@@ -1,0 +1,2 @@
+# Manual
+The Bforartists Manual
