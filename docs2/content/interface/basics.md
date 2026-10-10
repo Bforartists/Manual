@@ -19,13 +19,13 @@ The UI is made of several different workspaces. Each workspace is made of severa
 
 The idea is to have a non overlapping and blocking UI with a non modal tool set. Which is just partially to achieve. See header below. And by the fact that you work in modes ...
 
-![User Interface Principles](/docs2/images/ui/interface/basics/user-interface-principles.png){.right}
+![User Interface Principles](/docs2/images/ui/interface/basics/user-interface-principles.png)
 
 As a consequence of the non overlapping UI concept, the interface avoids to work with popup panels where possible. You can adjust the tool after you use it, in the so called last operation panel. It can be found in the 3D view for example, down left.
 
 ## Tooltips
 
-![Tooltips](/docs2/images/ui/interface/basics/tooltips.png){.right}
+![Tooltips](/docs2/images/ui/interface/basics/tooltips.png)
 
 When you hover with the mouse over an UI element, like a button, then you can see a tooltip.
 
@@ -35,15 +35,15 @@ A tooltip can contain the tool name, a short description of the tool, the hotkey
 
 The Python tool tip shows you the name of the operator. It is of interest for programming needs. It can be turned off in the User Preferences.
 
-![Tooltips](/docs2/images/ui/interface/basics/tooltips-3.png){.right}
+![Tooltips](/docs2/images/ui/interface/basics/tooltips-3.png)
 
 The tool tips in the Tool Shelf acts a bit different than the tool tips in the rest of the UI. It will not show you the Python tool tips, since it is a gigantic hack on top of the existing UI.
 
 ## Splash Screen
 
-![Splash Screen](/docs2/images/ui/interface/basics/splash-screen.png){.right}
+![Splash Screen](/docs2/images/ui/interface/basics/splash-screen.png)
 
-![Splash Screen](/docs2/images/ui/interface/basics/splash-screen-2.png){.right}
+![Splash Screen](/docs2/images/ui/interface/basics/splash-screen-2.png)
 
 The splash screen shows at startup. The splash screen will vanish when you click with the mouse. You can also turn its showing at startup completely off in the User Preferences.
 

@@ -9,19 +9,17 @@ screenshots: "5.1"
 source: ["26.9.9 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Deform Modifiers.odt"]
 ---
 
-![Deform modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-deform/deform-modifiers-grease-pencil.png){.thumb}
+![Deform modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-deform/deform-modifiers-grease-pencil.png)
 
 ## Armature
 
-::tool{id=modifier.grease_pencil_armature}
-
-![Armature](/docs2/images/ui/properties/modifiers/grease-pencil-deform/armature.png){.right}
+![Armature](/docs2/images/ui/properties/modifiers/grease-pencil-deform/armature.png)
 
 An armature system allows to deform objects accurately by posing bones. The Armature modifier contains the armature settings at the mesh end.
 
 This modifier gets created automatically when you parent a grease pencil to an armature.
 
-![Armature](/docs2/images/ui/properties/modifiers/grease-pencil-deform/armature-2.png){.right}
+![Armature](/docs2/images/ui/properties/modifiers/grease-pencil-deform/armature-2.png)
 
 The armature modifier has some extra entries in the dropdown menu in the header.
 
@@ -47,7 +45,7 @@ Inverts the influence set by the vertex group.
 
 #### Vertex Groups
 
-![Vertex Groups](/docs2/images/ui/properties/modifiers/mesh-deform/bind-to.png){.right}
+![Vertex Groups](/docs2/images/ui/properties/modifiers/mesh-deform/bind-to.png)
 
 Meshes and lattices only. Use Vertex groups for deforming the mesh. A bone named “forearm”, will only affect the vertices in the “forearm” vertex group. The influence of one bone on a given vertex is controlled by the weight of this vertex in the relevant group.
 
@@ -59,33 +57,29 @@ Use the Bone envelopes to deform vertices or control points near them, defined b
 
 When envelopes are disabled, Blender uses the set of existing vertex group names to determine which bones influences what mesh part.
 
-![Bone Envelopes](/docs2/images/ui/properties/modifiers/mesh-deform/bone-envelopes.png){.right}
+![Bone Envelopes](/docs2/images/ui/properties/modifiers/mesh-deform/bone-envelopes.png)
 
 Bone envelopes display can be turned on in the Viewport Display panel in the Object Data properties tab in the Properties Editor. Display as ...
 
-![Bone Envelopes](/docs2/images/ui/properties/modifiers/mesh-deform/bone-envelopes-2.png){.right}
+![Bone Envelopes](/docs2/images/ui/properties/modifiers/mesh-deform/bone-envelopes-2.png)
 
 And can be adjusted in the Transform panel in the sidebar of the 3D View, in Edit mode.
 
 ## Hook
 
-::tool{id=modifier.grease_pencil_hook}
-
-![Hook](/docs2/images/ui/properties/modifiers/grease-pencil-deform/hook.png){.right}
+![Hook](/docs2/images/ui/properties/modifiers/grease-pencil-deform/hook.png)
 
 The Hook modifier is used to deform a mesh, curve or lattice by another object. When you move this hook object, then it pulls vertices or control points with it.
 
 Assigning the hook object to specific vertices of the target object is done in Edit mode. The modifier shows a set of buttons then.
 
-![Hook](/docs2/images/ui/properties/modifiers/mesh-deform/hook-2.png){.right}
+![Hook](/docs2/images/ui/properties/modifiers/mesh-deform/hook-2.png)
 
 This modifier is automatically created when you add a Hook from the Hooks menu in the Edge menu in edit mode.
 
 Some settings just exists in Edit mode.
 
-:::warn
-The Hook Modifier stores vertex indices from the original mesh to determine what to affect. Modifiers that generate geometry, like Subdivision Surface, should always be put after the Hook modifier in the stack. Otherwise, the generated geometry can‘ t be affected by the hook’s influence.
-:::
+> **Warning:** The Hook Modifier stores vertex indices from the original mesh to determine what to affect. Modifiers that generate geometry, like Subdivision Surface, should always be put after the Hook modifier in the stack. Otherwise, the generated geometry can‘ t be affected by the hook’s influence.
 
 | Property | What it changes |
 |---|---|
@@ -95,7 +89,7 @@ The Hook Modifier stores vertex indices from the original mesh to determine what
 
 ### Reset
 
-![Reset](/docs2/images/ui/properties/modifiers/mesh-deform/reset.png){.right}
+![Reset](/docs2/images/ui/properties/modifiers/mesh-deform/reset.png)
 
 In Edit mode. Recalculate and clear the offset transform of the hook.
 
@@ -107,7 +101,7 @@ In Edit mode. Recalculate and clear the offset transform of the hook.
 
 ### Falloff
 
-![Falloff](/docs2/images/ui/properties/modifiers/grease-pencil-deform/falloff.png){.right}
+![Falloff](/docs2/images/ui/properties/modifiers/grease-pencil-deform/falloff.png)
 
 | Property | What it changes |
 |---|---|
@@ -117,7 +111,7 @@ In Edit mode. Recalculate and clear the offset transform of the hook.
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -128,19 +122,15 @@ In Edit mode. Recalculate and clear the offset transform of the hook.
 
 ## Lattice
 
-::tool{id=modifier.grease_pencil_lattice}
-
-![Lattice](/docs2/images/ui/properties/modifiers/grease-pencil-deform/lattice.png){.right}
+![Lattice](/docs2/images/ui/properties/modifiers/grease-pencil-deform/lattice.png)
 
 The Lattice modifier deforms the base object by the shape of a Lattice object. It can be used at meshes, curves, surfaces, text, lattices and even particles.
 
-![Lattice](/docs2/images/ui/properties/modifiers/mesh-deform/lattice-2.png){.right}
+![Lattice](/docs2/images/ui/properties/modifiers/mesh-deform/lattice-2.png)
 
 A Lattice modifier with valid settings can be added by selecting the object, holding down shift, select the target lattice object, and then choose Lattice Deform in the Parent menu.
 
-:::note
-When you want to use a lattice to deform particles, then you need to place the Lattice modifier after the Particle System modifier.
-:::
+> **Note:** When you want to use a lattice to deform particles, then you need to place the Lattice modifier after the Particle System modifier.
 
 | Property | What it changes |
 |---|---|
@@ -149,7 +139,7 @@ When you want to use a lattice to deform particles, then you need to place the L
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -160,9 +150,7 @@ When you want to use a lattice to deform particles, then you need to place the L
 
 ## Noise
 
-::tool{id=modifier.grease_pencil_noise}
-
-![Noise](/docs2/images/ui/properties/modifiers/grease-pencil-deform/noise.png){.right}
+![Noise](/docs2/images/ui/properties/modifiers/grease-pencil-deform/noise.png)
 
 The Noise Modifier adds noise to make the grease pencil line unstable and noisy.
 
@@ -179,7 +167,7 @@ The Noise Modifier adds noise to make the grease pencil line unstable and noisy.
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -190,7 +178,7 @@ The Noise Modifier adds noise to make the grease pencil line unstable and noisy.
 
 #### Custom Curve
 
-![Custom Curve](/docs2/images/ui/properties/modifiers/grease-pencil-deform/custom-curve.png){.right}
+![Custom Curve](/docs2/images/ui/properties/modifiers/grease-pencil-deform/custom-curve.png)
 
 Use a custom curve to define the noise along the strokes.
 
@@ -204,13 +192,13 @@ The two buttons with the magnifying glass at it zooms in and out in the curve wi
 
 ###### Clipping
 
-![Clipping](/docs2/images/ui/properties/modifiers/grease-pencil-deform/clipping.png){.thumb}
+![Clipping](/docs2/images/ui/properties/modifiers/grease-pencil-deform/clipping.png)
 
 Clipping options. Set up clipping for the stroke.
 
 ###### Tools
 
-![Tools](/docs2/images/ui/properties/modifiers/grease-pencil-deform/tools.png){.thumb}
+![Tools](/docs2/images/ui/properties/modifiers/grease-pencil-deform/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
@@ -233,7 +221,7 @@ Holding down shift enables slower movement, which allows more accurate setting.
 
 ##### Vector Handle
 
-![Vector Handle](/docs2/images/ui/properties/modifiers/grease-pencil-deform/vector-handle.png){.right}
+![Vector Handle](/docs2/images/ui/properties/modifiers/grease-pencil-deform/vector-handle.png)
 
 Set handle type to Vector.
 
@@ -245,15 +233,13 @@ Set handle type to Vector.
 
 ## Offset
 
-::tool{id=modifier.grease_pencil_offset}
-
-![Offset](/docs2/images/ui/properties/modifiers/grease-pencil-deform/offset.png){.right}
+![Offset](/docs2/images/ui/properties/modifiers/grease-pencil-deform/offset.png)
 
 The Offset Modifier changes the strokes location, rotation or scale, starting from the object origin.
 
 ### General Subpanel
 
-![General Subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/general-subpanel.png){.right}
+![General Subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/general-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -265,9 +251,9 @@ The Offset Modifier changes the strokes location, rotation or scale, starting fr
 
 #### Mode
 
-![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-deform/mode.png){.right}
+![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-deform/mode.png)
 
-![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-deform/mode-2.png){.thumb}
+![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-deform/mode-2.png)
 
 | Property | What it changes |
 |---|---|
@@ -292,7 +278,7 @@ The Offset Modifier changes the strokes location, rotation or scale, starting fr
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -303,29 +289,27 @@ The Offset Modifier changes the strokes location, rotation or scale, starting fr
 
 ## Shrinkwrap
 
-::tool{id=modifier.grease_pencil_shrinkwrap}
-
-![Shrinkwrap](/docs2/images/ui/properties/modifiers/grease-pencil-deform/shrinkwrap.png){.right}
+![Shrinkwrap](/docs2/images/ui/properties/modifiers/grease-pencil-deform/shrinkwrap.png)
 
 Shrinks the geometry to the surface of another object.
 
 ### Wrap Method
 
-![Wrap Method](/docs2/images/ui/properties/modifiers/mesh-deform/wrap-method.png){.thumb}
+![Wrap Method](/docs2/images/ui/properties/modifiers/mesh-deform/wrap-method.png)
 
 The method to determine the nearest point on the target’s surface for each vertex of the object.
 
 #### Nearest Surface Point + Target Normal Project
 
-![Nearest Surface Point + Target Normal Project](/docs2/images/ui/properties/modifiers/mesh-deform/nearest-surface-point-target-normal-project.png){.right}
+![Nearest Surface Point + Target Normal Project](/docs2/images/ui/properties/modifiers/mesh-deform/nearest-surface-point-target-normal-project.png)
 
-![Nearest Surface Point + Target Normal Project](/docs2/images/ui/properties/modifiers/mesh-deform/nearest-surface-point-target-normal-project-2.png){.right}
+![Nearest Surface Point + Target Normal Project](/docs2/images/ui/properties/modifiers/mesh-deform/nearest-surface-point-target-normal-project-2.png)
 
 Nearest Surface Point selects the nearest point at the surface. Additionally, Target Normal Project tries to match the interpolated normals of the surface.
 
 ##### Snap Mode
 
-![Snap Mode](/docs2/images/ui/properties/modifiers/mesh-deform/snap-mode.png){.thumb}
+![Snap Mode](/docs2/images/ui/properties/modifiers/mesh-deform/snap-mode.png)
 
 How the vertex snaps to the surface. The methods should be self explaining.
 
@@ -335,7 +319,7 @@ The target mesh to shrink to.
 
 #### Project
 
-![Project](/docs2/images/ui/properties/modifiers/grease-pencil-deform/project.png){.right}
+![Project](/docs2/images/ui/properties/modifiers/grease-pencil-deform/project.png)
 
 Projects all vertices along a chosen axis until they hit the surface of the target object.
 
@@ -343,7 +327,7 @@ Vertices that never hits the surface are not calculated.
 
 ##### Snap Mode
 
-![Snap Mode](/docs2/images/ui/properties/modifiers/mesh-deform/snap-mode.png){.thumb}
+![Snap Mode](/docs2/images/ui/properties/modifiers/mesh-deform/snap-mode.png)
 
 How the vertex snaps to the surface. The methods should be self explaining.
 
@@ -360,7 +344,7 @@ Allows you to prevent any projection over the “front side” or the “back si
 
 ###### Invert Cull
 
-![Invert Cull](/docs2/images/ui/properties/modifiers/mesh-deform/invert-cull.png){.right}
+![Invert Cull](/docs2/images/ui/properties/modifiers/mesh-deform/invert-cull.png)
 
 When projecting in the negative direction then invert culling.
 
@@ -373,7 +357,7 @@ You need to have negative ticked and face cull either front or back to set this 
 
 #### Nearest Vertex
 
-![Nearest Vertex](/docs2/images/ui/properties/modifiers/grease-pencil-deform/nearest-vertex.png){.right}
+![Nearest Vertex](/docs2/images/ui/properties/modifiers/grease-pencil-deform/nearest-vertex.png)
 
 ##### Target
 
@@ -388,7 +372,7 @@ The target mesh to shrink to.
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -399,9 +383,7 @@ The target mesh to shrink to.
 
 ## Smooth
 
-::tool{id=modifier.grease_pencil_smooth}
-
-![Smooth](/docs2/images/ui/properties/modifiers/grease-pencil-deform/smooth.png){.right}
+![Smooth](/docs2/images/ui/properties/modifiers/grease-pencil-deform/smooth.png)
 
 The Smooth modifier smoothens a stroke.
 
@@ -415,7 +397,7 @@ The Smooth modifier smoothens a stroke.
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -426,9 +408,7 @@ The Smooth modifier smoothens a stroke.
 
 ## Thickness
 
-::tool{id=modifier.grease_pencil_thickness}
-
-![Thickness](/docs2/images/ui/properties/modifiers/grease-pencil-deform/thickness.png){.right}
+![Thickness](/docs2/images/ui/properties/modifiers/grease-pencil-deform/thickness.png)
 
 The Thickness Modifier change the stroke points thickness.
 
@@ -439,7 +419,7 @@ The Thickness Modifier change the stroke points thickness.
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -450,7 +430,7 @@ The Thickness Modifier change the stroke points thickness.
 
 #### Custom Curve
 
-![Custom Curve](/docs2/images/ui/properties/modifiers/grease-pencil-deform/custom-curve.png){.right}
+![Custom Curve](/docs2/images/ui/properties/modifiers/grease-pencil-deform/custom-curve.png)
 
 Use a custom curve to define the noise along the strokes.
 
@@ -464,13 +444,13 @@ The two buttons with the magnifying glass at it zooms in and out in the curve wi
 
 ###### Clipping
 
-![Clipping](/docs2/images/ui/properties/modifiers/grease-pencil-deform/clipping.png){.thumb}
+![Clipping](/docs2/images/ui/properties/modifiers/grease-pencil-deform/clipping.png)
 
 Clipping options. Set up clipping for the stroke.
 
 ###### Tools
 
-![Tools](/docs2/images/ui/properties/modifiers/grease-pencil-deform/tools.png){.thumb}
+![Tools](/docs2/images/ui/properties/modifiers/grease-pencil-deform/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
@@ -493,7 +473,7 @@ Holding down shift enables slower movement, which allows more accurate setting.
 
 ##### Vector Handle
 
-![Vector Handle](/docs2/images/ui/properties/modifiers/grease-pencil-deform/vector-handle.png){.right}
+![Vector Handle](/docs2/images/ui/properties/modifiers/grease-pencil-deform/vector-handle.png)
 
 Set handle type to Vector.
 

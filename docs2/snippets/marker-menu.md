@@ -8,7 +8,7 @@ screenshots: "5.1"
 source: ["17.1.4 Editors - Timeline - Marker Menu.odt"]
 ---
 
-![Marker menu](/docs2/images/ui/shared/marker-menu/marker-menu.png){.right}
+![Marker menu](/docs2/images/ui/shared/marker-menu/marker-menu.png)
 
 Markers are visual landmarks. They can mark a start of a specific animation sequence, the end of a camera movement, and so on.
 
@@ -28,11 +28,11 @@ Duplicates the selected marker(s). The duplicate(s) sticks at the mouse until yo
 
 ## Duplicate Marker to Scene
 
-![Duplicate Marker to Scene](/docs2/images/ui/shared/marker-menu/duplicate-marker-to-scene.png){.right}
+![Duplicate Marker to Scene](/docs2/images/ui/shared/marker-menu/duplicate-marker-to-scene.png)
 
 A blend file can contain more than one scene. See Scene Properties in the Properties editor. Here you can duplicate markers to other scenes.
 
-![Duplicate Marker to Scene](/docs2/images/ui/shared/marker-menu/duplicate-marker-to-scene-2.png){.right}
+![Duplicate Marker to Scene](/docs2/images/ui/shared/marker-menu/duplicate-marker-to-scene-2.png)
 
 ## Delete Marker
 
@@ -40,7 +40,7 @@ Deletes the selected marker(s).
 
 ## Bind Camera to Markers
 
-![Bind Camera to Markers](/docs2/images/ui/shared/marker-menu/bind-camera-to-markers.png){.right}
+![Bind Camera to Markers](/docs2/images/ui/shared/marker-menu/bind-camera-to-markers.png)
 
 Bind camera to markers turns an object into a camera object. This can be any object in the scene. Not just camera objects.
 
@@ -52,7 +52,7 @@ The marker with a bind camera attached will show a camera icon.
 
 ## Rename Marker
 
-![Rename Marker](/docs2/images/ui/shared/marker-menu/rename-marker.png){.right}
+![Rename Marker](/docs2/images/ui/shared/marker-menu/rename-marker.png)
 
 A menu will open up where you can rename the active marker.
 
@@ -62,7 +62,7 @@ Hotkey only functionality! This menu item exists to show the hotkey to move the 
 
 ## Select sub menu
 
-![Select sub menu](/docs2/images/ui/shared/marker-menu/select-sub-menu.png){.right}
+![Select sub menu](/docs2/images/ui/shared/marker-menu/select-sub-menu.png)
 
 | Menu entry | What it does |
 |---|---|

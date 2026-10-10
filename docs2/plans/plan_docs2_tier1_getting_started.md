@@ -7,7 +7,7 @@
 
 **Date**: 2026-10-10
 
-**Status**: 📝 Draft — awaiting your approval
+**Status**: 🟢 Approved 10 Oct — Phase 1 in progress
 
 **Depends on**: Spike 1 (`docs2/spike1-migration`, commits `48a7749` → `ca887b9`)
 
@@ -108,16 +108,16 @@ the build does the polish; Webflow does the presenting.
 |---|---|---|---|
 | D1 | Source of truth | Markdown in the Manual repo; `.odt` frozen later on `odt-5.1-final` | ✅ Confirmed |
 | D2 | Writer editor | **Pages CMS** (hosted, nothing to maintain) | ✅ Confirmed |
-| D3 | Insert buttons vs preview | **Preview link on every pull request.** Insert buttons (Sveltia CMS custom editor components) only if the test shows writers need them and the extra sign-in service is acceptable | ✅ Confirmed 10 Oct |
-| D4 | Writer syntax | **Plain writing**, recognised by the build. Tags only for maintainers and agents | ✅ Confirmed |
+| D3 | Insert buttons vs preview | **Preview link on every pull request first** (the low-hanging fruit). A more visual GUI (Sveltia CMS insert buttons) is decided after we see how pages look and how writers do in the test | ✅ Confirmed 10 Oct |
+| D4 | Writer syntax | **Plain writing**, recognised by the build; WYSIWYG editing with drag and drop. Simple "insert" components stay a goal. Phase 2 scores the online editor (Pages CMS) against the GitHub editor and a local editor for no-dependency, fun usability | ✅ Confirmed 10 Oct |
 | D5 | Page-level options | Pages CMS form fields: status, video, example files, shared sections, Quick Start links | ✅ Confirmed |
-| D6 | Images | Drop → `_inbox/` → bot files by page + heading, WebP, ≤ 2,560 px, dedupe | 🟡 Proposed |
-| D7 | Webflow model | CMS collections `Doc Sections`, `Doc Pages`, `Doc Snippets`; one page template; staging only | ✅ Confirmed |
+| D6 | Images | Drop → `_inbox/` → bot files by page + heading, WebP, ≤ 2,560 px, dedupe | ✅ Confirmed 10 Oct |
+| D7 | Webflow model | CMS collections `Doc Sections`, `Doc Pages`, `Doc Snippets`; one page template; staging only. **Reuse the existing Webflow docs structure** (panels, sidebar, toolbar) and keep earlier decisions: panel sidebar with sub-chapter navigation and sticky sections | ✅ Confirmed 10 Oct |
 | D8 | Sync direction | One way: repo → Webflow. Checksum guard stops the sync if Webflow was edited by hand | ✅ Confirmed |
 | D9 | Print / PDF | Print stylesheet + browser print now; release PDFs in Tier 3 | ✅ Confirmed |
 | D10 | Mobile | Bottom bar: Chapters · current heading · Search | ✅ Confirmed |
 | D11 | Git workflow | Work on a branch; pull request only when you say it is ready | ✅ Confirmed |
-| D12 | Scope | Getting Started only (8 pages) | 🟡 Proposed |
+| D12 | Scope | Getting Started only (8 pages) | ✅ Confirmed 10 Oct |
 | D13 | Trimming | **No trimming or rewording until the whole manual is migrated and live.** Content is a faithful clone in the new architecture. Structure work is in: shared snippets for repeated text, chapters consolidated into pages. Trimming and new writing come in the Refine phase | ✅ Confirmed 10 Oct |
 
 ---
@@ -241,7 +241,7 @@ https://youtu.be/abc123                       → video embed (link on its own l
 ### Phase 0 — This Document
 
 - [x] Write `docs2/plans/plan_docs2_tier1_getting_started.md` and `usability_test_getting_started.md`.
-- [ ] 👤 **You:** approve, or comment on the decisions in §4.
+- [x] 👤 **You:** approved 10 Oct.
 
 ### Phase 1 — Getting Started Content
 
@@ -250,19 +250,19 @@ of the source kept** (faithful clone, D13).
 
 **Files:** `docs2/tools/convert.py`, `docs2/tools/pages.json`, `docs2/content/getting-started/*`, `docs2/nav.yml`
 
-- [ ] Switch converter output from tags to plain patterns (`:::tip` → `> Tip:`, `{.right}` → size rule,
+- [x] Switch converter output from tags to plain patterns (`:::tip` → `> Tip:`, `{.right}` → size rule,
       `:kbd[…]` → plain `Ctrl + Space`).
-- [ ] Add the Getting Started pages to `pages.json`; consolidate `1.1` + `38` into
+- [x] Add the Getting Started pages to `pages.json`; consolidate `1.1` + `38` into
       *Using the Documentation* (two sections, text unchanged).
-- [ ] Pull the existing Webflow text for Introduction, About Documentation, Quick Start, Comparing and
+- [x] Pull the existing Webflow text for Introduction, About Documentation, Quick Start, Comparing and
       Migrating; where a page has no source chapter, the website text is the source.
-- [ ] ♻️ Repeated text becomes a shared snippet, word for word (the longest copy wins; differences are
+- [x] ♻️ Repeated text becomes a shared snippet, word for word (the longest copy wins; differences are
       flagged for you, never dropped).
-- [ ] 🚫 No trimming or rewording (D13). Only fixes that keep meaning: broken headings, image placement,
+- [x] 🚫 No trimming or rewording (D13). Only fixes that keep meaning: broken headings, image placement,
       numbering.
-- [ ] Word-count check per page: converted words + words moved to snippets ≥ source words (report in
+- [x] Word-count check per page: converted words + words moved to snippets ≥ source words (report in
       the pull request).
-- [ ] Generate `nav.yml` (order + icon per page) from `pages.json`.
+- [x] Generate `nav.yml` (order + icon per page) from `pages.json`.
 
 ```yaml
 # nav.yml (generated, editable)
@@ -275,6 +275,16 @@ of the source kept** (faithful clone, D13).
     - { id: getting-started.installation, title: Installation, icon: import }
     - { id: getting-started.quick-start, title: Quick Start, icon: quickstart }
 ```
+
+**Done 10 Oct — how it came out:**
+
+- 🔗 Website addresses and titles kept: `/documentation/overview/…`, *About Documentation*, *Comparing to Blender* (`differences`).
+- 🌐 Introduction and About Documentation: your newer website text first, then the `.odt` text word for word under
+  "From the .odt manual", to merge in the Refine phase. `38 About this Manual` is consolidated into About Documentation.
+- 📄 Installation and Data Structure: from `.odt` chapters 2 and 31 (the website pages were placeholders).
+- 📝 Quick Start, Comparing to Blender, Migrating: no text exists yet; each keeps its one-line website summary and a note.
+- ✅ Word check: 23 of 23 groups keep every word ([`reports/wordcount.md`](../reports/wordcount.md)).
+- 🖼️ Website images stay as links to the Webflow CDN for now; icons in `nav.yml` are empty until the icon map (Phase 2).
 
 **Acceptance:** all 8 pages open on GitHub with no visible markup noise; images show; no source text lost.
 
@@ -289,6 +299,7 @@ of the source kept** (faithful clone, D13).
 - [ ] 👤 **You:** install the Pages CMS GitHub App on `Bforartists/Manual` (only you can grant it).
 - [ ] Push the branch (with your OK) so Pages CMS can see it.
 - [ ] Test: does `> Tip:`, `Ctrl + Space`, `Edit › Preferences` survive a save unchanged?
+- [ ] Score the three ways to write (Pages CMS online · GitHub web editor · clone + your own editor) on: no installs, WYSIWYG, drag and drop of images, ease of inserting a tip or video, fun. Recommend one as the advertised way.
 
 ```yaml
 # .pages.yml — additions
@@ -366,8 +377,9 @@ the check fails on the link, the preview link opens and looks like the site.
 **Where:** Webflow Designer (Bforartists site), using the Template page components
 
 - [ ] Collections: `Doc Sections`, `Doc Pages` (fields as §5.4), `Doc Snippets`.
-- [ ] Doc Pages template from boards 12/13 + your current docs layout (screenshot): sidebar panels,
-      toolbar (Panels · Print · Focus), section hero, page body, page info strip, previous/next.
+- [ ] Doc Pages template built **on the existing Webflow docs structure** (panels, sidebar, toolbar
+      Panels · Print · Focus), keeping the earlier decisions: panel sidebar with sub-chapter anchors,
+      sticky section path and right outline; plus section hero, page info strip, previous/next.
 - [ ] Doc kit classes on the Template page: callout, keycaps, menu chips, image float, video, step.
 - [ ] Docs script v1 (`BFA Docs`): sidebar from `nav.json`, right outline, sticky path, mobile bar,
       focus, panels fold, snippet placement, viewer text size.

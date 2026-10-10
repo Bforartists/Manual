@@ -591,6 +591,198 @@
      "as_intro": true
     }
    ]
+  },
+  {
+   "id": "getting-started.index",
+   "file": "content/getting-started/index.md",
+   "title": "Getting Started",
+   "slug": "overview",
+   "section": "getting-started",
+   "path": [
+    "Getting Started"
+   ],
+   "images": "getting-started/overview",
+   "status": "draft",
+   "opts": {
+    "fold": false
+   },
+   "parts": [
+    {
+     "web": "overview",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "getting-started.introduction",
+   "file": "content/getting-started/introduction.md",
+   "title": "Introduction",
+   "slug": "introduction",
+   "section": "getting-started",
+   "path": [
+    "Getting Started",
+    "Introduction"
+   ],
+   "images": "getting-started/introduction",
+   "status": "draft",
+   "opts": {
+    "fold": false
+   },
+   "parts": [
+    {
+     "web": "introduction",
+     "select": "*"
+    },
+    {
+     "note": "## From the .odt manual (1 Introduction)\n\n> **Note:** The earlier text of this page from the .odt manual, kept word for word. It is merged with the text above in the Refine phase, after the full migration."
+    },
+    {
+     "src": "1 Introduction",
+     "select": "*",
+     "shift": 1
+    }
+   ]
+  },
+  {
+   "id": "getting-started.about-documentation",
+   "file": "content/getting-started/about-documentation.md",
+   "title": "About Documentation",
+   "slug": "about-documentation",
+   "section": "getting-started",
+   "path": [
+    "Getting Started",
+    "About Documentation"
+   ],
+   "images": "getting-started/about-documentation",
+   "status": "draft",
+   "opts": {
+    "fold": false
+   },
+   "parts": [
+    {
+     "web": "about-documentation",
+     "select": "*"
+    },
+    {
+     "note": "## From the .odt manual (1.1 How to use the Manual)\n\n> **Note:** The earlier text of this page from the .odt manual, kept word for word. It is merged with the text above in the Refine phase, after the full migration."
+    },
+    {
+     "src": "1.1 How to use the Manual",
+     "select": "*",
+     "shift": 1
+    },
+    {
+     "src": "38 About this Manual",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "getting-started.installation",
+   "file": "content/getting-started/installation.md",
+   "title": "Installation",
+   "slug": "installation",
+   "section": "getting-started",
+   "path": [
+    "Getting Started",
+    "Installation"
+   ],
+   "images": "getting-started/installation",
+   "status": "draft",
+   "opts": {
+    "fold": false
+   },
+   "parts": [
+    {
+     "src": "2 Installing Bforartists",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "getting-started.quick-start",
+   "file": "content/getting-started/quick-start.md",
+   "title": "Quick Start",
+   "slug": "quick-start",
+   "section": "getting-started",
+   "path": [
+    "Getting Started",
+    "Quick Start"
+   ],
+   "images": "getting-started/quick-start",
+   "status": "draft",
+   "opts": {
+    "fold": false
+   },
+   "parts": [
+    {
+     "note": "Dive in and start a mini tutorial to get started. Cover basic navigation and make your first render!\n\n> **Note:** This page has no content yet, in the .odt manual or on the website. It is written in the Refine phase."
+    }
+   ]
+  },
+  {
+   "id": "getting-started.data-structure",
+   "file": "content/getting-started/data-structure.md",
+   "title": "Data Structure",
+   "slug": "data-structure",
+   "section": "getting-started",
+   "path": [
+    "Getting Started",
+    "Data Structure"
+   ],
+   "images": "getting-started/data-structure",
+   "status": "draft",
+   "opts": {
+    "fold": false
+   },
+   "parts": [
+    {
+     "src": "31 Data System",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "getting-started.differences",
+   "file": "content/getting-started/differences.md",
+   "title": "Comparing to Blender",
+   "slug": "differences",
+   "section": "getting-started",
+   "path": [
+    "Getting Started",
+    "Comparing to Blender"
+   ],
+   "images": "getting-started/differences",
+   "status": "draft",
+   "opts": {
+    "fold": false
+   },
+   "parts": [
+    {
+     "note": "This is **Blender** deep down, but there are some fundamental differences. Learn how to translate the ecosystem!\n\n> **Note:** This page has no content yet, in the .odt manual or on the website. It is written in the Refine phase."
+    }
+   ]
+  },
+  {
+   "id": "getting-started.migrating-from-blender",
+   "file": "content/getting-started/migrating-from-blender.md",
+   "title": "Migrating from Blender",
+   "slug": "migrating-from-blender",
+   "section": "getting-started",
+   "path": [
+    "Getting Started",
+    "Migrating from Blender"
+   ],
+   "images": "getting-started/migrating-from-blender",
+   "status": "draft",
+   "opts": {
+    "fold": false
+   },
+   "parts": [
+    {
+     "note": "You can use your **Blender** hotkeys, settings, addons and theme with Bforartists! Learn how to migrate here.\n\n> **Note:** This page has no content yet, in the .odt manual or on the website. It is written in the Refine phase."
+    }
+   ]
   }
  ],
  "snippets": [
@@ -632,5 +824,6 @@
     }
    ]
   }
- ]
+ ],
+ "web_dir": "docs2/sources/webflow"
 }

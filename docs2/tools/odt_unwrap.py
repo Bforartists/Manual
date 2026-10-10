@@ -49,7 +49,7 @@ def process(xml_bytes):
         # Title table: first table in the document, 1 row, 2 cells, an image + a numbered title
         if not first_table_seen and len(rows) == 1 and len(cs) == 2:
             text = "".join(cs[1].itertext()).strip()
-            if text and text[0].isdigit() and cs[0].find(".//draw:image", NS) is not None:
+            if text and cs[0].find(".//draw:image", NS) is not None:
                 h = etree.Element(X + "h")
                 h.set(X + "outline-level", "1")
                 frame = cs[0].find(".//draw:frame", NS)

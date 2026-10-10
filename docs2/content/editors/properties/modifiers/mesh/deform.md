@@ -11,9 +11,7 @@ source: ["26.9.5 Editors - Properties Editor - Modifiers Properties Tab - Add Mo
 
 ## Armature
 
-::tool{id=modifier.armature}
-
-![Armature](/docs2/images/ui/properties/modifiers/mesh-deform/armature.png){.right}
+![Armature](/docs2/images/ui/properties/modifiers/mesh-deform/armature.png)
 
 An armature system allows to deform objects accurately by posing bones. The Armature modifier contains the armature settings at the mesh end.
 
@@ -40,7 +38,7 @@ Inverts the influence set by the vertex group.
 
 ### Bind to
 
-![Bind to](/docs2/images/ui/properties/modifiers/mesh-deform/bind-to.png){.right}
+![Bind to](/docs2/images/ui/properties/modifiers/mesh-deform/bind-to.png)
 
 #### Vertex Groups
 
@@ -54,29 +52,25 @@ Use the Bone envelopes to deform vertices or control points near them, defined b
 
 When envelopes are disabled, Blender uses the set of existing vertex group names to determine which bones influences what mesh part.
 
-![Bone Envelopes](/docs2/images/ui/properties/modifiers/mesh-deform/bone-envelopes.png){.right}
+![Bone Envelopes](/docs2/images/ui/properties/modifiers/mesh-deform/bone-envelopes.png)
 
 Bone envelopes display can be turned on in the Viewport Display panel in the Object Data properties tab in the Properties Editor. Display as ...
 
-![Bone Envelopes](/docs2/images/ui/properties/modifiers/mesh-deform/bone-envelopes-2.png){.right}
+![Bone Envelopes](/docs2/images/ui/properties/modifiers/mesh-deform/bone-envelopes-2.png)
 
 And can be adjusted in the Transform panel in the sidebar of the 3D View, in Edit mode.
 
 ## Cast
 
-::tool{id=modifier.cast}
-
-![Cast](/docs2/images/ui/properties/modifiers/mesh-deform/cast.png){.right}
+![Cast](/docs2/images/ui/properties/modifiers/mesh-deform/cast.png)
 
 The Cast modifier shifts the shape of a mesh, curve, surface or lattice object, towards predefined shapes. Sphere, cylinder, cuboid.
 
-:::note
-For performance reasons, this modifier only works with local coordinates. If the modified object looks wrong, you may need to apply its transformations, especially when casting to a cylinder.
-:::
+> **Note:** For performance reasons, this modifier only works with local coordinates. If the modified object looks wrong, you may need to apply its transformations, especially when casting to a cylinder.
 
 ### Shape
 
-![Shape](/docs2/images/ui/properties/modifiers/mesh-deform/shape.png){.thumb}
+![Shape](/docs2/images/ui/properties/modifiers/mesh-deform/shape.png)
 
 Choose the target shape of the projection: Sphere, Cylinder or Cuboid.
 
@@ -92,9 +86,7 @@ Choose the target shape of the projection: Sphere, Cylinder or Cuboid.
 
 ## Curve
 
-::tool{id=modifier.curve}
-
-![Curve](/docs2/images/ui/properties/modifiers/mesh-deform/curve.png){.right}
+![Curve](/docs2/images/ui/properties/modifiers/mesh-deform/curve.png)
 
 The Curve modifier deforms a mesh along a curve object. You need to have a curve object in the scene, and choose it as the curve object.
 
@@ -102,9 +94,9 @@ The modifier works in global space on a dominant axis, X, Y, or Z. When you move
 
 When you move the object beyond the curve’s ends, the object will keep the deformation from the latest curve point.
 
-![Curve](/docs2/images/ui/properties/modifiers/mesh-deform/curve-2.png){.right}
+![Curve](/docs2/images/ui/properties/modifiers/mesh-deform/curve-2.png)
 
-![Curve](/docs2/images/ui/properties/modifiers/mesh-deform/curve-3.png){.right}
+![Curve](/docs2/images/ui/properties/modifiers/mesh-deform/curve-3.png)
 
 If the curve is 3D, then the rotation of the object can be controlled by the mean tilt of the curve control points. The mean tilt can be found in edit mode in the sidebar in the Transform panel. Other options in the Shape panel can also have an influence at the deforming result. Like Stretch.
 
@@ -114,7 +106,7 @@ The name of the curve object that will affect the deformed object.
 
 ### Deformation Axis
 
-![Deformation Axis](/docs2/images/ui/properties/modifiers/mesh-deform/deformation-axis.png){.thumb}
+![Deformation Axis](/docs2/images/ui/properties/modifiers/mesh-deform/deformation-axis.png)
 
 The axis to deform along.
 
@@ -128,9 +120,7 @@ Inverts the influence of the selected vertex group.
 
 ## Displace
 
-::tool{id=modifier.displace}
-
-![Displace](/docs2/images/ui/properties/modifiers/mesh-deform/displace.png){.right}
+![Displace](/docs2/images/ui/properties/modifiers/mesh-deform/displace.png)
 
 The Displace modifier displaces vertices in a mesh based on the greyscale values of a texture. You can use image textures or procedural textures.
 
@@ -144,11 +134,11 @@ The name of the texture from which the displacement for each vertex is derived. 
 
 #### Texture Prop
 
-![Texture Prop](/docs2/images/ui/properties/modifiers/mesh-deform/texture-prop.png){.right}
+![Texture Prop](/docs2/images/ui/properties/modifiers/mesh-deform/texture-prop.png)
 
 ##### Texture browser
 
-![Texture browser](/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png){.right}
+![Texture browser](/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png)
 
 A list of the available textures
 
@@ -162,7 +152,7 @@ A list of the available textures
 
 ### Coordinates
 
-![Coordinates](/docs2/images/ui/properties/modifiers/mesh-deform/coordinates.png){.thumb}
+![Coordinates](/docs2/images/ui/properties/modifiers/mesh-deform/coordinates.png)
 
 The texture coordinate system to use for the displacement.
 
@@ -170,7 +160,7 @@ The displacement can be along a particular local axis, along the vertex normal. 
 
 ### Direction
 
-![Direction](/docs2/images/ui/properties/modifiers/mesh-deform/direction.png){.thumb}
+![Direction](/docs2/images/ui/properties/modifiers/mesh-deform/direction.png)
 
 The direction along which to displace the vertices.
 
@@ -180,7 +170,7 @@ Displace along an axis.
 
 ##### Space
 
-![Space](/docs2/images/ui/properties/modifiers/mesh-deform/space.png){.right}
+![Space](/docs2/images/ui/properties/modifiers/mesh-deform/space.png)
 
 With a direction set to X, Y, Z, or XYZ the modifier can either displace along local or global axes.
 
@@ -195,7 +185,7 @@ Displace along local XYZ axes individually using the RGB components of the textu
 
 ##### Space
 
-![Space](/docs2/images/ui/properties/modifiers/mesh-deform/space-2.png){.right}
+![Space](/docs2/images/ui/properties/modifiers/mesh-deform/space-2.png)
 
 With a direction set to X, Y, Z, or XYZ the modifier can either displace along local or global axes.
 
@@ -207,23 +197,19 @@ With a direction set to X, Y, Z, or XYZ the modifier can either displace along l
 
 ## Hook
 
-::tool{id=modifier.hook}
-
-![Hook](/docs2/images/ui/properties/modifiers/mesh-deform/hook.png){.right}
+![Hook](/docs2/images/ui/properties/modifiers/mesh-deform/hook.png)
 
 The Hook modifier is used to deform a mesh, curve or lattice by another object. When you move this hook object, then it pulls vertices or control points with it.
 
 Assigning the hook object to specific vertices of the target object is done in Edit mode. The modifier shows a set of buttons then.
 
-![Hook](/docs2/images/ui/properties/modifiers/mesh-deform/hook-2.png){.right}
+![Hook](/docs2/images/ui/properties/modifiers/mesh-deform/hook-2.png)
 
 This modifier is automatically created when you add a Hook from the Hooks menu in the Edge menu in edit mode.
 
 Some settings just exists in Edit mode.
 
-:::warn
-The Hook Modifier stores vertex indices from the original mesh to determine what to affect. Modifiers that generate geometry, like Subdivision Surface, should always be put after the Hook modifier in the stack. Otherwise, the generated geometry can‘ t be affected by the hook’s influence.
-:::
+> **Warning:** The Hook Modifier stores vertex indices from the original mesh to determine what to affect. Modifiers that generate geometry, like Subdivision Surface, should always be put after the Hook modifier in the stack. Otherwise, the generated geometry can‘ t be affected by the hook’s influence.
 
 | Property | What it changes |
 |---|---|
@@ -233,7 +219,7 @@ The Hook Modifier stores vertex indices from the original mesh to determine what
 
 ### Reset
 
-![Reset](/docs2/images/ui/properties/modifiers/mesh-deform/reset.png){.right}
+![Reset](/docs2/images/ui/properties/modifiers/mesh-deform/reset.png)
 
 In Edit mode. Recalculate and clear the offset transform of the hook.
 
@@ -245,7 +231,7 @@ In Edit mode. Recalculate and clear the offset transform of the hook.
 
 ### Falloff
 
-![Falloff](/docs2/images/ui/properties/modifiers/mesh-deform/falloff.png){.right}
+![Falloff](/docs2/images/ui/properties/modifiers/mesh-deform/falloff.png)
 
 | Property | What it changes |
 |---|---|
@@ -255,27 +241,23 @@ In Edit mode. Recalculate and clear the offset transform of the hook.
 
 ## Laplacian Deform
 
-::tool{id=modifier.laplacian_deform}
-
-![Laplacian Deform](/docs2/images/ui/properties/modifiers/mesh-deform/laplacian-deform.png){.right}
+![Laplacian Deform](/docs2/images/ui/properties/modifiers/mesh-deform/laplacian-deform.png)
 
 The Laplacian Deform modifier allows you to pose a mesh by using some anchor vertices and moving them around. The modifier takes care for a proper deformation of the rest of the vertices.
 
 This modifier needs a hook modifier to move the geometry.
 
-:::note
-With a dense mesh above 100k the algorithm may fail.
-:::
+> **Note:** With a dense mesh above 100k the algorithm may fail.
 
 ### Workflow
 
-![Workflow](/docs2/images/ui/properties/modifiers/mesh-deform/workflow.png){.right}
+![Workflow](/docs2/images/ui/properties/modifiers/mesh-deform/workflow.png)
 
 Switch to Edit mode. Create a single vertex group, and add the vertices that you want to use as the anchor areas.
 
 You need at least two anchor areas.
 
-![Workflow](/docs2/images/ui/properties/modifiers/mesh-deform/workflow-2.png){.right}
+![Workflow](/docs2/images/ui/properties/modifiers/mesh-deform/workflow-2.png)
 
 Add a hook to each of this anchor areas. In our case one to the top of the cylinder, and one to the bottom of the cylinder.
 
@@ -283,11 +265,11 @@ I add the hook by Hook to New Object from the Vertex menu here, which creates an
 
 You should now have two hook objects in the modifier stack of the cylinder. And two empties.
 
-![Workflow](/docs2/images/ui/properties/modifiers/mesh-deform/workflow-3.png){.right}
+![Workflow](/docs2/images/ui/properties/modifiers/mesh-deform/workflow-3.png)
 
 Switch back to object mode. Select the cylinder. Add a Laplacian Deform modifier. In the Anchor Weights edit box select the vertex group that we have created.
 
-![Workflow](/docs2/images/ui/properties/modifiers/mesh-deform/workflow-4.png){.right}
+![Workflow](/docs2/images/ui/properties/modifiers/mesh-deform/workflow-4.png)
 
 Click at Bind to bind the vertex group to the modifier. Note! Binding happens with the current deformation. Not to the unmodified base mesh. When you have moved the hooks already to deform the mesh, then this will be the base for the calculation.
 
@@ -297,7 +279,7 @@ Now move the hooked empties.
 
 Without the Laplacian deform modifier moving the hooked empties will now only pull the vertices that are hooked.
 
-![Workflow](/docs2/images/ui/properties/modifiers/mesh-deform/workflow-6.png){.right}
+![Workflow](/docs2/images/ui/properties/modifiers/mesh-deform/workflow-6.png)
 
 With the Laplacian deform modifier the deformation affects all geometry, which allows you to pose the mesh. The algorithm tries to interpolate the result to give the best possible fitting deformation.
 
@@ -312,19 +294,15 @@ With the Laplacian deform modifier the deformation affects all geometry, which a
 
 ## Lattice
 
-::tool{id=modifier.lattice}
-
-![Lattice](/docs2/images/ui/properties/modifiers/mesh-deform/lattice.png){.right}
+![Lattice](/docs2/images/ui/properties/modifiers/mesh-deform/lattice.png)
 
 The Lattice modifier deforms the base object by the shape of a Lattice object. It can be used at meshes, curves, surfaces, text, lattices and even particles.
 
-![Lattice](/docs2/images/ui/properties/modifiers/mesh-deform/lattice-2.png){.right}
+![Lattice](/docs2/images/ui/properties/modifiers/mesh-deform/lattice-2.png)
 
 A Lattice modifier with valid settings can be added by selecting the object, holding down shift, select the target lattice object, and then choose Lattice Deform in the Parent menu.
 
-:::note
-When you want to use a lattice to deform particles, then you need to place the Lattice modifier after the Particle System modifier.
-:::
+> **Note:** When you want to use a lattice to deform particles, then you need to place the Lattice modifier after the Particle System modifier.
 
 | Property | What it changes |
 |---|---|
@@ -334,18 +312,12 @@ When you want to use a lattice to deform particles, then you need to place the L
 
 ## Mesh Deform
 
-::tool{id=modifier.mesh_deform}
-
-![Mesh Deform](/docs2/images/ui/properties/modifiers/mesh-deform/mesh-deform.png){.right}
+![Mesh Deform](/docs2/images/ui/properties/modifiers/mesh-deform/mesh-deform.png)
 
 The Mesh Deform modifier allows an arbitrary mesh of any closed shape to act as a deformation cage around another mesh.
 
-:::note
-The changes are not displayed in edit mode. But Edit mode is where you deform your cage object.
-:::
-:::note
-This modifier can run out of memory and crash.
-:::
+> **Note:** The changes are not displayed in edit mode. But Edit mode is where you deform your cage object.
+> **Note:** This modifier can run out of memory and crash.
 
 | Property | What it changes |
 |---|---|
@@ -358,9 +330,7 @@ This modifier can run out of memory and crash.
 
 ## Shrinkwrap
 
-::tool{id=modifier.shrinkwrap}
-
-![Shrinkwrap](/docs2/images/ui/properties/modifiers/mesh-deform/shrinkwrap.png){.right}
+![Shrinkwrap](/docs2/images/ui/properties/modifiers/mesh-deform/shrinkwrap.png)
 
 The Shrinkwrap modifier allows an object to “shrink” to the surface of another object. It moves each vertex of the object to the closest position on the surface of the target object.
 
@@ -368,21 +338,21 @@ It can be applied to meshes, lattices, curves, surfaces and texts.
 
 ### Wrap Method
 
-![Wrap Method](/docs2/images/ui/properties/modifiers/mesh-deform/wrap-method.png){.thumb}
+![Wrap Method](/docs2/images/ui/properties/modifiers/mesh-deform/wrap-method.png)
 
 The method to determine the nearest point on the target’s surface for each vertex of the object.
 
 #### Nearest Surface Point + Target Normal Project
 
-![Nearest Surface Point + Target Normal Project](/docs2/images/ui/properties/modifiers/mesh-deform/nearest-surface-point-target-normal-project.png){.right}
+![Nearest Surface Point + Target Normal Project](/docs2/images/ui/properties/modifiers/mesh-deform/nearest-surface-point-target-normal-project.png)
 
-![Nearest Surface Point + Target Normal Project](/docs2/images/ui/properties/modifiers/mesh-deform/nearest-surface-point-target-normal-project-2.png){.right}
+![Nearest Surface Point + Target Normal Project](/docs2/images/ui/properties/modifiers/mesh-deform/nearest-surface-point-target-normal-project-2.png)
 
 Nearest Surface Point selects the nearest point at the surface. Additionally, Target Normal Project tries to match the interpolated normals of the surface.
 
 ##### Snap Mode
 
-![Snap Mode](/docs2/images/ui/properties/modifiers/mesh-deform/snap-mode.png){.thumb}
+![Snap Mode](/docs2/images/ui/properties/modifiers/mesh-deform/snap-mode.png)
 
 How the vertex snaps to the surface. The methods should be self explaining.
 
@@ -392,7 +362,7 @@ The target mesh to shrink to.
 
 #### Project
 
-![Project](/docs2/images/ui/properties/modifiers/mesh-deform/project.png){.right}
+![Project](/docs2/images/ui/properties/modifiers/mesh-deform/project.png)
 
 Projects all vertices along a chosen axis until they hit the surface of the target object.
 
@@ -400,7 +370,7 @@ Vertices that never hits the surface are not calculated.
 
 ##### Snap Mode
 
-![Snap Mode](/docs2/images/ui/properties/modifiers/mesh-deform/snap-mode.png){.thumb}
+![Snap Mode](/docs2/images/ui/properties/modifiers/mesh-deform/snap-mode.png)
 
 How the vertex snaps to the surface. The methods should be self explaining.
 
@@ -417,7 +387,7 @@ Allows you to prevent any projection over the “front side” or the “back si
 
 ###### Invert Cull
 
-![Invert Cull](/docs2/images/ui/properties/modifiers/mesh-deform/invert-cull.png){.right}
+![Invert Cull](/docs2/images/ui/properties/modifiers/mesh-deform/invert-cull.png)
 
 When projecting in the negative direction then invert culling.
 
@@ -430,7 +400,7 @@ You need to have negative ticked and face cull either front or back to set this 
 
 #### Nearest Vertex
 
-![Nearest Vertex](/docs2/images/ui/properties/modifiers/mesh-deform/nearest-vertex.png){.right}
+![Nearest Vertex](/docs2/images/ui/properties/modifiers/mesh-deform/nearest-vertex.png)
 
 Snaps to the nearest vertex instead of the nearest surface point.
 
@@ -445,9 +415,7 @@ The target mesh to shrink to.
 
 ## Simple Deform
 
-::tool{id=modifier.simple_deform}
-
-![Simple Deform](/docs2/images/ui/properties/modifiers/mesh-deform/simple-deform.png){.right}
+![Simple Deform](/docs2/images/ui/properties/modifiers/mesh-deform/simple-deform.png)
 
 The Simple Deform modifier allows simple deforming of an object of type Mesh, lattice, curve, surface and text.
 
@@ -470,7 +438,7 @@ Pick an object to use its origin as the origin for the simple deformation.
 
 #### Limits
 
-![Limits](/docs2/images/ui/properties/modifiers/mesh-deform/limits.png){.right}
+![Limits](/docs2/images/ui/properties/modifiers/mesh-deform/limits.png)
 
 You can set lower and upper limits for the deformation. The upper limit cannot be lower than the lower one. These limits are mapped on the Deform axis.
 
@@ -481,9 +449,7 @@ You can set lower and upper limits for the deformation. The upper limit cannot b
 
 ## Smooth
 
-::tool{id=modifier.smooth}
-
-![Smooth](/docs2/images/ui/properties/modifiers/mesh-deform/smooth.png){.right}
+![Smooth](/docs2/images/ui/properties/modifiers/mesh-deform/smooth.png)
 
 The Smooth modifier smoothens a mesh by flattening the angles between adjacent faces.
 
@@ -496,9 +462,7 @@ The Smooth modifier smoothens a mesh by flattening the angles between adjacent f
 
 ## Smooth Corrective
 
-::tool{id=modifier.smooth_corrective}
-
-![Smooth Corrective](/docs2/images/ui/properties/modifiers/mesh-deform/smooth-corrective.png){.right}
+![Smooth Corrective](/docs2/images/ui/properties/modifiers/mesh-deform/smooth-corrective.png)
 
 The Smooth Corrective modifier tries to reduce highly distorted areas of a mesh. Like an armature with distortions at bent knees.
 
@@ -514,7 +478,7 @@ The Smooth Corrective modifier tries to reduce highly distorted areas of a mesh.
 
 ### Rest Source
 
-![Rest Source](/docs2/images/ui/properties/modifiers/mesh-deform/rest-source.png){.thumb}
+![Rest Source](/docs2/images/ui/properties/modifiers/mesh-deform/rest-source.png)
 
 Select the source for reference vertex positions that defines the undeformed state.
 
@@ -525,9 +489,7 @@ Select the source for reference vertex positions that defines the undeformed sta
 
 ## Smooth Laplacian
 
-::tool{id=modifier.smooth_laplacian}
-
-![Smooth Laplacian](/docs2/images/ui/properties/modifiers/mesh-deform/smooth-laplacian.png){.right}
+![Smooth Laplacian](/docs2/images/ui/properties/modifiers/mesh-deform/smooth-laplacian.png)
 
 The Smooth Laplacian modifier tries to reduce noise on a mesh’s surface with minimal changes to its shape. It can also exaggerate the shape using a negative Factor.
 
@@ -543,9 +505,7 @@ The Smooth Laplacian modifier tries to reduce noise on a mesh’s surface with m
 
 ## Surface Deform
 
-::tool{id=modifier.surface_deform}
-
-![Surface Deform](/docs2/images/ui/properties/modifiers/mesh-deform/surface-deform.png){.right}
+![Surface Deform](/docs2/images/ui/properties/modifiers/mesh-deform/surface-deform.png)
 
 The Surface Deform modifier allows an arbitrary mesh surface to control the deformation of another object.
 
@@ -558,12 +518,8 @@ The target mesh:
 - Must not contain overlapping vertices (doubles).
 - Must not contain faces with co-linear edges.
 
-:::note
-The meshes are bound in global coordinates. But later transformations on the objects are ignored. This means that one can freely transform the target or modified object after binding, without affecting the modified object. The modified mesh will only pick up changes to the target object’s mesh itself.
-:::
-:::note
-The more a mesh surface differs from the target mesh surface, the more likely it will show undesirable artifacts. So it is recommended to have reasonably well matching meshes to get a good bind.
-:::
+> **Note:** The meshes are bound in global coordinates. But later transformations on the objects are ignored. This means that one can freely transform the target or modified object after binding, without affecting the modified object. The modified mesh will only pick up changes to the target object’s mesh itself.
+> **Note:** The more a mesh surface differs from the target mesh surface, the more likely it will show undesirable artifacts. So it is recommended to have reasonably well matching meshes to get a good bind.
 
 | Property | What it changes |
 |---|---|
@@ -578,11 +534,9 @@ The more a mesh surface differs from the target mesh surface, the more likely it
 
 ## Warp
 
-::tool{id=modifier.warp}
+![Warp](/docs2/images/ui/properties/modifiers/mesh-deform/warp.png)
 
-![Warp](/docs2/images/ui/properties/modifiers/mesh-deform/warp.png){.right}
-
-![Warp](/docs2/images/ui/properties/modifiers/mesh-deform/warp-2.png){.thumb}
+![Warp](/docs2/images/ui/properties/modifiers/mesh-deform/warp-2.png)
 
 The Warp modifier warps parts of a mesh to a new location by using two target objects. The deformation goes into the direction from the first target object to the second target object. This target objects can be of any type. Empty, Lamp, Camera, etc. For demonstration purposes two spheres are used.
 
@@ -596,11 +550,11 @@ The Warp modifier warps parts of a mesh to a new location by using two target ob
 
 ### Falloff
 
-![Falloff](/docs2/images/ui/properties/modifiers/mesh-deform/falloff-2.png){.right}
+![Falloff](/docs2/images/ui/properties/modifiers/mesh-deform/falloff-2.png)
 
 #### Falloff Type
 
-![Falloff Type](/docs2/images/ui/properties/modifiers/mesh-deform/falloff-type.png){.thumb}
+![Falloff Type](/docs2/images/ui/properties/modifiers/mesh-deform/falloff-type.png)
 
 The falloff type. How the strength of the warp changes as it goes from the center of the transform to the Radius value.
 
@@ -610,15 +564,15 @@ The distance from the transforms that can be warped by the transform handles.
 
 ### Texture
 
-![Texture](/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png){.right}
+![Texture](/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png)
 
 A texture allows you to control how the vertices are affected by the modifier.
 
 #### Usage
 
-![Usage](/docs2/images/ui/properties/modifiers/mesh-deform/usage.png){.thumb}
+![Usage](/docs2/images/ui/properties/modifiers/mesh-deform/usage.png)
 
-![Usage](/docs2/images/ui/properties/modifiers/mesh-deform/usage-2.png){.thumb}
+![Usage](/docs2/images/ui/properties/modifiers/mesh-deform/usage-2.png)
 
 Add a texture.
 
@@ -628,11 +582,11 @@ In the texture tab either load an existing texture. Or create one. A procedural 
 
 #### Texture Prop
 
-![Texture Prop](/docs2/images/ui/properties/modifiers/mesh-deform/texture-prop.png){.right}
+![Texture Prop](/docs2/images/ui/properties/modifiers/mesh-deform/texture-prop.png)
 
 ##### Texture browser
 
-![Texture browser](/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png){.right}
+![Texture browser](/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png)
 
 A list of the available textures
 
@@ -646,25 +600,21 @@ A list of the available textures
 
 #### Coordinates
 
-![Coordinates](/docs2/images/ui/properties/modifiers/mesh-deform/coordinates-2.png){.thumb}
+![Coordinates](/docs2/images/ui/properties/modifiers/mesh-deform/coordinates-2.png)
 
 What texture coordinate system to use.
 
 ## Wave
 
-::tool{id=modifier.wave}
-
-![Wave](/docs2/images/ui/properties/modifiers/mesh-deform/wave.png){.right}
+![Wave](/docs2/images/ui/properties/modifiers/mesh-deform/wave.png)
 
 The Wave modifier adds a ripple-like shape to an object’s geometry. The shape can be animated by playing the animation.
 
-![Wave](/docs2/images/ui/properties/modifiers/mesh-deform/wave-2.png){.right}
+![Wave](/docs2/images/ui/properties/modifiers/mesh-deform/wave-2.png)
 
 This modifier works with meshes, lattices, curves, surfaces and texts.
 
-:::imp
-All the values are in local object space. They must be multiplied with the corresponding Scale values of the object to get the real dimensions.
-:::
+> **Important:** All the values are in local object space. They must be multiplied with the corresponding Scale values of the object to get the real dimensions.
 
 To obtain a nice wave effect similar to sea waves and close to a sinusoidal wave, make the distance between following ripples and the ripple width equal. That is, the Narrowness value must be equal to 2 / Width. E.g. for Width to be 1, set Narrow to 2.
 
@@ -682,7 +632,7 @@ When you want to have more circles at frame 1 already, then use a negative Offse
 
 ### Along Normals
 
-![Along Normals](/docs2/images/ui/properties/modifiers/mesh-deform/along-normals.png){.right}
+![Along Normals](/docs2/images/ui/properties/modifiers/mesh-deform/along-normals.png)
 
 For meshes only. Displaces the mesh along the surface normals (instead of the object’s Z axis).
 
@@ -701,7 +651,7 @@ Restrict displacement along normals to the selected local axes.
 
 ### Time
 
-![Time](/docs2/images/ui/properties/modifiers/mesh-deform/time.png){.right}
+![Time](/docs2/images/ui/properties/modifiers/mesh-deform/time.png)
 
 Settings to control the animation.
 
@@ -714,15 +664,15 @@ Settings to control the animation.
 
 ### Texture subtab
 
-![Texture subtab](/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png){.right}
+![Texture subtab](/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png)
 
 A texture allows you to control how the vertices are affected by the modifier.
 
 #### Usage
 
-![Usage](/docs2/images/ui/properties/modifiers/mesh-deform/usage.png){.thumb}
+![Usage](/docs2/images/ui/properties/modifiers/mesh-deform/usage.png)
 
-![Usage](/docs2/images/ui/properties/modifiers/mesh-deform/usage-2.png){.thumb}
+![Usage](/docs2/images/ui/properties/modifiers/mesh-deform/usage-2.png)
 
 Add a texture.
 
@@ -732,11 +682,11 @@ In the texture tab either load an existing texture. Or create one. A procedural 
 
 #### Texture Prop
 
-![Texture Prop](/docs2/images/ui/properties/modifiers/mesh-deform/texture-prop.png){.right}
+![Texture Prop](/docs2/images/ui/properties/modifiers/mesh-deform/texture-prop.png)
 
 ##### Texture browser
 
-![Texture browser](/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png){.right}
+![Texture browser](/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png)
 
 A list of the available textures
 
@@ -750,27 +700,25 @@ A list of the available textures
 
 #### Coordinates
 
-![Coordinates](/docs2/images/ui/properties/modifiers/mesh-deform/coordinates-2.png){.thumb}
+![Coordinates](/docs2/images/ui/properties/modifiers/mesh-deform/coordinates-2.png)
 
 What texture coordinate system to use.
 
 ## Volume Displace
 
-::tool{id=modifier.volume_displace}
-
-![Volume Displace](/docs2/images/ui/properties/modifiers/mesh-deform/volume-displace.png){.right}
+![Volume Displace](/docs2/images/ui/properties/modifiers/mesh-deform/volume-displace.png)
 
 The Volume Displace modifier displaces existing volume grids by a 3D texture. It uses the RGB color channels of the texture to displace the volume into the X, Y and Z direction.
 
 ### Texture Prop
 
-![Texture Prop](/docs2/images/ui/properties/modifiers/mesh-deform/texture-prop-2.png){.right}
+![Texture Prop](/docs2/images/ui/properties/modifiers/mesh-deform/texture-prop-2.png)
 
 The texture to use for the displacement of the voxels. For a three dimensional displacement colored textures should be used. Greyscale images just displaces into one direction. Colored images into all three directions.
 
 #### Texture Browser
 
-![Texture Browser](/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser-2.png){.right}
+![Texture Browser](/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser-2.png)
 
 A list of the available textures in the scene. Textures can be added in the Texture tab in the Properties Editor.
 
@@ -780,7 +728,7 @@ The name of the texture. Here you can also rename the texture.
 
 #### Change Context
 
-![Change Context](/docs2/images/ui/properties/modifiers/mesh-deform/change-context.png){.right}
+![Change Context](/docs2/images/ui/properties/modifiers/mesh-deform/change-context.png)
 
 Jump to the Texture tab to load a texture.
 
@@ -790,7 +738,7 @@ Removes the currently active texture.
 
 #### File selector menu
 
-![File selector menu](/docs2/images/ui/properties/modifiers/mesh-deform/file-selector-menu.png){.thumb}
+![File selector menu](/docs2/images/ui/properties/modifiers/mesh-deform/file-selector-menu.png)
 
 | Property | What it changes |
 |---|---|
@@ -802,7 +750,7 @@ Removes the currently active texture.
 
 ### Texture Mapping
 
-![Texture Mapping](/docs2/images/ui/properties/modifiers/mesh-deform/texture-mapping.png){.thumb}
+![Texture Mapping](/docs2/images/ui/properties/modifiers/mesh-deform/texture-mapping.png)
 
 What space to use to map the texture onto the object.
 

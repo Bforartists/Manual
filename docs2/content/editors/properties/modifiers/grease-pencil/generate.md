@@ -9,7 +9,7 @@ screenshots: "5.1"
 source: ["26.9.8 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Generate Modifiers.odt"]
 ---
 
-![Generate modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-generate/generate-modifiers-grease-pencil.png){.thumb}
+![Generate modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-generate/generate-modifiers-grease-pencil.png)
 
 Some of the modifiers are just available for specific object types.
 
@@ -17,9 +17,7 @@ Left grease pencil object, right a mesh object.
 
 ## Array
 
-::tool{id=modifier.grease_pencil_array}
-
-![Array](/docs2/images/ui/properties/modifiers/grease-pencil-generate/array.png){.right}
+![Array](/docs2/images/ui/properties/modifiers/grease-pencil-generate/array.png)
 
 The Array modifier creates an array of copies of the base object. Each copy can offset from the previous one in any of a number of possible ways. Vertices in adjacent copies can be merged if they are nearby, allowing smooth Subdivision Surface frameworks to be generated.
 
@@ -38,7 +36,7 @@ Hint for Offset Calculation. The transformation applied from one copy to the nex
 
 #### Factor X/Y/Z
 
-![Factor X/Y/Z](/docs2/images/ui/properties/modifiers/grease-pencil-generate/factor-x-y-z.png){.right}
+![Factor X/Y/Z](/docs2/images/ui/properties/modifiers/grease-pencil-generate/factor-x-y-z.png)
 
 Adds a translation equal to the object’s bounding box size along each axis to the offset, multiplied by a scaling factor. X, Y and Z scaling factors can be specified.
 
@@ -46,13 +44,13 @@ Adds a translation equal to the object’s bounding box size along each axis to 
 
 #### Distance X/Y/Z
 
-![Distance X/Y/Z](/docs2/images/ui/properties/modifiers/grease-pencil-generate/distance-x-y-z.png){.right}
+![Distance X/Y/Z](/docs2/images/ui/properties/modifiers/grease-pencil-generate/distance-x-y-z.png)
 
 Adds a constant translation component to the duplicate object’s offset. X, Y and Z constant components can be specified.
 
 ### Object Offset subpanel
 
-![Object Offset subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/object-offset-subpanel.png){.right}
+![Object Offset subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/object-offset-subpanel.png)
 
 Adds a transformation taken from a chosen object relative to the current object to the offset.
 
@@ -62,7 +60,7 @@ Choose an object.
 
 ### Randomize
 
-![Randomize](/docs2/images/ui/properties/modifiers/grease-pencil-generate/randomize.png){.right}
+![Randomize](/docs2/images/ui/properties/modifiers/grease-pencil-generate/randomize.png)
 
 Randomize the transform values.
 
@@ -75,7 +73,7 @@ Randomize the transform values.
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -86,39 +84,37 @@ Randomize the transform values.
 
 ## Build
 
-::tool{id=modifier.grease_pencil_build}
-
-![Build](/docs2/images/ui/properties/modifiers/grease-pencil-generate/build.png){.right}
+![Build](/docs2/images/ui/properties/modifiers/grease-pencil-generate/build.png)
 
 The Build modifier lets the strokes of the grease pencil object appear or disappear over time when you play the animation.
 
 ### Mode
 
-![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-generate/mode.png){.thumb}
+![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-generate/mode.png)
 
 How many strokes are animated at the same time.
 
 #### Sequential mode
 
-![Sequential mode](/docs2/images/ui/properties/modifiers/grease-pencil-generate/sequential-mode.png){.right}
+![Sequential mode](/docs2/images/ui/properties/modifiers/grease-pencil-generate/sequential-mode.png)
 
 Strokes appear or disappear one after the other.
 
 ##### Transition
 
-![Transition](/docs2/images/ui/properties/modifiers/grease-pencil-generate/transition.png){.thumb}
+![Transition](/docs2/images/ui/properties/modifiers/grease-pencil-generate/transition.png)
 
 How the strokes are animated. The items should be self explaining.
 
 ##### Timing
 
-![Timing](/docs2/images/ui/properties/modifiers/grease-pencil-generate/timing.png){.thumb}
+![Timing](/docs2/images/ui/properties/modifiers/grease-pencil-generate/timing.png)
 
 How to calculate the timing of the frames.
 
 ###### Natural Drawing Speed
 
-![Natural Drawing Speed](/docs2/images/ui/properties/modifiers/grease-pencil-generate/natural-drawing-speed.png){.right}
+![Natural Drawing Speed](/docs2/images/ui/properties/modifiers/grease-pencil-generate/natural-drawing-speed.png)
 
 Use recorded speed multiplied by a factor.
 
@@ -129,7 +125,7 @@ Use recorded speed multiplied by a factor.
 
 ###### Number of Frames
 
-![Number of Frames](/docs2/images/ui/properties/modifiers/grease-pencil-generate/number-of-frames.png){.right}
+![Number of Frames](/docs2/images/ui/properties/modifiers/grease-pencil-generate/number-of-frames.png)
 
 Set a fixed number of frames for all build animations.
 
@@ -140,7 +136,7 @@ Set a fixed number of frames for all build animations.
 
 ###### Percentage Factor
 
-![Percentage Factor](/docs2/images/ui/properties/modifiers/grease-pencil-generate/percentage-factor.png){.right}
+![Percentage Factor](/docs2/images/ui/properties/modifiers/grease-pencil-generate/percentage-factor.png)
 
 Set a manual percentage to build.
 
@@ -154,13 +150,13 @@ Pick an object as the starting position.
 
 #### Concurrent Mode
 
-![Concurrent Mode](/docs2/images/ui/properties/modifiers/grease-pencil-generate/concurrent-mode.png){.right}
+![Concurrent Mode](/docs2/images/ui/properties/modifiers/grease-pencil-generate/concurrent-mode.png)
 
 All strokes appear or disappear at once.
 
 ##### Transition
 
-![Transition](/docs2/images/ui/properties/modifiers/grease-pencil-generate/transition-2.png){.thumb}
+![Transition](/docs2/images/ui/properties/modifiers/grease-pencil-generate/transition-2.png)
 
 How the strokes are animated.
 
@@ -172,17 +168,17 @@ How the strokes are animated.
 
 ##### Timing
 
-![Timing](/docs2/images/ui/properties/modifiers/grease-pencil-generate/timing-2.png){.thumb}
+![Timing](/docs2/images/ui/properties/modifiers/grease-pencil-generate/timing-2.png)
 
 What method to use to build animations. Number of frames, or percentage.
 
 ###### Number of frames
 
-![Number of frames](/docs2/images/ui/properties/modifiers/grease-pencil-generate/number-of-frames-2.png){.right}
+![Number of frames](/docs2/images/ui/properties/modifiers/grease-pencil-generate/number-of-frames-2.png)
 
 **Time Alignment**
 
-![Time Alignment](/docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png){.thumb}
+![Time Alignment](/docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png)
 
 When strokes should start to appear or disappear.
 
@@ -201,11 +197,11 @@ Number of frames after each GP keyframe before the modifier has any effect.
 
 ###### Percentage Factor
 
-![Percentage Factor](/docs2/images/ui/properties/modifiers/grease-pencil-generate/percentage-factor-2.png){.right}
+![Percentage Factor](/docs2/images/ui/properties/modifiers/grease-pencil-generate/percentage-factor-2.png)
 
 **Time Alignment**
 
-![Time Alignment](/docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png){.thumb}
+![Time Alignment](/docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png)
 
 When strokes should start to appear or disappear.
 
@@ -224,19 +220,19 @@ Pick an object as the starting position.
 
 #### Additive
 
-![Additive](/docs2/images/ui/properties/modifiers/grease-pencil-generate/additive.png){.right}
+![Additive](/docs2/images/ui/properties/modifiers/grease-pencil-generate/additive.png)
 
 Builds only new strokes. Assumes additive painting.
 
 ##### Timing
 
-![Timing](/docs2/images/ui/properties/modifiers/grease-pencil-generate/timing-3.png){.thumb}
+![Timing](/docs2/images/ui/properties/modifiers/grease-pencil-generate/timing-3.png)
 
 What method to use to build animations.
 
 ###### Natural Drawing Speed
 
-![Natural Drawing Speed](/docs2/images/ui/properties/modifiers/grease-pencil-generate/natural-drawing-speed-2.png){.right}
+![Natural Drawing Speed](/docs2/images/ui/properties/modifiers/grease-pencil-generate/natural-drawing-speed-2.png)
 
 | Property | What it changes |
 |---|---|
@@ -245,11 +241,11 @@ What method to use to build animations.
 
 ###### Number of frames
 
-![Number of frames](/docs2/images/ui/properties/modifiers/grease-pencil-generate/number-of-frames-2.png){.right}
+![Number of frames](/docs2/images/ui/properties/modifiers/grease-pencil-generate/number-of-frames-2.png)
 
 **Time Alignment**
 
-![Time Alignment](/docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png){.thumb}
+![Time Alignment](/docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png)
 
 When strokes should start to appear or disappear.
 
@@ -268,11 +264,11 @@ Number of frames after each GP keyframe before the modifier has any effect.
 
 ###### Percentage Factor
 
-![Percentage Factor](/docs2/images/ui/properties/modifiers/grease-pencil-generate/percentage-factor-2.png){.right}
+![Percentage Factor](/docs2/images/ui/properties/modifiers/grease-pencil-generate/percentage-factor-2.png)
 
 **Time Alignment**
 
-![Time Alignment](/docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png){.thumb}
+![Time Alignment](/docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png)
 
 When strokes should start to appear or disappear.
 
@@ -293,7 +289,7 @@ How much the stroke is visible.
 
 ### Effective Range
 
-![Effective Range](/docs2/images/ui/properties/modifiers/grease-pencil-generate/effective-range.png){.right}
+![Effective Range](/docs2/images/ui/properties/modifiers/grease-pencil-generate/effective-range.png)
 
 Only modify strokes that lies in the specified time frame.
 
@@ -304,7 +300,7 @@ Only modify strokes that lies in the specified time frame.
 
 ### Fading subpanel
 
-![Fading subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/fading-subpanel.png){.right}
+![Fading subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/fading-subpanel.png)
 
 Fade out strokes instead of cutting them off.
 
@@ -317,7 +313,7 @@ Fade out strokes instead of cutting them off.
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -328,9 +324,7 @@ Fade out strokes instead of cutting them off.
 
 ## Dot Dash
 
-::tool{id=modifier.grease_pencil_dot_dash}
-
-![Dot Dash](/docs2/images/ui/properties/modifiers/grease-pencil-generate/dot-dash.png){.right}
+![Dot Dash](/docs2/images/ui/properties/modifiers/grease-pencil-generate/dot-dash.png)
 
 Turns a grease pencil stroke into a dotted line.
 
@@ -350,7 +344,7 @@ Manage the single segments of the dotted dash. Segments gets repeated as they ap
 
 #### Search element
 
-![Search element](/docs2/images/ui/properties/modifiers/grease-pencil-generate/search-element.png){.right}
+![Search element](/docs2/images/ui/properties/modifiers/grease-pencil-generate/search-element.png)
 
 By clicking at the triangle button you reveal a search field with which you can search through the list.
 
@@ -372,7 +366,7 @@ By clicking at the triangle button you reveal a search field with which you can 
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -383,15 +377,13 @@ By clicking at the triangle button you reveal a search field with which you can 
 
 ## Envelope
 
-::tool{id=modifier.grease_pencil_envelope}
-
-![Envelope](/docs2/images/ui/properties/modifiers/grease-pencil-generate/envelope.png){.right}
+![Envelope](/docs2/images/ui/properties/modifiers/grease-pencil-generate/envelope.png)
 
 Generates a envelope shape that connects all points in this envelope.
 
 ### Mode
 
-![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-generate/mode-2.png){.thumb}
+![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-generate/mode-2.png)
 
 | Property | What it changes |
 |---|---|
@@ -409,7 +401,7 @@ Generates a envelope shape that connects all points in this envelope.
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel-2.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel-2.png)
 
 | Property | What it changes |
 |---|---|
@@ -421,15 +413,13 @@ Generates a envelope shape that connects all points in this envelope.
 
 ## Length
 
-::tool{id=modifier.grease_pencil_length}
-
-![Length](/docs2/images/ui/properties/modifiers/grease-pencil-generate/length.png){.right}
+![Length](/docs2/images/ui/properties/modifiers/grease-pencil-generate/length.png)
 
 The Length Modifier extends or shortens the original strokes length.
 
 ### Mode
 
-![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-generate/mode-3.png){.thumb}
+![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-generate/mode-3.png)
 
 Defines the mode to use for the length calculation. Relative to the length of the grease pencil stroke, or absolute in geometry space.
 
@@ -440,7 +430,7 @@ Defines the mode to use for the length calculation. Relative to the length of th
 
 ### Randomize subpanel
 
-![Randomize subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/randomize-subpanel.png){.right}
+![Randomize subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/randomize-subpanel.png)
 
 Randomization for the start / end lengths.
 
@@ -454,7 +444,7 @@ Randomization for the start / end lengths.
 
 ### Curvature subpanel
 
-![Curvature subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/curvature-subpanel.png){.right}
+![Curvature subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/curvature-subpanel.png)
 
 Follow the curvature of the stroke.
 
@@ -467,7 +457,7 @@ Follow the curvature of the stroke.
 
 ### Influence
 
-![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png){.right}
+![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -478,9 +468,7 @@ Follow the curvature of the stroke.
 
 ## Line Art
 
-::tool{id=modifier.grease_pencil_line_art}
-
-![Line Art](/docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art.png){.right}
+![Line Art](/docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art.png)
 
 The Line Art modifier generates stylized line art from the scene or selected source collection or objects.
 
@@ -490,19 +478,19 @@ This modifier requires to have a ACTIVE camera in the scene, since the outline i
 
 The active camera has the active orange triangle above the widget. You can also see the active camera in the Scene properties.
 
-![Line Art](/docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art-2.png){.right}
+![Line Art](/docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art-2.png)
 
-![Line Art](/docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art-3.png){.right}
+![Line Art](/docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art-3.png)
 
 ### Source Type
 
-![Source Type](/docs2/images/ui/properties/modifiers/grease-pencil-generate/source-type.png){.thumb}
+![Source Type](/docs2/images/ui/properties/modifiers/grease-pencil-generate/source-type.png)
 
 What type of geometry source should line art be generated from.
 
 #### Collection
 
-![Collection](/docs2/images/ui/properties/modifiers/grease-pencil-generate/collection.png){.right}
+![Collection](/docs2/images/ui/properties/modifiers/grease-pencil-generate/collection.png)
 
 | Property | What it changes |
 |---|---|
@@ -514,7 +502,7 @@ What type of geometry source should line art be generated from.
 
 #### Object
 
-![Object](/docs2/images/ui/properties/modifiers/grease-pencil-generate/object.png){.right}
+![Object](/docs2/images/ui/properties/modifiers/grease-pencil-generate/object.png)
 
 | Property | What it changes |
 |---|---|
@@ -526,7 +514,7 @@ What type of geometry source should line art be generated from.
 
 #### Scene
 
-![Scene](/docs2/images/ui/properties/modifiers/grease-pencil-generate/scene.png){.right}
+![Scene](/docs2/images/ui/properties/modifiers/grease-pencil-generate/scene.png)
 
 Applies the line art grease pencil strokes to the whole scene.
 
@@ -539,7 +527,7 @@ Applies the line art grease pencil strokes to the whole scene.
 
 ### Edge types subpanel
 
-![Edge types subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/edge-types-subpanel.png){.right}
+![Edge types subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/edge-types-subpanel.png)
 
 Which kind of edges to influence.
 
@@ -551,7 +539,7 @@ Use a contour.
 
 ###### Silhouette Filtering
 
-![Silhouette Filtering](/docs2/images/ui/properties/modifiers/grease-pencil-generate/silhouette-filtering.png){.thumb}
+![Silhouette Filtering](/docs2/images/ui/properties/modifiers/grease-pencil-generate/silhouette-filtering.png)
 
 What kind of contour to use.
 
@@ -573,7 +561,7 @@ What kind of contour to use.
 
 ##### Illumination filtering
 
-![Illumination filtering](/docs2/images/ui/properties/modifiers/grease-pencil-generate/illumination-filtering.png){.right}
+![Illumination filtering](/docs2/images/ui/properties/modifiers/grease-pencil-generate/illumination-filtering.png)
 
 You need to pick a light object in the Light Reference panel. How to thread the shadow region filtering. The names should be self explaining.
 
@@ -585,7 +573,7 @@ Allow an edge to have multiple overlapping types.
 
 ### Light Reference subpanel
 
-![Light Reference subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/light-reference-subpanel.png){.right}
+![Light Reference subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/light-reference-subpanel.png)
 
 This panel allows you to add a light object as a source for line art.
 
@@ -598,7 +586,7 @@ This panel allows you to add a light object as a source for line art.
 
 ### Geometry Processing subpanel
 
-![Geometry Processing subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/geometry-processing-subpanel.png){.right}
+![Geometry Processing subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/geometry-processing-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -612,7 +600,7 @@ This panel allows you to add a light object as a source for line art.
 
 ### Occlusion Subpanel
 
-![Occlusion Subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/occlusion-subpanel.png){.right}
+![Occlusion Subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/occlusion-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -621,7 +609,7 @@ This panel allows you to add a light object as a source for line art.
 
 ### Intersection subpanel
 
-![Intersection subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/intersection-subpanel.png){.right}
+![Intersection subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/intersection-subpanel.png)
 
 #### Collection Masks
 
@@ -633,7 +621,7 @@ Require matching all intersections instead of just one.
 
 ### Face Mask Filtering subpanel
 
-![Face Mask Filtering subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/face-mask-filtering-subpanel.png){.right}
+![Face Mask Filtering subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/face-mask-filtering-subpanel.png)
 
 Filter Feature Lines using Freestlye Face Masks.
 
@@ -645,7 +633,7 @@ Filter Feature Lines using Freestlye Face Masks.
 
 ### Chain
 
-![Chain](/docs2/images/ui/properties/modifiers/grease-pencil-generate/chain.png){.right}
+![Chain](/docs2/images/ui/properties/modifiers/grease-pencil-generate/chain.png)
 
 | Property | What it changes |
 |---|---|
@@ -660,7 +648,7 @@ Filter Feature Lines using Freestlye Face Masks.
 
 ### Vertex Weight Transfer subpanel
 
-![Vertex Weight Transfer subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/vertex-weight-transfer-subpanel.png){.right}
+![Vertex Weight Transfer subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/vertex-weight-transfer-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -670,7 +658,7 @@ Filter Feature Lines using Freestlye Face Masks.
 
 ### Composition
 
-![Composition](/docs2/images/ui/properties/modifiers/grease-pencil-generate/composition.png){.right}
+![Composition](/docs2/images/ui/properties/modifiers/grease-pencil-generate/composition.png)
 
 | Property | What it changes |
 |---|---|
@@ -679,7 +667,7 @@ Filter Feature Lines using Freestlye Face Masks.
 
 ### Bake subpanel
 
-![Bake subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/bake-subpanel.png){.right}
+![Bake subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/bake-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -688,9 +676,7 @@ Filter Feature Lines using Freestlye Face Masks.
 
 ## Mirror
 
-::tool{id=modifier.grease_pencil_mirror}
-
-![Mirror](/docs2/images/ui/properties/modifiers/grease-pencil-generate/mirror.png){.right}
+![Mirror](/docs2/images/ui/properties/modifiers/grease-pencil-generate/mirror.png)
 
 The Mirror modifier for the Grease Pencil Object works in Object mode. It mirrors the object along its local X, Y and/or Z axes, across the Object Origin. It can also use another object as the mirror center, then use that object’s local axes instead of its own.
 
@@ -702,7 +688,7 @@ You can animate it to move the mirror axis.
 
 ### Influence
 
-![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png){.right}
+![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -713,9 +699,7 @@ You can animate it to move the mirror axis.
 
 ## Multiple Strokes
 
-::tool{id=modifier.grease_pencil_multiple_strokes}
-
-![Multiple Strokes](/docs2/images/ui/properties/modifiers/grease-pencil-generate/multiple-strokes.png){.right}
+![Multiple Strokes](/docs2/images/ui/properties/modifiers/grease-pencil-generate/multiple-strokes.png)
 
 Adds multiple parallel copies of the stroke around the original stroke.
 
@@ -727,7 +711,7 @@ Adds multiple parallel copies of the stroke around the original stroke.
 
 ### Fade
 
-![Fade](/docs2/images/ui/properties/modifiers/grease-pencil-generate/fade.png){.right}
+![Fade](/docs2/images/ui/properties/modifiers/grease-pencil-generate/fade.png)
 
 Fade out duplicate strokes, using their opacity or thickness.
 
@@ -739,7 +723,7 @@ Fade out duplicate strokes, using their opacity or thickness.
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -750,23 +734,21 @@ Fade out duplicate strokes, using their opacity or thickness.
 
 ## Outline
 
-::tool{id=modifier.grease_pencil_outline}
+![Outline](/docs2/images/ui/properties/modifiers/grease-pencil-generate/outline.png)
 
-![Outline](/docs2/images/ui/properties/modifiers/grease-pencil-generate/outline.png){.right}
-
-![Outline](/docs2/images/ui/properties/modifiers/grease-pencil-generate/outline-2.png){.right}
+![Outline](/docs2/images/ui/properties/modifiers/grease-pencil-generate/outline-2.png)
 
 Draws an outline around the grease pencil stroke.
 
-![Outline](/docs2/images/ui/properties/modifiers/grease-pencil-generate/outline-3.png){.right}
+![Outline](/docs2/images/ui/properties/modifiers/grease-pencil-generate/outline-3.png)
 
 This modifier requires to have a ACTIVE camera in the scene, since the outline is created from this active camera. And the outline is created from exact this view of the camera. So better switch to camera view to check if the view fits. You will get a warning in the modifier when the active camera is missing.
 
 The active camera has the active orange triangle above the widget. You can also see the active camera in the Scene properties.
 
-![Outline](/docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art-2.png){.right}
+![Outline](/docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art-2.png)
 
-![Outline](/docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art-3.png){.right}
+![Outline](/docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art-3.png)
 
 | Property | What it changes |
 |---|---|
@@ -779,7 +761,7 @@ The active camera has the active orange triangle above the widget. You can also 
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -790,15 +772,13 @@ The active camera has the active orange triangle above the widget. You can also 
 
 ## Simplify
 
-::tool{id=modifier.grease_pencil_simplify}
-
-![Simplify](/docs2/images/ui/properties/modifiers/grease-pencil-generate/simplify.png){.right}
+![Simplify](/docs2/images/ui/properties/modifiers/grease-pencil-generate/simplify.png)
 
 The Simplify modifier allows you to reduce the amount of points in the strokes. It tries to reduce points while maintaining the lines shape.
 
 ### Mode
 
-![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-generate/mode-4.png){.thumb}
+![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-generate/mode-4.png)
 
 How to reduce points in the strokes.
 
@@ -812,7 +792,7 @@ How to reduce points in the strokes.
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -823,15 +803,13 @@ How to reduce points in the strokes.
 
 ## Subdivide
 
-::tool{id=modifier.grease_pencil_subdivide}
-
-![Subdivide](/docs2/images/ui/properties/modifiers/grease-pencil-generate/subdivide.png){.right}
+![Subdivide](/docs2/images/ui/properties/modifiers/grease-pencil-generate/subdivide.png)
 
 The Subdivide modifier subdivide the strokes by inserting points between other points to the lines.
 
 ### Subdivision Type
 
-![Subdivision Type](/docs2/images/ui/properties/modifiers/grease-pencil-generate/subdivision-type.png){.thumb}
+![Subdivision Type](/docs2/images/ui/properties/modifiers/grease-pencil-generate/subdivision-type.png)
 
 | Property | What it changes |
 |---|---|
@@ -844,7 +822,7 @@ Number of subdivisions.
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel-3.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel-3.png)
 
 | Property | What it changes |
 |---|---|

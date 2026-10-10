@@ -11,17 +11,13 @@ source: ["26.9.2 Editors - Properties Editor - Modifiers Properties Tab - Add Mo
 
 ## Normal Edit
 
-::tool{id=modifier.normal_edit}
-
-![Normal Edit](/docs2/images/ui/properties/modifiers/mesh-normals/normal-edit.png){.right}
+![Normal Edit](/docs2/images/ui/properties/modifiers/mesh-normals/normal-edit.png)
 
 The Normal Edit modifier affects (or generates) custom normals. It uses a few simple parametric methods to compute them, and mixes back those generated normals with existing ones.
 
-![Normal Edit](/docs2/images/ui/properties/modifiers/mesh-normals/normal-edit-2.png){.right}
+![Normal Edit](/docs2/images/ui/properties/modifiers/mesh-normals/normal-edit-2.png)
 
-:::note
-This modifier requires custom normals to be enabled, which can be done by enabling Auto Smooth in the Properties.
-:::
+> **Note:** This modifier requires custom normals to be enabled, which can be done by enabling Auto Smooth in the Properties.
 
 Tip. More complex normal manipulations can be achieved by copying normals from one mesh to another, see the Data Transfer Modifier. Some shading effects can also make use of the Weighted Normals modifier.
 
@@ -33,11 +29,11 @@ Tip. More complex normal manipulations can be achieved by copying normals from o
 
 ### Mix
 
-![Mix](/docs2/images/ui/properties/modifiers/mesh-normals/mix.png){.right}
+![Mix](/docs2/images/ui/properties/modifiers/mesh-normals/mix.png)
 
 #### Mix Mode
 
-![Mix Mode](/docs2/images/ui/properties/modifiers/mesh-normals/mix-mode.png){.thumb}
+![Mix Mode](/docs2/images/ui/properties/modifiers/mesh-normals/mix-mode.png)
 
 How to affect existing normals with newly generated ones.
 
@@ -58,7 +54,7 @@ Prevents flipping (reversing front/back sides) of polygons which normal does not
 
 ### Offset
 
-![Offset](/docs2/images/ui/properties/modifiers/mesh-normals/offset.png){.right}
+![Offset](/docs2/images/ui/properties/modifiers/mesh-normals/offset.png)
 
 Gives the origin of the modified object an offset before using it to generate normals.
 
@@ -66,9 +62,7 @@ Offset is only relevant in Radial mode if no Target Object is set, and in Direct
 
 ## Weighted Normal
 
-::tool{id=modifier.weighted_normal}
-
-![Weighted Normal](/docs2/images/ui/properties/modifiers/mesh-normals/weighted-normal.png){.right}
+![Weighted Normal](/docs2/images/ui/properties/modifiers/mesh-normals/weighted-normal.png)
 
 This modifier allows you to change the custom normals of a mesh. This can be useful to make some faces appear very flat during shading, among other effects.
 
@@ -83,9 +77,7 @@ This modifier allows you to change the custom normals of a mesh. This can be use
 
 ## Smooth by Angle Modifier Asset
 
-::tool{id=modifier.smooth_by_angle_modifier_asset}
-
-![Smooth by Angle Modifier Asset](/docs2/images/ui/properties/modifiers/mesh-normals/smooth-by-angle-modifier-asset.png){.right}
+![Smooth by Angle Modifier Asset](/docs2/images/ui/properties/modifiers/mesh-normals/smooth-by-angle-modifier-asset.png)
 
 This modifier asset is a Geometry Nodegroup that does an “autosmooth” operation on the normals. By default this will consider edges that have been marked as sharp.
 

@@ -1,0 +1,46 @@
+# Sidebar order and icons. Generated from tools/pages.json by tools/make_nav.py;
+# icons you set here are kept on the next run.
+
+- section: getting-started
+  title: "Getting Started"
+  slug: overview
+  pages:
+    - { id: "getting-started.index", title: "Getting Started", file: "content/getting-started/index.md", icon: null }
+    - { id: "getting-started.introduction", title: "Introduction", file: "content/getting-started/introduction.md", icon: null }
+    - { id: "getting-started.about-documentation", title: "About Documentation", file: "content/getting-started/about-documentation.md", icon: null }
+    - { id: "getting-started.installation", title: "Installation", file: "content/getting-started/installation.md", icon: null }
+    - { id: "getting-started.quick-start", title: "Quick Start", file: "content/getting-started/quick-start.md", icon: null }
+    - { id: "getting-started.data-structure", title: "Data Structure", file: "content/getting-started/data-structure.md", icon: null }
+    - { id: "getting-started.differences", title: "Comparing to Blender", file: "content/getting-started/differences.md", icon: null }
+    - { id: "getting-started.migrating-from-blender", title: "Migrating from Blender", file: "content/getting-started/migrating-from-blender.md", icon: null }
+
+- section: interface
+  title: "Interface"
+  slug: interface
+  pages:
+    - { id: "interface.basics", title: "Interface basics", file: "content/interface/basics.md", icon: null }
+    - { id: "interface.header", title: "Header", file: "content/interface/components/header.md", icon: null }
+    - { id: "interface.panels-and-tabs", title: "Panels and tabs", file: "content/interface/components/panels-and-tabs.md", icon: null }
+    - { id: "interface.controls", title: "Menus, buttons and controls", file: "content/interface/components/menus-buttons-controls.md", icon: null }
+    - { id: "interface.tool-shelf", title: "Tool shelf", file: "content/interface/components/tool-shelf.md", icon: null }
+    - { id: "interface.sidebar", title: "Sidebar", file: "content/interface/components/sidebar.md", icon: null }
+    - { id: "interface.input-devices", title: "Input devices", file: "content/interface/input-devices.md", icon: null }
+
+- section: editors
+  title: "Editors"
+  slug: editors
+  pages:
+    - { id: "editors.timeline", title: "Timeline", file: "content/editors/timeline/index.md", icon: null }
+    - { id: "editors.timeline.header", title: "Timeline header", file: "content/editors/timeline/header.md", icon: null }
+    - { id: "editors.timeline.channel-list", title: "Timeline channel list", file: "content/editors/timeline/channel-list.md", icon: null }
+    - { id: "editors.timeline.viewport", title: "Timeline viewport", file: "content/editors/timeline/viewport.md", icon: null }
+    - { id: "editors.properties.modifiers", title: "Modifiers tab", file: "content/editors/properties/modifiers/index.md", icon: null }
+    - { id: "editors.properties.modifiers.mesh.normals", title: "Normals modifiers (Mesh)", file: "content/editors/properties/modifiers/mesh/normals.md", icon: null }
+    - { id: "editors.properties.modifiers.mesh.edit", title: "Edit modifiers (Mesh)", file: "content/editors/properties/modifiers/mesh/edit.md", icon: null }
+    - { id: "editors.properties.modifiers.mesh.generate", title: "Generate modifiers (Mesh)", file: "content/editors/properties/modifiers/mesh/generate.md", icon: null }
+    - { id: "editors.properties.modifiers.mesh.deform", title: "Deform modifiers (Mesh)", file: "content/editors/properties/modifiers/mesh/deform.md", icon: null }
+    - { id: "editors.properties.modifiers.mesh.physics", title: "Physics modifiers (Mesh)", file: "content/editors/properties/modifiers/mesh/physics.md", icon: null }
+    - { id: "editors.properties.modifiers.grease-pencil.edit", title: "Edit modifiers (Grease Pencil)", file: "content/editors/properties/modifiers/grease-pencil/edit.md", icon: null }
+    - { id: "editors.properties.modifiers.grease-pencil.generate", title: "Generate modifiers (Grease Pencil)", file: "content/editors/properties/modifiers/grease-pencil/generate.md", icon: null }
+    - { id: "editors.properties.modifiers.grease-pencil.deform", title: "Deform modifiers (Grease Pencil)", file: "content/editors/properties/modifiers/grease-pencil/deform.md", icon: null }
+    - { id: "editors.properties.modifiers.grease-pencil.color", title: "Color modifiers (Grease Pencil)", file: "content/editors/properties/modifiers/grease-pencil/color.md", icon: null }

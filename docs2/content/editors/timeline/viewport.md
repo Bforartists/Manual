@@ -21,7 +21,7 @@ Clicking left at the number bar moves the frame marker.
 
 Middle mouse button pans the view.
 
-Holding :kbd[Ctrl+MMB] zooms the view.
+Holding Ctrl + MMB zooms the view.
 
 Scroll Wheel zooms the view.
 
@@ -29,7 +29,7 @@ To drag a keyframe click at it and drag the mouse.
 
 ## Dope Sheet Context Menu
 
-![Dope Sheet Context Menu](/docs2/images/ui/timeline/viewport/dope-sheet-context-menu.png){.thumb}
+![Dope Sheet Context Menu](/docs2/images/ui/timeline/viewport/dope-sheet-context-menu.png)
 
 When you right click into the timeline viewport then you will call the Dope Sheet context menu. Despite being in the time line.
 
@@ -41,17 +41,17 @@ When you right click into the timeline viewport then you will call the Dope Shee
 
 ### Keyframe Type submenu
 
-![Keyframe Type submenu](/docs2/images/ui/timeline/viewport/keyframe-type-submenu.png){.right}
+![Keyframe Type submenu](/docs2/images/ui/timeline/viewport/keyframe-type-submenu.png)
 
 Recolor the currently selected keyframes.
 
 ### Handle Type submenu
 
-![Handle Type submenu](/docs2/images/ui/timeline/viewport/handle-type-submenu.png){.right}
+![Handle Type submenu](/docs2/images/ui/timeline/viewport/handle-type-submenu.png)
 
 Set the handle type for the currently selected keyframes.
 
-![Handle Type submenu](/docs2/images/ui/timeline/viewport/handle-type-submenu-2.png){.right}
+![Handle Type submenu](/docs2/images/ui/timeline/viewport/handle-type-submenu-2.png)
 
 This is a feature for the Graph editor, where each curve point has its own handler with which you can influence the curve behavior. But the handler type also influences how the animation curve acts at the chosen keyframes. So it has its use in the dope sheet editor too.
 
@@ -65,7 +65,7 @@ The easing methods here in the interpolation mode menu are for the easing shape.
 
 ### Easing Mode submenu
 
-![Easing Mode submenu](/docs2/images/ui/timeline/viewport/easing-mode-submenu.png){.right}
+![Easing Mode submenu](/docs2/images/ui/timeline/viewport/easing-mode-submenu.png)
 
 The easing methods in the interpolation mode menu are for the easing shape. This menu allows you to choose an easing method.
 
@@ -77,36 +77,36 @@ The easing methods in the interpolation mode menu are for the easing shape. This
 
 ### Mirror submenu
 
-![Mirror submenu](/docs2/images/ui/timeline/viewport/mirror-submenu.png){.right}
+![Mirror submenu](/docs2/images/ui/timeline/viewport/mirror-submenu.png)
 
 Mirrors the animation by the given method.
 
 ### Snap submenu
 
-![Snap submenu](/docs2/images/ui/timeline/viewport/snap-submenu.png){.right}
+![Snap submenu](/docs2/images/ui/timeline/viewport/snap-submenu.png)
 
 Snaps the selected keyframes by the given method.
 
 ## Slider snapping
 
-![Slider snapping](/docs2/images/ui/timeline/viewport/slider-snapping.png){.right}
+![Slider snapping](/docs2/images/ui/timeline/viewport/slider-snapping.png)
 
-Snapping also works at sliders. Hover with the mouse over the slider, start to slide, and holding down :kbd[Ctrl] will snap the sliders in incremental steps.
+Snapping also works at sliders. Hover with the mouse over the slider, start to slide, and holding down **Ctrl** will snap the sliders in incremental steps.
 
 When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.
 
-![Slider snapping](/docs2/images/ui/timeline/viewport/slider-snapping-2.png){.thumb}
+![Slider snapping](/docs2/images/ui/timeline/viewport/slider-snapping-2.png)
 
 The increment snapping also works at the frame slider. here the incremental snapping happens by the frame rate that you have defined. With a frame rate of 24 it will snap in steps of 24 frames when holding down ctrl.
 
 ## Quick Favorites menu
 
-![Quick Favorites menu](/docs2/images/ui/timeline/viewport/quick-favorites-menu.png){.thumb}
+![Quick Favorites menu](/docs2/images/ui/timeline/viewport/quick-favorites-menu.png)
 
 When you right click at a menu or a button, then a right click menu will open. Tools have usually a Add to Quick Favorites menu entry.
 
 The Quick Menu is empty by default. With Add to Quick favorites you can add this menu to the Quick menu.
 
-![Quick Favorites menu](/docs2/images/ui/timeline/viewport/quick-favorites-menu-2.png){.right}
+![Quick Favorites menu](/docs2/images/ui/timeline/viewport/quick-favorites-menu-2.png)
 
 In the 3D view we have a menu called Quick in the header, which shows this content then. In the Dope Sheet Editor you can just call it with its hotkey. Q. It has no regular menu entry here.

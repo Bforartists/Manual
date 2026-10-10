@@ -9,7 +9,7 @@ screenshots: "5.1"
 source: ["26.9 Editors - Properties Editor - Modifiers Properties Tab.odt", "26.9.1 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus.odt"]
 ---
 
-![Modifiers tab](/docs2/images/ui/properties/modifiers/modifiers-tab.png){.right}
+![Modifiers tab](/docs2/images/ui/properties/modifiers/modifiers-tab.png)
 
 Modifers are automatic operations that affects the geometry of objects in a non destructive way. You can, for example ,subdivide a mesh object dynamically where the base geometry stays intact when in edit mode.
 
@@ -23,7 +23,7 @@ There are two general types of objects where you can use modifiers. Mesh objects
 
 Each object types shows a different set of modifiers. Some modifiers have the same name, but shows different settings for different object types.
 
-![Object types with modifiers](/docs2/images/ui/properties/modifiers/object-types-with-modifiers.png){.right}
+![Object types with modifiers](/docs2/images/ui/properties/modifiers/object-types-with-modifiers.png)
 
 Mesh object
 
@@ -31,7 +31,7 @@ These show modifiers divided into four categories: Edit, Generate, Deform and Ph
 
 You can also use Geometry Nodes Asset Modifiers.
 
-![Object types with modifiers](/docs2/images/ui/properties/modifiers/object-types-with-modifiers-2.png){.right}
+![Object types with modifiers](/docs2/images/ui/properties/modifiers/object-types-with-modifiers-2.png)
 
 Curve + Text Object
 
@@ -39,7 +39,7 @@ These show modifiers divided into four categories: Edit, Generate, Deform and Ph
 
 You can also use Geometry Nodes Asset Modifiers.
 
-![Object types with modifiers](/docs2/images/ui/properties/modifiers/object-types-with-modifiers-3.png){.thumb}
+![Object types with modifiers](/docs2/images/ui/properties/modifiers/object-types-with-modifiers-3.png)
 
 Point Cloud object
 
@@ -47,19 +47,19 @@ Just one entry.
 
 Volume Object
 
-![Object types with modifiers](/docs2/images/ui/properties/modifiers/object-types-with-modifiers-4.png){.right}
+![Object types with modifiers](/docs2/images/ui/properties/modifiers/object-types-with-modifiers-4.png)
 
 These show modifiers divided into two categories: Generate and Deform.
 
 You can also use Geometry Nodes Asset Modifiers.
 
-![Object types with modifiers](/docs2/images/ui/properties/modifiers/object-types-with-modifiers-5.png){.right}
+![Object types with modifiers](/docs2/images/ui/properties/modifiers/object-types-with-modifiers-5.png)
 
 Grease Pencil Object
 
 These show modifiers divided into four categories: Edit, Generate, Deform and Color.
 
-![Object types with modifiers](/docs2/images/ui/properties/modifiers/object-types-with-modifiers-6.png){.right}
+![Object types with modifiers](/docs2/images/ui/properties/modifiers/object-types-with-modifiers-6.png)
 
 Lattice Object
 
@@ -91,19 +91,17 @@ To add a modifier to a selection of objects, simply open the add menu, and choos
 
 This will add the modifier to the list on your selection.
 
-![Add Modifier](/docs2/images/ui/properties/modifiers/add-modifier-2.png){.right}
+![Add Modifier](/docs2/images/ui/properties/modifiers/add-modifier-2.png)
 
 For some modifiers you will also find menu items in the 3D view. The Quick effect Fluid will for example add a fluid and liquid particle system modifier.
 
 This menu entries exists to simplify the workflow. This menu entries are described in other chapters.
 
-:::note
-To add modifiers will generally apply to all selected objects, unless you press and hold :kbd[Alt] and click on the operators. When removing and applying modifiers, they will generally apply to all selected objects, unless you press and hold :kbd[Alt] and click on the operators.
-:::
+> **Note:** To add modifiers will generally apply to all selected objects, unless you press and hold Alt and click on the operators. When removing and applying modifiers, they will generally apply to all selected objects, unless you press and hold Alt and click on the operators.
 
 ### Header elements
 
-![Header elements](/docs2/images/ui/properties/modifiers/header-elements.png){.right}
+![Header elements](/docs2/images/ui/properties/modifiers/header-elements.png)
 
 You might want to disable a modifier temporarily. Or just see the effect in the final rendering. This can be adjusted in the header. The header is what you see when you collapse the modifier panel.
 
@@ -113,19 +111,19 @@ Elements are explained from left to right.
 
 #### Collapse panel
 
-![Collapse panel](/docs2/images/ui/properties/modifiers/collapse-panel.png){.right}
+![Collapse panel](/docs2/images/ui/properties/modifiers/collapse-panel.png)
 
 The whole modifier panel can be collapsed. Click at the arrow button up left in the header.
 
 #### Modifier Icon
 
-![Modifier Icon](/docs2/images/ui/properties/modifiers/modifier-icon.png){.right}
+![Modifier Icon](/docs2/images/ui/properties/modifiers/modifier-icon.png)
 
 This icon shows the type of the modifier. And has no further functionality.
 
 #### Modifier Name
 
-![Modifier Name](/docs2/images/ui/properties/modifiers/modifier-name.png){.right}
+![Modifier Name](/docs2/images/ui/properties/modifiers/modifier-name.png)
 
 The name of the modifier. You can rename modifiers by clicking into the edit field and change the text.
 
@@ -135,15 +133,15 @@ The name of the modifier. You can rename modifiers by clicking into the edit fie
 | Edit Mode | Display the modifier result in edit mode. |
 | Realtime | Display the modifier in the viewport. |
 | Render | Display the modifier in the rendered result. |
-| Apply | This will apply the modifier, and it destructively change the mesh. **Note:***If multiple objects have the same modifier with the same name, they will be applied to the selection. If you want to apply to only the Active object, press and hold :kbd[Alt] then click on the operator.* |
+| Apply | This will apply the modifier, and it destructively change the mesh. **Note:** *If multiple objects have the same modifier with the same name, they will be applied to the selection. If you want to apply to only the Active object, press and hold Alt then click on the operator.* |
 
 #### Header menu
 
-![Header menu](/docs2/images/ui/properties/modifiers/header-menu.png){.thumb}
+![Header menu](/docs2/images/ui/properties/modifiers/header-menu.png)
 
-![Header menu](/docs2/images/ui/properties/modifiers/header-menu-2.png){.thumb}
+![Header menu](/docs2/images/ui/properties/modifiers/header-menu-2.png)
 
-![Header menu](/docs2/images/ui/properties/modifiers/header-menu-3.png){.thumb}
+![Header menu](/docs2/images/ui/properties/modifiers/header-menu-3.png)
 
 | Property | What it changes |
 |---|---|
@@ -152,7 +150,7 @@ The name of the modifier. You can rename modifiers by clicking into the edit fie
 
 ##### Save as Shapekey
 
-![Save as Shapekey](/docs2/images/ui/properties/modifiers/save-as-shapekey.png){.thumb}
+![Save as Shapekey](/docs2/images/ui/properties/modifiers/save-as-shapekey.png)
 
 Armature modifier. Applies the current pose as a shape key, and keeps the modifier.
 
@@ -166,7 +164,7 @@ Armature modifier. Applies the current pose as a shape key, and keeps the modifi
 
 ##### Show Node Groups
 
-![Show Node Groups](/docs2/images/ui/properties/modifiers/show-node-groups.png){.right}
+![Show Node Groups](/docs2/images/ui/properties/modifiers/show-node-groups.png)
 
 Hair modifier. Shows the node groups prop in the modifier
 
@@ -174,13 +172,11 @@ Hair modifier. Shows the node groups prop in the modifier
 
 Removes the modifier from the stack on all selected objects.
 
-:::note
-If multiple objects have the same modifier with the same name, they will be removed from the selection. If you want to remove from only the Active object, press and hold :kbd[Alt] then click on the operator.
-:::
+> **Note:** If multiple objects have the same modifier with the same name, they will be removed from the selection. If you want to remove from only the Active object, press and hold Alt then click on the operator.
 
 #### Pin to Last
 
-![Pin to Last](/docs2/images/ui/properties/modifiers/pin-to-last.png){.right}
+![Pin to Last](/docs2/images/ui/properties/modifiers/pin-to-last.png)
 
 Keep the modifier at the end of the list. You can pin multiple modifiers at the end of the stack. The order of the pinned modifiers is set by the order that you pin the modifiers.
 
@@ -190,7 +186,7 @@ Some modifiers cannot be removed from the modifiers stack directly. Like fluid m
 
 #### Reorder
 
-![Reorder](/docs2/images/ui/properties/modifiers/reorder.png){.right}
+![Reorder](/docs2/images/ui/properties/modifiers/reorder.png)
 
 You can have more than one modifier in the list. And sometimes the order of the modifiers is very important.
 
@@ -198,29 +194,29 @@ Grab the handler at the right and drag the modifier to the position where you wa
 
 ### Animate Property
 
-![Animate Property](/docs2/images/ui/properties/modifiers/animate-property.png){.right}
+![Animate Property](/docs2/images/ui/properties/modifiers/animate-property.png)
 
 Some of the properties can be animated. Click at the animate property button at the right to add a keyframe.
 
 ### Add Asset Modifier
 
-![Add Asset Modifier](/docs2/images/ui/properties/modifiers/add-asset-modifier.png){.right}
+![Add Asset Modifier](/docs2/images/ui/properties/modifiers/add-asset-modifier.png)
 
 Add a modifier nodegroup into the modifier stack. This will list and create all Geometry Node group assets assigned to the Modifier property. If they are not assigned to a category in the Asset Browser, they will list as “unassigned”.
 
-For more information, please check out the chapter 
+For more information, please check out the chapter  
 **Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus**
 
 ## Add Modifier menu buttons
 
-![Add Modifier menu buttons](/docs2/images/ui/properties/modifiers/add-modifier-menu-buttons.png){.right}
+![Add Modifier menu buttons](/docs2/images/ui/properties/modifiers/add-modifier-menu-buttons.png)
 
 There are two types of modifiers, builtin modifiers and geometry nodes modifiers that were marked as assets.
 
 | Menu entry | What it does |
 |---|---|
-| Add Modifier Button | The button to the left adds built in modifiers to all selected objects. ***Note:**When adding modifier assets will apply to all selected object.* |
-| Add Asset Modifier | The button to the right adds geometry nodes assets as modifiers to all selected objects. **Note:***When adding modifier assets will apply to all selected object.* |
+| Add Modifier Button | The button to the left adds built in modifiers to all selected objects. ***Note:** When adding modifier assets will apply to all selected object.* |
+| Add Asset Modifier | The button to the right adds geometry nodes assets as modifiers to all selected objects. **Note:** *When adding modifier assets will apply to all selected object.* |
 | Modifier Special menu | Contains some general modifier operators. |
 
 ## Add Modifier menu
@@ -239,7 +235,7 @@ When the menu is open, you can press any key to start typing to search, this wil
 
 ## Add Asset Modifier menu
 
-![Add Asset Modifier menu](/docs2/images/ui/properties/modifiers/add-asset-modifier-menu.png){.right}
+![Add Asset Modifier menu](/docs2/images/ui/properties/modifiers/add-asset-modifier-menu.png)
 
 There is also an add asset modifier menu items that shows all Geometry Node groups marked as assets that you can add as a modifier to all selected objects.
 
@@ -255,7 +251,7 @@ When the menu is open, you can press any key to start typing to search, this wil
 
 ### Geometry Nodes
 
-![Geometry Nodes](/docs2/images/ui/properties/modifiers/geometry-nodes.png){.right}
+![Geometry Nodes](/docs2/images/ui/properties/modifiers/geometry-nodes.png)
 
 Add a geometry nodes modifier.
 
@@ -263,9 +259,9 @@ This is usually done in the Geometry Nodes Editor.
 
 The geometry Nodes modifier adds a geometry node tree, which can be modified in the geometry node editor.
 
-![Geometry Nodes](/docs2/images/ui/properties/modifiers/geometry-nodes-2.png){.thumb}
+![Geometry Nodes](/docs2/images/ui/properties/modifiers/geometry-nodes-2.png)
 
-![Geometry Nodes](/docs2/images/ui/properties/modifiers/geometry-nodes-3.png){.right}
+![Geometry Nodes](/docs2/images/ui/properties/modifiers/geometry-nodes-3.png)
 
 Manage the nodes. If there is no geometry node tree for the current object, then you will see the New button.
 
@@ -281,11 +277,11 @@ Asset Browser category.
 
 2. Assign the Nodegroup to a category in the File Browser Editor.
 
-![Geometry Nodes Assets](/docs2/images/ui/properties/modifiers/geometry-nodes-assets-2.png){.right}
+![Geometry Nodes Assets](/docs2/images/ui/properties/modifiers/geometry-nodes-assets-2.png)
 
 3. Now you can use the Add Asset Modifier menu to quickly assign a new Geometry Nodes Asset Modifer preset to any object.
 
-#### DataBrowser
+#### Data Browser
 
 The list of available geometry node trees in the scene.
 
@@ -313,7 +309,7 @@ In case you define custom inputs and outputs in the geometry nodes editor, then 
 
 ### Unassigned (Catalogue)
 
-![Unassigned (Catalogue)](/docs2/images/ui/properties/modifiers/unassigned-catalogue.png){.right}
+![Unassigned (Catalogue)](/docs2/images/ui/properties/modifiers/unassigned-catalogue.png)
 
 Custom modifier assets. This menu item shows when you for example add a geometry node, and apply it. Then this applied node tree goes into this menu which allows you to reuse it. The term non-assets is a label, and no custom asset.
 
@@ -321,7 +317,7 @@ Custom modifier assets. This menu item shows when you for example add a geometry
 
 ### Copy Modifiers to selected Objects
 
-![Copy Modifiers to selected Objects](/docs2/images/ui/properties/modifiers/copy-modifiers-to-selected-objects.png){.right}
+![Copy Modifiers to selected Objects](/docs2/images/ui/properties/modifiers/copy-modifiers-to-selected-objects.png)
 
 Pastes the existing modifers at the active object to the selected objects.
 

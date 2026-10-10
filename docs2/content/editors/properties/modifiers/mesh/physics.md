@@ -11,23 +11,21 @@ source: ["26.9.6 Editors - Properties Editor - Modifiers Properties Tab - Mesh -
 
 Physics modifiers are available for Mesh object, Curve + Text object and Lattice Object
 
-![Physics modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-physics/physics-modifiers-mesh.png){.right}
+![Physics modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-physics/physics-modifiers-mesh.png)
 
-![Physics modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-physics/physics-modifiers-mesh-2.png){.thumb}
+![Physics modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-physics/physics-modifiers-mesh-2.png)
 
-![Physics modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-physics/physics-modifiers-mesh-3.png){.thumb}
+![Physics modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-physics/physics-modifiers-mesh-3.png)
 
 -
 
 ## Cloth
 
-::tool{id=modifier.cloth}
-
-![Cloth](/docs2/images/ui/properties/modifiers/mesh-physics/cloth.png){.right}
+![Cloth](/docs2/images/ui/properties/modifiers/mesh-physics/cloth.png)
 
 The cloth modifier gets added into the modifier stack when you add a cloth physics in the Physics tab. It enables cloth simulation for the mesh.
 
-![Cloth](/docs2/images/ui/properties/modifiers/mesh-physics/cloth-2.png){.right}
+![Cloth](/docs2/images/ui/properties/modifiers/mesh-physics/cloth-2.png)
 
 All the cloth settings and adjustments happens in the Physics tab. The cloth modifier has no further settings.
 
@@ -35,11 +33,9 @@ The modifier can only be removed in the physics tab by clicking the cloth button
 
 ## Collision
 
-::tool{id=modifier.collision}
+![Collision](/docs2/images/ui/properties/modifiers/mesh-physics/collision.png)
 
-![Collision](/docs2/images/ui/properties/modifiers/mesh-physics/collision.png){.right}
-
-![Collision](/docs2/images/ui/properties/modifiers/mesh-physics/collision-2.png){.right}
+![Collision](/docs2/images/ui/properties/modifiers/mesh-physics/collision-2.png)
 
 The collision modifier gets added into the modifier stack when you add a collision physics in the Physics tab. It enables collision for the mesh.
 
@@ -49,11 +45,9 @@ The modifier can only be removed in the physics tab by clicking the collision bu
 
 ## Dynamic Paint
 
-::tool{id=modifier.dynamic_paint}
+![Dynamic Paint](/docs2/images/ui/properties/modifiers/mesh-physics/dynamic-paint.png)
 
-![Dynamic Paint](/docs2/images/ui/properties/modifiers/mesh-physics/dynamic-paint.png){.right}
-
-![Dynamic Paint](/docs2/images/ui/properties/modifiers/mesh-physics/dynamic-paint-2.png){.right}
+![Dynamic Paint](/docs2/images/ui/properties/modifiers/mesh-physics/dynamic-paint-2.png)
 
 The dynamic paint modifier gets added into the modifier stack when you add a dynamic paint physics in the Physics tab. It enables dynamic painting. Which turns objects into paintable canvasses to modify vertex colors or displacement. Like footsteps in snow.
 
@@ -63,9 +57,7 @@ The modifier can only be removed in the physics tab by clicking the dynamic pain
 
 ## Explode
 
-::tool{id=modifier.explode}
-
-![Explode](/docs2/images/ui/properties/modifiers/mesh-physics/explode.png){.right}
+![Explode](/docs2/images/ui/properties/modifiers/mesh-physics/explode.png)
 
 The Explode modifier gets added into the modifier stack when you add a Quick Explode quick effect, together with a particle system. It splits the object apart, and uses the split parts as particles for an explosion like particle animation.
 
@@ -73,7 +65,7 @@ The modifier requires particles to work. The particles effect controls how the e
 
 The Explode modifier has some further settings. But all the particles settings and adjustments happens in the Physics tab.
 
-![Explode](/docs2/images/ui/properties/modifiers/mesh-physics/explode-2.png){.right}
+![Explode](/docs2/images/ui/properties/modifiers/mesh-physics/explode-2.png)
 
 ### Particle UV
 
@@ -93,13 +85,11 @@ This allows to make the color of a fragment (face) vary during it ‘explosion�
 
 ## Fluid
 
-::tool{id=modifier.fluid}
-
-![Fluid](/docs2/images/ui/properties/modifiers/mesh-physics/fluid.png){.right}
+![Fluid](/docs2/images/ui/properties/modifiers/mesh-physics/fluid.png)
 
 The fluid modifier gets added into the modifier stack when you add a fluid physics in the Physics tab. It enables fluid simulations.
 
-![Fluid](/docs2/images/ui/properties/modifiers/mesh-physics/fluid-2.png){.right}
+![Fluid](/docs2/images/ui/properties/modifiers/mesh-physics/fluid-2.png)
 
 All the settings and adjustments happens in the Physics tab. The fluid modifier has no further settings.
 
@@ -107,9 +97,7 @@ The modifier can only be removed in the physics tab by clicking the fluid button
 
 ## Ocean
 
-::tool{id=modifier.ocean}
-
-![Ocean](/docs2/images/ui/properties/modifiers/mesh-physics/ocean.png){.right}
+![Ocean](/docs2/images/ui/properties/modifiers/mesh-physics/ocean.png)
 
 The Ocean modifier is a tool to simulate and generate a deforming ocean surface. It is intended to simulate deep ocean waves and foam.
 
@@ -117,7 +105,7 @@ By default, the simulator only generates displacement data, since it takes the l
 
 ### Geometry
 
-![Geometry](/docs2/images/ui/properties/modifiers/mesh-physics/geometry.png){.thumb}
+![Geometry](/docs2/images/ui/properties/modifiers/mesh-physics/geometry.png)
 
 | Property | What it changes |
 |---|---|
@@ -134,9 +122,7 @@ The resolution of the internal 2D grids generated by the simulation.
 
 The internal grids are powers of two of the resolution value. So a resolution value of 16 will create simulation data of size 256×256. The higher the resolution, the more details will be produced, but the slower it will be to calculate.
 
-:::note
-When using the Generate modifier geometry option, this resolution value also determines the resolution of the generated mesh surface, equal to the resolution of the internal simulation data.
-:::
+> **Note:** When using the Generate modifier geometry option, this resolution value also determines the resolution of the generated mesh surface, equal to the resolution of the internal simulation data.
 
 | Property | What it changes |
 |---|---|
@@ -149,7 +135,7 @@ When using the Generate modifier geometry option, this resolution value also det
 
 ### Waves
 
-![Waves](/docs2/images/ui/properties/modifiers/mesh-physics/waves.png){.right}
+![Waves](/docs2/images/ui/properties/modifiers/mesh-physics/waves.png)
 
 | Property | What it changes |
 |---|---|
@@ -163,7 +149,7 @@ When using the Generate modifier geometry option, this resolution value also det
 
 ### Foam
 
-![Foam](/docs2/images/ui/properties/modifiers/mesh-physics/foam.png){.right}
+![Foam](/docs2/images/ui/properties/modifiers/mesh-physics/foam.png)
 
 Simulate extra foam data.
 
@@ -190,11 +176,11 @@ Inverts the spray direction map.
 
 ### Spectrum
 
-![Spectrum](/docs2/images/ui/properties/modifiers/mesh-physics/spectrum.png){.right}
+![Spectrum](/docs2/images/ui/properties/modifiers/mesh-physics/spectrum.png)
 
 #### Spectrum
 
-![Spectrum](/docs2/images/ui/properties/modifiers/mesh-physics/spectrum-2.png){.right}
+![Spectrum](/docs2/images/ui/properties/modifiers/mesh-physics/spectrum-2.png)
 
 What wave spectrum model to use. Wave spectra are used to describe how energy moves through the waves at different frequencies. Energy travels through waves differently depending on the depth of the water and the wind speed.
 
@@ -207,7 +193,7 @@ What wave spectrum model to use. Wave spectra are used to describe how energy mo
 
 ### Bake
 
-![Bake](/docs2/images/ui/properties/modifiers/mesh-physics/bake.png){.right}
+![Bake](/docs2/images/ui/properties/modifiers/mesh-physics/bake.png)
 
 The data for the ocean modifier can be baked to files in a given directory. When a simulation is baked, the simulator engine is completely bypassed, and the modifier/texture retrieves all information from the baked files. Baked files are faster, allows rendering in external renderers, and enables more advanced foam maps.
 
@@ -222,27 +208,25 @@ The created images are stored in exr format. And can be opened and modified in a
 
 ## Particle Instance
 
-::tool{id=modifier.particle_instance}
-
-![Particle Instance](/docs2/images/ui/properties/modifiers/mesh-physics/particle-instance.jpg){.right}
+![Particle Instance](/docs2/images/ui/properties/modifiers/mesh-physics/particle-instance.jpg)
 
 Adds a copy of the mesh to the particle positions of a particle system. This happens relative to the object origin.
 
 To use this modifier you must have at least one other object that has a Particles System attached.
 
-![Particle Instance](/docs2/images/ui/properties/modifiers/mesh-physics/particle-instance.png){.right}
+![Particle Instance](/docs2/images/ui/properties/modifiers/mesh-physics/particle-instance.png)
 
 Because of how the Particle Instance modifier influences the underlying particle systems on other objects, some of the effects generated by the modifier can look and act different. This depends on the underlying settings of the particle systems it is associated with.
 
 ### Object
 
-![Object](/docs2/images/ui/properties/modifiers/mesh-physics/object.png){.right}
+![Object](/docs2/images/ui/properties/modifiers/mesh-physics/object.png)
 
 Add the target object with the particle system.
 
 ### Particle System
 
-![Particle System](/docs2/images/ui/properties/modifiers/mesh-physics/particle-system.png){.right}
+![Particle System](/docs2/images/ui/properties/modifiers/mesh-physics/particle-system.png)
 
 The particle system from the target Object to use.
 
@@ -258,9 +242,7 @@ The particle system from the target Object to use.
 
 Allows you to randomly skip particles to adjust the amount of instances.
 
-:::warn
-The random algorithm used currently only ensures that relative amount to be respected statistically. The actual amount of instances generated will differ from the theoretical one, depending on the Seed value of the target particle system (and the Offset value described below, too).
-:::
+> **Warning:** The random algorithm used currently only ensures that relative amount to be respected statistically. The actual amount of instances generated will differ from the theoretical one, depending on the Seed value of the target particle system (and the Offset value described below, too).
 
 That deviation is not significant with high number of particles, but it will be highly noticeable with low numbers (e.g. with 100 particles in the target system, and an Amount value of 0.1, it can generate either up to 15 or 5 instances, instead of the 10 expected).
 
@@ -268,13 +250,11 @@ That deviation is not significant with high number of particles, but it will be 
 
 A relative offset in the range of particles used for instantiation. Allows you to avoid overlapping of the used particles, when the same particle system is used in multiple modifier instances.
 
-:::tip
-If you want to fully avoid overlaps, your Offset value must be at least as high as your Amount value.
-:::
+> **Tip:** If you want to fully avoid overlaps, your Offset value must be at least as high as your Amount value.
 
 ### Coordinate Space
 
-![Coordinate Space](/docs2/images/ui/properties/modifiers/mesh-physics/coordinate-space.png){.thumb}
+![Coordinate Space](/docs2/images/ui/properties/modifiers/mesh-physics/coordinate-space.png)
 
 What coordinate system to use for the target object. World space or Local space.
 
@@ -288,19 +268,13 @@ Which axis of the modified object to use as pole axis to apply the rotation from
 
 ### Create Along Paths
 
-![Create Along Paths](/docs2/images/ui/properties/modifiers/mesh-physics/create-along-paths.png){.right}
+![Create Along Paths](/docs2/images/ui/properties/modifiers/mesh-physics/create-along-paths.png)
 
 By default, the instances are placed depending on the particles position in the current frame. By enabling Create Along Paths, the instance of the modified object follows deforms its shape along the particle path (or the hair strand). This allows you to select the position along the particles path regardless of the current frame.
 
-:::tip
-You can adjust the path of particles on the Render panel of the Particle System tab by adjusting the Path visualization type
-:::
-:::note
-When the type is not Hair or Keyed Physics, the particle system must be baked.
-:::
-:::note
-When you use Strands you must also have Dead activated in the Show settings. Since they die immediately.
-:::
+> **Tip:** You can adjust the path of particles on the Render panel of the Particle System tab by adjusting the Path visualization type
+> **Note:** When the type is not Hair or Keyed Physics, the particle system must be baked.
+> **Note:** When you use Strands you must also have Dead activated in the Show settings. Since they die immediately.
 
 | Property | What it changes |
 |---|---|
@@ -310,11 +284,11 @@ When you use Strands you must also have Dead activated in the Show settings. Sin
 
 #### Layers
 
-![Layers](/docs2/images/ui/properties/modifiers/mesh-physics/layers.png){.right}
+![Layers](/docs2/images/ui/properties/modifiers/mesh-physics/layers.png)
 
 Select vertex color layers. These layers will be filled with colors based on the particles information. And can be used in a shader to add variance to a material.
 
-![Layers](/docs2/images/ui/properties/modifiers/mesh-physics/layers-2.png){.right}
+![Layers](/docs2/images/ui/properties/modifiers/mesh-physics/layers-2.png)
 
 You can create vertex color layers in the Object Data properties in the Vertex Colors panel.
 
@@ -325,13 +299,11 @@ You can create vertex color layers in the Object Data properties in the Vertex C
 
 ## Particle System
 
-::tool{id=modifier.particle_system}
-
-![Particle System](/docs2/images/ui/properties/modifiers/mesh-physics/particle-system-2.png){.right}
+![Particle System](/docs2/images/ui/properties/modifiers/mesh-physics/particle-system-2.png)
 
 The Particle System modifier gets added into the modifier stack when you add a particle system in the Particles tab. It enables particle simulation at the object.
 
-![Particle System](/docs2/images/ui/properties/modifiers/mesh-physics/particle-system-3.png){.right}
+![Particle System](/docs2/images/ui/properties/modifiers/mesh-physics/particle-system-3.png)
 
 All the particle settings and adjustments happens in the Particles tab. The Particle System modifier has no further settings.
 
@@ -339,12 +311,10 @@ The modifier can only be removed in the particle tab in the particle settings li
 
 ## Soft body
 
-::tool{id=modifier.soft_body}
-
-![Soft body](/docs2/images/ui/properties/modifiers/mesh-physics/soft-body.png){.right}
+![Soft body](/docs2/images/ui/properties/modifiers/mesh-physics/soft-body.png)
 
 The Soft body modifier gets added into the modifier stack when you add a Soft Body physics in the Physics tab. It enables Soft Body simulation for the mesh.
 
-![Soft body](/docs2/images/ui/properties/modifiers/mesh-physics/soft-body-2.png){.right}
+![Soft body](/docs2/images/ui/properties/modifiers/mesh-physics/soft-body-2.png)
 
 All the Soft body settings and adjustments happens in the Physics tab. The Soft body modifier has no further settings.

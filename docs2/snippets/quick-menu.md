@@ -8,7 +8,7 @@ screenshots: "5.1"
 source: ["17.1.2 Editors - Timeline - Header - Quick Menu.odt"]
 ---
 
-![Quick menu](/docs2/images/ui/shared/quick-menu/quick-menu.png){.right}
+![Quick menu](/docs2/images/ui/shared/quick-menu/quick-menu.png)
 
 The quick menu, or in long Quick Favorites menu, is a menu that can be customized to your needs. Here you can add operators for quick access.
 
@@ -20,7 +20,7 @@ Note that added operators in this menu does not have icons. Just text.
 
 ## Adding an operator to the Quick menu
 
-![Adding an operator to the Quick menu](/docs2/images/ui/shared/quick-menu/adding-an-operator-to-the-quick-menu.png){.right}
+![Adding an operator to the Quick menu](/docs2/images/ui/shared/quick-menu/adding-an-operator-to-the-quick-menu.png)
 
 Open the panel or the menu where your operator is that you want to add.
 
@@ -28,7 +28,7 @@ Let's add the open command from the File menu. Open the File menu, right click a
 
 Do the same with Save As. We should now have two new menu items in the Quick menu, which you can use now.
 
-![Adding an operator to the Quick menu](/docs2/images/ui/shared/quick-menu/adding-an-operator-to-the-quick-menu-2.png){.right}
+![Adding an operator to the Quick menu](/docs2/images/ui/shared/quick-menu/adding-an-operator-to-the-quick-menu-2.png)
 
 As a rule of thumb, when the right click menu has an Add to Quick Favorites, then you can add it to the quick menu.
 
@@ -36,11 +36,11 @@ Note that you can also add operators from the tool shelf at the left. And also o
 
 ## Adding a menu to the Quick menu
 
-![Adding a menu to the Quick menu](/docs2/images/ui/shared/quick-menu/adding-a-menu-to-the-quick-menu.png){.right}
+![Adding a menu to the Quick menu](/docs2/images/ui/shared/quick-menu/adding-a-menu-to-the-quick-menu.png)
 
 It is also possible to add a menu to the Quick menu. For example the whole Add menu. The way is the same. Right click at it, and choose Add to Quick Favorites.
 
-![Adding a menu to the Quick menu](/docs2/images/ui/shared/quick-menu/adding-a-menu-to-the-quick-menu-2.png){.right}
+![Adding a menu to the Quick menu](/docs2/images/ui/shared/quick-menu/adding-a-menu-to-the-quick-menu-2.png)
 
 ## Order
 
@@ -50,7 +50,7 @@ Besides that, operators and menus gets added in the order that you add them. The
 
 ## Removing an operator from the Quick menu
 
-![Removing an operator from the Quick menu](/docs2/images/ui/shared/quick-menu/removing-an-operator-from-the-quick-menu.png){.right}
+![Removing an operator from the Quick menu](/docs2/images/ui/shared/quick-menu/removing-an-operator-from-the-quick-menu.png)
 
 Removing is as simple as adding. Right click at the operators in the Quick menu, and choose Remove from Quick favorites.
 

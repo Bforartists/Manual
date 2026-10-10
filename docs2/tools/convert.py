@@ -15,6 +15,8 @@ from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATS = collections.Counter()
 IMAGE_INDEX = {}          # sha -> record
+SNIPPETS = {}
+DROPPED = collections.Counter()   # words removed on purpose: generated contents lists, file title lines
 WARN = []
 
 # ---------------------------------------------------------------- inline helpers
@@ -40,13 +42,25 @@ def clean_inlines(inls):
     for x in inls:
         t = x["t"]
         if t == "Span":
-            out.extend(clean_inlines(x["c"][1]))
+            inner = clean_inlines(x["c"][1])
+            if x["c"][1] and x["c"][1][0]["t"] in ("Space", "SoftBreak"): out.append({"t": "Space"})
+            out.extend(inner)
+            last = x["c"][1][-1] if x["c"][1] else None
+            if last and (last["t"] in ("Space", "SoftBreak") or (last["t"] in ("Strong", "Emph") and last["c"] and last["c"][-1]["t"] == "Space")):
+                out.append({"t": "Space"})
         elif t in ("Underline", "SmallCaps"):
             out.extend(clean_inlines(x["c"]))
         elif t in ("Emph", "Strong", "Strikeout", "Superscript", "Subscript"):
+            lead = bool(x["c"]) and x["c"][0]["t"] in ("Space", "SoftBreak")
+            trail = bool(x["c"]) and (x["c"][-1]["t"] in ("Space", "SoftBreak") or
+                                      (x["c"][-1]["t"] == "Str" and x["c"][-1]["c"].endswith(" ")))
             inner = clean_inlines(x["c"])
+            if inner and inner[-1]["t"] == "Str" and inner[-1]["c"].endswith(" "):
+                inner[-1] = {"t": "Str", "c": inner[-1]["c"].rstrip()}; trail = True
             if stringify(inner).strip():
+                if lead: out.append({"t": "Space"})
                 out.append({"t": t, "c": inner})
+                if trail: out.append({"t": "Space"})
             else:
                 out.extend(inner)
         elif t == "Link":
@@ -155,6 +169,7 @@ def build_tree(blocks, srcname):
     for c in list(root.children):
         if c.level == 1 and TITLE_NUM.match(c.title) and re.match(r"^\d", c.title):
             STATS["file_titles"] += 1
+            DROPPED[srcname] += words(c.title)
             root.title_icon = c.images[:1]
             idx = root.children.index(c)
             root.children[idx:idx + 1] = c.children
@@ -166,6 +181,7 @@ def build_tree(blocks, srcname):
         for c in n.children:
             if DROP_TITLES.match(c.title):
                 STATS["toc_sections_dropped"] += 1
+                DROPPED[srcname] += words(c.title) + c.text_words()
                 continue
             prune(c); keep.append(c)
         n.children = keep
@@ -182,11 +198,21 @@ def find(root, title_re):
 
 # ---------------------------------------------------------------- images
 
+def png_size(data):
+    import struct
+    if data[:8] == b"\x89PNG\r\n\x1a\n":
+        return struct.unpack(">II", data[16:24])
+    return (0, 0)
+
+
 class Library:
     def __init__(self, out):
         self.out = out
 
     def add(self, media_root, src, place, hint):
+        if src.startswith(("http://", "https://")):
+            STATS["remote_images"] += 1
+            return src
         fp = os.path.join(media_root, src)
         if not os.path.exists(fp):
             WARN.append(f"missing image {src}"); return None
@@ -204,7 +230,11 @@ class Library:
             path = f"{base}-{i}{ext}"; i += 1
         os.makedirs(os.path.dirname(os.path.join(self.out, path.lstrip("/"))), exist_ok=True)
         shutil.copyfile(fp, os.path.join(self.out, path.lstrip("/")))
-        w, h = Image.open(fp).size
+        try:
+            w, h = Image.open(fp).size
+        except Exception:
+            w, h = png_size(data)
+            WARN.append(f"image not readable by Pillow, size from header: {src}")
         IMAGE_INDEX[sha] = {"path": path, "sha": sha[:16], "px": [w, h], "bytes": len(data),
                             "uses": 1, "places": [place], "source": src}
         STATS["images_unique"] += 1
@@ -242,7 +272,7 @@ def kbd_norm(s):
     fix = {"ctrl": "Ctrl", "shift": "Shift", "alt": "Alt", "cmd": "Cmd", "spacebar": "Space", "space": "Space",
            "middle mouse button": "MMB", "left mouse button": "LMB", "right mouse button": "RMB",
            "delete": "Del", "del": "Del", "enter": "Enter", "return": "Enter", "esc": "Esc", "escape": "Esc", "tab": "Tab", "scroll wheel": "Wheel", "scrollwheel": "Wheel", "mouse wheel": "Wheel"}
-    return "+".join(fix.get(p.lower(), p.upper() if len(p) == 1 else p.capitalize()) for p in parts)
+    return " + ".join(fix.get(p.lower(), p.upper() if len(p) == 1 else p.capitalize()) for p in parts)
 
 
 KEYNAME = re.compile(r"^(ctrl|shift|alt|cmd|space(bar)?|enter|return|tab|esc|escape|del|delete|home|end|backspace|F\d{1,2}|[A-Z0-9]|numpad ?[0-9+\-.*/]|(ctrl|shift|alt)( ?\+ ?\S+)+)$", re.I)
@@ -257,7 +287,7 @@ def tag_kbd(inls):
         elif x["t"] in ("Emph", "Strong"):
             txt = stringify(x["c"]).strip()
             if txt and KEYNAME.match(txt) and (len(txt) > 1 or txt.isupper()):
-                out.append({"t": "RawInline", "c": ["markdown", f":kbd[{kbd_norm(txt)}]"]})
+                out.append({"t": "Strong", "c": [{"t": "Str", "c": kbd_norm(txt)}]})
                 STATS["hotkeys_tagged"] += 1
             else:
                 out.append({"t": x["t"], "c": tag_kbd(x["c"])})
@@ -270,7 +300,7 @@ def tag_kbd(inls):
             pos = 0
             for m in UPPERKEY.finditer(x["c"]):
                 if m.start() > pos: tmp.append({"t": "Str", "c": x["c"][pos:m.start()]})
-                tmp.append({"t": "RawInline", "c": ["markdown", f":kbd[{kbd_norm(m.group(1))}]"]})
+                tmp.append({"t": "Str", "c": kbd_norm(m.group(1))})
                 STATS["hotkeys_tagged"] += 1
                 pos = m.end()
             if pos < len(x["c"]): tmp.append({"t": "Str", "c": x["c"][pos:]})
@@ -289,7 +319,7 @@ def tag_kbd(inls):
         pos = 0
         for m in KBD.finditer(text):
             if m.start() > pos: joined.append({"t": "Str", "c": text[pos:m.start()]})
-            joined.append({"t": "RawInline", "c": ["markdown", f":kbd[{kbd_norm(m.group(1))}]"]})
+            joined.append({"t": "Str", "c": kbd_norm(m.group(1))})
             STATS["hotkeys_tagged"] += 1
             pos = m.end()
         if pos < len(text): joined.append({"t": "Str", "c": text[pos:]})
@@ -313,8 +343,9 @@ def process_inlines_images(inls, ctx, pulled):
                 p = ctx.lib.add(ctx.media_root, x["c"][2][0], ctx.place, ctx.heading + " icon")
                 if p: out.append(make_image(p, "", "icon")); STATS["inline_icons"] += 1
             else:
-                p = ctx.lib.add(ctx.media_root, x["c"][2][0], ctx.place, ctx.heading)
-                if p: pulled.append({"t": "Para", "c": [make_image(p, ctx.heading, kind)]}); STATS["figures_" + kind] += 1
+                alt = stringify(x["c"][1]).strip() or ctx.heading
+                p = ctx.lib.add(ctx.media_root, x["c"][2][0], ctx.place, alt)
+                if p: pulled.append({"t": "Para", "c": [make_image(p, alt, kind)]}); STATS["figures_" + kind] += 1
         elif x["t"] in ("Emph", "Strong", "Strikeout", "Superscript", "Subscript"):
             out.append({"t": x["t"], "c": process_inlines_images(x["c"], ctx, pulled)})
         elif x["t"] == "Link":
@@ -347,7 +378,30 @@ def transform_blocks(blocks, ctx):
             out.append(walk_table_images(b, ctx)); STATS["data_tables"] += 1
         else:
             out.append(b)
-    return detect_legends(detect_callouts(out))
+    return detect_legends(detect_callouts(fake_bullets(out)))
+
+
+BULLET = re.compile(r"^\s*[•·▪◦‣–]\s+")
+
+
+def fake_bullets(blocks):
+    """Runs of paragraphs starting with a bullet character -> a real bullet list (words unchanged)."""
+    out, run = [], []
+    def flush():
+        if run:
+            out.append({"t": "BulletList", "c": [[{"t": "Plain", "c": it}] for it in run]})
+            STATS["fake_bullet_items"] += len(run)
+            run.clear()
+    for b in blocks:
+        if b["t"] in ("Para", "Plain") and b["c"] and b["c"][0]["t"] == "Str" and BULLET.match(b["c"][0]["c"]):
+            first = BULLET.sub("", b["c"][0]["c"])
+            it = ([{"t": "Str", "c": first}] if first else []) + b["c"][1:]
+            while it and it[0]["t"] in ("Space", "SoftBreak"): it = it[1:]
+            run.append(it)
+        else:
+            flush(); out.append(b)
+    flush()
+    return out
 
 
 def walk_table_images(tbl, ctx):
@@ -377,9 +431,10 @@ def detect_callouts(blocks):
         if m:
             kind = {"hint": "tip", "attention": "warn", "warning": "warn", "caution": "warn", "important": "imp"}.get(m.group(1).lower(), m.group(1).lower())
             md = render_inlines(b["c"])
-            md = re.sub(r"^[*_\s]*(note|hint|tip|warning|attention|important|caution)\s*[:!][*_\s]*", "", md, count=1, flags=re.I).strip()
+            md = re.sub(r"^[*_\s]*(note|hint|tip|warning|attention|important|caution)[*_\s]*[:!][*_\s]*", "", md, count=1, flags=re.I).strip()
             if md.count("*") % 2: md = md.rstrip("*").strip()
-            out.append(raw(f":::{kind}\n{md}\n:::"))
+            label = {"tip": "Tip", "note": "Note", "warn": "Warning", "imp": "Important"}.get(kind, kind.title())
+            out.append(raw("\n".join("> " + ln if ln.strip() else ">" for ln in f"**{label}:** {md}".split("\n"))))
             STATS["callouts"] += 1
         else:
             out.append(b)
@@ -412,10 +467,10 @@ def detect_legends(blocks):
                 break
             if fig is not None:
                 img = fig["c"][2][0]
-                lines = [f":::hotspots{{img={img}}}"]
+                alt = stringify(fig["c"][1]) or "Screenshot"
+                lines = [f"![{alt}]({img})", ""]
                 for lab, col, desc in items:
-                    lines.append(f"- **{lab}** · {col}" + (f": {desc}" if desc else ""))
-                lines.append(":::")
+                    lines.append(f"- **{lab}** ({col})" + (f": {desc}" if desc else ""))
                 out.append(raw("\n".join(lines)))
                 STATS["hotspot_figures"] += 1
                 out.extend(extra)
@@ -514,8 +569,7 @@ def emit_node(n, level, ctx, opts, lines):
         lines.append(("md", "#" * level + " " + n.title))
     tool = opts.get("tool_level") == n.level_rel and opts.get("tool_prefix")
     if tool:
-        lines.append(("md", f"::tool{{id={opts['tool_prefix']}{slug(n.title).replace('-', '_')}}}"))
-        STATS["tool_cards"] += 1
+        STATS["tool_card_candidates"] += 1   # recognised later from the heading; nothing written
     for im in n.images:
         kind, _ = image_kind(im)
         p = ctx.lib.add(ctx.media_root, im["c"][2][0], ctx.place, n.title)
@@ -546,13 +600,20 @@ def emit_node(n, level, ctx, opts, lines):
 
 def assemble(spec, trees, lib, out_dir, media):
     lines = []
+    shared = []
     place = spec["images"]
     ctx = Ctx(lib, None, place, spec["title"])
     for part in spec["parts"]:
         if "include" in part:
             if part.get("heading"): lines.append(("md", "## " + part["heading"]))
-            lines.append(("md", f"::include{{snippet={part['include']}}}"))
+            sn = SNIPPETS[part["include"]]
+            rel = os.path.relpath(os.path.join(out_dir, sn["file"]), os.path.dirname(os.path.join(out_dir, spec["file"])))
+            lines.append(("md", f"*Shared section: [{sn['title']}]({rel})*"))
+            shared.append(sn["file"])
             STATS["includes"] += 1
+            continue
+        if "note" in part:
+            lines.append(("md", part["note"]))
             continue
         root = trees[part["src"]]
         ctx.media_root = media[part["src"]]
@@ -566,11 +627,11 @@ def assemble(spec, trees, lib, out_dir, media):
                 if body: lines.append(("blocks", body))
                 for c in n.children:
                     c.level_rel = 1
-                    emit_node(c, 2, ctx, opts, lines)
+                    emit_node(c, 2 + part.get("shift", 0), ctx, opts, lines)
             else:
                 n.level_rel = 1
                 if part.get("rename"): n.title = part["rename"]
-                emit_node(n, 2, ctx, opts, lines)
+                emit_node(n, 2 + part.get("shift", 0), ctx, opts, lines)
     # render blocks
     md_parts = []
     for kind, v in lines:
@@ -580,10 +641,12 @@ def assemble(spec, trees, lib, out_dir, media):
     pre = os.environ.get("DOCS_URL_PREFIX", "")
     if pre:
         body = body.replace("](/images/", f"]({pre}/images/").replace("img=/images/", f"img={pre}/images/")
-    fm = {k: spec[k] for k in ("id", "title", "section", "path", "icon") if k in spec}
+    fm = {k: spec[k] for k in ("id", "title", "slug", "section", "path", "icon") if k in spec}
     fm.update({"version": "5.1", "status": "draft", "screenshots": "5.1",
-               "source": [p["src"] + ".odt" for p in spec["parts"] if "src" in p and "include" not in p]})
-    fm["source"] = sorted(set(fm["source"]))
+               "source": [p["src"] + ".odt" for p in spec["parts"] if "src" in p and not p["src"].startswith("web:")]})
+    fm["source"] = sorted(set(fm["source"])) + sorted({"webflow:" + p["web"] for p in spec["parts"] if "web" in p})
+    if shared: fm["shared"] = shared
+    if spec.get("status"): fm["status"] = spec["status"]
     head = "---\n" + "\n".join(f"{k}: {json.dumps(v, ensure_ascii=False)}" for k, v in fm.items()) + "\n---\n\n"
     path = os.path.join(out_dir, spec["file"])
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -592,9 +655,12 @@ def assemble(spec, trees, lib, out_dir, media):
 
 
 def postfix(md):
-    md = md.replace("\\:kbd", ":kbd")
+    md = md.replace("\\'", "'").replace('\\"', '"')
+    md = re.sub(r"(!\[[^\]]*\]\([^)]*\))\{\.[a-z]+\}", r"\1", md)
     md = re.sub(r"\n{3,}", "\n\n", md)
-    md = re.sub(r"(\S)  +", r"\1 ", md)
+    md = re.sub(r"(\S) {2,}(?=\S)", r"\1 ", md)          # collapse inner runs, keep "  \n" line breaks
+    md = md.replace('{target="_blank"}', "")
+    md = re.sub(r"(?<!!)\[\]\([^)]*\)", "", md)          # empty links carry no words
     md = re.sub(r"\*\*\s*\*\*", "", md)
     return md
 
@@ -604,9 +670,24 @@ def main(manual_dir, cfg_path, out_dir, work):
     cfg = json.load(open(cfg_path))
     os.makedirs(work, exist_ok=True)
     trees, media = {}, {}
+    global SNIPPETS
+    SNIPPETS = {sn["id"].split(".", 1)[1]: sn for sn in cfg.get("snippets", [])}
+    for pg in cfg["pages"] + cfg.get("snippets", []):
+        for p in pg["parts"]:
+            if "web" in p: p["src"] = "web:" + p["web"]
     srcs = sorted({p["src"] for pg in cfg["pages"] + cfg.get("snippets", []) for p in pg["parts"] if "src" in p})
     src_words = {}
+    web_dir = cfg.get("web_dir", "web")
     for s in srcs:
+        if s.startswith("web:"):
+            key = s[4:]
+            r = subprocess.run(["pandoc", "-f", "html", "-t", "json", os.path.join(web_dir, key + ".html")],
+                               capture_output=True, text=True, check=True)
+            trees[s] = build_tree(json.loads(r.stdout)["blocks"], s)
+            media[s] = web_dir
+            txt = subprocess.run(["pandoc", "-f", "html", "-t", "plain", "--wrap=none", os.path.join(web_dir, key + ".html")], capture_output=True, text=True).stdout
+            src_words[s] = words(txt)
+            continue
         odt = os.path.join(manual_dir, s + ".odt")
         fixed = os.path.join(work, slug(s) + ".odt")
         subprocess.run([sys.executable, "-I", os.path.join(HERE, "odt_unwrap.py"), odt, fixed], check=True, capture_output=True)
@@ -635,6 +716,7 @@ def main(manual_dir, cfg_path, out_dir, work):
             path, w = assemble(spec, trees, lib, out_dir, media)
             report[kind].append({"file": spec["file"], "words": w, "sources": [p.get("src") for p in spec["parts"] if "src" in p]})
     report["source_words"] = src_words
+    report["dropped_words"] = dict(DROPPED)
     report["stats"] = dict(STATS)
     report["images"] = sorted(IMAGE_INDEX.values(), key=lambda r: r["path"])
     report["warnings"] = WARN

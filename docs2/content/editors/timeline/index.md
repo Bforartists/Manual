@@ -13,25 +13,25 @@ The Timeline Editor is the editor type that contains playback and record element
 
 The Dope sheet editor has several areas. Usually you will just see the header. To reveal the rest of it you have to pull the upper border of the timeline editor upwards.
 
-:::hotspots{img=/docs2/images/ui/timeline/timeline.png}
-- **Header** · green
-- **Channel list** · yellow: This channel list panel is hidden by default. You have to click at the small button up left to reveal it.
-- **Viewport** · no color
-:::
+![Timeline](/docs2/images/ui/timeline/timeline.png)
 
-![Timeline](/docs2/images/ui/timeline/timeline-2.png){.thumb}
+- **Header** (green)
+- **Channel list** (yellow): This channel list panel is hidden by default. You have to click at the small button up left to reveal it.
+- **Viewport** (no color)
+
+![Timeline](/docs2/images/ui/timeline/timeline-2.png)
 
 The header is divided into three parts too. Left tools and menus. Right Options. And in the middle the playback elements for the animation.
 
-:::hotspots{img=/docs2/images/ui/timeline/timeline-3.png}
-- **Menus** · yellow
-- **Playback tools** · green
-- **Options** · blue
-:::
+![Timeline](/docs2/images/ui/timeline/timeline-3.png)
+
+- **Menus** (yellow)
+- **Playback tools** (green)
+- **Options** (blue)
 
 ## Time cursor
 
-![Time cursor](/docs2/images/ui/timeline/time-cursor.png){.thumb}
+![Time cursor](/docs2/images/ui/timeline/time-cursor.png)
 
 The Time Cursor is the green line. It is used to set and display the current time frame.
 
@@ -51,8 +51,8 @@ To move a marker click and drag.
 
 The active marker is highlighted, and shows a dotted line upwards.
 
-![Markers](/docs2/images/ui/timeline/markers.png){.right}
+![Markers](/docs2/images/ui/timeline/markers.png)
 
-![Markers](/docs2/images/ui/timeline/markers-2.png){.right}
+![Markers](/docs2/images/ui/timeline/markers-2.png)
 
 When a frame matches the marker position then the info string in the 3D view shows the name of this marker too.

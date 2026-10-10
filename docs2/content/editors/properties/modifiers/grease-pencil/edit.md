@@ -9,29 +9,27 @@ screenshots: "5.1"
 source: ["26.9.7 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Edit modifiers.odt"]
 ---
 
-![Edit modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-edit/edit-modifiers-grease-pencil.png){.thumb}
+![Edit modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-edit/edit-modifiers-grease-pencil.png)
 
 ## Texture Mapping
 
-::tool{id=modifier.grease_pencil_texture_mapping}
-
-![Texture Mapping](/docs2/images/ui/properties/modifiers/grease-pencil-edit/texture-mapping.png){.right}
+![Texture Mapping](/docs2/images/ui/properties/modifiers/grease-pencil-edit/texture-mapping.png)
 
 The Texture Mapping Modifier changes the strokes texture UV position.
 
 ### Mode
 
-![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-edit/mode.png){.thumb}
+![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-edit/mode.png)
 
 The texture transformation will be applied to the stroke/fill or stroke UVs.
 
 #### Stroke
 
-![Stroke](/docs2/images/ui/properties/modifiers/grease-pencil-edit/stroke.png){.right}
+![Stroke](/docs2/images/ui/properties/modifiers/grease-pencil-edit/stroke.png)
 
 ##### Stroke Fit Method
 
-![Stroke Fit Method](/docs2/images/ui/properties/modifiers/grease-pencil-edit/stroke-fit-method.png){.thumb}
+![Stroke Fit Method](/docs2/images/ui/properties/modifiers/grease-pencil-edit/stroke-fit-method.png)
 
 The texture fitting method.
 
@@ -48,7 +46,7 @@ The texture fitting method.
 
 #### Fill
 
-![Fill](/docs2/images/ui/properties/modifiers/grease-pencil-edit/fill.png){.right}
+![Fill](/docs2/images/ui/properties/modifiers/grease-pencil-edit/fill.png)
 
 | Property | What it changes |
 |---|---|
@@ -58,7 +56,7 @@ The texture fitting method.
 
 #### Stroke and Fill
 
-![Stroke and Fill](/docs2/images/ui/properties/modifiers/grease-pencil-edit/stroke-and-fill.png){.right}
+![Stroke and Fill](/docs2/images/ui/properties/modifiers/grease-pencil-edit/stroke-and-fill.png)
 
 See both single chapters above.
 
@@ -66,7 +64,7 @@ See both single chapters above.
 
 ### Influence
 
-![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-edit/influence.png){.right}
+![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-edit/influence.png)
 
 | Property | What it changes |
 |---|---|
@@ -78,15 +76,13 @@ See both single chapters above.
 
 ## Time Offset Modifier
 
-::tool{id=modifier.grease_pencil_time_offset_modifier}
-
-![Time Offset Modifier](/docs2/images/ui/properties/modifiers/grease-pencil-edit/time-offset-modifier.png){.right}
+![Time Offset Modifier](/docs2/images/ui/properties/modifiers/grease-pencil-edit/time-offset-modifier.png)
 
 Grease Pencil object only. The Time Offset Modifier offsets the position of Grease Pencil keyframes.
 
 ### Mode
 
-![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-edit/mode-2.png){.thumb}
+![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-edit/mode-2.png)
 
 | Property | What it changes |
 |---|---|
@@ -104,7 +100,7 @@ Grease Pencil object only. The Time Offset Modifier offsets the position of Grea
 
 ### Segment List
 
-![Segment List](/docs2/images/ui/properties/modifiers/grease-pencil-edit/segment-list.png){.right}
+![Segment List](/docs2/images/ui/properties/modifiers/grease-pencil-edit/segment-list.png)
 
 Here you can define animation segments that you want to chain.
 
@@ -115,7 +111,7 @@ Here you can define animation segments that you want to chain.
 
 #### Mode
 
-![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-edit/mode-3.png){.thumb}
+![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-edit/mode-3.png)
 
 The mode of the segment.
 
@@ -127,7 +123,7 @@ The mode of the segment.
 
 #### Frame Start
 
-![Frame Start](/docs2/images/ui/properties/modifiers/grease-pencil-edit/frame-start.png){.right}
+![Frame Start](/docs2/images/ui/properties/modifiers/grease-pencil-edit/frame-start.png)
 
 The start frame of the segment.
 
@@ -143,7 +139,7 @@ The start frame of the segment.
 
 ### Influence
 
-![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-edit/influence.png){.right}
+![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-edit/influence.png)
 
 | Property | What it changes |
 |---|---|
@@ -155,17 +151,13 @@ The start frame of the segment.
 
 ## Vertex Weight Proximity
 
-::tool{id=modifier.grease_pencil_vertex_weight_proximity}
-
-![Vertex Weight Proximity](/docs2/images/ui/properties/modifiers/grease-pencil-edit/vertex-weight-proximity.png){.right}
+![Vertex Weight Proximity](/docs2/images/ui/properties/modifiers/grease-pencil-edit/vertex-weight-proximity.png)
 
 This modifier sets the weights of the given vertex group, based on the distance between the object (or its vertices), and another target object (or its geometry).
 
 Warning1 This modifier does implicit clamping of weight values in the standard (0.0 to 1.0) range. All values below 0.0 will be set to 0.0, and all values above 1.0 will be set to 1.0.
 
-:::note
-You can view the modified weights in Weight Paint Mode. This also implies that you will have to disable the Vertex Weight Proximity modifier if you want to see the original weights of the vertex group you are editing.
-:::
+> **Note:** You can view the modified weights in Weight Paint Mode. This also implies that you will have to disable the Vertex Weight Proximity modifier if you want to see the original weights of the vertex group you are editing.
 
 | Property | What it changes |
 |---|---|
@@ -179,7 +171,7 @@ You can view the modified weights in Weight Paint Mode. This also implies that y
 
 ### Influence
 
-![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-edit/influence.png){.right}
+![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-edit/influence.png)
 
 | Property | What it changes |
 |---|---|
@@ -191,18 +183,12 @@ You can view the modified weights in Weight Paint Mode. This also implies that y
 
 ## Vertex Weight Angle
 
-::tool{id=modifier.grease_pencil_vertex_weight_angle}
-
-![Vertex Weight Angle](/docs2/images/ui/properties/modifiers/grease-pencil-edit/vertex-weight-angle.png){.right}
+![Vertex Weight Angle](/docs2/images/ui/properties/modifiers/grease-pencil-edit/vertex-weight-angle.png)
 
 This modifier sets the weights of a vertex group based of the angle of the geometry.
 
-:::warn
-This modifier does implicit clamping of weight values in the standard (0.0 to 1.0) range. All values below 0.0 will be set to 0.0, and all values above 1.0 will be set to 1.0.
-:::
-:::note
-You can view the modified weights in Weight Paint Mode. This also implies that you will have to disable the Vertex Weight Proximity modifier if you want to see the original weights of the vertex group you are editing.
-:::
+> **Warning:** This modifier does implicit clamping of weight values in the standard (0.0 to 1.0) range. All values below 0.0 will be set to 0.0, and all values above 1.0 will be set to 1.0.
+> **Note:** You can view the modified weights in Weight Paint Mode. This also implies that you will have to disable the Vertex Weight Proximity modifier if you want to see the original weights of the vertex group you are editing.
 
 | Property | What it changes |
 |---|---|
@@ -211,13 +197,13 @@ You can view the modified weights in Weight Paint Mode. This also implies that y
 
 ### Axis
 
-![Axis](/docs2/images/ui/properties/modifiers/grease-pencil-edit/axis.png){.thumb}
+![Axis](/docs2/images/ui/properties/modifiers/grease-pencil-edit/axis.png)
 
 Which axis to use.
 
 ### Space
 
-![Space](/docs2/images/ui/properties/modifiers/grease-pencil-edit/space.png){.thumb}
+![Space](/docs2/images/ui/properties/modifiers/grease-pencil-edit/space.png)
 
 In which space to calculate. Local or Global.
 
@@ -229,7 +215,7 @@ In which space to calculate. Local or Global.
 
 ### Influence
 
-![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-edit/influence.png){.right}
+![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-edit/influence.png)
 
 | Property | What it changes |
 |---|---|

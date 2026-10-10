@@ -2,14 +2,14 @@
  "pages": [
   {
    "file": "content/editors/timeline/index.md",
-   "words": 287,
+   "words": 271,
    "sources": [
     "17 Editors - Timeline"
    ]
   },
   {
    "file": "content/editors/timeline/header.md",
-   "words": 1517,
+   "words": 1522,
    "sources": [
     "17.1.1 Editors - Timeline - Header Tools and Options",
     "17.1.3 Editors - Timeline - View Menu"
@@ -25,7 +25,7 @@
   },
   {
    "file": "content/editors/timeline/viewport.md",
-   "words": 516,
+   "words": 514,
    "sources": [
     "17 Editors - Timeline"
    ]
@@ -53,7 +53,7 @@
   },
   {
    "file": "content/interface/components/menus-buttons-controls.md",
-   "words": 936,
+   "words": 932,
    "sources": [
     "3 Interface",
     "3 Interface"
@@ -82,7 +82,7 @@
   },
   {
    "file": "content/editors/properties/modifiers/index.md",
-   "words": 1915,
+   "words": 1912,
    "sources": [
     "26.9 Editors - Properties Editor - Modifiers Properties Tab",
     "26.9.1 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus"
@@ -90,66 +90,119 @@
   },
   {
    "file": "content/editors/properties/modifiers/mesh/normals.md",
-   "words": 797,
+   "words": 785,
    "sources": [
     "26.9.2 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Normals modifiers"
    ]
   },
   {
    "file": "content/editors/properties/modifiers/mesh/edit.md",
-   "words": 3416,
+   "words": 3384,
    "sources": [
     "26.9.3 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Edit modifiers"
    ]
   },
   {
    "file": "content/editors/properties/modifiers/mesh/generate.md",
-   "words": 8494,
+   "words": 8414,
    "sources": [
     "26.9.4 Editors - Properties Editor - Modifiers Properties Tab - Add Modifiers menu - Generate modifiers"
    ]
   },
   {
    "file": "content/editors/properties/modifiers/mesh/deform.md",
-   "words": 5157,
+   "words": 5089,
    "sources": [
     "26.9.5 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Deform modifiers"
    ]
   },
   {
    "file": "content/editors/properties/modifiers/mesh/physics.md",
-   "words": 2583,
+   "words": 2547,
    "sources": [
     "26.9.6 Editors - Properties Editor - Modifiers Properties Tab - Mesh - Add Modifier menu - Physics modifiers"
    ]
   },
   {
    "file": "content/editors/properties/modifiers/grease-pencil/edit.md",
-   "words": 1203,
+   "words": 1187,
    "sources": [
     "26.9.7 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Edit modifiers"
    ]
   },
   {
    "file": "content/editors/properties/modifiers/grease-pencil/generate.md",
-   "words": 4445,
+   "words": 4401,
    "sources": [
     "26.9.8 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Generate Modifiers"
    ]
   },
   {
    "file": "content/editors/properties/modifiers/grease-pencil/deform.md",
-   "words": 2842,
+   "words": 2810,
    "sources": [
     "26.9.9 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Deform Modifiers"
    ]
   },
   {
    "file": "content/editors/properties/modifiers/grease-pencil/color.md",
-   "words": 1736,
+   "words": 1724,
    "sources": [
     "26.9.10 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Color Modifiers"
    ]
+  },
+  {
+   "file": "content/getting-started/index.md",
+   "words": 154,
+   "sources": [
+    "web:overview"
+   ]
+  },
+  {
+   "file": "content/getting-started/introduction.md",
+   "words": 923,
+   "sources": [
+    "web:introduction",
+    "1 Introduction"
+   ]
+  },
+  {
+   "file": "content/getting-started/about-documentation.md",
+   "words": 3365,
+   "sources": [
+    "web:about-documentation",
+    "1.1 How to use the Manual",
+    "38 About this Manual"
+   ]
+  },
+  {
+   "file": "content/getting-started/installation.md",
+   "words": 2657,
+   "sources": [
+    "2 Installing Bforartists"
+   ]
+  },
+  {
+   "file": "content/getting-started/quick-start.md",
+   "words": 40,
+   "sources": []
+  },
+  {
+   "file": "content/getting-started/data-structure.md",
+   "words": 1359,
+   "sources": [
+    "31 Data System"
+   ]
+  },
+  {
+   "file": "content/getting-started/differences.md",
+   "words": 39,
+   "sources": []
+  },
+  {
+   "file": "content/getting-started/migrating-from-blender.md",
+   "words": 39,
+   "sources": []
   }
  ],
  "snippets": [
@@ -169,12 +222,15 @@
   }
  ],
  "source_words": {
+  "1 Introduction": 301,
+  "1.1 How to use the Manual": 990,
   "17 Editors - Timeline": 954,
   "17.1.1 Editors - Timeline - Header Tools and Options": 1169,
   "17.1.2 Editors - Timeline - Header - Quick Menu": 526,
   "17.1.3 Editors - Timeline - View Menu": 272,
   "17.1.4 Editors - Timeline - Marker Menu": 310,
   "17.2 Editors - Timeline - Channel list": 330,
+  "2 Installing Bforartists": 2551,
   "26.9 Editors - Properties Editor - Modifiers Properties Tab": 1253,
   "26.9.1 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus": 639,
   "26.9.10 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Color Modifiers": 1646,
@@ -186,30 +242,63 @@
   "26.9.7 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Edit modifiers": 1113,
   "26.9.8 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Generate Modifiers": 4128,
   "26.9.9 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Deform Modifiers": 2657,
-  "3 Interface": 1929
+  "3 Interface": 1929,
+  "31 Data System": 854,
+  "38 About this Manual": 384,
+  "web:about-documentation": 1881,
+  "web:introduction": 574,
+  "web:overview": 140
+ },
+ "dropped_words": {
+  "1.1 How to use the Manual": 7,
+  "17 Editors - Timeline": 3,
+  "17.1.1 Editors - Timeline - Header Tools and Options": 9,
+  "17.1.2 Editors - Timeline - Header - Quick Menu": 8,
+  "17.1.3 Editors - Timeline - View Menu": 7,
+  "17.1.4 Editors - Timeline - Marker Menu": 7,
+  "17.2 Editors - Timeline - Channel list": 6,
+  "2 Installing Bforartists": 3,
+  "26.9 Editors - Properties Editor - Modifiers Properties Tab": 15,
+  "26.9.1 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus": 12,
+  "26.9.10 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Color Modifiers": 17,
+  "26.9.2 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Normals modifiers": 18,
+  "26.9.3 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Edit modifiers": 18,
+  "26.9.4 Editors - Properties Editor - Modifiers Properties Tab - Add Modifiers menu - Generate modifiers": 18,
+  "26.9.5 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Deform modifiers": 29,
+  "26.9.6 Editors - Properties Editor - Modifiers Properties Tab - Mesh - Add Modifier menu - Physics modifiers": 18,
+  "26.9.7 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Edit modifiers": 15,
+  "26.9.8 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Generate Modifiers": 17,
+  "26.9.9 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Deform Modifiers": 17,
+  "3 Interface": 2,
+  "31 Data System": 3,
+  "38 About this Manual": 4
  },
  "stats": {
-  "file_titles": 19,
-  "empty_headings": 21,
+  "empty_headings": 22,
+  "file_titles": 23,
   "toc_sections_dropped": 10,
-  "images_unique": 534,
-  "figures_right": 165,
+  "images_unique": 541,
+  "figures_right": 169,
   "max_depth_seen": 7,
-  "heading_images": 402,
+  "heading_images": 404,
   "table_rows": 952,
   "tables_from_leaves": 268,
-  "figures_full": 12,
+  "figures_full": 19,
   "figures_thumb": 44,
   "hotspot_figures": 2,
   "option_rows": 192,
-  "hotkeys_tagged": 15,
-  "callouts": 56,
+  "hotkeys_tagged": 19,
+  "callouts": 58,
   "includes": 2,
   "image_dupes_reused": 89,
-  "data_tables": 2,
-  "tool_cards": 83,
-  "deep_headings_as_labels": 12
+  "data_tables": 16,
+  "tool_card_candidates": 83,
+  "deep_headings_as_labels": 12,
+  "remote_images": 6,
+  "fake_bullet_items": 32
  },
- "images": 534,
- "warnings": []
+ "images": 541,
+ "warnings": [
+  "image not readable by Pillow, size from header: Pictures/10000001000004000000030058E9AC5798C688B7.png"
+ ]
 }

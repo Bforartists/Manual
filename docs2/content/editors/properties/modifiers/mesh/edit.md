@@ -11,19 +11,17 @@ source: ["26.9.3 Editors - Properties Editor - Modifiers Properties Tab - Add Mo
 
 Edit modifiers exists for the mesh object, the curve and text object, the point cloud and the lattice object.
 
-![Edit modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-edit/edit-modifiers-mesh.png){.thumb}
+![Edit modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-edit/edit-modifiers-mesh.png)
 
-![Edit modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-edit/edit-modifiers-mesh-2.png){.thumb}
+![Edit modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-edit/edit-modifiers-mesh-2.png)
 
-![Edit modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-edit/edit-modifiers-mesh-3.png){.thumb}
+![Edit modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-edit/edit-modifiers-mesh-3.png)
 
-![Edit modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-edit/edit-modifiers-mesh-4.png){.thumb}
+![Edit modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-edit/edit-modifiers-mesh-4.png)
 
 ## Data Transfer
 
-::tool{id=modifier.data_transfer}
-
-![Data Transfer](/docs2/images/ui/properties/modifiers/mesh-edit/data-transfer.png){.right}
+![Data Transfer](/docs2/images/ui/properties/modifiers/mesh-edit/data-transfer.png)
 
 The Data Transfer modifier transfers several types of data from one mesh to another. Data types include vertex groups, UV maps, vertex colors, custom normals…
 
@@ -36,7 +34,7 @@ Transfer works by generating a mapping between source mesh’s items (vertices, 
 
 ### Mix Mode
 
-![Mix Mode](/docs2/images/ui/properties/modifiers/mesh-edit/mix-mode.png){.thumb}
+![Mix Mode](/docs2/images/ui/properties/modifiers/mesh-edit/mix-mode.png)
 
 How to mix the destination elements with the source elements.
 
@@ -48,7 +46,7 @@ How to mix the destination elements with the source elements.
 
 ### Vertex data
 
-![Vertex data](/docs2/images/ui/properties/modifiers/mesh-edit/vertex-data.png){.right}
+![Vertex data](/docs2/images/ui/properties/modifiers/mesh-edit/vertex-data.png)
 
 Activate this group when you want to transfer vertex data.
 
@@ -58,49 +56,49 @@ Which vertex data layers to transfer. Vertex groups or Bevel weight or Colors.
 
 #### Mapping
 
-![Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/mapping.png){.right}
+![Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/mapping.png)
 
 The vertex mapping method to use.
 
 #### Vertex Groups
 
-![Vertex Groups](/docs2/images/ui/properties/modifiers/mesh-edit/vertex-groups.png){.right}
+![Vertex Groups](/docs2/images/ui/properties/modifiers/mesh-edit/vertex-groups.png)
 
 Just active with data layer Vertex groups.
 
 ##### Layer Selection
 
-![Layer Selection](/docs2/images/ui/properties/modifiers/mesh-edit/layer-selection.png){.thumb}
+![Layer Selection](/docs2/images/ui/properties/modifiers/mesh-edit/layer-selection.png)
 
 What layer from the source object gets selected.
 
 ##### Layer Mapping
 
-![Layer Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/layer-mapping.png){.right}
+![Layer Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/layer-mapping.png)
 
 How to match the destination layer.
 
 #### Colors
 
-![Colors](/docs2/images/ui/properties/modifiers/mesh-edit/colors.png){.right}
+![Colors](/docs2/images/ui/properties/modifiers/mesh-edit/colors.png)
 
 Just active with data layer Vertex groups.
 
 ##### Layer Selection
 
-![Layer Selection](/docs2/images/ui/properties/modifiers/mesh-edit/layer-selection.png){.thumb}
+![Layer Selection](/docs2/images/ui/properties/modifiers/mesh-edit/layer-selection.png)
 
 What layer from the source object gets selected.
 
 ##### Layer Mapping
 
-![Layer Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/layer-mapping.png){.right}
+![Layer Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/layer-mapping.png)
 
 How to match the destination layer.
 
 ### Edge Data
 
-![Edge Data](/docs2/images/ui/properties/modifiers/mesh-edit/edge-data.png){.right}
+![Edge Data](/docs2/images/ui/properties/modifiers/mesh-edit/edge-data.png)
 
 Activate this group when you want to transfer edge data.
 
@@ -110,13 +108,13 @@ Which edge data layers to transfer. You can just use one method.
 
 #### Mapping
 
-![Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/mapping-2.png){.right}
+![Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/mapping-2.png)
 
 The edge mapping method to use.
 
 ### Face Corner Data
 
-![Face Corner Data](/docs2/images/ui/properties/modifiers/mesh-edit/face-corner-data.png){.right}
+![Face Corner Data](/docs2/images/ui/properties/modifiers/mesh-edit/face-corner-data.png)
 
 #### Custom normals, Vertex Colors, UV's
 
@@ -124,43 +122,43 @@ Which face corner data to transfer. You can just use one method.
 
 #### Mapping
 
-![Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/mapping-3.png){.right}
+![Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/mapping-3.png)
 
 The face corner data mapping method to use.
 
 #### Colors
 
-![Colors](/docs2/images/ui/properties/modifiers/mesh-edit/colors-2.png){.right}
+![Colors](/docs2/images/ui/properties/modifiers/mesh-edit/colors-2.png)
 
 Further settings for when you choose Vertex colors.
 
 ##### Layer Selection
 
-![Layer Selection](/docs2/images/ui/properties/modifiers/mesh-edit/layer-selection-2.png){.thumb}
+![Layer Selection](/docs2/images/ui/properties/modifiers/mesh-edit/layer-selection-2.png)
 
 Source Layer Selection.
 
 ##### Layer Mapping
 
-![Layer Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/layer-mapping-2.png){.right}
+![Layer Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/layer-mapping-2.png)
 
 Destination layer mapping.
 
 #### UV's
 
-![UV's](/docs2/images/ui/properties/modifiers/mesh-edit/uv-s.png){.right}
+![UV's](/docs2/images/ui/properties/modifiers/mesh-edit/uv-s.png)
 
 Further settings for when you choose UV's.
 
 ##### Layer Selection
 
-![Layer Selection](/docs2/images/ui/properties/modifiers/mesh-edit/layer-selection-2.png){.thumb}
+![Layer Selection](/docs2/images/ui/properties/modifiers/mesh-edit/layer-selection-2.png)
 
 Source Layer Selection.
 
 ##### Layer Mapping
 
-![Layer Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/layer-mapping-2.png){.right}
+![Layer Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/layer-mapping-2.png)
 
 Destination layer mapping.
 
@@ -170,7 +168,7 @@ The factor to control the island handling. A value of 0.0 means no island handli
 
 #### Face Data
 
-![Face Data](/docs2/images/ui/properties/modifiers/mesh-edit/face-data.png){.right}
+![Face Data](/docs2/images/ui/properties/modifiers/mesh-edit/face-data.png)
 
 ##### Smooth / Freestyle Mark
 
@@ -178,13 +176,13 @@ Which poly data layers to transfer.
 
 ##### Mapping
 
-![Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/mapping-4.png){.right}
+![Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/mapping-4.png)
 
 The face mapping method.
 
 #### Topology Mapping
 
-![Topology Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/topology-mapping.png){.right}
+![Topology Mapping](/docs2/images/ui/properties/modifiers/mesh-edit/topology-mapping.png)
 
 ##### Max Distance
 
@@ -196,21 +194,17 @@ The width of rays.
 
 ## Mesh Cache
 
-::tool{id=modifier.mesh_cache}
-
-![Mesh Cache](/docs2/images/ui/properties/modifiers/mesh-edit/mesh-cache.png){.right}
+![Mesh Cache](/docs2/images/ui/properties/modifiers/mesh-edit/mesh-cache.png)
 
 The Mesh Cache modifier allows you to apply animated mesh data to a mesh. And deform it when playing back.
 
 This works in a similar way to shape keys. But uses external files, and allows to interchange between applications.
 
-:::tip
-Both MDD and PC2 depend on the vertex order on the mesh remaining unchanged. This is a limitation of this method, so take care not to add/remove/reorder vertices once this modifier is used.
-:::
+> **Tip:** Both MDD and PC2 depend on the vertex order on the mesh remaining unchanged. This is a limitation of this method, so take care not to add/remove/reorder vertices once this modifier is used.
 
 ### Format
 
-![Format](/docs2/images/ui/properties/modifiers/mesh-edit/format.png){.thumb}
+![Format](/docs2/images/ui/properties/modifiers/mesh-edit/format.png)
 
 The input file format (currently .mdd and .pc2 are supported).
 
@@ -221,7 +215,7 @@ The input file format (currently .mdd and .pc2 are supported).
 
 ### Deform Mode
 
-![Deform Mode](/docs2/images/ui/properties/modifiers/mesh-edit/deform-mode.png){.thumb}
+![Deform Mode](/docs2/images/ui/properties/modifiers/mesh-edit/deform-mode.png)
 
 This setting defaults to Overwrite which will replace the vertex locations with those in the cache file.
 
@@ -231,7 +225,7 @@ Note that this feature is limited to making smaller, isolated edits and will not
 
 ### Interpolation
 
-![Interpolation](/docs2/images/ui/properties/modifiers/mesh-edit/interpolation.png){.thumb}
+![Interpolation](/docs2/images/ui/properties/modifiers/mesh-edit/interpolation.png)
 
 The blend mode between frames. Use linear when the frames in the cache file do not match up exactly with the frames in the blend-file.
 
@@ -241,7 +235,7 @@ Which vertex group determines the influence of the modifier per point.
 
 ### Time Remapping
 
-![Time Remapping](/docs2/images/ui/properties/modifiers/mesh-edit/time-remapping.png){.right}
+![Time Remapping](/docs2/images/ui/properties/modifiers/mesh-edit/time-remapping.png)
 
 | Property | What it changes |
 |---|---|
@@ -254,7 +248,7 @@ Which vertex group determines the influence of the modifier per point.
 
 #### Forward/Up Axis
 
-![Forward/Up Axis](/docs2/images/ui/properties/modifiers/mesh-edit/forward-up-axis.png){.right}
+![Forward/Up Axis](/docs2/images/ui/properties/modifiers/mesh-edit/forward-up-axis.png)
 
 The axis for forward and up used in the source file.
 
@@ -264,11 +258,9 @@ Allows you to flip the coordinates on an axis.
 
 ## Mesh Sequence Cache
 
-::tool{id=modifier.mesh_sequence_cache}
+![Mesh Sequence Cache](/docs2/images/ui/properties/modifiers/mesh-edit/mesh-sequence-cache.png)
 
-![Mesh Sequence Cache](/docs2/images/ui/properties/modifiers/mesh-edit/mesh-sequence-cache.png){.right}
-
-![Mesh Sequence Cache](/docs2/images/ui/properties/modifiers/mesh-edit/mesh-sequence-cache-2.png){.right}
+![Mesh Sequence Cache](/docs2/images/ui/properties/modifiers/mesh-edit/mesh-sequence-cache-2.png)
 
 The Mesh Sequence Cache modifier loads data from Alembic files. It supports static meshes, but is mostly used to load animated meshes. Despite its name, this modifier also supports curves. It also handles file sequences, as well as meshes and curves with varying topology (like the result of fluid simulations).
 
@@ -278,7 +270,7 @@ When importing an Alembic file, Mesh Sequence Cache modifiers are automatically 
 
 #### Data browser
 
-![Data browser](/docs2/images/ui/properties/modifiers/mesh-edit/data-browser.png){.right}
+![Data browser](/docs2/images/ui/properties/modifiers/mesh-edit/data-browser.png)
 
 List of available Alembic files.
 
@@ -300,7 +292,7 @@ Path to the Alembic file.
 
 ### Object Path
 
-![Object Path](/docs2/images/ui/properties/modifiers/mesh-edit/object-path.png){.right}
+![Object Path](/docs2/images/ui/properties/modifiers/mesh-edit/object-path.png)
 
 Path to the object in the alembic file used to lookup geometric data.
 
@@ -311,7 +303,7 @@ Path to the object in the alembic file used to lookup geometric data.
 
 ### Time Subpanel
 
-![Time Subpanel](/docs2/images/ui/properties/modifiers/mesh-edit/time-subpanel.png){.right}
+![Time Subpanel](/docs2/images/ui/properties/modifiers/mesh-edit/time-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -321,13 +313,13 @@ Path to the object in the alembic file used to lookup geometric data.
 
 ### Render Procedural subpanel
 
-![Render Procedural subpanel](/docs2/images/ui/properties/modifiers/mesh-edit/render-procedural-subpanel.png){.right}
+![Render Procedural subpanel](/docs2/images/ui/properties/modifiers/mesh-edit/render-procedural-subpanel.png)
 
 #### Use Render Engine Procedural
 
 This feature is just available for Cycles, and just in an experimental state.
 
-![Use Render Engine Procedural](/docs2/images/ui/properties/modifiers/mesh-edit/use-render-engine-procedural.png){.right}
+![Use Render Engine Procedural](/docs2/images/ui/properties/modifiers/mesh-edit/use-render-engine-procedural.png)
 
 Display boxes as placeholders in the viewport.
 
@@ -338,7 +330,7 @@ Display boxes as placeholders in the viewport.
 
 ### Velocity subpanel
 
-![Velocity subpanel](/docs2/images/ui/properties/modifiers/mesh-edit/velocity-subpanel.png){.right}
+![Velocity subpanel](/docs2/images/ui/properties/modifiers/mesh-edit/velocity-subpanel.png)
 
 #### Velocity Attribute
 
@@ -346,7 +338,7 @@ Name of the Alembic Attribute used for generating motion blur data.
 
 #### Velocity Unit
 
-![Velocity Unit](/docs2/images/ui/properties/modifiers/mesh-edit/velocity-unit.png){.thumb}
+![Velocity Unit](/docs2/images/ui/properties/modifiers/mesh-edit/velocity-unit.png)
 
 Define if velocity vectors are interpreted in Frame or Second.
 
@@ -356,9 +348,7 @@ Multiplier used to control the magnitude of the velocity for time effects.
 
 ## UV Project
 
-::tool{id=modifier.uv_project}
-
-![UV Project](/docs2/images/ui/properties/modifiers/mesh-edit/uv-project.png){.right}
+![UV Project](/docs2/images/ui/properties/modifiers/mesh-edit/uv-project.png)
 
 The UV Project modifier acts like a slide projector. It emits a UV map from the negative Z axis of a controller object (such as an empty object), and applies it to the object as the “light” hits it.
 
@@ -368,7 +358,7 @@ Usually, an Image Texture node mapped to the UV map that the modifier targets is
 
 ### UV Map
 
-![UV Map](/docs2/images/ui/properties/modifiers/mesh-edit/uv-map.png){.right}
+![UV Map](/docs2/images/ui/properties/modifiers/mesh-edit/uv-map.png)
 
 Which UV map to modify. Defaults to the active rendering layer.
 
@@ -380,9 +370,7 @@ Which UV map to modify. Defaults to the active rendering layer.
 
 ## UV Warp
 
-::tool{id=modifier.uv_warp}
-
-![UV Warp](/docs2/images/ui/properties/modifiers/mesh-edit/uv-warp.png){.right}
+![UV Warp](/docs2/images/ui/properties/modifiers/mesh-edit/uv-warp.png)
 
 The UV Warp modifier transforms an object’s UV map based on values or two objects. Its purpose is to give you direct control over the object’s UV's in the 3D Viewport, allowing you to directly move, rotate, and scale existing UV coordinates using defined values or a controller object or bone.
 
@@ -396,7 +384,7 @@ Assuming the UV Axis of the modifier is X/Y and the scale of the objects is (1, 
 
 ### UV Layer
 
-![UV Layer](/docs2/images/ui/properties/modifiers/mesh-edit/uv-layer.png){.right}
+![UV Layer](/docs2/images/ui/properties/modifiers/mesh-edit/uv-layer.png)
 
 Which UV map to modify. Defaults to the active rendering layer.
 
@@ -409,7 +397,7 @@ Which UV map to modify. Defaults to the active rendering layer.
 
 ### Transform
 
-![Transform](/docs2/images/ui/properties/modifiers/mesh-edit/transform.png){.right}
+![Transform](/docs2/images/ui/properties/modifiers/mesh-edit/transform.png)
 
 | Property | What it changes |
 |---|---|
@@ -419,9 +407,7 @@ Which UV map to modify. Defaults to the active rendering layer.
 
 ## Vertex Weight Edit
 
-::tool{id=modifier.vertex_weight_edit}
-
-![Vertex Weight Edit](/docs2/images/ui/properties/modifiers/mesh-edit/vertex-weight-edit.png){.right}
+![Vertex Weight Edit](/docs2/images/ui/properties/modifiers/mesh-edit/vertex-weight-edit.png)
 
 This modifier is intended to edit the weights of a vertex group.
 
@@ -433,12 +419,8 @@ It applies the influence factor, and optionally the vertex group or texture mask
 
 It applies back the weight to the vertex, and/or it might optionally remove the vertex from the group if its weight is below a given threshold, or add it if it is above a given threshold.
 
-:::imp
-This modifier does implicit clamping of weight values in the standard (0.0 to 1.0) range. All values below 0.0 will be set to 0.0, and all values above 1.0 will be set to 1.0.
-:::
-:::note
-You can view the modified weights in Weight Paint Mode. This also implies that you will have to disable the Vertex Weight Edit modifier if you want to see the original weights of the vertex group you are editing.
-:::
+> **Important:** This modifier does implicit clamping of weight values in the standard (0.0 to 1.0) range. All values below 0.0 will be set to 0.0, and all values above 1.0 will be set to 1.0.
+> **Note:** You can view the modified weights in Weight Paint Mode. This also implies that you will have to disable the Vertex Weight Edit modifier if you want to see the original weights of the vertex group you are editing.
 
 | Property | What it changes |
 |---|---|
@@ -447,7 +429,7 @@ You can view the modified weights in Weight Paint Mode. This also implies that y
 
 ### Group Add
 
-![Group Add](/docs2/images/ui/properties/modifiers/mesh-edit/group-add.png){.right}
+![Group Add](/docs2/images/ui/properties/modifiers/mesh-edit/group-add.png)
 
 Adds vertices with a final weight over Add Threshold to the vertex group.
 
@@ -462,7 +444,7 @@ The add threshold.
 
 ### Falloff subpanel
 
-![Falloff subpanel](/docs2/images/ui/properties/modifiers/mesh-edit/falloff-subpanel.png){.right}
+![Falloff subpanel](/docs2/images/ui/properties/modifiers/mesh-edit/falloff-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -471,15 +453,13 @@ The add threshold.
 
 ### Influence
 
-![Influence](/docs2/images/ui/properties/modifiers/mesh-edit/influence.png){.right}
+![Influence](/docs2/images/ui/properties/modifiers/mesh-edit/influence.png)
 
 #### Global Influence
 
 The overall influence of the modifier (0.0 will leave the vertex group’s weights untouched, 1.0 is standard influence).
 
-:::imp
-Influence only affects weights, adding/removing of vertices to/from vertex group is not prevented by setting this value to 0.0. In addition, a per-vertex fine control of the effect is possible using either a vertex group or a texture (both are mutually exclusive). The per-vertex values from those will be multiplied with the Global Influence.
-:::
+> **Important:** Influence only affects weights, adding/removing of vertices to/from vertex group is not prevented by setting this value to 0.0. In addition, a per-vertex fine control of the effect is possible using either a vertex group or a texture (both are mutually exclusive). The per-vertex values from those will be multiplied with the Global Influence.
 
 | Property | What it changes |
 |---|---|
@@ -488,7 +468,7 @@ Influence only affects weights, adding/removing of vertices to/from vertex group
 
 #### Mask Texture
 
-![Mask Texture](/docs2/images/ui/properties/modifiers/mesh-edit/mask-texture.png){.right}
+![Mask Texture](/docs2/images/ui/properties/modifiers/mesh-edit/mask-texture.png)
 
 Choose a texture for masking. Note that using a mask texture will remove the mask vertex group.
 
@@ -505,32 +485,26 @@ Choose a texture for masking. Note that using a mask texture will remove the mas
 
 #### Channel
 
-![Channel](/docs2/images/ui/properties/modifiers/mesh-edit/channel.png){.thumb}
+![Channel](/docs2/images/ui/properties/modifiers/mesh-edit/channel.png)
 
 Which channel of the texture to use for masking.
 
 #### Texture Coordinates
 
-![Texture Coordinates](/docs2/images/ui/properties/modifiers/mesh-edit/texture-coordinates.png){.thumb}
+![Texture Coordinates](/docs2/images/ui/properties/modifiers/mesh-edit/texture-coordinates.png)
 
 Which texture coordinates of the texture to use for masking.
 
 ## Vertex Weight Mix
 
-::tool{id=modifier.vertex_weight_mix}
-
-![Vertex Weight Mix](/docs2/images/ui/properties/modifiers/mesh-edit/vertex-weight-mix.png){.right}
+![Vertex Weight Mix](/docs2/images/ui/properties/modifiers/mesh-edit/vertex-weight-mix.png)
 
 Vertex Weight Mix Modifier
 
 This modifier mixes a second vertex group (or a simple value) into the affected vertex group, using different operations.
 
-:::imp
-This modifier does implicit clamping of weight values in the standard (0.0 to 1.0) range. All values below 0.0 will be set to 0.0, and all values above 1.0 will be set to 1.0.
-:::
-:::note
-You can view the modified weights in Weight Paint Mode. This also implies that you will have to disable the Vertex Weight Mix modifier if you want to see the original weights of the vertex group you are editing.
-:::
+> **Important:** This modifier does implicit clamping of weight values in the standard (0.0 to 1.0) range. All values below 0.0 will be set to 0.0, and all values above 1.0 will be set to 1.0.
+> **Note:** You can view the modified weights in Weight Paint Mode. This also implies that you will have to disable the Vertex Weight Mix modifier if you want to see the original weights of the vertex group you are editing.
 
 | Property | What it changes |
 |---|---|
@@ -541,13 +515,11 @@ You can view the modified weights in Weight Paint Mode. This also implies that y
 
 ### Vertex Set
 
-![Vertex Set](/docs2/images/ui/properties/modifiers/mesh-edit/vertex-set.png){.thumb}
+![Vertex Set](/docs2/images/ui/properties/modifiers/mesh-edit/vertex-set.png)
 
 Which vertices should be affected.
 
-:::imp
-When using All vertices, Vertices from group B or Vertices from one group, vertices might be added to the affected vertex group.
-:::
+> **Important:** When using All vertices, Vertices from group B or Vertices from one group, vertices might be added to the affected vertex group.
 
 | Property | What it changes |
 |---|---|
@@ -573,15 +545,13 @@ How the vertex group weights are affected by the other vertex group’s weights.
 
 ### Influence
 
-![Influence](/docs2/images/ui/properties/modifiers/mesh-edit/influence.png){.right}
+![Influence](/docs2/images/ui/properties/modifiers/mesh-edit/influence.png)
 
 #### Global Influence
 
 The overall influence of the modifier (0.0 will leave the vertex group’s weights untouched, 1.0 is standard influence).
 
-:::imp
-Influence only affects weights, adding/removing of vertices to/from vertex group is not prevented by setting this value to 0.0. In addition, a per-vertex fine control of the effect is possible using either a vertex group or a texture (both are mutually exclusive). The per-vertex values from those will be multiplied with the Global Influence.
-:::
+> **Important:** Influence only affects weights, adding/removing of vertices to/from vertex group is not prevented by setting this value to 0.0. In addition, a per-vertex fine control of the effect is possible using either a vertex group or a texture (both are mutually exclusive). The per-vertex values from those will be multiplied with the Global Influence.
 
 | Property | What it changes |
 |---|---|
@@ -590,7 +560,7 @@ Influence only affects weights, adding/removing of vertices to/from vertex group
 
 #### Mask Texture
 
-![Mask Texture](/docs2/images/ui/properties/modifiers/mesh-edit/mask-texture.png){.right}
+![Mask Texture](/docs2/images/ui/properties/modifiers/mesh-edit/mask-texture.png)
 
 Choose a texture for masking. Note that using a mask texture will remove the mask vertex group.
 
@@ -607,29 +577,25 @@ Choose a texture for masking. Note that using a mask texture will remove the mas
 
 #### Channel
 
-![Channel](/docs2/images/ui/properties/modifiers/mesh-edit/channel.png){.thumb}
+![Channel](/docs2/images/ui/properties/modifiers/mesh-edit/channel.png)
 
 Which channel of the texture to use for masking.
 
 #### Texture Coordinates
 
-![Texture Coordinates](/docs2/images/ui/properties/modifiers/mesh-edit/texture-coordinates.png){.thumb}
+![Texture Coordinates](/docs2/images/ui/properties/modifiers/mesh-edit/texture-coordinates.png)
 
 Which texture coordinates of the texture to use for masking.
 
 ## Vertex Weight Proximity
 
-::tool{id=modifier.vertex_weight_proximity}
-
-![Vertex Weight Proximity](/docs2/images/ui/properties/modifiers/mesh-edit/vertex-weight-proximity.png){.right}
+![Vertex Weight Proximity](/docs2/images/ui/properties/modifiers/mesh-edit/vertex-weight-proximity.png)
 
 This modifier sets the weights of the given vertex group, based on the distance between the object (or its vertices), and another target object (or its geometry).
 
 Warning1 This modifier does implicit clamping of weight values in the standard (0.0 to 1.0) range. All values below 0.0 will be set to 0.0, and all values above 1.0 will be set to 1.0.
 
-:::note
-You can view the modified weights in Weight Paint Mode. This also implies that you will have to disable the Vertex Weight Proximity modifier if you want to see the original weights of the vertex group you are editing.
-:::
+> **Note:** You can view the modified weights in Weight Paint Mode. This also implies that you will have to disable the Vertex Weight Proximity modifier if you want to see the original weights of the vertex group you are editing.
 
 | Property | What it changes |
 |---|---|
@@ -638,7 +604,7 @@ You can view the modified weights in Weight Paint Mode. This also implies that y
 
 ### Proximity mode
 
-![Proximity mode](/docs2/images/ui/properties/modifiers/mesh-edit/proximity-mode.png){.thumb}
+![Proximity mode](/docs2/images/ui/properties/modifiers/mesh-edit/proximity-mode.png)
 
 | Property | What it changes |
 |---|---|
@@ -653,7 +619,7 @@ You can view the modified weights in Weight Paint Mode. This also implies that y
 
 ### Falloff
 
-![Falloff](/docs2/images/ui/properties/modifiers/mesh-edit/falloff-subpanel.png){.right}
+![Falloff](/docs2/images/ui/properties/modifiers/mesh-edit/falloff-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -664,13 +630,11 @@ You can view the modified weights in Weight Paint Mode. This also implies that y
 
 #### Global Influence
 
-![Global Influence](/docs2/images/ui/properties/modifiers/mesh-edit/influence.png){.right}
+![Global Influence](/docs2/images/ui/properties/modifiers/mesh-edit/influence.png)
 
 The overall influence of the modifier (0.0 will leave the vertex group’s weights untouched, 1.0 is standard influence).
 
-:::imp
-Influence only affects weights, adding/removing of vertices to/from vertex group is not prevented by setting this value to 0.0. In addition, a per-vertex fine control of the effect is possible using either a vertex group or a texture (both are mutually exclusive). The per-vertex values from those will be multiplied with the Global Influence.
-:::
+> **Important:** Influence only affects weights, adding/removing of vertices to/from vertex group is not prevented by setting this value to 0.0. In addition, a per-vertex fine control of the effect is possible using either a vertex group or a texture (both are mutually exclusive). The per-vertex values from those will be multiplied with the Global Influence.
 
 | Property | What it changes |
 |---|---|
@@ -679,7 +643,7 @@ Influence only affects weights, adding/removing of vertices to/from vertex group
 
 #### Mask Texture
 
-![Mask Texture](/docs2/images/ui/properties/modifiers/mesh-edit/mask-texture.png){.right}
+![Mask Texture](/docs2/images/ui/properties/modifiers/mesh-edit/mask-texture.png)
 
 Choose a texture for masking. Note that using a mask texture will remove the mask vertex group.
 
@@ -696,12 +660,12 @@ Choose a texture for masking. Note that using a mask texture will remove the mas
 
 #### Channel
 
-![Channel](/docs2/images/ui/properties/modifiers/mesh-edit/channel.png){.thumb}
+![Channel](/docs2/images/ui/properties/modifiers/mesh-edit/channel.png)
 
 Which channel of the texture to use for masking.
 
 #### Texture Coordinates
 
-![Texture Coordinates](/docs2/images/ui/properties/modifiers/mesh-edit/texture-coordinates.png){.thumb}
+![Texture Coordinates](/docs2/images/ui/properties/modifiers/mesh-edit/texture-coordinates.png)
 
 Which texture coordinates of the texture to use for masking.

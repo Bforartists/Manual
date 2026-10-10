@@ -9,21 +9,19 @@ screenshots: "5.1"
 source: ["26.9.10 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Color Modifiers.odt"]
 ---
 
-![Color modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-color/color-modifiers-grease-pencil.png){.thumb}
+![Color modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-color/color-modifiers-grease-pencil.png)
 
 Color modifiers just exists for the Grease Pencil object.
 
 ## Hue/Saturation
 
-::tool{id=modifier.grease_pencil_hue_saturation}
-
-![Hue/Saturation](/docs2/images/ui/properties/modifiers/grease-pencil-color/hue-saturation.png){.right}
+![Hue/Saturation](/docs2/images/ui/properties/modifiers/grease-pencil-color/hue-saturation.png)
 
 The Hue/Saturation Modifier applies a color transformation to the object output color.
 
 ### Mode
 
-![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-color/mode.png){.thumb}
+![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-color/mode.png)
 
 The color transformation will be applied on the stroke and/or the fill color.
 
@@ -37,7 +35,7 @@ Stroke and Fill, Stroke, Fill
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -48,7 +46,7 @@ Stroke and Fill, Stroke, Fill
 
 #### Custom Curve
 
-![Custom Curve](/docs2/images/ui/properties/modifiers/grease-pencil-deform/custom-curve.png){.right}
+![Custom Curve](/docs2/images/ui/properties/modifiers/grease-pencil-deform/custom-curve.png)
 
 Use a custom curve to define the noise along the strokes.
 
@@ -62,13 +60,13 @@ The two buttons with the magnifying glass at it zooms in and out in the curve wi
 
 ###### Clipping
 
-![Clipping](/docs2/images/ui/properties/modifiers/grease-pencil-deform/clipping.png){.thumb}
+![Clipping](/docs2/images/ui/properties/modifiers/grease-pencil-deform/clipping.png)
 
 Clipping options. Set up clipping for the stroke.
 
 ###### Tools
 
-![Tools](/docs2/images/ui/properties/modifiers/grease-pencil-deform/tools.png){.thumb}
+![Tools](/docs2/images/ui/properties/modifiers/grease-pencil-deform/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
@@ -91,7 +89,7 @@ Holding down shift enables slower movement, which allows more accurate setting.
 
 ##### Vector Handle
 
-![Vector Handle](/docs2/images/ui/properties/modifiers/grease-pencil-deform/vector-handle.png){.right}
+![Vector Handle](/docs2/images/ui/properties/modifiers/grease-pencil-deform/vector-handle.png)
 
 Set handle type to Vector.
 
@@ -103,9 +101,7 @@ Set handle type to Vector.
 
 ## Opacity Modifier
 
-::tool{id=modifier.grease_pencil_opacity_modifier}
-
-![Opacity Modifier](/docs2/images/ui/properties/modifiers/grease-pencil-color/opacity-modifier.png){.right}
+![Opacity Modifier](/docs2/images/ui/properties/modifiers/grease-pencil-color/opacity-modifier.png)
 
 The Opacity Modifier change the opacity (alpha) value of the stroke points.
 
@@ -113,7 +109,7 @@ The alpha value in Grease Pencil is stored per-point. The modifier can alter the
 
 ### Mode
 
-![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-color/mode-2.png){.thumb}
+![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-color/mode-2.png)
 
 The color transformation will be applied to the stroke/fill color or stroke Hardness. When Hardness is selected, then the opacity affects the stroke’s transparency (alpha) from the center to the border.
 
@@ -135,7 +131,7 @@ Use Weight to modulate effect.
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -146,7 +142,7 @@ Use Weight to modulate effect.
 
 #### Custom Curve
 
-![Custom Curve](/docs2/images/ui/properties/modifiers/grease-pencil-deform/custom-curve.png){.right}
+![Custom Curve](/docs2/images/ui/properties/modifiers/grease-pencil-deform/custom-curve.png)
 
 Use a custom curve to define the noise along the strokes.
 
@@ -160,13 +156,13 @@ The two buttons with the magnifying glass at it zooms in and out in the curve wi
 
 ###### Clipping
 
-![Clipping](/docs2/images/ui/properties/modifiers/grease-pencil-deform/clipping.png){.thumb}
+![Clipping](/docs2/images/ui/properties/modifiers/grease-pencil-deform/clipping.png)
 
 Clipping options. Set up clipping for the stroke.
 
 ###### Tools
 
-![Tools](/docs2/images/ui/properties/modifiers/grease-pencil-deform/tools.png){.thumb}
+![Tools](/docs2/images/ui/properties/modifiers/grease-pencil-deform/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
@@ -189,7 +185,7 @@ Holding down shift enables slower movement, which allows more accurate setting.
 
 ##### Vector Handle
 
-![Vector Handle](/docs2/images/ui/properties/modifiers/grease-pencil-deform/vector-handle.png){.right}
+![Vector Handle](/docs2/images/ui/properties/modifiers/grease-pencil-deform/vector-handle.png)
 
 Set handle type to Vector.
 
@@ -201,15 +197,13 @@ Set handle type to Vector.
 
 ## Tint Modifier
 
-::tool{id=modifier.grease_pencil_tint_modifier}
-
-![Tint Modifier](/docs2/images/ui/properties/modifiers/grease-pencil-color/tint-modifier.png){.right}
+![Tint Modifier](/docs2/images/ui/properties/modifiers/grease-pencil-color/tint-modifier.png)
 
 The Tint Modifier colorize the original stroke or fill with a selected color.
 
 ### Mode
 
-![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-color/mode-3.png){.thumb}
+![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-color/mode-3.png)
 
 The color transformation will be applied on the stroke and/or the fill color.
 
@@ -233,13 +227,13 @@ Use weight to modulate effect.
 
 ##### Color
 
-![Color](/docs2/images/ui/properties/modifiers/grease-pencil-color/color.png){.right}
+![Color](/docs2/images/ui/properties/modifiers/grease-pencil-color/color.png)
 
 Defines the tint color for mixing with the original color.
 
 #### Gradient
 
-![Gradient](/docs2/images/ui/properties/modifiers/grease-pencil-color/gradient.png){.right}
+![Gradient](/docs2/images/ui/properties/modifiers/grease-pencil-color/gradient.png)
 
 ##### Color Ramp
 
@@ -254,7 +248,7 @@ Defines the tint gradient color for mixing with the original vertex color.
 
 ###### Tools menu
 
-![Tools menu](/docs2/images/ui/properties/modifiers/grease-pencil-color/tools-menu.png){.thumb}
+![Tools menu](/docs2/images/ui/properties/modifiers/grease-pencil-color/tools-menu.png)
 
 | Property | What it changes |
 |---|---|
@@ -266,7 +260,7 @@ Defines the tint gradient color for mixing with the original vertex color.
 
 ###### Color Mode
 
-![Color Mode](/docs2/images/ui/properties/modifiers/grease-pencil-color/color-mode.png){.thumb}
+![Color Mode](/docs2/images/ui/properties/modifiers/grease-pencil-color/color-mode.png)
 
 | Property | What it changes |
 |---|---|
@@ -275,7 +269,7 @@ Defines the tint gradient color for mixing with the original vertex color.
 
 ###### Interpolation
 
-![Interpolation](/docs2/images/ui/properties/modifiers/grease-pencil-color/interpolation.png){.thumb}
+![Interpolation](/docs2/images/ui/properties/modifiers/grease-pencil-color/interpolation.png)
 
 | Property | What it changes |
 |---|---|
@@ -287,13 +281,13 @@ Defines the tint gradient color for mixing with the original vertex color.
 
 ###### Color Ramp
 
-![Color Ramp](/docs2/images/ui/properties/modifiers/grease-pencil-color/color-ramp.png){.right}
+![Color Ramp](/docs2/images/ui/properties/modifiers/grease-pencil-color/color-ramp.png)
 
 The color band. A click at one of the color stops makes it the active one. You can move the color stops by clicking at them and dragging them around.
 
 ###### Active Color Stop elements
 
-![Active Color Stop elements](/docs2/images/ui/properties/modifiers/grease-pencil-color/active-color-stop-elements.png){.right}
+![Active Color Stop elements](/docs2/images/ui/properties/modifiers/grease-pencil-color/active-color-stop-elements.png)
 
 Adjust the active color stop.
 
@@ -309,7 +303,7 @@ Adjust the active color stop.
 
 ### Influence subpanel
 
-![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png){.right}
+![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png)
 
 | Property | What it changes |
 |---|---|
@@ -320,7 +314,7 @@ Adjust the active color stop.
 
 #### Custom Curve
 
-![Custom Curve](/docs2/images/ui/properties/modifiers/grease-pencil-deform/custom-curve.png){.right}
+![Custom Curve](/docs2/images/ui/properties/modifiers/grease-pencil-deform/custom-curve.png)
 
 Use a custom curve to define the noise along the strokes.
 
@@ -334,13 +328,13 @@ The two buttons with the magnifying glass at it zooms in and out in the curve wi
 
 ###### Clipping
 
-![Clipping](/docs2/images/ui/properties/modifiers/grease-pencil-deform/clipping.png){.thumb}
+![Clipping](/docs2/images/ui/properties/modifiers/grease-pencil-deform/clipping.png)
 
 Clipping options. Set up clipping for the stroke.
 
 ###### Tools
 
-![Tools](/docs2/images/ui/properties/modifiers/grease-pencil-deform/tools.png){.thumb}
+![Tools](/docs2/images/ui/properties/modifiers/grease-pencil-deform/tools.png)
 
 Tools is a menu where you can find some curve related tools.
 
@@ -363,7 +357,7 @@ Holding down shift enables slower movement, which allows more accurate setting.
 
 ##### Vector Handle
 
-![Vector Handle](/docs2/images/ui/properties/modifiers/grease-pencil-deform/vector-handle.png){.right}
+![Vector Handle](/docs2/images/ui/properties/modifiers/grease-pencil-deform/vector-handle.png)
 
 Set handle type to Vector.
 

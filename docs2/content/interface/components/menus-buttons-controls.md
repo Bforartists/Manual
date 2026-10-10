@@ -13,15 +13,15 @@ The UI contains various control elements. Buttons, Menus, toggles, etc.
 
 ## Menu
 
-![Menu](/docs2/images/ui/interface/controls/menu.png){.right}
+![Menu](/docs2/images/ui/interface/controls/menu.png)
 
 In the header you may find text menus. A text menu contains usually buttons. But it can also contain toggles. Or other menus.
 
 ### Menu Search
 
-![Menu Search](/docs2/images/ui/interface/controls/menu-search.png){.right}
+![Menu Search](/docs2/images/ui/interface/controls/menu-search.png)
 
-You can search any header menu while it is open with the search menu operator by pressing :kbd[Space]. This will allow filtering the menu contents without navigating into the sub-menus.
+You can search any header menu while it is open with the search menu operator by pressing Space. This will allow filtering the menu contents without navigating into the sub-menus.
 
 ## Button
 
@@ -29,17 +29,17 @@ A button is a UI element that allows you to perform an operation at click. There
 
 ## Toggles
 
-![Toggles](/docs2/images/ui/interface/controls/toggles.png){.right}
+![Toggles](/docs2/images/ui/interface/controls/toggles.png)
 
-![Toggles](/docs2/images/ui/interface/controls/toggles-2.png){.thumb}
+![Toggles](/docs2/images/ui/interface/controls/toggles-2.png)
 
-![Toggles](/docs2/images/ui/interface/controls/toggles-3.png){.thumb}
+![Toggles](/docs2/images/ui/interface/controls/toggles-3.png)
 
 Toggles can be radio buttons. But also icon or text buttons. Where they are the same is that they have states. On and off for example. They can also have more states than just two.
 
 ## Edit Box
 
-![Edit Box](/docs2/images/ui/interface/controls/edit-box.png){.thumb}
+![Edit Box](/docs2/images/ui/interface/controls/edit-box.png)
 
 Some UI elements are editable. Edit boxes are used for things like position, angle, name, etc. . Click into the editable area to enter the edit mode. Do the changes, like typing in a new value, then press Enter to confirm the change.
 
@@ -47,15 +47,15 @@ Value edit boxes have some extra functionality. They work as sliders too. Hover 
 
 ### Snapping
 
-![Snapping](/docs2/images/ui/timeline/viewport/slider-snapping.png){.right}
+![Snapping](/docs2/images/ui/timeline/viewport/slider-snapping.png)
 
-Sliders can snap incrementally. Hover with the mouse over the slider, start to slide, and holding down :kbd[Ctrl] will snap the sliders in incremental steps.
+Sliders can snap incrementally. Hover with the mouse over the slider, start to slide, and holding down **Ctrl** will snap the sliders in incremental steps.
 
 When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.
 
 ## Drop down box
 
-![Drop down box](/docs2/images/ui/interface/controls/drop-down-box.png){.right}
+![Drop down box](/docs2/images/ui/interface/controls/drop-down-box.png)
 
 A drop down box is another kind of a menu. Usually you choose something here. Like a special setting. Or when you add a modifier. A list drop down box can show you the loaded textures for example. and allow you to choose another one.
 
@@ -63,9 +63,9 @@ A drop down box is another kind of a menu. Usually you choose something here. Li
 
 ## Color Picker
 
-![Color Picker](/docs2/images/ui/interface/controls/color-picker.png){.right}
+![Color Picker](/docs2/images/ui/interface/controls/color-picker.png)
 
-![Color Picker](/docs2/images/ui/interface/controls/color-picker-2.png){.right}
+![Color Picker](/docs2/images/ui/interface/controls/color-picker-2.png)
 
 You may stumble across color pickers in the UI. When you do a painting job for example. This allows you to adjust color for the specific task. Like adjusting the brush color.
 
@@ -73,17 +73,17 @@ You may stumble across color pickers in the UI. When you do a painting job for e
 
 There are various widget types in Bforartists to find. Most of them in the 3D View. Widgets allows you to manipulate the transformation along one or more axis.
 
-![Widgets](/docs2/images/ui/interface/controls/widgets.png){.right}
+![Widgets](/docs2/images/ui/interface/controls/widgets.png)
 
-![Widgets](/docs2/images/ui/interface/controls/widgets-2.png){.right}
+![Widgets](/docs2/images/ui/interface/controls/widgets-2.png)
 
-![Widgets](/docs2/images/ui/interface/controls/widgets-3.png){.right}
+![Widgets](/docs2/images/ui/interface/controls/widgets-3.png)
 
 ### Cursors
 
-![Cursors](/docs2/images/ui/interface/controls/cursors.png){.thumb}
+![Cursors](/docs2/images/ui/interface/controls/cursors.png)
 
-![Cursors](/docs2/images/ui/interface/controls/cursors-2.png){.thumb}
+![Cursors](/docs2/images/ui/interface/controls/cursors-2.png)
 
 A cursor is a center point, and allows manipulation in different ways. Objects gets created at the 3D cursor in the 3D view. You can set the cursor at different locations. You can snap it to elements, and you can snap elements to it.
 
@@ -93,7 +93,7 @@ You will find lots of value edit boxes in the Bforartists interface. To set the 
 
 ### Multi Value Editing
 
-![Multi Value Editing](/docs2/images/ui/interface/controls/multi-value-editing.png){.right}
+![Multi Value Editing](/docs2/images/ui/interface/controls/multi-value-editing.png)
 
 Sometimes you want to edit multiple values at once. The object scale for example. This can be done by clicking into the first edit box, and then drag with the mouse across the other edit boxes. They will become active now. And when you edit one value, then the other values will change too.
 
@@ -113,7 +113,7 @@ This is simply a convenient shortcut to add drivers which can also be added via 
 
 #### Units
 
-![Units](/docs2/images/ui/interface/controls/units.png){.right}
+![Units](/docs2/images/ui/interface/controls/units.png)
 
 You can mix units with numbers. This means when you work in meters, then you can type in cm for centimeters. And the correct value will be used then.
 
@@ -159,5 +159,5 @@ Metric Units
 - Arrow keys can be used to navigate into a menu
 - Each menu item has an underlined character which can be pressed to activate it.
 - Number keys or numpad can be used to access menu items. (Where *1* is the first menu item, *2* the second... etc. For larger menus *Alt-1* the 11th... up to *Alt-0* the 20th)
-- Press :kbd[Enter] to activate the selected menu item.
-- Press :kbd[Esc] to cancel the menu.
+- Press **Enter** to activate the selected menu item.
+- Press **Esc** to cancel the menu.

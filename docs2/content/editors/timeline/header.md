@@ -7,6 +7,7 @@ version: "5.1"
 status: "draft"
 screenshots: "5.1"
 source: ["17.1.1 Editors - Timeline - Header Tools and Options.odt", "17.1.3 Editors - Timeline - View Menu.odt"]
+shared: ["snippets/quick-menu.md", "snippets/marker-menu.md"]
 ---
 
 ## Introduction
@@ -25,7 +26,7 @@ The playback elements allows you to play your animation, and set the animation r
 
 ### Time Jump Delta
 
-![Time Jump Delta](/docs2/images/ui/timeline/header/time-jump-delta.png){.right}
+![Time Jump Delta](/docs2/images/ui/timeline/header/time-jump-delta.png)
 
 Number of frames or seconds to jump forward or backward.
 
@@ -46,13 +47,13 @@ What to use for the time jump. Frames or Seconds.
 
 ### Set Start Frame
 
-![Set Start Frame](/docs2/images/ui/timeline/header/set-start-frame.png){.right}
+![Set Start Frame](/docs2/images/ui/timeline/header/set-start-frame.png)
 
 Sets the current frame position as the start frame.
 
 ### Use Preview Range
 
-![Use Preview Range](/docs2/images/ui/timeline/header/use-preview-range.png){.right}
+![Use Preview Range](/docs2/images/ui/timeline/header/use-preview-range.png)
 
 Toggle an alternative range used to preview animations. The Preview range works for the UI playback, but will not work for rendering an animation.
 
@@ -68,7 +69,7 @@ The preview range is displayed in orange color. The original playback range that
 
 ## Active Keying Set
 
-![Active Keying Set](/docs2/images/ui/timeline/header/active-keying-set.png){.thumb}
+![Active Keying Set](/docs2/images/ui/timeline/header/active-keying-set.png)
 
 Objects needs a so called keying set so that you can record animation for it. It is a container for the animation, a set of keyframe channels. When you try to record an animation without an existing keying set, then you will get a warning since the channels for the keyframes are missing.
 
@@ -82,7 +83,7 @@ Note that Auto Keying just works with transform properties ( Objects and Bones) 
 
 ### Auto Keyframing Popover
 
-![Auto Keyframing Popover](/docs2/images/ui/timeline/header/auto-keyframing-popover.png){.right}
+![Auto Keyframing Popover](/docs2/images/ui/timeline/header/auto-keyframing-popover.png)
 
 Auto keying settings. These settings shows when you have auto keying activated.
 
@@ -95,13 +96,13 @@ Auto keying settings. These settings shows when you have auto keying activated.
 
 ### Active Keying Set
 
-![Active Keying Set](/docs2/images/ui/timeline/header/active-keying-set-2.png){.right}
+![Active Keying Set](/docs2/images/ui/timeline/header/active-keying-set-2.png)
 
 Choose your keying set.
 
 ## Playback Panel
 
-![Playback Panel](/docs2/images/ui/timeline/header/playback-panel.png){.right}
+![Playback Panel](/docs2/images/ui/timeline/header/playback-panel.png)
 
 Here you can find various options for playback.
 
@@ -117,7 +118,7 @@ How to synchronize playback.
 
 ### Audio Scrubbing
 
-![Audio Scrubbing](/docs2/images/ui/timeline/header/audio-scrubbing.png){.right}
+![Audio Scrubbing](/docs2/images/ui/timeline/header/audio-scrubbing.png)
 
 Play existing audio from sequence editor when scrubbing.
 
@@ -130,7 +131,7 @@ Play existing audio from sequence editor when scrubbing.
 
 ### Play in
 
-![Play in](/docs2/images/ui/timeline/header/play-in.png){.right}
+![Play in](/docs2/images/ui/timeline/header/play-in.png)
 
 Plays the animation in the chosen editor types.
 
@@ -154,49 +155,45 @@ Plays the animation in the chosen editor types.
 
 ## Playhead Snapping
 
-![Playhead Snapping](/docs2/images/ui/timeline/header/playhead-snapping.png){.right}
+![Playhead Snapping](/docs2/images/ui/timeline/header/playhead-snapping.png)
 
 Playhead controls in animation editors help position the current frame indicator with precision, improving navigation and editing across the Timeline, Dope Sheet, Graph Editor, NLA, and Video Sequencer.
 
 | Property | What it changes |
 |---|---|
-| Toggle Playhead Snapping On/Off | Toggles snapping behavior for the playhead with a visual indicator. When enabled, the playhead will snap to nearby time-based targets during scrubbing or dragging. **Tip:***You can temporarily enable/disable the playhead snapping by holding down :kbd[Ctrl] while dragging the playhead.* |
+| Toggle Playhead Snapping On/Off | Toggles snapping behavior for the playhead with a visual indicator. When enabled, the playhead will snap to nearby time-based targets during scrubbing or dragging. **Tip:** *You can temporarily enable/disable the playhead snapping by holding down Ctrl while dragging the playhead.* |
 | Distance | Sets the snapping threshold in pixels. Determines how close the playhead must be to a target for snapping to occur. |
 | Snap Target | **Frames**: Snaps to whole frame numbers. Ideal for frame-accurate editing instead of sub-frame cursor placement.<br>**Seconds**: Snaps to time intervals measured in seconds. Useful for audio syncing or time-based pacing.<br>**Markers**: Snaps to the closest timeline marker. Great for aligning actions to scene events or beats.<br>**Keyframes**: Snaps to keyframe positions. Ensures precise alignment for editing and playback.<br>**Strips**: Snaps to the start or end of video/audio strips. Useful in the Video Sequencer and NLA editor. |
 
 ### Frame Step
 
-![Frame Step](/docs2/images/ui/timeline/header/frame-step.png){.right}
+![Frame Step](/docs2/images/ui/timeline/header/frame-step.png)
 
 Defines the step size for frame-by-frame navigation. Controls how far the playhead moves when stepping through frames manually.
 
-:::note
-Only available with Frames Snap Target
-:::
+> **Note:** Only available with Frames Snap Target
 
 ### Second Step
 
 Defines the step size for second-by-second navigation. Controls how far the playhead moves when stepping through the timeline manually.
 
-:::note
-Only available with Second Snap Target
-:::
+> **Note:** Only available with Second Snap Target
 
 ## Keying Panel
 
-![Keying Panel](/docs2/images/ui/timeline/header/keying-panel.png){.right}
+![Keying Panel](/docs2/images/ui/timeline/header/keying-panel.png)
 
 Some more keying options.
 
 ### New Keyframe Type
 
-![New Keyframe Type](/docs2/images/ui/timeline/header/new-keyframe-type.png){.right}
+![New Keyframe Type](/docs2/images/ui/timeline/header/new-keyframe-type.png)
 
 Recolor the currently selected keyframes. Or create the new keyframes with this chosen keyframe color.
 
 ### Auto Keyframing
 
-![Auto Keyframing](/docs2/images/ui/timeline/header/auto-keyframing.png){.thumb}
+![Auto Keyframing](/docs2/images/ui/timeline/header/auto-keyframing.png)
 
 | Property | What it changes |
 |---|---|
@@ -210,7 +207,7 @@ Recolor the currently selected keyframes. Or create the new keyframes with this 
 
 ## Options
 
-![Options](/docs2/images/ui/timeline/header/options.png){.right}
+![Options](/docs2/images/ui/timeline/header/options.png)
 
 | Property | What it changes |
 |---|---|
@@ -219,7 +216,7 @@ Recolor the currently selected keyframes. Or create the new keyframes with this 
 
 ### Show Seconds
 
-![Show Seconds](/docs2/images/ui/timeline/header/show-seconds.png){.right}
+![Show Seconds](/docs2/images/ui/timeline/header/show-seconds.png)
 
 Show the timing in the timeline area in seconds instead of frames.
 
@@ -238,7 +235,7 @@ Shows the Dope Sheet Overlays.
 
 ### Overlays
 
-![Overlays](/docs2/images/ui/timeline/header/overlays.png){.right}
+![Overlays](/docs2/images/ui/timeline/header/overlays.png)
 
 #### Show Scene Strip Range
 
@@ -246,23 +243,23 @@ When using Scene Time Synchronisation in the video sequence editor, then display
 
 ## Quick menu
 
-::include{snippet=quick-menu}
+*Shared section: [Quick menu](../../../snippets/quick-menu.md)*
 
 ## View Menu
 
-![View Menu](/docs2/images/ui/timeline/header/view-menu.png){.right}
+![View Menu](/docs2/images/ui/timeline/header/view-menu.png)
 
 The View menu contains all View related tools.
 
 ### Adjust Last Operation
 
-![Adjust Last Operation](/docs2/images/ui/timeline/header/adjust-last-operation.png){.right}
+![Adjust Last Operation](/docs2/images/ui/timeline/header/adjust-last-operation.png)
 
 Shows the adjust last operation panel down left.
 
 ### Channels
 
-![Channels](/docs2/images/ui/timeline/header/channels.png){.right}
+![Channels](/docs2/images/ui/timeline/header/channels.png)
 
 Shows the channels list at the left
 
@@ -278,7 +275,7 @@ Shows the channels list at the left
 
 ### Area submenu
 
-![Area submenu](/docs2/images/ui/timeline/header/area-submenu.png){.right}
+![Area submenu](/docs2/images/ui/timeline/header/area-submenu.png)
 
 This menu contains general view functionality. And exists in most other editor types too.
 
@@ -289,7 +286,7 @@ This menu contains general view functionality. And exists in most other editor t
 
 #### Duplicate Area into New Window
 
-![Duplicate Area into New Window](/docs2/images/ui/timeline/header/duplicate-area-into-new-window.png){.right}
+![Duplicate Area into New Window](/docs2/images/ui/timeline/header/duplicate-area-into-new-window.png)
 
 Duplicate Area into New Window makes the selected editor window floating. You can then drag it around at the monitor. It is not connected with the rest of the UI anymore.
 
@@ -297,10 +294,10 @@ A separated window cannot be merged into the main window again. You have to clos
 
 | Menu entry | What it does |
 |---|---|
-| Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey :kbd[Ctrl+Space]. Or reuse the menu item in the area menu. |
-| Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey :kbd[Ctrl+Alt+Space]. |
+| Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu. |
+| Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
 | Close Area | Closes the area window. |
 
 ## Marker menu
 
-::include{snippet=marker-menu}
+*Shared section: [Marker menu](../../../snippets/marker-menu.md)*

@@ -1,5 +1,5 @@
 {
- "sections_scanned": 370,
+ "sections_scanned": 441,
  "clusters": [
   {
    "members": [
@@ -19,8 +19,8 @@
     "content/editors/properties/modifiers/mesh/generate.md \u203a Array ( Legacy )"
    ],
    "copies": 3,
-   "words_each": 212,
-   "words_saved": 345
+   "words_each": 206,
+   "words_saved": 336
   },
   {
    "members": [
@@ -37,8 +37,8 @@
     "content/editors/properties/modifiers/mesh/deform.md \u203a Hook"
    ],
    "copies": 2,
-   "words_each": 177,
-   "words_saved": 175
+   "words_each": 171,
+   "words_saved": 171
   },
   {
    "members": [
@@ -55,8 +55,8 @@
     "content/editors/properties/modifiers/mesh/edit.md \u203a Vertex Weight Proximity"
    ],
    "copies": 2,
-   "words_each": 183,
-   "words_saved": 134
+   "words_each": 175,
+   "words_saved": 128
   },
   {
    "members": [
@@ -73,8 +73,8 @@
     "content/editors/properties/modifiers/mesh/deform.md \u203a Lattice"
    ],
    "copies": 2,
-   "words_each": 135,
-   "words_saved": 112
+   "words_each": 131,
+   "words_saved": 106
   },
   {
    "members": [
@@ -159,6 +159,15 @@
   },
   {
    "members": [
+    "content/getting-started/about-documentation.md \u203a From the .odt manual (1.1 How to use the Manual)",
+    "content/getting-started/introduction.md \u203a From the .odt manual (1 Introduction)"
+   ],
+   "copies": 2,
+   "words_each": 30,
+   "words_saved": 30
+  },
+  {
+   "members": [
     "content/editors/properties/modifiers/mesh/edit.md \u203a Colors",
     "content/editors/properties/modifiers/mesh/edit.md \u203a Vertex Groups"
    ],
@@ -205,7 +214,39 @@
    "copies": 1,
    "words_each": 113,
    "words_saved": 0
+  },
+  {
+   "members": [
+    "content/getting-started/about-documentation.md \u203a Discover Button"
+   ],
+   "copies": 1,
+   "words_each": 67,
+   "words_saved": 0
+  },
+  {
+   "members": [
+    "content/getting-started/about-documentation.md \u203a Panels"
+   ],
+   "copies": 1,
+   "words_each": 57,
+   "words_saved": 0
+  },
+  {
+   "members": [
+    "content/getting-started/about-documentation.md \u203a Chapters"
+   ],
+   "copies": 1,
+   "words_each": 83,
+   "words_saved": 0
+  },
+  {
+   "members": [
+    "content/getting-started/about-documentation.md \u203a Sub-sections by Header links"
+   ],
+   "copies": 1,
+   "words_each": 140,
+   "words_saved": 0
   }
  ],
- "total_words_saved": 2196
+ "total_words_saved": 2201
 }
