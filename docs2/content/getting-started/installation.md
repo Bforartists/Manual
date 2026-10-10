@@ -24,6 +24,8 @@ You can also download from Flatpak, the Microsoft store and Blender Launcher v2.
 
 > Tip: test
 
+![bforartists_2E0BqKRl0z.png](/docs2/images/bforartists2e0bqkrl0z-1.png)
+
 There is also the source code available at GitHub. [https://github.com/Bforartists/Bforartists](https://github.com/Bforartists/Bforartists)
 
 ## System Requirements
