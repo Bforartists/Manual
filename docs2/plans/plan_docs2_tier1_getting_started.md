@@ -446,6 +446,54 @@ jobs:
       - run: python docs2/tools/render.py --out _preview  # same styles as the site
       # deploy _preview to GitHub Pages /preview/<pr>/ and post the comment
 ```
+**Files:** `.github/workflows/docs2.yml`, `docs2/tools/{check,image_bot,render,patterns,docs_io}.py`,
+`docs2/tools/preview/doc-kit.css`, `.pages.yml`, `.gitignore`
+
+**🤖 Done by Claude (10 Oct)**
+
+- [x] `check.py`: front matter, unique IDs and slugs, links, images, shared sections, sidebar (errors);
+      alt text, editor-safe text, waiting images (warnings). Markdown report; exit code 1 on errors.
+- [x] `image_bot.py`: files images from `images/_inbox/` **and the library root**, removes byte-identical
+      copies (also of images already in the library), names them `images/<section>/<page>/<heading>.png`,
+      rewrites links, replaces file-name alt text with the heading, shrinks > 1920 px, updates `index.csv`.
+      Keeps the library's PNG/JPG format (the plan said `.webp`; one format change at a time).
+- [x] `patterns.py`: plain writing → doc kit components (callouts, keycaps, menu chips, floated figures,
+      shared sections, YouTube, tables, code). Shared by the preview now and the Webflow sync later.
+- [x] `render.py`: preview pages with the **real doc kit CSS** copied from the Webflow template, sidebar from
+      `nav.yml`, page sections outline, light/dark, ✏️ *Edit this page* (Pages CMS deep link).
+- [x] `.github/workflows/docs2.yml`: on pull requests and on pushes to `docs2/**` (Pages CMS saves):
+      bot → checks → preview on GitHub Pages `/preview/<pr-N or branch>/` → one updated PR comment.
+- [x] `.pages.yml`: uploads now go to `docs2/images/_inbox` (the option needs the full path; `_inbox`
+      alone fell back to the library root, which is why your drop landed there).
+- [x] 🐛 The first check run found **14 broken image links** on 7 Spike 1 modifier pages (icons inside option
+      rows were never copied to the library). Fixed in the converter; word check still 23 of 23.
+
+**Tested locally**
+
+| Test | Result |
+|---|---|
+| Checks on all 31 pages | ✅ 0 errors · 2 warnings (your test screenshot: file-name alt, waiting for the bot) |
+| Broken link, missing image, bad `status` | ❌ each reported with file and line; exit code 1 |
+| Backslash and `<br>` in a page | 🟡 two editor-safe warnings |
+| Image bot on your test drop | 🏷️ `…z-1.png` → `getting-started/installation/download-bforartists.png`; ♻️ `…z.png` removed as a copy; alt set to "Download Bforartists" |
+| Preview of Installation and Timeline header | ✅ doc kit look: callouts, keycaps, menu chips, floated screenshots, outline |
+
+**👤 Your review: the test pull request (15 minutes)**
+
+- [x] **One-time settings** on `Bforartists/Manual`:
+      ⚙️ Settings → Actions → General → Workflow permissions → **Read and write permissions** · Save.
+      📄 Settings → Pages → Deploy from a branch → `gh-pages` / `(root)` (pick it after the first run creates the branch).
+- [x] **Push** both branches from VS Code: `docs2/tier1-getting-started` (Phase 2 wrap-up) and `docs2/tier1-phase3`.
+- [x] **Open the pull request:** on GitHub, *Compare & pull request* → **base: `docs2/tier1-getting-started`** ←
+      compare: `docs2/tier1-phase3`. ⚠️ Check the base is not `master`.
+- [x] Wait for **Docs 2.0 checks and preview** (about 2 minutes). Expected:
+      1. 🤖 A bot commit *docs: file new images [docs-bot]* on the PR: your screenshot filed and renamed, the copy removed.
+      2. 💬 One comment: 👀 preview link, check table, image bot table.
+      3. ✅ The run is green.
+- [x] Click **Open the preview**. Check Installation looks like the website: the tip, your screenshot, keycaps.
+- [x] Try one failure: in the PR, edit a page on GitHub and break a link; the run turns ❌ and the comment
+      lists the file and line. Revert it.
+- [x] Merge the PR into the working branch when happy (or tell me what to change).
 
 **Acceptance:** a test pull request with one dropped image and one broken link → bot files the image,
 the check fails on the link, the preview link opens and looks like the site.
