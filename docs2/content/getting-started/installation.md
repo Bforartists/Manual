@@ -22,6 +22,8 @@ Bforartists is available for download for Linux, mac OS and MS-Windows.
 
 You can also download from Flatpak, the Microsoft store and Blender Launcher v2.
 
+> Tip: test
+
 There is also the source code available at GitHub. [https://github.com/Bforartists/Bforartists](https://github.com/Bforartists/Bforartists)
 
 ## System Requirements
