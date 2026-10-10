@@ -49,7 +49,8 @@
 Spike 1 proved the `.odt` manual converts cleanly to Markdown. Tier 1 proves the **whole workflow**
 on one section that every new artist reads first:
 
-1. 📄 **Content** — convert the 5 Getting Started chapters, write 3 new pages, all in plain writing
+1. 📄 **Content** — convert the 5 Getting Started chapters **as a faithful clone** (no trimming),
+   carry over the current website text for the 3 pages that have no chapter, all in plain writing
    (no custom tags for writers).
 2. ✏️ **Writer workflow** — edit in the browser with Pages CMS; drop a screenshot and let the bot file it.
 3. 🔍 **Checks + preview** — every pull request is checked and gets a **preview link** that looks like
@@ -117,6 +118,7 @@ the build does the polish; Webflow does the presenting.
 | D10 | Mobile | Bottom bar: Chapters · current heading · Search | ✅ Confirmed |
 | D11 | Git workflow | Work on a branch; pull request only when you say it is ready | ✅ Confirmed |
 | D12 | Scope | Getting Started only (8 pages) | 🟡 Proposed |
+| D13 | Trimming | **No trimming or rewording until the whole manual is migrated and live.** Content is a faithful clone in the new architecture. Structure work is in: shared snippets for repeated text, chapters consolidated into pages. Trimming and new writing come in the Refine phase | ✅ Confirmed 10 Oct |
 
 ---
 
@@ -243,17 +245,23 @@ https://youtu.be/abc123                       → video embed (link on its own l
 
 ### Phase 1 — Getting Started Content
 
-**Goal:** 8 Getting Started pages in plain writing, readable on GitHub as they are.
+**Goal:** 8 Getting Started pages in plain writing, readable on GitHub as they are, with **every word
+of the source kept** (faithful clone, D13).
 
 **Files:** `docs2/tools/convert.py`, `docs2/tools/pages.json`, `docs2/content/getting-started/*`, `docs2/nav.yml`
 
 - [ ] Switch converter output from tags to plain patterns (`:::tip` → `> Tip:`, `{.right}` → size rule,
       `:kbd[…]` → plain `Ctrl + Space`).
-- [ ] Add the Getting Started pages to `pages.json`; merge `1.1` + `38` into *Using the Documentation*.
-- [ ] Pull the existing Webflow text for Introduction and About Documentation; keep whichever is newer.
-- [ ] Trim with the style rules (Spike 1 trim cut 43%).
-- [ ] Draft the 3 new pages (Quick Start, Comparing to Blender, Migrating from Blender) as outlines
-      with `status: draft`; you or a writer fill the words.
+- [ ] Add the Getting Started pages to `pages.json`; consolidate `1.1` + `38` into
+      *Using the Documentation* (two sections, text unchanged).
+- [ ] Pull the existing Webflow text for Introduction, About Documentation, Quick Start, Comparing and
+      Migrating; where a page has no source chapter, the website text is the source.
+- [ ] ♻️ Repeated text becomes a shared snippet, word for word (the longest copy wins; differences are
+      flagged for you, never dropped).
+- [ ] 🚫 No trimming or rewording (D13). Only fixes that keep meaning: broken headings, image placement,
+      numbering.
+- [ ] Word-count check per page: converted words + words moved to snippets ≥ source words (report in
+      the pull request).
 - [ ] Generate `nav.yml` (order + icon per page) from `pages.json`.
 
 ```yaml
@@ -268,7 +276,7 @@ https://youtu.be/abc123                       → video embed (link on its own l
     - { id: getting-started.quick-start, title: Quick Start, icon: quickstart }
 ```
 
-**Acceptance:** all 8 pages open on GitHub with no visible markup noise; images show.
+**Acceptance:** all 8 pages open on GitHub with no visible markup noise; images show; no source text lost.
 
 ### Phase 2 — Writer Workflow in the Browser
 
@@ -446,7 +454,7 @@ edit in Webflow makes the next sync stop with a clear message.
 | Step | Expected Result |
 |---|---|
 | Open `installation.md` on GitHub | Reads cleanly, images show, no `:::` or `{…}` noise |
-| Compare with `2 Installing Bforartists.odt` | No instructions lost; repetition gone |
+| Compare with `2 Installing Bforartists.odt` | Every sentence and image still there (faithful clone) |
 
 #### Phase 2 — Writer workflow
 
@@ -496,6 +504,7 @@ edit in Webflow makes the next sync stop with a clear message.
 
 ## 10. Out of Scope
 
+- 🚫 Trimming, rewording, new writing — Refine phase, after the full migration is live (D13).
 - 🚫 Other sections (Interface, Editors…) — Tier 2 onwards.
 - 🚫 Extractor, release diff, capture script, example scenes — Tier 3 (automation).
 - 🚫 Release PDFs and the Documentation History page — Tier 3.
