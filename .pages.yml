@@ -1,0 +1,126 @@
+# Pages CMS configuration: the online WYSIWYG editor for the Bforartists docs.
+# Writers sign in at https://app.pagescms.org with GitHub, pick this repo and a branch,
+# and edit pages in a form + rich-text editor. Every save is a Git commit.
+# Spike 1 points at docs2/; on the fresh main branch the paths drop the docs2/ prefix.
+
+media:
+  name: images
+  label: Image library
+  input: docs2/images
+  output: /docs2/images
+  categories: [image]
+
+content:
+  - name: docs
+    label: Documentation pages
+    type: collection
+    path: docs2/content
+    subfolders: true
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      layout: tree
+      node:
+        filename: index.md
+        hideDirs: others
+      fields: [title, status, version]
+      primary: title
+      search: [title, id]
+    fields:
+      - name: id
+        label: Page ID
+        type: string
+        required: true
+        description: Stable ID, for example editors.timeline.header. Never change it after publishing.
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: section
+        label: Section
+        type: select
+        options:
+          values: [getting-started, interface, workspaces, editors, assets, extensions, keymap, advanced, appendix]
+      - name: path
+        label: Breadcrumb path
+        type: string
+        list: true
+      - name: icon
+        label: Icon name
+        type: string
+      - name: version
+        label: Bforartists version
+        type: string
+        default: "5.1"
+      - name: status
+        label: Status
+        type: select
+        default: draft
+        options:
+          values: [draft, needs-review, reviewed]
+      - name: screenshots
+        label: Screenshots taken in
+        type: string
+      - name: source
+        label: Converted from (.odt)
+        type: string
+        list: true
+        readonly: true
+      - name: body
+        label: Page
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
+          media: images
+          rename: safe
+          extensions: [png, webp, jpg, svg]
+
+  - name: snippets
+    label: Shared snippets
+    type: collection
+    path: docs2/snippets
+    format: yaml-frontmatter
+    view:
+      fields: [title, status]
+      primary: title
+    fields:
+      - name: id
+        label: Snippet ID
+        type: string
+        required: true
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: version
+        label: Bforartists version
+        type: string
+      - name: status
+        label: Status
+        type: select
+        options:
+          values: [draft, needs-review, reviewed]
+      - name: source
+        label: Converted from (.odt)
+        type: string
+        list: true
+        readonly: true
+      - name: body
+        label: Snippet
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
+          media: images
+
+settings:
+  content:
+    merge: true          # keep front-matter keys this form does not know about
+  commit:
+    identity: user       # commits carry the writer's name, for the credits page
+    templates:
+      create: "docs: add {path} (Pages CMS, {userName})"
+      update: "docs: update {path} (Pages CMS, {userName})"
+      delete: "docs: delete {path} (Pages CMS, {userName})"
+      rename: "docs: move {oldPath} to {newPath} (Pages CMS, {userName})"
