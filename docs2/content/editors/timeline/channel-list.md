@@ -6,123 +6,60 @@ path: ["Editors", "Timeline", "Channel list"]
 version: "5.1"
 status: "draft"
 screenshots: "5.1"
-source: ["17 Editors - Timeline.odt", "17.2 Editors - Timeline - Channel list.odt"]
+source: ["17.2 Editors - Timeline - Channel list.odt", "17 Editors - Timeline.odt"]
 ---
 
-## Timeline - Channel List
+![Channel list](/docs2/images/ui/timeline/channel-list/timeline-channel-list.png){.right}
 
-![Timeline - Channel List](/docs2/images/ui/timeline/channel-list/timeline-channel-list.png){.right}
+The **channel list** shows your objects and their animation channels. It is the same list as in the Dope Sheet, but the Timeline has no modes, so it only shows Dope Sheet content. Shape key and Grease Pencil animation are not listed.
 
-The channel list contains your objects and their animation channels. It is basically the same list than the one in the dope sheet editor.The timeline has no modes like the Dope Sheet though. And so you will just see the content from the dope sheet mode. And not shape key animation or grease pencil edit mode animation for example.
+The list is hidden by default. Click the small button at the top left to show it. Drag its right border to resize it.
 
-The channel list area is hidden by default. You need to reveal it by clicking at the small button up left. It can be resized by dragging the right border to left or right.
+## Hotkeys
 
-The list has several elements, to turn on or off different features, Or to expand or collapse the hierarchy.
+| Input | What it does |
+|---|---|
+| :kbd[A] | Selects all channels |
+| :kbd[Alt+A] | Deselects all |
+| :kbd[LMB] | Selects a channel |
+| :kbd[Shift+LMB] | Adds a channel to the selection, or removes it |
+| :kbd[LMB] drag | Box select |
 
-### Hotkeys
+## Row elements
 
-![Hotkeys](/docs2/images/ui/timeline/channel-list/hotkeys.png){.right}
+| Element | What it does |
+|---|---|
+| ![](/docs2/images/ui/timeline/channel-list/search-field.png){.icon} **Search field** | Filters the list by name |
+| ![](/docs2/images/ui/timeline/channel-list/expand-collapse-triangle.png){.icon} **Expand triangle** | Opens or closes a level of the hierarchy |
+| ![](/docs2/images/ui/timeline/channel-list/object-type-icon.png){.icon} **Object type icon** | Shows what the channel belongs to. It cannot be clicked |
+| **Channel name** | Double-click to rename an element, such as an action or object. Press :kbd[Enter] or click elsewhere to confirm |
+| ![](/docs2/images/ui/timeline/channel-list/enable-f-curve-modifiers.png){.icon} **Enable F-Curve modifiers** | Turns the channel's F-Curve modifiers on or off. Modifiers are added in the Graph Editor |
+| ![](/docs2/images/ui/timeline/channel-list/mute-channel.png){.icon} **Mute** | The channel is not calculated |
+| ![](/docs2/images/ui/timeline/channel-list/lock-channel.png){.icon} **Lock** | The channel cannot be edited |
 
-Hotkey A selects all channels.
+## Channel context menu
 
-Hotkey Alt A deselects everything.
+![Channel context menu](/docs2/images/ui/timeline/channel-list/channel-context-menu.png){.right}
 
-Left mouse and dragging activates box select.
-
-Clicking at a channel selects it.
-
-Clicking at a channel while holding down shift adds to the selection or removes from the selection.
-
-### Search field
-
-![Search field](/docs2/images/ui/timeline/channel-list/search-field.png){.right}
-
-At the top is a search field that allows you to filter the channel list by search terms.
-
-### Expand / collapse triangle
-
-![Expand / collapse triangle](/docs2/images/ui/timeline/channel-list/expand-collapse-triangle.png){.right}
-
-The triangle icon at the left allows you to expand or collapse the hierarchy.
-
-### Object type Icon
-
-![Object type Icon](/docs2/images/ui/timeline/channel-list/object-type-icon.png){.right}
-
-This icon shows what kind of object this channel belongs to. These icons have no functionality.
-
-### Channel name
-
-![Channel name](/docs2/images/ui/timeline/channel-list/channel-name.png){.right}
-
-The name of the channel name and element. Some elements can be renamed. Like the action or object type.
-
-To rename an element double click at it. Type in the new name. Then press Enter or click elsewhere.
-
-### Enable F-Curve Modifiers
-
-![Enable F-Curve Modifiers](/docs2/images/ui/timeline/channel-list/enable-f-curve-modifiers.png){.right}
-
-![Enable F-Curve Modifiers](/docs2/images/ui/timeline/channel-list/enable-f-curve-modifiers-2.png){.right}
-
-In the Graph editor you can add F-Curve modifiers. In the other animation editor types, like the Dope Sheet editor, you can enable or disable these modifiers by the Enable F-Curve Modifiers setting in the channel list.
-
-For further informations about the F-Curve modifiers see the graph editor chapters.
-
-### Mute Channel
-
-![Mute Channel](/docs2/images/ui/timeline/channel-list/mute-channel.png){.right}
-
-Mutes the selected channel. It will not be calculated.
-
-### Lock Channel
-
-![Lock Channel](/docs2/images/ui/timeline/channel-list/lock-channel.png){.right}
-
-Locks the selected channel. It is not longer editable.
-
-## Channel Context Menu
-
-![Channel Context Menu](/docs2/images/ui/timeline/channel-list/channel-context-menu.png){.right}
-
-When you right click into the channel area, then you will call the Channel context menu.
+Right-click in the channel list to open the **Channel context menu**.
 
 | Menu entry | What it does |
 |---|---|
-| Frame selected channels | Centers the selected channels in view. |
-| Mute Channel | This channel is not calculated. |
-| Unmute Channel | This channel is calculated. |
-| Protect Channels | Protect channels from editing. |
-| Unprotect Channels | Enables editing of channels again. |
-| Group Channels | Groups channels together. |
-| Ungroup Channels | Ungroup grouped channels. Beware, the channels will not return to their initial group. |
-| Toggle Channel Editability | Protects or unprotects the selected channels. |
-| Extrapolation Mode submenu | — |
+| Frame Selected Channels | Centres the selected channels in the view |
+| Mute / Unmute Channel | Stops or restarts calculating the channel |
+| Protect / Unprotect Channels | Locks or unlocks the channels for editing |
+| Toggle Channel Editability | Switches protection on or off |
+| Group / Ungroup Channels | Groups the channels. Ungrouped channels do not return to their old group |
+| Extrapolation Mode › | How the curve continues before the first and after the last keyframe (below) |
+| Expand / Collapse Channels | Opens or closes the hierarchy |
+| Move Channels › | Changes the order of the channels |
+| Delete Channels | Deletes the selected channels |
 
-### Extrapolation Mode
+### Extrapolation mode
 
-![Extrapolation Mode](/docs2/images/ui/timeline/channel-list/extrapolation-mode.png){.right}
-
-Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.
-
-| Menu entry | What it does |
+| Entry | What it does |
 |---|---|
-| Constant Extrapolation | The animation curve continues straight at the end. |
-| Linear Extrapolation | The animation curve continues the last direction. |
-| Make Cyclic | Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame. |
-| Clear Cyclic | Removes the cyclic extrapolation. |
-
-| Menu entry | What it does |
-|---|---|
-| Expand Channels | Expands the channels. |
-| Collapse Channels | Collapses the channels. |
-
-### Move Channels submenu
-
-![Move Channels submenu](/docs2/images/ui/timeline/channel-list/move-channels-submenu.png){.right}
-
-Sort the order of the channels. The menu items should be self explaining.
-
-### Delete Channels
-
-Removes the selected channels.
+| Constant Extrapolation | The curve stays flat after the last keyframe |
+| Linear Extrapolation | The curve keeps its last direction |
+| Make Cyclic | Loops the animation. The first frame is matched to the last |
+| Clear Cyclic | Removes the loop |

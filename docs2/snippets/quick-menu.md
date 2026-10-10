@@ -10,52 +10,27 @@ source: ["17.1.2 Editors - Timeline - Header - Quick Menu.odt"]
 
 ![Quick menu](/docs2/images/ui/shared/quick-menu/quick-menu.png){.right}
 
-The quick menu, or in long Quick Favorites menu, is a menu that can be customized to your needs. Here you can add operators for quick access.
+The **Quick menu** (Quick Favorites) is a menu you fill yourself with the tools you use most. Press :kbd[Q] to open it under the mouse. This works in nearly every editor, but only the 3D Viewport also shows it in the header.
 
-It is located in the header. But it can be called by hotkey Q directly under the mouse. This hotkey works in other editors too.
+An empty Quick menu says "No Menu Items found". Entries show as text, without icons.
 
-When the menu is empty, then you will see the message "No Menu Items found". This means that you first have to add some tools to the menu. It is a user configurable menu.
+### Add a tool or a menu
 
-Note that added operators in this menu does not have icons. Just text.
+![Add to Quick Favorites](/docs2/images/ui/shared/quick-menu/adding-an-operator-to-the-quick-menu.png){.right}
 
-## Adding an operator to the Quick menu
+1. Right-click a menu entry, a button, a tool in the tool shelf or a whole menu.
+2. Choose **Add to Quick Favorites**.
 
-![Adding an operator to the Quick menu](/docs2/images/ui/shared/quick-menu/adding-an-operator-to-the-quick-menu.png){.right}
+If the right-click menu has **Add to Quick Favorites**, it can go in the Quick menu.
 
-Open the panel or the menu where your operator is that you want to add.
+### Order
 
-Let's add the open command from the File menu. Open the File menu, right click at open, and choose Add to Quick Favorites.
+Menus are listed first, then tools, each in the order you added them. They cannot be sorted later. To move an entry, remove it and add it again.
 
-Do the same with Save As. We should now have two new menu items in the Quick menu, which you can use now.
+### Remove an entry
 
-![Adding an operator to the Quick menu](/docs2/images/ui/shared/quick-menu/adding-an-operator-to-the-quick-menu-2.png){.right}
+Right-click it in the Quick menu and choose **Remove from Quick Favorites**.
 
-As a rule of thumb, when the right click menu has an Add to Quick Favorites, then you can add it to the quick menu.
+### Each editor and mode has its own
 
-Note that you can also add operators from the tool shelf at the left. And also operators from other editor types. Some other editors have their own quick menu though. The Image Editor for example. These operators gets added in the quick menu of the image editor then. And does not show in the quick menu in the header of the 3D view.
-
-## Adding a menu to the Quick menu
-
-![Adding a menu to the Quick menu](/docs2/images/ui/shared/quick-menu/adding-a-menu-to-the-quick-menu.png){.right}
-
-It is also possible to add a menu to the Quick menu. For example the whole Add menu. The way is the same. Right click at it, and choose Add to Quick Favorites.
-
-![Adding a menu to the Quick menu](/docs2/images/ui/shared/quick-menu/adding-a-menu-to-the-quick-menu-2.png){.right}
-
-## Order
-
-You might notice that the add menu adds at the top of the menu, and not at the bottom as you would expect. First comes menus, then comes operators. And they get added in the order in which you add them.
-
-Besides that, operators and menus gets added in the order that you add them. They cannot be sorted afterwards. So be careful how you add them. You can of course always remove operators and menus, and re-add them at the end of the list.
-
-## Removing an operator from the Quick menu
-
-![Removing an operator from the Quick menu](/docs2/images/ui/shared/quick-menu/removing-an-operator-from-the-quick-menu.png){.right}
-
-Removing is as simple as adding. Right click at the operators in the Quick menu, and choose Remove from Quick favorites.
-
-## Context and mode dependent content
-
-The quick favorites. menu exists in nearly all editors. But it is just in the 3D view available in the header. So that you know this functionality exists. In the other editors you call it with hotkey Q.
-
-The content of the quick favorites. menu changes, dependent over which editor you are, and in what mode you are. When you add for example an operator from the image editor, then this operator just shows in the quick menu when you call the menu from the image editor. Same goes for the modes. Edit mode tools will just show in edit mode. And so on.
+The content depends on the editor and the mode you open it in. A tool added in the Image Editor only shows in the Image Editor's Quick menu. A tool added in Edit Mode only shows in Edit Mode.
