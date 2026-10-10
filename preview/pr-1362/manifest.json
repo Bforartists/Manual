@@ -7,8 +7,7 @@
   "docs2/content/editors/properties/modifiers/mesh/edit.md": "editors/properties/modifiers/mesh/edit.html",
   "docs2/content/editors/properties/modifiers/mesh/generate.md": "editors/properties/modifiers/mesh/generate.html",
   "docs2/content/editors/properties/modifiers/mesh/normals.md": "editors/properties/modifiers/mesh/normals.html",
-  "docs2/content/getting-started/installation.md": "getting-started/installation.html",
-  "docs2/content/getting-started/quick-start.md": "getting-started/quick-start.html"
+  "docs2/content/getting-started/installation.md": "getting-started/installation.html"
  },
  "images": 354
 }
