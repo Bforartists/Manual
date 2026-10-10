@@ -7,7 +7,7 @@
 
 **Date**: 2026-10-10
 
-**Status**: 🟢 Approved 10 Oct — Phase 1 in progress
+**Status**: 🟢 Approved 10 Oct — Phase 1 ✅ · Phase 2 waiting for your hands-on test
 
 **Depends on**: Spike 1 (`docs2/spike1-migration`, commits `48a7749` → `ca887b9`)
 
@@ -292,31 +292,65 @@ of the source kept** (faithful clone, D13).
 
 **Goal:** a writer edits and saves a page in the browser in under 2 minutes, without help.
 
-**Files:** `.pages.yml`
+**Files:** `.pages.yml`, `docs2/tools/convert.py`, `docs2/dev-docs/*`
 
-- [ ] Point `.pages.yml` at `docs2/content/getting-started` and `docs2/images/_inbox`.
-- [ ] Add form fields: `video` (string), `examples` (file, multiple), `shared` (reference → snippets).
-- [ ] 👤 **You:** install the Pages CMS GitHub App on `Bforartists/Manual` (only you can grant it).
-- [ ] Push the branch (with your OK) so Pages CMS can see it.
-- [ ] Test: does `> Tip:`, `Ctrl + Space`, `Edit › Preferences` survive a save unchanged?
-- [ ] Score the three ways to write (Pages CMS online · GitHub web editor · clone + your own editor) on: no installs, WYSIWYG, drag and drop of images, ease of inserting a tip or video, fun. Recommend one as the advertised way.
+**🤖 Done by Claude (10 Oct)**
 
-```yaml
-# .pages.yml — additions
-      - name: video
-        label: Chapter video (YouTube link)
-        type: string
-      - name: examples
-        label: Example files to download
-        type: file
-        list: true
-      - name: shared
-        label: Shared sections on this page
-        type: reference
-        options:
-          collection: snippets
-          multiple: true
-```
+- [x] Read the Pages CMS source (v2.1.8) and the Tiptap Markdown writer it uses, to learn exactly how a save
+      rewrites a page.
+- [x] Converter now writes what the editor writes, so a one-word edit gives a one-line diff:
+      links as `[url](url)`, tables with trimmed rows and a padded divider row, lists without blank lines,
+      shared sections stored as repo paths (`docs2/snippets/…`), the way the editor's picker stores them.
+- [x] `.pages.yml` rewritten for the whole `docs2/` tree: page tree view, form (title, status, chapter video,
+      shared sections picker, example files), image library with drops into `images/_inbox/`, read-only
+      IDs and addresses, commit messages with the writer's name. Checked against the Pages CMS config schema.
+- [x] Developer wiki: *Editing the docs online* rewritten with the scorecard; *Plain writing* replaces the
+      old tags page.
+- [x] Word check still 23 of 23.
+
+**What survives a save** (from the source code; to be confirmed in your hands-on test)
+
+| Pattern | On save | Status |
+|---|---|---|
+| `> **Tip:** …` callouts | Written back the same | ✅ |
+| `Ctrl + Space`, `Edit › Preferences` | Same (plain text) | ✅ |
+| `**bold**`, `*italic*`, headings, `- ` lists, `1. ` lists | Same | ✅ |
+| Images on their own line `![alt](path)` | Same; path kept by the media mapping | ✅ |
+| Links | Written as `[text](url)`; converter now matches | ✅ fixed |
+| Tables | Rows trimmed, divider padded; converter now matches | ✅ fixed |
+| `*Shared section: [Title](…)*` | Same | ✅ |
+| Text with `*`, `_`, `[`, `]`, `~`, `&`, `<`, `>` | Escaped (`\_`, `&amp;`) | 🟡 rare, only that line changes |
+| Icons inside table cells (14 rows, Spike 1 pages only) | Images are blocks in this editor; may gain a `<br>` | ⚠️ test live |
+| `>` used as a menu separator (`A > B`) | Becomes `&gt;` | 🟡 use `›` (already the case) |
+
+**Scorecard: three ways to write** (first assessment, to be confirmed by your test)
+
+| | 🖋️ Pages CMS | 🐙 GitHub web editor | 💻 github.dev / own editor |
+|---|---|---|---|
+| No installs | ✅ | ✅ | ✅ github.dev · ❌ local |
+| WYSIWYG | ✅ | ❌ | 🟡 preview beside |
+| Drag and drop images | ✅ into the library | 🟡 not into the library | 🟡 copy by hand |
+| Insert a tip, image, table | ✅ `/` menu | ❌ | ❌ |
+| Review | 🟡 saves to a branch | ✅ pull request | ✅ pull request |
+| Fun | ✅ | ❌ | 🟡 developers |
+| **Verdict** | **Advertised way** | Typos | Bulk and developer work |
+
+**🧩 Custom `/` commands:** the `/` menu is fixed in Pages CMS (Text, Headings, Lists, Image, Table, Quote,
+Code block); `.pages.yml` cannot add commands. Plain writing covers tips (Quote + "Tip:"), videos (paste a link)
+and hotkeys. If writers want real `/Tip` or `/Video` buttons: propose an upstream change to Pages CMS (open source,
+MIT) that lets `.pages.yml` define text-template commands. Forking means hosting it, so it is the last resort (D3).
+
+**👤 Your hands-on test (30 minutes)**
+
+- [ ] Push `docs2/tier1-getting-started` to GitHub (VS Code: **Publish Branch**).
+- [ ] Open [app.pagescms.org](https://app.pagescms.org), sign in with GitHub, install the app on `Bforartists/Manual` only.
+- [ ] Pick the branch `docs2/tier1-getting-started`; open 📘 Documentation pages → Getting Started → Installation.
+- [ ] Change one word, Save. On GitHub, check the commit changed **one line**.
+- [ ] Add `/` → Quote → "Tip: test". Type `Ctrl + S` and `Edit › Preferences`. Save; check the diff.
+- [ ] Drag a screenshot in. Save; check it landed in `docs2/images/_inbox/`.
+- [ ] Open a Timeline page with icons in a table; change one word; Save; check the table.
+- [ ] Pick a shared section in the form on a Timeline page; Save; check `shared:`.
+- [ ] Tell me how it felt: easy, fun, or what got in the way.
 
 **Acceptance:** a save in Pages CMS produces a clean one-file diff; plain patterns unchanged.
 

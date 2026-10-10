@@ -50,20 +50,20 @@ Get the latest version of Bforartists and get directly involved here:
 [https://www.bforartists.co/download](https://www.bforartists.de/download)  
   
 📝 **Release Notes**  
-<https://www.bforartists.co/release-notes/>  
+[https://www.bforartists.co/release-notes/](https://www.bforartists.co/release-notes/)  
   
 🧰 **Source Code**  
 *Official Bug and Feature Requests Tracker*  
-<https://github.com/Bforartists/Bforartists>  
+[https://github.com/Bforartists/Bforartists](https://github.com/Bforartists/Bforartists)  
   
 🪟**Windows App Store**  
-<https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare>
+[https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&amp;gl=CO&amp;ocid=pdpshare](https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare)
 
 **Flatpak App Store**  
-<https://flathub.org/en/apps/de.bforartists.Bforartists>
+[https://flathub.org/en/apps/de.bforartists.Bforartists](https://flathub.org/en/apps/de.bforartists.Bforartists)
 
 🧡 **Blender Launcher**  
-<https://github.com/Victor-IX/Blender-Launcher-V2/releases>
+[https://github.com/Victor-IX/Blender-Launcher-V2/releases](https://github.com/Victor-IX/Blender-Launcher-V2/releases)
 
 **📄Manual Tracker**  
 [https://github.com/Bforartists/Manual](https://github.com/Bforartists/Manual)
@@ -74,25 +74,25 @@ Get the latest version of Bforartists and get directly involved here:
 Join the community, share your work, and stay updated:
 
 **💜  Discord**  
-<https://discord.gg/yKuR77v>
+[https://discord.gg/yKuR77v](https://discord.gg/yKuR77v)
 
 **💙 Facebook**  
-<https://www.facebook.com/bforartists/>
+[https://www.facebook.com/bforartists/](https://www.facebook.com/bforartists/)
 
 **🖤 X**  
-<https://twitter.com/bforartists>
+[https://twitter.com/bforartists](https://twitter.com/bforartists)
 
 **🖤 Threads**  
-<https://www.threads.net/@bforartists_official>
+[https://www.threads.net/@bforartists\_official](https://www.threads.net/@bforartists_official)
 
 **❤️ Youtube**  
-<https://www.youtube.com/@bforartists>
+[https://www.youtube.com/@bforartists](https://www.youtube.com/@bforartists)
 
 **🧡 Reddit**  
-<https://www.reddit.com/r/Bforartists/>
+[https://www.reddit.com/r/Bforartists/](https://www.reddit.com/r/Bforartists/)
 
 **💙 Bluesky**  
-<https://bsky.app/profile/bforartists.bsky.social>
+[https://bsky.app/profile/bforartists.bsky.social](https://bsky.app/profile/bforartists.bsky.social)
 
 ## From the .odt manual (1 Introduction)
 
@@ -120,69 +120,69 @@ This reference manual is for Bforartists 5 version 5.1.1 published on 23.04.2026
 
 📥 Download Free
 
-<https://www.bforartists.de/download>
+[https://www.bforartists.de/download](https://www.bforartists.de/download)
 
 📝 Release Notes
 
-<https://www.bforartists.de/release-notes/>
+[https://www.bforartists.de/release-notes/](https://www.bforartists.de/release-notes/)
 
 🧰 Source Code
 
 Official Bug and Feature Request Tracker
 
-<https://github.com/Bforartists/Bforartists>
+[https://github.com/Bforartists/Bforartists](https://github.com/Bforartists/Bforartists)
 
 **🪟Windows App Store**
 
-<https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare>
+[https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&amp;gl=CO&amp;ocid=pdpshare](https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare)
 
 🧡 Blender Launcher
 
-<https://github.com/Victor-IX/Blender-Launcher-V2/releases>
+[https://github.com/Victor-IX/Blender-Launcher-V2/releases](https://github.com/Victor-IX/Blender-Launcher-V2/releases)
 
 #### 🔗Other Links
 
 **Forum**  
-<https://www.bforartists.de/forum>  
+[https://www.bforartists.de/forum](https://www.bforartists.de/forum)  
   
 **FAQ**  
-<https://www.bforartists.de/wiki/FAQ>  
+[https://www.bforartists.de/wiki/FAQ](https://www.bforartists.de/wiki/FAQ)  
   
 **Wiki**  
-<https://www.bforartists.de/wiki/bforartists-wiki>
+[https://www.bforartists.de/wiki/bforartists-wiki](https://www.bforartists.de/wiki/bforartists-wiki)
 
 **Manual Tracker**  
-<https://github.com/Bforartists/Manual>  
+[https://github.com/Bforartists/Manual](https://github.com/Bforartists/Manual)  
   
 **Files**  
-<https://github.com/Bforartists/files>
+[https://github.com/Bforartists/files](https://github.com/Bforartists/files)
 
 #### 🫂 Socials
 
 💜 Discord
 
-<https://discord.gg/yKuR77v>
+[https://discord.gg/yKuR77v](https://discord.gg/yKuR77v)
 
 💙 Facebook
 
-<https://www.facebook.com/bforartists/>
+[https://www.facebook.com/bforartists/](https://www.facebook.com/bforartists/)
 
 🖤 X
 
-<https://twitter.com/bforartists>
+[https://twitter.com/bforartists](https://twitter.com/bforartists)
 
 🖤 Threads
 
-<https://www.threads.net/@bforartists_official>
+[https://www.threads.net/@bforartists\_official](https://www.threads.net/@bforartists_official)
 
 💖 Youtube
 
-<https://www.youtube.com/@bforartists>
+[https://www.youtube.com/@bforartists](https://www.youtube.com/@bforartists)
 
 🧡 Reddit
 
-<https://www.reddit.com/r/Bforartists/>
+[https://www.reddit.com/r/Bforartists/](https://www.reddit.com/r/Bforartists/)
 
 💙 Bluesky
 
-<https://bsky.app/profile/bforartists.bsky.social>
+[https://bsky.app/profile/bforartists.bsky.social](https://bsky.app/profile/bforartists.bsky.social)

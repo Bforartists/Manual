@@ -70,7 +70,7 @@ These show modifiers divided into three categories: Edit, Deform and Physics.
 There are several types of modifiers:
 
 | Property | What it changes |
-|---|---|
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Geometry Nodes | This allows you to insert a Geometry Nodes modifier. |
 | Normals | Normal nodes |
 | Edit | Miscellaneous modifiers like the mesh cache |
@@ -128,7 +128,7 @@ This icon shows the type of the modifier. And has no further functionality.
 The name of the modifier. You can rename modifiers by clicking into the edit field and change the text.
 
 | Property | What it changes |
-|---|---|
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | On Cage | Adjust edit cage to modifier result. With this option the geometry will be viewed at the position they will be after the modifier is calculated. Important for the mirror modifier for example. |
 | Edit Mode | Display the modifier result in edit mode. |
 | Realtime | Display the modifier in the viewport. |
@@ -144,7 +144,7 @@ The name of the modifier. You can rename modifiers by clicking into the edit fie
 ![Header menu](/docs2/images/ui/properties/modifiers/header-menu-3.png)
 
 | Property | What it changes |
-|---|---|
+| --------------------- | ------------------------------------------------------------------------------------- |
 | Apply as Shapekey | Armature modifier. Applies the current pose as a shape key, and removes the modifier. |
 | Apply (All Keyframes) | Grease pencil object. Applies the modifier to all keyframes, and removes it then. |
 
@@ -155,7 +155,7 @@ The name of the modifier. You can rename modifiers by clicking into the edit fie
 Armature modifier. Applies the current pose as a shape key, and keeps the modifier.
 
 | Property | What it changes |
-|---|---|
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Duplicate | Duplicates the modifier, and places the duplicate below the current modifier. |
 | Copy to Selected | Copies the modifier to the selected object. First select the object where you want to paste the modifier to. Then select the object with the modifier with holding down shift so that both objects are selected. Now use Copy to Selected. And the modifier will copy over to the first object. Works also with multiple objects. |
 | Move to first | Move the modifier to the first position in the stack. |
@@ -214,7 +214,7 @@ For more information, please check out the chapter
 There are two types of modifiers, builtin modifiers and geometry nodes modifiers that were marked as assets.
 
 | Menu entry | What it does |
-|---|---|
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Add Modifier Button | The button to the left adds built in modifiers to all selected objects. ***Note:** When adding modifier assets will apply to all selected object.* |
 | Add Asset Modifier | The button to the right adds geometry nodes assets as modifiers to all selected objects. **Note:** *When adding modifier assets will apply to all selected object.* |
 | Modifier Special menu | Contains some general modifier operators. |
@@ -296,7 +296,7 @@ Wit this button you assign a fake user to this selected geometry node tree.
 Data, like node trees, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
 
 | Menu entry | What it does |
-|---|---|
+| ---------- | --------------------------------------------------------------------------------------------------------------- |
 | User | The number of users that uses this data. Data with a user number of 0 will be removed with closing Bforartists. |
 | Add | Adds a duplicate geometry nodes nodegroup. |
 | Remove | Removes the geometry node tree. To delete it completely you need to purge it. See Fake user. |

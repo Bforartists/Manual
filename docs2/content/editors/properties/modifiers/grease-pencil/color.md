@@ -28,7 +28,7 @@ The color transformation will be applied on the stroke and/or the fill color.
 Stroke and Fill, Stroke, Fill
 
 | Property | What it changes |
-|---|---|
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Hue | Specifies the hue rotation of the image. 360° are mapped to (0 to 1). The hue shifts of 0 (-180°) and 1 (+180°) have the same result. |
 | Saturation | A saturation of 0 removes hues from the image, resulting in a greyscale image. A shift greater than 1.0 increases saturation. |
 | Value | Value is the overall brightness of the image. De/Increasing values shift an image darker/lighter. |
@@ -38,7 +38,7 @@ Stroke and Fill, Stroke, Fill
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png)
 
 | Property | What it changes |
-|---|---|
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
 | Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
 | Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
@@ -71,7 +71,7 @@ Clipping options. Set up clipping for the stroke.
 Tools is a menu where you can find some curve related tools.
 
 | Property | What it changes |
-|---|---|
+| ----------------- | ----------------------------------------------------------------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
 | Extend Horizontal | Extend the curve points horizontal before the first curve point and after the last curve point. |
 | Extend Vertical | Extend the curve points vertical before the first curve point and after the last curve point. |
@@ -94,7 +94,7 @@ Holding down shift enables slower movement, which allows more accurate setting.
 Set handle type to Vector.
 
 | Property | What it changes |
-|---|---|
+| ------------------- | -------------------------------------------------------------------------------------------------------- |
 | Auto Handle | Set handle type to Auto. |
 | Auto Clamped Handle | Set handle type to Auto Clamped. |
 | X / Y | The position of the currently selected curve point.<br>**Delete Points**: Deletes selected curve points. |
@@ -134,7 +134,7 @@ Use Weight to modulate effect.
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png)
 
 | Property | What it changes |
-|---|---|
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
 | Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
 | Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
@@ -167,7 +167,7 @@ Clipping options. Set up clipping for the stroke.
 Tools is a menu where you can find some curve related tools.
 
 | Property | What it changes |
-|---|---|
+| ----------------- | ----------------------------------------------------------------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
 | Extend Horizontal | Extend the curve points horizontal before the first curve point and after the last curve point. |
 | Extend Vertical | Extend the curve points vertical before the first curve point and after the last curve point. |
@@ -190,7 +190,7 @@ Holding down shift enables slower movement, which allows more accurate setting.
 Set handle type to Vector.
 
 | Property | What it changes |
-|---|---|
+| ------------------- | -------------------------------------------------------------------------------------------------------- |
 | Auto Handle | Set handle type to Auto. |
 | Auto Clamped Handle | Set handle type to Auto Clamped. |
 | X / Y | The position of the currently selected curve point.<br>**Delete Points**: Deletes selected curve points. |
@@ -242,7 +242,7 @@ Defines the tint gradient color for mixing with the original vertex color.
 ##### Controls
 
 | Property | What it changes |
-|---|---|
+| -------- | ------------------------------------------------------------------------------------------------------------ |
 | + | Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one. |
 | - | Deletes the selected color stop from the list. |
 
@@ -251,7 +251,7 @@ Defines the tint gradient color for mixing with the original vertex color.
 ![Tools menu](/docs2/images/ui/properties/modifiers/grease-pencil-color/tools-menu.png)
 
 | Property | What it changes |
-|---|---|
+| --------------------------- | -------------------------------------------------------------------------------------------- |
 | Flip Color Ramp | Flips the gradient, inverting the values of the color ramp. |
 | Distribute Stops from Left | Rearrange the stops so that every step has the same space to the right. |
 | Distribute Stops Evenly | Space between all neighboring stops becomes equal. |
@@ -263,7 +263,7 @@ Defines the tint gradient color for mixing with the original vertex color.
 ![Color Mode](/docs2/images/ui/properties/modifiers/grease-pencil-color/color-mode.png)
 
 | Property | What it changes |
-|---|---|
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | RGB | Blends color by mixing each color channel and combining. |
 | HSV/HSL | Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient. |
 
@@ -272,7 +272,7 @@ Defines the tint gradient color for mixing with the original vertex color.
 ![Interpolation](/docs2/images/ui/properties/modifiers/grease-pencil-color/interpolation.png)
 
 | Property | What it changes |
-|---|---|
+| -------- | -------------------------------------------------- |
 | Ease | Uses an Ease Interpolation for the color stops. |
 | Cardinal | Uses a Cardinal Interpolation for the color stops. |
 | Linear | Uses a Linear Interpolation for the color stops. |
@@ -292,12 +292,12 @@ The color band. A click at one of the color stops makes it the active one. You c
 Adjust the active color stop.
 
 | Property | What it changes |
-|---|---|
+| ------------------------ | -------------------------------------------------------------------------- |
 | Choose active color stop | Choose the color stop by index. |
 | Pos | The position of the active color stop. The range goes from 0.000 to 1.000. |
 
 | Property | What it changes |
-|---|---|
+| -------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Object | A Data ID to select an object (usually an empty), which position and rotation will be used to define the center of the effect. |
 | Radius | Defines the maximum distance of the effect. |
 
@@ -306,7 +306,7 @@ Adjust the active color stop.
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png)
 
 | Property | What it changes |
-|---|---|
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
 | Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
 | Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
@@ -339,7 +339,7 @@ Clipping options. Set up clipping for the stroke.
 Tools is a menu where you can find some curve related tools.
 
 | Property | What it changes |
-|---|---|
+| ----------------- | ----------------------------------------------------------------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
 | Extend Horizontal | Extend the curve points horizontal before the first curve point and after the last curve point. |
 | Extend Vertical | Extend the curve points vertical before the first curve point and after the last curve point. |
@@ -362,7 +362,7 @@ Holding down shift enables slower movement, which allows more accurate setting.
 Set handle type to Vector.
 
 | Property | What it changes |
-|---|---|
+| ------------------- | -------------------------------------------------------------------------------------------------------- |
 | Auto Handle | Set handle type to Auto. |
 | Auto Clamped Handle | Set handle type to Auto Clamped. |
 | X / Y | The position of the currently selected curve point.<br>**Delete Points**: Deletes selected curve points. |

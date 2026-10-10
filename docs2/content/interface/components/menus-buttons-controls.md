@@ -132,7 +132,7 @@ Here is a list of recognized unit names you can use. Plurals of the names are re
 Imperial Units
 
 | | | |
-|------------|-----------|-----------|
+| ---------- | --------- | --------- |
 | thou | *mil* | 0.0000254 |
 | inch | *"*, *in* | 0.0254 |
 | foot, feet | *'*, *ft* | 0.3048 |
@@ -144,7 +144,7 @@ Imperial Units
 Metric Units
 
 | | | |
-|------------|-------|----------|
+| ---------- | ----- | -------- |
 | micrometer | *um* | 0.000001 |
 | millimeter | *mm* | 0.001 |
 | centimeter | *cm* | 0.01 |

@@ -88,7 +88,7 @@ Locks the selected channel. It is not longer editable.
 When you right click into the channel area, then you will call the Channel context menu.
 
 | Menu entry | What it does |
-|---|---|
+| -------------------------- | -------------------------------------------------------------------------------------- |
 | Frame selected channels | Centers the selected channels in view. |
 | Mute Channel | This channel is not calculated. |
 | Unmute Channel | This channel is calculated. |
@@ -106,14 +106,14 @@ When you right click into the channel area, then you will call the Channel conte
 Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.
 
 | Menu entry | What it does |
-|---|---|
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Constant Extrapolation | The animation curve continues straight at the end. |
 | Linear Extrapolation | The animation curve continues the last direction. |
 | Make Cyclic | Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame. |
 | Clear Cyclic | Removes the cyclic extrapolation. |
 
 | Menu entry | What it does |
-|---|---|
+| ----------------- | ----------------------- |
 | Expand Channels | Expands the channels. |
 | Collapse Channels | Collapses the channels. |
 

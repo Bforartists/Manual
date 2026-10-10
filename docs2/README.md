@@ -40,7 +40,7 @@ Pages contain no special tags. The website build recognises plain patterns:
 Needs Pandoc 3.x and Python 3.10+ (`pip install -r docs2/tools/requirements.txt`). From the repository root:
 
 ```bash
-DOCS_URL_PREFIX=/docs2 python3 docs2/tools/convert.py . docs2/tools/pages.json docs2 docs2/.work
+DOCS_ROOT=docs2 DOCS_URL_PREFIX=/docs2 python3 docs2/tools/convert.py . docs2/tools/pages.json docs2 docs2/.work
 python3 docs2/tools/wordcount.py docs2 docs2/.work            # fails if any source words are lost
 python3 docs2/tools/make_nav.py docs2/tools/pages.json docs2/nav.yml
 python3 docs2/tools/find_repeats.py docs2 > docs2/reports/repeats.json

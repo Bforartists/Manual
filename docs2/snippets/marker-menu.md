@@ -65,7 +65,7 @@ Hotkey only functionality! This menu item exists to show the hotkey to move the 
 ![Select sub menu](/docs2/images/ui/shared/marker-menu/select-sub-menu.png)
 
 | Menu entry | What it does |
-|---|---|
+| -------------------- | --------------------------------------------- |
 | All | Select all markers. |
 | None | Deselect all markers. |
 | Invert | Inverts the current selection. |

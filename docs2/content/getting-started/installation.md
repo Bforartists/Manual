@@ -14,11 +14,11 @@ source: ["2 Installing Bforartists.odt"]
 
 ### Download Bforartists
 
-Bforartists downloads can be downloaded here: <https://www.bforartists.de/content/download>
+Bforartists downloads can be downloaded here: [https://www.bforartists.de/content/download](https://www.bforartists.de/content/download)
 
 Bforartists is available for download for Linux, mac OS and MS-Windows.
 
-There is also the source code available at GitHub. <https://github.com/Bforartists/Bforartists>
+There is also the source code available at GitHub. [https://github.com/Bforartists/Bforartists](https://github.com/Bforartists/Bforartists)
 
 ## System Requirements
 
@@ -138,7 +138,7 @@ Add the following command to .bash_rc or .bash_profile with Bforartists’s bina
 export PATH=\$/path/to/Bforartists-VERSION-linux-glibcVERSION-ARCH:\$PATH
 
 | |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Tip |
 | If you use daily builds and update Bforartists frequently, you can link or always rename your folder to ‘Bforartists’ and use this name for the *PATH* environment variable and for keeping the window manager menu up to date. |
 
@@ -173,7 +173,7 @@ After downloading Bforartists for Mac-OS X, uncompress the file and drag *Bforar
 
 In case the Silicon version does not start, make sure the App Store and Identified Developers option is ticked. And check if the files and folders tab to see Bforartists is listed and has permissions. Further informations can be found here: [support.apple.com/en-au/HT202491](https://support.apple.com/en-au/HT202491)
 
-And here: <https://www.macworld.com/article/672947/how-to-open-a-mac-app-from-an-unidentified-developer.html>  
+And here: [https://www.macworld.com/article/672947/how-to-open-a-mac-app-from-an-unidentified-developer.html](https://www.macworld.com/article/672947/how-to-open-a-mac-app-from-an-unidentified-developer.html)  
 In case it still does not work, try to launch from the terminal with xattr -cr since we don’t have a signed license yet.
 
 > **Note:** The default Bforartists keymap is not mapped to the oskey keys, but ctrl instead. It works fine for Linux and Windows but not with a Mac. You need to switch to the Bforartists-macOS keymap. It is mapped to the oskey keys.
@@ -241,7 +241,7 @@ At File ‣ User Preferences ‣ File you can set options such as what external 
 The *Temp* directory sets where to store files such as temporary renders and autosaves.
 
 | |
-|-----------------------------------------------------------------------------------------------------------------------------------------|
+| --------------------------------------------------------------------------------------------------------------------------------------- |
 | Tip |
 | *//* at the start of a path in Bforartists means the directory of the currently opened *.blend* file, used to reference relative-paths. |
 
@@ -265,7 +265,7 @@ If you do not have a 3 button mouse, you will need to emulate it by checking the
 The following table shows the combinations used:
 
 | | | | |
-|----------------|-------|-----------|-------|
+| -------------- | ----- | --------- | ----- |
 | 3-button Mouse | *LMB* | *MMB* | *RMB* |
 | 2-button Mouse | *LMB* | *Alt-LMB* | *RMB* |
 
@@ -308,7 +308,7 @@ For system installations both **SYSTEM** and **USER** directories are needed.
 For locally extracted Bforartists distributions, the user configuration and data runtime data are kept in the same sub-directory, allowing multiple Bforartists versions to run without conflict, ignoring the **USER** and **SYSTEM** files.
 
 | |
-|--------------------------------------------------------------------------------------------|
+| ------------------------------------------------------------------------------------------ |
 | Note |
 | You may need to have the “show hidden files” option checked in your file browser settings. |
 

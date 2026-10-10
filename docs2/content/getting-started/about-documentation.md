@@ -387,7 +387,7 @@ The Bforartists Manual is a community driven effort to which anyone can contribu
 
 And this very easy, since the manual comes not only as PDF files, but also as editable \*.odt files. That's the file format for Libre and Open Office. Both free and open source Office solutions. To manipulate or to fix a typo, a word, a sentence or even a whole chapter is as easy as manipulating the text in Libre Office or Open Office, commit the changes to the manual repository, and tell the Bforartists developers to put it online.
 
-The repository with the ODT files can be found here: <https://github.com/Bforartists/Manual>
+The repository with the ODT files can be found here: [https://github.com/Bforartists/Manual](https://github.com/Bforartists/Manual)
 
 ## License
 

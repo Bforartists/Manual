@@ -95,7 +95,7 @@ Other data-blocks such as groups and actions can be *Unlinked* from the *Outline
 For reference, here is a table of data-blocks types stored in *.blend* files.
 
 | | |
-|-------|--------------------------------------------------------------------------|
+| ----- | ------------------------------------------------------------------------ |
 | Link: | Library Linking, *supports bing linked into other blend files*. |
 | Pack: | File Packing, *supports file contents being packed into the blend file*. |
 

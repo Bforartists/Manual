@@ -367,9 +367,9 @@ def transform_blocks(blocks, ctx):
             if not only_figure:
                 out.append({"t": t, "c": tag_kbd(inls)})
         elif t == "BulletList":
-            out.append({"t": t, "c": [transform_blocks(it, ctx) for it in b["c"]]})
+            out.append({"t": t, "c": [tight(transform_blocks(it, ctx)) for it in b["c"]]})
         elif t == "OrderedList":
-            out.append({"t": t, "c": [b["c"][0], [transform_blocks(it, ctx) for it in b["c"][1]]]})
+            out.append({"t": t, "c": [b["c"][0], [tight(transform_blocks(it, ctx)) for it in b["c"][1]]]})
         elif t == "Div":
             out.extend(transform_blocks(b["c"][1], ctx))
         elif t == "BlockQuote":
@@ -379,6 +379,13 @@ def transform_blocks(blocks, ctx):
         else:
             out.append(b)
     return detect_legends(detect_callouts(fake_bullets(out)))
+
+
+def tight(item):
+    """Editor writes list items without blank lines between them: first paragraph -> Plain."""
+    if item and item[0]["t"] == "Para":
+        item = [{"t": "Plain", "c": item[0]["c"]}] + item[1:]
+    return item
 
 
 BULLET = re.compile(r"^\s*[•·▪◦‣–]\s+")
@@ -609,7 +616,7 @@ def assemble(spec, trees, lib, out_dir, media):
             sn = SNIPPETS[part["include"]]
             rel = os.path.relpath(os.path.join(out_dir, sn["file"]), os.path.dirname(os.path.join(out_dir, spec["file"])))
             lines.append(("md", f"*Shared section: [{sn['title']}]({rel})*"))
-            shared.append(sn["file"])
+            shared.append(os.path.join(os.environ.get("DOCS_ROOT", ""), sn["file"]))   # repo path, as the editor stores it
             STATS["includes"] += 1
             continue
         if "note" in part:
@@ -654,9 +661,57 @@ def assemble(spec, trees, lib, out_dir, media):
     return path, words(re.sub(r"!\[[^\]]*\]\([^)]*\)(\{[^}]*\})?", "", body))
 
 
+EDITOR_ESC = re.compile(r"([\\`*_\[\]~])")
+
+
+def editor_text(t):
+    """Escape link text the way the Pages CMS editor (Tiptap markdown) writes it."""
+    return EDITOR_ESC.sub(r"\\\1", t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
+
+
+def split_row(line):
+    row, cells, cur, i = line.strip()[1:-1], [], "", 0
+    while i < len(row):
+        if row[i] == "\\" and i + 1 < len(row):
+            cur += row[i:i + 2]; i += 2; continue
+        if row[i] == "|":
+            cells.append(cur); cur = ""
+        else:
+            cur += row[i]
+        i += 1
+    cells.append(cur)
+    return [c.strip() for c in cells]
+
+
+def editor_tables(md):
+    """Write tables as the editor saves them: trimmed rows, delimiter padded to the widest cell."""
+    lines, out, i = md.split("\n"), [], 0
+    delim = re.compile(r"^\s*\|[\s:|-]+\|\s*$")
+    while i < len(lines):
+        if lines[i].lstrip().startswith("|") and i + 1 < len(lines) and delim.match(lines[i + 1]) and "-" in lines[i + 1]:
+            block = [lines[i], lines[i + 1]]; j = i + 2
+            while j < len(lines) and lines[j].lstrip().startswith("|"):
+                block.append(lines[j]); j += 1
+            rows = [split_row(l) for k, l in enumerate(block) if k != 1]
+            n = max(len(r) for r in rows)
+            rows = [r + [""] * (n - len(r)) for r in rows]
+            widths = [max(3, max(len(r[c]) for r in rows)) for c in range(n)]
+            fmt = lambda r: "| " + " | ".join(r) + " |"
+            out.append(fmt(rows[0]))
+            out.append("| " + " | ".join("-" * w for w in widths) + " |")
+            out.extend(fmt(r) for r in rows[1:])
+            STATS["tables_editor_format"] += 1
+            i = j
+        else:
+            out.append(lines[i]); i += 1
+    return "\n".join(out)
+
+
 def postfix(md):
+    md = re.sub(r"<(https?://[^>\s]+)>", lambda m: f"[{editor_text(m.group(1))}]({m.group(1)})", md)
     md = md.replace("\\'", "'").replace('\\"', '"')
     md = re.sub(r"(!\[[^\]]*\]\([^)]*\))\{\.[a-z]+\}", r"\1", md)
+    md = editor_tables(md)
     md = re.sub(r"\n{3,}", "\n\n", md)
     md = re.sub(r"(\S) {2,}(?=\S)", r"\1 ", md)          # collapse inner runs, keep "  \n" line breaks
     md = md.replace('{target="_blank"}', "")

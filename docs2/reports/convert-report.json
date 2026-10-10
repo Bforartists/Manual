@@ -160,7 +160,7 @@
   },
   {
    "file": "content/getting-started/introduction.md",
-   "words": 923,
+   "words": 1097,
    "sources": [
     "web:introduction",
     "1 Introduction"
@@ -168,7 +168,7 @@
   },
   {
    "file": "content/getting-started/about-documentation.md",
-   "words": 3365,
+   "words": 3370,
    "sources": [
     "web:about-documentation",
     "1.1 How to use the Manual",
@@ -177,7 +177,7 @@
   },
   {
    "file": "content/getting-started/installation.md",
-   "words": 2657,
+   "words": 2676,
    "sources": [
     "2 Installing Bforartists"
    ]
@@ -283,6 +283,7 @@
   "heading_images": 404,
   "table_rows": 952,
   "tables_from_leaves": 268,
+  "tables_editor_format": 275,
   "figures_full": 19,
   "figures_thumb": 44,
   "hotspot_figures": 2,

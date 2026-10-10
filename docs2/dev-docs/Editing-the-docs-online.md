@@ -1,66 +1,63 @@
 # ✏️ Editing the docs online
 
-You can fix or write a docs page in your browser. Nothing to install, nothing to host. Every save becomes a Git commit, and every change is reviewed in a pull request before it goes live.
+Fix or write a docs page in your browser. Nothing to install, nothing to host. Every save is a Git commit, and changes are reviewed before they reach the website.
 
-## Pick your tool
+## 🧭 Pick your tool
 
-| | 🖋️ Pages CMS | 💻 github.dev | 🐙 GitHub editor |
+| | 🖋️ Pages CMS | 🐙 GitHub web editor | 💻 github.dev / your own editor |
 |---|---|---|---|
-| **Best for** | Writers, most edits | Many pages at once, developers | A typo, one line |
-| **Looks like** | A form and a word-processor editor | VS Code in the browser | A plain text box |
-| **WYSIWYG** | ✓ Text, headings, lists, links, images | ~ Side-by-side preview | ✗ Preview tab only |
-| **Open it** | [app.pagescms.org](https://app.pagescms.org) | Press `.` on any repo page | The ✏️ pencil on any file |
-| **Saves to** | A branch you choose | Your branch | A new branch + pull request |
+| **Best for** | Writers, most edits | A typo, one line | Many pages at once, developers |
+| **Looks like** | A form and a word-processor editor | A plain text box | VS Code, in the browser or on your PC |
+| **Installs** | None | None | None (github.dev) · Git + editor (local) |
+| **WYSIWYG** | ✅ Text, headings, lists, tables, images | ❌ Preview tab | 🟡 Preview beside the text |
+| **Drag and drop images** | ✅ Into the page, saved to the image library | 🟡 Uploads go to GitHub, not the library | 🟡 Copy the file into `docs2/images/_inbox/` |
+| **Insert a tip, image, table** | ✅ `/` menu | ❌ Type it | ❌ Type it |
+| **Review** | Saves to a branch; a maintainer opens the pull request | ✅ Opens a pull request for you | ✅ Your own pull request |
+| **Open it** | [app.pagescms.org](https://app.pagescms.org) | ✏️ pencil on any file | Press `.` on the repo page |
 
-On the docs website, every page will have **Edit this page**, which opens that exact file.
+On the website, every page will have **Edit this page**, which opens that exact page in Pages CMS.
 
 ## 🖋️ Pages CMS (recommended)
 
 ### One-time setup (maintainer)
 
-1. Install the **Pages CMS** GitHub App on the `Bforartists/Manual` repository: open [app.pagescms.org](https://app.pagescms.org), sign in with GitHub and follow the install prompt. Only this repository needs access.
-2. The editor reads [`.pages.yml`](../../.pages.yml) in the repository root. It defines the page form, the image library and the commit messages.
-3. Create a `docs-drafts` branch. Writers save there; a maintainer opens one pull request from `docs-drafts` to `main` when a batch is ready.
+1. Push the docs branch to GitHub.
+2. Open [app.pagescms.org](https://app.pagescms.org), sign in with GitHub, and install the **Pages CMS** GitHub App on `Bforartists/Manual` only.
+3. Pages CMS reads [`.pages.yml`](../../.pages.yml) in the repository root: the page tree, the form, the image library and the commit messages.
 
 ### Writing a page
 
 1. Sign in at [app.pagescms.org](https://app.pagescms.org) with your GitHub account.
-2. Choose **Bforartists/Manual** and the branch **docs-drafts**.
-3. Open **Documentation pages**. Pages are shown as a tree, the same as the sidebar.
-4. Edit the form at the top (title, status, version) and the page text below.
-5. Insert images with the image button. They go into the image library under a place name, like `ui/timeline/header.png`.
-6. Click **Save**. Pages CMS commits your change with your name.
+2. Choose **Bforartists/Manual** and the docs branch.
+3. Open **📘 Documentation pages**. Pages are shown as a tree, like the sidebar.
+4. Change the form at the top (title, status, video, shared sections) and the text below.
+5. Press `/` on an empty line for the menu: headings, lists, **Image**, **Table**, **Quote**.
+6. Drag a screenshot into the page. It is saved to the image library and filed by the image bot.
+7. Click **Save**. Pages CMS commits your change with your name.
 
-### Doc kit tags
+### ✍️ Plain writing: no codes to learn
 
-The editor shows normal text, headings, lists, tables, links and images as they will read. The doc kit blocks are short tags. Switch to **Source** (top right of the editor) to add or change them:
-
-| You type | You get on the website |
+| To get | Do this |
 |---|---|
-| `:::tip` … `:::` | A tip callout (also `note`, `warn`, `imp`) |
-| `:kbd[Ctrl+Space]` | Keycaps |
-| `:menu[View > Area > Split]` | A menu path with icons |
-| `![Header](/docs2/images/ui/timeline/header.png){.right}` | Image floated right; also `.thumb`, `.icon`, or none for full width |
-| `::tool{id=modifier.bevel}` | A tool card filled from Bforartists (name, icon, tooltip, hotkey) |
-| `::include{snippet=marker-menu}` | A shared section, written once in **Shared snippets** |
-| `:::hotspots{img=…}` + a list | A screenshot with hover areas |
+| 💡 A tip or note | `/` → **Quote**, then start with **Tip:** (or Note:, Warning:, Important:) |
+| ⌨️ Keycaps | Type `Ctrl + S` |
+| 🧭 A menu path | Type `Edit › Preferences` |
+| 🖼️ A screenshot | Drag it in, or `/` → **Image** |
+| 🎬 A video | Paste a YouTube link on its own line, or use the **Chapter video** field |
+| ♻️ A shared section | Pick it in **Shared sections on this page**; edit its text in **♻️ Shared snippets** |
 
-The full list is on [Doc kit tags](Doc-kit-tags.md).
-
-:::warn
-Spike 2 checks whether the rich-text editor keeps these tags exactly as typed. Until then, edit pages that have tags in **Source** mode.
-:::
-
-## 💻 github.dev
-
-Press `.` on the repository page on GitHub. VS Code opens in your browser with the repository. Open a page and press `Ctrl+K V` for a live preview beside it. Commit from the Source Control tab to your own branch, then open a pull request.
+More: [Plain writing](Plain-writing.md).
 
 ## 🐙 GitHub web editor
 
-Open a file on GitHub and click the ✏️ pencil. Edit, then **Propose changes**. GitHub makes a branch and a pull request for you. Good for a typo; for anything bigger use Pages CMS.
+Open a page on GitHub and click the ✏️ pencil. Edit, then **Commit changes → Propose changes**. GitHub makes a branch and a pull request for you. Good for a typo.
 
-## 🔍 What happens after you save
+## 💻 github.dev or your own editor
 
-1. A pull request shows your change. Checks run: front matter, links, images and tags.
-2. The section reviewer gets asked to review it (from `CODEOWNERS`).
-3. After merge, the build sends the changed pages to Webflow staging. Going live is a maintainer's click.
+Press `.` on the repository page: VS Code opens in your browser. Open a page, press `Ctrl+K V` for a preview, commit from Source Control to your own branch, then open a pull request. Locally the same works with Git and any editor.
+
+## 🔍 After you save
+
+1. A pull request shows the change. Checks run: front matter, links, images, no lost words.
+2. 👀 A bot comment links to a preview of the page with the website's styles.
+3. The section reviewer approves. After merge, the page syncs to the website's staging site. Going live is a maintainer's click.

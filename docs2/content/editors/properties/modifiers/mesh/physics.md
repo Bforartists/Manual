@@ -76,7 +76,7 @@ The V value is set to a constant 0.5 value.
 This allows to make the color of a fragment (face) vary during it ‘explosion’ phase, by using a texture with a gradient of colors along its U axis.
 
 | Property | What it changes |
-|---|---|
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Alive / Dead / Unborn | **Alive**: Show faces when their attached particles are alive.<br>**Dead**: Show faces when their attached particles are dead.<br>**Unborn**: Show faces when their attached particles are unborn. |
 | Cut Edges | Split the mesh in pieces based on location of emitted particles, instead of using existing faces. This will produce a splitting that appears more random. |
 | Size | Scale each face using the size of its attached particle, once that particle is alive. |
@@ -108,7 +108,7 @@ By default, the simulator only generates displacement data, since it takes the l
 ![Geometry](/docs2/images/ui/properties/modifiers/mesh-physics/geometry.png)
 
 | Property | What it changes |
-|---|---|
+| -------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | Generate | Creates a tiled mesh grid. The existing mesh object is replaced by the ocean grid. The generated mesh comes with UV mapping. |
 | Displace | The ocean modifier displaces the existing mesh. |
 
@@ -125,7 +125,7 @@ The internal grids are powers of two of the resolution value. So a resolution va
 > **Note:** When using the Generate modifier geometry option, this resolution value also determines the resolution of the generated mesh surface, equal to the resolution of the internal simulation data.
 
 | Property | What it changes |
-|---|---|
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Time | The time at which the ocean surface is being evaluated. To make an animated ocean, you will need to animate this value by adding keyframes. The speed that the time value is changing will determine the speed of the wave animation. |
 | Depth | The constant depth of the ocean floor under the simulated area. Lower values simulate shallower waters by producing higher frequency details and smaller waves. |
 | Size | A simple scaling factor that does not affect the height of the waves or behavior of the simulation. |
@@ -138,7 +138,7 @@ The internal grids are powers of two of the resolution value. So a resolution va
 ![Waves](/docs2/images/ui/properties/modifiers/mesh-physics/waves.png)
 
 | Property | What it changes |
-|---|---|
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Scale | An overall scale control for the amplitude of the waves. It approximates the height or depth of the waves above or below zero. Rather than just scaling the ocean object in Z, it scales all aspects of the simulation, displacement in X and Y, and corresponding foam and normals too. |
 | Smallest Wave | A minimum limit for the size of generated waves. Acts similarly to a low-pass filter, removing higher frequency wave detail. |
 | Choppiness | The choppiness of the wave peaks. With a choppiness of 0, the ocean surface is only displaced up and down in the Z direction, but with higher choppiness, the waves are also displaced laterally in X and Y, to create sharper wave peaks. |
@@ -162,7 +162,7 @@ Type in a name. This name defines a vertex data layer which is used by the Ocean
 Note that creating the full working ocean material is an own chapter, which cannot be covered here.
 
 | Property | What it changes |
-|---|---|
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Coverage | The amount of foam covering the waves. Negative values will reduce the amount of foam, and leave only the topmost peaks. Positive values will add to it. |
 | Spray | — |
 
@@ -185,7 +185,7 @@ Inverts the spray direction map.
 What wave spectrum model to use. Wave spectra are used to describe how energy moves through the waves at different frequencies. Energy travels through waves differently depending on the depth of the water and the wind speed.
 
 | Property | What it changes |
-|---|---|
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Turbulent Ocean | Use for turbulent seas with foam (Phillips). |
 | Established Ocean | Use for a large area, established ocean where the ocean would extend for miles with wind blowing for days allowing the waves to reach a point of equilibrium (Pierson-Moskowitz method). |
 | Established Ocean (Sharp Peaks) | Similar to regular Established Ocean however, waves will continue to grow with time creating sharper peaks (JONSWAP and Pierson-Moskowitz method). An extra parameter is used to define the sharpness of these peaks. |
@@ -200,7 +200,7 @@ The data for the ocean modifier can be baked to files in a given directory. When
 The created images are stored in exr format. And can be opened and modified in any graphics software that is able to handle the format.
 
 | Property | What it changes |
-|---|---|
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Bake Ocean | Bake an image sequence of ocean data. |
 | Cache Path | Folder to store the baked EXR files in. The sequences will be in the form disp\_####.exr, normal\_####.exr, and foam\_####.exr, where #### is the four digit frame number. If the cache path folder does not exist, it will be created. |
 | Frame Start, End | Frames of the simulation to bake (inclusive). The start and end frames of the bake are repeated when accessing frames outside of the baked range. |
@@ -231,7 +231,7 @@ Add the target object with the particle system.
 The particle system from the target Object to use.
 
 | Property | What it changes |
-|---|---|
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Create Instances | Instance settings. |
 | Regular | The modifier will use the regular (parents) particles to duplicate the mesh of the modified object. |
 | Children | The modifier will use the children particles to duplicate the mesh of the modified object. |
@@ -277,7 +277,7 @@ By default, the instances are placed depending on the particles position in the 
 > **Note:** When you use Strands you must also have Dead activated in the Show settings. Since they die immediately.
 
 | Property | What it changes |
-|---|---|
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Position | What percentage of the path that the instance fills. Or the position on the path if the Keep Shape option is enabled.<br>**Random**: Adds randomness to the Position value of each instance. |
 | Rotation | Specifies the rotation around the path.<br>**Random**: Adds randomness to the Rotation value of each instance. |
 | Keep Shape | Enabling this prevents the instance from being deformed, and places it on the path according to the Position value. |
@@ -293,7 +293,7 @@ Select vertex color layers. These layers will be filled with colors based on the
 You can create vertex color layers in the Object Data properties in the Vertex Colors panel.
 
 | Property | What it changes |
-|---|---|
+| -------- | ------------------------------------------------------------- |
 | Index | A vertex color layer for values based on the particles index. |
 | Value | A vertex color layer for random per-particle values. |
 

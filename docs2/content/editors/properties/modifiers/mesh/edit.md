@@ -28,7 +28,7 @@ The Data Transfer modifier transfers several types of data from one mesh to anot
 Transfer works by generating a mapping between source mesh’s items (vertices, edges, etc.) and destination ones, either on a one-to-one basis, or mapping several source items to a single destination one, using interpolation.
 
 | Property | What it changes |
-|---|---|
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Usage | Using this modifier will not create destination data layers. Use the Generate Data Layers button for this purpose when you are done with selecting the set of source data to transfer. Creating those data layers on destination mesh is not part of the modifier stack. This means that they will remain. Even once the modifier is deleted, or if the source data selection is modified. |
 | Source Object | Mesh object to copy the data from.<br>**Object transform**: Evaluate the source and destination objects in global space instead of local space. |
 
@@ -39,7 +39,7 @@ Transfer works by generating a mapping between source mesh’s items (vertices, 
 How to mix the destination elements with the source elements.
 
 | Property | What it changes |
-|---|---|
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Mix Factor | How much of the transferred data gets mixed into existing one (not supported by all data types). |
 | Vertex Group | Allows per-item fine control of the mix factor. Vertex group influence can be reverted using the small “arrow” button to the right. |
 | Generate Data Layers | This modifier cannot generate needed data layers itself. Adjust the settings to your needs, then press this button to generate matching destination layers, if needed. |
@@ -209,7 +209,7 @@ This works in a similar way to shape keys. But uses external files, and allows t
 The input file format (currently .mdd and .pc2 are supported).
 
 | Property | What it changes |
-|---|---|
+| --------- | ------------------------------------------------------------- |
 | File Path | Path to the cache file. |
 | Influence | Factor to adjust the influence of the modifier’s deformation. |
 
@@ -238,7 +238,7 @@ Which vertex group determines the influence of the modifier per point.
 ![Time Remapping](/docs2/images/ui/properties/modifiers/mesh-edit/time-remapping.png)
 
 | Property | What it changes |
-|---|---|
+| --------------------- | ---------------------------------------------------------- |
 | Frame / Time / Factor | How time is calculated. |
 | Play Mode | How playback operates. |
 | Frame Start | Play the cache starting from this frame. |
@@ -275,7 +275,7 @@ When importing an Alembic file, Mesh Sequence Cache modifiers are automatically 
 List of available Alembic files.
 
 | Property | What it changes |
-|---|---|
+| --------------- | ------------------------------------------------------------- |
 | Name | The name of the current active alembic file. |
 | Fake User | Keep this file in the scene even when it has no user anymore. |
 | Open Cache File | Open an alembic file. |
@@ -286,7 +286,7 @@ List of available Alembic files.
 Path to the Alembic file.
 
 | Property | What it changes |
-|---|---|
+| -------------- | --------------------------- |
 | Load File | Open an alembic file. |
 | Refresh Active | Update the files and paths. |
 
@@ -297,7 +297,7 @@ Path to the Alembic file.
 Path to the object in the alembic file used to lookup geometric data.
 
 | Property | What it changes |
-|---|---|
+| -------------------- | -------------------------------------------------------------------------------------------- |
 | Read Data | Type of data to read for a mesh object. Vertices, polygons, UV maps and Vertex Color layers. |
 | Vertex Interpolation | Allow interpolation of vertex positions. |
 
@@ -306,7 +306,7 @@ Path to the object in the alembic file used to lookup geometric data.
 ![Time Subpanel](/docs2/images/ui/properties/modifiers/mesh-edit/time-subpanel.png)
 
 | Property | What it changes |
-|---|---|
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sequence | Whether or not the cache is separated in a series of files. |
 | Override Frame | Whether to use a custom frame for looking up data in the cache file, instead of using the current scene frame.<br>**Frame**: The time to use for looking up the data in the cache file, or to determine which to use in a file sequence. |
 | Frame Offset | Define a frame offset to the current frame. |
@@ -324,7 +324,7 @@ This feature is just available for Cycles, and just in an experimental state.
 Display boxes as placeholders in the viewport.
 
 | Property | What it changes |
-|---|---|
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Use Prefetch | This feature is just available for Cycles, and just in an experimental state. When enabled, the Cycles procedural will preload animation data for faster update. |
 | Prefetch Cache Size | This feature is just available for Cycles, and just in an experimental state. Memory usage limit for the cache. If the data size does not fit the renderer is aborted. 0 disables the feature. |
 
@@ -363,7 +363,7 @@ Usually, an Image Texture node mapped to the UV map that the modifier targets is
 Which UV map to modify. Defaults to the active rendering layer.
 
 | Property | What it changes |
-|---|---|
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Aspect X/Y and Scale X/Y | Aspect and scale manipulation of the image. Only apply when a camera is used as projector object. |
 | Projectors | Up to ten projector objects are supported. Each face will choose the closest and aligned projector with its surface normal. Projections emit from the negative Z axis (i.e. straight down a camera or light). If the projector is a camera, the projection will adhere to its perspective/orthographic setting. |
 | Objects | Specify the projector object(s). |
@@ -389,7 +389,7 @@ Assuming the UV Axis of the modifier is X/Y and the scale of the objects is (1, 
 Which UV map to modify. Defaults to the active rendering layer.
 
 | Property | What it changes |
-|---|---|
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | UV Center | The center point of the UV map to use when applying scale or rotation. With (0, 0) at the bottom left and (1, 1) at the top right. |
 | Axis U / V | The axes to use when mapping the 3D coordinates into 2D. |
 | Object From, To | The two objects used to define the transformation. |
@@ -400,7 +400,7 @@ Which UV map to modify. Defaults to the active rendering layer.
 ![Transform](/docs2/images/ui/properties/modifiers/mesh-edit/transform.png)
 
 | Property | What it changes |
-|---|---|
+| -------- | ------------------------- |
 | Offset | 2D Offset for the warp. |
 | Scale | 2D Scale for the warp. |
 | Rotation | 2D Rotation for the warp. |
@@ -423,7 +423,7 @@ It applies back the weight to the vertex, and/or it might optionally remove the 
 > **Note:** You can view the modified weights in Weight Paint Mode. This also implies that you will have to disable the Vertex Weight Edit modifier if you want to see the original weights of the vertex group you are editing.
 
 | Property | What it changes |
-|---|---|
+| -------------- | --------------------------------------------------------------------------- |
 | Vertex Group | The vertex group to affect. |
 | Default Weight | The default weight to assign to all vertices not in the given vertex group. |
 
@@ -438,7 +438,7 @@ Adds vertices with a final weight over Add Threshold to the vertex group.
 The add threshold.
 
 | Property | What it changes |
-|---|---|
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | Group Remove | Removes vertices with a final weight below Remove Threshold from the vertex group.<br>**Threshold**: The remove threshold. |
 | Normalize Weights | Normalize the resulting weights. Without normalizing the values are clamped between 0 and 1. |
 
@@ -447,7 +447,7 @@ The add threshold.
 ![Falloff subpanel](/docs2/images/ui/properties/modifiers/mesh-edit/falloff-subpanel.png)
 
 | Property | What it changes |
-|---|---|
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Type | ![](Pictures/1000000100000088000000D5BAD5DF95.png){width="2.3cm" height="3.611cm"}How weights are mapped to their new values.<br>**Linear**: No mapping.<br>**Custom Curve**: Allows the user to manually define the mapping using a curve.<br>**Sharp, Smooth, Root and Sphere**: These are classical mapping functions, from spikiest to roundest.<br>**Random**: Uses a random value for each vertex.<br>**Median Step**: Creates binary weights (0.0 or 1.0), with 0.5 as cutting value. |
 | Invert | Inverts the falloff. |
 
@@ -462,7 +462,7 @@ The overall influence of the modifier (0.0 will leave the vertex group’s weigh
 > **Important:** Influence only affects weights, adding/removing of vertices to/from vertex group is not prevented by setting this value to 0.0. In addition, a per-vertex fine control of the effect is possible using either a vertex group or a texture (both are mutually exclusive). The per-vertex values from those will be multiplied with the Global Influence.
 
 | Property | What it changes |
-|---|---|
+| ----------------- | ----------------------------------- |
 | Mask Vertex Group | Choose a vertex group for masking. |
 | Invert | Invert vertex group mask influence. |
 
@@ -475,7 +475,7 @@ Choose a texture for masking. Note that using a mask texture will remove the mas
 ##### Texture Property
 
 | Property | What it changes |
-|---|---|
+| --------------------------- | ------------------------------------------------------------------------------------------------------ |
 | Texture Browser | A list of the available textures in the scene. |
 | Name | The name of the currently active texture. You can rename the texture here by clicking at the edit box. |
 | Fake User | Keep this texture in the scene even if it has no user. |
@@ -507,7 +507,7 @@ This modifier mixes a second vertex group (or a simple value) into the affected 
 > **Note:** You can view the modified weights in Weight Paint Mode. This also implies that you will have to disable the Vertex Weight Mix modifier if you want to see the original weights of the vertex group you are editing.
 
 | Property | What it changes |
-|---|---|
+| ---------------- | --------------------------------------------------------------------------------------------------------------- |
 | Vertex Group A | The vertex group to affect. |
 | Vertex Group B | The second vertex group to mix into the affected one. Leave it empty if you only want to mix in a simple value. |
 | Default Weight A | The default weight to assign to all vertices not in the given vertex group. |
@@ -522,7 +522,7 @@ Which vertices should be affected.
 > **Important:** When using All vertices, Vertices from group B or Vertices from one group, vertices might be added to the affected vertex group.
 
 | Property | What it changes |
-|---|---|
+| ------------- | --------------------------------------------------------------------- |
 | All | Affects all vertices, disregarding the vertex groups content. |
 | Vgroup A | Affects only vertices belonging to the affected vertex group. |
 | Vgroup B | Affects only vertices belonging to the second vertex group. |
@@ -534,7 +534,7 @@ Which vertices should be affected.
 How the vertex group weights are affected by the other vertex group’s weights.
 
 | Property | What it changes |
-|---|---|
+| --------------------- | ---------------------------------------------------------- |
 | Replace weights | Replaces affected weights with the second group’s weights. |
 | Add to weights | Adds the values of Group B to Group A. |
 | Subtract from weights | Subtracts the values of Group B from Group A. |
@@ -554,7 +554,7 @@ The overall influence of the modifier (0.0 will leave the vertex group’s weigh
 > **Important:** Influence only affects weights, adding/removing of vertices to/from vertex group is not prevented by setting this value to 0.0. In addition, a per-vertex fine control of the effect is possible using either a vertex group or a texture (both are mutually exclusive). The per-vertex values from those will be multiplied with the Global Influence.
 
 | Property | What it changes |
-|---|---|
+| ----------------- | ----------------------------------- |
 | Mask Vertex Group | Choose a vertex group for masking. |
 | Invert | Invert vertex group mask influence. |
 
@@ -567,7 +567,7 @@ Choose a texture for masking. Note that using a mask texture will remove the mas
 ##### Texture Property
 
 | Property | What it changes |
-|---|---|
+| --------------------------- | ------------------------------------------------------------------------------------------------------ |
 | Texture Browser | A list of the available textures in the scene. |
 | Name | The name of the currently active texture. You can rename the texture here by clicking at the edit box. |
 | Fake User | Keep this texture in the scene even if it has no user. |
@@ -598,7 +598,7 @@ Warning1 This modifier does implicit clamping of weight values in the standard (
 > **Note:** You can view the modified weights in Weight Paint Mode. This also implies that you will have to disable the Vertex Weight Proximity modifier if you want to see the original weights of the vertex group you are editing.
 
 | Property | What it changes |
-|---|---|
+| ------------- | ------------------------------------------- |
 | Vertex Group | The vertex group to affect. |
 | Target Object | The object from which to compute distances. |
 
@@ -607,12 +607,12 @@ Warning1 This modifier does implicit clamping of weight values in the standard (
 ![Proximity mode](/docs2/images/ui/properties/modifiers/mesh-edit/proximity-mode.png)
 
 | Property | What it changes |
-|---|---|
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Object | Use the distance between the modified mesh object and the target object as weight for all vertices in the affected vertex group. |
 | Geometry | Use the distance between each vertex and the target object, or its geometry. Note! If you enable more than one of them, the shortest distance will be used. If the target object has no geometry (e.g. an empty or camera), it will use the location of the object itself. |
 
 | Property | What it changes |
-|---|---|
+| ----------------- | ------------------------------------------------------------------------------------------------------ |
 | Lowest | Distance mapping to 0.0 weight. Tip! Lowest can be set above Highest to reverse the mapping. |
 | Highest | Distance mapping to 1.0 weight. |
 | Normalize Weights | Normalize the resulting weights. Without this option they get only clamped within the 0.0 - 1.0 range. |
@@ -622,7 +622,7 @@ Warning1 This modifier does implicit clamping of weight values in the standard (
 ![Falloff](/docs2/images/ui/properties/modifiers/mesh-edit/falloff-subpanel.png)
 
 | Property | What it changes |
-|---|---|
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Type | ![](Pictures/1000000100000088000000D5BAD5DF95.png){width="2.3cm" height="3.611cm"}How weights are mapped to their new values.<br>**Linear**: No mapping.<br>**Custom Curve**: Allows the user to manually define the mapping using a curve.<br>**Sharp, Smooth, Root and Sphere**: These are classical mapping functions, from spikiest to roundest.<br>**Random**: Uses a random value for each vertex.<br>**Median Step**: Creates binary weights (0.0 or 1.0), with 0.5 as cutting value. |
 | Invert | Inverts the falloff. |
 
@@ -637,7 +637,7 @@ The overall influence of the modifier (0.0 will leave the vertex group’s weigh
 > **Important:** Influence only affects weights, adding/removing of vertices to/from vertex group is not prevented by setting this value to 0.0. In addition, a per-vertex fine control of the effect is possible using either a vertex group or a texture (both are mutually exclusive). The per-vertex values from those will be multiplied with the Global Influence.
 
 | Property | What it changes |
-|---|---|
+| ----------------- | ----------------------------------- |
 | Mask Vertex Group | Choose a vertex group for masking. |
 | Invert | Invert vertex group mask influence. |
 
@@ -650,7 +650,7 @@ Choose a texture for masking. Note that using a mask texture will remove the mas
 ##### Texture Property
 
 | Property | What it changes |
-|---|---|
+| --------------------------- | ------------------------------------------------------------------------------------------------------ |
 | Texture Browser | A list of the available textures in the scene. |
 | Name | The name of the currently active texture. You can rename the texture here by clicking at the edit box. |
 | Fake User | Keep this texture in the scene even if it has no user. |
