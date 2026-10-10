@@ -16,7 +16,7 @@ Every save is a Git commit with your name, and changes are reviewed before they 
 | **Looks like** | A form and a word-processor editor | A plain text box | VS Code, in the browser or on your PC |
 | **Installs** | None | None | None (github.dev) · Git + editor (local) |
 | **WYSIWYG** | ✅ Text, headings, lists, tables, images | ❌ Preview tab | 🟡 Preview beside the text |
-| **Drag and drop images** | ✅ Into the page; the image bot files them | 🟡 Uploads go to GitHub, not the library | 🟡 Copy the file into `docs2/images/` |
+| **Drag and drop images** | ✅ Into the page; the image bot files them | 🟡 Uploads go to GitHub, not the library | 🟡 Copy the file into `docs2/images/_inbox/` |
 | **Insert a tip, image, table** | ✅ `/` menu | ❌ Type it | ❌ Type it |
 | **Review** | Saves to the docs branch; a maintainer opens the pull request | ✅ Opens a pull request for you | ✅ Your own pull request |
 | **Open it** | [Edit the docs](https://app.pagescms.org/Bforartists/Manual/docs2%2Ftier1-getting-started/collection/docs) | ✏️ pencil on any file | Press `.` on the repo page |
@@ -63,7 +63,7 @@ More: [Plain writing](Plain-writing.md).
 |---|---|---|
 | 🧹 | The editor writes pages in its own tidy style | Nothing. The converter writes the same style, so your save only changes your lines |
 | `>` | A plain `>` is saved as `&gt;` | Use `›` for menu paths |
-| 🖼️ | Alt text of a dropped image is its file name | Change it to what the image shows, or let the bot suggest one |
+| 🖼️ | Alt text of a dropped image is its file name | Change it to what the image shows, or the bot uses the heading above it |
 
 ---
 

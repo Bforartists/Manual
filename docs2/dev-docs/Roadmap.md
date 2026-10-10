@@ -13,7 +13,7 @@ Full plan: [`docs2/plans/plan_docs2_tier1_getting_started.md`](https://github.co
 | 0 | 🗺️ Plan | ✅ |
 | 1 | 📘 Getting Started as plain-writing Markdown, no words lost | ✅ |
 | 2 | 🖋️ Editing in the browser with Pages CMS; a one-word save changes one line | ✅ |
-| 3 | 🤖 Checks, image bot and preview link | 🚧 on `docs2/tier1-phase3` |
+| 3 | 🤖 Checks, image bot and preview link | 🧪 built on `docs2/tier1-phase3`, in review |
 | 4 | 🌐 Webflow template and collections (staging) | 🟡 built, waiting for the sync |
 | 5 | 🔄 Sync to Webflow staging | ⏳ |
 | 6 | 🧪 Usability test with writers and readers, fixes, pull request to `master` | ⏳ |

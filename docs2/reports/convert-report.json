@@ -277,21 +277,21 @@
   "empty_headings": 22,
   "file_titles": 23,
   "toc_sections_dropped": 10,
-  "images_unique": 541,
-  "figures_right": 169,
+  "images_unique": 553,
+  "figures_right": 181,
   "max_depth_seen": 7,
   "heading_images": 404,
   "table_rows": 952,
   "tables_from_leaves": 268,
   "tables_editor_format": 277,
   "figures_full": 19,
-  "figures_thumb": 44,
+  "figures_thumb": 52,
   "hotspot_figures": 2,
   "option_rows": 192,
   "hotkeys_tagged": 19,
   "callouts": 58,
   "includes": 2,
-  "image_dupes_reused": 89,
+  "image_dupes_reused": 97,
   "data_tables": 9,
   "tokens_as_code": 17,
   "tool_card_candidates": 83,
@@ -1096,7 +1096,7 @@
     25
    ],
    "bytes": 1836,
-   "uses": 1,
+   "uses": 2,
    "places": [
     "ui/properties/modifiers/grease-pencil-color"
    ],
@@ -1512,6 +1512,20 @@
    "source": "Pictures/100000010000012E00000116B2B7338E.png"
   },
   {
+   "path": "/images/ui/properties/modifiers/grease-pencil-deform/randomize.png",
+   "sha": "e3992864582c1f0e",
+   "px": [
+    293,
+    66
+   ],
+   "bytes": 3713,
+   "uses": 1,
+   "places": [
+    "ui/properties/modifiers/grease-pencil-deform"
+   ],
+   "source": "Pictures/100000010000012500000042354B9045.png"
+  },
+  {
    "path": "/images/ui/properties/modifiers/grease-pencil-deform/shrinkwrap.png",
    "sha": "08a432ae9b8e1e22",
    "px": [
@@ -1596,6 +1610,20 @@
     "ui/properties/modifiers/grease-pencil-edit"
    ],
    "source": "Pictures/10000001000000980000006603EF5D02.png"
+  },
+  {
+   "path": "/images/ui/properties/modifiers/grease-pencil-edit/custom-range-subpanel.png",
+   "sha": "1a27c3961f521074",
+   "px": [
+    294,
+    80
+   ],
+   "bytes": 5438,
+   "uses": 1,
+   "places": [
+    "ui/properties/modifiers/grease-pencil-edit"
+   ],
+   "source": "Pictures/1000000100000126000000509D3D021E.png"
   },
   {
    "path": "/images/ui/properties/modifiers/grease-pencil-edit/edit-modifiers-grease-pencil.png",
@@ -2381,20 +2409,6 @@
     "ui/properties/modifiers/grease-pencil-generate"
    ],
    "source": "Pictures/10000001000001300000004EE40974FC.png"
-  },
-  {
-   "path": "/images/ui/properties/modifiers/grease-pencil-generate/object-offset-subpanel.png",
-   "sha": "5b410c435270dd62",
-   "px": [
-    294,
-    60
-   ],
-   "bytes": 4493,
-   "uses": 1,
-   "places": [
-    "ui/properties/modifiers/grease-pencil-generate"
-   ],
-   "source": "Pictures/10000001000001260000003C97C0C6AF.png"
   },
   {
    "path": "/images/ui/properties/modifiers/grease-pencil-generate/object.png",
@@ -3224,7 +3238,7 @@
     59
    ],
    "bytes": 5555,
-   "uses": 1,
+   "uses": 2,
    "places": [
     "ui/properties/modifiers/mesh-deform"
    ],
@@ -3342,6 +3356,20 @@
     "ui/properties/modifiers/mesh-deform"
    ],
    "source": "Pictures/100000010000018E00000105CACA6A2E.png"
+  },
+  {
+   "path": "/images/ui/properties/modifiers/mesh-deform/smooth-type.png",
+   "sha": "93ef3713bc18eff1",
+   "px": [
+    155,
+    79
+   ],
+   "bytes": 5281,
+   "uses": 1,
+   "places": [
+    "ui/properties/modifiers/mesh-deform"
+   ],
+   "source": "Pictures/100000010000009B0000004FB431E9A5.png"
   },
   {
    "path": "/images/ui/properties/modifiers/mesh-deform/smooth.png",
@@ -4256,6 +4284,20 @@
    "source": "Pictures/1000000100000136000000BD22C4647B.png"
   },
   {
+   "path": "/images/ui/properties/modifiers/mesh-edit/type.png",
+   "sha": "cc699525e51c0b7a",
+   "px": [
+    136,
+    213
+   ],
+   "bytes": 9801,
+   "uses": 2,
+   "places": [
+    "ui/properties/modifiers/mesh-edit"
+   ],
+   "source": "Pictures/1000000100000088000000D5BAD5DF95.png"
+  },
+  {
    "path": "/images/ui/properties/modifiers/mesh-edit/use-render-engine-procedural.png",
    "sha": "ca46ab3564428ede",
    "px": [
@@ -4606,6 +4648,20 @@
    "source": "Pictures/100000010000013200000110513AF410.png"
   },
   {
+   "path": "/images/ui/properties/modifiers/mesh-generate/blocks-smooth-sharp.png",
+   "sha": "6ef018425623cd54",
+   "px": [
+    304,
+    193
+   ],
+   "bytes": 16295,
+   "uses": 1,
+   "places": [
+    "ui/properties/modifiers/mesh-generate"
+   ],
+   "source": "Pictures/1000000100000130000000C1118F2AD0.png"
+  },
+  {
    "path": "/images/ui/properties/modifiers/mesh-generate/boolean-2.png",
    "sha": "e805fa25eb9a4b8b",
    "px": [
@@ -4646,6 +4702,20 @@
     "ui/properties/modifiers/mesh-generate"
    ],
    "source": "Pictures/100000010000009800000053CBEE8E11.png"
+  },
+  {
+   "path": "/images/ui/properties/modifiers/mesh-generate/boundary.png",
+   "sha": "f3f480106ec65f18",
+   "px": [
+    156,
+    103
+   ],
+   "bytes": 5910,
+   "uses": 1,
+   "places": [
+    "ui/properties/modifiers/mesh-generate"
+   ],
+   "source": "Pictures/100000010000009C00000067A65B383B.png"
   },
   {
    "path": "/images/ui/properties/modifiers/mesh-generate/build-2.png",
@@ -4865,7 +4935,7 @@
     159
    ],
    "bytes": 9559,
-   "uses": 1,
+   "uses": 2,
    "places": [
     "ui/properties/modifiers/mesh-generate"
    ],
@@ -5194,6 +5264,20 @@
    "source": "Pictures/10000001000000DD00000040D3F339CE.png"
   },
   {
+   "path": "/images/ui/properties/modifiers/mesh-generate/merge-2.png",
+   "sha": "37f64e7bc59be3c1",
+   "px": [
+    394,
+    41
+   ],
+   "bytes": 2929,
+   "uses": 1,
+   "places": [
+    "ui/properties/modifiers/mesh-generate"
+   ],
+   "source": "Pictures/100000010000018A0000002966884719.png"
+  },
+  {
    "path": "/images/ui/properties/modifiers/mesh-generate/merge-subpanel.png",
    "sha": "e16c32177bbf0d6d",
    "px": [
@@ -5209,17 +5293,17 @@
   },
   {
    "path": "/images/ui/properties/modifiers/mesh-generate/merge.png",
-   "sha": "37f64e7bc59be3c1",
+   "sha": "aa2aa383a17e25f1",
    "px": [
-    394,
-    41
+    297,
+    84
    ],
-   "bytes": 2929,
+   "bytes": 5646,
    "uses": 1,
    "places": [
     "ui/properties/modifiers/mesh-generate"
    ],
-   "source": "Pictures/100000010000018A0000002966884719.png"
+   "source": "Pictures/100000010000012900000054257EFF45.png"
   },
   {
    "path": "/images/ui/properties/modifiers/mesh-generate/mesh-to-volume.png",
@@ -5404,6 +5488,21 @@
    "source": "Pictures/100000010000018B00000080C198D1FE.png"
   },
   {
+   "path": "/images/ui/properties/modifiers/mesh-generate/object-offset.png",
+   "sha": "5b410c435270dd62",
+   "px": [
+    294,
+    60
+   ],
+   "bytes": 4493,
+   "uses": 3,
+   "places": [
+    "ui/properties/modifiers/mesh-generate",
+    "ui/properties/modifiers/grease-pencil-generate"
+   ],
+   "source": "Pictures/10000001000001260000003C97C0C6AF.png"
+  },
+  {
    "path": "/images/ui/properties/modifiers/mesh-generate/offset-u-v.png",
    "sha": "72ad2e7b3362a1c6",
    "px": [
@@ -5537,7 +5636,7 @@
     126
    ],
    "bytes": 7591,
-   "uses": 1,
+   "uses": 2,
    "places": [
     "ui/properties/modifiers/mesh-generate"
    ],
@@ -5570,6 +5669,20 @@
     "ui/properties/modifiers/mesh-generate"
    ],
    "source": "Pictures/100000010000018A000001FFFD53D9F6.png"
+  },
+  {
+   "path": "/images/ui/properties/modifiers/mesh-generate/randomize.png",
+   "sha": "56ca660371ec185d",
+   "px": [
+    428,
+    87
+   ],
+   "bytes": 4749,
+   "uses": 1,
+   "places": [
+    "ui/properties/modifiers/mesh-generate"
+   ],
+   "source": "Pictures/10000001000001AC00000057286C78B1.png"
   },
   {
    "path": "/images/ui/properties/modifiers/mesh-generate/remesh.png",
@@ -5908,6 +6021,20 @@
    "source": "Pictures/1000000100000127000000567BA04529.png"
   },
   {
+   "path": "/images/ui/properties/modifiers/mesh-generate/thickness-mode.png",
+   "sha": "65d9c33b69aac5c7",
+   "px": [
+    159,
+    105
+   ],
+   "bytes": 6617,
+   "uses": 1,
+   "places": [
+    "ui/properties/modifiers/mesh-generate"
+   ],
+   "source": "Pictures/100000010000009F00000069E687ABC2.png"
+  },
+  {
    "path": "/images/ui/properties/modifiers/mesh-generate/triangulate.png",
    "sha": "16b61f214504ad1c",
    "px": [
@@ -5920,6 +6047,20 @@
     "ui/properties/modifiers/mesh-generate"
    ],
    "source": "Pictures/10000001000001310000009137B462C8.png"
+  },
+  {
+   "path": "/images/ui/properties/modifiers/mesh-generate/type.png",
+   "sha": "4f44a8e8489b14ba",
+   "px": [
+    158,
+    81
+   ],
+   "bytes": 5312,
+   "uses": 1,
+   "places": [
+    "ui/properties/modifiers/mesh-generate"
+   ],
+   "source": "Pictures/100000010000009E0000005130E70E30.png"
   },
   {
    "path": "/images/ui/properties/modifiers/mesh-generate/un-subdivide.png",
@@ -6018,6 +6159,20 @@
     "ui/properties/modifiers/mesh-generate"
    ],
    "source": "Pictures/1000000100000130000000BEEB118647.png"
+  },
+  {
+   "path": "/images/ui/properties/modifiers/mesh-generate/voxel.png",
+   "sha": "040ffe9a2139caf5",
+   "px": [
+    292,
+    106
+   ],
+   "bytes": 8573,
+   "uses": 1,
+   "places": [
+    "ui/properties/modifiers/mesh-generate"
+   ],
+   "source": "Pictures/10000001000001240000006A8AD8154B.png"
   },
   {
    "path": "/images/ui/properties/modifiers/mesh-generate/weight-2.png",
@@ -6270,6 +6425,20 @@
     "ui/properties/modifiers/mesh-normals"
    ],
    "source": "Pictures/1000000100000196000000E95CB8E66C.png"
+  },
+  {
+   "path": "/images/ui/properties/modifiers/mesh-normals/weighting-mode.png",
+   "sha": "e020d07d5b496bcb",
+   "px": [
+    161,
+    103
+   ],
+   "bytes": 7168,
+   "uses": 1,
+   "places": [
+    "ui/properties/modifiers/mesh-normals"
+   ],
+   "source": "Pictures/10000001000000A10000006702B4D6DE.png"
   },
   {
    "path": "/images/ui/properties/modifiers/mesh-physics/bake.png",
@@ -6699,7 +6868,7 @@
     125
    ],
    "bytes": 7411,
-   "uses": 1,
+   "uses": 2,
    "places": [
     "ui/properties/modifiers/mesh-physics"
    ],

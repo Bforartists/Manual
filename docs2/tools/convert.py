@@ -603,11 +603,14 @@ def option_row(n, ctx):
     if any(b["t"] not in ("Para", "Plain") for b in n.blocks): return None
     if words(" ".join(stringify(b["c"]) for b in n.blocks)) > 40: return None
     if not all(simple_leaf(c, 40) for c in n.children): return None
-    own = " ".join(render_inlines(clean_inlines(b["c"])) for b in n.blocks).strip()
+    ctx.heading = n.title
+    pulled = []                                   # icons inside the text go through the image library too
+    own = " ".join(render_inlines(process_inlines_images(clean_inlines(b["c"]), ctx, pulled)) for b in n.blocks).strip()
     opts = []
     for c in n.children:
         t = re.sub(r"^(method|mode)\s+", "", c.title, flags=re.I)
-        d = " ".join(render_inlines(tag_kbd(clean_inlines(b["c"]))) for b in c.blocks).strip()
+        d = " ".join(render_inlines(tag_kbd(process_inlines_images(clean_inlines(b["c"]), ctx, pulled)))
+                     for b in c.blocks).strip()
         opts.append(f"**{t}**" + (f": {d}" if d else ""))
     STATS["option_rows"] += 1
     desc = ((own + " · ") if own else "") + " · ".join(opts)
