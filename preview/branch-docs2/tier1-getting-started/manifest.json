@@ -1,13 +1,13 @@
 {
  "pages": {
-  "docs2/content/editors/properties/modifiers/grease-pencil/deform.md": "editors/properties/modifiers/grease-pencil/deform.html",
-  "docs2/content/editors/properties/modifiers/grease-pencil/edit.md": "editors/properties/modifiers/grease-pencil/edit.html",
-  "docs2/content/editors/properties/modifiers/grease-pencil/generate.md": "editors/properties/modifiers/grease-pencil/generate.html",
-  "docs2/content/editors/properties/modifiers/mesh/deform.md": "editors/properties/modifiers/mesh/deform.html",
-  "docs2/content/editors/properties/modifiers/mesh/edit.md": "editors/properties/modifiers/mesh/edit.html",
-  "docs2/content/editors/properties/modifiers/mesh/generate.md": "editors/properties/modifiers/mesh/generate.html",
-  "docs2/content/editors/properties/modifiers/mesh/normals.md": "editors/properties/modifiers/mesh/normals.html",
-  "docs2/content/getting-started/installation.md": "getting-started/installation.html"
+  "docs2/content/getting-started/about-documentation.md": "getting-started/about-documentation.html",
+  "docs2/content/getting-started/data-structure.md": "getting-started/data-structure.html",
+  "docs2/content/getting-started/differences.md": "getting-started/differences.html",
+  "docs2/content/getting-started/index.md": "getting-started.html",
+  "docs2/content/getting-started/installation.md": "getting-started/installation.html",
+  "docs2/content/getting-started/introduction.md": "getting-started/introduction.html",
+  "docs2/content/getting-started/migrating-from-blender.md": "getting-started/migrating-from-blender.html",
+  "docs2/content/getting-started/quick-start.md": "getting-started/quick-start.html"
  },
- "images": 354
+ "images": 8
 }
