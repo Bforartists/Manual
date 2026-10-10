@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Deform modifiers (Grease Pencil) · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1362 · <code>docs2/tier1-phase3</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<a href="../../../../getting-started/installation.html">Installation</a>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Editors</h4>
+<span>Timeline</span>
+<span>Timeline header</span>
+<span>Timeline channel list</span>
+<span>Timeline viewport</span>
+<span>Modifiers tab</span>
+<a href="../mesh/normals.html">Normals modifiers (Mesh)</a>
+<a href="../mesh/edit.html">Edit modifiers (Mesh)</a>
+<a href="../mesh/generate.html">Generate modifiers (Mesh)</a>
+<a href="../mesh/deform.html">Deform modifiers (Mesh)</a>
+<span>Physics modifiers (Mesh)</span>
+<a href="edit.html">Edit modifiers (Grease Pencil)</a>
+<a href="generate.html">Generate modifiers (Grease Pencil)</a>
+<a class="is-current" href="deform.html">Deform modifiers (Grease Pencil)</a>
+<span>Color modifiers (Grease Pencil)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties › Grease Pencil › Modifiers tab › Deform modifiers</div><h1 class="pv-title">Deform modifiers (Grease Pencil)</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 14 min read</span></div><article class="ui-doc-body"><figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/deform-modifiers-grease-pencil.png" alt="Deform modifiers (Grease Pencil)" loading="lazy"></figure>
+<h2 id="armature">Armature</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/armature.png" alt="Armature" loading="lazy"></figure>
+<p>An armature system allows to deform objects accurately by posing bones. The Armature modifier contains the armature settings at the mesh end.</p>
+<p>This modifier gets created automatically when you parent a grease pencil to an armature.</p>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/armature-2.png" alt="Armature" loading="lazy"></figure>
+<p>The armature modifier has some extra entries in the dropdown menu in the header.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apply ( Active Keyframe)</td>
+<td>Applies the active keyframe.</td>
+</tr>
+<tr>
+<td>Apply ( All Keyframes)</td>
+<td>Applies all keyframes.</td>
+</tr>
+<tr>
+<td>Apply as Shape Key</td>
+<td>Apply the modifier as a new shapekey to the mesh, and remove the armature modifier.</td>
+</tr>
+<tr>
+<td>Save as Shape Key</td>
+<td>Apply the modifier as a new shapekey to the mesh, but keep the armature modifier.</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>The name of the armature object used by this modifier.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vertex-group">Vertex Group</h3>
+<p>A vertex group of the object, which weights will be used to determine the influence of this modifier’s results when mixing it with the results from other Armature ones.</p>
+<p>This is only of use when having at least two of these modifiers on the same object, with Multi Modifier activated.</p>
+<h4 id="invert">Invert</h4>
+<p>Inverts the influence set by the vertex group.</p>
+<h3 id="bind-to">Bind to</h3>
+<h4 id="vertex-groups">Vertex Groups</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/mesh-deform/bind-to.png" alt="Vertex Groups" loading="lazy"></figure>
+<p>Meshes and lattices only. Use Vertex groups for deforming the mesh. A bone named “forearm”, will only affect the vertices in the “forearm” vertex group. The influence of one bone on a given vertex is controlled by the weight of this vertex in the relevant group.</p>
+<p>The vertex groups are located in the Object Data Properties in the Properties editor.</p>
+<h4 id="bone-envelopes">Bone Envelopes</h4>
+<p>Use the Bone envelopes to deform vertices or control points near them, defined by each bone’s envelope radius and distance.</p>
+<p>When envelopes are disabled, Blender uses the set of existing vertex group names to determine which bones influences what mesh part.</p>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/mesh-deform/bone-envelopes.png" alt="Bone Envelopes" loading="lazy"></figure>
+<p>Bone envelopes display can be turned on in the Viewport Display panel in the Object Data properties tab in the Properties Editor. Display as ...</p>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/mesh-deform/bone-envelopes-2.png" alt="Bone Envelopes" loading="lazy"></figure>
+<p>And can be adjusted in the Transform panel in the sidebar of the 3D View, in Edit mode.</p>
+<h2 id="hook">Hook</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/hook.png" alt="Hook" loading="lazy"></figure>
+<p>The Hook modifier is used to deform a mesh, curve or lattice by another object. When you move this hook object, then it pulls vertices or control points with it.</p>
+<p>Assigning the hook object to specific vertices of the target object is done in Edit mode. The modifier shows a set of buttons then.</p>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/mesh-deform/hook-2.png" alt="Hook" loading="lazy"></figure>
+<p>This modifier is automatically created when you add a Hook from the Hooks menu in the Edge menu in edit mode.</p>
+<p>Some settings just exists in Edit mode.</p>
+<div class="ui-doc-callout is-warning"><p><strong>Warning:</strong> The Hook Modifier stores vertex indices from the original mesh to determine what to affect. Modifiers that generate geometry, like Subdivision Surface, should always be put after the Hook modifier in the stack. Otherwise, the generated geometry can‘ t be affected by the hook’s influence.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>The name of the object to hook vertices to.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Allows you to define the influence per vertex. · <strong>Invert</strong>: Inverts the influence of the selected vertex group.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>Adjust this hooks influence on the vertices.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reset">Reset</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/mesh-deform/reset.png" alt="Reset" loading="lazy"></figure>
+<p>In Edit mode. Recalculate and clear the offset transform of the hook.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recenter</td>
+<td>In Edit mode. Set the hook center to the 3D cursor position.</td>
+</tr>
+<tr>
+<td>Select</td>
+<td>In Edit mode. Select the vertices affected by this hook.</td>
+</tr>
+<tr>
+<td>Assign</td>
+<td>In Edit mode. Assigns selected vertices to this hook.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="falloff">Falloff</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/falloff.png" alt="Falloff" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>This can be used to adjust the kind of influence curve that the hook has on the mesh. You can also define a custom curve to get a much higher level of control.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The size of the hooks influence.</td>
+</tr>
+<tr>
+<td>Uniform Falloff</td>
+<td>Compensate non uniform scale, and use a uniform falloff.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lattice">Lattice</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/lattice.png" alt="Lattice" loading="lazy"></figure>
+<p>The Lattice modifier deforms the base object by the shape of a Lattice object. It can be used at meshes, curves, surfaces, text, lattices and even particles.</p>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/mesh-deform/lattice-2.png" alt="Lattice" loading="lazy"></figure>
+<p>A Lattice modifier with valid settings can be added by selecting the object, holding down shift, select the target lattice object, and then choose Lattice Deform in the Parent menu.</p>
+<div class="ui-doc-callout"><p><strong>Note:</strong> When you want to use a lattice to deform particles, then you need to place the Lattice modifier after the Particle System modifier.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>The Lattice object that deforms the base object.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>A factor to control blending between original and deformed vertex positions.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel-2">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="noise">Noise</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/noise.png" alt="Noise" loading="lazy"></figure>
+<p>The Noise Modifier adds noise to make the grease pencil line unstable and noisy.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Position</td>
+<td>Strength of the noise effect over the point location.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>Strength of the noise effect over the point strength (opacity).</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>Strength of the noise effect over the point thickness.</td>
+</tr>
+<tr>
+<td>UV</td>
+<td>Strength of the noise effect over the point UV rotation.</td>
+</tr>
+<tr>
+<td>Noise Scale</td>
+<td>Control the noise frequency scale.</td>
+</tr>
+<tr>
+<td>Noise Offset</td>
+<td>Offset the noise along the stroke.</td>
+</tr>
+<tr>
+<td>Noise Seed</td>
+<td>Add a random seed.</td>
+</tr>
+<tr>
+<td>Randomize</td>
+<td>Use a random value over time. · <strong>Step</strong>: Number of frames before using a new random value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel-3">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="custom-curve">Custom Curve</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/custom-curve.png" alt="Custom Curve" loading="lazy"></figure>
+<p>Use a custom curve to define the noise along the strokes.</p>
+<h5 id="navigation-elements">Navigation elements</h5>
+<p>The navigation elements at the top are described from left to right.</p>
+<h6 id="zoom-in-and-out">Zoom in and out</h6>
+<p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
+<h6 id="clipping">Clipping</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/clipping.png" alt="Clipping" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke.</p>
+<h6 id="tools">Tools</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Extend Horizontal</td>
+<td>Extend the curve points horizontal before the first curve point and after the last curve point.</td>
+</tr>
+<tr>
+<td>Extend Vertical</td>
+<td>Extend the curve points vertical before the first curve point and after the last curve point.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="curve-window">Curve window</h4>
+<p>Tweak and adjust the falloff curve by clicking at a curve point and dragging it around.</p>
+<p>Double click adds a new point.</p>
+<p>Holding down ctrl activates temporary snapping.</p>
+<p>Holding down shift enables slower movement, which allows more accurate setting.</p>
+<h5 id="vector-handle">Vector Handle</h5>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/vector-handle.png" alt="Vector Handle" loading="lazy"></figure>
+<p>Set handle type to Vector.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Handle</td>
+<td>Set handle type to Auto.</td>
+</tr>
+<tr>
+<td>Auto Clamped Handle</td>
+<td>Set handle type to Auto Clamped.</td>
+</tr>
+<tr>
+<td>X / Y</td>
+<td>The position of the currently selected curve point. · <strong>Delete Points</strong>: Deletes selected curve points.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="offset">Offset</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/offset.png" alt="Offset" loading="lazy"></figure>
+<p>The Offset Modifier changes the strokes location, rotation or scale, starting from the object origin.</p>
+<h3 id="general-subpanel">General Subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/general-subpanel.png" alt="General Subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location X, Y, Z</td>
+<td>Sets strokes location offset from its object origin.</td>
+</tr>
+<tr>
+<td>Rotation X, Y, Z</td>
+<td>Sets strokes rotation.</td>
+</tr>
+<tr>
+<td>Scale X, Y, Z</td>
+<td>Sets strokes scale.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advanced-subpanel">Advanced Subpanel</h3>
+<h4 id="mode">Mode</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/mode.png" alt="Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/mode-2.png" alt="Mode" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Random</td>
+<td>Randomize Stroke Offset.</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>Offset Layers by the same factor.</td>
+</tr>
+<tr>
+<td>Stroke</td>
+<td>Offset stroke by the same factor based on stroke draw order.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Offset materials by the same factor.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Randomize the offset in x y and z axis.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Randomize the rotation in x y and z angle.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Randomize the size in x y and z axis.</td>
+</tr>
+<tr>
+<td>Uniform Scale</td>
+<td>Mode random. Use the same random seed for each scale axis for a uniform scale.</td>
+</tr>
+<tr>
+<td>Seed</td>
+<td>Mode Random. The random seed for the uniform scale.</td>
+</tr>
+<tr>
+<td>Layer Step</td>
+<td>Mode Seed. Number of elements that will be grouped.</td>
+</tr>
+<tr>
+<td>Layer Offset</td>
+<td>Mode Seed. Offset Starting Point.</td>
+</tr>
+<tr>
+<td>Stroke Step</td>
+<td>Mode Stroke. Number of elements that will be grouped.</td>
+</tr>
+<tr>
+<td>Stroke Offset</td>
+<td>Mode Stroke. Offset Starting Point.</td>
+</tr>
+<tr>
+<td>Material Step</td>
+<td>Mode Material. Number of elements that will be grouped.</td>
+</tr>
+<tr>
+<td>Material Offset</td>
+<td>Mode Material. Offset Starting Point.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel-4">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="shrinkwrap">Shrinkwrap</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/shrinkwrap.png" alt="Shrinkwrap" loading="lazy"></figure>
+<p>Shrinks the geometry to the surface of another object.</p>
+<h3 id="wrap-method">Wrap Method</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/mesh-deform/wrap-method.png" alt="Wrap Method" loading="lazy"></figure>
+<p>The method to determine the nearest point on the target’s surface for each vertex of the object.</p>
+<h4 id="nearest-surface-point-target-normal-project">Nearest Surface Point + Target Normal Project</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/mesh-deform/nearest-surface-point-target-normal-project.png" alt="Nearest Surface Point + Target Normal Project" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/mesh-deform/nearest-surface-point-target-normal-project-2.png" alt="Nearest Surface Point + Target Normal Project" loading="lazy"></figure>
+<p>Nearest Surface Point selects the nearest point at the surface. Additionally, Target Normal Project tries to match the interpolated normals of the surface.</p>
+<h5 id="snap-mode">Snap Mode</h5>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/mesh-deform/snap-mode.png" alt="Snap Mode" loading="lazy"></figure>
+<p>How the vertex snaps to the surface. The methods should be self explaining.</p>
+<h5 id="target">Target</h5>
+<p>The target mesh to shrink to.</p>
+<h4 id="project">Project</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/project.png" alt="Project" loading="lazy"></figure>
+<p>Projects all vertices along a chosen axis until they hit the surface of the target object.</p>
+<p>Vertices that never hits the surface are not calculated.</p>
+<h5 id="snap-mode-2">Snap Mode</h5>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/mesh-deform/snap-mode.png" alt="Snap Mode" loading="lazy"></figure>
+<p>How the vertex snaps to the surface. The methods should be self explaining.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Limit</td>
+<td>A distance limit between original vertex and surface. If the distance is larger than this limit vertex would not be projected onto the surface.</td>
+</tr>
+<tr>
+<td>Subdivision Levels</td>
+<td>This applies a (temporary) Catmull-Clark subdivision to the modified object’s geometry, before computing the wrap.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Along which local axis of the modified object the projection is done. These options can be combined with each other, yielding a “median axis” of projection. If none are selected, the normal direction is used.</td>
+</tr>
+<tr>
+<td>Negative/Positive</td>
+<td>This allows you to select the allowed direction(s) of the shrink along the selected axis. If both options are enabled, both ways are evaluated and the closest hit is selected.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="face-cull">Face Cull</h5>
+<p>Allows you to prevent any projection over the “front side” or the “back side” of the target’s faces. The “side” of a face is determined by its normal.</p>
+<h6 id="invert-cull">Invert Cull</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/mesh-deform/invert-cull.png" alt="Invert Cull" loading="lazy"></figure>
+<p>When projecting in the negative direction then invert culling.</p>
+<p>You need to have negative ticked and face cull either front or back to set this property active.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target</td>
+<td>The target mesh to shrink to.</td>
+</tr>
+<tr>
+<td>Auxiliary Target</td>
+<td>An additional object to project to.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="nearest-vertex">Nearest Vertex</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/nearest-vertex.png" alt="Nearest Vertex" loading="lazy"></figure>
+<h5 id="target-2">Target</h5>
+<p>The target mesh to shrink to.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>An offset distance to keep to the target surface.</td>
+</tr>
+<tr>
+<td>Smooth factor</td>
+<td>Amount of smoothing to apply</td>
+</tr>
+<tr>
+<td>Repeat</td>
+<td>Number of steps to apply smooth.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Restrict the affected vertices to a vertex group. · <strong>Invert</strong>: Inverts the influence of the selected vertex group.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel-5">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="smooth">Smooth</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/smooth.png" alt="Smooth" loading="lazy"></figure>
+<p>The Smooth modifier smoothens a stroke.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode</td>
+<td>What elements to affect. · <strong>Position</strong>: Affects the position of the point. · <strong>Strength</strong>: Affects the color strength of the point · <strong>Thickness</strong>: Affects the thickness of the point. · <strong>UV</strong>: Affects the uv rotation factor of the point.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>The smoothing amount. Higher values will increase the effect. Values outside expected range (above 1.0 or below 0.0) will distort the mesh.</td>
+</tr>
+<tr>
+<td>Repeat</td>
+<td>The number of smoothing iterations.</td>
+</tr>
+<tr>
+<td>Keep Shape</td>
+<td>Smooth the details, but keep the overall shape.</td>
+</tr>
+<tr>
+<td>Smooth Ends</td>
+<td>Smooth the ends of strokes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel-6">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="thickness">Thickness</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/thickness.png" alt="Thickness" loading="lazy"></figure>
+<p>The Thickness Modifier change the stroke points thickness.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uniform Thickness</td>
+<td>When enabled, makes the thickness equal for the entire strokes.</td>
+</tr>
+<tr>
+<td>Thickness Factor</td>
+<td>Value to add or subtract to the actual points thickness. · <strong>Weighted</strong>: Use weight to modulate effect.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel-7">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="custom-curve-2">Custom Curve</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/custom-curve.png" alt="Custom Curve" loading="lazy"></figure>
+<p>Use a custom curve to define the noise along the strokes.</p>
+<h5 id="navigation-elements-2">Navigation elements</h5>
+<p>The navigation elements at the top are described from left to right.</p>
+<h6 id="zoom-in-and-out-2">Zoom in and out</h6>
+<p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
+<h6 id="clipping-2">Clipping</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/clipping.png" alt="Clipping" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke.</p>
+<h6 id="tools-2">Tools</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Extend Horizontal</td>
+<td>Extend the curve points horizontal before the first curve point and after the last curve point.</td>
+</tr>
+<tr>
+<td>Extend Vertical</td>
+<td>Extend the curve points vertical before the first curve point and after the last curve point.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="curve-window-2">Curve window</h4>
+<p>Tweak and adjust the falloff curve by clicking at a curve point and dragging it around.</p>
+<p>Double click adds a new point.</p>
+<p>Holding down ctrl activates temporary snapping.</p>
+<p>Holding down shift enables slower movement, which allows more accurate setting.</p>
+<h5 id="vector-handle-2">Vector Handle</h5>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-deform/vector-handle.png" alt="Vector Handle" loading="lazy"></figure>
+<p>Set handle type to Vector.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Handle</td>
+<td>Set handle type to Auto.</td>
+</tr>
+<tr>
+<td>Auto Clamped Handle</td>
+<td>Set handle type to Auto Clamped.</td>
+</tr>
+<tr>
+<td>X / Y</td>
+<td>The position of the currently selected curve point. · <strong>Delete Points</strong>: Deletes selected curve points.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Ftier1-phase3/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fmodifiers%2Fgrease-pencil%2Fdeform.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/tier1-phase3/docs2/content/editors/properties/modifiers/grease-pencil/deform.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#armature">Armature</a><a class="h3" href="#vertex-group">Vertex Group</a><a class="h3" href="#bind-to">Bind to</a><a class="h2" href="#hook">Hook</a><a class="h3" href="#reset">Reset</a><a class="h3" href="#falloff">Falloff</a><a class="h3" href="#influence-subpanel">Influence subpanel</a><a class="h2" href="#lattice">Lattice</a><a class="h3" href="#influence-subpanel-2">Influence subpanel</a><a class="h2" href="#noise">Noise</a><a class="h3" href="#influence-subpanel-3">Influence subpanel</a><a class="h2" href="#offset">Offset</a><a class="h3" href="#general-subpanel">General Subpanel</a><a class="h3" href="#advanced-subpanel">Advanced Subpanel</a><a class="h3" href="#influence-subpanel-4">Influence subpanel</a><a class="h2" href="#shrinkwrap">Shrinkwrap</a><a class="h3" href="#wrap-method">Wrap Method</a><a class="h3" href="#influence-subpanel-5">Influence subpanel</a><a class="h2" href="#smooth">Smooth</a><a class="h3" href="#influence-subpanel-6">Influence subpanel</a><a class="h2" href="#thickness">Thickness</a><a class="h3" href="#influence-subpanel-7">Influence subpanel</a></aside></div></body></html>

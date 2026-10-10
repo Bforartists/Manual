@@ -1,0 +1,1518 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Generate modifiers (Grease Pencil) · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1362 · <code>docs2/tier1-phase3</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<a href="../../../../getting-started/installation.html">Installation</a>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Editors</h4>
+<span>Timeline</span>
+<span>Timeline header</span>
+<span>Timeline channel list</span>
+<span>Timeline viewport</span>
+<span>Modifiers tab</span>
+<a href="../mesh/normals.html">Normals modifiers (Mesh)</a>
+<a href="../mesh/edit.html">Edit modifiers (Mesh)</a>
+<a href="../mesh/generate.html">Generate modifiers (Mesh)</a>
+<a href="../mesh/deform.html">Deform modifiers (Mesh)</a>
+<span>Physics modifiers (Mesh)</span>
+<a href="edit.html">Edit modifiers (Grease Pencil)</a>
+<a class="is-current" href="generate.html">Generate modifiers (Grease Pencil)</a>
+<a href="deform.html">Deform modifiers (Grease Pencil)</a>
+<span>Color modifiers (Grease Pencil)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties › Grease Pencil › Modifiers tab › Generate modifiers</div><h1 class="pv-title">Generate modifiers (Grease Pencil)</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 22 min read</span></div><article class="ui-doc-body"><figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/generate-modifiers-grease-pencil.png" alt="Generate modifiers (Grease Pencil)" loading="lazy"></figure>
+<p>Some of the modifiers are just available for specific object types.</p>
+<p>Left grease pencil object, right a mesh object.</p>
+<h2 id="array">Array</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/array.png" alt="Array" loading="lazy"></figure>
+<p>The Array modifier creates an array of copies of the base object. Each copy can offset from the previous one in any of a number of possible ways. Vertices in adjacent copies can be merged if they are nearby, allowing smooth Subdivision Surface frameworks to be generated.</p>
+<p>This modifier can be useful when combined with tillable meshes for quickly developing large scenes. It is also useful for creating complex repetitive shapes.</p>
+<p>Multiple Array modifiers may be active for an object at the same time. This allows to create complex three-dimensional constructs.</p>
+<p>Hint for Offset Calculation. The transformation applied from one copy to the next is calculated as the sum of the three different components (Relative, Constant and Object), each of which can be enabled/disabled independently of the others. This allows, for example, a relative offset of (1.0, 0.0, 0.0) and a constant offset of (0.1, 0.0, 0.0), giving an array of objects neatly spaced along the X axis with a constant 0.1 unit between them, whatever the original object’s size.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Count</td>
+<td>Number of Items</td>
+</tr>
+<tr>
+<td>Material Override</td>
+<td>Index of the material used for generated strokes. A value of 0 uses the original material.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relative-offset-subpanel">Relative Offset subpanel</h3>
+<h4 id="factor-x-y-z">Factor X/Y/Z</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/factor-x-y-z.png" alt="Factor X/Y/Z" loading="lazy"></figure>
+<p>Adds a translation equal to the object’s bounding box size along each axis to the offset, multiplied by a scaling factor. X, Y and Z scaling factors can be specified.</p>
+<h3 id="constant-offset-subpanel">Constant Offset subpanel</h3>
+<h4 id="distance-x-y-z">Distance X/Y/Z</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/distance-x-y-z.png" alt="Distance X/Y/Z" loading="lazy"></figure>
+<p>Adds a constant translation component to the duplicate object’s offset. X, Y and Z constant components can be specified.</p>
+<h3 id="object-offset-subpanel">Object Offset subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/mesh-generate/object-offset.png" alt="Object Offset subpanel" loading="lazy"></figure>
+<p>Adds a transformation taken from a chosen object relative to the current object to the offset.</p>
+<h4 id="object">Object</h4>
+<p>Choose an object.</p>
+<h3 id="randomize">Randomize</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/randomize.png" alt="Randomize" loading="lazy"></figure>
+<p>Randomize the transform values.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Randomize the offset values.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Randomize the rotation values.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Randomize the scale values. · <strong>Uniform Scale</strong>: Use uniform scaling.</td>
+</tr>
+<tr>
+<td>Seed</td>
+<td>The random seed value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="build">Build</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/build.png" alt="Build" loading="lazy"></figure>
+<p>The Build modifier lets the strokes of the grease pencil object appear or disappear over time when you play the animation.</p>
+<h3 id="mode">Mode</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/mode.png" alt="Mode" loading="lazy"></figure>
+<p>How many strokes are animated at the same time.</p>
+<h4 id="sequential-mode">Sequential mode</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/sequential-mode.png" alt="Sequential mode" loading="lazy"></figure>
+<p>Strokes appear or disappear one after the other.</p>
+<h5 id="transition">Transition</h5>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/transition.png" alt="Transition" loading="lazy"></figure>
+<p>How the strokes are animated. The items should be self explaining.</p>
+<h5 id="timing">Timing</h5>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/timing.png" alt="Timing" loading="lazy"></figure>
+<p>How to calculate the timing of the frames.</p>
+<h6 id="natural-drawing-speed">Natural Drawing Speed</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/natural-drawing-speed.png" alt="Natural Drawing Speed" loading="lazy"></figure>
+<p>Use recorded speed multiplied by a factor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed Factor</td>
+<td>Multiply recorded drawing speed by a factor.</td>
+</tr>
+<tr>
+<td>Maximum Gap</td>
+<td>The maximum gap between strokes in seconds.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="number-of-frames">Number of Frames</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/number-of-frames.png" alt="Number of Frames" loading="lazy"></figure>
+<p>Set a fixed number of frames for all build animations.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frames</td>
+<td>Maximum number of frames that the build effect can run.</td>
+</tr>
+<tr>
+<td>Delay</td>
+<td>Number of frames to delay before the modifier has any effect.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="percentage-factor">Percentage Factor</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/percentage-factor.png" alt="Percentage Factor" loading="lazy"></figure>
+<p>Set a manual percentage to build.</p>
+<p><strong>Factor</strong></p>
+<p>How much the stroke is visible.</p>
+<h5 id="object-2">Object</h5>
+<p>Pick an object as the starting position.</p>
+<h4 id="concurrent-mode">Concurrent Mode</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/concurrent-mode.png" alt="Concurrent Mode" loading="lazy"></figure>
+<p>All strokes appear or disappear at once.</p>
+<h5 id="transition-2">Transition</h5>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/transition-2.png" alt="Transition" loading="lazy"></figure>
+<p>How the strokes are animated.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grow</td>
+<td>Grow over the animation time.</td>
+</tr>
+<tr>
+<td>Shrink</td>
+<td>Shrink over the animation time.</td>
+</tr>
+<tr>
+<td>Vanish</td>
+<td>Vanish over the animation time.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="timing-2">Timing</h5>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/timing-2.png" alt="Timing" loading="lazy"></figure>
+<p>What method to use to build animations. Number of frames, or percentage.</p>
+<h6 id="number-of-frames-2">Number of frames</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/number-of-frames-2.png" alt="Number of frames" loading="lazy"></figure>
+<p><strong>Time Alignment</strong></p>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png" alt="Time Alignment" loading="lazy"></figure>
+<p>When strokes should start to appear or disappear.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Align Start</td>
+<td>All strokes appears at the same time.</td>
+</tr>
+<tr>
+<td>Align End</td>
+<td>All strokes disappears at the same time.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Frames</strong></p>
+<p>Maximum number of frames that the build effect can run.</p>
+<h5 id="delay">Delay</h5>
+<p>Number of frames after each GP keyframe before the modifier has any effect.</p>
+<h6 id="percentage-factor-2">Percentage Factor</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/percentage-factor-2.png" alt="Percentage Factor" loading="lazy"></figure>
+<p><strong>Time Alignment</strong></p>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png" alt="Time Alignment" loading="lazy"></figure>
+<p>When strokes should start to appear or disappear.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Align Start</td>
+<td>All strokes appears at the same time.</td>
+</tr>
+<tr>
+<td>Align End</td>
+<td>All strokes disappears at the same time.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Factor</strong></p>
+<p>How much the stroke is visible.</p>
+<h5 id="object-3">Object</h5>
+<p>Pick an object as the starting position.</p>
+<h4 id="additive">Additive</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/additive.png" alt="Additive" loading="lazy"></figure>
+<p>Builds only new strokes. Assumes additive painting.</p>
+<h5 id="timing-3">Timing</h5>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/timing-3.png" alt="Timing" loading="lazy"></figure>
+<p>What method to use to build animations.</p>
+<h6 id="natural-drawing-speed-2">Natural Drawing Speed</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/natural-drawing-speed-2.png" alt="Natural Drawing Speed" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed Factor</td>
+<td>Multiply the recording speed by a factor.</td>
+</tr>
+<tr>
+<td>Maximum Gap</td>
+<td>The maximum gap between strokes in seconds.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="number-of-frames-3">Number of frames</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/number-of-frames-2.png" alt="Number of frames" loading="lazy"></figure>
+<p><strong>Time Alignment</strong></p>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png" alt="Time Alignment" loading="lazy"></figure>
+<p>When strokes should start to appear or disappear.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Align Start</td>
+<td>All strokes appears at the same time.</td>
+</tr>
+<tr>
+<td>Align End</td>
+<td>All strokes disappears at the same time.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Frames</strong></p>
+<p>Maximum number of frames that the build effect can run.</p>
+<h5 id="delay-2">Delay</h5>
+<p>Number of frames after each GP keyframe before the modifier has any effect.</p>
+<h6 id="percentage-factor-3">Percentage Factor</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/percentage-factor-2.png" alt="Percentage Factor" loading="lazy"></figure>
+<p><strong>Time Alignment</strong></p>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/time-alignment.png" alt="Time Alignment" loading="lazy"></figure>
+<p>When strokes should start to appear or disappear.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Align Start</td>
+<td>All strokes appears at the same time.</td>
+</tr>
+<tr>
+<td>Align End</td>
+<td>All strokes disappears at the same time.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Factor</strong></p>
+<p>How much the stroke is visible.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start delay</td>
+<td>Number of frames after each GP keyframe before the modifier has any effect.</td>
+</tr>
+<tr>
+<td>Frames</td>
+<td>Maximum number of frames that the build effect can run.</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>Pick an object as the starting position.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="effective-range">Effective Range</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/effective-range.png" alt="Effective Range" loading="lazy"></figure>
+<p>Only modify strokes that lies in the specified time frame.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start</td>
+<td>The first frame of the range.</td>
+</tr>
+<tr>
+<td>End</td>
+<td>The last frame of the range.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fading-subpanel">Fading subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/fading-subpanel.png" alt="Fading subpanel" loading="lazy"></figure>
+<p>Fade out strokes instead of cutting them off.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>The factor for how much the stroke is fading out.</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>How much strength fading applies on top of stroke thickness.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>How much strength fading applies on top of stroke opacity.</td>
+</tr>
+<tr>
+<td>Weight Output</td>
+<td>Limit the fade to a vertex group.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel-2">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dot-dash">Dot Dash</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/dot-dash.png" alt="Dot Dash" loading="lazy"></figure>
+<p>Turns a grease pencil stroke into a dotted line.</p>
+<h3 id="offset">Offset</h3>
+<p>The offset into each stroke before the dot creation starts.</p>
+<h3 id="segment-list">Segment list</h3>
+<p>Manage the single segments of the dotted dash. Segments gets repeated as they appear in the list. Means when you just have one segment in the list, then this shape will be repeated. When you have two, then the first will be displayed, then the second, then the first, and so on. Every segment can have its own settings. Which are managed below.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Segment</td>
+<td>Add a new dash segment.</td>
+</tr>
+<tr>
+<td>Remove Segment</td>
+<td>Remove the dash segment.</td>
+</tr>
+<tr>
+<td>Move Dash Segment up or down</td>
+<td>Moves the selected dash segment up or down in the list.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="search-element">Search element</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/search-element.png" alt="Search element" loading="lazy"></figure>
+<p>By clicking at the triangle button you reveal a search field with which you can search through the list.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Box</td>
+<td>Type in the search term and hit enter.</td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>Inverts the search term.</td>
+</tr>
+<tr>
+<td>Sort by name</td>
+<td>Sorts the list alphabetically.</td>
+</tr>
+<tr>
+<td>Reverse</td>
+<td>Inverts the list.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dash</td>
+<td>The number of points (vertices) from the orignal stroke to include in this segment.</td>
+</tr>
+<tr>
+<td>Gap</td>
+<td>The number of points (vertices) skipped after this segment.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The radius of the segment. Maximum is 1 of the original stroke.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>The visibility of this segment.</td>
+</tr>
+<tr>
+<td>Material Index</td>
+<td>What material to use.</td>
+</tr>
+<tr>
+<td>Cyclic</td>
+<td>Enable cyclic on individual stroke dashes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel-3">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="envelope">Envelope</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/envelope.png" alt="Envelope" loading="lazy"></figure>
+<p>Generates a envelope shape that connects all points in this envelope.</p>
+<h3 id="mode-2">Mode</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/mode-2.png" alt="Mode" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deform</td>
+<td>Deform the stoke to best match the envelope shape.</td>
+</tr>
+<tr>
+<td>Segments</td>
+<td>Add segments to create the envelope. Keep the original stroke.</td>
+</tr>
+<tr>
+<td>Fills</td>
+<td>Add Fill segments to create the envelope. This method does not keep the original stroke.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spread Length</td>
+<td>The number of points to skip to create straight segments.</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>Thickness multiplier for the thickness of the new stroke.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>Strength multiplier for the strength of the new stroke.</td>
+</tr>
+<tr>
+<td>Material Index</td>
+<td>The material index of the material that is used.</td>
+</tr>
+<tr>
+<td>Skip Segments</td>
+<td>Define a number of segments to skip to reduce the complexity.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel-4">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel-2.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Assign a vertex group to modulate the deform. · <strong>Inverse Pass</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="length">Length</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/length.png" alt="Length" loading="lazy"></figure>
+<p>The Length Modifier extends or shortens the original strokes length.</p>
+<h3 id="mode-3">Mode</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/mode-3.png" alt="Mode" loading="lazy"></figure>
+<p>Defines the mode to use for the length calculation. Relative to the length of the grease pencil stroke, or absolute in geometry space.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor Start/End</td>
+<td>Length difference for each stroke.</td>
+</tr>
+<tr>
+<td>Used Length</td>
+<td>What position of the stroke is used for the calculation of the extension.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="randomize-subpanel">Randomize subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/randomize-subpanel.png" alt="Randomize subpanel" loading="lazy"></figure>
+<p>Randomization for the start / end lengths.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Step</td>
+<td>Number of frames between randomization steps.</td>
+</tr>
+<tr>
+<td>Offset Start</td>
+<td>Size of random length added to the start of each stroke.</td>
+</tr>
+<tr>
+<td>End</td>
+<td>Size of random length added to the end of each stroke.</td>
+</tr>
+<tr>
+<td>Noise Offset</td>
+<td>Smoothly offset the random value of each stroke.</td>
+</tr>
+<tr>
+<td>Seed</td>
+<td>The random seed value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="curvature-subpanel">Curvature subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/curvature-subpanel.png" alt="Curvature subpanel" loading="lazy"></figure>
+<p>Follow the curvature of the stroke.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Point Density</td>
+<td>Multiplied by Start/End for the total added point count.</td>
+</tr>
+<tr>
+<td>Segment Influence</td>
+<td>How much the length of the individual segments should influence the final computed curvature.</td>
+</tr>
+<tr>
+<td>Filter Angle</td>
+<td>Ignore points of the stroke that derivate from their neighbours by more than this angle.</td>
+</tr>
+<tr>
+<td>Invert Curvature</td>
+<td>Invert the curvature of the stroke's extension.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence">Influence</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png" alt="Influence" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="line-art">Line Art</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art.png" alt="Line Art" loading="lazy"></figure>
+<p>The Line Art modifier generates stylized line art from the scene or selected source collection or objects.</p>
+<p>Note that due to lack of global cache at the moment, each Line Art modifier will run the entire occlusion calculation for itself. So if you have multiple line art modifiers to select different parts of the scene (to apply different styles, etc.), the evaluation will take much longer. There are plans to remedy this in the future, but this is a known limitation for now.</p>
+<p>This modifier requires to have a ACTIVE camera in the scene, since the outline is created from this active camera. And the outline is created from exact this view of the camera. So better switch to camera view to check if the view fits.</p>
+<p>The active camera has the active orange triangle above the widget. You can also see the active camera in the Scene properties.</p>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art-2.png" alt="Line Art" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art-3.png" alt="Line Art" loading="lazy"></figure>
+<h3 id="source-type">Source Type</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/source-type.png" alt="Source Type" loading="lazy"></figure>
+<p>What type of geometry source should line art be generated from.</p>
+<h4 id="collection">Collection</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/collection.png" alt="Collection" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collection</td>
+<td>The collection where you want to apply the line art to. · <strong>Invert</strong>: Inverts the selection of collections.</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>Grease Pencil layer that is assigned to the generated strokes.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Grease pencil material assigned to the generated strokes.</td>
+</tr>
+<tr>
+<td>Line Radius</td>
+<td>The thickness of the line.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>The opacity of the line.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="object-4">Object</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/object.png" alt="Object" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>The object where you want to apply the line art to.</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>Grease Pencil layer that is assigned to the generated strokes.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Grease pencil material assigned to the generated strokes.</td>
+</tr>
+<tr>
+<td>Line Radius</td>
+<td>The thickness of the line.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>The opacity of the line.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="scene">Scene</h4>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/scene.png" alt="Scene" loading="lazy"></figure>
+<p>Applies the line art grease pencil strokes to the whole scene.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Grease Pencil layer that is assigned to the generated strokes.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Grease pencil material assigned to the generated strokes.</td>
+</tr>
+<tr>
+<td>Line Radius</td>
+<td>The thickness of the line.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>The opacity of the line.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="edge-types-subpanel">Edge types subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/edge-types-subpanel.png" alt="Edge types subpanel" loading="lazy"></figure>
+<p>Which kind of edges to influence.</p>
+<h4 id="create">Create</h4>
+<h5 id="use-contour">Use Contour</h5>
+<p>Use a contour.</p>
+<h6 id="silhouette-filtering">Silhouette Filtering</h6>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/silhouette-filtering.png" alt="Silhouette Filtering" loading="lazy"></figure>
+<p>What kind of contour to use.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Crease</td>
+<td>Generate strokes from crease edges. · <strong>Crease Threshold</strong>: Angles smaller than this value will be treaten as creases.</td>
+</tr>
+<tr>
+<td>Crease</td>
+<td>Influence crease edges. The angle what edges are treaten as creases can be adjusted in the edit box.</td>
+</tr>
+<tr>
+<td>Material Borders</td>
+<td>Generate strokes from borders between materials.</td>
+</tr>
+<tr>
+<td>Intersections</td>
+<td>Generate strokes from intersections.</td>
+</tr>
+<tr>
+<td>Edge Marks</td>
+<td>Generate strokes from edge marks.</td>
+</tr>
+<tr>
+<td>Loose</td>
+<td>Generate strokes from loose geometry.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="light-object">Light Object</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light Contour</td>
+<td>You need to pick a light object in the Light Reference panel. Generate light shadow separation lines from a referenced light object.</td>
+</tr>
+<tr>
+<td>Cast Shadow</td>
+<td>You need to pick a light object in the Light Reference panel. The line casts shadow.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="illumination-filtering">Illumination filtering</h5>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/illumination-filtering.png" alt="Illumination filtering" loading="lazy"></figure>
+<p>You need to pick a light object in the Light Reference panel. How to thread the shadow region filtering. The names should be self explaining.</p>
+<h4 id="options">Options</h4>
+<h5 id="allow-overlaping-types">Allow Overlaping Types</h5>
+<p>Allow an edge to have multiple overlapping types.</p>
+<h3 id="light-reference-subpanel">Light Reference subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/light-reference-subpanel.png" alt="Light Reference subpanel" loading="lazy"></figure>
+<p>This panel allows you to add a light object as a source for line art.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light Object</td>
+<td>Pick the light source.</td>
+</tr>
+<tr>
+<td>Shadow Camera Size</td>
+<td>Represents the orthographic scale of an ortho camera. It calculates the area to cover.</td>
+</tr>
+<tr>
+<td>Near</td>
+<td>The near clip plane of the shadow camera.</td>
+</tr>
+<tr>
+<td>Far</td>
+<td>The far clip plane of the shadow camera.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="geometry-processing-subpanel">Geometry Processing subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/geometry-processing-subpanel.png" alt="Geometry Processing subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Custom Camera</td>
+<td>Allows to pick a different camera than the active scene camera for line art rendering.</td>
+</tr>
+<tr>
+<td>Overlapping Edges as Contour</td>
+<td>This option allows overlapping edges (e.g. from an edge split modifier or imported geometry where two edges occupy the exact same space) to be drawn as contour. Enabling this option will slow down the calculation slightly but it will handle edge overlapping cases without erroneous occlusion results.</td>
+</tr>
+<tr>
+<td>Instanced Objects</td>
+<td>This option enables particles and other instanced objects to be loaded for line art calculation. There will be performance impact when there are a large amount of instanced objects in the scene.</td>
+</tr>
+<tr>
+<td>Clipping Boundaries</td>
+<td>When enabled, line art will generate clipping lines as contour type at the place where near or far clipping planes cut the model. Otherwise there will be no lines.</td>
+</tr>
+<tr>
+<td>Crease on Smooth</td>
+<td>Allow crease edges to show inside smooth surfaces.</td>
+</tr>
+<tr>
+<td>Crease on Sharp</td>
+<td>Allow crease to show on sharp edges.</td>
+</tr>
+<tr>
+<td>Force Back Face Culling</td>
+<td>Remove all backfaces to speed up calculation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="occlusion-subpanel">Occlusion Subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/occlusion-subpanel.png" alt="Occlusion Subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Range</td>
+<td>If enabled, the modifier will select lines that have an occlusion level between start and end values. If not enabled just a single Level value slider shows.</td>
+</tr>
+<tr>
+<td>Material Mask subpanel</td>
+<td>Use material masks to filter out occluded strokes. You need to have a range level higher than 0. · <strong>Masks</strong>: Choose up to eight mask bits for the masking. · <strong>Exact match</strong>: Require matching all material masks instead of just one.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intersection-subpanel">Intersection subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/intersection-subpanel.png" alt="Intersection subpanel" loading="lazy"></figure>
+<h4 id="collection-masks">Collection Masks</h4>
+<p>Choose up to eight mask bits for masking.</p>
+<h5 id="exact-match">Exact match</h5>
+<p>Require matching all intersections instead of just one.</p>
+<h3 id="face-mask-filtering-subpanel">Face Mask Filtering subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/face-mask-filtering-subpanel.png" alt="Face Mask Filtering subpanel" loading="lazy"></figure>
+<p>Filter Feature Lines using Freestlye Face Masks.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invert</td>
+<td>Invert face mask filtering.</td>
+</tr>
+<tr>
+<td>Boundaries</td>
+<td>Filter feature lines based on face mask boundaries.</td>
+</tr>
+<tr>
+<td>Keep Contour</td>
+<td>Preserve contour lines while filtering.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="chain">Chain</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/chain.png" alt="Chain" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intersection with Contour</td>
+<td>Allows intersection lines to be chained together with contour lines.</td>
+</tr>
+<tr>
+<td>All Lines</td>
+<td>Enabling this option will cause all lines to have the type of contour and to be chained together.</td>
+</tr>
+<tr>
+<td>Loose Edges</td>
+<td>Allow loose edges to be chained together.</td>
+</tr>
+<tr>
+<td>Loose As Contour</td>
+<td>Loose edges will have contour type.</td>
+</tr>
+<tr>
+<td>Preserve Details</td>
+<td>Keep the zig-zag noise in initial chanining. · <strong>Geometry Space</strong>: Use Geometry distance for chaining instead of image space.</td>
+</tr>
+<tr>
+<td>Image Threshold</td>
+<td>Segments with an image distance smaller than this value will be chained together.</td>
+</tr>
+<tr>
+<td>Smooth tolerance</td>
+<td>Strength of smoothing applied on jagged chains.</td>
+</tr>
+<tr>
+<td>Angle Splitting</td>
+<td>The angle in screen space below which a stroke is split into two.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vertex-weight-transfer-subpanel">Vertex Weight Transfer subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/vertex-weight-transfer-subpanel.png" alt="Vertex Weight Transfer subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filter Source</td>
+<td>If source mesh has vertex groups whose name starts with this string, then the vertex weight info will be transferred into weight groups in Grease Pencil strokes. · <strong>Invert Vertex Group</strong>: Inverts the selection.</td>
+</tr>
+<tr>
+<td>Match Output</td>
+<td>Transfer the filtered object vertex weights into Grease Pencil weight groups with the same names as the filtered ones.</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>If Match Output is off, then a target vertex group has to be specified. If there are multiple weight groups copied into target, then the highest weight value is copied into it.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="composition">Composition</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/composition.png" alt="Composition" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overscan</td>
+<td>A margin to prevent an abrupt end of the stroke at the edge of the image. · <strong>Image boundary trimming</strong>: Trim all edges right at the boundary of image (including overscan region)</td>
+</tr>
+<tr>
+<td>Depth Offset</td>
+<td>Move strokes slightly towards the camera to avoid clipping. · <strong>Towards custom camera</strong>: Offset strokes towards selected camera instead of the active camera.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bake-subpanel">Bake subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/bake-subpanel.png" alt="Bake subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bake Line Art / Bake All</td>
+<td>Bakes Line Art strokes for active Grease Pencil object within the start, end frame range in scene. Bake All bakes all Grease Pencil objects that contains at least one Line Art modifier. After baking, baked Line Art modifier will be deactivated automatically.</td>
+</tr>
+<tr>
+<td>Clear Baked Line Art / Clear All</td>
+<td>Clears baked line art frames within the scene frame range for active Grease Pencil object. Clear All applies the same operation for all Grease Pencil objects that contains at least one Line Art modifier.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mirror">Mirror</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/mirror.png" alt="Mirror" loading="lazy"></figure>
+<p>The Mirror modifier for the Grease Pencil Object works in Object mode. It mirrors the object along its local X, Y and/or Z axes, across the Object Origin. It can also use another object as the mirror center, then use that object’s local axes instead of its own.</p>
+<h3 id="object-5">Object</h3>
+<p>Define an object to mirror at its origin instead of mirroring along the grease pencil origin.</p>
+<p>You can animate it to move the mirror axis.</p>
+<h3 id="influence-2">Influence</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png" alt="Influence" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="multiple-strokes">Multiple Strokes</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/multiple-strokes.png" alt="Multiple Strokes" loading="lazy"></figure>
+<p>Adds multiple parallel copies of the stroke around the original stroke.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duplicates</td>
+<td>The number of additional strokes.</td>
+</tr>
+<tr>
+<td>Distance</td>
+<td>Distance between the original and the duplicate strokes.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Control the offset position (inner or outer) for duplicate strokes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fade">Fade</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/fade.png" alt="Fade" loading="lazy"></figure>
+<p>Fade out duplicate strokes, using their opacity or thickness.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Center</td>
+<td>Control the initial position for the fading.</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>Fade influence on strokes thickness.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>Fade influence on strokes opacity.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel-5">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="outline">Outline</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/outline.png" alt="Outline" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/outline-2.png" alt="Outline" loading="lazy"></figure>
+<p>Draws an outline around the grease pencil stroke.</p>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/outline-3.png" alt="Outline" loading="lazy"></figure>
+<p>This modifier requires to have a ACTIVE camera in the scene, since the outline is created from this active camera. And the outline is created from exact this view of the camera. So better switch to camera view to check if the view fits. You will get a warning in the modifier when the active camera is missing.</p>
+<p>The active camera has the active orange triangle above the widget. You can also see the active camera in the Scene properties.</p>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art-2.png" alt="Outline" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art-3.png" alt="Outline" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thickness</td>
+<td>The thickness of the outline.</td>
+</tr>
+<tr>
+<td>Keep Shape</td>
+<td>Try to keep global shape.</td>
+</tr>
+<tr>
+<td>Subdivisions</td>
+<td>Subdivisions of the outline grease pencil stroke.</td>
+</tr>
+<tr>
+<td>Sample Length</td>
+<td>The distance between the vertices.</td>
+</tr>
+<tr>
+<td>Outline material</td>
+<td>Material used for the outline strokes. If no material is chosen then the material from the parent stroke is used.</td>
+</tr>
+<tr>
+<td>Target object</td>
+<td>A target object to define the stroke start.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel-6">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="simplify">Simplify</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/simplify.png" alt="Simplify" loading="lazy"></figure>
+<p>The Simplify modifier allows you to reduce the amount of points in the strokes. It tries to reduce points while maintaining the lines shape.</p>
+<h3 id="mode-4">Mode</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/mode-4.png" alt="Mode" loading="lazy"></figure>
+<p>How to reduce points in the strokes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixed</td>
+<td>Deletes alternated points in the strokes, except the start and end points.</td>
+</tr>
+<tr>
+<td>Adaptive</td>
+<td>Uses the RDP algorithm (Ramer-Douglas-Peucker algorithm) for points deletion. The algorithm try to obtain a similar line shape with fewer points.</td>
+</tr>
+<tr>
+<td>Sample</td>
+<td>Recreates the stroke geometry with a predefined length between points.</td>
+</tr>
+<tr>
+<td>Merge</td>
+<td>Simplifies the strokes by merging points that are closer than a specified distance to each other.</td>
+</tr>
+<tr>
+<td>Iterations</td>
+<td>Number of times to repeat the procedure.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influence-subpanel-7">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>The material pass index. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="subdivide">Subdivide</h2>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/subdivide.png" alt="Subdivide" loading="lazy"></figure>
+<p>The Subdivide modifier subdivide the strokes by inserting points between other points to the lines.</p>
+<h3 id="subdivision-type">Subdivision Type</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/subdivision-type.png" alt="Subdivision Type" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Catmull-Clark</td>
+<td>Subdivides and smooths the surfaces.</td>
+</tr>
+<tr>
+<td>Simple</td>
+<td>Only subdivides the surfaces, without any smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="subdivisions">Subdivisions</h3>
+<p>Number of subdivisions.</p>
+<h3 id="influence-subpanel-8">Influence subpanel</h3>
+<figure class="is-right"><img src="../../../../docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel-3.png" alt="Influence subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Layer Pass</td>
+<td>The layer pass index. · <strong>Use Layer pass</strong>: Use the layer pass. · <strong>Layer pass value</strong>: The layer pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Material Pass</td>
+<td>Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · <strong>Use Material pass</strong>: Use the Material pass. · <strong>Material pass value</strong>: The Material pass value. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+<tr>
+<td>Pass</td>
+<td>The material pass index. · <strong>Invert</strong>: Inverts the influence.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Ftier1-phase3/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fmodifiers%2Fgrease-pencil%2Fgenerate.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/tier1-phase3/docs2/content/editors/properties/modifiers/grease-pencil/generate.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#array">Array</a><a class="h3" href="#relative-offset-subpanel">Relative Offset subpanel</a><a class="h3" href="#constant-offset-subpanel">Constant Offset subpanel</a><a class="h3" href="#object-offset-subpanel">Object Offset subpanel</a><a class="h3" href="#randomize">Randomize</a><a class="h3" href="#influence-subpanel">Influence subpanel</a><a class="h2" href="#build">Build</a><a class="h3" href="#mode">Mode</a><a class="h3" href="#effective-range">Effective Range</a><a class="h3" href="#fading-subpanel">Fading subpanel</a><a class="h3" href="#influence-subpanel-2">Influence subpanel</a><a class="h2" href="#dot-dash">Dot Dash</a><a class="h3" href="#offset">Offset</a><a class="h3" href="#segment-list">Segment list</a><a class="h3" href="#influence-subpanel-3">Influence subpanel</a><a class="h2" href="#envelope">Envelope</a><a class="h3" href="#mode-2">Mode</a><a class="h3" href="#influence-subpanel-4">Influence subpanel</a><a class="h2" href="#length">Length</a><a class="h3" href="#mode-3">Mode</a><a class="h3" href="#randomize-subpanel">Randomize subpanel</a><a class="h3" href="#curvature-subpanel">Curvature subpanel</a><a class="h3" href="#influence">Influence</a><a class="h2" href="#line-art">Line Art</a><a class="h3" href="#source-type">Source Type</a><a class="h3" href="#edge-types-subpanel">Edge types subpanel</a><a class="h3" href="#light-reference-subpanel">Light Reference subpanel</a><a class="h3" href="#geometry-processing-subpanel">Geometry Processing subpanel</a><a class="h3" href="#occlusion-subpanel">Occlusion Subpanel</a><a class="h3" href="#intersection-subpanel">Intersection subpanel</a><a class="h3" href="#face-mask-filtering-subpanel">Face Mask Filtering subpanel</a><a class="h3" href="#chain">Chain</a><a class="h3" href="#vertex-weight-transfer-subpanel">Vertex Weight Transfer subpanel</a><a class="h3" href="#composition">Composition</a><a class="h3" href="#bake-subpanel">Bake subpanel</a><a class="h2" href="#mirror">Mirror</a><a class="h3" href="#object-5">Object</a><a class="h3" href="#influence-2">Influence</a><a class="h2" href="#multiple-strokes">Multiple Strokes</a><a class="h3" href="#fade">Fade</a><a class="h3" href="#influence-subpanel-5">Influence subpanel</a><a class="h2" href="#outline">Outline</a><a class="h3" href="#influence-subpanel-6">Influence subpanel</a><a class="h2" href="#simplify">Simplify</a><a class="h3" href="#mode-4">Mode</a><a class="h3" href="#influence-subpanel-7">Influence subpanel</a><a class="h2" href="#subdivide">Subdivide</a><a class="h3" href="#subdivision-type">Subdivision Type</a><a class="h3" href="#subdivisions">Subdivisions</a><a class="h3" href="#influence-subpanel-8">Influence subpanel</a></aside></div></body></html>
