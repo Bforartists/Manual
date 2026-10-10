@@ -1,14 +1,17 @@
 ---
-id: "interface.controls"
-title: "Menus, buttons and controls"
-section: "interface"
-path: ["The Interface", "Components", "Menus, buttons and controls"]
+id: interface.controls
+title: Menus, buttons and controls
+section: interface
+path:
+  - The Interface
+  - Components
+  - Menus, buttons and controls
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["3 Interface.odt"]
+source:
+  - 3 Interface.odt
 ---
-
 The UI contains various control elements. Buttons, Menus, toggles, etc.
 
 ## Menu
@@ -99,13 +102,13 @@ Sometimes you want to edit multiple values at once. The object scale for example
 
 ### Expressions
 
-You can also enter expressions in value edit boxes. And the result will be calculated. For example, *3\*2* instead of *6*. or *5/10+3*. Even constants like *pi* (3.142) or functions like *sqrt(2)* (square root of 2) may be used.
+You can also enter expressions in value edit boxes. And the result will be calculated. For example, `3*2` instead of *6*. or *5/10+3*. Even constants like *pi* (3.142) or functions like *sqrt(2)* (square root of 2) may be used.
 
 #### Expressions as Drivers
 
 You may want your expression to be re-evaluated after its entered. Blender supports this using *Drivers* (a feature of the animation system).
 
-Expression beginning with *\#*, have a special use. Instead of evaluating the value and discarding the expression, a driver is added to the property with the expression entered.
+Expression beginning with *#*, have a special use. Instead of evaluating the value and discarding the expression, a driver is added to the property with the expression entered.
 
 The expression *#frame* is a quick way to access map a value to the current frame, but more complex expressions are also supported *#fmod(frame, 24) / 24* for example.
 
@@ -131,7 +134,8 @@ Here is a list of recognized unit names you can use. Plurals of the names are re
 
 Imperial Units
 
-| | | |
+
+|  |  |  |
 | ---------- | --------- | --------- |
 | thou | *mil* | 0.0000254 |
 | inch | *"*, *in* | 0.0254 |
@@ -141,9 +145,11 @@ Imperial Units
 | furlong | *fur* | 201.168 |
 | mile | *mi*, *m* | 1609.344 |
 
+
 Metric Units
 
-| | | |
+
+|  |  |  |
 | ---------- | ----- | -------- |
 | micrometer | *um* | 0.000001 |
 | millimeter | *mm* | 0.001 |
@@ -154,6 +160,7 @@ Metric Units
 | hectometer | *hm* | 100.0 |
 | kilometer | *km* | 1000.0 |
 
+
 ## Menu shortcuts
 
 - Arrow keys can be used to navigate into a menu
@@ -161,3 +168,4 @@ Metric Units
 - Number keys or numpad can be used to access menu items. (Where *1* is the first menu item, *2* the second... etc. For larger menus *Alt-1* the 11th... up to *Alt-0* the 20th)
 - Press **Enter** to activate the selected menu item.
 - Press **Esc** to cancel the menu.
+

@@ -1,14 +1,19 @@
 ---
-id: "editors.properties.modifiers.mesh.generate"
-title: "Generate modifiers (Mesh)"
-section: "editors"
-path: ["Editors", "Properties", "Mesh", "Modifiers tab", "Generate modifiers"]
+id: editors.properties.modifiers.mesh.generate
+title: Generate modifiers (Mesh)
+section: editors
+path:
+  - Editors
+  - Properties
+  - Mesh
+  - Modifiers tab
+  - Generate modifiers
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["26.9.4 Editors - Properties Editor - Modifiers Properties Tab - Add Modifiers menu - Generate modifiers.odt"]
+source:
+  - 26.9.4 Editors - Properties Editor - Modifiers Properties Tab - Add Modifiers menu - Generate modifiers.odt
 ---
-
 Generate modifiers are available for mesh objects, curve + text objects and volume objects.
 
 ![Generate modifiers (Mesh)](/docs2/images/ui/properties/modifiers/mesh-generate/generate-modifiers-mesh.png)
@@ -35,6 +40,7 @@ Method used to arrange the duplicates.
 
 #### Method Line
 
+
 | Property | What it changes |
 | ----------------- | --------------------------------------- |
 | Count | The number of copies to generate. |
@@ -44,23 +50,28 @@ Method used to arrange the duplicates.
 | Scale | The scale vector of the copies. |
 | Realize Instances | Turn the output into a single geometry. |
 
+
 ##### Randomize subpanel
 
 ![Randomize subpanel](/docs2/images/ui/properties/modifiers/mesh-generate/randomize-subpanel.png)
 
 Randomize the copies.
 
+
 | Property | What it changes |
 | -------- | ----------------------- |
 | Offset | Random offset amount. |
 | Rotation | Random rotation amount. |
 
+
 ###### Scale Axes
 
+
 | Property | What it changes |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Method Uniform | randomizes uniform and equlaly along all axes. |
-| Method Axes | randomizes each axis individually.<br>**Scale**: Random scale amount.<br>**Flipping**: Random flipping amount.<br>**Exclude First**: Exclude the first copy.<br>**Exclude Last**: Exclude the last copy.<br>**Seed**: The seed to use for the randomness. |
+| Method Axes | randomizes each axis individually. · **Scale**: Random scale amount. · **Flipping**: Random flipping amount. · **Exclude First**: Exclude the first copy. · **Exclude Last**: Exclude the last copy. · **Seed**: The seed to use for the randomness. |
+
 
 ##### Merge subpanel
 
@@ -76,11 +87,13 @@ The threshold distance. Everything below this distance will be merged.
 
 ![Method Circle](/docs2/images/ui/properties/modifiers/mesh-generate/method-circle.png)
 
+
 | Property | What it changes |
 | ------------ | ---------------------------------------------- |
 | Count Method | The method to choose the number of duplicates. |
 | Count | The number of copies to generate. |
 | Central Axis | The axis to rotate the geometry around. |
+
 
 ##### Sweep Angle
 
@@ -88,10 +101,12 @@ The threshold distance. Everything below this distance will be merged.
 
 Just with method Arc. The sweep angle for the arc.
 
+
 | Property | What it changes |
 | -------------- | ---------------------------------------------- |
 | Circle segment | Generate a full circle, or an arc of elements. |
 | Radius | The distance of the elements to the origin. |
+
 
 ##### Align Rotation subpanel
 
@@ -99,10 +114,12 @@ Just with method Arc. The sweep angle for the arc.
 
 Rotate instances based on the circle shape.
 
+
 | Property | What it changes |
 | -------------- | ---------------------------------------- |
 | Primary Axis | The forward direction along the curve. |
 | Secondary Axis | The secondary direction along the curve. |
+
 
 ##### Randomize subpanel
 
@@ -110,17 +127,21 @@ Rotate instances based on the circle shape.
 
 Randomize the copies.
 
+
 | Property | What it changes |
 | -------- | ----------------------- |
 | Offset | Random offset amount. |
 | Rotation | Random rotation amount. |
 
+
 ###### Scale Axes
 
+
 | Property | What it changes |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Method Uniform | randomizes uniform and equlaly along all axes. |
-| Method Axes | randomizes each axis individually.<br>**Scale**: Random scale amount.<br>**Flipping**: Random flipping amount.<br>**Exclude First**: Exclude the first copy.<br>**Exclude Last**: Exclude the last copy.<br>**Seed**: The seed to use for the randomness. |
+| Method Axes | randomizes each axis individually. · **Scale**: Random scale amount. · **Flipping**: Random flipping amount. · **Exclude First**: Exclude the first copy. · **Exclude Last**: Exclude the last copy. · **Seed**: The seed to use for the randomness. |
+
 
 ##### Merge subpanel
 
@@ -138,6 +159,7 @@ The threshold distance. Everything below this distance will be merged.
 
 Distributes the duplicates along a selected curve.
 
+
 | Property | What it changes |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | Count Method | The method to choose the number of duplicates. |
@@ -147,16 +169,19 @@ Distributes the duplicates along a selected curve.
 | Relative Space | Use relative space for the input geometry. This makes sure that the transform of both inputs in relation are considered. |
 | Realize Instances | Turn the output into a single geometry. |
 
+
 ##### Align Rotation subpanel
 
 ![Align Rotation subpanel](/docs2/images/ui/properties/modifiers/mesh-generate/align-rotation-subpanel.png)
 
 Rotate instances based on the circle shape.
 
+
 | Property | What it changes |
 | -------------- | ---------------------------------------- |
 | Primary Axis | The forward direction along the curve. |
 | Secondary Axis | The secondary direction along the curve. |
+
 
 ##### Randomize subpanel
 
@@ -164,17 +189,21 @@ Rotate instances based on the circle shape.
 
 Randomize the copies.
 
+
 | Property | What it changes |
 | -------- | ----------------------- |
 | Offset | Random offset amount. |
 | Rotation | Random rotation amount. |
 
+
 ###### Scale Axes
 
+
 | Property | What it changes |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Method Uniform | randomizes uniform and equlaly along all axes. |
-| Method Axes | randomizes each axis individually.<br>**Scale**: Random scale amount.<br>**Flipping**: Random flipping amount.<br>**Exclude First**: Exclude the first copy.<br>**Exclude Last**: Exclude the last copy.<br>**Seed**: The seed to use for the randomness. |
+| Method Axes | randomizes each axis individually. · **Scale**: Random scale amount. · **Flipping**: Random flipping amount. · **Exclude First**: Exclude the first copy. · **Exclude Last**: Exclude the last copy. · **Seed**: The seed to use for the randomness. |
+
 
 ##### Merge subpanel
 
@@ -190,6 +219,7 @@ The threshold distance. Everything below this distance will be merged.
 
 ![Method Transform](/docs2/images/ui/properties/modifiers/mesh-generate/method-transform.png)
 
+
 | Property | What it changes |
 | ------------------- | -------------------------------------------------------------- |
 | Count | The number of copies to generate. |
@@ -199,23 +229,28 @@ The threshold distance. Everything below this distance will be merged.
 | Scale | The scale vector of the copies. |
 | Realize Instances | Turn the output into a single geometry. |
 
+
 ##### Randomize subpanel
 
 ![Randomize subpanel](/docs2/images/ui/properties/modifiers/mesh-generate/randomize-subpanel.png)
 
 Randomize the copies.
 
+
 | Property | What it changes |
 | -------- | ----------------------- |
 | Offset | Random offset amount. |
 | Rotation | Random rotation amount. |
 
+
 ###### Scale Axes
 
+
 | Property | What it changes |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Method Uniform | randomizes uniform and equlaly along all axes. |
-| Method Axes | randomizes each axis individually.<br>**Scale**: Random scale amount.<br>**Flipping**: Random flipping amount.<br>**Exclude First**: Exclude the first copy.<br>**Exclude Last**: Exclude the last copy.<br>**Seed**: The seed to use for the randomness. |
+| Method Axes | randomizes each axis individually. · **Scale**: Random scale amount. · **Flipping**: Random flipping amount. · **Exclude First**: Exclude the first copy. · **Exclude Last**: Exclude the last copy. · **Seed**: The seed to use for the randomness. |
+
 
 ##### Merge subpanel
 
@@ -285,10 +320,12 @@ Adds a translation equal to the object’s bounding box size along each axis to 
 
 Adds a constant translation component to the duplicate object’s offset. X, Y and Z constant components can be specified.
 
+
 | Property | What it changes |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object Offset | ![](Pictures/10000001000001260000003C97C0C6AF.png){width="4.979cm" height="1.02cm"}Adds a transformation taken from a chosen object relative to the current object to the offset.<br>**Object**: Choose an object. |
-| Merge | ![](Pictures/100000010000012900000054257EFF45.png){width="5.031cm" height="1.42cm"}If enabled, vertices in each copy will be merged with vertices in the next copy that are within the given Distance.<br>**Distance**: The merge distance between the vertices. Vertices below this distance will be merged.<br>**First and Last Copies**: Merge vertices in first and last duplicates. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Object Offset | ![](Pictures/10000001000001260000003C97C0C6AF.png){width="4.979cm" height="1.02cm"}Adds a transformation taken from a chosen object relative to the current object to the offset. · **Object**: Choose an object. |
+| Merge | ![](Pictures/100000010000012900000054257EFF45.png){width="5.031cm" height="1.42cm"}If enabled, vertices in each copy will be merged with vertices in the next copy that are within the given Distance. · **Distance**: The merge distance between the vertices. Vertices below this distance will be merged. · **First and Last Copies**: Merge vertices in first and last duplicates. |
+
 
 ### UV's
 
@@ -354,15 +391,18 @@ Value is interpreted as the distance between the two new edges formed by the bev
 
 Value is the perpendicular distance from the new bevel face to original edge.
 
+
 | Property | What it changes |
 | -------- | ------------------------------------------------------------------------------------------- |
 | Percent | Similar to Offset but the value is interpreted as a percentage of the adjacent edge length. |
 | Absolute | Amount is absolute along adjacent edge. |
 
+
 | Property | What it changes |
 | -------- | ------------------------------------------------------ |
 | Amount | The bevel amount. |
 | Segments | The number of edge loops added along the bevel’s face. |
+
 
 ### Limit Method
 
@@ -404,10 +444,12 @@ The geometry attribute that is used for the weight method. The geometry attribut
 
 Use weights from a vertex group to determine the width of the bevel. When the vertex weight is 0.0, no bevel is applied. An edge is only beveled if both of its vertices are in the vertex group. See here about adjusting vertex group weights.
 
+
 | Property | What it changes |
 | ------------ | --------------------------------------------------- |
 | Vertex Group | Choose the vertex group. |
 | Invert | Inverts the influence of the selected vertex group. |
+
 
 ### Profile subpanel
 
@@ -449,10 +491,12 @@ Choose and adjust a custom bevel profile. This feature needs more than one segme
 
 Choose some profile presets.
 
+
 | Property | What it changes |
 | -------- | ---------------------------- |
 | Zoom in | Zooms into the curve view. |
 | Zoom out | Zooms out of the curve view. |
+
 
 ###### Tools
 
@@ -466,10 +510,12 @@ Resets the zoom factor of the curve view.
 
 Resets the curve to the defaults. This means when you choose a curve preset to reset it to the values of the latest chosen preset.
 
+
 | Property | What it changes |
 | ----------------------- | ------------------------------------------------------------------------ |
 | Reverse Path | The path gets reversed. The first point becomes the last and vice versa. |
 | Toggle Profile Clipping | Toggles the profile clipping. |
+
 
 ###### Curve view
 
@@ -485,6 +531,7 @@ Holding down ctrl while moving activates temporary snapping.
 
 When a point is selected then the curve view reveals a sub menu at the bottom.
 
+
 | Property | What it changes |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Handle Type Auto Handle | Sets the handle type of this curve point to smooth. |
@@ -492,12 +539,14 @@ When a point is selected then the curve view reveals a sub menu at the bottom.
 | Handle Type Free Handle | Sets the handle type of this curve to Free handles. The curve point has now two handles with which you can adjust the curve before and after the point each. |
 | Handle Type Aligned Free Handle | Sets the handle type of this curve to Free handles. The curve point has now a handle with which you can adjust the curve. |
 
+
 | Property | What it changes |
 | --------------------- | --------------------------------------------------- |
 | X Y Values | The position of the currently selected curve point. |
 | Delete | Delete the selected curve point. |
 | Sample Straight Edges | Sample edges with vector handles. |
 | Sample Even Lengths | Sample edges with even lengths. |
+
 
 ### Geometry subpanel
 
@@ -557,10 +606,12 @@ When the inner corners of the cutoff profiles faces meet at the same location wi
 
 The direction of the cutoff faces depends on the original vertex’s normal.
 
+
 | Property | What it changes |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Clamp Overlap | Limits the width of each beveled edge so that edges cannot cause overlapping intersections with other geometry. |
 | Loop Slide | If there are unbeveled edges along with beveled edges into a vertex, the bevel tries to slide along those edges when possible. Turning the option off can lead to more even bevel widths. |
+
 
 ### Shading subpanel
 
@@ -574,10 +625,12 @@ Match normals of new faces to adjacent faces.
 
 Autosmooth needs to be enabled for this feature. And the shading needs to be smooth.
 
+
 | Property | What it changes |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mark | **Seam**: When the beveled edge is a seam edge, then the bevel will also contain a seam to keep the seam into account.<br>**Sharp**: When the beveled edge is a sharp edge, then the bevel will also contain a sharp edge to keep the sharp edge into account. |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mark | **Seam**: When the beveled edge is a seam edge, then the bevel will also contain a seam to keep the seam into account. · **Sharp**: When the beveled edge is a sharp edge, then the bevel will also contain a sharp edge to keep the sharp edge into account. |
 | Material Index | The index of the material slot to use for the bevel. When set to -1, the material of the nearest original face will be used. |
+
 
 #### Face Strength
 
@@ -587,12 +640,14 @@ Set the Face Strength on the faces involved in the bevel by the mode specified h
 
 This face strength then can be used in conjunction with a following Weighted Normals modifier (with the Face Influence option checked).
 
+
 | Property | What it changes |
 | -------- | ------------------------------------------------------------------------------------------------------------------------ |
 | None | Do not set face strength. |
 | New | Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak. |
 | Affected | In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong. |
 | All | In addition to those set for the Affected case, also set all the rest of the faces of the model to have strength Strong. |
+
 
 ## Boolean
 
@@ -636,10 +691,12 @@ Keeps the non intersecting geometry, removes the intersecting geometry.
 
 ![Operand Type](/docs2/images/ui/properties/modifiers/mesh-generate/operand-type.png)
 
+
 | Property | What it changes |
 | -------- | ------------------------------------------------------------------------------------------ |
 | Object | The target mesh object. You need to choose a target mesh object for the boolean operation. |
 | Solver | Fast, Exact or Manifold. Manifold works only on manifold meshes. |
+
 
 ### Solver Options sub panel
 
@@ -661,10 +718,12 @@ The threshold for overlapping geometry. This value determines above which value 
 
 Method for setting the materials on new faces.
 
+
 | Property | What it changes |
 | ----------------- | ---------------------------------------------- |
 | Self Intersection | Allow self intersection in operanding objects. |
 | Hole Tolerant | Better results when the mesh contains holes. |
+
 
 #### With Solver Method Manifold
 
@@ -686,12 +745,14 @@ The Build modifier lets the faces of the mesh object to appear or disappear one 
 
 By default, faces appear in the order in which they are stored in memory, which follows the order how they are created. This face/vertex order can be altered in Edit Mode by using Sort Mesh Elements in the Mesh menu.
 
+
 | Property | What it changes |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Start | The start frame of the building process. |
 | Length | The number of frames over which to rebuild the object. |
 | Reversed | The modifier will operate in reverse, and start with the full mesh. And deconstruct it towards the end frame. |
-| Randomize | ![](Pictures/10000001000001AC00000057286C78B1.png){width="5.429cm" height="1.101cm"}Randomizes the order in which the faces are built.<br>**Seed**: The random seed. Changing this value gives a different “random” order when Randomize is checked. This order is always the same for a given seed/mesh set. |
+| Randomize | ![](Pictures/10000001000001AC00000057286C78B1.png){width="5.429cm" height="1.101cm"}Randomizes the order in which the faces are built. · **Seed**: The random seed. Changing this value gives a different “random” order when Randomize is checked. This order is always the same for a given seed/mesh set. |
+
 
 ## Decimate
 
@@ -723,10 +784,12 @@ This is only true if the Triangulate option is disabled.
 
 Maintains symmetry on a single axis.
 
+
 | Property | What it changes |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Triangulate | Keeps any resulting triangulated geometry from the decimation process. |
-| Vertex Group | A vertex group that controls what parts of the mesh are decimated.<br>**Invert**: Decimate the geometry except the vertex group.<br>**Factor**: The influence factor of the vertex group. |
+| Vertex Group | A vertex group that controls what parts of the mesh are decimated. · **Invert**: Decimate the geometry except the vertex group. · **Factor**: The influence factor of the vertex group. |
+
 
 #### Un-Subdivide
 
@@ -744,10 +807,12 @@ The number of times to perform the unsubdivide operation. Two iterations is the 
 
 This algorithm reduces details by unioning adjacent faces that are below an angle limit.
 
+
 | Property | What it changes |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Angle Limit | Dissolve geometry which form angles (between surfaces) higher than this setting. |
-| Delimit | Prevent dissolving geometry in certain places.<br>**Normal**: Does not dissolve edges on the borders of areas where the face normals are reversed.<br>**Material**: Does not dissolve edges on the borders of where different materials are assigned.<br>**Seam**: Does not dissolve edges marked as seams.<br>**All Boundaries**: When enabled, all vertices along the boundaries of faces are dissolved. |
+| Delimit | Prevent dissolving geometry in certain places. · **Normal**: Does not dissolve edges on the borders of areas where the face normals are reversed. · **Material**: Does not dissolve edges on the borders of where different materials are assigned. · **Seam**: Does not dissolve edges marked as seams. · **All Boundaries**: When enabled, all vertices along the boundaries of faces are dissolved. |
+
 
 ### Face Count
 
@@ -763,10 +828,12 @@ Splitting an edge affects vertex normal generation at that edge, and makes the e
 
 > **Note:** This modifier is kept mostly for historical/compatibility reasons. Everything it can do in shading, and much more, can now be achieved using custom normals. Unless you really need the topology changes it generates, it is not advised to use it in new projects.
 
+
 | Property | What it changes |
 | ----------- | ------------------------------------------------------------------------------------------------------------------- |
 | Edge Angle | The angle above which to split edges. |
 | Sharp Edges | When you have marked edges as sharp, then these edges will be split. Note! Non-manifold edges will always be split. |
+
 
 ## Mask
 
@@ -774,19 +841,22 @@ Splitting an edge affects vertex normal generation at that edge, and makes the e
 
 The Mask modifier allows to hide vertices of an object dynamically based on vertex groups or an Armature.
 
+
 | Property | What it changes |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Mode | Use Vertex Groups or an armature to hide the mesh Vertex Group works in Object mode. Armature works in Pose mode, and uses the active bone for masking. |
 | Vertex Group | Here you can select the vertex group that you want to use for masking. The geometry from this vertex group is shown. |
 | Smooth | Use vertex group weighs to cut faces at the weight contour. |
-| Armature | When in Pose Mode, vertices belonging to the vertex group associated with the active bone (same names) will be visible. Vertices not in that group will be hidden.<br>**Invert**: Show the not selected geometry instead of the selected. |
+| Armature | When in Pose Mode, vertices belonging to the vertex group associated with the active bone (same names) will be visible. Vertices not in that group will be hidden. · **Invert**: Show the not selected geometry instead of the selected. |
 | Threshold | Vertices with weights less or equal to this value will be hidden. |
+
 
 ## Mirror
 
 ![Mirror](/docs2/images/ui/properties/modifiers/mesh-generate/mirror.png)
 
 The Mirror modifier mirrors a mesh along its local X, Y and/or Z axes, across the Object Origin. It can also use another object as the mirror center, then use that object’s local axes instead of its own.
+
 
 | Property | What it changes |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -796,6 +866,7 @@ The Mirror modifier mirrors a mesh along its local X, Y and/or Z axes, across th
 | Flip | When Bisect is enabled on an axis, you can use this setting to switch the side kept and mirrored (i.e. when it is enabled, the “positive” side will be kept, instead of the “negative” one). |
 | Mirror Object | An Object Selector to select an object (usually an empty), which position and rotation will be used to define mirror planes (instead of using the ones from the modified object). You can animate it to move the mirror axis. |
 
+
 ### Clipping
 
 Prevents vertices from moving through the mirror plane(s) when you transform them in Edit Mode.
@@ -804,10 +875,12 @@ If it is enabled but vertices are beyond the mirror plane and outside of the Mer
 
 > **Note:** Vertices on the mirror plane will be unable to move away from the mirror plane as long as Clipping is enabled. You must disable it to be able to move the vertices along the mirror axis again.
 
+
 | Property | What it changes |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Merge | Where a vertex is in the same place (within the Merge Distance) as its mirror it will be merged with the mirrored vertex. |
-| Bisect Distance | Vertices are removed up to this distance from the bisect plane.<br>**Merge Distance**: The maximum distance between a vertex and its mirror copy at which they are merged together (being snapped on the mirror plane). Needs Merge to be enabled. |
+| Bisect Distance | Vertices are removed up to this distance from the bisect plane. · **Merge Distance**: The maximum distance between a vertex and its mirror copy at which they are merged together (being snapped on the mirror plane). Needs Merge to be enabled. |
+
 
 ### Data subpanel
 
@@ -817,11 +890,13 @@ If it is enabled but vertices are beyond the mirror plane and outside of the Mer
 
 Mirror the UV texture coordinates across the middle of the image.
 
+
 | Property | What it changes |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Offset UV | Mirrored UV Offset along u and v axis. |
 | Vertex Groups | Try to mirror existing vertex groups. Note! The vertex groups you want to mirror must be named following the usual left/right pattern (i.e. with suffixes like “.R”, “.right”, “.L”, etc.). The mirror side vertex group must already exist (it will not be created automatically). It must also be completely empty (no vertices assigned to it). |
 | Flip UDIM | Mirror the texture coordinates around each tile center. |
+
 
 ## Multiresolution
 
@@ -839,6 +914,7 @@ Add the modifier. Switch to Sculpt mode. Click at the Subdivide button. The Leve
 
 To work at level 1 SDS simply change the Levels sculpt value back to 1. Or to 2 when you want to work at layer 2.
 
+
 | Property | What it changes |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Level Viewport | Number of subdivisions in the viewport when not in sculpt mode. |
@@ -847,25 +923,30 @@ To work at level 1 SDS simply change the Levels sculpt value back to 1. Or to 2 
 | Sculpt Base Mesh | Sculpt at the base mesh, not at the multires sds layer. Note that this property is greyed out when you are not in sculpt mode. |
 | Optimal Display | In object mode the subdivided edges will not be drawn. Only the edges of the base geometry. |
 
+
 ### Subdivision Subpanel
 
 ![Subdivision Subpanel](/docs2/images/ui/properties/modifiers/mesh-generate/subdivision-subpanel.png)
 
+
 | Property | What it changes |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Subdivision Mode | **Subdivide**: Adds another layer of subdivision. This subivision method divides the mesh smooth with the catmull clark algorithm.<br>**Simple**: Adds another layer of subdivision. The simple method just divides the existing faces.<br>**Linear**: Adds another layer of subdivision. The linear method divides the existing faces and interpolates linear. |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Subdivision Mode | **Subdivide**: Adds another layer of subdivision. This subivision method divides the mesh smooth with the catmull clark algorithm. · **Simple**: Adds another layer of subdivision. The simple method just divides the existing faces. · **Linear**: Adds another layer of subdivision. The linear method divides the existing faces and interpolates linear. |
 | Unsubdivide | Removes all subdivision layers. |
 | Delete Higher | Removes the highest subdivision layer. |
+
 
 ### Shape subpanel
 
 ![Shape subpanel](/docs2/images/ui/properties/modifiers/mesh-generate/shape-subpanel.png)
+
 
 | Property | What it changes |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Reshape | Copies vertex coordinates from another mesh. Usage: first select a different mesh object with matching topology and vertex indices. Shift select the object you wish to copy vertex coordinates to. Click Reshape. |
 | Apply Base | Modifies the original unsubdivided mesh to match the form of the subdivided sculpted mesh. |
 | Conform Base | Modifies the base mesh to conform to the displaced mesh. |
+
 
 ### Generate Subpanel
 
@@ -883,12 +964,14 @@ Saves displacements to an external .btx file. The Multiresolution sds informatio
 
 Once saved you will see the path to the btx file below the save external button. The save external button has turned into Pack external then.
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Type | ![](Pictures/100000010000009E0000005130E70E30.png){width="2.671cm" height="1.371cm"}Sets the type of subdivision. Note! You need to set the subdivision type before you start. You can't change it afterwards.<br>**Catmull-Clark**: Creates a smoothed surface, using the standard Catmull-Clark subdivision surface algorithm.<br>**Simple**: Maintains the current shape, and simply subdivides edges. |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Type | ![](Pictures/100000010000009E0000005130E70E30.png){width="2.671cm" height="1.371cm"}Sets the type of subdivision. Note! You need to set the subdivision type before you start. You can't change it afterwards. · **Catmull-Clark**: Creates a smoothed surface, using the standard Catmull-Clark subdivision surface algorithm. · **Simple**: Maintains the current shape, and simply subdivides edges. |
 | Levels Sculpt | The subdivision layer. |
 | Viewport | Set the level of subdivisions to show in Object Mode. In Sculpt mode this value has no effect. |
 | Render | Set the level of subdivisions to show when rendering. |
+
 
 ### Advanced Subpanel
 
@@ -900,10 +983,12 @@ Once saved you will see the path to the btx file below the save external button.
 
 How precisely the vertices are positioned. This settings becomes active when you have an edge crease applied. This can be done in edit mode in the edge menu.
 
+
 | Property | What it changes |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| UV Smooth | How to handle UV's during subdivision.<br>**Smooth, keep corners**: UV islands are smoothed, but their boundary remain sharp.<br>**Sharp**: UV remain unchanged. |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| UV Smooth | How to handle UV's during subdivision. · **Smooth, keep corners**: UV islands are smoothed, but their boundary remain sharp. · **Sharp**: UV remain unchanged. |
 | Use Creases | Use the crease information. This settings becomes active when you have an edge crease applied. |
+
 
 ## Remesh
 
@@ -913,10 +998,12 @@ The Remesh modifier generates new mesh topology. The output follows the surface 
 
 The output and also the settings of the three basic modes Blocks, Smooth and Sharp is almost identical. Except the smoothing.
 
+
 | Property | What it changes |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blocks, Smooth, Sharp | ![](Pictures/1000000100000130000000C1118F2AD0.png){width="5.151cm" height="3.27cm"}Blocks has no smoothing at all. Smooth outputs a smooth surface. Sharp outputs a smooth surface but preserves sharp edges and corners.<br>**Octree Depth**: The resolution of the Octree. Higher values gives finer details.<br>**Scale**: The ratio of the largest dimension of the model over the size of the grid.<br>**Sharpness**: Sharp mode only. Tolerance for outliers. Higher values produce edges more similar to the input, while lower values filter out noise.<br>**Remove Disconnected**: Filter out small disconnected pieces of the output.<br>**Threshold**: Use this to control how small a disconnected component must be to be removed.<br>**Smooth Shading**: Output faces with smooth shading. The smooth/flat shading of the input faces is not preserved. |
-| Voxel | ![](Pictures/10000001000001240000006A8AD8154B.png){width="4.941cm" height="1.799cm"}Generate a new manifold mesh from the current geometry while trying to preserve the mesh’s original volume.<br>**Voxel Size**: The voxel size. Defines the resolution of the created mesh.<br>**Adaptivity**: Reduces the final face count by simplifying geometry where detail is not needed. This feature triangulates faces that do not need as much detail.<br>**Smooth Shading**: Output faces with smooth shading. The smooth/flat shading of the input faces is not preserved. |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Blocks, Smooth, Sharp | ![](Pictures/1000000100000130000000C1118F2AD0.png){width="5.151cm" height="3.27cm"}Blocks has no smoothing at all. Smooth outputs a smooth surface. Sharp outputs a smooth surface but preserves sharp edges and corners. · **Octree Depth**: The resolution of the Octree. Higher values gives finer details. · **Scale**: The ratio of the largest dimension of the model over the size of the grid. · **Sharpness**: Sharp mode only. Tolerance for outliers. Higher values produce edges more similar to the input, while lower values filter out noise. · **Remove Disconnected**: Filter out small disconnected pieces of the output. · **Threshold**: Use this to control how small a disconnected component must be to be removed. · **Smooth Shading**: Output faces with smooth shading. The smooth/flat shading of the input faces is not preserved. |
+| Voxel | ![](Pictures/10000001000001240000006A8AD8154B.png){width="4.941cm" height="1.799cm"}Generate a new manifold mesh from the current geometry while trying to preserve the mesh’s original volume. · **Voxel Size**: The voxel size. Defines the resolution of the created mesh. · **Adaptivity**: Reduces the final face count by simplifying geometry where detail is not needed. This feature triangulates faces that do not need as much detail. · **Smooth Shading**: Output faces with smooth shading. The smooth/flat shading of the input faces is not preserved. |
+
 
 ## Screw
 
@@ -925,6 +1012,7 @@ The output and also the settings of the three basic modes Blocks, Smooth and Sha
 The Screw modifier takes a profile object, a mesh or a curve, to create a helix-like shape.
 
 The profile should be properly aligned to the cardinal direction of the object.
+
 
 | Property | What it changes |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
@@ -937,6 +1025,7 @@ The profile should be properly aligned to the cardinal direction of the object.
 | Object Screw | Use the distance from the Axis Object to define the height of one helix iteration. |
 | Steps Viewport | Number of steps used for a single revolution displayed in the 3D Viewport. |
 | Render | Number of steps used for a single revolution used during render time. Higher values gives higher quality. |
+
 
 ### Merge
 
@@ -956,11 +1045,13 @@ Stretch the UV coordinates from (0.0 to 1.0) when UV's are present.
 
 ![Normals](/docs2/images/ui/properties/modifiers/mesh-generate/normals.png)
 
+
 | Property | What it changes |
 | --------------- | ------------------------------------------------------------------------------------------------------------ |
 | Smooth Shading | Output faces with smooth shading. The smooth/flat shading of the input geometry is not preserved. |
 | Calculate Order | Order of edges is calculated to avoid problems with normals and shading. Only needed for meshes, not curves. |
 | Flip | Flip normals direction. |
+
 
 ## Skin
 
@@ -979,11 +1070,13 @@ You can use geometry with faces as the base geometry. But the modifier just uses
 > **Note:** The thickness of the created geometry can be adjusted in Edit mode with the Skin Resize tool.
 > **Note:** The Edit mode also activates most of the in Object mode greyed out tools.
 
+
 | Property | What it changes |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Branch Smoothing | A branch point is a vertex with three or more connected edges. These areas tend to produce more complicated topology, some of which may overlap. This setting relaxes the surface around these points, with the side effect of shrinking it. |
 | Symmetry Axes X/Y/Z | Keep the output topology symmetrical in their here chosen axes. Note! They do not add geometry flipped across an axis. For that, the Mirror modifier should be used, typically placed above the Skin modifier. |
 | Smooth Shading | Output faces with smooth shading rather than flat shading. The smooth/flat shading of the input geometry is not preserved. |
+
 
 ### Create Armature
 
@@ -993,10 +1086,12 @@ Creates an armature modifier below the Skin modifier. Each edge becomes a bone. 
 
 > **Note:** If the root vertex has more than one adjacent edge, an extra bone will be created to serve as the root.
 
+
 | Property | What it changes |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Add Skin Data | The Skin modifier uses a custom set of data in the mesh. This data is generated automatically when you add the Skin modifier the first time. There are use cases where this data can get lost, and the Skin modifier quits working. Add Skin Data then becomes available, and you can update the data. |
 | Mark / Clear Loose | You need to be in Edit Mode to make this tool active. By default, a branch vertex (vertex with three or more connected edges) will generate extra edge loops along adjacent edges in order to keep the output tight. Branches can be made loose by clicking Mark Loose, which will allow the output to stretch between all adjacent vertices. This can be disabled again by clicking Clear Loose. |
+
 
 ### Mark Root
 
@@ -1036,12 +1131,14 @@ This algorithm simply extrudes the geometry. It does not work on geometry where 
 
 > **Important:** Simple mode will not be able to solidify the boundary between two adjacent faces that does not point into the same direction.
 
+
 | Property | What it changes |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Thickness | The extrude amount. |
 | Offset | A value between (-1 to 1) to locate the solidified output inside or outside the original mesh. The inside and outside is determined by the face normals. Set to 0.0, the solidified output will be centered on the original mesh. |
 | Even Thickness | Maintain the thickness by adjusting for sharp corners. Note! Solidify thickness is an approximation. The final wall thickness is not guaranteed. The best option to preserve wall thickness is complex mode with constraints thickness mode. But even this is not guaranteed to work perfect in every case. |
-| Fill Rim | Fills the gap between the inner and outer edges. Note! Fill Rim and Only Rim only make a difference on Non-manifold objects, since the rims are generated from the borders of the original geometry.<br>**Only Rim**: Will not extrude surfaces parallel to the original one, but instead will only add the perpendicular rim. |
+| Fill Rim | Fills the gap between the inner and outer edges. Note! Fill Rim and Only Rim only make a difference on Non-manifold objects, since the rims are generated from the borders of the original geometry. · **Only Rim**: Will not extrude surfaces parallel to the original one, but instead will only add the perpendicular rim. |
+
 
 #### Complex
 
@@ -1053,13 +1150,15 @@ If the special cases are not present it is recommended to choose Simple because 
 
 > **Note:** There are no options for crease in the Modifier tab because crease is handled in a dynamic way. The modifier will transfer the creases of the original mesh in a smart way to the output mesh to work with the Subdivision Surface modifier.
 
+
 | Property | What it changes |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Thickness Mode | ![](Pictures/100000010000009F00000069E687ABC2.png){width="2.69cm" height="1.78cm"}Choose the kind of thickness handling.<br>**Fixed**: The new vertices are always in a fixed distance to the old ones.<br>**Even**: Adjusts for sharp corners, but may not always work when more than three faces come together.<br>**Constraints**: For up to three faces it is always guaranteed to find an optimal solution. |
-| Boundary | ![](Pictures/100000010000009C00000067A65B383B.png){width="2.641cm" height="1.739cm"}Choose the kind of boundary handling.<br>**None**: No boundary fix is applied. Results are stable.<br>**Round**: Adjusts the boundary for an opening to face inwards (like a hole in an egg).<br>**Flat**: Adjusts the boundary of a planar opening to be a flat (like a cut sphere). |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Thickness Mode | ![](Pictures/100000010000009F00000069E687ABC2.png){width="2.69cm" height="1.78cm"}Choose the kind of thickness handling. · **Fixed**: The new vertices are always in a fixed distance to the old ones. · **Even**: Adjusts for sharp corners, but may not always work when more than three faces come together. · **Constraints**: For up to three faces it is always guaranteed to find an optimal solution. |
+| Boundary | ![](Pictures/100000010000009C00000067A65B383B.png){width="2.641cm" height="1.739cm"}Choose the kind of boundary handling. · **None**: No boundary fix is applied. Results are stable. · **Round**: Adjusts the boundary for an opening to face inwards (like a hole in an egg). · **Flat**: Adjusts the boundary of a planar opening to be a flat (like a cut sphere). |
 | Thickness | The extrude amount. Important! The modifier thickness is calculated using local vertex coordinates. If the object has a non-uniform scale, the thickness will vary on different sides of the object. To fix this, either Apply or Clear the scale. |
 | Offset | A value between (-1 to 1) to locate the solidified output inside or outside the original mesh. The inside and outside is determined by the face normals. Set to 0.0, the solidified output will be centered on the original mesh. |
 | Merge Threshold | The distance within which degenerated geometry is merged. |
+
 
 ##### Rim
 
@@ -1081,10 +1180,12 @@ Will only leave the generated perpendicular rim
 
 Only vertices in this group are solidified. Their weights are multiplied by the thickness, so vertices with lower weights will be less thick.
 
+
 | Property | What it changes |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Invert | Reverses the vertex group, so that only vertices which are not in the vertex group are solidified. |
-| Factor | How much the vertex weights are taken into account. You need to have a vertex group assigned to activate this item. On 0.0, vertices with zero weight will have no thickness at all (creates duplicate vertices). On 0.5, vertices with zero weight will be half as thick as those with full weight. On 1.0 , the weights are ignored and the Thickness value is used for every vertex. |
+| Factor | How much the vertex weights are taken into account. You need to have a vertex group assigned to activate this item. On 0.0, vertices with zero weight will have no thickness at all (creates duplicate vertices).   On 0.5, vertices with zero weight will be half as thick as those with full weight.   On 1.0 , the weights are ignored and the Thickness value is used for every vertex. |
+
 
 #### Flat Faces
 
@@ -1128,12 +1229,14 @@ Choose a different material for the rim faces.
 
 Inner, Outer and Rim are simple mode only.
 
+
 | Property | What it changes |
 | ------------ | ----------------------------------------------- |
 | Inner | Set a crease to the inner edges. |
 | Outer | Set a crease to the outer edges. |
 | Rim | Set a crease to the rim. |
 | Bevel Convex | Edge bevel weight to be added to outside edges. |
+
 
 #### Thickness Clamp
 
@@ -1183,11 +1286,13 @@ Or you can change the crease of the edges in question. Edge Crease can be adjust
 
 Only subdivides the surfaces, without any smoothing.
 
+
 | Property | What it changes |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Levels Viewport | The number of subdivision levels shown in the 3D Viewport. |
 | Render | The number of subdivision levels shown in the final render. |
 | Optimal Display | When rendering the wire frame of this object, the wires of the new subdivided edges will be skipped. Only the edges of the original geometry will be displayed. |
+
 
 ### Adaptive Subdivision (Cycles Experimental Feature Set)
 
@@ -1197,10 +1302,12 @@ Only subdivides the surfaces, without any smoothing.
 
 Multiplier for scene dicing rate
 
+
 | Property | What it changes |
 | -------- | --------------------------------------------------------------------------------------------------- |
 | Viewport | Current dicing rate for Viewport (Adjustable via the Subdivision Panel under Render Properties Tab) |
 | Render | Current dicing rate for Render (Adjustable via the Subdivision Panel under Render Properties Tab) |
+
 
 ### Advanced
 
@@ -1218,6 +1325,7 @@ How precisely the vertices are positioned, relatively to their theoretical posit
 
 How to handle UV's during subdivision.
 
+
 | Property | What it changes |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | None | Uvs are not smoothed, boundaries are kept sharp. |
@@ -1229,19 +1337,23 @@ How to handle UV's during subdivision.
 | Smooth, keep corners | UV islands are smoothed, but their boundary remain sharp. |
 | Sharp | UV remain unchanged. |
 
+
 #### Boundary Smooth
 
 ![Boundary Smooth](/docs2/images/ui/properties/modifiers/mesh-generate/boundary-smooth.png)
+
 
 | Property | What it changes |
 | ------------ | ---------------------------------------------- |
 | Keep Corners | Smooth boundaries, but corners are kept sharp. |
 | All | Smooth boundaries, including corners. |
 
+
 | Property | What it changes |
 | ------------------ | -------------------------------------------------------------------------------------------- |
 | Use Creases | Use the Weighted Edge Creases values stored in edges to control the smoothness of the edges. |
 | Use Custom Normals | Interpolates existing custom normals to resulting mesh. |
+
 
 ## Triangulate
 
@@ -1255,6 +1367,7 @@ The Triangulate modifier triangulates all faces in a mesh.
 
 How to triangulate quads.
 
+
 | Property | What it changes |
 | ----------------- | ----------------------------------------------------------------------- |
 | Beauty | Tries to split the quads in a way that takes the topology into account. |
@@ -1262,16 +1375,19 @@ How to triangulate quads.
 | Fixed Alternate | Split the quads on their 2nd and 4th vertices. |
 | Shortest Diagonal | Split the quads based on the diagonal distance between their vertices. |
 
+
 ### N-Gon Method
 
 ![N-Gon Method](/docs2/images/ui/properties/modifiers/mesh-generate/n-gon-method.png)
 
 How to triangulate N-Gons.
 
+
 | Property | What it changes |
 | -------- | ------------------------------------------------------------------------ |
 | Beauty | Tries to split the N-Gons in a way that takes the topology into account. |
 | Clip | Split the N-Gons by using an ear-clipping algorithm |
+
 
 ### Minimum Vertices
 
@@ -1285,10 +1401,12 @@ This modifier is the inverse of the Mesh to Volume modifier. It takes an existin
 
 > **Tip:** To copy and move the generated mesh separately from the volume object, use a collection instance.
 
+
 | Property | What it changes |
 | --------- | ------------------------------------------------------------------ |
 | Object | The source volume object. Pick the volume object here. |
 | Grid Name | The name of the grid to convert. The grid has to be a scalar grid. |
+
 
 ### Resolution Mode
 
@@ -1296,17 +1414,20 @@ This modifier is the inverse of the Mesh to Volume modifier. It takes an existin
 
 How the resolution of the final mesh is controlled.
 
+
 | Property | What it changes |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Grid | This makes the resolution dependent on the resolution of the grid that is converted. Higher resolution grids result in a higher resolution mesh. In many cases, that is the most efficient mode. |
 | Voxel Amount | Specifies the approximate resolution of the final mesh. The voxel size is adapted to the size of the entire volume. |
 | Voxel Size | Use a fixed resolution that does not change when the volume changes. |
 
+
 | Property | What it changes |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Threshold | Voxels with a larger value are considered to be inside the mesh and all other voxels outside. The mesh will be generated on the boundary of inside and outside voxels. This is sometimes also called the “iso value”. |
 | Adaptivity | This is similar to decimating the final to reduce resolution where it is not needed. |
 | Smooth Shading | Enables smooth shading on the generated mesh. |
+
 
 ## Weld
 
@@ -1328,11 +1449,13 @@ Full merge by distance.
 
 Just along the edges.
 
+
 | Property | What it changes |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Distance | The maximum distance to merge vertices. |
 | Only Loose Edges | Just with Connected. Welds only loose edges. |
-| Vertex Group | Only merge vertices from this vertex group.<br>**Invert**: Inverts the influence of the selected vertex group. Only vertices outside of this vertex group will be merged. |
+| Vertex Group | Only merge vertices from this vertex group. · **Invert**: Inverts the influence of the selected vertex group. Only vertices outside of this vertex group will be merged. |
+
 
 ## Wireframe
 
@@ -1344,6 +1467,7 @@ The Wireframe modifier hides the faces of a mesh, and turns the edges into four 
 
 The mesh needs to have faces.
 
+
 | Property | What it changes |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Thickness | The depth or size of the wire frames. |
@@ -1351,14 +1475,17 @@ The mesh needs to have faces.
 | Boundary | Creates wire frames. on mesh island boundaries. |
 | Replace Original | Replace the original mesh by the generated wire frame mesh. If not, the wire frame is generated on top of it. |
 
+
 ### Thickness
 
 > **Warning:** Wireframe thickness is an approximation. While Even Thickness should yield good results in many cases, skinny faces can cause ugly spikes. In this case you can either reduce the extreme angles in the geometry or disable the Even Thickness option.
+
 
 | Property | What it changes |
 | -------- | ------------------------------------------------------------------------------------------------------------------ |
 | Even | Maintain thickness by adjusting for sharp corners. Sometimes improves quality but also increases computation time. |
 | Relative | Determines the edge thickness by the length of the edge. Longer edges will be thicker. |
+
 
 | Property | What it changes |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1366,16 +1493,19 @@ The mesh needs to have faces.
 | Crease Weight | Define how much crease (0 to 1, nothing to full) the junctions should receive. |
 | Material Offset | Uses the chosen material index as the material for the wire frame; this is applied as an offset from the first material. |
 
+
 ### Vertex Group
 
 ![Vertex Group](/docs2/images/ui/properties/modifiers/mesh-generate/vertex-group-3.png)
 
 Restrict the modifier to only this vertex group, and use its weighting for thickness.
 
+
 | Property | What it changes |
 | -------- | -------------------------------------------------------------------------- |
 | Invert | Inverts the vertex group weights. |
 | Factor | Percentage that the vertex has influence over the final wire frame result. |
+
 
 ## Mesh to Volume
 
@@ -1387,11 +1517,13 @@ The Mesh to Volume modifier uses a mesh to create a new volume grid. All previou
 
 > **Tip:** To copy and move the generated volume separately from the mesh object, use a collection instance.
 
+
 | Property | What it changes |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Object | The mesh object to use for the volume generation. Pick a mesh object here. |
 | Density | Makes the generated volume appear denser or less dense when rendering. |
 | Interior Band Width | The maximum distance of the included voxels to the surface on the inside of the mesh. Activating Fill Volume is similar to increasing the interior band width to a high number. |
+
 
 ### Resolution Mode
 
@@ -1399,7 +1531,10 @@ The Mesh to Volume modifier uses a mesh to create a new volume grid. All previou
 
 Mode for how the voxel size is specified.
 
+
 | Property | What it changes |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Voxel Amount | This allows setting an approximate number of voxels that will be used to represent mesh along its diagonal. When the dimensions of the mesh changes, the voxel size will change as well. For final rendering of animations, it’s better to specify the voxel size explicitly to avoid artifacts. |
 | Voxel Size | This allows setting the exact voxel size that will be used. This is idea for rendering when the voxel size should not change between frames. |
+
+

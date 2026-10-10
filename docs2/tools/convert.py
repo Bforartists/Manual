@@ -375,7 +375,11 @@ def transform_blocks(blocks, ctx):
         elif t == "BlockQuote":
             out.extend(transform_blocks(b["c"], ctx))
         elif t == "Table":
-            out.append(walk_table_images(b, ctx)); STATS["data_tables"] += 1
+            co = callout_table(b, ctx)
+            if co is not None:
+                out.append(co); STATS["callout_tables"] += 1
+            else:
+                out.append(walk_table_images(single_block_cells(b), ctx)); STATS["data_tables"] += 1
         else:
             out.append(b)
     return detect_legends(detect_callouts(fake_bullets(out)))
@@ -424,6 +428,73 @@ def walk_table_images(tbl, ctx):
         if isinstance(o, list): return [fix(v) for v in o]
         return o
     return fix(tbl)
+
+
+CALLOUT_WORDS = {"tip": "Tip", "hint": "Tip", "note": "Note", "warning": "Warning", "attention": "Warning",
+                 "caution": "Warning", "important": "Important"}
+
+
+def table_cells(tbl):
+    """All cells of a pandoc Table, row by row, as lists of blocks."""
+    _, _, _, head, bodies, foot = tbl["c"]
+    rows = list(head[1])
+    for body in bodies:
+        rows += body[2] + body[3]
+    rows += foot[1]
+    return [[cell[4] for cell in row[1]] for row in rows]
+
+
+def callout_table(tbl, ctx):
+    """1-column .odt box whose first cell is 'Tip'/'Note'/... -> a quote callout (words unchanged)."""
+    rows = table_cells(tbl)
+    if not rows or any(len(r) != 1 for r in rows):
+        return None
+    while rows and not rows[0][0] or (rows and not json.dumps(rows[0][0]).count('"Str"')
+                                      and not json.dumps(rows[0][0]).count('"Image"')):
+        rows = rows[1:]                                   # empty header row of the .odt box
+    if len(rows) < 2:
+        return None
+    first = " ".join(stringify(b["c"]) for b in rows[0][0] if b["t"] in ("Para", "Plain")).strip().rstrip(":")
+    label = CALLOUT_WORDS.get(first.lower())
+    if not label:
+        return None
+    paras = []
+    for r in rows[1:]:
+        for b in transform_blocks(r[0], ctx):
+            md = render([b]).strip()
+            if md:
+                paras.append(md)
+    if not paras:
+        return None
+    lines = []
+    for i, md in enumerate(paras):
+        if i == 0:
+            md = f"**{label}:** " + md
+        else:
+            lines.append(">")
+        lines += ["> " + ln if ln.strip() else ">" for ln in md.split("\n")]
+    return raw("\n".join(lines))
+
+
+def single_block_cells(tbl):
+    """Cells with several paragraphs -> one line joined by a space (the editor drops <br> inside table cells)."""
+    def fix_cell(cell):
+        blocks = cell[4]
+        if len([b for b in blocks if b["t"] in ("Para", "Plain")]) > 1 and all(b["t"] in ("Para", "Plain") for b in blocks):
+            inl = []
+            for k, b in enumerate(blocks):
+                if k: inl.append({"t": "Space"})
+                inl += b["c"]
+            cell = [cell[0], cell[1], cell[2], cell[3], [{"t": "Plain", "c": inl}]]
+            STATS["cells_joined"] += 1
+        return cell
+    t = copy.deepcopy(tbl)
+    _, _, _, head, bodies, foot = t["c"]
+    for row in head[1]: row[1] = [fix_cell(c) for c in row[1]]
+    for body in bodies:
+        for row in body[2] + body[3]: row[1] = [fix_cell(c) for c in row[1]]
+    for row in foot[1]: row[1] = [fix_cell(c) for c in row[1]]
+    return t
 
 
 def para_text(b):
@@ -539,7 +610,7 @@ def option_row(n, ctx):
         d = " ".join(render_inlines(tag_kbd(clean_inlines(b["c"]))) for b in c.blocks).strip()
         opts.append(f"**{t}**" + (f": {d}" if d else ""))
     STATS["option_rows"] += 1
-    desc = ((own + "<br>") if own else "") + "<br>".join(opts)
+    desc = ((own + " · ") if own else "") + " · ".join(opts)
     return f"| {n.title.replace('|', '/')} | {desc.replace(chr(10), ' ').replace('|', '/')} |"
 
 
@@ -654,19 +725,45 @@ def assemble(spec, trees, lib, out_dir, media):
     fm["source"] = sorted(set(fm["source"])) + sorted({"webflow:" + p["web"] for p in spec["parts"] if "web" in p})
     if shared: fm["shared"] = shared
     if spec.get("status"): fm["status"] = spec["status"]
-    head = "---\n" + "\n".join(f"{k}: {json.dumps(v, ensure_ascii=False)}" for k, v in fm.items()) + "\n---\n\n"
+    head = editor_yaml(fm)
+    body = body.strip("\n") + "\n\n"
+    if body.rstrip("\n").split("\n")[-1].startswith("|"):
+        body += "\n"                                      # the editor keeps two blank lines after a final table
     path = os.path.join(out_dir, spec["file"])
     os.makedirs(os.path.dirname(path), exist_ok=True)
     open(path, "w").write(head + body)
     return path, words(re.sub(r"!\[[^\]]*\]\([^)]*\)(\{[^}]*\})?", "", body))
 
 
+YAML_PLAIN_BAD = re.compile(r"^$|^[-?:,\[\]{}#&*!|>'\"%@`\s]|: |\s#|\s$|^(true|false|yes|no|on|off|null|~|[-+]?(\d[\d_]*)?\.?\d+([eE][-+]?\d+)?|0x[0-9a-fA-F]+)$", re.I)
+
+
+def yaml_scalar(v):
+    if isinstance(v, bool): return "true" if v else "false"
+    if isinstance(v, (int, float)): return str(v)
+    v = str(v)
+    return json.dumps(v, ensure_ascii=False) if YAML_PLAIN_BAD.search(v) or "\n" in v else v
+
+
+def editor_yaml(fm):
+    """Front matter the way Pages CMS saves it: plain scalars, quotes only when needed, block lists."""
+    out = ["---"]
+    for k, v in fm.items():
+        if isinstance(v, list):
+            if not v: continue                      # the editor drops empty lists
+            out.append(f"{k}:")
+            out += [f"  - {yaml_scalar(x)}" for x in v]
+        else:
+            out.append(f"{k}: {yaml_scalar(v)}")
+    return "\n".join(out) + "\n---\n"
+
+
 EDITOR_ESC = re.compile(r"([\\`*_\[\]~])")
 
 
 def editor_text(t):
-    """Escape link text the way the Pages CMS editor (Tiptap markdown) writes it."""
-    return EDITOR_ESC.sub(r"\\\1", t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
+    """Link text the way the Pages CMS editor (Tiptap markdown) writes it."""
+    return t.replace("<", "&lt;").replace(">", "&gt;")   # the editor writes no backslash escapes and keeps & raw
 
 
 def split_row(line):
@@ -707,13 +804,85 @@ def editor_tables(md):
     return "\n".join(out)
 
 
+CODE_TOKEN = re.compile(r"(?<!\S)(\*?)(\S*\\[*_\\\[\]`]\S*?)(\*?)(?=[.,;:)]?(?:\s|$))")
+BARE_URL = re.compile(r"(?<![(<\[`])\bhttps?://[^\s<>()\[\]`]+[^\s<>()\[\]`.,;:!?'\"]")
+
+
+def editor_stable_line(line):
+    """Rewrite one prose line so the Pages CMS editor saves it unchanged:
+    it drops backslash escapes and writes < > as &lt; &gt;."""
+    if not line.strip() or line.startswith("    ") or line.startswith("```"):
+        return line
+    m = re.match(r"^((?:> ?)*(?:#{1,6} |[-*] |\d+\. )?)(.*)$", line)
+    lead, text = m.group(1), m.group(2)
+    # protect code spans, links and <br>
+    keep = []
+    def hold(x):
+        keep.append(x.group(0)); return f"\x00{len(keep) - 1}\x00"
+    text = re.sub(r"`[^`]*`|!?\[[^\]]*\]\([^)]*\)|<br>", hold, text)
+    # a path line full of backslashes -> one code span
+    if text.count("\\\\") >= 2 or text.count("\\\\") >= 1 and ":" in text[:4]:
+        inner = re.sub(r"\\(.)", r"\1", text)
+        text = "`" + inner.replace("`", "") + "`"
+        STATS["paths_as_code"] += 1
+    else:
+        def code_tok(mm):
+            STATS["tokens_as_code"] += 1
+            return "`" + re.sub(r"\\(.)", r"\1", mm.group(2)) + "`"
+        text = CODE_TOKEN.sub(code_tok, text)
+        text = re.sub(r"\\([$|~#+!.()\-{}])", r"\1", text)          # escapes CommonMark never needed here
+        text = text.replace("\\<", "&lt;").replace("\\>", "&gt;")
+        text = re.sub(r">", "&gt;", text)
+        text = re.sub(r"(?<!&)<(?!br>)", "&lt;", text)
+        text = BARE_URL.sub(lambda u: f"[{u.group(0)}]({u.group(0)})", text)
+    text = re.sub(r"\x00(\d+)\x00", lambda x: keep[int(x.group(1))], text)
+    return lead + text
+
+
+def editor_stable(md):
+    out, fence = [], False
+    for line in md.split("\n"):
+        if line.startswith("```"):
+            fence = not fence; out.append(line); continue
+        if fence:
+            out.append(line); continue
+        if line.lstrip().startswith("|"):
+            if re.match(r"^\s*\|[\s:|-]+\|\s*$", line):
+                out.append(line); continue
+            cells = split_row(line)
+            cells = [editor_stable_line(c.replace("\\|", "\x02")).replace("\x02", "\\|") for c in cells]
+            out.append("| " + " | ".join(cells) + " |"); continue
+        out.append(editor_stable_line(line))
+    md = "\n".join(out)
+    md = re.sub(r"^(\s*[-*]) +$", r"\1 ", md, flags=re.M)              # empty list item: "- "
+    return md
+
+
+def editor_spacing(md):
+    """Tables get two blank lines before and after, like the editor writes them."""
+    lines = md.split("\n"); out = []; i = 0
+    while i < len(lines):
+        if lines[i].startswith("|") and (i == 0 or not lines[i - 1].startswith("|")):
+            while out and out[-1] == "": out.pop()
+            if out: out += ["", ""]
+            while i < len(lines) and lines[i].startswith("|"):
+                out.append(lines[i]); i += 1
+            out += ["", ""]
+            while i < len(lines) and lines[i] == "": i += 1
+            continue
+        out.append(lines[i]); i += 1
+    return "\n".join(out)
+
+
 def postfix(md):
     md = re.sub(r"<(https?://[^>\s]+)>", lambda m: f"[{editor_text(m.group(1))}]({m.group(1)})", md)
     md = md.replace("\\'", "'").replace('\\"', '"')
     md = re.sub(r"(!\[[^\]]*\]\([^)]*\))\{\.[a-z]+\}", r"\1", md)
-    md = editor_tables(md)
     md = re.sub(r"\n{3,}", "\n\n", md)
-    md = re.sub(r"(\S) {2,}(?=\S)", r"\1 ", md)          # collapse inner runs, keep "  \n" line breaks
+    md = editor_stable(md)
+    md = editor_tables(md)
+    md = editor_spacing(md)
+    md = re.sub(r"^((?!\|).*\S) {2,}(?=\S)", lambda m: re.sub(r" {2,}", " ", m.group(0)), md, flags=re.M)
     md = md.replace('{target="_blank"}', "")
     md = re.sub(r"(?<!!)\[\]\([^)]*\)", "", md)          # empty links carry no words
     md = re.sub(r"\*\*\s*\*\*", "", md)

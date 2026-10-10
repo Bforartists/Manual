@@ -1,15 +1,18 @@
 ---
-id: "getting-started.introduction"
-title: "Introduction"
-slug: "introduction"
-section: "getting-started"
-path: ["Getting Started", "Introduction"]
+id: getting-started.introduction
+title: Introduction
+slug: introduction
+section: getting-started
+path:
+  - Getting Started
+  - Introduction
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["1 Introduction.odt", "webflow:introduction"]
+source:
+  - 1 Introduction.odt
+  - webflow:introduction
 ---
-
 This is the official **reference manual** for Bforartists 5. This explains the tools, operators, panels, and concepts you’ll encounter in the software. Each chapter and section is designed to help you understand how features work and how to use them effectively in detail.
 
 What this documentation is not: this is not a general art tutorial. You won’t find step‑by‑step lessons on how to create a finished artwork here. Instead, you’ll find the technical knowledge you need to make the tools work to later make art efficiently with full control.
@@ -57,7 +60,7 @@ Get the latest version of Bforartists and get directly involved here:
 [https://github.com/Bforartists/Bforartists](https://github.com/Bforartists/Bforartists)  
   
 🪟**Windows App Store**  
-[https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&amp;gl=CO&amp;ocid=pdpshare](https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare)
+[https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare](https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare)
 
 **Flatpak App Store**  
 [https://flathub.org/en/apps/de.bforartists.Bforartists](https://flathub.org/en/apps/de.bforartists.Bforartists)
@@ -83,7 +86,7 @@ Join the community, share your work, and stay updated:
 [https://twitter.com/bforartists](https://twitter.com/bforartists)
 
 **🖤 Threads**  
-[https://www.threads.net/@bforartists\_official](https://www.threads.net/@bforartists_official)
+[https://www.threads.net/@bforartists_official](https://www.threads.net/@bforartists_official)
 
 **❤️ Youtube**  
 [https://www.youtube.com/@bforartists](https://www.youtube.com/@bforartists)
@@ -134,7 +137,7 @@ Official Bug and Feature Request Tracker
 
 **🪟Windows App Store**
 
-[https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&amp;gl=CO&amp;ocid=pdpshare](https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare)
+[https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare](https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&gl=CO&ocid=pdpshare)
 
 🧡 Blender Launcher
 
@@ -173,7 +176,7 @@ Official Bug and Feature Request Tracker
 
 🖤 Threads
 
-[https://www.threads.net/@bforartists\_official](https://www.threads.net/@bforartists_official)
+[https://www.threads.net/@bforartists_official](https://www.threads.net/@bforartists_official)
 
 💖 Youtube
 
@@ -186,3 +189,4 @@ Official Bug and Feature Request Tracker
 💙 Bluesky
 
 [https://bsky.app/profile/bforartists.bsky.social](https://bsky.app/profile/bforartists.bsky.social)
+

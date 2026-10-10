@@ -1,15 +1,19 @@
 ---
-id: "getting-started.about-documentation"
-title: "About Documentation"
-slug: "about-documentation"
-section: "getting-started"
-path: ["Getting Started", "About Documentation"]
+id: getting-started.about-documentation
+title: About Documentation
+slug: about-documentation
+section: getting-started
+path:
+  - Getting Started
+  - About Documentation
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["1.1 How to use the Manual.odt", "38 About this Manual.odt", "webflow:about-documentation"]
+source:
+  - 1.1 How to use the Manual.odt
+  - 38 About this Manual.odt
+  - webflow:about-documentation
 ---
-
 The question of how to use the manual sounds odd in the first moment. Yousimply read it! But there are a few things to know before you canreally find easily what you are looking for. Because using a 3dsoftware requires some special 3d knowledge. And it needs a bit ofknowledge about Bforartists to understand the structure of themanual. So that you can find what you need, both, from coming thesoftware side, and from coming the manual side.
 
 ![Example of Chapter Groups](https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6a459657c7c5e0a9f2298e57_General-Structure.jpg)
@@ -288,17 +292,12 @@ Chapter 9 is all about the UV Editor, and so on.
 
 Please have a look in the manual chapter 6 Editors Introduction. Here we list and describe all the different Editor types.
 
-<table>
-<tbody>
-<tr class="odd">
-<td>Conclusion</td>
-</tr>
-<tr class="even">
-<td><p>The manual chapter for the editors starts with the number. Followed by the editor type.</p>
-<p>Example: 7 Editors - 3D View</p></td>
-</tr>
-</tbody>
-</table>
+
+|  |
+| -------------------------------------------------------------------------------------------------------------------- |
+| Conclusion |
+| The manual chapter for the editors starts with the number. Followed by the editor type. Example: 7 Editors - 3D View |
+
 
 #### Editor Area
 
@@ -322,17 +321,12 @@ At the right of it you can find the Sidebar. Marked with blue again. It contains
 
 At the bottom left you can find the Adjust Last Operation panel. Marked with red. This panel appears when you do an operation, like move the mesh to another location, and allows you to adjust the values for the operation afterwards.
 
-<table>
-<tbody>
-<tr class="odd">
-<td>Conclusion</td>
-</tr>
-<tr class="even">
-<td><p>The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type.</p>
-<p>Example: 7.1 Editors - 3D View - Header</p></td>
-</tr>
-</tbody>
-</table>
+
+|  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Conclusion |
+| The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Example: 7.1 Editors - 3D View - Header |
+
 
 #### Menus, options, tabs and panels
 
@@ -340,18 +334,12 @@ Text menus and options are usually to find in the Header. So this are logical su
 
 Tabs and panels are usually to find in the sidebar. So this is the logical sub chapters for all sidebar chapters.
 
-<table>
-<tbody>
-<tr class="odd">
-<td>Conclusion</td>
-</tr>
-<tr class="even">
-<td><p>The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Followed by the sub types in this area.</p>
-<p>Example: 7.1.5 Editors - 3D View - Header - Select Menu</p>
-<p>Example: 7.3.2 Editors - 3D View - Sidebar - Tool Tab</p></td>
-</tr>
-</tbody>
-</table>
+
+|  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Conclusion |
+| The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Followed by the sub types in this area. Example: 7.1.5 Editors - 3D View - Header - Select Menu Example: 7.3.2 Editors - 3D View - Sidebar - Tool Tab |
+
 
 #### Object Types and their modes
 
@@ -363,17 +351,12 @@ Each mode has its own tool set. This means that some tools just shows with speci
 
 And this is the last and very important breadcrumb in our manual chapter titles. Object type and required mode.
 
-<table>
-<tbody>
-<tr class="odd">
-<td>Conclusion</td>
-</tr>
-<tr class="even">
-<td><p>The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Followed by the sub types in this area. Followed by object type and needed mode to show these tools.</p>
-<p>Example: 7.3.7 Editors - 3D View - Sidebar - Tool Tab - Mesh - Vertex Paint Mode</p></td>
-</tr>
-</tbody>
-</table>
+
+|  |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Conclusion |
+| The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Followed by the sub types in this area. Followed by object type and needed mode to show these tools. Example: 7.3.7 Editors - 3D View - Sidebar - Tool Tab - Mesh - Vertex Paint Mode |
+
 
 ## About this Manual
 
@@ -385,20 +368,21 @@ From Bforartists 2 on we did a complete rewrite, and so our manual does not cont
 
 The Bforartists Manual is a community driven effort to which anyone can contribute.
 
-And this very easy, since the manual comes not only as PDF files, but also as editable \*.odt files. That's the file format for Libre and Open Office. Both free and open source Office solutions. To manipulate or to fix a typo, a word, a sentence or even a whole chapter is as easy as manipulating the text in Libre Office or Open Office, commit the changes to the manual repository, and tell the Bforartists developers to put it online.
+And this very easy, since the manual comes not only as PDF files, but also as editable `*.odt` files. That's the file format for Libre and Open Office. Both free and open source Office solutions. To manipulate or to fix a typo, a word, a sentence or even a whole chapter is as easy as manipulating the text in Libre Office or Open Office, commit the changes to the manual repository, and tell the Bforartists developers to put it online.
 
 The repository with the ODT files can be found here: [https://github.com/Bforartists/Manual](https://github.com/Bforartists/Manual)
 
 ## License
 
-The Bforartists’s Manual is free and published under Public Domain\*
+The Bforartists’s Manual is free and published under Public `Domain*`
 
 This means that anyone is free to download, edit and share the manual. It also means that when contributing to the manual you don’t hold exclusive copyright to your text. You are, of course, acknowledged and appreciated for your contribution. However others can change and improve your text in order to keep the manual consistent and up to date.
 
-\* As of writing this part here the Blender manual for 2.77 and below was put under a Public Domain AS CC0 license. Which is simply invalid. You can have either Public domain. Or CC0. Those two licenses contradicts each other.
+`*` As of writing this part here the Blender manual for 2.77 and below was put under a Public Domain AS CC0 license. Which is simply invalid. You can have either Public domain. Or CC0. Those two licenses contradicts each other.
 
 It also seems that the Blender manual was put under CC0 and then once more under CC0 BY-SA without asking all involved persons if they wanted to do so. The original manual was under OCL license. Another license breach.
 
 So we choose the license type that seems to fit most here, especially when looking at the old licensing. Public Domain. The old Blender manual parts are still under OCL license.
 
 The Bforartists 2 manual should not contain any old Blender manual material anymore, and is fully licensed under Public Domain.
+

@@ -1,15 +1,17 @@
 ---
-id: "getting-started.data-structure"
-title: "Data Structure"
-slug: "data-structure"
-section: "getting-started"
-path: ["Getting Started", "Data Structure"]
+id: getting-started.data-structure
+title: Data Structure
+slug: data-structure
+section: getting-started
+path:
+  - Getting Started
+  - Data Structure
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["31 Data System.odt"]
+source:
+  - 31 Data System.odt
 ---
-
 ## Data System
 
 Each *.blend* file contains a database. This database contains all scenes, objects, meshes, textures, etc. that are in the file.
@@ -78,235 +80,52 @@ The following data-blocks can be removed directly: Scene, Text, Group and Screen
 
 Other data-blocks such as groups and actions can be *Unlinked* from the *Outliner* context menu.
 
-<table>
-<tbody>
-<tr class="odd">
-<td>Tip</td>
-</tr>
-<tr class="even">
-<td><p>Some data (images especially) is hard to keep track of, especially since image views are counted as users.</p>
-<p>For data-blocks that can be unlinked - hold <strong>Shift</strong> while pressing on the <strong>X</strong> button, This force-clears the user-count, so the data-block will be removed on reload.</p></td>
-</tr>
-</tbody>
-</table>
+> **Tip:** Some data (images especially) is hard to keep track of, especially since image views are counted as users.
+>
+> For data-blocks that can be unlinked - hold **Shift** while pressing on the **X** button, This force-clears the user-count, so the data-block will be removed on reload.
 
 ### Data-Block Types
 
 For reference, here is a table of data-blocks types stored in *.blend* files.
 
-| | |
+
+|  |  |
 | ----- | ------------------------------------------------------------------------ |
 | Link: | Library Linking, *supports bing linked into other blend files*. |
 | Pack: | File Packing, *supports file contents being packed into the blend file*. |
 
-<table>
-<tbody>
-<tr class="odd">
-<td>Action</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>Stores animation F Curves.</p>
-<p>Used as data-block animation data,</p>
-<p>and the Non-Linear-Editor.</p></td>
-</tr>
-<tr class="even">
-<td>Armature</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>Skeleton used to deform meshes.</p>
-<p>Used as object-data &amp; by the Armature Modifier.</p></td>
-</tr>
-<tr class="odd">
-<td>Brush</td>
-<td>✓</td>
-<td>✗</td>
-<td>Used by paint tools.</td>
-</tr>
-<tr class="even">
-<td>Camera</td>
-<td>✓</td>
-<td>✗</td>
-<td>Used as object-data.</td>
-</tr>
-<tr class="odd">
-<td>Curve</td>
-<td>✓</td>
-<td>✗</td>
-<td>Used by camera, font &amp; surface objects.</td>
-</tr>
-<tr class="even">
-<td>Font</td>
-<td>✓</td>
-<td>✓</td>
-<td><p>References font files.</p>
-<p>Used by Font object-data.</p></td>
-</tr>
-<tr class="odd">
-<td>GreasePencil</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>2D/3D sketch data.</p>
-<p>Used as overlay <em>helper</em> info, by the</p>
-<p>3D-View, Image, Sequencer &amp; Movie Clip editors.</p></td>
-</tr>
-<tr class="even">
-<td>Group</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>Reference object’s.</p>
-<p>Used by dupli-grous &amp; often library-linking.</p></td>
-</tr>
-<tr class="odd">
-<td>Image</td>
-<td>✓</td>
-<td>✓</td>
-<td><p>Image files.</p>
-<p>Used by textures &amp; shader nodes.</p></td>
-</tr>
-<tr class="even">
-<td>Lamp</td>
-<td>✓</td>
-<td>✗</td>
-<td>Used as object-data.</td>
-</tr>
-<tr class="odd">
-<td>Lattice</td>
-<td>✗</td>
-<td>✗</td>
-<td><p>Grid based lattice deformation.</p>
-<p>Used as object-data and by the Lattice Modifier.</p></td>
-</tr>
-<tr class="even">
-<td>Library</td>
-<td>✗</td>
-<td>✓</td>
-<td><p>References to external <em>.blend</em> files.</p>
-<p>Access from the outliner’s <em>Blend file</em> view.</p></td>
-</tr>
-<tr class="odd">
-<td>LineStyle</td>
-<td>✓</td>
-<td>✗</td>
-<td>Used by the FreeStyle render-engine.</td>
-</tr>
-<tr class="even">
-<td>Mask</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>2D animated mask curves.</p>
-<p>Used by compositing nodes &amp; sequencer strip.</p></td>
-</tr>
-<tr class="odd">
-<td>Material</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>Set shading and texturing render properties.</p>
-<p>Used by objects, meshes &amp; curves.</p></td>
-</tr>
-<tr class="even">
-<td>Mesh</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>Geometry verts/edges/faces.</p>
-<p>Used as object-data.</p></td>
-</tr>
-<tr class="odd">
-<td>MetaBall</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>An isosurface in 3D space.</p>
-<p>Used as object-data.</p></td>
-</tr>
-<tr class="even">
-<td>MovieClip</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>Reference to an image sequence or video file.</p>
-<p>Used in the motion-tracking editor.</p></td>
-</tr>
-<tr class="odd">
-<td>NodeGroup</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>Collections of re-usable nodes.</p>
-<p>Used in the node-editor.</p></td>
-</tr>
-<tr class="even">
-<td>Object</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>An entity in the scene with location,</p>
-<p>scale, rotation.</p>
-<p>Used by scenes &amp; groups.</p></td>
-</tr>
-<tr class="odd">
-<td>Particle</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>Particle settings.</p>
-<p>Used by particle systems.</p></td>
-</tr>
-<tr class="even">
-<td>Palette</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>Store color presets.</p>
-<p>Access from the paint tools.</p></td>
-</tr>
-<tr class="odd">
-<td>Scene</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>Primary store of all data displayed and animated.</p>
-<p>Used as top-level storage for objects &amp; animation.</p></td>
-</tr>
-<tr class="even">
-<td>Screen</td>
-<td>✗</td>
-<td>✗</td>
-<td><p>Screen layout.</p>
-<p>Used by each window, which has its own screen.</p></td>
-</tr>
-<tr class="odd">
-<td>ShapeKeys</td>
-<td>✗</td>
-<td>✗</td>
-<td><p>Geometry shape storage, which can be animated.</p>
-<p>Used by mesh, curve and lattice objects.</p></td>
-</tr>
-<tr class="even">
-<td>Sounds</td>
-<td>✓</td>
-<td>✓</td>
-<td><p>References to sound files.</p>
-<p>Used by speaker objects and the game-engine.</p></td>
-</tr>
-<tr class="odd">
-<td>Speaker</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>Sound sources for a 3D scene.</p>
-<p>Used as object-data.</p></td>
-</tr>
-<tr class="even">
-<td>Text</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>Text data.</p>
-<p>Used by Python scripts and OSL shaders.</p></td>
-</tr>
-<tr class="odd">
-<td>Texture</td>
-<td>✓</td>
-<td>✗</td>
-<td><p>2D/3D textures.</p>
-<p>Used by materials, world and brushes.</p></td>
-</tr>
-<tr class="even">
-<td>World</td>
-<td>✓</td>
-<td>✗</td>
-<td>Used by scenes for render environment settings.</td>
-</tr>
-</tbody>
-</table>
+
+|  |  |  |  |
+| ------------ | --- | --- | -------------------------------------------------------------------------------------------------------- |
+| Action | ✓ | ✗ | Stores animation F Curves. Used as data-block animation data, and the Non-Linear-Editor. |
+| Armature | ✓ | ✗ | Skeleton used to deform meshes. Used as object-data & by the Armature Modifier. |
+| Brush | ✓ | ✗ | Used by paint tools. |
+| Camera | ✓ | ✗ | Used as object-data. |
+| Curve | ✓ | ✗ | Used by camera, font & surface objects. |
+| Font | ✓ | ✓ | References font files. Used by Font object-data. |
+| GreasePencil | ✓ | ✗ | 2D/3D sketch data. Used as overlay *helper* info, by the 3D-View, Image, Sequencer & Movie Clip editors. |
+| Group | ✓ | ✗ | Reference object’s. Used by dupli-grous & often library-linking. |
+| Image | ✓ | ✓ | Image files. Used by textures & shader nodes. |
+| Lamp | ✓ | ✗ | Used as object-data. |
+| Lattice | ✗ | ✗ | Grid based lattice deformation. Used as object-data and by the Lattice Modifier. |
+| Library | ✗ | ✓ | References to external *.blend* files. Access from the outliner’s *Blend file* view. |
+| LineStyle | ✓ | ✗ | Used by the FreeStyle render-engine. |
+| Mask | ✓ | ✗ | 2D animated mask curves. Used by compositing nodes & sequencer strip. |
+| Material | ✓ | ✗ | Set shading and texturing render properties. Used by objects, meshes & curves. |
+| Mesh | ✓ | ✗ | Geometry verts/edges/faces. Used as object-data. |
+| MetaBall | ✓ | ✗ | An isosurface in 3D space. Used as object-data. |
+| MovieClip | ✓ | ✗ | Reference to an image sequence or video file. Used in the motion-tracking editor. |
+| NodeGroup | ✓ | ✗ | Collections of re-usable nodes. Used in the node-editor. |
+| Object | ✓ | ✗ | An entity in the scene with location, scale, rotation. Used by scenes & groups. |
+| Particle | ✓ | ✗ | Particle settings. Used by particle systems. |
+| Palette | ✓ | ✗ | Store color presets. Access from the paint tools. |
+| Scene | ✓ | ✗ | Primary store of all data displayed and animated. Used as top-level storage for objects & animation. |
+| Screen | ✗ | ✗ | Screen layout. Used by each window, which has its own screen. |
+| ShapeKeys | ✗ | ✗ | Geometry shape storage, which can be animated. Used by mesh, curve and lattice objects. |
+| Sounds | ✓ | ✓ | References to sound files. Used by speaker objects and the game-engine. |
+| Speaker | ✓ | ✗ | Sound sources for a 3D scene. Used as object-data. |
+| Text | ✓ | ✗ | Text data. Used by Python scripts and OSL shaders. |
+| Texture | ✓ | ✗ | 2D/3D textures. Used by materials, world and brushes. |
+| World | ✓ | ✗ | Used by scenes for render environment settings. |
+
+

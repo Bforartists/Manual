@@ -1,13 +1,13 @@
 ---
-id: "snippet.quick-menu"
-title: "Quick menu"
-section: "snippets"
+id: snippet.quick-menu
+title: Quick menu
+section: snippets
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["17.1.2 Editors - Timeline - Header - Quick Menu.odt"]
+source:
+  - 17.1.2 Editors - Timeline - Header - Quick Menu.odt
 ---
-
 ![Quick menu](/docs2/images/ui/shared/quick-menu/quick-menu.png)
 
 The quick menu, or in long Quick Favorites menu, is a menu that can be customized to your needs. Here you can add operators for quick access.
@@ -59,3 +59,4 @@ Removing is as simple as adding. Right click at the operators in the Quick menu,
 The quick favorites. menu exists in nearly all editors. But it is just in the 3D view available in the header. So that you know this functionality exists. In the other editors you call it with hotkey Q.
 
 The content of the quick favorites. menu changes, dependent over which editor you are, and in what mode you are. When you add for example an operator from the image editor, then this operator just shows in the quick menu when you call the menu from the image editor. Same goes for the modes. Edit mode tools will just show in edit mode. And so on.
+

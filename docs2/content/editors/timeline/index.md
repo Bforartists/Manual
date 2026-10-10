@@ -1,14 +1,16 @@
 ---
-id: "editors.timeline"
-title: "Timeline"
-section: "editors"
-path: ["Editors", "Timeline"]
+id: editors.timeline
+title: Timeline
+section: editors
+path:
+  - Editors
+  - Timeline
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["17 Editors - Timeline.odt"]
+source:
+  - 17 Editors - Timeline.odt
 ---
-
 The Timeline Editor is the editor type that contains playback and record elements and some further animation settings. The Timeline editor is part of five editor types that deals with your animation data.
 
 The Dope sheet editor has several areas. Usually you will just see the header. To reveal the rest of it you have to pull the upper border of the timeline editor upwards.
@@ -56,3 +58,4 @@ The active marker is highlighted, and shows a dotted line upwards.
 ![Markers](/docs2/images/ui/timeline/markers-2.png)
 
 When a frame matches the marker position then the info string in the 3D view shows the name of this marker too.
+

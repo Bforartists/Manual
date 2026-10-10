@@ -1,14 +1,17 @@
 ---
-id: "interface.panels-and-tabs"
-title: "Panels and tabs"
-section: "interface"
-path: ["The Interface", "Components", "Panels and tabs"]
+id: interface.panels-and-tabs
+title: Panels and tabs
+section: interface
+path:
+  - The Interface
+  - Components
+  - Panels and tabs
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["3 Interface.odt"]
+source:
+  - 3 Interface.odt
 ---
-
 ## Panels
 
 ![Panels](/docs2/images/ui/interface/panels/panels.png)
@@ -40,3 +43,4 @@ This can be done by clicking at the header of a panel and holding down ctrl.
 ![Tabs](/docs2/images/ui/interface/panels/tabs.png)
 
 The Sidebars can have Tabs to switch between different content. Also the Properties editor has them. The tabs helps to organize the available tools into categories. In the 3D view it's also a common place where addons adds themselves.
+

@@ -1,13 +1,13 @@
 ---
-id: "snippet.marker-menu"
-title: "Marker menu"
-section: "snippets"
+id: snippet.marker-menu
+title: Marker menu
+section: snippets
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["17.1.4 Editors - Timeline - Marker Menu.odt"]
+source:
+  - 17.1.4 Editors - Timeline - Marker Menu.odt
 ---
-
 ![Marker menu](/docs2/images/ui/shared/marker-menu/marker-menu.png)
 
 Markers are visual landmarks. They can mark a start of a specific animation sequence, the end of a camera movement, and so on.
@@ -64,6 +64,7 @@ Hotkey only functionality! This menu item exists to show the hotkey to move the 
 
 ![Select sub menu](/docs2/images/ui/shared/marker-menu/select-sub-menu.png)
 
+
 | Menu entry | What it does |
 | -------------------- | --------------------------------------------- |
 | All | Select all markers. |
@@ -72,6 +73,7 @@ Hotkey only functionality! This menu item exists to show the hotkey to move the 
 | Before Current Frame | Selects the markers before the current frame. |
 | After Current Frame | Selects the markers after the current frame. |
 
+
 ## Jump to Next Marker
 
 Sets the frame position to the next marker.
@@ -79,3 +81,4 @@ Sets the frame position to the next marker.
 ## Jump to Previous Marker
 
 Sets the frame position to the previous marker.
+

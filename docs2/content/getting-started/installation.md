@@ -143,14 +143,9 @@ To run Bforartists from the terminal without needing to be in the executable dir
 
 Add the following command to .bash_rc or .bash_profile with Bforartists’s binary:
 
-export PATH=/path/to/Bforartists-VERSION-linux-glibcVERSION-ARCH:PATH
+export PATH=$/path/to/Bforartists-VERSION-linux-glibcVERSION-ARCH:$PATH
 
-
-|  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tip |
-| If you use daily builds and update Bforartists frequently, you can link or always rename your folder to ‘Bforartists’ and use this name for the *PATH* environment variable and for keeping the window manager menu up to date. |
-
+> **Tip:** If you use daily builds and update Bforartists frequently, you can link or always rename your folder to ‘Bforartists’ and use this name for the *PATH* environment variable and for keeping the window manager menu up to date.
 
 ### Avoiding Alt+Mouse Conflict
 
@@ -169,12 +164,9 @@ We offer three versions at the moment. A universal installer, one for the Intel 
 
 After downloading Bforartists for Mac-OS X, uncompress the file and drag *Bforartists.app* onto the Applications folder.
 
-
-|  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tip |
-| Because *Bforartists* doesn’t use the standard OS menu system, you likely have a redundant menu-bar at the top.To remove it see this post on Macworld, but beware that it is somewhat complex. As an alternative: simply make *Bforartists* full screen by *Alt-F11* or by File ‣ Window ‣ Toggle Window Full screen. |
-
+> **Tip:** Because *Bforartists* doesn’t use the standard OS menu system, you likely have a redundant menu-bar at the top.
+>
+> To remove it see this post on Macworld, but beware that it is somewhat complex. As an alternative: simply make *Bforartists* full screen by *Alt-F11* or by File ‣ Window ‣ Toggle Window Full screen.
 
 In case the Silicon version does not start, make sure the App Store and Identified Developers option is ticked. And check if the files and folders tab to see Bforartists is listed and has permissions. Further informations can be found here: [support.apple.com/en-au/HT202491](https://support.apple.com/en-au/HT202491)
 
@@ -245,12 +237,7 @@ At File ‣ User Preferences ‣ File you can set options such as what external 
 
 The *Temp* directory sets where to store files such as temporary renders and autosaves.
 
-
-|  |
-| --------------------------------------------------------------------------------------------------------------------------------------- |
-| Tip |
-| *//* at the start of a path in Bforartists means the directory of the currently opened *.blend* file, used to reference relative-paths. |
-
+> **Tip:** *//* at the start of a path in Bforartists means the directory of the currently opened *.blend* file, used to reference relative-paths.
 
 If you trust the source of your *.blend* files, you can enable *Auto Run Python Scripts*. This option is meant to protect you from malicious Python scripts that someone can include inside a Bforartists file. This would not happen by accident, and most users leave this option on to automatically run scripts such as *Rigify* that controls the skeleton of a human rig.
 
@@ -316,16 +303,11 @@ For system installations both **SYSTEM** and **USER** directories are needed.
 
 For locally extracted Bforartists distributions, the user configuration and data runtime data are kept in the same sub-directory, allowing multiple Bforartists versions to run without conflict, ignoring the **USER** and **SYSTEM** files.
 
-
-|  |
-| ------------------------------------------------------------------------------------------ |
-| Note |
-| You may need to have the “show hidden files” option checked in your file browser settings. |
-
+> **Note:** You may need to have the “show hidden files” option checked in your file browser settings.
 
 ## Platform Dependent Paths
 
-Every OS handles the peripheral paths a bit different. The default locations for each system are as follow. Note that he path *./BFORARTISTS_VERSION/* is relative to the Bforartists executable.
+Every OS handles the peripheral paths a bit different. The default locations for each system are as follow. Note that he path *./|BFORARTISTS_VERSION|/* is relative to the Bforartists executable.
 
 ### Linux
 
@@ -335,18 +317,15 @@ LOCAL
 
 USER
 
-HOME/.config/Bforartists/2.80/
+$HOME/.config/Bforartists/2.80/
 
 SYSTEM
 
 /usr/share/Bforartists/2.80/
 
-
-|  |
-| -------------------------------------------------------------------------------------------- |
-| Note |
-| The **USER** path will use *$XDG_CONFIG_HOME* if its set:$XDG_CONFIG_HOME/Bforartists/2.80/ |
-
+> **Note:** The **USER** path will use *$XDG_CONFIG_HOME* if its set:
+>
+> $XDG_CONFIG_HOME/Bforartists/2.80/
 
 ### Mac OSX
 
@@ -356,38 +335,35 @@ LOCAL
 
 USER
 
-/Users/USER/Library/Application Support/Bforartists/2.80/
+/Users/$USER/Library/Application Support/Bforartists/2.80/
 
 SYSTEM
 
 /Library/Application Support/Bforartists/2.80/
 
-
-|  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Note |
-| OSX stores the Bforartists binary in *./Bforartists.app/Contents/MacOS/Bforartists*, so the local path to data & config is:./Bforartists.app/Contents/MacOS/2.80/ |
-
+> **Note:** OSX stores the Bforartists binary in *./Bforartists.app/Contents/MacOS/Bforartists*, so the local path to data & config is:
+>
+> ./Bforartists.app/Contents/MacOS/2.80/
 
 ### MS-Windows
 
 LOCAL
 
-.2.80.
+`.\2.80\.`
 
 USER
 
-C:Documents and SettingsUSERNAMEAppDataRoamingBforartistsBforartists2.80
+`C:\Documents and Settings\$USERNAME\AppData\Roaming\Bforartists\Bforartists\2.80\`
 
 SYSTEM
 
-C:Documents and SettingsAll UsersAppDataRoamingBforartistsBforartists2.80
+`C:\Documents and Settings\All Users\AppData\Roaming\Bforartists\Bforartists\2.80\`
 
 ### Path Layout
 
 This is the path layout which is used within the directories described above.
 
-Where *./config/startup.blend* could be /.Bforartists/2.80/config/startup.blend for example.
+Where *./config/startup.blend* could be ~/.Bforartists/2.80/config/startup.blend for example.
 
 *./autosave/ ...*
 
@@ -427,11 +403,11 @@ Search order: *LOCAL, USER, SYSTEM*
 
 Static precompiled language files for UI translation.
 
-*./datafiles/icons/.png*
+`./datafiles/icons/*.png`
 
 Icon themes for Bforartists user interface. *Not currently selectable in the theme preferences.*
 
-*./datafiles/brushicons/.png*
+`./datafiles/brushicons/*.png`
 
 Images for each brush.
 
@@ -441,35 +417,35 @@ Python scripts for the user interface and tools.
 
 Search order: *LOCAL, USER, SYSTEM*.
 
-*./scripts/addons/.py*
+`./scripts/addons/*.py`
 
 Python add-ons which may be enabled in the user preferences, includes import/export format support, render engine integration and many handy utilities.
 
-*./scripts/addons/modules/.py*
+`./scripts/addons/modules/*.py`
 
 Modules for add-ons to use (added to Python’s sys.path).
 
-*./scripts/addons_contrib/.py*
+`./scripts/addons_contrib/*.py`
 
 Another add-ons directory which is used for community maintained add-ons (must be manually created).
 
-*./scripts/addons_contrib/modules/.py*
+`./scripts/addons_contrib/modules/*.py`
 
 Modules for addons_contrib to use (added to Python’s sys.path).
 
-*./scripts/modules/.py*
+`./scripts/modules/*.py`
 
 Python modules containing our core API and utility functions for other scripts to import (added to Python’s *sys.path*).
 
-*./scripts/startup/.py*
+`./scripts/startup/*.py`
 
 Scripts which are automatically imported on startup.
 
-*./scripts/presets/{preset}/.py*
+`./scripts/presets/{preset}/*.py`
 
 Presets used for storing user defined settings for cloth, render formats etc.
 
-*./scripts/templates/.py*
+`./scripts/templates/*.py`
 
 Example scripts which can be accessed from: Text Space’s Header –&gt; Text –&gt; Script Templates.
 

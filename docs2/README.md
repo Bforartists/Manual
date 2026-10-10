@@ -2,6 +2,13 @@
 
 The Bforartists manual as Markdown: one file per web page, written in plain text that reads well on GitHub and is turned into rich components on the website. **This is a test branch;** `master` and the `.odt` manual are untouched.
 
+[![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/docs2%2Ftier1-getting-started/collection/docs)
+[![Shared snippets](https://img.shields.io/badge/Shared-snippets-6f42c1?style=for-the-badge&logo=files&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/docs2%2Ftier1-getting-started/collection/snippets)
+[![Image library](https://img.shields.io/badge/Image-library-0969da?style=for-the-badge&logo=googlephotos&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/docs2%2Ftier1-getting-started/media/images)
+[![Developer wiki](https://img.shields.io/badge/Developer-wiki-555555?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Bforartists/Manual/wiki)
+
+> ✏️ **To edit:** click **Edit the docs**, sign in with GitHub, pick a page, change it, click **Save**. First time? Read [Editing the docs online](dev-docs/Editing-the-docs-online.md).
+
 - 🌿 Branch: `docs2/tier1-getting-started`
 - 🗺️ Plan: [`plans/plan_docs2_tier1_getting_started.md`](plans/plan_docs2_tier1_getting_started.md)
 - 🧪 Usability test: [`plans/usability_test_getting_started.md`](plans/usability_test_getting_started.md)
@@ -14,12 +21,12 @@ The Bforartists manual as Markdown: one file per web page, written in plain text
 | `content/getting-started/` | ⭐ The 8 Getting Started pages (Tier 1) |
 | `content/editors/…`, `content/interface/…` | Spike 1 pages: Timeline, Interface, Modifiers tab |
 | `snippets/` | ♻️ Shared sections, written once, linked from every page that shows them |
-| `images/` | 🖼️ The image library, each image stored once, named by where it is used; `images/index.csv` lists them |
+| `images/` | 🖼️ The image library, each image stored once, named by where it is used; `images/index.csv` lists them. New drops land in the root and the image bot files them |
 | `nav.yml` | 🧭 Sidebar order and icons |
 | `sources/webflow/` | The current website text the converter reads for pages that live on the website |
 | `tools/` | ⚙️ Converter, word-count check, repeat scan, sidebar generator |
 | `reports/` | 📊 Machine output of the last run |
-| `dev-docs/` | 📘 Draft pages for the developer wiki |
+| `dev-docs/` | 📘 The [wiki](https://github.com/Bforartists/Manual/wiki) pages, reviewed here and copied by `tools/wiki_sync.py` |
 | `plans/` | 🗺️ Plans and tests |
 
 ## ✍️ Plain writing

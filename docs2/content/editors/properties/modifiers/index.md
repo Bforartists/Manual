@@ -1,14 +1,18 @@
 ---
-id: "editors.properties.modifiers"
-title: "Modifiers tab"
-section: "editors"
-path: ["Editors", "Properties", "Modifiers tab"]
+id: editors.properties.modifiers
+title: Modifiers tab
+section: editors
+path:
+  - Editors
+  - Properties
+  - Modifiers tab
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["26.9 Editors - Properties Editor - Modifiers Properties Tab.odt", "26.9.1 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus.odt"]
+source:
+  - 26.9 Editors - Properties Editor - Modifiers Properties Tab.odt
+  - 26.9.1 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus.odt
 ---
-
 ![Modifiers tab](/docs2/images/ui/properties/modifiers/modifiers-tab.png)
 
 Modifers are automatic operations that affects the geometry of objects in a non destructive way. You can, for example ,subdivide a mesh object dynamically where the base geometry stays intact when in edit mode.
@@ -69,6 +73,7 @@ These show modifiers divided into three categories: Edit, Deform and Physics.
 
 There are several types of modifiers:
 
+
 | Property | What it changes |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Geometry Nodes | This allows you to insert a Geometry Nodes modifier. |
@@ -80,6 +85,7 @@ There are several types of modifiers:
 | Phyiscs | Those represent physics simulations. In most cases, they are automatically added to the modifiers stack whenever a Particle System or Physics simulation is enabled. Their only role is to define the position in the modifier stack from which is taken the base data for the simulation they represent. As such, they typically have no attributes, and are controlled by settings exposed in separate sections of the Properties. |
 | Color | Just for the grease pencil object. Adds some modifiers to adjust the color. |
 | Hair | Mesh Object. Add Hair Curve Modifiers. |
+
 
 ## General functionality
 
@@ -127,6 +133,7 @@ This icon shows the type of the modifier. And has no further functionality.
 
 The name of the modifier. You can rename modifiers by clicking into the edit field and change the text.
 
+
 | Property | What it changes |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | On Cage | Adjust edit cage to modifier result. With this option the geometry will be viewed at the position they will be after the modifier is calculated. Important for the mirror modifier for example. |
@@ -134,6 +141,7 @@ The name of the modifier. You can rename modifiers by clicking into the edit fie
 | Realtime | Display the modifier in the viewport. |
 | Render | Display the modifier in the rendered result. |
 | Apply | This will apply the modifier, and it destructively change the mesh. **Note:** *If multiple objects have the same modifier with the same name, they will be applied to the selection. If you want to apply to only the Active object, press and hold Alt then click on the operator.* |
+
 
 #### Header menu
 
@@ -143,16 +151,19 @@ The name of the modifier. You can rename modifiers by clicking into the edit fie
 
 ![Header menu](/docs2/images/ui/properties/modifiers/header-menu-3.png)
 
+
 | Property | What it changes |
 | --------------------- | ------------------------------------------------------------------------------------- |
 | Apply as Shapekey | Armature modifier. Applies the current pose as a shape key, and removes the modifier. |
 | Apply (All Keyframes) | Grease pencil object. Applies the modifier to all keyframes, and removes it then. |
+
 
 ##### Save as Shapekey
 
 ![Save as Shapekey](/docs2/images/ui/properties/modifiers/save-as-shapekey.png)
 
 Armature modifier. Applies the current pose as a shape key, and keeps the modifier.
+
 
 | Property | What it changes |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -161,6 +172,7 @@ Armature modifier. Applies the current pose as a shape key, and keeps the modifi
 | Move to first | Move the modifier to the first position in the stack. |
 | Move to last | Move the modifier to the last position in the stack. |
 | Move to Nodes | Hair modifier. Moves the modifier to nodes instead. |
+
 
 ##### Show Node Groups
 
@@ -213,11 +225,13 @@ For more information, please check out the chapter
 
 There are two types of modifiers, builtin modifiers and geometry nodes modifiers that were marked as assets.
 
+
 | Menu entry | What it does |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Add Modifier Button | The button to the left adds built in modifiers to all selected objects. ***Note:** When adding modifier assets will apply to all selected object.* |
 | Add Asset Modifier | The button to the right adds geometry nodes assets as modifiers to all selected objects. **Note:** *When adding modifier assets will apply to all selected object.* |
 | Modifier Special menu | Contains some general modifier operators. |
+
 
 ## Add Modifier menu
 
@@ -295,11 +309,13 @@ Wit this button you assign a fake user to this selected geometry node tree.
 
 Data, like node trees, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
 
+
 | Menu entry | What it does |
 | ---------- | --------------------------------------------------------------------------------------------------------------- |
 | User | The number of users that uses this data. Data with a user number of 0 will be removed with closing Bforartists. |
 | Add | Adds a duplicate geometry nodes nodegroup. |
 | Remove | Removes the geometry node tree. To delete it completely you need to purge it. See Fake user. |
+
 
 #### Custom Inputs and Outputs
 
@@ -326,3 +342,4 @@ Select the objects that you want to copy the modifiers to . Hold down shift, sel
 ### Clear Object Modifiers
 
 Removes all modifiers at the selected objects.
+

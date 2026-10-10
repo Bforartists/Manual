@@ -1,14 +1,19 @@
 ---
-id: "editors.properties.modifiers.grease-pencil.deform"
-title: "Deform modifiers (Grease Pencil)"
-section: "editors"
-path: ["Editors", "Properties", "Grease Pencil", "Modifiers tab", "Deform modifiers"]
+id: editors.properties.modifiers.grease-pencil.deform
+title: Deform modifiers (Grease Pencil)
+section: editors
+path:
+  - Editors
+  - Properties
+  - Grease Pencil
+  - Modifiers tab
+  - Deform modifiers
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["26.9.9 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Deform Modifiers.odt"]
+source:
+  - 26.9.9 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Deform Modifiers.odt
 ---
-
 ![Deform modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-deform/deform-modifiers-grease-pencil.png)
 
 ## Armature
@@ -23,6 +28,7 @@ This modifier gets created automatically when you parent a grease pencil to an a
 
 The armature modifier has some extra entries in the dropdown menu in the header.
 
+
 | Property | What it changes |
 | ------------------------ | ----------------------------------------------------------------------------------- |
 | Apply ( Active Keyframe) | Applies the active keyframe. |
@@ -30,6 +36,7 @@ The armature modifier has some extra entries in the dropdown menu in the header.
 | Apply as Shape Key | Apply the modifier as a new shapekey to the mesh, and remove the armature modifier. |
 | Save as Shape Key | Apply the modifier as a new shapekey to the mesh, but keep the armature modifier. |
 | Object | The name of the armature object used by this modifier. |
+
 
 ### Vertex Group
 
@@ -81,11 +88,13 @@ Some settings just exists in Edit mode.
 
 > **Warning:** The Hook Modifier stores vertex indices from the original mesh to determine what to affect. Modifiers that generate geometry, like Subdivision Surface, should always be put after the Hook modifier in the stack. Otherwise, the generated geometry can‘ t be affected by the hook’s influence.
 
+
 | Property | What it changes |
-| ------------ | ----------------------------------------------------------------------------------------------------------------- |
+| ------------ | ---------------------------------------------------------------------------------------------------------------- |
 | Object | The name of the object to hook vertices to. |
-| Vertex Group | Allows you to define the influence per vertex.<br>**Invert**: Inverts the influence of the selected vertex group. |
+| Vertex Group | Allows you to define the influence per vertex. · **Invert**: Inverts the influence of the selected vertex group. |
 | Strength | Adjust this hooks influence on the vertices. |
+
 
 ### Reset
 
@@ -93,15 +102,18 @@ Some settings just exists in Edit mode.
 
 In Edit mode. Recalculate and clear the offset transform of the hook.
 
+
 | Property | What it changes |
 | -------- | ------------------------------------------------------------ |
 | Recenter | In Edit mode. Set the hook center to the 3D cursor position. |
 | Select | In Edit mode. Select the vertices affected by this hook. |
 | Assign | In Edit mode. Assigns selected vertices to this hook. |
 
+
 ### Falloff
 
 ![Falloff](/docs2/images/ui/properties/modifiers/grease-pencil-deform/falloff.png)
+
 
 | Property | What it changes |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -109,16 +121,19 @@ In Edit mode. Recalculate and clear the offset transform of the hook.
 | Radius | The size of the hooks influence. |
 | Uniform Falloff | Compensate non uniform scale, and use a uniform falloff. |
 
+
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 ## Lattice
 
@@ -132,21 +147,25 @@ A Lattice modifier with valid settings can be added by selecting the object, hol
 
 > **Note:** When you want to use a lattice to deform particles, then you need to place the Lattice modifier after the Particle System modifier.
 
+
 | Property | What it changes |
 | -------- | ---------------------------------------------------------------------------- |
 | Object | The Lattice object that deforms the base object. |
 | Strength | A factor to control blending between original and deformed vertex positions. |
 
+
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 ## Noise
 
@@ -154,8 +173,9 @@ A Lattice modifier with valid settings can be added by selecting the object, hol
 
 The Noise Modifier adds noise to make the grease pencil line unstable and noisy.
 
+
 | Property | What it changes |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Position | Strength of the noise effect over the point location. |
 | Strength | Strength of the noise effect over the point strength (opacity). |
 | Thickness | Strength of the noise effect over the point thickness. |
@@ -163,18 +183,21 @@ The Noise Modifier adds noise to make the grease pencil line unstable and noisy.
 | Noise Scale | Control the noise frequency scale. |
 | Noise Offset | Offset the noise along the stroke. |
 | Noise Seed | Add a random seed. |
-| Randomize | ![](Pictures/100000010000012500000042354B9045.png){width="4.96cm" height="1.109cm"}Use a random value over time.<br>**Step**: Number of frames before using a new random value. |
+| Randomize | ![](Pictures/100000010000012500000042354B9045.png){width="4.96cm" height="1.109cm"}Use a random value over time. · **Step**: Number of frames before using a new random value. |
+
 
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 #### Custom Curve
 
@@ -202,12 +225,14 @@ Clipping options. Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
+
 | Property | What it changes |
 | ----------------- | ----------------------------------------------------------------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
 | Extend Horizontal | Extend the curve points horizontal before the first curve point and after the last curve point. |
 | Extend Vertical | Extend the curve points vertical before the first curve point and after the last curve point. |
 | Reset Curve | Resets the curve to the initial shape. |
+
 
 #### Curve window
 
@@ -225,11 +250,13 @@ Holding down shift enables slower movement, which allows more accurate setting.
 
 Set handle type to Vector.
 
+
 | Property | What it changes |
-| ------------------- | -------------------------------------------------------------------------------------------------------- |
+| ------------------- | ------------------------------------------------------------------------------------------------------- |
 | Auto Handle | Set handle type to Auto. |
 | Auto Clamped Handle | Set handle type to Auto Clamped. |
-| X / Y | The position of the currently selected curve point.<br>**Delete Points**: Deletes selected curve points. |
+| X / Y | The position of the currently selected curve point. · **Delete Points**: Deletes selected curve points. |
+
 
 ## Offset
 
@@ -241,11 +268,13 @@ The Offset Modifier changes the strokes location, rotation or scale, starting fr
 
 ![General Subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/general-subpanel.png)
 
+
 | Property | What it changes |
 | ---------------- | ---------------------------------------------------- |
 | Location X, Y, Z | Sets strokes location offset from its object origin. |
 | Rotation X, Y, Z | Sets strokes rotation. |
 | Scale X, Y, Z | Sets strokes scale. |
+
 
 ### Advanced Subpanel
 
@@ -255,12 +284,14 @@ The Offset Modifier changes the strokes location, rotation or scale, starting fr
 
 ![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-deform/mode-2.png)
 
+
 | Property | What it changes |
 | -------- | ------------------------------------------------------------ |
 | Random | Randomize Stroke Offset. |
 | Layer | Offset Layers by the same factor. |
 | Stroke | Offset stroke by the same factor based on stroke draw order. |
 | Material | Offset materials by the same factor. |
+
 
 | Property | What it changes |
 | --------------- | ------------------------------------------------------------------------------ |
@@ -276,16 +307,19 @@ The Offset Modifier changes the strokes location, rotation or scale, starting fr
 | Material Step | Mode Material. Number of elements that will be grouped. |
 | Material Offset | Mode Material. Offset Starting Point. |
 
+
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 ## Shrinkwrap
 
@@ -331,12 +365,14 @@ Vertices that never hits the surface are not calculated.
 
 How the vertex snaps to the surface. The methods should be self explaining.
 
+
 | Property | What it changes |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Limit | A distance limit between original vertex and surface. If the distance is larger than this limit vertex would not be projected onto the surface. |
 | Subdivision Levels | This applies a (temporary) Catmull-Clark subdivision to the modified object’s geometry, before computing the wrap. |
 | Axis | Along which local axis of the modified object the projection is done. These options can be combined with each other, yielding a “median axis” of projection. If none are selected, the normal direction is used. |
 | Negative/Positive | This allows you to select the allowed direction(s) of the shrink along the selected axis. If both options are enabled, both ways are evaluated and the closest hit is selected. |
+
 
 ##### Face Cull
 
@@ -350,10 +386,12 @@ When projecting in the negative direction then invert culling.
 
 You need to have negative ticked and face cull either front or back to set this property active.
 
+
 | Property | What it changes |
 | ---------------- | ----------------------------------- |
 | Target | The target mesh to shrink to. |
 | Auxiliary Target | An additional object to project to. |
+
 
 #### Nearest Vertex
 
@@ -363,23 +401,27 @@ You need to have negative ticked and face cull either front or back to set this 
 
 The target mesh to shrink to.
 
+
 | Property | What it changes |
-| ------------- | -------------------------------------------------------------------------------------------------------------------- |
+| ------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Offset | An offset distance to keep to the target surface. |
 | Smooth factor | Amount of smoothing to apply |
 | Repeat | Number of steps to apply smooth. |
-| Vertex Group | Restrict the affected vertices to a vertex group.<br>**Invert**: Inverts the influence of the selected vertex group. |
+| Vertex Group | Restrict the affected vertices to a vertex group. · **Invert**: Inverts the influence of the selected vertex group. |
+
 
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 ## Smooth
 
@@ -387,24 +429,28 @@ The target mesh to shrink to.
 
 The Smooth modifier smoothens a stroke.
 
+
 | Property | What it changes |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mode | What elements to affect.<br>**Position**: Affects the position of the point.<br>**Strength**: Affects the color strength of the point<br>**Thickness**: Affects the thickness of the point.<br>**UV**: Affects the uv rotation factor of the point. |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mode | What elements to affect. · **Position**: Affects the position of the point. · **Strength**: Affects the color strength of the point · **Thickness**: Affects the thickness of the point. · **UV**: Affects the uv rotation factor of the point. |
 | Factor | The smoothing amount. Higher values will increase the effect. Values outside expected range (above 1.0 or below 0.0) will distort the mesh. |
 | Repeat | The number of smoothing iterations. |
 | Keep Shape | Smooth the details, but keep the overall shape. |
 | Smooth Ends | Smooth the ends of strokes. |
 
+
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 ## Thickness
 
@@ -412,21 +458,25 @@ The Smooth modifier smoothens a stroke.
 
 The Thickness Modifier change the stroke points thickness.
 
+
 | Property | What it changes |
-| ----------------- | -------------------------------------------------------------------------------------------------------- |
+| ----------------- | ------------------------------------------------------------------------------------------------------- |
 | Uniform Thickness | When enabled, makes the thickness equal for the entire strokes. |
-| Thickness Factor | Value to add or subtract to the actual points thickness.<br>**Weighted**: Use weight to modulate effect. |
+| Thickness Factor | Value to add or subtract to the actual points thickness. · **Weighted**: Use weight to modulate effect. |
+
 
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-deform/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 #### Custom Curve
 
@@ -454,12 +504,14 @@ Clipping options. Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
+
 | Property | What it changes |
 | ----------------- | ----------------------------------------------------------------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
 | Extend Horizontal | Extend the curve points horizontal before the first curve point and after the last curve point. |
 | Extend Vertical | Extend the curve points vertical before the first curve point and after the last curve point. |
 | Reset Curve | Resets the curve to the initial shape. |
+
 
 #### Curve window
 
@@ -477,8 +529,11 @@ Holding down shift enables slower movement, which allows more accurate setting.
 
 Set handle type to Vector.
 
+
 | Property | What it changes |
-| ------------------- | -------------------------------------------------------------------------------------------------------- |
+| ------------------- | ------------------------------------------------------------------------------------------------------- |
 | Auto Handle | Set handle type to Auto. |
 | Auto Clamped Handle | Set handle type to Auto Clamped. |
-| X / Y | The position of the currently selected curve point.<br>**Delete Points**: Deletes selected curve points. |
+| X / Y | The position of the currently selected curve point. · **Delete Points**: Deletes selected curve points. |
+
+

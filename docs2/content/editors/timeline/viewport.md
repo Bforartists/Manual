@@ -1,14 +1,17 @@
 ---
-id: "editors.timeline.viewport"
-title: "Timeline viewport"
-section: "editors"
-path: ["Editors", "Timeline", "Viewport"]
+id: editors.timeline.viewport
+title: Timeline viewport
+section: editors
+path:
+  - Editors
+  - Timeline
+  - Viewport
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["17 Editors - Timeline.odt"]
+source:
+  - 17 Editors - Timeline.odt
 ---
-
 ## Viewport Navigation
 
 Navigation in the viewport happens by mouse or hotkeys. Some of them does not have a menu entry. And needs to be explained here.
@@ -33,11 +36,13 @@ To drag a keyframe click at it and drag the mouse.
 
 When you right click into the timeline viewport then you will call the Dope Sheet context menu. Despite being in the time line.
 
+
 | Menu entry | What it does |
 | ------------- | ------------------------------------------ |
 | Copy | Copies the currently selected keyframe(s). |
 | Paste | Pastes copied keyframe(s) |
 | Paste Flipped | Pastes copied keyframe(s), but flipped. |
+
 
 ### Keyframe Type submenu
 
@@ -69,11 +74,13 @@ The easing methods here in the interpolation mode menu are for the easing shape.
 
 The easing methods in the interpolation mode menu are for the easing shape. This menu allows you to choose an easing method.
 
+
 | Menu entry | What it does |
 | ---------------- | ------------------------------------------ |
 | Insert Keyframes | Insert a keyframe at the current position. |
 | Duplicate | Duplicate the selected keyframe(s). |
 | Delete Keyframes | Delete the selected keyframe(s). |
+
 
 ### Mirror submenu
 
@@ -110,3 +117,4 @@ The Quick Menu is empty by default. With Add to Quick favorites you can add this
 ![Quick Favorites menu](/docs2/images/ui/timeline/viewport/quick-favorites-menu-2.png)
 
 In the 3D view we have a menu called Quick in the header, which shows this content then. In the Dope Sheet Editor you can just call it with its hotkey. Q. It has no regular menu entry here.
+

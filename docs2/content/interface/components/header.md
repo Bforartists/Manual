@@ -1,14 +1,17 @@
 ---
-id: "interface.header"
-title: "Header"
-section: "interface"
-path: ["The Interface", "Components", "Header"]
+id: interface.header
+title: Header
+section: interface
+path:
+  - The Interface
+  - Components
+  - Header
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["3 Interface.odt"]
+source:
+  - 3 Interface.odt
 ---
-
 Every editor has a header area. It usually contains the menu. And some tools or settings.
 
 ## Scroll Header
@@ -18,3 +21,4 @@ Every editor has a header area. It usually contains the menu. And some tools or 
 To scroll the header, click with the middle mouse button at it, and drag.
 
 ![Scroll Header](/docs2/images/ui/interface/header/scroll-header.png)
+

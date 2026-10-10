@@ -1,14 +1,18 @@
 ---
-id: "editors.timeline.channel-list"
-title: "Timeline channel list"
-section: "editors"
-path: ["Editors", "Timeline", "Channel list"]
+id: editors.timeline.channel-list
+title: Timeline channel list
+section: editors
+path:
+  - Editors
+  - Timeline
+  - Channel list
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["17 Editors - Timeline.odt", "17.2 Editors - Timeline - Channel list.odt"]
+source:
+  - 17 Editors - Timeline.odt
+  - 17.2 Editors - Timeline - Channel list.odt
 ---
-
 ## Timeline - Channel List
 
 ![Timeline - Channel List](/docs2/images/ui/timeline/channel-list/timeline-channel-list.png)
@@ -87,6 +91,7 @@ Locks the selected channel. It is not longer editable.
 
 When you right click into the channel area, then you will call the Channel context menu.
 
+
 | Menu entry | What it does |
 | -------------------------- | -------------------------------------------------------------------------------------- |
 | Frame selected channels | Centers the selected channels in view. |
@@ -99,11 +104,13 @@ When you right click into the channel area, then you will call the Channel conte
 | Toggle Channel Editability | Protects or unprotects the selected channels. |
 | Extrapolation Mode submenu | — |
 
+
 ### Extrapolation Mode
 
 ![Extrapolation Mode](/docs2/images/ui/timeline/channel-list/extrapolation-mode.png)
 
 Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.
+
 
 | Menu entry | What it does |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -112,10 +119,12 @@ Sets the extrapolation mode for the selected F-Curves. Means how the curve acts 
 | Make Cyclic | Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame. |
 | Clear Cyclic | Removes the cyclic extrapolation. |
 
+
 | Menu entry | What it does |
 | ----------------- | ----------------------- |
 | Expand Channels | Expands the channels. |
 | Collapse Channels | Collapses the channels. |
+
 
 ### Move Channels submenu
 
@@ -126,3 +135,4 @@ Sort the order of the channels. The menu items should be self explaining.
 ### Delete Channels
 
 Removes the selected channels.
+

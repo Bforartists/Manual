@@ -7,7 +7,7 @@
 
 **Date**: 2026-10-10
 
-**Status**: 🟢 Approved 10 Oct — Phase 1 ✅ · Phase 2 waiting for your hands-on test
+**Status**: 🟢 Approved 10 Oct — Phase 1 ✅ · Phase 2 ✅ · Phase 3 🚧 on the test branch `docs2/tier1-phase3`
 
 **Depends on**: Spike 1 (`docs2/spike1-migration`, commits `48a7749` → `ca887b9`)
 
@@ -308,28 +308,61 @@ of the source kept** (faithful clone, D13).
       old tags page.
 - [x] Word check still 23 of 23.
 
-**What survives a save** (from the source code; to be confirmed in your hands-on test)
+**🤖 Round 2, after your first live saves (10 Oct)**
+
+Your first one-word save changed **128 lines** and lost characters. The converter now writes exactly what the
+editor writes, checked line by line against your saved file: the only difference left is your own new sentence.
+
+- [x] **No backslashes anywhere.** The editor silently drops `\$`, `\|`, `\*`, `\~`, `\\` when it loads a page
+      (`$HOME` became `HOME`, `C:\Documents\…` became `C:Documents…`). Paths and `*.py` patterns are now code
+      spans; everything else is written without escapes.
+- [x] **Front matter in the editor's style:** plain values, quotes only where needed (`"5.1"`), lists as
+      `  - item`, empty lists left out, no blank line after `---`, file ends with one blank line.
+- [x] **Tip and Note tables** from the `.odt` become `> **Tip:** …` quotes instead of tables.
+- [x] **Table cells** with several paragraphs are joined with a space; the editor drops `<br>` inside cells.
+- [x] **Two blank lines around tables**, `&gt;` / `&lt;` for angle brackets, `&` left raw, link text unescaped.
+- [x] All pages regenerated; your edits kept (the Flatpak sentence, the test tip and screenshot, the test table).
+- [x] 🔘 **Edit buttons** at the top of `docs2/README.md`: Edit the docs, Shared snippets, Image library, Wiki.
+      They open Pages CMS directly on the docs branch.
+- [x] 📘 **Wiki populated** in the Bforartists wiki style (Home with tables, grouped sidebar, footer): 10 pages.
+      Kept in `docs2/dev-docs/`, copied by `docs2/tools/wiki_sync.py`. GitHub wikis can't be branched, so
+      every copied page carries a 🧪 **Proposed workflow** notice until Docs 2.0 is merged.
+- [x] Word check still 23 of 23.
+
+**What survives a save** (confirmed on your live saves)
 
 | Pattern | On save | Status |
 |---|---|---|
-| `> **Tip:** …` callouts | Written back the same | ✅ |
+| `> **Tip:** …` callouts | Same. `> Tip: …` without bold also works | ✅ |
 | `Ctrl + Space`, `Edit › Preferences` | Same (plain text) | ✅ |
 | `**bold**`, `*italic*`, headings, `- ` lists, `1. ` lists | Same | ✅ |
-| Images on their own line `![alt](path)` | Same; path kept by the media mapping | ✅ |
-| Links | Written as `[text](url)`; converter now matches | ✅ fixed |
-| Tables | Rows trimmed, divider padded; converter now matches | ✅ fixed |
+| Images on their own line `![alt](path)` | Same | ✅ |
+| Links, bare web addresses | Written as `[url](url)`; converter matches | ✅ |
+| Tables | Rows trimmed, divider padded, two blank lines around; converter matches | ✅ fixed |
+| Front matter | Rewritten as plain YAML; converter matches | ✅ fixed |
+| Backslash escapes (`\$`, `\*`, `\|`) | ❌ Dropped with the character; converter writes none | ✅ fixed |
+| `<br>` inside a table cell | ❌ Dropped; converter joins with a space | ✅ fixed |
+| `>` and `<` in text | Become `&gt;` and `&lt;` | 🟡 use `›` for menus (already the case) |
 | `*Shared section: [Title](…)*` | Same | ✅ |
-| Text with `*`, `_`, `[`, `]`, `~`, `&`, `<`, `>` | Escaped (`\_`, `&amp;`) | 🟡 rare, only that line changes |
-| Icons inside table cells (14 rows, Spike 1 pages only) | Images are blocks in this editor; may gain a `<br>` | ⚠️ test live |
-| `>` used as a menu separator (`A > B`) | Becomes `&gt;` | 🟡 use `›` (already the case) |
 
-**Scorecard: three ways to write** (first assessment, to be confirmed by your test)
+**📋 What your test showed**
+
+| | Finding | What we do |
+|---|---|---|
+| 🔴 | A one-word save rewrote 128 lines and lost characters | ✅ Fixed in the converter (round 2 above) |
+| 🟡 | Dropped screenshots land in `docs2/images/` (the library root), not `images/_inbox/` | Phase 3: the image bot also files new images in the root |
+| 🟡 | One drop made two copies (`…z.png` and `…z-1.png`) | Phase 3: the bot removes byte-identical copies |
+| 🟡 | Alt text is the file name (`bforartists_2E0BqKRl0z.png`) | Phase 3: `check.py` flags file-name alt text; the bot suggests the heading |
+| 🟢 | `/` → Quote → `Tip: test` saved as `> Tip: test` | Plain writing accepts bold and plain `Tip:` |
+| 🟢 | New table from `/` → Table saved cleanly | Nothing to do |
+
+**Scorecard: three ways to write** (confirmed by your test)
 
 | | 🖋️ Pages CMS | 🐙 GitHub web editor | 💻 github.dev / own editor |
 |---|---|---|---|
 | No installs | ✅ | ✅ | ✅ github.dev · ❌ local |
 | WYSIWYG | ✅ | ❌ | 🟡 preview beside |
-| Drag and drop images | ✅ into the library | 🟡 not into the library | 🟡 copy by hand |
+| Drag and drop images | ✅ into `images/`, the bot files them | 🟡 not into the library | 🟡 copy by hand |
 | Insert a tip, image, table | ✅ `/` menu | ❌ | ❌ |
 | Review | 🟡 saves to a branch | ✅ pull request | ✅ pull request |
 | Fun | ✅ | ❌ | 🟡 developers |
@@ -340,19 +373,32 @@ Code block); `.pages.yml` cannot add commands. Plain writing covers tips (Quote 
 and hotkeys. If writers want real `/Tip` or `/Video` buttons: propose an upstream change to Pages CMS (open source,
 MIT) that lets `.pages.yml` define text-template commands. Forking means hosting it, so it is the last resort (D3).
 
-**👤 Your hands-on test (30 minutes)**
+**👤 Your hands-on test (30 minutes)** ✅ done 10 Oct
 
-- [ ] Push `docs2/tier1-getting-started` to GitHub (VS Code: **Publish Branch**).
-- [ ] Open [app.pagescms.org](https://app.pagescms.org), sign in with GitHub, install the app on `Bforartists/Manual` only.
-- [ ] Pick the branch `docs2/tier1-getting-started`; open 📘 Documentation pages → Getting Started → Installation.
-- [ ] Change one word, Save. On GitHub, check the commit changed **one line**.
-- [ ] Add `/` → Quote → "Tip: test". Type `Ctrl + S` and `Edit › Preferences`. Save; check the diff.
-- [ ] Drag a screenshot in. Save; check it landed in `docs2/images/_inbox/`.
-- [ ] Open a Timeline page with icons in a table; change one word; Save; check the table.
-- [ ] Pick a shared section in the form on a Timeline page; Save; check `shared:`.
-- [ ] Tell me how it felt: easy, fun, or what got in the way.
+- [x] Push `docs2/tier1-getting-started` to GitHub (VS Code: **Publish Branch**).
+- [x] Open [app.pagescms.org](https://app.pagescms.org), sign in with GitHub, install the app on `Bforartists/Manual` only.
+- [x] Pick the branch `docs2/tier1-getting-started`; open 📘 Documentation pages → Getting Started → Installation.
+- [x] Change one word, Save. On GitHub, check the commit changed **one line**.
+- [x] **Try the plain-writing patterns** (about 5 minutes, still on the Installation page):
+      1. Click at the end of any paragraph and press `Enter` for a new empty line.
+      2. Type `/`. A menu opens; pick **Quote**. Inside the quote, type `Tip: test`. Optional: select `Tip:`
+         and press `Ctrl + B` to make it bold, like the converted pages.
+      3. Press `Enter` twice to leave the quote. On the new line, type `Press Ctrl + S to save.`
+      4. On the next line, type `Open Edit › Preferences.` Copy the `›` from this line; a plain `>` also works,
+         but the editor saves it as `&gt;`.
+      5. Click **Save** (top right).
+      6. On GitHub, open the newest commit on the branch: *docs: update … (Pages CMS, your name)*.
+      7. ✅ Expected: only your three new lines show in green, `> Tip: test` (or `> **Tip:** test`),
+         `Press Ctrl + S to save.` and `Open Edit › Preferences.`; no other line changed.
+      8. ❌ If other lines changed, or `Tip:`, `+` or `›` came out differently (for example `\>` or `&gt;`),
+         screenshot the diff and send it to me.
+      9. Delete the three test lines and Save again, or leave them and I clean up later.
+- [x] Drag a screenshot in. Save; check it landed in `docs2/images/_inbox/`.
+- [x] Open a Timeline page with icons in a table; change one word; Save; check the table.
+- [x] Pick a shared section in the form on a Timeline page; Save; check `shared:`.
+- [x] Tell me how it felt: easy, fun, or what got in the way.
 
-**Acceptance:** a save in Pages CMS produces a clean one-file diff; plain patterns unchanged.
+**Acceptance:** a save in Pages CMS produces a clean one-file diff; plain patterns unchanged. ✅ (round 2)
 
 ### Phase 3 — Checks, Image Bot and Preview
 

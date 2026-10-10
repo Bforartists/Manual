@@ -1,14 +1,19 @@
 ---
-id: "editors.properties.modifiers.grease-pencil.generate"
-title: "Generate modifiers (Grease Pencil)"
-section: "editors"
-path: ["Editors", "Properties", "Grease Pencil", "Modifiers tab", "Generate modifiers"]
+id: editors.properties.modifiers.grease-pencil.generate
+title: Generate modifiers (Grease Pencil)
+section: editors
+path:
+  - Editors
+  - Properties
+  - Grease Pencil
+  - Modifiers tab
+  - Generate modifiers
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["26.9.8 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Generate Modifiers.odt"]
+source:
+  - 26.9.8 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Generate Modifiers.odt
 ---
-
 ![Generate modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-generate/generate-modifiers-grease-pencil.png)
 
 Some of the modifiers are just available for specific object types.
@@ -27,10 +32,12 @@ Multiple Array modifiers may be active for an object at the same time. This allo
 
 Hint for Offset Calculation. The transformation applied from one copy to the next is calculated as the sum of the three different components (Relative, Constant and Object), each of which can be enabled/disabled independently of the others. This allows, for example, a relative offset of (1.0, 0.0, 0.0) and a constant offset of (0.1, 0.0, 0.0), giving an array of objects neatly spaced along the X axis with a constant 0.1 unit between them, whatever the original object’s size.
 
+
 | Property | What it changes |
 | ----------------- | ------------------------------------------------------------------------------------------ |
 | Count | Number of Items |
 | Material Override | Index of the material used for generated strokes. A value of 0 uses the original material. |
+
 
 ### Relative Offset subpanel
 
@@ -64,23 +71,27 @@ Choose an object.
 
 Randomize the transform values.
 
+
 | Property | What it changes |
-| -------- | ---------------------------------------------------------------------- |
+| -------- | --------------------------------------------------------------------- |
 | Offset | Randomize the offset values. |
 | Rotation | Randomize the rotation values. |
-| Scale | Randomize the scale values.<br>**Uniform Scale**: Use uniform scaling. |
+| Scale | Randomize the scale values. · **Uniform Scale**: Use uniform scaling. |
 | Seed | The random seed value. |
+
 
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 ## Build
 
@@ -118,10 +129,12 @@ How to calculate the timing of the frames.
 
 Use recorded speed multiplied by a factor.
 
+
 | Property | What it changes |
 | ------------ | -------------------------------------------- |
 | Speed Factor | Multiply recorded drawing speed by a factor. |
 | Maximum Gap | The maximum gap between strokes in seconds. |
+
 
 ###### Number of Frames
 
@@ -129,10 +142,12 @@ Use recorded speed multiplied by a factor.
 
 Set a fixed number of frames for all build animations.
 
+
 | Property | What it changes |
 | -------- | ------------------------------------------------------------- |
 | Frames | Maximum number of frames that the build effect can run. |
 | Delay | Number of frames to delay before the modifier has any effect. |
+
 
 ###### Percentage Factor
 
@@ -160,11 +175,13 @@ All strokes appear or disappear at once.
 
 How the strokes are animated.
 
+
 | Property | What it changes |
 | -------- | ------------------------------- |
 | Grow | Grow over the animation time. |
 | Shrink | Shrink over the animation time. |
 | Vanish | Vanish over the animation time. |
+
 
 ##### Timing
 
@@ -182,10 +199,12 @@ What method to use to build animations. Number of frames, or percentage.
 
 When strokes should start to appear or disappear.
 
+
 | Property | What it changes |
 | ----------- | ---------------------------------------- |
 | Align Start | All strokes appears at the same time. |
 | Align End | All strokes disappears at the same time. |
+
 
 **Frames**
 
@@ -205,10 +224,12 @@ Number of frames after each GP keyframe before the modifier has any effect.
 
 When strokes should start to appear or disappear.
 
+
 | Property | What it changes |
 | ----------- | ---------------------------------------- |
 | Align Start | All strokes appears at the same time. |
 | Align End | All strokes disappears at the same time. |
+
 
 **Factor**
 
@@ -234,10 +255,12 @@ What method to use to build animations.
 
 ![Natural Drawing Speed](/docs2/images/ui/properties/modifiers/grease-pencil-generate/natural-drawing-speed-2.png)
 
+
 | Property | What it changes |
 | ------------ | ------------------------------------------- |
 | Speed Factor | Multiply the recording speed by a factor. |
 | Maximum Gap | The maximum gap between strokes in seconds. |
+
 
 ###### Number of frames
 
@@ -249,10 +272,12 @@ What method to use to build animations.
 
 When strokes should start to appear or disappear.
 
+
 | Property | What it changes |
 | ----------- | ---------------------------------------- |
 | Align Start | All strokes appears at the same time. |
 | Align End | All strokes disappears at the same time. |
+
 
 **Frames**
 
@@ -272,14 +297,17 @@ Number of frames after each GP keyframe before the modifier has any effect.
 
 When strokes should start to appear or disappear.
 
+
 | Property | What it changes |
 | ----------- | ---------------------------------------- |
 | Align Start | All strokes appears at the same time. |
 | Align End | All strokes disappears at the same time. |
 
+
 **Factor**
 
 How much the stroke is visible.
+
 
 | Property | What it changes |
 | ----------- | --------------------------------------------------------------------------- |
@@ -287,22 +315,26 @@ How much the stroke is visible.
 | Frames | Maximum number of frames that the build effect can run. |
 | Object | Pick an object as the starting position. |
 
+
 ### Effective Range
 
 ![Effective Range](/docs2/images/ui/properties/modifiers/grease-pencil-generate/effective-range.png)
 
 Only modify strokes that lies in the specified time frame.
 
+
 | Property | What it changes |
 | -------- | ----------------------------- |
 | Start | The first frame of the range. |
 | End | The last frame of the range. |
+
 
 ### Fading subpanel
 
 ![Fading subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/fading-subpanel.png)
 
 Fade out strokes instead of cutting them off.
+
 
 | Property | What it changes |
 | ------------- | ------------------------------------------------------------ |
@@ -311,16 +343,19 @@ Fade out strokes instead of cutting them off.
 | Opacity | How much strength fading applies on top of stroke opacity. |
 | Weight Output | Limit the fade to a vertex group. |
 
+
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 ## Dot Dash
 
@@ -336,11 +371,13 @@ The offset into each stroke before the dot creation starts.
 
 Manage the single segments of the dotted dash. Segments gets repeated as they appear in the list. Means when you just have one segment in the list, then this shape will be repeated. When you have two, then the first will be displayed, then the second, then the first, and so on. Every segment can have its own settings. Which are managed below.
 
+
 | Property | What it changes |
 | ---------------------------- | ------------------------------------------------------- |
 | Add Segment | Add a new dash segment. |
 | Remove Segment | Remove the dash segment. |
 | Move Dash Segment up or down | Moves the selected dash segment up or down in the list. |
+
 
 #### Search element
 
@@ -348,12 +385,14 @@ Manage the single segments of the dotted dash. Segments gets repeated as they ap
 
 By clicking at the triangle button you reveal a search field with which you can search through the list.
 
+
 | Property | What it changes |
 | ------------ | -------------------------------------- |
 | Edit Box | Type in the search term and hit enter. |
 | Invert | Inverts the search term. |
 | Sort by name | Sorts the list alphabetically. |
 | Reverse | Inverts the list. |
+
 
 | Property | What it changes |
 | -------------- | ----------------------------------------------------------------------------------- |
@@ -364,16 +403,19 @@ By clicking at the triangle button you reveal a search field with which you can 
 | Material Index | What material to use. |
 | Cyclic | Enable cyclic on individual stroke dashes. |
 
+
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 ## Envelope
 
@@ -385,11 +427,13 @@ Generates a envelope shape that connects all points in this envelope.
 
 ![Mode](/docs2/images/ui/properties/modifiers/grease-pencil-generate/mode-2.png)
 
+
 | Property | What it changes |
 | -------- | ---------------------------------------------------------------------------------------- |
 | Deform | Deform the stoke to best match the envelope shape. |
 | Segments | Add segments to create the envelope. Keep the original stroke. |
 | Fills | Add Fill segments to create the envelope. This method does not keep the original stroke. |
+
 
 | Property | What it changes |
 | -------------- | ------------------------------------------------------------- |
@@ -399,17 +443,20 @@ Generates a envelope shape that connects all points in this envelope.
 | Material Index | The material index of the material that is used. |
 | Skip Segments | Define a number of segments to skip to reduce the complexity. |
 
+
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel-2.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
-| Vertex Group | Assign a vertex group to modulate the deform.<br>**Inverse Pass**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+| Vertex Group | Assign a vertex group to modulate the deform. · **Inverse Pass**: Inverts the influence. |
+
 
 ## Length
 
@@ -423,16 +470,19 @@ The Length Modifier extends or shortens the original strokes length.
 
 Defines the mode to use for the length calculation. Relative to the length of the grease pencil stroke, or absolute in geometry space.
 
+
 | Property | What it changes |
 | ---------------- | ------------------------------------------------------------------------- |
 | Factor Start/End | Length difference for each stroke. |
 | Used Length | What position of the stroke is used for the calculation of the extension. |
+
 
 ### Randomize subpanel
 
 ![Randomize subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/randomize-subpanel.png)
 
 Randomization for the start / end lengths.
+
 
 | Property | What it changes |
 | ------------ | -------------------------------------------------------- |
@@ -442,11 +492,13 @@ Randomization for the start / end lengths.
 | Noise Offset | Smoothly offset the random value of each stroke. |
 | Seed | The random seed value. |
 
+
 ### Curvature subpanel
 
 ![Curvature subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/curvature-subpanel.png)
 
 Follow the curvature of the stroke.
+
 
 | Property | What it changes |
 | ----------------- | --------------------------------------------------------------------------------------------- |
@@ -455,16 +507,19 @@ Follow the curvature of the stroke.
 | Filter Angle | Ignore points of the stroke that derivate from their neighbours by more than this angle. |
 | Invert Curvature | Invert the curvature of the stroke's extension. |
 
+
 ### Influence
 
 ![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 ## Line Art
 
@@ -492,17 +547,20 @@ What type of geometry source should line art be generated from.
 
 ![Collection](/docs2/images/ui/properties/modifiers/grease-pencil-generate/collection.png)
 
+
 | Property | What it changes |
-| ----------- | ------------------------------------------------------------------------------------------------------------ |
-| Collection | The collection where you want to apply the line art to.<br>**Invert**: Inverts the selection of collections. |
+| ----------- | ----------------------------------------------------------------------------------------------------------- |
+| Collection | The collection where you want to apply the line art to. · **Invert**: Inverts the selection of collections. |
 | Layer | Grease Pencil layer that is assigned to the generated strokes. |
 | Material | Grease pencil material assigned to the generated strokes. |
 | Line Radius | The thickness of the line. |
 | Opacity | The opacity of the line. |
 
+
 #### Object
 
 ![Object](/docs2/images/ui/properties/modifiers/grease-pencil-generate/object.png)
+
 
 | Property | What it changes |
 | ----------- | -------------------------------------------------------------- |
@@ -512,11 +570,13 @@ What type of geometry source should line art be generated from.
 | Line Radius | The thickness of the line. |
 | Opacity | The opacity of the line. |
 
+
 #### Scene
 
 ![Scene](/docs2/images/ui/properties/modifiers/grease-pencil-generate/scene.png)
 
 Applies the line art grease pencil strokes to the whole scene.
+
 
 | Property | What it changes |
 | ----------- | -------------------------------------------------------------- |
@@ -524,6 +584,7 @@ Applies the line art grease pencil strokes to the whole scene.
 | Material | Grease pencil material assigned to the generated strokes. |
 | Line Radius | The thickness of the line. |
 | Opacity | The opacity of the line. |
+
 
 ### Edge types subpanel
 
@@ -543,21 +604,25 @@ Use a contour.
 
 What kind of contour to use.
 
+
 | Property | What it changes |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Use Crease | Generate strokes from crease edges.<br>**Crease Threshold**: Angles smaller than this value will be treaten as creases. |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Use Crease | Generate strokes from crease edges. · **Crease Threshold**: Angles smaller than this value will be treaten as creases. |
 | Crease | Influence crease edges. The angle what edges are treaten as creases can be adjusted in the edit box. |
 | Material Borders | Generate strokes from borders between materials. |
 | Intersections | Generate strokes from intersections. |
 | Edge Marks | Generate strokes from edge marks. |
 | Loose | Generate strokes from loose geometry. |
 
+
 #### Light Object
+
 
 | Property | What it changes |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | Light Contour | You need to pick a light object in the Light Reference panel. Generate light shadow separation lines from a referenced light object. |
 | Cast Shadow | You need to pick a light object in the Light Reference panel. The line casts shadow. |
+
 
 ##### Illumination filtering
 
@@ -577,6 +642,7 @@ Allow an edge to have multiple overlapping types.
 
 This panel allows you to add a light object as a source for line art.
 
+
 | Property | What it changes |
 | ------------------ | -------------------------------------------------------------------------------------- |
 | Light Object | Pick the light source. |
@@ -584,9 +650,11 @@ This panel allows you to add a light object as a source for line art.
 | Near | The near clip plane of the shadow camera. |
 | Far | The far clip plane of the shadow camera. |
 
+
 ### Geometry Processing subpanel
 
 ![Geometry Processing subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/geometry-processing-subpanel.png)
+
 
 | Property | What it changes |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -598,14 +666,17 @@ This panel allows you to add a light object as a source for line art.
 | Crease on Sharp | Allow crease to show on sharp edges. |
 | Force Back Face Culling | Remove all backfaces to speed up calculation. |
 
+
 ### Occlusion Subpanel
 
 ![Occlusion Subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/occlusion-subpanel.png)
 
+
 | Property | What it changes |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Range | If enabled, the modifier will select lines that have an occlusion level between start and end values. If not enabled just a single Level value slider shows. |
-| Material Mask subpanel | Use material masks to filter out occluded strokes. You need to have a range level higher than 0.<br>**Masks**: Choose up to eight mask bits for the masking.<br>**Exact match**: Require matching all material masks instead of just one. |
+| Material Mask subpanel | Use material masks to filter out occluded strokes. You need to have a range level higher than 0. · **Masks**: Choose up to eight mask bits for the masking. · **Exact match**: Require matching all material masks instead of just one. |
+
 
 ### Intersection subpanel
 
@@ -625,54 +696,64 @@ Require matching all intersections instead of just one.
 
 Filter Feature Lines using Freestlye Face Masks.
 
+
 | Property | What it changes |
 | ------------ | --------------------------------------------------- |
 | Invert | Invert face mask filtering. |
 | Boundaries | Filter feature lines based on face mask boundaries. |
 | Keep Contour | Preserve contour lines while filtering. |
 
+
 ### Chain
 
 ![Chain](/docs2/images/ui/properties/modifiers/grease-pencil-generate/chain.png)
 
+
 | Property | What it changes |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Intersection with Contour | Allows intersection lines to be chained together with contour lines. |
 | All Lines | Enabling this option will cause all lines to have the type of contour and to be chained together. |
 | Loose Edges | Allow loose edges to be chained together. |
 | Loose As Contour | Loose edges will have contour type. |
-| Preserve Details | Keep the zig-zag noise in initial chanining.<br>**Geometry Space**: Use Geometry distance for chaining instead of image space. |
+| Preserve Details | Keep the zig-zag noise in initial chanining. · **Geometry Space**: Use Geometry distance for chaining instead of image space. |
 | Image Threshold | Segments with an image distance smaller than this value will be chained together. |
 | Smooth tolerance | Strength of smoothing applied on jagged chains. |
 | Angle Splitting | The angle in screen space below which a stroke is split into two. |
+
 
 ### Vertex Weight Transfer subpanel
 
 ![Vertex Weight Transfer subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/vertex-weight-transfer-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Filter Source | If source mesh has vertex groups whose name starts with this string, then the vertex weight info will be transferred into weight groups in Grease Pencil strokes.<br>**Invert Vertex Group**: Inverts the selection. |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Filter Source | If source mesh has vertex groups whose name starts with this string, then the vertex weight info will be transferred into weight groups in Grease Pencil strokes. · **Invert Vertex Group**: Inverts the selection. |
 | Match Output | Transfer the filtered object vertex weights into Grease Pencil weight groups with the same names as the filtered ones. |
 | Target | If Match Output is off, then a target vertex group has to be specified. If there are multiple weight groups copied into target, then the highest weight value is copied into it. |
+
 
 ### Composition
 
 ![Composition](/docs2/images/ui/properties/modifiers/grease-pencil-generate/composition.png)
 
+
 | Property | What it changes |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Overscan | A margin to prevent an abrupt end of the stroke at the edge of the image.<br>**Image boundary trimming**: Trim all edges right at the boundary of image (including overscan region) |
-| Depth Offset | Move strokes slightly towards the camera to avoid clipping.<br>**Towards custom camera**: Offset strokes towards selected camera instead of the active camera. |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Overscan | A margin to prevent an abrupt end of the stroke at the edge of the image. · **Image boundary trimming**: Trim all edges right at the boundary of image (including overscan region) |
+| Depth Offset | Move strokes slightly towards the camera to avoid clipping. · **Towards custom camera**: Offset strokes towards selected camera instead of the active camera. |
+
 
 ### Bake subpanel
 
 ![Bake subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/bake-subpanel.png)
 
+
 | Property | What it changes |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Bake Line Art / Bake All | Bakes Line Art strokes for active Grease Pencil object within the start, end frame range in scene. Bake All bakes all Grease Pencil objects that contains at least one Line Art modifier. After baking, baked Line Art modifier will be deactivated automatically. |
 | Clear Baked Line Art / Clear All | Clears baked line art frames within the scene frame range for active Grease Pencil object. Clear All applies the same operation for all Grease Pencil objects that contains at least one Line Art modifier. |
+
 
 ## Mirror
 
@@ -690,12 +771,14 @@ You can animate it to move the mirror axis.
 
 ![Influence](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 ## Multiple Strokes
 
@@ -703,11 +786,13 @@ You can animate it to move the mirror axis.
 
 Adds multiple parallel copies of the stroke around the original stroke.
 
+
 | Property | What it changes |
 | ---------- | ------------------------------------------------------------------- |
 | Duplicates | The number of additional strokes. |
 | Distance | Distance between the original and the duplicate strokes. |
 | Offset | Control the offset position (inner or outer) for duplicate strokes. |
+
 
 ### Fade
 
@@ -715,22 +800,26 @@ Adds multiple parallel copies of the stroke around the original stroke.
 
 Fade out duplicate strokes, using their opacity or thickness.
 
+
 | Property | What it changes |
 | --------- | -------------------------------------------- |
 | Center | Control the initial position for the fading. |
 | Thickness | Fade influence on strokes thickness. |
 | Opacity | Fade influence on strokes opacity. |
 
+
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 ## Outline
 
@@ -750,6 +839,7 @@ The active camera has the active orange triangle above the widget. You can also 
 
 ![Outline](/docs2/images/ui/properties/modifiers/grease-pencil-generate/line-art-3.png)
 
+
 | Property | What it changes |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
 | Thickness | The thickness of the outline. |
@@ -759,16 +849,19 @@ The active camera has the active orange triangle above the widget. You can also 
 | Outline material | Material used for the outline strokes. If no material is chosen then the material from the parent stroke is used. |
 | Target object | A target object to define the stroke start. |
 
+
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 ## Simplify
 
@@ -782,6 +875,7 @@ The Simplify modifier allows you to reduce the amount of points in the strokes. 
 
 How to reduce points in the strokes.
 
+
 | Property | What it changes |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fixed | Deletes alternated points in the strokes, except the start and end points. |
@@ -790,16 +884,19 @@ How to reduce points in the strokes.
 | Merge | Simplifies the strokes by merging points that are closer than a specified distance to each other. |
 | Iterations | Number of times to repeat the procedure. |
 
+
 ### Influence subpanel
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel.png)
 
+
 | Property | What it changes |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Invert**: Inverts the influence. |
-| Material Pass | The material pass index.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Invert**: Inverts the influence. |
+| Material Pass | The material pass index. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+
 
 ## Subdivide
 
@@ -811,10 +908,12 @@ The Subdivide modifier subdivide the strokes by inserting points between other p
 
 ![Subdivision Type](/docs2/images/ui/properties/modifiers/grease-pencil-generate/subdivision-type.png)
 
+
 | Property | What it changes |
 | ------------- | ---------------------------------------------------- |
 | Catmull-Clark | Subdivides and smooths the surfaces. |
 | Simple | Only subdivides the surfaces, without any smoothing. |
+
 
 ### Subdivisions
 
@@ -824,9 +923,12 @@ Number of subdivisions.
 
 ![Influence subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/influence-subpanel-3.png)
 
+
 | Property | What it changes |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use.<br>**Invert**: Inverts the influence. |
-| Layer Pass | The layer pass index.<br>**Use Layer pass**: Use the layer pass.<br>**Layer pass value**: The layer pass value.<br>**Invert**: Inverts the influence. |
-| Material Pass | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use.<br>**Use Material pass**: Use the Material pass.<br>**Material pass value**: The Material pass value.<br>**Invert**: Inverts the influence. |
-| Pass | The material pass index.<br>**Invert**: Inverts the influence. |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Layer | Restricts the effect only to one layer or to any layers that share the same pass index. Click to pick the layer that you want to use. · **Invert**: Inverts the influence. |
+| Layer Pass | The layer pass index. · **Use Layer pass**: Use the layer pass. · **Layer pass value**: The layer pass value. · **Invert**: Inverts the influence. |
+| Material Pass | Restricts the effect only to material that share the same material or pass index. Click to pick the material that you want to use. · **Use Material pass**: Use the Material pass. · **Material pass value**: The Material pass value. · **Invert**: Inverts the influence. |
+| Pass | The material pass index. · **Invert**: Inverts the influence. |
+
+

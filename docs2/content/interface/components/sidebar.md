@@ -1,14 +1,17 @@
 ---
-id: "interface.sidebar"
-title: "Sidebar"
-section: "interface"
-path: ["The Interface", "Components", "Sidebar"]
+id: interface.sidebar
+title: Sidebar
+section: interface
+path:
+  - The Interface
+  - Components
+  - Sidebar
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["3 Interface.odt"]
+source:
+  - 3 Interface.odt
 ---
-
 ![Sidebar](/docs2/images/ui/interface/sidebar/sidebar.png)
 
 Some editors have a Sidebar at the right side. It can be resized by dragging. It can be closed and opened.
@@ -30,3 +33,4 @@ You can grab the border and drag the Sidebar to the left or to the right to expa
 ![Open Sidebar by Plus Button](/docs2/images/ui/interface/sidebar/open-sidebar-by-plus-button.png)
 
 When a sidebar is closed then you will see a little plus button. When you click at this button then the sidebar will reappear.
+

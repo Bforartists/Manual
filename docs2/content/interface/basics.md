@@ -1,14 +1,16 @@
 ---
-id: "interface.basics"
-title: "Interface basics"
-section: "interface"
-path: ["The Interface", "Basics"]
+id: interface.basics
+title: Interface basics
+section: interface
+path:
+  - The Interface
+  - Basics
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["3 Interface.odt"]
+source:
+  - 3 Interface.odt
 ---
-
 ## Interface
 
 ### User Interface Principles
@@ -54,3 +56,4 @@ When you don't have any recent files, then the splash screen shows a Getting Sta
 And when you have recent files, then the splash screen lists them instead of the Getting Started section.
 
 In the splash screen you can also read at what Blender version the current Bforartists version is based at.
+

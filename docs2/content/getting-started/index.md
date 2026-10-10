@@ -1,15 +1,16 @@
 ---
-id: "getting-started.index"
-title: "Getting Started"
-slug: "overview"
-section: "getting-started"
-path: ["Getting Started"]
+id: getting-started.index
+title: Getting Started
+slug: overview
+section: getting-started
+path:
+  - Getting Started
 version: "5.1"
-status: "draft"
+status: draft
 screenshots: "5.1"
-source: ["webflow:overview"]
+source:
+  - webflow:overview
 ---
-
 ## Introduction
 
 Welcome to the Documentation! Let's get started.
@@ -51,3 +52,4 @@ This is **Blender** deep down, but there are some fundamental differences. Learn
 You can use your **Blender** hotkeys, settings, addons and theme with Bforartists! Learn how to migrate here.
 
 [Make Yourself at Home](migrating-from-blender.md)
+
