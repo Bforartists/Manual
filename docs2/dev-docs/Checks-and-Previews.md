@@ -2,7 +2,7 @@
 
 > **Every change answers two questions on its own: is it correct, and how will it look?**
 
-🧪 Built in Phase 3 on the test branch `docs2/tier1-phase3`, reviewed as a pull request into `docs2/tier1-getting-started`.
+✅ Built in Phase 3 and merged into `docs2/tier1-getting-started` (pull request #1362).
 
 ---
 

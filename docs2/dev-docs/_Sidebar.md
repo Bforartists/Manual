@@ -13,6 +13,7 @@
 - [🌿 Branches and review](Branches-and-Review.md)
 - [🔄 Converting chapters](Converting-Chapters.md)
 - [✅ Checks and previews](Checks-and-Previews.md)
+- [🌐 Website sync](Website-Sync.md)
 
 **📊 Status**
 - [🛣️ Roadmap](Roadmap.md)

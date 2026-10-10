@@ -18,8 +18,8 @@ import sys
 from urllib.parse import quote
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from docs_io import DOCS_ROOT, iter_pages, resolve  # noqa: E402
-import patterns  # noqa: E402
+from docs_io import DOCS_ROOT, iter_pages, site_tree  # noqa: E402
+import html_build  # noqa: E402
 
 REPO_URL = os.environ.get("DOCS_REPO_URL", "https://github.com/Bforartists/Manual")
 CMS_URL = os.environ.get("DOCS_CMS_URL", "https://app.pagescms.org/Bforartists/Manual")
@@ -62,11 +62,6 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 """
 
 
-def md_engine():
-    from markdown_it import MarkdownIt
-    return MarkdownIt("commonmark", {"html": True}).enable("table")
-
-
 def load_nav(repo):
     import yaml
     p = os.path.join(repo, DOCS_ROOT, "nav.yml")
@@ -84,68 +79,34 @@ def rel_url(from_file, to_file):
 class Builder:
     def __init__(self, repo, out, branch, title):
         self.repo, self.out, self.branch, self.title = repo, out, branch, title
-        self.md = md_engine()
+        self.md = html_build.md_engine()
         self.nav = load_nav(repo)
+        self.tree = site_tree(repo)
         self.pages = {p.rel: p for p in iter_pages(repo)}
         self.rendered = set()
         self.images = set()
 
-    def image_width(self, abs_path):
-        try:
-            from PIL import Image
-            with Image.open(abs_path) as im:
-                return im.size[0]
-        except Exception:
-            return 0
-
-    def body_html(self, page, out_file, snippet=False):
-        html = self.md.render(page.body)
-
-        def fix_src(m):
-            src = htmllib.unescape(m.group(1))
-            r = resolve(page, src)
-            if r and os.path.exists(os.path.join(self.repo, r)):
-                self.images.add(r)
-                return f'src="{rel_url(out_file, r)}"'
-            return m.group(0)
-        html = re.sub(r'src="([^"]+)"', fix_src, html)
-
-        def fix_href(m):
-            href = htmllib.unescape(m.group(1))
-            r = resolve(page, href)
-            if not r:
-                return m.group(0)
-            anchor = "#" + href.split("#", 1)[1] if "#" in href else ""
-            if r in self.pages and r in self.targets and not (snippet and self.pages[r].kind == "snippet"):
-                return f'href="{rel_url(out_file, out_name(self.pages[r]))}{anchor}"'
-            return f'href="{REPO_URL}/blob/{self.branch}/{r}{anchor}"'
-        html = re.sub(r'href="([^"]+)"', fix_href, html)
-
-        def snippet_html(href):
-            name = os.path.basename(href.split("#")[0])
-            for p in self.pages.values():
-                if p.kind == "snippet" and os.path.basename(p.rel) == name:
-                    return self.body_html(p, out_file, snippet=True)
-            return None
-
-        return patterns.enhance(html, image_width=lambda s: self.image_width(os.path.join(self.repo, self._repo_path(out_file, s))),
-                                load_snippet=None if snippet else snippet_html)
-
-    def _repo_path(self, out_file, src):
-        return os.path.normpath(os.path.join(os.path.dirname(out_file), src)).replace("\\", "/")
+    def body_html(self, page, out_file):
+        return html_build.page_html(
+            self.repo, page, self.pages, self.md,
+            img_url=lambda r: rel_url(out_file, r),
+            page_url=lambda t: rel_url(out_file, out_name(t)) if t.rel in self.targets else None,
+            file_url=lambda r: f"{REPO_URL}/blob/{self.branch}/{r}",
+            used_images=self.images)
 
     def sidebar(self, current, out_file):
         rows = []
-        for sec in self.nav:
-            rows.append(f"<h4>{htmllib.escape(str(sec.get('title', '')))}</h4>")
-            for pg in sec.get("pages", []):
-                rel = f"{DOCS_ROOT}/{pg.get('file', '')}"
-                t = htmllib.escape(str(pg.get("title", "")))
-                if rel in self.targets:
-                    cls = ' class="is-current"' if current and rel == current.rel else ""
-                    rows.append(f'<a{cls} href="{rel_url(out_file, out_name(self.pages[rel]))}">{t}</a>')
+        for sec in self.tree:
+            rows.append(f"<h4>{htmllib.escape(str(sec.title))}</h4>")
+            for node in ([] if not sec.index else [None]) + sec.nodes:
+                p = sec.index if node is None else node.page
+                t = htmllib.escape(str(p.fm.get("title", "")))
+                pad = f' style="padding-left:{0.5 + 1.0 * node.level}rem"' if node and node.level else ""
+                if p.rel in self.targets:
+                    cls = ' class="is-current"' if current and p.rel == current.rel else ""
+                    rows.append(f'<a{cls}{pad} href="{rel_url(out_file, out_name(p))}">{t}</a>')
                 else:
-                    rows.append(f"<span>{t}</span>")
+                    rows.append(f"<span{pad}>{t}</span>")
         return "\n".join(rows)
 
     def shell(self, out_file, title, main, side, outline=""):
@@ -182,7 +143,7 @@ class Builder:
         return out_file, self.shell(out_file, str(fm.get("title", "")), main, self.sidebar(page, out_file), outline)
 
     def index_file(self, check_md, bot_md, changed):
-        order = [f"{DOCS_ROOT}/{pg.get('file', '')}" for sec in self.nav for pg in sec.get("pages", [])]
+        order = [p.rel for sec in self.tree for p in ([sec.index] if sec.index else []) + [n.page for n in sec.nodes]]
         rank = lambda r: (r not in changed, order.index(r) if r in order else len(order), r)  # noqa: E731
         cards = "".join(
             f'<a href="{out_name(self.pages[r])}"><b>{htmllib.escape(str(self.pages[r].fm.get("title", r)))}</b>'

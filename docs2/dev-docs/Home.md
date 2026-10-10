@@ -55,6 +55,7 @@ This wiki is for **writers, reviewers and maintainers** of the Bforartists manua
 | 🌿 [Branches and review](Branches-and-Review.md) | Branches, pull requests and who approves what |
 | 🔄 [Converting chapters](Converting-Chapters.md) | Turning `.odt` chapters into pages without losing a word |
 | ✅ [Checks and previews](Checks-and-Previews.md) | What every change is checked for, and the preview link |
+| 🌐 [Website sync](Website-Sync.md) | How a merge reaches the staging website |
 
 ### 📊 Status
 

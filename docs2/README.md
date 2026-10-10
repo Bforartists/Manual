@@ -24,7 +24,7 @@ The Bforartists manual as Markdown: one file per web page, written in plain text
 | `images/` | 🖼️ The image library, each image stored once, named by where it is used; `images/index.csv` lists them. New drops land in the root and the image bot files them |
 | `nav.yml` | 🧭 Sidebar order and icons |
 | `sources/webflow/` | The current website text the converter reads for pages that live on the website |
-| `tools/` | ⚙️ Converter, word-count check, repeat scan, sidebar generator, checks, image bot, preview, wiki sync |
+| `tools/` | ⚙️ Converter, word-count check, repeat scan, sidebar generator, checks, page-header and image bots, preview, Webflow sync, wiki sync |
 | `reports/` | 📊 Machine output of the last run |
 | `dev-docs/` | 📘 The [wiki](https://github.com/Bforartists/Manual/wiki) pages, reviewed here and copied by `tools/wiki_sync.py` |
 | `plans/` | 🗺️ Plans and tests |
@@ -44,7 +44,7 @@ Pages contain no special tags. The website build recognises plain patterns:
 
 ## 🤖 On every change
 
-`.github/workflows/docs2.yml` files new screenshots, checks every page and posts a 👀 preview link with the website's styles. See [Checks and previews](dev-docs/Checks-and-Previews.md).
+`.github/workflows/docs2.yml` fills in new page headers, files new screenshots, checks every page and posts a 👀 preview link with the website's styles. After a merge it syncs the pages to the staging website. See [Checks and previews](dev-docs/Checks-and-Previews.md) and [Website sync](dev-docs/Website-Sync.md).
 
 ## ⚙️ Run the converter
 

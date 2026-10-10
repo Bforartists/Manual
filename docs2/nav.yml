@@ -44,3 +44,8 @@
     - { id: "editors.properties.modifiers.grease-pencil.generate", title: "Generate modifiers (Grease Pencil)", file: "content/editors/properties/modifiers/grease-pencil/generate.md", icon: null }
     - { id: "editors.properties.modifiers.grease-pencil.deform", title: "Deform modifiers (Grease Pencil)", file: "content/editors/properties/modifiers/grease-pencil/deform.md", icon: null }
     - { id: "editors.properties.modifiers.grease-pencil.color", title: "Color modifiers (Grease Pencil)", file: "content/editors/properties/modifiers/grease-pencil/color.md", icon: null }
+
+- section: doc-kit
+  title: "Doc Kit (test)"
+  slug: doc-kit
+  pages: []

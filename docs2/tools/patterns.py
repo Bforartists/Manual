@@ -17,7 +17,7 @@ Used by the preview (render.py) and, later, by the Webflow sync, so both show th
 import html as htmllib
 import re
 
-CALLOUT_CLASS = {"tip": "is-tip", "hint": "is-tip", "note": "", "warning": "is-warning",
+CALLOUT_CLASS = {"tip": "is-tip", "hint": "is-tip", "note": "is-note", "warning": "is-warning",
                  "attention": "is-warning", "caution": "is-warning", "important": "is-important"}
 KEY = r"(?:Ctrl|Shift|Alt|Cmd|Option|Tab|Enter|Return|Esc|Space|Del|Delete|Backspace|Home|End|PageUp|PageDown|LMB|MMB|RMB|Wheel|F(?:1[0-2]|[1-9])|Numpad\s?\d|[A-Z0-9])"
 MOD = r"(?:Ctrl|Shift|Alt|Cmd|Option|LMB|MMB|RMB)"
@@ -43,12 +43,14 @@ LEAD_WORDS = {"Open", "Go", "Click", "Choose", "Select", "Use", "Press", "In", "
 
 def menu_chips(path):
     items = [x.strip() for x in re.split(r"[›‣]", path)]
+    seps = re.findall(r"[›‣]", path)
     lead = ""
     first = items[0].split(" ")
-    while len(first) > 1 and first[0] in LEAD_WORDS:          # "Open Edit › …" -> "Open " + chip "Edit"
+    while len(first) > 1 and first[0] in LEAD_WORDS:          # "Open Edit › …" -> "Open " + chip "Edit ›…"
         lead += first.pop(0) + " "
     items[0] = " ".join(first)
-    return lead + " › ".join(f'<span class="ui-doc-menu">{x}</span>' for x in items)
+    joined = items[0] + "".join(f" {sep} {x}" for sep, x in zip(seps, items[1:]))
+    return f'{lead}<span class="ui-doc-menu">{joined}</span>'
 
 
 def on_text(html, fn):
@@ -80,13 +82,26 @@ def callouts(html):
     return re.sub(r"<blockquote>\s*(.*?)\s*</blockquote>", fix, html, flags=re.S)
 
 
+FILE_ALT = re.compile(r"^[\w.-]+\.(png|jpe?g|webp|gif)$", re.I)
+IMG = re.compile(r'<img src="([^"]+)" alt="([^"]*)"\s*/?>')
+
+
+def figure(src, alt, cls=""):
+    # a caption only for descriptive alt text; short alt texts are usually just the heading again
+    cap = f"<figcaption>{htmllib.escape(alt)}</figcaption>" if len(alt.split()) >= 4 and not FILE_ALT.match(alt) else ""
+    return f'<figure{cls}><img src="{src}" alt="{htmllib.escape(alt)}" loading="lazy">{cap}</figure>'
+
+
 def figures(html, image_width):
+    """An image alone in a paragraph -> figure (caption = alt text); two or more -> gallery."""
     def fix(m):
-        src, alt = m.group(1), htmllib.unescape(m.group(2))
+        imgs = IMG.findall(m.group(1))
+        if len(imgs) > 1:
+            return '<div class="ui-doc-gallery">' + "".join(figure(s, htmllib.unescape(a)) for s, a in imgs) + "</div>"
+        src, alt = imgs[0]
         w = image_width(src) or 0
-        cls = ' class="is-right"' if 0 < w < FLOAT_BELOW else ""
-        return f'<figure{cls}><img src="{src}" alt="{htmllib.escape(alt)}" loading="lazy"></figure>'
-    return re.sub(r'<p><img src="([^"]+)" alt="([^"]*)"\s*/?></p>', fix, html)
+        return figure(src, htmllib.unescape(alt), ' class="is-right"' if 0 < w < FLOAT_BELOW else "")
+    return re.sub(r'<p>((?:\s*<img src="[^"]+" alt="[^"]*"\s*/?>\s*)+)</p>', fix, html)
 
 
 def videos(html):
@@ -98,8 +113,9 @@ def videos(html):
         vid = y.group(1)
         src = (f"https://www.youtube.com/embed/videoseries?list={vid}" if "list=" in url and "watch" not in url
                else f"https://www.youtube.com/embed/{vid}")
-        return ('<figure class="w-richtext-figure-type-video"><div>'
-                f'<iframe src="{src}" title="Video" allowfullscreen loading="lazy"></iframe></div></figure>')
+        return ('<figure style="padding-bottom:56.25%" class="w-richtext-align-fullwidth w-richtext-figure-type-video"><div>'
+                f'<iframe allowfullscreen="true" frameborder="0" scrolling="no" src="{src}" title="Video"></iframe></div></figure>'
+                f'<p class="ui-doc-video-link"><a href="{htmllib.escape(url)}">Watch on YouTube</a></p>')
     return re.sub(r'<p><a href="([^"]+)">[^<]*</a></p>', fix, html)
 
 
@@ -108,7 +124,8 @@ def tables_and_code(html):
 
     def code(m):
         lang = m.group(1) or "code"
-        return f'<div class="ui-doc-code" data-lang="{lang}"><code>{m.group(2)}</code></div>'
+        code = m.group(2).rstrip("\n").replace("\n", "<br>")           # rich text keeps <br>, not newlines
+        return f'<div class="ui-doc-code" data-lang="{lang}"><code>{code}</code></div>'
     return re.sub(r'<pre><code(?: class="language-([\w+-]+)")?>(.*?)</code></pre>', code, html, flags=re.S)
 
 
@@ -118,9 +135,29 @@ def shared_sections(html, load_snippet):
         body = load_snippet(href)
         if body is None:
             return m.group(0)
-        return (f'<div class="ui-doc-snippet"><p class="ui-doc-snippet-label">Shared section: {title}</p>'
+        sid = re.sub(r"\.(md|html)$", "", href.split("#")[0].rsplit("/", 1)[-1])
+        return (f'<div class="ui-doc-snippet" data-snippet="{sid}"><p class="ui-doc-snippet-label">Shared section · {title}</p>'
                 f"{body}</div>")
     return re.sub(r'<p><em>Shared section: <a href="([^"]+)">([^<]*)</a></em></p>', fix, html)
+
+
+BADGE = re.compile(r"\[(New|Changed|Removed) in ([\d.]+)\]")
+
+
+def small_parts(html):
+    """Find it rows, version badges, go links and download buttons."""
+    html = re.sub(r"<p>(?:<strong>)?Find it:(?:</strong>)?", '<p class="ui-doc-find"><strong>Find it:</strong>', html)
+    html = on_text(html, lambda t: BADGE.sub(
+        lambda m: f'<span class="ui-doc-badge is-{m.group(1).lower()}">{m.group(1)} in {m.group(2)}</span>', t))
+
+    def lone_link(m):
+        href, text = m.group(1), m.group(2)
+        if YOUTUBE.match(htmllib.unescape(href)) or htmllib.unescape(text) == htmllib.unescape(href):
+            return m.group(0)
+        if text.lower().startswith("download"):
+            return f'<p class="ui-doc-download"><a href="{href}">{text}</a></p>'
+        return f'<p class="ui-doc-go"><a href="{href}">{text} →</a></p>'
+    return re.sub(r'<p><a href="([^"]+)">([^<]+)</a></p>', lone_link, html)
 
 
 def heading_ids(html):
@@ -142,6 +179,7 @@ def enhance(html, image_width=lambda src: 0, load_snippet=lambda href: None):
     html = figures(html, image_width)
     html = videos(html)
     html = tables_and_code(html)
+    html = small_parts(html)
     html = on_text(html, lambda t: MENU.sub(lambda m: menu_chips(m.group(1)), COMBO.sub(lambda m: keycaps(m.group(1)), t)))
     html = heading_ids(html)
     return html

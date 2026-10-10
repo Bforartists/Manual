@@ -103,3 +103,82 @@ def resolve(page, target):
 def slugify(text, limit=60):
     s = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
     return s[:limit].rstrip("-") or "image"
+
+
+# ---------------------------------------------------------------- the site tree
+
+class Node:
+    """A page in the site tree: where it sits, its level, parent and order."""
+
+    def __init__(self, page, section, level, parent_id, order):
+        self.page, self.section, self.level, self.parent_id, self.order = page, section, level, parent_id, order
+
+    @property
+    def id(self):
+        return self.page.fm.get("id") or self.page.rel
+
+    @property
+    def web_slug(self):
+        return slugify(self.id.replace(".", "-"), limit=120)
+
+
+class Section:
+    def __init__(self, sid, title, order, index_page=None, nav_slug=None):
+        self.id, self.title, self.order, self.index, self.nav_slug = sid, title, order, index_page, nav_slug
+        self.nodes = []
+
+
+def site_tree(repo, pages=None):
+    """Sections in sidebar order, each with its pages in order.
+
+    Order comes from nav.yml; pages nav.yml does not list yet (new pages made in Pages CMS)
+    follow, in folder order, chapter first. A front matter `order:` number wins over both.
+    Level and parent come from folders: a folder with an index.md is a chapter; pages
+    inside it are its sub-chapters. The section's own index.md is the section overview.
+    """
+    pages = pages if pages is not None else [p for p in iter_pages(repo) if p.kind == "page"]
+    by_rel = {p.rel: p for p in pages}
+    nav_path = os.path.join(repo, DOCS_ROOT, "nav.yml")
+    nav = yaml.safe_load(open(nav_path, encoding="utf-8")) if os.path.exists(nav_path) else []
+    content = f"{DOCS_ROOT}/content/"
+    sections, rank = {}, {}
+    for i, sec in enumerate(nav or []):
+        sid = sec.get("section")
+        sections[sid] = Section(sid, sec.get("title") or sid, (i + 1) * 10, nav_slug=sec.get("slug"))
+        for j, pg in enumerate(sec.get("pages") or []):
+            rank[f"{DOCS_ROOT}/{pg.get('file', '')}"] = (j + 1) * 10
+    for p in pages:
+        sid = p.rel[len(content):].split("/")[0]
+        if sid not in sections:
+            sections[sid] = Section(sid, sid.replace("-", " ").title(), 900 + len(sections))
+    for sid, sec in sections.items():
+        idx = by_rel.get(f"{content}{sid}/index.md")
+        if idx:
+            sec.index = idx
+            sec.title = idx.fm.get("title") or sec.title
+    # order: nav rank, else after the last ranked page, walking folders chapter-first
+    extra = 0
+    for p in sorted(pages, key=lambda p: (p.rel.rsplit("/", 1)[0], not p.rel.endswith("/index.md"), p.rel)):
+        sid = p.rel[len(content):].split("/")[0]
+        if p is sections[sid].index:
+            continue
+        parts = p.rel[len(content):].split("/")[1:]           # below the section
+        chain, folder = [], f"{content}{sid}"
+        for d in parts[:-1]:
+            folder += "/" + d
+            ix = by_rel.get(folder + "/index.md")
+            if ix and ix is not p:
+                chain.append(ix)
+        level = len(chain)
+        parent = chain[-1].fm.get("id") if chain else None
+        if isinstance(p.fm.get("order"), (int, float)):
+            order = int(p.fm["order"])
+        elif p.rel in rank:
+            order = rank[p.rel]
+        else:
+            extra += 1
+            order = 5000 + extra * 10
+        sections[sid].nodes.append(Node(p, sid, level, parent, order))
+    for sec in sections.values():
+        sec.nodes.sort(key=lambda n: (n.order, n.page.rel))
+    return sorted(sections.values(), key=lambda s: s.order)

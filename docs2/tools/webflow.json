@@ -1,0 +1,13 @@
+{
+  "_about": "Webflow targets for docs2/tools/sync.py. IDs only, no secrets: the API token is the WEBFLOW_TOKEN repository secret.",
+  "site_id": "650c5901cff33429a5e537f5",
+  "staging_url": "https://bforartists.webflow.io/docs/getting-started-introduction",
+  "collections": {
+    "sections": "6aca79b17ad365f6d6fce2c1",
+    "snippets": "6aca79b1a65b53d5b641c284",
+    "pages": "6aca79b2c07a0416be267349"
+  },
+  "page_url": "/docs/",
+  "repo": "Bforartists/Manual",
+  "branch": "docs2/tier1-getting-started"
+}

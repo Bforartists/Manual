@@ -17,6 +17,11 @@ content:
     path: docs2/content
     subfolders: true
     format: yaml-frontmatter
+    # New pages are named after their title (my-page.md). A chapter is a folder with index.md:
+    # "Create folder", then "Add an entry" inside it and set the file name to index.md.
+    filename:
+      template: "{primary}.md"
+      field: create
     exclude: [README.md]
     view:
       layout: tree
@@ -38,6 +43,14 @@ content:
         default: draft
         options:
           values: [draft, needs-review, reviewed]
+      - name: summary
+        label: Summary
+        type: string
+        description: Optional. One sentence under the title and in search. Left empty, the first paragraph is used.
+      - name: order
+        label: Position in the sidebar
+        type: number
+        description: Optional. Lower numbers come first (10, 20, 30…). Left empty, new pages go after the existing ones.
       - name: video
         label: Chapter video (YouTube link)
         type: string

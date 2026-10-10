@@ -7,7 +7,7 @@
 
 **Date**: 2026-10-10
 
-**Status**: 🟢 Approved 10 Oct — Phase 1 ✅ · Phase 2 ✅ · Phase 3 🧪 built on `docs2/tier1-phase3`, waiting for your pull request review
+**Status**: 🟢 Approved 10 Oct — Phase 1 ✅ · Phase 2 ✅ · Phase 3 ✅ · Phase 4 🟡 (other session) · Phase 5 🧪 on `docs2/tier1-phase5`, waiting for your end-to-end test
 
 **Depends on**: Spike 1 (`docs2/spike1-migration`, commits `48a7749` → `ca887b9`)
 
@@ -445,7 +445,7 @@ master ────────────────────────�
 | Image bot on your test drop | 🏷️ `…z-1.png` → `getting-started/installation/download-bforartists.png`; ♻️ `…z.png` removed as a copy; alt set to "Download Bforartists" |
 | Preview of Installation and Timeline header | ✅ doc kit look: callouts, keycaps, menu chips, floated screenshots, outline |
 
-**👤 Your review: the test pull request (15 minutes)**
+**👤 Your review: the test pull request (15 minutes)** ✅ PR #1362 merged 10 Oct
 
 - [x] **One-time settings** on `Bforartists/Manual`:
       ⚙️ Settings → Actions → General → Workflow permissions → **Read and write permissions** · Save.
@@ -471,6 +471,10 @@ the check fails on the link, the preview link opens and looks like the site.
 
 **Where:** Webflow Designer (Bforartists site), using the Template page components
 
+**Status:** 🟡 built by the Webflow template session (see project doc `docs2-phase4-webflow.md`): 3 collections,
+Doc Pages template with sidebar, outline, breadcrumb icons, footer card, light mode, search, and Doc Kit test pages.
+The sync in Phase 5 writes into exactly these fields and this markup.
+
 - [ ] Collections: `Doc Sections`, `Doc Pages` (fields as §5.4), `Doc Snippets`.
 - [ ] Doc Pages template built **on the existing Webflow docs structure** (panels, sidebar, toolbar
       Panels · Print · Focus), keeping the earlier decisions: panel sidebar with sub-chapter anchors,
@@ -485,28 +489,54 @@ the check fails on the link, the preview link opens and looks like the site.
 
 ### Phase 5 — Sync to Webflow Staging
 
-**Goal:** merge on the branch → Getting Started appears on bforartists.webflow.io.
+**Goal:** merge on the branch → the pages appear on bforartists.webflow.io. Nothing reaches bforartists.co.
 
-**Files:** `docs2/tools/sync.py`, `.github/workflows/docs2.yml` (sync job, manual trigger first)
+**Branch:** 🧪 `docs2/tier1-phase5` → pull request into `docs2/tier1-getting-started`.
 
-- [ ] Create or update items by `page-id`; never by name.
-- [ ] Upload new images to Webflow assets once (hash cache), rewrite `src`.
-- [ ] Checksum guard: if the item in Webflow differs from the last sync, stop and report.
-- [ ] Publish to the **webflow.io subdomain only**; custom domains never.
-- [ ] Redirect stubs from the old static Getting Started pages (list only, applied at launch).
+**Files:** `docs2/tools/{sync,html_build,fill_front_matter}.py`, `docs2/tools/webflow.json`, `docs_io.py` (site tree),
+`patterns.py`, `render.py`, `.github/workflows/docs2.yml`, `.pages.yml`, `docs2/content/doc-kit/index.md`, `nav.yml`
 
-```python
-# sync.py — the safe core
-item = find_item(collection, page_id)            # by our ID, never by name
-if item and item["fieldData"]["checksum"] != last_synced[page_id]:
-    raise SyncStopped(f"{page_id} was edited in Webflow — not overwriting")
-body = render_page(md_path)                      # same render.py as the preview
-upsert(collection, page_id, field_data(body))    # POST /v2/collections/{id}/items | PATCH …/items/{item_id}
-publish_site(site_id, custom_domains=[], webflow_subdomain=True)   # staging only
+```
+ merge into docs2/tier1-getting-started
+        │
+        ▼  🤖 GitHub Actions
+ 🧾 fill page headers → 🖼️ file images → ✅ checks → 👀 preview
+        │ (checks green, publish branch only)
+        ▼
+ 🌐 sync.py ── Doc Sections · Doc Snippets · Doc Pages (match on IDs, skip unchanged)
+        │
+        ▼
+ 🚀 publish → bforartists.webflow.io only (custom domains: never)
 ```
 
-**Acceptance:** run the sync twice — first run creates 8 items, second run changes nothing; a manual
-edit in Webflow makes the next sync stop with a clear message.
+**🤖 Done by Claude (10 Oct)**
+
+- [x] `sync.py`: builds every item from the repo and creates or updates it by `page-id` / `section-id` /
+      `snippet-id`, never by name. Sections get their overview from the section's `index.md`.
+- [x] **Chapters and sub-chapters from folders:** a folder with `index.md` is a chapter, pages inside it are
+      sub-chapters (`level` 1, `parent-page-id`). Order from `nav.yml`; new pages follow; `order:` wins.
+- [x] **Images:** sent as GitHub links at the exact commit; Webflow copies them to its CDN on save
+      (tested on Data Structure: re-hosted to `cdn.prod.website-files.com`). No separate upload step.
+- [x] **Checksum guard:** unchanged items are skipped; an item edited by hand in Webflow after the last sync is
+      skipped and reported (`--force` overwrites). Nothing is ever deleted.
+- [x] **Staging only:** publishes with `publishToWebflowSubdomain: true` and no custom domains. The site has
+      `bforartists.co` attached, so item-level publishing (which would reach it) is never used.
+- [x] **Same HTML as the preview:** `html_build.py` is shared by `render.py` and `sync.py`; `patterns.py` now writes
+      the Webflow doc kit markup the template session uses (`is-note`, one menu chip per path, captions,
+      galleries, video + "Watch on YouTube", `<br>` in code, *Find it*, version badges, go and download links).
+- [x] **New pages from Pages CMS just work:** `fill_front_matter.py` fills the ID, section and breadcrumb a
+      writer cannot type (read-only in the form); new files are named after the title (`{primary}.md`, not
+      dated); the form gained *Summary* and *Position in the sidebar*. Shared sections picked in the form but
+      not placed in the text are added at the end of the page.
+- [x] `Doc Kit (test)` section added to the repo for workflow tests (matches the existing Webflow section).
+- [x] Simulated a writer's chapter with two sub-chapters and every content type: bot, checks, preview and
+      sync plan all pass.
+
+**👤 Your end-to-end test:** [`test_end_to_end_workflow.md`](test_end_to_end_workflow.md) (9 steps, about 30 minutes).
+
+**Acceptance:** a chapter with two sub-chapters, made in Pages CMS on a branch, goes through a pull request,
+and after the merge shows on bforartists.webflow.io with the right sidebar nesting and every content type.
+A second run changes nothing; a manual edit in Webflow is skipped and reported.
 
 ### Phase 6 — Usability Test, Fixes, Pull Request
 

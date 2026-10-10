@@ -7,10 +7,13 @@
 #   3. 👀 builds a preview with the website's styles (render.py) and publishes it to
 #      GitHub Pages under /preview/<pr-N or branch>/ on the gh-pages branch
 #   4. 💬 posts or updates one comment on the pull request with the results
+#   5. 🌐 on the publish branch only (after a merge): syncs the pages to Webflow and
+#      publishes the webflow.io staging site. Custom domains are never published here.
 #
 # One-time repository setup (maintainer):
 #   Settings → Actions → General → Workflow permissions → "Read and write permissions"
 #   Settings → Pages → Build and deployment → Deploy from a branch → gh-pages / (root)
+#   Settings → Secrets and variables → Actions → New repository secret → WEBFLOW_TOKEN
 
 name: Docs 2.0 checks and preview
 
@@ -38,6 +41,7 @@ jobs:
     env:
       SAME_REPO: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
       BRANCH: ${{ github.head_ref || github.ref_name }}
+      PUBLISH_BRANCH: docs2/tier1-getting-started
       PREVIEW_DIR: ${{ github.event.pull_request.number && format('pr-{0}', github.event.pull_request.number) || format('branch-{0}', github.ref_name) }}
     steps:
       - uses: actions/checkout@v4
@@ -55,19 +59,18 @@ jobs:
       - name: Install tools
         run: pip install -r docs2/tools/requirements.txt
 
-      - name: 🤖 Image bot
+      - name: 🤖 Bot (page headers and images)
         id: bot
         run: |
-          if [ "$SAME_REPO" = "true" ]; then
-            python docs2/tools/image_bot.py . --report _bot.md
-          else
-            python docs2/tools/image_bot.py . --dry-run --report _bot.md
-          fi
+          dry=""; [ "$SAME_REPO" = "true" ] || dry="--dry-run"
+          python docs2/tools/fill_front_matter.py . $dry --report _fill.md
+          python docs2/tools/image_bot.py . $dry --report _img.md
+          cat _fill.md _img.md > _bot.md
           if [ -n "$(git status --porcelain docs2)" ]; then
             git config user.name "docs-bot"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add -A docs2
-            git commit -m "docs: file new images [docs-bot]"
+            git commit -m "docs: fill page headers and file new images [docs-bot]"
             git push origin "HEAD:$BRANCH"
             echo "committed=true" >> "$GITHUB_OUTPUT"
           fi
@@ -142,6 +145,15 @@ jobs:
             const mine = comments.find(c => c.body && c.body.includes(marker));
             if (mine) await github.rest.issues.updateComment({ owner, repo, comment_id: mine.id, body });
             else await github.rest.issues.createComment({ owner, repo, issue_number, body });
+
+      - name: 🌐 Sync to Webflow staging
+        if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH && steps.check.outcome == 'success'
+        env:
+          WEBFLOW_TOKEN: ${{ secrets.WEBFLOW_TOKEN }}
+        run: |
+          export DOCS_SHA=$(git rev-parse HEAD)     # includes the bot's commit, so image links match
+          python docs2/tools/sync.py . --apply --publish --report _sync.md
+          cat _sync.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Fail when checks found problems
         if: steps.check.outcome == 'failure'

@@ -44,6 +44,16 @@ On the website, every page will have **Edit this page**, which opens that exact 
 6. Click **Save** (top right). Pages CMS commits your change with your name.
 7. Check your change: on GitHub, the newest commit on the branch is *docs: update … (Pages CMS, your name)*. Only your lines should be green.
 
+### 📁 New chapters and sub-chapters
+
+| To make | Do this in Pages CMS |
+|---|---|
+| 📄 A page | In a section folder, **Add an entry**, give it a title, **Save** |
+| 📁 A chapter with sub-chapters | **Create folder** (`my-chapter`), then **Add an entry** inside it with the file name `index.md` |
+| ↳ A sub-chapter | **Add an entry** inside the chapter folder |
+
+You only type the title. The bot fills in the page ID, section and breadcrumb after you save.
+
 ### 💡 Plain writing: no codes to learn
 
 | To get | Do this |
