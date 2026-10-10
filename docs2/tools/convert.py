@@ -143,7 +143,36 @@ TITLE_NUM = re.compile(r"^\d+(\.\d+)*\s*(-\s*)?")
 DROP_TITLES = re.compile(r"^((detailed )?table of contents?|available content)$", re.I)
 
 
+def has_header(blocks):
+    for b in blocks:
+        if b["t"] == "Header":
+            return True
+        if b["t"] == "BulletList" and any(has_header(it) for it in b["c"]):
+            return True
+        if b["t"] == "OrderedList" and any(has_header(it) for it in b["c"][1]):
+            return True
+        if b["t"] in ("Div", "BlockQuote") and has_header(b["c"][1] if b["t"] == "Div" else b["c"]):
+            return True
+    return False
+
+
+def unlist_headers(blocks):
+    """Some .odt chapters put headings inside list items. Lift those lists out so each heading
+    becomes a real section (otherwise its images and anchors are left raw)."""
+    out = []
+    for b in blocks:
+        items = b["c"] if b["t"] == "BulletList" else b["c"][1] if b["t"] == "OrderedList" else None
+        if items is not None and any(has_header(it) for it in items):
+            STATS["lists_with_headings_lifted"] += 1
+            for it in items:
+                out.extend(unlist_headers(it))
+        else:
+            out.append(b)
+    return out
+
+
 def build_tree(blocks, srcname):
+    blocks = unlist_headers(blocks)
     root = Node(0, "")
     root.src = srcname
     stack = [root]
@@ -899,6 +928,10 @@ def main(manual_dir, cfg_path, out_dir, work):
     trees, media = {}, {}
     global SNIPPETS
     SNIPPETS = {sn["id"].split(".", 1)[1]: sn for sn in cfg.get("snippets", [])}
+    only = [x for x in os.environ.get("DOCS_ONLY", "").split(",") if x]     # convert just these page ids (prefixes)
+    if only:
+        cfg["pages"] = [pg for pg in cfg["pages"] if any(pg["id"] == o or pg["id"].startswith(o + ".") for o in only)]
+        cfg["snippets"] = [sn for sn in cfg.get("snippets", []) if any(sn["id"] == o for o in only)]
     for pg in cfg["pages"] + cfg.get("snippets", []):
         for p in pg["parts"]:
             if "web" in p: p["src"] = "web:" + p["web"]

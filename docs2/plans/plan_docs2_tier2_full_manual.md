@@ -7,17 +7,18 @@
 
 **Date**: 2026-10-10
 
-**Status**: 📝 Draft for your review
+**Status**: 🟢 Approved 10 Oct — Phase 1 🧪 groundwork done (inventory, page map, `docs2/main`)
 
 **Depends on**: Tier 1 (`plan_docs2_tier1_getting_started.md`): Phase 5 sync and its end-to-end test
 
 **Blocks**: Refine phase (trimming, rewording, new writing — decision D13), retiring the `.odt` manual
 
-**Branch**: `docs2/main` (proposed long-lived docs branch, from `docs2/tier1-getting-started`); one
-`docs2/section-<name>` branch per section, merged by pull request. `master` untouched until go-live.
+**Branch**: `docs2/main`, the docs branch that becomes the main branch once everything is green (holds Tier 1,
+Phase 5 and this groundwork); one `docs2/section-<name>` branch per section, merged by pull request. `master`
+untouched until go-live.
 
-**Estimated scope**: 42 chapters · 517 `.odt` files (288 MB) · est. 350–550 pages · est. 5,000–9,000 unique
-images · 13 sections · 1 legacy redirect map · 1 screenshot capture tool
+**Scope (measured)**: 42 chapters · 517 `.odt` files · **763,486 words** · 11,526 images before dedupe ·
+**523 pages in 8 sections** (page map) · 97 legacy website pages · 1 screenshot capture tool
 
 **Companion docs**: [Tier 1 plan](plan_docs2_tier1_getting_started.md) · [End-to-end test](test_end_to_end_workflow.md) ·
 [Usability test](usability_test_getting_started.md) · Wiki: [How Docs 2.0 works](../dev-docs/How-Docs-2.0-Works.md)
@@ -107,15 +108,16 @@ Tier 1 proved the road on one section. Tier 2 drives the **whole manual** down i
 | # | Decision | Choice | Status |
 |---|---|---|---|
 | T2-D1 | Content fidelity | **Faithful clone** of every chapter (D13). Structure work allowed: shared sections, consolidated chapters | ✅ From Tier 1 |
-| T2-D2 | Batching | **One pull request per section** (13), each with word check, preview, bot. Largest first after a small warm-up | 📝 Proposed |
-| T2-D3 | Docs branch | `docs2/main` becomes the long-lived docs branch and the sync's publish branch; Tier 1 branch retires | ❓ Your call |
+| T2-D2 | Batching | **Follow the chapter list top to bottom** (4 → 42). One pull request per chapter (big chapters split by sub-chapter), each with word check, preview, bot | ✅ Confirmed 10 Oct |
+| T2-D3 | Docs branch | **`docs2/main`**: the docs branch and the sync's publish branch; becomes the main branch once all is green | ✅ Confirmed 10 Oct |
 | T2-D4 | Sidebar at scale | Generated `nav.json` (sections → chapters → sub-chapters) read by the docs script, instead of collection lists (100-item limit) | 📝 Proposed |
-| T2-D5 | Screenshots | **Recipe per image** (workspace, editor, state, crop) captured in Bforartists; same file names, so pages stay untouched. Priority by how outdated | 📝 Proposed |
+| T2-D5 | Screenshots | **Recipe per image** (workspace, editor, state, crop) captured in Bforartists with the **default Bforartists theme**; same file names, so pages stay untouched | ✅ Theme confirmed 10 Oct |
 | T2-D6 | Image format | Keep PNG/JPG through Tier 2; WebP decided after measuring Webflow's CDN | 📝 Proposed |
 | T2-D7 | Legacy addresses | Every page carries `legacy-path`; a redirect list is generated and applied at go-live, not before | ✅ From Tier 1 |
 | T2-D8 | PDF | Print stylesheet per page; full-manual PDF printed on demand and offered on *Documentation History* | ✅ Confirmed earlier |
 | T2-D9 | Go-live | A separate maintainer decision after Phase 6; publishing bforartists.co is never automatic | ✅ Confirmed |
-| T2-D10 | Webflow plan | Confirm the plan's CMS item limit before Phase 3 (pages + sections + snippets, est. 600–800 items) | ❓ Check |
+| T2-D10 | Webflow plan | **2,000 CMS items** available; the page map needs about 523 pages + 8 sections + shared sections (< 700) | ✅ Confirmed 10 Oct |
+| T2-D11 | Page structure | **One page per `.odt` file** (chapter → folder `index.md`, sub-chapter → page or folder, leaf → page); sub-chapters with no file get a title-only group page; files under 80 words fold into the page above | ✅ Groundwork |
 
 ---
 
@@ -171,17 +173,43 @@ getting-started/installation/download-bforartists.png:
 
 **Goal:** know exactly what we are moving, and where every chapter lands, before converting anything.
 
-**Files:** `docs2/tools/inventory.py` (new), `docs2/tools/pages.json`, `docs2/reports/inventory.md`
+**Files:** `docs2/tools/{inventory,map_pages}.py`, `docs2/tools/{sections.yml,page_map.json,legacy_pages.json}`,
+`docs2/reports/{inventory.md,inventory.json,page-map.md}`
 
-- [ ] `inventory.py`: per `.odt` — words, images, tables, headings depth, unwrap warnings; per chapter totals.
-- [ ] Section map in `pages.json` for all 42 chapters: which files become which page (consolidation rule from
-      Tier 1: short sub-chapters fold into their chapter page).
-- [ ] `legacy-path` for every page, from the current Webflow docs pages (129 static pages listed).
-- [ ] Repeat scan across the whole manual (`find_repeats.py`) → candidate shared sections, biggest first
-      (node *Add menu* chapters, brush settings, last-operator panels).
-- [ ] Section order and size table; the warm-up section picked.
+**🤖 Done by Claude (10 Oct)**
 
-**Acceptance:** every one of the 517 files is mapped to a page or a shared section; nothing unmapped.
+- [x] 🌿 `docs2/main` made from Tier 1 + Phase 5; workflow, Pages CMS buttons, sync and wiki point at it.
+- [x] 📦 `inventory.py`: every `.odt` read straight from its XML in 15 seconds → words, images, tables, headings.
+      **517 files · 763,486 words · 11,526 images · 2,975 tables.** Largest: Standard Keymap (35,779 words),
+      3D Viewport sculpt tool tab (16,153), 3D Viewport header tools (14,710).
+- [x] 📚 `sections.yml`: 8 sections in chapter-list order — Getting Started · Interface · Workspaces · Editors ·
+      Advanced · Extensions · Appendix · Keymap — matching the current website's documentation folders.
+- [x] 🗺️ `map_pages.py`: every file mapped → **523 pages** (20 already converted), 10 title-only group pages,
+      11 very long pages flagged for the Webflow size check. `--apply --section editors --chapter 7` moves one
+      chapter into `pages.json` when its turn comes.
+- [x] 🌐 `legacy_pages.json`: the 97 current `/documentation/...` pages; chapter and sub-chapter pages are matched
+      to them by title. The rest (Interface and Workspaces sub-pages, assets, development) are listed in the
+      report for redirects to the right page or heading.
+- [x] 🧪 **Converter dry run on the whole manual** (all 503 planned pages, scratch only, nothing committed):
+
+| Result | |
+|---|---|
+| 💥 Crashes | **0** in about 20 minutes |
+| 📝 Word check | **505 of 505 groups keep every word** |
+| 🖼️ Images | 8,067 unique (3,902 duplicates reused), 216 MB |
+| ✅ Checks | 6 broken image links on 2 pages (headings inside lists) → **fixed** in the converter; 12 false alt warnings (a node called *Image*) → **fixed** in `check.py` |
+| 📏 Size | 8.4 MB of page HTML in total; largest page Standard Keymap ≈ 330 KB |
+| 🗂️ Webflow items | 531 pages + 8 sections + shared sections ≈ **540 of 2,000** |
+
+- [x] 🔄 `convert_chapter.py`: one command per chapter — adds it to `pages.json`, converts only its pages, stops if a word
+      is lost, copies new pages and images in (never overwrites an edited page), runs the checks. Tried on
+      chapter 4 Workspaces: 1 page, 40 images, all checks green.
+- [x] 🌐 Sync ready for the full size: updates go in batches (50 items per call); Doc Sections got a `checksum` field so
+      unchanged sections are skipped too. Tested against a stand-in Webflow: run 1 creates, run 2 changes nothing,
+      a hand edit is skipped.
+- [x] 🧭 Section order comes from `sections.yml` (chapter-list order) in the preview, the sidebar and the sync.
+
+**Acceptance:** every one of the 517 files is mapped to a page or a shared section; nothing unmapped. ✅
 
 ### Phase 2 — Convert the Whole Manual
 
@@ -189,18 +217,28 @@ getting-started/installation/download-bforartists.png:
 
 **Files:** `docs2/content/**`, `docs2/snippets/**`, `docs2/images/**`, `convert.py` (fixes as found)
 
-| Order | Section | Files | Why this order |
-|---|---|---|---|
-| 1 | Topbar, Workspaces, Editors intro | 8 | 🔥 Warm-up: small, varied |
-| 2 | Properties Editor (rest of 26) | ~70 | Modifiers already done; big shared-section win |
-| 3 | 3D Viewport (7) | 106 | Most read |
-| 4 | Node editors (10–13) | 152 | Heavy repeats → snippets |
-| 5 | Animation editors (16, 18–20) | 52 | Timeline pattern reused |
-| 6 | Image, UV, VSE, Movie Clip (8, 9, 14, 15) | 72 | |
-| 7 | Text, Console, Info, Toolbar, Outliner, browsers, Spreadsheet, Preferences | 11 | |
-| 8 | Advanced, Extensions, Troubleshooting, Glossary, History, Keymaps (32–42) | 15 | Short; keymaps as tables |
+Order: **the chapter list, top to bottom** (T2-D2). Chapters 1–3, 17, 26.9 and 31 are done.
 
-- [ ] Per section: convert → word check 100% → repeats into snippets → PR → preview review → merge.
+| Run | Chapters | Section | Files | Words |
+|---|---|---|---|---|
+| 1 | 4 Workspaces | Workspaces | 1 | 2,073 |
+| 2 | 5 Topbar and Statusbar · 6 Editors introduction | Editors | 7 | 16,501 |
+| 3 | 7 3D Viewport | Editors | 106 | 217,252 |
+| 4 | 8 Image · 9 UV | Editors | 29 | 35,629 |
+| 5 | 10 Compositor · 11 Texture nodes | Editors | 36 | 35,115 |
+| 6 | 12 Geometry nodes | Editors | 88 | 54,493 |
+| 7 | 13 Shader · 14 Video Sequencer · 15 Movie Clip | Editors | 71 | 69,999 |
+| 8 | 16 Dope Sheet · 18 Graph · 19 Drivers · 20 NLA | Editors | 52 | 42,009 |
+| 9 | 21–25 Text, Console, Info, Toolbar, Outliner | Editors | 5 | 17,170 |
+| 10 | 26 Properties (rest) | Editors | 79 | 143,501 |
+| 11 | 27–30 File browser, Asset browser, Spreadsheet, Preferences | Editors | 6 | 22,715 |
+| 12 | 32–34, 36 Advanced | Advanced | 4 | 4,487 |
+| 13 | 35 Extensions | Extensions | 5 | 4,983 |
+| 14 | 37, 39, 40 Glossary, History, Manual history | Appendix | 3 | 12,618 |
+| 15 | 41, 42 Keymaps | Keymap | 2 | 36,269 |
+
+- [ ] Per run: `python3 docs2/tools/convert_chapter.py <odt manual> <section> <chapter>` on a `docs2/section-<name>`
+      branch → word check 100% → repeats into snippets → PR into `docs2/main` → preview review → merge (syncs staging).
 - [ ] Converter fixes found at scale go in their own small PRs, re-run on converted sections (idempotent).
 - [ ] Hotspot screenshots (`**Label** (colour)` lists) and tool cards (`### Bevel`) recognised in `patterns.py`.
 
@@ -212,8 +250,11 @@ getting-started/installation/download-bforartists.png:
 
 **Files:** `sync.py`, `docs2/tools/nav_json.py` (new), docs script (template session), `docs2/reports/redirects.csv`
 
-- [ ] **Limits check:** CMS item limit of the plan, rich-text size per item (split rule for very long pages),
-      API rate limits for a full sync (batched updates).
+- [x] CMS item limit: 2,000 (≈ 540 needed). Updates batched (50 per call).
+- [ ] **Size check:** rich-text size per item with the largest pages (Standard Keymap ≈ 330 KB); split rule by top heading if needed.
+- [ ] 🧩 With the template session: the sidebar nests three levels in Editors (chapter → sub-chapter → page, e.g.
+      3D Viewport → Header → View Menu); the template indents one level today. `#` sub-chapters with `{icon=name}`
+      are already sent as `<h1 data-icon="name">` (the template maps names to icons).
 - [ ] `nav.json`: sections → chapters → sub-chapters with titles, icons, slugs; synced as one Doc Snippet item
       (or a hosted asset) that the docs script reads for the sidebar and previous/next.
 - [ ] Full sync of all sections; second run changes nothing (checksums).
@@ -315,9 +356,9 @@ average, no maintainer rescue needed.
 
 | Who | When |
 |---|---|
-| You | Section PR reviews (structure only), go-live decision |
-| 2–3 team writers | Phase 5 update, Phase 6 writer test |
-| 5 readers | Phase 6 reader test |
+| You | Section PR reviews (structure only), the Phase 5 update, go-live decision |
+| Contributors (later) | Writer test; you organise this side |
+| Readers | Phase 6 reader test; you organise this side |
 
 ---
 
@@ -348,8 +389,9 @@ average, no maintainer rescue needed.
 
 ## 11. Open Questions
 
-1. **T2-D3:** rename the working branch to `docs2/main` now, or keep `docs2/tier1-getting-started` until go-live?
-2. **T2-D10:** which Webflow plan is the site on, and is an upgrade possible if the item limit is too low?
-3. **Section order:** start with Properties (shared-section win) or 3D Viewport (most read)?
-4. **Screenshots:** default theme or the Bforartists brand theme for captures?
-5. **People:** who are the 2–3 writers for the Phase 5 update, and which release do we use?
+1. ✅ Answered 10 Oct: `docs2/main` · 2,000 CMS items · chapter list top to bottom · default Bforartists theme ·
+   writers are you, later a few contributors.
+2. **Very long pages** (11 over 8,000 words, e.g. Standard Keymap): keep whole if Webflow accepts the size, or split
+   by top heading? Decided in Phase 3 after the size check.
+3. **Website-only pages** (assets, development, information): keep their website text as pages (like Quick Start),
+   or redirect them to the closest chapter?

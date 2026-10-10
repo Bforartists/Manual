@@ -2,7 +2,7 @@
 
 > **One section travels the whole road first: Getting Started. Then every other section follows.**
 
-Full plan: [`docs2/plans/plan_docs2_tier1_getting_started.md`](https://github.com/Bforartists/Manual/blob/docs2/tier1-getting-started/docs2/plans/plan_docs2_tier1_getting_started.md)
+Full plan: [`docs2/plans/plan_docs2_tier1_getting_started.md`](https://github.com/Bforartists/Manual/blob/docs2/main/docs2/plans/plan_docs2_tier1_getting_started.md)
 
 ---
 
@@ -20,16 +20,25 @@ Full plan: [`docs2/plans/plan_docs2_tier1_getting_started.md`](https://github.co
 
 ---
 
-## 🧭 After Tier 1
+## 📚 Tier 2: the whole manual
+
+Full plan: [`docs2/plans/plan_docs2_tier2_full_manual.md`](https://github.com/Bforartists/Manual/blob/docs2/main/docs2/plans/plan_docs2_tier2_full_manual.md) · Page map: [`docs2/reports/page-map.md`](https://github.com/Bforartists/Manual/blob/docs2/main/docs2/reports/page-map.md)
+
+| Phase | What | Status |
+|---|---|---|
+| 1 | 🗺️ Inventory and page map: 517 files → 523 pages in 8 sections | 🧪 groundwork done |
+| 2 | 📄 Convert the whole manual, chapter list top to bottom | ⏳ |
+| 3 | 🌐 Webflow at full size (sidebar from a navigation file, search, redirects) | ⏳ |
+| 4 | 📸 New screenshots in the default Bforartists theme | ⏳ |
+| 5 | 🔁 A real docs update in the new workflow | ⏳ |
+| 6 | 🧪 Usability test and go-live readiness | ⏳ |
+
+## 🧭 Then
 
 | Step | What |
 |---|---|
-| 1 | 📄 Migrate the whole manual, chapter by chapter, as a faithful copy |
-| 2 | 🔁 One routine documentation update, done with the team in the new workflow |
-| 3 | ✂️ Only then: trimming, rewording and consolidation |
-| 4 | 📄 Release PDFs printed on demand from the website |
-
----
+| 1 | 🚀 Go-live: `docs2/main` becomes main, bforartists.co switches (maintainer's click) |
+| 2 | ✂️ Refine: trimming, rewording and consolidation |
 
 ## 📌 Decisions
 

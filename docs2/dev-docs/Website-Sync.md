@@ -16,7 +16,7 @@
 | 4. 🌐 | Sections, shared sections and pages are written to Webflow's CMS | `sync.py` |
 | 5. 🚀 | bforartists.webflow.io is published | Webflow API, staging only |
 
-It runs on every push to the publish branch (`docs2/tier1-getting-started` for now) when the checks pass, and from
+It runs on every push to the publish branch (`docs2/main`) when the checks pass, and from
 **Actions → Docs 2.0 checks and preview → Run workflow**.
 
 ---

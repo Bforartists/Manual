@@ -20,4 +20,4 @@
 
 ---
 
-[![Edit the docs](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=flat-square&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/docs2%2Ftier1-getting-started/collection/docs)
+[![Edit the docs](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=flat-square&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/docs2%2Fmain/collection/docs)

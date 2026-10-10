@@ -4,7 +4,7 @@
     python3 docs2/tools/render.py [repo root] --out _preview
         [--only docs2/content/a.md ...]   only these pages (default: all)
         [--check check.md] [--bot bot.md] reports shown on the preview front page
-        [--title "Pull request #12"] [--branch docs2/tier1-getting-started]
+        [--title "Pull request #12"] [--branch docs2/main]
 
 Writes _preview/index.html (overview, check results, changed pages) and one HTML file per page,
 plus the images those pages use. Open _preview/index.html in a browser, or publish the folder.
@@ -179,7 +179,7 @@ class Builder:
 
 def main(argv):
     opts = {"--out": "_preview", "--check": None, "--bot": None, "--title": "Local preview",
-            "--branch": os.environ.get("DOCS_BRANCH", "docs2/tier1-getting-started")}
+            "--branch": os.environ.get("DOCS_BRANCH", "docs2/main")}
     only, args, it = set(), [], iter(argv)
     for a in it:
         if a == "--only":

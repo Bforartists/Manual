@@ -16,6 +16,24 @@ For maintainers. Writers never need this: once a chapter is converted, it is edi
 
 ---
 
+## 🗺️ Plan a chapter first
+
+```bash
+python3 docs2/tools/inventory.py ../path/to/odt/manual          # words, images, tables per file → docs2/reports/
+python3 docs2/tools/map_pages.py .                               # where every file lands → docs2/reports/page-map.md
+python3 docs2/tools/map_pages.py . --apply --section editors --chapter 7   # move one chapter into pages.json
+```
+
+| File | Holds |
+|---|---|
+| `docs2/tools/sections.yml` | The 8 sidebar sections, in chapter-list order, with folder names and group titles |
+| `docs2/tools/page_map.json` | Every planned page, in `pages.json` format |
+| `docs2/tools/legacy_pages.json` | The current website's documentation addresses, for redirects |
+| `docs2/reports/page-map.md` | The map as a table: done ✅, planned ⏳, very long ✂️ |
+
+The rule: one page per `.odt` file. A chapter becomes a folder with `index.md`, its sub-chapters pages inside it.
+Files under 80 words fold into the page above them.
+
 ## ▶️ Run
 
 From the repository root:

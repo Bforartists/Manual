@@ -1,15 +1,16 @@
-# 📘 Docs 2.0 (test branch)
+# 📘 Docs 2.0
 
-The Bforartists manual as Markdown: one file per web page, written in plain text that reads well on GitHub and is turned into rich components on the website. **This is a test branch;** `master` and the `.odt` manual are untouched.
+The Bforartists manual as Markdown: one file per web page, written in plain text that reads well on GitHub and is turned into rich components on the website. **Work in progress on `docs2/main`;** `master` and the `.odt` manual are untouched until Docs 2.0 goes live.
 
-[![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/docs2%2Ftier1-getting-started/collection/docs)
-[![Shared snippets](https://img.shields.io/badge/Shared-snippets-6f42c1?style=for-the-badge&logo=files&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/docs2%2Ftier1-getting-started/collection/snippets)
-[![Image library](https://img.shields.io/badge/Image-library-0969da?style=for-the-badge&logo=googlephotos&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/docs2%2Ftier1-getting-started/media/images)
+[![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/docs2%2Fmain/collection/docs)
+[![Shared snippets](https://img.shields.io/badge/Shared-snippets-6f42c1?style=for-the-badge&logo=files&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/docs2%2Fmain/collection/snippets)
+[![Image library](https://img.shields.io/badge/Image-library-0969da?style=for-the-badge&logo=googlephotos&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/docs2%2Fmain/media/images)
 [![Developer wiki](https://img.shields.io/badge/Developer-wiki-555555?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Bforartists/Manual/wiki)
 
 > ✏️ **To edit:** click **Edit the docs**, sign in with GitHub, pick a page, change it, click **Save**. First time? Read [Editing the docs online](dev-docs/Editing-the-docs-online.md).
 
-- 🌿 Branch: `docs2/tier1-getting-started`
+- 🌿 Branch: `docs2/main`, the docs branch that becomes the main branch once everything is green
+- 🗺️ Tier 2 plan: [`plans/plan_docs2_tier2_full_manual.md`](plans/plan_docs2_tier2_full_manual.md) · page map: [`reports/page-map.md`](reports/page-map.md)
 - 🗺️ Plan: [`plans/plan_docs2_tier1_getting_started.md`](plans/plan_docs2_tier1_getting_started.md)
 - 🧪 Usability test: [`plans/usability_test_getting_started.md`](plans/usability_test_getting_started.md)
 - ✅ Faithful-clone check: [`reports/wordcount.md`](reports/wordcount.md)

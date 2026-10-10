@@ -17,7 +17,7 @@ from docs_io import DOCS_ROOT, Page, iter_pages, resolve, strip_code  # noqa: E4
 STATUSES = {"draft", "needs-review", "reviewed"}
 PAGE_FIELDS = ("id", "title", "section")
 SNIPPET_FIELDS = ("id", "title")
-FILE_NAME_ALT = re.compile(r"^[\w.-]+\.(png|jpe?g|webp|gif)$|^(image|screenshot|img)[\s_-]*\d*$", re.I)
+FILE_NAME_ALT = re.compile(r"^[\w.-]+\.(png|jpe?g|webp|gif)$|^(image|screenshot|img)[\s_-]*\d+$", re.I)
 
 
 def is_icon(path, limit=64):
@@ -129,6 +129,10 @@ def check_editor_safe(pages, rep):
             t = strip_code(line)
             if "\\" in t:
                 rep.warn(p, n, "🖋️ Editor-safe", "backslash outside backticks; the editor drops it with the next character")
+                bad = True
+            hm = re.match(r"^(#{2,6})\s.*\{icon=[\w.-]+\}\s*$", t)
+            if hm:
+                rep.warn(p, n, "🖋️ Editor-safe", "`{icon=…}` only works on `#` sub-chapter headings; it is ignored here")
                 bad = True
             if re.search(r"<br\s*/?>", t, re.I):
                 rep.warn(p, n, "🖋️ Editor-safe", "`<br>` is dropped by the editor; use a new paragraph or a list")

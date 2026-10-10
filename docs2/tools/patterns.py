@@ -160,17 +160,29 @@ def small_parts(html):
     return re.sub(r'<p><a href="([^"]+)">([^<]+)</a></p>', lone_link, html)
 
 
+ICON_MARK = re.compile(r"\s*\{icon=([\w.-]+)\}\s*$")
+
+
 def heading_ids(html):
+    """Ids for headings (the outline links to them). A `#` sub-chapter heading may end with
+    {icon=name}: it becomes data-icon="name" for the template (see the wiki: sub-chapters and icons)."""
     seen = {}
 
     def fix(m):
         level, text = m.group(1), m.group(2)
+        icon = ""
+        im = ICON_MARK.search(text)
+        if im:
+            text = text[:im.start()]
+            if level == "1":
+                icon = f' data-icon="{im.group(1)}"'
+
         base = re.sub(r"[^a-z0-9]+", "-", re.sub(r"<[^>]+>", "", htmllib.unescape(text)).lower()).strip("-") or "section"
         n = seen.get(base, 0)
         seen[base] = n + 1
         hid = base if not n else f"{base}-{n + 1}"
-        return f'<h{level} id="{hid}">{text}</h{level}>'
-    return re.sub(r"<h([2-6])>(.*?)</h\1>", fix, html)
+        return f'<h{level} id="{hid}"{icon}>{text}</h{level}>'
+    return re.sub(r"<h([1-6])>(.*?)</h\1>", fix, html)
 
 
 def enhance(html, image_width=lambda src: 0, load_snippet=lambda href: None):

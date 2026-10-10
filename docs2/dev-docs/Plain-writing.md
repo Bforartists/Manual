@@ -55,6 +55,30 @@ Page title = the editor or area · `##` object type · `###` mode · `####` area
 
 ---
 
+## 🧩 Sub-chapters on one page, with icons
+
+Some pages cover a family of things (the 3D View with meshes, curves, lights). Start each one with a level 1
+heading (`#`); add `{icon=name}` at the end for its icon (Bforartists icon names, like the `icon:` field).
+
+```markdown
+Short introduction.
+
+# Meshes {icon=outliner_ob_mesh}
+
+## Add a mesh
+
+# Curves {icon=outliner_ob_curve}
+```
+
+| Place | What shows |
+|---|---|
+| ⬅️ Left sidebar | The page, with a link to each sub-chapter |
+| ➡️ Right side | One panel per sub-chapter with its headings |
+| 📌 Top of the text | A slim bar with the sub-chapter you are reading |
+
+Use `#` only for sub-chapters (the page title comes from the header form). `{icon=…}` works only on `#` headings;
+the check warns elsewhere. Three to eight sub-chapters per page.
+
 ## 🚫 Avoid
 
 | Avoid | Why | Instead |

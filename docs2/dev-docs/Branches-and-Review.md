@@ -4,21 +4,23 @@
 
 ---
 
-## 🌳 Branches today (testing)
+## 🌳 Branches
 
 ```
-master ─────────────────────────────────────────  🔒 .odt manual, untouched
-   └─ docs2/spike1-migration                      first test conversion
-        └─ docs2/tier1-getting-started            ⭐ working branch: Pages CMS saves here
-             └─ docs2/tier1-phase3                🧪 test branch for checks, image bot, preview
-                                                     → pull request into the working branch
+master ─────────────────────────────────────────  🔒 .odt manual, untouched until go-live
+   └─ docs2/main                                  ⭐ the docs branch: publishes staging, becomes main when all is green
+        ├─ docs2/section-<name>                   📄 one branch per section being converted (Tier 2)
+        └─ docs2/<your-change>                    ✍️ any reviewed change: Pages CMS on a branch → pull request
 ```
 
 | Branch | Purpose | Merges into |
 |---|---|---|
-| `master` | The manual as it is today | — |
-| `docs2/tier1-getting-started` | Docs 2.0 working branch. Pages CMS edits land here | `master`, once Docs 2.0 is approved |
-| `docs2/tier1-phase3` | Test branch for the automation | `docs2/tier1-getting-started`, by pull request |
+| `master` | The manual as it is today (`.odt`) | — |
+| `docs2/main` | The Docs 2.0 branch. Every merge here syncs to the staging website | `master` (or replaces it) at go-live |
+| `docs2/section-<name>` | A section being converted from the `.odt` manual | `docs2/main`, by pull request |
+| `docs2/<your-change>` | A change you want reviewed first | `docs2/main`, by pull request |
+
+Earlier test branches (`docs2/spike1-migration`, `docs2/tier1-getting-started`, `docs2/tier1-phase3`, `docs2/tier1-phase5`) are history; their work is all in `docs2/main`.
 
 ---
 

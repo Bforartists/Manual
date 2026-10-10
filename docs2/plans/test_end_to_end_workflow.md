@@ -22,8 +22,7 @@
 
 ## 🔑 Before you start (one time, 5 minutes)
 
-- [ ] **Merge the Phase 5 pull request** (`docs2/tier1-phase5` → `docs2/tier1-getting-started`). The tools must be on
-      the working branch first.
+- [ ] **Push `docs2/main`** from VS Code (it already holds Tier 1, Phase 5 and the Tier 2 groundwork).
 - [ ] **Make a Webflow API key:** in Webflow, open the Bforartists site's **Site settings → Apps & integrations →
       API access → Generate API token**. Name it `Docs sync`. Permissions: **CMS: Read and write** and
       **Sites: Read and write** (needed to publish staging). Copy the token.
@@ -37,8 +36,8 @@
 ## 1. 🌿 Make a branch for your test
 
 - [ ] On GitHub, open `Bforartists/Manual`. Click the branch button (top left, it says `master`).
-- [ ] Type `docs2/test-chapter`. Click **Create branch docs2/test-chapter from docs2/tier1-getting-started**.
-      (If it says *from master*, first switch the branch button to `docs2/tier1-getting-started`, then type the name.)
+- [ ] Type `docs2/test-chapter`. Click **Create branch docs2/test-chapter from docs2/main**.
+      (If it says *from master*, first switch the branch button to `docs2/main`, then type the name.)
 - [ ] Open [Pages CMS](https://app.pagescms.org/Bforartists/Manual). In the branch picker (top left), choose
       `docs2/test-chapter`.
 
@@ -105,7 +104,7 @@ hidden fields (ID, section, breadcrumb).
 
 ## 7. 🔀 Pull request, then merge
 
-- [ ] On GitHub: **Compare & pull request**. **Base: `docs2/tier1-getting-started`** ← compare: `docs2/test-chapter`.
+- [ ] On GitHub: **Compare & pull request**. **Base: `docs2/main`** ← compare: `docs2/test-chapter`.
       ⚠️ Not `master`.
 - [ ] Wait for the bot comment. Click **👀 Open the preview** and check your chapter. In the sidebar, *Part one* and
       *Part two* should sit indented under *My first chapter*.
@@ -114,7 +113,7 @@ hidden fields (ID, section, breadcrumb).
 
 ## 8. 🌐 See it on the website
 
-- [ ] On GitHub: **Actions → Docs 2.0 checks and preview** → the newest run on `docs2/tier1-getting-started`.
+- [ ] On GitHub: **Actions → Docs 2.0 checks and preview** → the newest run on `docs2/main`.
       Its summary ends with **🌐 Webflow sync**: 3 items created, and *🚀 Published to staging*.
 - [ ] Open https://bforartists.webflow.io/docs/doc-kit-my-first-chapter
 - [ ] Then the sub-chapters: `/docs/doc-kit-my-first-chapter-part-one` and `…-part-two`.
@@ -139,7 +138,7 @@ hidden fields (ID, section, breadcrumb).
 **Extra checks (optional)**
 
 - [ ] 🔁 **Nothing changes twice:** in GitHub, **Actions → Docs 2.0 checks and preview → Run workflow** on
-      `docs2/tier1-getting-started`. The sync says *unchanged* for everything.
+      `docs2/main`. The sync says *unchanged* for everything.
 - [ ] ✋ **Hand edits are protected:** change one word of *Part two* in Webflow's CMS, wait 10 minutes, edit *Part two*
       in Pages CMS and merge. The sync skips it and says *edited by hand in Webflow*.
 
@@ -149,7 +148,7 @@ hidden fields (ID, section, breadcrumb).
 
 | | |
 |---|---|
-| 🔁 | Saving in Pages CMS **straight on `docs2/tier1-getting-started`** also publishes staging (no pull request). For reviewed work, use a branch as in step 1. |
+| 🔁 | Saving in Pages CMS **straight on `docs2/main`** also publishes staging (no pull request). For reviewed work, use a branch as in step 1. |
 | 🧹 | The sync never deletes. The earlier hand-made Doc Kit pages in Webflow stay; the summary lists them as *not in the repo*. |
 | 🖼️ | Images are copied to Webflow's CDN on the first sync, so the website does not depend on GitHub to show them. |
 | 🐛 | Anything odd: screenshot it, note the step number, and send it to me. |

@@ -81,8 +81,20 @@ class Webflow:
         return self.req("POST", f"/collections/{cid}/items", {"isDraft": False, "isArchived": False, "fieldData": field_data})
 
     def update(self, cid, item_id, field_data):
-        return self.req("PATCH", f"/collections/{cid}/items",
-                        {"items": [{"id": item_id, "isDraft": False, "fieldData": field_data}]})
+        return self.update_many(cid, [(item_id, field_data)])
+
+    def update_many(self, cid, pairs, max_items=50, max_bytes=1_500_000):
+        """PATCH items in batches (fewer calls, kinder to rate limits on a full sync)."""
+        batch, size = [], 0
+        for item_id, fd in pairs:
+            n = len(json.dumps(fd))
+            if batch and (len(batch) >= max_items or size + n > max_bytes):
+                self.req("PATCH", f"/collections/{cid}/items", {"items": batch})
+                batch, size = [], 0
+            batch.append({"id": item_id, "isDraft": False, "fieldData": fd})
+            size += n
+        if batch:
+            self.req("PATCH", f"/collections/{cid}/items", {"items": batch})
 
     def publish_staging(self, site_id):
         return self.req("POST", f"/sites/{site_id}/publish", {"publishToWebflowSubdomain": True, "customDomains": []})
@@ -175,7 +187,7 @@ def parse_checksum(value):
 
 def apply_collection(wf, cid, key_field, wanted, report, force, extra=lambda w: {}):
     existing = {it["fieldData"].get(key_field): it for it in wf.items(cid) if it["fieldData"].get(key_field)}
-    ids = {}
+    ids, pending = {}, []
     for w in wanted:
         fields = dict(w["fields"], **extra(w))
         h = checksum(fields)
@@ -197,7 +209,7 @@ def apply_collection(wf, cid, key_field, wanted, report, force, extra=lambda w: 
             data = dict(fields)
             if "checksum" in KNOWN.get(cid, {"checksum"}):
                 data["checksum"] = stamp
-            wf.update(cid, it["id"], data)
+            pending.append((it["id"], data))
             report.append(("🔄", w["key"], "updated"))
         else:
             data = dict(w.get("create", {}), **fields, slug=w["slug"])
@@ -206,6 +218,8 @@ def apply_collection(wf, cid, key_field, wanted, report, force, extra=lambda w: 
             res = wf.create(cid, data)
             ids[w["key"]] = res.get("id")
             report.append(("🆕", w["key"], "created"))
+    if pending:
+        wf.update_many(cid, pending)
     for k in existing:
         if k not in {w["key"] for w in wanted}:
             report.append(("🧹", k, "in Webflow but not in the repo; left alone"))

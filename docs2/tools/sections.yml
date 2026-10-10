@@ -1,0 +1,71 @@
+# The sidebar sections of the new docs, in the order of the .odt chapter list (top to bottom).
+# map_pages.py turns this into the page map; convert.py then converts one section at a time.
+#
+#   chapters:  .odt chapter numbers in this section, in order
+#   folders:   folder name for a chapter (default: its title without "Editors - ")
+#   groups:    title for a sub-chapter number that has no file of its own (e.g. 12.1 = the header pages)
+#   legacy:    address of the section on the current website, for redirects at go-live
+
+sections:
+  - id: getting-started
+    title: Getting Started
+    legacy: /documentation/overview
+    chapters: [1, 2, 31, 38]
+
+  - id: interface
+    title: Interface
+    legacy: /documentation/interface
+    chapters: [3]
+
+  - id: workspaces
+    title: Workspaces
+    legacy: /documentation/workspaces
+    chapters: [4]
+
+  - id: editors
+    title: Editors
+    legacy: /documentation/editors
+    chapters: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+    folders:
+      5: topbar-and-statusbar
+      6: introduction
+      26: properties
+    aliases:                       # other names a chapter uses in its file titles
+      20: [NLA Editor]
+      12: [Geometry Nodes Editor]
+      10: [Compositor Editor]
+    groups:
+      "5.1": Topbar menus
+      "7.0": Context menus
+      "12.1": Header
+      "16.1": Header
+      "17.1": Header
+      "18.1": Header
+      "19.1": Header
+      "20.1": Header
+      "20.3": Sidebar
+
+  - id: advanced
+    title: Advanced
+    legacy: /documentation/advanced
+    chapters: [32, 33, 34, 36]
+
+  - id: extensions
+    title: Extensions
+    legacy: /documentation/extensions
+    chapters: [35]
+
+  - id: appendix
+    title: Appendix
+    legacy: /documentation/appendix
+    chapters: [37, 39, 40]
+
+  - id: keymap
+    title: Keymap
+    legacy: /documentation/keymap
+    chapters: [41, 42]
+
+# Small files fold into the page above them (words, and no tables of their own)
+fold_below_words: 80
+# Files this big are flagged as split candidates (one page per top heading) for the Webflow size check
+split_above_words: 8000

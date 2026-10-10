@@ -41,7 +41,7 @@ jobs:
     env:
       SAME_REPO: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
       BRANCH: ${{ github.head_ref || github.ref_name }}
-      PUBLISH_BRANCH: docs2/tier1-getting-started
+      PUBLISH_BRANCH: docs2/main
       PREVIEW_DIR: ${{ github.event.pull_request.number && format('pr-{0}', github.event.pull_request.number) || format('branch-{0}', github.ref_name) }}
     steps:
       - uses: actions/checkout@v4

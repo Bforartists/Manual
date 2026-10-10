@@ -147,6 +147,17 @@ def site_tree(repo, pages=None):
         sections[sid] = Section(sid, sec.get("title") or sid, (i + 1) * 10, nav_slug=sec.get("slug"))
         for j, pg in enumerate(sec.get("pages") or []):
             rank[f"{DOCS_ROOT}/{pg.get('file', '')}"] = (j + 1) * 10
+    # sections.yml (the chapter-list order) decides section order and titles; nav.yml the page order
+    sec_cfg = os.path.join(repo, DOCS_ROOT, "tools", "sections.yml")
+    if os.path.exists(sec_cfg):
+        for i, sc in enumerate((yaml.safe_load(open(sec_cfg, encoding="utf-8")) or {}).get("sections", [])):
+            if sc["id"] in sections:
+                sections[sc["id"]].order, sections[sc["id"]].title = (i + 1) * 10, sc.get("title", sections[sc["id"]].title)
+            else:
+                sections[sc["id"]] = Section(sc["id"], sc.get("title", sc["id"]), (i + 1) * 10)
+        for sec in sections.values():
+            if sec.id not in {sc["id"] for sc in yaml.safe_load(open(sec_cfg, encoding="utf-8"))["sections"]}:
+                sec.order = 990                                # test sections (Doc Kit) go last
     for p in pages:
         sid = p.rel[len(content):].split("/")[0]
         if sid not in sections:
@@ -181,4 +192,4 @@ def site_tree(repo, pages=None):
         sections[sid].nodes.append(Node(p, sid, level, parent, order))
     for sec in sections.values():
         sec.nodes.sort(key=lambda n: (n.order, n.page.rel))
-    return sorted(sections.values(), key=lambda s: s.order)
+    return sorted([s for s in sections.values() if s.nodes or s.index], key=lambda s: s.order)
