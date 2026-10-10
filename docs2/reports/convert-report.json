@@ -1,0 +1,215 @@
+{
+ "pages": [
+  {
+   "file": "content/editors/timeline/index.md",
+   "words": 287,
+   "sources": [
+    "17 Editors - Timeline"
+   ]
+  },
+  {
+   "file": "content/editors/timeline/header.md",
+   "words": 1517,
+   "sources": [
+    "17.1.1 Editors - Timeline - Header Tools and Options",
+    "17.1.3 Editors - Timeline - View Menu"
+   ]
+  },
+  {
+   "file": "content/editors/timeline/channel-list.md",
+   "words": 530,
+   "sources": [
+    "17.2 Editors - Timeline - Channel list",
+    "17 Editors - Timeline"
+   ]
+  },
+  {
+   "file": "content/editors/timeline/viewport.md",
+   "words": 516,
+   "sources": [
+    "17 Editors - Timeline"
+   ]
+  },
+  {
+   "file": "content/interface/basics.md",
+   "words": 372,
+   "sources": [
+    "3 Interface"
+   ]
+  },
+  {
+   "file": "content/interface/components/header.md",
+   "words": 74,
+   "sources": [
+    "3 Interface"
+   ]
+  },
+  {
+   "file": "content/interface/components/panels-and-tabs.md",
+   "words": 237,
+   "sources": [
+    "3 Interface"
+   ]
+  },
+  {
+   "file": "content/interface/components/menus-buttons-controls.md",
+   "words": 936,
+   "sources": [
+    "3 Interface",
+    "3 Interface"
+   ]
+  },
+  {
+   "file": "content/interface/components/tool-shelf.md",
+   "words": 132,
+   "sources": [
+    "3 Interface"
+   ]
+  },
+  {
+   "file": "content/interface/components/sidebar.md",
+   "words": 100,
+   "sources": [
+    "3 Interface"
+   ]
+  },
+  {
+   "file": "content/interface/input-devices.md",
+   "words": 90,
+   "sources": [
+    "3 Interface"
+   ]
+  },
+  {
+   "file": "content/editors/properties/modifiers/index.md",
+   "words": 1915,
+   "sources": [
+    "26.9 Editors - Properties Editor - Modifiers Properties Tab",
+    "26.9.1 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus"
+   ]
+  },
+  {
+   "file": "content/editors/properties/modifiers/mesh/normals.md",
+   "words": 797,
+   "sources": [
+    "26.9.2 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Normals modifiers"
+   ]
+  },
+  {
+   "file": "content/editors/properties/modifiers/mesh/edit.md",
+   "words": 3416,
+   "sources": [
+    "26.9.3 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Edit modifiers"
+   ]
+  },
+  {
+   "file": "content/editors/properties/modifiers/mesh/generate.md",
+   "words": 8494,
+   "sources": [
+    "26.9.4 Editors - Properties Editor - Modifiers Properties Tab - Add Modifiers menu - Generate modifiers"
+   ]
+  },
+  {
+   "file": "content/editors/properties/modifiers/mesh/deform.md",
+   "words": 5157,
+   "sources": [
+    "26.9.5 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Deform modifiers"
+   ]
+  },
+  {
+   "file": "content/editors/properties/modifiers/mesh/physics.md",
+   "words": 2583,
+   "sources": [
+    "26.9.6 Editors - Properties Editor - Modifiers Properties Tab - Mesh - Add Modifier menu - Physics modifiers"
+   ]
+  },
+  {
+   "file": "content/editors/properties/modifiers/grease-pencil/edit.md",
+   "words": 1203,
+   "sources": [
+    "26.9.7 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Edit modifiers"
+   ]
+  },
+  {
+   "file": "content/editors/properties/modifiers/grease-pencil/generate.md",
+   "words": 4445,
+   "sources": [
+    "26.9.8 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Generate Modifiers"
+   ]
+  },
+  {
+   "file": "content/editors/properties/modifiers/grease-pencil/deform.md",
+   "words": 2842,
+   "sources": [
+    "26.9.9 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Deform Modifiers"
+   ]
+  },
+  {
+   "file": "content/editors/properties/modifiers/grease-pencil/color.md",
+   "words": 1736,
+   "sources": [
+    "26.9.10 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Color Modifiers"
+   ]
+  }
+ ],
+ "snippets": [
+  {
+   "file": "snippets/quick-menu.md",
+   "words": 518,
+   "sources": [
+    "17.1.2 Editors - Timeline - Header - Quick Menu"
+   ]
+  },
+  {
+   "file": "snippets/marker-menu.md",
+   "words": 308,
+   "sources": [
+    "17.1.4 Editors - Timeline - Marker Menu"
+   ]
+  }
+ ],
+ "source_words": {
+  "17 Editors - Timeline": 954,
+  "17.1.1 Editors - Timeline - Header Tools and Options": 1169,
+  "17.1.2 Editors - Timeline - Header - Quick Menu": 526,
+  "17.1.3 Editors - Timeline - View Menu": 272,
+  "17.1.4 Editors - Timeline - Marker Menu": 310,
+  "17.2 Editors - Timeline - Channel list": 330,
+  "26.9 Editors - Properties Editor - Modifiers Properties Tab": 1253,
+  "26.9.1 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus": 639,
+  "26.9.10 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Color Modifiers": 1646,
+  "26.9.2 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Normals modifiers": 777,
+  "26.9.3 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Edit modifiers": 3272,
+  "26.9.4 Editors - Properties Editor - Modifiers Properties Tab - Add Modifiers menu - Generate modifiers": 8104,
+  "26.9.5 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Deform modifiers": 5032,
+  "26.9.6 Editors - Properties Editor - Modifiers Properties Tab - Mesh - Add Modifier menu - Physics modifiers": 2512,
+  "26.9.7 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Edit modifiers": 1113,
+  "26.9.8 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Generate Modifiers": 4128,
+  "26.9.9 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Deform Modifiers": 2657,
+  "3 Interface": 1929
+ },
+ "stats": {
+  "file_titles": 19,
+  "empty_headings": 21,
+  "toc_sections_dropped": 10,
+  "images_unique": 534,
+  "figures_right": 165,
+  "max_depth_seen": 7,
+  "heading_images": 402,
+  "table_rows": 952,
+  "tables_from_leaves": 268,
+  "figures_full": 12,
+  "figures_thumb": 44,
+  "hotspot_figures": 2,
+  "option_rows": 192,
+  "hotkeys_tagged": 15,
+  "callouts": 56,
+  "includes": 2,
+  "image_dupes_reused": 89,
+  "data_tables": 2,
+  "tool_cards": 83,
+  "deep_headings_as_labels": 12
+ },
+ "images": 534,
+ "warnings": []
+}

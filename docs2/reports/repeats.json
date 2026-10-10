@@ -1,0 +1,211 @@
+{
+ "sections_scanned": 370,
+ "clusters": [
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/color.md \u203a Influence subpanel",
+    "content/editors/properties/modifiers/grease-pencil/deform.md \u203a Influence subpanel",
+    "content/editors/properties/modifiers/grease-pencil/generate.md \u203a Influence",
+    "content/editors/properties/modifiers/grease-pencil/generate.md \u203a Influence subpanel"
+   ],
+   "copies": 4,
+   "words_each": 121,
+   "words_saved": 363
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/generate.md \u203a Array",
+    "content/editors/properties/modifiers/mesh/generate.md \u203a Array",
+    "content/editors/properties/modifiers/mesh/generate.md \u203a Array ( Legacy )"
+   ],
+   "copies": 3,
+   "words_each": 212,
+   "words_saved": 345
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/deform.md \u203a Project",
+    "content/editors/properties/modifiers/mesh/deform.md \u203a Project"
+   ],
+   "copies": 2,
+   "words_each": 236,
+   "words_saved": 236
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/deform.md \u203a Hook",
+    "content/editors/properties/modifiers/mesh/deform.md \u203a Hook"
+   ],
+   "copies": 2,
+   "words_each": 177,
+   "words_saved": 175
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/mesh/generate.md \u203a Method Line",
+    "content/editors/properties/modifiers/mesh/generate.md \u203a Method Transform"
+   ],
+   "copies": 2,
+   "words_each": 152,
+   "words_saved": 146
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/edit.md \u203a Vertex Weight Proximity",
+    "content/editors/properties/modifiers/mesh/edit.md \u203a Vertex Weight Proximity"
+   ],
+   "copies": 2,
+   "words_each": 183,
+   "words_saved": 134
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/color.md \u203a Custom Curve",
+    "content/editors/properties/modifiers/grease-pencil/deform.md \u203a Custom Curve"
+   ],
+   "copies": 2,
+   "words_each": 124,
+   "words_saved": 124
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/deform.md \u203a Lattice",
+    "content/editors/properties/modifiers/mesh/deform.md \u203a Lattice"
+   ],
+   "copies": 2,
+   "words_each": 135,
+   "words_saved": 112
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/deform.md \u203a Bone Envelopes",
+    "content/editors/properties/modifiers/mesh/deform.md \u203a Bone Envelopes"
+   ],
+   "copies": 2,
+   "words_each": 84,
+   "words_saved": 84
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/color.md \u203a Curve window",
+    "content/editors/properties/modifiers/grease-pencil/deform.md \u203a Curve window"
+   ],
+   "copies": 2,
+   "words_each": 83,
+   "words_saved": 83
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/mesh/edit.md \u203a Falloff",
+    "content/editors/properties/modifiers/mesh/edit.md \u203a Falloff subpanel"
+   ],
+   "copies": 2,
+   "words_each": 76,
+   "words_saved": 76
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/deform.md \u203a Vertex Groups",
+    "content/editors/properties/modifiers/mesh/deform.md \u203a Vertex Groups"
+   ],
+   "copies": 2,
+   "words_each": 60,
+   "words_saved": 60
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/deform.md \u203a Falloff",
+    "content/editors/properties/modifiers/mesh/deform.md \u203a Falloff"
+   ],
+   "copies": 2,
+   "words_each": 56,
+   "words_saved": 56
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/deform.md \u203a Vertex Group",
+    "content/editors/properties/modifiers/mesh/deform.md \u203a Vertex Group"
+   ],
+   "copies": 2,
+   "words_each": 51,
+   "words_saved": 51
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/deform.md \u203a Reset",
+    "content/editors/properties/modifiers/mesh/deform.md \u203a Reset"
+   ],
+   "copies": 2,
+   "words_each": 50,
+   "words_saved": 50
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/deform.md \u203a Nearest Surface Point + Target Normal Project",
+    "content/editors/properties/modifiers/mesh/deform.md \u203a Nearest Surface Point + Target Normal Project"
+   ],
+   "copies": 2,
+   "words_each": 45,
+   "words_saved": 45
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/generate.md \u203a Factor X/Y/Z",
+    "content/editors/properties/modifiers/mesh/generate.md \u203a Factor X/Y/Z"
+   ],
+   "copies": 2,
+   "words_each": 31,
+   "words_saved": 31
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/mesh/edit.md \u203a Colors",
+    "content/editors/properties/modifiers/mesh/edit.md \u203a Vertex Groups"
+   ],
+   "copies": 2,
+   "words_each": 25,
+   "words_saved": 25
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/mesh/deform.md \u203a Texture Prop"
+   ],
+   "copies": 1,
+   "words_each": 33,
+   "words_saved": 0
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/mesh/deform.md \u203a Usage"
+   ],
+   "copies": 1,
+   "words_each": 27,
+   "words_saved": 0
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/mesh/edit.md \u203a Global Influence"
+   ],
+   "copies": 1,
+   "words_each": 100,
+   "words_saved": 0
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/mesh/edit.md \u203a Mask Texture"
+   ],
+   "copies": 1,
+   "words_each": 94,
+   "words_saved": 0
+  },
+  {
+   "members": [
+    "content/editors/properties/modifiers/grease-pencil/edit.md \u203a Influence"
+   ],
+   "copies": 1,
+   "words_each": 113,
+   "words_saved": 0
+  }
+ ],
+ "total_words_saved": 2196
+}

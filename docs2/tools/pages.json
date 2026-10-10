@@ -1,0 +1,636 @@
+{
+ "pages": [
+  {
+   "id": "editors.timeline",
+   "file": "content/editors/timeline/index.md",
+   "title": "Timeline",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Timeline"
+   ],
+   "images": "ui/timeline",
+   "parts": [
+    {
+     "src": "17 Editors - Timeline",
+     "select": [
+      "^Timeline Editor$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "editors.timeline.header",
+   "file": "content/editors/timeline/header.md",
+   "title": "Timeline header",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Timeline",
+    "Header"
+   ],
+   "images": "ui/timeline/header",
+   "opts": {
+    "table_head": [
+     "Property",
+     "What it changes"
+    ]
+   },
+   "parts": [
+    {
+     "src": "17.1.1 Editors - Timeline - Header Tools and Options",
+     "select": "*"
+    },
+    {
+     "include": "quick-menu",
+     "heading": "Quick menu"
+    },
+    {
+     "src": "17.1.3 Editors - Timeline - View Menu",
+     "select": [
+      "^View Menu$"
+     ],
+     "opts": {
+      "table_head": [
+       "Menu entry",
+       "What it does"
+      ]
+     }
+    },
+    {
+     "include": "marker-menu",
+     "heading": "Marker menu"
+    }
+   ]
+  },
+  {
+   "id": "editors.timeline.channel-list",
+   "file": "content/editors/timeline/channel-list.md",
+   "title": "Timeline channel list",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Timeline",
+    "Channel list"
+   ],
+   "images": "ui/timeline/channel-list",
+   "opts": {
+    "table_head": [
+     "Menu entry",
+     "What it does"
+    ]
+   },
+   "parts": [
+    {
+     "src": "17.2 Editors - Timeline - Channel list",
+     "select": "*"
+    },
+    {
+     "src": "17 Editors - Timeline",
+     "select": [
+      "^Channel Context Menu$"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "editors.timeline.viewport",
+   "file": "content/editors/timeline/viewport.md",
+   "title": "Timeline viewport",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Timeline",
+    "Viewport"
+   ],
+   "images": "ui/timeline/viewport",
+   "opts": {
+    "table_head": [
+     "Menu entry",
+     "What it does"
+    ]
+   },
+   "parts": [
+    {
+     "src": "17 Editors - Timeline",
+     "select": [
+      "^Viewport Navigation$",
+      "^Dope Sheet Context Menu$",
+      "^Slider snapping$",
+      "^Quick Favorites menu$"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "interface.basics",
+   "file": "content/interface/basics.md",
+   "title": "Interface basics",
+   "section": "interface",
+   "path": [
+    "The Interface",
+    "Basics"
+   ],
+   "images": "ui/interface/basics",
+   "parts": [
+    {
+     "src": "3 Interface",
+     "select": [
+      "^Interface$",
+      "^Tooltips$",
+      "^Splash Screen$"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "interface.header",
+   "file": "content/interface/components/header.md",
+   "title": "Header",
+   "section": "interface",
+   "path": [
+    "The Interface",
+    "Components",
+    "Header"
+   ],
+   "images": "ui/interface/header",
+   "parts": [
+    {
+     "src": "3 Interface",
+     "select": [
+      "^Header$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "interface.panels-and-tabs",
+   "file": "content/interface/components/panels-and-tabs.md",
+   "title": "Panels and tabs",
+   "section": "interface",
+   "path": [
+    "The Interface",
+    "Components",
+    "Panels and tabs"
+   ],
+   "images": "ui/interface/panels",
+   "parts": [
+    {
+     "src": "3 Interface",
+     "select": [
+      "^Panels$",
+      "^Tabs$"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "interface.controls",
+   "file": "content/interface/components/menus-buttons-controls.md",
+   "title": "Menus, buttons and controls",
+   "section": "interface",
+   "path": [
+    "The Interface",
+    "Components",
+    "Menus, buttons and controls"
+   ],
+   "images": "ui/interface/controls",
+   "opts": {
+    "fold": false
+   },
+   "parts": [
+    {
+     "src": "3 Interface",
+     "select": [
+      "^Menus, Buttons and Controls$"
+     ],
+     "as_intro": true
+    },
+    {
+     "src": "3 Interface",
+     "select": [
+      "^Value Editing$",
+      "^Menu shortcuts$"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "interface.tool-shelf",
+   "file": "content/interface/components/tool-shelf.md",
+   "title": "Tool shelf",
+   "section": "interface",
+   "path": [
+    "The Interface",
+    "Components",
+    "Tool shelf"
+   ],
+   "images": "ui/interface/tool-shelf",
+   "parts": [
+    {
+     "src": "3 Interface",
+     "select": [
+      "^Tool Shelf$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "interface.sidebar",
+   "file": "content/interface/components/sidebar.md",
+   "title": "Sidebar",
+   "section": "interface",
+   "path": [
+    "The Interface",
+    "Components",
+    "Sidebar"
+   ],
+   "images": "ui/interface/sidebar",
+   "parts": [
+    {
+     "src": "3 Interface",
+     "select": [
+      "^Sidebar$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "interface.input-devices",
+   "file": "content/interface/input-devices.md",
+   "title": "Input devices",
+   "section": "interface",
+   "path": [
+    "The Interface",
+    "Input devices"
+   ],
+   "images": "ui/interface/input-devices",
+   "parts": [
+    {
+     "src": "3 Interface",
+     "select": [
+      "^Input Devices$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.modifiers",
+   "file": "content/editors/properties/modifiers/index.md",
+   "title": "Modifiers tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties",
+    "Modifiers tab"
+   ],
+   "images": "ui/properties/modifiers",
+   "opts": {
+    "table_head": [
+     "Property",
+     "What it changes"
+    ]
+   },
+   "parts": [
+    {
+     "src": "26.9 Editors - Properties Editor - Modifiers Properties Tab",
+     "select": "*"
+    },
+    {
+     "src": "26.9.1 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus",
+     "select": "*",
+     "opts": {
+      "table_head": [
+       "Menu entry",
+       "What it does"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.modifiers.mesh.normals",
+   "file": "content/editors/properties/modifiers/mesh/normals.md",
+   "title": "Normals modifiers (Mesh)",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties",
+    "Mesh",
+    "Modifiers tab",
+    "Normals modifiers"
+   ],
+   "images": "ui/properties/modifiers/mesh-normals",
+   "opts": {
+    "table_head": [
+     "Property",
+     "What it changes"
+    ],
+    "tool_level": 1,
+    "tool_prefix": "modifier."
+   },
+   "parts": [
+    {
+     "src": "26.9.2 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Normals modifiers",
+     "select": [
+      "^Normals modifiers$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.modifiers.mesh.edit",
+   "file": "content/editors/properties/modifiers/mesh/edit.md",
+   "title": "Edit modifiers (Mesh)",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties",
+    "Mesh",
+    "Modifiers tab",
+    "Edit modifiers"
+   ],
+   "images": "ui/properties/modifiers/mesh-edit",
+   "opts": {
+    "table_head": [
+     "Property",
+     "What it changes"
+    ],
+    "tool_level": 1,
+    "tool_prefix": "modifier."
+   },
+   "parts": [
+    {
+     "src": "26.9.3 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Edit modifiers",
+     "select": [
+      "^Edit modifiers$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.modifiers.mesh.generate",
+   "file": "content/editors/properties/modifiers/mesh/generate.md",
+   "title": "Generate modifiers (Mesh)",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties",
+    "Mesh",
+    "Modifiers tab",
+    "Generate modifiers"
+   ],
+   "images": "ui/properties/modifiers/mesh-generate",
+   "opts": {
+    "table_head": [
+     "Property",
+     "What it changes"
+    ],
+    "tool_level": 1,
+    "tool_prefix": "modifier."
+   },
+   "parts": [
+    {
+     "src": "26.9.4 Editors - Properties Editor - Modifiers Properties Tab - Add Modifiers menu - Generate modifiers",
+     "select": [
+      "^Generate modifiers$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.modifiers.mesh.deform",
+   "file": "content/editors/properties/modifiers/mesh/deform.md",
+   "title": "Deform modifiers (Mesh)",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties",
+    "Mesh",
+    "Modifiers tab",
+    "Deform modifiers"
+   ],
+   "images": "ui/properties/modifiers/mesh-deform",
+   "opts": {
+    "table_head": [
+     "Property",
+     "What it changes"
+    ],
+    "tool_level": 1,
+    "tool_prefix": "modifier."
+   },
+   "parts": [
+    {
+     "src": "26.9.5 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Deform modifiers",
+     "select": [
+      "Deform modifiers$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.modifiers.mesh.physics",
+   "file": "content/editors/properties/modifiers/mesh/physics.md",
+   "title": "Physics modifiers (Mesh)",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties",
+    "Mesh",
+    "Modifiers tab",
+    "Physics modifiers"
+   ],
+   "images": "ui/properties/modifiers/mesh-physics",
+   "opts": {
+    "table_head": [
+     "Property",
+     "What it changes"
+    ],
+    "tool_level": 1,
+    "tool_prefix": "modifier."
+   },
+   "parts": [
+    {
+     "src": "26.9.6 Editors - Properties Editor - Modifiers Properties Tab - Mesh - Add Modifier menu - Physics modifiers",
+     "select": [
+      "Physics modifiers$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.modifiers.grease-pencil.edit",
+   "file": "content/editors/properties/modifiers/grease-pencil/edit.md",
+   "title": "Edit modifiers (Grease Pencil)",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties",
+    "Grease Pencil",
+    "Modifiers tab",
+    "Edit modifiers"
+   ],
+   "images": "ui/properties/modifiers/grease-pencil-edit",
+   "opts": {
+    "table_head": [
+     "Property",
+     "What it changes"
+    ],
+    "tool_level": 1,
+    "tool_prefix": "modifier.grease_pencil_"
+   },
+   "parts": [
+    {
+     "src": "26.9.7 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Edit modifiers",
+     "select": [
+      "Edit modifiers$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.modifiers.grease-pencil.generate",
+   "file": "content/editors/properties/modifiers/grease-pencil/generate.md",
+   "title": "Generate modifiers (Grease Pencil)",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties",
+    "Grease Pencil",
+    "Modifiers tab",
+    "Generate modifiers"
+   ],
+   "images": "ui/properties/modifiers/grease-pencil-generate",
+   "opts": {
+    "table_head": [
+     "Property",
+     "What it changes"
+    ],
+    "tool_level": 1,
+    "tool_prefix": "modifier.grease_pencil_"
+   },
+   "parts": [
+    {
+     "src": "26.9.8 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Generate Modifiers",
+     "select": [
+      "Generate modifiers$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.modifiers.grease-pencil.deform",
+   "file": "content/editors/properties/modifiers/grease-pencil/deform.md",
+   "title": "Deform modifiers (Grease Pencil)",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties",
+    "Grease Pencil",
+    "Modifiers tab",
+    "Deform modifiers"
+   ],
+   "images": "ui/properties/modifiers/grease-pencil-deform",
+   "opts": {
+    "table_head": [
+     "Property",
+     "What it changes"
+    ],
+    "tool_level": 1,
+    "tool_prefix": "modifier.grease_pencil_"
+   },
+   "parts": [
+    {
+     "src": "26.9.9 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Deform Modifiers",
+     "select": [
+      "^Deform modifiers$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.modifiers.grease-pencil.color",
+   "file": "content/editors/properties/modifiers/grease-pencil/color.md",
+   "title": "Color modifiers (Grease Pencil)",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties",
+    "Grease Pencil",
+    "Modifiers tab",
+    "Color modifiers"
+   ],
+   "images": "ui/properties/modifiers/grease-pencil-color",
+   "opts": {
+    "table_head": [
+     "Property",
+     "What it changes"
+    ],
+    "tool_level": 1,
+    "tool_prefix": "modifier.grease_pencil_"
+   },
+   "parts": [
+    {
+     "src": "26.9.10 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Color Modifiers",
+     "select": [
+      "Color modifiers$"
+     ],
+     "as_intro": true
+    }
+   ]
+  }
+ ],
+ "snippets": [
+  {
+   "id": "snippet.quick-menu",
+   "file": "snippets/quick-menu.md",
+   "title": "Quick menu",
+   "section": "snippets",
+   "images": "ui/shared/quick-menu",
+   "parts": [
+    {
+     "src": "17.1.2 Editors - Timeline - Header - Quick Menu",
+     "select": [
+      "^Quick Menu$"
+     ],
+     "as_intro": true
+    }
+   ]
+  },
+  {
+   "id": "snippet.marker-menu",
+   "file": "snippets/marker-menu.md",
+   "title": "Marker menu",
+   "section": "snippets",
+   "images": "ui/shared/marker-menu",
+   "opts": {
+    "table_head": [
+     "Menu entry",
+     "What it does"
+    ]
+   },
+   "parts": [
+    {
+     "src": "17.1.4 Editors - Timeline - Marker Menu",
+     "select": [
+      "Marker Menu$"
+     ],
+     "as_intro": true
+    }
+   ]
+  }
+ ]
+}
