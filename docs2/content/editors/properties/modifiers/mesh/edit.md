@@ -481,8 +481,8 @@ The add threshold.
 
 
 | Property | What it changes |
-| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Type | ![](Pictures/1000000100000088000000D5BAD5DF95.png){width="2.3cm" height="3.611cm"}How weights are mapped to their new values. · **Linear**: No mapping. · **Custom Curve**: Allows the user to manually define the mapping using a curve. · **Sharp, Smooth, Root and Sphere**: These are classical mapping functions, from spikiest to roundest. · **Random**: Uses a random value for each vertex. · **Median Step**: Creates binary weights (0.0 or 1.0), with 0.5 as cutting value. |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Type | How weights are mapped to their new values. · **Linear**: No mapping. · **Custom Curve**: Allows the user to manually define the mapping using a curve. · **Sharp, Smooth, Root and Sphere**: These are classical mapping functions, from spikiest to roundest. · **Random**: Uses a random value for each vertex. · **Median Step**: Creates binary weights (0.0 or 1.0), with 0.5 as cutting value. |
 | Invert | Inverts the falloff. |
 
 
@@ -677,8 +677,8 @@ Warning1 This modifier does implicit clamping of weight values in the standard (
 
 
 | Property | What it changes |
-| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Type | ![](Pictures/1000000100000088000000D5BAD5DF95.png){width="2.3cm" height="3.611cm"}How weights are mapped to their new values. · **Linear**: No mapping. · **Custom Curve**: Allows the user to manually define the mapping using a curve. · **Sharp, Smooth, Root and Sphere**: These are classical mapping functions, from spikiest to roundest. · **Random**: Uses a random value for each vertex. · **Median Step**: Creates binary weights (0.0 or 1.0), with 0.5 as cutting value. |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Type | How weights are mapped to their new values. · **Linear**: No mapping. · **Custom Curve**: Allows the user to manually define the mapping using a curve. · **Sharp, Smooth, Root and Sphere**: These are classical mapping functions, from spikiest to roundest. · **Random**: Uses a random value for each vertex. · **Median Step**: Creates binary weights (0.0 or 1.0), with 0.5 as cutting value. |
 | Invert | Inverts the falloff. |
 
 

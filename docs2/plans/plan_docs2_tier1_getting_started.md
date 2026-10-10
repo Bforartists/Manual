@@ -7,7 +7,7 @@
 
 **Date**: 2026-10-10
 
-**Status**: 🟢 Approved 10 Oct — Phase 1 ✅ · Phase 2 ✅ · Phase 3 🚧 on the test branch `docs2/tier1-phase3`
+**Status**: 🟢 Approved 10 Oct — Phase 1 ✅ · Phase 2 ✅ · Phase 3 🧪 built on `docs2/tier1-phase3`, waiting for your pull request review
 
 **Depends on**: Spike 1 (`docs2/spike1-migration`, commits `48a7749` → `ca887b9`)
 
@@ -404,48 +404,15 @@ MIT) that lets `.pages.yml` define text-template commands. Forking means hosting
 
 **Goal:** every pull request answers "is it correct?" and "how will it look?" automatically.
 
-**Files:** `.github/workflows/docs2.yml`, `docs2/tools/check.py`, `image_bot.py`, `render.py`, `patterns.py`
+**Branch:** 🧪 `docs2/tier1-phase3`, made from `docs2/tier1-getting-started`. You review it as a pull request
+**into the working branch**; `master` is never touched.
 
-- [ ] `check.py` — front matter schema, internal links, image exists, alt text present, repeat scan.
-- [ ] `image_bot.py` — move `_inbox/*` to `images/<section>/<page>/<heading>.webp`, resize, dedupe
-      by hash, rewrite links, commit back to the pull request branch.
-- [ ] `patterns.py` — the plain-writing recogniser (shared by preview and sync).
-- [ ] `render.py` — Markdown → HTML with doc kit classes, wrapped in the live site's CSS.
-- [ ] Publish the preview to GitHub Pages under `/preview/<pr-number>/`.
-- [ ] Bot comment on the pull request: checks ✅/❌, filed images, 👀 preview link.
-
-```python
-# patterns.py — the heart of "plain writing"
-KBD  = re.compile(r"\b((?:Ctrl|Shift|Alt|Cmd)(?:\s*\+\s*(?:Ctrl|Shift|Alt|Cmd))*\s*\+\s*\w+)")
-MENU = re.compile(r"\b([A-Z][\w ]+?)(?:\s*[›>]\s*[A-Z][\w ]+?){1,5}\b")
-TIP  = re.compile(r"^>\s*(Tip|Note|Warning|Important):\s*", re.M)
-
-def enhance(html: str, facts: dict) -> str:
-    html = KBD.sub(lambda m: keycaps(m.group(1)), html)
-    html = MENU.sub(lambda m: menu_chips(m.group(0), facts["menus"]), html)  # only real menu names
-    html = callouts(html)                 # blockquote "Tip:" → <div class="ui-doc-callout is-tip">
-    html = float_images_by_size(html)     # < 900 px wide → .is-right, else full width
-    html = youtube_links_to_embeds(html)  # bare link on its own line → video component
-    return html
+```
+master ──────────────────────────────── 🔒 untouched
+  └─ docs2/tier1-getting-started        ⭐ working branch (Pages CMS saves here)
+       └─ docs2/tier1-phase3            🧪 this phase → PR into the working branch
 ```
 
-```yaml
-# .github/workflows/docs2.yml (outline)
-on:
-  pull_request:
-    paths: ["docs2/**", ".pages.yml"]
-jobs:
-  docs:
-    runs-on: ubuntu-latest
-    permissions: { contents: write, pull-requests: write, pages: write }
-    steps:
-      - uses: actions/checkout@v4
-      - run: pip install -r docs2/tools/requirements.txt
-      - run: python docs2/tools/image_bot.py --commit     # files dropped images
-      - run: python docs2/tools/check.py                  # fails the PR on errors
-      - run: python docs2/tools/render.py --out _preview  # same styles as the site
-      # deploy _preview to GitHub Pages /preview/<pr>/ and post the comment
-```
 **Files:** `.github/workflows/docs2.yml`, `docs2/tools/{check,image_bot,render,patterns,docs_io}.py`,
 `docs2/tools/preview/doc-kit.css`, `.pages.yml`, `.gitignore`
 

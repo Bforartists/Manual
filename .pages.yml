@@ -64,7 +64,7 @@ content:
           format: markdown
           switcher: true
           media: images
-          path: _inbox
+          path: docs2/images/_inbox
           rename: safe
           extensions: [png, jpg, jpeg, webp, gif]
       # Set by the converter and the build. Shown read-only so writers can see them.
@@ -126,7 +126,7 @@ content:
           format: markdown
           switcher: true
           media: images
-          path: _inbox
+          path: docs2/images/_inbox
           rename: safe
           extensions: [png, jpg, jpeg, webp, gif]
       - name: id

@@ -154,8 +154,8 @@ The start frame of the segment.
 
 
 | Property | What it changes |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Custom Range subpanel | ![](Pictures/1000000100000126000000509D3D021E.png){width="4.979cm" height="1.349cm"}Use a custom range of frames. · **Frame Start / End**: Sets the range start and end frames. |
+| --------------------- | ------------------------------------------------------------------------------------------- |
+| Custom Range subpanel | Use a custom range of frames. · **Frame Start / End**: Sets the range start and end frames. |
 | Influence Subpanel | — |
 
 

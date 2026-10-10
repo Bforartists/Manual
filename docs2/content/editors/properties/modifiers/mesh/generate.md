@@ -322,9 +322,9 @@ Adds a constant translation component to the duplicate object’s offset. X, Y a
 
 
 | Property | What it changes |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object Offset | ![](Pictures/10000001000001260000003C97C0C6AF.png){width="4.979cm" height="1.02cm"}Adds a transformation taken from a chosen object relative to the current object to the offset. · **Object**: Choose an object. |
-| Merge | ![](Pictures/100000010000012900000054257EFF45.png){width="5.031cm" height="1.42cm"}If enabled, vertices in each copy will be merged with vertices in the next copy that are within the given Distance. · **Distance**: The merge distance between the vertices. Vertices below this distance will be merged. · **First and Last Copies**: Merge vertices in first and last duplicates. |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Object Offset | Adds a transformation taken from a chosen object relative to the current object to the offset. · **Object**: Choose an object. |
+| Merge | If enabled, vertices in each copy will be merged with vertices in the next copy that are within the given Distance. · **Distance**: The merge distance between the vertices. Vertices below this distance will be merged. · **First and Last Copies**: Merge vertices in first and last duplicates. |
 
 
 ### UV's
@@ -747,11 +747,11 @@ By default, faces appear in the order in which they are stored in memory, which 
 
 
 | Property | What it changes |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Start | The start frame of the building process. |
 | Length | The number of frames over which to rebuild the object. |
 | Reversed | The modifier will operate in reverse, and start with the full mesh. And deconstruct it towards the end frame. |
-| Randomize | ![](Pictures/10000001000001AC00000057286C78B1.png){width="5.429cm" height="1.101cm"}Randomizes the order in which the faces are built. · **Seed**: The random seed. Changing this value gives a different “random” order when Randomize is checked. This order is always the same for a given seed/mesh set. |
+| Randomize | Randomizes the order in which the faces are built. · **Seed**: The random seed. Changing this value gives a different “random” order when Randomize is checked. This order is always the same for a given seed/mesh set. |
 
 
 ## Decimate
@@ -966,8 +966,8 @@ Once saved you will see the path to the btx file below the save external button.
 
 
 | Property | What it changes |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Type | ![](Pictures/100000010000009E0000005130E70E30.png){width="2.671cm" height="1.371cm"}Sets the type of subdivision. Note! You need to set the subdivision type before you start. You can't change it afterwards. · **Catmull-Clark**: Creates a smoothed surface, using the standard Catmull-Clark subdivision surface algorithm. · **Simple**: Maintains the current shape, and simply subdivides edges. |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Type | Sets the type of subdivision. Note! You need to set the subdivision type before you start. You can't change it afterwards. · **Catmull-Clark**: Creates a smoothed surface, using the standard Catmull-Clark subdivision surface algorithm. · **Simple**: Maintains the current shape, and simply subdivides edges. |
 | Levels Sculpt | The subdivision layer. |
 | Viewport | Set the level of subdivisions to show in Object Mode. In Sculpt mode this value has no effect. |
 | Render | Set the level of subdivisions to show when rendering. |
@@ -1000,9 +1000,9 @@ The output and also the settings of the three basic modes Blocks, Smooth and Sha
 
 
 | Property | What it changes |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blocks, Smooth, Sharp | ![](Pictures/1000000100000130000000C1118F2AD0.png){width="5.151cm" height="3.27cm"}Blocks has no smoothing at all. Smooth outputs a smooth surface. Sharp outputs a smooth surface but preserves sharp edges and corners. · **Octree Depth**: The resolution of the Octree. Higher values gives finer details. · **Scale**: The ratio of the largest dimension of the model over the size of the grid. · **Sharpness**: Sharp mode only. Tolerance for outliers. Higher values produce edges more similar to the input, while lower values filter out noise. · **Remove Disconnected**: Filter out small disconnected pieces of the output. · **Threshold**: Use this to control how small a disconnected component must be to be removed. · **Smooth Shading**: Output faces with smooth shading. The smooth/flat shading of the input faces is not preserved. |
-| Voxel | ![](Pictures/10000001000001240000006A8AD8154B.png){width="4.941cm" height="1.799cm"}Generate a new manifold mesh from the current geometry while trying to preserve the mesh’s original volume. · **Voxel Size**: The voxel size. Defines the resolution of the created mesh. · **Adaptivity**: Reduces the final face count by simplifying geometry where detail is not needed. This feature triangulates faces that do not need as much detail. · **Smooth Shading**: Output faces with smooth shading. The smooth/flat shading of the input faces is not preserved. |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Blocks, Smooth, Sharp | Blocks has no smoothing at all. Smooth outputs a smooth surface. Sharp outputs a smooth surface but preserves sharp edges and corners. · **Octree Depth**: The resolution of the Octree. Higher values gives finer details. · **Scale**: The ratio of the largest dimension of the model over the size of the grid. · **Sharpness**: Sharp mode only. Tolerance for outliers. Higher values produce edges more similar to the input, while lower values filter out noise. · **Remove Disconnected**: Filter out small disconnected pieces of the output. · **Threshold**: Use this to control how small a disconnected component must be to be removed. · **Smooth Shading**: Output faces with smooth shading. The smooth/flat shading of the input faces is not preserved. |
+| Voxel | Generate a new manifold mesh from the current geometry while trying to preserve the mesh’s original volume. · **Voxel Size**: The voxel size. Defines the resolution of the created mesh. · **Adaptivity**: Reduces the final face count by simplifying geometry where detail is not needed. This feature triangulates faces that do not need as much detail. · **Smooth Shading**: Output faces with smooth shading. The smooth/flat shading of the input faces is not preserved. |
 
 
 ## Screw
@@ -1029,7 +1029,7 @@ The profile should be properly aligned to the cardinal direction of the object.
 
 ### Merge
 
-![Merge](/docs2/images/ui/properties/modifiers/mesh-generate/merge.png)
+![Merge](/docs2/images/ui/properties/modifiers/mesh-generate/merge-2.png)
 
 Merge vertices that lie on the axis of rotation. Closes off end points with a triangle fan.
 
@@ -1152,9 +1152,9 @@ If the special cases are not present it is recommended to choose Simple because 
 
 
 | Property | What it changes |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Thickness Mode | ![](Pictures/100000010000009F00000069E687ABC2.png){width="2.69cm" height="1.78cm"}Choose the kind of thickness handling. · **Fixed**: The new vertices are always in a fixed distance to the old ones. · **Even**: Adjusts for sharp corners, but may not always work when more than three faces come together. · **Constraints**: For up to three faces it is always guaranteed to find an optimal solution. |
-| Boundary | ![](Pictures/100000010000009C00000067A65B383B.png){width="2.641cm" height="1.739cm"}Choose the kind of boundary handling. · **None**: No boundary fix is applied. Results are stable. · **Round**: Adjusts the boundary for an opening to face inwards (like a hole in an egg). · **Flat**: Adjusts the boundary of a planar opening to be a flat (like a cut sphere). |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Thickness Mode | Choose the kind of thickness handling. · **Fixed**: The new vertices are always in a fixed distance to the old ones. · **Even**: Adjusts for sharp corners, but may not always work when more than three faces come together. · **Constraints**: For up to three faces it is always guaranteed to find an optimal solution. |
+| Boundary | Choose the kind of boundary handling. · **None**: No boundary fix is applied. Results are stable. · **Round**: Adjusts the boundary for an opening to face inwards (like a hole in an egg). · **Flat**: Adjusts the boundary of a planar opening to be a flat (like a cut sphere). |
 | Thickness | The extrude amount. Important! The modifier thickness is calculated using local vertex coordinates. If the object has a non-uniform scale, the thickness will vary on different sides of the object. To fix this, either Apply or Clear the scale. |
 | Offset | A value between (-1 to 1) to locate the solidified output inside or outside the original mesh. The inside and outside is determined by the face normals. Set to 0.0, the solidified output will be centered on the original mesh. |
 | Merge Threshold | The distance within which degenerated geometry is merged. |

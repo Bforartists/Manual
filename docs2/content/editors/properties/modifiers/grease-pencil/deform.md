@@ -175,7 +175,7 @@ The Noise Modifier adds noise to make the grease pencil line unstable and noisy.
 
 
 | Property | What it changes |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ------------ | ------------------------------------------------------------------------------------------- |
 | Position | Strength of the noise effect over the point location. |
 | Strength | Strength of the noise effect over the point strength (opacity). |
 | Thickness | Strength of the noise effect over the point thickness. |
@@ -183,7 +183,7 @@ The Noise Modifier adds noise to make the grease pencil line unstable and noisy.
 | Noise Scale | Control the noise frequency scale. |
 | Noise Offset | Offset the noise along the stroke. |
 | Noise Seed | Add a random seed. |
-| Randomize | ![](Pictures/100000010000012500000042354B9045.png){width="4.96cm" height="1.109cm"}Use a random value over time. · **Step**: Number of frames before using a new random value. |
+| Randomize | Use a random value over time. · **Step**: Number of frames before using a new random value. |
 
 
 ### Influence subpanel

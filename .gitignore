@@ -1,0 +1,6 @@
+# Docs 2.0 local output
+_preview/
+_check.md
+_bot.md
+docs2/.work/
+__pycache__/
