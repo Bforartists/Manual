@@ -9,7 +9,7 @@
 | Tool | How |
 |---|---|
 | 🖋️ Pages CMS | Drag the file into the page where it belongs, or `/` → **Image** → upload |
-| 🐙 GitHub / 💻 own editor | Copy the file into `docs2/images/`, then add `![What it shows](/docs2/images/your-file.png)` on its own line |
+| 🐙 GitHub / 💻 own editor | Copy the file into `docs2/images/_inbox/`, then add `![What it shows](/docs2/images/_inbox/your-file.png)` on its own line |
 
 Then write the **alt text**: a few words on what the image shows (*Timeline header with the quick menu open*). Pages CMS fills in the file name; replace it.
 
@@ -17,7 +17,7 @@ Then write the **alt text**: a few words on what the image shows (*Timeline head
 
 ## 🤖 What the image bot does
 
-New images land in the library root, `docs2/images/`. On the next check run the bot:
+New images land in `docs2/images/_inbox/` (older drops: the library root `docs2/images/`). On the next check run the bot:
 
 | Step | Example |
 |---|---|
@@ -25,10 +25,11 @@ New images land in the library root, `docs2/images/`. On the next check run the 
 | 2. ♻️ Removes byte-identical copies and points every page at one file | `…z.png` and `…z-1.png` → one file |
 | 3. 🏷️ Names it after the page and the heading above it | `getting-started/installation/download-bforartists.png` |
 | 4. 🔗 Rewrites the links in every page that uses it | `![…](/docs2/images/getting-started/installation/download-bforartists.png)` |
-| 5. 📋 Adds it to `docs2/images/index.csv` with size and checksum | |
-| 6. 💬 Lists what it filed in the pull request comment | |
+| 5. 📐 Shrinks it if wider than 1920 px | |
+| 6. 📋 Adds it to `docs2/images/index.csv` with size and checksum | |
+| 7. 💬 Lists what it filed in the pull request comment | |
 
-It never deletes an image a page still uses, and it never changes your text.
+It never deletes an image a page still uses, and it never changes your text. The one exception: alt text that is only a file name becomes the heading above the image.
 
 ---
 

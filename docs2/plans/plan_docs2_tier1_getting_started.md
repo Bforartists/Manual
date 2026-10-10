@@ -7,7 +7,7 @@
 
 **Date**: 2026-10-10
 
-**Status**: 🟢 Approved 10 Oct — Phase 1 ✅ · Phase 2 ✅ · Phase 3 🚧 on the test branch `docs2/tier1-phase3`
+**Status**: 🟢 Approved 10 Oct — Phase 1 ✅ · Phase 2 ✅ · Phase 3 🧪 built on `docs2/tier1-phase3`, waiting for your pull request review
 
 **Depends on**: Spike 1 (`docs2/spike1-migration`, commits `48a7749` → `ca887b9`)
 
@@ -404,48 +404,63 @@ MIT) that lets `.pages.yml` define text-template commands. Forking means hosting
 
 **Goal:** every pull request answers "is it correct?" and "how will it look?" automatically.
 
-**Files:** `.github/workflows/docs2.yml`, `docs2/tools/check.py`, `image_bot.py`, `render.py`, `patterns.py`
+**Branch:** 🧪 `docs2/tier1-phase3`, made from `docs2/tier1-getting-started`. You review it as a pull request
+**into the working branch**; `master` is never touched.
 
-- [ ] `check.py` — front matter schema, internal links, image exists, alt text present, repeat scan.
-- [ ] `image_bot.py` — move `_inbox/*` to `images/<section>/<page>/<heading>.webp`, resize, dedupe
-      by hash, rewrite links, commit back to the pull request branch.
-- [ ] `patterns.py` — the plain-writing recogniser (shared by preview and sync).
-- [ ] `render.py` — Markdown → HTML with doc kit classes, wrapped in the live site's CSS.
-- [ ] Publish the preview to GitHub Pages under `/preview/<pr-number>/`.
-- [ ] Bot comment on the pull request: checks ✅/❌, filed images, 👀 preview link.
-
-```python
-# patterns.py — the heart of "plain writing"
-KBD  = re.compile(r"\b((?:Ctrl|Shift|Alt|Cmd)(?:\s*\+\s*(?:Ctrl|Shift|Alt|Cmd))*\s*\+\s*\w+)")
-MENU = re.compile(r"\b([A-Z][\w ]+?)(?:\s*[›>]\s*[A-Z][\w ]+?){1,5}\b")
-TIP  = re.compile(r"^>\s*(Tip|Note|Warning|Important):\s*", re.M)
-
-def enhance(html: str, facts: dict) -> str:
-    html = KBD.sub(lambda m: keycaps(m.group(1)), html)
-    html = MENU.sub(lambda m: menu_chips(m.group(0), facts["menus"]), html)  # only real menu names
-    html = callouts(html)                 # blockquote "Tip:" → <div class="ui-doc-callout is-tip">
-    html = float_images_by_size(html)     # < 900 px wide → .is-right, else full width
-    html = youtube_links_to_embeds(html)  # bare link on its own line → video component
-    return html
+```
+master ──────────────────────────────── 🔒 untouched
+  └─ docs2/tier1-getting-started        ⭐ working branch (Pages CMS saves here)
+       └─ docs2/tier1-phase3            🧪 this phase → PR into the working branch
 ```
 
-```yaml
-# .github/workflows/docs2.yml (outline)
-on:
-  pull_request:
-    paths: ["docs2/**", ".pages.yml"]
-jobs:
-  docs:
-    runs-on: ubuntu-latest
-    permissions: { contents: write, pull-requests: write, pages: write }
-    steps:
-      - uses: actions/checkout@v4
-      - run: pip install -r docs2/tools/requirements.txt
-      - run: python docs2/tools/image_bot.py --commit     # files dropped images
-      - run: python docs2/tools/check.py                  # fails the PR on errors
-      - run: python docs2/tools/render.py --out _preview  # same styles as the site
-      # deploy _preview to GitHub Pages /preview/<pr>/ and post the comment
-```
+**Files:** `.github/workflows/docs2.yml`, `docs2/tools/{check,image_bot,render,patterns,docs_io}.py`,
+`docs2/tools/preview/doc-kit.css`, `.pages.yml`, `.gitignore`
+
+**🤖 Done by Claude (10 Oct)**
+
+- [x] `check.py`: front matter, unique IDs and slugs, links, images, shared sections, sidebar (errors);
+      alt text, editor-safe text, waiting images (warnings). Markdown report; exit code 1 on errors.
+- [x] `image_bot.py`: files images from `images/_inbox/` **and the library root**, removes byte-identical
+      copies (also of images already in the library), names them `images/<section>/<page>/<heading>.png`,
+      rewrites links, replaces file-name alt text with the heading, shrinks > 1920 px, updates `index.csv`.
+      Keeps the library's PNG/JPG format (the plan said `.webp`; one format change at a time).
+- [x] `patterns.py`: plain writing → doc kit components (callouts, keycaps, menu chips, floated figures,
+      shared sections, YouTube, tables, code). Shared by the preview now and the Webflow sync later.
+- [x] `render.py`: preview pages with the **real doc kit CSS** copied from the Webflow template, sidebar from
+      `nav.yml`, page sections outline, light/dark, ✏️ *Edit this page* (Pages CMS deep link).
+- [x] `.github/workflows/docs2.yml`: on pull requests and on pushes to `docs2/**` (Pages CMS saves):
+      bot → checks → preview on GitHub Pages `/preview/<pr-N or branch>/` → one updated PR comment.
+- [x] `.pages.yml`: uploads now go to `docs2/images/_inbox` (the option needs the full path; `_inbox`
+      alone fell back to the library root, which is why your drop landed there).
+- [x] 🐛 The first check run found **14 broken image links** on 7 Spike 1 modifier pages (icons inside option
+      rows were never copied to the library). Fixed in the converter; word check still 23 of 23.
+
+**Tested locally**
+
+| Test | Result |
+|---|---|
+| Checks on all 31 pages | ✅ 0 errors · 2 warnings (your test screenshot: file-name alt, waiting for the bot) |
+| Broken link, missing image, bad `status` | ❌ each reported with file and line; exit code 1 |
+| Backslash and `<br>` in a page | 🟡 two editor-safe warnings |
+| Image bot on your test drop | 🏷️ `…z-1.png` → `getting-started/installation/download-bforartists.png`; ♻️ `…z.png` removed as a copy; alt set to "Download Bforartists" |
+| Preview of Installation and Timeline header | ✅ doc kit look: callouts, keycaps, menu chips, floated screenshots, outline |
+
+**👤 Your review: the test pull request (15 minutes)**
+
+- [ ] **One-time settings** on `Bforartists/Manual`:
+      ⚙️ Settings → Actions → General → Workflow permissions → **Read and write permissions** · Save.
+      📄 Settings → Pages → Deploy from a branch → `gh-pages` / `(root)` (pick it after the first run creates the branch).
+- [ ] **Push** both branches from VS Code: `docs2/tier1-getting-started` (Phase 2 wrap-up) and `docs2/tier1-phase3`.
+- [ ] **Open the pull request:** on GitHub, *Compare & pull request* → **base: `docs2/tier1-getting-started`** ←
+      compare: `docs2/tier1-phase3`. ⚠️ Check the base is not `master`.
+- [ ] Wait for **Docs 2.0 checks and preview** (about 2 minutes). Expected:
+      1. 🤖 A bot commit *docs: file new images [docs-bot]* on the PR: your screenshot filed and renamed, the copy removed.
+      2. 💬 One comment: 👀 preview link, check table, image bot table.
+      3. ✅ The run is green.
+- [ ] Click **Open the preview**. Check Installation looks like the website: the tip, your screenshot, keycaps.
+- [ ] Try one failure: in the PR, edit a page on GitHub and break a link; the run turns ❌ and the comment
+      lists the file and line. Revert it.
+- [ ] Merge the PR into the working branch when happy (or tell me what to change).
 
 **Acceptance:** a test pull request with one dropped image and one broken link → bot files the image,
 the check fails on the link, the preview link opens and looks like the site.

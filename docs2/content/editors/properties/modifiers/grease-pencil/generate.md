@@ -57,7 +57,7 @@ Adds a constant translation component to the duplicate object’s offset. X, Y a
 
 ### Object Offset subpanel
 
-![Object Offset subpanel](/docs2/images/ui/properties/modifiers/grease-pencil-generate/object-offset-subpanel.png)
+![Object Offset subpanel](/docs2/images/ui/properties/modifiers/mesh-generate/object-offset.png)
 
 Adds a transformation taken from a chosen object relative to the current object to the offset.
 

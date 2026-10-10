@@ -507,11 +507,11 @@ The Smooth Corrective modifier tries to reduce highly distorted areas of a mesh.
 
 
 | Property | What it changes |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Factor | The factor to control the smoothing amount. Higher values will increase the effect. Values outside expected range (above 1.0 or below 0.0) will distort the mesh. |
 | Repeat | The number of smoothing iterations, equivalent to executing the Smooth tool multiple times. |
 | Scale | Additional scaling factor to increase the size of the mesh. This is useful because sometimes the Smooth Corrective modifier will introduce volume loss, especially when used with a rig. |
-| Smooth Type | ![](Pictures/100000010000009B0000004FB431E9A5.png){width="2.619cm" height="1.341cm"}The smoothing method. · **Simple**: Relaxes vertices to their connected edges. · **Length Weight**: Weights by the distance of surrounding vertices. This option can give higher quality smoothing in some cases, by better preserving the shape of the original form. |
+| Smooth Type | The smoothing method. · **Simple**: Relaxes vertices to their connected edges. · **Length Weight**: Weights by the distance of surrounding vertices. This option can give higher quality smoothing in some cases, by better preserving the shape of the original form. |
 | Vertex Group | Restrict the effect to a vertex group. · **Invert**: Inverts the influence of the vertex group. |
 | Only Smooth | Preview the smoothing used, before correction is applied. |
 | Pin Boundaries | Prevent boundary vertices from smoothing. |

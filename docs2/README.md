@@ -24,7 +24,7 @@ The Bforartists manual as Markdown: one file per web page, written in plain text
 | `images/` | 🖼️ The image library, each image stored once, named by where it is used; `images/index.csv` lists them. New drops land in the root and the image bot files them |
 | `nav.yml` | 🧭 Sidebar order and icons |
 | `sources/webflow/` | The current website text the converter reads for pages that live on the website |
-| `tools/` | ⚙️ Converter, word-count check, repeat scan, sidebar generator |
+| `tools/` | ⚙️ Converter, word-count check, repeat scan, sidebar generator, checks, image bot, preview, wiki sync |
 | `reports/` | 📊 Machine output of the last run |
 | `dev-docs/` | 📘 The [wiki](https://github.com/Bforartists/Manual/wiki) pages, reviewed here and copied by `tools/wiki_sync.py` |
 | `plans/` | 🗺️ Plans and tests |
@@ -41,6 +41,10 @@ Pages contain no special tags. The website build recognises plain patterns:
 | An image on its own line | Floated right when small, full width when wide |
 | An image followed by a list of `**Label** (colour)` | A screenshot with hover areas |
 | `*Shared section: [Quick menu](…)*` | The shared section, filled in from `snippets/` |
+
+## 🤖 On every change
+
+`.github/workflows/docs2.yml` files new screenshots, checks every page and posts a 👀 preview link with the website's styles. See [Checks and previews](dev-docs/Checks-and-Previews.md).
 
 ## ⚙️ Run the converter
 
