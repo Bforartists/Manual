@@ -6,7 +6,7 @@
 
 **Date**: 2026-10-10
 
-**Status**: 📝 Draft for your review
+**Status**: 🟢 Direction confirmed 10 Oct (timing, Interface, Workspaces, 3D Viewport split, 5.3 = the developer build)
 
 **Depends on**: Tier 2 (`plan_docs2_tier2_full_manual.md`): the whole manual converted and syncing to Webflow
 
@@ -14,8 +14,9 @@
 
 **Branch**: `docs2/main`; one `docs2/t3-<chapter>` branch per consolidated chapter, merged by pull request
 
-**Estimated scope**: ≈ 520 pages → **≈ 90–100 chapters** · 1 keymap redesign · 1 interface diff 5.1 → 5.3 ·
-new pages for 5.2/5.3 features · Quick Start, Comparing to Blender, Migrating from Blender written
+**Estimated scope**: ≈ 520 pages → **≈ 110–120 sidebar entries** (≈ 75 big chapters + 16 Interface topic pages +
+19 Workspaces pages + website-only chapters) · 1 keymap redesign · update to the developer build (next release) ·
+Quick Start, Comparing to Blender, Migrating from Blender written
 
 **Companion docs**: [Tier 1](plan_docs2_tier1_getting_started.md) · [Tier 2](plan_docs2_tier2_full_manual.md) ·
 Wiki: [Plain writing](../dev-docs/Plain-writing.md) (sub-chapters and icons)
@@ -26,7 +27,7 @@ Wiki: [Plain writing](../dev-docs/Plain-writing.md) (sub-chapters and icons)
 
 | Level | What Tier 3 does |
 |---|---|
-| 🏔️ **Big picture** | From 500 small pages to ~100 big chapters, up to date with 5.3, with the missing content written |
+| 🏔️ **Big picture** | From ≈ 520 small pages to ≈ 110–120 sidebar entries (big chapters), up to date with the next release, with the missing content written |
 | 🧱 **How** | Writers keep **small source files**; the website **assembles** each chapter into **one long page** with sub-chapters. Keymap rebuilt from data. A 5.1 → 5.3 interface diff makes the to-do list |
 | 📏 **Proof it works** | A size and speed test with the largest chapters before anything is consolidated |
 
@@ -62,7 +63,7 @@ Wiki: [Plain writing](../dev-docs/Plain-writing.md) (sub-chapters and icons)
 Tier 2 moves the manual as it is: one `.odt` file → one page, ≈ 520 pages. That is faithful, but the index is far
 too long for a reader. Tier 3 reshapes it:
 
-1. 🧱 **Structure** — about 100 chapters: one per editor, workspace set, interface topic, properties tab. Each
+1. 🧱 **Structure** — ≈ 110–120 entries: one big chapter per editor, 3D Viewport object type and mode, properties tab; dedicated pages for Interface topics and each workspace. Each
    chapter is **one long page** that loads once; sub-chapters (`#` headings with icons) and the right-side panels
    make it easy to explore deep.
 2. ✍️ **Writers keep small files.** A chapter is a folder of small Markdown files (the Tier 2 pages). The build
@@ -133,14 +134,17 @@ per section in Phase 2.
 |---|---|---|---|
 | T3-D1 | Reading unit | **One long page per chapter** (load once, explore deep), ≈ 100 chapters | ✅ Your direction 10 Oct |
 | T3-D2 | Writing unit | **Small source files stay** (the Tier 2 pages); a chapter folder with `assemble: true` is built into one page | 📝 Proposed |
-| T3-D3 | Giants | 3D Viewport and Properties Editor are split **by area / tab** (≈ 9 and ≈ 20 chapters); everything else is one page | 📝 Proposed |
+| T3-D3 | Giants | **3D Viewport by object type → mode → areas** (≈ 10 chapters, see §5.3); Properties Editor **by tab** (≈ 20); Geometry nodes in 2–3; everything else one page | ✅ 3D Viewport rule confirmed 10 Oct |
 | T3-D4 | Page size cap | About **40,000 words** per assembled page until the Phase 1 test says otherwise | 🧪 To test |
 | T3-D5 | Sub-chapters | Each source file becomes a `#` sub-chapter with its icon (`{icon=name}`), as the template already supports | ✅ Template ready |
 | T3-D6 | Old addresses | Every Tier 2 page address redirects to its chapter with an anchor (`/docs/image-editor#sidebar-view-tab`) | 📝 Proposed |
 | T3-D7 | Website-only pages | Become **new chapters** (assets, development, information, how to help, reporting a bug, requesting a feature) | ✅ Your direction 10 Oct |
 | T3-D8 | Keymap | Generated from Bforartists' keymap export; one-line descriptions from operator tooltips; each operator links to its documented place | ✅ Your direction 10 Oct |
-| T3-D9 | Target version | First pass to **Bforartists 5.3**; screenshots in 5.3 with the default theme | ✅ Your direction 10 Oct |
-| T3-D10 | Timing | Assemble before the public go-live if possible, so readers never see the 520-page structure | ❓ Your call |
+| T3-D9 | Target version | **The developer build = the next release (5.3)**: update against it as it is; screenshots once, in the developer build, default theme | ✅ Confirmed 10 Oct |
+| T3-D10 | Timing | **Mature before release:** chapters are assembled and reviewed before the public go-live; readers never see the 520-page structure | ✅ Confirmed 10 Oct |
+| T3-D11 | Interface | **Dedicated chapter pages**, one per topic (windows, areas, headers, tool shelves, side bars, menus, panels…), like the current website | ✅ Confirmed 10 Oct |
+| T3-D12 | Workspaces | **One overview page** about workspaces in general + **one page per workspace** with quick navigation between them (the page system from the docs design artifact) | ✅ Confirmed 10 Oct |
+| T3-D13 | Change tracking | The existing Bforartists action that **files a doc task after a code pull** is the main source for what changed; the interface dump fills gaps | ✅ Confirmed 10 Oct |
 
 ---
 
@@ -176,11 +180,29 @@ per section in Phase 2.
 
 | Chapter | As one page | Split into | Each part |
 |---|---|---|---|
-| 7 3D Viewport | ≈ 2 MB HTML, 3,590 images | Overview · Context menus · Header (≈ 3 parts by object type) · Tool Shelf · Sidebar (≈ 2 parts) · Asset Shelf | ≤ 40,000 words |
+| 7 3D Viewport | ≈ 2 MB HTML, 3,590 images | **By object type → mode → areas** (table below) | ≤ 40,000 words |
 | 26 Properties Editor | ≈ 1.7 MB HTML, 2,562 images | One chapter per tab (Render, Output, View Layer, … Modifiers, Particles, Physics, Object Data …) | ≤ 40,000 words |
 | 12 Geometry nodes | 54,493 words | Editor · Add menu nodes (2–3 parts) | ≤ 40,000 words |
 
-**Result:** 42 `.odt` chapters → **≈ 73 chapters**, plus ≈ 10–15 website-only and new chapters → **≈ 90–100**.
+**3D Viewport by object type, then mode, then areas** (your rule). Each chapter's sub-chapters are the modes; inside
+each mode the same areas in the same order: Header menus · Context menu · Tool Shelf · Sidebar.
+
+| Chapter | Files | Words | Images | Sub-chapters |
+|---|---|---|---|---|
+| 3D Viewport (overview and general areas) | 23 | 48,843 | 787 | Split in 2: Header (tools and options, View, Navigation, Select, Add) · Tool Shelf, Sidebar, Asset Shelf |
+| Object mode | 4 | 24,484 | 357 | Areas |
+| Mesh · Edit mode | ≈ 7 | ≈ 28,000 | ≈ 470 | Areas |
+| Mesh · Sculpt mode | ≈ 5 | ≈ 22,300 | ≈ 340 | Areas |
+| Mesh · Paint modes | ≈ 11 | ≈ 19,300 | ≈ 320 | Vertex Paint · Weight Paint · Texture Paint, each with its areas |
+| Grease Pencil | 22 | 25,312 | 404 | Edit · Draw · Sculpt · Vertex/Weight Paint |
+| Armature | 7 | 15,461 | 281 | Edit · Pose |
+| Curves and surfaces | 10 | 12,442 | 250 | Curve · Surface · Curve & Surface · Hair Curves |
+| Other objects | 10 | 7,966 | 155 | Metaball · Lattice · Text · Point Cloud · Particles |
+
+(Mesh as a whole is 79,992 words, so it splits by mode; the rest stay one chapter per object type.)
+
+**Result:** 42 `.odt` chapters → **≈ 75 big chapters**; with Interface as 16 topic pages, Workspaces as 19 pages and the
+website-only chapters → **≈ 110–120 sidebar entries**.
 
 ### 5.4 What we test before deciding (Phase 1)
 
@@ -257,7 +279,9 @@ per section in Phase 2.
 
 - [ ] `structure.yml`: every chapter → which Tier 2 pages it assembles, in which order, with sub-chapter icons.
 - [ ] Starts from your website consolidation (§3.1): one page per editor; website-only pages as new chapters.
-- [ ] Decide per section: Interface and Workspaces as one page each, or split by topic like the website.
+- [ ] 🖥️ Interface: 16 dedicated topic pages (T3-D11), from chapter 3 split by heading.
+- [ ] 🗂️ Workspaces: overview page + one page per workspace with quick navigation (T3-D12), from chapter 4 split by heading.
+- [ ] 🧊 3D Viewport: object type → mode → areas (§5.3); files regrouped by the object type and mode in their titles.
 - [ ] Redirect map: every Tier 2 address → chapter + anchor.
 - [ ] Review with you, section by section.
 
@@ -290,15 +314,18 @@ per section in Phase 2.
 **Acceptance:** every keymap row links to a page or is on the "not documented yet" list; re-running for a new
 version regenerates the tables in one pull request.
 
-### Phase 5 — 5.3 Audit: What Changed
+### Phase 5 — Audit: What Changed Since the Manual
 
-**Goal:** an exact, per-chapter list of what to update.
+**Goal:** an exact, per-chapter list of what to update for the developer build (next release).
 
+- [ ] 📋 **Doc tasks first:** collect the tasks the existing Bforartists action files after each code pull (T3-D13);
+      map each to its chapter.
 - [ ] `ui_dump.py` (runs inside Bforartists, also via the bfa-coworker connection): menus, panels, operators,
-      properties with labels and tooltips → JSON, for 5.1 and 5.3.
-- [ ] Diff → 🆕 added · ✏️ changed · 🗑️ removed, mapped to chapters through the operator index.
-- [ ] Release notes of Blender 5.2 / 5.3 and the Bforartists weekly reports for behaviour changes the dump cannot see.
+      properties with labels and tooltips → JSON, from the manual's version and from the developer build.
+- [ ] Diff → 🆕 added · ✏️ changed · 🗑️ removed, mapped to chapters through the operator index; only what the doc tasks
+      do not already cover is added.
 - [ ] Each affected page gets `status: needs-update`; a report lists the queue per chapter.
+- [ ] From then on, new doc tasks from the action land in the same queue, so the docs follow each code change.
 
 **Acceptance:** every chapter has an update list (or "no changes"); nothing in the diff is unmapped.
 
@@ -306,8 +333,8 @@ version regenerates the tables in one pull request.
 
 **Goal:** every chapter correct for 5.3; nothing important missing.
 
-- [ ] Work the queue chapter by chapter; `version: "5.3"` when a chapter is done.
-- [ ] Screenshots retaken in 5.3 with the capture tool from Tier 2 (default Bforartists theme).
+- [ ] Work the queue chapter by chapter against the developer build; `version: "5.3"` when a chapter is done.
+- [ ] Screenshots taken **once** in the developer build with the capture tool from Tier 2 (default Bforartists theme).
 - [ ] New sections or pages for 5.2 / 5.3 features.
 - [ ] Write the empty pages: Quick Start (mini tutorial), Comparing to Blender, Migrating from Blender.
 - [ ] Website-only chapters refreshed: geometry node assets, development, how to help, reporting a bug.
@@ -377,11 +404,11 @@ version regenerates the tables in one pull request.
 
 ## 12. Open Questions
 
-1. **T3-D10 timing:** assemble chapters before the public go-live (readers only ever see ~100 chapters), or go live
-   with the Tier 2 structure first?
-2. **Interface and Workspaces:** one page each with sub-chapters, or split by topic like the current website
-   (16 and 18 pages)?
-3. **3D Viewport header** (94,868 words): split by object type (Mesh, Curve, Grease Pencil, Armature…) or by menu
-   family (View/Select/Add, Object, Edit-mode menus)?
-4. **5.3 timing:** is 5.3 released (or close) when Tier 3 starts, so the screenshots of Tier 2 Phase 4 can be taken
-   in 5.3 directly instead of twice?
+✅ Answered 10 Oct: mature before release · Interface as dedicated pages · Workspaces overview + one page each ·
+3D Viewport by object type → mode → areas · update against the developer build, doc tasks from the existing action.
+
+1. 📋 **Doc-task action:** which repository and label does it use? Phase 5 reads its tasks into the update queue.
+2. 🧩 **Workspaces page system:** point me to the part of the docs design artifact that shows the workspace pages and
+   quick navigation, so the template session and the sync build the same thing.
+3. 🗂️ **Properties Editor:** one chapter per tab (≈ 20), or group small tabs (World, Collection, Visual Effects, Bone
+   Constraints are each under 2,000 words) into one chapter?
