@@ -117,6 +117,7 @@ Tier 1 proved the road on one section. Tier 2 drives the **whole manual** down i
 | T2-D8 | PDF | Print stylesheet per page; full-manual PDF printed on demand and offered on *Documentation History* | ✅ Confirmed earlier |
 | T2-D9 | Go-live | A separate maintainer decision after Phase 6; publishing bforartists.co is never automatic | ✅ Confirmed |
 | T2-D10 | Webflow plan | **2,000 CMS items** available; the page map needs about 523 pages + 8 sections + shared sections (< 700) | ✅ Confirmed 10 Oct |
+| T2-D12 | Branches after go-live | **`main` → Webflow** (merges publish); **`develop`** is GitHub's default branch, so Pages CMS opens it and new pull requests target it; writers may make their own branches; `develop` → `main` by reviewed pull request only | ✅ Your direction 11 Oct |
 | T2-D11 | Page structure | **One page per `.odt` file** (chapter → folder `index.md`, sub-chapter → page or folder, leaf → page); sub-chapters with no file get a title-only group page; files under 80 words fold into the page above | ✅ Groundwork |
 
 ---
@@ -306,6 +307,18 @@ average, no maintainer rescue needed.
 - [ ] Writer test (3 people): the end-to-end test tasks on a real section.
 - [ ] Go-live checklist: redirects applied, `master` merge plan for `docs2/`, `.odt` frozen on `odt-5.1-final`,
       bforartists.co publish by a maintainer, announcement.
+- [ ] 🌿 Branch setup (T2-D12):
+
+```
+ ✍️ Pages CMS / writers ──▶ develop (GitHub default) ──PR + review──▶ main ──sync──▶ 🌐 Webflow
+        └─▶ docs/<my-change> ──PR──┘                     (protected)
+```
+
+      1. `docs2/main` becomes `main` (the `.odt` history stays on `odt-5.1-final`).
+      2. Make `develop` from `main`; set it as GitHub's **default branch** → Pages CMS and new PRs start there.
+      3. Protect `main`: pull request required, checks must pass, one approval.
+      4. Workflow: `PUBLISH_BRANCH: main`; `develop` and other branches get checks, bot and preview only.
+      5. Edit buttons (README, wiki, website *Edit this page*) point at `develop`.
 - [ ] Decision meeting: go / fix first.
 
 **Acceptance:** readers answer ≥ 5 of 6 tasks; writers finish without help; go-live checklist complete.
