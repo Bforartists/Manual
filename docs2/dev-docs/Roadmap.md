@@ -38,7 +38,7 @@ Full plan: [`docs2/plans/plan_docs2_tier2_full_manual.md`](https://github.com/Bf
 | Step | What |
 |---|---|
 | 1 | 🚀 Go-live: `docs2/main` becomes main, bforartists.co switches (maintainer's click) |
-| 2 | ✂️ Refine: trimming, rewording and consolidation |
+| 2 | 🧱 Tier 3: ~100 big chapters (assembled from small files), keymap redesign, first pass to Bforartists 5.3, new content, trimming |
 
 ## 📌 Decisions
 

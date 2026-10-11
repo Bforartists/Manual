@@ -236,6 +236,7 @@ Order: **the chapter list, top to bottom** (T2-D2). Chapters 1–3, 17, 26.9 and
 | 13 | 35 Extensions | Extensions | 5 | 4,983 |
 | 14 | 37, 39, 40 Glossary, History, Manual history | Appendix | 3 | 12,618 |
 | 15 | 41, 42 Keymaps | Keymap | 2 | 36,269 |
+| 16 | Website-only pages → **new chapters** (assets, development, information, how to help, reporting a bug, requesting a feature) | Several | ≈ 12 | website text |
 
 - [ ] Per run: `python3 docs2/tools/convert_chapter.py <odt manual> <section> <chapter>` on a `docs2/section-<name>`
       branch → word check 100% → repeats into snippets → PR into `docs2/main` → preview review → merge (syncs staging).
@@ -391,7 +392,6 @@ average, no maintainer rescue needed.
 
 1. ✅ Answered 10 Oct: `docs2/main` · 2,000 CMS items · chapter list top to bottom · default Bforartists theme ·
    writers are you, later a few contributors.
-2. **Very long pages** (11 over 8,000 words, e.g. Standard Keymap): keep whole if Webflow accepts the size, or split
-   by top heading? Decided in Phase 3 after the size check.
-3. **Website-only pages** (assets, development, information): keep their website text as pages (like Quick Start),
-   or redirect them to the closest chapter?
+2. ✅ **Long pages:** big pages are the goal (load once, explore deep, ~100 chapters). Tier 2 keeps one source file
+   per `.odt` file; Tier 3 assembles them into big chapter pages. See `plan_docs2_tier3_structure_and_update.md`.
+3. ✅ **Website-only pages** become new chapters (run 16).
