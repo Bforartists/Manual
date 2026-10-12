@@ -20,16 +20,71 @@
 
 ---
 
-## 🔑 Before you start (one time, 5 minutes)
+## 🔑 Before you start (one time, about 10 minutes)
 
-- [ ] **Push `docs2/main`** from VS Code (it already holds Tier 1, Phase 5 and the Tier 2 groundwork).
-- [ ] **Make a Webflow API key:** in Webflow, open the Bforartists site's **Site settings → Apps & integrations →
-      API access → Generate API token**. Name it `Docs sync`. Permissions: **CMS: Read and write** and
-      **Sites: Read and write** (needed to publish staging). Copy the token.
-- [ ] **Give it to GitHub:** `Bforartists/Manual` → **Settings → Secrets and variables → Actions →
-      New repository secret**. Name: `WEBFLOW_TOKEN`. Paste the token. **Add secret**.
+Do these **in this order**. The token goes in first, so that the push in step C already does the first real sync
+and you can watch it work before the test.
 
-> 💡 The token lives only in GitHub's secret store. Nobody can read it back, not even in the logs.
+### A. 🔐 Make a Webflow API token
+
+The token is a password that lets GitHub write the docs into Webflow's CMS for this one site only.
+
+- [ ] Open the Webflow dashboard. On the **Bforartists** site card, click **⋯ → Settings**
+      (or, in the Designer, the **W** menu → **Site settings**).
+- [ ] In the left menu: **Apps & integrations**. Scroll down to **API access**.
+- [ ] Click **Generate API token**.
+- [ ] **Name:** `Docs sync (GitHub)`.
+- [ ] **Access:** set two lines and leave everything else on **No access**:
+
+      | API | Access | Why |
+      |---|---|---|
+      | **CMS** | Read and write | create and update the Doc Sections, Doc Snippets and Doc Pages items |
+      | **Sites** | Read and write | publish the **webflow.io** staging site after a sync |
+
+- [ ] Click **Generate token**. **Copy it now** and keep the tab open until step B is done. Treat it like a password:
+      don't paste it in chats, issues or files.
+
+> 💡 The token stays valid until you revoke it, or until it goes unused for 365 days. The sync uses it on every
+> merge, so it won't expire in practice. To revoke: the same **API access** list → the token → **Revoke**.
+
+### B. 🗝️ Give the token to GitHub
+
+- [ ] Open https://github.com/Bforartists/Manual/settings/secrets/actions
+      (**Settings → Secrets and variables → Actions**).
+- [ ] Click **New repository secret**.
+- [ ] **Name:** `WEBFLOW_TOKEN` (exactly this, in capitals). **Secret:** paste the token.
+- [ ] Click **Add secret**. It shows in the list as `WEBFLOW_TOKEN`, with the value hidden.
+
+> 💡 Nobody can read a secret back, not even you; the logs show `***` in its place. To change it later, click
+> the pencil next to it and paste a new token.
+
+### C. ⬆️ Push `docs2/main`
+
+`docs2/main` exists only on your computer for now. It holds Tier 1, Phase 5, the Tier 2 groundwork and the plans.
+
+- [ ] In VS Code, click the branch name at the bottom left and choose **docs2/main**.
+- [ ] Click **Publish Branch** (the cloud button in the Source Control view, or the same spot at the bottom left).
+
+### D. 👀 Watch the first sync (the warm-up)
+
+- [ ] On GitHub: **Actions → Docs 2.0 checks and preview**. The newest run is on `docs2/main`. Wait for the green ✓
+      (about 2–3 minutes).
+- [ ] Open the run. Its summary ends with **🌐 Webflow sync**: about **30 pages created or updated** (Getting
+      Started, the Interface and Editors samples, Doc Kit; pages made by hand earlier are updated, not doubled) and **🚀 Published to staging**.
+- [ ] Open https://bforartists.webflow.io/docs/getting-started-introduction. It shows the page from the repo.
+
+> ⚠️ **Publishing staging publishes the whole webflow.io site,** including any unfinished Designer work from the
+> template session. bforartists.co is never touched. If the template is mid-change, finish or undo it first.
+
+**If something goes wrong**
+
+| You see | Do this |
+|---|---|
+| ⚠️ *WEBFLOW_TOKEN is not set; nothing was sent to Webflow* | The secret is missing or misspelled. Redo step B, then open the run → **Re-run all jobs**. |
+| ❌ *401* or *Unauthorized* in the sync step | The token was copied wrong or revoked. Make a new one (A), update the secret (B), re-run. |
+| ❌ *403* or *missing scopes* | The token lacks **CMS** or **Sites** write access. Make a new one with both (A). |
+| ❌ The push is refused with *workflow* in the message | VS Code's GitHub sign-in lacks the *workflow* permission. Sign out of GitHub in VS Code (Accounts menu, bottom left), sign in again, push again. |
+| 🟡 The sync step is skipped | The checks failed. The summary lists the problems; send them to me. |
 
 ---
 
@@ -137,8 +192,9 @@ hidden fields (ID, section, breadcrumb).
 
 **Extra checks (optional)**
 
-- [ ] 🔁 **Nothing changes twice:** in GitHub, **Actions → Docs 2.0 checks and preview → Run workflow** on
-      `docs2/main`. The sync says *unchanged* for everything.
+- [ ] 🔁 **Nothing changes twice:** in GitHub, open the newest run on `docs2/main` → **Re-run all jobs**. The sync
+      says *unchanged* for everything. (The **Run workflow** button only appears once the workflow is on the
+      default branch, after go-live.)
 - [ ] ✋ **Hand edits are protected:** change one word of *Part two* in Webflow's CMS, wait 10 minutes, edit *Part two*
       in Pages CMS and merge. The sync skips it and says *edited by hand in Webflow*.
 
