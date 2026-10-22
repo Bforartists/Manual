@@ -668,7 +668,7 @@ Some examples.
 
 à - A, Alt-Backspace, Backslash
 
-â - A, Alt-Backspace, \^
+â - A, Alt-Backspace, `\^`
 
 å - A, Alt-Backspace, O
 
