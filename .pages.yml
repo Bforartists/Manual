@@ -17,8 +17,11 @@ content:
     path: docs2/content
     subfolders: true
     format: yaml-frontmatter
-    # New pages are named after their title (my-page.md). A chapter is a folder with index.md:
-    # "Create folder", then "Add an entry" inside it and set the file name to index.md.
+    # New pages are named after their title (my-page.md). A chapter is a folder with index.md.
+    # To make one: add the page, then use its "+" (Add children entry) button and accept
+    # "Rename this file first?". Pages CMS turns my-page.md into my-page/index.md.
+    # hideDirs: nodes shows a chapter folder once (as its index.md row, expandable), and
+    # still shows plain folders such as interface/ and editors/ that have no index.md.
     filename:
       template: "{primary}.md"
       field: create
@@ -27,7 +30,7 @@ content:
       layout: tree
       node:
         filename: index.md
-        hideDirs: others
+        hideDirs: nodes
       fields: [title, status, version]
       primary: title
       search: [title, id]
