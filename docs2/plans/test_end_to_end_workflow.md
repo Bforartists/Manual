@@ -104,7 +104,7 @@ In the list, each row has two kinds of plus: the **⊕ next to the title** opens
 **+ button at the right end of the row** (tooltip *Add children entry*) adds a page inside it.
 
 - [ ] Open **📘 Documentation pages**. On the **Doc Kit (test)** row, click the **+ at the right end** of the row.
-- [ ] Title: `My first chapter`. Keep the file name (`my-first-chapter.md`). Type one sentence, for example
+- [ ] Title: `My first chapter`. (There is no file name to set: saving names it `my-first-chapter.md`.) Type one sentence, for example
       *This chapter tries every kind of content.* Click **Save**.
 - [ ] Back in the list, open **Doc Kit (test)** with its ⊕. On the new **My first chapter** row, click the
       **+ at the right end**. Pages CMS asks **Rename this file first?** Click **Rename**.
@@ -115,8 +115,8 @@ In the list, each row has two kinds of plus: the **⊕ next to the title** opens
 
 ## 3. 📄 Make two sub-chapters
 
-- [ ] On the **My first chapter** row, click the **+ at the right end** again. Title: `Part one`. Keep the file name
-      (`part-one.md`). Type one sentence. **Save**.
+- [ ] On the **My first chapter** row, click the **+ at the right end** again. Title: `Part one`. Type one sentence. **Save**
+      (saved as `part-one.md`).
 - [ ] Do the same for `Part two`.
 
 ✅ Open *My first chapter* with its ⊕: *Part one* and *Part two* sit inside it.
