@@ -8280,6 +8280,91 @@
      "select": "*"
     }
    ]
+  },
+  {
+   "id": "editors.text-editor",
+   "file": "content/editors/text-editor.md",
+   "title": "Text Editor",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Text Editor"
+   ],
+   "images": "editors/text-editor",
+   "parts": [
+    {
+     "src": "21 Editors - Text Editor",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.python-console",
+   "file": "content/editors/python-console.md",
+   "title": "Python Console",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Python Console"
+   ],
+   "images": "editors/python-console",
+   "parts": [
+    {
+     "src": "22 Editors - Python Console",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.info-editor",
+   "file": "content/editors/info-editor.md",
+   "title": "Info Editor",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Info Editor"
+   ],
+   "images": "editors/info-editor",
+   "parts": [
+    {
+     "src": "23 Editors - Info Editor",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.toolbar",
+   "file": "content/editors/toolbar.md",
+   "title": "Toolbar",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Toolbar"
+   ],
+   "images": "editors/toolbar",
+   "parts": [
+    {
+     "src": "24 Editors - Toolbar",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.outliner",
+   "file": "content/editors/outliner.md",
+   "title": "Outliner",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Outliner"
+   ],
+   "images": "editors/outliner",
+   "parts": [
+    {
+     "src": "25 Editors - Outliner",
+     "select": "*"
+    }
+   ]
   }
  ],
  "snippets": [

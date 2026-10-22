@@ -9602,7 +9602,7 @@
    ],
    "images": "editors/nonlinear-animation-editor",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "20",
    "parts": [
     {
@@ -9613,29 +9613,6 @@
    "words": 1256,
    "images_count": 31,
    "legacy_path": "/documentation/editors/nonlinear-animation",
-   "split_candidate": false
-  },
-  {
-   "id": "editors.nonlinear-animation-editor.header",
-   "file": "content/editors/nonlinear-animation-editor/header/index.md",
-   "title": "Header",
-   "section": "editors",
-   "path": [
-    "Editors",
-    "Nonlinear Animation Editor",
-    "Header"
-   ],
-   "images": "editors/nonlinear-animation-editor/header",
-   "kind": "group",
-   "status": "planned",
-   "number": "20.1",
-   "parts": [
-    {
-     "note": "The pages of this part are listed in the sidebar under *Header*."
-    }
-   ],
-   "words": 0,
-   "images_count": 0,
    "split_candidate": false
   },
   {
@@ -9651,7 +9628,7 @@
    ],
    "images": "editors/nonlinear-animation-editor/header/nla-editor-header-tools-and-options",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "20.1.1",
    "parts": [
     {
@@ -9676,7 +9653,7 @@
    ],
    "images": "editors/nonlinear-animation-editor/header/nla-editor-header-quick-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "20.1.2",
    "parts": [
     {
@@ -9701,7 +9678,7 @@
    ],
    "images": "editors/nonlinear-animation-editor/header/nla-editor-view-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "20.1.3",
    "parts": [
     {
@@ -9726,7 +9703,7 @@
    ],
    "images": "editors/nonlinear-animation-editor/header/nla-editor-select-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "20.1.4",
    "parts": [
     {
@@ -9751,7 +9728,7 @@
    ],
    "images": "editors/nonlinear-animation-editor/header/nla-editor-marker-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "20.1.5",
    "parts": [
     {
@@ -9776,7 +9753,7 @@
    ],
    "images": "editors/nonlinear-animation-editor/header/nla-editor-add-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "20.1.6",
    "parts": [
     {
@@ -9801,7 +9778,7 @@
    ],
    "images": "editors/nonlinear-animation-editor/header/nla-editor-track-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "20.1.7",
    "parts": [
     {
@@ -9826,7 +9803,7 @@
    ],
    "images": "editors/nonlinear-animation-editor/header/nla-editor-strip-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "20.1.8",
    "parts": [
     {
@@ -9850,7 +9827,7 @@
    ],
    "images": "editors/nonlinear-animation-editor/nla-editor-channel-list",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "20.2",
    "parts": [
     {
@@ -9860,29 +9837,6 @@
    ],
    "words": 352,
    "images_count": 13,
-   "split_candidate": false
-  },
-  {
-   "id": "editors.nonlinear-animation-editor.sidebar",
-   "file": "content/editors/nonlinear-animation-editor/sidebar/index.md",
-   "title": "Sidebar",
-   "section": "editors",
-   "path": [
-    "Editors",
-    "Nonlinear Animation Editor",
-    "Sidebar"
-   ],
-   "images": "editors/nonlinear-animation-editor/sidebar",
-   "kind": "group",
-   "status": "planned",
-   "number": "20.3",
-   "parts": [
-    {
-     "note": "The pages of this part are listed in the sidebar under *Sidebar*."
-    }
-   ],
-   "words": 0,
-   "images_count": 0,
    "split_candidate": false
   },
   {
@@ -9898,7 +9852,7 @@
    ],
    "images": "editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "20.3.1",
    "parts": [
     {
@@ -9923,7 +9877,7 @@
    ],
    "images": "editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "20.3.2",
    "parts": [
     {
@@ -9948,7 +9902,7 @@
    ],
    "images": "editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "20.3.3",
    "parts": [
     {
@@ -9972,7 +9926,7 @@
    ],
    "images": "editors/nonlinear-animation-editor/nla-editor-footer-tools-and-options",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "20.4",
    "parts": [
     {
@@ -9995,7 +9949,7 @@
    ],
    "images": "editors/text-editor",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "21",
    "parts": [
     {
@@ -10019,7 +9973,7 @@
    ],
    "images": "editors/python-console",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "22",
    "parts": [
     {
@@ -10043,7 +9997,7 @@
    ],
    "images": "editors/info-editor",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "23",
    "parts": [
     {
@@ -10067,7 +10021,7 @@
    ],
    "images": "editors/toolbar",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "24",
    "parts": [
     {
