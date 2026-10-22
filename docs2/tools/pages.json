@@ -783,6 +783,169 @@
      "note": "You can use your **Blender** hotkeys, settings, addons and theme with Bforartists! Learn how to migrate here.\n\n> **Note:** This page has no content yet, in the .odt manual or on the website. It is written in the Refine phase."
     }
    ]
+  },
+  {
+   "id": "workspaces.workspaces",
+   "file": "content/workspaces/workspaces.md",
+   "title": "Workspaces",
+   "section": "workspaces",
+   "path": [
+    "Workspaces",
+    "Workspaces"
+   ],
+   "images": "workspaces/workspaces",
+   "parts": [
+    {
+     "src": "4 Workspaces",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.topbar-and-statusbar",
+   "file": "content/editors/topbar-and-statusbar/index.md",
+   "title": "Topbar and Statusbar",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Topbar and Statusbar"
+   ],
+   "images": "editors/topbar-and-statusbar",
+   "parts": [
+    {
+     "src": "5 Topbar and Statusbar",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.topbar-and-statusbar.topbar-menus",
+   "file": "content/editors/topbar-and-statusbar/topbar-menus/index.md",
+   "title": "Topbar menus",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Topbar and Statusbar",
+    "Topbar menus"
+   ],
+   "images": "editors/topbar-and-statusbar/topbar-menus",
+   "parts": [
+    {
+     "note": "The pages of this part are listed in the sidebar under *Topbar menus*."
+    }
+   ]
+  },
+  {
+   "id": "editors.topbar-and-statusbar.topbar-menus.file-menu",
+   "file": "content/editors/topbar-and-statusbar/topbar-menus/file-menu.md",
+   "title": "File menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Topbar and Statusbar",
+    "Topbar menus",
+    "File menu"
+   ],
+   "images": "editors/topbar-and-statusbar/topbar-menus/file-menu",
+   "parts": [
+    {
+     "src": "5.1.1 Topbar and Statusbar - File menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.topbar-and-statusbar.topbar-menus.edit-menu",
+   "file": "content/editors/topbar-and-statusbar/topbar-menus/edit-menu.md",
+   "title": "Edit menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Topbar and Statusbar",
+    "Topbar menus",
+    "Edit menu"
+   ],
+   "images": "editors/topbar-and-statusbar/topbar-menus/edit-menu",
+   "parts": [
+    {
+     "src": "5.1.2 Topbar and Statusbar - Edit menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.topbar-and-statusbar.topbar-menus.render-menu",
+   "file": "content/editors/topbar-and-statusbar/topbar-menus/render-menu.md",
+   "title": "Render menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Topbar and Statusbar",
+    "Topbar menus",
+    "Render menu"
+   ],
+   "images": "editors/topbar-and-statusbar/topbar-menus/render-menu",
+   "parts": [
+    {
+     "src": "5.1.3 Topbar and Statusbar - Render menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.topbar-and-statusbar.topbar-menus.window-menu",
+   "file": "content/editors/topbar-and-statusbar/topbar-menus/window-menu.md",
+   "title": "Window menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Topbar and Statusbar",
+    "Topbar menus",
+    "Window menu"
+   ],
+   "images": "editors/topbar-and-statusbar/topbar-menus/window-menu",
+   "parts": [
+    {
+     "src": "5.1.4 Topbar and Statusbar - Window menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.topbar-and-statusbar.topbar-menus.help-menu",
+   "file": "content/editors/topbar-and-statusbar/topbar-menus/help-menu.md",
+   "title": "Help menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Topbar and Statusbar",
+    "Topbar menus",
+    "Help menu"
+   ],
+   "images": "editors/topbar-and-statusbar/topbar-menus/help-menu",
+   "parts": [
+    {
+     "src": "5.1.5 Topbar and Statusbar - Help menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.introduction",
+   "file": "content/editors/introduction.md",
+   "title": "Editors introduction",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Editors introduction"
+   ],
+   "images": "editors/introduction",
+   "parts": [
+    {
+     "src": "6 Editors introduction",
+     "select": "*"
+    }
+   ]
   }
  ],
  "snippets": [
