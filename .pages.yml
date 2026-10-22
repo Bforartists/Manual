@@ -36,47 +36,21 @@ content:
       primary: title
       search: [title, id]
       sort: [title]
+    # Form order: the three things a writer edits (📝 title, 💬 summary, 📄 page) come first.
+    # Everything after them is optional page settings, then 🔒 fields the tools fill in.
     fields:
       - name: title
-        label: Title
+        label: 📝 Title
         type: string
         required: true
-      - name: status
-        label: Status
-        type: select
-        default: draft
-        options:
-          values: [draft, needs-review, reviewed]
       - name: summary
-        label: Summary
+        label: 💬 Summary
         type: string
-        description: Optional. One sentence under the title and in search. Left empty, the first paragraph is used.
-      - name: order
-        label: Position in the sidebar
-        type: number
-        description: Optional. Lower numbers come first (10, 20, 30…). Left empty, new pages go after the existing ones.
-      - name: video
-        label: Chapter video (YouTube link)
-        type: string
-        description: Optional. Shown at the top of the page.
-      - name: shared
-        label: Shared sections on this page
-        type: reference
-        description: Sections written once in Shared snippets. Each appears where the page links to it.
-        options:
-          collection: snippets
-          multiple: true
-          search: title
-          value: "{path}"
-          label: "{title}"
-      - name: examples
-        label: Example files to download
-        type: file
-        list: true
-        description: Optional .blend or other files shown as downloads on the page.
+        description: Optional. One sentence shown under the title and in search. Left empty, the first paragraph is used.
       - name: body
-        label: Page
+        label: 📄 Page
         type: rich-text
+        description: The page itself. Press / on an empty line for headings, tips, tables and more; drag in screenshots.
         options:
           format: markdown
           switcher: true
@@ -84,36 +58,70 @@ content:
           path: docs2/images/_inbox
           rename: safe
           extensions: [png, jpg, jpeg, webp, gif]
-      # Set by the converter and the build. Shown read-only so writers can see them.
+      # ── ⚙️ Page settings (optional) ──
+      - name: status
+        label: 🚦 Status
+        type: select
+        default: draft
+        description: Page setting. draft → needs-review → reviewed.
+        options:
+          values: [draft, needs-review, reviewed]
+      - name: order
+        label: 🔢 Position in the sidebar
+        type: number
+        description: Page setting, optional. Lower numbers come first (10, 20, 30…). Left empty, new pages go after the existing ones.
+      - name: video
+        label: 🎬 Chapter video (YouTube link)
+        type: string
+        description: Page setting, optional. Shown at the top of the page.
+      - name: shared
+        label: ♻️ Shared sections on this page
+        type: reference
+        description: Page setting, optional. Sections written once in Shared snippets. Each appears where the page links to it.
+        options:
+          collection: snippets
+          multiple: true
+          search: title
+          value: "{path}"
+          label: "{title}"
+      - name: examples
+        label: 📦 Example files to download
+        type: file
+        list: true
+        description: Page setting, optional. .blend or other files shown as downloads on the page.
+      - name: icon
+        label: 🎨 Icon name
+        type: string
+        description: Page setting, optional. A Bforartists icon shown next to the page title.
+      - name: version
+        label: 🏷️ Bforartists version
+        type: string
+        default: "5.1"
+        description: Page setting. The version this page describes.
+      - name: screenshots
+        label: 📸 Screenshots taken in version
+        type: string
+        description: Page setting, optional.
+      # ── 🔒 Filled in by the tools; shown read-only so writers can see them ──
       - name: id
-        label: Page ID (do not change)
+        label: 🔒 Page ID (do not change)
         type: string
         readonly: true
       - name: slug
-        label: Web address (do not change)
+        label: 🔒 Web address (do not change)
         type: string
         readonly: true
       - name: section
-        label: Section
+        label: 🔒 Section
         type: string
         readonly: true
       - name: path
-        label: Breadcrumb
+        label: 🔒 Breadcrumb
         type: string
         list: true
         readonly: true
-      - name: icon
-        label: Icon name
-        type: string
-      - name: version
-        label: Bforartists version
-        type: string
-        default: "5.1"
-      - name: screenshots
-        label: Screenshots taken in version
-        type: string
       - name: source
-        label: Converted from
+        label: 🔒 Converted from
         type: string
         list: true
         readonly: true
@@ -128,17 +136,13 @@ content:
       primary: title
     fields:
       - name: title
-        label: Title
+        label: 📝 Title
         type: string
         required: true
-      - name: status
-        label: Status
-        type: select
-        options:
-          values: [draft, needs-review, reviewed]
       - name: body
-        label: Shared section
+        label: ♻️ Shared section
         type: rich-text
+        description: Written once, shown on every page that lists it under Shared sections.
         options:
           format: markdown
           switcher: true
@@ -146,18 +150,23 @@ content:
           path: docs2/images/_inbox
           rename: safe
           extensions: [png, jpg, jpeg, webp, gif]
-      - name: id
-        label: Snippet ID (do not change)
-        type: string
-        readonly: true
+      - name: status
+        label: 🚦 Status
+        type: select
+        options:
+          values: [draft, needs-review, reviewed]
       - name: version
-        label: Bforartists version
+        label: 🏷️ Bforartists version
         type: string
       - name: screenshots
-        label: Screenshots taken in version
+        label: 📸 Screenshots taken in version
         type: string
+      - name: id
+        label: 🔒 Snippet ID (do not change)
+        type: string
+        readonly: true
       - name: source
-        label: Converted from
+        label: 🔒 Converted from
         type: string
         list: true
         readonly: true
