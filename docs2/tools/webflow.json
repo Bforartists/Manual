@@ -9,5 +9,9 @@
   },
   "page_url": "/docs/",
   "repo": "Bforartists/Manual",
-  "branch": "docs2/main"
+  "branch": "docs2/main",
+  "skip_sections": [
+    "doc-kit"
+  ],
+  "_skip_sections": "Test sections that stay in the repo (and the preview) but are never sent to Webflow."
 }
