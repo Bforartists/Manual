@@ -99,11 +99,26 @@ jobs:
           only="${{ steps.changed.outputs.files }}"
           [ -z "$only" ] && only=$(ls docs2/content/getting-started/*.md | tr '\n' ' ')
           title="${{ github.event.pull_request.number && format('Pull request #{0}', github.event.pull_request.number) || format('Branch {0}', github.ref_name) }}"
+          # images load from GitHub at this commit (pushed, with the bot's commit) instead of being copied
+          if [ "$SAME_REPO" = "true" ]; then export PREVIEW_RAW_BASE="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/$(git rev-parse HEAD)/"; fi
           python docs2/tools/render.py . --out _preview --branch "$BRANCH" --title "$title" \
             --check _check.md --bot _bot.md --only $only
 
       - name: Publish preview to GitHub Pages
+        id: publish
         if: env.SAME_REPO == 'true'
+        continue-on-error: true
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: _preview
+          destination_dir: preview/${{ env.PREVIEW_DIR }}
+          keep_files: true
+          commit_message: "preview: ${{ env.PREVIEW_DIR }} [docs-bot]"
+
+      - name: Publish preview to GitHub Pages (second try)
+        if: env.SAME_REPO == 'true' && steps.publish.outcome == 'failure'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

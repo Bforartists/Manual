@@ -72,6 +72,11 @@ def out_name(page):
     return page.page_key + ".html" if page.kind == "page" else "snippets/" + page.page_key.split("/")[-1] + ".html"
 
 
+# Set by the workflow for branches in this repository: images load from GitHub at the commit
+# instead of being copied into every preview (a big pull request would copy hundreds of MB).
+RAW_BASE = os.environ.get("PREVIEW_RAW_BASE", "")
+
+
 def rel_url(from_file, to_file):
     return os.path.relpath(to_file, os.path.dirname(from_file) or ".").replace("\\", "/")
 
@@ -89,7 +94,7 @@ class Builder:
     def body_html(self, page, out_file):
         return html_build.page_html(
             self.repo, page, self.pages, self.md,
-            img_url=lambda r: rel_url(out_file, r),
+            img_url=lambda r: (RAW_BASE + r) if RAW_BASE else rel_url(out_file, r),
             page_url=lambda t: rel_url(out_file, out_name(t)) if t.rel in self.targets else None,
             file_url=lambda r: f"{REPO_URL}/blob/{self.branch}/{r}",
             used_images=self.images)
@@ -168,7 +173,7 @@ class Builder:
             os.makedirs(os.path.dirname(dst), exist_ok=True)
             open(dst, "w", encoding="utf-8").write(html)
         open(os.path.join(self.out, "index.html"), "w", encoding="utf-8").write(self.index_file(check_md, bot_md, only or set()))
-        for r in sorted(self.images):
+        for r in sorted(self.images) if not RAW_BASE else []:     # with RAW_BASE the images stay on GitHub
             dst = os.path.join(self.out, r)
             os.makedirs(os.path.dirname(dst), exist_ok=True)
             shutil.copy(os.path.join(self.repo, r), dst)
