@@ -1,0 +1,1836 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Outliner · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1417 · <code>docs2/clone-runs-3-15</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span>Editors introduction</span>
+<a href="3d-viewport.html">3D Viewport</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/object-mode-object-context-menu.html">Object mode - Object Context Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu.html">Mesh Object - Edit Mode - Vertex Context Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu.html">Mesh Object - Edit Mode - Edge Context Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu.html">Mesh Object - Edit Mode - Face Context Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus.html">Mesh Object - Sculpt Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/mesh-object-vertex-paint-mode-brushes-context-menus.html">Mesh Object - Vertex Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/mesh-object-weight-paint-mode-brushes-context-menus.html">Mesh Object - Weight Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/mesh-object-texture-paint-mode-brushes-context-menus.html">Mesh Object - Texture Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus.html">Curve + Surface Object - Edit Mode - Curve context menus</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu.html">Metaball - Edit Mode - Metaball context menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/text-edit-mode-text-context-menu.html">Text - Edit Mode - Text context menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu.html">Grease Pencil object - Edit Mode - Point context menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu.html">Grease Pencil object - Edit Mode - Stroke context menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu.html">Grease Pencil object - Sculpt Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/grease-pencil-object-draw-mode-brushes-context-menu.html">Grease Pencil object - Draw Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu.html">Grease Pencil object - Vertex Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/grease-pencil-object-weight-paint-mode-brushes-context-menu.html">Grease Pencil object - Weight Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/armature-edit-mode-armature-context-menu.html">Armature - Edit Mode - Armature context menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/armature-pose-mode-pose-context-menu.html">Armature - Pose Mode - Pose context menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/armature-edit-mode-lattice-context-menu.html">Armature - Edit Mode - Lattice context menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/context-menus/hair-curves-edit-mode-curves-context-menu.html">Hair Curves - Edit Mode - Curves context menu</a>
+<a style="padding-left:1.5rem" href="3d-viewport/header.html">Header</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/edit-mode-add-menu.html">Edit mode - Add menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/object-menu.html">Object menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/mesh-edit-mode-mesh-menu.html">Mesh - Edit mode - Mesh menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/mesh-edit-mode-vertex-menu.html">Mesh - Edit Mode - Vertex Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/mesh-edit-mode-edge-menu.html">Mesh - Edit mode - Edge Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/mesh-edit-mode-face-menu.html">Mesh - Edit mode - Face menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/mesh-edit-mode-uv-menu.html">Mesh - Edit mode - UV menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/mesh-sculpt-mode-sculpt-menu.html">Mesh - Sculpt mode - Sculpt menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/mesh-sculpt-mode-mask-menu.html">Mesh - Sculpt mode - Mask menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/mesh-sculpt-mode-face-sets-menu.html">Mesh - Sculpt mode - Face Sets menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/mesh-vertex-paint-mode-paint-menu.html">Mesh - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/mesh-vertex-paint-mode-brush-menu.html">Mesh - Vertex Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/mesh-weight-paint-mode-weights-menu.html">Mesh - Weight Paint mode - Weights menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/mesh-texture-paint-mode-brush-menu.html">Mesh - Texture Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/curve-edit-mode-curve-menu.html">Curve - Edit mode - Curve menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/surface-edit-mode-surface-menu.html">Surface - Edit mode - Surface menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/curve-surface-edit-mode-control-points-menu.html">Curve &amp; Surface - Edit mode - Control points menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/curve-surface-edit-mode-segments-menu.html">Curve &amp; Surface - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/metaball-edit-mode-metaball-menu.html">Metaball - Edit mode - Metaball menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/text-edit-mode-text-menu.html">Text - Edit mode - Text menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu.html">Grease Pencil - Edit mode - Grease Pencil menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/point-cloud-edit-mode-point-cloud-menu.html">Point Cloud - Edit mode - Point Cloud menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/grease-pencil-edit-mode-point-menu.html">Grease Pencil - Edit mode - Point menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/grease-pencil-edit-mode-stroke-menu.html">Grease Pencil - Edit mode - Stroke menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/grease-pencil-draw-mode-draw-menu.html">Grease Pencil - Draw mode - Draw menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu.html">Grease Pencil - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/grease-pencil-weight-paint-mode-weights-menu.html">Grease Pencil - Weight Paint Mode - Weights Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/armature-edit-mode-armature-menu.html">Armature - Edit mode - Armature menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/armature-pose-mode-pose-menu.html">Armature - Pose mode - Pose menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/lattice-edit-mode-lattice-menu.html">Lattice - Edit mode - Lattice menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/particle-particle-mode-particle-menu.html">Particle - Particle mode - Particle menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/hair-curve-edit-mode-curves-menu.html">Hair Curve - Edit mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/hair-curve-edit-mode-control-points-menu.html">Hair Curve - Edit mode - Control Points menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/hair-curve-edit-mode-segments-menu.html">Hair Curve - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/header/hair-curve-sculpt-mode-curves-menu.html">Hair Curve - Sculpt mode - Curves menu</a>
+<a style="padding-left:1.5rem" href="3d-viewport/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/mesh-edit-mode.html">Mesh - Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/mesh-sculpt-mode.html">Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/mesh-vertex-paint-mode.html">Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/mesh-weight-paint-mode.html">Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/mesh-texture-paint-mode.html">Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/mesh-particle-edit-mode.html">Mesh - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/curve-edit-mode.html">Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/surface-edit-mode.html">Surface - Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/metaball-edit-mode.html">Metaball - Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/text-edit-mode.html">Text - Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/grease-pencil-edit-mode.html">Grease Pencil - Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/grease-pencil-sculpt-mode.html">Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/grease-pencil-draw-mode.html">Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/grease-pencil-vertex-paint-mode.html">Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/grease-pencil-weight-paint-mode.html">Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/armature-edit-mode.html">Armature - Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/armature-pose-mode.html">Armature - Pose Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/lattice-edit-mode.html">Lattice - Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/hair-curve-edit-mode.html">Hair Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/tool-shelf/hair-curve-sculpt-mode.html">Hair Curve - Sculpt Mode</a>
+<a style="padding-left:1.5rem" href="3d-viewport/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/item-tab.html">Item tab</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-object-mode.html">Tool Tab - Object Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-edit-mode.html">Tool Tab - Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-pose-mode.html">Tool Tab - Pose Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-mesh-sculpt-mode.html">Tool Tab - Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode.html">Tool Tab - Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-mesh-texture-paint-mode.html">Tool Tab - Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode.html">Tool Tab - Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-particle-edit-mode.html">Tool Tab - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-grease-pencil-sculpt-mode.html">Tool Tab - Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-grease-pencil-draw-mode.html">Tool Tab - Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-grease-pencil-vertex-paint-mode.html">Tool Tab - Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-grease-pencil-weight-paint-mode.html">Tool Tab - Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-grease-pencil-layer-panel.html">Tool Tab - Grease Pencil - Layer Panel</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode.html">Tool Tab - Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="3d-viewport/sidebar/animation-tab.html">Animation Tab</a>
+<a style="padding-left:1.5rem" href="3d-viewport/asset-shelf.html">Asset Shelf</a>
+<a href="image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="image-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="image-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="image-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="image-editor/header/view-menu.html">View menu</a>
+<a style="padding-left:2.5rem" href="image-editor/header/image-menu.html">Image menu</a>
+<a style="padding-left:2.5rem" href="image-editor/header/select-menu.html">Select menu</a>
+<a style="padding-left:2.5rem" href="image-editor/header/add-menu.html">Add menu</a>
+<a style="padding-left:2.5rem" href="image-editor/header/mask-menu.html">Mask menu</a>
+<a style="padding-left:1.5rem" href="image-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="image-editor/sidebar/tool-tab-in-paint-mode.html">Tool Tab in Paint Mode</a>
+<a style="padding-left:2.5rem" href="image-editor/sidebar/image-tab.html">Image Tab</a>
+<a style="padding-left:2.5rem" href="image-editor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="image-editor/sidebar/scopes-tab.html">Scopes Tab</a>
+<a style="padding-left:2.5rem" href="image-editor/sidebar/mask-tab.html">Mask Tab</a>
+<a href="uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="uv-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="uv-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="uv-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="uv-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="uv-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="uv-editor/header/image-menu.html">Image Menu</a>
+<a style="padding-left:2.5rem" href="uv-editor/header/uv-menu.html">UV menu</a>
+<a style="padding-left:1.5rem" href="uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="uv-editor/sidebar/image-tab.html">Image Tab</a>
+<a style="padding-left:2.5rem" href="uv-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="uv-editor/sidebar/view-tab.html">View Tab</a>
+<a href="compositor.html">Compositor</a>
+<a style="padding-left:1.5rem" href="compositor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="compositor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="compositor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="compositor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="compositor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-input-constant.html">Add Menu - Input - Constant</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-input.html">Add Menu - Input</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-input-scene.html">Add Menu - Input - Scene</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-color-adjust.html">Add Menu - Color - Adjust</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-creative.html">Add Menu - Creative</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-filter-blur.html">Add Menu - Filter - Blur</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-filter.html">Add Menu - Filter</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-keying.html">Add Menu - Keying</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-mask.html">Add Menu - Mask</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-tracking.html">Add Menu - Tracking</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-transform.html">Add Menu - Transform</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="compositor/header/geometry-nodes-editor-header-add-menu-group.html">Geometry Nodes Editor - Header - Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:1.5rem" href="compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="compositor/sidebar/node-tab.html">Node Tab</a>
+<a style="padding-left:2.5rem" href="compositor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="compositor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="compositor/sidebar/options-tab.html">Options Tab</a>
+<a style="padding-left:2.5rem" href="compositor/sidebar/add-tab.html">Add Tab</a>
+<a style="padding-left:2.5rem" href="compositor/sidebar/relations-tab.html">Relations tab</a>
+<a style="padding-left:2.5rem" href="compositor/sidebar/group-tab.html">Group tab</a>
+<a href="texture-node-editor.html">Texture Node Editor</a>
+<a href="geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-input-constant.html">Add Menu - Input - Constant</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-input-gizmo.html">Add Menu - Input - Gizmo</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-input-import.html">Add Menu - Input - Import</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-input-scene.html">Add Menu - Input - Scene</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-attribute.html">Add Menu - Attribute</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-read.html">Add Menu - Geometry - Read</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-sample.html">Add Menu - Geometry - Sample</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-write.html">Add Menu - Geometry - Write</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-material.html">Add Menu - Geometry - Material</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-operations.html">Add Menu - Geometry - Operations</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry.html">Add Menu - Geometry</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-curve-read.html">Add Menu - Curve - Read</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-curve-sample.html">Add Menu - Curve - Sample</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-curve-write.html">Add Menu - Curve - Write</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-curve-operations.html">Add Menu - Curve - Operations</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-curve-primitives.html">Add Menu - Curve - Primitives</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-curve-topology.html">Add Menu - Curve - Topology</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-grease-pencil-read.html">Add Menu - Grease Pencil - Read</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-grease-pencil-write.html">Add Menu - Grease Pencil - Write</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-grease-pencil-operations.html">Add Menu - Grease Pencil - Operations</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-instances.html">Add Menu - Instances</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-mesh-read.html">Add Menu - Mesh - Read</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-mesh-sample.html">Add Menu - Mesh - Sample</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-mesh-write.html">Add Menu - Mesh - Write</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-mesh-operations.html">Add Menu - Mesh - Operations</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-mesh-primitives.html">Add Menu - Mesh - Primitives</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-mesh-topology.html">Add Menu - Mesh - Topology</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-mesh-uv.html">Add Menu - Mesh - UV</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-point.html">Add Menu - Point</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-volume-read.html">Add Menu - Volume - Read</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-volume-sample.html">Add Menu - Volume - Sample</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-volume-write.html">Add Menu - Volume - Write</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-volume-operations.html">Add Menu - Volume - Operations</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-volume-primitives.html">Add Menu - Volume - Primitives</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-simulation.html">Add Menu - Simulation</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-utilities-text.html">Add Menu - Utilities - Text</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-utilities-bundle.html">Add Menu - Utilities - Bundle</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-utilities-closure.html">Add Menu - Utilities - Closure</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-utilities-field.html">Add Menu - Utilities - Field</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-utilities-matrix.html">Add Menu - Utilities - Matrix</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-utilities-rotation.html">Add Menu - Utilities - Rotation</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-utilities-deprecated.html">Add Menu - Utilities - Deprecated</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-generate.html">Add Menu - Generate</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-geometry.html">Add Menu - Geometry Nodegroups - Geometry</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations.html">Add Menu - Geometry Nodegroups - Geometry - Operations</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection.html">Add Menu - Geometry Nodegroups - Geometry - Selection</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations.html">Add Menu - Geometry Nodegroups - Grease Pencil - Operations</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read.html">Add Menu - Geometry Nodegroups - Grease Pencil - Read</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write.html">Add Menu - Geometry Nodegroups - Grease Pencil - Write</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation.html">Add Menu - Geometry Nodegroups - Hair - Deformation</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation.html">Add Menu - Geometry Nodegroups - Hair - Generation</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides.html">Add Menu - Geometry Nodegroups - Hair - Guides</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read.html">Add Menu - Geometry Nodegroups - Hair - Read</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility.html">Add Menu - Geometry Nodegroups - Hair - Utility</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write.html">Add Menu - Geometry Nodegroups - Hair - Write</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-instances.html">Add Menu - Geometry Nodegroups - Instances</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-material.html">Add Menu - Geometry Nodegroups - Material</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-mesh.html">Add Menu - Geometry Nodegroups - Mesh</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read.html">Add Menu - Geometry Nodegroups - Mesh - Read</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-normals.html">Add Menu - Geometry Nodegroups - Normals</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-utilities.html">Add Menu - Geometry Nodegroups - Utilities</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector.html">Add Menu - Geometry Nodegroups - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-geometry-nodegroups-utility.html">Add Menu - Geometry Nodegroups - Utility</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-normals.html">Add Menu - Normals</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-group.html">Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/swap-menu.html">Swap menu</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/node-menu.html">Node menu</a>
+<a style="padding-left:1.5rem" href="geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/sidebar/group-tab.html">Group tab</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/sidebar/node-tab.html">Node tab</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/sidebar/add.html">Add</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/sidebar/relations-tab.html">Relations tab</a>
+<a href="shader-editor.html">Shader Editor</a>
+<a style="padding-left:1.5rem" href="shader-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/add-menu-input.html">Add Menu - Input</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/add-menu-shader.html">Add Menu - Shader</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/add-menu-group.html">Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/swap-menu.html">Swap menu</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/node-menu.html">Node menu</a>
+<a style="padding-left:1.5rem" href="shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="shader-editor/sidebar/node-tab.html">Node Tab</a>
+<a style="padding-left:2.5rem" href="shader-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="shader-editor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="shader-editor/sidebar/options-tab.html">Options Tab</a>
+<a style="padding-left:2.5rem" href="shader-editor/sidebar/add-tab.html">Add Tab</a>
+<a style="padding-left:2.5rem" href="shader-editor/sidebar/relations-tab.html">Relations tab</a>
+<a style="padding-left:2.5rem" href="shader-editor/sidebar/group-tab.html">Group tab</a>
+<a href="video-sequence-editor.html">Video Sequence Editor</a>
+<a style="padding-left:1.5rem" href="video-sequence-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/header/export-menu.html">Export Menu</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/header/strip-menu.html">Strip Menu</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/header/image-menu.html">Image Menu</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/header/text-menu.html">Text Menu</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/header/scene-menu.html">Scene Menu</a>
+<a style="padding-left:1.5rem" href="video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/sidebar/preview-tool-tab.html">Preview - Tool tab</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/sidebar/preview-view-tab.html">Preview - View tab</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/sidebar/sequencer-strip-tab.html">Sequencer - Strip tab</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/sidebar/sequencer-tool-tab.html">Sequencer - Tool tab</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/sidebar/sequencer-cache-tab.html">Sequencer - Cache tab</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/sidebar/sequencer-proxy-tab.html">Sequencer - Proxy tab</a>
+<a style="padding-left:2.5rem" href="video-sequence-editor/sidebar/sequencer-view-tab.html">Sequencer - View tab</a>
+<a style="padding-left:1.5rem" href="video-sequence-editor/footer-tools-and-options.html">Footer tools and options</a>
+<a href="movie-clip-editor.html">Movie Clip Editor</a>
+<a style="padding-left:1.5rem" href="movie-clip-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/header/tracking-mode-clip-submode-clip-menu.html">Tracking Mode - Clip Submode - Clip Menu</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/header/tracking-mode-clip-submode-track-menu.html">Tracking Mode - Clip Submode - Track Menu</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/header/tracking-mode-graph-submode-graph-menu.html">Tracking Mode - Graph Submode - Graph Menu</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/header/mask-mode-clip-menu.html">Mask Mode - Clip Menu</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/header/mask-mode-add-menu.html">Mask Mode - Add Menu</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/header/mask-mode-mask-menu.html">Mask Mode - Mask Menu</a>
+<a style="padding-left:1.5rem" href="movie-clip-editor/tool-shelf.html">Tool shelf</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/tool-shelf/tracking-mode.html">Tracking Mode</a>
+<a style="padding-left:1.5rem" href="movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/sidebar/footage-tab.html">Footage Tab</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/sidebar/track-tab.html">Track tab</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/sidebar/tracking-mode-stabilization-tab.html">Tracking Mode - Stabilization tab</a>
+<a style="padding-left:2.5rem" href="movie-clip-editor/sidebar/tracking-mode-view-tab.html">Tracking Mode - View tab</a>
+<a href="dope-sheet.html">Dope Sheet</a>
+<a style="padding-left:2.5rem" href="dope-sheet/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="dope-sheet/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="dope-sheet/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="dope-sheet/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="dope-sheet/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="dope-sheet/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="dope-sheet/header/key-menu.html">Key Menu</a>
+<a style="padding-left:2.5rem" href="dope-sheet/header/action-menu.html">Action Menu</a>
+<a style="padding-left:1.5rem" href="dope-sheet/channel-list.html">Channel list</a>
+<a style="padding-left:1.5rem" href="dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="dope-sheet/footer-tools-and-options.html">Footer tools and options</a>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<a href="graph-editor.html">Graph Editor</a>
+<a style="padding-left:2.5rem" href="graph-editor/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="graph-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="graph-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="graph-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="graph-editor/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="graph-editor/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="graph-editor/header/key-menu.html">Key Menu</a>
+<a style="padding-left:1.5rem" href="graph-editor/channel-list.html">Channel list</a>
+<a style="padding-left:1.5rem" href="graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="graph-editor/sidebar/f-curve-tab.html">F-Curve Tab</a>
+<a style="padding-left:2.5rem" href="graph-editor/sidebar/modifiers-tab.html">Modifiers Tab</a>
+<a style="padding-left:2.5rem" href="graph-editor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:1.5rem" href="graph-editor/footer-tools-and-options.html">Footer tools and options</a>
+<a href="drivers-editor.html">Drivers Editor</a>
+<a style="padding-left:2.5rem" href="drivers-editor/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="drivers-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="drivers-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="drivers-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="drivers-editor/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="drivers-editor/header/key-menu.html">Key Menu</a>
+<a style="padding-left:1.5rem" href="drivers-editor/channel-list.html">Channel list</a>
+<a style="padding-left:2.5rem" href="drivers-editor/sidebar/f-curve-tab.html">F-Curve Tab</a>
+<a style="padding-left:2.5rem" href="drivers-editor/sidebar/drivers-tab.html">Drivers Tab</a>
+<a style="padding-left:2.5rem" href="drivers-editor/sidebar/modifiers-tab.html">Modifiers Tab</a>
+<a style="padding-left:2.5rem" href="drivers-editor/sidebar/driver-editor-sidebar-view-tab.html">Driver Editor - Sidebar - View Tab</a>
+<a href="nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a style="padding-left:2.5rem" href="nonlinear-animation-editor/header/nla-editor-header-tools-and-options.html">NLA Editor - Header tools and options</a>
+<a style="padding-left:2.5rem" href="nonlinear-animation-editor/header/nla-editor-header-quick-menu.html">NLA Editor - Header - Quick Menu</a>
+<a style="padding-left:2.5rem" href="nonlinear-animation-editor/header/nla-editor-view-menu.html">NLA Editor - View Menu</a>
+<a style="padding-left:2.5rem" href="nonlinear-animation-editor/header/nla-editor-select-menu.html">NLA Editor - Select Menu</a>
+<a style="padding-left:2.5rem" href="nonlinear-animation-editor/header/nla-editor-marker-menu.html">NLA Editor - Marker Menu</a>
+<a style="padding-left:2.5rem" href="nonlinear-animation-editor/header/nla-editor-add-menu.html">NLA Editor - Add Menu</a>
+<a style="padding-left:2.5rem" href="nonlinear-animation-editor/header/nla-editor-track-menu.html">NLA Editor - Track Menu</a>
+<a style="padding-left:2.5rem" href="nonlinear-animation-editor/header/nla-editor-strip-menu.html">NLA Editor - Strip Menu</a>
+<a style="padding-left:1.5rem" href="nonlinear-animation-editor/nla-editor-channel-list.html">NLA Editor - Channel list</a>
+<a style="padding-left:2.5rem" href="nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel.html">NLA Editor - Sidebar - Animation Data panel</a>
+<a style="padding-left:2.5rem" href="nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab.html">NLA Editor - Sidebar - Strip tab</a>
+<a style="padding-left:2.5rem" href="nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab.html">NLA Editor - Sidebar - Modifiers Tab</a>
+<a style="padding-left:1.5rem" href="nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">NLA Editor - Footer tools and options</a>
+<a href="text-editor.html">Text Editor</a>
+<a href="python-console.html">Python Console</a>
+<a href="info-editor.html">Info Editor</a>
+<a href="toolbar.html">Toolbar</a>
+<a class="is-current" href="outliner.html">Outliner</a>
+<a href="properties.html">Properties Editor</a>
+<a style="padding-left:1.5rem" href="properties/render-properties-tab.html">Render Properties Tab</a>
+<a style="padding-left:2.5rem" href="properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="properties/render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:1.5rem" href="properties/output-properties-tab.html">Output Properties Tab</a>
+<a style="padding-left:1.5rem" href="properties/view-layer-properties-tab.html">View Layer Properties Tab</a>
+<a style="padding-left:1.5rem" href="properties/scene-properties-tab.html">Scene Properties Tab</a>
+<a style="padding-left:1.5rem" href="properties/world-properties-tab.html">World Properties Tab</a>
+<a style="padding-left:1.5rem" href="properties/collection-properties-tab.html">Collection Properties Tab</a>
+<a style="padding-left:1.5rem" href="properties/object-properties-tab.html">Object Properties Tab</a>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<a style="padding-left:1.5rem" href="properties/particle-properties-tab.html">Particle Properties Tab</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:1.5rem" href="properties/visual-effects-properties-tab.html">Visual Effects Properties Tab</a>
+<a style="padding-left:1.5rem" href="properties/physics-properties-tab.html">Physics Properties Tab</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:1.5rem" href="properties/object-constraints-properties-tab.html">Object Constraints Properties Tab</a>
+<a style="padding-left:1.5rem" href="properties/object-data-properties-tab.html">Object Data Properties Tab</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/volume-object.html">Volume Object</a>
+<a style="padding-left:1.5rem" href="properties/material-properties-tab.html">Material Properties Tab</a>
+<a style="padding-left:1.5rem" href="properties/texture-properties-tab.html">Texture Properties Tab</a>
+<a style="padding-left:1.5rem" href="properties/bone-properties-tab.html">Bone Properties Tab</a>
+<a style="padding-left:1.5rem" href="properties/bone-constraint-properties.html">Bone Constraint Properties</a>
+<a style="padding-left:1.5rem" href="properties/strip-tab.html">Strip Tab</a>
+<a style="padding-left:1.5rem" href="properties/strip-modifiers-tab.html">Strip Modifiers Tab</a>
+<a href="file-browser.html">File browser</a>
+<a href="asset-browser.html">Asset Browser</a>
+<a style="padding-left:1.5rem" href="asset-browser/asset-browser-default-asset-library.html">Asset Browser - Default Asset LIbrary</a>
+<a style="padding-left:1.5rem" href="asset-browser/asset-browser-essentials-asset-library.html">Asset Browser - Essentials Asset Library</a>
+<a href="spreadsheet.html">Spreadsheet</a>
+<a href="preferences.html">Preferences</a>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<a style="padding-left:1.5rem" href="3d-viewport/context-menus.html">Context menus</a>
+<a style="padding-left:1.5rem" href="geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="drivers-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<h4>Advanced</h4>
+<a href="../advanced/advanced-command-line.html">Advanced - Command Line</a>
+<a href="../advanced/advanced-scripting-extending-bforartists.html">Advanced - Scripting &amp; Extending Bforartists</a>
+<a href="../advanced/advanced-working-limits.html">Advanced - Working Limits</a>
+<a href="../advanced/troubleshooting.html">Troubleshooting</a>
+<h4>Extensions</h4>
+<a href="../extensions/bforartists-extensions.html">Bforartists Extensions</a>
+<a style="padding-left:1.5rem" href="../extensions/bforartists-extensions/core-extension-brush-panels.html">Core Extension - Brush Panels</a>
+<a style="padding-left:1.5rem" href="../extensions/bforartists-extensions/core-extension-presentation-slider.html">Core Extension - Presentation Slider</a>
+<a style="padding-left:1.5rem" href="../extensions/bforartists-extensions/core-extension-3d-sequencer.html">Core Extension- 3D Sequencer</a>
+<a style="padding-left:1.5rem" href="../extensions/bforartists-extensions/core-extension-power-user-tools.html">Core Extension - Power User Tools</a>
+<h4>Appendix</h4>
+<a href="../appendix/glossary.html">Glossary</a>
+<a href="../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../appendix/manual-update-history.html">Manual Update History</a>
+<h4>Keymap</h4>
+<a href="../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Outliner</div><h1 class="pv-title">Outliner</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 27 min read</span></div><article class="ui-doc-body"><h2 id="outliner">Outliner</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/outliner.png" alt="Outliner" loading="lazy"></figure>
+<p>The Outliner is an editor where you can organize the data in your scene. It is in the View Layer mode basically a list of the available objects and data in the scene, which is organized in so called collections. Think of it as a container that carries the scene data. This also includes things like brushes, textures and materials.</p>
+<p>The outliner not only lists the data. But you can modify the data in various ways. And it has more than one mode. We will go through them, one by one.</p>
+<p>The outliner has some context menus that are available by a right click at an element. We will also cover them, one by one.</p>
+<h3 id="general-hotkey-functionality">General hotkey functionality</h3>
+<p>There is some general hotkey functionality that works across the whole interface. And so it works in the outliner too.</p>
+<p>Left click at an object selects it. When you select an object in the outliner, then it is also selected in the scene.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/general-hotkey-functionality.png" alt="General hotkey functionality" loading="lazy"></figure>
+<p>Dragging the mouse with left click box selects.</p>
+<p>Like in the 3D view, <span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>LMB</kbd></span> adds to the selection, or can remove the clicked object from the selection.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/general-hotkey-functionality-2.png" alt="General hotkey functionality" loading="lazy"></figure>
+<p>Ctrt+LMB enters the rename mode for the object. You can also double click at it. In both cases the text becomes editable.</p>
+<p>You can drag objects into the hierarchy of other objects, and make them a child object by that.</p>
+<p>You can navigate with the arrow buttons. Holding shift while navigating with the arrow buttons will extend the selection.</p>
+<p>Delete hotkey deletes the selected items. Also selected collections.</p>
+<h3 id="extended-functionality">Extended Functionality</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/extended-functionality.png" alt="Extended Functionality" loading="lazy"></figure>
+<p>The outliner has some extended functionality in some modes.</p>
+<p>Objects with an arrow sign at the left are hierarchical objects. Hierarchy can be expanded and collapsed by clicking at the + and - signs.</p>
+<p>When you click at a data block of some object types object, like the mesh component for a mesh or a curve object, then you will jump from object mode into edit mode. And vice versa.</p>
+<h3 id="collections">Collections</h3>
+<p>Collections are containers that can contain objects or anything else in the scene. They can also include collections, and are fully recursive.</p>
+<h2 id="header-all-modes">Header - All Modes</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/header-all-modes.png" alt="Header - All Modes" loading="lazy"><figcaption>Header - All Modes</figcaption></figure>
+<p>The header content changes, dependent of the display mode. Here we list the elements that are available in all display modes.</p>
+<h3 id="switch-to-properties-editor-outliner">Switch to Properties Editor / Outliner</h3>
+<p>Sometimes you want to switch from Outliner to the Properties Editor, or vice versa. Since you sometimes don't have enough space for both, and end in dragging the borders of the editors around all the time. This two editors are connected by a menu that allows exactly that. A button in each header that switches to the other editor.</p>
+<h3 id="display-mode">Display Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/display-mode.png" alt="Display Mode" loading="lazy"></figure>
+<p>The Outliner has more than one purpose and workspace. In this drop down menu you can switch to different display modes. The available Modes are Scenes, View Layer, Sequence, Blender File, Data API and Unused Data. We will cover their functionality in their own chapters.</p>
+<h3 id="view-menu">View Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/view-menu.png" alt="View Menu" loading="lazy"></figure>
+<p>The View menu contains general view related functionality.</p>
+<h4 id="show-active">Show Active</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/show-active.png" alt="Show Active" loading="lazy"></figure>
+<p>Centers the view of the list to the active object.</p>
+<h4 id="show-one-level">Show One Level</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/show-one-level.png" alt="Show One Level" loading="lazy"></figure>
+<p>Expands the list hierarchy level by one.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hide One Level</td>
+<td>Collapses the list hierarchy level by one.</td>
+</tr>
+<tr>
+<td>Expand / Collapse All</td>
+<td>Expands or collapses all collapsed hierarchy. It's a toggle</td>
+</tr>
+<tr>
+<td>Show Hierarchy</td>
+<td>Open all object entries and close all others. For example, when you are in Scene view, and have the objects expanded, then the Show Hierarchy closes the objects hierarchy.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="box-select">Box Select</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/general-hotkey-functionality.png" alt="Box Select" loading="lazy"></figure>
+<p>Box select items in the list.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select All</td>
+<td>Select all items in the list.</td>
+</tr>
+<tr>
+<td>Deselect All</td>
+<td>Deselect all items in the list.</td>
+</tr>
+<tr>
+<td>Invert Selection</td>
+<td>Inverts the selection. Unselected list items becomes selected, selected list items becomes unselected.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="manage-unused-data">Manage Unused Data</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/manage-unused-data.png" alt="Manage Unused Data" loading="lazy"></figure>
+<p>This opens a pop-out floating Outliner Editor in the Unused Data mode, so you can view and manage the unused data while remaining in the same Outliner mode.</p>
+<h4 id="pie-menus">Pie menus</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/pie-menus.png" alt="Pie menus" loading="lazy"></figure>
+<p>Lists the available pie menus, and gives you the ability to read the hotkeys and assign own hotkeys.</p>
+<h4 id="area">Area</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/area.png" alt="Area" loading="lazy"></figure>
+<p>Area is a menu with window related settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal Split</td>
+<td>Splits the editor horizontally into two editors.</td>
+</tr>
+<tr>
+<td>Vertical Split</td>
+<td>Splits the editor vertically into two editors.</td>
+</tr>
+<tr>
+<td>Duplicate Area into new Window</td>
+<td>Creates a floating window out of the current editor</td>
+</tr>
+<tr>
+<td>Toggle Maximize Area</td>
+<td>Displays the editor maximized with menus. To return to split view press hotkey Ctrl Up Arrow, or reuse the menu item in the View menu.</td>
+</tr>
+<tr>
+<td>Toggle Fullscreen Area</td>
+<td>Displays the editor maximized without menus. To return from the full screen view press hotkey Alt F10, or use the little button that appears up right when you move the mouse in this corner.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="close-area">Close Area</h4>
+<p>Closes the area window.</p>
+<h3 id="search-field">Search Field</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/search-field.png" alt="Search Field" loading="lazy"></figure>
+<p>Search for specific terms in the list. When the search term matches a name in the list, then the list will center at the first entry with the match.</p>
+<p>This search field is collapsible, and closed by default to free some UI space.</p>
+<h2 id="right-click-menus">Right Click Menus</h2>
+<p>The Outliner comes with various right click functionality, dependent at what data you right click.</p>
+<h3 id="outliner-scene-operation">Outliner Scene Operation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/outliner-scene-operation.png" alt="Outliner Scene Operation" loading="lazy"></figure>
+<p>This menu appears when you right click at a scene in Scene mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete</td>
+<td>Deletes the currently selected scene.</td>
+</tr>
+<tr>
+<td>Copy Settings</td>
+<td>Creates an empty scene but also copies the settings from the active scene into the new one.</td>
+</tr>
+<tr>
+<td>Linked Copy</td>
+<td>This option creates a new scene with the same settings and contents as the active scene. However, instead of copying the objects, the new scene contains links to the objects in the old scene. Therefore, changes to objects in the new scene will result in the same changes to the original scene, because the objects used are literally the same. The reverse is also true.</td>
+</tr>
+<tr>
+<td>Full Copy</td>
+<td>Using this option, nothing is shared. This option creates a fully independent scene with copies of the active scenes contents. Every object in the original scene is duplicated, and a duplicate, private copy of its object-data is made as well.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mark-as-asset-clear-asset-clear-asset-set-fake-user">Mark as Asset, Clear Asset, Clear Asset (Set Fake User)</h4>
+<p>Scenes cannot be stored in the asset library. This menu entries are redundant.</p>
+<h3 id="outliner-data-operation">Outliner Data Operation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/outliner-data-operation.png" alt="Outliner Data Operation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/outliner-scene-operation.png" alt="Outliner Data Operation" loading="lazy"></figure>
+<p>This menu appears at various object types and when you for example right click at the View Layer item. It also appears at objects in Data API mode, with varying content.</p>
+<h4 id="select">Select</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/select.png" alt="Select" loading="lazy"></figure>
+<p>Select the current element.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deselect</td>
+<td>Deselect the current element.</td>
+</tr>
+<tr>
+<td>Hide</td>
+<td>Hides the current element.</td>
+</tr>
+<tr>
+<td>Unhide</td>
+<td>Unhides the current element.</td>
+</tr>
+<tr>
+<td>Select Linked</td>
+<td>Does not show on all objects and tree elements. Selects the linked elements.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mark-as-asset-clear-asset-clear-asset-set-fake-user-2">Mark as Asset, Clear Asset, Clear Asset (Set Fake User)</h4>
+<p>Scenes, Collections, Objects, Brushes, Materials, Nodegroups and Worlds can be marked as assets. View Layers cannot be stored in the asset library.</p>
+<h3 id="collection">Collection</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/collection.png" alt="Collection" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/collection-2.png" alt="Collection" loading="lazy"></figure>
+<p>This menu appears when you right click at a collection. Clicking at a Scene collection will have not this much entries than licking at the Collection item lower in the hierarchy.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New Nested</td>
+<td>Create a new nested collection. There is no difference. Both gets added in the selected collection as a child, and the functionality is the same. Ask the Blender developers what they did here.</td>
+</tr>
+<tr>
+<td>New</td>
+<td>Create a new scene collection.</td>
+</tr>
+<tr>
+<td>Duplicate Collection</td>
+<td>Duplicates the currently selected collection, all its children, objects and the object data.</td>
+</tr>
+<tr>
+<td>Duplicate Linked</td>
+<td>Recursively duplicate the selected collection, all its children and objects, including linked object data.</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Copies the collection.</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Pastes a copied collection.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Delete the collection. Objects in the hierarchy will remain.</td>
+</tr>
+<tr>
+<td>Delete Hierarchy</td>
+<td>Delete the collection. Objects in the hierarchy will be deleted too.</td>
+</tr>
+<tr>
+<td>Select Objects</td>
+<td>Select the objects in the collection.</td>
+</tr>
+<tr>
+<td>Deselect Objects</td>
+<td>Deselect the objects in the collection.</td>
+</tr>
+<tr>
+<td>Instance to Scene</td>
+<td>Instance selected collections to the active scene.</td>
+</tr>
+<tr>
+<td>Unlink</td>
+<td>Unlink selected collections from the active scene.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="visibility">Visibility</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/visibility.png" alt="Visibility" loading="lazy"></figure>
+<p>Visibility is a sub menu with some visibility functionality. The greyed out menu items will become available when the functionality becomes available. For example, Show becomes available when something is hidden.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Isolate</td>
+<td>Hide all but this collection and its parents.</td>
+</tr>
+<tr>
+<td>Show All Inside</td>
+<td>Reveals the collection and all its content.</td>
+</tr>
+<tr>
+<td>Hide</td>
+<td>Hides the collection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-color-tag">Set Color Tag</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/set-color-tag.png" alt="Set Color Tag" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/set-color-tag-2.png" alt="Set Color Tag" loading="lazy"></figure>
+<p>Give the collections a colored icon.</p>
+<h4 id="id-data">ID Data</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/id-data.png" alt="ID Data" loading="lazy"></figure>
+<p>Data related operations.</p>
+<p>The content differs, dependant of the collection element that you right click at. And in which display mode you are. Linked collections have different content.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/id-data-2.png" alt="ID Data" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/id-data-3.png" alt="ID Data" loading="lazy"></figure>
+<h5 id="unlink">Unlink</h5>
+<p>Does basically the same than delete. It unlinks all data, and removes the object from the scene.</p>
+<h5 id="make-local">Make Local</h5>
+<p>For appended or linked data. Makes the selected object a local copy in the current blend file.</p>
+<h6 id="add-library-override">Add Library Override</h6>
+<p>Add a local library override to this collection.</p>
+<p>This tool works different from Make Override in the outliner. It does not iterate through the hierarchy of objects and collections based on the selection. But works just for the currently selected object.</p>
+<p>Library Overrides is the new system designed to replace and supersede Proxies. Most types of linked data-blocks can be overridden, and the properties of those overrides can then be edited. When the library data change, unmodified properties of the override one will be updated accordingly.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Make Single User</td>
+<td>For duplicated content. Makes the data block of the selected object a single user.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Not functional in all situations. In the Unused Data mode you can remove objects with this.</td>
+</tr>
+<tr>
+<td>Remap Users</td>
+<td>Remaps the user of a data block to another one of the same type. This allows you to replace all usages of a material or texture by another one.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy</td>
+<td>Copies the user data block.</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Pastes a copied user data block.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="make-library-override">Make Library Override</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/make-library-override.png" alt="Make Library Override" loading="lazy"></figure>
+<p>Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected</td>
+<td>Add a library override to the selected collection.</td>
+</tr>
+<tr>
+<td>Content</td>
+<td>Add a library override to the content of the selected collection.</td>
+</tr>
+<tr>
+<td>Selected &amp; Content</td>
+<td>Add a library override to both, the content of the selected collection, and the selected collection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reset-library-override">Reset Library Override</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/reset-library-override.png" alt="Reset Library Override" loading="lazy"></figure>
+<p>Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected</td>
+<td>Reset a library override to the selected collection.</td>
+</tr>
+<tr>
+<td>Content</td>
+<td>Reset a library override to the content of the selected collection.</td>
+</tr>
+<tr>
+<td>Selected &amp; Content</td>
+<td>Reset a library override to both, the content of the selected collection, and the selected collection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clear-library-override">Clear Library Override</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/clear-library-override.png" alt="Clear Library Override" loading="lazy"></figure>
+<p>Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected</td>
+<td>Clear the library override to the selected collection.</td>
+</tr>
+<tr>
+<td>Content</td>
+<td>Clear the library override to the content of the selected collection.</td>
+</tr>
+<tr>
+<td>Selected &amp; Content</td>
+<td>Clear the library override to both, the content of the selected collection, and the selected collection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="troubleshoot-library-override">Troubleshoot Library Override</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/troubleshoot-library-override.png" alt="Troubleshoot Library Override" loading="lazy"></figure>
+<p>Troubleshoot library Override operators are useful to help syncronize or remove overrides without needing to reload scene or the linked file.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resync</td>
+<td>Rebuild the selected library overrides.</td>
+</tr>
+<tr>
+<td>Resync Enforce</td>
+<td>Rebuild the selected library overrides, enforcing libraries to match the linked data.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Delete the selected local library overrides. And relink the usage to the selected data.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mark as Asset</td>
+<td>Adds the collection to the asset library.</td>
+</tr>
+<tr>
+<td>Clear Asset</td>
+<td>Removes the collection from the asset library.</td>
+</tr>
+<tr>
+<td>Clear Asset (Set Fake User)</td>
+<td>Removes the collection from the asset library. But marks it with a fake user so that it remains in the scene.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="object-menu">Object Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/object-menu.png" alt="Object Menu" loading="lazy"></figure>
+<p>This menu appears when you click at an object type. A mesh, a lamp, a camera ...</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select</td>
+<td>Selects the object.</td>
+</tr>
+<tr>
+<td>Select Hierarchy</td>
+<td>Selects the object and its hierarchy.</td>
+</tr>
+<tr>
+<td>Deselect</td>
+<td>Deselects the object.</td>
+</tr>
+<tr>
+<td>Duplicate</td>
+<td>Duplicates the currently selected object and the object data.</td>
+</tr>
+<tr>
+<td>Duplicate Linked</td>
+<td>Duplicates the selected objec, including linked object data.</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Copies object.</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Pastes copied object.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Deletes the selected object. Child objects gets unparented.</td>
+</tr>
+<tr>
+<td>Delete Hierarchy</td>
+<td>Deletes the selected object and all its child objects.</td>
+</tr>
+<tr>
+<td>Unlink</td>
+<td>Deletes the selected object.</td>
+</tr>
+<tr>
+<td>Make Library Override</td>
+<td>Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited. · <strong>Selected</strong>: Add a library override to the selected collection. · <strong>Content</strong>: Add a library override to the content of the selected collection. · <strong>Selected &amp; Content</strong>: Add a library override to both, the content of the selected collection, and the selected collection.</td>
+</tr>
+<tr>
+<td>Reset Library Override</td>
+<td>Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited. · <strong>Selected</strong>: Reset a library override to the selected collection. · <strong>Content</strong>: Reset a library override to the content of the selected collection. · <strong>Selected &amp; Content</strong>: Reset a library override to both, the content of the selected collection, and the selected collection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clear-library-override-2">Clear Library Override</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/clear-library-override.png" alt="Clear Library Override" loading="lazy"></figure>
+<p>Library Overrides is a system designed to allow editing linked data, while keeping it in sync with the original library data. Most types of linked data-blocks can be overridden, and the properties of these overrides can then be edited.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected</td>
+<td>Clear the library override to the selected collection.</td>
+</tr>
+<tr>
+<td>Content</td>
+<td>Clear the library override to the content of the selected collection.</td>
+</tr>
+<tr>
+<td>Selected &amp; Content</td>
+<td>Clear the library override to both, the content of the selected collection, and the selected collection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="troubleshoot-library-override-2">Troubleshoot Library Override</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/troubleshoot-library-override.png" alt="Troubleshoot Library Override" loading="lazy"></figure>
+<p>Troubleshoot library Override operators are useful to help syncronize or remove overrides without needing to reload scene or the linked file.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resync</td>
+<td>Rebuild the selected library overrides.</td>
+</tr>
+<tr>
+<td>Resync Enforce</td>
+<td>Rebuild the selected library overrides, enforcing libraries to match the linked data.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Delete the selected local library overrides. And relink the usage to the selected data.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mark as Asset</td>
+<td>Adds the collection to the asset library.</td>
+</tr>
+<tr>
+<td>Clear Asset</td>
+<td>Removes the collection from the asset library.</td>
+</tr>
+<tr>
+<td>Clear Asset (Set Fake User)</td>
+<td>Removes the collection from the asset library. But marks it as fake user so that it remains in the scene.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="id-data-2">ID Data</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/id-data-4.png" alt="ID Data" loading="lazy"></figure>
+<p>Data related operations. Note that the tool tips are currently missing here.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unlink</td>
+<td>Does basically the same than delete. It unlinks all data, and removes the object from the scene.</td>
+</tr>
+<tr>
+<td>Make Local</td>
+<td>For appended or linked data. Makes the selected object a local copy in the current blend file.</td>
+</tr>
+<tr>
+<td>Make Single User</td>
+<td>For duplicated content. Makes the data block of the selected object a single user.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Not functional in all situations. In the Unused Data mode you can remove objects with this.</td>
+</tr>
+<tr>
+<td>Remap Users</td>
+<td>Remaps the user of a data block to another one of the same type. This allows you to replace all usages of a material or texture by another one.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="copy">Copy</h4>
+<p>Copies ID data.</p>
+<h4 id="paste">Paste</h4>
+<p>Pastes copied ID data.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Fake User</td>
+<td>Adds a fake user to the selected object. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</td>
+</tr>
+<tr>
+<td>Clear Fake User</td>
+<td>Removes the fake user from the selected object.</td>
+</tr>
+<tr>
+<td>Rename</td>
+<td>Rename the object in the outliner.</td>
+</tr>
+<tr>
+<td>Select Linked</td>
+<td>Selects all objects that are linked to the currently selected one.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="outliner-id-data-operation">Outliner ID Data Operation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/outliner-id-data-operation.png" alt="Outliner ID Data Operation" loading="lazy"><figcaption>Outliner ID Data Operation</figcaption></figure>
+<p>This menu appears when you for example click at the mesh component of a mesh object. It is the same content than the ID Data menu from the Object menu.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unlink</td>
+<td>Does basically the same than delete. It unlinks all data, and removes the object from the scene.</td>
+</tr>
+<tr>
+<td>Make Local</td>
+<td>For appended or linked data. Makes the selected object a local copy in the current blend file.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Not functional in all situations. In the Unused Data mode you can remove objects with this.</td>
+</tr>
+<tr>
+<td>Remap Users</td>
+<td>Remaps the user of a data block to another one of the same type. This allows you to replace all usages of a material or texture by another one.</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Copies ID data.</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Pastes copied ID data.</td>
+</tr>
+<tr>
+<td>Add Fake User</td>
+<td>Adds a fake user to the selected object. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</td>
+</tr>
+<tr>
+<td>Clear Fake User</td>
+<td>Removes the fake user from the selected object.</td>
+</tr>
+<tr>
+<td>Rename</td>
+<td>Rename the object in the outliner.</td>
+</tr>
+<tr>
+<td>Select Linked</td>
+<td>Selects all objects that are linked to the currently selected one.</td>
+</tr>
+<tr>
+<td>Relocate</td>
+<td>Allows you to replace a <strong>linked data-block</strong> (such as an object, material, or collection) with another one—either from the same library or a different external file. This is especially useful when updating asset paths, switching to newer versions, or resolving broken links. <strong>Note:</strong> <em>This is only available for linked data from external files.</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="outliner-animation-data-property">Outliner Animation Data Property</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/outliner-animation-data-property.png" alt="Outliner Animation Data Property" loading="lazy"><figcaption>Outliner Animation Data Property</figcaption></figure>
+<p>This menu appears with a right click at an Animation data.</p>
+<h4 id="clear-animation-data">Clear Animation Data</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/clear-animation-data.png" alt="Clear Animation Data" loading="lazy"></figure>
+<p>Removes the whole animation.</p>
+<h4 id="set-action">Set Action</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/set-action.png" alt="Set Action" loading="lazy"></figure>
+<p>Opens a popup menu where you can choose the action for this object.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unlink Action</td>
+<td>Removes the action.</td>
+</tr>
+<tr>
+<td>Refresh Drivers</td>
+<td>Refreshes existing drivers.</td>
+</tr>
+<tr>
+<td>Clear Drivers</td>
+<td>Removes existing drivers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="outliner-modifier-operation">Outliner Modifier Operation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/outliner-modifier-operation.png" alt="Outliner Modifier Operation" loading="lazy"></figure>
+<p>This menu appears with a right click on modifiers.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apply</td>
+<td>Applies the modifier.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Removes the modifier.</td>
+</tr>
+<tr>
+<td>Toggle Viewport Use</td>
+<td>Toggles the visibility of the modifier in viewport.</td>
+</tr>
+<tr>
+<td>Toggle Render Use</td>
+<td>Toggles the visibility of the modifier on render time.</td>
+</tr>
+<tr>
+<td>Mark as Asset</td>
+<td>Adds the collection to the asset library.</td>
+</tr>
+<tr>
+<td>Clear Asset</td>
+<td>Removes the collection from the asset library.</td>
+</tr>
+<tr>
+<td>Clear Asset (Set Fake User)</td>
+<td>Removes the collection from the asset library. But marks it as fake user so that it remains in the scene.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="level-restrictions">Level Restrictions</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/level-restrictions.png" alt="Level Restrictions" loading="lazy"></figure>
+<p>Some list items have so called level restrictions. You can click at them, and so exclude the object from specific things. You can make more level restrictions available in the filter settings, which will be covered below. The by default activated are:</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selectability</td>
+<td>Makes the object unselectable in the viewport. Or disables it, in case of a collection for example.</td>
+</tr>
+<tr>
+<td>Hide from Viewport</td>
+<td>Hides the object from the Viewport.</td>
+</tr>
+<tr>
+<td>Hide from Render</td>
+<td>Excludes the object from rendering.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scenes-mode">Scenes Mode</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/scenes-mode.png" alt="Scenes Mode" loading="lazy"></figure>
+<p>The Scenes mode starts one hierarchy higher than the default View Layer Mode. It shows all available scenes and their content.</p>
+<p>Normally you work with one scene. And so the default starts with the View Layer mode of the scene. But you can create more scenes in the Properties Editor in the Scene tab.</p>
+<h3 id="collection-menu">Collection Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/collection-menu.png" alt="Collection Menu" loading="lazy"></figure>
+<h4 id="move-to-collection">Move to Collection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/move-to-collection.png" alt="Move to Collection" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/move-to-collection-2.png" alt="Move to Collection" loading="lazy"></figure>
+<p>Moves the selected object to a collection. The object is removed from the collection it was in.</p>
+<p>By clicking at this menu item a popup will appear to choose the new collection. Allows also to create a new collection. Once done, the object will be moved to this new created collection.</p>
+<h5 id="last-operator-move-to-collection">Last Operator Move to Collection</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/last-operator-move-to-collection.png" alt="Last Operator Move to Collection" loading="lazy"><figcaption>Last Operator Move to Collection</figcaption></figure>
+<h6 id="name">Name</h6>
+<p>Set a name for your new collection. When you haven't created a new collection, then this name stays blank.</p>
+<h4 id="link-to-collection">Link to Collection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/link-to-collection.png" alt="Link to Collection" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/link-to-collection-2.png" alt="Link to Collection" loading="lazy"></figure>
+<p>Links the object to a collection. The object remains in the collection it was in.</p>
+<p>By clicking at this menu item a popup will appear to choose the collection. Here you can also create a new collection. Once done, the object will be linked to this new created collection.</p>
+<h5 id="last-operator-link-to-collection">Last Operator Link to Collection</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/last-operator-link-to-collection.png" alt="Last Operator Link to Collection" loading="lazy"><figcaption>Last Operator Link to Collection</figcaption></figure>
+<h6 id="name-2">Name</h6>
+<p>Set a name for your new collection. When you haven't created a new collection, then this name stays blank.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remove From Collection</td>
+<td>Objects can be in more than one collection. Remove from collection removes the selected object from the current collection. When the object is in no collection anymore, then it gets removed.</td>
+</tr>
+<tr>
+<td>Remove From all Unlinked Collections</td>
+<td>Objects can be in more than one collection. Remove from all unlinked collection removes the selected object from all unlinked collections. When the object is in no collection anymore, then it gets removed.</td>
+</tr>
+<tr>
+<td>Add selected To Active Collection</td>
+<td>Objects can be in more than one collection. Adds the selected object to the active collection.</td>
+</tr>
+<tr>
+<td>Remove Selected From Active Collection</td>
+<td>Objects can be in more than one collection. Removes the selected object from the active collection. When the object is in no collection anymore, then it gets removed.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="add-collection">Add Collection</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/add-collection.png" alt="Add Collection" loading="lazy"></figure>
+<p>Add a collection inside of the current selected collection.</p>
+<h3 id="new-scene">New Scene</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/new-scene.png" alt="New Scene" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>Creates an empty scene with default values.</td>
+</tr>
+<tr>
+<td>Copy Settings</td>
+<td>Creates an empty scene but also copies the settings from the active scene into the new one.</td>
+</tr>
+<tr>
+<td>Linked Copy</td>
+<td>This option creates a new scene with the same settings and contents as the active scene. However, instead of copying the objects, the new scene contains links to the objects in the old scene. Therefore, changes to objects in the new scene will result in the same changes to the original scene, because the objects used are literally the same. The reverse is also true.</td>
+</tr>
+<tr>
+<td>Full Copy</td>
+<td>Using this option, nothing is shared. This option creates a fully independent scene with copies of the active scenes contents. Every object in the original scene is duplicated, and a duplicate, private copy of its object-data is made as well.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filter">Filter</h3>
+<p>Options and filter settings.</p>
+<h4 id="restriction-toggles">Restriction Toggles</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/restriction-toggles.png" alt="Restriction Toggles" loading="lazy"></figure>
+<p>Enable or disable further level restrictions. Note that these toggles shows when you expand a scene hierarchy. Scenes itself have no such toggles.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sort Alphabetically</td>
+<td>Sorts the content of the outliner in alphabetically order.</td>
+</tr>
+<tr>
+<td>Sync Selection</td>
+<td>Synchronize the selection between outliner and 3d view.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="show-mode-column">Show Mode Column</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/show-mode-column.png" alt="Show Mode Column" loading="lazy"></figure>
+<p>Display the Mode column at the left. When you are not in object mode, but in edit mode, or in vertex paint mode etc. , then a mode icon is displayed at the left of the object that you currently edit.</p>
+<h4 id="search">Search</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exact Match Search</td>
+<td>The search result must fit exactly. For example, when you search for cam, then a camera should not display as a search result.</td>
+</tr>
+<tr>
+<td>Case Sensitive Search</td>
+<td>Search case sensitive.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="view-layer-mode">View Layer Mode</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/view-layer-mode.png" alt="View Layer Mode" loading="lazy"></figure>
+<p>The view layer mode shows the content of the current View Layer. This is the default mode.</p>
+<h3 id="collection-menu-2">Collection Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/collection-menu.png" alt="Collection Menu" loading="lazy"></figure>
+<h4 id="move-to-collection-2">Move to Collection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/move-to-collection.png" alt="Move to Collection" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/move-to-collection-2.png" alt="Move to Collection" loading="lazy"></figure>
+<p>Moves the selected object to a collection. The object is removed from the collection it was in.</p>
+<p>By clicking at this menu item a popup will appear to choose the new collection. Allows also to create a new collection. Once done, the object will be moved to this new created collection.</p>
+<h4 id="link-to-collection-2">Link to Collection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/link-to-collection.png" alt="Link to Collection" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/link-to-collection-2.png" alt="Link to Collection" loading="lazy"></figure>
+<p>Links the object to a collection. The object remains in the collection it was in.</p>
+<p>By clicking at this menu item a popup will appear to choose the collection. Here you can also create a new collection. Once done, the object will be linked to this new created collection.</p>
+<p>Note that there is a tool called Add to collection in the Object Properties in the Collections panel that does a similar job. It links an object to other collections. But this Link to Collection tool here just lists the collections in the current view layer.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remove From Collection</td>
+<td>Objects can be in more than one collection. Remove from collection removes the selected object from the current collection. When the object is in no collection anymore, then it gets removed.</td>
+</tr>
+<tr>
+<td>Remove From all Unlinked Collections</td>
+<td>Objects can be in more than one collection. Remove from all unlinked collection removes the selected object from all unlinked collections. When the object is in no collection anymore, then it gets removed.</td>
+</tr>
+<tr>
+<td>Add selected To Active Collection</td>
+<td>Objects can be in more than one collection. Adds the selected object to the active collection.</td>
+</tr>
+<tr>
+<td>Remove Selected From Active Collection</td>
+<td>Objects can be in more than one collection. Removes the selected object from the active collection. When the object is in no collection anymore, then it gets removed.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="add-collection-2">Add Collection</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/add-collection.png" alt="Add Collection" loading="lazy"></figure>
+<p>Add a collection inside of the current selected collection.</p>
+<h3 id="filter-2">Filter</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/filter.png" alt="Filter" loading="lazy"></figure>
+<p>Options and filter settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Restriction Toggles</td>
+<td>Enable or disable further level restrictions. To make the changes permanent you would have to save the startup file. This settings is part of the layout. · <strong>Exclude from View Layer</strong>: include / Exclude the collection from the view layer. · <strong>Selectable</strong>: Make the object selectable / unselectable. · <strong>Hide in Viewport</strong>: Show or hide the object in the viewport. · <strong>Disable in Viewport</strong>: Enable or disable the object in the viewport. · <strong>Disable in Renders</strong>: Enable or disable the object in the rendered result. · <strong>Holdout</strong>: Mask out objects in the collection from view layer. · <strong>Indirect only</strong>: Make the objects in the collection just distribute indirect lighting to the layer.</td>
+</tr>
+<tr>
+<td>Sort Alphabetically</td>
+<td>Sorts the content of the outliner in alphabetically order.</td>
+</tr>
+<tr>
+<td>Sync Selection</td>
+<td>Synchronize the selection between outliner and 3d view.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="show-mode-column-2">Show Mode Column</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/show-mode-column.png" alt="Show Mode Column" loading="lazy"></figure>
+<p>Display the Mode column at the left. When you are not in object mode, but in edit mode, or in vertex paint mode etc. , then a mode icon is displayed at the left of the object that you currently edit.</p>
+<h4 id="search-2">Search</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exact Match Search</td>
+<td>The search result must fit exactly. For example, when you search for cam, then a camera should not display as a search result.</td>
+</tr>
+<tr>
+<td>Case Sensitive Search</td>
+<td>Search case sensitive.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="filter-3">Filter</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/filter-2.png" alt="Filter" loading="lazy"></figure>
+<p>Shows or hides the object and data types. The names should be self explaining. Note that the Library Override option just shows for appended objects.</p>
+<h5 id="object-state-filter">Object State Filter</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/object-state-filter.png" alt="Object State Filter" loading="lazy"></figure>
+<p>Shows or hides objects by its state.</p>
+<h6 id="invert">Invert</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/invert.png" alt="Invert" loading="lazy"></figure>
+<p>Inverts the object state filter.</p>
+<h2 id="video-sequencer-mode">Video Sequencer Mode</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/video-sequencer-mode.png" alt="Video Sequencer Mode" loading="lazy"></figure>
+<p>This mode lists the loaded files when you work with the sequencer layout and have video material loaded.</p>
+<h3 id="sync-outliner-selection">Sync Outliner Selection</h3>
+<p>Keep the selection in synchronization with the other editors. 3D View and VSE.</p>
+<h2 id="blend-file-mode">Blend File Mode</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/blend-file-mode.png" alt="Blend File Mode" loading="lazy"></figure>
+<p>This mode lists the whole content of the current Blender file. It includes also things like the default brushes, which comes from the startup defaults.</p>
+<h3 id="filter-4">Filter</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/filter-3.png" alt="Filter" loading="lazy"></figure>
+<p>Enable a filter to display a specific data type. You can just filter by one data type at a time. The rest will be hidden.</p>
+<h4 id="filter-id-type">Filter ID Type</h4>
+<p>The menu to choose the data type that should be displayed.</p>
+<h3 id="outliner-library-operation">Outliner Library Operation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/outliner-library-operation.png" alt="Outliner Library Operation" loading="lazy"></figure>
+<p>In this mode, you can see linked data from external <code>**.blend*</code> files.</p>
+<p>Grey arrows means the data is directly referenced from a linked <code>**.blend*</code> file.</p>
+<p>Green arrows means the data is indirectly referenced into another linked <code>**.blend*</code> file.</p>
+<h4 id="delete">Delete</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/delete.png" alt="Delete" loading="lazy"></figure>
+<p>Deletes linked libraries.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relocate</td>
+<td>Relocated the path of a linked library.</td>
+</tr>
+<tr>
+<td>Reload</td>
+<td>Reloads and refreshes the linked library in the current file.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-api-mode">Data API Mode</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/data-api-mode.png" alt="Data API Mode" loading="lazy"></figure>
+<p>Displays Low Level Blender data and its properties.</p>
+<p>This view also reveals some properties. Like File is Saved or Use Autopack.</p>
+<p>When no keying set is defined then you will get a No Keying set Active message instead of the Keying set element.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/data-api-mode-2.png" alt="Data API Mode" loading="lazy"></figure>
+<h3 id="header-tools">Header tools</h3>
+<h4 id="edit-menu">Edit Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/edit-menu.png" alt="Edit Menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keying Set Add Selected</td>
+<td>Add a keying set to the selected object.</td>
+</tr>
+<tr>
+<td>Keying Set Remove Selected</td>
+<td>Remove the keying set from the selected object.</td>
+</tr>
+<tr>
+<td>Add Drivers to Selected</td>
+<td>Add a driver to the selected object.</td>
+</tr>
+<tr>
+<td>Delete Drivers for Selected</td>
+<td>Delete a driver from the selected object.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set Keying set</td>
+<td>Choose a keying set.</td>
+</tr>
+<tr>
+<td>Add keyframe</td>
+<td>Adds a keyframe for the selected element.</td>
+</tr>
+<tr>
+<td>Remove keyframe</td>
+<td>Removes the current keyframe from the selected element. · <strong>Keying Set Add Selected</strong>: Add selected item to active keying set. · <strong>Keying Set Add Selected</strong>: Remove selected item from active keying set.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="library-override-mode">Library Override Mode</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/library-override-mode.png" alt="Library Override Mode" loading="lazy"></figure>
+<p>Lists the library overrides in the scene.</p>
+<p>This feature is experimental and this lousy documented in the Blender manual that it is not to find out what library overrides are and how to use them. None of the mentioned ways to create a library override works.</p>
+<p>What you can read there though is how great they are, and that they replace the proxies. So here comes the outliner section for the great library overrides. Whatever it is ...</p>
+<h3 id="library-override-view-mode">Library Override View Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/library-override-view-mode.png" alt="Library Override View Mode" loading="lazy"><figcaption>Library Override View Mode</figcaption></figure>
+<h4 id="properties">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/library-override-mode.png" alt="Properties" loading="lazy"></figure>
+<p>Show the properties of the library overrides.</p>
+<h4 id="hierarchies">Hierarchies</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/hierarchies.png" alt="Hierarchies" loading="lazy"></figure>
+<p>Show the objects with library overrides in a hierarchical way.</p>
+<h3 id="filter-options">Filter options</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/filter-options.png" alt="Filter options" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sort alphabetically</td>
+<td>Sorts the library overrides in alphabetical order in the outliner list.</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>Search options. · <strong>Exact match</strong>: Search with exact match. · <strong>Case sensitive</strong>: Take upper and lower case status into account.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="unused-data-mode">Unused Data Mode</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/unused-data-mode.png" alt="Unused Data Mode" loading="lazy"></figure>
+<p>Bforartists has a special system to treat not longer used data. Unused data will normally remain in the scene as long as you haven't saved it and reloaded it. Means delete does not immediately remove a mesh completely from the scene for example. It will be unused data now. Until you save and reopen the scene. The cleanup process happens at saving the blend file.</p>
+<p>The Unused Data allows you to clean up the unused data without to save and reload the blend file. It lists all data that has no user in the scene. This includes the standard brushes from the startup configuration. Don't delete them!</p>
+<h3 id="clean-up">Clean Up</h3>
+<p>Normally you would need to save the blend file and reload it to get rid of the unused data. Clean Up removes all unued data from the blend file immediately. Note that this does not remove objects with a fake user associated.</p>
+<h4 id="clean-up-menu">Clean Up menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/clean-up-menu.png" alt="Clean Up menu" loading="lazy"></figure>
+<p>The clean up button cleans up what is in the list. This is good enough for most cases. But sometimes you might want to have a bit more fine control.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unused Data</td>
+<td>Removes unused data blocks.</td>
+</tr>
+<tr>
+<td>Recursive Unused Data</td>
+<td>Recursively removes unused data blocks. Means the child objects gets removed too.</td>
+</tr>
+<tr>
+<td>Unused Linked Data</td>
+<td>Removes unused data that is linked to this file.</td>
+</tr>
+<tr>
+<td>Recursive Unused Linked Data</td>
+<td>Recursively removes unused data that is linked to this file. Means the child objects gets removed too.</td>
+</tr>
+<tr>
+<td>Unused Local Data</td>
+<td>Removes unused local data.</td>
+</tr>
+<tr>
+<td>Recursive Unused Local Data</td>
+<td>Recursively removes unused local data. Means the child objects gets removed too.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filter-5">Filter</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/filter-4.png" alt="Filter" loading="lazy"></figure>
+<p>Enable a filter to display a specific data type. You can just filter by one data type at a time. The rest will be hidden.</p>
+<h4 id="filter-id-type-2">Filter ID Type</h4>
+<p>The menu to choose the data type that should be displayed.</p>
+<h3 id="status-column">Status column</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/outliner/status-column.png" alt="Status column" loading="lazy"></figure>
+<p>The number at the right tells you how many users the object has. Objects with a power icon and an F besides the number have a fake user assigned. Objects with an X in the row is unused data, and will be removed with the next save and reload of the blend file. Objects with the power icon will remain in the scene. They have a fake user.</p>
+<p>To remove the Fake User at an object click at the Power icon. It will turn into the X button then. And the object will be removed at saving.</p>
+<h2 id="hotkey-only-functionality">Hotkey only functionality</h2>
+<div class="ui-doc-callout is-important"><p><strong>Important:</strong> These hotkeys works with the default Bforartists key map And they do not list the Ndof hotkeys. Ndof is a 3d connexion mouse device that is also used for tablets.</p></div>
+<p>Most of the tools can be found in the graphical UI. But there are still some tools that are hotkey only. Some have a UI brother with equal functionality. For example, Pick shortest path is the hotkey sister of Select shortest path. Some are hotkey only since they cannot be integrated in the graphical UI. Like calling the File menu under the mouse. Or mouse position dependent functionality like selecting an edge loop.</p>
+<p>The navigation hotkeys and the context menus are excluded here since they are already covered.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insert Keyframe - I</td>
+<td>Insert a keyframe at current position. You need to have a keying set added to the object.</td>
+</tr>
+<tr>
+<td>Delete Keying Set Keyframe - Alt I</td>
+<td>Remove existing keyframes.</td>
+</tr>
+<tr>
+<td>Hide - H</td>
+<td>Hides the object in the 3d view.</td>
+</tr>
+<tr>
+<td>Unhide - Alt H</td>
+<td>Unhides all hidden objects in the 3d view.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fclone-runs-3-15/collection/docs/edit/docs2%2Fcontent%2Feditors%2Foutliner.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/clone-runs-3-15/docs2/content/editors/outliner.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#outliner">Outliner</a><a class="h3" href="#general-hotkey-functionality">General hotkey functionality</a><a class="h3" href="#extended-functionality">Extended Functionality</a><a class="h3" href="#collections">Collections</a><a class="h2" href="#header-all-modes">Header - All Modes</a><a class="h3" href="#switch-to-properties-editor-outliner">Switch to Properties Editor / Outliner</a><a class="h3" href="#display-mode">Display Mode</a><a class="h3" href="#view-menu">View Menu</a><a class="h3" href="#search-field">Search Field</a><a class="h2" href="#right-click-menus">Right Click Menus</a><a class="h3" href="#outliner-scene-operation">Outliner Scene Operation</a><a class="h3" href="#outliner-data-operation">Outliner Data Operation</a><a class="h3" href="#collection">Collection</a><a class="h3" href="#object-menu">Object Menu</a><a class="h3" href="#outliner-id-data-operation">Outliner ID Data Operation</a><a class="h3" href="#outliner-animation-data-property">Outliner Animation Data Property</a><a class="h3" href="#outliner-modifier-operation">Outliner Modifier Operation</a><a class="h2" href="#level-restrictions">Level Restrictions</a><a class="h2" href="#scenes-mode">Scenes Mode</a><a class="h3" href="#collection-menu">Collection Menu</a><a class="h3" href="#add-collection">Add Collection</a><a class="h3" href="#new-scene">New Scene</a><a class="h3" href="#filter">Filter</a><a class="h2" href="#view-layer-mode">View Layer Mode</a><a class="h3" href="#collection-menu-2">Collection Menu</a><a class="h3" href="#add-collection-2">Add Collection</a><a class="h3" href="#filter-2">Filter</a><a class="h2" href="#video-sequencer-mode">Video Sequencer Mode</a><a class="h3" href="#sync-outliner-selection">Sync Outliner Selection</a><a class="h2" href="#blend-file-mode">Blend File Mode</a><a class="h3" href="#filter-4">Filter</a><a class="h3" href="#outliner-library-operation">Outliner Library Operation</a><a class="h2" href="#data-api-mode">Data API Mode</a><a class="h3" href="#header-tools">Header tools</a><a class="h2" href="#library-override-mode">Library Override Mode</a><a class="h3" href="#library-override-view-mode">Library Override View Mode</a><a class="h3" href="#filter-options">Filter options</a><a class="h2" href="#unused-data-mode">Unused Data Mode</a><a class="h3" href="#clean-up">Clean Up</a><a class="h3" href="#filter-5">Filter</a><a class="h3" href="#status-column">Status column</a><a class="h2" href="#hotkey-only-functionality">Hotkey only functionality</a></aside></div></body></html>

@@ -1,0 +1,2612 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mesh - Edit mode - Mesh menu · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1417 · <code>docs2/clone-runs-3-15</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span>Editors introduction</span>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:2.5rem" href="../context-menus/object-mode-object-context-menu.html">Object mode - Object Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-vertex-context-menu.html">Mesh Object - Edit Mode - Vertex Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-edge-context-menu.html">Mesh Object - Edit Mode - Edge Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-face-context-menu.html">Mesh Object - Edit Mode - Face Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-sculpt-mode-brushes-context-menus.html">Mesh Object - Sculpt Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-vertex-paint-mode-brushes-context-menus.html">Mesh Object - Vertex Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-weight-paint-mode-brushes-context-menus.html">Mesh Object - Weight Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-texture-paint-mode-brushes-context-menus.html">Mesh Object - Texture Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/curve-surface-object-edit-mode-curve-context-menus.html">Curve + Surface Object - Edit Mode - Curve context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/metaball-edit-mode-metaball-context-menu.html">Metaball - Edit Mode - Metaball context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/text-edit-mode-text-context-menu.html">Text - Edit Mode - Text context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-edit-mode-point-context-menu.html">Grease Pencil object - Edit Mode - Point context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-edit-mode-stroke-context-menu.html">Grease Pencil object - Edit Mode - Stroke context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu.html">Grease Pencil object - Sculpt Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-draw-mode-brushes-context-menu.html">Grease Pencil object - Draw Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu.html">Grease Pencil object - Vertex Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-weight-paint-mode-brushes-context-menu.html">Grease Pencil object - Weight Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-edit-mode-armature-context-menu.html">Armature - Edit Mode - Armature context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-pose-mode-pose-context-menu.html">Armature - Pose Mode - Pose context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-edit-mode-lattice-context-menu.html">Armature - Edit Mode - Lattice context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/hair-curves-edit-mode-curves-context-menu.html">Hair Curves - Edit Mode - Curves context menu</a>
+<a style="padding-left:1.5rem" href="../header.html">Header</a>
+<a style="padding-left:2.5rem" href="header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="edit-mode-add-menu.html">Edit mode - Add menu</a>
+<a style="padding-left:2.5rem" href="object-menu.html">Object menu</a>
+<a class="is-current" style="padding-left:2.5rem" href="mesh-edit-mode-mesh-menu.html">Mesh - Edit mode - Mesh menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-vertex-menu.html">Mesh - Edit Mode - Vertex Menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-edge-menu.html">Mesh - Edit mode - Edge Menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-face-menu.html">Mesh - Edit mode - Face menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-uv-menu.html">Mesh - Edit mode - UV menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-sculpt-menu.html">Mesh - Sculpt mode - Sculpt menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-mask-menu.html">Mesh - Sculpt mode - Mask menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-face-sets-menu.html">Mesh - Sculpt mode - Face Sets menu</a>
+<a style="padding-left:2.5rem" href="mesh-vertex-paint-mode-paint-menu.html">Mesh - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="mesh-vertex-paint-mode-brush-menu.html">Mesh - Vertex Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="mesh-weight-paint-mode-weights-menu.html">Mesh - Weight Paint mode - Weights menu</a>
+<a style="padding-left:2.5rem" href="mesh-texture-paint-mode-brush-menu.html">Mesh - Texture Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="curve-edit-mode-curve-menu.html">Curve - Edit mode - Curve menu</a>
+<a style="padding-left:2.5rem" href="surface-edit-mode-surface-menu.html">Surface - Edit mode - Surface menu</a>
+<a style="padding-left:2.5rem" href="curve-surface-edit-mode-control-points-menu.html">Curve &amp; Surface - Edit mode - Control points menu</a>
+<a style="padding-left:2.5rem" href="curve-surface-edit-mode-segments-menu.html">Curve &amp; Surface - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="metaball-edit-mode-metaball-menu.html">Metaball - Edit mode - Metaball menu</a>
+<a style="padding-left:2.5rem" href="text-edit-mode-text-menu.html">Text - Edit mode - Text menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode-grease-pencil-menu.html">Grease Pencil - Edit mode - Grease Pencil menu</a>
+<a style="padding-left:2.5rem" href="point-cloud-edit-mode-point-cloud-menu.html">Point Cloud - Edit mode - Point Cloud menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode-point-menu.html">Grease Pencil - Edit mode - Point menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode-stroke-menu.html">Grease Pencil - Edit mode - Stroke menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-draw-mode-draw-menu.html">Grease Pencil - Draw mode - Draw menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-vertex-paint-mode-paint-menu.html">Grease Pencil - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-weight-paint-mode-weights-menu.html">Grease Pencil - Weight Paint Mode - Weights Menu</a>
+<a style="padding-left:2.5rem" href="armature-edit-mode-armature-menu.html">Armature - Edit mode - Armature menu</a>
+<a style="padding-left:2.5rem" href="armature-pose-mode-pose-menu.html">Armature - Pose mode - Pose menu</a>
+<a style="padding-left:2.5rem" href="lattice-edit-mode-lattice-menu.html">Lattice - Edit mode - Lattice menu</a>
+<a style="padding-left:2.5rem" href="particle-particle-mode-particle-menu.html">Particle - Particle mode - Particle menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-curves-menu.html">Hair Curve - Edit mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-control-points-menu.html">Hair Curve - Edit mode - Control Points menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-segments-menu.html">Hair Curve - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-sculpt-mode-curves-menu.html">Hair Curve - Sculpt mode - Curves menu</a>
+<a style="padding-left:1.5rem" href="../tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-edit-mode.html">Mesh - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-sculpt-mode.html">Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-vertex-paint-mode.html">Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-weight-paint-mode.html">Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-texture-paint-mode.html">Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-particle-edit-mode.html">Mesh - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/curve-edit-mode.html">Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/surface-edit-mode.html">Surface - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/metaball-edit-mode.html">Metaball - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/text-edit-mode.html">Text - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-edit-mode.html">Grease Pencil - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-sculpt-mode.html">Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-draw-mode.html">Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-vertex-paint-mode.html">Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-weight-paint-mode.html">Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/armature-edit-mode.html">Armature - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/armature-pose-mode.html">Armature - Pose Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/lattice-edit-mode.html">Lattice - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/hair-curve-edit-mode.html">Hair Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/hair-curve-sculpt-mode.html">Hair Curve - Sculpt Mode</a>
+<a style="padding-left:1.5rem" href="../sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../sidebar/item-tab.html">Item tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-object-mode.html">Tool Tab - Object Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-edit-mode.html">Tool Tab - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-pose-mode.html">Tool Tab - Pose Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-sculpt-mode.html">Tool Tab - Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-vertex-paint-mode.html">Tool Tab - Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-texture-paint-mode.html">Tool Tab - Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-weight-paint-mode.html">Tool Tab - Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-particle-edit-mode.html">Tool Tab - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-sculpt-mode.html">Tool Tab - Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-draw-mode.html">Tool Tab - Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-vertex-paint-mode.html">Tool Tab - Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-weight-paint-mode.html">Tool Tab - Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-layer-panel.html">Tool Tab - Grease Pencil - Layer Panel</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-hair-curve-sculpt-mode.html">Tool Tab - Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/animation-tab.html">Animation Tab</a>
+<a style="padding-left:1.5rem" href="../asset-shelf.html">Asset Shelf</a>
+<a href="../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/view-menu.html">View menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/image-menu.html">Image menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/select-menu.html">Select menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/add-menu.html">Add menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/mask-menu.html">Mask menu</a>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/tool-tab-in-paint-mode.html">Tool Tab in Paint Mode</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/image-tab.html">Image Tab</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/scopes-tab.html">Scopes Tab</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/mask-tab.html">Mask Tab</a>
+<a href="../../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/image-menu.html">Image Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/uv-menu.html">UV menu</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/sidebar/image-tab.html">Image Tab</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/sidebar/view-tab.html">View Tab</a>
+<a href="../../compositor.html">Compositor</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-input-constant.html">Add Menu - Input - Constant</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-input.html">Add Menu - Input</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-input-scene.html">Add Menu - Input - Scene</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-color-adjust.html">Add Menu - Color - Adjust</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-creative.html">Add Menu - Creative</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-filter-blur.html">Add Menu - Filter - Blur</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-filter.html">Add Menu - Filter</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-keying.html">Add Menu - Keying</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-mask.html">Add Menu - Mask</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-tracking.html">Add Menu - Tracking</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-transform.html">Add Menu - Transform</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/geometry-nodes-editor-header-add-menu-group.html">Geometry Nodes Editor - Header - Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:1.5rem" href="../../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/node-tab.html">Node Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/options-tab.html">Options Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/add-tab.html">Add Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/relations-tab.html">Relations tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/group-tab.html">Group tab</a>
+<a href="../../texture-node-editor.html">Texture Node Editor</a>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-constant.html">Add Menu - Input - Constant</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-gizmo.html">Add Menu - Input - Gizmo</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-import.html">Add Menu - Input - Import</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-scene.html">Add Menu - Input - Scene</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-attribute.html">Add Menu - Attribute</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-read.html">Add Menu - Geometry - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-sample.html">Add Menu - Geometry - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-write.html">Add Menu - Geometry - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-material.html">Add Menu - Geometry - Material</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-operations.html">Add Menu - Geometry - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry.html">Add Menu - Geometry</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-read.html">Add Menu - Curve - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-sample.html">Add Menu - Curve - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-write.html">Add Menu - Curve - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-operations.html">Add Menu - Curve - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-primitives.html">Add Menu - Curve - Primitives</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-topology.html">Add Menu - Curve - Topology</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-grease-pencil-read.html">Add Menu - Grease Pencil - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-grease-pencil-write.html">Add Menu - Grease Pencil - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-grease-pencil-operations.html">Add Menu - Grease Pencil - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-instances.html">Add Menu - Instances</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-read.html">Add Menu - Mesh - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-sample.html">Add Menu - Mesh - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-write.html">Add Menu - Mesh - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-operations.html">Add Menu - Mesh - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-primitives.html">Add Menu - Mesh - Primitives</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-topology.html">Add Menu - Mesh - Topology</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-uv.html">Add Menu - Mesh - UV</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-point.html">Add Menu - Point</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-read.html">Add Menu - Volume - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-sample.html">Add Menu - Volume - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-write.html">Add Menu - Volume - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-operations.html">Add Menu - Volume - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-primitives.html">Add Menu - Volume - Primitives</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-simulation.html">Add Menu - Simulation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-text.html">Add Menu - Utilities - Text</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-bundle.html">Add Menu - Utilities - Bundle</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-closure.html">Add Menu - Utilities - Closure</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-field.html">Add Menu - Utilities - Field</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-matrix.html">Add Menu - Utilities - Matrix</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-rotation.html">Add Menu - Utilities - Rotation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-deprecated.html">Add Menu - Utilities - Deprecated</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-generate.html">Add Menu - Generate</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-geometry.html">Add Menu - Geometry Nodegroups - Geometry</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations.html">Add Menu - Geometry Nodegroups - Geometry - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection.html">Add Menu - Geometry Nodegroups - Geometry - Selection</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations.html">Add Menu - Geometry Nodegroups - Grease Pencil - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read.html">Add Menu - Geometry Nodegroups - Grease Pencil - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write.html">Add Menu - Geometry Nodegroups - Grease Pencil - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation.html">Add Menu - Geometry Nodegroups - Hair - Deformation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation.html">Add Menu - Geometry Nodegroups - Hair - Generation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides.html">Add Menu - Geometry Nodegroups - Hair - Guides</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read.html">Add Menu - Geometry Nodegroups - Hair - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility.html">Add Menu - Geometry Nodegroups - Hair - Utility</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write.html">Add Menu - Geometry Nodegroups - Hair - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-instances.html">Add Menu - Geometry Nodegroups - Instances</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-material.html">Add Menu - Geometry Nodegroups - Material</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-mesh.html">Add Menu - Geometry Nodegroups - Mesh</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read.html">Add Menu - Geometry Nodegroups - Mesh - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-normals.html">Add Menu - Geometry Nodegroups - Normals</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-utilities.html">Add Menu - Geometry Nodegroups - Utilities</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector.html">Add Menu - Geometry Nodegroups - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-utility.html">Add Menu - Geometry Nodegroups - Utility</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-normals.html">Add Menu - Normals</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-group.html">Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/swap-menu.html">Swap menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/node-menu.html">Node menu</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/group-tab.html">Group tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/node-tab.html">Node tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/add.html">Add</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/relations-tab.html">Relations tab</a>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-input.html">Add Menu - Input</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-shader.html">Add Menu - Shader</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-group.html">Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/swap-menu.html">Swap menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/node-menu.html">Node menu</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/node-tab.html">Node Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/options-tab.html">Options Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/add-tab.html">Add Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/relations-tab.html">Relations tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/group-tab.html">Group tab</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/export-menu.html">Export Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/strip-menu.html">Strip Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/image-menu.html">Image Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/text-menu.html">Text Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/scene-menu.html">Scene Menu</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/preview-tool-tab.html">Preview - Tool tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/preview-view-tab.html">Preview - View tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-strip-tab.html">Sequencer - Strip tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-tool-tab.html">Sequencer - Tool tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-cache-tab.html">Sequencer - Cache tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-proxy-tab.html">Sequencer - Proxy tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-view-tab.html">Sequencer - View tab</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/footer-tools-and-options.html">Footer tools and options</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/tracking-mode-clip-submode-clip-menu.html">Tracking Mode - Clip Submode - Clip Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/tracking-mode-clip-submode-track-menu.html">Tracking Mode - Clip Submode - Track Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/tracking-mode-graph-submode-graph-menu.html">Tracking Mode - Graph Submode - Graph Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/mask-mode-clip-menu.html">Mask Mode - Clip Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/mask-mode-add-menu.html">Mask Mode - Add Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/mask-mode-mask-menu.html">Mask Mode - Mask Menu</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool shelf</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/tool-shelf/tracking-mode.html">Tracking Mode</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/footage-tab.html">Footage Tab</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/track-tab.html">Track tab</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/tracking-mode-stabilization-tab.html">Tracking Mode - Stabilization tab</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/tracking-mode-view-tab.html">Tracking Mode - View tab</a>
+<a href="../../dope-sheet.html">Dope Sheet</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/key-menu.html">Key Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/action-menu.html">Action Menu</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/channel-list.html">Channel list</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/footer-tools-and-options.html">Footer tools and options</a>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/key-menu.html">Key Menu</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/channel-list.html">Channel list</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/sidebar/f-curve-tab.html">F-Curve Tab</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/sidebar/modifiers-tab.html">Modifiers Tab</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/footer-tools-and-options.html">Footer tools and options</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/key-menu.html">Key Menu</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/channel-list.html">Channel list</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/f-curve-tab.html">F-Curve Tab</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/drivers-tab.html">Drivers Tab</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/modifiers-tab.html">Modifiers Tab</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/driver-editor-sidebar-view-tab.html">Driver Editor - Sidebar - View Tab</a>
+<a href="../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-header-tools-and-options.html">NLA Editor - Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-header-quick-menu.html">NLA Editor - Header - Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-view-menu.html">NLA Editor - View Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-select-menu.html">NLA Editor - Select Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-marker-menu.html">NLA Editor - Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-add-menu.html">NLA Editor - Add Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-track-menu.html">NLA Editor - Track Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-strip-menu.html">NLA Editor - Strip Menu</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-channel-list.html">NLA Editor - Channel list</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel.html">NLA Editor - Sidebar - Animation Data panel</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab.html">NLA Editor - Sidebar - Strip tab</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab.html">NLA Editor - Sidebar - Modifiers Tab</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">NLA Editor - Footer tools and options</a>
+<a href="../../text-editor.html">Text Editor</a>
+<a href="../../python-console.html">Python Console</a>
+<a href="../../info-editor.html">Info Editor</a>
+<a href="../../toolbar.html">Toolbar</a>
+<a href="../../outliner.html">Outliner</a>
+<a href="../../properties.html">Properties Editor</a>
+<a style="padding-left:1.5rem" href="../../properties/render-properties-tab.html">Render Properties Tab</a>
+<a style="padding-left:2.5rem" href="../../properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../../properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../../properties/render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:1.5rem" href="../../properties/output-properties-tab.html">Output Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/view-layer-properties-tab.html">View Layer Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/scene-properties-tab.html">Scene Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/world-properties-tab.html">World Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/collection-properties-tab.html">Collection Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/object-properties-tab.html">Object Properties Tab</a>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<a style="padding-left:1.5rem" href="../../properties/particle-properties-tab.html">Particle Properties Tab</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:1.5rem" href="../../properties/visual-effects-properties-tab.html">Visual Effects Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/physics-properties-tab.html">Physics Properties Tab</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:1.5rem" href="../../properties/object-constraints-properties-tab.html">Object Constraints Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/object-data-properties-tab.html">Object Data Properties Tab</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/volume-object.html">Volume Object</a>
+<a style="padding-left:1.5rem" href="../../properties/material-properties-tab.html">Material Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/texture-properties-tab.html">Texture Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/bone-properties-tab.html">Bone Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/bone-constraint-properties.html">Bone Constraint Properties</a>
+<a style="padding-left:1.5rem" href="../../properties/strip-tab.html">Strip Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/strip-modifiers-tab.html">Strip Modifiers Tab</a>
+<a href="../../file-browser.html">File browser</a>
+<a href="../../asset-browser.html">Asset Browser</a>
+<a style="padding-left:1.5rem" href="../../asset-browser/asset-browser-default-asset-library.html">Asset Browser - Default Asset LIbrary</a>
+<a style="padding-left:1.5rem" href="../../asset-browser/asset-browser-essentials-asset-library.html">Asset Browser - Essentials Asset Library</a>
+<a href="../../spreadsheet.html">Spreadsheet</a>
+<a href="../../preferences.html">Preferences</a>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<a style="padding-left:1.5rem" href="../context-menus.html">Context menus</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<h4>Advanced</h4>
+<a href="../../../advanced/advanced-command-line.html">Advanced - Command Line</a>
+<a href="../../../advanced/advanced-scripting-extending-bforartists.html">Advanced - Scripting &amp; Extending Bforartists</a>
+<a href="../../../advanced/advanced-working-limits.html">Advanced - Working Limits</a>
+<a href="../../../advanced/troubleshooting.html">Troubleshooting</a>
+<h4>Extensions</h4>
+<a href="../../../extensions/bforartists-extensions.html">Bforartists Extensions</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-brush-panels.html">Core Extension - Brush Panels</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-presentation-slider.html">Core Extension - Presentation Slider</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-3d-sequencer.html">Core Extension- 3D Sequencer</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-power-user-tools.html">Core Extension - Power User Tools</a>
+<h4>Appendix</h4>
+<a href="../../../appendix/glossary.html">Glossary</a>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/manual-update-history.html">Manual Update History</a>
+<h4>Keymap</h4>
+<a href="../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Header › Mesh - Edit mode - Mesh menu</div><h1 class="pv-title">Mesh - Edit mode - Mesh menu</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 38 min read</span></div><article class="ui-doc-body"><h2 id="edit-mode-mesh-menu">Edit Mode - Mesh Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/edit-mode-mesh-menu.png" alt="Edit Mode - Mesh Menu" loading="lazy"><figcaption>Edit Mode - Mesh Menu</figcaption></figure>
+<p>The Mesh Menu in Edit Mode contains the tools to manipulate the mesh geometry in Edit mode. It just exists for Mesh Objects.</p>
+<p>Lots of functionality that could also belong here can also be found in the Tool Shelf. The difference is that the tools in the tool shelf are easier to access. And so it contains the most used tools for the daily work. While the Mesh menu contains the not so often used tools. Or tools where you use the hotkey anyway. Delete for example.</p>
+<h2 id="legacy">Legacy</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/legacy.png" alt="Legacy" loading="lazy"></figure>
+<p>The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.</p>
+<h3 id="bisect">Bisect</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/bisect.png" alt="Bisect" loading="lazy"></figure>
+<p>Bisect cuts geometry along a plane. This description is a bit misleading though. You simply cut through the whole geometry by defining a line. And the cut goes through the geometry from the current view.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/bisect-2.png" alt="Bisect" loading="lazy"></figure>
+<p>When you have set your cut and release the mouse then you reveal a widget with which you can move and rotate the cut. Clicking at the arrow and drag moves the cut. Clicking at the circle and drag rotates the cut.</p>
+<h4 id="last-operator-bisect">Last Operator Bisect</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-bisect.png" alt="Last Operator Bisect" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plane Point X , Y , Z</td>
+<td>Defines the start point of the Bisect cut.</td>
+</tr>
+<tr>
+<td>Plane Normal X , Y , Z</td>
+<td>The direction in which the bisect points.</td>
+</tr>
+<tr>
+<td>Fill</td>
+<td>Fills the cut.</td>
+</tr>
+<tr>
+<td>Clear Inner</td>
+<td>Removes the inner part of the face to cut.</td>
+</tr>
+<tr>
+<td>Clear Outer</td>
+<td>Removes the outer part of the face to cut.</td>
+</tr>
+<tr>
+<td>Axis threshold</td>
+<td>Axis threshold.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="knife-tool">Knife tool</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/knife-topology.png" alt="Knife tool" loading="lazy"></figure>
+<p>The Knife tool cuts the geometry, and adds edges. When it crosses existing geometry then it adds a vertice at the crossing point.</p>
+<p>Usage: activate the tool, left click to define the starting point. This can also be a point in the middle of a face. But ideally you choose an existing vertice or an edge as the start and endpoints. The knife tool tries to snap to them when you get close with the mouse cursor.</p>
+<p>When done press Enter or Spacebar to confirm. Right click abandons the operation.</p>
+<p>When you create a vertice in the middle of a face, then the knife tool will try to connect this vertice by an existing vertice of this face when you confirm with spacebar.</p>
+<h5 id="hotkey-functionality-in-the-footer-text">Hotkey functionality in the footer text</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/hotkey-functionality-in-the-footer-text.png" alt="Hotkey functionality in the footer text" loading="lazy"><figcaption>Hotkey functionality in the footer text</figcaption></figure>
+<p>Have a look at the footer when you work with this tool. Here you will find further instructions and hotkeys.</p>
+<p>Enter, Pad Enter, Spacebar - confirm</p>
+<p>Esc key, RMB - cancel the operation</p>
+<p>LMB start the cut</p>
+<p>Double LMB - close the cut</p>
+<p>E - create new cut</p>
+<p>Ctrl or Shift while dragging - Snap to the middle of an edge</p>
+<p>Z - cut through the whole geometry, also the backfaces.</p>
+<p>MMB - pan the view.</p>
+<p>Alt MMB - rotate the view.</p>
+<h2 id="transform">Transform</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/transform.png" alt="Transform" loading="lazy"></figure>
+<h3 id="to-sphere">To Sphere</h3>
+<p>Shapes a selection of objects into the shape of a sphere. The calculation happens with the object origins.</p>
+<p>In Object mode this tools requires to have more than one object selected.</p>
+<h4 id="usage">Usage</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/usage.png" alt="Usage" loading="lazy"></figure>
+<p>Select the vertices, activate the tool, then drag the mouse in the 3D viewport. In the header you will read the current factor then. Which tells you how close you are towards the sphere shape.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/usage-2.png" alt="Usage" loading="lazy"></figure>
+<h4 id="last-operator-to-sphere">Last Operator To Sphere</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png" alt="Last Operator To Sphere" loading="lazy"><figcaption>Last Operator To Sphere</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>The factor to transform the selection into a shape form.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="proportional-editing">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="to-circle">To Circle</h3>
+<p>Transforms selected vertices into a circular arrangement.<br />
+Useful for reshaping loops, aligning geometry, or creating radial structures with precision.</p>
+<h4 id="usage-2">Usage</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/usage-3.png" alt="Usage" loading="lazy"></figure>
+<p>Select the loop of mesh geometry, activate the tool. In the Last Operator panel, you can then adjust properties after the operation.</p>
+<h4 id="last-operator-to-sphere-2">Last Operator To Sphere</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-to-sphere.png" alt="Last Operator To Sphere" loading="lazy"><figcaption>Last Operator To Sphere</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>Controls the strength of the circular transformation.   – <strong>1.000</strong>: full circle.   – <strong>&lt; 1.000</strong>: partial influence, blending with original shape.</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>Defines how the circle is calculated:   – <strong>Best Fit</strong>: fits a circle to the selection using least-squares approximation.   – Interior Fit: Moves vertices inward toward the center of the selection.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Applies a rotational offset to the resulting circle.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>Sets a fixed radius for the circle.</td>
+</tr>
+<tr>
+<td>Space Evenly</td>
+<td>Distributes vertices evenly along the circle’s perimeter.   – Enabled: uniform spacing.   – Disabled: preserves original spacing.</td>
+</tr>
+<tr>
+<td>Flatten</td>
+<td>Controls how much the selection is flattened onto a plane before circularization.   – <strong>1.000</strong>: full flattening.   – <strong>0.000</strong>: preserves original depth variation.</td>
+</tr>
+<tr>
+<td>Lock Axis (X, Y, Z)</td>
+<td>Constrains transformation to specific axes. Useful for maintaining symmetry or aligning with existing geometry.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shear">Shear</h3>
+<p>Shear shears the selection.</p>
+<p>In Object mode this tools requires to have more than one object selected.</p>
+<p>The shear tool works along a imaginary 2d plane. The shear axis controls if the items are sheared along the x or the y axes of this plane. This is the plane along which the transformation happens. You can shear along the x or the y axis of this plane.</p>
+<p>To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.</p>
+<h4 id="last-operator-shear">Last Operator Shear</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png" alt="Last Operator Shear" loading="lazy"></figure>
+<h5 id="offset">Offset</h5>
+<p>Adjust an offset.</p>
+<h5 id="axis">Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/axis.png" alt="Axis" loading="lazy"></figure>
+<p>Defines one axis of the imaginary shear axis plane.</p>
+<h5 id="axis-ortho">Axis Ortho</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/axis.png" alt="Axis Ortho" loading="lazy"></figure>
+<p>Defines the other axis of the imaginary shear axis plane.</p>
+<h5 id="orientation">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation for the shear action.</p>
+<h5 id="mirror-editing">Mirror Editing</h5>
+<p>Enable mirror editing.</p>
+<h5 id="proportional-editing-2">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bend">Bend</h3>
+<p>Bends the selection.</p>
+<h3 id="push-pull">Push/Pull</h3>
+<p>It pushes or pulls the object positions relative to the center of the selection.</p>
+<p>In Object mode this tool requires to have more than one object selected.</p>
+<h4 id="last-operator-push-pull">Last Operator Push/Pull</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png" alt="Last Operator Push/Pull" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distance</td>
+<td>Adjust the distance of influence of the tool.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="proportional-editing-3">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="warp">Warp</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/warp.png" alt="Warp" loading="lazy"></figure>
+<p>Warps a mesh selection between two defined points.</p>
+<h4 id="last-operator-warp">Last operator Warp</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Warp Angle</td>
+<td>The strength of the warp effect</td>
+</tr>
+<tr>
+<td>Offset Angle</td>
+<td>An offset angle to bend side wards.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="min">Min</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/min.png" alt="Min" loading="lazy"></figure>
+<p>The start point.</p>
+<h5 id="max">Max</h5>
+<p>The end point.</p>
+<h3 id="randomize">Randomize</h3>
+<p>This tool allows randomizes the positions of the selected vertices.</p>
+<h4 id="last-operator-randomize">Last Operator Randomize</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png" alt="Last Operator Randomize" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amount</td>
+<td>Adjust the amount.</td>
+</tr>
+<tr>
+<td>Uniform</td>
+<td>The uniform offset distance.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Align the offset direction to the normals.</td>
+</tr>
+<tr>
+<td>Random Seed</td>
+<td>The seed value for randomization.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shrink-fatten">Shrink/Fatten</h3>
+<p>Shrink/Fatten scales the selected geometry along its normals. Transform orientation and Pivot point gets ignored.</p>
+<p>A positive value pushes the vertices outwards. A negative value pushes the vertices inwards.</p>
+<h4 id="last-operator-shrink-fatten">Last Operator Shrink/Fatten</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-shrink-fatten.png" alt="Last Operator Shrink/Fatten" loading="lazy"></figure>
+<p>The Last Operator Shrink/Fatten panel gives you tools to adjust the Shrink/Fatten operation. Here you have numeric input for the strength and a few more options.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Offset is the strength of the offset for Shrink/Fatten.</td>
+</tr>
+<tr>
+<td>Offset Even</td>
+<td>Offset Even scales the selection to give more thickness in even areas.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="proportional-editing-4">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="skin-resize">Skin Resize</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/skin-resize.png" alt="Skin Resize" loading="lazy"></figure>
+<p>This tool requires to have a skin modifier at the mesh. It scales the thickness of the skin.</p>
+<p>While the operation you will see in the header the strength value for the skin.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/skin-resize-2.png" alt="Skin Resize" loading="lazy"></figure>
+<h4 id="last-operator-skin-resize">Last Operator Skin Resize</h4>
+<h5 id="vector">Vector</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/vector.png" alt="Vector" loading="lazy"></figure>
+<p>Adjust the position values for the three values.</p>
+<h5 id="scale-x-y-z">Scale X, Y, Z</h5>
+<p>Limit the position relative to the source object.</p>
+<h5 id="orientation-2">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box choose the type of orientation for the mirroring action.</p>
+<h5 id="mirror-editing-2">Mirror Editing</h5>
+<p>Enable mirror editing.</p>
+<h5 id="proportional-editing-5">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="move-texture-space">Move Texture Space</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space.png" alt="Move Texture Space" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-2.png" alt="Move Texture Space" loading="lazy"></figure>
+<p>This tool relies at the move tool. With the difference that it moves the texture space instead of the object. It has also a very special use case, and just works with a material with a Texture Coordinate / Generated node. And requires to have the shading at Material or Rendered to see a result in the viewport.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-3.png" alt="Move Texture Space" loading="lazy"></figure>
+<p>In the viewport you will see the UV cage in black color. In the header you will see the values for the current position of the UV cage.</p>
+<p>Note that once done and applied, there is no way to reset the UV cage back to zero. When you repeat the operation, then the values will start at 0 again. Even when the UV cage is already offset.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-4.png" alt="Move Texture Space" loading="lazy"></figure>
+<h4 id="last-operator-move">Last Operator Move</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png" alt="Last Operator Move" loading="lazy"></figure>
+<h5 id="move">Move</h5>
+<p>Adjust in which directions you want to transform.</p>
+<h5 id="orientation-3">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<h5 id="mirror-editing-3">Mirror Editing</h5>
+<p>Enable mirror editing.</p>
+<h5 id="proportional-editing-6">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scale-texture-space">Scale Texture Space</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/scale-texture-space.png" alt="Scale Texture Space" loading="lazy"></figure>
+<p>Scale Texture space is similar to the Move texture Space. With the only difference that it scales the UV space instead of moving it.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-2.png" alt="Scale Texture Space" loading="lazy"></figure>
+<p>This tool relies at the scale tool. With the difference that it scales the texture space instead of the object. It has also a very special use case, and just works with a material with a Texture Coordinate / Generated node. And requires to have the shading at Material or Rendered to see a result in the viewport.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-3.png" alt="Scale Texture Space" loading="lazy"></figure>
+<p>In the viewport you will see the UV cage in black color. In the header you will see the values for the current position of the UV cage.</p>
+<p>Note that once done and applied, there is no way to reset the UV cage back to zero. When you repeat the operation, then the values will start at 0 again. Even when the UV cage is already offset.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/scale-texture-space-2.png" alt="Scale Texture Space" loading="lazy"></figure>
+<h4 id="last-operator-resize">Last Operator Resize</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png" alt="Last Operator Resize" loading="lazy"></figure>
+<h5 id="scale">Scale</h5>
+<p>Adjust in which directions you want to transform.</p>
+<h5 id="orientation-4">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<h5 id="mirror-editing-4">Mirror Editing</h5>
+<p>Enable mirror editing.</p>
+<h5 id="proportional-editing-7">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set-dimensions">Set Dimensions</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/set-dimensions.png" alt="Set Dimensions" loading="lazy"></figure>
+<p>Edit Mode Only!</p>
+<p>Normally all scale operations in Bforartists are relative to the current selection and dimensions. And you always start with a relative value of 1.</p>
+<p>Set dimensions allows to scale mesh selections in absolute world values. No matter how the initial values are. The new values gets set in the Last Operator.</p>
+<p>Set dimensions is an add-on. You can turn it off in the add-ons section of the user preferences when you want.</p>
+<h4 id="last-operator-set-dimensions">Last Operator Set Dimensions</h4>
+<h5 id="new-dimensions">New Dimensions</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/new-dimensions.png" alt="New Dimensions" loading="lazy"></figure>
+<p>When you activate the tool then you will see the world coordinates of the selection. Change the values to other world coordinates.</p>
+<h2 id="mirror">Mirror</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/mirror.png" alt="Mirror" loading="lazy"></figure>
+<p>Mirror mirrors the selected geometry along the defined axis.</p>
+<h3 id="interactive-mirror">Interactive Mirror</h3>
+<p>Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored</p>
+<h3 id="x-global-y-global-etc">X Global, Y Global etc.</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/x-global-y-global-etc.png" alt="X Global, Y Global etc." loading="lazy"><figcaption>X Global, Y Global etc.</figcaption></figure>
+<p>Mirrors the selection around the chosen axis.</p>
+<h4 id="last-operator-mirror">Last Operator Mirror</h4>
+<p>The Last Operator Mirror panel gives you tools to adjust the mirror action.</p>
+<h5 id="orientation-5">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box choose the type of orientation for the mirroring action.</p>
+<h5 id="constraint-axis">Constraint Axis</h5>
+<p>Constraint Axis gives you again the possibility to define the mirror axis. You can choose more than one axis here.</p>
+<h3 id="mirror-vertex-group">Mirror Vertex Group</h3>
+<p>This tool requires to have a vertex group assigned. It mirrors the selected vertex group.</p>
+<p>This tool works only with a perfectly symmetrical mesh along the local X axis. Vertices that have no corresponding vertex on the other side will not be affected.</p>
+<h4 id="last-operator-mirror-vertex-group">Last Operator Mirror Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-mirror-vertex-group.png" alt="Last Operator Mirror Vertex Group" loading="lazy"><figcaption>Last Operator Mirror Vertex Group</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Weights</td>
+<td>Mirrors the Weight Painting informations from the symmetrical counterpart. When both are selected it will become a group and weight information exchange. If only one is selected, then the information from the unselected vertice will go to the selected vertice.</td>
+</tr>
+<tr>
+<td>Flip Group Names</td>
+<td>Flip selected group names. This works with vertex groups with symmetrical name conventions. Like .L , .R, right, left.</td>
+</tr>
+<tr>
+<td>All Groups</td>
+<td>Pass information to all groups instead of the active one.</td>
+</tr>
+<tr>
+<td>Topology Mirror</td>
+<td>Use topology based mirroring.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="snap">Snap</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/snap-vertices.png" alt="Snap" loading="lazy"></figure>
+<p>Choose several methods to snap one element to another. The menu items should be self explaining.</p>
+<h3 id="last-operator-snap-selection-to-cursor">Last operator Snap Selection to Cursor</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/object-menu/last-operator-snap-selection-to-cursor.png" alt="Last operator Snap Selection to Cursor" loading="lazy"><figcaption>Last operator Snap Selection to Cursor</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Keep the offset of the selected objects to each other.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Rotate the selection to match cursor.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="single-operators">Single Operators</h2>
+<h3 id="duplicate">Duplicate</h3>
+<p>Duplicates the current selection.</p>
+<p>When you duplicate a selection, then it sticks to the mouse until you left click. And moves around. A right click repositions the duplicated geometry at its original location.</p>
+<h4 id="last-operator-duplicate">Last Operator Duplicate</h4>
+<h5 id="mode">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/mode.png" alt="Mode" loading="lazy"></figure>
+<p>Not to find out. No tool tip, no entry in the Blender manual. Good Job Blender Developers.</p>
+<h5 id="move-x-y-z">Move X, Y, Z</h5>
+<p>Adjust the position.</p>
+<h5 id="orientation-6">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/orientation-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box choose the type of orientation for the mirroring action.</p>
+<h5 id="mirror-editing-5">Mirror Editing</h5>
+<p>Enable Mirror Editing.</p>
+<h5 id="proportional-editing-8">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extrude">Extrude</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/extrude.png" alt="Extrude" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/extrude-2.png" alt="Extrude" loading="lazy"></figure>
+<p>Extrude is a sub menu with several extrude methods. The contend is dependent of the mesh select mode.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/extrude-3.png" alt="Extrude" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/extrude-4.png" alt="Extrude" loading="lazy"></figure>
+<p>Note that the tool shelf also contains extrude functionality. And a few methods here are a double. These are marked as legacy here in the manual.</p>
+<h4 id="extrude-vertices">Extrude Vertices</h4>
+<p>Extrudes out the selected vertices by moving the mouse.</p>
+<h5 id="last-operator-extrude-only-vertices-and-move">Last Operator Extrude Only Vertices and Move</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-only-vertices-and-move.png" alt="Last Operator Extrude Only Vertices and Move" loading="lazy"><figcaption>Last Operator Extrude Only Vertices and Move</figcaption></figure>
+<h6 id="move-x-y-z-2">Move X Y Z</h6>
+<p>The coordinates for the extruded geometry.</p>
+<h6 id="orientation-7">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/orientation-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the type of orientation, in which coordinate system the action should happen.</p>
+<h6 id="mirror-editing-6">Mirror Editing</h6>
+<p>Enable Mirror Editing.</p>
+<h6 id="proportional-editing-9">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="extrude-edges">Extrude Edges</h4>
+<p>Extrudes out the selected edges by moving the mouse.</p>
+<h5 id="last-operator-extrude-only-edges-and-move">Last Operator Extrude Only Edges and Move</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-only-edges-and-move.png" alt="Last Operator Extrude Only Edges and Move" loading="lazy"><figcaption>Last Operator Extrude Only Edges and Move</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flip Normals</td>
+<td>Flip the normals at the involved faces.</td>
+</tr>
+<tr>
+<td>Move X Y Z</td>
+<td>The coordinates for the extruded geometry.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-8">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/orientation-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the type of orientation, in which coordinate system the action should happen.</p>
+<h6 id="mirror-editing-7">Mirror Editing</h6>
+<p>Enable Mirror Editing.</p>
+<h5 id="proportional-editing-10">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="extrude-faces-legacy">Extrude Faces (Legacy)</h4>
+<p>Extrude the selected faces along their normals. This functionality is part of the Extrude Region tool in the tool shelf.</p>
+<h5 id="last-operator-extrude-region-and-move">Last Operator Extrude Region and Move</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-region-and-move.png" alt="Last Operator Extrude Region and Move" loading="lazy"><figcaption>Last Operator Extrude Region and Move</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flip Normals</td>
+<td>Flips the normals of the extruded faces.</td>
+</tr>
+<tr>
+<td>Dissolve Orthogonal Edges</td>
+<td>Dissolves orthogonal edges at extrusion.</td>
+</tr>
+<tr>
+<td>Move X, Y Z</td>
+<td>The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-9">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/orientation-2.png" alt="Orientation" loading="lazy"></figure>
+<p>The extrusion can have different orientations. The menu items should be self explaining.</p>
+<h6 id="mirror-editing-8">Mirror Editing</h6>
+<p>Enable Mirror Editing.</p>
+<h6 id="proportional-editing-11">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="extrude-faces-along-normals-legacy">Extrude Faces along Normals (Legacy)</h4>
+<p>In the toolshelf it's the Extrude Along Normals tool. Extrudes the selection along local normals. You won't see a widget here. Simply drag.</p>
+<p>The method works the same in all Mesh select modes. Vertice, Edge and Face Mode.</p>
+<h5 id="last-operator-extrude-region-and-shrink-fatten">Last Operator Extrude Region and Shrink/Fatten</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-region-and-shrink-fatten.png" alt="Last Operator Extrude Region and Shrink/Fatten" loading="lazy"><figcaption>Last Operator Extrude Region and Shrink/Fatten</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flip Normals</td>
+<td>Flips the normals of the extruded faces.</td>
+</tr>
+<tr>
+<td>Dissolve Orthogonal Edges</td>
+<td>Dissolves orthogonal edges at extrusion.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The current extrude amount.</td>
+</tr>
+<tr>
+<td>Offset Even</td>
+<td>Scales the offset to give more even thickness. Without this checked the farer away faces will have a bigger extrude amount.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable Mirror Editing.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="proportional-editing-12">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="extrude-individual-faces-legacy">Extrude Individual Faces ( Legacy)</h4>
+<p>In the tool shelf the tool is called Extrude Individual. Extrudes the selection along local normals of each individual face. You won't see a widget here. Simply drag.</p>
+<p>The method works the same in all Mesh select modes. Vertice, Edge and Face Mode.</p>
+<h5 id="last-operator-extrude-individual-faces-and-move">Last Operator Extrude Individual Faces and Move</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-individual-faces-and-move.png" alt="Last Operator Extrude Individual Faces and Move" loading="lazy"><figcaption>Last Operator Extrude Individual Faces and Move</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>The current extrude amount.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable Mirror Editing.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="proportional-editing-13">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="extrude-manifold-legacy">Extrude Manifold (Legacy)</h4>
+<p>The same tool exists in the tool shelf. Extrude, dissolve Edges whose faces form a flat surface, and intersect new edges.</p>
+<p>The method works the same in all Mesh select modes. Vertice, Edge and Face Mode.</p>
+<h5 id="last-operator-extrude-manifold">Last Operator Extrude Manifold</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-manifold.png" alt="Last Operator Extrude Manifold" loading="lazy"><figcaption>Last Operator Extrude Manifold</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flip Normals</td>
+<td>Flips the normals of the extruded faces.</td>
+</tr>
+<tr>
+<td>Dissolve Orthogonal Edges</td>
+<td>Dissolve edges that are at the same straight surface.</td>
+</tr>
+<tr>
+<td>Move X, Y Z</td>
+<td>The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-10">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/orientation-2.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h6 id="mirror-editing-9">Mirror Editing</h6>
+<p>Enable Mirror Editing.</p>
+<h6 id="proportional-editing-14">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="extrude-repeat">Extrude Repeat</h4>
+<p>All modes. Extrudes into the Z depth of the viewport, and repeats the extrusion by the adjusted amount. You have to adjust the extrusion afterwards.</p>
+<h5 id="last-operator-extrude-repeat">Last Operator Extrude Repeat</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-extrude-repeat.png" alt="Last Operator Extrude Repeat" loading="lazy"><figcaption>Last Operator Extrude Repeat</figcaption></figure>
+<h5 id="steps">Steps</h5>
+<p>How much repetitions.</p>
+<p>Offset X / Y / Z</p>
+<p>The offset in the x y and z direction.</p>
+<p>Scale Offset</p>
+<p>The scale factor of the extruded element.</p>
+<h4 id="spin">Spin</h4>
+<p>All modes. Extrudes in a curve form.</p>
+<h5 id="last-operator-spin">Last Operator Spin</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-spin.png" alt="Last Operator Spin" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steps</td>
+<td>How much segments.</td>
+</tr>
+<tr>
+<td>Use Duplicates</td>
+<td>Creates not connected geometry. In Vertex mode single vertices for example. Auto Merge and Flip Normals will not be available with duplicates.</td>
+</tr>
+<tr>
+<td>Angle</td>
+<td>The angle to extrude.</td>
+</tr>
+<tr>
+<td>Auto Merge</td>
+<td>Merge first and last element when the extrude is a full circle.</td>
+</tr>
+<tr>
+<td>Flip Normals</td>
+<td>Flip the normals of the extruded geometry.</td>
+</tr>
+<tr>
+<td>Center X / Y / Z</td>
+<td>The center point of the spin circle.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Axis in global View space. The values goes from -1 to 1.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="merge">Merge</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/merge.png" alt="Merge" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/merge-2.png" alt="Merge" loading="lazy"></figure>
+<p>Merges the geometry.</p>
+<h4 id="at-center-at-cursor-collapse-at-first-at-last">At Center, At Cursor, Collapse, At First, At Last</h4>
+<p>Merges the geometry with the given methods.</p>
+<p>The methods At First and At Last just shows when you have vertices selected, and there is at least one first vertice and one last vertice to merge at. So minimum two. But you can have more than one vertices selected.</p>
+<h4 id="last-operator-merge">Last Operator Merge</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-merge.png" alt="Last Operator Merge" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Choose the merge method again.</td>
+</tr>
+<tr>
+<td>UV's</td>
+<td>Move the UV's according to the merge.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="by-distance">By Distance</h4>
+<p>Merge the vertices by their distance to each other. This tool is meant to remove double vertices at the same location.</p>
+<h4 id="last-operator-merge-by-distance">Last Operator Merge by Distance</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-merge-by-distance.png" alt="Last Operator Merge by Distance" loading="lazy"><figcaption>Last Operator Merge by Distance</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Merge Distance</td>
+<td>Adjust the distance below which the vertices gets merged. Merge selected vertices to unselected vertices.</td>
+</tr>
+<tr>
+<td>Unselected</td>
+<td>Merge unselected geometry.</td>
+</tr>
+<tr>
+<td>Sharp Edges</td>
+<td>Calculate sharp edges using available normal custom data.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="split">Split</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/split.png" alt="Split" loading="lazy"></figure>
+<h4 id="selection">Selection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/edge-split.png" alt="Selection" loading="lazy"></figure>
+<p>Split splits the edges between the selected vertices. It creates two edges out of one. And splits the edge by that.</p>
+<p>The mode doesn't matter. There will always the edges be splitted.</p>
+<h4 id="faces-by-edges-faces-by-edges-by-vertices">Faces by Edges / Faces by Edges by Vertices</h4>
+<p>Splits selected edges so that each neighbor face gets its own copy. You have two methods here.</p>
+<h4 id="last-operator-edge-split">Last Operator Edge Split</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-edge-split.png" alt="Last Operator Edge Split" loading="lazy"><figcaption>Last Operator Edge Split</figcaption></figure>
+<h5 id="type">Type</h5>
+<p>Choose the method again.</p>
+<h3 id="separate">Separate</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/separate.png" alt="Separate" loading="lazy"></figure>
+<p>Separate separates the selected geometry, and creates a new object. The geometry becomes uneditable, since it is now a new object. You will have to leave the Edit mode, select the new object, and re-enter Edit mode when you want to edit it.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selection</td>
+<td>Selection separates the current selection.</td>
+</tr>
+<tr>
+<td>By Material</td>
+<td>By Material separates all geometry that has the same material than the current selection.</td>
+</tr>
+<tr>
+<td>By Loose Parts</td>
+<td>By Loose parts separates all geometry that is connected by edges to the current selection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="knife-project">Knife Project</h3>
+<p>Knife Project uses an object as a knife to cut edges into a mesh.</p>
+<p>Usage: Create a cube. Create a circle. Move the circle in front of the cube so that the geometry does not overlap the cube geometry. Enter Edit Mode with the cube. In the outliner hold down Shift, and select the circle. Note that you can select the circle in the 3d view with holding down Ctrl.<br />
+Now that both objects are selected, go into front view, or whatever view you want. Just make sure that in the view the circle covers a part of the cube. Projection of the cut happens from the current view. Click the Knife Project tool.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/knife-project.png" alt="Knife Project" /></td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/knife-project-2.png" alt="Knife Project" /></td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/knife-project-3.png" alt="Knife Project" /></td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/knife-project-4.png" alt="Knife Project" /></td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-knife-project">Last Operator Knife Project</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-knife-project.png" alt="Last Operator Knife Project" loading="lazy"><figcaption>Last Operator Knife Project</figcaption></figure>
+<h5 id="cut-through">Cut through</h5>
+<p>The cut goes through the whole object when the Cut through checkbox is ticked.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/cut-through.png" alt="Cut through" loading="lazy"></figure>
+<h3 id="convex-hull">Convex Hull</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/convex-hull.png" alt="Convex Hull" loading="lazy"></figure>
+<p>Creates a convex hull around the outside of selected vertices. The old faces and inlaying vertices gets removed.</p>
+<h4 id="last-operator-convex-hull">Last Operator Convex Hull</h4>
+<h5 id="delete-unused">Delete Unused</h5>
+<p>Removes vertices that are not part of the convex geometry.</p>
+<h5 id="use-existing-faces">Use existing Faces</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/use-existing-faces.png" alt="Use existing Faces" loading="lazy"></figure>
+<p>Use existing input faces that lies on the hull where possible. This option allows to have N-Gons in the convex hull.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Make Holes</td>
+<td>Deletes edges and faces in the hull that were part of the input. This allows to delete faces between the existing mesh and the convex hull.</td>
+</tr>
+<tr>
+<td>Join Triangles</td>
+<td>Joins adjacent triangles into quads.</td>
+</tr>
+<tr>
+<td>Max Face Angle</td>
+<td>Max Face Angle belongs to the Join Triangles setting. Set the maximum face angle.</td>
+</tr>
+<tr>
+<td>Max Shape Angle</td>
+<td>Max Face Angle belongs to the Join Triangles setting. Set the maximum shape angle.</td>
+</tr>
+<tr>
+<td>Topology influence</td>
+<td>How much to priorize regular grids of quads as well as quads that touch existing quads.</td>
+</tr>
+<tr>
+<td>Compare UV's</td>
+<td>Takes existing UV patches for the calculation into account.</td>
+</tr>
+<tr>
+<td>Compare Color Attributes</td>
+<td>Takes existing color attributes for the calculation into account.</td>
+</tr>
+<tr>
+<td>Compare Seam</td>
+<td>Takes existing seams for the calculation into account.</td>
+</tr>
+<tr>
+<td>Compare Sharp</td>
+<td>Takes existing sharp edges for the calculation into account.</td>
+</tr>
+<tr>
+<td>Compare Materials</td>
+<td>Takes existing materials for the calculation into account.</td>
+</tr>
+<tr>
+<td>Deselect joined</td>
+<td>Only select remaining triangles that were not merged.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="symmetrize">Symmetrize</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/symmetrize.png" alt="Symmetrize" loading="lazy"></figure>
+<p>The Symmetrize tool mirrors the selected geometry symmetrical along a world axis.</p>
+<h4 id="last-operator-symmetrize">Last Operator Symmetrize</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-symmetrize.png" alt="Last Operator Symmetrize" loading="lazy"></figure>
+<h5 id="direction">Direction</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/direction.png" alt="Direction" loading="lazy"></figure>
+<p>Direction is a drop down box define the mirroring direction.</p>
+<h5 id="threshold">Threshold</h5>
+<p>Adjust a distance after which the mirroring should happen, relative to the mirror axis. 0 means it mirrors the geometry directly at the axis.</p>
+<h3 id="snap-to-symmetry">Snap to Symmetry</h3>
+<p>Tries to snap the selected vertices symmetrical along the chosen world orientation.</p>
+<h4 id="last-operator-snap-to-symmetry">Last Operator Snap to Symmetry</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-snap-to-symmetry.png" alt="Last Operator Snap to Symmetry" loading="lazy"><figcaption>Last Operator Snap to Symmetry</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direction</td>
+<td>The calculation direction.</td>
+</tr>
+<tr>
+<td>Threshold</td>
+<td>The threshold defines the radius in which matching vertices gets located. When you get a warning that snapping failed try increasing the threshold value.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>The snapping factor. Blend mirrored locations from one side to the other. 0.5 is blending both sides equal.</td>
+</tr>
+<tr>
+<td>Center</td>
+<td>Snap vertices in the center axis to zero.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="normals">Normals</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/normals.png" alt="Normals" loading="lazy"></figure>
+<p>This menu contains functionality about dealing with normals. Normals influences the shading and the direction of a face. They can point inwards or outwards. And edges can be split. So that two adjacent faces have a sharp edge.</p>
+<p>You can activate the display of normals in the Overlays panel in Edit mode.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/normals-2.png" alt="Normals" loading="lazy"></figure>
+<h3 id="recalculate-outside">Recalculate Outside</h3>
+<p>Recalculates the normals of the selected geometry so that everything points outwards.</p>
+<h3 id="recalculate-inside">Recalculate Inside</h3>
+<p>Recalculates the normals of the selected geometry so that everything points inwards.</p>
+<h4 id="last-operator-recalc-outside">Last Operator Recalc Outside</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-recalc-outside.png" alt="Last Operator Recalc Outside" loading="lazy"><figcaption>Last Operator Recalc Outside</figcaption></figure>
+<h5 id="inside">Inside</h5>
+<p>Inside recalculates the normals of the selected geometry so that everything points inwards.</p>
+<h3 id="flip">Flip</h3>
+<p>Flips the direction of the normals of the selected geometry.</p>
+<h4 id="last-operator-flip-normals">Last Operator Flip Normals</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-recalc-outside.png" alt="Last Operator Flip Normals" loading="lazy"><figcaption>Last Operator Flip Normals</figcaption></figure>
+<h5 id="custom-normals-only">Custom Normals only</h5>
+<p>Only flip the custom loop normals of the selected elements.</p>
+<h3 id="set-from-faces">Set from Faces</h3>
+<p>Sets the vertex normals from the selected faces. This tool requires to have Auto smooth activated!</p>
+<h4 id="last-operator-set-normals-from-faces">Last Operator Set Normals from Faces</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-set-normals-from-faces.png" alt="Last Operator Set Normals from Faces" loading="lazy"><figcaption>Last Operator Set Normals from Faces</figcaption></figure>
+<h5 id="keep-sharp-edges">Keep Sharp Edges</h5>
+<p>Don’t set sharp edges to faces.</p>
+<h3 id="rotate">Rotate</h3>
+<p>Rotate the normals of the selected vertices manually.</p>
+<h4 id="last-operator-rotate-normals">Last Operator Rotate Normals</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-rotate-normals.png" alt="Last Operator Rotate Normals" loading="lazy"><figcaption>Last Operator Rotate Normals</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>The angle of the selected normal(s).</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>The axis to rotate around.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-11">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/orientation-3.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the type of orientation, in which coordinate system the action should happen.</p>
+<h5 id="mirror-editing-10">Mirror Editing</h5>
+<p>Enable mirror editing.</p>
+<h3 id="point-normals-to-target">Point Normals to Target</h3>
+<p>All vertex normals will point to a specific target. This target can be chosen from hotkeys. They show in the header.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/point-normals-to-target.png" alt="Point Normals to Target" loading="lazy"><figcaption>Point Normals to Target</figcaption></figure>
+<p>Pressing R for Reset will reset the normals to where they were before the operation.</p>
+<h4 id="last-operator-point-normals-to-target">Last Operator Point Normals to Target</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-point-normals-to-target.png" alt="Last Operator Point Normals to Target" loading="lazy"><figcaption>Last Operator Point Normals to Target</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invert</td>
+<td>The normal directions are reversed from what is specified.</td>
+</tr>
+<tr>
+<td>Align</td>
+<td>All normals will point in the same direction.</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>The target position.</td>
+</tr>
+<tr>
+<td>Spherize</td>
+<td>Each normal will be interpolated between its original value and the direction to the target.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Merge</td>
+<td>Merge all of the normals at selected vertices, making one average normal for all of the faces.</td>
+</tr>
+<tr>
+<td>Split</td>
+<td>Split the normals at all selected vertices so that there are separate normals for each face, pointing in the same direction as those faces.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="average">Average</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/average.png" alt="Average" loading="lazy"></figure>
+<p>Average all of the normals in each fan of faces between sharp edges at a vertex.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Custom Normal</td>
+<td>Take the average of vertices normals.</td>
+</tr>
+<tr>
+<td>Face Area</td>
+<td>Set all vertices normals by face area.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="corner-angle">Corner Angle</h4>
+<p>Set all vertices by corner angle.</p>
+<h5 id="last-operator-average-normals">Last Operator Average Normals</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-average-normals.png" alt="Last Operator Average Normals" loading="lazy"><figcaption>Last Operator Average Normals</figcaption></figure>
+<h5 id="type-2">Type</h5>
+<p>Choose the average type again.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weigh</td>
+<td>Just for custom normals method. Weight applied by face.</td>
+</tr>
+<tr>
+<td>Threshold</td>
+<td>Just for custom normals method. Threshold value for different weights to be considered as equal.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="copy-vectors">Copy Vectors</h3>
+<p>Copies the normals of a single selected vertice.</p>
+<h3 id="paste-vectors">Paste Vectors</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/paste-vectors.png" alt="Paste Vectors" loading="lazy"></figure>
+<p>Pastes the normals from a formerly copied selected vertice to the currently selected vertice.</p>
+<h4 id="last-operator-normals-vector-tools">Last Operator Normals Vector Tools</h4>
+<h5 id="absolute-coordinates">Absolute Coordinates</h5>
+<p>When you paste normals then they get pasted relative to the current orientation of the selected vertice. With absolute coordinates the normals gets pasted in world coordinates.</p>
+<h3 id="smooth-vectors">Smooth Vectors</h3>
+<p>Smooth custom normals towards the adjacent vertex normals.</p>
+<h4 id="last-operator-smooth-normals-vectors">Last Operator Smooth Normals Vectors</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-smooth-normals-vectors.png" alt="Last Operator Smooth Normals Vectors" loading="lazy"><figcaption>Last Operator Smooth Normals Vectors</figcaption></figure>
+<h5 id="factor">Factor</h5>
+<p>Adjust how strong the smoothen should be.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset Vectors</td>
+<td>Resets the normal of the selected element(s).</td>
+</tr>
+<tr>
+<td>Select by Face Strength</td>
+<td>Face strength gets used by the Weighted Normals modifier. See Face Influence checkbox. Select faces with either weak or medium or strong face strength.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set-face-strength">Set Face Strength</h3>
+<p>Face strength gets used by the Weighted Normals modifier. See Face Influence checkbox.</p>
+<p>Set selected faces to either a weak, a medium or a strong face strength.</p>
+<h4 id="last-operator-face-normal-strength">Last Operator Face Normal Strength</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-face-normal-strength.png" alt="Last Operator Face Normal Strength" loading="lazy"><figcaption>Last Operator Face Normal Strength</figcaption></figure>
+<h5 id="set-value">Set Value</h5>
+<p>Unticked it selects by face strength by weak, medium or high. Ticked it sets the face strength to weak, medium or high.</p>
+<h3 id="face-strength">Face Strength</h3>
+<p>Resets the normal of the selected element(s).</p>
+<h2 id="shading">Shading</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/shading.png" alt="Shading" loading="lazy"></figure>
+<p>Sets the shading of the selected elements to either smooth or flat.</p>
+<p>Shading is under the hood a normals operation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shade smooth</td>
+<td>Display shading smooth.</td>
+</tr>
+<tr>
+<td>Shade Flat</td>
+<td>Display shading flat.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="smooth-edges">Smooth Edges</h3>
+<p>Clear as sharp marked edges and set them to smooth.</p>
+<h4 id="last-operator-clear-sharp">Last Operator Clear Sharp</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-clear-sharp.png" alt="Last Operator Clear Sharp" loading="lazy"><figcaption>Last Operator Clear Sharp</figcaption></figure>
+<h5 id="vertices">Vertices</h5>
+<p>Consider vertices instead of edges to select which edges to set to smooth.</p>
+<h3 id="sharp-edges">Sharp Edges</h3>
+<p>Mark selected edges as sharp.</p>
+<h4 id="last-operator-mark-sharp">Last Operator Mark Sharp</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-mark-sharp.png" alt="Last Operator Mark Sharp" loading="lazy"><figcaption>Last Operator Mark Sharp</figcaption></figure>
+<h5 id="vertices-2">Vertices</h5>
+<p>Consider vertices instead of edges to select which edges to set to sharp.</p>
+<h3 id="smooth-vertices">Smooth Vertices</h3>
+<p>Clear as sharp marked edges and set them to smooth. But the calculation happens from the selected vertices instead of the edges.</p>
+<h4 id="last-operator-clear-sharp-from-vertices">Last Operator Clear Sharp from Vertices</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-clear-sharp-from-vertices.png" alt="Last Operator Clear Sharp from Vertices" loading="lazy"><figcaption>Last Operator Clear Sharp from Vertices</figcaption></figure>
+<h5 id="vertices-3">Vertices</h5>
+<p>Consider vertices instead of edges to select which edges to set to sharp.</p>
+<h3 id="sharp-vertices">Sharp Vertices</h3>
+<p>Mark selected edges as sharp. But the calculation happens from the selected vertices instead of the edges.</p>
+<h4 id="last-operator-mark-sharp-from-vertices">Last Operator Mark Sharp from Vertices</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-mark-sharp-from-vertices.png" alt="Last Operator Mark Sharp from Vertices" loading="lazy"><figcaption>Last Operator Mark Sharp from Vertices</figcaption></figure>
+<h5 id="vertices-4">Vertices</h5>
+<p>Consider vertices instead of edges to select which edges to set to sharp.</p>
+<h2 id="weights">Weights</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/weights.png" alt="Weights" loading="lazy"></figure>
+<p>The Weights menu contains Weight tools. Those tools are meant to modify the weight mapping. At characters for example. The Weight Tools requires Vertex Groups to work with. Such Vertex groups gets created when you do weight painting at a character for example. Here is defined what bone is connected to what vertice.</p>
+<p>In Edit Mode the weight mapping doesn't show. Here you work with the Vertex Groups.</p>
+<p>In Weight paint mode the weight painting shows with colors. Here you usually paint the weighting.</p>
+<p>This menu items also exists in Weight Paint mode.</p>
+<h3 id="legacy-sub-menu">Legacy sub menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/legacy-sub-menu.png" alt="Legacy sub menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/legacy-sub-menu-2.png" alt="Legacy sub menu" loading="lazy"></figure>
+<p>Contains legacy menu items. They can currently not be activated.</p>
+<h3 id="normalize-all">Normalize All</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/normalize-all.png" alt="Normalize All" loading="lazy"></figure>
+<p>While weight painting it can happen that a vertice gets several weightings assigned. Normalize all normalizes the weight of all Vertex groups so that the values for the single vertices in the sum is 1.</p>
+<h4 id="last-operator-normalize-all">Last Operator Normalize all</h4>
+<h5 id="subset">Subset</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/subset.png" alt="Subset" loading="lazy"></figure>
+<p>Subset is a drop-down menu choose the Subset method.</p>
+<h5 id="lock-active">Lock Active</h5>
+<p>Keep the values of the active group while normalizing others.</p>
+<h3 id="normalize">Normalize</h3>
+<p>Normalize normalizes the weight of the current selected Vertex group so that the values for the single vertices in the sum is 1. Means when there is influence from other groups, then those values are kept, but the one for the current group gets lowered so that the sum is 1.</p>
+<p>The Last Operator Normalize panel has no adjustable settings.</p>
+<h3 id="mirror-2">Mirror</h3>
+<p>Mirror Vertex Group mirrors Vertex Groups and flips weights and/or names. It only edits selected Vertices. It flips when both sides are selected. Otherwise it copies from Unselected.</p>
+<h4 id="last-operator-mirror-vertex-group-2">Last Operator Mirror Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-mirror-vertex-group-2.png" alt="Last Operator Mirror Vertex Group" loading="lazy"><figcaption>Last Operator Mirror Vertex Group</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Weights</td>
+<td>With Mirror Weights ticked it mirrors the weights.</td>
+</tr>
+<tr>
+<td>Flip Group Names</td>
+<td>With Flip Group Names ticked it flips the Group names.</td>
+</tr>
+<tr>
+<td>All Groups</td>
+<td>Mirrors all Vertex Groups</td>
+</tr>
+<tr>
+<td>Topology Mirror</td>
+<td>Uses topology based mirroring. This requires matching mirrored topology.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="invert">Invert</h3>
+<p>Invert inverts the weight painting for the selected vertex group.</p>
+<h4 id="last-operator-invert-vertex-group">Last Operator Invert Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-invert-vertex-group.png" alt="Last Operator Invert Vertex Group" loading="lazy"><figcaption>Last Operator Invert Vertex Group</figcaption></figure>
+<h5 id="subset-2">Subset</h5>
+<p>Subset is a drop-down menu choose the Subset method.</p>
+<h5 id="add-weights">Add Weights</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/add-weights.png" alt="Add Weights" loading="lazy"></figure>
+<p>Add Vertices from Groups that have zero Weighting before inverting.</p>
+<h5 id="remove-weights">Remove Weights</h5>
+<p>Remove Vertices from Groups that have zero weight after inverting.</p>
+<h3 id="clean">Clean</h3>
+<p>Removes Vertex group assignments that are not required from the active vertex group.</p>
+<h4 id="last-operator-clean-vertex-group">Last Operator Clean Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-clean-vertex-group.png" alt="Last Operator Clean Vertex Group" loading="lazy"><figcaption>Last Operator Clean Vertex Group</figcaption></figure>
+<h5 id="subset-3">Subset</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/subset-2.png" alt="Subset" loading="lazy"></figure>
+<p>Subset is a drop-down menu choose the Subset method.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Limit</td>
+<td>Remove weights that are below or equal to the limit value.</td>
+</tr>
+<tr>
+<td>Keep Single</td>
+<td>Keep Vertices assigned to at least one vertex group when cleaning.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantize">Quantize</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/quantize.png" alt="Quantize" loading="lazy"></figure>
+<p>Quantize quantizes the weight paint values. It starts with 4 steps. With a step of 1 you have a single vertex color, no matter how you have painted it before.</p>
+<h4 id="last-operator-quantize">Last Operator Quantize</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/subset-2.png" alt="Last Operator Quantize" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subset</td>
+<td>Subset is a drop-down menu choose the Subset method.</td>
+</tr>
+<tr>
+<td>Steps</td>
+<td>Here you adjust in how many steps the weight paint colors should be divided.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="levels">Levels</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/levels.png" alt="Levels" loading="lazy"></figure>
+<p>Adds some offset to the Weight paint, and multiplys it with some gain.</p>
+<h4 id="last-operator-vertex-group-levels">Last Operator Vertex Group Levels</h4>
+<h5 id="subset-4">Subset</h5>
+<p>Subset is a drop-down menu choose the Subset method.</p>
+<h5 id="offset-2">Offset</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/subset-2.png" alt="Offset" loading="lazy"></figure>
+<p>Here you adjust the offset.</p>
+<h5 id="gain">Gain</h5>
+<p>Here you adjust the gain.</p>
+<h3 id="smooth">Smooth</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/smooth.png" alt="Smooth" loading="lazy"></figure>
+<p>Smooths the weight for selected vertices.</p>
+<h4 id="last-operator-smooth-vertex-weights">Last Operator Smooth Vertex Weights</h4>
+<h5 id="subset-5">Subset</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/subset-2.png" alt="Subset" loading="lazy"></figure>
+<p>Subset is a drop-down menu choose the Subset method.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>Here you adjust the factor.</td>
+</tr>
+<tr>
+<td>Iterations</td>
+<td>Here you adjust how many iterations you use.</td>
+</tr>
+<tr>
+<td>Expand/Contract</td>
+<td>Expand or contract the weights.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="limit-total">Limit Total</h3>
+<p>Limit number of Weights per vertex. The lowest weights gets removed.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/limit-total.png" alt="Limit Total" loading="lazy"></figure>
+<p>This is of interest when you have for example five bones associated with a vertice. But your game engine just allows four ...</p>
+<h4 id="last-operator-limit-number-of-weights-per-vertex">Last Operator Limit Number of Weights per Vertex</h4>
+<h5 id="subset-6">Subset</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/subset.png" alt="Subset" loading="lazy"></figure>
+<p>Subset is a drop-down menu choose the Subset method.</p>
+<h5 id="limit">Limit</h5>
+<p>Here you adjust how many weights are allowed.</p>
+<h3 id="locks">Locks</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/locks.png" alt="Locks" loading="lazy"></figure>
+<p>The locks from the Vertex groups as operators.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/locks-2.png" alt="Locks" loading="lazy"></figure>
+<h2 id="set-attribute">Set Attribute</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/set-attribute.png" alt="Set Attribute" loading="lazy"></figure>
+<p>Set values of the active attribute for the selected element. It calls a popup where you can add an attribute. A vertex group index number or a uv map value for example. It depends of the element.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/set-attribute-2.png" alt="Set Attribute" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/set-attribute-3.png" alt="Set Attribute" loading="lazy"></figure>
+<h2 id="sort-elements">Sort Elements</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/sort-elements.png" alt="Sort Elements" loading="lazy"></figure>
+<p>Sort Elements is a menu with different sorting methods. It allows you to reorder the mesh indices of the selected mesh elements by various methods.</p>
+<p>The indices can be turned on in the Overlays menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/sort-elements-2.png" alt="Sort Elements" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/sort-elements-3.png" alt="Sort Elements" loading="lazy"></figure>
+<h3 id="view-z-axis">View Z Axis</h3>
+<p>Sorts along the active view’s Z axis, from farthest to nearest. You can use <strong>Reverse</strong> if you want it the other way.</p>
+<h3 id="view-y-axis">View Y Axis</h3>
+<p>Sorts along the active view’s Y axis, from farthest to nearest. You can use <strong>Reverse</strong> if you want it the other way.</p>
+<h3 id="cursor-distance">Cursor Distance</h3>
+<p>Sorts from nearest to farthest away from the 3D cursor position.</p>
+<h3 id="material">Material</h3>
+<p>Faces only! Sorts faces by their lowest material index up to highest material index. Order of faces inside each of those material groups remains unchanged.</p>
+<p>Note that the <strong>Reverse</strong> option only reverses the order of the materials**.* <em>And</em>* the order of the faces inside them.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected</td>
+<td>Moves all selected elements to the beginning without affecting their relative orders. Attention, this option will also affect unselected element indices!</td>
+</tr>
+<tr>
+<td>Randomize</td>
+<td>Randomizes the indices of selected elements. This option does not affect the unselected elements.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reverse">Reverse</h3>
+<p>Reverses the order of the selected elements.</p>
+<h4 id="last-operator-sort-mesh-elements">Last Operator Sort Mesh Elements</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-sort-mesh-elements.png" alt="Last Operator Sort Mesh Elements" loading="lazy"><figcaption>Last Operator Sort Mesh Elements</figcaption></figure>
+<p>Sort Elements always brings up the same last operator. But with a small difference for Randomize and Reverse. Reverse has no checkbox. And Randomize has a Seed checkbox.</p>
+<h5 id="type-3">Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/type.png" alt="Type" loading="lazy"></figure>
+<p>This is a drop-down box choose the sort method again.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vertices, Edges or Faces</td>
+<td>Adjust if the sort will affect the vertices, edges or faces.</td>
+</tr>
+<tr>
+<td>Reverse</td>
+<td>Reverses the sorting.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="seed-edit-box-randomize-only">Seed Edit box (Randomize only)</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/seed-edit-box-randomize-only.png" alt="Seed Edit box (Randomize only)" loading="lazy"><figcaption>Seed Edit box (Randomize only)</figcaption></figure>
+<p>The seed option allows you to get another randomization – the same seed over the same mesh/set of selected elements will always give the same result!</p>
+<h2 id="subdivide">Subdivide</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/subdivide.png" alt="Subdivide" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/subdivide-2.png" alt="Subdivide" loading="lazy"></figure>
+<p>Subdivide is a menu where you can quickly add and change a subdivision surface modifier with a predefined resolution in a quick way. Especially when you use the hotkey for it. The subdivision surface modifier panel can then as usual be found in the Properties editor in the Modifier tab.</p>
+<h3 id="last-operator-subdivision-set">Last Operator Subdivision Set</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-subdivision-set.png" alt="Last Operator Subdivision Set" loading="lazy"><figcaption>Last Operator Subdivision Set</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Level</td>
+<td>Set the level of subdivisions</td>
+</tr>
+<tr>
+<td>Relative</td>
+<td>Applies the sub surf level as an offset to the already existing sub surf level.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="show-hide">Show / Hide</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/delete-vertices.png" alt="Show / Hide" loading="lazy"></figure>
+<p>The Show/Hide menu is available for all object types and in all modes. It is usually in the object related menu to find. In Object mode it's the Object menu, for a curve object in edit mode it is the Curve menu. It always contains three menu items. Show Hidden, Hide Selected and Hide Unselected.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show Hidden</td>
+<td>Makes all hidden elements in the scene visible again.</td>
+</tr>
+<tr>
+<td>Hide Selected</td>
+<td>Hides the selected elements.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hide-unselected">Hide Unselected</h3>
+<p>Hides the not selected elements. The selected elements stays visible.</p>
+<h4 id="last-operator-reveal-hidden-hide-selected">Last Operator Reveal Hidden / Hide Selected</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-reveal-hidden-hide-selected.png" alt="Last Operator Reveal Hidden / Hide Selected" loading="lazy"><figcaption>Last Operator Reveal Hidden / Hide Selected</figcaption></figure>
+<h5 id="select">Select</h5>
+<p>Define if the selected or the unselected elements gets hidden or revealed.</p>
+<h2 id="cleanup">Cleanup</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/cleanup.png" alt="Cleanup" loading="lazy"></figure>
+<p>In the Cleanup menu you will find tools to clean up the current geometry.</p>
+<h3 id="delete-loose">Delete Loose</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/delete-loose.png" alt="Delete Loose" loading="lazy"></figure>
+<p>Delete loose deletes not connected geometry. Vertices, Edges, and Faces. The tool starts with deleting Vertices and Edges. But you can tick Faces in the Last Operator too, and then it also removes not connected Faces.</p>
+<h4 id="last-operator-delete-loose">Last Operator Delete Loose</h4>
+<h5 id="vertices-5">Vertices</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/vertices.png" alt="Vertices" loading="lazy"></figure>
+<p>Delete Vertices.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edges</td>
+<td>Delete Edges.</td>
+</tr>
+<tr>
+<td>Faces</td>
+<td>Delete Faces.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="decimate-geometry">Decimate Geometry</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/decimate-geometry.png" alt="Decimate Geometry" loading="lazy"></figure>
+<p>Decimate Geometry decimates the currently selected geometry. It starts with a Ratio of 1. Which means no decimation. The lower the ratio the more decimation you will get. The Decimate Modifier works with Tris!</p>
+<h4 id="last-operator-decimate-geometry">Last Operator Decimate Geometry</h4>
+<h5 id="ratio">Ratio</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/ratio.png" alt="Ratio" loading="lazy"></figure>
+<p>Adjust the strength of decimation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vertex Group</td>
+<td>Use active Vertex Group as an influence. You need to have a Vertex Group.</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>Adjust the Vertex Group Strength.</td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>Invert Vertex Group Influence.</td>
+</tr>
+<tr>
+<td>Symmetry</td>
+<td>Make the decimation geometry symmetric along a chosen world axis.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="degenerate-dissolve">Degenerate Dissolve</h3>
+<p>Removes zero size Faces and Edges.</p>
+<h4 id="last-operator-degenerate-dissolve">Last Operator Degenerate Dissolve</h4>
+<h5 id="merge-distance">Merge Distance</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/merge-distance.png" alt="Merge Distance" loading="lazy"></figure>
+<p>Maximum distance between elements to merge.</p>
+<h3 id="make-planar-faces">Make Planar Faces</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/make-planar-faces.png" alt="Make Planar Faces" loading="lazy"></figure>
+<p>Make Planar Faces tries to make the selected faces planar. Quads or N-Gons for example can have vertices that are not planar.</p>
+<h4 id="last-operator-make-planar-faces">Last Operator Make Planar Faces</h4>
+<h5 id="factor-2">Factor</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/factor.png" alt="Factor" loading="lazy"></figure>
+<p>Here you adjust how strong the influence should be.</p>
+<h5 id="iterations">Iterations</h5>
+<p>Here you adjust how often it should repeat in the try to find a solution.</p>
+<h3 id="split-non-planar-faces">Split Non-Planar Faces</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/split-non-planar-faces.png" alt="Split Non-Planar Faces" loading="lazy"></figure>
+<p>Split Non Planar Faces splits up non planar Quads and N-Gons to end in planar faces.</p>
+<h4 id="last-operator-split-non-planar-faces">Last Operator Split Non-Planar Faces</h4>
+<h5 id="max-angle">Max Angle</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/max-angle.png" alt="Max Angle" loading="lazy"></figure>
+<p>Limit the action to a maximum angle.</p>
+<h3 id="split-concave-faces">Split Concave Faces</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/split-concave-faces.png" alt="Split Concave Faces" loading="lazy"></figure>
+<p>Splits concave faces to make the geometry more stable. This tool is thought for N-Gons.</p>
+<h3 id="fill-holes">Fill Holes</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/fill-holes.png" alt="Fill Holes" loading="lazy"></figure>
+<p>Fill holes closes holes in the mesh geometry.</p>
+<p>Fill holes can just calculate one face size at one time. So when you have several holes in the mesh, let's say one is a tri, and one is a quad, then you need to calculate twice.</p>
+<h4 id="last-operator-fill-holes">Last Operator Fill Holes</h4>
+<h5 id="sides">Sides</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/sides.png" alt="Sides" loading="lazy"></figure>
+<p>Define what face size will be filled.</p>
+<h2 id="delete">Delete</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/delete.png" alt="Delete" loading="lazy"></figure>
+<p>The smart delete add-on. usually does the delete job already fine. It deletes the selected element(s).</p>
+<p>There are sometimes some situations where you need more control over what you want to delete. The tools for this can be found in the Delete menu.</p>
+<h3 id="vertices-6">Vertices</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/vertices-2.png" alt="Vertices" loading="lazy"></figure>
+<p>Deletes the selected vertices, and all with it connected edges and faces.</p>
+<h3 id="edges">Edges</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/edges.png" alt="Edges" loading="lazy"></figure>
+<p>Deletes the selected edges and the connected faces.</p>
+<h3 id="faces">Faces</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/faces.png" alt="Faces" loading="lazy"></figure>
+<p>This one works similar to the smart delete. It deletes the selected faces.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Only Edges and Faces</td>
+<td>This mode is of interest when you have more than one selection mode activated. It deletes then just the selected edges and faces. And not single vertices.</td>
+</tr>
+<tr>
+<td>Only Faces</td>
+<td>This mode is of interest when you have more than one selection mode activated. Just selected faces gets deleted. Not single edges or vertices.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="edge-loops">Edge Loops</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/edge-loops.png" alt="Edge Loops" loading="lazy"></figure>
+<p>This method works similar to the smart delete tool. It deletes the edge loop. But it selects the faces of the edge ring. And the Last operator offers you the option to split off face corners.</p>
+<h4 id="last-operator-delete-edge-loop">Last Operator Delete Edge Loop</h4>
+<h5 id="face-split">Face Split</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/face-split.png" alt="Face Split" loading="lazy"></figure>
+<p>Split off face corners to maintain surrounding geometry.</p>
+<h2 id="dissolve">Dissolve</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/dissolve.png" alt="Dissolve" loading="lazy"></figure>
+<p>Dissolve operations removes for examples selected vertices, edges and faces. But they are not delete operations. They are union tools.</p>
+<p>When you for example choose Delete vertices from the mesh menu, then the involved faces can get deleted too. When you choose Dissolve vertices, then the vertices gets removed, and the faces stays intact. The edges gets unioned.</p>
+<p>Dissolve is a union operation.</p>
+<h3 id="dissolve-vertices">Dissolve Vertices</h3>
+<p>Dissolve Vertices dissolves the selected Vertices.</p>
+<p>Note that pressing Del in Vertice select mode calls Dissolve Vertices already. It's the same operator. But you don't get the Last operator that way.</p>
+<h4 id="last-operator-dissolve-vertices">Last Operator Dissolve Vertices</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-dissolve-vertices.png" alt="Last Operator Dissolve Vertices" loading="lazy"><figcaption>Last Operator Dissolve Vertices</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Face Split</td>
+<td>Split off Face corners to maintain surrounding geometry</td>
+</tr>
+<tr>
+<td>Tear Boundary</td>
+<td>Split off Face corners instead of merging faces.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dissolve-edges">Dissolve Edges</h3>
+<p>Dissolve Edges dissolves the selected Edges.</p>
+<p>Note that pressing Del in Edge select mode calls Dissolve Edges already. It's the same operator. But you don't get the Last operator that way.</p>
+<h4 id="last-operator-dissolve-edges">Last Operator Dissolve Edges</h4>
+<h5 id="dissolve-vertices-2">Dissolve Vertices</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/dissolve-vertices.png" alt="Dissolve Vertices" loading="lazy"></figure>
+<p>When the dissolve operation leaves vertices behind, then this vertices will be dissolved too.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle Threshold</td>
+<td>Remaining vertices which eseparate edge pairs are preseved if their edge angle exceeds this threshold</td>
+</tr>
+<tr>
+<td>Face Split</td>
+<td>Split off Face corners to maintain surrounding geometry.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dissolve-faces">Dissolve Faces</h3>
+<p>Dissolve Faces removes the inlaying edges of the selected faces. This faces becomes one big N-Gon.</p>
+<h4 id="last-operator-dissolve-faces">Last Operator Dissolve Faces</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-dissolve-faces.png" alt="Last Operator Dissolve Faces" loading="lazy"><figcaption>Last Operator Dissolve Faces</figcaption></figure>
+<h5 id="dissolve-vertices-3">Dissolve Vertices</h5>
+<p>When the dissolve operation leaves vertices behind, then this vertices will be dissolved too.</p>
+<h3 id="limited-dissolve">Limited Dissolve</h3>
+<p>Dissolve selected edges and vertices, limited by the surrounded angles.</p>
+<h4 id="last-operator-limited-dissolve">Last Operator Limited Dissolve</h4>
+<h5 id="max-angle-2">Max Angle</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/max-angle-2.png" alt="Max Angle" loading="lazy"></figure>
+<p>The angle limit up to which the dissolve happens.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All Boundaries</td>
+<td>Dissolve all vertices in between face boundaries.</td>
+</tr>
+<tr>
+<td>Delimit</td>
+<td>By which element to delimit.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dissolve-selection">Dissolve Selection</h3>
+<p>Dissolves the selected geometry.</p>
+<h4 id="last-operator-dissolve-selection">Last Operator Dissolve Selection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/last-operator-dissolve-selection.png" alt="Last Operator Dissolve Selection" loading="lazy"><figcaption>Last Operator Dissolve Selection</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dissolve Verts</td>
+<td>When the dissolve operation leaves vertices behind, then this vertices will be dissolved too.</td>
+</tr>
+<tr>
+<td>Face Split</td>
+<td>Split off Face corners to maintain surrounding geometry.</td>
+</tr>
+<tr>
+<td>Tear Boundary</td>
+<td>Split off face corners instead of merging faces.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="collapse-edges-faces">Collapse Edges &amp; Faces</h3>
+<p>Collapses the selected edges or faces to a vertice at the center of the selection.</p>
+<h2 id="mesh-select-mode">Mesh Select Mode</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/mesh-select-mode.png" alt="Mesh Select Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/mesh-select-mode-2.png" alt="Mesh Select Mode" loading="lazy"></figure>
+<p>Mesh Select mode is a sub menu Set the current mesh select mode. Its functionality is equal to the mesh select mode buttons in the header. Just that you can't select more than one mode directly here.</p>
+<p>This menu just exists to show and to edit the hotkeys. Not to work with it.</p>
+<h2 id="smart-delete">Smart Delete</h2>
+<h3 id="smart-delete-2">Smart Delete</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/smart-delete.png" alt="Smart Delete" loading="lazy"></figure>
+<p>Smart delete deletes what is selected in an intelligent way. When you for example delete an edge then the edge gets deleted. But it also deletes the vertices connected to this edge. It performs a Dissolve operation under the hood.</p>
+<p>There is also a Delete and Dissolve menu in the Mesh menu, choose different methods for deleting if required.</p>
+<p>Smart delete is an add-on. And can be deactivated if desired.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fclone-runs-3-15/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fheader%2Fmesh-edit-mode-mesh-menu.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/clone-runs-3-15/docs2/content/editors/3d-viewport/header/mesh-edit-mode-mesh-menu.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#edit-mode-mesh-menu">Edit Mode - Mesh Menu</a><a class="h2" href="#legacy">Legacy</a><a class="h3" href="#bisect">Bisect</a><a class="h2" href="#transform">Transform</a><a class="h3" href="#to-sphere">To Sphere</a><a class="h3" href="#to-circle">To Circle</a><a class="h3" href="#shear">Shear</a><a class="h3" href="#bend">Bend</a><a class="h3" href="#push-pull">Push/Pull</a><a class="h3" href="#warp">Warp</a><a class="h3" href="#randomize">Randomize</a><a class="h3" href="#shrink-fatten">Shrink/Fatten</a><a class="h3" href="#skin-resize">Skin Resize</a><a class="h3" href="#move-texture-space">Move Texture Space</a><a class="h3" href="#scale-texture-space">Scale Texture Space</a><a class="h3" href="#set-dimensions">Set Dimensions</a><a class="h2" href="#mirror">Mirror</a><a class="h3" href="#interactive-mirror">Interactive Mirror</a><a class="h3" href="#x-global-y-global-etc">X Global, Y Global etc.</a><a class="h3" href="#mirror-vertex-group">Mirror Vertex Group</a><a class="h2" href="#snap">Snap</a><a class="h3" href="#last-operator-snap-selection-to-cursor">Last operator Snap Selection to Cursor</a><a class="h2" href="#single-operators">Single Operators</a><a class="h3" href="#duplicate">Duplicate</a><a class="h3" href="#extrude">Extrude</a><a class="h3" href="#merge">Merge</a><a class="h3" href="#split">Split</a><a class="h3" href="#separate">Separate</a><a class="h3" href="#knife-project">Knife Project</a><a class="h3" href="#convex-hull">Convex Hull</a><a class="h3" href="#symmetrize">Symmetrize</a><a class="h3" href="#snap-to-symmetry">Snap to Symmetry</a><a class="h2" href="#normals">Normals</a><a class="h3" href="#recalculate-outside">Recalculate Outside</a><a class="h3" href="#recalculate-inside">Recalculate Inside</a><a class="h3" href="#flip">Flip</a><a class="h3" href="#set-from-faces">Set from Faces</a><a class="h3" href="#rotate">Rotate</a><a class="h3" href="#point-normals-to-target">Point Normals to Target</a><a class="h3" href="#average">Average</a><a class="h3" href="#copy-vectors">Copy Vectors</a><a class="h3" href="#paste-vectors">Paste Vectors</a><a class="h3" href="#smooth-vectors">Smooth Vectors</a><a class="h3" href="#set-face-strength">Set Face Strength</a><a class="h3" href="#face-strength">Face Strength</a><a class="h2" href="#shading">Shading</a><a class="h3" href="#smooth-edges">Smooth Edges</a><a class="h3" href="#sharp-edges">Sharp Edges</a><a class="h3" href="#smooth-vertices">Smooth Vertices</a><a class="h3" href="#sharp-vertices">Sharp Vertices</a><a class="h2" href="#weights">Weights</a><a class="h3" href="#legacy-sub-menu">Legacy sub menu</a><a class="h3" href="#normalize-all">Normalize All</a><a class="h3" href="#normalize">Normalize</a><a class="h3" href="#mirror-2">Mirror</a><a class="h3" href="#invert">Invert</a><a class="h3" href="#clean">Clean</a><a class="h3" href="#quantize">Quantize</a><a class="h3" href="#levels">Levels</a><a class="h3" href="#smooth">Smooth</a><a class="h3" href="#limit-total">Limit Total</a><a class="h3" href="#locks">Locks</a><a class="h2" href="#set-attribute">Set Attribute</a><a class="h2" href="#sort-elements">Sort Elements</a><a class="h3" href="#view-z-axis">View Z Axis</a><a class="h3" href="#view-y-axis">View Y Axis</a><a class="h3" href="#cursor-distance">Cursor Distance</a><a class="h3" href="#material">Material</a><a class="h3" href="#reverse">Reverse</a><a class="h2" href="#subdivide">Subdivide</a><a class="h3" href="#last-operator-subdivision-set">Last Operator Subdivision Set</a><a class="h2" href="#show-hide">Show / Hide</a><a class="h3" href="#hide-unselected">Hide Unselected</a><a class="h2" href="#cleanup">Cleanup</a><a class="h3" href="#delete-loose">Delete Loose</a><a class="h3" href="#decimate-geometry">Decimate Geometry</a><a class="h3" href="#degenerate-dissolve">Degenerate Dissolve</a><a class="h3" href="#make-planar-faces">Make Planar Faces</a><a class="h3" href="#split-non-planar-faces">Split Non-Planar Faces</a><a class="h3" href="#split-concave-faces">Split Concave Faces</a><a class="h3" href="#fill-holes">Fill Holes</a><a class="h2" href="#delete">Delete</a><a class="h3" href="#vertices-6">Vertices</a><a class="h3" href="#edges">Edges</a><a class="h3" href="#faces">Faces</a><a class="h3" href="#edge-loops">Edge Loops</a><a class="h2" href="#dissolve">Dissolve</a><a class="h3" href="#dissolve-vertices">Dissolve Vertices</a><a class="h3" href="#dissolve-edges">Dissolve Edges</a><a class="h3" href="#dissolve-faces">Dissolve Faces</a><a class="h3" href="#limited-dissolve">Limited Dissolve</a><a class="h3" href="#dissolve-selection">Dissolve Selection</a><a class="h3" href="#collapse-edges-faces">Collapse Edges &amp; Faces</a><a class="h2" href="#mesh-select-mode">Mesh Select Mode</a><a class="h2" href="#smart-delete">Smart Delete</a><a class="h3" href="#smart-delete-2">Smart Delete</a></aside></div></body></html>

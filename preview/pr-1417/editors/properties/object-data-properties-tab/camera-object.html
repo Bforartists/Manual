@@ -1,0 +1,1223 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Camera Object · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1417 · <code>docs2/clone-runs-3-15</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span>Editors introduction</span>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/object-mode-object-context-menu.html">Object mode - Object Context Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu.html">Mesh Object - Edit Mode - Vertex Context Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu.html">Mesh Object - Edit Mode - Edge Context Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu.html">Mesh Object - Edit Mode - Face Context Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus.html">Mesh Object - Sculpt Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/mesh-object-vertex-paint-mode-brushes-context-menus.html">Mesh Object - Vertex Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/mesh-object-weight-paint-mode-brushes-context-menus.html">Mesh Object - Weight Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/mesh-object-texture-paint-mode-brushes-context-menus.html">Mesh Object - Texture Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus.html">Curve + Surface Object - Edit Mode - Curve context menus</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu.html">Metaball - Edit Mode - Metaball context menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/text-edit-mode-text-context-menu.html">Text - Edit Mode - Text context menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu.html">Grease Pencil object - Edit Mode - Point context menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu.html">Grease Pencil object - Edit Mode - Stroke context menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu.html">Grease Pencil object - Sculpt Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/grease-pencil-object-draw-mode-brushes-context-menu.html">Grease Pencil object - Draw Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu.html">Grease Pencil object - Vertex Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/grease-pencil-object-weight-paint-mode-brushes-context-menu.html">Grease Pencil object - Weight Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/armature-edit-mode-armature-context-menu.html">Armature - Edit Mode - Armature context menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/armature-pose-mode-pose-context-menu.html">Armature - Pose Mode - Pose context menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/armature-edit-mode-lattice-context-menu.html">Armature - Edit Mode - Lattice context menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/context-menus/hair-curves-edit-mode-curves-context-menu.html">Hair Curves - Edit Mode - Curves context menu</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/edit-mode-add-menu.html">Edit mode - Add menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/object-menu.html">Object menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/mesh-edit-mode-mesh-menu.html">Mesh - Edit mode - Mesh menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/mesh-edit-mode-vertex-menu.html">Mesh - Edit Mode - Vertex Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/mesh-edit-mode-edge-menu.html">Mesh - Edit mode - Edge Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/mesh-edit-mode-face-menu.html">Mesh - Edit mode - Face menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/mesh-edit-mode-uv-menu.html">Mesh - Edit mode - UV menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/mesh-sculpt-mode-sculpt-menu.html">Mesh - Sculpt mode - Sculpt menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/mesh-sculpt-mode-mask-menu.html">Mesh - Sculpt mode - Mask menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/mesh-sculpt-mode-face-sets-menu.html">Mesh - Sculpt mode - Face Sets menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/mesh-vertex-paint-mode-paint-menu.html">Mesh - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/mesh-vertex-paint-mode-brush-menu.html">Mesh - Vertex Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/mesh-weight-paint-mode-weights-menu.html">Mesh - Weight Paint mode - Weights menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/mesh-texture-paint-mode-brush-menu.html">Mesh - Texture Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/curve-edit-mode-curve-menu.html">Curve - Edit mode - Curve menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/surface-edit-mode-surface-menu.html">Surface - Edit mode - Surface menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/curve-surface-edit-mode-control-points-menu.html">Curve &amp; Surface - Edit mode - Control points menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/curve-surface-edit-mode-segments-menu.html">Curve &amp; Surface - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/metaball-edit-mode-metaball-menu.html">Metaball - Edit mode - Metaball menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/text-edit-mode-text-menu.html">Text - Edit mode - Text menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu.html">Grease Pencil - Edit mode - Grease Pencil menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/point-cloud-edit-mode-point-cloud-menu.html">Point Cloud - Edit mode - Point Cloud menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/grease-pencil-edit-mode-point-menu.html">Grease Pencil - Edit mode - Point menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/grease-pencil-edit-mode-stroke-menu.html">Grease Pencil - Edit mode - Stroke menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/grease-pencil-draw-mode-draw-menu.html">Grease Pencil - Draw mode - Draw menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu.html">Grease Pencil - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/grease-pencil-weight-paint-mode-weights-menu.html">Grease Pencil - Weight Paint Mode - Weights Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/armature-edit-mode-armature-menu.html">Armature - Edit mode - Armature menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/armature-pose-mode-pose-menu.html">Armature - Pose mode - Pose menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/lattice-edit-mode-lattice-menu.html">Lattice - Edit mode - Lattice menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/particle-particle-mode-particle-menu.html">Particle - Particle mode - Particle menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/hair-curve-edit-mode-curves-menu.html">Hair Curve - Edit mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/hair-curve-edit-mode-control-points-menu.html">Hair Curve - Edit mode - Control Points menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/hair-curve-edit-mode-segments-menu.html">Hair Curve - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/header/hair-curve-sculpt-mode-curves-menu.html">Hair Curve - Sculpt mode - Curves menu</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/mesh-edit-mode.html">Mesh - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/mesh-sculpt-mode.html">Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/mesh-vertex-paint-mode.html">Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/mesh-weight-paint-mode.html">Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/mesh-texture-paint-mode.html">Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/mesh-particle-edit-mode.html">Mesh - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/curve-edit-mode.html">Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/surface-edit-mode.html">Surface - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/metaball-edit-mode.html">Metaball - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/text-edit-mode.html">Text - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/grease-pencil-edit-mode.html">Grease Pencil - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/grease-pencil-sculpt-mode.html">Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/grease-pencil-draw-mode.html">Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/grease-pencil-vertex-paint-mode.html">Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/grease-pencil-weight-paint-mode.html">Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/armature-edit-mode.html">Armature - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/armature-pose-mode.html">Armature - Pose Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/lattice-edit-mode.html">Lattice - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/hair-curve-edit-mode.html">Hair Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/tool-shelf/hair-curve-sculpt-mode.html">Hair Curve - Sculpt Mode</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/item-tab.html">Item tab</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-object-mode.html">Tool Tab - Object Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-edit-mode.html">Tool Tab - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-pose-mode.html">Tool Tab - Pose Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-mesh-sculpt-mode.html">Tool Tab - Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode.html">Tool Tab - Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-mesh-texture-paint-mode.html">Tool Tab - Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode.html">Tool Tab - Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-particle-edit-mode.html">Tool Tab - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-grease-pencil-sculpt-mode.html">Tool Tab - Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-grease-pencil-draw-mode.html">Tool Tab - Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-grease-pencil-vertex-paint-mode.html">Tool Tab - Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-grease-pencil-weight-paint-mode.html">Tool Tab - Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-grease-pencil-layer-panel.html">Tool Tab - Grease Pencil - Layer Panel</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode.html">Tool Tab - Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/sidebar/animation-tab.html">Animation Tab</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/asset-shelf.html">Asset Shelf</a>
+<a href="../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/view-menu.html">View menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/image-menu.html">Image menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/select-menu.html">Select menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/add-menu.html">Add menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/mask-menu.html">Mask menu</a>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/tool-tab-in-paint-mode.html">Tool Tab in Paint Mode</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/image-tab.html">Image Tab</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/scopes-tab.html">Scopes Tab</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/mask-tab.html">Mask Tab</a>
+<a href="../../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/image-menu.html">Image Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/uv-menu.html">UV menu</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/sidebar/image-tab.html">Image Tab</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/sidebar/view-tab.html">View Tab</a>
+<a href="../../compositor.html">Compositor</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-input-constant.html">Add Menu - Input - Constant</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-input.html">Add Menu - Input</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-input-scene.html">Add Menu - Input - Scene</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-color-adjust.html">Add Menu - Color - Adjust</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-creative.html">Add Menu - Creative</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-filter-blur.html">Add Menu - Filter - Blur</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-filter.html">Add Menu - Filter</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-keying.html">Add Menu - Keying</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-mask.html">Add Menu - Mask</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-tracking.html">Add Menu - Tracking</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-transform.html">Add Menu - Transform</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/geometry-nodes-editor-header-add-menu-group.html">Geometry Nodes Editor - Header - Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:1.5rem" href="../../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/node-tab.html">Node Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/options-tab.html">Options Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/add-tab.html">Add Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/relations-tab.html">Relations tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/group-tab.html">Group tab</a>
+<a href="../../texture-node-editor.html">Texture Node Editor</a>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-constant.html">Add Menu - Input - Constant</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-gizmo.html">Add Menu - Input - Gizmo</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-import.html">Add Menu - Input - Import</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-scene.html">Add Menu - Input - Scene</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-attribute.html">Add Menu - Attribute</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-read.html">Add Menu - Geometry - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-sample.html">Add Menu - Geometry - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-write.html">Add Menu - Geometry - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-material.html">Add Menu - Geometry - Material</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-operations.html">Add Menu - Geometry - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry.html">Add Menu - Geometry</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-read.html">Add Menu - Curve - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-sample.html">Add Menu - Curve - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-write.html">Add Menu - Curve - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-operations.html">Add Menu - Curve - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-primitives.html">Add Menu - Curve - Primitives</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-topology.html">Add Menu - Curve - Topology</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-grease-pencil-read.html">Add Menu - Grease Pencil - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-grease-pencil-write.html">Add Menu - Grease Pencil - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-grease-pencil-operations.html">Add Menu - Grease Pencil - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-instances.html">Add Menu - Instances</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-read.html">Add Menu - Mesh - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-sample.html">Add Menu - Mesh - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-write.html">Add Menu - Mesh - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-operations.html">Add Menu - Mesh - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-primitives.html">Add Menu - Mesh - Primitives</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-topology.html">Add Menu - Mesh - Topology</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-uv.html">Add Menu - Mesh - UV</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-point.html">Add Menu - Point</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-read.html">Add Menu - Volume - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-sample.html">Add Menu - Volume - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-write.html">Add Menu - Volume - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-operations.html">Add Menu - Volume - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-primitives.html">Add Menu - Volume - Primitives</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-simulation.html">Add Menu - Simulation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-text.html">Add Menu - Utilities - Text</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-bundle.html">Add Menu - Utilities - Bundle</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-closure.html">Add Menu - Utilities - Closure</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-field.html">Add Menu - Utilities - Field</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-matrix.html">Add Menu - Utilities - Matrix</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-rotation.html">Add Menu - Utilities - Rotation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-deprecated.html">Add Menu - Utilities - Deprecated</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-generate.html">Add Menu - Generate</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-geometry.html">Add Menu - Geometry Nodegroups - Geometry</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations.html">Add Menu - Geometry Nodegroups - Geometry - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection.html">Add Menu - Geometry Nodegroups - Geometry - Selection</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations.html">Add Menu - Geometry Nodegroups - Grease Pencil - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read.html">Add Menu - Geometry Nodegroups - Grease Pencil - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write.html">Add Menu - Geometry Nodegroups - Grease Pencil - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation.html">Add Menu - Geometry Nodegroups - Hair - Deformation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation.html">Add Menu - Geometry Nodegroups - Hair - Generation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides.html">Add Menu - Geometry Nodegroups - Hair - Guides</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read.html">Add Menu - Geometry Nodegroups - Hair - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility.html">Add Menu - Geometry Nodegroups - Hair - Utility</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write.html">Add Menu - Geometry Nodegroups - Hair - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-instances.html">Add Menu - Geometry Nodegroups - Instances</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-material.html">Add Menu - Geometry Nodegroups - Material</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-mesh.html">Add Menu - Geometry Nodegroups - Mesh</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read.html">Add Menu - Geometry Nodegroups - Mesh - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-normals.html">Add Menu - Geometry Nodegroups - Normals</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-utilities.html">Add Menu - Geometry Nodegroups - Utilities</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector.html">Add Menu - Geometry Nodegroups - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-utility.html">Add Menu - Geometry Nodegroups - Utility</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-normals.html">Add Menu - Normals</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-group.html">Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/swap-menu.html">Swap menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/node-menu.html">Node menu</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/group-tab.html">Group tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/node-tab.html">Node tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/add.html">Add</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/relations-tab.html">Relations tab</a>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-input.html">Add Menu - Input</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-shader.html">Add Menu - Shader</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-group.html">Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/swap-menu.html">Swap menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/node-menu.html">Node menu</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/node-tab.html">Node Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/options-tab.html">Options Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/add-tab.html">Add Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/relations-tab.html">Relations tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/group-tab.html">Group tab</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/export-menu.html">Export Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/strip-menu.html">Strip Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/image-menu.html">Image Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/text-menu.html">Text Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/scene-menu.html">Scene Menu</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/preview-tool-tab.html">Preview - Tool tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/preview-view-tab.html">Preview - View tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-strip-tab.html">Sequencer - Strip tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-tool-tab.html">Sequencer - Tool tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-cache-tab.html">Sequencer - Cache tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-proxy-tab.html">Sequencer - Proxy tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-view-tab.html">Sequencer - View tab</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/footer-tools-and-options.html">Footer tools and options</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/tracking-mode-clip-submode-clip-menu.html">Tracking Mode - Clip Submode - Clip Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/tracking-mode-clip-submode-track-menu.html">Tracking Mode - Clip Submode - Track Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/tracking-mode-graph-submode-graph-menu.html">Tracking Mode - Graph Submode - Graph Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/mask-mode-clip-menu.html">Mask Mode - Clip Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/mask-mode-add-menu.html">Mask Mode - Add Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/mask-mode-mask-menu.html">Mask Mode - Mask Menu</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool shelf</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/tool-shelf/tracking-mode.html">Tracking Mode</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/footage-tab.html">Footage Tab</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/track-tab.html">Track tab</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/tracking-mode-stabilization-tab.html">Tracking Mode - Stabilization tab</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/tracking-mode-view-tab.html">Tracking Mode - View tab</a>
+<a href="../../dope-sheet.html">Dope Sheet</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/key-menu.html">Key Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/action-menu.html">Action Menu</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/channel-list.html">Channel list</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/footer-tools-and-options.html">Footer tools and options</a>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/key-menu.html">Key Menu</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/channel-list.html">Channel list</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/sidebar/f-curve-tab.html">F-Curve Tab</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/sidebar/modifiers-tab.html">Modifiers Tab</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/footer-tools-and-options.html">Footer tools and options</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/key-menu.html">Key Menu</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/channel-list.html">Channel list</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/f-curve-tab.html">F-Curve Tab</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/drivers-tab.html">Drivers Tab</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/modifiers-tab.html">Modifiers Tab</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/driver-editor-sidebar-view-tab.html">Driver Editor - Sidebar - View Tab</a>
+<a href="../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-header-tools-and-options.html">NLA Editor - Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-header-quick-menu.html">NLA Editor - Header - Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-view-menu.html">NLA Editor - View Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-select-menu.html">NLA Editor - Select Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-marker-menu.html">NLA Editor - Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-add-menu.html">NLA Editor - Add Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-track-menu.html">NLA Editor - Track Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-strip-menu.html">NLA Editor - Strip Menu</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-channel-list.html">NLA Editor - Channel list</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel.html">NLA Editor - Sidebar - Animation Data panel</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab.html">NLA Editor - Sidebar - Strip tab</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab.html">NLA Editor - Sidebar - Modifiers Tab</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">NLA Editor - Footer tools and options</a>
+<a href="../../text-editor.html">Text Editor</a>
+<a href="../../python-console.html">Python Console</a>
+<a href="../../info-editor.html">Info Editor</a>
+<a href="../../toolbar.html">Toolbar</a>
+<a href="../../outliner.html">Outliner</a>
+<a href="../../properties.html">Properties Editor</a>
+<a style="padding-left:1.5rem" href="../render-properties-tab.html">Render Properties Tab</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:1.5rem" href="../output-properties-tab.html">Output Properties Tab</a>
+<a style="padding-left:1.5rem" href="../view-layer-properties-tab.html">View Layer Properties Tab</a>
+<a style="padding-left:1.5rem" href="../scene-properties-tab.html">Scene Properties Tab</a>
+<a style="padding-left:1.5rem" href="../world-properties-tab.html">World Properties Tab</a>
+<a style="padding-left:1.5rem" href="../collection-properties-tab.html">Collection Properties Tab</a>
+<a style="padding-left:1.5rem" href="../object-properties-tab.html">Object Properties Tab</a>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<a style="padding-left:1.5rem" href="../particle-properties-tab.html">Particle Properties Tab</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:1.5rem" href="../visual-effects-properties-tab.html">Visual Effects Properties Tab</a>
+<a style="padding-left:1.5rem" href="../physics-properties-tab.html">Physics Properties Tab</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:1.5rem" href="../object-constraints-properties-tab.html">Object Constraints Properties Tab</a>
+<a style="padding-left:1.5rem" href="../object-data-properties-tab.html">Object Data Properties Tab</a>
+<a style="padding-left:2.5rem" href="mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="speaker-object.html">Speaker Object</a>
+<a class="is-current" style="padding-left:2.5rem" href="camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="volume-object.html">Volume Object</a>
+<a style="padding-left:1.5rem" href="../material-properties-tab.html">Material Properties Tab</a>
+<a style="padding-left:1.5rem" href="../texture-properties-tab.html">Texture Properties Tab</a>
+<a style="padding-left:1.5rem" href="../bone-properties-tab.html">Bone Properties Tab</a>
+<a style="padding-left:1.5rem" href="../bone-constraint-properties.html">Bone Constraint Properties</a>
+<a style="padding-left:1.5rem" href="../strip-tab.html">Strip Tab</a>
+<a style="padding-left:1.5rem" href="../strip-modifiers-tab.html">Strip Modifiers Tab</a>
+<a href="../../file-browser.html">File browser</a>
+<a href="../../asset-browser.html">Asset Browser</a>
+<a style="padding-left:1.5rem" href="../../asset-browser/asset-browser-default-asset-library.html">Asset Browser - Default Asset LIbrary</a>
+<a style="padding-left:1.5rem" href="../../asset-browser/asset-browser-essentials-asset-library.html">Asset Browser - Essentials Asset Library</a>
+<a href="../../spreadsheet.html">Spreadsheet</a>
+<a href="../../preferences.html">Preferences</a>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<a style="padding-left:1.5rem" href="../../3d-viewport/context-menus.html">Context menus</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<h4>Advanced</h4>
+<a href="../../../advanced/advanced-command-line.html">Advanced - Command Line</a>
+<a href="../../../advanced/advanced-scripting-extending-bforartists.html">Advanced - Scripting &amp; Extending Bforartists</a>
+<a href="../../../advanced/advanced-working-limits.html">Advanced - Working Limits</a>
+<a href="../../../advanced/troubleshooting.html">Troubleshooting</a>
+<h4>Extensions</h4>
+<a href="../../../extensions/bforartists-extensions.html">Bforartists Extensions</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-brush-panels.html">Core Extension - Brush Panels</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-presentation-slider.html">Core Extension - Presentation Slider</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-3d-sequencer.html">Core Extension- 3D Sequencer</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-power-user-tools.html">Core Extension - Power User Tools</a>
+<h4>Appendix</h4>
+<a href="../../../appendix/glossary.html">Glossary</a>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/manual-update-history.html">Manual Update History</a>
+<h4>Keymap</h4>
+<a href="../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Object Data Properties Tab › Camera Object</div><h1 class="pv-title">Camera Object</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 15 min read</span></div><article class="ui-doc-body"><h2 id="lens-panel">Lens panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/lens-panel.png" alt="Lens panel" loading="lazy"></figure>
+<h3 id="type">Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/type.png" alt="Type" loading="lazy"></figure>
+<p>How to display the content in the camera view.</p>
+<h4 id="perspective">Perspective</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/perspective.png" alt="Perspective" loading="lazy"></figure>
+<p>Displays the content with perspectivic distortions.</p>
+<h5 id="lens-unit">Lens Unit</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/lens-unit.png" alt="Lens Unit" loading="lazy"></figure>
+<p>What lens unit to use. Millimeters or Field of View as an angle.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Focal Length</td>
+<td>With Lens Unit Millimeters. The focal length controls the amount of zoom, i.e. the amount of the scene which is visible all at once. Longer focal lengths result in a smaller Field of View (more zoom), while short focal lengths allow you to see more of the scene at once (larger Field of View, less zoom). Focal length is adjusted in millimeters like in a real camera.</td>
+</tr>
+<tr>
+<td>Field of View</td>
+<td>With Lens Unit Field of View. Field of View is adjusted in degrees. But has the same purpose than Focal Length. Smaller angle means small field of view more zoom. Higher angle means larger field of view and less zoom.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="orthographic">Orthographic</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/orthographic.png" alt="Orthographic" loading="lazy"></figure>
+<p>Displays the content in parallel projection.</p>
+<h5 id="orthographic-scale">Orthographic Scale</h5>
+<p>The camera lens angle influences the zoom factor.</p>
+<h4 id="panoramic">Panoramic</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/panoramic.png" alt="Panoramic" loading="lazy"></figure>
+<p>Panoramic cameras just works with Cycles. Panoramic allows you to render equirectangular, fish eye and mirror ball images. Note that the result is not displayed in the viewport.</p>
+<h5 id="lens-unit-2">Lens Unit</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/lens-unit.png" alt="Lens Unit" loading="lazy"></figure>
+<p>What lens unit to use. Millimeters or Field of View as an angle.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Focal Length</td>
+<td>With Lens Unit Millimeters. The focal length controls the amount of zoom, i.e. the amount of the scene which is visible all at once. Longer focal lengths result in a smaller Field of View (more zoom), while short focal lengths allow you to see more of the scene at once (larger Field of View, less zoom). Focal length is adjusted in millimeters like in a real camera.</td>
+</tr>
+<tr>
+<td>Field of View</td>
+<td>With Lens Unit Field of View. Field of View is adjusted in degrees. But has the same purpose than Focal Length. Smaller angle means small field of view more zoom. Higher angle means larger field of view and less zoom.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="shift-x-y">Shift X / Y</h4>
+<p>Allows the adjustment of vanishing points. Vanishing points refer to the positions to which parallel lines converge.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Using lens shift is equivalent to rendering an image with a larger FOV and cropping it off-center.</p></div>
+<h4 id="clip-near-and-far">Clip Near and Far</h4>
+<p>The closest and farest distance in which the scene geometry gets displayed. Any objects outside this range still influence the image indirectly. Further light bounces are not clipped. But they are not displayed directly.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> For viewport rendering, setting clipping distances to limited values is important to ensure sufficient rasterization precision. Ray tracing renders do not suffer from this issue so much, and as such more extreme values can safely be set.
+<strong>Tip:</strong> When Limits in the Viewport Display panel is enabled, the clip bounds will be visible as two yellow connected dots on the camera’s line of sight</p></div>
+<h2 id="depth-of-field-panel">Depth of Field panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/depth-of-field-panel.png" alt="Depth of Field panel" loading="lazy"><figcaption>Depth of Field panel</figcaption></figure>
+<p>Depth of Field is the distance between the nearest and farthest objects that are in an acceptable sharp focus in an image. Objects behind and in front of the focus point are blurred.</p>
+<p>The area in focus is called the focal point. It can be set by a value, or by choosing an object, and using the distance between the camera and the object.</p>
+<h3 id="focus-on-object">Focus on Object</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/focus-on-object.png" alt="Focus on Object" loading="lazy"></figure>
+<p>Pick a focus object.</p>
+<h4 id="focus-distance">Focus Distance</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/focus-distance.png" alt="Focus Distance" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/focus-distance-2.png" alt="Focus Distance" loading="lazy"></figure>
+<p>The distance to the focal point when no Focus Object is specified.</p>
+<p>To display the distance by a yellow cross turn on Limits in the Viewport Display panel.</p>
+<h5 id="eyedropper-depth">Eyedropper Depth</h5>
+<p>Attention, crazy design! The Eyedropper Depth button is greyed out and remains not clickable, even when it hilights when you hover over the Focus Distance slider. It is just implemented to show the hotkey and how to call the eyedropper.</p>
+<p>You can call a Depth picker by hovering with the mouse over the Focus Distance property and pressing hotkey E. Then click on a point in the 3D Viewport to sample the distance from that point to the camera.</p>
+<h3 id="aperture">Aperture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/aperture.png" alt="Aperture" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F-Stop</td>
+<td>Defines the amount of blurring. Lower values give a strong depth of field effect.</td>
+</tr>
+<tr>
+<td>Blades</td>
+<td>Total number of polygonal blades used to alter the shape of the blurred objects in the render, and render preview. As with the viewport, the minimum amount of blades to enable the bokeh effect is 3, resulting in a triangular-shaped blur.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Rotate the polygonal blades along the facing axis, and will rotate in a clockwise, and counter-clockwise fashion.</td>
+</tr>
+<tr>
+<td>Ratio</td>
+<td>Change the amount of distortion to simulate the anamorphic bokeh effect. A setting of 1.0 shows no distortion, where a number below 1.0 will cause a horizontal distortion, and a higher number will cause a vertical distortion.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="camera-panel">Camera panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/camera-panel.png" alt="Camera panel" loading="lazy"></figure>
+<h3 id="presets">Presets</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/presets.png" alt="Presets" loading="lazy"></figure>
+<p>Camera presets. To add a new preset enter a name and click the + button. To remove a preset click at the minus button besides the name.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/presets-2.png" alt="Presets" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> To adjust camera resolution and pixel aspect ratio, go to the Output Tab in the Format Panel, since the final resolution and aspect ratio is defined by the file format output.</p></div>
+<h3 id="sensor-fit">Sensor Fit</h3>
+<p>A method to fit the image aspect ratio and resolution with relative field of view angle inside the sensor dimensions.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto</td>
+<td>Adjust the relative focal length to the sensor width or height and adjust the image with a fixed aspect ratio to the image resolution from the Output Tab. · <strong>Size</strong>: The sensor size according to the image resolution and pixel aspect ratio. This contains the automatic horizontal size of the image sensor area in millimeters.</td>
+</tr>
+<tr>
+<td>Horizontal</td>
+<td>Adjust the relative focal length to the sensor width and adjust the image with a fixed aspect ratio to the image resolution from the Output Tab. Height cannot be modified. · <strong>Width</strong>: The sensor width. This contains the horizontal size of the image sensor area.</td>
+</tr>
+<tr>
+<td>Vertical</td>
+<td>Adjust the relative focal length to the sensor hieght and adjust the image with a fixed aspect ratio to the image resolution from the Output Tab. Width cannot be modified. · <strong>Height</strong>: The sensor height. This contains the horizontal size of the image sensor area in millimeters.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="safe-areas-panel">Safe Areas panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/safe-areas-panel.png" alt="Safe Areas panel" loading="lazy"></figure>
+<p>Modern LCD or plasma monitors usually doesn't have over scan areas anymore. But especially older TV screens still may have varying amounts of over scan. And cuts quite a bit content away at the border. And so not all content is shown at all monitors. Safe areas is the area that is always visible at all hardware.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/safe-areas-panel-2.png" alt="Safe Areas panel" loading="lazy"></figure>
+<p>Safe areas are guides to ensure that the most important parts of the content can be seen across all screens. The lines are unfortunately a bit hard to see when you are in camera view. They mark the safe areas.</p>
+<p>Safe areas can be set from the Camera and Sequencer views.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> Each country sets a legal standard for broadcasting. These include also specific values for safe areas. Bforartists defaults for safe areas follow the EBU (European Union) standard. Make sure you are using the correct values when working for broadcast to avoid any trouble.</p></div>
+<h3 id="presets-2">Presets</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/presets-3.png" alt="Presets" loading="lazy"></figure>
+<p>Safe areas presets. To add a preset enter a name and click at the plus button. To remove a preset click at the minus button besides the preset name.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title Safe Margins X/Y</td>
+<td>Also known as Graphics Safe. Information (graphics or text) inside this area can be seen by the majority of viewers.</td>
+</tr>
+<tr>
+<td>Action Safe Margins X/Y</td>
+<td>An extra “margin” for the screen, which can be used to keep elements from piling up against the edges.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="center-cut-safe-areas">Center-Cut Safe Areas</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/center-cut-safe-areas.png" alt="Center-Cut Safe Areas" loading="lazy"></figure>
+<p>Center-cuts are a second set of safe areas to ensure content is seen correctly on screens with a different aspect ratio. Old TV sets receiving 16:9 or 21:9 video will cut off the sides. Position content inside the center-cut areas to make sure the most important elements of your composition can still be visible in these screens.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Center Title Safe Margins X/Y</td>
+<td>Information (graphics or text) inside this area can be seen by the majority of viewers.</td>
+</tr>
+<tr>
+<td>Center Action Safe Margins X/Y</td>
+<td>An extra “margin” for the screen, which can be used to keep elements from piling up against the edges.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="background-images-panel">Background Images panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/background-images-panel.png" alt="Background Images panel" loading="lazy"></figure>
+<p>Add a background image or movie to the camera.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/background-images-panel-2.png" alt="Background Images panel" loading="lazy"></figure>
+<p>You can add more than one image or movie. The content can be offset and the opacity can be changed.</p>
+<p>Note that an image that is added here does not render. It just displays in the viewport background.</p>
+<p>To render the background image too you need to add it in a compositing step. Or in the Shading tab add the image in the World shader. Use Window as the mapping vector.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/background-images-panel-3.png" alt="Background Images panel" loading="lazy"></figure>
+<h3 id="background-images-panel-2">Background Images panel</h3>
+<h4 id="header">Header</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/background-images-panel.png" alt="Header" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Background Images checkbox</td>
+<td>Activate or deactivate the background images.</td>
+</tr>
+<tr>
+<td>Add Image</td>
+<td>Adds a new Image box. As told above, you can work with more than one image or movie clip. The image box can be removed by the X button at the left.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="background-image-box">Background Image box</h4>
+<h5 id="triangle-button">Triangle Button</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/triangle-button.png" alt="Triangle Button" loading="lazy"></figure>
+<p>You can collapse the background images box with the triangle button at the left.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image / Movie name</td>
+<td>The name of the loaded movie or image. When there is no image loaded then the text is Not Set.</td>
+</tr>
+<tr>
+<td>Show Background Image</td>
+<td>Display the image in the viewport when you are in camera view.</td>
+</tr>
+<tr>
+<td>Remove Background Image</td>
+<td>Remove the background image.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="background-source">Background Source</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/background-source.png" alt="Background Source" loading="lazy"></figure>
+<p>What type to display. Image or Movie.</p>
+<h4 id="background-source-image">Background Source Image</h4>
+<h5 id="image-property">Image Property</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/image-property.png" alt="Image Property" loading="lazy"></figure>
+<h6 id="image-browser">Image Browser</h6>
+<p>Browse the available images or movie clips.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image name</td>
+<td>The name of the image or movie clips.</td>
+</tr>
+<tr>
+<td>Number of Users</td>
+<td>The number of users for this image.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Keep this image in the scene even if it has no users.</td>
+</tr>
+<tr>
+<td>Open Image</td>
+<td>Opens a file browser where you can load an image.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes this image as the active image. Note that the image is still available in the image browser.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="source-type-single-image-background-source-type-image">Source Type Single Image (Background source type image)</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/source-type-single-image-background-source-type-.png" alt="Source Type Single Image (Background source type image)" loading="lazy"><figcaption>Source Type Single Image (Background source type image)</figcaption></figure>
+<h6 id="path-edit-box">Path edit box</h6>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pack</td>
+<td>With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.</td>
+</tr>
+<tr>
+<td>Path edit box</td>
+<td>See and edit the path to your movie or image sequence files.</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a new movie or image sequence files. A file dialog will appear.</td>
+</tr>
+<tr>
+<td>Refresh</td>
+<td>Reread the movie or image sequence files.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="source-type-movie-image-sequence-background-source-type-image">Source Type Movie + Image Sequence (Background source type image)</h5>
+<p>Attention. This is with Image as the background source. Background Source Movie Clip offers other options.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/source-type-movie-image-sequence-background-sour.png" alt="Source Type Movie + Image Sequence (Background source type image)" loading="lazy"><figcaption>Source Type Movie + Image Sequence (Background source type image)</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/source-type-movie-image-sequence-background-sour-2.png" alt="Source Type Movie + Image Sequence (Background source type image)" loading="lazy"><figcaption>Source Type Movie + Image Sequence (Background source type image)</figcaption></figure>
+<h6 id="path-edit-box-2">Path edit box</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/path-edit-box-2.png" alt="Path edit box" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pack</td>
+<td>With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.</td>
+</tr>
+<tr>
+<td>Path edit box</td>
+<td>See and edit the path to your movie or image sequence files.</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a new movie or image sequence files. A file dialog will appear.</td>
+</tr>
+<tr>
+<td>Refresh</td>
+<td>Reread the movie or image sequence files.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frames</td>
+<td>The number of frames of the movie or image sequence.</td>
+</tr>
+<tr>
+<td>Start</td>
+<td>The start frame of the movie or image sequence</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Offset the number of the frame to use in the animation. -1 means off.</td>
+</tr>
+<tr>
+<td>Cyclic</td>
+<td>Cycle the images in the movie.</td>
+</tr>
+<tr>
+<td>Auto Refresh</td>
+<td>Always refresh image on frame changes.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="source-type-generated">Source Type Generated</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/source-type-generated.png" alt="Source Type Generated" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X / Y</td>
+<td>The image width and height.</td>
+</tr>
+<tr>
+<td>Float Buffer</td>
+<td>Use a floating point buffer. 8 Bit images uses integers. 32 Bit works with floats.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="generated-type-blank">Generated Type Blank</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/generated-type-blank.png" alt="Generated Type Blank" loading="lazy"></figure>
+<p>This type displays an image with one blank color</p>
+<h6 id="color">Color</h6>
+<p>The color of the blank image.</p>
+<h6 id="generated-type-uv-grid">Generated Type UV Grid</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/generated-type-uv-grid.png" alt="Generated Type UV Grid" loading="lazy"><figcaption>Generated Type UV Grid</figcaption></figure>
+<p>This type displays a with a black and white checker texture but colored dots.</p>
+<h6 id="generated-type-color-grid">Generated Type Color Grid</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/generated-type-color-grid.png" alt="Generated Type Color Grid" loading="lazy"><figcaption>Generated Type Color Grid</figcaption></figure>
+<p>This type displays a with a colored checker texture with numbers.</p>
+<h5 id="source-type-udim-tile">Source Type UDIM Tile</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/source-type-udim-tile.png" alt="Source Type UDIM Tile" loading="lazy"><figcaption>Source Type UDIM Tile</figcaption></figure>
+<p>UDIM tiles is a way to deal with several textures in different resolution as one texture. Other software like Substance Painter also works with UDIM textures.</p>
+<p>Note that you need to have a fitting numbers of UDIM tiles in the UDIM tiles panel. Or not all UDIM textures will be loaded. Which is impossible to set up from here. UDIM setup happens in UV Editor in Edit mode. It will just load the first tile of the Udim texture.</p>
+<h5 id="path-edit-box-3">Path edit box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/path-edit-box.png" alt="Path edit box" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pack</td>
+<td>With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.</td>
+</tr>
+<tr>
+<td>Path edit box</td>
+<td>See and edit the path to your movie or image sequence files.</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a new movie or image sequence files. A file dialog will appear.</td>
+</tr>
+<tr>
+<td>Refresh</td>
+<td>Reread the file.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="color-space">Color Space</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/color-space.png" alt="Color Space" loading="lazy"></figure>
+<p>Choose the color space type for the movie or image sequence files.</p>
+<h5 id="opacity">Opacity</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/opacity.png" alt="Opacity" loading="lazy"></figure>
+<p>The transparency of the background image or movie.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Depth</td>
+<td>Choose whether the image is shown behind all objects, or in front of everything.</td>
+</tr>
+<tr>
+<td>Frame Method</td>
+<td>Controls how the image is placed in the camera view.</td>
+</tr>
+<tr>
+<td>Stretch</td>
+<td>Forces the image dimensions to match the camera bounds (may alter the aspect ratio).</td>
+</tr>
+<tr>
+<td>Offset X/Y</td>
+<td>Positions the background image using these offsets. In orthographic views the values are measured in the normal scene units. In the camera view the values are measured relative to the camera bounds (0.1 will offset it by 10% of the view width/height).</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Rotates the image around its center.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Scales the image up or down from its center.</td>
+</tr>
+<tr>
+<td>Flip X</td>
+<td>Swaps the image around, such that the left side is now on the right, and the right now on the left.</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Swaps the image around, such that the top side is now on the bottom, and the bottom now on the top.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="background-source-movie-clip">Background Source Movie Clip</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/background-source-movie-clip.png" alt="Background Source Movie Clip" loading="lazy"><figcaption>Background Source Movie Clip</figcaption></figure>
+<h5 id="active-clip">Active Clip</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/active-clip.png" alt="Active Clip" loading="lazy"></figure>
+<p>Use the movie clip from the active camera instead of a loaded one.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File Path</td>
+<td><strong>Path edit box</strong>: See and edit the path to your movie or image sequence files. · <strong>Open</strong>: Open a new movie or image sequence files. A file dialog will appear. · <strong>Refresh</strong>: Reread the movie or image sequence files.</td>
+</tr>
+<tr>
+<td>Start Frame</td>
+<td>The frame at which the movie starts playing.</td>
+</tr>
+<tr>
+<td>Frame Offset</td>
+<td>Offset of the first frame of the footage relative to its file name. This affects only how the footage is loading. And does not change the data associated with a clip</td>
+</tr>
+<tr>
+<td>Render Undistorted</td>
+<td>Render Preview using undistorted proxy material.</td>
+</tr>
+<tr>
+<td>Proxy Size</td>
+<td>This setting defines which proxy image resolution is used for display in the viewport. If there is no generated proxies, then the render size is set to “No proxy, full render&quot;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="color-space-2">Color Space</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/color-space.png" alt="Color Space" loading="lazy"></figure>
+<p>Choose the color space type for the movie or image sequence files.</p>
+<h5 id="render-undistorted">Render Undistorted</h5>
+<p>Render Preview using Undistorted Proxy.</p>
+<h5 id="proxy-render-size">Proxy Render Size</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/proxy-render-size.png" alt="Proxy Render Size" loading="lazy"></figure>
+<p>Display the preview in full size, or with proxies in reduced size.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View as Render</td>
+<td>Apply render part of display transformation when displaying this image on the screen.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>The transparency of the background image or movie.</td>
+</tr>
+<tr>
+<td>Depth</td>
+<td>Choose whether the image is shown behind all objects, or in front of everything.</td>
+</tr>
+<tr>
+<td>Frame Method</td>
+<td>Controls how the image is placed in the camera view.</td>
+</tr>
+<tr>
+<td>Offset X/Y</td>
+<td>Positions the background image using these offsets. In orthographic views the values are measured in the normal scene units. In the camera view the values are measured relative to the camera bounds (0.1 will offset it by 10% of the view width/height).</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Rotates the image around its center.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Scales the image up or down from its center.</td>
+</tr>
+<tr>
+<td>Flip X</td>
+<td>Swaps the image around, such that the left side is now on the right, and the right now on the left.</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Swaps the image around, such that the top side is now on the bottom, and the bottom now on the top.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="viewport-display-panel">Viewport Display panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/viewport-display-panel.png" alt="Viewport Display panel" loading="lazy"></figure>
+<p>Viewport display settings.</p>
+<p>hier weiter</p>
+<h3 id="size">Size</h3>
+<p>Size of the camera visualization in the 3D Viewport. This setting has no effect on the render output of a camera.</p>
+<h3 id="show">Show</h3>
+<h4 id="limits">Limits</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/limits.png" alt="Limits" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/limits-2.png" alt="Limits" loading="lazy"></figure>
+<p>Shows a line which indicates Start and End Clipping values. Displays also the depth of field focus point.</p>
+<h4 id="mist">Mist</h4>
+<p>Toggles viewing of the mist limits on and off. The limits are shown as two connected white dots on the camera line of sight. The mist limits and other options are set in the World panel, in the Mist section.</p>
+<p>To activate the Mist panel you first have to activate the Mist pass in the View layer properties.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/mist.png" alt="Mist" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/mist-2.png" alt="Mist" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/mist-3.png" alt="Mist" loading="lazy"></figure>
+<h4 id="sensor">Sensor</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/sensor.png" alt="Sensor" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/sensor-2.png" alt="Sensor" loading="lazy"></figure>
+<p>Displays a dotted frame for the sensor size (film gate) in the camera view.</p>
+<p>The sensor size can be adjusted in the camera panel. It is fixed for the method Auto.</p>
+<h4 id="name">Name</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/mist-3.png" alt="Name" loading="lazy"></figure>
+<p>Display the name of the camera down left in the passepartout.</p>
+<h4 id="passepartout">Passepartout</h4>
+<p>This option darkens the area outside of the camera’s field of view.</p>
+<h5 id="alpha">Alpha</h5>
+<p>Controls the transparency of the passepartout mask.</p>
+<h4 id="composition-guides-subpanel">Composition Guides subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/composition-guides-subpanel.png" alt="Composition Guides subpanel" loading="lazy"></figure>
+<p>Composition Guides enable overlays onto the camera display that can help when framing a shot.</p>
+<h5 id="thirds">Thirds</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/thirds.png" alt="Thirds" loading="lazy"></figure>
+<p>Adds lines dividing the frame in thirds vertically and horizontally.</p>
+<h5 id="center">Center</h5>
+<p>Adds lines dividing the frame in half vertically and horizontally.</p>
+<h6 id="center-2">Center</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/center.png" alt="Center" loading="lazy"></figure>
+<h6 id="diagonal">Diagonal</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/diagonal.png" alt="Diagonal" loading="lazy"></figure>
+<p>Adds lines connecting opposite corners.</p>
+<h5 id="golden">Golden</h5>
+<h6 id="ratio">Ratio</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/ratio.png" alt="Ratio" loading="lazy"></figure>
+<p>Divides the width and height into Golden proportions (about 0.618 of the size from all sides of the frame).</p>
+<h6 id="triangle-a">Triangle A</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/triangle-a.png" alt="Triangle A" loading="lazy"></figure>
+<p>Displays a diagonal line from the lower left to upper right corners, then adds perpendicular lines that pass through the top left and bottom right corners.</p>
+<h6 id="triangle-b">Triangle B</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/triangle-b.png" alt="Triangle B" loading="lazy"></figure>
+<p>Same as A, but with the opposite corners.</p>
+<h5 id="harmonious">Harmonious</h5>
+<h6 id="triangle-a-2">Triangle A</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/triangle-a-2.png" alt="Triangle A" loading="lazy"></figure>
+<p>Displays a diagonal line from the lower left to upper right corners, then lines from the top left and bottom right corners to 0.618 the lengths of the opposite side.</p>
+<h6 id="triangle-b-2">Triangle B</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/object-data-properties-tab/camera-object/triangle-b-2.png" alt="Triangle B" loading="lazy"></figure>
+<p>Same as A, but with the opposite corners.</p>
+<h2 id="custom-properties-panel">Custom Properties Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/view-layer-properties-tab/custom-properties-panel.png" alt="Custom Properties Panel" loading="lazy"></figure>
+<p>Here you can define custom properties that can be used for scripting.</p>
+<p>Here you might also find custom properties from addons or scripts.</p>
+<h3 id="add">Add</h3>
+<p>Adds a new property.</p>
+<h3 id="edit">Edit</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/cd96b5487b296b39f34ed08e4ca0768977a8ea8c/docs2/images/editors/properties/view-layer-properties-tab/edit.png" alt="Edit" loading="lazy"></figure>
+<p>Opens a panel where you can adjust the settings for the custom property.</p>
+<h3 id="remove">Remove</h3>
+<p>Removes the property.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fclone-runs-3-15/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fobject-data-properties-tab%2Fcamera-object.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/clone-runs-3-15/docs2/content/editors/properties/object-data-properties-tab/camera-object.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#lens-panel">Lens panel</a><a class="h3" href="#type">Type</a><a class="h2" href="#depth-of-field-panel">Depth of Field panel</a><a class="h3" href="#focus-on-object">Focus on Object</a><a class="h3" href="#aperture">Aperture</a><a class="h2" href="#camera-panel">Camera panel</a><a class="h3" href="#presets">Presets</a><a class="h3" href="#sensor-fit">Sensor Fit</a><a class="h2" href="#safe-areas-panel">Safe Areas panel</a><a class="h3" href="#presets-2">Presets</a><a class="h3" href="#center-cut-safe-areas">Center-Cut Safe Areas</a><a class="h2" href="#background-images-panel">Background Images panel</a><a class="h3" href="#background-images-panel-2">Background Images panel</a><a class="h2" href="#viewport-display-panel">Viewport Display panel</a><a class="h3" href="#size">Size</a><a class="h3" href="#show">Show</a><a class="h2" href="#custom-properties-panel">Custom Properties Panel</a><a class="h3" href="#add">Add</a><a class="h3" href="#edit">Edit</a><a class="h3" href="#remove">Remove</a></aside></div></body></html>
