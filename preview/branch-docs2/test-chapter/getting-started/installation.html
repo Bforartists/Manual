@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Installation · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/test-chapter · <code>docs2/test-chapter</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../getting-started.html">Getting Started</a>
+<a href="introduction.html">Introduction</a>
+<a href="about-documentation.html">About Documentation</a>
+<a class="is-current" href="installation.html">Installation</a>
+<a href="quick-start.html">Quick Start</a>
+<a href="data-structure.html">Data Structure</a>
+<a href="differences.html">Comparing to Blender</a>
+<a href="migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Editors</h4>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<span>Modifiers tab</span>
+<span style="padding-left:1.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Color modifiers (Grease Pencil)</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Getting Started › Installation</div><h1 class="pv-title">Installation</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 12 min read</span></div><article class="ui-doc-body"><h2 id="getting-bforartists">Getting Bforartists</h2>
+<h3 id="download-bforartists">Download Bforartists</h3>
+<p>Bforartists downloads can be downloaded here: <a href="https://www.bforartists.de/content/download">https://www.bforartists.de/content/download</a></p>
+<p>Bforartists is available for download for Linux, mac OS and MS-Windows.</p>
+<p>You can also download from Flatpak, the Microsoft store and Blender Launcher v2.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> test</p></div>
+<figure class="is-right"><img src="../docs2/images/getting-started/installation/download-bforartists.png" alt="Download Bforartists" loading="lazy"></figure>
+<p>There is also the source code available at GitHub. <a href="https://github.com/Bforartists/Bforartists">https://github.com/Bforartists/Bforartists</a></p>
+<h2 id="system-requirements">System Requirements</h2>
+<p>Windows</p>
+<p><strong>Minimum</strong>:</p>
+<ul>
+<li>OS: Windows 8.1 (64-bit)</li>
+<li>CPU: 4 cores with SSE4.2 support</li>
+<li>RAM: 8 GB</li>
+<li>GPU: 2 GB VRAM with OpenGL 4.3 support</li>
+<li>NVIDIA: GeForce 400 series or newer, Quadro Tesla architecture or newer (including RTX cards)</li>
+<li>AMD: GCN 1st generation or newer</li>
+<li>Intel: Broadwell architecture or newer (latest drivers recommended)</li>
+</ul>
+<p><strong>Recommended</strong>:</p>
+<ul>
+<li>OS: Windows 10 or Windows 11</li>
+<li>CPU: 8 cores</li>
+<li>RAM: 32 GB</li>
+<li>GPU: 8 GB VRAM or more with OpenGL 4.3 support or better</li>
+</ul>
+<p>macOS</p>
+<p><strong>Minimum</strong>:</p>
+<ul>
+<li>OS: macOS 11.2 (Big Sur)</li>
+<li>CPU: Apple Silicon or Intel</li>
+<li>RAM: 8 GB</li>
+<li>GPU: GPU with Metal 2.2 support (AMD, Apple Silicon, or Intel Skylake and newer)</li>
+</ul>
+<p><strong>Recommended</strong>:</p>
+<ul>
+<li>OS: macOS 15 (Sequoia)</li>
+<li>CPU: Apple Silicon</li>
+<li>RAM: 32 GB</li>
+<li>GPU: Same as minimum (Metal 2.2 support)</li>
+</ul>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Blender 4.5 LTS is the last version supporting Intel and macOS 11.2 Big Sur.</p></div>
+<p>Blender 5.0 and later require Apple Silicon with macOS 13 or later.</p>
+<p>Linux</p>
+<p><strong>Minimum</strong>:</p>
+<ul>
+<li>OS: Distribution with glibc 2.28 or newer (64-bit)</li>
+<li>CPU: 4 cores with SSE4.2 support</li>
+<li>RAM: 8 GB</li>
+<li>GPU: 2 GB VRAM with OpenGL 4.3 support</li>
+<li>NVIDIA: GeForce 400 series or newer, Quadro Tesla architecture or newer (including RTX cards)</li>
+<li>AMD: GCN 1st generation or newer</li>
+<li>Intel: Broadwell architecture or newer (latest drivers recommended)</li>
+</ul>
+<p><strong>Recommended</strong>:</p>
+<ul>
+<li>CPU: 8 cores or more</li>
+<li>RAM: 32 GB or more</li>
+<li>GPU: 8 GB VRAM or more with OpenGL 4.3 support or better</li>
+</ul>
+<p><strong>AdditionalNotes</strong>:</p>
+<ul>
+<li>Always ensure you have the latest GPU drivers installed from your hardware manufacturer.</li>
+<li>Integrated GPUs may work but can have performance or compatibility limitations.</li>
+<li>For GPU rendering with Cycles, CUDA or OptiX support requires Nvidia GPUs and drivers; HIP support requires compatible AMD GPUs</li>
+</ul>
+<h2 id="compiling-bforartists">Compiling Bforartists</h2>
+<p>To compile Bforartists on any supported platform (Linux, Windows, macOS), start by following the <a href="https://developer.blender.org/docs/handbook/building_blender/">official Blender build instructions</a> for your OS to set up all required packages and dependencies.</p>
+<p>Once your build environment is ready, clone the Bforartists repository instead of Blender’s:</p>
+<p>git clone <a href="https://github.com/Bforartists/Bforartists.git">https://github.com/Bforartists/Bforartists.git</a></p>
+<p>cd Bforartists</p>
+<p>From here, basic compilation commands are:</p>
+<ul>
+<li>make — compile Bforartists with default options (no CUDA/OptiX/HIP/Intel binaries)</li>
+<li>make release — compile a full release build including optional platform-specific features</li>
+<li>make lite — compile a minimal build for faster iteration (useful for GUI or minor changes)</li>
+<li>make update — update your local source and dependencies</li>
+</ul>
+<p>Additional notes for Windows users:</p>
+<ul>
+<li>Use the official Blender Windows build guide to install Visual Studio and required tools.</li>
+<li>Ensure you have the correct Windows SDK and CMake installed.</li>
+<li>CUDA and OptiX support requires Nvidia drivers and manual setup.</li>
+</ul>
+<p>Additional notes for macOS users:</p>
+<ul>
+<li>Follow Blender’s macOS build instructions for installing Xcode, Homebrew, and dependencies.</li>
+<li>Make sure you have the required SDKs and developer tools installed.</li>
+<li>Some optional features may require additional setup or are currently unsupported.</li>
+<li></li>
+</ul>
+<p>Additional notes for Linux users:</p>
+<ul>
+<li>We recommend Rocky Linux 8 for building and distributing Bforartists, as its glibc version is compatible with many Linux distros.</li>
+<li>Our repository includes linux_rocky8_setup.sh to automate environment setup on Rocky 8.</li>
+<li>Some components, like Nvidia OptiX, require manual installation due to download restrictions.</li>
+</ul>
+<p>If you have questions or need help building on any platform, feel free to reach out on our Discord!</p>
+<h2 id="linux">Linux</h2>
+<h3 id="binaries">Binaries</h3>
+<p>We offer currently a Tar.gz file, a Deb, an Appimage as a download. All compiled at Rocky 8. And there is an external Flatpak version too. So pick your version, download it, and execute it.</p>
+<h3 id="running-from-the-terminal">Running from the terminal</h3>
+<p>To run Bforartists from the terminal without needing to be in the executable directory, add the extracted folder to the environment PATH.</p>
+<p>Add the following command to .bash_rc or .bash_profile with Bforartists’s binary:</p>
+<p>export PATH=$/path/to/Bforartists-VERSION-linux-glibcVERSION-ARCH:$PATH</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> If you use daily builds and update Bforartists frequently, you can link or always rename your folder to ‘Bforartists’ and use this name for the <em>PATH</em> environment variable and for keeping the window manager menu up to date.</p></div>
+<h3 id="avoiding-alt-mouse-conflict">Avoiding Alt+Mouse Conflict</h3>
+<p>Many Window Managers default to <em><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>LMB</kbd></span></em> for moving windows, which is a shortcut that Bforartists uses to simulate a 3 button mouse. You can either have this feature disabled <span class="ui-doc-menu">User Preferences ‣ Input ‣ Emulate 3 Button Mouse</span> or you can change the Window Manager settings to use the <em>Meta</em> key instead (also called <em>Super</em> or <em>Windows key</em>):</p>
+<ul>
+<li><strong>KDE:</strong> System Settings &gt; Window Behavior &gt; Window Behavior &gt; Window Actions , Switch ‘Alt’ for ‘Meta’ key</li>
+<li><strong>Unity/Gnome:</strong> enter the following in a command line (effective at next login):</li>
+</ul>
+<p>gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '&lt;Super&gt;'</p>
+<h2 id="mac">Mac</h2>
+<h3 id="binaries-2">Binaries</h3>
+<p>We offer three versions at the moment. A universal installer, one for the Intel architecture. And one for the new Silicon architecture. Note that the Intel installer, and so also the Universal installer, will vanish soon. Intel architecture is deprecated.</p>
+<p>After downloading Bforartists for Mac-OS X, uncompress the file and drag <em>Bforartists.app</em> onto the Applications folder.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> Because <em>Bforartists</em> doesn’t use the standard OS menu system, you likely have a redundant menu-bar at the top.</p>
+<p>To remove it see this post on Macworld, but beware that it is somewhat complex. As an alternative: simply make <em>Bforartists</em> full screen by <em><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>F11</kbd></span></em> or by <span class="ui-doc-menu">File ‣ Window ‣ Toggle Window Full</span> screen.</p></div>
+<p>In case the Silicon version does not start, make sure the App Store and Identified Developers option is ticked. And check if the files and folders tab to see Bforartists is listed and has permissions. Further informations can be found here: <a href="https://support.apple.com/en-au/HT202491">support.apple.com/en-au/HT202491</a></p>
+<p>And here: <a href="https://www.macworld.com/article/672947/how-to-open-a-mac-app-from-an-unidentified-developer.html">https://www.macworld.com/article/672947/how-to-open-a-mac-app-from-an-unidentified-developer.html</a><br />
+In case it still does not work, try to launch from the terminal with xattr -cr since we don’t have a signed license yet.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The default Bforartists keymap is not mapped to the oskey keys, but ctrl instead. It works fine for Linux and Windows but not with a Mac. You need to switch to the Bforartists-macOS keymap. It is mapped to the oskey keys.</p></div>
+<h2 id="ms-windows">MS-Windows</h2>
+<h3 id="binaries-3">Binaries</h3>
+<p>We currently offer an installer, and a zipped portable version.</p>
+<h4 id="exe">Exe</h4>
+<p>Download the installer, and execute it. Follow the advice of the installer.</p>
+<h5 id="uninstalling-previous-versions">Uninstalling previous versions</h5>
+<p>Bforartists 1 and 2 have different folders and settings. This will not conflict. And you can have them installed side by side.</p>
+<p>But in case you want to install a new version of Bforartists 2, and have an earlier version of Bforartists 2 already installed, then please uninstall this previous version first. Bforartists is in permanent development. And so lots of things can change with every version. Like which ad don is in what folder, or the number of add-ons at all. And this can lead to dysfunctional or a double set of add-ons or files then when you simply install over the old installation.</p>
+<p>Changes at the settings are not affected by uninstalling the software. They are stored in the appdata directory, and will remain. You can work with the old settings, see point below. But there is no guarantee that everything works flawless then. Old settings may or may not work proper.</p>
+<h4 id="zip">Zip</h4>
+<p>Download the <em>.zip</em> file.</p>
+<p>Place the zip file where you want Bforartists to be. This can be everywhere at your system. Then extract the zip file. To start Bforartists you have to double click at the exe file inside the created folder now.</p>
+<p>It is also recommend to make a shortcut towards this executable. So that you don't have to navigate to the folder all the time when you want to start Bforartists. Place this shortcut at the desktop or the quickstart taskbar.</p>
+<h2 id="import-existing-settings">Import Existing settings</h2>
+<figure class="is-right"><img src="../docs2/images/getting-started/installation/import-existing-settings.png" alt="Import Existing settings" loading="lazy"></figure>
+<p>When you install a new version of Bforartists and had an older version installed, then you might experience that your old settings are gone, and Bforartists starts with the factory settings again.</p>
+<p>Have a look at the splash screen. When there is a Import Existing setttings field at the top, then this means that you run a new version the first time, and the old settings from the previous version is available. And that you can import it. Which can be done with a click at the Load Bforartists xxx Settings button.</p>
+<p>Bforartists is based at Blender. And follows under the hood the naming conventions of Blender. So the number that you can see at the button here is the Blender version number that was used for the old settings.</p>
+<figure class="is-right"><img src="../docs2/images/getting-started/installation/import-existing-settings.jpg" alt="Import Existing settings" loading="lazy"></figure>
+<p>This just works for the former version. You can import 2.81 settings in 2.82. Or 3.6.2 settings in 4.0. And 4.0 settings in 4.1. But settings from former versions older than the previous version does not show.</p>
+<p>Beware of possible conflicts. The key map is still in change here and there. New add-ons or code might conflict with the ones that you have installed.</p>
+<h2 id="configuration">Configuration</h2>
+<p>Here are some quick preferences that you may wish to set as quickly as possible. The full list and explanation of the preferences is in the section <em>User Preferences</em>.</p>
+<h3 id="language">Language</h3>
+<p>At <span class="ui-doc-menu">File ‣ User Preferences ‣ System</span>, enable <em>International Fonts</em> to choose the <em>Language</em> and what to translate from <em>Interface</em>, <em>Tool tips</em> and <em>New Data</em>. See more at Internationalization</p>
+<h3 id="input">Input</h3>
+<p>If you have a compact keyboard without a separate number pad enable <span class="ui-doc-menu">File ‣ User Preferences ‣ Emulate Numpad</span>.</p>
+<p>If you don’t have a middle mouse button you can enable <span class="ui-doc-menu">File ‣ User Preferences ‣ Emulate 3 Button Mouse</span>.</p>
+<h3 id="file-and-paths">File and Paths</h3>
+<p>At <span class="ui-doc-menu">File ‣ User Preferences ‣ File</span> you can set options such as what external <em>Image Editor</em> to use, such as GIMP or Krita, and the Animation Player.</p>
+<p>The <em>Temp</em> directory sets where to store files such as temporary renders and autosaves.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> <em>//</em> at the start of a path in Bforartists means the directory of the currently opened <em>.blend</em> file, used to reference relative-paths.</p></div>
+<p>If you trust the source of your <em>.blend</em> files, you can enable <em>Auto Run Python Scripts</em>. This option is meant to protect you from malicious Python scripts that someone can include inside a Bforartists file. This would not happen by accident, and most users leave this option on to automatically run scripts such as <em>Rigify</em> that controls the skeleton of a human rig.</p>
+<h2 id="input-devices">Input Devices</h2>
+<p>Bforartists supports various types of input devices:</p>
+<p>Keyboard (recommended: keyboard with numeric keypad, English layout works best)<br />
+Mouse (recommended: 3 button mouse with scroll wheel)<br />
+NDOF Devices (also known as <em>3D Mouse</em>)<br />
+Graphic Tablets</p>
+<h3 id="mice">Mice</h3>
+<h4 id="mouse-button-emulation">Mouse Button Emulation</h4>
+<p>If you do not have a 3 button mouse, you will need to emulate it by checking the option in the User Preferences.</p>
+<p>The following table shows the combinations used:</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3-button Mouse</td>
+<td><em>LMB</em></td>
+<td><em>MMB</em></td>
+<td><em>RMB</em></td>
+</tr>
+<tr>
+<td>2-button Mouse</td>
+<td><em>LMB</em></td>
+<td><em><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>LMB</kbd></span></em></td>
+<td><em>RMB</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="keyboards">Keyboards</h3>
+<h4 id="numpad-emulation">Numpad Emulation</h4>
+<p>If you do not have a numeric Numpad on the side of your keyboard, at a laptop for example, you may want to emulate one (uses the numbers at the top of the keyboard instead, however, removes quick access to layer visibility).</p>
+<h4 id="non-english-keyboards">Non-English Keyboards</h4>
+<p>Bforartists defaults are made for an English keyboard layout. It works fine at non-English keyboards in most cases. But in the input manager in the user preferences you may stumble across some oddities.</p>
+<h3 id="graphic-tablets">Graphic Tablets</h3>
+<p>Graphics tablets can be used to provide a more traditional method of controlling the mouse cursor using a pen. This can help to provide a more familiar experience for artists who are used to painting and drawing with similar tools, as well as provide additional controls such as pressure sensitivity.</p>
+<h3 id="3d-mice">3D Mice</h3>
+<p>3D Mice or NDOF devices are hardware that you can use to navigate a scene in Bforartists. Currently only devices made by 3Dconnexion are supported. These devices allow you to explore a scene, as well as Walk/Fly modes.</p>
+<h2 id="configuring-directories">Configuring Directories</h2>
+<p>There are three different directories Bforartists may use, their exact locations are operating system dependent.</p>
+<p>LOCAL</p>
+<p>Location of configuration and runtime data (for self contained bundle)</p>
+<p>USER</p>
+<p>Location of configuration files (normally in the user’s home directory).</p>
+<p>SYSTEM</p>
+<p>Location of runtime data for system wide installation (may be read-only).</p>
+<p>For system installations both <strong>SYSTEM</strong> and <strong>USER</strong> directories are needed.</p>
+<p>For locally extracted Bforartists distributions, the user configuration and data runtime data are kept in the same sub-directory, allowing multiple Bforartists versions to run without conflict, ignoring the <strong>USER</strong> and <strong>SYSTEM</strong> files.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> You may need to have the “show hidden files” option checked in your file browser settings.</p></div>
+<h2 id="platform-dependent-paths">Platform Dependent Paths</h2>
+<p>Every OS handles the peripheral paths a bit different. The default locations for each system are as follow. Note that he path <em>./|BFORARTISTS_VERSION|/</em> is relative to the Bforartists executable.</p>
+<h3 id="linux-2">Linux</h3>
+<p>LOCAL</p>
+<p>./2.80/</p>
+<p>USER</p>
+<p>$HOME/.config/Bforartists/2.80/</p>
+<p>SYSTEM</p>
+<p>/usr/share/Bforartists/2.80/</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The <strong>USER</strong> path will use <em>$XDG_CONFIG_HOME</em> if its set:</p>
+<p>$XDG_CONFIG_HOME/Bforartists/2.80/</p></div>
+<h3 id="mac-osx">Mac OSX</h3>
+<p>LOCAL</p>
+<p>./2.80/</p>
+<p>USER</p>
+<p>/Users/$USER/Library/Application Support/Bforartists/2.80/</p>
+<p>SYSTEM</p>
+<p>/Library/Application Support/Bforartists/2.80/</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> OSX stores the Bforartists binary in <em>./Bforartists.app/Contents/MacOS/Bforartists</em>, so the local path to data &amp; config is:</p>
+<p>./Bforartists.app/Contents/MacOS/2.80/</p></div>
+<h3 id="ms-windows-2">MS-Windows</h3>
+<p>LOCAL</p>
+<p><code>.\2.80\.</code></p>
+<p>USER</p>
+<p><code>C:\Documents and Settings\$USERNAME\AppData\Roaming\Bforartists\Bforartists\2.80\</code></p>
+<p>SYSTEM</p>
+<p><code>C:\Documents and Settings\All Users\AppData\Roaming\Bforartists\Bforartists\2.80\</code></p>
+<h3 id="path-layout">Path Layout</h3>
+<p>This is the path layout which is used within the directories described above.</p>
+<p>Where <em>./config/startup.blend</em> could be ~/.Bforartists/2.80/config/startup.blend for example.</p>
+<p><em>./autosave/ ...</em></p>
+<p>Autosave blend file location. <em>Windows only, temp directory used for other systems.</em></p>
+<p>Search order: <em>LOCAL, USER</em>.</p>
+<p><em>./config/ ...</em></p>
+<p>Defaults &amp; session info.</p>
+<p>Search order: <em>LOCAL, USER</em>.</p>
+<p><em>./config/startup.blend</em></p>
+<p>Default file to load on startup.</p>
+<p><em>./config/userpref.blend</em></p>
+<p>Default preferences to load on startup.</p>
+<p><em>./config/bookmarks.txt</em></p>
+<p>File selector bookmarks.</p>
+<p><em>./config/recent-files.txt</em></p>
+<p>Recent file menu list.</p>
+<p><em>./datafiles/ ...</em></p>
+<p>Runtime files.</p>
+<p>Search order: <em>LOCAL, USER, SYSTEM</em></p>
+<p><em>./datafiles/locale/{language}/</em></p>
+<p>Static precompiled language files for UI translation.</p>
+<p><code>./datafiles/icons/*.png</code></p>
+<p>Icon themes for Bforartists user interface. <em>Not currently selectable in the theme preferences.</em></p>
+<p><code>./datafiles/brushicons/*.png</code></p>
+<p>Images for each brush.</p>
+<p><em>./scripts/ ...</em></p>
+<p>Python scripts for the user interface and tools.</p>
+<p>Search order: <em>LOCAL, USER, SYSTEM</em>.</p>
+<p><code>./scripts/addons/*.py</code></p>
+<p>Python add-ons which may be enabled in the user preferences, includes import/export format support, render engine integration and many handy utilities.</p>
+<p><code>./scripts/addons/modules/*.py</code></p>
+<p>Modules for add-ons to use (added to Python’s sys.path).</p>
+<p><code>./scripts/addons_contrib/*.py</code></p>
+<p>Another add-ons directory which is used for community maintained add-ons (must be manually created).</p>
+<p><code>./scripts/addons_contrib/modules/*.py</code></p>
+<p>Modules for addons_contrib to use (added to Python’s sys.path).</p>
+<p><code>./scripts/modules/*.py</code></p>
+<p>Python modules containing our core API and utility functions for other scripts to import (added to Python’s <em>sys.path</em>).</p>
+<p><code>./scripts/startup/*.py</code></p>
+<p>Scripts which are automatically imported on startup.</p>
+<p><code>./scripts/presets/{preset}/*.py</code></p>
+<p>Presets used for storing user defined settings for cloth, render formats etc.</p>
+<p><code>./scripts/templates/*.py</code></p>
+<p>Example scripts which can be accessed from: Text Space’s Header –&gt; Text –&gt; Script Templates.</p>
+<p><em>./python/ ...</em></p>
+<p>Bundled Python distribution, only necessary when the system Python installation is absent or incompatible.</p>
+<p>Search order: <em>LOCAL, SYSTEM</em>.</p>
+<h3 id="temporary-directory">Temporary Directory</h3>
+<p>The temporary directory is used to store various files at run-time (including render layers, physics cache, copy-paste buffer and crash logs).</p>
+<p>The temporary directory is selected based on the following priority:</p>
+<ul>
+<li>User Preference</li>
+<li>Environment variables (<em>TEMP</em> on MS-Windows, <em>TMP</em> &amp; <em>TMP_DIR</em> on other platforms).</li>
+<li>The */tmp/*directory.</li>
+</ul>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Ftest-chapter/collection/docs/edit/docs2%2Fcontent%2Fgetting-started%2Finstallation.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/test-chapter/docs2/content/getting-started/installation.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#getting-bforartists">Getting Bforartists</a><a class="h3" href="#download-bforartists">Download Bforartists</a><a class="h2" href="#system-requirements">System Requirements</a><a class="h2" href="#compiling-bforartists">Compiling Bforartists</a><a class="h2" href="#linux">Linux</a><a class="h3" href="#binaries">Binaries</a><a class="h3" href="#running-from-the-terminal">Running from the terminal</a><a class="h3" href="#avoiding-alt-mouse-conflict">Avoiding Alt+Mouse Conflict</a><a class="h2" href="#mac">Mac</a><a class="h3" href="#binaries-2">Binaries</a><a class="h2" href="#ms-windows">MS-Windows</a><a class="h3" href="#binaries-3">Binaries</a><a class="h2" href="#import-existing-settings">Import Existing settings</a><a class="h2" href="#configuration">Configuration</a><a class="h3" href="#language">Language</a><a class="h3" href="#input">Input</a><a class="h3" href="#file-and-paths">File and Paths</a><a class="h2" href="#input-devices">Input Devices</a><a class="h3" href="#mice">Mice</a><a class="h3" href="#keyboards">Keyboards</a><a class="h3" href="#graphic-tablets">Graphic Tablets</a><a class="h3" href="#3d-mice">3D Mice</a><a class="h2" href="#configuring-directories">Configuring Directories</a><a class="h2" href="#platform-dependent-paths">Platform Dependent Paths</a><a class="h3" href="#linux-2">Linux</a><a class="h3" href="#mac-osx">Mac OSX</a><a class="h3" href="#ms-windows-2">MS-Windows</a><a class="h3" href="#path-layout">Path Layout</a><a class="h3" href="#temporary-directory">Temporary Directory</a></aside></div></body></html>
