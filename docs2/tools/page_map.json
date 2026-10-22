@@ -12518,7 +12518,7 @@
    ],
    "images": "extensions/bforartists-extensions",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "35",
    "parts": [
     {
@@ -12542,7 +12542,7 @@
    ],
    "images": "extensions/bforartists-extensions/core-extension-brush-panels",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "35.1",
    "parts": [
     {
@@ -12566,7 +12566,7 @@
    ],
    "images": "extensions/bforartists-extensions/core-extension-presentation-slider",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "35.2",
    "parts": [
     {
@@ -12590,7 +12590,7 @@
    ],
    "images": "extensions/bforartists-extensions/core-extension-3d-sequencer",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "35.3",
    "parts": [
     {
@@ -12614,7 +12614,7 @@
    ],
    "images": "extensions/bforartists-extensions/core-extension-power-user-tools",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "35.4",
    "parts": [
     {
@@ -12637,7 +12637,7 @@
    ],
    "images": "appendix/glossary",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "37",
    "parts": [
     {
@@ -12661,7 +12661,7 @@
    ],
    "images": "appendix/bforartists-history",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "39",
    "parts": [
     {

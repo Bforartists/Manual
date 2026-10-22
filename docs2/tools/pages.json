@@ -10107,6 +10107,57 @@
      "select": "*"
     }
    ]
+  },
+  {
+   "id": "appendix.glossary",
+   "file": "content/appendix/glossary.md",
+   "title": "Glossary",
+   "section": "appendix",
+   "path": [
+    "Appendix",
+    "Glossary"
+   ],
+   "images": "appendix/glossary",
+   "parts": [
+    {
+     "src": "37 Glossary",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "appendix.bforartists-history",
+   "file": "content/appendix/bforartists-history.md",
+   "title": "Bforartists History",
+   "section": "appendix",
+   "path": [
+    "Appendix",
+    "Bforartists History"
+   ],
+   "images": "appendix/bforartists-history",
+   "parts": [
+    {
+     "src": "39 Bforartists History",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "appendix.manual-update-history",
+   "file": "content/appendix/manual-update-history.md",
+   "title": "Manual Update History",
+   "section": "appendix",
+   "path": [
+    "Appendix",
+    "Manual Update History"
+   ],
+   "images": "appendix/manual-update-history",
+   "parts": [
+    {
+     "src": "40 Manual Update History",
+     "select": "*"
+    }
+   ]
   }
  ],
  "snippets": [
