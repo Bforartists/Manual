@@ -38,6 +38,10 @@ HAND_EDIT_SLACK = dt.timedelta(minutes=10)
 
 # ---------------------------------------------------------------- Webflow API
 
+class SyncError(Exception):
+    pass
+
+
 class Webflow:
     def __init__(self, token):
         self.token = token
@@ -58,7 +62,15 @@ class Webflow:
                 if e.code == 429 and attempt < 5:
                     time.sleep(int(e.headers.get("Retry-After", "10")))
                     continue
-                raise SystemExit(f"Webflow {method} {path} failed: {e.code} {e.read().decode()[:500]}")
+                if e.code >= 500 and attempt < 3:
+                    time.sleep(5 * (attempt + 1))
+                    continue
+                raise SyncError(f"Webflow {method} {path} failed: {e.code} {e.read().decode()[:800]}")
+            except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+                if attempt < 3:
+                    time.sleep(5 * (attempt + 1))
+                    continue
+                raise SyncError(f"Webflow {method} {path} failed: {e}")
 
     def items(self, cid):
         out, offset = [], 0
@@ -126,10 +138,25 @@ def build(repo, cfg):
     tree = site_tree(repo, [p for p in pages if p.kind == "page"])
     slug_of = {n.page.rel: n.web_slug for sec in tree for n in sec.nodes}
     md = html_build.md_engine()
+    branch = cfg.get("branch", "main")
+    # Stable links: an image URL names the last commit that changed that image, so it only
+    # changes when the image changes. (With the current commit in every URL, any merge made
+    # every page with images "changed", re-sent it and made Webflow re-import every screenshot.)
+    last_commit = {}
+    cur = None
+    for line in git(repo, "log", "--format=@%H", "--name-only", sha, "--", "docs2/images").splitlines():
+        if line.startswith("@"):
+            cur = line[1:]
+        elif line and cur:
+            last_commit.setdefault(line, cur)
+
+    def img_url(r):
+        return f"https://raw.githubusercontent.com/{gh}/{last_commit.get(r, sha)}/{r}"
+
     urls = dict(
-        img_url=lambda r: f"https://raw.githubusercontent.com/{gh}/{sha}/{r}",
+        img_url=img_url,
         page_url=lambda t: cfg["page_url"] + slug_of[t.rel] if t.rel in slug_of else None,
-        file_url=lambda r: f"https://github.com/{gh}/blob/{sha}/{r}")
+        file_url=lambda r: f"https://github.com/{gh}/blob/{branch}/{r}")
 
     def edited(p):
         return git(repo, "log", "-1", "--format=%cI", "--", p.rel) or None
@@ -254,6 +281,7 @@ def main(argv):
             print("::warning::WEBFLOW_TOKEN is not set; nothing was sent to Webflow.")
             lines.append("⚠️ No Webflow token set, so nothing was sent. See *Website sync* in the wiki.")
         else:
+          try:
             wf = Webflow(token)
             col = cfg["collections"]
             for name, cid in col.items():
@@ -279,6 +307,15 @@ def main(argv):
             if changed and "--publish" in opts:
                 wf.publish_staging(cfg["site_id"])
                 lines += ["", f"🚀 Published to staging: {cfg['staging_url']}"]
+          except SyncError as e:
+              msg = str(e).replace("\n", " ")
+              print(f"::error title=Webflow sync::{msg}")
+              lines += ["", f"❌ **Sync stopped:** {msg}"]
+              out = "\n".join(lines) + "\n"
+              if report_out:
+                  open(report_out, "w", encoding="utf-8").write(out)
+              print(out)
+              return 1
     out = "\n".join(lines) + "\n"
     if report_out:
         open(report_out, "w", encoding="utf-8").write(out)

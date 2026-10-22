@@ -152,8 +152,10 @@ jobs:
           WEBFLOW_TOKEN: ${{ secrets.WEBFLOW_TOKEN }}
         run: |
           export DOCS_SHA=$(git rev-parse HEAD)     # includes the bot's commit, so image links match
-          python docs2/tools/sync.py . --apply --publish --report _sync.md
-          cat _sync.md >> "$GITHUB_STEP_SUMMARY"
+          status=0
+          python docs2/tools/sync.py . --apply --publish --report _sync.md || status=$?
+          [ -f _sync.md ] && cat _sync.md >> "$GITHUB_STEP_SUMMARY"
+          exit $status
 
       - name: Fail when checks found problems
         if: steps.check.outcome == 'failure'
