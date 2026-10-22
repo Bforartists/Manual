@@ -135,7 +135,8 @@ def build(repo, cfg):
     gh = cfg["repo"]
     pages = list(iter_pages(repo))
     by_rel = {p.rel: p for p in pages}
-    tree = site_tree(repo, [p for p in pages if p.kind == "page"])
+    skip = set(cfg.get("skip_sections", []))
+    tree = [sec for sec in site_tree(repo, [p for p in pages if p.kind == "page"]) if sec.id not in skip]
     slug_of = {n.page.rel: n.web_slug for sec in tree for n in sec.nodes}
     md = html_build.md_engine()
     branch = cfg.get("branch", "main")
