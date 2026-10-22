@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Edit menu · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/main · <code>docs2/main</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<a href="../../../workspaces/workspaces.html">Workspaces</a>
+<h4>Editors</h4>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<span>Modifiers tab</span>
+<span style="padding-left:1.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Color modifiers (Grease Pencil)</span>
+<a href="../../introduction.html">Editors introduction</a>
+<a href="../../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../topbar-menus.html">Topbar menus</a>
+<a class="is-current" style="padding-left:2.5rem" href="edit-menu.html">Edit menu</a>
+<a style="padding-left:2.5rem" href="file-menu.html">File menu</a>
+<a style="padding-left:2.5rem" href="help-menu.html">Help menu</a>
+<a style="padding-left:2.5rem" href="render-menu.html">Render menu</a>
+<a style="padding-left:2.5rem" href="window-menu.html">Window menu</a>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Topbar and Statusbar › Topbar menus › Edit menu</div><h1 class="pv-title">Edit menu</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 6 min read</span></div><article class="ui-doc-body"><p>Edit Menu</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/edit-menu.png" alt="Edit menu" loading="lazy"></figure>
+<h2 id="undo">Undo</h2>
+<p>Reverts the last step.</p>
+<p>Note. Bforartists uses two separated histories for the Object Mode and the Edit Mode. Means when you leave the Edit mode then you will loose the undo steps in the edit mode.</p>
+<h2 id="redo">Redo</h2>
+<p>Rolls back your last Undo action.</p>
+<h2 id="undo-history">Undo History</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/undo-history.png" alt="Undo History" loading="lazy"></figure>
+<p>The Undo History is a list of the last operations. Here you can roll back to a specific step.</p>
+<p>Note that this Undo History is a session history, and does not save to the Blend file.</p>
+<h2 id="repeat-last">Repeat Last</h2>
+<p>Repeat last repeats the last operation. For example, when you have moved an object by 5 in X, then it moves the object by 5 in X with every repeat last step.</p>
+<h2 id="repeat-history">Repeat History</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/repeat-history.png" alt="Repeat History" loading="lazy"></figure>
+<p>Repeat History calls a menu with the last actions where yon can choose an action to be repeated.</p>
+<h2 id="adjust-last-operation">Adjust Last Operation</h2>
+<figure><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/adjust-last-operation.png" alt="Adjust Last Operation" loading="lazy"></figure>
+<p>Some operations have settings, and can be further tweaked. It's the Blender ass forward concept for setting up an operation. In other software you set up an operation and perform it then with this settings. In Blender you first perform the operation, and tweak its settings afterwards. At least sometimes, this concept is not consistent. Bforartists is a fork of Blender. And so we have to live with this concept too.</p>
+<p>For example, when you create a primitive, then you may want to adjust the size, or tick options like generate UV's at creation. This is done in the Last Operator panel. This Last Operator Panel is usually down left in the view.</p>
+<p>Note that when you perform another operation, like moving the cube after creation, then the last operation content for creation is gone. It will now display the last operation content for the transform operation.</p>
+<h2 id="menu-search">Menu search</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/menu-search.png" alt="Menu search" loading="lazy"></figure>
+<p>Lists the available menus.</p>
+<h2 id="operator-search">Operator Search</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/operator-search.png" alt="Operator Search" loading="lazy"></figure>
+<p>This menu item calls a search menu where you can search through all available operators, and perform them if needed. Think of it as one gigantic searchable drop down menu that contains everything available.</p>
+<p>Even operators that have no menu entries are listed. Which is useful for scripting purposes, when you want to perform a script operation, but don't have a menu button (yet).</p>
+<p>You can navigate with the mouse or with arrow up and down buttons. Performing an operator can be done by clicking at it or by hitting enter.</p>
+<p>Note that this search just lists the old traditional operators from before Blender 2.80. Not the ones in the Tool Shelf, which is a completely independent tool system.</p>
+<h2 id="rename-active-item">Rename active Item</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/rename-active-item.png" alt="Rename active Item" loading="lazy"></figure>
+<p>Allows you to rename the currently active item. A rename dialog will pop up where you can type in a new name for the current item. You can have more than one item selected. Just the active item gets renamed.</p>
+<h2 id="batch-rename">Batch Rename</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/batch-rename.png" alt="Batch Rename" loading="lazy"></figure>
+<p>Allows you to rename more than one item or parts of the name at once. It will open a rename dialog with various settings.</p>
+<h3 id="add-remove-operator">Add / Remove Operator</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/add-remove-operator.png" alt="Add / Remove Operator" loading="lazy"><figcaption>Add / Remove Operator</figcaption></figure>
+<p>This allows you to add more than one operator and method. And here you can remove the operators too.</p>
+<h3 id="data-source">Data Source</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/data-source.png" alt="Data Source" loading="lazy"></figure>
+<p>Rename just the selected objects, or all objects.</p>
+<h3 id="data-type">Data Type</h3>
+<p>Choose the data type that you want to process.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Some of the data types require to be selected and processed from within the Outliner Editor, since elsewhere you can only select one at a time.</p></div>
+<h3 id="type">Type</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/type.png" alt="Type" loading="lazy"></figure>
+<p>Choose the operation method. The content of the panel will change with the different types.</p>
+<h4 id="find-replace">Find / Replace</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/find-replace.png" alt="Find / Replace" loading="lazy"></figure>
+<p>Find and replace names in the chosen objects.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Find</td>
+<td>The string that you want to modify.</td>
+</tr>
+<tr>
+<td>Replace</td>
+<td>The replacement.</td>
+</tr>
+<tr>
+<td>Case Sensitive</td>
+<td>Operate case sensitive, or handle small and big letters as equal.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set Name</td>
+<td>Set name of the chosen objects. · <strong>Method</strong>: Set the method. Sets the name new. Sets a number as a prefix Or Sets a number as a suffix. · <strong>Name</strong>: The name to set.</td>
+</tr>
+<tr>
+<td>Strip Characters</td>
+<td>Strip characters in the names of the chosen objects. · <strong>Characters</strong>: What type of characters to change. · <strong>Strip From</strong>: To strip from the start or to strip from the end.</td>
+</tr>
+<tr>
+<td>Change Case</td>
+<td><strong>Convert to</strong>: Change the string to upper case, lower case or title case.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ok">OK</h3>
+<p>Accept the settings and apply the batch rename operation.</p>
+<h2 id="install-application-templates">Install Application Templates</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/install-application-templates.png" alt="Install Application Templates" loading="lazy"></figure>
+<p>Load a new application template.</p>
+<p>Application templates is a predefined set of workspaces with its own setup. It can contain its own layout, theming, its own startup file, its own add on set and scripts, a own key map and own lighting, and its own User Preferences.</p>
+<p>Bforartists comes with six internal application templates already. Have a look at the &quot;new&quot; menu item in the file menu. Clicking at one of the menu items creates in fact a new scene by using one of the existing application templates.</p>
+<h3 id="how-to-create-an-application-template">How to create an application template</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/how-to-create-an-application-template.png" alt="How to create an application template" loading="lazy"><figcaption>How to create an application template</figcaption></figure>
+<p>An application template is basically a zip file that contains a startup.blend, a userpref.blend, a splash.png and a <code>__init__.py</code> file that defines this all as an application template.</p>
+<p>startup.blend and userpref.blend can be created in the Edit menu. So tweak everything to your needs, and save the startup file.</p>
+<p>At Windows you will find them in the appdata directory in the Bforartists folder.</p>
+<p>At Linux it's in /home/yourusername/.config/bforartists/2.80/config/</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/how-to-create-an-application-template-2.png" alt="How to create an application template" loading="lazy"><figcaption>How to create an application template</figcaption></figure>
+<p>Copy those two files, startup.blend and userpref.blend, and throw them into a folder where you want to build the application template in. Rename this folder to AT_01, or to whatever name you want it to use.</p>
+<p>Next create a png image as a splash screen for your template, and save it as splash.png into the AT_01 folder. The required size is 501x250. Everything else will throw an error, and you won't be able to see the new splash. You can alternatively also create a splashx2.png file in double size. This is for hi dpi monitors.</p>
+<p>The required <code>__init__.py</code> file is a python file with a def register and a def unregister.</p>
+<p>def register():</p>
+<p>print(Registering application template : <code>{0}.format(__name__</code>)</p>
+<p>def unregister():</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/how-to-create-an-application-template-3.png" alt="How to create an application template" loading="lazy"><figcaption>How to create an application template</figcaption></figure>
+<p>print(Unregistering application template : <code>{0}.format(__name__</code>)</p>
+<p>So copy over this text, and save this file as <code>__init__.py</code> in the AT_01 folder</p>
+<p>We should now have four files in the AT_01 folder. Zip the AT_01 folder. The template is finished for installing.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/how-to-create-an-application-template-4.png" alt="How to create an application template" loading="lazy"><figcaption>How to create an application template</figcaption></figure>
+<p>But as a last step, and before you install the template, remove the startup.blend and userpref.blend that we have created to build the application template from the config directory, to have a clean environment.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/how-to-create-an-application-template-5.png" alt="How to create an application template" loading="lazy"><figcaption>How to create an application template</figcaption></figure>
+<p>Once installed you will find the new application template in the New menu.</p>
+<p>To remove an application template you need to remove its data in the config folder. There is no functionality to uninstall it.</p>
+<h2 id="save-startup-file">Save Startup File</h2>
+<p>Saves a startup.blend with the current configuration.</p>
+<p>A startup.blend stores layout informations. Editor layouts, default values, if a panel is open or closed, etc. .</p>
+<h2 id="load-factory-settings">Load Factory Settings</h2>
+<p>Resets Bforartists into a fresh installed state. All customer modifications, like activated addons, changes at the layout, etc. will be ignored.</p>
+<h2 id="open-preferences-folder">Open Preferences Folder</h2>
+<p>Opens the folder in which the Bforartists settings and addons are stored.</p>
+<h2 id="preferences">Preferences</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/preferences.png" alt="Preferences" loading="lazy"></figure>
+<p>Opens the Preferences window. Adjust various settings.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fmain/collection/docs/edit/docs2%2Fcontent%2Feditors%2Ftopbar-and-statusbar%2Ftopbar-menus%2Fedit-menu.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/main/docs2/content/editors/topbar-and-statusbar/topbar-menus/edit-menu.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#undo">Undo</a><a class="h2" href="#redo">Redo</a><a class="h2" href="#undo-history">Undo History</a><a class="h2" href="#repeat-last">Repeat Last</a><a class="h2" href="#repeat-history">Repeat History</a><a class="h2" href="#adjust-last-operation">Adjust Last Operation</a><a class="h2" href="#menu-search">Menu search</a><a class="h2" href="#operator-search">Operator Search</a><a class="h2" href="#rename-active-item">Rename active Item</a><a class="h2" href="#batch-rename">Batch Rename</a><a class="h3" href="#add-remove-operator">Add / Remove Operator</a><a class="h3" href="#data-source">Data Source</a><a class="h3" href="#data-type">Data Type</a><a class="h3" href="#type">Type</a><a class="h3" href="#ok">OK</a><a class="h2" href="#install-application-templates">Install Application Templates</a><a class="h3" href="#how-to-create-an-application-template">How to create an application template</a><a class="h2" href="#save-startup-file">Save Startup File</a><a class="h2" href="#load-factory-settings">Load Factory Settings</a><a class="h2" href="#open-preferences-folder">Open Preferences Folder</a><a class="h2" href="#preferences">Preferences</a></aside></div></body></html>

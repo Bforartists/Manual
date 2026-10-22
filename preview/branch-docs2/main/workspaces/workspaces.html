@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Workspaces · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/main · <code>docs2/main</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<a class="is-current" href="workspaces.html">Workspaces</a>
+<h4>Editors</h4>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<span>Modifiers tab</span>
+<span style="padding-left:1.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Color modifiers (Grease Pencil)</span>
+<a href="../editors/introduction.html">Editors introduction</a>
+<a href="../editors/topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../editors/topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:2.5rem" href="../editors/topbar-and-statusbar/topbar-menus/edit-menu.html">Edit menu</a>
+<a style="padding-left:2.5rem" href="../editors/topbar-and-statusbar/topbar-menus/file-menu.html">File menu</a>
+<a style="padding-left:2.5rem" href="../editors/topbar-and-statusbar/topbar-menus/help-menu.html">Help menu</a>
+<a style="padding-left:2.5rem" href="../editors/topbar-and-statusbar/topbar-menus/render-menu.html">Render menu</a>
+<a style="padding-left:2.5rem" href="../editors/topbar-and-statusbar/topbar-menus/window-menu.html">Window menu</a>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Workspaces › Workspaces</div><h1 class="pv-title">Workspaces</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 10 min read</span></div><article class="ui-doc-body"><h2 id="introduction">Introduction</h2>
+<figure><img src="../docs2/images/workspaces/workspaces/introduction.png" alt="Introduction" loading="lazy"></figure>
+<p>A Workspace is a layout with different editors. For example, in most workspaces you have a 3d view editor, a outliner and a properties editor. It includes Top Bar and Footer. And every workspace can have some specific settings. The Sculpting Workspace starts for example in Sculpt mode. And not in Edit Mode like the default workspace.</p>
+<p>To switch between the workspaces simply click at the tabs.</p>
+<p>The chapter tabs and default workspaces is explained in the chapter Topbar. It is menu functionality. And menu functionality gets explained where the menu is.</p>
+<p>This chapter here is about the general functionality of workspaces.</p>
+<h2 id="modifying-workspaces">Modifying Workspaces</h2>
+<h3 id="resizing-editor-windows">Resizing Editor Windows</h3>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/resizing-editor-windows.png" alt="Resizing Editor Windows" loading="lazy"></figure>
+<p>Move the mouse over a border between the editors. The mouse cursor will turn into a double arrow. Drag the arrow around and the editor will resize with your moving mouse.</p>
+<p>In the Default layout there are two editors that are collapsed to just show the menu. The menu bar at the top is an own editor. The Info editor. You can drag it down to reveal a text field. Here Bforartists displays all the former actions as strings. When you create a primitive for example, then it displays a string with the python command for it.</p>
+<figure><img src="../docs2/images/workspaces/workspaces/resizing-editor-windows-2.png" alt="Resizing Editor Windows" loading="lazy"></figure>
+<p>The other collapsed editor is at the bottom. The timeline.</p>
+<h3 id="splitting-editor-windows">Splitting Editor Windows</h3>
+<p>When you move the mouse over the upper corner of an editor window, then the mouse pointer turns into a white cross.</p>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/splitting-editor-windows.png" alt="Splitting Editor Windows" loading="lazy"></figure>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/splitting-editor-windows-2.png" alt="Splitting Editor Windows" loading="lazy"></figure>
+<p>When you click and drag the mouse inwards of the current editor, then the editor splits up. You open a second 3D view for example.</p>
+<h3 id="unioning-editor-windows">Unioning Editor Windows</h3>
+<figure><img src="../docs2/images/workspaces/workspaces/unioning-editor-windows.png" alt="Unioning Editor Windows" loading="lazy"></figure>
+<p>The method is nearly the same than with splitting the editor windows. When you move the mouse over the upper corner of an editor window, then the mouse pointer turns into a white cross.</p>
+<p>When you click and drag the mouse outwards of the current editor, then the editor unions with the neighbor editor. Note that this just works when they are in one row, horizontally or vertically.</p>
+<h3 id="swapping-contents">Swapping Contents</h3>
+<p>You can swap the contents between two editors with clicking at the corner area, holding Ctrl, and drag into the target editor. The mouse pointer will turn into a swap icon. When you release the mouse the two editors will swap their positions.</p>
+<figure><img src="../docs2/images/workspaces/workspaces/swapping-contents.png" alt="Swapping Contents" loading="lazy"></figure>
+<figure><img src="../docs2/images/workspaces/workspaces/swapping-contents-2.png" alt="Swapping Contents" loading="lazy"></figure>
+<h3 id="make-editor-window-floating">Make Editor Window floating</h3>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/make-editor-window-floating.png" alt="Make Editor Window floating" loading="lazy"><figcaption>Make Editor Window floating</figcaption></figure>
+<p>When you move the mouse over the upper corner of an editor window, then the mouse pointer turns into a white cross.</p>
+<p>Hold down Shift, and drag the mouse. The editor will detach from the Blender surface. This is useful for a multi monitor setup for example. Now you can place this editor at Monitor 2.</p>
+<p>Note that there is no way to reintegrate this floating editor window back into the Blender UI once it is detached. You have to close it.</p>
+<h2 id="change-editor-type">Change Editor Type</h2>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/change-editor-type.png" alt="Change Editor Type" loading="lazy"></figure>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/change-editor-type-2.png" alt="Change Editor Type" loading="lazy"></figure>
+<p>There is a Editor Type menu in every header. This menu is usually hidden in the default layouts. It can be revealed by either splitting the editor window. Or in the right click menu in the header. Hide editortype menu. See next point.</p>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/change-editor-type-3.png" alt="Change Editor Type" loading="lazy"></figure>
+<p>When you click at this button then a menu with all available editor types opens up. And you can change the current editor to another editor type.</p>
+<h2 id="show-hide-the-editor-type-menu">Show / Hide the editor type menu</h2>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/change-editor-type-2.png" alt="Show / Hide the editor type menu" loading="lazy"><figcaption>Show / Hide the editor type menu</figcaption></figure>
+<p>You might have noticed that the editor type menu is not available in the editors of the standard layouts. This is to reduce visual noise and to free some UI space.</p>
+<p>You can show and hide this editor type menu. To do so right click at an empty space somewhere at the menu bar of an editor. You will see a menu now. Check or uncheck the menu item Hide Editortype Menu to show or hide the Editor Type menu.</p>
+<h2 id="collapse-menus">Collapse Menus</h2>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/collapse-menus.png" alt="Collapse Menus" loading="lazy"></figure>
+<p>The text menus can be collapsed to free some UI space. Right click at an empty space somewhere at the menu bar of an editor. You will see a menu now. Choose if you want to display the text menu collapsed or expanded.</p>
+<h2 id="resize-tool-shelf-and-properties-content">Resize Tool Shelf and Properties content</h2>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/resize-tool-shelf-and-properties-content.png" alt="Resize Tool Shelf and Properties content" loading="lazy"><figcaption>Resize Tool Shelf and Properties content</figcaption></figure>
+<p>You can resize the Tool Shelf content and the Properties Sidebar content. This means that you can zoom in or out. This trick also works in the Properties Editor.</p>
+<p>Move the mouse over the upper region of the Tool Shelf.<br />
+Hold down Ctrl key<br />
+Click with Middle Mouse button. The mouse pointer will turn into two white triangles.</p>
+<p>Now drag up or down to resize the area content</p>
+<p>OR</p>
+<p>Move the mouse over the upper region of the Tool Shelf.<br />
+Simply press Numpad + or Numpad -</p>
+<p>To reset the area content to default scale move the mouse over the area and press Home key ( german keyboard layout Pos 1)</p>
+<h2 id="create-new-workspace">Create new Workspace</h2>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/create-new-workspace.png" alt="Create new Workspace" loading="lazy"></figure>
+<p>To create a new workspace, simply click at the + sign at the of the workspaces, a menu will popup for the user to choose what new workspace they want.</p>
+<p>Once you choose a workspace, it will add it at the end of all other tabs and immediantly switches to it.</p>
+<p>The name will be something like mycurrentworkspace.001</p>
+<p>To rename the new layout, double click at the name. The text becomes editable, now you can start to edit your workspace and its settings.</p>
+<h2 id="workspace-settings">Workspace Settings</h2>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/workspace-settings.png" alt="Workspace Settings" loading="lazy"></figure>
+<p>A workspace is not only a set of editor windows. In the Properties editor you can also find some workspace specific settings.</p>
+<p>In this settings you can define in what mode the workspace starts. You can exclude addons. And you can add custom properties. Which are basically just values for scripting needs.</p>
+<p>The settings from this panel will load every time you switch to this workspace.</p>
+<h2 id="save-changes-at-the-workspace">Save changes at the Workspace</h2>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/save-changes-at-the-workspace.png" alt="Save changes at the Workspace" loading="lazy"><figcaption>Save changes at the Workspace</figcaption></figure>
+<p>You cannot save new workspaces or modifications at an existing workspace directly. To save modifications at an existing workspace you have to save the Startup File. This menu item can be found in the File menu.</p>
+<p>Once saved you will find this new workspace also in the add workspace menu under your template.</p>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/save-changes-at-the-workspace-2.png" alt="Save changes at the Workspace" loading="lazy"><figcaption>Save changes at the Workspace</figcaption></figure>
+<p>When you are in the default application template then this settings will save the new workspace to the defaults.</p>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/save-changes-at-the-workspace-3.png" alt="Save changes at the Workspace" loading="lazy"><figcaption>Save changes at the Workspace</figcaption></figure>
+<p>When you are in one of the other application templates though, then you will save the new workspace to the template. Same counts for the factory settings. You will then load the factory settings from the current active application template.</p>
+<p>The menu entry will also look a bit different then. You will see a label that gives you a hint about the current application template in use. In this case the sculpting application template.</p>
+<p>Note that this also affects other changes. Bforartists will for example now start with the currently active layout. And it will also preserve the changes that you did at other layouts before saving.</p>
+<p>So when you work at a layout be sure that you don't accidentally do changes at other areas. And before you save the startup file you should switch back to the layout with which you want to start Bforartists.</p>
+<h2 id="workspace-context-menu">Workspace Context Menu</h2>
+<h3 id="duplicate">Duplicate</h3>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/duplicate.png" alt="Duplicate" loading="lazy"></figure>
+<p>Creates a copy of the current workspace, including its editor layout and active tools.<br />
+Useful for experimenting with variations without losing the original setup.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete</td>
+<td>Workspace can also be deleted. To do so right click at the tab that you want to delete, and choose delete in the menu. Note that you can remove your own created workspaces this way. But the default workspaces will remain in the menus. They will just vanish from the tabs. These workspaces are protected so that you cannot remove them completely.</td>
+</tr>
+<tr>
+<td>Reorder to Front</td>
+<td>Moves the selected workspace tab to the beginning of the workspace list (far left).   Ideal for prioritizing frequently used layouts.</td>
+</tr>
+<tr>
+<td>Reorder to Back</td>
+<td>Moves the selected workspace tab to the end of the list (far right).   Useful for archiving less-used layouts.</td>
+</tr>
+<tr>
+<td>Previous Workspace</td>
+<td>Switches to the workspace tab immediately to the left of the current one.   Shortcut-friendly navigation for rapid layout switching.</td>
+</tr>
+<tr>
+<td>Next Workspace</td>
+<td>Switches to the workspace tab immediately to the right.   Complements the previous operator for fluid tab cycling.</td>
+</tr>
+<tr>
+<td>Delete Other Workspaces</td>
+<td>Deletes all workspaces <strong>except</strong> the currently selected one.   Great for cleaning up clutter or preparing a minimal layout for export or sharing.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="load-workspace-layout-from-blend-files">Load Workspace layout from Blend Files</h2>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/load-workspace-layout-from-blend-files.png" alt="Load Workspace layout from Blend Files" loading="lazy"><figcaption>Load Workspace layout from Blend Files</figcaption></figure>
+<p>Every blend file saves also the layout in which the scene is at the point of saving. Means you can load a layout from the blend file.</p>
+<p>This feature is off by default since it is usually unwanted behavior to load layouts from other people.</p>
+<p>You can turn it on in the User Preferences in the File tab. Tick the menu item Load UI. Then save User Settings.</p>
+<p>Note that now all Blend files that you open will load the workspace layout that the Blend files are saved with.</p>
+<figure class="is-right"><img src="../docs2/images/workspaces/workspaces/load-workspace-layout-from-blend-files-2.png" alt="Load Workspace layout from Blend Files" loading="lazy"><figcaption>Load Workspace layout from Blend Files</figcaption></figure>
+<p>You can also do this at a file by file base. The file browser allows you to load a blend file with the saved layout. This setting can be found down left in the file browser.</p>
+<h2 id="standard-workspaces">Standard Workspaces</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>This layout is for general 3D work. Here you work at your 3D scene. Here happens modeling, texturing, etc. . It is also the workspace with which Bforartists opens up. It contains a 3D View editor, an Info editor, a Timeline editor, a Outliner editor and a Properties editor. It starts in Object Mode.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The UV Editing is made for texturing and UV mapping. It contains an Info Editor, a UV Editor and a 3D View editor. The 3D View starts in Edit mode.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-2.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Same as the Default workspace. It starts in Object Mode.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-3.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The workspace to work with the geometry nodes. Basic 3d view with the geometry nodes editor plus the spreadsheet editor to have access to the mesh data. A timeline at the bottom. And the usual outliner and properties editor.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-4.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>This workspace provides you with a layout that is optimized for Animation tasks. It contains two 3D View editors, an Info Editor, a Outliner Editor, a Properties Editor, a Timeline Editor, a Dope Sheet Editor.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-5.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The texture painting workspace is made to do texture painting work. It contains an Info Editor, a Image Editor and a 3D View editor. The 3D View starts in Edit mode.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-6.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The workspace to do all the shader and material work. It comes with a file browser, an image editor, the 3D view in a special view look setup, the shader editor, outliner and properties editor.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-7.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A workspace for the rendering.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-8.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>This workspace is dedicated to sculpting. It starts in Sculpt Mode in case you have an object in the scene.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-9.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The workspace to do compositing and post processing.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-10.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The scripting workspace gives you a layout where you can write Python code. It contains an Info editor, a 3D View editor, a Console editor, a Text editor, a Outliner Editor and a Properties Editor.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-11.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A workspace to work with the grease pencil and to create 2D animation.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-12.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A workspace to work with the grease pencil and to create 2D animation. The 3D view is maximized.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-13.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A workspace for the VFX workflow, to mask content.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-14.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A workspace for the VFX workflow. The Motion tracking layout.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-15.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A workspace to edit videos.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-16.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A workspace that provides you the asset browser.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-17.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A 3d sequencer workspace.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-18.png" alt="Standard Workspaces" /></td>
+</tr>
+<tr>
+<td>A video editing workspace especially made for color balance.</td>
+<td><img src="../docs2/images/workspaces/workspaces/standard-workspaces-18.png" alt="Standard Workspaces" /></td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fmain/collection/docs/edit/docs2%2Fcontent%2Fworkspaces%2Fworkspaces.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/main/docs2/content/workspaces/workspaces.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#introduction">Introduction</a><a class="h2" href="#modifying-workspaces">Modifying Workspaces</a><a class="h3" href="#resizing-editor-windows">Resizing Editor Windows</a><a class="h3" href="#splitting-editor-windows">Splitting Editor Windows</a><a class="h3" href="#unioning-editor-windows">Unioning Editor Windows</a><a class="h3" href="#swapping-contents">Swapping Contents</a><a class="h3" href="#make-editor-window-floating">Make Editor Window floating</a><a class="h2" href="#change-editor-type">Change Editor Type</a><a class="h2" href="#show-hide-the-editor-type-menu">Show / Hide the editor type menu</a><a class="h2" href="#collapse-menus">Collapse Menus</a><a class="h2" href="#resize-tool-shelf-and-properties-content">Resize Tool Shelf and Properties content</a><a class="h2" href="#create-new-workspace">Create new Workspace</a><a class="h2" href="#workspace-settings">Workspace Settings</a><a class="h2" href="#save-changes-at-the-workspace">Save changes at the Workspace</a><a class="h2" href="#workspace-context-menu">Workspace Context Menu</a><a class="h3" href="#duplicate">Duplicate</a><a class="h2" href="#load-workspace-layout-from-blend-files">Load Workspace layout from Blend Files</a><a class="h2" href="#standard-workspaces">Standard Workspaces</a></aside></div></body></html>
