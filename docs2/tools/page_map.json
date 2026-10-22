@@ -12401,7 +12401,7 @@
    ],
    "images": "editors/preferences",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "30",
    "parts": [
     {
@@ -12425,7 +12425,7 @@
    ],
    "images": "advanced/advanced-command-line",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "32",
    "parts": [
     {
@@ -12448,7 +12448,7 @@
    ],
    "images": "advanced/advanced-scripting-extending-bforartists",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "33",
    "parts": [
     {
@@ -12471,7 +12471,7 @@
    ],
    "images": "advanced/advanced-working-limits",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "34",
    "parts": [
     {

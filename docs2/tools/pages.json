@@ -9950,6 +9950,74 @@
      "select": "*"
     }
    ]
+  },
+  {
+   "id": "advanced.advanced-command-line",
+   "file": "content/advanced/advanced-command-line.md",
+   "title": "Advanced - Command Line",
+   "section": "advanced",
+   "path": [
+    "Advanced",
+    "Advanced - Command Line"
+   ],
+   "images": "advanced/advanced-command-line",
+   "parts": [
+    {
+     "src": "32 Advanced - Command Line",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "advanced.advanced-scripting-extending-bforartists",
+   "file": "content/advanced/advanced-scripting-extending-bforartists.md",
+   "title": "Advanced - Scripting & Extending Bforartists",
+   "section": "advanced",
+   "path": [
+    "Advanced",
+    "Advanced - Scripting & Extending Bforartists"
+   ],
+   "images": "advanced/advanced-scripting-extending-bforartists",
+   "parts": [
+    {
+     "src": "33 Advanced - Scripting & Extending Bforartists",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "advanced.advanced-working-limits",
+   "file": "content/advanced/advanced-working-limits.md",
+   "title": "Advanced - Working Limits",
+   "section": "advanced",
+   "path": [
+    "Advanced",
+    "Advanced - Working Limits"
+   ],
+   "images": "advanced/advanced-working-limits",
+   "parts": [
+    {
+     "src": "34 Advanced - Working Limits",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "advanced.troubleshooting",
+   "file": "content/advanced/troubleshooting.md",
+   "title": "Troubleshooting",
+   "section": "advanced",
+   "path": [
+    "Advanced",
+    "Troubleshooting"
+   ],
+   "images": "advanced/troubleshooting",
+   "parts": [
+    {
+     "src": "36 Troubleshooting",
+     "select": "*"
+    }
+   ]
   }
  ],
  "snippets": [
