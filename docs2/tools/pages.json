@@ -2971,6 +2971,547 @@
      "select": "*"
     }
    ]
+  },
+  {
+   "id": "editors.image-editor",
+   "file": "content/editors/image-editor/index.md",
+   "title": "Image Editor",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor"
+   ],
+   "images": "editors/image-editor",
+   "parts": [
+    {
+     "src": "8 Editors - Image Editor",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.header",
+   "file": "content/editors/image-editor/header/index.md",
+   "title": "Header",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Header"
+   ],
+   "images": "editors/image-editor/header",
+   "parts": [
+    {
+     "src": "8.1 Editors - Image Editor - Header",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.header.header-tools-and-options",
+   "file": "content/editors/image-editor/header/header-tools-and-options.md",
+   "title": "Header Tools and Options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Header",
+    "Header Tools and Options"
+   ],
+   "images": "editors/image-editor/header/header-tools-and-options",
+   "parts": [
+    {
+     "src": "8.1.1 Editors - Image Editor - Header - Header Tools and Options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.header.quick-menu",
+   "file": "content/editors/image-editor/header/quick-menu.md",
+   "title": "Quick Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Header",
+    "Quick Menu"
+   ],
+   "images": "editors/image-editor/header/quick-menu",
+   "parts": [
+    {
+     "src": "8.1.2 Editors - Image Editor - Header - Quick Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.header.view-menu",
+   "file": "content/editors/image-editor/header/view-menu.md",
+   "title": "View menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Header",
+    "View menu"
+   ],
+   "images": "editors/image-editor/header/view-menu",
+   "parts": [
+    {
+     "src": "8.1.3 Editors - Image Editor - Header - View menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.header.image-menu",
+   "file": "content/editors/image-editor/header/image-menu.md",
+   "title": "Image menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Header",
+    "Image menu"
+   ],
+   "images": "editors/image-editor/header/image-menu",
+   "parts": [
+    {
+     "src": "8.1.4 Editors - Image Editor - Header - Image menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.header.select-menu",
+   "file": "content/editors/image-editor/header/select-menu.md",
+   "title": "Select menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Header",
+    "Select menu"
+   ],
+   "images": "editors/image-editor/header/select-menu",
+   "parts": [
+    {
+     "src": "8.1.5 Editors - Image Editor - Header - Select menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.header.add-menu",
+   "file": "content/editors/image-editor/header/add-menu.md",
+   "title": "Add menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Header",
+    "Add menu"
+   ],
+   "images": "editors/image-editor/header/add-menu",
+   "parts": [
+    {
+     "src": "8.1.6 Editors - Image Editor - Header - Add menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.header.mask-menu",
+   "file": "content/editors/image-editor/header/mask-menu.md",
+   "title": "Mask menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Header",
+    "Mask menu"
+   ],
+   "images": "editors/image-editor/header/mask-menu",
+   "parts": [
+    {
+     "src": "8.1.7 Editors - Image Editor - Header - Mask menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.tool-shelf",
+   "file": "content/editors/image-editor/tool-shelf.md",
+   "title": "Tool Shelf",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Tool Shelf"
+   ],
+   "images": "editors/image-editor/tool-shelf",
+   "parts": [
+    {
+     "src": "8.2 Editors - Image Editor - Tool Shelf",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.sidebar",
+   "file": "content/editors/image-editor/sidebar/index.md",
+   "title": "Sidebar",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Sidebar"
+   ],
+   "images": "editors/image-editor/sidebar",
+   "parts": [
+    {
+     "src": "8.3 Editors - Image Editor - Sidebar",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.sidebar.tool-tab-in-paint-mode",
+   "file": "content/editors/image-editor/sidebar/tool-tab-in-paint-mode.md",
+   "title": "Tool Tab in Paint Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Sidebar",
+    "Tool Tab in Paint Mode"
+   ],
+   "images": "editors/image-editor/sidebar/tool-tab-in-paint-mode",
+   "parts": [
+    {
+     "src": "8.3.1 Editors - Image Editor - Sidebar - Tool Tab in Paint Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.sidebar.image-tab",
+   "file": "content/editors/image-editor/sidebar/image-tab.md",
+   "title": "Image Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Sidebar",
+    "Image Tab"
+   ],
+   "images": "editors/image-editor/sidebar/image-tab",
+   "parts": [
+    {
+     "src": "8.3.2 Editors - Image Editor - Sidebar - Image Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.sidebar.view-tab",
+   "file": "content/editors/image-editor/sidebar/view-tab.md",
+   "title": "View Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Sidebar",
+    "View Tab"
+   ],
+   "images": "editors/image-editor/sidebar/view-tab",
+   "parts": [
+    {
+     "src": "8.3.3 Editors - Image Editor - Sidebar - View Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.sidebar.scopes-tab",
+   "file": "content/editors/image-editor/sidebar/scopes-tab.md",
+   "title": "Scopes Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Sidebar",
+    "Scopes Tab"
+   ],
+   "images": "editors/image-editor/sidebar/scopes-tab",
+   "parts": [
+    {
+     "src": "8.3.4 Editors - Image Editor - Sidebar - Scopes Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.image-editor.sidebar.mask-tab",
+   "file": "content/editors/image-editor/sidebar/mask-tab.md",
+   "title": "Mask Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Image Editor",
+    "Sidebar",
+    "Mask Tab"
+   ],
+   "images": "editors/image-editor/sidebar/mask-tab",
+   "parts": [
+    {
+     "src": "8.3.5 Editors - Image Editor - Sidebar - Mask Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.uv-editor",
+   "file": "content/editors/uv-editor/index.md",
+   "title": "UV Editor",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "UV Editor"
+   ],
+   "images": "editors/uv-editor",
+   "parts": [
+    {
+     "src": "9 Editors - UV Editor",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.uv-editor.header",
+   "file": "content/editors/uv-editor/header/index.md",
+   "title": "Header",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "UV Editor",
+    "Header"
+   ],
+   "images": "editors/uv-editor/header",
+   "parts": [
+    {
+     "src": "9.1 Editors - UV Editor - Header",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.uv-editor.header.header-tools-and-options",
+   "file": "content/editors/uv-editor/header/header-tools-and-options.md",
+   "title": "Header Tools and Options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "UV Editor",
+    "Header",
+    "Header Tools and Options"
+   ],
+   "images": "editors/uv-editor/header/header-tools-and-options",
+   "parts": [
+    {
+     "src": "9.1.1 Editors - UV Editor - Header - Header Tools and Options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.uv-editor.header.quick-menu",
+   "file": "content/editors/uv-editor/header/quick-menu.md",
+   "title": "Quick Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "UV Editor",
+    "Header",
+    "Quick Menu"
+   ],
+   "images": "editors/uv-editor/header/quick-menu",
+   "parts": [
+    {
+     "src": "9.1.2 Editors - UV Editor - Header - Quick Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.uv-editor.header.view-menu",
+   "file": "content/editors/uv-editor/header/view-menu.md",
+   "title": "View Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "UV Editor",
+    "Header",
+    "View Menu"
+   ],
+   "images": "editors/uv-editor/header/view-menu",
+   "parts": [
+    {
+     "src": "9.1.3 Editors - UV Editor - Header - View Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.uv-editor.header.select-menu",
+   "file": "content/editors/uv-editor/header/select-menu.md",
+   "title": "Select Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "UV Editor",
+    "Header",
+    "Select Menu"
+   ],
+   "images": "editors/uv-editor/header/select-menu",
+   "parts": [
+    {
+     "src": "9.1.4 Editors - UV Editor - Header - Select Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.uv-editor.header.image-menu",
+   "file": "content/editors/uv-editor/header/image-menu.md",
+   "title": "Image Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "UV Editor",
+    "Header",
+    "Image Menu"
+   ],
+   "images": "editors/uv-editor/header/image-menu",
+   "parts": [
+    {
+     "src": "9.1.5 Editors - UV Editor - Header - Image Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.uv-editor.header.uv-menu",
+   "file": "content/editors/uv-editor/header/uv-menu.md",
+   "title": "UV menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "UV Editor",
+    "Header",
+    "UV menu"
+   ],
+   "images": "editors/uv-editor/header/uv-menu",
+   "parts": [
+    {
+     "src": "9.1.6 Editors - UV Editor - Header - UV menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.uv-editor.tool-shelf",
+   "file": "content/editors/uv-editor/tool-shelf.md",
+   "title": "Tool Shelf",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "UV Editor",
+    "Tool Shelf"
+   ],
+   "images": "editors/uv-editor/tool-shelf",
+   "parts": [
+    {
+     "src": "9.2 Editors - UV Editor - Tool Shelf",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.uv-editor.sidebar",
+   "file": "content/editors/uv-editor/sidebar/index.md",
+   "title": "Sidebar",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "UV Editor",
+    "Sidebar"
+   ],
+   "images": "editors/uv-editor/sidebar",
+   "parts": [
+    {
+     "src": "9.3 Editors - UV Editor - Sidebar",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.uv-editor.sidebar.image-tab",
+   "file": "content/editors/uv-editor/sidebar/image-tab.md",
+   "title": "Image Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "UV Editor",
+    "Sidebar",
+    "Image Tab"
+   ],
+   "images": "editors/uv-editor/sidebar/image-tab",
+   "parts": [
+    {
+     "src": "9.3.1 Editors - UV Editor - Sidebar - Image Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.uv-editor.sidebar.tool-tab",
+   "file": "content/editors/uv-editor/sidebar/tool-tab.md",
+   "title": "Tool Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "UV Editor",
+    "Sidebar",
+    "Tool Tab"
+   ],
+   "images": "editors/uv-editor/sidebar/tool-tab",
+   "parts": [
+    {
+     "src": "9.3.2 Editors - UV Editor - Sidebar - Tool Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.uv-editor.sidebar.view-tab",
+   "file": "content/editors/uv-editor/sidebar/view-tab.md",
+   "title": "View Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "UV Editor",
+    "Sidebar",
+    "View Tab"
+   ],
+   "images": "editors/uv-editor/sidebar/view-tab",
+   "parts": [
+    {
+     "src": "9.3.3 Editors - UV Editor - Sidebar - View Tab",
+     "select": "*"
+    }
+   ]
   }
  ],
  "snippets": [
