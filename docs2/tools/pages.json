@@ -10018,6 +10018,95 @@
      "select": "*"
     }
    ]
+  },
+  {
+   "id": "extensions.bforartists-extensions",
+   "file": "content/extensions/bforartists-extensions/index.md",
+   "title": "Bforartists Extensions",
+   "section": "extensions",
+   "path": [
+    "Extensions",
+    "Bforartists Extensions"
+   ],
+   "images": "extensions/bforartists-extensions",
+   "parts": [
+    {
+     "src": "35 Bforartists Extensions",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "extensions.bforartists-extensions.core-extension-brush-panels",
+   "file": "content/extensions/bforartists-extensions/core-extension-brush-panels.md",
+   "title": "Core Extension - Brush Panels",
+   "section": "extensions",
+   "path": [
+    "Extensions",
+    "Bforartists Extensions",
+    "Core Extension - Brush Panels"
+   ],
+   "images": "extensions/bforartists-extensions/core-extension-brush-panels",
+   "parts": [
+    {
+     "src": "35.1 Core Extension - Brush Panels",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "extensions.bforartists-extensions.core-extension-presentation-slider",
+   "file": "content/extensions/bforartists-extensions/core-extension-presentation-slider.md",
+   "title": "Core Extension - Presentation Slider",
+   "section": "extensions",
+   "path": [
+    "Extensions",
+    "Bforartists Extensions",
+    "Core Extension - Presentation Slider"
+   ],
+   "images": "extensions/bforartists-extensions/core-extension-presentation-slider",
+   "parts": [
+    {
+     "src": "35.2 Core Extension- Presentation Slider",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "extensions.bforartists-extensions.core-extension-3d-sequencer",
+   "file": "content/extensions/bforartists-extensions/core-extension-3d-sequencer.md",
+   "title": "Core Extension- 3D Sequencer",
+   "section": "extensions",
+   "path": [
+    "Extensions",
+    "Bforartists Extensions",
+    "Core Extension- 3D Sequencer"
+   ],
+   "images": "extensions/bforartists-extensions/core-extension-3d-sequencer",
+   "parts": [
+    {
+     "src": "35.3 Core Extension- 3D Sequencer",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "extensions.bforartists-extensions.core-extension-power-user-tools",
+   "file": "content/extensions/bforartists-extensions/core-extension-power-user-tools.md",
+   "title": "Core Extension - Power User Tools",
+   "section": "extensions",
+   "path": [
+    "Extensions",
+    "Bforartists Extensions",
+    "Core Extension - Power User Tools"
+   ],
+   "images": "extensions/bforartists-extensions/core-extension-power-user-tools",
+   "parts": [
+    {
+     "src": "35.4 Core Extension - Power User Tools",
+     "select": "*"
+    }
+   ]
   }
  ],
  "snippets": [
