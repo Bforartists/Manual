@@ -1,0 +1,7 @@
+{
+ "pages": {
+  "docs2/content/doc-kit/my-first-chapter.md": "doc-kit/my-first-chapter.html",
+  "docs2/content/my-first-chapter/index.md": "my-first-chapter.html"
+ },
+ "images": 0
+}
