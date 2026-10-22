@@ -1,5 +1,5 @@
-# Sidebar order and icons. Generated from tools/pages.json by tools/make_nav.py;
-# icons you set here are kept on the next run.
+# Sidebar order and icons. Written by tools/make_nav.py: pages follow the original chapter
+# numbers (getting-started and interface keep their hand-made order); icons set here are kept.
 
 - section: getting-started
   title: "Getting Started"
@@ -26,14 +26,424 @@
     - { id: "interface.sidebar", title: "Sidebar", file: "content/interface/components/sidebar.md", icon: null }
     - { id: "interface.input-devices", title: "Input devices", file: "content/interface/input-devices.md", icon: null }
 
+- section: workspaces
+  title: "Workspaces"
+  slug: workspaces
+  pages:
+    - { id: "workspaces.workspaces", title: "Workspaces", file: "content/workspaces/workspaces.md", icon: null }
+
 - section: editors
   title: "Editors"
   slug: editors
   pages:
+    - { id: "editors.topbar-and-statusbar", title: "Topbar and Statusbar", file: "content/editors/topbar-and-statusbar/index.md", icon: null }
+    - { id: "editors.topbar-and-statusbar.topbar-menus.file-menu", title: "File menu", file: "content/editors/topbar-and-statusbar/topbar-menus/file-menu.md", icon: null }
+    - { id: "editors.topbar-and-statusbar.topbar-menus.edit-menu", title: "Edit menu", file: "content/editors/topbar-and-statusbar/topbar-menus/edit-menu.md", icon: null }
+    - { id: "editors.topbar-and-statusbar.topbar-menus.render-menu", title: "Render menu", file: "content/editors/topbar-and-statusbar/topbar-menus/render-menu.md", icon: null }
+    - { id: "editors.topbar-and-statusbar.topbar-menus.window-menu", title: "Window menu", file: "content/editors/topbar-and-statusbar/topbar-menus/window-menu.md", icon: null }
+    - { id: "editors.topbar-and-statusbar.topbar-menus.help-menu", title: "Help menu", file: "content/editors/topbar-and-statusbar/topbar-menus/help-menu.md", icon: null }
+    - { id: "editors.introduction", title: "Editors introduction", file: "content/editors/introduction.md", icon: null }
+    - { id: "editors.3d-viewport", title: "3D Viewport", file: "content/editors/3d-viewport/index.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.object-mode-object-context-menu", title: "Object mode - Object Context Menu", file: "content/editors/3d-viewport/context-menus/object-mode-object-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.mesh-object-edit-mode-vertex-context-menu", title: "Mesh Object - Edit Mode - Vertex Context Menu", file: "content/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.mesh-object-edit-mode-edge-context-menu", title: "Mesh Object - Edit Mode - Edge Context Menu", file: "content/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.mesh-object-edit-mode-face-context-menu", title: "Mesh Object - Edit Mode - Face Context Menu", file: "content/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.mesh-object-sculpt-mode-brushes-context-menus", title: "Mesh Object - Sculpt Mode - Brushes context menus", file: "content/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.mesh-object-vertex-paint-mode-brushes-context-menus", title: "Mesh Object - Vertex Paint Mode - Brushes context menus", file: "content/editors/3d-viewport/context-menus/mesh-object-vertex-paint-mode-brushes-context-menus.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.mesh-object-weight-paint-mode-brushes-context-menus", title: "Mesh Object - Weight Paint Mode - Brushes context menus", file: "content/editors/3d-viewport/context-menus/mesh-object-weight-paint-mode-brushes-context-menus.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.mesh-object-texture-paint-mode-brushes-context-menus", title: "Mesh Object - Texture Paint Mode - Brushes context menus", file: "content/editors/3d-viewport/context-menus/mesh-object-texture-paint-mode-brushes-context-menus.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.curve-surface-object-edit-mode-curve-context-menus", title: "Curve + Surface Object - Edit Mode - Curve context menus", file: "content/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.metaball-edit-mode-metaball-context-menu", title: "Metaball - Edit Mode - Metaball context menu", file: "content/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.text-edit-mode-text-context-menu", title: "Text - Edit Mode - Text context menu", file: "content/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.grease-pencil-object-edit-mode-point-context-menu", title: "Grease Pencil object - Edit Mode - Point context menu", file: "content/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.grease-pencil-object-edit-mode-stroke-context-menu", title: "Grease Pencil object - Edit Mode - Stroke context menu", file: "content/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.grease-pencil-object-sculpt-mode-brushes-context-menu", title: "Grease Pencil object - Sculpt Mode - Brushes context menu", file: "content/editors/3d-viewport/context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.grease-pencil-object-draw-mode-brushes-context-menu", title: "Grease Pencil object - Draw Mode - Brushes context menu", file: "content/editors/3d-viewport/context-menus/grease-pencil-object-draw-mode-brushes-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.grease-pencil-object-vertex-paint-mode-brushes-context-menu", title: "Grease Pencil object - Vertex Paint Mode - Brushes context menu", file: "content/editors/3d-viewport/context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.grease-pencil-object-weight-paint-mode-brushes-context-menu", title: "Grease Pencil object - Weight Paint Mode - Brushes context menu", file: "content/editors/3d-viewport/context-menus/grease-pencil-object-weight-paint-mode-brushes-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.armature-edit-mode-armature-context-menu", title: "Armature - Edit Mode - Armature context menu", file: "content/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.armature-pose-mode-pose-context-menu", title: "Armature - Pose Mode - Pose context menu", file: "content/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.armature-edit-mode-lattice-context-menu", title: "Armature - Edit Mode - Lattice context menu", file: "content/editors/3d-viewport/context-menus/armature-edit-mode-lattice-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus.hair-curves-edit-mode-curves-context-menu", title: "Hair Curves - Edit Mode - Curves context menu", file: "content/editors/3d-viewport/context-menus/hair-curves-edit-mode-curves-context-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header", title: "Header", file: "content/editors/3d-viewport/header/index.md", icon: null }
+    - { id: "editors.3d-viewport.header.header-tools-and-options", title: "Header tools and Options", file: "content/editors/3d-viewport/header/header-tools-and-options.md", icon: null }
+    - { id: "editors.3d-viewport.header.quick-menu", title: "Quick Menu", file: "content/editors/3d-viewport/header/quick-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.view-menu", title: "View Menu", file: "content/editors/3d-viewport/header/view-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.navigation-menu", title: "Navigation Menu", file: "content/editors/3d-viewport/header/navigation-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.select-menu", title: "Select Menu", file: "content/editors/3d-viewport/header/select-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.add-menu", title: "Add Menu", file: "content/editors/3d-viewport/header/add-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.edit-mode-add-menu", title: "Edit mode - Add menu", file: "content/editors/3d-viewport/header/edit-mode-add-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.object-menu", title: "Object menu", file: "content/editors/3d-viewport/header/object-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.mesh-edit-mode-mesh-menu", title: "Mesh - Edit mode - Mesh menu", file: "content/editors/3d-viewport/header/mesh-edit-mode-mesh-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.mesh-edit-mode-vertex-menu", title: "Mesh - Edit Mode - Vertex Menu", file: "content/editors/3d-viewport/header/mesh-edit-mode-vertex-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.mesh-edit-mode-edge-menu", title: "Mesh - Edit mode - Edge Menu", file: "content/editors/3d-viewport/header/mesh-edit-mode-edge-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.mesh-edit-mode-face-menu", title: "Mesh - Edit mode - Face menu", file: "content/editors/3d-viewport/header/mesh-edit-mode-face-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.mesh-edit-mode-uv-menu", title: "Mesh - Edit mode - UV menu", file: "content/editors/3d-viewport/header/mesh-edit-mode-uv-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.mesh-sculpt-mode-sculpt-menu", title: "Mesh - Sculpt mode - Sculpt menu", file: "content/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.mesh-sculpt-mode-mask-menu", title: "Mesh - Sculpt mode - Mask menu", file: "content/editors/3d-viewport/header/mesh-sculpt-mode-mask-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.mesh-sculpt-mode-face-sets-menu", title: "Mesh - Sculpt mode - Face Sets menu", file: "content/editors/3d-viewport/header/mesh-sculpt-mode-face-sets-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.mesh-vertex-paint-mode-paint-menu", title: "Mesh - Vertex Paint mode - Paint menu", file: "content/editors/3d-viewport/header/mesh-vertex-paint-mode-paint-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.mesh-vertex-paint-mode-brush-menu", title: "Mesh - Vertex Paint mode - Brush menu", file: "content/editors/3d-viewport/header/mesh-vertex-paint-mode-brush-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.mesh-weight-paint-mode-weights-menu", title: "Mesh - Weight Paint mode - Weights menu", file: "content/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.mesh-texture-paint-mode-brush-menu", title: "Mesh - Texture Paint mode - Brush menu", file: "content/editors/3d-viewport/header/mesh-texture-paint-mode-brush-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.curve-edit-mode-curve-menu", title: "Curve - Edit mode - Curve menu", file: "content/editors/3d-viewport/header/curve-edit-mode-curve-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.surface-edit-mode-surface-menu", title: "Surface - Edit mode - Surface menu", file: "content/editors/3d-viewport/header/surface-edit-mode-surface-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.curve-surface-edit-mode-control-points-menu", title: "Curve & Surface - Edit mode - Control points menu", file: "content/editors/3d-viewport/header/curve-surface-edit-mode-control-points-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.curve-surface-edit-mode-segments-menu", title: "Curve & Surface - Edit mode - Segments menu", file: "content/editors/3d-viewport/header/curve-surface-edit-mode-segments-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.metaball-edit-mode-metaball-menu", title: "Metaball - Edit mode - Metaball menu", file: "content/editors/3d-viewport/header/metaball-edit-mode-metaball-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.text-edit-mode-text-menu", title: "Text - Edit mode - Text menu", file: "content/editors/3d-viewport/header/text-edit-mode-text-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.grease-pencil-edit-mode-grease-pencil-menu", title: "Grease Pencil - Edit mode - Grease Pencil menu", file: "content/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.point-cloud-edit-mode-point-cloud-menu", title: "Point Cloud - Edit mode - Point Cloud menu", file: "content/editors/3d-viewport/header/point-cloud-edit-mode-point-cloud-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.grease-pencil-edit-mode-point-menu", title: "Grease Pencil - Edit mode - Point menu", file: "content/editors/3d-viewport/header/grease-pencil-edit-mode-point-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.grease-pencil-edit-mode-stroke-menu", title: "Grease Pencil - Edit mode - Stroke menu", file: "content/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.grease-pencil-draw-mode-draw-menu", title: "Grease Pencil - Draw mode - Draw menu", file: "content/editors/3d-viewport/header/grease-pencil-draw-mode-draw-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.grease-pencil-vertex-paint-mode-paint-menu", title: "Grease Pencil - Vertex Paint mode - Paint menu", file: "content/editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.grease-pencil-weight-paint-mode-weights-menu", title: "Grease Pencil - Weight Paint Mode - Weights Menu", file: "content/editors/3d-viewport/header/grease-pencil-weight-paint-mode-weights-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.armature-edit-mode-armature-menu", title: "Armature - Edit mode - Armature menu", file: "content/editors/3d-viewport/header/armature-edit-mode-armature-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.armature-pose-mode-pose-menu", title: "Armature - Pose mode - Pose menu", file: "content/editors/3d-viewport/header/armature-pose-mode-pose-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.lattice-edit-mode-lattice-menu", title: "Lattice - Edit mode - Lattice menu", file: "content/editors/3d-viewport/header/lattice-edit-mode-lattice-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.particle-particle-mode-particle-menu", title: "Particle - Particle mode - Particle menu", file: "content/editors/3d-viewport/header/particle-particle-mode-particle-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.hair-curve-edit-mode-curves-menu", title: "Hair Curve - Edit mode - Curves menu", file: "content/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.hair-curve-edit-mode-control-points-menu", title: "Hair Curve - Edit mode - Control Points menu", file: "content/editors/3d-viewport/header/hair-curve-edit-mode-control-points-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.hair-curve-edit-mode-segments-menu", title: "Hair Curve - Edit mode - Segments menu", file: "content/editors/3d-viewport/header/hair-curve-edit-mode-segments-menu.md", icon: null }
+    - { id: "editors.3d-viewport.header.hair-curve-sculpt-mode-curves-menu", title: "Hair Curve - Sculpt mode - Curves menu", file: "content/editors/3d-viewport/header/hair-curve-sculpt-mode-curves-menu.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf", title: "Tool Shelf", file: "content/editors/3d-viewport/tool-shelf/index.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.object-mode", title: "Object Mode", file: "content/editors/3d-viewport/tool-shelf/object-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.mesh-edit-mode", title: "Mesh - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/mesh-edit-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.mesh-sculpt-mode", title: "Mesh - Sculpt Mode", file: "content/editors/3d-viewport/tool-shelf/mesh-sculpt-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.mesh-vertex-paint-mode", title: "Mesh - Vertex Paint Mode", file: "content/editors/3d-viewport/tool-shelf/mesh-vertex-paint-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.mesh-weight-paint-mode", title: "Mesh - Weight Paint Mode", file: "content/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.mesh-texture-paint-mode", title: "Mesh - Texture Paint Mode", file: "content/editors/3d-viewport/tool-shelf/mesh-texture-paint-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.mesh-particle-edit-mode", title: "Mesh - Particle Edit Mode", file: "content/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.curve-edit-mode", title: "Curve - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/curve-edit-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.surface-edit-mode", title: "Surface - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/surface-edit-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.metaball-edit-mode", title: "Metaball - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/metaball-edit-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.text-edit-mode", title: "Text - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/text-edit-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.grease-pencil-edit-mode", title: "Grease Pencil - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.grease-pencil-sculpt-mode", title: "Grease Pencil - Sculpt Mode", file: "content/editors/3d-viewport/tool-shelf/grease-pencil-sculpt-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.grease-pencil-draw-mode", title: "Grease Pencil - Draw Mode", file: "content/editors/3d-viewport/tool-shelf/grease-pencil-draw-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.grease-pencil-vertex-paint-mode", title: "Grease Pencil - Vertex Paint Mode", file: "content/editors/3d-viewport/tool-shelf/grease-pencil-vertex-paint-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.grease-pencil-weight-paint-mode", title: "Grease Pencil - Weight Paint Mode", file: "content/editors/3d-viewport/tool-shelf/grease-pencil-weight-paint-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.armature-edit-mode", title: "Armature - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/armature-edit-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.armature-pose-mode", title: "Armature - Pose Mode", file: "content/editors/3d-viewport/tool-shelf/armature-pose-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.lattice-edit-mode", title: "Lattice - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/lattice-edit-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.hair-curve-edit-mode", title: "Hair Curve - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/hair-curve-edit-mode.md", icon: null }
+    - { id: "editors.3d-viewport.tool-shelf.hair-curve-sculpt-mode", title: "Hair Curve - Sculpt Mode", file: "content/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar", title: "Sidebar", file: "content/editors/3d-viewport/sidebar/index.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.item-tab", title: "Item tab", file: "content/editors/3d-viewport/sidebar/item-tab.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab", title: "Tool Tab", file: "content/editors/3d-viewport/sidebar/tool-tab.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-object-mode", title: "Tool Tab - Object Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-object-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-edit-mode", title: "Tool Tab - Edit Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-edit-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-pose-mode", title: "Tool Tab - Pose Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-pose-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-mesh-sculpt-mode", title: "Tool Tab - Mesh - Sculpt Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-mesh-vertex-paint-mode", title: "Tool Tab - Mesh - Vertex Paint Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-mesh-texture-paint-mode", title: "Tool Tab - Mesh - Texture Paint Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-mesh-texture-paint-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-mesh-weight-paint-mode", title: "Tool Tab - Mesh - Weight Paint Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-particle-edit-mode", title: "Tool Tab - Particle Edit Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-grease-pencil-sculpt-mode", title: "Tool Tab - Grease Pencil - Sculpt Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-sculpt-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-grease-pencil-draw-mode", title: "Tool Tab - Grease Pencil - Draw Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-draw-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-grease-pencil-vertex-paint-mode", title: "Tool Tab - Grease Pencil - Vertex Paint Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-vertex-paint-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-grease-pencil-weight-paint-mode", title: "Tool Tab - Grease Pencil - Weight Paint Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-weight-paint-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-grease-pencil-layer-panel", title: "Tool Tab - Grease Pencil - Layer Panel", file: "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-layer-panel.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.tool-tab-hair-curve-sculpt-mode", title: "Tool Tab - Hair Curve - Sculpt Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.view-tab", title: "View Tab", file: "content/editors/3d-viewport/sidebar/view-tab.md", icon: null }
+    - { id: "editors.3d-viewport.sidebar.animation-tab", title: "Animation Tab", file: "content/editors/3d-viewport/sidebar/animation-tab.md", icon: null }
+    - { id: "editors.3d-viewport.asset-shelf", title: "Asset Shelf", file: "content/editors/3d-viewport/asset-shelf.md", icon: null }
+    - { id: "editors.image-editor", title: "Image Editor", file: "content/editors/image-editor/index.md", icon: null }
+    - { id: "editors.image-editor.header", title: "Header", file: "content/editors/image-editor/header/index.md", icon: null }
+    - { id: "editors.image-editor.header.header-tools-and-options", title: "Header Tools and Options", file: "content/editors/image-editor/header/header-tools-and-options.md", icon: null }
+    - { id: "editors.image-editor.header.quick-menu", title: "Quick Menu", file: "content/editors/image-editor/header/quick-menu.md", icon: null }
+    - { id: "editors.image-editor.header.view-menu", title: "View menu", file: "content/editors/image-editor/header/view-menu.md", icon: null }
+    - { id: "editors.image-editor.header.image-menu", title: "Image menu", file: "content/editors/image-editor/header/image-menu.md", icon: null }
+    - { id: "editors.image-editor.header.select-menu", title: "Select menu", file: "content/editors/image-editor/header/select-menu.md", icon: null }
+    - { id: "editors.image-editor.header.add-menu", title: "Add menu", file: "content/editors/image-editor/header/add-menu.md", icon: null }
+    - { id: "editors.image-editor.header.mask-menu", title: "Mask menu", file: "content/editors/image-editor/header/mask-menu.md", icon: null }
+    - { id: "editors.image-editor.tool-shelf", title: "Tool Shelf", file: "content/editors/image-editor/tool-shelf.md", icon: null }
+    - { id: "editors.image-editor.sidebar", title: "Sidebar", file: "content/editors/image-editor/sidebar/index.md", icon: null }
+    - { id: "editors.image-editor.sidebar.tool-tab-in-paint-mode", title: "Tool Tab in Paint Mode", file: "content/editors/image-editor/sidebar/tool-tab-in-paint-mode.md", icon: null }
+    - { id: "editors.image-editor.sidebar.image-tab", title: "Image Tab", file: "content/editors/image-editor/sidebar/image-tab.md", icon: null }
+    - { id: "editors.image-editor.sidebar.view-tab", title: "View Tab", file: "content/editors/image-editor/sidebar/view-tab.md", icon: null }
+    - { id: "editors.image-editor.sidebar.scopes-tab", title: "Scopes Tab", file: "content/editors/image-editor/sidebar/scopes-tab.md", icon: null }
+    - { id: "editors.image-editor.sidebar.mask-tab", title: "Mask Tab", file: "content/editors/image-editor/sidebar/mask-tab.md", icon: null }
+    - { id: "editors.uv-editor", title: "UV Editor", file: "content/editors/uv-editor/index.md", icon: null }
+    - { id: "editors.uv-editor.header", title: "Header", file: "content/editors/uv-editor/header/index.md", icon: null }
+    - { id: "editors.uv-editor.header.header-tools-and-options", title: "Header Tools and Options", file: "content/editors/uv-editor/header/header-tools-and-options.md", icon: null }
+    - { id: "editors.uv-editor.header.quick-menu", title: "Quick Menu", file: "content/editors/uv-editor/header/quick-menu.md", icon: null }
+    - { id: "editors.uv-editor.header.view-menu", title: "View Menu", file: "content/editors/uv-editor/header/view-menu.md", icon: null }
+    - { id: "editors.uv-editor.header.select-menu", title: "Select Menu", file: "content/editors/uv-editor/header/select-menu.md", icon: null }
+    - { id: "editors.uv-editor.header.image-menu", title: "Image Menu", file: "content/editors/uv-editor/header/image-menu.md", icon: null }
+    - { id: "editors.uv-editor.header.uv-menu", title: "UV menu", file: "content/editors/uv-editor/header/uv-menu.md", icon: null }
+    - { id: "editors.uv-editor.tool-shelf", title: "Tool Shelf", file: "content/editors/uv-editor/tool-shelf.md", icon: null }
+    - { id: "editors.uv-editor.sidebar", title: "Sidebar", file: "content/editors/uv-editor/sidebar/index.md", icon: null }
+    - { id: "editors.uv-editor.sidebar.image-tab", title: "Image Tab", file: "content/editors/uv-editor/sidebar/image-tab.md", icon: null }
+    - { id: "editors.uv-editor.sidebar.tool-tab", title: "Tool Tab", file: "content/editors/uv-editor/sidebar/tool-tab.md", icon: null }
+    - { id: "editors.uv-editor.sidebar.view-tab", title: "View Tab", file: "content/editors/uv-editor/sidebar/view-tab.md", icon: null }
+    - { id: "editors.compositor", title: "Compositor", file: "content/editors/compositor/index.md", icon: null }
+    - { id: "editors.compositor.header", title: "Header", file: "content/editors/compositor/header/index.md", icon: null }
+    - { id: "editors.compositor.header.tools-and-options", title: "Tools and Options", file: "content/editors/compositor/header/tools-and-options.md", icon: null }
+    - { id: "editors.compositor.header.quick-menu", title: "Quick Menu", file: "content/editors/compositor/header/quick-menu.md", icon: null }
+    - { id: "editors.compositor.header.view-menu", title: "View Menu", file: "content/editors/compositor/header/view-menu.md", icon: null }
+    - { id: "editors.compositor.header.select-menu", title: "Select Menu", file: "content/editors/compositor/header/select-menu.md", icon: null }
+    - { id: "editors.compositor.header.add-menu", title: "Add Menu", file: "content/editors/compositor/header/add-menu.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-input-constant", title: "Add Menu - Input - Constant", file: "content/editors/compositor/header/add-menu-input-constant.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-input", title: "Add Menu - Input", file: "content/editors/compositor/header/add-menu-input.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-input-scene", title: "Add Menu - Input - Scene", file: "content/editors/compositor/header/add-menu-input-scene.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-output", title: "Add Menu - Output", file: "content/editors/compositor/header/add-menu-output.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-color-adjust", title: "Add Menu - Color - Adjust", file: "content/editors/compositor/header/add-menu-color-adjust.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-color", title: "Add Menu - Color", file: "content/editors/compositor/header/add-menu-color.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-creative", title: "Add Menu - Creative", file: "content/editors/compositor/header/add-menu-creative.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-filter-blur", title: "Add Menu - Filter - Blur", file: "content/editors/compositor/header/add-menu-filter-blur.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-filter", title: "Add Menu - Filter", file: "content/editors/compositor/header/add-menu-filter.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-keying", title: "Add Menu - Keying", file: "content/editors/compositor/header/add-menu-keying.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-mask", title: "Add Menu - Mask", file: "content/editors/compositor/header/add-menu-mask.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-tracking", title: "Add Menu - Tracking", file: "content/editors/compositor/header/add-menu-tracking.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-texture", title: "Add Menu - Texture", file: "content/editors/compositor/header/add-menu-texture.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-transform", title: "Add Menu - Transform", file: "content/editors/compositor/header/add-menu-transform.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-utilities-math", title: "Add Menu - Utilities - Math", file: "content/editors/compositor/header/add-menu-utilities-math.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-utilities-vector", title: "Add Menu - Utilities - Vector", file: "content/editors/compositor/header/add-menu-utilities-vector.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-utilities", title: "Add Menu - Utilities", file: "content/editors/compositor/header/add-menu-utilities.md", icon: null }
+    - { id: "editors.compositor.header.geometry-nodes-editor-header-add-menu-group", title: "Geometry Nodes Editor - Header - Add Menu - Group", file: "content/editors/compositor/header/geometry-nodes-editor-header-add-menu-group.md", icon: null }
+    - { id: "editors.compositor.header.add-menu-layout", title: "Add Menu - Layout", file: "content/editors/compositor/header/add-menu-layout.md", icon: null }
+    - { id: "editors.compositor.tool-shelf", title: "Tool Shelf", file: "content/editors/compositor/tool-shelf.md", icon: null }
+    - { id: "editors.compositor.sidebar", title: "Sidebar", file: "content/editors/compositor/sidebar/index.md", icon: null }
+    - { id: "editors.compositor.sidebar.node-tab", title: "Node Tab", file: "content/editors/compositor/sidebar/node-tab.md", icon: null }
+    - { id: "editors.compositor.sidebar.tool-tab", title: "Tool Tab", file: "content/editors/compositor/sidebar/tool-tab.md", icon: null }
+    - { id: "editors.compositor.sidebar.view-tab", title: "View Tab", file: "content/editors/compositor/sidebar/view-tab.md", icon: null }
+    - { id: "editors.compositor.sidebar.options-tab", title: "Options Tab", file: "content/editors/compositor/sidebar/options-tab.md", icon: null }
+    - { id: "editors.compositor.sidebar.add-tab", title: "Add Tab", file: "content/editors/compositor/sidebar/add-tab.md", icon: null }
+    - { id: "editors.compositor.sidebar.relations-tab", title: "Relations tab", file: "content/editors/compositor/sidebar/relations-tab.md", icon: null }
+    - { id: "editors.compositor.sidebar.group-tab", title: "Group tab", file: "content/editors/compositor/sidebar/group-tab.md", icon: null }
+    - { id: "editors.texture-node-editor", title: "Texture Node Editor", file: "content/editors/texture-node-editor.md", icon: null }
+    - { id: "editors.geometry-node-editor", title: "Geometry Node Editor", file: "content/editors/geometry-node-editor/index.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.tools-and-options", title: "Tools and Options", file: "content/editors/geometry-node-editor/header/tools-and-options.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.quick-menu", title: "Quick Menu", file: "content/editors/geometry-node-editor/header/quick-menu.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.view-menu", title: "View Menu", file: "content/editors/geometry-node-editor/header/view-menu.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.select-menu", title: "Select Menu", file: "content/editors/geometry-node-editor/header/select-menu.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu", title: "Add Menu", file: "content/editors/geometry-node-editor/header/add-menu.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-input-constant", title: "Add Menu - Input - Constant", file: "content/editors/geometry-node-editor/header/add-menu-input-constant.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-input-gizmo", title: "Add Menu - Input - Gizmo", file: "content/editors/geometry-node-editor/header/add-menu-input-gizmo.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-input-import", title: "Add Menu - Input - Import", file: "content/editors/geometry-node-editor/header/add-menu-input-import.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-input-scene", title: "Add Menu - Input - Scene", file: "content/editors/geometry-node-editor/header/add-menu-input-scene.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-output", title: "Add Menu - Output", file: "content/editors/geometry-node-editor/header/add-menu-output.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-attribute", title: "Add Menu - Attribute", file: "content/editors/geometry-node-editor/header/add-menu-attribute.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-read", title: "Add Menu - Geometry - Read", file: "content/editors/geometry-node-editor/header/add-menu-geometry-read.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-sample", title: "Add Menu - Geometry - Sample", file: "content/editors/geometry-node-editor/header/add-menu-geometry-sample.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-write", title: "Add Menu - Geometry - Write", file: "content/editors/geometry-node-editor/header/add-menu-geometry-write.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-material", title: "Add Menu - Geometry - Material", file: "content/editors/geometry-node-editor/header/add-menu-geometry-material.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-operations", title: "Add Menu - Geometry - Operations", file: "content/editors/geometry-node-editor/header/add-menu-geometry-operations.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry", title: "Add Menu - Geometry", file: "content/editors/geometry-node-editor/header/add-menu-geometry.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-curve-read", title: "Add Menu - Curve - Read", file: "content/editors/geometry-node-editor/header/add-menu-curve-read.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-curve-sample", title: "Add Menu - Curve - Sample", file: "content/editors/geometry-node-editor/header/add-menu-curve-sample.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-curve-write", title: "Add Menu - Curve - Write", file: "content/editors/geometry-node-editor/header/add-menu-curve-write.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-curve-operations", title: "Add Menu - Curve - Operations", file: "content/editors/geometry-node-editor/header/add-menu-curve-operations.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-curve-primitives", title: "Add Menu - Curve - Primitives", file: "content/editors/geometry-node-editor/header/add-menu-curve-primitives.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-curve-topology", title: "Add Menu - Curve - Topology", file: "content/editors/geometry-node-editor/header/add-menu-curve-topology.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-grease-pencil-read", title: "Add Menu - Grease Pencil - Read", file: "content/editors/geometry-node-editor/header/add-menu-grease-pencil-read.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-grease-pencil-write", title: "Add Menu - Grease Pencil - Write", file: "content/editors/geometry-node-editor/header/add-menu-grease-pencil-write.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-grease-pencil-operations", title: "Add Menu - Grease Pencil - Operations", file: "content/editors/geometry-node-editor/header/add-menu-grease-pencil-operations.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-instances", title: "Add Menu - Instances", file: "content/editors/geometry-node-editor/header/add-menu-instances.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-mesh-read", title: "Add Menu - Mesh - Read", file: "content/editors/geometry-node-editor/header/add-menu-mesh-read.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-mesh-sample", title: "Add Menu - Mesh - Sample", file: "content/editors/geometry-node-editor/header/add-menu-mesh-sample.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-mesh-write", title: "Add Menu - Mesh - Write", file: "content/editors/geometry-node-editor/header/add-menu-mesh-write.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-mesh-operations", title: "Add Menu - Mesh - Operations", file: "content/editors/geometry-node-editor/header/add-menu-mesh-operations.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-mesh-primitives", title: "Add Menu - Mesh - Primitives", file: "content/editors/geometry-node-editor/header/add-menu-mesh-primitives.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-mesh-topology", title: "Add Menu - Mesh - Topology", file: "content/editors/geometry-node-editor/header/add-menu-mesh-topology.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-mesh-uv", title: "Add Menu - Mesh - UV", file: "content/editors/geometry-node-editor/header/add-menu-mesh-uv.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-point", title: "Add Menu - Point", file: "content/editors/geometry-node-editor/header/add-menu-point.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-volume-read", title: "Add Menu - Volume - Read", file: "content/editors/geometry-node-editor/header/add-menu-volume-read.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-volume-sample", title: "Add Menu - Volume - Sample", file: "content/editors/geometry-node-editor/header/add-menu-volume-sample.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-volume-write", title: "Add Menu - Volume - Write", file: "content/editors/geometry-node-editor/header/add-menu-volume-write.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-volume-operations", title: "Add Menu - Volume - Operations", file: "content/editors/geometry-node-editor/header/add-menu-volume-operations.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-volume-primitives", title: "Add Menu - Volume - Primitives", file: "content/editors/geometry-node-editor/header/add-menu-volume-primitives.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-simulation", title: "Add Menu - Simulation", file: "content/editors/geometry-node-editor/header/add-menu-simulation.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-color", title: "Add Menu - Color", file: "content/editors/geometry-node-editor/header/add-menu-color.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-texture", title: "Add Menu - Texture", file: "content/editors/geometry-node-editor/header/add-menu-texture.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-utilities-math", title: "Add Menu - Utilities - Math", file: "content/editors/geometry-node-editor/header/add-menu-utilities-math.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-utilities-text", title: "Add Menu - Utilities - Text", file: "content/editors/geometry-node-editor/header/add-menu-utilities-text.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-utilities-vector", title: "Add Menu - Utilities - Vector", file: "content/editors/geometry-node-editor/header/add-menu-utilities-vector.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-utilities-bundle", title: "Add Menu - Utilities - Bundle", file: "content/editors/geometry-node-editor/header/add-menu-utilities-bundle.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-utilities-closure", title: "Add Menu - Utilities - Closure", file: "content/editors/geometry-node-editor/header/add-menu-utilities-closure.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-utilities-field", title: "Add Menu - Utilities - Field", file: "content/editors/geometry-node-editor/header/add-menu-utilities-field.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-utilities-matrix", title: "Add Menu - Utilities - Matrix", file: "content/editors/geometry-node-editor/header/add-menu-utilities-matrix.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-utilities-rotation", title: "Add Menu - Utilities - Rotation", file: "content/editors/geometry-node-editor/header/add-menu-utilities-rotation.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-utilities-deprecated", title: "Add Menu - Utilities - Deprecated", file: "content/editors/geometry-node-editor/header/add-menu-utilities-deprecated.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-utilities", title: "Add Menu - Utilities", file: "content/editors/geometry-node-editor/header/add-menu-utilities.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-generate", title: "Add Menu - Generate", file: "content/editors/geometry-node-editor/header/add-menu-generate.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-geometry", title: "Add Menu - Geometry Nodegroups - Geometry", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-geometry-operations", title: "Add Menu - Geometry Nodegroups - Geometry - Operations", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-geometry-selection", title: "Add Menu - Geometry Nodegroups - Geometry - Selection", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-grease-pencil-operations", title: "Add Menu - Geometry Nodegroups - Grease Pencil - Operations", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-grease-pencil-read", title: "Add Menu - Geometry Nodegroups - Grease Pencil - Read", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-grease-pencil-write", title: "Add Menu - Geometry Nodegroups - Grease Pencil - Write", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-hair-deformation", title: "Add Menu - Geometry Nodegroups - Hair - Deformation", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-hair-generation", title: "Add Menu - Geometry Nodegroups - Hair - Generation", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-hair-guides", title: "Add Menu - Geometry Nodegroups - Hair - Guides", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-hair-read", title: "Add Menu - Geometry Nodegroups - Hair - Read", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-hair-utility", title: "Add Menu - Geometry Nodegroups - Hair - Utility", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-hair-write", title: "Add Menu - Geometry Nodegroups - Hair - Write", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-instances", title: "Add Menu - Geometry Nodegroups - Instances", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-instances.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-material", title: "Add Menu - Geometry Nodegroups - Material", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-material.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-mesh", title: "Add Menu - Geometry Nodegroups - Mesh", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-mesh-read", title: "Add Menu - Geometry Nodegroups - Mesh - Read", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-normals", title: "Add Menu - Geometry Nodegroups - Normals", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-normals.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-utilities", title: "Add Menu - Geometry Nodegroups - Utilities", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-utilities-vector", title: "Add Menu - Geometry Nodegroups - Utilities - Vector", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-geometry-nodegroups-utility", title: "Add Menu - Geometry Nodegroups - Utility", file: "content/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utility.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-normals", title: "Add Menu - Normals", file: "content/editors/geometry-node-editor/header/add-menu-normals.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-group", title: "Add Menu - Group", file: "content/editors/geometry-node-editor/header/add-menu-group.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.add-menu-layout", title: "Add Menu - Layout", file: "content/editors/geometry-node-editor/header/add-menu-layout.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.swap-menu", title: "Swap menu", file: "content/editors/geometry-node-editor/header/swap-menu.md", icon: null }
+    - { id: "editors.geometry-node-editor.header.node-menu", title: "Node menu", file: "content/editors/geometry-node-editor/header/node-menu.md", icon: null }
+    - { id: "editors.geometry-node-editor.tool-shelf", title: "Tool Shelf", file: "content/editors/geometry-node-editor/tool-shelf.md", icon: null }
+    - { id: "editors.geometry-node-editor.sidebar", title: "Sidebar", file: "content/editors/geometry-node-editor/sidebar/index.md", icon: null }
+    - { id: "editors.geometry-node-editor.sidebar.group-tab", title: "Group tab", file: "content/editors/geometry-node-editor/sidebar/group-tab.md", icon: null }
+    - { id: "editors.geometry-node-editor.sidebar.node-tab", title: "Node tab", file: "content/editors/geometry-node-editor/sidebar/node-tab.md", icon: null }
+    - { id: "editors.geometry-node-editor.sidebar.tool-tab", title: "Tool Tab", file: "content/editors/geometry-node-editor/sidebar/tool-tab.md", icon: null }
+    - { id: "editors.geometry-node-editor.sidebar.view-tab", title: "View Tab", file: "content/editors/geometry-node-editor/sidebar/view-tab.md", icon: null }
+    - { id: "editors.geometry-node-editor.sidebar.add", title: "Add", file: "content/editors/geometry-node-editor/sidebar/add.md", icon: null }
+    - { id: "editors.geometry-node-editor.sidebar.relations-tab", title: "Relations tab", file: "content/editors/geometry-node-editor/sidebar/relations-tab.md", icon: null }
+    - { id: "editors.shader-editor", title: "Shader Editor", file: "content/editors/shader-editor/index.md", icon: null }
+    - { id: "editors.shader-editor.header", title: "Header", file: "content/editors/shader-editor/header/index.md", icon: null }
+    - { id: "editors.shader-editor.header.tools-and-options", title: "Tools and Options", file: "content/editors/shader-editor/header/tools-and-options.md", icon: null }
+    - { id: "editors.shader-editor.header.quick-menu", title: "Quick Menu", file: "content/editors/shader-editor/header/quick-menu.md", icon: null }
+    - { id: "editors.shader-editor.header.view-menu", title: "View Menu", file: "content/editors/shader-editor/header/view-menu.md", icon: null }
+    - { id: "editors.shader-editor.header.select-menu", title: "Select Menu", file: "content/editors/shader-editor/header/select-menu.md", icon: null }
+    - { id: "editors.shader-editor.header.add-menu", title: "Add Menu", file: "content/editors/shader-editor/header/add-menu.md", icon: null }
+    - { id: "editors.shader-editor.header.add-menu-input", title: "Add Menu - Input", file: "content/editors/shader-editor/header/add-menu-input.md", icon: null }
+    - { id: "editors.shader-editor.header.add-menu-output", title: "Add Menu - Output", file: "content/editors/shader-editor/header/add-menu-output.md", icon: null }
+    - { id: "editors.shader-editor.header.add-menu-shader", title: "Add Menu - Shader", file: "content/editors/shader-editor/header/add-menu-shader.md", icon: null }
+    - { id: "editors.shader-editor.header.add-menu-color", title: "Add Menu - Color", file: "content/editors/shader-editor/header/add-menu-color.md", icon: null }
+    - { id: "editors.shader-editor.header.add-menu-texture", title: "Add Menu - Texture", file: "content/editors/shader-editor/header/add-menu-texture.md", icon: null }
+    - { id: "editors.shader-editor.header.add-menu-utilities-math", title: "Add Menu - Utilities - Math", file: "content/editors/shader-editor/header/add-menu-utilities-math.md", icon: null }
+    - { id: "editors.shader-editor.header.add-menu-utilities-vector", title: "Add Menu - Utilities - Vector", file: "content/editors/shader-editor/header/add-menu-utilities-vector.md", icon: null }
+    - { id: "editors.shader-editor.header.add-menu-utilities", title: "Add Menu - Utilities", file: "content/editors/shader-editor/header/add-menu-utilities.md", icon: null }
+    - { id: "editors.shader-editor.header.add-menu-group", title: "Add Menu - Group", file: "content/editors/shader-editor/header/add-menu-group.md", icon: null }
+    - { id: "editors.shader-editor.header.add-menu-layout", title: "Add Menu - Layout", file: "content/editors/shader-editor/header/add-menu-layout.md", icon: null }
+    - { id: "editors.shader-editor.header.swap-menu", title: "Swap menu", file: "content/editors/shader-editor/header/swap-menu.md", icon: null }
+    - { id: "editors.shader-editor.header.node-menu", title: "Node menu", file: "content/editors/shader-editor/header/node-menu.md", icon: null }
+    - { id: "editors.shader-editor.tool-shelf", title: "Tool Shelf", file: "content/editors/shader-editor/tool-shelf.md", icon: null }
+    - { id: "editors.shader-editor.sidebar", title: "Sidebar", file: "content/editors/shader-editor/sidebar/index.md", icon: null }
+    - { id: "editors.shader-editor.sidebar.node-tab", title: "Node Tab", file: "content/editors/shader-editor/sidebar/node-tab.md", icon: null }
+    - { id: "editors.shader-editor.sidebar.tool-tab", title: "Tool Tab", file: "content/editors/shader-editor/sidebar/tool-tab.md", icon: null }
+    - { id: "editors.shader-editor.sidebar.view-tab", title: "View Tab", file: "content/editors/shader-editor/sidebar/view-tab.md", icon: null }
+    - { id: "editors.shader-editor.sidebar.options-tab", title: "Options Tab", file: "content/editors/shader-editor/sidebar/options-tab.md", icon: null }
+    - { id: "editors.shader-editor.sidebar.add-tab", title: "Add Tab", file: "content/editors/shader-editor/sidebar/add-tab.md", icon: null }
+    - { id: "editors.shader-editor.sidebar.relations-tab", title: "Relations tab", file: "content/editors/shader-editor/sidebar/relations-tab.md", icon: null }
+    - { id: "editors.shader-editor.sidebar.group-tab", title: "Group tab", file: "content/editors/shader-editor/sidebar/group-tab.md", icon: null }
+    - { id: "editors.video-sequence-editor", title: "Video Sequence Editor", file: "content/editors/video-sequence-editor/index.md", icon: null }
+    - { id: "editors.video-sequence-editor.header", title: "Header", file: "content/editors/video-sequence-editor/header/index.md", icon: null }
+    - { id: "editors.video-sequence-editor.header.tools-and-options", title: "Tools and Options", file: "content/editors/video-sequence-editor/header/tools-and-options.md", icon: null }
+    - { id: "editors.video-sequence-editor.header.quick-menu", title: "Quick Menu", file: "content/editors/video-sequence-editor/header/quick-menu.md", icon: null }
+    - { id: "editors.video-sequence-editor.header.view-menu", title: "View Menu", file: "content/editors/video-sequence-editor/header/view-menu.md", icon: null }
+    - { id: "editors.video-sequence-editor.header.export-menu", title: "Export Menu", file: "content/editors/video-sequence-editor/header/export-menu.md", icon: null }
+    - { id: "editors.video-sequence-editor.header.navigation-menu", title: "Navigation Menu", file: "content/editors/video-sequence-editor/header/navigation-menu.md", icon: null }
+    - { id: "editors.video-sequence-editor.header.select-menu", title: "Select Menu", file: "content/editors/video-sequence-editor/header/select-menu.md", icon: null }
+    - { id: "editors.video-sequence-editor.header.marker-menu", title: "Marker Menu", file: "content/editors/video-sequence-editor/header/marker-menu.md", icon: null }
+    - { id: "editors.video-sequence-editor.header.add-menu", title: "Add Menu", file: "content/editors/video-sequence-editor/header/add-menu.md", icon: null }
+    - { id: "editors.video-sequence-editor.header.strip-menu", title: "Strip Menu", file: "content/editors/video-sequence-editor/header/strip-menu.md", icon: null }
+    - { id: "editors.video-sequence-editor.header.image-menu", title: "Image Menu", file: "content/editors/video-sequence-editor/header/image-menu.md", icon: null }
+    - { id: "editors.video-sequence-editor.header.text-menu", title: "Text Menu", file: "content/editors/video-sequence-editor/header/text-menu.md", icon: null }
+    - { id: "editors.video-sequence-editor.header.scene-menu", title: "Scene Menu", file: "content/editors/video-sequence-editor/header/scene-menu.md", icon: null }
+    - { id: "editors.video-sequence-editor.tool-shelf", title: "Tool Shelf", file: "content/editors/video-sequence-editor/tool-shelf.md", icon: null }
+    - { id: "editors.video-sequence-editor.sidebar", title: "Sidebar", file: "content/editors/video-sequence-editor/sidebar/index.md", icon: null }
+    - { id: "editors.video-sequence-editor.sidebar.preview-tool-tab", title: "Preview - Tool tab", file: "content/editors/video-sequence-editor/sidebar/preview-tool-tab.md", icon: null }
+    - { id: "editors.video-sequence-editor.sidebar.preview-view-tab", title: "Preview - View tab", file: "content/editors/video-sequence-editor/sidebar/preview-view-tab.md", icon: null }
+    - { id: "editors.video-sequence-editor.sidebar.sequencer-strip-tab", title: "Sequencer - Strip tab", file: "content/editors/video-sequence-editor/sidebar/sequencer-strip-tab.md", icon: null }
+    - { id: "editors.video-sequence-editor.sidebar.sequencer-tool-tab", title: "Sequencer - Tool tab", file: "content/editors/video-sequence-editor/sidebar/sequencer-tool-tab.md", icon: null }
+    - { id: "editors.video-sequence-editor.sidebar.sequencer-cache-tab", title: "Sequencer - Cache tab", file: "content/editors/video-sequence-editor/sidebar/sequencer-cache-tab.md", icon: null }
+    - { id: "editors.video-sequence-editor.sidebar.sequencer-proxy-tab", title: "Sequencer - Proxy tab", file: "content/editors/video-sequence-editor/sidebar/sequencer-proxy-tab.md", icon: null }
+    - { id: "editors.video-sequence-editor.sidebar.sequencer-view-tab", title: "Sequencer - View tab", file: "content/editors/video-sequence-editor/sidebar/sequencer-view-tab.md", icon: null }
+    - { id: "editors.video-sequence-editor.footer-tools-and-options", title: "Footer tools and options", file: "content/editors/video-sequence-editor/footer-tools-and-options.md", icon: null }
+    - { id: "editors.movie-clip-editor", title: "Movie Clip Editor", file: "content/editors/movie-clip-editor/index.md", icon: null }
+    - { id: "editors.movie-clip-editor.header", title: "Header", file: "content/editors/movie-clip-editor/header/index.md", icon: null }
+    - { id: "editors.movie-clip-editor.header.header-tools-and-options", title: "Header Tools and Options", file: "content/editors/movie-clip-editor/header/header-tools-and-options.md", icon: null }
+    - { id: "editors.movie-clip-editor.header.quick-menu", title: "Quick Menu", file: "content/editors/movie-clip-editor/header/quick-menu.md", icon: null }
+    - { id: "editors.movie-clip-editor.header.view-menu", title: "View Menu", file: "content/editors/movie-clip-editor/header/view-menu.md", icon: null }
+    - { id: "editors.movie-clip-editor.header.select-menu", title: "Select Menu", file: "content/editors/movie-clip-editor/header/select-menu.md", icon: null }
+    - { id: "editors.movie-clip-editor.header.tracking-mode-clip-submode-clip-menu", title: "Tracking Mode - Clip Submode - Clip Menu", file: "content/editors/movie-clip-editor/header/tracking-mode-clip-submode-clip-menu.md", icon: null }
+    - { id: "editors.movie-clip-editor.header.tracking-mode-clip-submode-track-menu", title: "Tracking Mode - Clip Submode - Track Menu", file: "content/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu.md", icon: null }
+    - { id: "editors.movie-clip-editor.header.tracking-mode-graph-submode-graph-menu", title: "Tracking Mode - Graph Submode - Graph Menu", file: "content/editors/movie-clip-editor/header/tracking-mode-graph-submode-graph-menu.md", icon: null }
+    - { id: "editors.movie-clip-editor.header.mask-mode-clip-menu", title: "Mask Mode - Clip Menu", file: "content/editors/movie-clip-editor/header/mask-mode-clip-menu.md", icon: null }
+    - { id: "editors.movie-clip-editor.header.mask-mode-add-menu", title: "Mask Mode - Add Menu", file: "content/editors/movie-clip-editor/header/mask-mode-add-menu.md", icon: null }
+    - { id: "editors.movie-clip-editor.header.mask-mode-mask-menu", title: "Mask Mode - Mask Menu", file: "content/editors/movie-clip-editor/header/mask-mode-mask-menu.md", icon: null }
+    - { id: "editors.movie-clip-editor.tool-shelf", title: "Tool shelf", file: "content/editors/movie-clip-editor/tool-shelf/index.md", icon: null }
+    - { id: "editors.movie-clip-editor.tool-shelf.tracking-mode", title: "Tracking Mode", file: "content/editors/movie-clip-editor/tool-shelf/tracking-mode.md", icon: null }
+    - { id: "editors.movie-clip-editor.sidebar", title: "Sidebar", file: "content/editors/movie-clip-editor/sidebar/index.md", icon: null }
+    - { id: "editors.movie-clip-editor.sidebar.footage-tab", title: "Footage Tab", file: "content/editors/movie-clip-editor/sidebar/footage-tab.md", icon: null }
+    - { id: "editors.movie-clip-editor.sidebar.track-tab", title: "Track tab", file: "content/editors/movie-clip-editor/sidebar/track-tab.md", icon: null }
+    - { id: "editors.movie-clip-editor.sidebar.tracking-mode-stabilization-tab", title: "Tracking Mode - Stabilization tab", file: "content/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab.md", icon: null }
+    - { id: "editors.movie-clip-editor.sidebar.tracking-mode-view-tab", title: "Tracking Mode - View tab", file: "content/editors/movie-clip-editor/sidebar/tracking-mode-view-tab.md", icon: null }
+    - { id: "editors.dope-sheet", title: "Dope Sheet", file: "content/editors/dope-sheet/index.md", icon: null }
+    - { id: "editors.dope-sheet.header.header-tools-and-options", title: "Header tools and options", file: "content/editors/dope-sheet/header/header-tools-and-options.md", icon: null }
+    - { id: "editors.dope-sheet.header.quick-menu", title: "Quick Menu", file: "content/editors/dope-sheet/header/quick-menu.md", icon: null }
+    - { id: "editors.dope-sheet.header.view-menu", title: "View Menu", file: "content/editors/dope-sheet/header/view-menu.md", icon: null }
+    - { id: "editors.dope-sheet.header.select-menu", title: "Select Menu", file: "content/editors/dope-sheet/header/select-menu.md", icon: null }
+    - { id: "editors.dope-sheet.header.marker-menu", title: "Marker Menu", file: "content/editors/dope-sheet/header/marker-menu.md", icon: null }
+    - { id: "editors.dope-sheet.header.channel-menu", title: "Channel Menu", file: "content/editors/dope-sheet/header/channel-menu.md", icon: null }
+    - { id: "editors.dope-sheet.header.key-menu", title: "Key Menu", file: "content/editors/dope-sheet/header/key-menu.md", icon: null }
+    - { id: "editors.dope-sheet.header.action-menu", title: "Action Menu", file: "content/editors/dope-sheet/header/action-menu.md", icon: null }
+    - { id: "editors.dope-sheet.channel-list", title: "Channel list", file: "content/editors/dope-sheet/channel-list.md", icon: null }
+    - { id: "editors.dope-sheet.sidebar", title: "Sidebar", file: "content/editors/dope-sheet/sidebar.md", icon: null }
+    - { id: "editors.dope-sheet.footer-tools-and-options", title: "Footer tools and options", file: "content/editors/dope-sheet/footer-tools-and-options.md", icon: null }
     - { id: "editors.timeline", title: "Timeline", file: "content/editors/timeline/index.md", icon: null }
     - { id: "editors.timeline.header", title: "Timeline header", file: "content/editors/timeline/header.md", icon: null }
     - { id: "editors.timeline.channel-list", title: "Timeline channel list", file: "content/editors/timeline/channel-list.md", icon: null }
-    - { id: "editors.timeline.viewport", title: "Timeline viewport", file: "content/editors/timeline/viewport.md", icon: null }
+    - { id: "editors.graph-editor", title: "Graph Editor", file: "content/editors/graph-editor/index.md", icon: null }
+    - { id: "editors.graph-editor.header.header-tools-and-options", title: "Header tools and options", file: "content/editors/graph-editor/header/header-tools-and-options.md", icon: null }
+    - { id: "editors.graph-editor.header.quick-menu", title: "Quick Menu", file: "content/editors/graph-editor/header/quick-menu.md", icon: null }
+    - { id: "editors.graph-editor.header.view-menu", title: "View Menu", file: "content/editors/graph-editor/header/view-menu.md", icon: null }
+    - { id: "editors.graph-editor.header.select-menu", title: "Select Menu", file: "content/editors/graph-editor/header/select-menu.md", icon: null }
+    - { id: "editors.graph-editor.header.marker-menu", title: "Marker Menu", file: "content/editors/graph-editor/header/marker-menu.md", icon: null }
+    - { id: "editors.graph-editor.header.channel-menu", title: "Channel Menu", file: "content/editors/graph-editor/header/channel-menu.md", icon: null }
+    - { id: "editors.graph-editor.header.key-menu", title: "Key Menu", file: "content/editors/graph-editor/header/key-menu.md", icon: null }
+    - { id: "editors.graph-editor.channel-list", title: "Channel list", file: "content/editors/graph-editor/channel-list.md", icon: null }
+    - { id: "editors.graph-editor.sidebar", title: "Sidebar", file: "content/editors/graph-editor/sidebar/index.md", icon: null }
+    - { id: "editors.graph-editor.sidebar.f-curve-tab", title: "F-Curve Tab", file: "content/editors/graph-editor/sidebar/f-curve-tab.md", icon: null }
+    - { id: "editors.graph-editor.sidebar.modifiers-tab", title: "Modifiers Tab", file: "content/editors/graph-editor/sidebar/modifiers-tab.md", icon: null }
+    - { id: "editors.graph-editor.sidebar.view-tab", title: "View Tab", file: "content/editors/graph-editor/sidebar/view-tab.md", icon: null }
+    - { id: "editors.graph-editor.footer-tools-and-options", title: "Footer tools and options", file: "content/editors/graph-editor/footer-tools-and-options.md", icon: null }
+    - { id: "editors.drivers-editor", title: "Drivers Editor", file: "content/editors/drivers-editor/index.md", icon: null }
+    - { id: "editors.drivers-editor.header.header-tools-and-options", title: "Header tools and options", file: "content/editors/drivers-editor/header/header-tools-and-options.md", icon: null }
+    - { id: "editors.drivers-editor.header.quick-menu", title: "Quick Menu", file: "content/editors/drivers-editor/header/quick-menu.md", icon: null }
+    - { id: "editors.drivers-editor.header.view-menu", title: "View Menu", file: "content/editors/drivers-editor/header/view-menu.md", icon: null }
+    - { id: "editors.drivers-editor.header.select-menu", title: "Select Menu", file: "content/editors/drivers-editor/header/select-menu.md", icon: null }
+    - { id: "editors.drivers-editor.header.channel-menu", title: "Channel Menu", file: "content/editors/drivers-editor/header/channel-menu.md", icon: null }
+    - { id: "editors.drivers-editor.header.key-menu", title: "Key Menu", file: "content/editors/drivers-editor/header/key-menu.md", icon: null }
+    - { id: "editors.drivers-editor.channel-list", title: "Channel list", file: "content/editors/drivers-editor/channel-list.md", icon: null }
+    - { id: "editors.drivers-editor.sidebar.f-curve-tab", title: "F-Curve Tab", file: "content/editors/drivers-editor/sidebar/f-curve-tab.md", icon: null }
+    - { id: "editors.drivers-editor.sidebar.drivers-tab", title: "Drivers Tab", file: "content/editors/drivers-editor/sidebar/drivers-tab.md", icon: null }
+    - { id: "editors.drivers-editor.sidebar.modifiers-tab", title: "Modifiers Tab", file: "content/editors/drivers-editor/sidebar/modifiers-tab.md", icon: null }
+    - { id: "editors.drivers-editor.sidebar.driver-editor-sidebar-view-tab", title: "Driver Editor - Sidebar - View Tab", file: "content/editors/drivers-editor/sidebar/driver-editor-sidebar-view-tab.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor", title: "Nonlinear Animation Editor", file: "content/editors/nonlinear-animation-editor/index.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.header.nla-editor-header-tools-and-options", title: "NLA Editor - Header tools and options", file: "content/editors/nonlinear-animation-editor/header/nla-editor-header-tools-and-options.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.header.nla-editor-header-quick-menu", title: "NLA Editor - Header - Quick Menu", file: "content/editors/nonlinear-animation-editor/header/nla-editor-header-quick-menu.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.header.nla-editor-view-menu", title: "NLA Editor - View Menu", file: "content/editors/nonlinear-animation-editor/header/nla-editor-view-menu.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.header.nla-editor-select-menu", title: "NLA Editor - Select Menu", file: "content/editors/nonlinear-animation-editor/header/nla-editor-select-menu.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.header.nla-editor-marker-menu", title: "NLA Editor - Marker Menu", file: "content/editors/nonlinear-animation-editor/header/nla-editor-marker-menu.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.header.nla-editor-add-menu", title: "NLA Editor - Add Menu", file: "content/editors/nonlinear-animation-editor/header/nla-editor-add-menu.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.header.nla-editor-track-menu", title: "NLA Editor - Track Menu", file: "content/editors/nonlinear-animation-editor/header/nla-editor-track-menu.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.header.nla-editor-strip-menu", title: "NLA Editor - Strip Menu", file: "content/editors/nonlinear-animation-editor/header/nla-editor-strip-menu.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.nla-editor-channel-list", title: "NLA Editor - Channel list", file: "content/editors/nonlinear-animation-editor/nla-editor-channel-list.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.sidebar.nla-editor-sidebar-animation-data-panel", title: "NLA Editor - Sidebar - Animation Data panel", file: "content/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.sidebar.nla-editor-sidebar-strip-tab", title: "NLA Editor - Sidebar - Strip tab", file: "content/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.sidebar.nla-editor-sidebar-modifiers-tab", title: "NLA Editor - Sidebar - Modifiers Tab", file: "content/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.nla-editor-footer-tools-and-options", title: "NLA Editor - Footer tools and options", file: "content/editors/nonlinear-animation-editor/nla-editor-footer-tools-and-options.md", icon: null }
+    - { id: "editors.text-editor", title: "Text Editor", file: "content/editors/text-editor.md", icon: null }
+    - { id: "editors.python-console", title: "Python Console", file: "content/editors/python-console.md", icon: null }
+    - { id: "editors.info-editor", title: "Info Editor", file: "content/editors/info-editor.md", icon: null }
+    - { id: "editors.toolbar", title: "Toolbar", file: "content/editors/toolbar.md", icon: null }
+    - { id: "editors.outliner", title: "Outliner", file: "content/editors/outliner.md", icon: null }
+    - { id: "editors.properties", title: "Properties Editor", file: "content/editors/properties/index.md", icon: null }
+    - { id: "editors.properties.render-properties-tab", title: "Render Properties Tab", file: "content/editors/properties/render-properties-tab/index.md", icon: null }
+    - { id: "editors.properties.render-properties-tab.cycles", title: "Cycles", file: "content/editors/properties/render-properties-tab/cycles.md", icon: null }
+    - { id: "editors.properties.render-properties-tab.eevee", title: "EEVEE", file: "content/editors/properties/render-properties-tab/eevee.md", icon: null }
+    - { id: "editors.properties.render-properties-tab.workbench", title: "Workbench", file: "content/editors/properties/render-properties-tab/workbench.md", icon: null }
+    - { id: "editors.properties.output-properties-tab", title: "Output Properties Tab", file: "content/editors/properties/output-properties-tab.md", icon: null }
+    - { id: "editors.properties.view-layer-properties-tab", title: "View Layer Properties Tab", file: "content/editors/properties/view-layer-properties-tab.md", icon: null }
+    - { id: "editors.properties.scene-properties-tab", title: "Scene Properties Tab", file: "content/editors/properties/scene-properties-tab.md", icon: null }
+    - { id: "editors.properties.world-properties-tab", title: "World Properties Tab", file: "content/editors/properties/world-properties-tab.md", icon: null }
+    - { id: "editors.properties.collection-properties-tab", title: "Collection Properties Tab", file: "content/editors/properties/collection-properties-tab.md", icon: null }
+    - { id: "editors.properties.object-properties-tab", title: "Object Properties Tab", file: "content/editors/properties/object-properties-tab.md", icon: null }
     - { id: "editors.properties.modifiers", title: "Modifiers tab", file: "content/editors/properties/modifiers/index.md", icon: null }
     - { id: "editors.properties.modifiers.mesh.normals", title: "Normals modifiers (Mesh)", file: "content/editors/properties/modifiers/mesh/normals.md", icon: null }
     - { id: "editors.properties.modifiers.mesh.edit", title: "Edit modifiers (Mesh)", file: "content/editors/properties/modifiers/mesh/edit.md", icon: null }
@@ -44,6 +454,124 @@
     - { id: "editors.properties.modifiers.grease-pencil.generate", title: "Generate modifiers (Grease Pencil)", file: "content/editors/properties/modifiers/grease-pencil/generate.md", icon: null }
     - { id: "editors.properties.modifiers.grease-pencil.deform", title: "Deform modifiers (Grease Pencil)", file: "content/editors/properties/modifiers/grease-pencil/deform.md", icon: null }
     - { id: "editors.properties.modifiers.grease-pencil.color", title: "Color modifiers (Grease Pencil)", file: "content/editors/properties/modifiers/grease-pencil/color.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab", title: "Particle Properties Tab", file: "content/editors/properties/particle-properties-tab/index.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter", title: "Emitter", file: "content/editors/properties/particle-properties-tab/emitter.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-emission-panel", title: "Emitter - Emission Panel", file: "content/editors/properties/particle-properties-tab/emitter-emission-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-cache-panel", title: "Emitter - Cache Panel", file: "content/editors/properties/particle-properties-tab/emitter-cache-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-velocity-panel", title: "Emitter - Velocity panel", file: "content/editors/properties/particle-properties-tab/emitter-velocity-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-rotation-panel", title: "Emitter - Rotation panel", file: "content/editors/properties/particle-properties-tab/emitter-rotation-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-physics-panel", title: "Emitter - Physics panel", file: "content/editors/properties/particle-properties-tab/emitter-physics-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-render-panel", title: "Emitter - Render panel", file: "content/editors/properties/particle-properties-tab/emitter-render-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-viewport-display-panel", title: "Emitter - Viewport Display panel", file: "content/editors/properties/particle-properties-tab/emitter-viewport-display-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-children-panel", title: "Emitter - Children panel", file: "content/editors/properties/particle-properties-tab/emitter-children-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-field-weights-panel", title: "Emitter - Field Weights panel", file: "content/editors/properties/particle-properties-tab/emitter-field-weights-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-hair-dynamics-panel", title: "Hair - Hair Dynamics panel", file: "content/editors/properties/particle-properties-tab/hair-hair-dynamics-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-force-field-settings-panel", title: "Emitter - Force Field Settings panel", file: "content/editors/properties/particle-properties-tab/emitter-force-field-settings-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-vertex-groups-panel", title: "Emitter - Vertex Groups panel", file: "content/editors/properties/particle-properties-tab/emitter-vertex-groups-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-textures-panel", title: "Emitter - Textures panel", file: "content/editors/properties/particle-properties-tab/emitter-textures-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-animation-panel", title: "Emitter - Animation panel", file: "content/editors/properties/particle-properties-tab/emitter-animation-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.emitter-custom-properties-panel", title: "Emitter - Custom Properties panel", file: "content/editors/properties/particle-properties-tab/emitter-custom-properties-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair", title: "Hair", file: "content/editors/properties/particle-properties-tab/hair.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-emission-panel", title: "Hair - Emission Panel", file: "content/editors/properties/particle-properties-tab/hair-emission-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-cache-panel", title: "Hair - Cache Panel", file: "content/editors/properties/particle-properties-tab/hair-cache-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-velocity-panel", title: "Hair - Velocity panel", file: "content/editors/properties/particle-properties-tab/hair-velocity-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-rotation-panel", title: "Hair - Rotation panel", file: "content/editors/properties/particle-properties-tab/hair-rotation-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-physics-panel", title: "Hair - Physics panel", file: "content/editors/properties/particle-properties-tab/hair-physics-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-render-panel", title: "Hair - Render panel", file: "content/editors/properties/particle-properties-tab/hair-render-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-viewport-display-panel", title: "Hair - Viewport Display panel", file: "content/editors/properties/particle-properties-tab/hair-viewport-display-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-children-panel", title: "Hair - Children panel", file: "content/editors/properties/particle-properties-tab/hair-children-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-hair-shape-panel", title: "Hair - Hair Shape panel", file: "content/editors/properties/particle-properties-tab/hair-hair-shape-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-field-weights-panel", title: "Hair - Field Weights panel", file: "content/editors/properties/particle-properties-tab/hair-field-weights-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-force-field-settings-panel", title: "Hair - Force Field Settings panel", file: "content/editors/properties/particle-properties-tab/hair-force-field-settings-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-vertex-groups-panel", title: "Hair - Vertex Groups panel", file: "content/editors/properties/particle-properties-tab/hair-vertex-groups-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-textures-panel", title: "Hair - Textures panel", file: "content/editors/properties/particle-properties-tab/hair-textures-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-animation-panel", title: "Hair - Animation panel", file: "content/editors/properties/particle-properties-tab/hair-animation-panel.md", icon: null }
+    - { id: "editors.properties.particle-properties-tab.hair-custom-properties-panel", title: "Hair - Custom Properties panel", file: "content/editors/properties/particle-properties-tab/hair-custom-properties-panel.md", icon: null }
+    - { id: "editors.properties.visual-effects-properties-tab", title: "Visual Effects Properties Tab", file: "content/editors/properties/visual-effects-properties-tab.md", icon: null }
+    - { id: "editors.properties.physics-properties-tab", title: "Physics Properties Tab", file: "content/editors/properties/physics-properties-tab/index.md", icon: null }
+    - { id: "editors.properties.physics-properties-tab.force-field-panel", title: "Force Field panel", file: "content/editors/properties/physics-properties-tab/force-field-panel.md", icon: null }
+    - { id: "editors.properties.physics-properties-tab.collision-panel", title: "Collision panel", file: "content/editors/properties/physics-properties-tab/collision-panel.md", icon: null }
+    - { id: "editors.properties.physics-properties-tab.cloth-panel", title: "Cloth panel", file: "content/editors/properties/physics-properties-tab/cloth-panel.md", icon: null }
+    - { id: "editors.properties.physics-properties-tab.dynamic-paint-panel", title: "Dynamic Paint panel", file: "content/editors/properties/physics-properties-tab/dynamic-paint-panel.md", icon: null }
+    - { id: "editors.properties.physics-properties-tab.soft-body-panel", title: "Soft Body panel", file: "content/editors/properties/physics-properties-tab/soft-body-panel.md", icon: null }
+    - { id: "editors.properties.physics-properties-tab.fluid-panel", title: "Fluid panel", file: "content/editors/properties/physics-properties-tab/fluid-panel.md", icon: null }
+    - { id: "editors.properties.physics-properties-tab.rigid-body-panel", title: "Rigid Body panel", file: "content/editors/properties/physics-properties-tab/rigid-body-panel.md", icon: null }
+    - { id: "editors.properties.physics-properties-tab.rigid-body-constraint-panel", title: "Rigid Body Constraint panel", file: "content/editors/properties/physics-properties-tab/rigid-body-constraint-panel.md", icon: null }
+    - { id: "editors.properties.object-constraints-properties-tab", title: "Object Constraints Properties Tab", file: "content/editors/properties/object-constraints-properties-tab.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab", title: "Object Data Properties Tab", file: "content/editors/properties/object-data-properties-tab/index.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.mesh-object", title: "Mesh Object", file: "content/editors/properties/object-data-properties-tab/mesh-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.curve-object", title: "Curve Object", file: "content/editors/properties/object-data-properties-tab/curve-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.curves-object", title: "Curves Object", file: "content/editors/properties/object-data-properties-tab/curves-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.metaball-object", title: "Metaball Object", file: "content/editors/properties/object-data-properties-tab/metaball-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.surface-object", title: "Surface Object", file: "content/editors/properties/object-data-properties-tab/surface-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.point-cloud-object", title: "Point Cloud Object", file: "content/editors/properties/object-data-properties-tab/point-cloud-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.text-object", title: "Text Object", file: "content/editors/properties/object-data-properties-tab/text-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.grease-pencil-object", title: "Grease Pencil Object", file: "content/editors/properties/object-data-properties-tab/grease-pencil-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.armature-object", title: "Armature Object", file: "content/editors/properties/object-data-properties-tab/armature-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.lattice-object", title: "Lattice Object", file: "content/editors/properties/object-data-properties-tab/lattice-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.empty-image-object", title: "Empty&Image Object", file: "content/editors/properties/object-data-properties-tab/empty-image-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.speaker-object", title: "Speaker Object", file: "content/editors/properties/object-data-properties-tab/speaker-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.camera-object", title: "Camera Object", file: "content/editors/properties/object-data-properties-tab/camera-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.light-object", title: "Light Object", file: "content/editors/properties/object-data-properties-tab/light-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.light-probe-object", title: "Light Probe Object", file: "content/editors/properties/object-data-properties-tab/light-probe-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.force-field-object", title: "Force Field Object", file: "content/editors/properties/object-data-properties-tab/force-field-object.md", icon: null }
+    - { id: "editors.properties.object-data-properties-tab.volume-object", title: "Volume Object", file: "content/editors/properties/object-data-properties-tab/volume-object.md", icon: null }
+    - { id: "editors.properties.material-properties-tab", title: "Material Properties Tab", file: "content/editors/properties/material-properties-tab.md", icon: null }
+    - { id: "editors.properties.texture-properties-tab", title: "Texture Properties Tab", file: "content/editors/properties/texture-properties-tab.md", icon: null }
+    - { id: "editors.properties.bone-properties-tab", title: "Bone Properties Tab", file: "content/editors/properties/bone-properties-tab.md", icon: null }
+    - { id: "editors.properties.bone-constraint-properties", title: "Bone Constraint Properties", file: "content/editors/properties/bone-constraint-properties.md", icon: null }
+    - { id: "editors.properties.strip-tab", title: "Strip Tab", file: "content/editors/properties/strip-tab.md", icon: null }
+    - { id: "editors.properties.strip-modifiers-tab", title: "Strip Modifiers Tab", file: "content/editors/properties/strip-modifiers-tab.md", icon: null }
+    - { id: "editors.file-browser", title: "File browser", file: "content/editors/file-browser.md", icon: null }
+    - { id: "editors.asset-browser", title: "Asset Browser", file: "content/editors/asset-browser/index.md", icon: null }
+    - { id: "editors.asset-browser.asset-browser-default-asset-library", title: "Asset Browser - Default Asset LIbrary", file: "content/editors/asset-browser/asset-browser-default-asset-library.md", icon: null }
+    - { id: "editors.asset-browser.asset-browser-essentials-asset-library", title: "Asset Browser - Essentials Asset Library", file: "content/editors/asset-browser/asset-browser-essentials-asset-library.md", icon: null }
+    - { id: "editors.spreadsheet", title: "Spreadsheet", file: "content/editors/spreadsheet.md", icon: null }
+    - { id: "editors.preferences", title: "Preferences", file: "content/editors/preferences.md", icon: null }
+    - { id: "editors.topbar-and-statusbar.topbar-menus", title: "Topbar menus", file: "content/editors/topbar-and-statusbar/topbar-menus/index.md", icon: null }
+    - { id: "editors.3d-viewport.context-menus", title: "Context menus", file: "content/editors/3d-viewport/context-menus/index.md", icon: null }
+    - { id: "editors.geometry-node-editor.header", title: "Header", file: "content/editors/geometry-node-editor/header/index.md", icon: null }
+    - { id: "editors.dope-sheet.header", title: "Header", file: "content/editors/dope-sheet/header/index.md", icon: null }
+    - { id: "editors.graph-editor.header", title: "Header", file: "content/editors/graph-editor/header/index.md", icon: null }
+    - { id: "editors.drivers-editor.header", title: "Header", file: "content/editors/drivers-editor/header/index.md", icon: null }
+    - { id: "editors.drivers-editor.sidebar", title: "Sidebar", file: "content/editors/drivers-editor/sidebar/index.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.header", title: "Header", file: "content/editors/nonlinear-animation-editor/header/index.md", icon: null }
+    - { id: "editors.nonlinear-animation-editor.sidebar", title: "Sidebar", file: "content/editors/nonlinear-animation-editor/sidebar/index.md", icon: null }
+    - { id: "editors.timeline.viewport", title: "Timeline viewport", file: "content/editors/timeline/viewport.md", icon: null }
+
+- section: advanced
+  title: "Advanced"
+  slug: advanced
+  pages:
+    - { id: "advanced.advanced-command-line", title: "Advanced - Command Line", file: "content/advanced/advanced-command-line.md", icon: null }
+    - { id: "advanced.advanced-scripting-extending-bforartists", title: "Advanced - Scripting & Extending Bforartists", file: "content/advanced/advanced-scripting-extending-bforartists.md", icon: null }
+    - { id: "advanced.advanced-working-limits", title: "Advanced - Working Limits", file: "content/advanced/advanced-working-limits.md", icon: null }
+    - { id: "advanced.troubleshooting", title: "Troubleshooting", file: "content/advanced/troubleshooting.md", icon: null }
+
+- section: extensions
+  title: "Extensions"
+  slug: extensions
+  pages:
+    - { id: "extensions.bforartists-extensions", title: "Bforartists Extensions", file: "content/extensions/bforartists-extensions/index.md", icon: null }
+    - { id: "extensions.bforartists-extensions.core-extension-brush-panels", title: "Core Extension - Brush Panels", file: "content/extensions/bforartists-extensions/core-extension-brush-panels.md", icon: null }
+    - { id: "extensions.bforartists-extensions.core-extension-presentation-slider", title: "Core Extension - Presentation Slider", file: "content/extensions/bforartists-extensions/core-extension-presentation-slider.md", icon: null }
+    - { id: "extensions.bforartists-extensions.core-extension-3d-sequencer", title: "Core Extension- 3D Sequencer", file: "content/extensions/bforartists-extensions/core-extension-3d-sequencer.md", icon: null }
+    - { id: "extensions.bforartists-extensions.core-extension-power-user-tools", title: "Core Extension - Power User Tools", file: "content/extensions/bforartists-extensions/core-extension-power-user-tools.md", icon: null }
+
+- section: appendix
+  title: "Appendix"
+  slug: appendix
+  pages:
+    - { id: "appendix.glossary", title: "Glossary", file: "content/appendix/glossary.md", icon: null }
+    - { id: "appendix.bforartists-history", title: "Bforartists History", file: "content/appendix/bforartists-history.md", icon: null }
+    - { id: "appendix.manual-update-history", title: "Manual Update History", file: "content/appendix/manual-update-history.md", icon: null }
+
+- section: keymap
+  title: "Keymap"
+  slug: keymap
+  pages:
+    - { id: "keymap.standard-keymap", title: "Standard Keymap", file: "content/keymap/standard-keymap.md", icon: null }
+    - { id: "keymap.important-hotkeys", title: "Important Hotkeys", file: "content/keymap/important-hotkeys.md", icon: null }
 
 - section: doc-kit
   title: "Doc Kit (test)"
