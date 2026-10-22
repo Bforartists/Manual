@@ -10068,7 +10068,7 @@
    ],
    "images": "editors/properties",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "26",
    "parts": [
     {
@@ -10093,7 +10093,7 @@
    ],
    "images": "editors/properties/render-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.2",
    "parts": [
     {
@@ -10118,7 +10118,7 @@
    ],
    "images": "editors/properties/render-properties-tab/cycles",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.2.1",
    "parts": [
     {
@@ -10143,7 +10143,7 @@
    ],
    "images": "editors/properties/render-properties-tab/eevee",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.2.2",
    "parts": [
     {
@@ -10168,7 +10168,7 @@
    ],
    "images": "editors/properties/render-properties-tab/workbench",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.2.4",
    "parts": [
     {
@@ -10192,7 +10192,7 @@
    ],
    "images": "editors/properties/output-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.3",
    "parts": [
     {
@@ -10216,7 +10216,7 @@
    ],
    "images": "editors/properties/view-layer-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.4",
    "parts": [
     {
@@ -10240,7 +10240,7 @@
    ],
    "images": "editors/properties/scene-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.5",
    "parts": [
     {
@@ -10264,7 +10264,7 @@
    ],
    "images": "editors/properties/world-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.6",
    "parts": [
     {
@@ -10288,7 +10288,7 @@
    ],
    "images": "editors/properties/collection-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.7",
    "parts": [
     {
@@ -10312,7 +10312,7 @@
    ],
    "images": "editors/properties/object-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.8",
    "parts": [
     {
@@ -10594,7 +10594,7 @@
    ],
    "images": "editors/properties/particle-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.10",
    "parts": [
     {
@@ -10619,7 +10619,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.1",
    "parts": [
     {
@@ -10644,7 +10644,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-emission-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.2",
    "parts": [
     {
@@ -10669,7 +10669,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-cache-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.3",
    "parts": [
     {
@@ -10694,7 +10694,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-velocity-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.4",
    "parts": [
     {
@@ -10719,7 +10719,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-rotation-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.5",
    "parts": [
     {
@@ -10744,7 +10744,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-physics-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.6",
    "parts": [
     {
@@ -10769,7 +10769,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-render-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.7",
    "parts": [
     {
@@ -10794,7 +10794,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-viewport-display-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.8",
    "parts": [
     {
@@ -10819,7 +10819,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-children-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.9",
    "parts": [
     {
@@ -10844,7 +10844,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-field-weights-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.10",
    "parts": [
     {
@@ -10869,7 +10869,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-hair-dynamics-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.10",
    "parts": [
     {
@@ -10894,7 +10894,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-force-field-settings-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.11",
    "parts": [
     {
@@ -10919,7 +10919,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-vertex-groups-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.12",
    "parts": [
     {
@@ -10944,7 +10944,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-textures-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.13",
    "parts": [
     {
@@ -10969,7 +10969,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-animation-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.14",
    "parts": [
     {
@@ -10994,7 +10994,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/emitter-custom-properties-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.15",
    "parts": [
     {
@@ -11019,7 +11019,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.16",
    "parts": [
     {
@@ -11044,7 +11044,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-emission-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.17",
    "parts": [
     {
@@ -11069,7 +11069,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-cache-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.18",
    "parts": [
     {
@@ -11094,7 +11094,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-velocity-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.19",
    "parts": [
     {
@@ -11119,7 +11119,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-rotation-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.20",
    "parts": [
     {
@@ -11144,7 +11144,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-physics-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.21",
    "parts": [
     {
@@ -11169,7 +11169,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-render-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.22",
    "parts": [
     {
@@ -11194,7 +11194,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-viewport-display-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.23",
    "parts": [
     {
@@ -11219,7 +11219,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-children-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.24",
    "parts": [
     {
@@ -11244,7 +11244,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-hair-shape-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.25",
    "parts": [
     {
@@ -11269,7 +11269,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-field-weights-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.26",
    "parts": [
     {
@@ -11294,7 +11294,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-force-field-settings-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.27",
    "parts": [
     {
@@ -11319,7 +11319,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-vertex-groups-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.28",
    "parts": [
     {
@@ -11344,7 +11344,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-textures-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.29",
    "parts": [
     {
@@ -11369,7 +11369,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-animation-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.30",
    "parts": [
     {
@@ -11394,7 +11394,7 @@
    ],
    "images": "editors/properties/particle-properties-tab/hair-custom-properties-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.10.31",
    "parts": [
     {
@@ -11418,7 +11418,7 @@
    ],
    "images": "editors/properties/visual-effects-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.11",
    "parts": [
     {
@@ -11442,7 +11442,7 @@
    ],
    "images": "editors/properties/physics-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.12",
    "parts": [
     {
@@ -11467,7 +11467,7 @@
    ],
    "images": "editors/properties/physics-properties-tab/force-field-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.12.1",
    "parts": [
     {
@@ -11492,7 +11492,7 @@
    ],
    "images": "editors/properties/physics-properties-tab/collision-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.12.2",
    "parts": [
     {
@@ -11517,7 +11517,7 @@
    ],
    "images": "editors/properties/physics-properties-tab/cloth-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.12.3",
    "parts": [
     {
@@ -11542,7 +11542,7 @@
    ],
    "images": "editors/properties/physics-properties-tab/dynamic-paint-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.12.4",
    "parts": [
     {
@@ -11567,7 +11567,7 @@
    ],
    "images": "editors/properties/physics-properties-tab/soft-body-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.12.5",
    "parts": [
     {
@@ -11592,7 +11592,7 @@
    ],
    "images": "editors/properties/physics-properties-tab/fluid-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.12.6",
    "parts": [
     {
@@ -11617,7 +11617,7 @@
    ],
    "images": "editors/properties/physics-properties-tab/rigid-body-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.12.7",
    "parts": [
     {
@@ -11642,7 +11642,7 @@
    ],
    "images": "editors/properties/physics-properties-tab/rigid-body-constraint-panel",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.12.8",
    "parts": [
     {
@@ -11666,7 +11666,7 @@
    ],
    "images": "editors/properties/object-constraints-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.13",
    "parts": [
     {
@@ -11690,7 +11690,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.14",
    "parts": [
     {
@@ -11715,7 +11715,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/mesh-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.1",
    "parts": [
     {
@@ -11740,7 +11740,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/curve-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.2",
    "parts": [
     {
@@ -11765,7 +11765,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/curves-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.3",
    "parts": [
     {
@@ -11790,7 +11790,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/metaball-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.4",
    "parts": [
     {
@@ -11815,7 +11815,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/surface-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.5",
    "parts": [
     {
@@ -11840,7 +11840,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/point-cloud-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.6",
    "parts": [
     {
@@ -11865,7 +11865,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/text-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.7",
    "parts": [
     {
@@ -11890,7 +11890,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/grease-pencil-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.8",
    "parts": [
     {
@@ -11915,7 +11915,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/armature-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.9",
    "parts": [
     {
@@ -11940,7 +11940,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/lattice-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.10",
    "parts": [
     {
@@ -11965,7 +11965,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/empty-image-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.11",
    "parts": [
     {
@@ -11990,7 +11990,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/speaker-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.12",
    "parts": [
     {
@@ -12015,7 +12015,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/camera-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.13",
    "parts": [
     {
@@ -12040,7 +12040,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/light-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.14",
    "parts": [
     {
@@ -12065,7 +12065,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/light-probe-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.15",
    "parts": [
     {
@@ -12090,7 +12090,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/force-field-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.16",
    "parts": [
     {
@@ -12115,7 +12115,7 @@
    ],
    "images": "editors/properties/object-data-properties-tab/volume-object",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "26.14.17",
    "parts": [
     {
@@ -12139,7 +12139,7 @@
    ],
    "images": "editors/properties/material-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.15",
    "parts": [
     {
@@ -12163,7 +12163,7 @@
    ],
    "images": "editors/properties/texture-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.16",
    "parts": [
     {
@@ -12187,7 +12187,7 @@
    ],
    "images": "editors/properties/bone-properties-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.17",
    "parts": [
     {
@@ -12211,7 +12211,7 @@
    ],
    "images": "editors/properties/bone-constraint-properties",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.18",
    "parts": [
     {
@@ -12235,7 +12235,7 @@
    ],
    "images": "editors/properties/strip-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.19",
    "parts": [
     {
@@ -12259,7 +12259,7 @@
    ],
    "images": "editors/properties/strip-modifiers-tab",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "26.20",
    "parts": [
     {
@@ -12282,7 +12282,7 @@
    ],
    "images": "editors/file-browser",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "27",
    "parts": [
     {
@@ -12306,7 +12306,7 @@
    ],
    "images": "editors/asset-browser",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "28",
    "parts": [
     {
@@ -12330,7 +12330,7 @@
    ],
    "images": "editors/asset-browser/asset-browser-default-asset-library",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "28.1",
    "parts": [
     {
@@ -12354,7 +12354,7 @@
    ],
    "images": "editors/asset-browser/asset-browser-essentials-asset-library",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "28.2",
    "parts": [
     {
@@ -12377,7 +12377,7 @@
    ],
    "images": "editors/spreadsheet",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "29",
    "parts": [
     {

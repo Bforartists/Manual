@@ -9846,6 +9846,110 @@
      "select": "*"
     }
    ]
+  },
+  {
+   "id": "editors.file-browser",
+   "file": "content/editors/file-browser.md",
+   "title": "File browser",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "File browser"
+   ],
+   "images": "editors/file-browser",
+   "parts": [
+    {
+     "src": "27 Editors - File browser",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.asset-browser",
+   "file": "content/editors/asset-browser/index.md",
+   "title": "Asset Browser",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Asset Browser"
+   ],
+   "images": "editors/asset-browser",
+   "parts": [
+    {
+     "src": "28 Editors - Asset Browser",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.asset-browser.asset-browser-default-asset-library",
+   "file": "content/editors/asset-browser/asset-browser-default-asset-library.md",
+   "title": "Asset Browser - Default Asset LIbrary",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Asset Browser",
+    "Asset Browser - Default Asset LIbrary"
+   ],
+   "images": "editors/asset-browser/asset-browser-default-asset-library",
+   "parts": [
+    {
+     "src": "28.1 Asset Browser - Default Asset LIbrary",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.asset-browser.asset-browser-essentials-asset-library",
+   "file": "content/editors/asset-browser/asset-browser-essentials-asset-library.md",
+   "title": "Asset Browser - Essentials Asset Library",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Asset Browser",
+    "Asset Browser - Essentials Asset Library"
+   ],
+   "images": "editors/asset-browser/asset-browser-essentials-asset-library",
+   "parts": [
+    {
+     "src": "28.2 Asset Browser - Essentials Asset Library",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.spreadsheet",
+   "file": "content/editors/spreadsheet.md",
+   "title": "Spreadsheet",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Spreadsheet"
+   ],
+   "images": "editors/spreadsheet",
+   "parts": [
+    {
+     "src": "29 Editors - Spreadsheet",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.preferences",
+   "file": "content/editors/preferences.md",
+   "title": "Preferences",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Preferences"
+   ],
+   "images": "editors/preferences",
+   "parts": [
+    {
+     "src": "30 Editors - Preferences",
+     "select": "*"
+    }
+   ]
   }
  ],
  "snippets": [
