@@ -100,21 +100,29 @@ The token is a password that lets GitHub write the docs into Webflow's CMS for t
 
 ## 2. 📁 Make a chapter
 
-- [ ] Open **📘 Documentation pages → Doc Kit (test)**.
-- [ ] Click **Create folder**. Name it `my-first-chapter`.
-- [ ] Inside that folder, click **Add an entry**. Title: `My first chapter`.
-- [ ] Change the file name to `index.md`. (A folder's `index.md` is the chapter itself.)
-- [ ] Type one sentence, for example *This chapter tries every kind of content.* Click **Save**.
+In the list, each row has two kinds of plus: the **⊕ next to the title** opens or closes the chapter, and the
+**+ button at the right end of the row** (tooltip *Add children entry*) adds a page inside it.
 
-✅ The chapter shows in the tree under *Doc Kit (test)*.
+- [ ] Open **📘 Documentation pages**. On the **Doc Kit (test)** row, click the **+ at the right end** of the row.
+- [ ] Title: `My first chapter`. Keep the file name (`my-first-chapter.md`). Type one sentence, for example
+      *This chapter tries every kind of content.* Click **Save**.
+- [ ] Back in the list, open **Doc Kit (test)** with its ⊕. On the new **My first chapter** row, click the
+      **+ at the right end**. Pages CMS asks **Rename this file first?** Click **Rename**.
+      (This turns `my-first-chapter.md` into `my-first-chapter/index.md`: a folder's `index.md` is the chapter
+      itself, and the folder can now hold sub-chapters.)
+
+✅ *My first chapter* shows under *Doc Kit (test)* with its own ⊕.
 
 ## 3. 📄 Make two sub-chapters
 
-- [ ] Inside `my-first-chapter`, click **Add an entry**. Title: `Part one`. Keep the file name (`part-one.md`).
-      Type one sentence. **Save**.
+- [ ] On the **My first chapter** row, click the **+ at the right end** again. Title: `Part one`. Keep the file name
+      (`part-one.md`). Type one sentence. **Save**.
 - [ ] Do the same for `Part two`.
 
-✅ Both sub-chapters show inside the chapter folder.
+✅ Open *My first chapter* with its ⊕: *Part one* and *Part two* sit inside it.
+
+> 💡 **"Something went wrong · Fetch failed: 504"** means Pages CMS timed out while reading GitHub, which can happen
+> on a branch's first visit. Wait a few seconds and reload the page.
 
 ## 4. ✍️ Try every kind of content (in *My first chapter*)
 
