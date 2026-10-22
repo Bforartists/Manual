@@ -12685,7 +12685,7 @@
    ],
    "images": "appendix/manual-update-history",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "40",
    "parts": [
     {
@@ -12708,7 +12708,7 @@
    ],
    "images": "keymap/standard-keymap",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "41",
    "parts": [
     {

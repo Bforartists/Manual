@@ -10158,6 +10158,40 @@
      "select": "*"
     }
    ]
+  },
+  {
+   "id": "keymap.standard-keymap",
+   "file": "content/keymap/standard-keymap.md",
+   "title": "Standard Keymap",
+   "section": "keymap",
+   "path": [
+    "Keymap",
+    "Standard Keymap"
+   ],
+   "images": "keymap/standard-keymap",
+   "parts": [
+    {
+     "src": "41 Standard Keymap",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "keymap.important-hotkeys",
+   "file": "content/keymap/important-hotkeys.md",
+   "title": "Important Hotkeys",
+   "section": "keymap",
+   "path": [
+    "Keymap",
+    "Important Hotkeys"
+   ],
+   "images": "keymap/important-hotkeys",
+   "parts": [
+    {
+     "src": "42 Important Hotkeys",
+     "select": "*"
+    }
+   ]
   }
  ],
  "snippets": [
