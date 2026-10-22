@@ -8,3 +8,4 @@ section: my-first-chapter
 path:
   - My first chapter
 ---
+Here is a sentence. 
