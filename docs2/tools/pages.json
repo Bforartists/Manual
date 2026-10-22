@@ -3512,6 +3512,683 @@
      "select": "*"
     }
    ]
+  },
+  {
+   "id": "editors.compositor",
+   "file": "content/editors/compositor/index.md",
+   "title": "Compositor",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor"
+   ],
+   "images": "editors/compositor",
+   "parts": [
+    {
+     "src": "10 Editors - Compositor",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header",
+   "file": "content/editors/compositor/header/index.md",
+   "title": "Header",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header"
+   ],
+   "images": "editors/compositor/header",
+   "parts": [
+    {
+     "src": "10.1 Editors - Compositor - Header",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.tools-and-options",
+   "file": "content/editors/compositor/header/tools-and-options.md",
+   "title": "Tools and Options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Tools and Options"
+   ],
+   "images": "editors/compositor/header/tools-and-options",
+   "parts": [
+    {
+     "src": "10.1.1 Editors - Compositor - Header - Tools and Options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.quick-menu",
+   "file": "content/editors/compositor/header/quick-menu.md",
+   "title": "Quick Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Quick Menu"
+   ],
+   "images": "editors/compositor/header/quick-menu",
+   "parts": [
+    {
+     "src": "10.1.2 Editors - Compositor - Header - Quick Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.view-menu",
+   "file": "content/editors/compositor/header/view-menu.md",
+   "title": "View Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "View Menu"
+   ],
+   "images": "editors/compositor/header/view-menu",
+   "parts": [
+    {
+     "src": "10.1.3 Editors - Compositor Editor - Header - View Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.select-menu",
+   "file": "content/editors/compositor/header/select-menu.md",
+   "title": "Select Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Select Menu"
+   ],
+   "images": "editors/compositor/header/select-menu",
+   "parts": [
+    {
+     "src": "10.1.4 Editors - Compositor Editor - Header - Select Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu",
+   "file": "content/editors/compositor/header/add-menu.md",
+   "title": "Add Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu"
+   ],
+   "images": "editors/compositor/header/add-menu",
+   "parts": [
+    {
+     "src": "10.1.5 Editors - Compositor Editor - Header - Add Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-input-constant",
+   "file": "content/editors/compositor/header/add-menu-input-constant.md",
+   "title": "Add Menu - Input - Constant",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Input - Constant"
+   ],
+   "images": "editors/compositor/header/add-menu-input-constant",
+   "parts": [
+    {
+     "src": "10.1.6 Editors - Compositor Editor - Header - Add Menu - Input - Constant",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-input",
+   "file": "content/editors/compositor/header/add-menu-input.md",
+   "title": "Add Menu - Input",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Input"
+   ],
+   "images": "editors/compositor/header/add-menu-input",
+   "parts": [
+    {
+     "src": "10.1.7 Editors - Compositor Editor - Header - Add Menu - Input",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-input-scene",
+   "file": "content/editors/compositor/header/add-menu-input-scene.md",
+   "title": "Add Menu - Input - Scene",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Input - Scene"
+   ],
+   "images": "editors/compositor/header/add-menu-input-scene",
+   "parts": [
+    {
+     "src": "10.1.8 Editors - Compositor Editor - Header - Add Menu - Input - Scene",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-output",
+   "file": "content/editors/compositor/header/add-menu-output.md",
+   "title": "Add Menu - Output",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Output"
+   ],
+   "images": "editors/compositor/header/add-menu-output",
+   "parts": [
+    {
+     "src": "10.1.9 Editors - Compositor Editor - Header - Add Menu - Output",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-color-adjust",
+   "file": "content/editors/compositor/header/add-menu-color-adjust.md",
+   "title": "Add Menu - Color - Adjust",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Color - Adjust"
+   ],
+   "images": "editors/compositor/header/add-menu-color-adjust",
+   "parts": [
+    {
+     "src": "10.1.10 Editors - Compositor Editor - Header - Add Menu - Color - Adjust",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-color",
+   "file": "content/editors/compositor/header/add-menu-color.md",
+   "title": "Add Menu - Color",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Color"
+   ],
+   "images": "editors/compositor/header/add-menu-color",
+   "parts": [
+    {
+     "src": "10.1.11 Editors - Compositor Editor - Header - Add Menu - Color",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-creative",
+   "file": "content/editors/compositor/header/add-menu-creative.md",
+   "title": "Add Menu - Creative",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Creative"
+   ],
+   "images": "editors/compositor/header/add-menu-creative",
+   "parts": [
+    {
+     "src": "10.1.12 Editors - Compositor Editor - Header - Add Menu - Creative",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-filter-blur",
+   "file": "content/editors/compositor/header/add-menu-filter-blur.md",
+   "title": "Add Menu - Filter - Blur",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Filter - Blur"
+   ],
+   "images": "editors/compositor/header/add-menu-filter-blur",
+   "parts": [
+    {
+     "src": "10.1.13 Editors - Compositor Editor - Header - Add Menu - Filter - Blur",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-filter",
+   "file": "content/editors/compositor/header/add-menu-filter.md",
+   "title": "Add Menu - Filter",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Filter"
+   ],
+   "images": "editors/compositor/header/add-menu-filter",
+   "parts": [
+    {
+     "src": "10.1.14 Editors - Compositor Editor - Header - Add Menu - Filter",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-keying",
+   "file": "content/editors/compositor/header/add-menu-keying.md",
+   "title": "Add Menu - Keying",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Keying"
+   ],
+   "images": "editors/compositor/header/add-menu-keying",
+   "parts": [
+    {
+     "src": "10.1.15 Editors - Compositor Editor - Header - Add Menu - Keying",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-mask",
+   "file": "content/editors/compositor/header/add-menu-mask.md",
+   "title": "Add Menu - Mask",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Mask"
+   ],
+   "images": "editors/compositor/header/add-menu-mask",
+   "parts": [
+    {
+     "src": "10.1.16 Editors - Compositor Editor - Header - Add Menu - Mask",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-tracking",
+   "file": "content/editors/compositor/header/add-menu-tracking.md",
+   "title": "Add Menu - Tracking",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Tracking"
+   ],
+   "images": "editors/compositor/header/add-menu-tracking",
+   "parts": [
+    {
+     "src": "10.1.17 Editors - Compositor Editor - Header - Add Menu - Tracking",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-texture",
+   "file": "content/editors/compositor/header/add-menu-texture.md",
+   "title": "Add Menu - Texture",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Texture"
+   ],
+   "images": "editors/compositor/header/add-menu-texture",
+   "parts": [
+    {
+     "src": "10.1.18 Editors - Compositor Editor - Header - Add Menu - Texture",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-transform",
+   "file": "content/editors/compositor/header/add-menu-transform.md",
+   "title": "Add Menu - Transform",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Transform"
+   ],
+   "images": "editors/compositor/header/add-menu-transform",
+   "parts": [
+    {
+     "src": "10.1.19 Editors - Compositor Editor - Header - Add Menu - Transform",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-utilities-math",
+   "file": "content/editors/compositor/header/add-menu-utilities-math.md",
+   "title": "Add Menu - Utilities - Math",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Utilities - Math"
+   ],
+   "images": "editors/compositor/header/add-menu-utilities-math",
+   "parts": [
+    {
+     "src": "10.1.20 Editors - Compositor Editor - Header - Add Menu - Utilities - Math",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-utilities-vector",
+   "file": "content/editors/compositor/header/add-menu-utilities-vector.md",
+   "title": "Add Menu - Utilities - Vector",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Utilities - Vector"
+   ],
+   "images": "editors/compositor/header/add-menu-utilities-vector",
+   "parts": [
+    {
+     "src": "10.1.21 Editors - Compositor Editor - Header - Add Menu - Utilities - Vector",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-utilities",
+   "file": "content/editors/compositor/header/add-menu-utilities.md",
+   "title": "Add Menu - Utilities",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Utilities"
+   ],
+   "images": "editors/compositor/header/add-menu-utilities",
+   "parts": [
+    {
+     "src": "10.1.22 Editors - Compositor Editor - Header - Add Menu - Utilities",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.geometry-nodes-editor-header-add-menu-group",
+   "file": "content/editors/compositor/header/geometry-nodes-editor-header-add-menu-group.md",
+   "title": "Geometry Nodes Editor - Header - Add Menu - Group",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Geometry Nodes Editor - Header - Add Menu - Group"
+   ],
+   "images": "editors/compositor/header/geometry-nodes-editor-header-add-menu-group",
+   "parts": [
+    {
+     "src": "10.1.23 Editors - Geometry Nodes Editor - Header - Add Menu - Group",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.header.add-menu-layout",
+   "file": "content/editors/compositor/header/add-menu-layout.md",
+   "title": "Add Menu - Layout",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Header",
+    "Add Menu - Layout"
+   ],
+   "images": "editors/compositor/header/add-menu-layout",
+   "parts": [
+    {
+     "src": "10.1.24 Editors - Compositor Editor - Header - Add Menu - Layout",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.tool-shelf",
+   "file": "content/editors/compositor/tool-shelf.md",
+   "title": "Tool Shelf",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Tool Shelf"
+   ],
+   "images": "editors/compositor/tool-shelf",
+   "parts": [
+    {
+     "src": "10.2 Editors - Compositor Editor - Tool Shelf",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.sidebar",
+   "file": "content/editors/compositor/sidebar/index.md",
+   "title": "Sidebar",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Sidebar"
+   ],
+   "images": "editors/compositor/sidebar",
+   "parts": [
+    {
+     "src": "10.3 Editors - Compositor Editor - Sidebar",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.sidebar.node-tab",
+   "file": "content/editors/compositor/sidebar/node-tab.md",
+   "title": "Node Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Sidebar",
+    "Node Tab"
+   ],
+   "images": "editors/compositor/sidebar/node-tab",
+   "parts": [
+    {
+     "src": "10.3.1 Editors - Compositor Editor - Sidebar - Node Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.sidebar.tool-tab",
+   "file": "content/editors/compositor/sidebar/tool-tab.md",
+   "title": "Tool Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Sidebar",
+    "Tool Tab"
+   ],
+   "images": "editors/compositor/sidebar/tool-tab",
+   "parts": [
+    {
+     "src": "10.3.2 Editors - Compositor Editor - Sidebar - Tool Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.sidebar.view-tab",
+   "file": "content/editors/compositor/sidebar/view-tab.md",
+   "title": "View Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Sidebar",
+    "View Tab"
+   ],
+   "images": "editors/compositor/sidebar/view-tab",
+   "parts": [
+    {
+     "src": "10.3.3 Editors - Compositor Editor - Sidebar - View Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.sidebar.options-tab",
+   "file": "content/editors/compositor/sidebar/options-tab.md",
+   "title": "Options Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Sidebar",
+    "Options Tab"
+   ],
+   "images": "editors/compositor/sidebar/options-tab",
+   "parts": [
+    {
+     "src": "10.3.4 Editors - Compositor Editor - Sidebar - Options Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.sidebar.add-tab",
+   "file": "content/editors/compositor/sidebar/add-tab.md",
+   "title": "Add Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Sidebar",
+    "Add Tab"
+   ],
+   "images": "editors/compositor/sidebar/add-tab",
+   "parts": [
+    {
+     "src": "10.3.5 Editors - Compositor Editor - Sidebar - Add Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.sidebar.relations-tab",
+   "file": "content/editors/compositor/sidebar/relations-tab.md",
+   "title": "Relations tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Sidebar",
+    "Relations tab"
+   ],
+   "images": "editors/compositor/sidebar/relations-tab",
+   "parts": [
+    {
+     "src": "10.3.6 Editors - Compositor Editor - Sidebar - Relations tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.compositor.sidebar.group-tab",
+   "file": "content/editors/compositor/sidebar/group-tab.md",
+   "title": "Group tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Compositor",
+    "Sidebar",
+    "Group tab"
+   ],
+   "images": "editors/compositor/sidebar/group-tab",
+   "parts": [
+    {
+     "src": "10.3.7 Editors - Compositor Editor - Sidebar - Group tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.texture-node-editor",
+   "file": "content/editors/texture-node-editor.md",
+   "title": "Texture Node Editor",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Texture Node Editor"
+   ],
+   "images": "editors/texture-node-editor",
+   "parts": [
+    {
+     "src": "11 Editors - Texture Node Editor",
+     "select": "*"
+    }
+   ]
   }
  ],
  "snippets": [
