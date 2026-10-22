@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grease Pencil - Edit mode - Grease Pencil menu · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/clone-runs-3-15 · <code>docs2/clone-runs-3-15</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<span>Modifiers tab</span>
+<span style="padding-left:1.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Color modifiers (Grease Pencil)</span>
+<span>Editors introduction</span>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:1.5rem" href="../asset-shelf.html">Asset Shelf</a>
+<a style="padding-left:1.5rem" href="../context-menus.html">Context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-edit-mode-armature-context-menu.html">Armature - Edit Mode - Armature context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-edit-mode-lattice-context-menu.html">Armature - Edit Mode - Lattice context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-pose-mode-pose-context-menu.html">Armature - Pose Mode - Pose context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/curve-surface-object-edit-mode-curve-context-menus.html">Curve + Surface Object - Edit Mode - Curve context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-draw-mode-brushes-context-menu.html">Grease Pencil object - Draw Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-edit-mode-point-context-menu.html">Grease Pencil object - Edit Mode - Point context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-edit-mode-stroke-context-menu.html">Grease Pencil object - Edit Mode - Stroke context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu.html">Grease Pencil object - Sculpt Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu.html">Grease Pencil object - Vertex Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-weight-paint-mode-brushes-context-menu.html">Grease Pencil object - Weight Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/hair-curves-edit-mode-curves-context-menu.html">Hair Curves - Edit Mode - Curves context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-edge-context-menu.html">Mesh Object - Edit Mode - Edge Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-face-context-menu.html">Mesh Object - Edit Mode - Face Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-vertex-context-menu.html">Mesh Object - Edit Mode - Vertex Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-sculpt-mode-brushes-context-menus.html">Mesh Object - Sculpt Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-texture-paint-mode-brushes-context-menus.html">Mesh Object - Texture Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-vertex-paint-mode-brushes-context-menus.html">Mesh Object - Vertex Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-weight-paint-mode-brushes-context-menus.html">Mesh Object - Weight Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/metaball-edit-mode-metaball-context-menu.html">Metaball - Edit Mode - Metaball context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/object-mode-object-context-menu.html">Object mode - Object Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/text-edit-mode-text-context-menu.html">Text - Edit Mode - Text context menu</a>
+<a style="padding-left:1.5rem" href="../header.html">Header</a>
+<a style="padding-left:2.5rem" href="add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="armature-edit-mode-armature-menu.html">Armature - Edit mode - Armature menu</a>
+<a style="padding-left:2.5rem" href="armature-pose-mode-pose-menu.html">Armature - Pose mode - Pose menu</a>
+<a style="padding-left:2.5rem" href="curve-edit-mode-curve-menu.html">Curve - Edit mode - Curve menu</a>
+<a style="padding-left:2.5rem" href="curve-surface-edit-mode-control-points-menu.html">Curve &amp; Surface - Edit mode - Control points menu</a>
+<a style="padding-left:2.5rem" href="curve-surface-edit-mode-segments-menu.html">Curve &amp; Surface - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="edit-mode-add-menu.html">Edit mode - Add menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-draw-mode-draw-menu.html">Grease Pencil - Draw mode - Draw menu</a>
+<a class="is-current" style="padding-left:2.5rem" href="grease-pencil-edit-mode-grease-pencil-menu.html">Grease Pencil - Edit mode - Grease Pencil menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode-point-menu.html">Grease Pencil - Edit mode - Point menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode-stroke-menu.html">Grease Pencil - Edit mode - Stroke menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-vertex-paint-mode-paint-menu.html">Grease Pencil - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-weight-paint-mode-weights-menu.html">Grease Pencil - Weight Paint Mode - Weights Menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-control-points-menu.html">Hair Curve - Edit mode - Control Points menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-curves-menu.html">Hair Curve - Edit mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-segments-menu.html">Hair Curve - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-sculpt-mode-curves-menu.html">Hair Curve - Sculpt mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="lattice-edit-mode-lattice-menu.html">Lattice - Edit mode - Lattice menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-edge-menu.html">Mesh - Edit mode - Edge Menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-face-menu.html">Mesh - Edit mode - Face menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-mesh-menu.html">Mesh - Edit mode - Mesh menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-uv-menu.html">Mesh - Edit mode - UV menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-vertex-menu.html">Mesh - Edit Mode - Vertex Menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-face-sets-menu.html">Mesh - Sculpt mode - Face Sets menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-mask-menu.html">Mesh - Sculpt mode - Mask menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-sculpt-menu.html">Mesh - Sculpt mode - Sculpt menu</a>
+<a style="padding-left:2.5rem" href="mesh-texture-paint-mode-brush-menu.html">Mesh - Texture Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="mesh-vertex-paint-mode-brush-menu.html">Mesh - Vertex Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="mesh-vertex-paint-mode-paint-menu.html">Mesh - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="mesh-weight-paint-mode-weights-menu.html">Mesh - Weight Paint mode - Weights menu</a>
+<a style="padding-left:2.5rem" href="metaball-edit-mode-metaball-menu.html">Metaball - Edit mode - Metaball menu</a>
+<a style="padding-left:2.5rem" href="navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="object-menu.html">Object menu</a>
+<a style="padding-left:2.5rem" href="particle-particle-mode-particle-menu.html">Particle - Particle mode - Particle menu</a>
+<a style="padding-left:2.5rem" href="point-cloud-edit-mode-point-cloud-menu.html">Point Cloud - Edit mode - Point Cloud menu</a>
+<a style="padding-left:2.5rem" href="quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="surface-edit-mode-surface-menu.html">Surface - Edit mode - Surface menu</a>
+<a style="padding-left:2.5rem" href="text-edit-mode-text-menu.html">Text - Edit mode - Text menu</a>
+<a style="padding-left:2.5rem" href="view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../sidebar/animation-tab.html">Animation Tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/item-tab.html">Item tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-edit-mode.html">Tool Tab - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-draw-mode.html">Tool Tab - Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-layer-panel.html">Tool Tab - Grease Pencil - Layer Panel</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-sculpt-mode.html">Tool Tab - Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-vertex-paint-mode.html">Tool Tab - Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-weight-paint-mode.html">Tool Tab - Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-hair-curve-sculpt-mode.html">Tool Tab - Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-sculpt-mode.html">Tool Tab - Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-texture-paint-mode.html">Tool Tab - Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-vertex-paint-mode.html">Tool Tab - Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-weight-paint-mode.html">Tool Tab - Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-object-mode.html">Tool Tab - Object Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-particle-edit-mode.html">Tool Tab - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-pose-mode.html">Tool Tab - Pose Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:1.5rem" href="../tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/armature-edit-mode.html">Armature - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/armature-pose-mode.html">Armature - Pose Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/curve-edit-mode.html">Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-draw-mode.html">Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-edit-mode.html">Grease Pencil - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-sculpt-mode.html">Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-vertex-paint-mode.html">Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-weight-paint-mode.html">Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/hair-curve-edit-mode.html">Hair Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/hair-curve-sculpt-mode.html">Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/lattice-edit-mode.html">Lattice - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-edit-mode.html">Mesh - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-particle-edit-mode.html">Mesh - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-sculpt-mode.html">Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-texture-paint-mode.html">Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-vertex-paint-mode.html">Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-weight-paint-mode.html">Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/metaball-edit-mode.html">Metaball - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/surface-edit-mode.html">Surface - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/text-edit-mode.html">Text - Edit Mode</a>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Header › Grease Pencil - Edit mode - Grease Pencil menu</div><h1 class="pv-title">Grease Pencil - Edit mode - Grease Pencil menu</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 9 min read</span></div><article class="ui-doc-body"><h2 id="edit-mode-grease-pencil-menu">Edit Mode - Grease Pencil Menu</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/edit-mode-grease-pencil-menu.png" alt="Edit Mode - Grease Pencil Menu" loading="lazy"><figcaption>Edit Mode - Grease Pencil Menu</figcaption></figure>
+<h2 id="transform-submenu">Transform submenu</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/transform-submenu.png" alt="Transform submenu" loading="lazy"></figure>
+<h3 id="to-sphere">To Sphere</h3>
+<p>Transforms the selected geometry into a sphere shape.</p>
+<h4 id="last-operator-to-sphere">Last Operator To Sphere</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-to-sphere.png" alt="Last Operator To Sphere" loading="lazy"><figcaption>Last Operator To Sphere</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>The transform factor.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Edit mirror geometry too.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="proportional-editing">Proportional Editing</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/proportional-editing.png" alt="Proportional Editing" loading="lazy"></figure>
+<h5 id="proportional-editing-2">Proportional editing</h5>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shear">Shear</h3>
+<p>Shear shears the selection.</p>
+<p>In Object mode this tools requires to have more than one object selected.</p>
+<p>The shear tool works along a imaginary 2d plane. The shear axis controls if the items are sheared along the x or the y axes of this plane. This is the plane along which the transformation happens. You can shear along the x or the y axis of this plane.</p>
+<p>To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.</p>
+<h4 id="last-operator-shear">Last Operator Shear</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png" alt="Last Operator Shear" loading="lazy"></figure>
+<h5 id="offset">Offset</h5>
+<p>Adjust an offset.</p>
+<h5 id="axis">Axis</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/object-menu/axis.png" alt="Axis" loading="lazy"></figure>
+<p>Defines one axis of the imaginary shear axis plane.</p>
+<h5 id="axis-ortho">Axis Ortho</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/object-menu/axis.png" alt="Axis Ortho" loading="lazy"></figure>
+<p>Defines the other axis of the imaginary shear axis plane.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Orientation</td>
+<td>Choose the orientation for the shear action.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="proportional-editing-3">Proportional editing</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bend">Bend</h3>
+<p>Bends the selection.</p>
+<h3 id="push-pull">Push/Pull</h3>
+<p>It pushes or pulls the object positions relative to the center of the selection.</p>
+<p>In Object mode this tool requires to have more than one object selected.</p>
+<h4 id="last-operator-push-pull">Last Operator Push/Pull</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png" alt="Last Operator Push/Pull" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distance</td>
+<td>Adjust the distance of influence of the tool.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="proportional-editing-4">Proportional editing</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="radius">Radius</h3>
+<p>Scales the selected geometry of a curve along its normals. Grease pencil is under the hood a curve. Transform orientation and Pivot point gets ignored.</p>
+<p>A positive value pushes the vertices outwards. A negative value pushes the vertices inwards.</p>
+<h4 id="last-operator-transform">Last Operator Transform</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png" alt="Last Operator Transform" loading="lazy"></figure>
+<h5 id="values">Values</h5>
+<p>The transform values.</p>
+<h5 id="axis-2">Axis</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/axis.png" alt="Axis" loading="lazy"></figure>
+<p>The transform axis.</p>
+<h5 id="orientation">Orientation</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable Mirror Editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="opacity">Opacity</h4>
+<p>Changes the transparency of selected Grease Pencil vertices. Higher values = more opaque; lower values = more transparent. This is useful for shading, layering, or fade effects in drawings.</p>
+<p>To use, activate then drag left or right to change the stroke opacity.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This does not affect fill opacity, only stroke.</p></div>
+<h4 id="last-operator-transform-2">Last Operator Transform</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png" alt="Last Operator Transform" loading="lazy"></figure>
+<h5 id="values-2">Values</h5>
+<p>The transform values.</p>
+<h5 id="axis-3">Axis</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/axis.png" alt="Axis" loading="lazy"></figure>
+<p>The transform axis.</p>
+<h5 id="orientation-2">Orientation</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable Mirror Editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mirror-submenu">Mirror submenu</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/mirror.png" alt="Mirror submenu" loading="lazy"></figure>
+<p>Mirror mirrors the selected geometry along the defined axis.</p>
+<h3 id="interactive-mirror">Interactive Mirror</h3>
+<p>Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored</p>
+<h3 id="x-global-y-global-etc">X Global, Y Global etc.</h3>
+<p>Mirrors the selection around the chosen axis.</p>
+<h4 id="last-operator-mirror">Last Operator Mirror</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/x-global-y-global-etc.png" alt="Last Operator Mirror" loading="lazy"></figure>
+<p>The Last Operator Mirror panel gives you tools to adjust the mirror action.</p>
+<h5 id="orientation-3">Orientation</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box . Choose the type of orientation for the mirroring action.</p>
+<h5 id="constraint-axis">Constraint Axis</h5>
+<p>Constraint Axis gives you again the possibility to define the mirror axis. You can choose more than one axis here.</p>
+<h2 id="snap-submenu">Snap submenu</h2>
+<h3 id="snap">Snap</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/snap-sub-menu.png" alt="Snap" loading="lazy"></figure>
+<p>Choose several methods to snap one element to another. The menu items should be self explaining.</p>
+<h4 id="last-operator-snap-selection-to-cursor">Last operator Snap Selection to Cursor</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-snap.png" alt="Last operator Snap Selection to Cursor" loading="lazy"><figcaption>Last operator Snap Selection to Cursor</figcaption></figure>
+<p>Some snap operations shows a last operation panel, some not.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>If the selection should snap as a whole, or if each individual element of the selection should snap.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>If the selection should be rotated to match the cursor.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="active-layer">Active Layer</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/active-layer.png" alt="Active Layer" loading="lazy"></figure>
+<p>Set the active layer</p>
+<h3 id="new-layer">New Layer</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/new-layer.png" alt="New Layer" loading="lazy"></figure>
+<p>Add a new greasepencil layer. A popup will appear where you can add the name.</p>
+<h3 id="layers">Layers</h3>
+<p>The list of the available layers.</p>
+<h2 id="animation">Animation</h2>
+<h3 id="insert-blank-key-frame-active-layer">Insert Blank Key frame ( Active Layer )</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/insert-blank-key-frame-active-layer.png" alt="Insert Blank Key frame ( Active Layer )" loading="lazy"><figcaption>Insert Blank Key frame ( Active Layer )</figcaption></figure>
+<p>Inserts a key frame into the active layer.</p>
+<h3 id="insert-blank-key-frame-all-layers">Insert Blank Key frame ( All Layers )</h3>
+<p>Inserts a key frame into all layers.</p>
+<h3 id="last-operator-insert-blank-frame">Last Operator Insert Blank Frame</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-insert-blank-frame.png" alt="Last Operator Insert Blank Frame" loading="lazy"><figcaption>Last Operator Insert Blank Frame</figcaption></figure>
+<p>Some snap operations shows a last operation panel, some not.</p>
+<h4 id="all-layers">All Layers</h4>
+<p>Insert into active layer or into all layers.</p>
+<h3 id="duplicate-active-key-frame-active-layer">Duplicate Active Key frame ( Active Layer )</h3>
+<p>Duplicates the active key frame in the active layer.</p>
+<h3 id="duplicate-active-key-frame-all-layers">Duplicate Active Key frame ( All Layers )</h3>
+<p>Duplicates the active key frame in all layers.</p>
+<h3 id="last-operator-insert-blank-frame-2">Last Operator Insert Blank Frame</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-insert-blank-frame-2.png" alt="Last Operator Insert Blank Frame" loading="lazy"><figcaption>Last Operator Insert Blank Frame</figcaption></figure>
+<p>Some snap operations shows a last operation panel, some not.</p>
+<h4 id="mode">Mode</h4>
+<p>Duplicate the active key frame in the active layer or in all layers.</p>
+<h3 id="delete-active-key-frame-active-layer">Delete Active Key frame ( Active Layer )</h3>
+<p>Deletes the active key frame in the active layer.</p>
+<h3 id="delete-active-key-frame-all-layers">Delete Active Key frame ( All Layers )</h3>
+<p>Deletes the active key frame in all layers</p>
+<h2 id="single-operators">Single Operators</h2>
+<h3 id="interpolate-sequence">Interpolate Sequence</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/interpolate-sequence.png" alt="Interpolate Sequence" loading="lazy"></figure>
+<p>Interpolate strokes between the previous and next keyframe by adding multiple keyframes. When you are on a frame between two keyframes and click the sequence button, then a breakdown keyframe will be added on every frame between the previous and next keyframe.</p>
+<h3 id="duplicate">Duplicate</h3>
+<p>Duplicates the current selection. This can be a single control point or a whole curve.</p>
+<p>The copy sticks to the mouse until you release it. A Right click while moving will reset the position of the duplicate. The duplicated part will be part of the same object.</p>
+<p>When you drag the duplicate around you will see the position values in the header.</p>
+<h4 id="last-operator-duplicate">Last Operator Duplicate</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-duplicate.png" alt="Last Operator Duplicate" loading="lazy"></figure>
+<h5 id="move-x-y-z">Move X , Y , Z</h5>
+<h5 id="orientation-4">Orientation</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable Mirror Editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Split</td>
+<td>Split selected points to a new stroke.</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Copies the selection.</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Pastes a copied selection to active layer. You can have more than one layer.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="paste-by-layer">Paste by Layer</h3>
+<p>Pastes a copied selection to same, original layer. You can have more than one layer.</p>
+<h4 id="last-operator-paste-strokes">Last operator Paste Strokes</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-paste-strokes.png" alt="Last operator Paste Strokes" loading="lazy"><figcaption>Last operator Paste Strokes</figcaption></figure>
+<h5 id="type">Type</h5>
+<p>Choose between the paste methods again.</p>
+<h3 id="dissolve">Dissolve</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/dissolve.png" alt="Dissolve" loading="lazy"></figure>
+<p>Dissolve is a union operation. Two edges becomes one edge by removing the vertice in between.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dissolve</td>
+<td>Dissolves the selection.</td>
+</tr>
+<tr>
+<td>Dissolve Between</td>
+<td>Dissolves the vertices between the selected vertices.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dissolve-unselect">Dissolve Unselect</h4>
+<p>Dissolves the vertices that are not selected.</p>
+<h5 id="last-operator-dissolve">Last Operator Dissolve</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-dissolve.png" alt="Last Operator Dissolve" loading="lazy"></figure>
+<h6 id="type-2">Type</h6>
+<p>Choose how you want to dissolve.</p>
+<h3 id="delete">Delete</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/delete.png" alt="Delete" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete</td>
+<td>Delete selected stroke points.</td>
+</tr>
+<tr>
+<td>Delete Active Key frame(Active Layer)</td>
+<td>Deletes the active key frame in the current active layer.</td>
+</tr>
+<tr>
+<td>Delete Active Key frame(All Layers)</td>
+<td>Deletes the active key frame in all layers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cleanup-sub-menu">Cleanup sub menu</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/cleanup-sub-menu.png" alt="Cleanup sub menu" loading="lazy"></figure>
+<h4 id="clean-loose-points">Clean Loose Points</h4>
+<p>Deletes not connected stroke geometry that is made of loose points.</p>
+<h5 id="last-operator-clean-loose-points">Last Operator Clean Loose Points</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-loose-points.png" alt="Last Operator Clean Loose Points" loading="lazy"><figcaption>Last Operator Clean Loose Points</figcaption></figure>
+<h6 id="limit">Limit</h6>
+<p>The number of vertices below which a stroke gets counted as a loose point.</p>
+<h4 id="delete-duplicated-frames">Delete Duplicated Frames</h4>
+<p>Deletes all duplicated frames.</p>
+<h5 id="last-operator-clean-duplicated-frames">Last Operator Clean Duplicated Frames</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-duplicated-frames.png" alt="Last Operator Clean Duplicated Frames" loading="lazy"><figcaption>Last Operator Clean Duplicated Frames</figcaption></figure>
+<h6 id="type-3">Type</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/type.png" alt="Type" loading="lazy"></figure>
+<p>Delete just in the selected frames or in all frames.</p>
+<h4 id="merge-by-distance">Merge by Distance</h4>
+<p>Merge selected geometry that is in a specific range to each other.</p>
+<h5 id="last-operator-merge-by-distance">Last Operator Merge by Distance</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-merge-by-distance.png" alt="Last Operator Merge by Distance" loading="lazy"><figcaption>Last Operator Merge by Distance</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Threshold</td>
+<td>Delete just in the selected frames or in all frames.</td>
+</tr>
+<tr>
+<td>Unselected</td>
+<td>Also merge geometry by distance that is not selected but part of the stroke.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="re-project-strokes">Re project Strokes</h4>
+<p>Re project the selected strokes onto a new plane from the current viewport. So that all strokes are on one plane.</p>
+<h5 id="re-project-strokes-menu">Re project Strokes menu</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/re-project-strokes-menu.png" alt="Re project Strokes menu" loading="lazy"><figcaption>Re project Strokes menu</figcaption></figure>
+<p>Using this tool opens a popup menu. Choose the projection type method.</p>
+<h5 id="last-operator-re-projectstrokes">Last Operator Re projectStrokes</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-re-projectstrokes.png" alt="Last Operator Re projectStrokes" loading="lazy"><figcaption>Last Operator Re projectStrokes</figcaption></figure>
+<h6 id="projection-type">Projection Type</h6>
+<p>A popup menu. Choose the projection type method.</p>
+<h4 id="remove-fill-guides">Remove Fill Guides</h4>
+<p>In Draw mode with the fill tool you are able to draw so called fill guide with holding down the Alt key. They act as the boundary of the fill area. This tool removes these fill guides.</p>
+<h5 id="last-operator-remove-fill-guides">Last Operator Remove Fill Guides</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-remove-fill-guides.png" alt="Last Operator Remove Fill Guides" loading="lazy"><figcaption>Last Operator Remove Fill Guides</figcaption></figure>
+<h6 id="mode-2">Mode</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/mode.png" alt="Mode" loading="lazy"></figure>
+<p>All frames or just the current frame.</p>
+<h3 id="show-hide">Show / Hide</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/curve-edit-mode-curve-menu/show-hide.png" alt="Show / Hide" loading="lazy"></figure>
+<h4 id="show-hidden">Show Hidden</h4>
+<p>Makes all curve geometry in the scene visible again.</p>
+<h4 id="hide-selected">Hide Selected</h4>
+<p>Hides the selected curve geometry.</p>
+<h5 id="last-operator-hide-selected">Last Operator Hide Selected</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/curve-edit-mode-curve-menu/last-operator-hide-selected.png" alt="Last Operator Hide Selected" loading="lazy"><figcaption>Last Operator Hide Selected</figcaption></figure>
+<h6 id="unselected">Unselected</h6>
+<p>Hides the not selected curve geometry.</p>
+<h4 id="hide-unselected">Hide Unselected</h4>
+<p>Hides the not selected curve geometry. The selected geometry stays visible.</p>
+<h3 id="outline">Outline</h3>
+<p>Convert selected strokes to perimeter.</p>
+<h4 id="last-operator-outline">Last Operator Outline</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-outline.png" alt="Last Operator Outline" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Projection mode</td>
+<td>Hides the not selected layers.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The radius.</td>
+</tr>
+<tr>
+<td>Offset Factor</td>
+<td>The offset factor.</td>
+</tr>
+<tr>
+<td>Corner Subdivision</td>
+<td>The corner subdivision resolution.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="separate-sub-menu">Separate sub menu</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/separate-sub-menu.jpg" alt="Separate sub menu" loading="lazy"></figure>
+<p>Separates the selection into a new grease pencil object.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected Points</td>
+<td>Separate the selected points with its edges.</td>
+</tr>
+<tr>
+<td>Selected Strokes</td>
+<td>Separate the whole stroke of the current selection.</td>
+</tr>
+<tr>
+<td>Active Layer</td>
+<td>Separate all the strokes at the current active layer.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-separate-strokes">Last Operator Separate Strokes</h4>
+<h5 id="mode-3">Mode</h5>
+<h6 id="active-layer-2">Active Layer</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/active-layer.png" alt="Active Layer" loading="lazy"></figure>
+<p>Separate all the strokes at the current active layer.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected Strokes</td>
+<td>Separate the whole stroke of the current selection.</td>
+</tr>
+<tr>
+<td>Selected Points</td>
+<td>Separate the selected points with its edges.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fclone-runs-3-15/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fheader%2Fgrease-pencil-edit-mode-grease-pencil-menu.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/clone-runs-3-15/docs2/content/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#edit-mode-grease-pencil-menu">Edit Mode - Grease Pencil Menu</a><a class="h2" href="#transform-submenu">Transform submenu</a><a class="h3" href="#to-sphere">To Sphere</a><a class="h3" href="#shear">Shear</a><a class="h3" href="#bend">Bend</a><a class="h3" href="#push-pull">Push/Pull</a><a class="h3" href="#radius">Radius</a><a class="h2" href="#mirror-submenu">Mirror submenu</a><a class="h3" href="#interactive-mirror">Interactive Mirror</a><a class="h3" href="#x-global-y-global-etc">X Global, Y Global etc.</a><a class="h2" href="#snap-submenu">Snap submenu</a><a class="h3" href="#snap">Snap</a><a class="h2" href="#active-layer">Active Layer</a><a class="h3" href="#new-layer">New Layer</a><a class="h3" href="#layers">Layers</a><a class="h2" href="#animation">Animation</a><a class="h3" href="#insert-blank-key-frame-active-layer">Insert Blank Key frame ( Active Layer )</a><a class="h3" href="#insert-blank-key-frame-all-layers">Insert Blank Key frame ( All Layers )</a><a class="h3" href="#last-operator-insert-blank-frame">Last Operator Insert Blank Frame</a><a class="h3" href="#duplicate-active-key-frame-active-layer">Duplicate Active Key frame ( Active Layer )</a><a class="h3" href="#duplicate-active-key-frame-all-layers">Duplicate Active Key frame ( All Layers )</a><a class="h3" href="#last-operator-insert-blank-frame-2">Last Operator Insert Blank Frame</a><a class="h3" href="#delete-active-key-frame-active-layer">Delete Active Key frame ( Active Layer )</a><a class="h3" href="#delete-active-key-frame-all-layers">Delete Active Key frame ( All Layers )</a><a class="h2" href="#single-operators">Single Operators</a><a class="h3" href="#interpolate-sequence">Interpolate Sequence</a><a class="h3" href="#duplicate">Duplicate</a><a class="h3" href="#paste-by-layer">Paste by Layer</a><a class="h3" href="#dissolve">Dissolve</a><a class="h3" href="#delete">Delete</a><a class="h3" href="#cleanup-sub-menu">Cleanup sub menu</a><a class="h3" href="#show-hide">Show / Hide</a><a class="h3" href="#outline">Outline</a><a class="h3" href="#separate-sub-menu">Separate sub menu</a></aside></div></body></html>

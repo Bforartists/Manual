@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mesh - Edit Mode - Vertex Menu · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/clone-runs-3-15 · <code>docs2/clone-runs-3-15</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<span>Modifiers tab</span>
+<span style="padding-left:1.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Color modifiers (Grease Pencil)</span>
+<span>Editors introduction</span>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:1.5rem" href="../asset-shelf.html">Asset Shelf</a>
+<a style="padding-left:1.5rem" href="../context-menus.html">Context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-edit-mode-armature-context-menu.html">Armature - Edit Mode - Armature context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-edit-mode-lattice-context-menu.html">Armature - Edit Mode - Lattice context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-pose-mode-pose-context-menu.html">Armature - Pose Mode - Pose context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/curve-surface-object-edit-mode-curve-context-menus.html">Curve + Surface Object - Edit Mode - Curve context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-draw-mode-brushes-context-menu.html">Grease Pencil object - Draw Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-edit-mode-point-context-menu.html">Grease Pencil object - Edit Mode - Point context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-edit-mode-stroke-context-menu.html">Grease Pencil object - Edit Mode - Stroke context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu.html">Grease Pencil object - Sculpt Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu.html">Grease Pencil object - Vertex Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-weight-paint-mode-brushes-context-menu.html">Grease Pencil object - Weight Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/hair-curves-edit-mode-curves-context-menu.html">Hair Curves - Edit Mode - Curves context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-edge-context-menu.html">Mesh Object - Edit Mode - Edge Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-face-context-menu.html">Mesh Object - Edit Mode - Face Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-vertex-context-menu.html">Mesh Object - Edit Mode - Vertex Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-sculpt-mode-brushes-context-menus.html">Mesh Object - Sculpt Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-texture-paint-mode-brushes-context-menus.html">Mesh Object - Texture Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-vertex-paint-mode-brushes-context-menus.html">Mesh Object - Vertex Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-weight-paint-mode-brushes-context-menus.html">Mesh Object - Weight Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/metaball-edit-mode-metaball-context-menu.html">Metaball - Edit Mode - Metaball context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/object-mode-object-context-menu.html">Object mode - Object Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/text-edit-mode-text-context-menu.html">Text - Edit Mode - Text context menu</a>
+<a style="padding-left:1.5rem" href="../header.html">Header</a>
+<a style="padding-left:2.5rem" href="add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="armature-edit-mode-armature-menu.html">Armature - Edit mode - Armature menu</a>
+<a style="padding-left:2.5rem" href="armature-pose-mode-pose-menu.html">Armature - Pose mode - Pose menu</a>
+<a style="padding-left:2.5rem" href="curve-edit-mode-curve-menu.html">Curve - Edit mode - Curve menu</a>
+<a style="padding-left:2.5rem" href="curve-surface-edit-mode-control-points-menu.html">Curve &amp; Surface - Edit mode - Control points menu</a>
+<a style="padding-left:2.5rem" href="curve-surface-edit-mode-segments-menu.html">Curve &amp; Surface - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="edit-mode-add-menu.html">Edit mode - Add menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-draw-mode-draw-menu.html">Grease Pencil - Draw mode - Draw menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode-grease-pencil-menu.html">Grease Pencil - Edit mode - Grease Pencil menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode-point-menu.html">Grease Pencil - Edit mode - Point menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode-stroke-menu.html">Grease Pencil - Edit mode - Stroke menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-vertex-paint-mode-paint-menu.html">Grease Pencil - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-weight-paint-mode-weights-menu.html">Grease Pencil - Weight Paint Mode - Weights Menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-control-points-menu.html">Hair Curve - Edit mode - Control Points menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-curves-menu.html">Hair Curve - Edit mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-segments-menu.html">Hair Curve - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-sculpt-mode-curves-menu.html">Hair Curve - Sculpt mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="lattice-edit-mode-lattice-menu.html">Lattice - Edit mode - Lattice menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-edge-menu.html">Mesh - Edit mode - Edge Menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-face-menu.html">Mesh - Edit mode - Face menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-mesh-menu.html">Mesh - Edit mode - Mesh menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-uv-menu.html">Mesh - Edit mode - UV menu</a>
+<a class="is-current" style="padding-left:2.5rem" href="mesh-edit-mode-vertex-menu.html">Mesh - Edit Mode - Vertex Menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-face-sets-menu.html">Mesh - Sculpt mode - Face Sets menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-mask-menu.html">Mesh - Sculpt mode - Mask menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-sculpt-menu.html">Mesh - Sculpt mode - Sculpt menu</a>
+<a style="padding-left:2.5rem" href="mesh-texture-paint-mode-brush-menu.html">Mesh - Texture Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="mesh-vertex-paint-mode-brush-menu.html">Mesh - Vertex Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="mesh-vertex-paint-mode-paint-menu.html">Mesh - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="mesh-weight-paint-mode-weights-menu.html">Mesh - Weight Paint mode - Weights menu</a>
+<a style="padding-left:2.5rem" href="metaball-edit-mode-metaball-menu.html">Metaball - Edit mode - Metaball menu</a>
+<a style="padding-left:2.5rem" href="navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="object-menu.html">Object menu</a>
+<a style="padding-left:2.5rem" href="particle-particle-mode-particle-menu.html">Particle - Particle mode - Particle menu</a>
+<a style="padding-left:2.5rem" href="point-cloud-edit-mode-point-cloud-menu.html">Point Cloud - Edit mode - Point Cloud menu</a>
+<a style="padding-left:2.5rem" href="quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="surface-edit-mode-surface-menu.html">Surface - Edit mode - Surface menu</a>
+<a style="padding-left:2.5rem" href="text-edit-mode-text-menu.html">Text - Edit mode - Text menu</a>
+<a style="padding-left:2.5rem" href="view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../sidebar/animation-tab.html">Animation Tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/item-tab.html">Item tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-edit-mode.html">Tool Tab - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-draw-mode.html">Tool Tab - Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-layer-panel.html">Tool Tab - Grease Pencil - Layer Panel</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-sculpt-mode.html">Tool Tab - Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-vertex-paint-mode.html">Tool Tab - Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-weight-paint-mode.html">Tool Tab - Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-hair-curve-sculpt-mode.html">Tool Tab - Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-sculpt-mode.html">Tool Tab - Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-texture-paint-mode.html">Tool Tab - Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-vertex-paint-mode.html">Tool Tab - Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-weight-paint-mode.html">Tool Tab - Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-object-mode.html">Tool Tab - Object Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-particle-edit-mode.html">Tool Tab - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-pose-mode.html">Tool Tab - Pose Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:1.5rem" href="../tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/armature-edit-mode.html">Armature - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/armature-pose-mode.html">Armature - Pose Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/curve-edit-mode.html">Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-draw-mode.html">Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-edit-mode.html">Grease Pencil - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-sculpt-mode.html">Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-vertex-paint-mode.html">Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-weight-paint-mode.html">Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/hair-curve-edit-mode.html">Hair Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/hair-curve-sculpt-mode.html">Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/lattice-edit-mode.html">Lattice - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-edit-mode.html">Mesh - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-particle-edit-mode.html">Mesh - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-sculpt-mode.html">Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-texture-paint-mode.html">Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-vertex-paint-mode.html">Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-weight-paint-mode.html">Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/metaball-edit-mode.html">Metaball - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/surface-edit-mode.html">Surface - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/text-edit-mode.html">Text - Edit Mode</a>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Header › Mesh - Edit Mode - Vertex Menu</div><h1 class="pv-title">Mesh - Edit Mode - Vertex Menu</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 11 min read</span></div><article class="ui-doc-body"><h2 id="edit-mode-vertex-menu">Edit Mode - Vertex Menu</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/edit-mode-vertex-menu.png" alt="Edit Mode - Vertex Menu" loading="lazy"><figcaption>Edit Mode - Vertex Menu</figcaption></figure>
+<p>The Vertex menu just exists for mesh objects. It provides you with tools that are designed to modify vertices.</p>
+<h3 id="legacy">Legacy</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/legacy.png" alt="Legacy" loading="lazy"></figure>
+<p>The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.</p>
+<h4 id="bevel">Bevel</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/bevel.png" alt="Bevel" loading="lazy"></figure>
+<p>The Bevel Tool adds a bevel to the selected geometry.</p>
+<p>Usage: first select the geometry that you want to bevel. Then activate the tool. Don't wonder that the mouse movement does nothing until you move the mouse really really far away. That's by design. Best is to adjust the amount in the Last Operator Bevel panel.</p>
+<h5 id="last-operator-bevel">Last Operator Bevel</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-bevel.png" alt="Last Operator Bevel" loading="lazy"></figure>
+<h6 id="affect">Affect</h6>
+<p>What geometry to bevel. Vertices or Edges.</p>
+<h6 id="width-type">Width type</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/width-type.png" alt="Width type" loading="lazy"></figure>
+<p>Which measure type to choose for the bevel action. Offset, Width, Depth or Percent.</p>
+<h6 id="segments">Segments</h6>
+<p>How many segments gets created.</p>
+<h6 id="profile-shape">Profile Shape</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/profile-shape.png" alt="Profile Shape" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/profile-shape.jpg" alt="Profile Shape" loading="lazy"></figure>
+<p>Controls the profile shape strength. A value close to 0 bends the roundness to inside. A value towards 1 bends the curve to outside. A value of 0.5 defines a radius around the center point of the bevel.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Material Index</td>
+<td>The material for bevel faces. -1 means to use the material from the adjacent faces.</td>
+</tr>
+<tr>
+<td>Harden Normals</td>
+<td>Match normals of new faces to adjacent faces.</td>
+</tr>
+<tr>
+<td>Clamp Overlap</td>
+<td>Do not allow beveled geometry to overlap each other.</td>
+</tr>
+<tr>
+<td>Loop Slide</td>
+<td>Prefer slide along edge to even widths.</td>
+</tr>
+<tr>
+<td>Mark Seams</td>
+<td>Mark the edges of the new created geometry as seams.</td>
+</tr>
+<tr>
+<td>Mark Sharp</td>
+<td>Mark the edges of the new created geometry sharp.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="miter-outer">Miter Outer</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/miter-outer.png" alt="Miter Outer" loading="lazy"></figure>
+<p>How the outer miter is set. Miter is how the bevel rounding at a corner is done.</p>
+<p><strong>Sharp</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png" alt="Sharp" loading="lazy"></figure>
+<p>Creates a sharp miter.</p>
+<p><strong>Patch</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/patch.png" alt="Patch" loading="lazy"></figure>
+<p>This replaces the outside vertex of a miter with 3 vertices. And uses a patch pattern there.</p>
+<p><strong>Arc</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png" alt="Arc" loading="lazy"></figure>
+<p>This replaces the vertex of a miter with 2 vertices, joined by an arc. A separate Spread parameter says how far to move the vertices away from their original position.</p>
+<h6 id="inner">Inner</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/inner.png" alt="Inner" loading="lazy"></figure>
+<p>How the inner miter is set. Miter is how the bevel rounding at a corner is done.</p>
+<p><strong>Sharp</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png" alt="Sharp" loading="lazy"></figure>
+<p>Creates a sharp miter.</p>
+<p><strong>Arc</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png" alt="Arc" loading="lazy"></figure>
+<p>This replaces the vertex of a miter with 2 vertices, joined by an arc. A separate Spread parameter says how far to move the vertices away from their original position.</p>
+<h6 id="intersection-type">Intersection Type</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/intersection-type.png" alt="Intersection Type" loading="lazy"></figure>
+<p>The method to use to create meshes at intersections. Bevel can create self intersecting geometry.</p>
+<h6 id="face-strength">Face Strength</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/face-strength.png" alt="Face Strength" loading="lazy"></figure>
+<p>Set Face Strength on the faces involved in the bevel, according to the specified mode. This can be used in conjunction with a Weight Normals Modifier (with the Face Influence option checked).</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Do not set face strength.</td>
+</tr>
+<tr>
+<td>New</td>
+<td>Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak.</td>
+</tr>
+<tr>
+<td>Affected</td>
+<td>In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>In addition to those set for the Affected option, also set all the rest of the faces of the model to have strength Strong.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="profile-type">Profile Type</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/profile-type.png" alt="Profile Type" loading="lazy"></figure>
+<p>The profile type.</p>
+<p><strong>Superellipse</strong></p>
+<p>Uses a mathematically smooth curve for bevel profiles</p>
+<p><strong>Custom</strong></p>
+<p>Allows manual control of the bevel profile shape via a curve widget.</p>
+<p><strong>Presets</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/presets.png" alt="Presets" loading="lazy"></figure>
+<p>Curve presets.</p>
+<p><strong>Navigation elements</strong></p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in and out</td>
+<td>The two buttons with the magnifying glass at it zooms in and out in the curve window.</td>
+</tr>
+<tr>
+<td>Reverse Path</td>
+<td>Reverses the curve path.</td>
+</tr>
+<tr>
+<td>Toggle Profile Clipping</td>
+<td>Turns the profile clipping on or off.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tools menu</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/tools-menu.png" alt="Tools menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Handler and node position</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/handler-and-node-position.png" alt="Handler and node position" loading="lazy"><figcaption>Handler and node position</figcaption></figure>
+<p>When you select a node, then the handler and node position tools shows below the curve window.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sample straigt edges</td>
+<td>Sample edges with vector handles.</td>
+</tr>
+<tr>
+<td>Sample even length</td>
+<td>Sample edges with even lengths.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rip-vertices">Rip Vertices</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/rip-vertices.png" alt="Rip Vertices" loading="lazy"></figure>
+<p>Rip splits the edges between the selected vertices. It creates two edges out of one.</p>
+<p>This tool works similar to the Edge Split tool. It also selects the outer edges so that you immediately move them. Right click will snap them back to the initial space.</p>
+<h5 id="last-operator-rip">Last Operator Rip</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-rip.png" alt="Last Operator Rip" loading="lazy"></figure>
+<h6 id="move-x-y-z">Move X , Y , Z</h6>
+<p>Adjust the position.</p>
+<h6 id="orientation">Orientation</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box. Choose the type of orientation for the mirroring action.</p>
+<h6 id="mirror-editing">Mirror Editing</h6>
+<p>Enable mirror editing.</p>
+<h6 id="proportional-editing">Proportional editing</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<h6 id="proportional-falloff">Proportional Falloff</h6>
+<p>Adjust the falloff methods.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rip-vertices-and-fill">Rip Vertices and Fill</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/rip-vertices.png" alt="Rip Vertices and Fill" loading="lazy"><figcaption>Rip Vertices and Fill</figcaption></figure>
+<p>Rip splits the edges between the selected vertices. It creates two edges out of one. But fills the gap.</p>
+<p>The last operator is the same than for the rip vertices tool above.</p>
+<h4 id="rip-vertices-and-extend">Rip Vertices and Extend</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/rip-vertices-and-extend.png" alt="Rip Vertices and Extend" loading="lazy"><figcaption>Rip Vertices and Extend</figcaption></figure>
+<p>This tool is the same tool than the Rip Edge tool from the tool shelf.</p>
+<p>Rip Vertices and Extend extrudes out the selected vertices. When you do this operation at an edge then you will create N-Gons that way.</p>
+<h5 id="last-operator-extend-vertices">Last Operator Extend Vertices</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-extend-vertices.png" alt="Last Operator Extend Vertices" loading="lazy"><figcaption>Last Operator Extend Vertices</figcaption></figure>
+<h6 id="move-x-y-z-2">Move X , Y , Z</h6>
+<p>Adjust the position.</p>
+<h6 id="orientation-2">Orientation</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box. Choose the type of orientation for the mirroring action.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="slide-vertices">Slide Vertices</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/slide-vertices.png" alt="Slide Vertices" loading="lazy"></figure>
+<p>Same tool than the Vertex Slide in the Tool Shelf. Vertex Slide slides the selected vertice along the edge that it is part of. This is for the corner vertice at a cube into three possible directions.</p>
+<h5 id="last-operator-vertex-slide">Last Operator Vertex Slide</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-vertex-slide.png" alt="Last Operator Vertex Slide" loading="lazy"><figcaption>Last Operator Vertex Slide</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>Factor is a sliding box Adjust the slide strength numerically. The width of the face is the 0-1 range.</td>
+</tr>
+<tr>
+<td>Even</td>
+<td>Make the Edge loop match the shape of the adjacent edge loop.</td>
+</tr>
+<tr>
+<td>Flipped</td>
+<td>When Even Mode is active, flips between the two adjacent edge loops.</td>
+</tr>
+<tr>
+<td>Clamp</td>
+<td>Clamp within the edge extend.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+<tr>
+<td>Correct UV's</td>
+<td>Correct UV's corrects the UV's while editing the geometry.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="smooth-vertices">Smooth Vertices</h4>
+<p>Same tool than in the tool shelf. Smoothens the selected vertices.</p>
+<h5 id="last-operator-smooth-vertices">Last Operator Smooth Vertices</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-smooth-vertices.png" alt="Last Operator Smooth Vertices" loading="lazy"><figcaption>Last Operator Smooth Vertices</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Smoothing</td>
+<td>The smoothing factor.</td>
+</tr>
+<tr>
+<td>Repeat</td>
+<td>How often the smoothing should be applied.</td>
+</tr>
+<tr>
+<td>X Axis, Y Axis, Z Axis</td>
+<td>Which axis to affect.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extrude-to-cursor-or-add">Extrude to Cursor or Add</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/extrude-to-cursor-or-add.png" alt="Extrude to Cursor or Add" loading="lazy"><figcaption>Extrude to Cursor or Add</figcaption></figure>
+<p>Extrude to the mouse position.</p>
+<p>Howto: activate the tool. then right click into the workspace by holding down the ctrl key.</p>
+<p>In the header you will see a message that the tool waits for input.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/extrude-to-cursor-or-add-2.png" alt="Extrude to Cursor or Add" loading="lazy"><figcaption>Extrude to Cursor or Add</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/extrude-to-cursor-or-add-3.png" alt="Extrude to Cursor or Add" loading="lazy"><figcaption>Extrude to Cursor or Add</figcaption></figure>
+<p>This tool has two functionalities. If the whole geometry is selected, then it creates a copy of the geometry at the mouse position, randomly rotated by a small amount. If just elements are selected, then it extrudes this element to the mouse position.</p>
+<h3 id="make-edge-face">Make Edge/Face</h3>
+<p>Adds a face when you have edges selected. And Edges when you have Vertices selected. It's a Bridge tool.</p>
+<p>You can have either the one method or the other. When you select two adjacent vertices, then you select the edge too. And the tool works in edge mode then. In this case just the possible faces gets created. Not edges between single vertices.</p>
+<p>First select the edges or Vertices that you want to bridge. Then click the New Edge/Face from Vertices Button.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/make-edge-face.png" alt="Make Edge/Face" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/make-edge-face-2.png" alt="Make Edge/Face" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/make-edge-face-3.png" alt="Make Edge/Face" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/make-edge-face-4.png" alt="Make Edge/Face" loading="lazy"></figure>
+<h3 id="connect-vertex-path">Connect Vertex Path</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/connect-vertex-path.png" alt="Connect Vertex Path" loading="lazy"></figure>
+<p>Connect Vertex path connects selected vertices, but takes the vertex order into account in which you selected the vertices. It just creates edges between vertices that are not connected in this order.</p>
+<h3 id="connect-vertex-pair">Connect Vertex Pair</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/connect-vertex-pair.png" alt="Connect Vertex Pair" loading="lazy"></figure>
+<p>Connect Vertex pair connects selected vertices and makes a face of the pairs.</p>
+<h3 id="smooth-laplacian">Smooth Laplacian</h3>
+<p>Laplacian Smooth Vertex smooths out the angles between the selected vertices. It is a tool to reduce noise at the mesh. It works a bit different than the normal Smooth Vertex tool. And gives a different result. The Laplacian method allows you to preserve the volume, and to adjust border smoothing.</p>
+<h4 id="last-operator-laplacian-smooth-vertex">Last Operator Laplacian Smooth Vertex</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-laplacian-smooth-vertex.png" alt="Last Operator Laplacian Smooth Vertex" loading="lazy"><figcaption>Last Operator Laplacian Smooth Vertex</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of Iterations</td>
+<td>Number of Iterations is the number of iterations that the smoothing action gets repeated. With 1 the smoothing is just performed once. With 10 it is performed ten times.</td>
+</tr>
+<tr>
+<td>Lambda Factor</td>
+<td>Lambda Factor is the strength of the smoothing.</td>
+</tr>
+<tr>
+<td>Lambda Factor in border</td>
+<td>Lambda Factor is the strength of the smoothing in border areas.</td>
+</tr>
+<tr>
+<td>Smooth Axis</td>
+<td>The Smooth Axis check boxes allows you to limit the smoothing to specific world axis.</td>
+</tr>
+<tr>
+<td>Preserve Volume</td>
+<td>Preserve Volume preserves the volume of the object.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vertex-crease">Vertex Crease</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/vertex-crease.png" alt="Vertex Crease" loading="lazy"></figure>
+<p>When you use a Subdivision Surface Modifier, then you can define the sharpness of selected vertices with this tool. Crease vertices will be marked colored in edit mode.</p>
+<p>You will see a value in the header that indicates the current strength when you activate the tool. Move with the mouse to increase or decrease the value. Or type in a value while you are in this mode. You can also scale into negative range.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/vertex-crease-2.png" alt="Vertex Crease" loading="lazy"></figure>
+<p>A negative crease value will subtract from the current active crease value in case it exists already from a former crease operation. A Crease value of -1 removes the crease from this edge.</p>
+<h4 id="last-operator-vertex-crease">Last Operator Vertex Crease</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-vertex-crease.png" alt="Last Operator Vertex Crease" loading="lazy"><figcaption>Last Operator Vertex Crease</figcaption></figure>
+<h5 id="factor">Factor</h5>
+<p>Adjust the crease factor.</p>
+<h3 id="blend-from-shape">Blend from Shape</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/blend-from-shape.png" alt="Blend from Shape" loading="lazy"></figure>
+<p>This tool requires to have a shape key at the mesh. It blends the selected shape key into the mesh.</p>
+<h4 id="last-operator-blend-from-shape">Last Operator Blend from Shape</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-blend-from-shape.png" alt="Last Operator Blend from Shape" loading="lazy"><figcaption>Last Operator Blend from Shape</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drop-down box</td>
+<td>Define which shape key should be used.</td>
+</tr>
+<tr>
+<td>Blend edit box</td>
+<td>Adjust the blend factor between the current shape and the shape that you want to blend here.</td>
+</tr>
+<tr>
+<td>Add</td>
+<td>Add to blend shape instead of blending in.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="propagate-to-shapes">Propagate to Shapes</h3>
+<p>This tool requires to have a shape key at the mesh. It applies the current vertex locations for the selected vertices to all other shape keys at the mesh.</p>
+<h3 id="vertex-groups">Vertex Groups</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/vertex-groups.png" alt="Vertex Groups" loading="lazy"></figure>
+<p>Vertex groups is a menu around vertex group functionality. The vertex groups can be found in the Object data tab in the Properties editor.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/vertex-groups-2.png" alt="Vertex Groups" loading="lazy"></figure>
+<p>When there is no vertex group assigned yet then you can only see one menu item. The Assign To New Group button.</p>
+<p>Once you have a vertex group assigned you will see the full functionality.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Assign to New Group</td>
+<td>Assigns the mesh selection to a new vertex group.</td>
+</tr>
+<tr>
+<td>Assign to active Group</td>
+<td>Assigns the mesh selection to the currently active vertex group.</td>
+</tr>
+<tr>
+<td>Remove from Active Group</td>
+<td>Removes the mesh selection from the currently active vertex group.</td>
+</tr>
+<tr>
+<td>Remove from All</td>
+<td>Removes the mesh selection from all vertex groups.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-active-group">Set Active Group</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/set-active-group.png" alt="Set Active Group" loading="lazy"></figure>
+<p>Select a vertex group to be the active one.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remove Active Group</td>
+<td>Removes the currently active vertex group.</td>
+</tr>
+<tr>
+<td>Remove All Groups</td>
+<td>Removes all vertex groups from the mesh.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hooks">Hooks</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/hooks.png" alt="Hooks" loading="lazy"></figure>
+<p>Hooks is a menu with tools around the hook modifier. You could also adjust the hook modifier from the Properties editor. But the menu items are more accessible.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/hooks-2.png" alt="Hooks" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/hooks-3.png" alt="Hooks" loading="lazy"></figure>
+<p>When there is no hook modifier at the mesh then you just see three menu items. When there is minimum one hook modifier applied, then you will see an extended menu.</p>
+<h4 id="hook-to-new-object">Hook to New Object</h4>
+<p>Creates a new Hook Modifier for the active object and assigns it to the selected vertices. It also creates an empty at the center of those vertices, which are hooked to it.</p>
+<h4 id="hook-to-selected-object">Hook to Selected Object</h4>
+<p>Does the same as <em>Hook to New Object</em>, but instead of hooking the vertices to a new empty, it hooks them to the selected object (if it exists). There should be only one selected object (besides the mesh being edited).</p>
+<h5 id="last-operator-hook-to-selected-object">Last Operator Hook to Selected Object</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-hook-to-selected-object.png" alt="Last Operator Hook to Selected Object" loading="lazy"><figcaption>Last Operator Hook to Selected Object</figcaption></figure>
+<h6 id="active-bone">Active Bone</h6>
+<p>Hook to the object(s) of the active bone.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hook to Selected Object Bone</td>
+<td>Does the same as <strong>Hook to New Object</strong>. B**ut it sets the last selected bone in the also selected armature as a target.</td>
+</tr>
+<tr>
+<td>Assign to Hook</td>
+<td>Assign the selected vertices to the chosen hook modifier. Existing hooks gets overwritten. One vertex can be assigned to more than one hook.</td>
+</tr>
+<tr>
+<td>Remove Hook</td>
+<td>Removes the chosen Hook Modifier from the object.</td>
+</tr>
+<tr>
+<td>Select Hook</td>
+<td>Selects all vertices assigned to the chosen Hook Modifier.</td>
+</tr>
+<tr>
+<td>Reset Hook</td>
+<td>Resets the chosen Hook Modifier.</td>
+</tr>
+<tr>
+<td>Recenter Hook</td>
+<td><strong>Recenter</strong> the Hook Modifier.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="make-vertex-parent">Make Vertex Parent</h3>
+<p>Parents another object to the selected vertice(s).</p>
+<h4 id="workflow">Workflow:</h4>
+<p>In Object mode select the object that you want to parent to a vertex. Shift select the parent object so that both are selected. Enter Edit mode. Then select one vertex for a single point. Or three for an area. Then click the Make Vertex Parent button to make the relation.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fclone-runs-3-15/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fheader%2Fmesh-edit-mode-vertex-menu.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/clone-runs-3-15/docs2/content/editors/3d-viewport/header/mesh-edit-mode-vertex-menu.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#edit-mode-vertex-menu">Edit Mode - Vertex Menu</a><a class="h3" href="#legacy">Legacy</a><a class="h3" href="#extrude-to-cursor-or-add">Extrude to Cursor or Add</a><a class="h3" href="#make-edge-face">Make Edge/Face</a><a class="h3" href="#connect-vertex-path">Connect Vertex Path</a><a class="h3" href="#connect-vertex-pair">Connect Vertex Pair</a><a class="h3" href="#smooth-laplacian">Smooth Laplacian</a><a class="h3" href="#vertex-crease">Vertex Crease</a><a class="h3" href="#blend-from-shape">Blend from Shape</a><a class="h3" href="#propagate-to-shapes">Propagate to Shapes</a><a class="h3" href="#vertex-groups">Vertex Groups</a><a class="h3" href="#hooks">Hooks</a><a class="h3" href="#make-vertex-parent">Make Vertex Parent</a></aside></div></body></html>

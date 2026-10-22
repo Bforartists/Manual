@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Asset Shelf · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/clone-runs-3-15 · <code>docs2/clone-runs-3-15</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<span>Modifiers tab</span>
+<span style="padding-left:1.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Color modifiers (Grease Pencil)</span>
+<span>Editors introduction</span>
+<a href="../3d-viewport.html">3D Viewport</a>
+<a class="is-current" style="padding-left:1.5rem" href="asset-shelf.html">Asset Shelf</a>
+<a style="padding-left:1.5rem" href="context-menus.html">Context menus</a>
+<a style="padding-left:2.5rem" href="context-menus/armature-edit-mode-armature-context-menu.html">Armature - Edit Mode - Armature context menu</a>
+<a style="padding-left:2.5rem" href="context-menus/armature-edit-mode-lattice-context-menu.html">Armature - Edit Mode - Lattice context menu</a>
+<a style="padding-left:2.5rem" href="context-menus/armature-pose-mode-pose-context-menu.html">Armature - Pose Mode - Pose context menu</a>
+<a style="padding-left:2.5rem" href="context-menus/curve-surface-object-edit-mode-curve-context-menus.html">Curve + Surface Object - Edit Mode - Curve context menus</a>
+<a style="padding-left:2.5rem" href="context-menus/grease-pencil-object-draw-mode-brushes-context-menu.html">Grease Pencil object - Draw Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="context-menus/grease-pencil-object-edit-mode-point-context-menu.html">Grease Pencil object - Edit Mode - Point context menu</a>
+<a style="padding-left:2.5rem" href="context-menus/grease-pencil-object-edit-mode-stroke-context-menu.html">Grease Pencil object - Edit Mode - Stroke context menu</a>
+<a style="padding-left:2.5rem" href="context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu.html">Grease Pencil object - Sculpt Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu.html">Grease Pencil object - Vertex Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="context-menus/grease-pencil-object-weight-paint-mode-brushes-context-menu.html">Grease Pencil object - Weight Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="context-menus/hair-curves-edit-mode-curves-context-menu.html">Hair Curves - Edit Mode - Curves context menu</a>
+<a style="padding-left:2.5rem" href="context-menus/mesh-object-edit-mode-edge-context-menu.html">Mesh Object - Edit Mode - Edge Context Menu</a>
+<a style="padding-left:2.5rem" href="context-menus/mesh-object-edit-mode-face-context-menu.html">Mesh Object - Edit Mode - Face Context Menu</a>
+<a style="padding-left:2.5rem" href="context-menus/mesh-object-edit-mode-vertex-context-menu.html">Mesh Object - Edit Mode - Vertex Context Menu</a>
+<a style="padding-left:2.5rem" href="context-menus/mesh-object-sculpt-mode-brushes-context-menus.html">Mesh Object - Sculpt Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="context-menus/mesh-object-texture-paint-mode-brushes-context-menus.html">Mesh Object - Texture Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="context-menus/mesh-object-vertex-paint-mode-brushes-context-menus.html">Mesh Object - Vertex Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="context-menus/mesh-object-weight-paint-mode-brushes-context-menus.html">Mesh Object - Weight Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="context-menus/metaball-edit-mode-metaball-context-menu.html">Metaball - Edit Mode - Metaball context menu</a>
+<a style="padding-left:2.5rem" href="context-menus/object-mode-object-context-menu.html">Object mode - Object Context Menu</a>
+<a style="padding-left:2.5rem" href="context-menus/text-edit-mode-text-context-menu.html">Text - Edit Mode - Text context menu</a>
+<a style="padding-left:1.5rem" href="header.html">Header</a>
+<a style="padding-left:2.5rem" href="header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="header/armature-edit-mode-armature-menu.html">Armature - Edit mode - Armature menu</a>
+<a style="padding-left:2.5rem" href="header/armature-pose-mode-pose-menu.html">Armature - Pose mode - Pose menu</a>
+<a style="padding-left:2.5rem" href="header/curve-edit-mode-curve-menu.html">Curve - Edit mode - Curve menu</a>
+<a style="padding-left:2.5rem" href="header/curve-surface-edit-mode-control-points-menu.html">Curve &amp; Surface - Edit mode - Control points menu</a>
+<a style="padding-left:2.5rem" href="header/curve-surface-edit-mode-segments-menu.html">Curve &amp; Surface - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="header/edit-mode-add-menu.html">Edit mode - Add menu</a>
+<a style="padding-left:2.5rem" href="header/grease-pencil-draw-mode-draw-menu.html">Grease Pencil - Draw mode - Draw menu</a>
+<a style="padding-left:2.5rem" href="header/grease-pencil-edit-mode-grease-pencil-menu.html">Grease Pencil - Edit mode - Grease Pencil menu</a>
+<a style="padding-left:2.5rem" href="header/grease-pencil-edit-mode-point-menu.html">Grease Pencil - Edit mode - Point menu</a>
+<a style="padding-left:2.5rem" href="header/grease-pencil-edit-mode-stroke-menu.html">Grease Pencil - Edit mode - Stroke menu</a>
+<a style="padding-left:2.5rem" href="header/grease-pencil-vertex-paint-mode-paint-menu.html">Grease Pencil - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="header/grease-pencil-weight-paint-mode-weights-menu.html">Grease Pencil - Weight Paint Mode - Weights Menu</a>
+<a style="padding-left:2.5rem" href="header/hair-curve-edit-mode-control-points-menu.html">Hair Curve - Edit mode - Control Points menu</a>
+<a style="padding-left:2.5rem" href="header/hair-curve-edit-mode-curves-menu.html">Hair Curve - Edit mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="header/hair-curve-edit-mode-segments-menu.html">Hair Curve - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="header/hair-curve-sculpt-mode-curves-menu.html">Hair Curve - Sculpt mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="header/lattice-edit-mode-lattice-menu.html">Lattice - Edit mode - Lattice menu</a>
+<a style="padding-left:2.5rem" href="header/mesh-edit-mode-edge-menu.html">Mesh - Edit mode - Edge Menu</a>
+<a style="padding-left:2.5rem" href="header/mesh-edit-mode-face-menu.html">Mesh - Edit mode - Face menu</a>
+<a style="padding-left:2.5rem" href="header/mesh-edit-mode-mesh-menu.html">Mesh - Edit mode - Mesh menu</a>
+<a style="padding-left:2.5rem" href="header/mesh-edit-mode-uv-menu.html">Mesh - Edit mode - UV menu</a>
+<a style="padding-left:2.5rem" href="header/mesh-edit-mode-vertex-menu.html">Mesh - Edit Mode - Vertex Menu</a>
+<a style="padding-left:2.5rem" href="header/mesh-sculpt-mode-face-sets-menu.html">Mesh - Sculpt mode - Face Sets menu</a>
+<a style="padding-left:2.5rem" href="header/mesh-sculpt-mode-mask-menu.html">Mesh - Sculpt mode - Mask menu</a>
+<a style="padding-left:2.5rem" href="header/mesh-sculpt-mode-sculpt-menu.html">Mesh - Sculpt mode - Sculpt menu</a>
+<a style="padding-left:2.5rem" href="header/mesh-texture-paint-mode-brush-menu.html">Mesh - Texture Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="header/mesh-vertex-paint-mode-brush-menu.html">Mesh - Vertex Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="header/mesh-vertex-paint-mode-paint-menu.html">Mesh - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="header/mesh-weight-paint-mode-weights-menu.html">Mesh - Weight Paint mode - Weights menu</a>
+<a style="padding-left:2.5rem" href="header/metaball-edit-mode-metaball-menu.html">Metaball - Edit mode - Metaball menu</a>
+<a style="padding-left:2.5rem" href="header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="header/object-menu.html">Object menu</a>
+<a style="padding-left:2.5rem" href="header/particle-particle-mode-particle-menu.html">Particle - Particle mode - Particle menu</a>
+<a style="padding-left:2.5rem" href="header/point-cloud-edit-mode-point-cloud-menu.html">Point Cloud - Edit mode - Point Cloud menu</a>
+<a style="padding-left:2.5rem" href="header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="header/surface-edit-mode-surface-menu.html">Surface - Edit mode - Surface menu</a>
+<a style="padding-left:2.5rem" href="header/text-edit-mode-text-menu.html">Text - Edit mode - Text menu</a>
+<a style="padding-left:2.5rem" href="header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="sidebar/animation-tab.html">Animation Tab</a>
+<a style="padding-left:2.5rem" href="sidebar/item-tab.html">Item tab</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-edit-mode.html">Tool Tab - Edit Mode</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-grease-pencil-draw-mode.html">Tool Tab - Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-grease-pencil-layer-panel.html">Tool Tab - Grease Pencil - Layer Panel</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-grease-pencil-sculpt-mode.html">Tool Tab - Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-grease-pencil-vertex-paint-mode.html">Tool Tab - Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-grease-pencil-weight-paint-mode.html">Tool Tab - Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-hair-curve-sculpt-mode.html">Tool Tab - Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-mesh-sculpt-mode.html">Tool Tab - Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-mesh-texture-paint-mode.html">Tool Tab - Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-mesh-vertex-paint-mode.html">Tool Tab - Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-mesh-weight-paint-mode.html">Tool Tab - Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-object-mode.html">Tool Tab - Object Mode</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-particle-edit-mode.html">Tool Tab - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab-pose-mode.html">Tool Tab - Pose Mode</a>
+<a style="padding-left:2.5rem" href="sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:1.5rem" href="tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="tool-shelf/armature-edit-mode.html">Armature - Edit Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/armature-pose-mode.html">Armature - Pose Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/curve-edit-mode.html">Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/grease-pencil-draw-mode.html">Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/grease-pencil-edit-mode.html">Grease Pencil - Edit Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/grease-pencil-sculpt-mode.html">Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/grease-pencil-vertex-paint-mode.html">Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/grease-pencil-weight-paint-mode.html">Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/hair-curve-edit-mode.html">Hair Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/hair-curve-sculpt-mode.html">Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/lattice-edit-mode.html">Lattice - Edit Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/mesh-edit-mode.html">Mesh - Edit Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/mesh-particle-edit-mode.html">Mesh - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/mesh-sculpt-mode.html">Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/mesh-texture-paint-mode.html">Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/mesh-vertex-paint-mode.html">Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/mesh-weight-paint-mode.html">Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/metaball-edit-mode.html">Metaball - Edit Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/surface-edit-mode.html">Surface - Edit Mode</a>
+<a style="padding-left:2.5rem" href="tool-shelf/text-edit-mode.html">Text - Edit Mode</a>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Asset Shelf</div><h1 class="pv-title">Asset Shelf</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 6 min read</span></div><article class="ui-doc-body"><p>Click to switch the active brush.</p>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf.png" alt="Asset Shelf" loading="lazy"></figure>
+<p>Click to switch the active brush.</p>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-2.png" alt="Asset Shelf" loading="lazy"></figure>
+<p>Click to switch the active brush.</p>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-2.png" alt="Asset Shelf" loading="lazy"></figure>
+<p>The Grease Pencil sculpt brushes are divided into categories. Click to switch the active brush.</p>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-3.png" alt="Asset Shelf" loading="lazy"></figure>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-4.png" alt="Asset Shelf" loading="lazy"></figure>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-5.png" alt="Asset Shelf" loading="lazy"></figure>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-6.png" alt="Asset Shelf" loading="lazy"></figure>
+<p>The Grease Pencil draw brushes are divided into categories. Click to switch the active brush.</p>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-7.png" alt="Asset Shelf" loading="lazy"></figure>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-8.png" alt="Asset Shelf" loading="lazy"></figure>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-9.png" alt="Asset Shelf" loading="lazy"></figure>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-10.png" alt="Asset Shelf" loading="lazy"></figure>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-11.png" alt="Asset Shelf" loading="lazy"></figure>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-12.png" alt="Asset Shelf" loading="lazy"></figure>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-13.png" alt="Asset Shelf" loading="lazy"></figure>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-14.png" alt="Asset Shelf" loading="lazy"></figure>
+<p>When in the Mesh Sculpt mode of the 3D View, the Asset Shelf exposes brush assets.</p>
+<figure><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-shelf-15.png" alt="Asset Shelf" loading="lazy"></figure>
+<p>The Object mode asset shelf exposes your Asset Browser library assets directly in the 3D View.</p>
+<h2 id="introduction">Introduction</h2>
+<p>The Asset Shelf is a quick access to marked assets for the Asset Browser available in the footer of many editors.</p>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/introduction.png" alt="Introduction" loading="lazy"></figure>
+<p>The 3D View is made of several areas, and at the bottom of the 3D View you will find the Asset Shelf.</p>
+<ol>
+<li>Blue: Catalog Selector</li>
+<li>Red: Catalog tabs</li>
+<li>Orange: Import Properties</li>
+<li>Green: Display Settings</li>
+<li>Purple: Search Filter</li>
+<li>Yellow: Assets List</li>
+</ol>
+<p>This shelf lists Essential and user defined assets from the Asset Browser for quick and easy access to drag and drop marked assets into the 3D View - directly from the 3D view footer.</p>
+<p>Location</p>
+<p>The 3D Shelf is available in the following editors:</p>
+<ul>
+<li>3D View</li>
+<li>Image Editor</li>
+<li>Node Editors: Shader, Compositor, Geometry Nodes</li>
+<li></li>
+</ul>
+<h3 id="catalog-selector">Catalog Selector</h3>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/catalog-selector.png" alt="Catalog Selector" loading="lazy"></figure>
+<p>To the top left, you can pick and choose which asset library catalog will show in the header – these will help filter assets you would like to see listed in the Asset Shelf.</p>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/catalog-selector-2.png" alt="Catalog Selector" loading="lazy"></figure>
+<p>When you select a category, it will create a tab in the header.</p>
+<p>You can alternatively filter by library and expose a selection of Catalogs per library.</p>
+<h3 id="asset-library-dropdown-selector">Asset Library Dropdown Selector</h3>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/asset-library-dropdown-selector.png" alt="Asset Library Dropdown Selector" loading="lazy"><figcaption>Asset Library Dropdown Selector</figcaption></figure>
+<p>These are available asset libraries you can filter assets to the Asset Shelf.</p>
+<ul>
+<li>The <strong>All</strong> category shows all Catalogs from all asst Libraries.</li>
+<li>The <strong>Current File</strong> shows all Catalogs from the current Blend file.</li>
+<li>The <strong>Essentials</strong> shows all default Catalogs built in to Bforaritsts.</li>
+<li>The <strong>User Library</strong> shows all Catalogs from a user defined library.</li>
+<li>If you have the Default Library addon by Bforartists, this will show the <strong>Default Library</strong> Catalogs.</li>
+</ul>
+<h3 id="refresh">Refresh</h3>
+<p>Refresh the libraries.</p>
+<h3 id="catalog-tabs">Catalog Tabs</h3>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/catalog-tabs.png" alt="Catalog Tabs" loading="lazy"></figure>
+<p>When you pick a Catalog in the Catalog Selector, these catalogs will list as tabs at the top of the Asset Shelf.</p>
+<p>Choose a tab to filter the assets by Catalog.</p>
+<h3 id="import-method">Import Method</h3>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/import-method.png" alt="Import Method" loading="lazy"></figure>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/import-method-2.png" alt="Import Method" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instance Collections on Linking</td>
+<td>When linking or appending collections, this will instance the collection to the scene at the mouse cursor.</td>
+</tr>
+<tr>
+<td>Drop Instances to Origin</td>
+<td>When linking or appending collections as instances, this will position the new instance to the world center origin.</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>Import the assets as linked data. This will link data from the asset library to the current scene and file.</td>
+</tr>
+<tr>
+<td>Append</td>
+<td>Import the assets as copied data, with no link to the original asset data This will append data to the current scene and file.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="append-reuse-data">Append (Reuse Data)</h4>
+<p>Import the assets as copied data while avoiding multiple copies of nested, typically heavy data. For example the textures of a material asset, or the mesh of an object asset, don't have to be copied every time this asset is imported. The instances of the asset share the data instead.</p>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/append-reuse-data.png" alt="Append (Reuse Data)" loading="lazy"></figure>
+<p>Recommending using Pack instead<br />
+You can go in the Preferences, in Developers Tools tab and enable No Packing to show Append (Reuse) back</p>
+<h4 id="pack">Pack</h4>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/pack.png" alt="Pack" loading="lazy"></figure>
+<p>Import the asset as packed. Make it is unchanged modified, linked with the original data.</p>
+<h4 id="link-override">Link (Override)</h4>
+<p>Import the assets as linked library overrided data. This will only override the active hierarchy. The active hierarchy is defined by the last selected object of a collection or the armature.</p>
+<p>To override all selected contents, use the Outliner Editor by right clicking on the asset and Overriding Selected and Content.</p>
+<h3 id="display-settings">Display Settings</h3>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/display-settings.png" alt="Display Settings" loading="lazy"></figure>
+<p>To the right you can find the display settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quick Sizes</td>
+<td>Some quick presets between Tiny 48, small 96, Medium 128 and Large 256px thumbnails</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Changes the size of the asset thumbnails with a slider.</td>
+</tr>
+<tr>
+<td>Names</td>
+<td>Toggles the asset names.</td>
+</tr>
+<tr>
+<td>By Active Tool</td>
+<td><strong>Note:</strong> <em>Only available in the Brush Asset Shelf in draw and paint modes.</em> This toggles a filter that will show only brushes set by the active brush mode set in the Toolshelf to the left. For example, it will only show Paint draw mode brushes but not Erasers at the same time. <strong>Note:</strong> <em>If you want to see all types of brushes regardless of the mode, turn this off.</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="search-filter">Search Filter</h3>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/search-filter.png" alt="Search Filter" loading="lazy"></figure>
+<p>Search and filters the assets by name.</p>
+<h2 id="use">Use</h2>
+<p>When in the Object mode, you can drag and drop collections, mesh objects, materials, geometry nodes and world shaders to the 3D View to link or append the assets.</p>
+<p>Select an asset, press and drag into the 3D View to place into the scene.</p>
+<h2 id="asset-types">Asset Types</h2>
+<h3 id="collections">Collections</h3>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/collections.png" alt="Collections" loading="lazy"></figure>
+<p>Marked collections as assets will show here. Drag and drop will default to linking the collection to scene as an instance.</p>
+<h3 id="mesh-objects">Mesh Objects</h3>
+<p>Marked mesh objects as assets will show here. Drag and drop will default to appending the collection to scene.</p>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/mesh-objects.png" alt="Mesh Objects" loading="lazy"></figure>
+<h3 id="materials">Materials</h3>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/materials.png" alt="Materials" loading="lazy"></figure>
+<p>Marked materials as assets will also show here. Drag and drop will default to append to scene.</p>
+<h2 id="geometry-nodes">Geometry Nodes</h2>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/geometry-nodes.png" alt="Geometry Nodes" loading="lazy"></figure>
+<p>Geometry Nodes with the tag “Geometry Nodes” and “3D View” in the Tags panel of the left sidebar of the Asset Browser will show here.</p>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/geometry-nodes-2.png" alt="Geometry Nodes" loading="lazy"></figure>
+<p>Drag and drop will default to append to scene.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> To mark a Geometry Nodes asset to show in the 3D Asset Shelf, go to the Asset Browser editor, and in the sidebar under the Tags panel, add “Geometry Nodes” and “3D View”</p></div>
+<h3 id="worlds">Worlds</h3>
+<p>World shaders marked as assets will show here. Drag and drop will default to append to scene.</p>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/worlds.png" alt="Worlds" loading="lazy"></figure>
+<h2 id="use-2">Use</h2>
+<p>Select a brush to change the brush settings to the saved brush asset. Select a brush category</p>
+<h2 id="asset-type">Asset Type</h2>
+<p>Sculpt mode brushes.</p>
+<h2 id="use-3">Use</h2>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/use.png" alt="Use" loading="lazy"></figure>
+<ol>
+<li>In the 3D View, select your Armature object and go into Pose Mode</li>
+<li>Select the bones you want to store as a pose</li>
+<li>In the Asset Browser Header Asset menu, use the operator Create Pose Asset</li>
+<li>This will create a Pose Asset in the Unassigned (Catalogue) category in the Current File.</li>
+<li>Click on the new Pose Asset in the Asset Shelf or Asset Browser to apply. Press and drag to apply with a slider strength.</li>
+<li>You can alternatively right click on the Pose Asset for alternative methods of applying the pose.</li>
+</ol>
+<p>&lt;!-- --&gt;</p>
+<ol>
+<li></li>
+</ol>
+<h2 id="pose-asset-context-menu">Pose Asset Context Menu</h2>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/pose-asset-context-menu.png" alt="Pose Asset Context Menu" loading="lazy"><figcaption>Pose Asset Context Menu</figcaption></figure>
+<p>When you right click into the a pose asset then an Asset context menu opens. For more information, please refer to the <strong>Editors – Asset Browser</strong> chapter</p>
+<h2 id="apply-pose">Apply Pose</h2>
+<p>Apply the Pose asset to the selected bones.</p>
+<h2 id="apply-pose-flipped">Apply Pose Flipped</h2>
+<p>Apply the flipped Pose asset to the selected bones.</p>
+<h2 id="blend-pose">Blend Pose</h2>
+<p>Blends the selected bones with the Pose asset.</p>
+<h2 id="blend-pose-flipped">Blend Pose Flipped</h2>
+<p>Blends the selected bones with the flipped Pose asset.</p>
+<h2 id="select-pose-bones">Select Pose Bones</h2>
+<p>Selects the pose bones stored in the Pose asset</p>
+<h2 id="deselect-pose-bones">Deselect Pose Bones</h2>
+<p>Deselects the pose bones stored in the Pose asset</p>
+<h2 id="shader-editor">Shader Editor</h2>
+<p>Drag the nodes from the asset shelf into the shader editor viewport. Note that you need to have an active shader.</p>
+<p>The Shader nodes are divided into serveral categories.</p>
+<figure><img src="../../docs2/images/editors/3d-viewport/asset-shelf/shader-editor.png" alt="Shader Editor" loading="lazy"></figure>
+<h2 id="compositor-editor">Compositor Editor</h2>
+<p>There are currently no nodes in the asset shelf in the compositor editor.</p>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/compositor-editor.png" alt="Compositor Editor" loading="lazy"></figure>
+<h2 id="geometry-nodes-editor">Geometry Nodes Editor</h2>
+<p>Drag the nodes from the asset shelf into the geometry nodes editor viewport. Note that you need to have an active node tree.</p>
+<p>The geometry nodes are divided into serveral categories.</p>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/geometry-nodes-editor.png" alt="Geometry Nodes Editor" loading="lazy"></figure>
+<h2 id="image-editor-paint-mode">Image Editor – Paint Mode</h2>
+<figure class="is-right"><img src="../../docs2/images/editors/3d-viewport/asset-shelf/image-editor-paint-mode.png" alt="Image Editor – Paint Mode" loading="lazy"><figcaption>Image Editor – Paint Mode</figcaption></figure>
+<p>Click to switch the active brush.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fclone-runs-3-15/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fasset-shelf.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/clone-runs-3-15/docs2/content/editors/3d-viewport/asset-shelf.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#introduction">Introduction</a><a class="h3" href="#catalog-selector">Catalog Selector</a><a class="h3" href="#asset-library-dropdown-selector">Asset Library Dropdown Selector</a><a class="h3" href="#refresh">Refresh</a><a class="h3" href="#catalog-tabs">Catalog Tabs</a><a class="h3" href="#import-method">Import Method</a><a class="h3" href="#display-settings">Display Settings</a><a class="h3" href="#search-filter">Search Filter</a><a class="h2" href="#use">Use</a><a class="h2" href="#asset-types">Asset Types</a><a class="h3" href="#collections">Collections</a><a class="h3" href="#mesh-objects">Mesh Objects</a><a class="h3" href="#materials">Materials</a><a class="h2" href="#geometry-nodes">Geometry Nodes</a><a class="h3" href="#worlds">Worlds</a><a class="h2" href="#use-2">Use</a><a class="h2" href="#asset-type">Asset Type</a><a class="h2" href="#use-3">Use</a><a class="h2" href="#pose-asset-context-menu">Pose Asset Context Menu</a><a class="h2" href="#apply-pose">Apply Pose</a><a class="h2" href="#apply-pose-flipped">Apply Pose Flipped</a><a class="h2" href="#blend-pose">Blend Pose</a><a class="h2" href="#blend-pose-flipped">Blend Pose Flipped</a><a class="h2" href="#select-pose-bones">Select Pose Bones</a><a class="h2" href="#deselect-pose-bones">Deselect Pose Bones</a><a class="h2" href="#shader-editor">Shader Editor</a><a class="h2" href="#compositor-editor">Compositor Editor</a><a class="h2" href="#geometry-nodes-editor">Geometry Nodes Editor</a><a class="h2" href="#image-editor-paint-mode">Image Editor – Paint Mode</a></aside></div></body></html>

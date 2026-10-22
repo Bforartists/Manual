@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Curve - Edit Mode · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/clone-runs-3-15 · <code>docs2/clone-runs-3-15</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<span>Modifiers tab</span>
+<span style="padding-left:1.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Color modifiers (Grease Pencil)</span>
+<span>Editors introduction</span>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:1.5rem" href="../asset-shelf.html">Asset Shelf</a>
+<a style="padding-left:1.5rem" href="../context-menus.html">Context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-edit-mode-armature-context-menu.html">Armature - Edit Mode - Armature context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-edit-mode-lattice-context-menu.html">Armature - Edit Mode - Lattice context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-pose-mode-pose-context-menu.html">Armature - Pose Mode - Pose context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/curve-surface-object-edit-mode-curve-context-menus.html">Curve + Surface Object - Edit Mode - Curve context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-draw-mode-brushes-context-menu.html">Grease Pencil object - Draw Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-edit-mode-point-context-menu.html">Grease Pencil object - Edit Mode - Point context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-edit-mode-stroke-context-menu.html">Grease Pencil object - Edit Mode - Stroke context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu.html">Grease Pencil object - Sculpt Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu.html">Grease Pencil object - Vertex Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-weight-paint-mode-brushes-context-menu.html">Grease Pencil object - Weight Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/hair-curves-edit-mode-curves-context-menu.html">Hair Curves - Edit Mode - Curves context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-edge-context-menu.html">Mesh Object - Edit Mode - Edge Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-face-context-menu.html">Mesh Object - Edit Mode - Face Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-vertex-context-menu.html">Mesh Object - Edit Mode - Vertex Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-sculpt-mode-brushes-context-menus.html">Mesh Object - Sculpt Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-texture-paint-mode-brushes-context-menus.html">Mesh Object - Texture Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-vertex-paint-mode-brushes-context-menus.html">Mesh Object - Vertex Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-weight-paint-mode-brushes-context-menus.html">Mesh Object - Weight Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/metaball-edit-mode-metaball-context-menu.html">Metaball - Edit Mode - Metaball context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/object-mode-object-context-menu.html">Object mode - Object Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/text-edit-mode-text-context-menu.html">Text - Edit Mode - Text context menu</a>
+<a style="padding-left:1.5rem" href="../header.html">Header</a>
+<a style="padding-left:2.5rem" href="../header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../header/armature-edit-mode-armature-menu.html">Armature - Edit mode - Armature menu</a>
+<a style="padding-left:2.5rem" href="../header/armature-pose-mode-pose-menu.html">Armature - Pose mode - Pose menu</a>
+<a style="padding-left:2.5rem" href="../header/curve-edit-mode-curve-menu.html">Curve - Edit mode - Curve menu</a>
+<a style="padding-left:2.5rem" href="../header/curve-surface-edit-mode-control-points-menu.html">Curve &amp; Surface - Edit mode - Control points menu</a>
+<a style="padding-left:2.5rem" href="../header/curve-surface-edit-mode-segments-menu.html">Curve &amp; Surface - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="../header/edit-mode-add-menu.html">Edit mode - Add menu</a>
+<a style="padding-left:2.5rem" href="../header/grease-pencil-draw-mode-draw-menu.html">Grease Pencil - Draw mode - Draw menu</a>
+<a style="padding-left:2.5rem" href="../header/grease-pencil-edit-mode-grease-pencil-menu.html">Grease Pencil - Edit mode - Grease Pencil menu</a>
+<a style="padding-left:2.5rem" href="../header/grease-pencil-edit-mode-point-menu.html">Grease Pencil - Edit mode - Point menu</a>
+<a style="padding-left:2.5rem" href="../header/grease-pencil-edit-mode-stroke-menu.html">Grease Pencil - Edit mode - Stroke menu</a>
+<a style="padding-left:2.5rem" href="../header/grease-pencil-vertex-paint-mode-paint-menu.html">Grease Pencil - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="../header/grease-pencil-weight-paint-mode-weights-menu.html">Grease Pencil - Weight Paint Mode - Weights Menu</a>
+<a style="padding-left:2.5rem" href="../header/hair-curve-edit-mode-control-points-menu.html">Hair Curve - Edit mode - Control Points menu</a>
+<a style="padding-left:2.5rem" href="../header/hair-curve-edit-mode-curves-menu.html">Hair Curve - Edit mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="../header/hair-curve-edit-mode-segments-menu.html">Hair Curve - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="../header/hair-curve-sculpt-mode-curves-menu.html">Hair Curve - Sculpt mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="../header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../header/lattice-edit-mode-lattice-menu.html">Lattice - Edit mode - Lattice menu</a>
+<a style="padding-left:2.5rem" href="../header/mesh-edit-mode-edge-menu.html">Mesh - Edit mode - Edge Menu</a>
+<a style="padding-left:2.5rem" href="../header/mesh-edit-mode-face-menu.html">Mesh - Edit mode - Face menu</a>
+<a style="padding-left:2.5rem" href="../header/mesh-edit-mode-mesh-menu.html">Mesh - Edit mode - Mesh menu</a>
+<a style="padding-left:2.5rem" href="../header/mesh-edit-mode-uv-menu.html">Mesh - Edit mode - UV menu</a>
+<a style="padding-left:2.5rem" href="../header/mesh-edit-mode-vertex-menu.html">Mesh - Edit Mode - Vertex Menu</a>
+<a style="padding-left:2.5rem" href="../header/mesh-sculpt-mode-face-sets-menu.html">Mesh - Sculpt mode - Face Sets menu</a>
+<a style="padding-left:2.5rem" href="../header/mesh-sculpt-mode-mask-menu.html">Mesh - Sculpt mode - Mask menu</a>
+<a style="padding-left:2.5rem" href="../header/mesh-sculpt-mode-sculpt-menu.html">Mesh - Sculpt mode - Sculpt menu</a>
+<a style="padding-left:2.5rem" href="../header/mesh-texture-paint-mode-brush-menu.html">Mesh - Texture Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="../header/mesh-vertex-paint-mode-brush-menu.html">Mesh - Vertex Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="../header/mesh-vertex-paint-mode-paint-menu.html">Mesh - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="../header/mesh-weight-paint-mode-weights-menu.html">Mesh - Weight Paint mode - Weights menu</a>
+<a style="padding-left:2.5rem" href="../header/metaball-edit-mode-metaball-menu.html">Metaball - Edit mode - Metaball menu</a>
+<a style="padding-left:2.5rem" href="../header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../header/object-menu.html">Object menu</a>
+<a style="padding-left:2.5rem" href="../header/particle-particle-mode-particle-menu.html">Particle - Particle mode - Particle menu</a>
+<a style="padding-left:2.5rem" href="../header/point-cloud-edit-mode-point-cloud-menu.html">Point Cloud - Edit mode - Point Cloud menu</a>
+<a style="padding-left:2.5rem" href="../header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../header/surface-edit-mode-surface-menu.html">Surface - Edit mode - Surface menu</a>
+<a style="padding-left:2.5rem" href="../header/text-edit-mode-text-menu.html">Text - Edit mode - Text menu</a>
+<a style="padding-left:2.5rem" href="../header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../sidebar/animation-tab.html">Animation Tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/item-tab.html">Item tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-edit-mode.html">Tool Tab - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-draw-mode.html">Tool Tab - Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-layer-panel.html">Tool Tab - Grease Pencil - Layer Panel</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-sculpt-mode.html">Tool Tab - Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-vertex-paint-mode.html">Tool Tab - Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-weight-paint-mode.html">Tool Tab - Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-hair-curve-sculpt-mode.html">Tool Tab - Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-sculpt-mode.html">Tool Tab - Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-texture-paint-mode.html">Tool Tab - Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-vertex-paint-mode.html">Tool Tab - Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-weight-paint-mode.html">Tool Tab - Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-object-mode.html">Tool Tab - Object Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-particle-edit-mode.html">Tool Tab - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-pose-mode.html">Tool Tab - Pose Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:1.5rem" href="../tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="armature-edit-mode.html">Armature - Edit Mode</a>
+<a style="padding-left:2.5rem" href="armature-pose-mode.html">Armature - Pose Mode</a>
+<a class="is-current" style="padding-left:2.5rem" href="curve-edit-mode.html">Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="grease-pencil-draw-mode.html">Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode.html">Grease Pencil - Edit Mode</a>
+<a style="padding-left:2.5rem" href="grease-pencil-sculpt-mode.html">Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="grease-pencil-vertex-paint-mode.html">Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="grease-pencil-weight-paint-mode.html">Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode.html">Hair Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="hair-curve-sculpt-mode.html">Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="lattice-edit-mode.html">Lattice - Edit Mode</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode.html">Mesh - Edit Mode</a>
+<a style="padding-left:2.5rem" href="mesh-particle-edit-mode.html">Mesh - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode.html">Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="mesh-texture-paint-mode.html">Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="mesh-vertex-paint-mode.html">Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="mesh-weight-paint-mode.html">Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="metaball-edit-mode.html">Metaball - Edit Mode</a>
+<a style="padding-left:2.5rem" href="object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="surface-edit-mode.html">Surface - Edit Mode</a>
+<a style="padding-left:2.5rem" href="text-edit-mode.html">Text - Edit Mode</a>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Tool Shelf › Curve - Edit Mode</div><h1 class="pv-title">Curve - Edit Mode</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 10 min read</span></div><article class="ui-doc-body"><h2 id="tool-shelf-curve-edit-mode">Tool Shelf - Curve - Edit Mode</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-shelf-curve-edit-mode.png" alt="Tool Shelf - Curve - Edit Mode" loading="lazy"><figcaption>Tool Shelf - Curve - Edit Mode</figcaption></figure>
+<p>With a curve object in edit mode you will find some tools to edit the curve geometry in the tool shelf.</p>
+<h3 id="tweak-select-transform-3d-cursor-measure-and-annotate-tools">Tweak, Select, Transform, 3D Cursor Measure and Annotate tools</h3>
+<p>The tweak, select, transform, 3d cursor, measure and annotate tools at the end of the list are explained in the chapter 7.1.1 Editors - 3D View - Tool Shelf - Object Mode. We won't cover this tools again here.</p>
+<h3 id="curve-stroke-panel">Curve Stroke Panel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/curve-stroke-panel.png" alt="Curve Stroke Panel" loading="lazy"></figure>
+<p>The curve stroke panel is covered in the chapter 25.1.1 Editors - Properties Editor - Tools Tab - Edit Mode. We won't cover this tools again here.</p>
+<h3 id="draw">Draw</h3>
+<p>Allows you to draw a curve into the viewport.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/draw.png" alt="Draw" loading="lazy"></figure>
+<h4 id="tool-settings">Tool Settings</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-settings.png" alt="Tool Settings" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-settings-2.png" alt="Tool Settings" loading="lazy"></figure>
+<h4 id="type">Type</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/type.png" alt="Type" loading="lazy"></figure>
+<p>Set the draw method for the curve. Poly draws a simple polygon shape. Bezier creates a Bezier curve type with handlers.</p>
+<p>With type Bezier you will get more options.</p>
+<h4 id="method">Method</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/method.png" alt="Method" loading="lazy"></figure>
+<p>The curve fitting method for a Bezier curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Refit</td>
+<td>Incrementally refit the curve.</td>
+</tr>
+<tr>
+<td>Split</td>
+<td>Split the curve until it fits.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tolerance">Tolerance</h4>
+<p>Allow deviation for a smoother but less precise line.</p>
+<h4 id="detect-corners">Detect Corners</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/detect-corners.png" alt="Detect Corners" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/detect-corners-2.png" alt="Detect Corners" loading="lazy"></figure>
+<p>Detect corners and use non aligned angles.</p>
+<h5 id="corner-angle">Corner Angle</h5>
+<p>Corners above this angle are considered as corners.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Taper Start / End</td>
+<td>Taper factor for the radius of each curve point.</td>
+</tr>
+<tr>
+<td>Radius Min/Max</td>
+<td>Minimum or maximum radius when the pressure is applied.</td>
+</tr>
+<tr>
+<td>Use Pressure</td>
+<td>Use tablet pressure to draw the curve.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="depth">Depth</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/depth.png" alt="Depth" loading="lazy"></figure>
+<p>The method of projecting depth. Cursor or surface.</p>
+<h5 id="cursor">Cursor</h5>
+<p>Cursor has no further settings.</p>
+<h5 id="surface">Surface</h5>
+<h6 id="project-onto-selected">Project onto selected</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/project-onto-selected.png" alt="Project onto selected" loading="lazy"></figure>
+<p>Projects the strokes only onto selected objects.</p>
+<h6 id="absolute-offset">Absolute Offset</h6>
+<p>Apply a fixed offset, and don't scale by the radius.</p>
+<h6 id="only-first">Only First</h6>
+<p>Use the start of the stroke for the depth.</p>
+<p><strong>Plane</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/plane.png" alt="Plane" loading="lazy"></figure>
+<p>The plane for the projected strokes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal to Surface</td>
+<td>Draw in a plane perpendicular to the surface.</td>
+</tr>
+<tr>
+<td>Tangent to Surface</td>
+<td>Draw in the surface plane.</td>
+</tr>
+<tr>
+<td>View</td>
+<td>Draw in a plane that is aligned to the viewport.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve 2D</td>
+<td>Draw the curve as 2d.</td>
+</tr>
+<tr>
+<td>As Nurbs</td>
+<td>Draw the curve as nurbs.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-draw-curve">Last Operator Draw Curve</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-draw-curve.png" alt="Last Operator Draw Curve" loading="lazy"><figcaption>Last Operator Draw Curve</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Error</td>
+<td>Adjust the error distance threshold in object units</td>
+</tr>
+<tr>
+<td>Fit Method</td>
+<td>The curve fitting method. Choose between Refit and Split.</td>
+</tr>
+<tr>
+<td>Corner Angle</td>
+<td>Corners above this angle are considered as corners.</td>
+</tr>
+<tr>
+<td>Cyclic</td>
+<td>With curve type Bezier the curve gets closed. Has no effect at curve type Poly.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="curve-pen">Curve Pen</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/curve-pen.png" alt="Curve Pen" loading="lazy"></figure>
+<p>Extrudes start and end point of the spline to where you click with the mouse.</p>
+<h4 id="tool-settings-2">Tool Settings</h4>
+<h5 id="close-spline">Close Spline</h5>
+<p>Make the spline cyclic.</p>
+<h5 id="extrude-handle-type">Extrude Handle Type</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/extrude-handle-type.png" alt="Extrude Handle Type" loading="lazy"></figure>
+<p>Type of the extrude handler.</p>
+<h3 id="extrude-tools-group">Extrude Tools Group</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/extrude-tools-group.png" alt="Extrude Tools Group" loading="lazy"></figure>
+<p>This tools allows you to extrude out a new curve segment from the current selection</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snapping</td>
+<td>Holding down Ctrl activates temporary global snapping.</td>
+</tr>
+<tr>
+<td>Precision movement</td>
+<td>When you hold down shift, then you will have a much slower but also much preciser movement.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="header-values">Header Values</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/header-values.png" alt="Header Values" loading="lazy"></figure>
+<p>When you move your selection then you will see some values in the header, which defines the current position of the extrude point.</p>
+<h4 id="move-without-widget">Move without Widget</h4>
+<p>You don't have to use the widget to move the object. You can also click aside of it, and drag the object around. The mouse turns into a move cursor. The standard behavior then is to move in screen space. When you want to move into a specific axis, then press X or Y or Z to limit the movement to this axis.</p>
+<h4 id="limit-axis">Limit Axis</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/navigation-menu/limit-axis.png" alt="Limit Axis" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/navigation-menu/header-values.png" alt="Limit Axis" loading="lazy"></figure>
+<p>When you want to move along a specific axis, then press X or Y or Z to limit the movement to this axis. You usually start in global orientation. But you can change this in the Orientation settings.</p>
+<p>By holding down the mouse button and pressing the X, Y or Z key twice you can toggle this to local. But also to other orientations. This depends in what orientation you start. With normal you can toggle that way between Normal and Global.</p>
+<h4 id="extrude">Extrude</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/extrude.png" alt="Extrude" loading="lazy"></figure>
+<p>The Extrude tool extrudes the current selection in the direction of the widget.</p>
+<p>When you activate the tool, then you will by default see a yellow widget at the selection. Drag it to extrude the selection.</p>
+<h4 id="header-value">Header Value</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/header-value.png" alt="Header Value" loading="lazy"></figure>
+<p>When you extrude curve points then you will see a value in the header. It tells you the current target position relative to the initial starting point(s) . This factor always starts with 0.</p>
+<h5 id="tool-settings-3">Tool Settings</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-settings-3.png" alt="Tool Settings" loading="lazy"></figure>
+<h6 id="axis-type">Axis Type</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/axis-type.png" alt="Axis Type" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/navigation-menu/limit-axis.png" alt="Axis Type" loading="lazy"></figure>
+<p>You can choose between the regular axis type. That's the yellow widget with just one handler. It always points in the direction of the middled normals of the selection.</p>
+<p>Or you can use the XYZ axis type. That's a handler with three axis. This widget can be aligned with the transform orientation methods.</p>
+<h6 id="drag">Drag</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active Tool</td>
+<td>When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.</td>
+</tr>
+<tr>
+<td>Tweak, Select Box, Circle and Lasso</td>
+<td>When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="last-operator-extrude-curve-and-move">Last operator Extrude Curve and Move</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-extrude-curve-and-move.png" alt="Last operator Extrude Curve and Move" loading="lazy"><figcaption>Last operator Extrude Curve and Move</figcaption></figure>
+<h6 id="mode">Mode</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/mode.png" alt="Mode" loading="lazy"></figure>
+<p>A drop-down box. Choose between different extrude modes.</p>
+<p>Default is Translation. Most other methods has no effect.</p>
+<h6 id="move-x-y-z">Move X , Y , Z</h6>
+<p>The position of the extruded point(s).</p>
+<h6 id="orientation">Orientation</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Adjust the orientation of the extrusion. It usually starts with Normal.</p>
+<h6 id="proportional-editing">Proportional editing</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="extrude-cursor">Extrude Cursor</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/extrude-cursor.png" alt="Extrude Cursor" loading="lazy"></figure>
+<p>Extrudes the control points to where you click.</p>
+<h5 id="last-operator-add-vertex">Last Operator Add Vertex</h5>
+<h6 id="location-x-y-z">Location X Y Z</h6>
+<p>The location of the new created control point(s).</p>
+<h3 id="radius">Radius</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/radius.png" alt="Radius" loading="lazy"></figure>
+<p>Bezier curves have a radius. This is displayed by the black lines that points away from the curve. The radius tool allows you to resize this radius.</p>
+<h4 id="header-value-2">Header Value</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/header-value-2.png" alt="Header Value" loading="lazy"></figure>
+<p>When you resize the curve radius then you will see a value in the header. It tells you the current scale factor. This factor always starts with 1.</p>
+<h5 id="tool-settings-4">Tool Settings</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-settings-4.png" alt="Tool Settings" loading="lazy"></figure>
+<h6 id="drag-2">Drag</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active Tool</td>
+<td>When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.</td>
+</tr>
+<tr>
+<td>Tweak, Select Box, Circle and Lasso</td>
+<td>When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-transform">Last Operator Transform</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform.png" alt="Last Operator Transform" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Values X Y Z W</td>
+<td>The axis to increase the radius. Just X has an effect with the curve radius.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>The axis to use. This has no effect with a curve object.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-2">Orientation</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Adjust the orientation of the extrusion. It usually starts with Normal.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tilt">Tilt</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tilt.png" alt="Tilt" loading="lazy"></figure>
+<p>With this tool you can tilt the curve. It is the mean tilt value in the Transform panel of the Sidebar.</p>
+<h4 id="header-value-3">Header Value</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/header-value-3.png" alt="Header Value" loading="lazy"></figure>
+<p>When you rotate the curve with the tilt tool, then you will see a value in the header. It tells you the current rotation relative to the starting rotation. This value always starts with 0.</p>
+<h5 id="tool-settings-5">Tool Settings</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-settings-5.png" alt="Tool Settings" loading="lazy"></figure>
+<h6 id="drag-3">Drag</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active Tool</td>
+<td>When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.</td>
+</tr>
+<tr>
+<td>Tweak, Select Box, Circle and Lasso</td>
+<td>When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-transform-2">Last Operator Transform</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform-2.png" alt="Last Operator Transform" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>This value tells you the current rotation relative to the starting rotation. This value always starts with 0.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shear">Shear</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/shear.png" alt="Shear" loading="lazy"></figure>
+<p>The shear tool allows you to shear the selected geometry. When you activate the tool, then a widget appears that allows you to pull in the desired direction.</p>
+<h4 id="tool-settings-6">Tool Settings</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-settings-6.png" alt="Tool Settings" loading="lazy"></figure>
+<h5 id="orientation-3">Orientation</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation for the shear action.</p>
+<h5 id="drag-4">Drag</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active Tool</td>
+<td>When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.</td>
+</tr>
+<tr>
+<td>Tweak, Select Box, Circle and Lasso</td>
+<td>When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-shear">Last Operator Shear</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-shear.png" alt="Last Operator Shear" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Adjust an offset.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Defines one axis of the imaginary shear axis plane.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="axis-ortho">Axis Ortho</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/orientation.png" alt="Axis Ortho" loading="lazy"></figure>
+<p>Defines the other axis of the imaginary shear axis plane.</p>
+<h5 id="orientation-4">Orientation</h5>
+<p>Choose the orientation for the shear action.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="randomize">Randomize</h3>
+<p>Randomize the position of the selected polygon or control points.</p>
+<h4 id="header-value-4">Header Value</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/header-value-4.png" alt="Header Value" loading="lazy"></figure>
+<p>When you randomize the points, then you will see a value in the header. It tells you the current randomization amount. This value always starts with 0.</p>
+<h4 id="tool-settings-7">Tool Settings</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-settings-7.png" alt="Tool Settings" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uniform</td>
+<td>With a value of 0 the randomization happens uniformly. The higher the value the more uniform the randomization affects the selected points.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Align the offset direction to normals. This value has no effect.</td>
+</tr>
+<tr>
+<td>Random Seed</td>
+<td>A random seed value.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="drag-5">Drag</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active Tool</td>
+<td>When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.</td>
+</tr>
+<tr>
+<td>Tweak, Select Box, Circle and Lasso</td>
+<td>When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-transform-3">Last Operator Transform</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform-3.png" alt="Last Operator Transform" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amount</td>
+<td>The randomization amount.</td>
+</tr>
+<tr>
+<td>Uniform</td>
+<td>With a value of 0 the randomization happens uniformly. The higher the value the more uniform the randomization affects the selected points.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Align the offset direction to normals. This value has no effect.</td>
+</tr>
+<tr>
+<td>Random Seed</td>
+<td>A random seed value.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fclone-runs-3-15/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Ftool-shelf%2Fcurve-edit-mode.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/clone-runs-3-15/docs2/content/editors/3d-viewport/tool-shelf/curve-edit-mode.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#tool-shelf-curve-edit-mode">Tool Shelf - Curve - Edit Mode</a><a class="h3" href="#tweak-select-transform-3d-cursor-measure-and-annotate-tools">Tweak, Select, Transform, 3D Cursor Measure and Annotate tools</a><a class="h3" href="#curve-stroke-panel">Curve Stroke Panel</a><a class="h3" href="#draw">Draw</a><a class="h3" href="#curve-pen">Curve Pen</a><a class="h3" href="#extrude-tools-group">Extrude Tools Group</a><a class="h3" href="#radius">Radius</a><a class="h3" href="#tilt">Tilt</a><a class="h3" href="#shear">Shear</a><a class="h3" href="#randomize">Randomize</a></aside></div></body></html>

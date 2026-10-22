@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grease Pencil - Edit mode - Stroke menu · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/clone-runs-3-15 · <code>docs2/clone-runs-3-15</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<span>Modifiers tab</span>
+<span style="padding-left:1.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Color modifiers (Grease Pencil)</span>
+<span>Editors introduction</span>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:1.5rem" href="../asset-shelf.html">Asset Shelf</a>
+<a style="padding-left:1.5rem" href="../context-menus.html">Context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-edit-mode-armature-context-menu.html">Armature - Edit Mode - Armature context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-edit-mode-lattice-context-menu.html">Armature - Edit Mode - Lattice context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-pose-mode-pose-context-menu.html">Armature - Pose Mode - Pose context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/curve-surface-object-edit-mode-curve-context-menus.html">Curve + Surface Object - Edit Mode - Curve context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-draw-mode-brushes-context-menu.html">Grease Pencil object - Draw Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-edit-mode-point-context-menu.html">Grease Pencil object - Edit Mode - Point context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-edit-mode-stroke-context-menu.html">Grease Pencil object - Edit Mode - Stroke context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu.html">Grease Pencil object - Sculpt Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu.html">Grease Pencil object - Vertex Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-weight-paint-mode-brushes-context-menu.html">Grease Pencil object - Weight Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/hair-curves-edit-mode-curves-context-menu.html">Hair Curves - Edit Mode - Curves context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-edge-context-menu.html">Mesh Object - Edit Mode - Edge Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-face-context-menu.html">Mesh Object - Edit Mode - Face Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-vertex-context-menu.html">Mesh Object - Edit Mode - Vertex Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-sculpt-mode-brushes-context-menus.html">Mesh Object - Sculpt Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-texture-paint-mode-brushes-context-menus.html">Mesh Object - Texture Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-vertex-paint-mode-brushes-context-menus.html">Mesh Object - Vertex Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-weight-paint-mode-brushes-context-menus.html">Mesh Object - Weight Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/metaball-edit-mode-metaball-context-menu.html">Metaball - Edit Mode - Metaball context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/object-mode-object-context-menu.html">Object mode - Object Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/text-edit-mode-text-context-menu.html">Text - Edit Mode - Text context menu</a>
+<a style="padding-left:1.5rem" href="../header.html">Header</a>
+<a style="padding-left:2.5rem" href="add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="armature-edit-mode-armature-menu.html">Armature - Edit mode - Armature menu</a>
+<a style="padding-left:2.5rem" href="armature-pose-mode-pose-menu.html">Armature - Pose mode - Pose menu</a>
+<a style="padding-left:2.5rem" href="curve-edit-mode-curve-menu.html">Curve - Edit mode - Curve menu</a>
+<a style="padding-left:2.5rem" href="curve-surface-edit-mode-control-points-menu.html">Curve &amp; Surface - Edit mode - Control points menu</a>
+<a style="padding-left:2.5rem" href="curve-surface-edit-mode-segments-menu.html">Curve &amp; Surface - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="edit-mode-add-menu.html">Edit mode - Add menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-draw-mode-draw-menu.html">Grease Pencil - Draw mode - Draw menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode-grease-pencil-menu.html">Grease Pencil - Edit mode - Grease Pencil menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode-point-menu.html">Grease Pencil - Edit mode - Point menu</a>
+<a class="is-current" style="padding-left:2.5rem" href="grease-pencil-edit-mode-stroke-menu.html">Grease Pencil - Edit mode - Stroke menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-vertex-paint-mode-paint-menu.html">Grease Pencil - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-weight-paint-mode-weights-menu.html">Grease Pencil - Weight Paint Mode - Weights Menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-control-points-menu.html">Hair Curve - Edit mode - Control Points menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-curves-menu.html">Hair Curve - Edit mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-segments-menu.html">Hair Curve - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-sculpt-mode-curves-menu.html">Hair Curve - Sculpt mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="lattice-edit-mode-lattice-menu.html">Lattice - Edit mode - Lattice menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-edge-menu.html">Mesh - Edit mode - Edge Menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-face-menu.html">Mesh - Edit mode - Face menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-mesh-menu.html">Mesh - Edit mode - Mesh menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-uv-menu.html">Mesh - Edit mode - UV menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-vertex-menu.html">Mesh - Edit Mode - Vertex Menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-face-sets-menu.html">Mesh - Sculpt mode - Face Sets menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-mask-menu.html">Mesh - Sculpt mode - Mask menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-sculpt-menu.html">Mesh - Sculpt mode - Sculpt menu</a>
+<a style="padding-left:2.5rem" href="mesh-texture-paint-mode-brush-menu.html">Mesh - Texture Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="mesh-vertex-paint-mode-brush-menu.html">Mesh - Vertex Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="mesh-vertex-paint-mode-paint-menu.html">Mesh - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="mesh-weight-paint-mode-weights-menu.html">Mesh - Weight Paint mode - Weights menu</a>
+<a style="padding-left:2.5rem" href="metaball-edit-mode-metaball-menu.html">Metaball - Edit mode - Metaball menu</a>
+<a style="padding-left:2.5rem" href="navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="object-menu.html">Object menu</a>
+<a style="padding-left:2.5rem" href="particle-particle-mode-particle-menu.html">Particle - Particle mode - Particle menu</a>
+<a style="padding-left:2.5rem" href="point-cloud-edit-mode-point-cloud-menu.html">Point Cloud - Edit mode - Point Cloud menu</a>
+<a style="padding-left:2.5rem" href="quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="surface-edit-mode-surface-menu.html">Surface - Edit mode - Surface menu</a>
+<a style="padding-left:2.5rem" href="text-edit-mode-text-menu.html">Text - Edit mode - Text menu</a>
+<a style="padding-left:2.5rem" href="view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../sidebar/animation-tab.html">Animation Tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/item-tab.html">Item tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-edit-mode.html">Tool Tab - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-draw-mode.html">Tool Tab - Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-layer-panel.html">Tool Tab - Grease Pencil - Layer Panel</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-sculpt-mode.html">Tool Tab - Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-vertex-paint-mode.html">Tool Tab - Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-weight-paint-mode.html">Tool Tab - Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-hair-curve-sculpt-mode.html">Tool Tab - Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-sculpt-mode.html">Tool Tab - Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-texture-paint-mode.html">Tool Tab - Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-vertex-paint-mode.html">Tool Tab - Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-weight-paint-mode.html">Tool Tab - Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-object-mode.html">Tool Tab - Object Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-particle-edit-mode.html">Tool Tab - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-pose-mode.html">Tool Tab - Pose Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:1.5rem" href="../tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/armature-edit-mode.html">Armature - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/armature-pose-mode.html">Armature - Pose Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/curve-edit-mode.html">Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-draw-mode.html">Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-edit-mode.html">Grease Pencil - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-sculpt-mode.html">Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-vertex-paint-mode.html">Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-weight-paint-mode.html">Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/hair-curve-edit-mode.html">Hair Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/hair-curve-sculpt-mode.html">Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/lattice-edit-mode.html">Lattice - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-edit-mode.html">Mesh - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-particle-edit-mode.html">Mesh - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-sculpt-mode.html">Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-texture-paint-mode.html">Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-vertex-paint-mode.html">Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-weight-paint-mode.html">Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/metaball-edit-mode.html">Metaball - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/surface-edit-mode.html">Surface - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/text-edit-mode.html">Text - Edit Mode</a>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Header › Grease Pencil - Edit mode - Stroke menu</div><h1 class="pv-title">Grease Pencil - Edit mode - Stroke menu</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 6 min read</span></div><article class="ui-doc-body"><h2 id="edit-mode-stroke-menu">Edit Mode - Stroke Menu</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/edit-mode-stroke-menu.png" alt="Edit Mode - Stroke Menu" loading="lazy"><figcaption>Edit Mode - Stroke Menu</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/edit-mode-stroke-menu-2.png" alt="Edit Mode - Stroke Menu" loading="lazy"><figcaption>Edit Mode - Stroke Menu</figcaption></figure>
+<p>The menu content changes dependant of the Select mode. In Select mode Stroke a few menu items are not displayed. Since they do not work in that mode.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/edit-mode-stroke-menu-3.png" alt="Edit Mode - Stroke Menu" loading="lazy"><figcaption>Edit Mode - Stroke Menu</figcaption></figure>
+<h3 id="subdivide">Subdivide</h3>
+<p>Subdivides the selected grease pencil geometry.</p>
+<h4 id="last-operator-subdivide">Last Operator Subdivide</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-subdivide.png" alt="Last Operator Subdivide" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of Cuts</td>
+<td>Number of subdivision cuts.</td>
+</tr>
+<tr>
+<td>Selected Points</td>
+<td>Limits the effect to only the selected points within the stroke.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="subdivide-and-smooth">Subdivide and smooth</h3>
+<p>Subdivides the selected grease pencil geometry, and smoothens it.</p>
+<h4 id="last-operator-subdivide-2">Last Operator Subdivide</h4>
+<h5 id="number-of-cuts">Number of Cuts</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/number-of-cuts.png" alt="Number of Cuts" loading="lazy"></figure>
+<p>Number of subdivision cuts.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected Points</td>
+<td>Limits the effect to only the selected points within the stroke.</td>
+</tr>
+<tr>
+<td>Iterations</td>
+<td>How often to smooth.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>The smoothing factor</td>
+</tr>
+<tr>
+<td>Smooth Endpoints</td>
+<td>Smoothen the endpoints.</td>
+</tr>
+<tr>
+<td>Keep Shape</td>
+<td>Try to keep the original shape.</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>The operator affects the points location.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The smooth radius around vertices.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>The smooth opacity.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="simplify-strokes-sub-menu">Simplify Strokes - Sub Menu</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/simplify-strokes-sub-menu.png" alt="Simplify Strokes - Sub Menu" loading="lazy"><figcaption>Simplify Strokes - Sub Menu</figcaption></figure>
+<p>Stroke mode. Simplify the stroke.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixed</td>
+<td>Deletes every second point in the stroke, except the start and end points.</td>
+</tr>
+<tr>
+<td>Adaptive</td>
+<td>This method uses an algorithm called RDP algorithm (Ramer-Douglas-Peucker algorithm) for points deletion. The algorithm tries to keep the shape with the remaining points.</td>
+</tr>
+<tr>
+<td>Sample</td>
+<td>Samples points along the shape of the stroke, and increases the length of the edges.</td>
+</tr>
+<tr>
+<td>Merge</td>
+<td>Simplify the stroke by merging vertices closer than a given distance.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-simplify-stroke">Last Operator Simplify Stroke</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-simplify-stroke.png" alt="Last Operator Simplify Stroke" loading="lazy"><figcaption>Last Operator Simplify Stroke</figcaption></figure>
+<p>The simplify strokes operators share the same last operator.</p>
+<h5 id="mode">Mode</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mode-2.png" alt="Mode" loading="lazy"></figure>
+<p>The method.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steps (Fixed)</td>
+<td>How much levels of simplifying.</td>
+</tr>
+<tr>
+<td>Factor (Adaptive)</td>
+<td>How strong the simplification should be performed.</td>
+</tr>
+<tr>
+<td>Length (Sample)</td>
+<td>The sample length.</td>
+</tr>
+<tr>
+<td>Distance (Merge)</td>
+<td>The distance. Below this value the vertices gets merged.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="join-sub-menu">Join - Sub Menu</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Join and Copy</td>
+<td>Copy the selection in the new stroke.</td>
+</tr>
+<tr>
+<td>Join</td>
+<td>Move the selection to the new stroke.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="adjust-last-operator-join-selection">Adjust last operator Join Selection</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/adjust-last-operator-join-selection.png" alt="Adjust last operator Join Selection" loading="lazy"><figcaption>Adjust last operator Join Selection</figcaption></figure>
+<h5 id="type">Type</h5>
+<p>Choose the join method.</p>
+<h3 id="outline">Outline</h3>
+<p>Convert selected strokes to perimeter.</p>
+<h4 id="adjust-last-operator-outline">Adjust last operator Outline</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/adjust-last-operator-outline.png" alt="Adjust last operator Outline" loading="lazy"><figcaption>Adjust last operator Outline</figcaption></figure>
+<h5 id="projection-mode">Projection mode</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/projection-mode.png" alt="Projection mode" loading="lazy"></figure>
+<p>How to project the stroke.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>How big.</td>
+</tr>
+<tr>
+<td>Offset Factor</td>
+<td>Offset from the stroke.</td>
+</tr>
+<tr>
+<td>Corner Subdivisions</td>
+<td>How much subdivisions at corners.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="move-to-layer-sub-menu">Move to Layer – Sub Menu</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/move-to-layer-sub-menu-2.png" alt="Move to Layer – Sub Menu" loading="lazy"><figcaption>Move to Layer – Sub Menu</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/move-to-layer-sub-menu.png" alt="Move to Layer – Sub Menu" loading="lazy"><figcaption>Move to Layer – Sub Menu</figcaption></figure>
+<p>Move the current selected stroke to another grease pencil layer. It lists the current layers.</p>
+<h4 id="new-layer">New Layer</h4>
+<p>New Layer button adds a new grease pencil layer.</p>
+<h5 id="last-operator-move-strokes-to-layer">Last Operator Move Strokes to Layer</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-move-strokes-to-layer.png" alt="Last Operator Move Strokes to Layer" loading="lazy"><figcaption>Last Operator Move Strokes to Layer</figcaption></figure>
+<h6 id="grease-pencil-layer">Grease Pencil Layer</h6>
+<p>Internal the layers are enumerated. So here you move by number.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/grease-pencil-layer.png" alt="Grease Pencil Layer" loading="lazy"></figure>
+<p>The number of a layer can be found out in the tool tip, in the Python part of it.</p>
+<h3 id="assign-material-sub-menu">Assign Material – Sub Menu</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/assign-material-sub-menu.png" alt="Assign Material – Sub Menu" loading="lazy"><figcaption>Assign Material – Sub Menu</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/assign-material-sub-menu-2.png" alt="Assign Material – Sub Menu" loading="lazy"><figcaption>Assign Material – Sub Menu</figcaption></figure>
+<p>Assign a new material to the current selected stroke geometry.</p>
+<p>The materials can be found and edited in the Properties editor. Here you can also create new materials.</p>
+<h4 id="last-operator-change-stroke-color">Last Operator Change Stroke Color</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-change-stroke-color.png" alt="Last Operator Change Stroke Color" loading="lazy"><figcaption>Last Operator Change Stroke Color</figcaption></figure>
+<h5 id="material">Material</h5>
+<p>The materials are defined by its name. So when you want to use another material, then change the name here.</p>
+<h3 id="set-as-active-material">Set as active material</h3>
+<p>Sets the current selected material as the active material.</p>
+<h3 id="arrange-strokes-sub-menu">Arrange Strokes - Sub Menu</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/arrange-strokes-sub-menu.png" alt="Arrange Strokes - Sub Menu" loading="lazy"><figcaption>Arrange Strokes - Sub Menu</figcaption></figure>
+<p>Changes the drawing order of the strokes in the 2D layer.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bring Forward</td>
+<td>Moves the selected points/strokes upper the next one in the drawing order.</td>
+</tr>
+<tr>
+<td>Send Backward</td>
+<td>Moves the selected points/strokes below the previous one in the drawing order.</td>
+</tr>
+<tr>
+<td>Bring to Front</td>
+<td>Moves to the top the selected points/strokes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="send-to-back">Send to Back</h4>
+<p>Moves to the bottom the selected points/strokes.</p>
+<h5 id="last-operator-arrange-stroke">Last Operator Arrange Stroke</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-arrange-stroke.png" alt="Last Operator Arrange Stroke" loading="lazy"><figcaption>Last Operator Arrange Stroke</figcaption></figure>
+<h6 id="direction">Direction</h6>
+<p>Choose the method again.</p>
+<h3 id="close">Close</h3>
+<p>Closes the current stroke by connecting the first vertice with the last vertice by a stroke. See also Toggle Cyclic.</p>
+<h3 id="toggle-cyclic">Toggle Cyclic</h3>
+<p>When the curve is open, then it Closes the current stroke by connecting the first vertice with the last vertice by a stroke. When the curve is closed, then it removes the connection between first and last vertice, and makes the curve open.</p>
+<h4 id="last-operator-set-cyclical-state">Last Operator Set Cyclical State</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-set-cyclical-state.png" alt="Last Operator Set Cyclical State" loading="lazy"><figcaption>Last Operator Set Cyclical State</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Choose the method again. · <strong>Close all</strong>: Close all open selected strokes. · <strong>Open all</strong>: Open all closed selected strokes. · <strong>Toggle</strong>: Close or Open selected strokes as required.</td>
+</tr>
+<tr>
+<td>Create geometry</td>
+<td>When enabled, points are added for closing the strokes like when using the Close tool. If disabled, the stroke is closed with just one edge.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set-caps-sub-menu">Set Caps - Sub Menu</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/set-caps-sub-menu.png" alt="Set Caps - Sub Menu" loading="lazy"><figcaption>Set Caps - Sub Menu</figcaption></figure>
+<p>Toggles if the start and endpoints of the strokes are rounded or flat.</p>
+<h4 id="default">Default</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/default.png" alt="Default" loading="lazy"></figure>
+<p>Sets stroke start and end points to rounded (default).</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Both</td>
+<td>Toggle stroke start and end points caps to flat or rounded.</td>
+</tr>
+<tr>
+<td>Start</td>
+<td>Toggle stroke start point cap to flat or rounded.</td>
+</tr>
+<tr>
+<td>End</td>
+<td>Toggle stroke end point cap to flat or rounded.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-set-caps-mode">Last Operator Set Caps Mode</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-set-caps-mode.png" alt="Last Operator Set Caps Mode" loading="lazy"><figcaption>Last Operator Set Caps Mode</figcaption></figure>
+<h5 id="type-2">Type</h5>
+<p>Choose the method again.</p>
+<h3 id="switch-direction">Switch Direction</h3>
+<p>Switches the direction of the stroke geometry.</p>
+<h3 id="set-start-point">Set Start Point</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/set-start-point.png" alt="Set Start Point" loading="lazy"></figure>
+<p>Select which point is the start point of the grease pencil curve. This defines the order of point indices, useful for Geometry nodes.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Not available in stroke selection mode.</p></div>
+<h3 id="normalize-thickness">Normalize Thickness</h3>
+<p>Adjust the thickness of the stroke.</p>
+<h3 id="normalize-opacity">Normalize Opacity</h3>
+<p>Adjust the opacity of the stroke.</p>
+<h4 id="last-operator-normalize-stroke">Last operator Normalize Stroke</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-normalize-stroke.png" alt="Last operator Normalize Stroke" loading="lazy"><figcaption>Last operator Normalize Stroke</figcaption></figure>
+<p>This last operator works for both tools, Normalize Thickness and Normalize Opacity.</p>
+<h5 id="mode-2">Mode</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/mode.png" alt="Mode" loading="lazy"></figure>
+<p>Adjust thickness or opacity.</p>
+<h5 id="value">Value</h5>
+<p>The value to adjust the opacity or thickness.</p>
+<h3 id="set-spline-type-sub-menu">Set Spline Type – Sub Menu</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/set-spline-type-sub-menu.png" alt="Set Spline Type – Sub Menu" loading="lazy"><figcaption>Set Spline Type – Sub Menu</figcaption></figure>
+<p>Set the curve type.</p>
+<h3 id="set-curve-resolution">Set Curve Resolution</h3>
+<p>Set the resolution of the curve.</p>
+<h4 id="ajust-last-operator-set-curve-resolution">Ajust last operator Set Curve Resolution</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/ajust-last-operator-set-curve-resolution.png" alt="Ajust last operator Set Curve Resolution" loading="lazy"><figcaption>Ajust last operator Set Curve Resolution</figcaption></figure>
+<h5 id="resolution">Resolution</h5>
+<p>The resolution that you want to choose.</p>
+<h3 id="set-stroke-type-sub-menu">Set Stroke Type - Sub Menu</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/set-stroke-type-sub-menu.png" alt="Set Stroke Type - Sub Menu" loading="lazy"><figcaption>Set Stroke Type - Sub Menu</figcaption></figure>
+<p>Defines how selected points are interpreted on the Grease Pencil.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stroke</td>
+<td>Points are treated as part of a line stroke.</td>
+</tr>
+<tr>
+<td>Fill</td>
+<td>Points are treated as part of a filled region.</td>
+</tr>
+<tr>
+<td>Both</td>
+<td>Points contribute to both stroke and fill.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reset-uvs">Reset UVs</h3>
+<p>Reset UV Transformation values to zero.</p>
+<h3 id="join-fills">Join Fills</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/join-fills.png" alt="Join Fills" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/join-fills-2.png" alt="Join Fills" loading="lazy"></figure>
+<p>Combines selected strokes into a single fill region. If they overlap, it will create a subtractive boolean. Useful for merging complex shapes into one continuous fill for coloring or shading.</p>
+<ul>
+<li>Creates unified fill areas, even across multiple strokes.<br />
+– Automatically generates holes if overlapping strokes define enclosed spaces.</li>
+</ul>
+<h3 id="separate-fills">Separate Fills</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/separate-fills.png" alt="Separate Fills" loading="lazy"></figure>
+<p>Splits a combined fill back into individual fill regions. Useful for isolating specific areas for recoloring, shading, or animation. Restores stroke-based independence after a join operation.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fclone-runs-3-15/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fheader%2Fgrease-pencil-edit-mode-stroke-menu.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/clone-runs-3-15/docs2/content/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#edit-mode-stroke-menu">Edit Mode - Stroke Menu</a><a class="h3" href="#subdivide">Subdivide</a><a class="h3" href="#subdivide-and-smooth">Subdivide and smooth</a><a class="h3" href="#simplify-strokes-sub-menu">Simplify Strokes - Sub Menu</a><a class="h3" href="#join-sub-menu">Join - Sub Menu</a><a class="h3" href="#outline">Outline</a><a class="h3" href="#move-to-layer-sub-menu">Move to Layer – Sub Menu</a><a class="h3" href="#assign-material-sub-menu">Assign Material – Sub Menu</a><a class="h3" href="#set-as-active-material">Set as active material</a><a class="h3" href="#arrange-strokes-sub-menu">Arrange Strokes - Sub Menu</a><a class="h3" href="#close">Close</a><a class="h3" href="#toggle-cyclic">Toggle Cyclic</a><a class="h3" href="#set-caps-sub-menu">Set Caps - Sub Menu</a><a class="h3" href="#switch-direction">Switch Direction</a><a class="h3" href="#set-start-point">Set Start Point</a><a class="h3" href="#normalize-thickness">Normalize Thickness</a><a class="h3" href="#normalize-opacity">Normalize Opacity</a><a class="h3" href="#set-spline-type-sub-menu">Set Spline Type – Sub Menu</a><a class="h3" href="#set-curve-resolution">Set Curve Resolution</a><a class="h3" href="#set-stroke-type-sub-menu">Set Stroke Type - Sub Menu</a><a class="h3" href="#reset-uvs">Reset UVs</a><a class="h3" href="#join-fills">Join Fills</a><a class="h3" href="#separate-fills">Separate Fills</a></aside></div></body></html>

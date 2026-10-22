@@ -1,0 +1,3281 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Header tools and Options · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/clone-runs-3-15 · <code>docs2/clone-runs-3-15</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<span>Modifiers tab</span>
+<span style="padding-left:1.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:1.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Color modifiers (Grease Pencil)</span>
+<span>Editors introduction</span>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:1.5rem" href="../asset-shelf.html">Asset Shelf</a>
+<a style="padding-left:1.5rem" href="../context-menus.html">Context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-edit-mode-armature-context-menu.html">Armature - Edit Mode - Armature context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-edit-mode-lattice-context-menu.html">Armature - Edit Mode - Lattice context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/armature-pose-mode-pose-context-menu.html">Armature - Pose Mode - Pose context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/curve-surface-object-edit-mode-curve-context-menus.html">Curve + Surface Object - Edit Mode - Curve context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-draw-mode-brushes-context-menu.html">Grease Pencil object - Draw Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-edit-mode-point-context-menu.html">Grease Pencil object - Edit Mode - Point context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-edit-mode-stroke-context-menu.html">Grease Pencil object - Edit Mode - Stroke context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu.html">Grease Pencil object - Sculpt Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu.html">Grease Pencil object - Vertex Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/grease-pencil-object-weight-paint-mode-brushes-context-menu.html">Grease Pencil object - Weight Paint Mode - Brushes context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/hair-curves-edit-mode-curves-context-menu.html">Hair Curves - Edit Mode - Curves context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-edge-context-menu.html">Mesh Object - Edit Mode - Edge Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-face-context-menu.html">Mesh Object - Edit Mode - Face Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-edit-mode-vertex-context-menu.html">Mesh Object - Edit Mode - Vertex Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-sculpt-mode-brushes-context-menus.html">Mesh Object - Sculpt Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-texture-paint-mode-brushes-context-menus.html">Mesh Object - Texture Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-vertex-paint-mode-brushes-context-menus.html">Mesh Object - Vertex Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/mesh-object-weight-paint-mode-brushes-context-menus.html">Mesh Object - Weight Paint Mode - Brushes context menus</a>
+<a style="padding-left:2.5rem" href="../context-menus/metaball-edit-mode-metaball-context-menu.html">Metaball - Edit Mode - Metaball context menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/object-mode-object-context-menu.html">Object mode - Object Context Menu</a>
+<a style="padding-left:2.5rem" href="../context-menus/text-edit-mode-text-context-menu.html">Text - Edit Mode - Text context menu</a>
+<a style="padding-left:1.5rem" href="../header.html">Header</a>
+<a style="padding-left:2.5rem" href="add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="armature-edit-mode-armature-menu.html">Armature - Edit mode - Armature menu</a>
+<a style="padding-left:2.5rem" href="armature-pose-mode-pose-menu.html">Armature - Pose mode - Pose menu</a>
+<a style="padding-left:2.5rem" href="curve-edit-mode-curve-menu.html">Curve - Edit mode - Curve menu</a>
+<a style="padding-left:2.5rem" href="curve-surface-edit-mode-control-points-menu.html">Curve &amp; Surface - Edit mode - Control points menu</a>
+<a style="padding-left:2.5rem" href="curve-surface-edit-mode-segments-menu.html">Curve &amp; Surface - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="edit-mode-add-menu.html">Edit mode - Add menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-draw-mode-draw-menu.html">Grease Pencil - Draw mode - Draw menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode-grease-pencil-menu.html">Grease Pencil - Edit mode - Grease Pencil menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode-point-menu.html">Grease Pencil - Edit mode - Point menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-edit-mode-stroke-menu.html">Grease Pencil - Edit mode - Stroke menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-vertex-paint-mode-paint-menu.html">Grease Pencil - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="grease-pencil-weight-paint-mode-weights-menu.html">Grease Pencil - Weight Paint Mode - Weights Menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-control-points-menu.html">Hair Curve - Edit mode - Control Points menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-curves-menu.html">Hair Curve - Edit mode - Curves menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-edit-mode-segments-menu.html">Hair Curve - Edit mode - Segments menu</a>
+<a style="padding-left:2.5rem" href="hair-curve-sculpt-mode-curves-menu.html">Hair Curve - Sculpt mode - Curves menu</a>
+<a class="is-current" style="padding-left:2.5rem" href="header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="lattice-edit-mode-lattice-menu.html">Lattice - Edit mode - Lattice menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-edge-menu.html">Mesh - Edit mode - Edge Menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-face-menu.html">Mesh - Edit mode - Face menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-mesh-menu.html">Mesh - Edit mode - Mesh menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-uv-menu.html">Mesh - Edit mode - UV menu</a>
+<a style="padding-left:2.5rem" href="mesh-edit-mode-vertex-menu.html">Mesh - Edit Mode - Vertex Menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-face-sets-menu.html">Mesh - Sculpt mode - Face Sets menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-mask-menu.html">Mesh - Sculpt mode - Mask menu</a>
+<a style="padding-left:2.5rem" href="mesh-sculpt-mode-sculpt-menu.html">Mesh - Sculpt mode - Sculpt menu</a>
+<a style="padding-left:2.5rem" href="mesh-texture-paint-mode-brush-menu.html">Mesh - Texture Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="mesh-vertex-paint-mode-brush-menu.html">Mesh - Vertex Paint mode - Brush menu</a>
+<a style="padding-left:2.5rem" href="mesh-vertex-paint-mode-paint-menu.html">Mesh - Vertex Paint mode - Paint menu</a>
+<a style="padding-left:2.5rem" href="mesh-weight-paint-mode-weights-menu.html">Mesh - Weight Paint mode - Weights menu</a>
+<a style="padding-left:2.5rem" href="metaball-edit-mode-metaball-menu.html">Metaball - Edit mode - Metaball menu</a>
+<a style="padding-left:2.5rem" href="navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="object-menu.html">Object menu</a>
+<a style="padding-left:2.5rem" href="particle-particle-mode-particle-menu.html">Particle - Particle mode - Particle menu</a>
+<a style="padding-left:2.5rem" href="point-cloud-edit-mode-point-cloud-menu.html">Point Cloud - Edit mode - Point Cloud menu</a>
+<a style="padding-left:2.5rem" href="quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="surface-edit-mode-surface-menu.html">Surface - Edit mode - Surface menu</a>
+<a style="padding-left:2.5rem" href="text-edit-mode-text-menu.html">Text - Edit mode - Text menu</a>
+<a style="padding-left:2.5rem" href="view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../sidebar/animation-tab.html">Animation Tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/item-tab.html">Item tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-edit-mode.html">Tool Tab - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-draw-mode.html">Tool Tab - Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-layer-panel.html">Tool Tab - Grease Pencil - Layer Panel</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-sculpt-mode.html">Tool Tab - Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-vertex-paint-mode.html">Tool Tab - Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-grease-pencil-weight-paint-mode.html">Tool Tab - Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-hair-curve-sculpt-mode.html">Tool Tab - Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-sculpt-mode.html">Tool Tab - Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-texture-paint-mode.html">Tool Tab - Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-vertex-paint-mode.html">Tool Tab - Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-mesh-weight-paint-mode.html">Tool Tab - Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-object-mode.html">Tool Tab - Object Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-particle-edit-mode.html">Tool Tab - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab-pose-mode.html">Tool Tab - Pose Mode</a>
+<a style="padding-left:2.5rem" href="../sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../sidebar/view-tab.html">View Tab</a>
+<a style="padding-left:1.5rem" href="../tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/armature-edit-mode.html">Armature - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/armature-pose-mode.html">Armature - Pose Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/curve-edit-mode.html">Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-draw-mode.html">Grease Pencil - Draw Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-edit-mode.html">Grease Pencil - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-sculpt-mode.html">Grease Pencil - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-vertex-paint-mode.html">Grease Pencil - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/grease-pencil-weight-paint-mode.html">Grease Pencil - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/hair-curve-edit-mode.html">Hair Curve - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/hair-curve-sculpt-mode.html">Hair Curve - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/lattice-edit-mode.html">Lattice - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-edit-mode.html">Mesh - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-particle-edit-mode.html">Mesh - Particle Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-sculpt-mode.html">Mesh - Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-texture-paint-mode.html">Mesh - Texture Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-vertex-paint-mode.html">Mesh - Vertex Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/mesh-weight-paint-mode.html">Mesh - Weight Paint Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/metaball-edit-mode.html">Metaball - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/surface-edit-mode.html">Surface - Edit Mode</a>
+<a style="padding-left:2.5rem" href="../tool-shelf/text-edit-mode.html">Text - Edit Mode</a>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Header › Header tools and Options</div><h1 class="pv-title">Header tools and Options</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 64 min read</span></div><article class="ui-doc-body"><h2 id="introduction">Introduction</h2>
+<p>The header in the 3D view contains various menus and tools. This chapter here is about the tools, modes and options elements in the header.</p>
+<p>The text menus are covered in a own chapter each. They vary too much, dependent of mode and object type.</p>
+<h2 id="mode-drop-down-box">Mode Drop-down Box</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/mode-drop-down-box.png" alt="Mode Drop-down Box" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/mode-drop-down-box-2.png" alt="Mode Drop-down Box" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/mode-drop-down-box-3.png" alt="Mode Drop-down Box" loading="lazy"></figure>
+<p>The Mode drop-down box allows you to switch between the different modes.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/mode-drop-down-box-4.png" alt="Mode Drop-down Box" loading="lazy"></figure>
+<p>Modes are object states that allows you to edit and manipulate objects at different levels with different tool sets and goals. The sculpt mode for example allows you to sculpt a mesh object. Edit Mode allows to manipulate the mesh of the object, and so on.</p>
+<p>The available modes can differ from object to object. An armature for example has an additional pose mode. And when you work with a grease pencil object, then several grease pencil modes becomes available.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object Mode</td>
+<td>This mode allows to manipulate objects at Object level. Like move it around, rotate it, etc. This mode is available for all object types.</td>
+</tr>
+<tr>
+<td>Edit Mode</td>
+<td>The edit mode allows to edit the object. With a mesh object this means that you are able to modify and to change the geometry. With an armature you build your skeleton. And with a text object you can type in text, and choose the font etc. Not all objects has an edit mode.</td>
+</tr>
+<tr>
+<td>Sculpt Mode</td>
+<td>In this mode you can sculpt the mesh. This mode is available for mesh and grease pencil objects.</td>
+</tr>
+<tr>
+<td>Vertex Paint</td>
+<td>Vertex Paint is a mesh object only mode. In this mode you can paint vertices with colors.</td>
+</tr>
+<tr>
+<td>Weight Paint</td>
+<td>In this mode you can adjust weight painting for an armature for example. But Weight Painted mesh objects can also be used in conjunction with particles. Also a grease pencil stroke can be weight painted.</td>
+</tr>
+<tr>
+<td>Texture Paint</td>
+<td>Weight Paint is a mesh object only mode. In this mode you can paint at the texture of a mesh directly. This mode requires to have a working UV mapping and a texture at the mesh object.</td>
+</tr>
+<tr>
+<td>Edit Strokes</td>
+<td>Edit Strokes is a Grease Pencil only mode. It allows to manipulate the curves at a mesh level.</td>
+</tr>
+<tr>
+<td>Particle Edit</td>
+<td>Particle edit is a Particle System mode only. When you apply a particle system to a mesh object then this mode becomes available. It allows you to manipulate the particle system at a mesh level. You can comb hair particles for example.</td>
+</tr>
+<tr>
+<td>Draw</td>
+<td>Draw is a grease pencil object only mode. In this mode you draw grease pencil strokes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mesh-object-sub-modes">Mesh Object Sub Modes</h2>
+<p>The different modes can have some sub modes. For example different selection methods in mesh edit mode. Or a mask mode for texture painting. The sub mode settings can be found right from the Modes drop down box.</p>
+<h3 id="edit-mode-mesh-select-modes">Edit Mode - Mesh Select Modes</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/edit-mode-mesh-select-modes.png" alt="Edit Mode - Mesh Select Modes" loading="lazy"><figcaption>Edit Mode - Mesh Select Modes</figcaption></figure>
+<p>When you enter the edit mode with a mesh object then you will see the mesh select modes. They allows you to switch between the three available selection modes Vertice select, Edge Select and Face Select.</p>
+<p>Vertex Select allows you to select vertices.</p>
+<p>Edge Select allows you to select edges.</p>
+<p>Face select allows you to select faces.</p>
+<p>The mesh display changes, dependent of the mode. When you have for example select vertices active, then the vertices highlights at the mesh.</p>
+<p>You can have more than one mode active by shift clicking at the other mesh select modes.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/edit-mode-mesh-select-modes-2.png" alt="Edit Mode - Mesh Select Modes" loading="lazy"><figcaption>Edit Mode - Mesh Select Modes</figcaption></figure>
+<p>The standard Bforartists has hotkeys to switch between the modes. X, C and V. You cannot see or edit them at the header element. There is however a sub menu in the mesh menu, called Mesh Select Mode. Here you can see and edit the hotkeys.</p>
+<h3 id="vertex-paint-mask-and-vertex-selection">Vertex Paint - Mask and Vertex Selection</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/vertex-paint-mask-and-vertex-selection.png" alt="Vertex Paint - Mask and Vertex Selection" loading="lazy"><figcaption>Vertex Paint - Mask and Vertex Selection</figcaption></figure>
+<h3 id="paint-mask">Paint Mask</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/paint-mask.png" alt="Paint Mask" loading="lazy"></figure>
+<p>When you activate this tool then you reveal a Select menu in the header. And you can select the mesh parts that you want to manipulate. Note that you may first want to deselect all. By default everything is selected ...</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/paint-mask-2.png" alt="Paint Mask" loading="lazy"></figure>
+<p>The select menu is explained in the chapter Vertex Paint modes. The menu items should be pretty self explaining though.</p>
+<p>When you have selected a part of the mesh, then you can just paint the faces at this selected part. The edges are the border.</p>
+<h3 id="vertex-selection">Vertex Selection</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/vertex-selection.png" alt="Vertex Selection" loading="lazy"></figure>
+<p>When you activate this tool then you reveal a Select menu in the header. And you can select the mesh parts that you want to manipulate. This tool is meant for Weight Painting. And so the mesh displays the vertices too.</p>
+<p>Note that you may first want to deselect all. By default everything is selected ...</p>
+<p>The select menu is explained in the chapter Vertex Paint modes. The menu items should be pretty self explaining though.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/vertex-selection-2.png" alt="Vertex Selection" loading="lazy"></figure>
+<p>When you have selected a part of the mesh, then you can just paint the vertices at this selected part. The difference to the Paint mask method is that here the edges are not the border of the color. But there is a gradient between the vertices.</p>
+<h3 id="weight-paint-mask-and-vertex-selection">Weight Paint - Mask and Vertex Selection</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/weight-paint-mask-and-vertex-selection.png" alt="Weight Paint - Mask and Vertex Selection" loading="lazy"><figcaption>Weight Paint - Mask and Vertex Selection</figcaption></figure>
+<h3 id="paint-mask-2">Paint Mask</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/paint-mask-3.png" alt="Paint Mask" loading="lazy"></figure>
+<p>Mesh Object.</p>
+<p>When you activate this tool then you reveal a Select menu in the header. And you can select the mesh parts that you want to manipulate. Note that you may first want to deselect all. By default everything is selected ...</p>
+<p>The select menu is explained in the chapter Vertex Paint modes. The menu items should be pretty self explaining though.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/paint-mask-4.png" alt="Paint Mask" loading="lazy"></figure>
+<p>When you have selected a part of the mesh, then you can just paint the faces at this selected part. The edges are the border.</p>
+<h3 id="vertex-selection-2">Vertex Selection</h3>
+<p>Mesh Object.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/vertex-selection-3.png" alt="Vertex Selection" loading="lazy"></figure>
+<p>When you activate this tool then you reveal a Select menu in the header. And you can select the mesh parts that you want to manipulate. This tool is meant for Weight Painting. And so the mesh displays the vertices too.</p>
+<p>Note that you may first want to deselect all. By default everything is selected ...</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/vertex-selection-4.png" alt="Vertex Selection" loading="lazy"></figure>
+<p>The select menu is explained in the chapter Vertex Paint modes. The menu items should be pretty self explaining though.</p>
+<p>When you have selected a part of the mesh, then you can just paint the vertices at this selected part. There is no real difference to the faces method. The selection is the same.</p>
+<h3 id="texture-paint-mask-selection">Texture Paint - Mask Selection</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/weight-paint-mask-and-vertex-selection.png" alt="Texture Paint - Mask Selection" loading="lazy"><figcaption>Texture Paint - Mask Selection</figcaption></figure>
+<h3 id="paint-mask-3">Paint Mask</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/paint-mask-5.png" alt="Paint Mask" loading="lazy"></figure>
+<p>Mesh Object.</p>
+<p>When you activate this tool then you reveal a Select menu in the header. And you can select the mesh parts that you want to manipulate. Note that you may first want to deselect all. By default everything is selected ...</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/paint-mask-6.png" alt="Paint Mask" loading="lazy"></figure>
+<p>The select menu is explained in the chapter Vertex Paint modes. The menu items should be pretty self explaining though.</p>
+<p>When you have selected a part of the mesh, then you can just paint the faces at this selected part. The edges are the border.</p>
+<h3 id="particle-edit-select-modes">Particle Edit - Select Modes</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/particle-edit-select-modes.png" alt="Particle Edit - Select Modes" loading="lazy"><figcaption>Particle Edit - Select Modes</figcaption></figure>
+<h3 id="mesh-object-with-a-particle-system-you-can-just-have-one-method-active-at-a-time">Mesh Object with a particle system. You can just have one method active at a time.</h3>
+<h4 id="path">Path</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/path.jpg" alt="Path" loading="lazy"></figure>
+<p>No key points are visible, you can select/deselect only all particles.</p>
+<h4 id="point">Point</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/point.png" alt="Point" loading="lazy"></figure>
+<p>You can see, select and edit all key points of the particle paths.</p>
+<h4 id="tip">Tip</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/tip.png" alt="Tip" loading="lazy"></figure>
+<p>You can only see, select and edit the tip of the particles. This includes the brushes. The comb brush is a special case here. The other pat key points bends of course still in this mode. But affected by the brush is just the tip key.</p>
+<h2 id="grease-pencil-sub-modes">Grease Pencil Sub Modes</h2>
+<p>The different modes can have some sub modes. For example different selection methods in mesh edit mode. Or a mask mode for texture painting. The sub mode settings can be found right from the Modes drop down box.</p>
+<h3 id="edit-mode">Edit Mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/edit-mode.png" alt="Edit Mode" loading="lazy"></figure>
+<p>The edit mode allows you to edit the grease pencil strokes.</p>
+<h4 id="select-modes">Select Modes</h4>
+<p>You can only have one method active at a time.</p>
+<h5 id="select-only-points">Select Only Points</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/select-only-points.png" alt="Select Only Points" loading="lazy"></figure>
+<p>When you for example border select some points of the stroke, then just this points gets selected.</p>
+<h5 id="select-all-stroke-points">Select all Stroke Points</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/select-all-stroke-points.png" alt="Select all Stroke Points" loading="lazy"><figcaption>Select all Stroke Points</figcaption></figure>
+<p>When you for example border select some points of the stroke, then the whole stroke gets selected.</p>
+<h5 id="select-all-stroke-points-between-other-strokes">Select all Stroke Points between other strokes</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/select-all-stroke-points-between-other-strokes.png" alt="Select all Stroke Points between other strokes" loading="lazy"><figcaption>Select all Stroke Points between other strokes</figcaption></figure>
+<p>When you for example border select some points of the stroke, and this stroke crosses another stroke, then the part of the stroke up to the crossing point gets selected.</p>
+<h4 id="multi-frame">Multi-frame</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/multi-frame.png" alt="Multi-frame" loading="lazy"></figure>
+<p>When this mode is active, then you can edit strokes from multiple grease pencil frames at once. The key frames must be selected to be included.</p>
+<h5 id="use-falloff">Use Falloff</h5>
+<p>Multi frame has a setting, which becomes visible when the mode is active.</p>
+<p>Use Falloff when edit in Multi frame mode to compute brush effect by frame.</p>
+<h3 id="sculpt-mode">Sculpt Mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/sculpt-mode.png" alt="Sculpt Mode" loading="lazy"></figure>
+<p>The sculpt mode allows you to sculpt the grease pencil strokes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selection Mask Points</td>
+<td>Just the selected vertices gets sculpted.</td>
+</tr>
+<tr>
+<td>Selection Mask Strokes</td>
+<td>Just the selected strokes gets sculpted.</td>
+</tr>
+<tr>
+<td>Selection Mask other strokes</td>
+<td>Only sculpt selected stroke points between other strokes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="multi-frame-2">Multi-frame</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/multi-frame.png" alt="Multi-frame" loading="lazy"></figure>
+<p>When this mode is active, then you can edit strokes from multiple grease pencil frames at once. The key frames must be selected to be included.</p>
+<h5 id="use-falloff-2">Use Falloff</h5>
+<p>Multi frame has a setting, which becomes visible when the mode is active.</p>
+<p>Use Falloff when edit in Multi frame mode to compute brush effect by frame.</p>
+<h4 id="view">View</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/view.png" alt="View" loading="lazy"></figure>
+<p>Relative to which plane to draw the strokes. Default orientation is view.</p>
+<h3 id="draw-mode">Draw Mode</h3>
+<figure><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/draw-mode.png" alt="Draw Mode" loading="lazy"></figure>
+<p>The draw mode is the mode in which you draw the grease pencil strokes.</p>
+<h4 id="origin">Origin</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/origin.png" alt="Origin" loading="lazy"></figure>
+<p>Where the stroke is placed.</p>
+<h4 id="view-2">View</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/view-2.png" alt="View" loading="lazy"></figure>
+<p>Relative to which plane to draw the strokes. Default orientation is view.</p>
+<h4 id="multi-frame-3">Multi-frame</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/multi-frame-2.png" alt="Multi-frame" loading="lazy"></figure>
+<p>When this mode is active, then you can edit strokes from multiple grease pencil frames at once. The key frames must be selected to be included.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Additive Drawing</td>
+<td>When creating new frames, then the strokes from the previous or active frame gets included as the base for the new stroke.</td>
+</tr>
+<tr>
+<td>Automerge</td>
+<td>Join last drawn strokes by distance with previous strokes in the active layer.</td>
+</tr>
+<tr>
+<td>Add Weight Data for new strokes</td>
+<td>Add Weight data for new strokes, according to the current vertex group and weight. When no vertex group is selected, then no weight is added.</td>
+</tr>
+<tr>
+<td>Draw Strokes on Back</td>
+<td>Usually a new stroke is drawn on top of existing strokes. Draw Strokes on Back adds the new strokes below the existing strokes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="weight-paint-mode">Weight Paint Mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/multi-frame.png" alt="Weight Paint Mode" loading="lazy"></figure>
+<h4 id="multi-frame-4">Multi frame</h4>
+<p>When this mode is active, then you can edit strokes from multiple grease pencil frames at once. The key frames must be selected to be included.</p>
+<h5 id="use-falloff-3">Use Falloff</h5>
+<p>Multi frame has a setting, which becomes visible when the mode is active.</p>
+<p>Use Falloff when edit in Multi frame mode to compute brush effect by frame.</p>
+<h3 id="vertex-paint-mode">Vertex Paint Mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/vertex-paint-mode.png" alt="Vertex Paint Mode" loading="lazy"></figure>
+<h4 id="select-modes-2">Select Modes</h4>
+<p>You can only have one method active at a time.</p>
+<h5 id="select-only-points-2">Select Only Points</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/select-only-points.png" alt="Select Only Points" loading="lazy"></figure>
+<p>When you for example border select some points of the stroke, then just this points gets selected.</p>
+<h5 id="select-all-stroke-points-2">Select all Stroke Points</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/select-all-stroke-points.png" alt="Select all Stroke Points" loading="lazy"><figcaption>Select all Stroke Points</figcaption></figure>
+<p>When you for example border select some points of the stroke, then the whole stroke gets selected.</p>
+<h5 id="select-all-stroke-points-between-other-strokes-2">Select all Stroke Points between other strokes</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/select-all-stroke-points-between-other-strokes.png" alt="Select all Stroke Points between other strokes" loading="lazy"><figcaption>Select all Stroke Points between other strokes</figcaption></figure>
+<p>When you for example border select some points of the stroke, and this stroke crosses another stroke, then the part of the stroke up to the crossing point gets selected.</p>
+<h4 id="multi-frame-5">Multi frame</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/multi-frame.png" alt="Multi frame" loading="lazy"></figure>
+<p>When this mode is active, then you can edit strokes from multiple grease pencil frames at once. The key frames must be selected to be included.</p>
+<h5 id="use-falloff-4">Use Falloff</h5>
+<p>Multi frame has a setting, which becomes visible when the mode is active.</p>
+<p>Use Falloff when edit in Multi frame mode to compute brush effect by frame.</p>
+<h2 id="geometry-node-group-tools">Geometry Node Group Tools</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/geometry-node-group-tools.png" alt="Geometry Node Group Tools" loading="lazy"><figcaption>Geometry Node Group Tools</figcaption></figure>
+<p>This header button menu with the tool icon is a container for Geometry Node Groups that have been set as “Tools” in the Geometry Nodes editor. These are act-once operators that now can be placed in the Geometry Node Group Tools or in custom entries in the 3D View header entries.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/geometry-node-group-tools-2.png" alt="Geometry Node Group Tools" loading="lazy"><figcaption>Geometry Node Group Tools</figcaption></figure>
+<p><strong>Example:</strong> here the Geometry Nodes has be switched to the Tool mode, and the node group Properites have been set to Tool. This node group will now show in the Geometry Node Group Tools header menu.</p>
+<h3 id="marked-assets">Marked Assets</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/marked-assets.png" alt="Marked Assets" loading="lazy"></figure>
+<p>A marked Geometry Nodes node group set as an asset and a tool will display here. To mark, right click on the geometry node selector in the Geometry Nodes editor, and mark as asset.</p>
+<h3 id="unmarked-assets">Unmarked Assets</h3>
+<p>A local unmarked Geometry Nodes node group set as a tool will display under the “Unmarked Assets:” label.</p>
+<h3 id="marked-assets-with-assigned-asset-browser-category">Marked Assets with assigned Asset Browser Category</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/marked-assets-with-assigned-asset-browser-catego.png" alt="Marked Assets with assigned Asset Browser Category" loading="lazy"><figcaption>Marked Assets with assigned Asset Browser Category</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/marked-assets-with-assigned-asset-browser-catego-2.png" alt="Marked Assets with assigned Asset Browser Category" loading="lazy"><figcaption>Marked Assets with assigned Asset Browser Category</figcaption></figure>
+<p>A marked node group set as a tool and as an asset and assigned to an Asset Browser category with the same category structure as the menu entry names will display as nested act-once operators.</p>
+<p><strong>Example:</strong> This is a marked-as-asset geometry node group with the name “A Marked Tool Asset” in the category “Object” then sub-category “Quick Effects”.</p>
+<h2 id="object-settings">Object settings</h2>
+<figure><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/object-settings.png" alt="Object settings" loading="lazy"></figure>
+<p>The object settings just appears when the Tool Settings are hidden. This can be done in the View menu.</p>
+<h3 id="transform-orientations">Transform Orientations</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/transform-orientations.png" alt="Transform Orientations" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/transform-orientations-2.png" alt="Transform Orientations" loading="lazy"></figure>
+<p>You can display Transform Manipulators at your object or selection by activating them in the tool shelf. They allow you to scale, rotate or move objects by grabbing their controls, and moving your mouse in the corresponding axis. The widget can be oriented in different ways by using another method in this drop down box. The names should be self explaining.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View</td>
+<td>The transform orientation aligns to the current view.</td>
+</tr>
+<tr>
+<td>Gimbal</td>
+<td>Aligns each axis to the Euler rotation axis as used for input.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>This is of interest for bones for example. Aligns the transformation axis to average normal of the selected elements. Bone Y axis for Pose mode.</td>
+</tr>
+<tr>
+<td>Local</td>
+<td>Uses the local orientation of the selected elements.</td>
+</tr>
+<tr>
+<td>Global</td>
+<td>Uses the global orientation for the selected elements.</td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td>Uses the orientation of the 3D cursor.</td>
+</tr>
+<tr>
+<td>Parent</td>
+<td>Uses the orientation of the parent object.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="create-orientation">Create Orientation</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/create-orientation.png" alt="Create Orientation" loading="lazy"></figure>
+<p>The create orientation button at the right adds a new orientation from the current mode and view. You can rename it.</p>
+<p>This view is scene specific only. It does save and load with the current scene. But you cannot transfer it into another scene. When you create a new scene then this custom orientation is gone.</p>
+<p>You can create more than one user orientation.</p>
+<h5 id="last-operator-create-orientation">Last Operator Create Orientation</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/last-operator-create-orientation.png" alt="Last Operator Create Orientation" loading="lazy"><figcaption>Last Operator Create Orientation</figcaption></figure>
+<p>Create Orientation has some settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Rename the orientation.</td>
+</tr>
+<tr>
+<td>Use View</td>
+<td>Use the current view instead of the active object to create the new orientation.</td>
+</tr>
+<tr>
+<td>Use after creation</td>
+<td>Use this orientation after creation.</td>
+</tr>
+<tr>
+<td>Overwrite Previous</td>
+<td>Overwrite previous created orientation in case it has the same name.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transform-pivot-point">Transform Pivot Point</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/transform-pivot-point.png" alt="Transform Pivot Point" loading="lazy"></figure>
+<p>The Pivot Point is the center of your object or your selection. When you rotate or scale an object, or a group of vertices/edges/faces, you may want to shift the pivot point in 3D space. The names should be self explaining.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bounding Box Center</td>
+<td>Pivot around the bounding box center of selected objects.</td>
+</tr>
+<tr>
+<td>3D Cursor</td>
+<td>Pivot around the 3D cursor.</td>
+</tr>
+<tr>
+<td>Individual Origins</td>
+<td>Pivot around the center of each individual object.</td>
+</tr>
+<tr>
+<td>Median Point</td>
+<td>Pivot around the median point of selected objects.</td>
+</tr>
+<tr>
+<td>Active Element</td>
+<td>Pivot around the active element.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="snapping">Snapping</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/snapping.png" alt="Snapping" loading="lazy"></figure>
+<p>Activate snapping when transforming an element.</p>
+<p>Snapping can be temporarily activated by holding Ctrl key. So no need to turn snapping on and off all the time.</p>
+<p>You can snap to various scene elements in Object, Edit and Pose mode. And you can activate more than one snapping method by holding down Ctrl and clicking at the next snapping element.</p>
+<h4 id="multiple-snap-targets">Multiple Snap Targets</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/multiple-snap-targets.png" alt="Multiple Snap Targets" loading="lazy"></figure>
+<p>When you move the mouse with snapping on and the element to snap selected (This does not work with holding Ctrl), then you can press hotkey A to mark the current snapping point, then proceed to mark as many other snapping points as you wish. And the element that you want to snap will then be in the center of these marked snapping points. Marked snapping points will have a circle around.</p>
+<p>Marking a point more than once will give it more weight in the averaged location.</p>
+<h4 id="snap-target">Snap Target</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/snap-target.png" alt="Snap Target" loading="lazy"></figure>
+<p>Which part to snap onto the target.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Closest</td>
+<td>Snap closest point onto the target.</td>
+</tr>
+<tr>
+<td>Center</td>
+<td>Snap transformation center onto the target.</td>
+</tr>
+<tr>
+<td>Median</td>
+<td>Snap median onto the target.</td>
+</tr>
+<tr>
+<td>Active</td>
+<td>Snap active onto the target.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="snap-to">Snap to</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/snap-to.png" alt="Snap to" loading="lazy"></figure>
+<p>To which part of the target to snap.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Increment</td>
+<td>Incremental grid snapping. In Orthographic view the snapping increment changes depending on zoom level. **Note:**<em>You can selected multiple by holding down the Shift key and selecting additional snap base modes.</em></td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>Snap to a grid.</td>
+</tr>
+<tr>
+<td>Vertex</td>
+<td>Snap to a vertice.</td>
+</tr>
+<tr>
+<td>Edge</td>
+<td>Snap to an edge.</td>
+</tr>
+<tr>
+<td>Face</td>
+<td>Snap to a face.</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>Snaps to regions within the volume of the first object found below the mouse cursor.</td>
+</tr>
+<tr>
+<td>Edge Center</td>
+<td>Snaps to the center of an edge.</td>
+</tr>
+<tr>
+<td>Edge Perpendicular</td>
+<td>Snap to the nearest point of an edge.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="snap-target-for-individual-elements">Snap Target for Individual Elements</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/snap-target-for-individual-elements.png" alt="Snap Target for Individual Elements" loading="lazy"><figcaption>Snap Target for Individual Elements</figcaption></figure>
+<p>Type of element for individual transformed elements to snap to.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Face Project</td>
+<td>Snap by projecting onto faces.</td>
+</tr>
+<tr>
+<td>Face Nearest</td>
+<td>Snap to nearest point on faces.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="snap-peel-object">Snap Peel Object</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/snap-peel-object.png" alt="Snap Peel Object" loading="lazy"></figure>
+<p>Only available with the Snap to Method Volume. Consider objects as whole when finding a volume center.</p>
+<h4 id="snap-to-same-target">Snap to Same Target</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/snap-to-same-target.png" alt="Snap to Same Target" loading="lazy"><figcaption>Snap to Same Target</figcaption></figure>
+<p>Only available with the Snap Face Nearest. Snap only to target that the source was initially near.</p>
+<h4 id="absolute-increment-snap">Absolute Increment Snap</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/absolute-increment-snap.png" alt="Absolute Increment Snap" loading="lazy"></figure>
+<p>Only available with Increment Snap mode, this will allow an absolute grid alignment while translating (based on the pivot center)</p>
+<h4 id="align-rotation-to-target">Align Rotation to Target</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/align-rotation-to-target.png" alt="Align Rotation to Target" loading="lazy"><figcaption>Align Rotation to Target</figcaption></figure>
+<p>Align rotation with the snapping target.</p>
+<h4 id="back-face-culling">Back face Culling</h4>
+<p>Exclude back facing geometry from snapping.</p>
+<h4 id="target-selection">Target Selection</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/target-selection.png" alt="Target Selection" loading="lazy"></figure>
+<p>Align rotation with the snapping target.</p>
+<h5 id="exclude-non-selectable">Exclude Non-Selectable</h5>
+<p>Snap only onto objects that are selectable. This will ignore any objects that have been marked as un-selectable from the Outliner Editor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Affect</td>
+<td>Adjust what transform methods should be affected by snapping. **Note:**<em>You can selected multiple by holding down the SHIFT key and selecting additional transforms.</em> · <strong>Move</strong>: Move the affected by snapping settings. · <strong>Rotate</strong>: Rotate the affected by snapping settings. · <strong>Scale</strong>: Scale the affected by snapping settings.</td>
+</tr>
+<tr>
+<td>Rotation Increment</td>
+<td>Snap in adjustable incremental steps. · <strong>Rotation Increment Slider</strong>: Angle used for rotation increments in the 3D editors. · <strong>Precision Rotation Increment Slider</strong>: Precision angle used for rotation increments in the 3D editors.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="proportional-editing">Proportional Editing</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/proportional-editing.png" alt="Proportional Editing" loading="lazy"></figure>
+<p>Enables proportional editing.</p>
+<p>Proportional Editing is a way of transforming selected elements (such as vertices) while having that transformation affect other nearby elements with a falloff. For example, moving a single vertex will move unselected vertices within a given range. And the falloff means that selected vertices that are closer to the selected vertex will move more than those farther from it.</p>
+<h4 id="settings">Settings</h4>
+<p>The settings appears when you activate Proportional Editing. Choose between different falloff methods for the proportional editing.</p>
+<h4 id="proportional-size">Proportional Size</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/proportional-size.png" alt="Proportional Size" loading="lazy"></figure>
+<p>The influence of the proportional editing is defined by a radius. It is by default one standard unit.</p>
+<p>You can change the influence radius for proportional editing with the mouse wheel or the Page up Page down arrows <strong>while keeping the mouse button pressed down</strong> and do the translation.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/proportional-size-2.png" alt="Proportional Size" loading="lazy"></figure>
+<p>The exact radius value can be read in the header while transformation.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/proportional-size-3.png" alt="Proportional Size" loading="lazy"></figure>
+<p>And it can also be read and edited at the Proportional Size slider in the Proportional Editing panel.</p>
+<h4 id="last-operator-proportional-editing">Last Operator Proportional Editing</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/last-operator-proportional-editing.png" alt="Last Operator Proportional Editing" loading="lazy"><figcaption>Last Operator Proportional Editing</figcaption></figure>
+<p>When you translate an object, move it around or rotate or scale it, then the last operator contains also proportional editing settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Editing</td>
+<td>Enable proportional editing.</td>
+</tr>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods again.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>Adjust the falloff radius. Note that the white circle is not displayed when using this slider.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>In depth direction along the view the radius is ignored. It selects as deep as there is something to select.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="selectability-visibility">Selectability &amp; Visibility</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/selectability-and-visibility.jpg" alt="Selectability &amp; Visibility" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/selectability-and-visibility.png" alt="Selectability &amp; Visibility" loading="lazy"></figure>
+<p>In this drop down box you can set specific elements in the scene to either not selectable or invisible.</p>
+<p>When the elements are invisible then they are also not selectable.</p>
+<p>When you have set some objects to not selectable or invisible, then the icon in the menu header changes.</p>
+<h2 id="viewport-gizmo">Viewport Gizmo</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport-gizmo.png" alt="Viewport Gizmo" loading="lazy"></figure>
+<p>This menu allows you to adjust what gizmos shows. The button at the left turns them all off or on.</p>
+<h3 id="show-gizmo">Show Gizmo</h3>
+<p>Shows or hides all available gizmos at once.</p>
+<h3 id="gizmo-options">Gizmo Options</h3>
+<p>Turn on or off specific widgets.</p>
+<h4 id="viewport-gizmos">Viewport Gizmos</h4>
+<h5 id="navigate">Navigate</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/navigate.png" alt="Navigate" loading="lazy"></figure>
+<p>Turn on or off the navigate widget. The navigate gizmo is the block of buttons and the widget up right.</p>
+<h5 id="active-tools">Active Tools</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/active-tools.png" alt="Active Tools" loading="lazy"></figure>
+<p>Turn on or off the active tool widget. When you activate one of the transformation buttons in the tool shelf, then a gizmo will appear at the object.</p>
+<h5 id="active-modifier">Active Modifier</h5>
+<p>Toggles the gizmos for the active Geometry Nodes modifier assets.</p>
+<h5 id="active-object">Active Object</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/active-object.png" alt="Active Object" loading="lazy"></figure>
+<p>Turn on or off the Object Gizmos. The Object Gizmos is an extra set of translate gizmos, similar to the active tool widget that shows when you activate one of the transform buttons in the tool shelf. These alternatively show the transform gizmos as permanent gizmos as long as you don't have another tool selected that overrides this widget.</p>
+<h4 id="object-gizmos">Object Gizmos</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/object-gizmos.png" alt="Object Gizmos" loading="lazy"></figure>
+<h5 id="transformation-orientation">Transformation Orientation</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/transformation-orientation.png" alt="Transformation Orientation" loading="lazy"></figure>
+<p>Adjust the orientation of the widget. By default it uses the transform orientation from the viewport. This set can override the transform orientation.</p>
+<p>You can have all transform methods on at once.</p>
+<h5 id="move">Move</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/move.png" alt="Move" loading="lazy"></figure>
+<p>Shows the move part of the widget.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rotate</td>
+<td>Shows the rotate part of the widget.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Shows the scale part of the widget.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="empty">Empty</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/empty.png" alt="Empty" loading="lazy"></figure>
+<h5 id="image">Image</h5>
+<p>Shows the transform gizmo at an empty of type Image. You need to hover with the mouse over the object to reveal the yellow gizmo.</p>
+<h5 id="force-field">Force Field</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/force-field.png" alt="Force Field" loading="lazy"></figure>
+<p>Some force field types have a gizmo. Shows the transform gizmo at a force field.</p>
+<h4 id="light">Light</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/light.png" alt="Light" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>Show the gizmo to adjust the size of lights. That's the blue arrow here.</td>
+</tr>
+<tr>
+<td>Look At</td>
+<td>Show the gizmo to adjust the direction of the light. That's the yellow dot in the middle of the circle.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="camera">Camera</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/camera.png" alt="Camera" loading="lazy"></figure>
+<h5 id="lens">Lens</h5>
+<p>Show the gizmo to adjust the lens and orthographic size. The yellow square.</p>
+<h5 id="focus-distance">Focus Distance</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/focus-distance.png" alt="Focus Distance" loading="lazy"></figure>
+<p>Shows the gizmo to adjust the focus distance.</p>
+<p>You first need to turn on the Limits gizmo in the camera settings in the Viewport Display panel. Then you can turn off the focus distance gizmo part with Focus Distance.</p>
+<h2 id="mesh-object-sculpt-mode">Mesh Object - Sculpt mode</h2>
+<h3 id="color-attributes-panel">Color attributes panel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/color-attributes-panel.png" alt="Color attributes panel" loading="lazy"></figure>
+<p>This panel also exists in the properties editor.</p>
+<p>Currently this panel is greyed out and dysfunctional in Sculpt mode. It is WIP.</p>
+<h3 id="global-auto-masking">Global Auto Masking</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/global-auto-masking.png" alt="Global Auto Masking" loading="lazy"></figure>
+<p>These override all brush settings, but you can also set these auto masking features per brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Topology</td>
+<td>Affect only vertices that are connected to the current active vertex under the brush.</td>
+</tr>
+<tr>
+<td>Face Sets</td>
+<td>Affect only vertices that share face sets with the active vertex.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mesh-boundary">Mesh Boundary</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/mesh-boundary.png" alt="Mesh Boundary" loading="lazy"></figure>
+<p>Do not affect non manifold boundary edges.</p>
+<p>The setting that appears on activation and is valid for both, Mesh Boundary and Face Sets Boundary.</p>
+<h3 id="face-sets-boundary">Face Sets Boundary</h3>
+<p>Do not affect vertices that belong to a face set boundary.</p>
+<p>The setting that appears on activation and is valid for both, Mesh Boundary and Face Sets Boundary.</p>
+<h4 id="steps">Steps</h4>
+<p>Distance where boundary edge automasking is going to protect vertices from the fully masked edge.</p>
+<h3 id="cavity">Cavity</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/cavity.png" alt="Cavity" loading="lazy"></figure>
+<p>Do not affect vertices on peaks. This feature is based on the surface curvature.</p>
+<p>The setting that appears on activation and is valid for both, Cavity, and Cavity (Inverted).</p>
+<h3 id="cavity-inverted">Cavity (Inverted)</h3>
+<p>Do not affect vertices in valleys. This feature is based on the surface curvature.</p>
+<p>The setting that appears on activation and is valid for both, Cavity, and Cavity (Inverted).</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create Mask</td>
+<td>Creates a mask based on the curvature of the surface.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>The contrast of the cavity mask.</td>
+</tr>
+<tr>
+<td>Blur</td>
+<td>The number of times the cavity mask is blurred</td>
+</tr>
+</tbody>
+</table>
+<h4 id="custom-curve">Custom Curve</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/custom-curve.png" alt="Custom Curve" loading="lazy"></figure>
+<p>Use a custom falloff curve for the cavity mask.</p>
+<h4 id="selecting-points">Selecting Points</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
+<p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
+<h4 id="adding-points">Adding Points</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/adding-points.png" alt="Adding Points" loading="lazy"></figure>
+<p>You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.</p>
+<h4 id="navigation-elements">Navigation elements</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<p>The navigation elements at the top are described from left to right.</p>
+<h4 id="zoom-in-and-out">Zoom in and out</h4>
+<p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
+<h4 id="clipping-options">Clipping Options</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/clipping-options.png" alt="Clipping Options" loading="lazy"></figure>
+<p>Set up clipping for the stroke.</p>
+<h5 id="use-clipping">Use Clipping</h5>
+<p>Turns clipping on or off.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Min and Max X Y</td>
+<td>The values for the clipping area.</td>
+</tr>
+<tr>
+<td>Tools</td>
+<td>Tools is a menu where you can find some curve related tools. · <strong>Reset View</strong>: Resets the curve windows zoom. · <strong>Extend horizontal</strong>: Extends the curve before the first curve point and after the last curve point horizontally. · <strong>Extend extrapolated</strong>: Extends the curve before the first curve point and after the last curve point extrapolated. · <strong>Reset Curve</strong>: Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="handle-types">Handle Types</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/handle-types.png" alt="Handle Types" loading="lazy"></figure>
+<p>Sets the handle type for the current selected curve point.</p>
+<h4 id="x-y-position">X Y Position</h4>
+<p>The position of the current active curve point.</p>
+<h5 id="delete-points">Delete Points</h5>
+<p>Deletes the current active curve point.</p>
+<h3 id="view-normal">View Normal</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/view-normal.png" alt="View Normal" loading="lazy"></figure>
+<p>Affect only vertices with a normal that faces the viewer.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Occlusion</td>
+<td>Only affect vertices that are not occluded by other faces. With Occlusion on the Limit and Falloff options are not available.</td>
+</tr>
+<tr>
+<td>Limit</td>
+<td>View normal limit. The range of angles that will be affected.</td>
+</tr>
+<tr>
+<td>Falloff</td>
+<td>Extend the angular range with a falloff gradient.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="area-normal">Area Normal</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/area-normal.png" alt="Area Normal" loading="lazy"></figure>
+<p>Affect only vertices with a similar normal to where the stroke starts.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Limit</td>
+<td>Area normal limit. The range of angles that will be affected.</td>
+</tr>
+<tr>
+<td>Falloff</td>
+<td>Extend the angular range with a falloff gradient.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mesh-object-vertex-paint-mode">Mesh Object - Vertex Paint mode</h2>
+<h3 id="color-attributes-panel-2">Color Attributes panel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/color-attributes-panel-2.png" alt="Color Attributes panel" loading="lazy"></figure>
+<p>This panel also exists in the properties editor.</p>
+<p>In vertex paint mode and sculpt mode you can paint vertices of a mesh with a color. This will create a vertex color index. You can see and manage this vertex color indexes in the Vertex Colors panel.</p>
+<p>Vertex colors can for example be used to mix shaders together. Or also directly render them. In the shader editor color attributes can be used by the Attribute node.</p>
+<p>A mesh can have more than one vertex color index and type. But just one index can be the active one.</p>
+<h4 id="active-color-index">Active Color Index</h4>
+<p>A List of the vertex color indexes for this mesh.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color index name</td>
+<td>The name of the vertex color index. It can be renamed by double clicking at it.</td>
+</tr>
+<tr>
+<td>Active Render</td>
+<td>Set this vertex color index as the one to render. Just one vertex color index can be active at a time. But you can use another vertex color index in a material.</td>
+</tr>
+<tr>
+<td>Drag Handler</td>
+<td>The two vertical lines at the end is a handler with which you can expand the list.</td>
+</tr>
+<tr>
+<td>Search Field</td>
+<td>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · <strong>Invert</strong>: Exclude the search term instead of searching for it. · <strong>Sort by Name</strong>: Sort the List by name.</td>
+</tr>
+<tr>
+<td>Add +</td>
+<td>Create a vertex color index.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="add-color-attribute-popup">Add Color Attribute Popup</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/add-color-attribute-popup.png" alt="Add Color Attribute Popup" loading="lazy"><figcaption>Add Color Attribute Popup</figcaption></figure>
+<h6 id="name">Name</h6>
+<p>The name of the color attribute index.</p>
+<h6 id="domain">Domain</h6>
+<p>The domain of the color attribute.</p>
+<ul>
+<li><strong>Vertex</strong> stores the color attribute data in the vertices of the mesh data</li>
+<li>Face Corner stores the color attribute data in the face corners of the mesh data</li>
+</ul>
+<h6 id="data-type">Data Type</h6>
+<p>The the color attribute type.</p>
+<ul>
+<li>Color stores RGBA color 32-bit floating point values</li>
+<li>Byte Color stores RGBA color 32-bit positive integer values</li>
+</ul>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>The Default fill colour</td>
+</tr>
+<tr>
+<td>Ok</td>
+<td>Confirm to apply</td>
+</tr>
+</tbody>
+</table>
+<h5 id="remove">Remove -</h5>
+<p>Delete the selected vertex color index.</p>
+<h5 id="adjust-last-operator-add-color-attribute">Adjust last operator Add Color Attribute</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/adjust-last-operator-add-color-attribute.png" alt="Adjust last operator Add Color Attribute" loading="lazy"><figcaption>Adjust last operator Add Color Attribute</figcaption></figure>
+<p>This is basically the same content as above. Minus the OK button.</p>
+<h5 id="specials-menu">Specials menu</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/specials-menu.png" alt="Specials menu" loading="lazy"></figure>
+<h6 id="duplicate-color-attribute">Duplicate Color Attribute</h6>
+<p>Duplicates the selected color attribute.</p>
+<h6 id="convert-color-attribute">Convert Color Attribute</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/convert-color-attribute.png" alt="Convert Color Attribute" loading="lazy"></figure>
+<p>Convert a color attribute domain and data type. This tool calls a popup where you can choose what to convert.</p>
+<h2 id="mesh-object-weight-paint-mode">Mesh Object - Weight Paint mode</h2>
+<h3 id="vertex-groups">Vertex Groups</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/vertex-groups.png" alt="Vertex Groups" loading="lazy"></figure>
+<p>This panel also exists in the properties editor.</p>
+<p>A Vertex group is a group of vertices, a selection of the mesh. It is for example used to weight a specific mesh part to a bone. Or to control the growth of hair particles.</p>
+<p>This panel allows you to manage and edit vertex groups. Weight painting creates vertex groups automatically.</p>
+<p>In Edit mode this panel shows some further controls.</p>
+<p>Vertex groups exists for mesh and lattice objects.</p>
+<h4 id="active-vertex-group-list">Active Vertex Group list</h4>
+<p>A List of the vertex groups for this mesh.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Group name</td>
+<td>The name of the group. It can be renamed by double clicking at it.</td>
+</tr>
+<tr>
+<td>Lock</td>
+<td>The lock icon at the end of a group name locks the group from being editable.</td>
+</tr>
+<tr>
+<td>Drag Handler</td>
+<td>The two vertical lines at the end is a handler with which you can expand the list.</td>
+</tr>
+<tr>
+<td>Search Field</td>
+<td>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · <strong>Invert</strong>: Exclude the search term instead of searching for it. · <strong>Sort by Name</strong>: Sort the List by name.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add +</td>
+<td>Create an empty vertex group.</td>
+</tr>
+<tr>
+<td>Remove -</td>
+<td>Deletes the active vertex group.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="specials-menu-2">Specials menu</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/specials-menu-2.png" alt="Specials menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sort by Name</td>
+<td>Sorts the vertex groups alphabetically by name.</td>
+</tr>
+<tr>
+<td>Sort by Bone Hierarchy</td>
+<td>Sorts the vertex groups by the hierarchy of the assigned bones.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="duplicate-vertex-group">Duplicate Vertex Group</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/duplicate-vertex-group.png" alt="Duplicate Vertex Group" loading="lazy"></figure>
+<p>Add a copy of the active vertex group as a new group. The new group will be named like the original group with <code>“_copy”</code> appended at the end of its name. And it will contain associations to exactly the same vertices with the exact same weights as in the source vertex group.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy Vertex Group to Selected</td>
+<td>Copy all vertex groups to other selected objects provided they have matching indices (typically this is true for copies of the mesh which are only deformed and not otherwise edited).</td>
+</tr>
+<tr>
+<td>Mirror Vertex Group</td>
+<td>Mirrors weights and/or flips group names from one side of a symmetrical mesh to the other. Only mirroring along local X axis is supported. Vertices that have no corresponding vertex on the other side will not be affected. Note, the weights are not transferred to the corresponding opposite bone weight group.</td>
+</tr>
+<tr>
+<td>Mirror Vertex Group (Topology)</td>
+<td>Performs the Mirror Vertex Group with the Topology Mirror option enabled.</td>
+</tr>
+<tr>
+<td>Remove from All Groups</td>
+<td>Unassigns the selected vertices from all groups. Even locked.</td>
+</tr>
+<tr>
+<td>Clear Active Group</td>
+<td>Remove all assigned vertices from the active group. The group is made empty. Note that the vertices may still be assigned to other vertex groups of the object. This feature does not affect locked groups.</td>
+</tr>
+<tr>
+<td>Delete All Unlocked Groups</td>
+<td>Remove all vertex groups from the object that are not locked.</td>
+</tr>
+<tr>
+<td>Delete All Groups</td>
+<td>Remove all vertex groups from the object.</td>
+</tr>
+<tr>
+<td>Lock All</td>
+<td>Lock all groups.</td>
+</tr>
+<tr>
+<td>Unlock All</td>
+<td>Unlock all groups.</td>
+</tr>
+<tr>
+<td>Lock Invert All</td>
+<td>Invert group locks.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="move-vertex-group-up-down">Move Vertex Group Up / Down</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/move-vertex-group-up-down.png" alt="Move Vertex Group Up / Down" loading="lazy"><figcaption>Move Vertex Group Up / Down</figcaption></figure>
+<p>Moves the selected vertex group up or down in the list.</p>
+<h2 id="mesh-object-texture-paint-mode">Mesh Object - Texture Paint mode</h2>
+<h3 id="texture-slots">Texture Slots</h3>
+<p>The texture slots panel allows you to manage the textures that you use for texture painting. When the mesh doesn't have a texture yet to paint at, then you get a hint about a missing texture. No Textures. The Add Texture Paint Slot button allows you to add one. Base Color allows you to create a diffuse map.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/texture-slots.png" alt="Texture Slots" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/texture-slots-2.png" alt="Texture Slots" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/texture-slots-3.png" alt="Texture Slots" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/texture-slots-4.png" alt="Texture Slots" loading="lazy"></figure>
+<h4 id="mode">Mode</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/mode.png" alt="Mode" loading="lazy"></figure>
+<p>Choose in which mode you want to paint. Single Image just works with a single image, without any material.</p>
+<p>Material works with a material and a texture. The texture is here part of the material.</p>
+<h4 id="add-texture-paint-slot">Add Texture Paint Slot</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/texture-slots-3.png" alt="Add Texture Paint Slot" loading="lazy"><figcaption>Add Texture Paint Slot</figcaption></figure>
+<p>Here you can choose what type of texture you want to add for texture painting.</p>
+<p>The texture gets added to the shader, and connected to the correct node. A base color is meant for diffuse, and so it connects with the base color slot.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/add-texture-paint-slot.png" alt="Add Texture Paint Slot" loading="lazy"><figcaption>Add Texture Paint Slot</figcaption></figure>
+<h4 id="paint-slot-with-mode-material">Paint Slot with mode Material</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/texture-slots-4.png" alt="Paint Slot with mode Material" loading="lazy"><figcaption>Paint Slot with mode Material</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Material Paint Slot</td>
+<td>A list of the available paint slot materials.</td>
+</tr>
+<tr>
+<td>Add Texture Paint Slot</td>
+<td>The + button at the right. Add more materials to the Material Paint Slot.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="paint-slot-with-mode-single-image">Paint Slot with Mode Single Image</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/paint-slot-with-mode-single-image.png" alt="Paint Slot with Mode Single Image" loading="lazy"><figcaption>Paint Slot with Mode Single Image</figcaption></figure>
+<h5 id="image-list">Image List</h5>
+<p>A list of the available images, which allows you choose one in case one exists.</p>
+<h5 id="new-open">New/Open</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/new-open.png" alt="New/Open" loading="lazy"></figure>
+<p>When no image is loaded then you can create a new image here, or load a new image.</p>
+<h5 id="edit-box">Edit Box</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/edit-box.png" alt="Edit Box" loading="lazy"></figure>
+<p>See the name of the image, and edit the name.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fake User</td>
+<td>When enabled then this image will be stored internally. But not the painted changes at it!!</td>
+</tr>
+<tr>
+<td>New Image</td>
+<td>Create a new image.</td>
+</tr>
+<tr>
+<td>Open Image</td>
+<td>Open an image</td>
+</tr>
+<tr>
+<td>Unlink Data Block</td>
+<td>Delete the Image when saving the scene, closing and reopening Bforartists. Note that the number of Users must be zero. Or the image comes back.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="uv-map">UV Map</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/uv-map.png" alt="UV Map" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/uv-map-2.png" alt="UV Map" loading="lazy"></figure>
+<p>Choose a UV map to work with. Usually there is just one. But there can be more than one UV map. You can add and manage more in the Object data tab in the UV Map panel.</p>
+<h5 id="interpolation">Interpolation</h5>
+<p>Set the interpolation type. Linear or Closest.</p>
+<h4 id="save-all-images">Save all Images</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/save-all-images.png" alt="Save all Images" loading="lazy"></figure>
+<p>Saves all images. Internal images needs to be saved manually first. They don't have a path yet to which they could be saved. You will get an invalid path warning.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/save-all-images.jpg" alt="Save all Images" loading="lazy"></figure>
+<h3 id="stencil-mask">Stencil Mask</h3>
+<p>Stencil mask allows mask painting with a stencil map. It is a sub menu tab. In expanded state it shows the falloff curve, which can be edited.</p>
+<h4 id="activate-stencil-map">Activate Stencil map</h4>
+<p>Activates the stencil map.</p>
+<h4 id="stencil-image">Stencil Image</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/stencil-image.png" alt="Stencil Image" loading="lazy"></figure>
+<p>Choose or load your stencil texture.</p>
+<h5 id="texture-browser">Texture browser</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/texture-browser.png" alt="Texture browser" loading="lazy"></figure>
+<p>Here you will find a list of currently loaded textures.</p>
+<h5 id="edit-box-2">Edit Box</h5>
+<p>The currently active stencil texture.</p>
+<p><strong>The number</strong> right of it, <strong>in this case 2</strong>, indicates how much number of users ( internally ) this brush uses. This means that this data block (the brush) shares currently settings with at least one other object. Most probably the parent brush where we have created it from. Click at the value to make this brush a single user. The button will vanish then.</p>
+<p><strong>The shield icon button</strong> set the brush to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user.</p>
+<p><strong>The + button</strong> allows you to add a new pencil with the current settings. Note that the brushes are NOT saved when you close Bforartists. You can save them into the current blend file. Or you can save the startup file. But be careful here. This saves everything else of the current state of Bforartists too.</p>
+<p><strong>The X button</strong> deletes the brush as the active one. It does NOT delete it from the brushes list.</p>
+<h4 id="uv-layer">UV Layer</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/uv-layer.png" alt="UV Layer" loading="lazy"></figure>
+<p>At which UV map the stencil texture is active.</p>
+<h4 id="display-color">Display Color</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/display-color.png" alt="Display Color" loading="lazy"></figure>
+<p>The stencil color in the viewport.</p>
+<h5 id="invert-the-stencil-color">Invert the stencil color</h5>
+<p>Inverts the stencil color.</p>
+<h4 id="cavity-mask">Cavity Mask</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/cavity-mask.png" alt="Cavity Mask" loading="lazy"></figure>
+<p>Cavity mask allows mask painting according to mesh geometry cavity. It is a sub menu tab. In expanded state it shows the falloff curve, which can be edited.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activate Cavity mask</td>
+<td>Activates the Cavity mask.</td>
+</tr>
+<tr>
+<td>Navigation elements</td>
+<td>The navigation elements at the top are described from left to right.</td>
+</tr>
+<tr>
+<td>Zoom in and out</td>
+<td>The two buttons with the magnifying glass at it zooms in and out in the curve window.</td>
+</tr>
+<tr>
+<td>Zoom in and out</td>
+<td>The two buttons with the magnifying glass at it zooms in and out in the curve window.</td>
+</tr>
+<tr>
+<td>Tools</td>
+<td>Tools is a menu where you can find some curve related tools. · <strong>Reset View</strong>: Resets the curve windows zoom. · <strong>Reset Curve</strong>: Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="use-clipping-2">Use Clipping</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/use-clipping.png" alt="Use Clipping" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke.</p>
+<h5 id="vector-handle">Vector Handle</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/vector-handle.png" alt="Vector Handle" loading="lazy"></figure>
+<p>Set handle type to Vector.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Handle</td>
+<td>Set handle type to Auto.</td>
+</tr>
+<tr>
+<td>Auto Clamped Handle</td>
+<td>Set handle type to Auto Clamped.</td>
+</tr>
+<tr>
+<td>X / Y</td>
+<td>The x and y position of the selected point.</td>
+</tr>
+<tr>
+<td>Delete Points</td>
+<td>Deletes selected curve points.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="curve-object-edit-mode">Curve Object - Edit Mode</h2>
+<h3 id="set-handle-type">Set Handle Type</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/set-handle-type.png" alt="Set Handle Type" loading="lazy"></figure>
+<p>Handles defines the type of handle for the control points of the curve. You have the choice between Auto, Vector, Align and Free. And the Last Operator gives you a fifth possibility to toggle between Free and Align.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto</td>
+<td>Auto aligns the handles automatically.</td>
+</tr>
+<tr>
+<td>Vector</td>
+<td>Set Handle type to Vector.</td>
+</tr>
+<tr>
+<td>Align</td>
+<td>Set Handle type to Align.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="free">Free</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/free.png" alt="Free" loading="lazy"></figure>
+<p>Set Handle type to Free.</p>
+<h4 id="toggle-free-aligned">Toggle Free/Aligned</h4>
+<p>Toggle Free/Aligned.</p>
+<h5 id="last-operator-set-handle-type">Last Operator Set Handle Type</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-handle-type.png" alt="Last Operator Set Handle Type" loading="lazy"><figcaption>Last Operator Set Handle Type</figcaption></figure>
+<h6 id="type">Type</h6>
+<p>Type is a drop-down box where you can set the handle type. You have the choice between Auto, Vector, Align, Free. And the fifth possibility toggles between Free and Align.</p>
+<h2 id="viewport-overlays-all-modes">Viewport Overlays - all modes</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport-overlays-all-modes.png" alt="Viewport Overlays - all modes" loading="lazy"><figcaption>Viewport Overlays - all modes</figcaption></figure>
+<p>Turn on or off all overlays. This includes the ground grid, things like relationship lines, and several other elements in the viewport. Some content is available in all modes. Some content is changing, dependent of the mode you are in. In Edit mode with a mesh object you will get some normal functionality for example.</p>
+<h3 id="guides">Guides</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid</td>
+<td>Show the whole ground grid, including axes. You can also show the grid in orthographic mode of the viewport.</td>
+</tr>
+<tr>
+<td>Floor</td>
+<td>Show the ground grid, the white part of it.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="axes">Axes</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/axes.png" alt="Axes" loading="lazy"></figure>
+<p>Show the colored axis lines in the 3d view</p>
+<p>( now works in both perspective / orthographic Views).</p>
+<h4 id="scale">Scale</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/scale.png" alt="Scale" loading="lazy"></figure>
+<p>Scale the ground grid. This works in perspective and orthographic view.</p>
+<h4 id="subdivisions">Subdivisions</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/subdivisions.png" alt="Subdivisions" loading="lazy"></figure>
+<p>Subdivisions just shows with a Unit system of None. It allows you to subdivide the ground grid.</p>
+<h3 id="options">Options</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/options.png" alt="Options" loading="lazy"></figure>
+<h4 id="text-info">Text Info</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/text-info.png" alt="Text Info" loading="lazy"></figure>
+<p>In the upper left corner of the 3D view there is a text info string, which can be hidden here. It tells you in what view you are, what is selected, and things like frames per second when you play an animation</p>
+<h4 id="annotations">Annotations</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/annotations.png" alt="Annotations" loading="lazy"></figure>
+<p>Show or hide annotations. Annotations can be drawn at the 3D View with the annotation tool in the tool shelf.</p>
+<h4 id="statistics">Statistics</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/statistics.png" alt="Statistics" loading="lazy"></figure>
+<p>Displays statistical informations in the upper left corner of the 3d viewport. Object count, vertices, and so on.</p>
+<h4 id="3d-cursor">3D Cursor</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/3d-cursor.png" alt="3D Cursor" loading="lazy"></figure>
+<p>Show or hide the 3D cursor. That's the white red circle in the center of the viewport.</p>
+<h4 id="camera-guides">Camera Guides</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/camera-guides.png" alt="Camera Guides" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/camera-guides-2.png" alt="Camera Guides" loading="lazy"></figure>
+<p>Just in Camera mode.</p>
+<p>Display the dotted line around the inside of the passepartout.</p>
+<h3 id="objects">Objects</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/objects.png" alt="Objects" loading="lazy"></figure>
+<h4 id="extras">Extras</h4>
+<p>Show or hide object details. Including things like empty wires like lights, cameras, and other visual guides.</p>
+<h4 id="light-colors">Light Colors</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/light-colors.png" alt="Light Colors" loading="lazy"></figure>
+<p>Displays the light widget in the color of the light.</p>
+<h4 id="relationship-lines">Relationship Lines</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/relationship-lines.png" alt="Relationship Lines" loading="lazy"></figure>
+<p>Show or hide relationship lines. When you for example parent one object to another then you will see a dotted line. The relationship line.</p>
+<h4 id="outline-selected">Outline Selected</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/outline-selected.png" alt="Outline Selected" loading="lazy"></figure>
+<p>Show the selected object with an outline</p>
+<h4 id="bones">Bones</h4>
+<p>Show or hide bones.</p>
+<h4 id="motion-paths">Motion Paths</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/motion-paths.png" alt="Motion Paths" loading="lazy"></figure>
+<p>Show or hide motion paths. Motion paths can be calculated in the Motion Paths panel. You need an animation for that.</p>
+<h4 id="origins">Origins</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/origins.png" alt="Origins" loading="lazy"></figure>
+<p>Show or hide the origin of the selected object. The origin is the center point of the object, and represented by an orange dot.</p>
+<h4 id="origins-all">Origins(All)</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/origins-all.png" alt="Origins(All)" loading="lazy"></figure>
+<p>Show or hide the origin of all objects. Even from hidden ones. The not selected objects shows the center point with a white dot.</p>
+<h3 id="geometry">Geometry</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/geometry.png" alt="Geometry" loading="lazy"></figure>
+<p>Geometry related settings.</p>
+<h4 id="wire-frame">Wire frame</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/wire-frame.png" alt="Wire frame" loading="lazy"></figure>
+<p>Show the wire frame in object mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wireframe Threshold</td>
+<td>With a wire frame value of 1 all edges are drawn. The lower the value, the more edges will disappear.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>The opacity of the displayed edges.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="face-orientation">Face Orientation</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/face-orientation.png" alt="Face Orientation" loading="lazy"></figure>
+<p>This mode allows to check for faces with flipped normals, which cannot be seen with the defaults. Blue is pointing outwards, red is pointing inwards.</p>
+<h4 id="fade-inactive-geometry">Fade inactive Geometry</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/fade-inactive-geometry.jpg" alt="Fade inactive Geometry" loading="lazy"></figure>
+<p>Edit mode feature, does not show in other modes. Fades the not active geometry, the not selected scene objects, towards a plain grey. In Object mode this setting has no effect.</p>
+<h3 id="viewer-node">Viewer Node</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewer-node.png" alt="Viewer Node" loading="lazy"></figure>
+<p>Viewer node related settings.</p>
+<h4 id="color-overlay">Color Overlay</h4>
+<p>Enable color overlay in viewport for geometry attributes that are connected to an enabled Geometry Nodes’ viewer node.</p>
+<h5 id="opacity">Opacity</h5>
+<p>The opacity of the color overlay mentioned above.</p>
+<h4 id="text-overlay">Text Overlay</h4>
+<p>Show geometry attribute values that are connected to an enabled Geometry Nodes’ viewer node as text in viewport. This option just shows when you have geometry nodes at the object, and there is a viewer node in the tree. Example with index values:</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/text-overlay.png" alt="Text Overlay" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/text-overlay-2.png" alt="Text Overlay" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/text-overlay-3.png" alt="Text Overlay" loading="lazy"></figure>
+<h3 id="motion-tracking">Motion Tracking</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/motion-tracking.png" alt="Motion Tracking" loading="lazy"></figure>
+<p>Motion tracking related settings. When you turn it on, then some further options appears. These features just shows before you bake the solution. Not with the resolved solution.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Camera Path</td>
+<td>Shows the camera path.</td>
+</tr>
+<tr>
+<td>Marker Names</td>
+<td>Shows the marker names.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="track-display-type">Track display type</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/track-display-type.png" alt="Track display type" loading="lazy"></figure>
+<p>How to display the tracks.</p>
+<h5 id="track-size">Track size</h5>
+<p>Adjust the display size of the tracks of reconstructed data</p>
+<h2 id="viewport-overlays-mesh-object-edit-mode">Viewport Overlays - Mesh Object - Edit Mode</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport-overlays-mesh-object-edit-mode.png" alt="Viewport Overlays - Mesh Object - Edit Mode" loading="lazy"><figcaption>Viewport Overlays - Mesh Object - Edit Mode</figcaption></figure>
+<p>The Viewport Overlays panel shows different content, dependent of mode and object type. This is with mesh object in edit mode.</p>
+<h3 id="mesh-edit-mode-overlays">Mesh Edit Mode Overlays</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bevel</td>
+<td>Display weights created for the Bevel Modifier.</td>
+</tr>
+<tr>
+<td>Crease</td>
+<td>Display edges marked with a crease for the Subdivision Surface Modifier.</td>
+</tr>
+<tr>
+<td>Seam</td>
+<td>Display the UV unwrapping seams.</td>
+</tr>
+<tr>
+<td>Sharp</td>
+<td>Display sharp edges, used with the edge split modifier.</td>
+</tr>
+<tr>
+<td>Faces</td>
+<td>Highlight faces by using a face overlay that applies to both selected and unselected faces. This affects all selection modes.</td>
+</tr>
+<tr>
+<td>Center</td>
+<td>Show face-center points in solid shading modes. This is disabled in wireframe and xray mode. Only affects face-select mode.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices">Indices</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/indices.png" alt="Indices" loading="lazy"></figure>
+<p>Display the indices of selected vertices, edges and faces at the mesh.</p>
+<h3 id="shading">Shading</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/shading.png" alt="Shading" loading="lazy"></figure>
+<h4 id="retopology">Retopology</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/retopology.png" alt="Retopology" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/retopology-2.png" alt="Retopology" loading="lazy"></figure>
+<p>Hides the solid mesh and offset the overlay towards the view to make retopology easier. The selection is occluded by inactive geometry. You have to enable X-ray.</p>
+<h4 id="vertex-groups-weights">Vertex Groups Weights</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/vertex-groups-weights.png" alt="Vertex Groups Weights" loading="lazy"></figure>
+<p>Display weights in Edit Mode. When you activate this feature then further options appears.</p>
+<h5 id="zero-weights">Zero Weights</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/zero-weights.png" alt="Zero Weights" loading="lazy"></figure>
+<h6 id="none">None</h6>
+<p>Don't show the vertices with zero weights with a specific color. They appear blue like vertices with a very low weighting.</p>
+<h6 id="active">Active</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/active.png" alt="Active" loading="lazy"></figure>
+<p>Zero weights vertices are shown with a black color in the active vertex group.</p>
+<h6 id="all">All</h6>
+<p>Zero weights vertices are shown with a black color in all vertex groups of the mesh.</p>
+<h4 id="mesh-analysis">Mesh Analysis</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/mesh-analysis.png" alt="Mesh Analysis" loading="lazy"></figure>
+<p>Show the mesh analysis overlay and settings. Note that editing may be slow with mesh analysis tools on. And modifiers can make trouble.</p>
+<h5 id="type-2">Type</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/type.png" alt="Type" loading="lazy"></figure>
+<p>The mesh analysis type.</p>
+<h6 id="overhang">Overhang</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/overhang.png" alt="Overhang" loading="lazy"></figure>
+<p>Extrusion 3D printers have a physical limit to the overhang that can be printed. The Overhang type shows the overhang in different ways. Angle and axis can be adjusted.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minimum/Maximum</td>
+<td>Minimum/Maximum angle to display.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Choose which angle to calculate.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="thickness">Thickness</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/thickness.png" alt="Thickness" loading="lazy"></figure>
+<p>3D Printers have a limited wall-thickness. Too thin areas cannot be printed. This mode displays thin areas as red.</p>
+<p><strong>Minimum/Maximum</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/minimum-maximum.png" alt="Minimum/Maximum" loading="lazy"></figure>
+<p>Minimum/Maximum thickness to display.</p>
+<p><strong>Samples</strong></p>
+<p>The number of samples to use to calculate the thickness.</p>
+<h6 id="intersections">Intersections</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/intersections.png" alt="Intersections" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/intersections-2.png" alt="Intersections" loading="lazy"></figure>
+<p>A mesh can be made of more than one closed sub mesh. Join two spheres and you have one mesh with two closed sub meshes. Such intersections can be a problem with printing. Intersect marks intersecting areas with red.</p>
+<h6 id="distortion">Distortion</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/distortion.png" alt="Distortion" loading="lazy"></figure>
+<p>Marks distorted faces.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/distortion-2.png" alt="Distortion" loading="lazy"></figure>
+<p>Distorted geometry, means uneven quads or N-gons, can cause problems with printing. Since the triangulation of a distorted quad or N-gon is undefined. And printing works with tris. With a quad there are already two solutions in which direction the edge to triangulate the face can point.</p>
+<p><strong>Minimum/Maximum</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/minimum-maximum-2.png" alt="Minimum/Maximum" loading="lazy"></figure>
+<p>Adjust the minimum and maximum values after which a face gets displayed as distorted.</p>
+<h6 id="sharp-edges">Sharp Edges</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/sharp-edges.png" alt="Sharp Edges" loading="lazy"></figure>
+<p>Similar to wall-thickness, sharp edges can be too thin to be able to print.</p>
+<p><strong>Minimum/Maximum</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/minimum-maximum-3.png" alt="Minimum/Maximum" loading="lazy"></figure>
+<p>Adjust the minimum and maximum values after which an edge gets displayed as sharp.</p>
+<h3 id="measurement">Measurement</h3>
+<figure><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/measurement.png" alt="Measurement" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/measurement-2.png" alt="Measurement" loading="lazy"></figure>
+<p>Shows measure values at the selected elements. The units are displayed as chosen in the preferences. These values respects global/ local in the transform panel. And so the values can differ when you have scaled the mesh in object mode, and the scaling is not applied yet. Use Global to take the object scale into account.</p>
+<h4 id="edge-length">Edge Length</h4>
+<p>Shows the length of selected edges.</p>
+<h4 id="edge-angle">Edge Angle</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/edge-angle.png" alt="Edge Angle" loading="lazy"></figure>
+<p>Shows the angle of selected edges between two faces.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Face Area</td>
+<td>Show the area of selected faces.</td>
+</tr>
+<tr>
+<td>Face Angle</td>
+<td>Show the angle of selected face corners.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="normals">Normals</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/normals.png" alt="Normals" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/normals-2.png" alt="Normals" loading="lazy"></figure>
+<p>Show the normals for the chosen elements. They will be displayed as lines.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Display vertex normals</td>
+<td>Displays the normals of the vertices</td>
+</tr>
+<tr>
+<td>Display split normals</td>
+<td>Displays the per vertex face normals</td>
+</tr>
+<tr>
+<td>Display normals</td>
+<td>Displays the face normals.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="constant-screen-size-normals">Constant Screen Size Normals</h4>
+<p>Display the normals either in size relative to the object. Or constant to the screen size.</p>
+<figure><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/constant-screen-size-normals.png" alt="Constant Screen Size Normals" loading="lazy"><figcaption>Constant Screen Size Normals</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/constant-screen-size-normals-2.png" alt="Constant Screen Size Normals" loading="lazy"><figcaption>Constant Screen Size Normals</figcaption></figure>
+<p>Relative to the object is measured in object units. Absolute to the screen size is measued in pixels.</p>
+<h4 id="size">Size</h4>
+<p>Adjust the length of the line that represents the normal.</p>
+<h3 id="freestyle">Freestyle</h3>
+<figure><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/freestyle.png" alt="Freestyle" loading="lazy"></figure>
+<p>Freestyle is the line renderer integrated into Bforartists. For freestyle you can mark edges and faces.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edge Marks</td>
+<td>Display Freestyle edge marks, used with the Freestyle renderer.</td>
+</tr>
+<tr>
+<td>Face Marks</td>
+<td>Display Freestyle face marks, used with the Freestyle renderer.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="viewport-overlays-mesh-object-sculpt-mode">Viewport Overlays - Mesh Object - Sculpt Mode</h2>
+<h3 id="show-mask">Show Mask</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-mask.png" alt="Show Mask" loading="lazy"></figure>
+<p>Show mask as overlay on object. The opacity of the overlay can be controlled by the slider.</p>
+<h3 id="show-face-sets">Show Face Sets</h3>
+<p>Show face sets as overlay on object. The opacity of the overlay can be controlled by the slider.</p>
+<h2 id="viewport-overlays-mesh-object-vertex-paint-mode">Viewport Overlays - Mesh Object - Vertex Paint Mode</h2>
+<h3 id="opacity-2">Opacity</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/opacity.png" alt="Opacity" loading="lazy"></figure>
+<p>How strong the painted color gets shown.</p>
+<h3 id="show-wire">Show Wire</h3>
+<p>Display the wire at the mesh. Normally the wire is hidden.</p>
+<h2 id="viewport-overlays-mesh-object-weight-paint-mode">Viewport Overlays - Mesh Object - Weight Paint Mode</h2>
+<h3 id="opacity-3">Opacity</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/opacity-2.png" alt="Opacity" loading="lazy"></figure>
+<p>The opacity of the color overlay.</p>
+<h3 id="zero-weights-2">Zero Weights</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/zero-weights.png" alt="Zero Weights" loading="lazy"></figure>
+<h4 id="none-2">None</h4>
+<p>Don't show the vertices with zero weights with a specific color. They appear blue like vertices with a very low weighting.</p>
+<h4 id="active-2">Active</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/active.png" alt="Active" loading="lazy"></figure>
+<p>Zero weights vertices are shown with a black color in the active vertex group.</p>
+<h4 id="all-2">All</h4>
+<p>Zero weights vertices are shown with a black color in all vertex groups of the mesh.</p>
+<h3 id="show-weight-contours">Show Weight Contours</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-weight-contours.png" alt="Show Weight Contours" loading="lazy"></figure>
+<p>Show contour lines formed by points with the same interpolated weight.</p>
+<h3 id="show-wire-2">Show Wire</h3>
+<p>Display the wire at the mesh. Normally the wire is hidden.</p>
+<h3 id="show-bone-x-ray">Show Bone X Ray</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-bone-x-ray.png" alt="Show Bone X Ray" loading="lazy"><figcaption>Show Bone X Ray</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-bone-x-ray-2.png" alt="Show Bone X Ray" loading="lazy"><figcaption>Show Bone X Ray</figcaption></figure>
+<p>This prop just shows when you have both, the bone and the mesh object selected by holding down shift, and switch to weight paint.</p>
+<p>This has in general the same effect than draw in front. It shows the bones on top of the mesh geometry.</p>
+<h2 id="viewport-overlays-mesh-object-texture-paint-mode">Viewport Overlays - Mesh Object - Texture Paint Mode</h2>
+<h3 id="stencil-opacity">Stencil Opacity</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/stencil-opacity.png" alt="Stencil Opacity" loading="lazy"></figure>
+<p>How strong the painted color gets shown.</p>
+<h2 id="viewport-overlays-hair-object-sculpt-mode">Viewport Overlays - Hair Object - Sculpt Mode</h2>
+<h3 id="selection-opacity">Selection Opacity</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/selection-opacity.png" alt="Selection Opacity" loading="lazy"></figure>
+<p>How solid not selected curves are displayed. Note that you can't make them fully transparent.</p>
+<h3 id="curves-cage">Curves Cage</h3>
+<p>Highlight the selected curves.</p>
+<h4 id="cage-opacity">Cage Opacity</h4>
+<p>How strong selected curves are highlighted.</p>
+<h2 id="viewport-overlays-armature-in-pose-mode">Viewport Overlays - Armature in Pose Mode</h2>
+<h3 id="show-bone-x-ray-2">Show Bone X Ray</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-bone-x-ray-3.png" alt="Show Bone X Ray" loading="lazy"><figcaption>Show Bone X Ray</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-bone-x-ray.png" alt="Show Bone X Ray" loading="lazy"><figcaption>Show Bone X Ray</figcaption></figure>
+<p>This has in general nearly the same effect than draw in front. It shows the bones on top of the mesh geometry. But you can fade the mesh geometry to black.</p>
+<h3 id="bone-wireframe-opacity">Bone Wireframe Opacity</h3>
+<p>The maximum opacity of bones in wireframe display mode.</p>
+<h2 id="viewport-overlays-grease-pencil">Viewport Overlays - Grease Pencil</h2>
+<h3 id="in-object-mode">In Object Mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/in-object-mode.png" alt="In Object Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/in-object-mode-2.png" alt="In Object Mode" loading="lazy"></figure>
+<h4 id="onion-skin">Onion Skin</h4>
+<p>Show ghosts of the key frames before and after the current frame.</p>
+<h4 id="canvas">Canvas</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/canvas.png" alt="Canvas" loading="lazy"></figure>
+<p>Display a grid over Grease Pencil drawing plane. The opacity of the grid can be controlled with a slider.</p>
+<h5 id="canvas-x-ray">Canvas X Ray</h5>
+<p>Show the grid in front of the stroke.</p>
+<h4 id="fade-layers">Fade Layers</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/fade-layers.png" alt="Fade Layers" loading="lazy"></figure>
+<p>Controls the opacity of the not selected layers in the current grease pencil object.</p>
+<p>I have set the fade layers opacity to 1 here. When you select the other layer, then the inner part becomes visible again, and the black outlines hides.</p>
+<h4 id="fade-objects">Fade Objects</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/fade-objects.png" alt="Fade Objects" loading="lazy"></figure>
+<p>Fades everything in the viewport but the grease pencil color to black.</p>
+<h5 id="fade-grease-pencil-objects">Fade Grease Pencil Objects</h5>
+<p>Fades the not active grease pencil objects to black too.</p>
+<h3 id="in-edit-mode">In Edit Mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/in-edit-mode.png" alt="In Edit Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/in-edit-mode-2.png" alt="In Edit Mode" loading="lazy"></figure>
+<h4 id="onion-skin-2">Onion Skin</h4>
+<p>Show ghosts of the key frames before and after the current frame.</p>
+<h4 id="canvas-2">Canvas</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/canvas.png" alt="Canvas" loading="lazy"></figure>
+<p>Display a grid over Grease Pencil drawing plane. The opacity of the grid can be controlled with a slider.</p>
+<h5 id="canvas-x-ray-2">Canvas X Ray</h5>
+<p>Show the grid in front of the stroke.</p>
+<h4 id="fade-layers-2">Fade Layers</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/fade-layers.png" alt="Fade Layers" loading="lazy"></figure>
+<p>Control the opacity of the not selected layers in the current grease pencil object.</p>
+<p>I have set the fade layers opacity to 1 here. When you select the other layer, then the inner part becomes visible again, and the black outlines hides.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fade Objects</td>
+<td>Fades everything in the viewport but the grease pencil color to black. · <strong>Fade Grease Pencil Objects</strong>: Fades the not active grease pencil objects to black too.</td>
+</tr>
+<tr>
+<td>Edit Lines</td>
+<td>Show the edges of the curve when editing strokes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="stroke-direction">Stroke Direction</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/stroke-direction.png" alt="Stroke Direction" loading="lazy"></figure>
+<p>Shows a red and a green dot at the end of the stroke. Green dot is start. Red dot is end.</p>
+<h4 id="only-in-multi-frame">Only in multi frame</h4>
+<p>Only show edges of the curve while in multi frame edition.</p>
+<h4 id="material-name">Material Name</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/material-name.png" alt="Material Name" loading="lazy"></figure>
+<p>Displays the material name at the start of the stroke.</p>
+<h4 id="vertex-opacity">Vertex Opacity</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/vertex-opacity.png" alt="Vertex Opacity" loading="lazy"></figure>
+<p>With Curve Editing off. How strong the selected vertices of the stroke shows.</p>
+<h4 id="handles">Handles</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/handles.png" alt="Handles" loading="lazy"></figure>
+<p>With Curve Editing on. Limit the display of curve handles in edit mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Don't limit the handles.</td>
+</tr>
+<tr>
+<td>Selected</td>
+<td>Just limit the selected handles.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>Limit all handles.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="in-sculpt-and-weight-paint-mode">In Sculpt and Weight paint Mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/in-sculpt-and-weight-paint-mode.png" alt="In Sculpt and Weight paint Mode" loading="lazy"><figcaption>In Sculpt and Weight paint Mode</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/in-sculpt-and-weight-paint-mode-2.png" alt="In Sculpt and Weight paint Mode" loading="lazy"><figcaption>In Sculpt and Weight paint Mode</figcaption></figure>
+<h4 id="onion-skin-3">Onion Skin</h4>
+<p>Show ghosts of the key frames before and after the current frame.</p>
+<h4 id="canvas-3">Canvas</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/canvas.png" alt="Canvas" loading="lazy"></figure>
+<p>Display a grid over Grease Pencil drawing plane. The opacity of the grid can be controlled with a slider.</p>
+<h5 id="canvas-x-ray-3">Canvas X Ray</h5>
+<p>Show the grid in front of the stroke.</p>
+<h4 id="fade-layers-3">Fade Layers</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/fade-layers.png" alt="Fade Layers" loading="lazy"></figure>
+<p>Control the opacity of the not selected layers in the current grease pencil object.</p>
+<p>I have set the fade layers opacity to 1 here. When you select the other layer, then the inner part becomes visible again, and the black outlines hides.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fade Objects</td>
+<td>Fades everything in the viewport but the grease pencil color to black. · <strong>Fade Grease Pencil Objects</strong>: Fades the not active grease pencil objects to black too.</td>
+</tr>
+<tr>
+<td>Edit Lines</td>
+<td>Show the edges of the curve when editing strokes.</td>
+</tr>
+<tr>
+<td>Only in multi frame</td>
+<td>Only show edges of the curve while in multi frame edition.</td>
+</tr>
+<tr>
+<td>Vertex Opacity</td>
+<td>Sculpt mode only. How strong the selected vertices of the stroke shows.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="in-draw-mode">In Draw Mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/in-draw-mode.png" alt="In Draw Mode" loading="lazy"></figure>
+<h4 id="onion-skin-4">Onion Skin</h4>
+<p>Show ghosts of the key frames before and after the current frame.</p>
+<h4 id="canvas-4">Canvas</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/canvas.png" alt="Canvas" loading="lazy"></figure>
+<p>Display a grid over Grease Pencil drawing plane. The opacity of the grid can be controlled with a slider.</p>
+<h5 id="canvas-x-ray-4">Canvas X Ray</h5>
+<p>Show the grid in front of the stroke.</p>
+<h4 id="fade-layers-4">Fade Layers</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/fade-layers.png" alt="Fade Layers" loading="lazy"></figure>
+<p>Control the opacity of the not selected layers in the current grease pencil object.</p>
+<p>I have set the fade layers opacity to 1 here. When you select the other layer, then the inner part becomes visible again, and the black outlines hides.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fade Objects</td>
+<td>Fades everything in the viewport but the grease pencil color to black. · <strong>Fade Grease Pencil Objects</strong>: Fades the not active grease pencil objects to black too.</td>
+</tr>
+<tr>
+<td>Vertex Opacity</td>
+<td>How strong the selected vertices of the stroke shows.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="in-vertex-paint-mode">In Vertex Paint mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/in-vertex-paint-mode.png" alt="In Vertex Paint mode" loading="lazy"><figcaption>In Vertex Paint mode</figcaption></figure>
+<h4 id="onion-skin-5">Onion Skin</h4>
+<p>Show ghosts of the key frames before and after the current frame.</p>
+<h4 id="use-grid">Use Grid</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/canvas.png" alt="Use Grid" loading="lazy"></figure>
+<p>Display a grid over Grease Pencil drawing plane. The opacity of the grid can be controlled with a slider.</p>
+<h5 id="canvas-x-ray-5">Canvas X Ray</h5>
+<p>Show the grid in front of the stroke.</p>
+<h4 id="fade-layers-5">Fade Layers</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/fade-layers.png" alt="Fade Layers" loading="lazy"></figure>
+<p>Control the opacity of the not selected layers in the current grease pencil object.</p>
+<p>I have set the fade layers opacity to 1 here. When you select the other layer, then the inner part becomes visible again, and the black outlines hides.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fade Objects</td>
+<td>Fades everything in the viewport but the grease pencil color to black. · <strong>Fade Grease Pencil Objects</strong>: Fades the not active grease pencil objects to black too.</td>
+</tr>
+<tr>
+<td>Edit Lines</td>
+<td>Show the edges of the curve when editing strokes.</td>
+</tr>
+<tr>
+<td>Only in multi frame</td>
+<td>Only show edges of the curve while in multi frame edition.</td>
+</tr>
+<tr>
+<td>Vertex Opacity</td>
+<td>How strong the selected vertices of the stroke shows.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>The vertex paint opacity.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="viewport-shading">Viewport Shading</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport-shading.png" alt="Viewport Shading" loading="lazy"></figure>
+<p>At the very right of the header you can find the viewport shading settings. Here you adjust the display of the viewport. The order goes from left to right.</p>
+<h3 id="show-x-ray">Show X Ray</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-x-ray.png" alt="Show X Ray" loading="lazy"></figure>
+<p>This viewport setting is connected with the viewport shading. It allows you to show and edit the back geometry. Or hide it, so that you can just edit the geometry that points forwards.</p>
+<h3 id="viewport-shading-2">Viewport Shading</h3>
+<p>Defines how geometry gets displayed in the viewport.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wire frame</td>
+<td>Displays the content in the viewport as Wire frame.</td>
+</tr>
+<tr>
+<td>Solid</td>
+<td>Displays the content in the viewport with a solid white color.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Displays the content in the viewport with all material settings and with OpenGL rendering. Note that this does not exist when you choose the Workbench renderer.</td>
+</tr>
+<tr>
+<td>Rendered</td>
+<td>Displays the content in the viewport like you would have rendered it. This mode is dependent of what render engine you have currently active.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="viewport-shading-settings">Viewport Shading Settings</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport-shading-settings.png" alt="Viewport Shading Settings" loading="lazy"></figure>
+<p>The viewport shading panel. Its settings changes, dependent of which viewport shading mode you have activated. And provides you with further settings for it.</p>
+<h4 id="viewport-shading-settings-with-wire-frame">Viewport Shading Settings with Wire frame</h4>
+<h5 id="color">Color</h5>
+<h6 id="single">Single</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/single.png" alt="Single" loading="lazy"></figure>
+<p>The selected object gets highlighted. The wire frame is the color of the selection outline. The not selected objects shows a black wire frame.</p>
+<h6 id="object">Object</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/object.png" alt="Object" loading="lazy"></figure>
+<p>The selected object gets highlighted. The wire frame is white. The not selected objects shows a Grey wire frame.</p>
+<h6 id="random">Random</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/random.png" alt="Random" loading="lazy"></figure>
+<p>The selected object gets highlighted. The wire frame is a random wire frame color. The not selected objects shows a random wire frame color. You cannot influence this random color. It is random.</p>
+<h5 id="background">Background</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Theme</td>
+<td>Uses the viewport background color as defined in the theme.</td>
+</tr>
+<tr>
+<td>World</td>
+<td>Uses the world background color as the viewport background color.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="viewport">Viewport</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport.png" alt="Viewport" loading="lazy"></figure>
+<p>Defines a custom color for the viewport background color.</p>
+<h5 id="options-2">Options</h5>
+<h6 id="show-x-ray-2">Show X Ray</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-x-ray.png" alt="Show X Ray" loading="lazy"></figure>
+<p>This viewport setting is connected with the viewport shading. It allows you to show and edit the back geometry. Or hide it, so that you can just edit the geometry that points forwards.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X Ray Alpha</td>
+<td>Adjust the amount of transparency.</td>
+</tr>
+<tr>
+<td>Outline</td>
+<td>Show the not selected objects with an outline.</td>
+</tr>
+<tr>
+<td>Outline Color</td>
+<td>Defines the color of the outline for not selected objects.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="viewport-shading-settings-with-solid">Viewport shading Settings with Solid</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport-shading-settings-with-solid.png" alt="Viewport shading Settings with Solid" loading="lazy"><figcaption>Viewport shading Settings with Solid</figcaption></figure>
+<h5 id="lighting">Lighting</h5>
+<p>Choose between different lighting methods.</p>
+<p>Note that this methods are not for rendering the scene. This lighting methods are meant to light the viewport.</p>
+<h6 id="studio">Studio</h6>
+<p>Uses a studio setup lighting. You can choose between several studio light setups in the library menu below. This library menu is a box with a preview of the currently active light setup.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/studio.png" alt="Studio" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>World Space Lighting</td>
+<td>Make the lighting fixed to the world. And not follow the camera when you rotate around the scene.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>The rotation of the light setup. This edit box is just active when you use World Space Lighting.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Show Light Preferences</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-light-preferences.png" alt="Show Light Preferences" loading="lazy"></figure>
+<p>At the right of the drop down box you will see a tiny button. It will open the preferences, where you can edit the existing studio light setups, or add new Studio light setups. This chapter is explained in the preferences manual part.</p>
+<h5 id="wire-color">Wire Color</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/wire-color.png" alt="Wire Color" loading="lazy"></figure>
+<p>Allows you to display the wire color in different colors. Note that you need to have Wireframe display activated in the Viewport Overlays to see this effect.</p>
+<h6 id="theme">Theme</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/theme.png" alt="Theme" loading="lazy"></figure>
+<p>Displays the wireframe color as defined in the theme.</p>
+<h6 id="object-2">Object</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/object-2.png" alt="Object" loading="lazy"></figure>
+<p>Displays the wireframe color object based.</p>
+<h6 id="random-2">Random</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/random-2.png" alt="Random" loading="lazy"></figure>
+<p>Displays the wireframe color in a random color.</p>
+<h5 id="color-2">Color</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/color.png" alt="Color" loading="lazy"></figure>
+<p>Influence how the objects in the scene are colored. Just one setting can be active at one time.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Material</td>
+<td>Uses the color of the material, in case a material is assigned to the object(s).</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>Uses the Object color.</td>
+</tr>
+<tr>
+<td>Vertex</td>
+<td>Shows the vertex colors in case vertex colors exists.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="single-2">Single</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/single-2.png" alt="Single" loading="lazy"></figure>
+<p>Define a custom color. A color picker box appears when you activate single.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Random</td>
+<td>Colors the objects with a random color</td>
+</tr>
+<tr>
+<td>Texture</td>
+<td>Shows the texture in case a material with a texture is assigned to the object(s).</td>
+</tr>
+</tbody>
+</table>
+<h5 id="background-2">Background</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/background.png" alt="Background" loading="lazy"></figure>
+<p>Define the look of the viewport background</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Theme</td>
+<td>Uses the background as defined in the theme.</td>
+</tr>
+<tr>
+<td>World</td>
+<td>Uses the background as defined in the world settings of the scene.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="viewport-2">Viewport</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport-2.png" alt="Viewport" loading="lazy"></figure>
+<p>Use a custom color. When you activate this setting, then a color picker field appears, adjust a custom color.</p>
+<h5 id="options-3">Options</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/options-2.png" alt="Options" loading="lazy"></figure>
+<h6 id="back-face-culling-2">Back face Culling</h6>
+<p>Use back face culling to hide backsides of faces.</p>
+<h6 id="show-x-ray-3">Show X Ray</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-x-ray.png" alt="Show X Ray" loading="lazy"></figure>
+<p>This viewport setting is connected with the viewport shading. It allows you to show and edit the back geometry. Or hide it, so that you can just see and edit the geometry that points forwards.<br />
+Note that you can either have Show X Ray active. Or Shadow and Cavity.</p>
+<p><strong>X Ray Alpha</strong></p>
+<p>Adjust the strength of the transparency effect.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/x-ray-alpha.png" alt="X Ray Alpha" loading="lazy"></figure>
+<h6 id="shadow">Shadow</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/shadow.png" alt="Shadow" loading="lazy"></figure>
+<p>Cast a shadow. Note that the shadow casting light is not part of the chosen studio light. It is an independent light.</p>
+<p><strong>Shadow Intensity</strong></p>
+<p>Here you adjust the strength of the shadow. Higher value means darker shadow.</p>
+<p><strong>Light Settings</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/light-settings.png" alt="Light Settings" loading="lazy"></figure>
+<p>Adjust some settings of the light.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light Direction</td>
+<td>Click into the field and drag the mouse to change the direction of the light that casts the shadow.</td>
+</tr>
+<tr>
+<td>Shadow Shift</td>
+<td>The shadow termination angle. This can be used to minimize self shadowing artifacts.</td>
+</tr>
+<tr>
+<td>Shadow Focus</td>
+<td>The shadow hardness. It controls the falloff near the edge of the shadow.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="cavity-2">Cavity</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/cavity-2.png" alt="Cavity" loading="lazy"></figure>
+<p>Show Cavity. Cavity highlights ridges and valleys in the scene geometry. When you activate this setting, then further settings appears.</p>
+<p><strong>Type</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/type-2.png" alt="Type" loading="lazy"></figure>
+<p>The method how to calculate the cavity. In worlds pace, in screen space. Or in both.</p>
+<p><strong>World</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/cavity-2.png" alt="World" loading="lazy"></figure>
+<p>Draw the cavity shading in world space.</p>
+<p><strong>World Space / Ridge Valley</strong></p>
+<p>Factor for the cavity ridges and valleys.</p>
+<p><strong>Shading Options</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/shading-options.png" alt="Shading Options" loading="lazy"></figure>
+<p>Adjust samples, distance and attenuation for the cavity ridges and valleys.</p>
+<p><strong>Screen</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/screen.png" alt="Screen" loading="lazy"></figure>
+<p>Draw the cavity shading in Screen space.</p>
+<p><strong>Screen Space / Ridge Valley</strong></p>
+<p>Factor for the curvature ridges and valleys.</p>
+<p><strong>Both</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/both.png" alt="Both" loading="lazy"></figure>
+<p>Draw the cavity shading in both, World Space and Screen space.</p>
+<p>Settings see above.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Depth of Field</td>
+<td>Use depth of field for the viewport. It uses the values from the active camera.</td>
+</tr>
+<tr>
+<td>Outline</td>
+<td>Show the not selected objects with an outline. · <strong>Outline Color</strong>: Define the color of the outline for not selected objects.</td>
+</tr>
+<tr>
+<td>Specular Lighting</td>
+<td>Render specular highlights.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="matcap">Matcap</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/matcap.png" alt="Matcap" loading="lazy"></figure>
+<p>Matcap stands for material capture. With Matcap you use a special matcap shader at the mesh. This shader is usually something colorful, which makes for example sculpting easier.</p>
+<p>You can choose between several matcap setups in the library menu below. This library menu is a box with a preview of the currently active matcap setup.</p>
+<h6 id="show-light-preferences">Show Light Preferences</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-light-preferences.png" alt="Show Light Preferences" loading="lazy"></figure>
+<p>At the right of the library menu box you will see a tiny button. It will open the preferences, where you can edit the existing studio light setups, or add new Studio light setups. This chapter is explained in the preferences manual part.</p>
+<h6 id="flip-matcap">Flip Matcap</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/flip-matcap.png" alt="Flip Matcap" loading="lazy"></figure>
+<p>Some matcaps have a direction from which the light comes. With Flip Matcap you can flip this direction.</p>
+<h5 id="color-3">Color</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/color.png" alt="Color" loading="lazy"></figure>
+<p>Influence how the objects in the scene are colored. Just one setting can be active at one time.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Material</td>
+<td>Uses the color of the material, in case a material is assigned to the object(s).</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>Uses the Object color.</td>
+</tr>
+<tr>
+<td>Vertex</td>
+<td>Shows the vertex colors in case vertex colors exists.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="single-3">Single</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/single-2.png" alt="Single" loading="lazy"></figure>
+<p>Define a custom color. A color picker box appears when you activate single.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Random</td>
+<td>Colors the objects with a random color</td>
+</tr>
+<tr>
+<td>Texture</td>
+<td>Shows the texture in case a material with a texture is assigned to the object(s).</td>
+</tr>
+</tbody>
+</table>
+<h5 id="background-3">Background</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/background.png" alt="Background" loading="lazy"></figure>
+<p>This defines the look of the viewport background</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Theme</td>
+<td>Uses the background as defined in the theme.</td>
+</tr>
+<tr>
+<td>World</td>
+<td>Uses the background as defined in the world settings of the scene.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="viewport-3">Viewport</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport-2.png" alt="Viewport" loading="lazy"></figure>
+<p>Use a custom color. When you activate this setting, then a color picker field appears, adjust a custom color.</p>
+<h5 id="options-4">Options</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/options-3.png" alt="Options" loading="lazy"></figure>
+<h6 id="back-face-culling-3">Back face Culling</h6>
+<p>Use back face culling to hide backsides of faces.</p>
+<h6 id="show-x-ray-4">Show X Ray</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-x-ray.png" alt="Show X Ray" loading="lazy"></figure>
+<p>This viewport setting is connected with the viewport shading. It allows you to show and edit the back geometry. Or hide it, so that you can just see and edit the geometry that points forwards.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-x-ray-2.png" alt="Show X Ray" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-x-ray-3.png" alt="Show X Ray" loading="lazy"></figure>
+<p>Note that you can either have Show X Ray active. Or Shadow and Cavity. When activating Show X Ray, the other two options will be hidden.</p>
+<p><strong>X Ray Alpha</strong></p>
+<p>Adjust the strength of the transparency effect.</p>
+<h6 id="shadow-2">Shadow</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/shadow.png" alt="Shadow" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/x-ray-alpha.png" alt="Shadow" loading="lazy"></figure>
+<p>Cast a shadow. Note that the shadow casting light is not part of the chosen studio light. It is an independent light.</p>
+<p><strong>Shadow Intensity</strong></p>
+<p>Here you adjust the strength of the shadow. Higher value means darker shadow.</p>
+<p><strong>Light Settings</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/light-settings.png" alt="Light Settings" loading="lazy"></figure>
+<p>Adjust some settings of the light.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light Direction</td>
+<td>Click into the field and drag the mouse to change the direction of the light that casts the shadow.</td>
+</tr>
+<tr>
+<td>Shadow Shift</td>
+<td>The shadow termination angle. This can be used to minimize self shadowing artifacts.</td>
+</tr>
+<tr>
+<td>Shadow Focus</td>
+<td>The shadow hardness. It controls the falloff near the edge of the shadow.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="cavity-3">Cavity</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/cavity-2.png" alt="Cavity" loading="lazy"></figure>
+<p>Show Cavity. Cavity highlights ridges and valleys in the scene geometry. When you activate this setting, then further settings appears.</p>
+<p><strong>Type</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/type-2.png" alt="Type" loading="lazy"></figure>
+<p>The method how to calculate the cavity. In worlds pace, in screen space. Or in both.</p>
+<p><strong>World</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/cavity-2.png" alt="World" loading="lazy"></figure>
+<p>Draw the cavity shading in world space.</p>
+<p><strong>World Space / Ridge Valley</strong></p>
+<p>Factor for the cavity ridges and valleys.</p>
+<p><strong>Shading Options</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/shading-options.png" alt="Shading Options" loading="lazy"></figure>
+<p>Adjust samples, distance and attenuation for the cavity ridges and valleys.</p>
+<p><strong>Screen</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/screen.png" alt="Screen" loading="lazy"></figure>
+<p>Draw the cavity shading in Screen space.</p>
+<p><strong>Screen Space / Ridge Valley</strong></p>
+<p>Factor for the curvature ridges and valleys.</p>
+<p><strong>Both</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/both.png" alt="Both" loading="lazy"></figure>
+<p>Draw the cavity shading in both, World Space and Screen space.</p>
+<p>Settings see above.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outline</td>
+<td>Show the not selected objects with an outline. · <strong>Outline Color</strong>: Define the color of the outline for not selected objects.</td>
+</tr>
+<tr>
+<td>Specular Lighting</td>
+<td>Render specular highlights.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="flat">Flat</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/flat.png" alt="Flat" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/flat-2.png" alt="Flat" loading="lazy"></figure>
+<p>Lights the objects plain white.</p>
+<h6 id="color-4">Color</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/color.png" alt="Color" loading="lazy"></figure>
+<p>Influence how the objects in the scene are colored. Just one setting can be active at one time.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Material</td>
+<td>Uses the color of the material, in case a material is assigned to the object(s).</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>Uses the Object color.</td>
+</tr>
+<tr>
+<td>Vertex</td>
+<td>Shows the vertex colors in case vertex colors exists.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Single</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/single-2.png" alt="Single" loading="lazy"></figure>
+<p>Define a custom color. A color picker box appears when you activate single.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Random</td>
+<td>Colors the objects with a random color</td>
+</tr>
+<tr>
+<td>Texture</td>
+<td>Shows the texture in case a material with a texture is assigned to the object(s).</td>
+</tr>
+</tbody>
+</table>
+<h6 id="background-4">Background</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/background.png" alt="Background" loading="lazy"></figure>
+<p>Define the look of the viewport background.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Theme</td>
+<td>Uses the background as defined in the theme.</td>
+</tr>
+<tr>
+<td>World</td>
+<td>Uses the background as defined in the world settings of the scene.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Viewport</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport-2.png" alt="Viewport" loading="lazy"></figure>
+<p>Use a custom color. When you activate this setting, then a color picker field appears, adjust a custom color.</p>
+<h5 id="options-5">Options</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/options-4.png" alt="Options" loading="lazy"></figure>
+<h6 id="back-face-culling-4">Back face Culling</h6>
+<p>Use back face culling to hide backsides of faces.</p>
+<h6 id="show-x-ray-5">Show X Ray</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-x-ray.png" alt="Show X Ray" loading="lazy"></figure>
+<p>This viewport setting is connected with the viewport shading. It allows you to show and edit the back geometry. Or hide it, so that you can just see and edit the geometry that points forwards.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-x-ray-2.png" alt="Show X Ray" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-x-ray-3.png" alt="Show X Ray" loading="lazy"></figure>
+<p>Note that you can either have Show X Ray active. Or Shadow and Cavity. When activating Show X Ray, the other two options will be hidden.</p>
+<p><strong>X Ray Alpha</strong></p>
+<p>Adjust the strength of the transparency effect.</p>
+<h6 id="shadow-3">Shadow</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/shadow.png" alt="Shadow" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/x-ray-alpha.png" alt="Shadow" loading="lazy"></figure>
+<p>Cast a shadow. Note that the shadow casting light is not part of the chosen studio light. It is an independent light.</p>
+<p><strong>Shadow Intensity</strong></p>
+<p>Here you adjust the strength of the shadow. Higher value means darker shadow.</p>
+<p><strong>Light Settings</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/light-settings.png" alt="Light Settings" loading="lazy"></figure>
+<p>Adjust some settings of the light.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light Direction</td>
+<td>Click into the field and drag the mouse to change the direction of the light that casts the shadow.</td>
+</tr>
+<tr>
+<td>Shadow Shift</td>
+<td>The shadow termination angle. This can be used to minimize self shadowing artifacts.</td>
+</tr>
+<tr>
+<td>Shadow Focus</td>
+<td>The shadow hardness. It controls the falloff near the edge of the shadow.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="cavity-4">Cavity</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/cavity-3.png" alt="Cavity" loading="lazy"></figure>
+<p>Show Cavity. Cavity highlights ridges and valleys in the scene geometry. When you activate this setting, then further settings appears.</p>
+<p><strong>Type</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/type-2.png" alt="Type" loading="lazy"></figure>
+<p>The method how to calculate the cavity. In worlds pace, in screen space. Or in both.</p>
+<p><strong>World</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/world.png" alt="World" loading="lazy"></figure>
+<p>Draw the cavity shading in world space.</p>
+<p><strong>World Space / Ridge Valley</strong></p>
+<p>Factor for the cavity ridges and valleys.</p>
+<p><strong>Shading Options</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/shading-options-2.png" alt="Shading Options" loading="lazy"></figure>
+<p>Adjust samples, distance and attenuation for the cavity ridges and valleys.</p>
+<p><strong>Screen</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/screen-2.png" alt="Screen" loading="lazy"></figure>
+<p>Draw the cavity shading in Screen space.</p>
+<p><strong>Screen Space / Ridge Valley</strong></p>
+<p>Factor for the curvature ridges and valleys.</p>
+<p><strong>Both</strong></p>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/both-2.png" alt="Both" loading="lazy"></figure>
+<p>Draw the cavity shading in both, World Space and Screen space.</p>
+<p>Settings see above.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outline</td>
+<td>Show the not selected objects with an outline. · <strong>Outline Color</strong>: This defines the color of the outline for not selected objects.</td>
+</tr>
+<tr>
+<td>Specular Lighting</td>
+<td>Render specular highlights.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="viewport-shading-with-material-preview">Viewport Shading with Material Preview</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport-shading-with-material-preview.png" alt="Viewport Shading with Material Preview" loading="lazy"><figcaption>Viewport Shading with Material Preview</figcaption></figure>
+<p>In this mode you can use a hdr file to light the scene.</p>
+<p>This mode is just available with Cycles and Eevee renderer. Workspace renderer does not have this mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lighting</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Scene Lights</td>
+<td>Use the scene lights instead of the hdr to light the scene.</td>
+</tr>
+<tr>
+<td>Scene World</td>
+<td>Use the scene world to light the scene. This turns off the hdr. And the further options are not longer available.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hdr-file-browser">HDR File Browser</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/hdr-file-browser.png" alt="HDR File Browser" loading="lazy"></figure>
+<p>Pick a hdr file to light the world with.</p>
+<h5 id="show-light-preferences-2">Show light preferences</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/show-light-preferences-2.png" alt="Show light preferences" loading="lazy"></figure>
+<p>At the right of the library menu box you will see a tiny button. It will open the preferences, where you can edit the existing studio light setups, or add new Studio light setups. This chapter is explained in the preferences manual part.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>World Space Lighting</td>
+<td>Make the hdr rotation fixed, and not follow the camera.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>The rotation of the hdr file.</td>
+</tr>
+<tr>
+<td>Background</td>
+<td>Show the studio light in the background. The higher the value the more the studio light gets mixed into the hdr.</td>
+</tr>
+<tr>
+<td>World Opacity</td>
+<td>Show the studio light in the background</td>
+</tr>
+<tr>
+<td>Blur</td>
+<td>The blur factor.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="wire-color-2">Wire Color</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/wire-color-2.png" alt="Wire Color" loading="lazy"></figure>
+<p>Allows you to display the wire color in different colors. Note that you need to have Wireframe display activated in the Viewport Overlays to see this effect.</p>
+<h6 id="theme-2">Theme</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/theme-2.png" alt="Theme" loading="lazy"></figure>
+<p>Displays the wireframe color as defined in the theme.</p>
+<h6 id="object-3">Object</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/object-3.png" alt="Object" loading="lazy"></figure>
+<p>Displays the wireframe color object based.</p>
+<h6 id="random-3">Random</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/random-3.png" alt="Random" loading="lazy"></figure>
+<p>Displays the wireframe color in a random color.</p>
+<h5 id="render-pass">Render Pass</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/render-pass.png" alt="Render Pass" loading="lazy"></figure>
+<p>Choose what render passes to calculate.</p>
+<h5 id="compositor">Compositor</h5>
+<p>Alllows you to display the compositor result in the viewport. Note that you need to have a active compositor node setup for this to work.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disabled</td>
+<td>To display the compositor result in the viewport is disabled.</td>
+</tr>
+<tr>
+<td>Camera</td>
+<td>Displays the compositor result when you are in camera view.</td>
+</tr>
+<tr>
+<td>Always</td>
+<td>Always displays the compositor result.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="viewport-shading-with-rendered">Viewport Shading with Rendered</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport-shading-with-rendered.png" alt="Viewport Shading with Rendered" loading="lazy"><figcaption>Viewport Shading with Rendered</figcaption></figure>
+<p>With rendered shading the viewport uses the renderer settings of the chosen render engine. Workbench has no specific shading settings here. And the panel is empty. Cycles and Eeevee have some further settings.</p>
+<h5 id="lighting-2">Lighting</h5>
+<h6 id="scene-lights">Scene Lights</h6>
+<p>Render lights and light probes in the scene.</p>
+<h6 id="scene-world">Scene World</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/viewport-shading-with-material-preview.png" alt="Scene World" loading="lazy"></figure>
+<p>Use scene world for lighting. When you turn off Scene World then you reveal further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Studiolight Preview</td>
+<td>Displays the current active hdri file to light the scene. A click at the display allows you to pick another hdri file. · <strong>Show Light preferences</strong>: Opens the light preferences in the preferences where you can pick more hdri files.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>The rotation of the studio light.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>The strength of the studio light.</td>
+</tr>
+<tr>
+<td>World Opacity</td>
+<td>The opacity of the hdri.</td>
+</tr>
+<tr>
+<td>Blur</td>
+<td>Eevee. Blur the studiolight in the background.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="wire-color-3">Wire Color</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/wire-color-2.png" alt="Wire Color" loading="lazy"></figure>
+<p>Allows you to display the wire color in different colors. Note that you need to have Wireframe display activated in the Viewport Overlays to see this effect.</p>
+<h6 id="theme-3">Theme</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/theme-3.png" alt="Theme" loading="lazy"></figure>
+<p>Displays the wireframe color as defined in the theme.</p>
+<h6 id="object-4">Object</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/object-4.png" alt="Object" loading="lazy"></figure>
+<p>Displays the wireframe color object based.</p>
+<h6 id="random-4">Random</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/random-4.png" alt="Random" loading="lazy"></figure>
+<p>Displays the wireframe color in a random color.</p>
+<h5 id="render-pass-2">Render Pass</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/render-pass.png" alt="Render Pass" loading="lazy"></figure>
+<p>Choose what render passes to calculate.</p>
+<h5 id="compositor-2">Compositor</h5>
+<p>Alllows you to display the compositor result in the viewport. Note that you need to have a active compositor node setup for this to work.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disabled</td>
+<td>To display the compositor result in the viewport is disabled.</td>
+</tr>
+<tr>
+<td>Camera</td>
+<td>Displays the compositor result when you are in camera view.</td>
+</tr>
+<tr>
+<td>Always</td>
+<td>Always displays the compositor result.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pause-preview">Pause Preview</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/pause-preview.png" alt="Pause Preview" loading="lazy"></figure>
+<p>When you choose the Cycles renderer and set the viewport shading mode to rendered, then it reveals one more button at the right. Pause Preview pauses the rendering in the viewport when Cycles is chosen as the viewport renderer.</p>
+<h2 id="align-view-buttons">Align View Buttons</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/align-view-buttons.png" alt="Align View Buttons" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/align-view-buttons-2.png" alt="Align View Buttons" loading="lazy"></figure>
+<p>Align View Buttons is an addon. The buttons allows you to align the view to the orthographic views. And brings further functionality from the View menu and other hard to reach locations.</p>
+<p>The content is all a double entry by purpose, to have these buttons at the top hierarchical position for quick access. And it is already described at the original UI position. So we won't go into detail here.</p>
+<p>This addon can be turned off in the Preferences.</p>
+<h2 id="grease-pencil-all-modes-layer-panel">Grease Pencil - all modes - Layer Panel</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-all-modes-layer-panel.png" alt="Grease Pencil - all modes - Layer Panel" loading="lazy"><figcaption>Grease Pencil - all modes - Layer Panel</figcaption></figure>
+<p>This panel shows in most of the modes. It is the same content than the Layers panel in the Object Data Properties.</p>
+<h3 id="layer-list">Layer list</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer name</td>
+<td>The name of the layer.</td>
+</tr>
+<tr>
+<td>Mask Layer</td>
+<td>Toggle the Masks visibility in the layer.</td>
+</tr>
+<tr>
+<td>Onion Skinning</td>
+<td>Toggle the use the layer for Onion Skinning.</td>
+</tr>
+<tr>
+<td>Viewport/Render Visibility</td>
+<td>Toggle layer visibility in the viewport and in render.</td>
+</tr>
+<tr>
+<td>Lock</td>
+<td>Toggle layer from being editable.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="search-field">Search Field</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/search-field-2.png" alt="Search Field" loading="lazy"></figure>
+<p>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add new layer</td>
+<td>Adds a new layer.</td>
+</tr>
+<tr>
+<td>Remove layer</td>
+<td>Removes the selected layer.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layer-specials">Layer Specials</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/layer-specials.png" alt="Layer Specials" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move to Top</td>
+<td>Moves the selected layer to the top of the list.</td>
+</tr>
+<tr>
+<td>Move to Bottom</td>
+<td>Moves the selected layer to the bottom of the list.</td>
+</tr>
+<tr>
+<td>Duplicate Layer</td>
+<td>Makes an exact copy of the selected layer appending a number to differentiate its name.</td>
+</tr>
+<tr>
+<td>Duplicate Empty Keyframes</td>
+<td>Makes a copy of the active grease pencil layer.</td>
+</tr>
+<tr>
+<td>Show All</td>
+<td>Turns on the visibility of every layer in the list.</td>
+</tr>
+<tr>
+<td>Hide Others</td>
+<td>Turns off the visibility of every layer in the list except the active one.</td>
+</tr>
+<tr>
+<td>Lock All</td>
+<td>Locks edition of all the layers in the list</td>
+</tr>
+<tr>
+<td>Unlock All</td>
+<td>Unlocks edition of all the layers in the list.</td>
+</tr>
+<tr>
+<td>Merge Down</td>
+<td>Merge the selected layer with the layer below, the new layer keeps the name of the lower layer.</td>
+</tr>
+<tr>
+<td>Merge Group</td>
+<td>Merge the selected layer in the active group with the layer below, the new layer keeps the name of the lower layer.</td>
+</tr>
+<tr>
+<td>Merge All</td>
+<td>Merge the selected layer with all other layers.</td>
+</tr>
+<tr>
+<td>Copy Layer to Selected</td>
+<td>Makes a copy of the layer and move it to the selected Grease Pencil object.</td>
+</tr>
+<tr>
+<td>Copy all Layers to Selected</td>
+<td>Makes a copy of all layers and moves it to the selected Grease Pencil object.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reorder Layer up/down</td>
+<td>Moves the selected layer up or down in the list.</td>
+</tr>
+<tr>
+<td>Isolate Layers</td>
+<td>Hide and lock the layer.</td>
+</tr>
+<tr>
+<td>Isolate Layers</td>
+<td>Lock the layer.</td>
+</tr>
+<tr>
+<td>Autolock inactive layer</td>
+<td>Locks automatically the edition of every layer in the list except the active one. This way you avoid to make unwanted changes in other layers without the need to lock them every time.</td>
+</tr>
+<tr>
+<td>Igonre Material Locking</td>
+<td>Allow editing strokes even if they use locked materials.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="blend-mode">Blend mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/blend-mode.png" alt="Blend mode" loading="lazy"></figure>
+<p>The layer blending operation to perform. See Color Blend Modes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opacity</td>
+<td>Used to set the opacity of the layer.</td>
+</tr>
+<tr>
+<td>Lights</td>
+<td>When enabled, the layer is affected by lights.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="grease-pencil-options-panel">Grease Pencil - Options Panel</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-options-panel.png" alt="Grease Pencil - Options Panel" loading="lazy"><figcaption>Grease Pencil - Options Panel</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-options-panel-2.png" alt="Grease Pencil - Options Panel" loading="lazy"><figcaption>Grease Pencil - Options Panel</figcaption></figure>
+<p>Options for the use of the grease pencil.</p>
+<h3 id="grease-pencil-all-modes">Grease Pencil - all modes</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Onion Skin</td>
+<td>Use onion skinning. Onion skinning shows ghosts of the keyframes before and after the current position.</td>
+</tr>
+<tr>
+<td>Fade Layers</td>
+<td>Fade all layers except the active one. · <strong>Opacity</strong>: The fading opacity.</td>
+</tr>
+<tr>
+<td>Fade Objects</td>
+<td>Fade all objects except the active one. · <strong>Opacity</strong>: The fading opacity. · <strong>Fade Grease Pencil Objects</strong>: Fade also all Grease Pencil Objects except the active one.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="canvas-5">Canvas</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/canvas-2.png" alt="Canvas" loading="lazy"></figure>
+<h4 id="use-grid-2">Use Grid</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/use-grid.png" alt="Use Grid" loading="lazy"></figure>
+<p>Use a reference grid behind the grease pencil.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opacity</td>
+<td>The opacity of the grid.</td>
+</tr>
+<tr>
+<td>Canvas X Ray</td>
+<td>Show the canvas in front of the grease pencil.</td>
+</tr>
+<tr>
+<td>Subdivisions</td>
+<td>How much subdivisions the grid has.</td>
+</tr>
+<tr>
+<td>Grid Color</td>
+<td>The grid color.</td>
+</tr>
+<tr>
+<td>Scale X , Y</td>
+<td>The size of the grid.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The offset of the grid.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grease-pencil-edit-mode">Grease Pencil - Edit mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-edit-mode.png" alt="Grease Pencil - Edit mode" loading="lazy"><figcaption>Grease Pencil - Edit mode</figcaption></figure>
+<p>In Edit mode a few more options appears</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Lines</td>
+<td>Show editing lines when editing strokes.</td>
+</tr>
+<tr>
+<td>Only in Multiframe</td>
+<td>Show edit lines only in multiframe.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="handles-2">Handles</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/handles-2.png" alt="Handles" loading="lazy"></figure>
+<p>Limit the display of curve handles in edit mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Handles are not displayed.</td>
+</tr>
+<tr>
+<td>Selected</td>
+<td>Just the handles of the selection are displayed.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>All handles are displayed.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stroke Direction</td>
+<td>Show stroke drawing direction. The direction is indicated by a green dot.</td>
+</tr>
+<tr>
+<td>Material Name</td>
+<td>Show the material name that is assigned to each stroke.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grease-pencil-sculpt-mode">Grease Pencil - Sculpt mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-sculpt-mode.png" alt="Grease Pencil - Sculpt mode" loading="lazy"><figcaption>Grease Pencil - Sculpt mode</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Lines</td>
+<td>Show editing lines when editing strokes.</td>
+</tr>
+<tr>
+<td>Only in Multiframe</td>
+<td>Show edit lines only in multiframe.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="handles-3">Handles</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/handles-2.png" alt="Handles" loading="lazy"></figure>
+<p>Limit the display of curve handles in edit mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Handles are not displayed.</td>
+</tr>
+<tr>
+<td>Selected</td>
+<td>Just the handles of the selection are displayed.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>All handles are displayed.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grease-pencil-draw-mode">Grease Pencil - Draw mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-draw-mode.png" alt="Grease Pencil - Draw mode" loading="lazy"><figcaption>Grease Pencil - Draw mode</figcaption></figure>
+<h4 id="vertex-paint">Vertex Paint</h4>
+<h5 id="opacity-4">Opacity</h5>
+<p>The vertex paint mix factor.</p>
+<h3 id="grease-pencil-weight-paint-mode">Grease Pencil - Weight Paint mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-weight-paint-mode.png" alt="Grease Pencil - Weight Paint mode" loading="lazy"><figcaption>Grease Pencil - Weight Paint mode</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Lines</td>
+<td>Show editing lines when editing strokes.</td>
+</tr>
+<tr>
+<td>Only in Multiframe</td>
+<td>Show edit lines only in multiframe.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="handles-4">Handles</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/handles-2.png" alt="Handles" loading="lazy"></figure>
+<p>Limit the display of curve handles in edit mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Handles are not displayed.</td>
+</tr>
+<tr>
+<td>Selected</td>
+<td>Just the handles of the selection are displayed.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>All handles are displayed.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grease-pencil-vertex-paint-mode">Grease Pencil - Vertex Paint mode</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-vertex-paint-mode.png" alt="Grease Pencil - Vertex Paint mode" loading="lazy"><figcaption>Grease Pencil - Vertex Paint mode</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Lines</td>
+<td>Show editing lines when editing strokes.</td>
+</tr>
+<tr>
+<td>Only in Multiframe</td>
+<td>Show edit lines only in multiframe.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="handles-5">Handles</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/handles-2.png" alt="Handles" loading="lazy"></figure>
+<p>Limit the display of curve handles in edit mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Handles are not displayed.</td>
+</tr>
+<tr>
+<td>Selected</td>
+<td>Just the handles of the selection are displayed.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>All handles are displayed.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vertex-paint-2">Vertex Paint</h4>
+<h5 id="opacity-5">Opacity</h5>
+<p>The vertex paint mix factor.</p>
+<h2 id="grease-pencil-sculpt-mode-auto-masking-panel">Grease Pencil - Sculpt mode - Auto-masking Panel</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-sculpt-mode-auto-masking-panel.png" alt="Grease Pencil - Sculpt mode - Auto-masking Panel" loading="lazy"><figcaption>Grease Pencil - Sculpt mode - Auto-masking Panel</figcaption></figure>
+<p>Automasking settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stroke</td>
+<td>Affect only strokes below the cursor that are the same stroke.</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>Affect only strokes below the cursor that are at the same layer.</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Affect only strokes below the cursor that have the same material.</td>
+</tr>
+<tr>
+<td>Active Layer</td>
+<td>Affect only the active layer.</td>
+</tr>
+<tr>
+<td>Active material</td>
+<td>Affect only strokes with the active material.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fclone-runs-3-15/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fheader%2Fheader-tools-and-options.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/clone-runs-3-15/docs2/content/editors/3d-viewport/header/header-tools-and-options.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#introduction">Introduction</a><a class="h2" href="#mode-drop-down-box">Mode Drop-down Box</a><a class="h2" href="#mesh-object-sub-modes">Mesh Object Sub Modes</a><a class="h3" href="#edit-mode-mesh-select-modes">Edit Mode - Mesh Select Modes</a><a class="h3" href="#vertex-paint-mask-and-vertex-selection">Vertex Paint - Mask and Vertex Selection</a><a class="h3" href="#paint-mask">Paint Mask</a><a class="h3" href="#vertex-selection">Vertex Selection</a><a class="h3" href="#weight-paint-mask-and-vertex-selection">Weight Paint - Mask and Vertex Selection</a><a class="h3" href="#paint-mask-2">Paint Mask</a><a class="h3" href="#vertex-selection-2">Vertex Selection</a><a class="h3" href="#texture-paint-mask-selection">Texture Paint - Mask Selection</a><a class="h3" href="#paint-mask-3">Paint Mask</a><a class="h3" href="#particle-edit-select-modes">Particle Edit - Select Modes</a><a class="h3" href="#mesh-object-with-a-particle-system-you-can-just-have-one-method-active-at-a-time">Mesh Object with a particle system. You can just have one method active at a time.</a><a class="h2" href="#grease-pencil-sub-modes">Grease Pencil Sub Modes</a><a class="h3" href="#edit-mode">Edit Mode</a><a class="h3" href="#sculpt-mode">Sculpt Mode</a><a class="h3" href="#draw-mode">Draw Mode</a><a class="h3" href="#weight-paint-mode">Weight Paint Mode</a><a class="h3" href="#vertex-paint-mode">Vertex Paint Mode</a><a class="h2" href="#geometry-node-group-tools">Geometry Node Group Tools</a><a class="h3" href="#marked-assets">Marked Assets</a><a class="h3" href="#unmarked-assets">Unmarked Assets</a><a class="h3" href="#marked-assets-with-assigned-asset-browser-category">Marked Assets with assigned Asset Browser Category</a><a class="h2" href="#object-settings">Object settings</a><a class="h3" href="#transform-orientations">Transform Orientations</a><a class="h3" href="#transform-pivot-point">Transform Pivot Point</a><a class="h3" href="#snapping">Snapping</a><a class="h3" href="#proportional-editing">Proportional Editing</a><a class="h2" href="#selectability-visibility">Selectability &amp; Visibility</a><a class="h2" href="#viewport-gizmo">Viewport Gizmo</a><a class="h3" href="#show-gizmo">Show Gizmo</a><a class="h3" href="#gizmo-options">Gizmo Options</a><a class="h2" href="#mesh-object-sculpt-mode">Mesh Object - Sculpt mode</a><a class="h3" href="#color-attributes-panel">Color attributes panel</a><a class="h3" href="#global-auto-masking">Global Auto Masking</a><a class="h3" href="#mesh-boundary">Mesh Boundary</a><a class="h3" href="#face-sets-boundary">Face Sets Boundary</a><a class="h3" href="#cavity">Cavity</a><a class="h3" href="#cavity-inverted">Cavity (Inverted)</a><a class="h3" href="#view-normal">View Normal</a><a class="h3" href="#area-normal">Area Normal</a><a class="h2" href="#mesh-object-vertex-paint-mode">Mesh Object - Vertex Paint mode</a><a class="h3" href="#color-attributes-panel-2">Color Attributes panel</a><a class="h2" href="#mesh-object-weight-paint-mode">Mesh Object - Weight Paint mode</a><a class="h3" href="#vertex-groups">Vertex Groups</a><a class="h2" href="#mesh-object-texture-paint-mode">Mesh Object - Texture Paint mode</a><a class="h3" href="#texture-slots">Texture Slots</a><a class="h3" href="#stencil-mask">Stencil Mask</a><a class="h2" href="#curve-object-edit-mode">Curve Object - Edit Mode</a><a class="h3" href="#set-handle-type">Set Handle Type</a><a class="h2" href="#viewport-overlays-all-modes">Viewport Overlays - all modes</a><a class="h3" href="#guides">Guides</a><a class="h3" href="#options">Options</a><a class="h3" href="#objects">Objects</a><a class="h3" href="#geometry">Geometry</a><a class="h3" href="#viewer-node">Viewer Node</a><a class="h3" href="#motion-tracking">Motion Tracking</a><a class="h2" href="#viewport-overlays-mesh-object-edit-mode">Viewport Overlays - Mesh Object - Edit Mode</a><a class="h3" href="#mesh-edit-mode-overlays">Mesh Edit Mode Overlays</a><a class="h3" href="#shading">Shading</a><a class="h3" href="#measurement">Measurement</a><a class="h3" href="#normals">Normals</a><a class="h3" href="#freestyle">Freestyle</a><a class="h2" href="#viewport-overlays-mesh-object-sculpt-mode">Viewport Overlays - Mesh Object - Sculpt Mode</a><a class="h3" href="#show-mask">Show Mask</a><a class="h3" href="#show-face-sets">Show Face Sets</a><a class="h2" href="#viewport-overlays-mesh-object-vertex-paint-mode">Viewport Overlays - Mesh Object - Vertex Paint Mode</a><a class="h3" href="#opacity-2">Opacity</a><a class="h3" href="#show-wire">Show Wire</a><a class="h2" href="#viewport-overlays-mesh-object-weight-paint-mode">Viewport Overlays - Mesh Object - Weight Paint Mode</a><a class="h3" href="#opacity-3">Opacity</a><a class="h3" href="#zero-weights-2">Zero Weights</a><a class="h3" href="#show-weight-contours">Show Weight Contours</a><a class="h3" href="#show-wire-2">Show Wire</a><a class="h3" href="#show-bone-x-ray">Show Bone X Ray</a><a class="h2" href="#viewport-overlays-mesh-object-texture-paint-mode">Viewport Overlays - Mesh Object - Texture Paint Mode</a><a class="h3" href="#stencil-opacity">Stencil Opacity</a><a class="h2" href="#viewport-overlays-hair-object-sculpt-mode">Viewport Overlays - Hair Object - Sculpt Mode</a><a class="h3" href="#selection-opacity">Selection Opacity</a><a class="h3" href="#curves-cage">Curves Cage</a><a class="h2" href="#viewport-overlays-armature-in-pose-mode">Viewport Overlays - Armature in Pose Mode</a><a class="h3" href="#show-bone-x-ray-2">Show Bone X Ray</a><a class="h3" href="#bone-wireframe-opacity">Bone Wireframe Opacity</a><a class="h2" href="#viewport-overlays-grease-pencil">Viewport Overlays - Grease Pencil</a><a class="h3" href="#in-object-mode">In Object Mode</a><a class="h3" href="#in-edit-mode">In Edit Mode</a><a class="h3" href="#in-sculpt-and-weight-paint-mode">In Sculpt and Weight paint Mode</a><a class="h3" href="#in-draw-mode">In Draw Mode</a><a class="h3" href="#in-vertex-paint-mode">In Vertex Paint mode</a><a class="h2" href="#viewport-shading">Viewport Shading</a><a class="h3" href="#show-x-ray">Show X Ray</a><a class="h3" href="#viewport-shading-2">Viewport Shading</a><a class="h3" href="#viewport-shading-settings">Viewport Shading Settings</a><a class="h3" href="#pause-preview">Pause Preview</a><a class="h2" href="#align-view-buttons">Align View Buttons</a><a class="h2" href="#grease-pencil-all-modes-layer-panel">Grease Pencil - all modes - Layer Panel</a><a class="h3" href="#layer-list">Layer list</a><a class="h3" href="#layer-specials">Layer Specials</a><a class="h3" href="#blend-mode">Blend mode</a><a class="h2" href="#grease-pencil-options-panel">Grease Pencil - Options Panel</a><a class="h3" href="#grease-pencil-all-modes">Grease Pencil - all modes</a><a class="h3" href="#canvas-5">Canvas</a><a class="h3" href="#grease-pencil-edit-mode">Grease Pencil - Edit mode</a><a class="h3" href="#grease-pencil-sculpt-mode">Grease Pencil - Sculpt mode</a><a class="h3" href="#grease-pencil-draw-mode">Grease Pencil - Draw mode</a><a class="h3" href="#grease-pencil-weight-paint-mode">Grease Pencil - Weight Paint mode</a><a class="h3" href="#grease-pencil-vertex-paint-mode">Grease Pencil - Vertex Paint mode</a><a class="h2" href="#grease-pencil-sculpt-mode-auto-masking-panel">Grease Pencil - Sculpt mode - Auto-masking Panel</a></aside></div></body></html>
