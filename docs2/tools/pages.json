@@ -8365,6 +8365,1487 @@
      "select": "*"
     }
    ]
+  },
+  {
+   "id": "editors.properties",
+   "file": "content/editors/properties/index.md",
+   "title": "Properties Editor",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor"
+   ],
+   "images": "editors/properties",
+   "parts": [
+    {
+     "src": "26 Editors - Properties Editor",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.render-properties-tab",
+   "file": "content/editors/properties/render-properties-tab/index.md",
+   "title": "Render Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Render Properties Tab"
+   ],
+   "images": "editors/properties/render-properties-tab",
+   "parts": [
+    {
+     "src": "26.2 Editors - Properties Editor - Render Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.render-properties-tab.cycles",
+   "file": "content/editors/properties/render-properties-tab/cycles.md",
+   "title": "Cycles",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Render Properties Tab",
+    "Cycles"
+   ],
+   "images": "editors/properties/render-properties-tab/cycles",
+   "parts": [
+    {
+     "src": "26.2.1 Editors - Properties Editor - Render Properties Tab - Cycles",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.render-properties-tab.eevee",
+   "file": "content/editors/properties/render-properties-tab/eevee.md",
+   "title": "EEVEE",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Render Properties Tab",
+    "EEVEE"
+   ],
+   "images": "editors/properties/render-properties-tab/eevee",
+   "parts": [
+    {
+     "src": "26.2.2 Editors - Properties Editor - Render Properties Tab - EEVEE",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.render-properties-tab.workbench",
+   "file": "content/editors/properties/render-properties-tab/workbench.md",
+   "title": "Workbench",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Render Properties Tab",
+    "Workbench"
+   ],
+   "images": "editors/properties/render-properties-tab/workbench",
+   "parts": [
+    {
+     "src": "26.2.4 Editors - Properties Editor - Render Properties Tab - Workbench",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.output-properties-tab",
+   "file": "content/editors/properties/output-properties-tab.md",
+   "title": "Output Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Output Properties Tab"
+   ],
+   "images": "editors/properties/output-properties-tab",
+   "parts": [
+    {
+     "src": "26.3 Editors - Properties Editor - Output Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.view-layer-properties-tab",
+   "file": "content/editors/properties/view-layer-properties-tab.md",
+   "title": "View Layer Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "View Layer Properties Tab"
+   ],
+   "images": "editors/properties/view-layer-properties-tab",
+   "parts": [
+    {
+     "src": "26.4 Editors - Properties Editor - View Layer Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.scene-properties-tab",
+   "file": "content/editors/properties/scene-properties-tab.md",
+   "title": "Scene Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Scene Properties Tab"
+   ],
+   "images": "editors/properties/scene-properties-tab",
+   "parts": [
+    {
+     "src": "26.5 Editors - Properties Editor - Scene Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.world-properties-tab",
+   "file": "content/editors/properties/world-properties-tab.md",
+   "title": "World Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "World Properties Tab"
+   ],
+   "images": "editors/properties/world-properties-tab",
+   "parts": [
+    {
+     "src": "26.6 Editors - Properties Editor - World Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.collection-properties-tab",
+   "file": "content/editors/properties/collection-properties-tab.md",
+   "title": "Collection Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Collection Properties Tab"
+   ],
+   "images": "editors/properties/collection-properties-tab",
+   "parts": [
+    {
+     "src": "26.7 Editors - Properties Editor - Collection Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-properties-tab",
+   "file": "content/editors/properties/object-properties-tab.md",
+   "title": "Object Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Properties Tab"
+   ],
+   "images": "editors/properties/object-properties-tab",
+   "parts": [
+    {
+     "src": "26.8 Editors - Properties Editor - Object Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab",
+   "file": "content/editors/properties/particle-properties-tab/index.md",
+   "title": "Particle Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab"
+   ],
+   "images": "editors/properties/particle-properties-tab",
+   "parts": [
+    {
+     "src": "26.10 Editors - Properties Editor - Particle Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter",
+   "file": "content/editors/properties/particle-properties-tab/emitter.md",
+   "title": "Emitter",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter",
+   "parts": [
+    {
+     "src": "26.10.1 Editors - Properties Editor - Particle Properties Tab - Emitter",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-emission-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-emission-panel.md",
+   "title": "Emitter - Emission Panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Emission Panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-emission-panel",
+   "parts": [
+    {
+     "src": "26.10.2 Editors - Properties Editor - Particle Properties Tab - Emitter - Emission Panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-cache-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-cache-panel.md",
+   "title": "Emitter - Cache Panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Cache Panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-cache-panel",
+   "parts": [
+    {
+     "src": "26.10.3 Editors - Properties Editor - Particle Properties Tab - Emitter - Cache Panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-velocity-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-velocity-panel.md",
+   "title": "Emitter - Velocity panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Velocity panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-velocity-panel",
+   "parts": [
+    {
+     "src": "26.10.4 Editors - Properties Editor - Particle Properties Tab - Emitter - Velocity panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-rotation-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-rotation-panel.md",
+   "title": "Emitter - Rotation panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Rotation panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-rotation-panel",
+   "parts": [
+    {
+     "src": "26.10.5 Editors - Properties Editor - Particle Properties Tab - Emitter - Rotation panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-physics-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-physics-panel.md",
+   "title": "Emitter - Physics panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Physics panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-physics-panel",
+   "parts": [
+    {
+     "src": "26.10.6 Editors - Properties Editor - Particle Properties Tab - Emitter - Physics panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-render-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-render-panel.md",
+   "title": "Emitter - Render panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Render panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-render-panel",
+   "parts": [
+    {
+     "src": "26.10.7 Editors - Properties Editor - Particle Properties Tab - Emitter - Render panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-viewport-display-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-viewport-display-panel.md",
+   "title": "Emitter - Viewport Display panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Viewport Display panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-viewport-display-panel",
+   "parts": [
+    {
+     "src": "26.10.8 Editors - Properties Editor - Particle Properties Tab - Emitter - Viewport Display panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-children-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-children-panel.md",
+   "title": "Emitter - Children panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Children panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-children-panel",
+   "parts": [
+    {
+     "src": "26.10.9 Editors - Properties Editor - Particle Properties Tab - Emitter - Children panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-field-weights-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-field-weights-panel.md",
+   "title": "Emitter - Field Weights panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Field Weights panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-field-weights-panel",
+   "parts": [
+    {
+     "src": "26.10.10 Editors - Properties Editor - Particle Properties Tab - Emitter - Field Weights panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-hair-dynamics-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-hair-dynamics-panel.md",
+   "title": "Hair - Hair Dynamics panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Hair Dynamics panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-hair-dynamics-panel",
+   "parts": [
+    {
+     "src": "26.10.10 Editors - Properties Editor - Particle Properties Tab - Hair - Hair Dynamics panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-force-field-settings-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-force-field-settings-panel.md",
+   "title": "Emitter - Force Field Settings panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Force Field Settings panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-force-field-settings-panel",
+   "parts": [
+    {
+     "src": "26.10.11 Editors - Properties Editor - Particle Properties Tab - Emitter - Force Field Settings panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-vertex-groups-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-vertex-groups-panel.md",
+   "title": "Emitter - Vertex Groups panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Vertex Groups panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-vertex-groups-panel",
+   "parts": [
+    {
+     "src": "26.10.12 Editors - Properties Editor - Particle Properties Tab - Emitter - Vertex Groups panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-textures-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-textures-panel.md",
+   "title": "Emitter - Textures panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Textures panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-textures-panel",
+   "parts": [
+    {
+     "src": "26.10.13 Editors - Properties Editor - Particle Properties Tab - Emitter - Textures panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-animation-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-animation-panel.md",
+   "title": "Emitter - Animation panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Animation panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-animation-panel",
+   "parts": [
+    {
+     "src": "26.10.14 Editors - Properties Editor - Particle Properties Tab - Emitter - Animation panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.emitter-custom-properties-panel",
+   "file": "content/editors/properties/particle-properties-tab/emitter-custom-properties-panel.md",
+   "title": "Emitter - Custom Properties panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Emitter - Custom Properties panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/emitter-custom-properties-panel",
+   "parts": [
+    {
+     "src": "26.10.15 Editors - Properties Editor - Particle Properties Tab - Emitter - Custom Properties panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair",
+   "file": "content/editors/properties/particle-properties-tab/hair.md",
+   "title": "Hair",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair",
+   "parts": [
+    {
+     "src": "26.10.16 Editors - Properties Editor - Particle Properties Tab - Hair",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-emission-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-emission-panel.md",
+   "title": "Hair - Emission Panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Emission Panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-emission-panel",
+   "parts": [
+    {
+     "src": "26.10.17 Editors - Properties Editor - Particle Properties Tab - Hair - Emission Panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-cache-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-cache-panel.md",
+   "title": "Hair - Cache Panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Cache Panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-cache-panel",
+   "parts": [
+    {
+     "src": "26.10.18 Editors - Properties Editor - Particle Properties Tab - Hair - Cache Panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-velocity-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-velocity-panel.md",
+   "title": "Hair - Velocity panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Velocity panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-velocity-panel",
+   "parts": [
+    {
+     "src": "26.10.19 Editors - Properties Editor - Particle Properties Tab - Hair- Velocity panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-rotation-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-rotation-panel.md",
+   "title": "Hair - Rotation panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Rotation panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-rotation-panel",
+   "parts": [
+    {
+     "src": "26.10.20 Editors - Properties Editor - Particle Properties Tab - Hair - Rotation panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-physics-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-physics-panel.md",
+   "title": "Hair - Physics panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Physics panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-physics-panel",
+   "parts": [
+    {
+     "src": "26.10.21 Editors - Properties Editor - Particle Properties Tab - Hair - Physics panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-render-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-render-panel.md",
+   "title": "Hair - Render panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Render panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-render-panel",
+   "parts": [
+    {
+     "src": "26.10.22 Editors - Properties Editor - Particle Properties Tab - Hair - Render panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-viewport-display-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-viewport-display-panel.md",
+   "title": "Hair - Viewport Display panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Viewport Display panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-viewport-display-panel",
+   "parts": [
+    {
+     "src": "26.10.23 Editors - Properties Editor - Particle Properties Tab - Hair - Viewport Display panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-children-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-children-panel.md",
+   "title": "Hair - Children panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Children panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-children-panel",
+   "parts": [
+    {
+     "src": "26.10.24 Editors - Properties Editor - Particle Properties Tab - Hair - Children panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-hair-shape-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-hair-shape-panel.md",
+   "title": "Hair - Hair Shape panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Hair Shape panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-hair-shape-panel",
+   "parts": [
+    {
+     "src": "26.10.25 Editors - Properties Editor - Particle Properties Tab - Hair - Hair Shape panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-field-weights-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-field-weights-panel.md",
+   "title": "Hair - Field Weights panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Field Weights panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-field-weights-panel",
+   "parts": [
+    {
+     "src": "26.10.26 Editors - Properties Editor - Particle Properties Tab - Hair - Field Weights panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-force-field-settings-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-force-field-settings-panel.md",
+   "title": "Hair - Force Field Settings panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Force Field Settings panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-force-field-settings-panel",
+   "parts": [
+    {
+     "src": "26.10.27 Editors - Properties Editor - Particle Properties Tab - Hair - Force Field Settings panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-vertex-groups-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-vertex-groups-panel.md",
+   "title": "Hair - Vertex Groups panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Vertex Groups panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-vertex-groups-panel",
+   "parts": [
+    {
+     "src": "26.10.28 Editors - Properties Editor - Particle Properties Tab - Hair - Vertex Groups panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-textures-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-textures-panel.md",
+   "title": "Hair - Textures panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Textures panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-textures-panel",
+   "parts": [
+    {
+     "src": "26.10.29 Editors - Properties Editor - Particle Properties Tab - Hair - Textures panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-animation-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-animation-panel.md",
+   "title": "Hair - Animation panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Animation panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-animation-panel",
+   "parts": [
+    {
+     "src": "26.10.30 Editors - Properties Editor - Particle Properties Tab - Hair - Animation panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.particle-properties-tab.hair-custom-properties-panel",
+   "file": "content/editors/properties/particle-properties-tab/hair-custom-properties-panel.md",
+   "title": "Hair - Custom Properties panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Particle Properties Tab",
+    "Hair - Custom Properties panel"
+   ],
+   "images": "editors/properties/particle-properties-tab/hair-custom-properties-panel",
+   "parts": [
+    {
+     "src": "26.10.31 Editors - Properties Editor - Particle Properties Tab - Hair - Custom Properties panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.visual-effects-properties-tab",
+   "file": "content/editors/properties/visual-effects-properties-tab.md",
+   "title": "Visual Effects Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Visual Effects Properties Tab"
+   ],
+   "images": "editors/properties/visual-effects-properties-tab",
+   "parts": [
+    {
+     "src": "26.11 Editors - Properties Editor - Visual Effects Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.physics-properties-tab",
+   "file": "content/editors/properties/physics-properties-tab/index.md",
+   "title": "Physics Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Physics Properties Tab"
+   ],
+   "images": "editors/properties/physics-properties-tab",
+   "parts": [
+    {
+     "src": "26.12 Editors - Properties Editor - Physics Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.physics-properties-tab.force-field-panel",
+   "file": "content/editors/properties/physics-properties-tab/force-field-panel.md",
+   "title": "Force Field panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Physics Properties Tab",
+    "Force Field panel"
+   ],
+   "images": "editors/properties/physics-properties-tab/force-field-panel",
+   "parts": [
+    {
+     "src": "26.12.1 Editors - Properties Editor - Physics Properties Tab - Force Field panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.physics-properties-tab.collision-panel",
+   "file": "content/editors/properties/physics-properties-tab/collision-panel.md",
+   "title": "Collision panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Physics Properties Tab",
+    "Collision panel"
+   ],
+   "images": "editors/properties/physics-properties-tab/collision-panel",
+   "parts": [
+    {
+     "src": "26.12.2 Editors - Properties Editor - Physics Properties Tab - Collision panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.physics-properties-tab.cloth-panel",
+   "file": "content/editors/properties/physics-properties-tab/cloth-panel.md",
+   "title": "Cloth panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Physics Properties Tab",
+    "Cloth panel"
+   ],
+   "images": "editors/properties/physics-properties-tab/cloth-panel",
+   "parts": [
+    {
+     "src": "26.12.3 Editors - Properties Editor - Physics Properties Tab - Cloth panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.physics-properties-tab.dynamic-paint-panel",
+   "file": "content/editors/properties/physics-properties-tab/dynamic-paint-panel.md",
+   "title": "Dynamic Paint panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Physics Properties Tab",
+    "Dynamic Paint panel"
+   ],
+   "images": "editors/properties/physics-properties-tab/dynamic-paint-panel",
+   "parts": [
+    {
+     "src": "26.12.4 Editors - Properties Editor - Physics Properties Tab - Dynamic Paint panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.physics-properties-tab.soft-body-panel",
+   "file": "content/editors/properties/physics-properties-tab/soft-body-panel.md",
+   "title": "Soft Body panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Physics Properties Tab",
+    "Soft Body panel"
+   ],
+   "images": "editors/properties/physics-properties-tab/soft-body-panel",
+   "parts": [
+    {
+     "src": "26.12.5 Editors - Properties Editor - Physics Properties Tab - Soft Body panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.physics-properties-tab.fluid-panel",
+   "file": "content/editors/properties/physics-properties-tab/fluid-panel.md",
+   "title": "Fluid panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Physics Properties Tab",
+    "Fluid panel"
+   ],
+   "images": "editors/properties/physics-properties-tab/fluid-panel",
+   "parts": [
+    {
+     "src": "26.12.6 Editors - Properties Editor - Physics Properties Tab - Fluid panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.physics-properties-tab.rigid-body-panel",
+   "file": "content/editors/properties/physics-properties-tab/rigid-body-panel.md",
+   "title": "Rigid Body panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Physics Properties Tab",
+    "Rigid Body panel"
+   ],
+   "images": "editors/properties/physics-properties-tab/rigid-body-panel",
+   "parts": [
+    {
+     "src": "26.12.7 Editors - Properties Editor - Physics Properties Tab - Rigid Body panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.physics-properties-tab.rigid-body-constraint-panel",
+   "file": "content/editors/properties/physics-properties-tab/rigid-body-constraint-panel.md",
+   "title": "Rigid Body Constraint panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Physics Properties Tab",
+    "Rigid Body Constraint panel"
+   ],
+   "images": "editors/properties/physics-properties-tab/rigid-body-constraint-panel",
+   "parts": [
+    {
+     "src": "26.12.8 Editors - Properties Editor - Physics Properties Tab - Rigid Body Constraint panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-constraints-properties-tab",
+   "file": "content/editors/properties/object-constraints-properties-tab.md",
+   "title": "Object Constraints Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Constraints Properties Tab"
+   ],
+   "images": "editors/properties/object-constraints-properties-tab",
+   "parts": [
+    {
+     "src": "26.13 Editors - Properties Editor - Object Constraints Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab",
+   "file": "content/editors/properties/object-data-properties-tab/index.md",
+   "title": "Object Data Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab"
+   ],
+   "images": "editors/properties/object-data-properties-tab",
+   "parts": [
+    {
+     "src": "26.14 Editors - Properties Editor - Object Data Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.mesh-object",
+   "file": "content/editors/properties/object-data-properties-tab/mesh-object.md",
+   "title": "Mesh Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Mesh Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/mesh-object",
+   "parts": [
+    {
+     "src": "26.14.1 Editors - Properties Editor - Object Data Properties Tab - Mesh Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.curve-object",
+   "file": "content/editors/properties/object-data-properties-tab/curve-object.md",
+   "title": "Curve Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Curve Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/curve-object",
+   "parts": [
+    {
+     "src": "26.14.2 Editors - Properties Editor - Object Data Properties Tab - Curve Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.curves-object",
+   "file": "content/editors/properties/object-data-properties-tab/curves-object.md",
+   "title": "Curves Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Curves Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/curves-object",
+   "parts": [
+    {
+     "src": "26.14.3 Editors - Properties Editor - Object Data Properties Tab - Curves Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.metaball-object",
+   "file": "content/editors/properties/object-data-properties-tab/metaball-object.md",
+   "title": "Metaball Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Metaball Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/metaball-object",
+   "parts": [
+    {
+     "src": "26.14.4 Editors - Properties Editor - Object Data Properties Tab - Metaball Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.surface-object",
+   "file": "content/editors/properties/object-data-properties-tab/surface-object.md",
+   "title": "Surface Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Surface Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/surface-object",
+   "parts": [
+    {
+     "src": "26.14.5 Editors - Properties Editor - Object Data Properties Tab - Surface Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.point-cloud-object",
+   "file": "content/editors/properties/object-data-properties-tab/point-cloud-object.md",
+   "title": "Point Cloud Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Point Cloud Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/point-cloud-object",
+   "parts": [
+    {
+     "src": "26.14.6 Editors - Properties Editor - Object Data Properties Tab - Point Cloud Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.text-object",
+   "file": "content/editors/properties/object-data-properties-tab/text-object.md",
+   "title": "Text Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Text Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/text-object",
+   "parts": [
+    {
+     "src": "26.14.7 Editors - Properties Editor - Object Data Properties Tab - Text Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.grease-pencil-object",
+   "file": "content/editors/properties/object-data-properties-tab/grease-pencil-object.md",
+   "title": "Grease Pencil Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Grease Pencil Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/grease-pencil-object",
+   "parts": [
+    {
+     "src": "26.14.8 Editors - Properties Editor - Object Data Properties Tab - Grease Pencil Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.armature-object",
+   "file": "content/editors/properties/object-data-properties-tab/armature-object.md",
+   "title": "Armature Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Armature Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/armature-object",
+   "parts": [
+    {
+     "src": "26.14.9 Editors - Properties Editor - Object Data Properties Tab - Armature Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.lattice-object",
+   "file": "content/editors/properties/object-data-properties-tab/lattice-object.md",
+   "title": "Lattice Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Lattice Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/lattice-object",
+   "parts": [
+    {
+     "src": "26.14.10 Editors - Properties Editor - Object Data Properties Tab - Lattice Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.empty-image-object",
+   "file": "content/editors/properties/object-data-properties-tab/empty-image-object.md",
+   "title": "Empty&Image Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Empty&Image Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/empty-image-object",
+   "parts": [
+    {
+     "src": "26.14.11 Editors - Properties Editor - Object Data Properties Tab - Empty&Image Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.speaker-object",
+   "file": "content/editors/properties/object-data-properties-tab/speaker-object.md",
+   "title": "Speaker Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Speaker Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/speaker-object",
+   "parts": [
+    {
+     "src": "26.14.12 Editors - Properties Editor - Object Data Properties Tab - Speaker Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.camera-object",
+   "file": "content/editors/properties/object-data-properties-tab/camera-object.md",
+   "title": "Camera Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Camera Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/camera-object",
+   "parts": [
+    {
+     "src": "26.14.13 Editors - Properties Editor - Object Data Properties Tab - Camera Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.light-object",
+   "file": "content/editors/properties/object-data-properties-tab/light-object.md",
+   "title": "Light Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Light Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/light-object",
+   "parts": [
+    {
+     "src": "26.14.14 Editors - Properties Editor - Object Data Properties Tab - Light Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.light-probe-object",
+   "file": "content/editors/properties/object-data-properties-tab/light-probe-object.md",
+   "title": "Light Probe Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Light Probe Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/light-probe-object",
+   "parts": [
+    {
+     "src": "26.14.15 Editors - Properties Editor - Object Data Properties Tab - Light Probe Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.force-field-object",
+   "file": "content/editors/properties/object-data-properties-tab/force-field-object.md",
+   "title": "Force Field Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Force Field Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/force-field-object",
+   "parts": [
+    {
+     "src": "26.14.16 Editors - Properties Editor - Object Data Properties Tab - Force Field Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.object-data-properties-tab.volume-object",
+   "file": "content/editors/properties/object-data-properties-tab/volume-object.md",
+   "title": "Volume Object",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Object Data Properties Tab",
+    "Volume Object"
+   ],
+   "images": "editors/properties/object-data-properties-tab/volume-object",
+   "parts": [
+    {
+     "src": "26.14.17 Editors - Properties Editor - Object Data Properties Tab - Volume Object",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.material-properties-tab",
+   "file": "content/editors/properties/material-properties-tab.md",
+   "title": "Material Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Material Properties Tab"
+   ],
+   "images": "editors/properties/material-properties-tab",
+   "parts": [
+    {
+     "src": "26.15 Editors - Properties Editor - Material Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.texture-properties-tab",
+   "file": "content/editors/properties/texture-properties-tab.md",
+   "title": "Texture Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Texture Properties Tab"
+   ],
+   "images": "editors/properties/texture-properties-tab",
+   "parts": [
+    {
+     "src": "26.16 Editors - Properties Editor - Texture Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.bone-properties-tab",
+   "file": "content/editors/properties/bone-properties-tab.md",
+   "title": "Bone Properties Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Bone Properties Tab"
+   ],
+   "images": "editors/properties/bone-properties-tab",
+   "parts": [
+    {
+     "src": "26.17 Editors - Properties Editor - Bone Properties Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.bone-constraint-properties",
+   "file": "content/editors/properties/bone-constraint-properties.md",
+   "title": "Bone Constraint Properties",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Bone Constraint Properties"
+   ],
+   "images": "editors/properties/bone-constraint-properties",
+   "parts": [
+    {
+     "src": "26.18 Editors - Properties Editor - Bone Constraint Properties",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.strip-tab",
+   "file": "content/editors/properties/strip-tab.md",
+   "title": "Strip Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Strip Tab"
+   ],
+   "images": "editors/properties/strip-tab",
+   "parts": [
+    {
+     "src": "26.19 Editors - Properties Editor - Strip Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.properties.strip-modifiers-tab",
+   "file": "content/editors/properties/strip-modifiers-tab.md",
+   "title": "Strip Modifiers Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Properties Editor",
+    "Strip Modifiers Tab"
+   ],
+   "images": "editors/properties/strip-modifiers-tab",
+   "parts": [
+    {
+     "src": "26.20 Editors - Properties Editor - Strip Modifiers Tab",
+     "select": "*"
+    }
+   ]
   }
  ],
  "snippets": [
