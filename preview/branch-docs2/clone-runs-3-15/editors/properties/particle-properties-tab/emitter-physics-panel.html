@@ -1,0 +1,1521 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Emitter - Physics panel · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/clone-runs-3-15 · <code>docs2/clone-runs-3-15</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<a href="../../file-browser.html">File browser</a>
+<a href="../../info-editor.html">Info Editor</a>
+<span>Editors introduction</span>
+<a href="../../outliner.html">Outliner</a>
+<a href="../../preferences.html">Preferences</a>
+<a href="../../python-console.html">Python Console</a>
+<a href="../../spreadsheet.html">Spreadsheet</a>
+<a href="../../text-editor.html">Text Editor</a>
+<a href="../../texture-node-editor.html">Texture Node Editor</a>
+<a href="../../toolbar.html">Toolbar</a>
+<span>3D Viewport</span>
+<span style="padding-left:1.5rem">Asset Shelf</span>
+<span style="padding-left:1.5rem">Context menus</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode - Armature context menu</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode - Lattice context menu</span>
+<span style="padding-left:2.5rem">Armature - Pose Mode - Pose context menu</span>
+<span style="padding-left:2.5rem">Curve + Surface Object - Edit Mode - Curve context menus</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Draw Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Edit Mode - Point context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Edit Mode - Stroke context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Sculpt Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Vertex Paint Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Weight Paint Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Hair Curves - Edit Mode - Curves context menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Edge Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Face Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Vertex Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Sculpt Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Texture Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Vertex Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Weight Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Metaball - Edit Mode - Metaball context menu</span>
+<span style="padding-left:2.5rem">Object mode - Object Context Menu</span>
+<span style="padding-left:2.5rem">Text - Edit Mode - Text context menu</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Armature - Edit mode - Armature menu</span>
+<span style="padding-left:2.5rem">Armature - Pose mode - Pose menu</span>
+<span style="padding-left:2.5rem">Curve - Edit mode - Curve menu</span>
+<span style="padding-left:2.5rem">Curve &amp; Surface - Edit mode - Control points menu</span>
+<span style="padding-left:2.5rem">Curve &amp; Surface - Edit mode - Segments menu</span>
+<span style="padding-left:2.5rem">Edit mode - Add menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Draw mode - Draw menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Grease Pencil menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Point menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Stroke menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Vertex Paint mode - Paint menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Weight Paint Mode - Weights Menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Control Points menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Curves menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Segments menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Sculpt mode - Curves menu</span>
+<span style="padding-left:2.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Lattice - Edit mode - Lattice menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Edge Menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Face menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Mesh menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - UV menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit Mode - Vertex Menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Face Sets menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Mask menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Sculpt menu</span>
+<span style="padding-left:2.5rem">Mesh - Texture Paint mode - Brush menu</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint mode - Brush menu</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint mode - Paint menu</span>
+<span style="padding-left:2.5rem">Mesh - Weight Paint mode - Weights menu</span>
+<span style="padding-left:2.5rem">Metaball - Edit mode - Metaball menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Object menu</span>
+<span style="padding-left:2.5rem">Particle - Particle mode - Particle menu</span>
+<span style="padding-left:2.5rem">Point Cloud - Edit mode - Point Cloud menu</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Surface - Edit mode - Surface menu</span>
+<span style="padding-left:2.5rem">Text - Edit mode - Text menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Animation Tab</span>
+<span style="padding-left:2.5rem">Item tab</span>
+<span style="padding-left:2.5rem">Tool Tab - Edit Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Draw Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Layer Panel</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Hair Curve - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Texture Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Object Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Particle Edit Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Pose Mode</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode</span>
+<span style="padding-left:2.5rem">Armature - Pose Mode</span>
+<span style="padding-left:2.5rem">Curve - Edit Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Draw Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit Mode</span>
+<span style="padding-left:2.5rem">Hair Curve - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Lattice - Edit Mode</span>
+<span style="padding-left:2.5rem">Mesh - Edit Mode</span>
+<span style="padding-left:2.5rem">Mesh - Particle Edit Mode</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Mesh - Texture Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Metaball - Edit Mode</span>
+<span style="padding-left:2.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Surface - Edit Mode</span>
+<span style="padding-left:2.5rem">Text - Edit Mode</span>
+<a href="../../asset-browser.html">Asset Browser</a>
+<a style="padding-left:1.5rem" href="../../asset-browser/asset-browser-default-asset-library.html">Asset Browser - Default Asset LIbrary</a>
+<a style="padding-left:1.5rem" href="../../asset-browser/asset-browser-essentials-asset-library.html">Asset Browser - Essentials Asset Library</a>
+<a href="../../compositor.html">Compositor</a>
+<a style="padding-left:1.5rem" href="../../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-color-adjust.html">Add Menu - Color - Adjust</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-creative.html">Add Menu - Creative</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-filter-blur.html">Add Menu - Filter - Blur</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-filter.html">Add Menu - Filter</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-input-constant.html">Add Menu - Input - Constant</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-input-scene.html">Add Menu - Input - Scene</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-input.html">Add Menu - Input</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-keying.html">Add Menu - Keying</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-mask.html">Add Menu - Mask</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-tracking.html">Add Menu - Tracking</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-transform.html">Add Menu - Transform</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/geometry-nodes-editor-header-add-menu-group.html">Geometry Nodes Editor - Header - Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/add-tab.html">Add Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/group-tab.html">Group tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/node-tab.html">Node Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/options-tab.html">Options Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/relations-tab.html">Relations tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/view-tab.html">View Tab</a>
+<a href="../../dope-sheet.html">Dope Sheet</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/channel-list.html">Channel list</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/footer-tools-and-options.html">Footer tools and options</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/action-menu.html">Action Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/key-menu.html">Key Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/view-menu.html">View Menu</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/channel-list.html">Channel list</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/key-menu.html">Key Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/driver-editor-sidebar-view-tab.html">Driver Editor - Sidebar - View Tab</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/drivers-tab.html">Drivers Tab</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/f-curve-tab.html">F-Curve Tab</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/modifiers-tab.html">Modifiers Tab</a>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-attribute.html">Add Menu - Attribute</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-operations.html">Add Menu - Curve - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-primitives.html">Add Menu - Curve - Primitives</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-read.html">Add Menu - Curve - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-sample.html">Add Menu - Curve - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-topology.html">Add Menu - Curve - Topology</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-write.html">Add Menu - Curve - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-generate.html">Add Menu - Generate</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-material.html">Add Menu - Geometry - Material</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations.html">Add Menu - Geometry Nodegroups - Geometry - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection.html">Add Menu - Geometry Nodegroups - Geometry - Selection</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-geometry.html">Add Menu - Geometry Nodegroups - Geometry</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations.html">Add Menu - Geometry Nodegroups - Grease Pencil - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read.html">Add Menu - Geometry Nodegroups - Grease Pencil - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write.html">Add Menu - Geometry Nodegroups - Grease Pencil - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation.html">Add Menu - Geometry Nodegroups - Hair - Deformation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation.html">Add Menu - Geometry Nodegroups - Hair - Generation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides.html">Add Menu - Geometry Nodegroups - Hair - Guides</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read.html">Add Menu - Geometry Nodegroups - Hair - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility.html">Add Menu - Geometry Nodegroups - Hair - Utility</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write.html">Add Menu - Geometry Nodegroups - Hair - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-instances.html">Add Menu - Geometry Nodegroups - Instances</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-material.html">Add Menu - Geometry Nodegroups - Material</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read.html">Add Menu - Geometry Nodegroups - Mesh - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-mesh.html">Add Menu - Geometry Nodegroups - Mesh</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-normals.html">Add Menu - Geometry Nodegroups - Normals</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector.html">Add Menu - Geometry Nodegroups - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-utilities.html">Add Menu - Geometry Nodegroups - Utilities</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-utility.html">Add Menu - Geometry Nodegroups - Utility</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-operations.html">Add Menu - Geometry - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-read.html">Add Menu - Geometry - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-sample.html">Add Menu - Geometry - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-write.html">Add Menu - Geometry - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry.html">Add Menu - Geometry</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-grease-pencil-operations.html">Add Menu - Grease Pencil - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-grease-pencil-read.html">Add Menu - Grease Pencil - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-grease-pencil-write.html">Add Menu - Grease Pencil - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-group.html">Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-constant.html">Add Menu - Input - Constant</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-gizmo.html">Add Menu - Input - Gizmo</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-import.html">Add Menu - Input - Import</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-scene.html">Add Menu - Input - Scene</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-instances.html">Add Menu - Instances</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-operations.html">Add Menu - Mesh - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-primitives.html">Add Menu - Mesh - Primitives</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-read.html">Add Menu - Mesh - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-sample.html">Add Menu - Mesh - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-topology.html">Add Menu - Mesh - Topology</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-uv.html">Add Menu - Mesh - UV</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-write.html">Add Menu - Mesh - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-normals.html">Add Menu - Normals</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-point.html">Add Menu - Point</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-simulation.html">Add Menu - Simulation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-bundle.html">Add Menu - Utilities - Bundle</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-closure.html">Add Menu - Utilities - Closure</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-deprecated.html">Add Menu - Utilities - Deprecated</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-field.html">Add Menu - Utilities - Field</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-matrix.html">Add Menu - Utilities - Matrix</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-rotation.html">Add Menu - Utilities - Rotation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-text.html">Add Menu - Utilities - Text</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-operations.html">Add Menu - Volume - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-primitives.html">Add Menu - Volume - Primitives</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-read.html">Add Menu - Volume - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-sample.html">Add Menu - Volume - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-write.html">Add Menu - Volume - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/node-menu.html">Node menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/swap-menu.html">Swap menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/add.html">Add</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/group-tab.html">Group tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/node-tab.html">Node tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/relations-tab.html">Relations tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/view-tab.html">View Tab</a>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/channel-list.html">Channel list</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/footer-tools-and-options.html">Footer tools and options</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/key-menu.html">Key Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/sidebar/f-curve-tab.html">F-Curve Tab</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/sidebar/modifiers-tab.html">Modifiers Tab</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/sidebar/view-tab.html">View Tab</a>
+<a href="../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/add-menu.html">Add menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/image-menu.html">Image menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/mask-menu.html">Mask menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/select-menu.html">Select menu</a>
+<a style="padding-left:2.5rem" href="../../image-editor/header/view-menu.html">View menu</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/image-tab.html">Image Tab</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/mask-tab.html">Mask Tab</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/scopes-tab.html">Scopes Tab</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/tool-tab-in-paint-mode.html">Tool Tab in Paint Mode</a>
+<a style="padding-left:2.5rem" href="../../image-editor/sidebar/view-tab.html">View Tab</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/mask-mode-add-menu.html">Mask Mode - Add Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/mask-mode-clip-menu.html">Mask Mode - Clip Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/mask-mode-mask-menu.html">Mask Mode - Mask Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/tracking-mode-clip-submode-clip-menu.html">Tracking Mode - Clip Submode - Clip Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/tracking-mode-clip-submode-track-menu.html">Tracking Mode - Clip Submode - Track Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/tracking-mode-graph-submode-graph-menu.html">Tracking Mode - Graph Submode - Graph Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/footage-tab.html">Footage Tab</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/track-tab.html">Track tab</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/tracking-mode-stabilization-tab.html">Tracking Mode - Stabilization tab</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/tracking-mode-view-tab.html">Tracking Mode - View tab</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool shelf</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/tool-shelf/tracking-mode.html">Tracking Mode</a>
+<a href="../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-channel-list.html">NLA Editor - Channel list</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">NLA Editor - Footer tools and options</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-add-menu.html">NLA Editor - Add Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-header-quick-menu.html">NLA Editor - Header - Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-header-tools-and-options.html">NLA Editor - Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-marker-menu.html">NLA Editor - Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-select-menu.html">NLA Editor - Select Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-strip-menu.html">NLA Editor - Strip Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-track-menu.html">NLA Editor - Track Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-view-menu.html">NLA Editor - View Menu</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel.html">NLA Editor - Sidebar - Animation Data panel</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab.html">NLA Editor - Sidebar - Modifiers Tab</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab.html">NLA Editor - Sidebar - Strip tab</a>
+<a href="../../properties.html">Properties Editor</a>
+<a style="padding-left:1.5rem" href="../bone-constraint-properties.html">Bone Constraint Properties</a>
+<a style="padding-left:1.5rem" href="../bone-properties-tab.html">Bone Properties Tab</a>
+<a style="padding-left:1.5rem" href="../collection-properties-tab.html">Collection Properties Tab</a>
+<a style="padding-left:1.5rem" href="../material-properties-tab.html">Material Properties Tab</a>
+<a style="padding-left:1.5rem" href="../object-constraints-properties-tab.html">Object Constraints Properties Tab</a>
+<a style="padding-left:1.5rem" href="../object-properties-tab.html">Object Properties Tab</a>
+<a style="padding-left:1.5rem" href="../output-properties-tab.html">Output Properties Tab</a>
+<a style="padding-left:1.5rem" href="../scene-properties-tab.html">Scene Properties Tab</a>
+<a style="padding-left:1.5rem" href="../strip-modifiers-tab.html">Strip Modifiers Tab</a>
+<a style="padding-left:1.5rem" href="../strip-tab.html">Strip Tab</a>
+<a style="padding-left:1.5rem" href="../texture-properties-tab.html">Texture Properties Tab</a>
+<a style="padding-left:1.5rem" href="../view-layer-properties-tab.html">View Layer Properties Tab</a>
+<a style="padding-left:1.5rem" href="../visual-effects-properties-tab.html">Visual Effects Properties Tab</a>
+<a style="padding-left:1.5rem" href="../world-properties-tab.html">World Properties Tab</a>
+<a style="padding-left:1.5rem" href="../object-data-properties-tab.html">Object Data Properties Tab</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/volume-object.html">Volume Object</a>
+<a style="padding-left:1.5rem" href="../particle-properties-tab.html">Particle Properties Tab</a>
+<a style="padding-left:2.5rem" href="emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a class="is-current" style="padding-left:2.5rem" href="emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="hair.html">Hair</a>
+<a style="padding-left:1.5rem" href="../physics-properties-tab.html">Physics Properties Tab</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:1.5rem" href="../render-properties-tab.html">Render Properties Tab</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/workbench.html">Workbench</a>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-group.html">Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-input.html">Add Menu - Input</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-shader.html">Add Menu - Shader</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/node-menu.html">Node menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/swap-menu.html">Swap menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/add-tab.html">Add Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/group-tab.html">Group tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/node-tab.html">Node Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/options-tab.html">Options Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/relations-tab.html">Relations tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/view-tab.html">View Tab</a>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<a href="../../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/image-menu.html">Image Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/uv-menu.html">UV menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/sidebar/image-tab.html">Image Tab</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/sidebar/view-tab.html">View Tab</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/footer-tools-and-options.html">Footer tools and options</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/export-menu.html">Export Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/image-menu.html">Image Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/scene-menu.html">Scene Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/strip-menu.html">Strip Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/text-menu.html">Text Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/preview-tool-tab.html">Preview - Tool tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/preview-view-tab.html">Preview - View tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-cache-tab.html">Sequencer - Cache tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-proxy-tab.html">Sequencer - Proxy tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-strip-tab.html">Sequencer - Strip tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-tool-tab.html">Sequencer - Tool tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-view-tab.html">Sequencer - View tab</a>
+<h4>Advanced</h4>
+<a href="../../../advanced/advanced-command-line.html">Advanced - Command Line</a>
+<a href="../../../advanced/advanced-scripting-extending-bforartists.html">Advanced - Scripting &amp; Extending Bforartists</a>
+<a href="../../../advanced/advanced-working-limits.html">Advanced - Working Limits</a>
+<a href="../../../advanced/troubleshooting.html">Troubleshooting</a>
+<h4>Extensions</h4>
+<a href="../../../extensions/bforartists-extensions.html">Bforartists Extensions</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-3d-sequencer.html">Core Extension- 3D Sequencer</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-brush-panels.html">Core Extension - Brush Panels</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-power-user-tools.html">Core Extension - Power User Tools</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-presentation-slider.html">Core Extension - Presentation Slider</a>
+<h4>Appendix</h4>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/glossary.html">Glossary</a>
+<a href="../../../appendix/manual-update-history.html">Manual Update History</a>
+<h4>Keymap</h4>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<a href="../../../keymap/standard-keymap.html">Standard Keymap</a>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Particle Properties Tab › Emitter - Physics panel</div><h1 class="pv-title">Emitter - Physics panel</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 15 min read</span></div><article class="ui-doc-body"><h2 id="physics-panel">Physics Panel</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/physics-panel.png" alt="Physics Panel" loading="lazy"></figure>
+<p>The movement of particles can be controlled and influenced in various ways. Physics is one of it.</p>
+<h3 id="physics-type">Physics Type</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/physics-type.png" alt="Physics Type" loading="lazy"></figure>
+<p>The kind of physics to influence the particles.</p>
+<h2 id="physics-panel-physics-type-none">Physics Panel - Physics type None</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/physics-panel-physics-type-none.png" alt="Physics Panel - Physics type None" loading="lazy"><figcaption>Physics Panel - Physics type None</figcaption></figure>
+<p>The particles are created, and remains at their creation point.</p>
+<p>This physics type does not have further settings.</p>
+<h2 id="physics-panel-physics-type-newtonian">Physics Panel - Physics type Newtonian</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/physics-panel-physics-type-newtonian.png" alt="Physics Panel - Physics type Newtonian" loading="lazy"><figcaption>Physics Panel - Physics type Newtonian</figcaption></figure>
+<p>Particles are influenced by gravity.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mass</td>
+<td>Specify the mass of the particles.</td>
+</tr>
+<tr>
+<td>Multiply Mass with Size</td>
+<td>Causes larger particles to have larger masses.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="forces-subpanel">Forces subpanel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/forces-subpanel.png" alt="Forces subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brownian</td>
+<td>Specify the amount of Brownian motion. Brownian motion adds random motion to the particles based on a Brownian noise field.</td>
+</tr>
+<tr>
+<td>Drag</td>
+<td>A force that reduces particle velocity in relation to its speed and size (useful in order to simulate air drag or water drag).</td>
+</tr>
+<tr>
+<td>Damp</td>
+<td>Reduces particle velocity (deceleration, friction, dampening).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deflection-subpanel">Deflection subpanel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/deflection-subpanel.png" alt="Deflection subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size Deflect</td>
+<td>Use the particle size in deflections.</td>
+</tr>
+<tr>
+<td>Die on Hit</td>
+<td>Kill particle when it hits a deflector object.</td>
+</tr>
+<tr>
+<td>Collision Collection</td>
+<td>If set, particles collide with objects from the collection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="integration-subpanel">Integration subpanel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/integration-subpanel.png" alt="Integration subpanel" loading="lazy"></figure>
+<p>Integrators are a set of mathematical methods available to calculate the movement of particles. The following guidelines will help to choose a proper integrator, according to the behavior aimed at by the animator.</p>
+<h4 id="integration">Integration</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/integration.png" alt="Integration" loading="lazy"></figure>
+<h5 id="euler">Euler</h5>
+<p>Also known as “Forward Euler”. Simplest integrator. Very fast but also with less exact results. If no dampening is used, particles get more and more energy over time. For example, bouncing particles will bounce higher and higher each time. Should not be confused with “Backward Euler” (not implemented) which has the opposite feature, the energy decrease over time, even with no dampening. Use this integrator for short simulations or simulations with a lot of dampening where speedy calculations are more important than accuracy.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verlet</td>
+<td>Very fast and stable integrator, energy is conserved over time with very little numerical dissipation.</td>
+</tr>
+<tr>
+<td>Midpoint</td>
+<td>Also known as “2nd order Runge-Kutta”. Slower than Euler but much more stable. If the acceleration is constant (no drag for example), it is energy conservative. It should be noted that in example of the bouncing particles, the particles might bounce higher than they started once in a while, but this is not a trend. This integrator is a generally good integrator for use in most cases.</td>
+</tr>
+<tr>
+<td>RK4</td>
+<td>Short for “4th order Runge-Kutta”. Similar to Midpoint but slower and in most cases more accurate. It is energy conservative even if the acceleration is not constant. Only needed in complex simulations where Midpoint is found not to be accurate enough.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time step</td>
+<td>The amount of simulation time (in seconds) that passes during each frame.</td>
+</tr>
+<tr>
+<td>Sub frames</td>
+<td>The number of simulation steps per frame. Sub frames to simulate for improved stability and finer granularity in simulations. Use higher values for faster-moving particles.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="physics-panel-physics-type-keyed">Physics Panel - Physics type Keyed</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/physics-panel-physics-type-keyed.png" alt="Physics Panel - Physics type Keyed" loading="lazy"><figcaption>Physics Panel - Physics type Keyed</figcaption></figure>
+<p>The path of Keyed particles is determined between particles of any two (or more) particle systems. This allows the creation of a chains of systems to create long strands or groovy moving particles. Basically the particles have no dynamics but are interpolated from one system to the next each frame.</p>
+<p>To setup Keyed particles you need at least two particle systems in the Keys list.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mass</td>
+<td>Specify the mass of the particles.</td>
+</tr>
+<tr>
+<td>Multiply Mass with Size</td>
+<td>Causes larger particles to have larger masses.</td>
+</tr>
+<tr>
+<td>Loops</td>
+<td>Sets the number of times the entire Keys list is repeated. Disabled if Use Timing is enabled.</td>
+</tr>
+<tr>
+<td>Use Timing</td>
+<td>Specify the timing for each key independently, using the Time and Duration options. By default, the Use Timing option is deactivated, and the particles will pass through all keys for a time equal to its lifetime. A shorter lifetime means faster movement. The lifetime will be split equally between the keys, this may lead to varying particle speeds between the targets.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relations-sub-tab">Relations sub tab</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/relations-sub-tab.png" alt="Relations sub tab" loading="lazy"></figure>
+<h4 id="particle-targets-list">Particle Targets list</h4>
+<p>A list of the available particle systems. You need at least two.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drag Handler</td>
+<td>The two vertical lines at the end is a handler with which you can expand the list.</td>
+</tr>
+<tr>
+<td>Search Field</td>
+<td>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · <strong>Invert</strong>: Exclude the search term instead of searching for it. · <strong>Sort by Name</strong>: Sort the List by name.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="new-particle-target">New Particle Target</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/new-particle-target.png" alt="New Particle Target" loading="lazy"></figure>
+<p>Add a particle target. You need to specify the object that contains the particle system, which can be done below. Empty particle targets are marked as Invalid target!</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move Up Target / Move Down Target</td>
+<td>Move the selected particle target up or down in the list.</td>
+</tr>
+<tr>
+<td>Target Object</td>
+<td>Choose the target object that contains the particle system.</td>
+</tr>
+<tr>
+<td>System</td>
+<td>The index of the particle system on the target object.</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>Becomes active when Use Timing is activated. The start time.</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>Becomes active when Use Timing is activated. The duration.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="physics-panel-physics-type-boid">Physics Panel - Physics type Boid</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/physics-panel-physics-type-boid.png" alt="Physics Panel - Physics type Boid" loading="lazy"><figcaption>Physics Panel - Physics type Boid</figcaption></figure>
+<p>Boids particle systems are controlled by a limited artificial intelligence, which can be programmed to follow basic rules and behaviors. They are ideal for simulating flocks, swarms, herds and schools of various kind of animals, insects and fishes or predators vs. preys simulations. They can react on the presence of other objects and on the members of their own system. Boids can handle only a certain amount of information, therefore the sequence of the Boid Brain rules is very important. In certain situations only the first three parameter are evaluated.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mass</td>
+<td>Specify the mass of the particles.</td>
+</tr>
+<tr>
+<td>Multiply Mass with Size</td>
+<td>Causes larger particles to have larger masses.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="movement-subpanel">Movement subpanel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/movement-subpanel.png" alt="Movement subpanel" loading="lazy"></figure>
+<p>Boids try to avoid objects with activated Collision. They try to reach goal objects, and fly from “predators” according to the Boid Brain settings.</p>
+<p>Boids can have different physics depending on whether they are in the air, or on land (on collision object).</p>
+<h4 id="allow-flight">Allow Flight</h4>
+<p>Allow boids to move in the air.</p>
+<h4 id="allow-land">Allow Land</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/allow-land.png" alt="Allow Land" loading="lazy"></figure>
+<p>Allow boids to move on land. Activating this setting will reveal further sliders.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allow Climbing</td>
+<td>Allow boids to climb goal objects.</td>
+</tr>
+<tr>
+<td>Max Air Speed</td>
+<td>Set the Maximum velocity in the air.</td>
+</tr>
+<tr>
+<td>Min Air Speed</td>
+<td>Set the Minimum velocity in the air.</td>
+</tr>
+<tr>
+<td>Max Air Acceleration</td>
+<td>Lateral acceleration in air, percentage of the max velocity (turn). Defines how fast a boid is able to change direction.</td>
+</tr>
+<tr>
+<td>Max Air Angular Velocity</td>
+<td>Tangential acceleration in air, percent 180 degrees. Defines how much the boid can suddenly accelerate in order to fulfill a rule.</td>
+</tr>
+<tr>
+<td>Air Personal Space</td>
+<td>Radius of boids personal space in air. Percentage of particle size.</td>
+</tr>
+<tr>
+<td>Landing Smoothness</td>
+<td>How smoothly the boids land.</td>
+</tr>
+<tr>
+<td>Max Land Speed</td>
+<td>Set the Maximum velocity on land.</td>
+</tr>
+<tr>
+<td>Jump Speed</td>
+<td>Maximum speed for jumping.</td>
+</tr>
+<tr>
+<td>Max Land Acceleration</td>
+<td>Lateral acceleration on land, percent of max velocity (turn). Defines how fast a boid is able to change direction.</td>
+</tr>
+<tr>
+<td>Max Land Angular Velocity</td>
+<td>Tangential acceleration on land, percent 180 degrees. Defines how much the boid can suddenly accelerate in order to fulfill a rule.</td>
+</tr>
+<tr>
+<td>Land Personal Space</td>
+<td>Radius of boids personal space on land. Percentage of particle size.</td>
+</tr>
+<tr>
+<td>Land Stick Force</td>
+<td>How strong a force must be to start effecting a boid on land.</td>
+</tr>
+<tr>
+<td>Collision Collection</td>
+<td>Only collide with objects in this collection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="battle-subpanel">Battle subpanel</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/battle-subpanel.png" alt="Battle subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Health</td>
+<td>Initial boid health when born.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>Maximum caused damage per second on attack.</td>
+</tr>
+<tr>
+<td>Aggression</td>
+<td>Boid will fight this time stronger than enemy.</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>Accuracy of attack.</td>
+</tr>
+<tr>
+<td>Range</td>
+<td>Maximum distance of which a boid can attack.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="misc-subpanel">Misc subpanel</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/misc-subpanel.png" alt="Misc subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Banking</td>
+<td>Amount of rotation around velocity vector on turns. Banking of 1.0 gives a natural banking effect.</td>
+</tr>
+<tr>
+<td>Pitch</td>
+<td>Amount of rotation around side vector.</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>Boid height relative to particle size.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relations-subpanel">Relations subpanel</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/relations-subpanel.png" alt="Relations subpanel" loading="lazy"></figure>
+<p>Boid particles can react with other particle systems. This list allows you to select other objects with their particle systems.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deflection</td>
+<td>Boids will try to avoid deflector objects according to the Collision rule’s weight. It works best for convex surfaces (some work needed for concave surfaces).</td>
+</tr>
+<tr>
+<td>Force Fields</td>
+<td>As other physics types, Boids is also influenced by external force fields. In addition, special Boid force fields can be used with the Boids physics. These effectors could be predators (positive Strength) that boids try to avoid, or targets (negative Strength) that boids try to reach according to the (respectively) Avoid and Goal rules of the Boid Brain.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="particle-targets-list-2">Particle Targets list</h4>
+<p>A list of the available particle systems.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drag Handler</td>
+<td>The two vertical lines at the end is a handler with which you can expand the list.</td>
+</tr>
+<tr>
+<td>Search Field</td>
+<td>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · <strong>Invert</strong>: Exclude the search term instead of searching for it. · <strong>Sort by Name</strong>: Sort the List by name.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="new-particle-target-2">New Particle Target</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/new-particle-target.png" alt="New Particle Target" loading="lazy"></figure>
+<p>Add a particle target. You need to specify the object that contains the particle system, which can be done below. Empty particle targets are marked as Invalid target!</p>
+<h5 id="move-up-target-move-down-target">Move Up Target / Move Down Target</h5>
+<p>Move the selected particle target up or down in the list.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target Object</td>
+<td>Choose the target object that contains the particle system.</td>
+</tr>
+<tr>
+<td>System</td>
+<td>Index of the Object’s particle system as set in the list view in the particle panel.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mode">Mode</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/mode.png" alt="Mode" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enemy</td>
+<td>Setting the type to Enemy will cause the systems to fight with each other.</td>
+</tr>
+<tr>
+<td>Friend</td>
+<td>Will make the systems work together.</td>
+</tr>
+<tr>
+<td>Neutral</td>
+<td>Will not cause them to align or fight with each other.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="boid-brain-subpanel">Boid Brain subpanel</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/boid-brain-subpanel.png" alt="Boid Brain subpanel" loading="lazy"></figure>
+<p>The Boid Brain panel controls how the boids particles will react with each other. The boids’ behavior is controlled by a list of rules. Only a certain amount of information in the list can be evaluated. If the memory capacity is exceeded, the remaining rules are ignored.</p>
+<p>The rules are by default parsed from top-list to bottom-list (thus giving explicit priorities), and the order can be modified using the little arrows buttons on the right side.</p>
+<h5 id="list-of-rules">List of Rules</h5>
+<p>The list of the current rules.</p>
+<h6 id="search-field">Search Field</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/search-field.png" alt="Search Field" loading="lazy"></figure>
+<p>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invert</td>
+<td>Exclude the search term instead of searching for it.</td>
+</tr>
+<tr>
+<td>Sort by Name</td>
+<td>Sort the List by name.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="add-boid-rule">Add Boid Rule</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/add-boid-rule.png" alt="Add Boid Rule" loading="lazy"></figure>
+<p>A list of the available boid rules. Each rule has different settings.</p>
+<h5 id="all-rules">All rules</h5>
+<h6 id="rule-evaluation">Rule Evaluation</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/rule-evaluation.png" alt="Rule Evaluation" loading="lazy"></figure>
+<p>There are three ways to control how rules are evaluated:</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Average</td>
+<td>All rules are averaged.</td>
+</tr>
+<tr>
+<td>Random</td>
+<td>A random rule is selected for each boid.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fuzzy</strong></p>
+<p>Uses fuzzy logic to evaluate rules. Rules are gone through top to bottom. Only the first rule that affect above the Rule Fuzziness threshold is evaluated. The value should be considered how hard the boid will try to respect a given rule (a value of 1 means the Boid will always stick to it, a value of 0 means it will never). If the boid meets more than one conflicting condition at the same time, it will try to fulfill all the rules according to the respective weight of each.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> A given boid will try as much as it can to comply to each of the rules it is given, but it is more than likely that some rule will take precedence on other in some cases. For example, in order to avoid a predator, a boid could probably “forget” about Collision, Separate and Flock rules, meaning that “while panicked” it could well run into obstacles, e.g. even if instructed not to, most of the time.</p></div>
+<p><strong>Rule Fuzziness</strong></p>
+<p>The fuzziness for the rule evaluation method Fuzzy.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In Air</td>
+<td>The current rule affects boids while they are flying.</td>
+</tr>
+<tr>
+<td>On Land</td>
+<td>The current rule affects boids while they are not flying.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="goal-boid-rule">Goal Boid Rule</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/goal-boid-rule.png" alt="Goal Boid Rule" loading="lazy"></figure>
+<p>Seek the goal.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>Specifies the goal object. If not specified, Boid force fields with negative Strength are used as goals.</td>
+</tr>
+<tr>
+<td>Predict</td>
+<td>Predict target’s movements.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="avoid-boid-rule">Avoid Boid Rule</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/avoid-boid-rule.png" alt="Avoid Boid Rule" loading="lazy"></figure>
+<p>Avoid “predators”.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>Specifies the object to avoid. If not specified, Boid force fields with positive Strength are used as predators.</td>
+</tr>
+<tr>
+<td>Predict</td>
+<td>Predict target’s movements.</td>
+</tr>
+<tr>
+<td>Fear Factor</td>
+<td>Avoid object if danger from it is above this threshold.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="avoid-collision-boid-rule">Avoid Collision Boid Rule</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/avoid-collision-boid-rule.png" alt="Avoid Collision Boid Rule" loading="lazy"><figcaption>Avoid Collision Boid Rule</figcaption></figure>
+<p>Avoid objects with activated Deflection.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Boids</td>
+<td>Avoid collision with other boids.</td>
+</tr>
+<tr>
+<td>Deflectors</td>
+<td>Avoid collision with deflector objects.</td>
+</tr>
+<tr>
+<td>Look Ahead</td>
+<td>Time to look ahead in seconds.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Separate Boid Rule</td>
+<td>Boids move away from each other.</td>
+</tr>
+<tr>
+<td>Flock Boid Rule</td>
+<td>Copy movements of neighboring boids, but avoid each other.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="follow-leader-boid-rule">Follow Leader Boid Rule</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/follow-leader-boid-rule.png" alt="Follow Leader Boid Rule" loading="lazy"><figcaption>Follow Leader Boid Rule</figcaption></figure>
+<p>Follows a leader object instead of a boid.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>Pick the leader object.</td>
+</tr>
+<tr>
+<td>Distance</td>
+<td>Distance behind leader to follow.</td>
+</tr>
+<tr>
+<td>Line</td>
+<td>Follow the leader in a line.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="queue-size">Queue Size</h6>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/queue-size.png" alt="Queue Size" loading="lazy"></figure>
+<p>How many boids that are allowed to follow in a line.</p>
+<h5 id="average-speed-boid-rule">Average Speed Boid Rule</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/average-speed-boid-rule.png" alt="Average Speed Boid Rule" loading="lazy"><figcaption>Average Speed Boid Rule</figcaption></figure>
+<p>Maintain average velocity.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed</td>
+<td>Percentage of maximum speed.</td>
+</tr>
+<tr>
+<td>Wander</td>
+<td>How fast velocity’s direction is randomized.</td>
+</tr>
+<tr>
+<td>Level</td>
+<td>How much velocity’s Z component is kept constant.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="fight-boid-rule">Fight Boid Rule</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/fight-boid-rule.png" alt="Fight Boid Rule" loading="lazy"></figure>
+<p>Move toward nearby boids.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fight Distance</td>
+<td>Attack boids at a maximum of this distance.</td>
+</tr>
+<tr>
+<td>Flee Distance</td>
+<td>Flee to this distance.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remove Boid Rule</td>
+<td>Remove the boid rule from the list.</td>
+</tr>
+<tr>
+<td>Move Up / Move Down Boid Rule</td>
+<td>Move the boid rule up or down the list.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="physics-panel-physics-type-fluid">Physics Panel - Physics type Fluid</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/physics-panel-physics-type-fluid.png" alt="Physics Panel - Physics type Fluid" loading="lazy"><figcaption>Physics Panel - Physics type Fluid</figcaption></figure>
+<p>Fluid particles are similar to Newtonian particles. But the particles are influenced by internal forces like pressure, surface tension, viscosity, springs, etc. The range goes from liquids to slime, goo to sand and wispy.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mass</td>
+<td>Specify the mass of the particles.</td>
+</tr>
+<tr>
+<td>Multiply Mass with Size</td>
+<td>Causes larger particles to have larger masses.</td>
+</tr>
+<tr>
+<td>SPH Solver</td>
+<td>Smoothed-particle hydrodynamics (SPH) is a computational method used for simulating fluid flows. It is a mesh-free Lagrangian method where the coordinates move with the fluid. · <strong>Double density</strong>: An artistic solver with strong surface tension effects. Reveals the Spring sub panel. · <strong>Classic</strong>: A more physically accurate solver.</td>
+</tr>
+<tr>
+<td>Stiffness</td>
+<td>How incompressible the fluid is.</td>
+</tr>
+<tr>
+<td>Viscosity</td>
+<td>Linear viscosity. Use lower viscosity for thicker fluids.</td>
+</tr>
+<tr>
+<td>Buoyancy</td>
+<td>Artificial buoyancy force in negative gravity direction based on pressure differences inside the fluid.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="forces-subpanel-2">Forces subpanel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/forces-subpanel.png" alt="Forces subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brownian</td>
+<td>Specify the amount of Brownian motion. Brownian motion adds random motion to the particles based on a Brownian noise field.</td>
+</tr>
+<tr>
+<td>Drag</td>
+<td>A force that reduces particle velocity in relation to its speed and size (useful in order to simulate air drag or water drag).</td>
+</tr>
+<tr>
+<td>Damp</td>
+<td>Reduces particle velocity (deceleration, friction, dampening).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deflection-subpanel-2">Deflection subpanel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/deflection-subpanel.png" alt="Deflection subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size Deflect</td>
+<td>Use the particle size in deflections.</td>
+</tr>
+<tr>
+<td>Die on Hit</td>
+<td>Kill particle when it hits a deflector object.</td>
+</tr>
+<tr>
+<td>Collision Collection</td>
+<td>If set, particles collide with objects from the collection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="integration-subpanel-2">Integration subpanel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/integration-subpanel-2.png" alt="Integration subpanel" loading="lazy"></figure>
+<p>Integrators are a set of mathematical methods available to calculate the movement of particles. The following guidelines will help to choose a proper integrator, according to the behavior aimed at by the animator.</p>
+<h4 id="integration-2">Integration</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/integration.png" alt="Integration" loading="lazy"></figure>
+<h5 id="euler-2">Euler</h5>
+<p>Also known as “Forward Euler”. Simplest integrator. Very fast but also with less exact results. If no dampening is used, particles get more and more energy over time. For example, bouncing particles will bounce higher and higher each time. Should not be confused with “Backward Euler” (not implemented) which has the opposite feature, the energy decrease over time, even with no dampening. Use this integrator for short simulations or simulations with a lot of dampening where speedy calculations are more important than accuracy.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verlet</td>
+<td>Very fast and stable integrator, energy is conserved over time with very little numerical dissipation.</td>
+</tr>
+<tr>
+<td>Midpoint</td>
+<td>Also known as “2nd order Runge-Kutta”. Slower than Euler but much more stable. If the acceleration is constant (no drag for example), it is energy conservative. It should be noted that in example of the bouncing particles, the particles might bounce higher than they started once in a while, but this is not a trend. This integrator is a generally good integrator for use in most cases.</td>
+</tr>
+<tr>
+<td>RK4</td>
+<td>Short for “4th order Runge-Kutta”. Similar to Midpoint but slower and in most cases more accurate. It is energy conservative even if the acceleration is not constant. Only needed in complex simulations where Midpoint is found not to be accurate enough.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time step</td>
+<td>The amount of simulation time (in seconds) that passes during each frame.</td>
+</tr>
+<tr>
+<td>Sub frames</td>
+<td>The number of simulation steps per frame. Sub frames to simulate for improved stability and finer granularity in simulations. Use higher values for faster-moving particles.</td>
+</tr>
+<tr>
+<td>Adaptive</td>
+<td>Automatically set the number of subframes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="springs-subpanel">Springs Subpanel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/springs-subpanel.png" alt="Springs Subpanel" loading="lazy"></figure>
+<h4 id="force">Force</h4>
+<p>Spring force.</p>
+<h4 id="viscoelastic-springs">Viscoelastic Springs</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/viscoelastic-springs.png" alt="Viscoelastic Springs" loading="lazy"></figure>
+<p>Use viscoelastic springs instead of Hooke’s springs.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Elastic Limit</td>
+<td>How much the spring has to be stretched/compressed in order to change its rest length.</td>
+</tr>
+<tr>
+<td>Plasticity</td>
+<td>How much the spring rest length can change after the elastic limit is crossed.</td>
+</tr>
+<tr>
+<td>Initial Rest Length</td>
+<td>Use initial length as spring rest length instead of 2 × particle size.</td>
+</tr>
+<tr>
+<td>Frames</td>
+<td>Create springs for this number of frames since particle’s birth (0 is always).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="advanced">Advanced</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/advanced.png" alt="Advanced" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rest Length</td>
+<td>Rest length of springs. Factor of particle radius. Checkbox sets this to be a factor of 2 × particle size.</td>
+</tr>
+<tr>
+<td>Factor Rest Length</td>
+<td>Spring rest length is a factor of <code>2*</code> particle size.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fluid-interaction">Fluid Interaction</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/emitter-physics-panel/fluid-interaction.png" alt="Fluid Interaction" loading="lazy"></figure>
+<p>Add a particle system to interact with the fluid.</p>
+<h4 id="particle-targets-list-3">Particle Targets list</h4>
+<p>A list of the available particle systems.</p>
+<h5 id="search-field-2">Search Field</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/properties/particle-properties-tab/search-field.png" alt="Search Field" loading="lazy"></figure>
+<p>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invert</td>
+<td>Exclude the search term instead of searching for it.</td>
+</tr>
+<tr>
+<td>Sort by Name</td>
+<td>Sort the List by name.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target Object</td>
+<td>Choose the target object that contains the particle system.</td>
+</tr>
+<tr>
+<td>System</td>
+<td>The index of the particle system on the target object.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fclone-runs-3-15/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fparticle-properties-tab%2Femitter-physics-panel.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/clone-runs-3-15/docs2/content/editors/properties/particle-properties-tab/emitter-physics-panel.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#physics-panel">Physics Panel</a><a class="h3" href="#physics-type">Physics Type</a><a class="h2" href="#physics-panel-physics-type-none">Physics Panel - Physics type None</a><a class="h2" href="#physics-panel-physics-type-newtonian">Physics Panel - Physics type Newtonian</a><a class="h3" href="#forces-subpanel">Forces subpanel</a><a class="h3" href="#deflection-subpanel">Deflection subpanel</a><a class="h3" href="#integration-subpanel">Integration subpanel</a><a class="h2" href="#physics-panel-physics-type-keyed">Physics Panel - Physics type Keyed</a><a class="h3" href="#relations-sub-tab">Relations sub tab</a><a class="h2" href="#physics-panel-physics-type-boid">Physics Panel - Physics type Boid</a><a class="h3" href="#movement-subpanel">Movement subpanel</a><a class="h2" href="#physics-panel-physics-type-fluid">Physics Panel - Physics type Fluid</a><a class="h3" href="#forces-subpanel-2">Forces subpanel</a><a class="h3" href="#deflection-subpanel-2">Deflection subpanel</a><a class="h3" href="#integration-subpanel-2">Integration subpanel</a><a class="h3" href="#springs-subpanel">Springs Subpanel</a><a class="h3" href="#fluid-interaction">Fluid Interaction</a></aside></div></body></html>

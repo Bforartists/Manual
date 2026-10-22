@@ -1,0 +1,1870 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tool Tab in Paint Mode · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/clone-runs-3-15 · <code>docs2/clone-runs-3-15</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<a href="../../file-browser.html">File browser</a>
+<a href="../../info-editor.html">Info Editor</a>
+<span>Editors introduction</span>
+<a href="../../outliner.html">Outliner</a>
+<a href="../../preferences.html">Preferences</a>
+<a href="../../python-console.html">Python Console</a>
+<a href="../../spreadsheet.html">Spreadsheet</a>
+<a href="../../text-editor.html">Text Editor</a>
+<a href="../../texture-node-editor.html">Texture Node Editor</a>
+<a href="../../toolbar.html">Toolbar</a>
+<span>3D Viewport</span>
+<span style="padding-left:1.5rem">Asset Shelf</span>
+<span style="padding-left:1.5rem">Context menus</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode - Armature context menu</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode - Lattice context menu</span>
+<span style="padding-left:2.5rem">Armature - Pose Mode - Pose context menu</span>
+<span style="padding-left:2.5rem">Curve + Surface Object - Edit Mode - Curve context menus</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Draw Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Edit Mode - Point context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Edit Mode - Stroke context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Sculpt Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Vertex Paint Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Weight Paint Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Hair Curves - Edit Mode - Curves context menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Edge Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Face Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Vertex Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Sculpt Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Texture Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Vertex Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Weight Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Metaball - Edit Mode - Metaball context menu</span>
+<span style="padding-left:2.5rem">Object mode - Object Context Menu</span>
+<span style="padding-left:2.5rem">Text - Edit Mode - Text context menu</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Armature - Edit mode - Armature menu</span>
+<span style="padding-left:2.5rem">Armature - Pose mode - Pose menu</span>
+<span style="padding-left:2.5rem">Curve - Edit mode - Curve menu</span>
+<span style="padding-left:2.5rem">Curve &amp; Surface - Edit mode - Control points menu</span>
+<span style="padding-left:2.5rem">Curve &amp; Surface - Edit mode - Segments menu</span>
+<span style="padding-left:2.5rem">Edit mode - Add menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Draw mode - Draw menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Grease Pencil menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Point menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Stroke menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Vertex Paint mode - Paint menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Weight Paint Mode - Weights Menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Control Points menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Curves menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Segments menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Sculpt mode - Curves menu</span>
+<span style="padding-left:2.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Lattice - Edit mode - Lattice menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Edge Menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Face menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Mesh menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - UV menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit Mode - Vertex Menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Face Sets menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Mask menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Sculpt menu</span>
+<span style="padding-left:2.5rem">Mesh - Texture Paint mode - Brush menu</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint mode - Brush menu</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint mode - Paint menu</span>
+<span style="padding-left:2.5rem">Mesh - Weight Paint mode - Weights menu</span>
+<span style="padding-left:2.5rem">Metaball - Edit mode - Metaball menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Object menu</span>
+<span style="padding-left:2.5rem">Particle - Particle mode - Particle menu</span>
+<span style="padding-left:2.5rem">Point Cloud - Edit mode - Point Cloud menu</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Surface - Edit mode - Surface menu</span>
+<span style="padding-left:2.5rem">Text - Edit mode - Text menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Animation Tab</span>
+<span style="padding-left:2.5rem">Item tab</span>
+<span style="padding-left:2.5rem">Tool Tab - Edit Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Draw Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Layer Panel</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Hair Curve - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Texture Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Object Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Particle Edit Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Pose Mode</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode</span>
+<span style="padding-left:2.5rem">Armature - Pose Mode</span>
+<span style="padding-left:2.5rem">Curve - Edit Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Draw Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit Mode</span>
+<span style="padding-left:2.5rem">Hair Curve - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Lattice - Edit Mode</span>
+<span style="padding-left:2.5rem">Mesh - Edit Mode</span>
+<span style="padding-left:2.5rem">Mesh - Particle Edit Mode</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Mesh - Texture Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Metaball - Edit Mode</span>
+<span style="padding-left:2.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Surface - Edit Mode</span>
+<span style="padding-left:2.5rem">Text - Edit Mode</span>
+<a href="../../asset-browser.html">Asset Browser</a>
+<a style="padding-left:1.5rem" href="../../asset-browser/asset-browser-default-asset-library.html">Asset Browser - Default Asset LIbrary</a>
+<a style="padding-left:1.5rem" href="../../asset-browser/asset-browser-essentials-asset-library.html">Asset Browser - Essentials Asset Library</a>
+<a href="../../compositor.html">Compositor</a>
+<a style="padding-left:1.5rem" href="../../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-color-adjust.html">Add Menu - Color - Adjust</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-creative.html">Add Menu - Creative</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-filter-blur.html">Add Menu - Filter - Blur</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-filter.html">Add Menu - Filter</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-input-constant.html">Add Menu - Input - Constant</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-input-scene.html">Add Menu - Input - Scene</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-input.html">Add Menu - Input</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-keying.html">Add Menu - Keying</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-mask.html">Add Menu - Mask</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-tracking.html">Add Menu - Tracking</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-transform.html">Add Menu - Transform</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/geometry-nodes-editor-header-add-menu-group.html">Geometry Nodes Editor - Header - Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/add-tab.html">Add Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/group-tab.html">Group tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/node-tab.html">Node Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/options-tab.html">Options Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/relations-tab.html">Relations tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../compositor/sidebar/view-tab.html">View Tab</a>
+<a href="../../dope-sheet.html">Dope Sheet</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/channel-list.html">Channel list</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/footer-tools-and-options.html">Footer tools and options</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/action-menu.html">Action Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/key-menu.html">Key Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../dope-sheet/header/view-menu.html">View Menu</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/channel-list.html">Channel list</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/key-menu.html">Key Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/driver-editor-sidebar-view-tab.html">Driver Editor - Sidebar - View Tab</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/drivers-tab.html">Drivers Tab</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/f-curve-tab.html">F-Curve Tab</a>
+<a style="padding-left:2.5rem" href="../../drivers-editor/sidebar/modifiers-tab.html">Modifiers Tab</a>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-attribute.html">Add Menu - Attribute</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-operations.html">Add Menu - Curve - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-primitives.html">Add Menu - Curve - Primitives</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-read.html">Add Menu - Curve - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-sample.html">Add Menu - Curve - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-topology.html">Add Menu - Curve - Topology</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-curve-write.html">Add Menu - Curve - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-generate.html">Add Menu - Generate</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-material.html">Add Menu - Geometry - Material</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations.html">Add Menu - Geometry Nodegroups - Geometry - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection.html">Add Menu - Geometry Nodegroups - Geometry - Selection</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-geometry.html">Add Menu - Geometry Nodegroups - Geometry</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations.html">Add Menu - Geometry Nodegroups - Grease Pencil - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read.html">Add Menu - Geometry Nodegroups - Grease Pencil - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write.html">Add Menu - Geometry Nodegroups - Grease Pencil - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation.html">Add Menu - Geometry Nodegroups - Hair - Deformation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation.html">Add Menu - Geometry Nodegroups - Hair - Generation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides.html">Add Menu - Geometry Nodegroups - Hair - Guides</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read.html">Add Menu - Geometry Nodegroups - Hair - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility.html">Add Menu - Geometry Nodegroups - Hair - Utility</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write.html">Add Menu - Geometry Nodegroups - Hair - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-instances.html">Add Menu - Geometry Nodegroups - Instances</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-material.html">Add Menu - Geometry Nodegroups - Material</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read.html">Add Menu - Geometry Nodegroups - Mesh - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-mesh.html">Add Menu - Geometry Nodegroups - Mesh</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-normals.html">Add Menu - Geometry Nodegroups - Normals</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector.html">Add Menu - Geometry Nodegroups - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-utilities.html">Add Menu - Geometry Nodegroups - Utilities</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-nodegroups-utility.html">Add Menu - Geometry Nodegroups - Utility</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-operations.html">Add Menu - Geometry - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-read.html">Add Menu - Geometry - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-sample.html">Add Menu - Geometry - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry-write.html">Add Menu - Geometry - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-geometry.html">Add Menu - Geometry</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-grease-pencil-operations.html">Add Menu - Grease Pencil - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-grease-pencil-read.html">Add Menu - Grease Pencil - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-grease-pencil-write.html">Add Menu - Grease Pencil - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-group.html">Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-constant.html">Add Menu - Input - Constant</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-gizmo.html">Add Menu - Input - Gizmo</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-import.html">Add Menu - Input - Import</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-input-scene.html">Add Menu - Input - Scene</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-instances.html">Add Menu - Instances</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-operations.html">Add Menu - Mesh - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-primitives.html">Add Menu - Mesh - Primitives</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-read.html">Add Menu - Mesh - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-sample.html">Add Menu - Mesh - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-topology.html">Add Menu - Mesh - Topology</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-uv.html">Add Menu - Mesh - UV</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-mesh-write.html">Add Menu - Mesh - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-normals.html">Add Menu - Normals</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-point.html">Add Menu - Point</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-simulation.html">Add Menu - Simulation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-bundle.html">Add Menu - Utilities - Bundle</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-closure.html">Add Menu - Utilities - Closure</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-deprecated.html">Add Menu - Utilities - Deprecated</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-field.html">Add Menu - Utilities - Field</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-matrix.html">Add Menu - Utilities - Matrix</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-rotation.html">Add Menu - Utilities - Rotation</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-text.html">Add Menu - Utilities - Text</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-operations.html">Add Menu - Volume - Operations</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-primitives.html">Add Menu - Volume - Primitives</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-read.html">Add Menu - Volume - Read</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-sample.html">Add Menu - Volume - Sample</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu-volume-write.html">Add Menu - Volume - Write</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/node-menu.html">Node menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/swap-menu.html">Swap menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/add.html">Add</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/group-tab.html">Group tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/node-tab.html">Node tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/relations-tab.html">Relations tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/sidebar/view-tab.html">View Tab</a>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/channel-list.html">Channel list</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/footer-tools-and-options.html">Footer tools and options</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/channel-menu.html">Channel Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/header-tools-and-options.html">Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/key-menu.html">Key Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/sidebar/f-curve-tab.html">F-Curve Tab</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/sidebar/modifiers-tab.html">Modifiers Tab</a>
+<a style="padding-left:2.5rem" href="../../graph-editor/sidebar/view-tab.html">View Tab</a>
+<a href="../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../header.html">Header</a>
+<a style="padding-left:2.5rem" href="../header/add-menu.html">Add menu</a>
+<a style="padding-left:2.5rem" href="../header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="../header/image-menu.html">Image menu</a>
+<a style="padding-left:2.5rem" href="../header/mask-menu.html">Mask menu</a>
+<a style="padding-left:2.5rem" href="../header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../header/select-menu.html">Select menu</a>
+<a style="padding-left:2.5rem" href="../header/view-menu.html">View menu</a>
+<a style="padding-left:1.5rem" href="../sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="image-tab.html">Image Tab</a>
+<a style="padding-left:2.5rem" href="mask-tab.html">Mask Tab</a>
+<a style="padding-left:2.5rem" href="scopes-tab.html">Scopes Tab</a>
+<a class="is-current" style="padding-left:2.5rem" href="tool-tab-in-paint-mode.html">Tool Tab in Paint Mode</a>
+<a style="padding-left:2.5rem" href="view-tab.html">View Tab</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/mask-mode-add-menu.html">Mask Mode - Add Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/mask-mode-clip-menu.html">Mask Mode - Clip Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/mask-mode-mask-menu.html">Mask Mode - Mask Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/tracking-mode-clip-submode-clip-menu.html">Tracking Mode - Clip Submode - Clip Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/tracking-mode-clip-submode-track-menu.html">Tracking Mode - Clip Submode - Track Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/tracking-mode-graph-submode-graph-menu.html">Tracking Mode - Graph Submode - Graph Menu</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/footage-tab.html">Footage Tab</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/track-tab.html">Track tab</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/tracking-mode-stabilization-tab.html">Tracking Mode - Stabilization tab</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/sidebar/tracking-mode-view-tab.html">Tracking Mode - View tab</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool shelf</a>
+<a style="padding-left:2.5rem" href="../../movie-clip-editor/tool-shelf/tracking-mode.html">Tracking Mode</a>
+<a href="../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-channel-list.html">NLA Editor - Channel list</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">NLA Editor - Footer tools and options</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-add-menu.html">NLA Editor - Add Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-header-quick-menu.html">NLA Editor - Header - Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-header-tools-and-options.html">NLA Editor - Header tools and options</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-marker-menu.html">NLA Editor - Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-select-menu.html">NLA Editor - Select Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-strip-menu.html">NLA Editor - Strip Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-track-menu.html">NLA Editor - Track Menu</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/header/nla-editor-view-menu.html">NLA Editor - View Menu</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel.html">NLA Editor - Sidebar - Animation Data panel</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab.html">NLA Editor - Sidebar - Modifiers Tab</a>
+<a style="padding-left:2.5rem" href="../../nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab.html">NLA Editor - Sidebar - Strip tab</a>
+<a href="../../properties.html">Properties Editor</a>
+<a style="padding-left:1.5rem" href="../../properties/bone-constraint-properties.html">Bone Constraint Properties</a>
+<a style="padding-left:1.5rem" href="../../properties/bone-properties-tab.html">Bone Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/collection-properties-tab.html">Collection Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/material-properties-tab.html">Material Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/object-constraints-properties-tab.html">Object Constraints Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/object-properties-tab.html">Object Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/output-properties-tab.html">Output Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/scene-properties-tab.html">Scene Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/strip-modifiers-tab.html">Strip Modifiers Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/strip-tab.html">Strip Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/texture-properties-tab.html">Texture Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/view-layer-properties-tab.html">View Layer Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/visual-effects-properties-tab.html">Visual Effects Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/world-properties-tab.html">World Properties Tab</a>
+<a style="padding-left:1.5rem" href="../../properties/object-data-properties-tab.html">Object Data Properties Tab</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/volume-object.html">Volume Object</a>
+<a style="padding-left:1.5rem" href="../../properties/particle-properties-tab.html">Particle Properties Tab</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:1.5rem" href="../../properties/physics-properties-tab.html">Physics Properties Tab</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:1.5rem" href="../../properties/render-properties-tab.html">Render Properties Tab</a>
+<a style="padding-left:2.5rem" href="../../properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../../properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../../properties/render-properties-tab/workbench.html">Workbench</a>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-color.html">Add Menu - Color</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-group.html">Add Menu - Group</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-input.html">Add Menu - Input</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-layout.html">Add Menu - Layout</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-output.html">Add Menu - Output</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-shader.html">Add Menu - Shader</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-texture.html">Add Menu - Texture</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-utilities-math.html">Add Menu - Utilities - Math</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-utilities-vector.html">Add Menu - Utilities - Vector</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu-utilities.html">Add Menu - Utilities</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/node-menu.html">Node menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/swap-menu.html">Swap menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/add-tab.html">Add Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/group-tab.html">Group tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/node-tab.html">Node Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/options-tab.html">Options Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/relations-tab.html">Relations tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/sidebar/view-tab.html">View Tab</a>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<a href="../../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/header-tools-and-options.html">Header Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/image-menu.html">Image Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/uv-menu.html">UV menu</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/sidebar/image-tab.html">Image Tab</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/sidebar/tool-tab.html">Tool Tab</a>
+<a style="padding-left:2.5rem" href="../../uv-editor/sidebar/view-tab.html">View Tab</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/footer-tools-and-options.html">Footer tools and options</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/export-menu.html">Export Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/image-menu.html">Image Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/marker-menu.html">Marker Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/scene-menu.html">Scene Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/select-menu.html">Select Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/strip-menu.html">Strip Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/text-menu.html">Text Menu</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/tools-and-options.html">Tools and Options</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/header/view-menu.html">View Menu</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/preview-tool-tab.html">Preview - Tool tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/preview-view-tab.html">Preview - View tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-cache-tab.html">Sequencer - Cache tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-proxy-tab.html">Sequencer - Proxy tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-strip-tab.html">Sequencer - Strip tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-tool-tab.html">Sequencer - Tool tab</a>
+<a style="padding-left:2.5rem" href="../../video-sequence-editor/sidebar/sequencer-view-tab.html">Sequencer - View tab</a>
+<h4>Advanced</h4>
+<a href="../../../advanced/advanced-command-line.html">Advanced - Command Line</a>
+<a href="../../../advanced/advanced-scripting-extending-bforartists.html">Advanced - Scripting &amp; Extending Bforartists</a>
+<a href="../../../advanced/advanced-working-limits.html">Advanced - Working Limits</a>
+<a href="../../../advanced/troubleshooting.html">Troubleshooting</a>
+<h4>Extensions</h4>
+<a href="../../../extensions/bforartists-extensions.html">Bforartists Extensions</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-3d-sequencer.html">Core Extension- 3D Sequencer</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-brush-panels.html">Core Extension - Brush Panels</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-power-user-tools.html">Core Extension - Power User Tools</a>
+<a style="padding-left:1.5rem" href="../../../extensions/bforartists-extensions/core-extension-presentation-slider.html">Core Extension - Presentation Slider</a>
+<h4>Appendix</h4>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/glossary.html">Glossary</a>
+<a href="../../../appendix/manual-update-history.html">Manual Update History</a>
+<h4>Keymap</h4>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<a href="../../../keymap/standard-keymap.html">Standard Keymap</a>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Image Editor › Sidebar › Tool Tab in Paint Mode</div><h1 class="pv-title">Tool Tab in Paint Mode</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 27 min read</span></div><article class="ui-doc-body"><h2 id="tool-tab">Tool Tab</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/tool-tab.png" alt="Tool Tab" loading="lazy"></figure>
+<p>In View and Mask mode you don't have any further content in the Tool tab. But in Paint mode the tools tab contains several panels with functionality for the brushes. It is in big parts similar functionality to the paint tools in the 3D view.</p>
+<p>The Brush panel shows different content, dependent of which brush is chosen in the tool shelf.</p>
+<h3 id="save-image">Save Image</h3>
+<p>A short warning. A modified image does NOT save with the scene. You have to save out the image when you want to save the changes at the texture. There is no warning. So DON'T FORGET TO SAVE THE IMAGE.</p>
+<h2 id="brush-asset-panel">Brush Asset Panel</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-asset-panel.png" alt="Brush Asset Panel" loading="lazy"></figure>
+<p>The Brush Asset Panel contains the different Brushes and some Brush settings. Choose and adjust your current active brush.</p>
+<h3 id="browse-brush">Browse Brush</h3>
+<p>The big image at the top is a dropdown box that allows you to choose a brush. Click at it, and you will see the different brushes. A click at one of the images will choose this brush then.</p>
+<figure><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-brush.png" alt="Browse Brush" loading="lazy"></figure>
+<p>Brushes are assets. You can load them from different libraries if you want.</p>
+<h3 id="brush-specials-menu">Brush Specials menu</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-specials-menu.png" alt="Brush Specials menu" loading="lazy"></figure>
+<p>This menu becomes active when you create a new brush. Which can be done wiht the Plus button in the name property. This data cannot be changed for builtin system brushes.</p>
+<h4 id="edit-metadata">Edit Metadata</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/edit-metadata.jpg" alt="Edit Metadata" loading="lazy"></figure>
+<p>Calls a popup where you can adjust further informations and settings for the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Catalog</td>
+<td>The asset catalog in which the brush is stored.</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>The brush author.</td>
+</tr>
+<tr>
+<td>Desctription</td>
+<td>Add a description</td>
+</tr>
+<tr>
+<td>OK / Cancel</td>
+<td>Accept or decline the changes.</td>
+</tr>
+<tr>
+<td>Edit Preview Image</td>
+<td>Allows you to load a custom preview image.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Save Brush Asset</td>
+<td>This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush.</td>
+</tr>
+<tr>
+<td>Revert Brush Asset</td>
+<td>Reverts the brush settings to the default values of the brush in the asset library.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="brush-settings-panel">Brush settings Panel</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel.png" alt="Brush settings Panel" loading="lazy"></figure>
+<p>The Brush Panel contains the different paint brushes, a color dialog, and some brush settings.</p>
+<h3 id="blend">Blend</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/blend.png" alt="Blend" loading="lazy"></figure>
+<p>Define how the stroke will blend. You can choose between various blend modes.</p>
+<h3 id="size">Size</h3>
+<p>The Radius edit box allows you to adjust the radius of the brush. The button behind the edit box enables tablet pressure sensitivity for radius.</p>
+<h4 id="size-pressure">Size Pressure</h4>
+<p>The first button behind the edit box enables tablet pressure sensitivity for radius.</p>
+<h3 id="pressure-size-curve">Pressure Size Curve</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/pressure-size-curve.png" alt="Pressure Size Curve" loading="lazy"></figure>
+<p>Behind the pressure size button there is a button to reveal the size pressure curve panel. When you activate Size Pressure for tablets, then the Size Pressure curve becomes active, and can be adjusted.</p>
+<p>The pressure size curve allows you to adjust the falloff curve for the tablet pressure. It shows when Use Pressure is activated. The curve panel shows when clicking at the button.</p>
+<h4 id="selecting-points">Selecting Points</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
+<p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
+<h4 id="adding-points">Adding Points</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/adding-points.png" alt="Adding Points" loading="lazy"></figure>
+<p>You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.</p>
+<h4 id="navigation-elements">Navigation elements</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in</td>
+<td>Zooms in.</td>
+</tr>
+<tr>
+<td>Zoom out</td>
+<td>Zooms out.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="clipping-options">Clipping options</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/clipping-options.png" alt="Clipping options" loading="lazy"></figure>
+<p>Set up clipping for the stroke.</p>
+<h5 id="tools">Tools</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="handles">Handles</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/handles.png" alt="Handles" loading="lazy"></figure>
+<p>You can choose between Auto handle, Vector Handle and Auto Clamped.</p>
+<h5 id="position-x-y">Position X / Y</h5>
+<p>The position of the selectedc curve point.</p>
+<h6 id="delete-points">Delete Points</h6>
+<p>Deletes the selected curve point.</p>
+<h5 id="curve-presets">Curve Presets</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/curve-presets.png" alt="Curve Presets" loading="lazy"></figure>
+<p>A curve preset to start with.</p>
+<h4 id="use-unified-radius">Use Unified Radius</h4>
+<p>The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.</p>
+<h3 id="strength">Strength</h3>
+<p>The Strength edit box allows you to adjust the strength of the brush. The button behind the edit box enables tablet pressure sensitivity for strength.</p>
+<h4 id="size-pressure-2">Size Pressure</h4>
+<p>The first button behind the edit box enables tablet pressure sensitivity for radius.</p>
+<h3 id="pressure-size-curve-2">Pressure Size Curve</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/pressure-size-curve.png" alt="Pressure Size Curve" loading="lazy"></figure>
+<p>Behind the pressure size button there is a button to reveal the size pressure curve panel. When you activate Size Pressure for tablets, then the Size Pressure curve becomes active, and can be adjusted.</p>
+<p>The pressure size curve allows you to adjust the falloff curve for the tablet pressure. It shows when Use Pressure is activated. The curve panel shows when clicking at the button.</p>
+<h4 id="selecting-points-2">Selecting Points</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
+<p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
+<h4 id="adding-points-2">Adding Points</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/adding-points.png" alt="Adding Points" loading="lazy"></figure>
+<p>You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.</p>
+<h4 id="navigation-elements-2">Navigation elements</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in</td>
+<td>Zooms in.</td>
+</tr>
+<tr>
+<td>Zoom out</td>
+<td>Zooms out.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="clipping-options-2">Clipping options</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/clipping-options.png" alt="Clipping options" loading="lazy"></figure>
+<p>Set up clipping for the stroke.</p>
+<h5 id="tools-2">Tools</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="handles-2">Handles</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/handles.png" alt="Handles" loading="lazy"></figure>
+<p>You can choose between Auto handle, Vector Handle and Auto Clamped.</p>
+<h5 id="position-x-y-2">Position X / Y</h5>
+<p>The position of the selectedc curve point.</p>
+<h6 id="delete-points-2">Delete Points</h6>
+<p>Deletes the selected curve point.</p>
+<h5 id="curve-presets-2">Curve Presets</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/curve-presets.png" alt="Curve Presets" loading="lazy"></figure>
+<p>A curve preset to start with.</p>
+<h4 id="use-unified-radius-2">Use Unified Radius</h4>
+<p>The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.</p>
+<h2 id="brush-settings-panel-color-picker-sub-panel">Brush Settings Panel - Color Picker Sub panel</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-color-picker-sub-panel.png" alt="Brush Settings Panel - Color Picker Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Color Picker Sub panel</figcaption></figure>
+<p>Define the color for your brush.</p>
+<p>The active color is the left one. When you click the button with the two arrows down right then you can swap the color with the secondary color. Then this secondary color becomes the primary color, and is active.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-color-picker-sub-panel-2.png" alt="Brush Settings Panel - Color Picker Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Color Picker Sub panel</figcaption></figure>
+<p>A click at one of the color fields will open a more detailed color dialog, to set up the color by using rgb, hsv and hex colors and with value sliders.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brush colors flip</td>
+<td>Flips the primary color with the secondary color.</td>
+</tr>
+<tr>
+<td>Use unified Color</td>
+<td>Choose if you want to use global colors or local color just for vertex painting.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="brush-settings-panel-color-palette-sub-panel">Brush Settings Panel - Color Palette Sub panel</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-color-palette-sub-panel.png" alt="Brush Settings Panel - Color Palette Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Color Palette Sub panel</figcaption></figure>
+<p>Create a color palette for later reuse.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-color-palette-sub-panel-2.png" alt="Brush Settings Panel - Color Palette Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Color Palette Sub panel</figcaption></figure>
+<p>First create a new palette by clicking at New. Then adjust the color in the color picker. And then click at the add button to add this color to the palette.</p>
+<p>To set the color picker to a palette color simply click at this palette color.</p>
+<p>To remove a color from the palette, choose it, then click at the remove button. The active palette color that gets removed is the one with the triangle at it.</p>
+<p>The color palette cannot be saved externally. It is part of the current blend file. You can however append color palettes from other blend files.</p>
+<p>The elements are explained from left to right.</p>
+<h3 id="palette-browser">Palette browser</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/palette-browser.png" alt="Palette browser" loading="lazy"></figure>
+<p>The button at the left opens a drop down list where you can choose between your palettes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Box</td>
+<td>Read the name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable.</td>
+</tr>
+<tr>
+<td>Number of users</td>
+<td>See how many users the palette currently has.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Fake User sets the element to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user.</td>
+</tr>
+<tr>
+<td>Add palette</td>
+<td>Add a new palette.</td>
+</tr>
+<tr>
+<td>Remove Palette</td>
+<td>Clicking at this button removes the palette. Note that you need to save, close Bforartists and reload the blend file to remove the palette completely.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="brush-settings-panel-advanced-sub-panel">Brush Settings Panel - Advanced Sub panel</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-advanced-sub-panel.png" alt="Brush Settings Panel - Advanced Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Advanced Sub panel</figcaption></figure>
+<p>This sub panel contains brush specific settings.</p>
+<h3 id="brush-type-draw">Brush type Draw</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-draw.png" alt="Brush type Draw" loading="lazy"></figure>
+<figure><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-draw-2.png" alt="Brush type Draw" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anti Aliasing</td>
+<td>Smooths the edges of the strokes.</td>
+</tr>
+<tr>
+<td>Accumulate</td>
+<td>Accumulate stroke daubs on top of each other.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-type-soften">Brush type Soften</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-soften.png" alt="Brush type Soften" loading="lazy"></figure>
+<figure><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-soften-2.png" alt="Brush type Soften" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sharpen / Soften</td>
+<td><strong>Sharp Threshold</strong>: The threshold below which no sharpening is performed. · <strong>Kernel Radius</strong>: Radius of kernel used for soften and sharpen in pixels.</td>
+</tr>
+<tr>
+<td>Blur Mode</td>
+<td>Choose the blur method. Gaussian or Box.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-type-smear">Brush type Smear</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-smear.png" alt="Brush type Smear" loading="lazy"></figure>
+<figure><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-smear-2.png" alt="Brush type Smear" loading="lazy"></figure>
+<h4 id="anti-aliasing">Anti Aliasing</h4>
+<p>Smooths the edges of the strokes.</p>
+<h3 id="brush-type-clone">Brush type Clone</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-clone.png" alt="Brush type Clone" loading="lazy"></figure>
+<figure><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-clone-2.png" alt="Brush type Clone" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anti Aliasing</td>
+<td>Smooths the edges of the strokes.</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>Choose an image to clone from. · <strong>Alpha</strong>: The alpha value for the clone image.</td>
+</tr>
+<tr>
+<td>Accumulate</td>
+<td>Accumulate stroke daubs on top of each other.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-type-fill">Brush type Fill</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-fill.png" alt="Brush type Fill" loading="lazy"></figure>
+<figure><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-fill-2.png" alt="Brush type Fill" loading="lazy"></figure>
+<h4 id="anti-aliasing-2">Anti Aliasing</h4>
+<p>Smooths the edges of the strokes.</p>
+<h3 id="brush-type-mask">Brush type Mask</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-mask.png" alt="Brush type Mask" loading="lazy"></figure>
+<figure><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-mask-2.png" alt="Brush type Mask" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anti Aliasing</td>
+<td>Smooths the edges of the strokes.</td>
+</tr>
+<tr>
+<td>Mask Value</td>
+<td>The vertex weight when brush is applied.</td>
+</tr>
+<tr>
+<td>Accumulate</td>
+<td>Accumulate stroke daubs on top of each other.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="randomize-color-subtab">Randomize Color subtab</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/randomize-color-subtab.png" alt="Randomize Color subtab" loading="lazy"></figure>
+<p>Jitter the brush color.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hue</td>
+<td><strong>Hue Jitter</strong>: The amount to jitter the Hue value. · <strong>Stroke Random</strong>: Activate the Jitter. · <strong>Use Pressure</strong>: Use tablet pressure when drawing.</td>
+</tr>
+<tr>
+<td>Saturation</td>
+<td><strong>Saturation Jitter</strong>: The amount to jitter the Saturation value. · <strong>Stroke Random</strong>: Activate the Jitter. · <strong>Use Pressure</strong>: Use tablet pressure when drawing.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><strong>Value Jitter</strong>: The amount to jitter the Value value. · <strong>Stroke Random</strong>: Activate the Jitter. · <strong>Use Pressure</strong>: Use tablet pressure when drawing.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modes-subpanel">Modes subpanel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/modes-subpanel.png" alt="Modes subpanel" loading="lazy"></figure>
+<p>In which mode to use the brushes.</p>
+<h2 id="brush-settings-panel-texture-sub-panel">Brush Settings Panel - Texture Sub panel</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-texture-sub-panel.png" alt="Brush Settings Panel - Texture Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Texture Sub panel</figcaption></figure>
+<h3 id="texture-panel">Texture Panel</h3>
+<p>The Texture panel allows you to paint with textures. This allows you for example to grab a photo from some fish scales, and simply paint them onto the mesh by using this image as a pencil. Or as a blueprint where you calk through ( Stencil method ).</p>
+<h4 id="browse-texture-to-be-linked">Browse Texture to be linked</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>The image at the top of the panel is an image browser. Choose a texture that you can choose for painting then. You can also have more than one image loaded at once.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-2.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>In this shot there is already a texture added. The way to add the texture here is a bit more complicated. And not done with clicking at the New button.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-3.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>First click at the New button below the image. This will create a new texture slot. This slot is still empty, it displays black.</p>
+<p>We need to load a texture in this slot. This must be done in the Properties editor in the Textures tab.</p>
+<p>The problem is, we have most probably an object with a material and a texture already selected. And when we change this texture , then we don't get the pencil texture loaded. But we change the texture at our mesh.</p>
+<p>What we need to do is to create a material first. And in this material we load our pencil texture then. And then this texture becomes available in the image browser of the Texture panel. Note that you need to be in texture paint mode to see the texture tab in the properties editor. It does not show in object mode.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-4.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-5.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-6.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-7.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-8.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>And when we go back to the texture panel, then the texture should be loaded here. And we can work with this texture.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texture Edit box</td>
+<td>The Texture edit box is the edit box below the Image browser. When there's no image loaded then it displays the New button. When there's an image (or more) loaded, then you will see the name of the current texture. · <strong>New Texture</strong>: Creates a duplicate of the current texture. · <strong>Remove</strong>: Removes the current texture. · <strong>Show Texture in Texture tab</strong>: Reveals the current texture in the texture tab in the properties editor.</td>
+</tr>
+<tr>
+<td>Brush Mapping</td>
+<td>Our texture can be mapped in different methods. The Brush mapping is a drop down box where you can choose this different brush mapping methods. The settings vary. So we will go through them by the different brush mapping methods.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="brush-mapping-with-mapping-method-tiled">Brush Mapping with mapping method Tiled</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-tiled.png" alt="Brush Mapping with mapping method Tiled" loading="lazy"><figcaption>Brush Mapping with mapping method Tiled</figcaption></figure>
+<p>The brush mapping method Tiled tiles the brush stroke at the surface. The mapping happens from the current view. The result may be distorted when the view does not align with the surface of the object.</p>
+<h4 id="angle">Angle</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/angle.png" alt="Angle" loading="lazy"></figure>
+<p>The angle of the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>The offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="brush-mapping-with-mapping-method-view-plane">Brush Mapping with mapping method View Plane</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-view-plane.png" alt="Brush Mapping with mapping method View Plane" loading="lazy"><figcaption>Brush Mapping with mapping method View Plane</figcaption></figure>
+<p>The brush mapping method View Plane simply paints onto the surface. The mapping happens from the current view. The result may be distorted when the view does not align with the surface of the object.</p>
+<h5 id="angle-2">Angle</h5>
+<p>The angle of the brush.</p>
+<h5 id="rake">Rake</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/rake.png" alt="Rake" loading="lazy"></figure>
+<p>The angle follows the direction of the brush stroke.</p>
+<h5 id="random">Random</h5>
+<p>The brush angle gets set random.</p>
+<h6 id="random-angle">Random Angle</h6>
+<p>Brush texture random angle.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>The offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="brush-mapping-with-mapping-method-3d">Brush Mapping with mapping method 3D</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-3d.png" alt="Brush Mapping with mapping method 3D" loading="lazy"><figcaption>Brush Mapping with mapping method 3D</figcaption></figure>
+<p>The brush mapping method 3D paints the texture at the surface, by tiling it 1/1 at the object surface.</p>
+<h4 id="offset">Offset</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/offset.png" alt="Offset" loading="lazy"></figure>
+<p>The offset of the texture in the brush.</p>
+<h4 id="size-2">Size</h4>
+<p>The size of the texture in the brush.</p>
+<h4 id="brush-mapping-with-mapping-method-random">Brush Mapping with mapping method Random</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-random.png" alt="Brush Mapping with mapping method Random" loading="lazy"><figcaption>Brush Mapping with mapping method Random</figcaption></figure>
+<p>The brush mapping method Random paints onto the surface, and randomizes the texture position in the brush while that. The mapping happens from the current view. The result may be distorted when the view does not align with the surface of the object.</p>
+<h5 id="angle-3">Angle</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/angle-2.png" alt="Angle" loading="lazy"></figure>
+<p>The angle of the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rake</td>
+<td>The angle follows the direction of the brush stroke.</td>
+</tr>
+<tr>
+<td>Random</td>
+<td>The brush angle gets set random. · <strong>Random Angle</strong>: Brush texture random angle.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="brush-mapping-with-mapping-method-stencil">Brush Mapping with mapping method Stencil</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-stencil.png" alt="Brush Mapping with mapping method Stencil" loading="lazy"><figcaption>Brush Mapping with mapping method Stencil</figcaption></figure>
+<p>The former methods uses the textures for the brush. The method Stencil works different. You have your texture displayed in the workspace above the object, and you paint this texture onto your object with your pencil strokes.</p>
+<p>Note that the texture in the 3d space is just visible when you are with the mouse over the viewport.</p>
+<p>The stencil map gets by default displayed down left in the 3d view. You have to position it where you need it.</p>
+<p>Hotkeys ctrl right mouse, shift right mouse and alt right mouse.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-stencil-2.png" alt="Brush Mapping with mapping method Stencil" loading="lazy"><figcaption>Brush Mapping with mapping method Stencil</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image Aspect</td>
+<td>Adjust the stencil size to fit to the image aspect ratio.</td>
+</tr>
+<tr>
+<td>Reset Transform</td>
+<td>Resets the stencil image to be down right in the 3D view.</td>
+</tr>
+<tr>
+<td>Angle edit box</td>
+<td>Adjust the angle of the brush.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Fine tune the offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Fine tune the size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="brush-settings-panel-texture-mask-sub-panel">Brush Settings Panel - Texture Mask Sub panel</h2>
+<h3 id="texture-mask-panel">Texture Mask Panel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/texture-mask-panel.png" alt="Texture Mask Panel" loading="lazy"></figure>
+<p>The texture mask panel allows you to use a texture as a mask to define the strength of painting. It paints just where the mask texture is bright. You can also use gradients to define the paint strength.</p>
+<h4 id="browse-texture-to-be-linked-2">Browse Texture to be linked</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-9.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>The image at the top of the panel is an image browser. Choose a texture that you can choose for painting then. You can also have more than one image loaded at once.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>In this shot there is already two textures added. The way to add the texture here is a bit more complicated. And not done with clicking at the New button.</p>
+<p>First click at the New button below the image. This will create a new texture slot. This slot is still empty, it displays black.</p>
+<p>We need to load a texture in this slot. This must be done in the Properties editor in the Textures tab.</p>
+<p>The problem is, we have an object with a material and a texture already selected. And when we change this texture , then we don't get the pencil texture loaded. But we change the texture at our mesh.</p>
+<p>What we need to do is to create a material first. And in this material we load our pencil texture then. And then we can choose this texture in the image browser of the texture.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-4.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-6.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-5.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-7.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-8.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>And when we switch back to the tools tab, then the texture is loaded. And we can work with this texture.</p>
+<p>Make sure that you use another texture in the Texture panel than in the Texture Mask panel, or no texture at all. When both is the same then you will get the same result with all Mask Mapping methods since they overlap each other at the very same positions.</p>
+<h4 id="brush-mapping-with-mapping-method-view-plane-2">Brush Mapping with mapping method View Plane</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-view-plane-2.png" alt="Brush Mapping with mapping method View Plane" loading="lazy"><figcaption>Brush Mapping with mapping method View Plane</figcaption></figure>
+<p>The brush mapping method View Plane simply paints onto the surface. The mapping happens from the current view. The result may be distorted when the view does not align with the surface of the object.</p>
+<h4 id="pressure-masking">Pressure Masking</h4>
+<p>Enable pressure masking when you use a tablet.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/pressure-masking.png" alt="Pressure Masking" loading="lazy"></figure>
+<h4 id="angle-4">Angle</h4>
+<p>The angle of the brush.</p>
+<h5 id="rake-2">Rake</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/rake-2.png" alt="Rake" loading="lazy"></figure>
+<p>The angle follows the direction of the brush stroke.</p>
+<h5 id="random-2">Random</h5>
+<p>The brush angle gets set random.</p>
+<h6 id="random-angle-2">Random Angle</h6>
+<p>Brush texture random angle.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>The offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="brush-mapping-with-mapping-method-tiled-2">Brush Mapping with mapping method Tiled</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-tiled-2.png" alt="Brush Mapping with mapping method Tiled" loading="lazy"><figcaption>Brush Mapping with mapping method Tiled</figcaption></figure>
+<p>The brush mapping method Tiled tiles the brush stroke at the surface. The mapping happens from the current view. The result may be distorted when the view does not align with the surface of the object.</p>
+<h4 id="pressure-masking-2">Pressure Masking</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/pressure-masking.png" alt="Pressure Masking" loading="lazy"></figure>
+<p>Enable pressure masking when you use a tablet.</p>
+<h4 id="angle-5">Angle</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/angle-3.png" alt="Angle" loading="lazy"></figure>
+<p>The angle of the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>The offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="brush-mapping-with-mapping-method-random-2">Brush Mapping with mapping method Random</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-random-2.png" alt="Brush Mapping with mapping method Random" loading="lazy"><figcaption>Brush Mapping with mapping method Random</figcaption></figure>
+<p>The brush mapping method Random paints onto the surface, and randomizes the texture position in the brush while that.</p>
+<h4 id="pressure-masking-3">Pressure Masking</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/pressure-masking.png" alt="Pressure Masking" loading="lazy"></figure>
+<p>Enable pressure masking when you use a tablet.</p>
+<h4 id="mask-pressure-mode">Mask Pressure Mode</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/mask-pressure-mode.png" alt="Mask Pressure Mode" loading="lazy"></figure>
+<p>A drop down box to choose the mask pressure mode for tablets.</p>
+<h4 id="angle-6">Angle</h4>
+<p>The angle of the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rake</td>
+<td>The angle follows the direction of the brush stroke.</td>
+</tr>
+<tr>
+<td>Random</td>
+<td>The brush angle gets set random. · <strong>Random Angle</strong>: Brush texture random angle.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>The offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="brush-mapping-with-mapping-method-stencil-2">Brush Mapping with mapping method Stencil</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-stencil-3.png" alt="Brush Mapping with mapping method Stencil" loading="lazy"><figcaption>Brush Mapping with mapping method Stencil</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-stencil-4.png" alt="Brush Mapping with mapping method Stencil" loading="lazy"><figcaption>Brush Mapping with mapping method Stencil</figcaption></figure>
+<p>The former methods uses the textures for the brush. The method Stencil works different. You have your texture displayed in the workspace above the image, and you paint this texture onto your object with your pencil strokes.</p>
+<p>Note that the stencil texture is just visible when you are with the mouse over the viewport. It gets by default displayed down left. You have to position it where you need it. See Brush menu, Stencil Texture controls.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image Aspect</td>
+<td>Adjust the stencil size to fit to the image aspect ratio.</td>
+</tr>
+<tr>
+<td>Reset Transform</td>
+<td>Resets the stencil image to be down right in the 3D view.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pressure-masking-4">Pressure Masking</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/pressure-masking.png" alt="Pressure Masking" loading="lazy"></figure>
+<p>Enable pressure masking when you use a tablet.</p>
+<h5 id="angle-edit-box">Angle edit box</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/angle-edit-box.png" alt="Angle edit box" loading="lazy"></figure>
+<p>Adjust the angle of the brush. The button at the end allows you to set the radius by dragging the mouse. This should be done in the viewport and with the hotkey. This button is just a visible reminder.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Fine tune the offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Fine tune the size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stroke-panel">Stroke Panel</h2>
+<h3 id="stroke-panel-2">Stroke Panel</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-panel.png" alt="Stroke Panel" loading="lazy"></figure>
+<p>The Stroke panel contains settings to influence the behavior of the brush stroke. There are various stroke methods available. We will go through them one by one.</p>
+<h4 id="stroke-method-space">Stroke method Space</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-panel.png" alt="Stroke method Space" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-space.png" alt="Stroke method Space" loading="lazy"></figure>
+<p>This is the default Stroke method. The stroke gets added continuously with given settings.</p>
+<h5 id="spacing-edit-box">Spacing Edit Box</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/spacing-edit-box.png" alt="Spacing Edit Box" loading="lazy"></figure>
+<p>The sculpt drawing happens by mapping the pencil onto the mouse position. And when you move the mouse then the next mapping happens. Adjust the spacing after what mouse movement the next mapping should happen. The lower the value, the lower the distance between the single dots.</p>
+<h5 id="spacing-pressure">Spacing Pressure</h5>
+<p>The icon behind the edit box enables tablet pressure sensitivity for tablets.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adjust Strength for Spacing</td>
+<td>Automatically adjust strength to give consistent results for different spacing.</td>
+</tr>
+<tr>
+<td>Dash Ratio</td>
+<td>Ratio of samples in a cycle that the brush is covering.</td>
+</tr>
+<tr>
+<td>Dash Length</td>
+<td>Length of a dash cycle measured in stroke samples.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="jitter-edit-box">Jitter Edit Box</h4>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spacing Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in screen space, or relative to the brush size.</td>
+</tr>
+<tr>
+<td>Input Samples Edit Box</td>
+<td>Average multiple input samples together to smooth the brush stroke.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="stabilize-stroke-subpanel">Stabilize Stroke subpanel</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="stroke-method-curve">Stroke method Curve</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-curve.png" alt="Stroke method Curve" loading="lazy"></figure>
+<p>The Stroke method curve doesn't simply influence the way how the stroke is painted. It is a special method.</p>
+<p>First you draw a curve object by holding down ctrl and clicking with right mouse button. Then you tweak the curve. You can click at the curve point, and drag out handlers to make the curve points smooth. This way you get one handler. When you click and drag then you will get two handlers at the curve point.</p>
+<p>When done you hit the Draw Curve button or click left outside of the image. And the curve gets drawn onto the surface.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-curve-2.png" alt="Stroke method Curve" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-curve-3.png" alt="Stroke method Curve" loading="lazy"></figure>
+<h5 id="spacing-edit-box-2">Spacing Edit Box</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/spacing-edit-box.png" alt="Spacing Edit Box" loading="lazy"></figure>
+<p>The drawing happens by mapping the pencil onto the mouse position. And when you move the mouse then the next mapping happens. Adjust the spacing after what mouse movement the next mapping should happen. The lower the value, the lower the distance between the single dots.</p>
+<p>The icon behind the edit box enables tablet pressure sensitivity for tablets.</p>
+<h5 id="paint-curve-edit-box">Paint Curve edit box</h5>
+<p>Here you set the active curve.</p>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/paint-curve-edit-box.png" alt="Paint Curve edit box" loading="lazy"><figcaption>Paint Curve edit box</figcaption></figure>
+<p><strong>The first element</strong> is a drop down box where you will find your curves objects. You can have more than one.</p>
+<p><strong>The second element</strong> is the edit box that displays the active curve.</p>
+<p><strong>The number</strong> right of it, <strong>in this case 2</strong>, indicates how much number of users ( internally ) this brush uses. This means that this data block (the brush) shares currently settings with at least one other object. Most probably the parent brush where we have created it from. Click at the value to make this brush a single user. The button will vanish then.</p>
+<p><strong>F</strong> set the brush to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user.</p>
+<p><strong>The + button</strong> allows you to add a new pencil with the current settings. Note that the brushes are NOT saved when you close Bforartists. You can save them into the current blend file. Or you can save the startup file. But be careful here. This saves everything else of the current state of Bforartists too.</p>
+<p><strong>The X button</strong> deletes the brush as the active one. It does NOT delete it from the brushes list.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draw Curve Button</td>
+<td>A click at it to turns the curve into curve.</td>
+</tr>
+<tr>
+<td>Jitter Edit Box</td>
+<td>Add Jitter to the brush while painting.</td>
+</tr>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in screen space, or relative to the brush size.</td>
+</tr>
+<tr>
+<td>Input Samples Edit Box</td>
+<td>Average multiple input samples together to smooth the brush stroke.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="stabilize-stroke-subpanel-2">Stabilize Stroke subpanel</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="stroke-method-line">Stroke method Line</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-line.png" alt="Stroke method Line" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-line-2.png" alt="Stroke method Line" loading="lazy"></figure>
+<p>With Stroke method line you draw a line between a starting point and an endpoint. And when you release the mouse then the line gets drawn.</p>
+<h4 id="spacing-edit-box-3">Spacing Edit Box</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/spacing-edit-box.png" alt="Spacing Edit Box" loading="lazy"></figure>
+<p>The drawing happens by mapping the pencil onto the mouse position. And when you move the mouse then the next mapping happens. Adjust the spacing after what mouse movement the next mapping should happen. The lower the value, the lower the distance between the single dots.</p>
+<p>The icon behind the edit box enables tablet pressure sensitivity for tablets.</p>
+<h4 id="jitter-edit-box-2">Jitter Edit Box</h4>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in screen space, or relative to the brush size.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="input-samples-edit-box">Input Samples Edit Box</h4>
+<p>Average multiple input samples together to smooth the brush stroke.</p>
+<h5 id="stabilize-stroke-subpanel-3">Stabilize Stroke subpanel</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="stroke-method-anchored">Stroke method Anchored</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-anchored.png" alt="Stroke method Anchored" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-anchored-2.png" alt="Stroke method Anchored" loading="lazy"></figure>
+<p>Click and drag to place a dot and to scale it.</p>
+<h5 id="edge-to-edge">Edge to edge</h5>
+<p>Drag Anchor Brush from edge to edge.</p>
+<h4 id="jitter-edit-box-3">Jitter Edit Box</h4>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in screen space, or relative to the brush size.</td>
+</tr>
+<tr>
+<td>Input Sample Edit Box</td>
+<td>Average multiple input samples together to smooth the brush stroke.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="stabilize-stroke-subpanel-4">Stabilize Stroke subpanel</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="stroke-method-airbrush">Stroke method Airbrush</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-airbrush.png" alt="Stroke method Airbrush" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-airbrush-2.png" alt="Stroke method Airbrush" loading="lazy"></figure>
+<p>The stroke acts like an airbrush pencil. The dots gets placed randomly.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rate Edit Box</td>
+<td>Define the rate of the drawing.</td>
+</tr>
+<tr>
+<td>Jitter Edit Box</td>
+<td>Add Jitter to the brush while painting. · <strong>Jitter Pressure</strong>: The icon behind the edit box enables tablet pressure sensitivity for tablets. · <strong>Jitter Unit</strong>: Jitter in screen space, or relative to the brush size.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="input-samples-edit-box-2">Input Samples Edit Box</h4>
+<p>Average multiple input samples together to smooth the brush stroke.</p>
+<h5 id="stabilize-stroke-subpanel-5">Stabilize Stroke subpanel</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="stroke-method-drag-dot">Stroke method Drag Dot</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-drag-dot.png" alt="Stroke method Drag Dot" loading="lazy"><figcaption>Stroke method Drag Dot</figcaption></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-drag-dot-2.png" alt="Stroke method Drag Dot" loading="lazy"><figcaption>Stroke method Drag Dot</figcaption></figure>
+<p>Paint a dot and drag it around. The actual painting happens then at releasing the mouse.</p>
+<h4 id="jitter-edit-box-4">Jitter Edit Box</h4>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in screen space, or relative to the brush size.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="input-samples-edit-box-3">Input Samples Edit Box</h4>
+<p>Average multiple input samples together to smooth the brush stroke.</p>
+<h5 id="stabilize-stroke-subpanel-6">Stabilize Stroke subpanel</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="stroke-method-dots">Stroke method Dots</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-dots.png" alt="Stroke method Dots" loading="lazy"></figure>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-dots-2.png" alt="Stroke method Dots" loading="lazy"></figure>
+<p>The stroke method Dots draws dots of the pencil onto the surface. The mapping happens from the current view. Means you will get distortions when your view is not aligned with the surface of the object.</p>
+<h4 id="jitter-edit-box-5">Jitter Edit Box</h4>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in screen space, or relative to the brush size.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="input-samples-edit-box-4">Input Samples Edit Box</h4>
+<p>Average multiple input samples together to smooth the brush stroke.</p>
+<h5 id="stabilize-stroke-subpanel-7">Stabilize Stroke subpanel</h5>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="brush-settings-panel-falloff-sub-panel">Brush Settings Panel - Falloff Sub panel</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-falloff-sub-panel.png" alt="Brush Settings Panel - Falloff Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Falloff Sub panel</figcaption></figure>
+<p>The curve panel allows you to define different falloffs methods for the border of the brush.</p>
+<h3 id="selecting-points-3">Selecting Points</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
+<p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
+<h3 id="adding-points-3">Adding Points</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/adding-points.png" alt="Adding Points" loading="lazy"></figure>
+<p>You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.</p>
+<h3 id="navigation-elements-3">Navigation elements</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/navigation-elements-2.png" alt="Navigation elements" loading="lazy"></figure>
+<p>The navigation elements at the top are described from left to right.</p>
+<h4 id="zoom-in-and-out">Zoom in and out</h4>
+<p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
+<h4 id="use-clipping">Use Clipping</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/use-clipping.png" alt="Use Clipping" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke.</p>
+<h4 id="tools-3">Tools</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/tools-2.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve window</td>
+<td>Tweak and adjust the falloff curve by clicking at a curve point and dragging it around. Double click adds a new point. Holding down ctrl activates temporary snapping. Holding down shift enables slower movement, which allows more accurate setting.</td>
+</tr>
+<tr>
+<td>Vector Handle</td>
+<td>Set handle type to Vector.</td>
+</tr>
+<tr>
+<td>Auto Handle</td>
+<td>Set handle type to Auto.</td>
+</tr>
+<tr>
+<td>X / Y values</td>
+<td>The position of the currently selected curve point.</td>
+</tr>
+<tr>
+<td>Auto Clamped Handle</td>
+<td>Set handle type to Auto Clamped.</td>
+</tr>
+<tr>
+<td>Delete Points</td>
+<td>Deletes selected curve points.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="curve-presets-3">Curve Presets</h4>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/curve-presets-2.png" alt="Curve Presets" loading="lazy"></figure>
+<p>Predefined curve presets.</p>
+<h2 id="brush-settings-panel-brush-tip-sub-panel">Brush Settings Panel - Brush Tip Sub panel</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-brush-tip-sub-panel.png" alt="Brush Settings Panel - Brush Tip Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Brush Tip Sub panel</figcaption></figure>
+<p>Adjust the color and appearance of the brush cursor to custom values.</p>
+<h3 id="brush-tip-checkbox">Brush Tip Checkbox</h3>
+<p>Activate the custom settings.</p>
+<h3 id="cursor-color">Cursor Color</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/cursor-color.png" alt="Cursor Color" loading="lazy"></figure>
+<p>Choose another color for the brush cursor. Double clicking at the color field will open a color picker.</p>
+<h3 id="falloff-opacity">Falloff Opacity</h3>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/falloff-opacity.png" alt="Falloff Opacity" loading="lazy"></figure>
+<p>You can turn on the cursor overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Override Overlay</td>
+<td>Hide the Cursor Overlay when painting.</td>
+</tr>
+<tr>
+<td>Use Cursor Overlay</td>
+<td>Turn on Cursor Overlay.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="texture-opacity">Texture Opacity</h3>
+<p>This is for the case when you paint with a texture brush. You can turn on the Texture overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Override Overlay</td>
+<td>Hide the Texture Overlay when painting.</td>
+</tr>
+<tr>
+<td>Use Cursor Overlay</td>
+<td>Turn on Texture Overlay.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mask-texture-opacity">Mask Texture Opacity</h3>
+<p>This is for the case when you mask paint with a texture brush. You can turn on the Texture overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Override Overlay</td>
+<td>Hide the Texture Overlay when painting.</td>
+</tr>
+<tr>
+<td>Use Cursor Overlay</td>
+<td>Turn on Texture Overlay.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tiling-panel">Tiling panel</h2>
+<figure class="is-right"><img src="../../../docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/tiling-panel.png" alt="Tiling panel" loading="lazy"></figure>
+<p>Tiling allows you to draw over the borders and continue the stroke at the other side of the image. You can tile in X and Y direction.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fclone-runs-3-15/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fimage-editor%2Fsidebar%2Ftool-tab-in-paint-mode.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/clone-runs-3-15/docs2/content/editors/image-editor/sidebar/tool-tab-in-paint-mode.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#tool-tab">Tool Tab</a><a class="h3" href="#save-image">Save Image</a><a class="h2" href="#brush-asset-panel">Brush Asset Panel</a><a class="h3" href="#browse-brush">Browse Brush</a><a class="h3" href="#brush-specials-menu">Brush Specials menu</a><a class="h2" href="#brush-settings-panel">Brush settings Panel</a><a class="h3" href="#blend">Blend</a><a class="h3" href="#size">Size</a><a class="h3" href="#pressure-size-curve">Pressure Size Curve</a><a class="h3" href="#strength">Strength</a><a class="h3" href="#pressure-size-curve-2">Pressure Size Curve</a><a class="h2" href="#brush-settings-panel-color-picker-sub-panel">Brush Settings Panel - Color Picker Sub panel</a><a class="h2" href="#brush-settings-panel-color-palette-sub-panel">Brush Settings Panel - Color Palette Sub panel</a><a class="h3" href="#palette-browser">Palette browser</a><a class="h2" href="#brush-settings-panel-advanced-sub-panel">Brush Settings Panel - Advanced Sub panel</a><a class="h3" href="#brush-type-draw">Brush type Draw</a><a class="h3" href="#brush-type-soften">Brush type Soften</a><a class="h3" href="#brush-type-smear">Brush type Smear</a><a class="h3" href="#brush-type-clone">Brush type Clone</a><a class="h3" href="#brush-type-fill">Brush type Fill</a><a class="h3" href="#brush-type-mask">Brush type Mask</a><a class="h3" href="#randomize-color-subtab">Randomize Color subtab</a><a class="h3" href="#modes-subpanel">Modes subpanel</a><a class="h2" href="#brush-settings-panel-texture-sub-panel">Brush Settings Panel - Texture Sub panel</a><a class="h3" href="#texture-panel">Texture Panel</a><a class="h2" href="#brush-settings-panel-texture-mask-sub-panel">Brush Settings Panel - Texture Mask Sub panel</a><a class="h3" href="#texture-mask-panel">Texture Mask Panel</a><a class="h2" href="#stroke-panel">Stroke Panel</a><a class="h3" href="#stroke-panel-2">Stroke Panel</a><a class="h2" href="#brush-settings-panel-falloff-sub-panel">Brush Settings Panel - Falloff Sub panel</a><a class="h3" href="#selecting-points-3">Selecting Points</a><a class="h3" href="#adding-points-3">Adding Points</a><a class="h3" href="#navigation-elements-3">Navigation elements</a><a class="h2" href="#brush-settings-panel-brush-tip-sub-panel">Brush Settings Panel - Brush Tip Sub panel</a><a class="h3" href="#brush-tip-checkbox">Brush Tip Checkbox</a><a class="h3" href="#cursor-color">Cursor Color</a><a class="h3" href="#falloff-opacity">Falloff Opacity</a><a class="h3" href="#texture-opacity">Texture Opacity</a><a class="h3" href="#mask-texture-opacity">Mask Texture Opacity</a><a class="h2" href="#tiling-panel">Tiling panel</a></aside></div></body></html>
