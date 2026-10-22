@@ -25,6 +25,7 @@ import subprocess
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -38,12 +39,20 @@ HAND_EDIT_SLACK = dt.timedelta(minutes=10)
 
 # ---------------------------------------------------------------- Webflow API
 
+TIMEOUT = 300               # seconds per Webflow call; a page with many new screenshots is slow
+MAX_IMAGES_PER_CALL = 60    # new screenshots per batched update
+
+
+class SyncError(Exception):
+    pass
+
+
 class Webflow:
     def __init__(self, token):
         self.token = token
         self.calls = 0
 
-    def req(self, method, path, body=None):
+    def req(self, method, path, body=None, retry_timeouts=True):
         data = json.dumps(body).encode() if body is not None else None
         for attempt in range(6):
             r = urllib.request.Request(API + path, data=data, method=method, headers={
@@ -51,14 +60,22 @@ class Webflow:
                 "content-type": "application/json"})
             try:
                 self.calls += 1
-                with urllib.request.urlopen(r, timeout=60) as resp:
+                with urllib.request.urlopen(r, timeout=TIMEOUT) as resp:
                     txt = resp.read().decode()
                     return json.loads(txt) if txt else {}
             except urllib.error.HTTPError as e:
                 if e.code == 429 and attempt < 5:
                     time.sleep(int(e.headers.get("Retry-After", "10")))
                     continue
-                raise SystemExit(f"Webflow {method} {path} failed: {e.code} {e.read().decode()[:500]}")
+                if e.code >= 500 and attempt < 3:
+                    time.sleep(5 * (attempt + 1))
+                    continue
+                raise SyncError(f"Webflow {method} {path} failed: {e.code} {e.read().decode()[:800]}")
+            except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+                if retry_timeouts and attempt < 3:
+                    time.sleep(5 * (attempt + 1))
+                    continue
+                raise SyncError(f"Webflow {method} {path} failed: {e}")
 
     def items(self, cid):
         out, offset = [], 0
@@ -78,21 +95,37 @@ class Webflow:
         return {}
 
     def create(self, cid, field_data):
-        return self.req("POST", f"/collections/{cid}/items", {"isDraft": False, "isArchived": False, "fieldData": field_data})
+        """Create one item. Webflow copies every screenshot of the page to its CDN while it answers,
+        so a big page can take minutes. A timed-out create may still have worked: look it up by
+        slug before trying again, so a page is never made twice."""
+        body = {"isDraft": False, "isArchived": False, "fieldData": field_data}
+        for attempt in range(3):
+            try:
+                return self.req("POST", f"/collections/{cid}/items", body, retry_timeouts=False)
+            except SyncError as e:
+                if "failed: 4" in str(e) or attempt == 2:
+                    raise
+                time.sleep(20)
+                found = self.req("GET", f"/collections/{cid}/items?slug={urllib.parse.quote(field_data['slug'])}").get("items", [])
+                if found:
+                    return found[0]
 
     def update(self, cid, item_id, field_data):
         return self.update_many(cid, [(item_id, field_data)])
 
-    def update_many(self, cid, pairs, max_items=50, max_bytes=1_500_000):
-        """PATCH items in batches (fewer calls, kinder to rate limits on a full sync)."""
-        batch, size = [], 0
+    def update_many(self, cid, pairs, max_items=25, max_bytes=1_000_000, max_images=MAX_IMAGES_PER_CALL):
+        """PATCH items in batches (fewer calls, kinder to rate limits on a full sync). Batches are also
+        capped by screenshot count: Webflow copies each new image while it answers."""
+        batch, size, imgs = [], 0, 0
         for item_id, fd in pairs:
-            n = len(json.dumps(fd))
-            if batch and (len(batch) >= max_items or size + n > max_bytes):
+            raw = json.dumps(fd)
+            n, k = len(raw), raw.count("raw.githubusercontent.com")
+            if batch and (len(batch) >= max_items or size + n > max_bytes or imgs + k > max_images):
                 self.req("PATCH", f"/collections/{cid}/items", {"items": batch})
-                batch, size = [], 0
+                batch, size, imgs = [], 0, 0
             batch.append({"id": item_id, "isDraft": False, "fieldData": fd})
             size += n
+            imgs += k
         if batch:
             self.req("PATCH", f"/collections/{cid}/items", {"items": batch})
 
@@ -123,13 +156,29 @@ def build(repo, cfg):
     gh = cfg["repo"]
     pages = list(iter_pages(repo))
     by_rel = {p.rel: p for p in pages}
-    tree = site_tree(repo, [p for p in pages if p.kind == "page"])
+    skip = set(cfg.get("skip_sections", []))
+    tree = [sec for sec in site_tree(repo, [p for p in pages if p.kind == "page"]) if sec.id not in skip]
     slug_of = {n.page.rel: n.web_slug for sec in tree for n in sec.nodes}
     md = html_build.md_engine()
+    branch = cfg.get("branch", "main")
+    # Stable links: an image URL names the last commit that changed that image, so it only
+    # changes when the image changes. (With the current commit in every URL, any merge made
+    # every page with images "changed", re-sent it and made Webflow re-import every screenshot.)
+    last_commit = {}
+    cur = None
+    for line in git(repo, "log", "--format=@%H", "--name-only", sha, "--", "docs2/images").splitlines():
+        if line.startswith("@"):
+            cur = line[1:]
+        elif line and cur:
+            last_commit.setdefault(line, cur)
+
+    def img_url(r):
+        return f"https://raw.githubusercontent.com/{gh}/{last_commit.get(r, sha)}/{r}"
+
     urls = dict(
-        img_url=lambda r: f"https://raw.githubusercontent.com/{gh}/{sha}/{r}",
+        img_url=img_url,
         page_url=lambda t: cfg["page_url"] + slug_of[t.rel] if t.rel in slug_of else None,
-        file_url=lambda r: f"https://github.com/{gh}/blob/{sha}/{r}")
+        file_url=lambda r: f"https://github.com/{gh}/blob/{branch}/{r}")
 
     def edited(p):
         return git(repo, "log", "-1", "--format=%cI", "--", p.rel) or None
@@ -254,6 +303,7 @@ def main(argv):
             print("::warning::WEBFLOW_TOKEN is not set; nothing was sent to Webflow.")
             lines.append("⚠️ No Webflow token set, so nothing was sent. See *Website sync* in the wiki.")
         else:
+          try:
             wf = Webflow(token)
             col = cfg["collections"]
             for name, cid in col.items():
@@ -279,6 +329,15 @@ def main(argv):
             if changed and "--publish" in opts:
                 wf.publish_staging(cfg["site_id"])
                 lines += ["", f"🚀 Published to staging: {cfg['staging_url']}"]
+          except SyncError as e:
+              msg = str(e).replace("\n", " ")
+              print(f"::error title=Webflow sync::{msg}")
+              lines += ["", f"❌ **Sync stopped:** {msg}"]
+              out = "\n".join(lines) + "\n"
+              if report_out:
+                  open(report_out, "w", encoding="utf-8").write(out)
+              print(out)
+              return 1
     out = "\n".join(lines) + "\n"
     if report_out:
         open(report_out, "w", encoding="utf-8").write(out)
