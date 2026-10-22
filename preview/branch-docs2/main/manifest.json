@@ -1,14 +1,13 @@
 {
  "pages": {
-  "docs2/content/editors/introduction.md": "editors/introduction.html",
-  "docs2/content/editors/topbar-and-statusbar/index.md": "editors/topbar-and-statusbar.html",
-  "docs2/content/editors/topbar-and-statusbar/topbar-menus/edit-menu.md": "editors/topbar-and-statusbar/topbar-menus/edit-menu.html",
-  "docs2/content/editors/topbar-and-statusbar/topbar-menus/file-menu.md": "editors/topbar-and-statusbar/topbar-menus/file-menu.html",
-  "docs2/content/editors/topbar-and-statusbar/topbar-menus/help-menu.md": "editors/topbar-and-statusbar/topbar-menus/help-menu.html",
-  "docs2/content/editors/topbar-and-statusbar/topbar-menus/index.md": "editors/topbar-and-statusbar/topbar-menus.html",
-  "docs2/content/editors/topbar-and-statusbar/topbar-menus/render-menu.md": "editors/topbar-and-statusbar/topbar-menus/render-menu.html",
-  "docs2/content/editors/topbar-and-statusbar/topbar-menus/window-menu.md": "editors/topbar-and-statusbar/topbar-menus/window-menu.html",
-  "docs2/content/workspaces/workspaces.md": "workspaces/workspaces.html"
+  "docs2/content/getting-started/about-documentation.md": "getting-started/about-documentation.html",
+  "docs2/content/getting-started/data-structure.md": "getting-started/data-structure.html",
+  "docs2/content/getting-started/differences.md": "getting-started/differences.html",
+  "docs2/content/getting-started/index.md": "getting-started.html",
+  "docs2/content/getting-started/installation.md": "getting-started/installation.html",
+  "docs2/content/getting-started/introduction.md": "getting-started/introduction.html",
+  "docs2/content/getting-started/migrating-from-blender.md": "getting-started/migrating-from-blender.html",
+  "docs2/content/getting-started/quick-start.md": "getting-started/quick-start.html"
  },
- "images": 321
+ "images": 8
 }
