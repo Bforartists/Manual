@@ -8069,7 +8069,7 @@
    ],
    "images": "editors/movie-clip-editor",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "15",
    "parts": [
     {
@@ -8094,7 +8094,7 @@
    ],
    "images": "editors/movie-clip-editor/header",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "15.1",
    "parts": [
     {
@@ -8119,7 +8119,7 @@
    ],
    "images": "editors/movie-clip-editor/header/header-tools-and-options",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.1.1",
    "parts": [
     {
@@ -8144,7 +8144,7 @@
    ],
    "images": "editors/movie-clip-editor/header/quick-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.1.2",
    "parts": [
     {
@@ -8169,7 +8169,7 @@
    ],
    "images": "editors/movie-clip-editor/header/view-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.1.3",
    "parts": [
     {
@@ -8194,7 +8194,7 @@
    ],
    "images": "editors/movie-clip-editor/header/select-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.1.4",
    "parts": [
     {
@@ -8219,7 +8219,7 @@
    ],
    "images": "editors/movie-clip-editor/header/tracking-mode-clip-submode-clip-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.1.5",
    "parts": [
     {
@@ -8244,7 +8244,7 @@
    ],
    "images": "editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.1.6",
    "parts": [
     {
@@ -8269,7 +8269,7 @@
    ],
    "images": "editors/movie-clip-editor/header/tracking-mode-graph-submode-graph-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.1.7",
    "parts": [
     {
@@ -8294,7 +8294,7 @@
    ],
    "images": "editors/movie-clip-editor/header/mask-mode-clip-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.1.8",
    "parts": [
     {
@@ -8319,7 +8319,7 @@
    ],
    "images": "editors/movie-clip-editor/header/mask-mode-add-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.1.9",
    "parts": [
     {
@@ -8344,7 +8344,7 @@
    ],
    "images": "editors/movie-clip-editor/header/mask-mode-mask-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.1.10",
    "parts": [
     {
@@ -8368,7 +8368,7 @@
    ],
    "images": "editors/movie-clip-editor/tool-shelf",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "15.2",
    "parts": [
     {
@@ -8393,7 +8393,7 @@
    ],
    "images": "editors/movie-clip-editor/tool-shelf/tracking-mode",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.2.1",
    "parts": [
     {
@@ -8417,7 +8417,7 @@
    ],
    "images": "editors/movie-clip-editor/sidebar",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "15.3",
    "parts": [
     {
@@ -8442,7 +8442,7 @@
    ],
    "images": "editors/movie-clip-editor/sidebar/footage-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.3.1",
    "parts": [
     {
@@ -8467,7 +8467,7 @@
    ],
    "images": "editors/movie-clip-editor/sidebar/track-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.3.2",
    "parts": [
     {
@@ -8492,7 +8492,7 @@
    ],
    "images": "editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.3.3",
    "parts": [
     {
@@ -8517,7 +8517,7 @@
    ],
    "images": "editors/movie-clip-editor/sidebar/tracking-mode-view-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "15.3.4",
    "parts": [
     {
@@ -8540,7 +8540,7 @@
    ],
    "images": "editors/dope-sheet",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "16",
    "parts": [
     {
@@ -8551,29 +8551,6 @@
    "words": 1322,
    "images_count": 22,
    "legacy_path": "/documentation/editors/dope-sheet",
-   "split_candidate": false
-  },
-  {
-   "id": "editors.dope-sheet.header",
-   "file": "content/editors/dope-sheet/header/index.md",
-   "title": "Header",
-   "section": "editors",
-   "path": [
-    "Editors",
-    "Dope Sheet",
-    "Header"
-   ],
-   "images": "editors/dope-sheet/header",
-   "kind": "group",
-   "status": "planned",
-   "number": "16.1",
-   "parts": [
-    {
-     "note": "The pages of this part are listed in the sidebar under *Header*."
-    }
-   ],
-   "words": 0,
-   "images_count": 0,
    "split_candidate": false
   },
   {
@@ -8589,7 +8566,7 @@
    ],
    "images": "editors/dope-sheet/header/header-tools-and-options",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "16.1.1",
    "parts": [
     {
@@ -8614,7 +8591,7 @@
    ],
    "images": "editors/dope-sheet/header/quick-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "16.1.2",
    "parts": [
     {
@@ -8639,7 +8616,7 @@
    ],
    "images": "editors/dope-sheet/header/view-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "16.1.3",
    "parts": [
     {
@@ -8664,7 +8641,7 @@
    ],
    "images": "editors/dope-sheet/header/select-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "16.1.4",
    "parts": [
     {
@@ -8689,7 +8666,7 @@
    ],
    "images": "editors/dope-sheet/header/marker-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "16.1.5",
    "parts": [
     {
@@ -8714,7 +8691,7 @@
    ],
    "images": "editors/dope-sheet/header/channel-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "16.1.6",
    "parts": [
     {
@@ -8739,7 +8716,7 @@
    ],
    "images": "editors/dope-sheet/header/key-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "16.1.7",
    "parts": [
     {
@@ -8764,7 +8741,7 @@
    ],
    "images": "editors/dope-sheet/header/action-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "16.1.8",
    "parts": [
     {
@@ -8788,7 +8765,7 @@
    ],
    "images": "editors/dope-sheet/channel-list",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "16.2",
    "parts": [
     {
@@ -8812,7 +8789,7 @@
    ],
    "images": "editors/dope-sheet/sidebar",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "16.3",
    "parts": [
     {
@@ -8836,7 +8813,7 @@
    ],
    "images": "editors/dope-sheet/footer-tools-and-options",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "16.4",
    "parts": [
     {
@@ -8981,7 +8958,7 @@
    ],
    "images": "editors/graph-editor",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "18",
    "parts": [
     {
@@ -8992,29 +8969,6 @@
    "words": 1808,
    "images_count": 40,
    "legacy_path": "/documentation/editors/graph-editor",
-   "split_candidate": false
-  },
-  {
-   "id": "editors.graph-editor.header",
-   "file": "content/editors/graph-editor/header/index.md",
-   "title": "Header",
-   "section": "editors",
-   "path": [
-    "Editors",
-    "Graph Editor",
-    "Header"
-   ],
-   "images": "editors/graph-editor/header",
-   "kind": "group",
-   "status": "planned",
-   "number": "18.1",
-   "parts": [
-    {
-     "note": "The pages of this part are listed in the sidebar under *Header*."
-    }
-   ],
-   "words": 0,
-   "images_count": 0,
    "split_candidate": false
   },
   {
@@ -9030,7 +8984,7 @@
    ],
    "images": "editors/graph-editor/header/header-tools-and-options",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "18.1.1",
    "parts": [
     {
@@ -9055,7 +9009,7 @@
    ],
    "images": "editors/graph-editor/header/quick-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "18.1.2",
    "parts": [
     {
@@ -9080,7 +9034,7 @@
    ],
    "images": "editors/graph-editor/header/view-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "18.1.3",
    "parts": [
     {
@@ -9105,7 +9059,7 @@
    ],
    "images": "editors/graph-editor/header/select-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "18.1.4",
    "parts": [
     {
@@ -9130,7 +9084,7 @@
    ],
    "images": "editors/graph-editor/header/marker-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "18.1.5",
    "parts": [
     {
@@ -9155,7 +9109,7 @@
    ],
    "images": "editors/graph-editor/header/channel-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "18.1.6",
    "parts": [
     {
@@ -9180,7 +9134,7 @@
    ],
    "images": "editors/graph-editor/header/key-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "18.1.7",
    "parts": [
     {
@@ -9204,7 +9158,7 @@
    ],
    "images": "editors/graph-editor/channel-list",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "18.2",
    "parts": [
     {
@@ -9228,7 +9182,7 @@
    ],
    "images": "editors/graph-editor/sidebar",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "18.3",
    "parts": [
     {
@@ -9253,7 +9207,7 @@
    ],
    "images": "editors/graph-editor/sidebar/f-curve-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "18.3.1",
    "parts": [
     {
@@ -9278,7 +9232,7 @@
    ],
    "images": "editors/graph-editor/sidebar/modifiers-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "18.3.2",
    "parts": [
     {
@@ -9303,7 +9257,7 @@
    ],
    "images": "editors/graph-editor/sidebar/view-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "18.3.3",
    "parts": [
     {
@@ -9327,7 +9281,7 @@
    ],
    "images": "editors/graph-editor/footer-tools-and-options",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "18.4",
    "parts": [
     {
@@ -9350,7 +9304,7 @@
    ],
    "images": "editors/drivers-editor",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "19",
    "parts": [
     {
@@ -9361,29 +9315,6 @@
    "words": 2055,
    "images_count": 48,
    "legacy_path": "/documentation/editors/drivers-editor",
-   "split_candidate": false
-  },
-  {
-   "id": "editors.drivers-editor.header",
-   "file": "content/editors/drivers-editor/header/index.md",
-   "title": "Header",
-   "section": "editors",
-   "path": [
-    "Editors",
-    "Drivers Editor",
-    "Header"
-   ],
-   "images": "editors/drivers-editor/header",
-   "kind": "group",
-   "status": "planned",
-   "number": "19.1",
-   "parts": [
-    {
-     "note": "The pages of this part are listed in the sidebar under *Header*."
-    }
-   ],
-   "words": 0,
-   "images_count": 0,
    "split_candidate": false
   },
   {
@@ -9399,7 +9330,7 @@
    ],
    "images": "editors/drivers-editor/header/header-tools-and-options",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "19.1.1",
    "parts": [
     {
@@ -9424,7 +9355,7 @@
    ],
    "images": "editors/drivers-editor/header/quick-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "19.1.2",
    "parts": [
     {
@@ -9449,7 +9380,7 @@
    ],
    "images": "editors/drivers-editor/header/view-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "19.1.3",
    "parts": [
     {
@@ -9474,7 +9405,7 @@
    ],
    "images": "editors/drivers-editor/header/select-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "19.1.4",
    "parts": [
     {
@@ -9499,7 +9430,7 @@
    ],
    "images": "editors/drivers-editor/header/channel-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "19.1.5",
    "parts": [
     {
@@ -9524,7 +9455,7 @@
    ],
    "images": "editors/drivers-editor/header/key-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "19.1.6",
    "parts": [
     {
@@ -9548,7 +9479,7 @@
    ],
    "images": "editors/drivers-editor/channel-list",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "19.2",
    "parts": [
     {
@@ -9558,29 +9489,6 @@
    ],
    "words": 399,
    "images_count": 12,
-   "split_candidate": false
-  },
-  {
-   "id": "editors.drivers-editor.sidebar",
-   "file": "content/editors/drivers-editor/sidebar/index.md",
-   "title": "Sidebar",
-   "section": "editors",
-   "path": [
-    "Editors",
-    "Drivers Editor",
-    "Sidebar"
-   ],
-   "images": "editors/drivers-editor/sidebar",
-   "kind": "group",
-   "status": "planned",
-   "number": "19.3",
-   "parts": [
-    {
-     "note": "The pages of this part are listed in the sidebar under *Sidebar*."
-    }
-   ],
-   "words": 0,
-   "images_count": 0,
    "split_candidate": false
   },
   {
@@ -9596,7 +9504,7 @@
    ],
    "images": "editors/drivers-editor/sidebar/f-curve-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "19.3.1",
    "parts": [
     {
@@ -9621,7 +9529,7 @@
    ],
    "images": "editors/drivers-editor/sidebar/drivers-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "19.3.2",
    "parts": [
     {
@@ -9646,7 +9554,7 @@
    ],
    "images": "editors/drivers-editor/sidebar/modifiers-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "19.3.3",
    "parts": [
     {
@@ -9671,7 +9579,7 @@
    ],
    "images": "editors/drivers-editor/sidebar/driver-editor-sidebar-view-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "19.3.4",
    "parts": [
     {

@@ -7207,6 +7207,1079 @@
      "select": "*"
     }
    ]
+  },
+  {
+   "id": "editors.dope-sheet",
+   "file": "content/editors/dope-sheet/index.md",
+   "title": "Dope Sheet",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Dope Sheet"
+   ],
+   "images": "editors/dope-sheet",
+   "parts": [
+    {
+     "src": "16 Editors - Dope Sheet",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.dope-sheet.header",
+   "file": "content/editors/dope-sheet/header/index.md",
+   "title": "Header",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Dope Sheet",
+    "Header"
+   ],
+   "images": "editors/dope-sheet/header",
+   "parts": [
+    {
+     "note": "The pages of this part are listed in the sidebar under *Header*."
+    }
+   ]
+  },
+  {
+   "id": "editors.dope-sheet.header.header-tools-and-options",
+   "file": "content/editors/dope-sheet/header/header-tools-and-options.md",
+   "title": "Header tools and options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Dope Sheet",
+    "Header",
+    "Header tools and options"
+   ],
+   "images": "editors/dope-sheet/header/header-tools-and-options",
+   "parts": [
+    {
+     "src": "16.1.1 Editors - Dope Sheet - Header tools and options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.dope-sheet.header.quick-menu",
+   "file": "content/editors/dope-sheet/header/quick-menu.md",
+   "title": "Quick Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Dope Sheet",
+    "Header",
+    "Quick Menu"
+   ],
+   "images": "editors/dope-sheet/header/quick-menu",
+   "parts": [
+    {
+     "src": "16.1.2 Editors - Dope Sheet - Header - Quick Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.dope-sheet.header.view-menu",
+   "file": "content/editors/dope-sheet/header/view-menu.md",
+   "title": "View Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Dope Sheet",
+    "Header",
+    "View Menu"
+   ],
+   "images": "editors/dope-sheet/header/view-menu",
+   "parts": [
+    {
+     "src": "16.1.3 Editors - Dope Sheet - View Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.dope-sheet.header.select-menu",
+   "file": "content/editors/dope-sheet/header/select-menu.md",
+   "title": "Select Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Dope Sheet",
+    "Header",
+    "Select Menu"
+   ],
+   "images": "editors/dope-sheet/header/select-menu",
+   "parts": [
+    {
+     "src": "16.1.4 Editors - Dope Sheet - Select Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.dope-sheet.header.marker-menu",
+   "file": "content/editors/dope-sheet/header/marker-menu.md",
+   "title": "Marker Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Dope Sheet",
+    "Header",
+    "Marker Menu"
+   ],
+   "images": "editors/dope-sheet/header/marker-menu",
+   "parts": [
+    {
+     "src": "16.1.5 Editors - Dope Sheet - Marker Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.dope-sheet.header.channel-menu",
+   "file": "content/editors/dope-sheet/header/channel-menu.md",
+   "title": "Channel Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Dope Sheet",
+    "Header",
+    "Channel Menu"
+   ],
+   "images": "editors/dope-sheet/header/channel-menu",
+   "parts": [
+    {
+     "src": "16.1.6 Editors - Dope Sheet - Channel Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.dope-sheet.header.key-menu",
+   "file": "content/editors/dope-sheet/header/key-menu.md",
+   "title": "Key Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Dope Sheet",
+    "Header",
+    "Key Menu"
+   ],
+   "images": "editors/dope-sheet/header/key-menu",
+   "parts": [
+    {
+     "src": "16.1.7 Editors - Dope Sheet - Key Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.dope-sheet.header.action-menu",
+   "file": "content/editors/dope-sheet/header/action-menu.md",
+   "title": "Action Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Dope Sheet",
+    "Header",
+    "Action Menu"
+   ],
+   "images": "editors/dope-sheet/header/action-menu",
+   "parts": [
+    {
+     "src": "16.1.8 Editors - Dope Sheet - Action Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.dope-sheet.channel-list",
+   "file": "content/editors/dope-sheet/channel-list.md",
+   "title": "Channel list",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Dope Sheet",
+    "Channel list"
+   ],
+   "images": "editors/dope-sheet/channel-list",
+   "parts": [
+    {
+     "src": "16.2 Editors - Dope Sheet - Channel list",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.dope-sheet.sidebar",
+   "file": "content/editors/dope-sheet/sidebar.md",
+   "title": "Sidebar",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Dope Sheet",
+    "Sidebar"
+   ],
+   "images": "editors/dope-sheet/sidebar",
+   "parts": [
+    {
+     "src": "16.3 Editors - Dope Sheet - Sidebar",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.dope-sheet.footer-tools-and-options",
+   "file": "content/editors/dope-sheet/footer-tools-and-options.md",
+   "title": "Footer tools and options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Dope Sheet",
+    "Footer tools and options"
+   ],
+   "images": "editors/dope-sheet/footer-tools-and-options",
+   "parts": [
+    {
+     "src": "16.4 Editors - Dope Sheet - Footer tools and options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor",
+   "file": "content/editors/graph-editor/index.md",
+   "title": "Graph Editor",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor"
+   ],
+   "images": "editors/graph-editor",
+   "parts": [
+    {
+     "src": "18 Editors - Graph Editor",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.header",
+   "file": "content/editors/graph-editor/header/index.md",
+   "title": "Header",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Header"
+   ],
+   "images": "editors/graph-editor/header",
+   "parts": [
+    {
+     "note": "The pages of this part are listed in the sidebar under *Header*."
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.header.header-tools-and-options",
+   "file": "content/editors/graph-editor/header/header-tools-and-options.md",
+   "title": "Header tools and options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Header",
+    "Header tools and options"
+   ],
+   "images": "editors/graph-editor/header/header-tools-and-options",
+   "parts": [
+    {
+     "src": "18.1.1 Editors - Graph Editor - Header tools and options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.header.quick-menu",
+   "file": "content/editors/graph-editor/header/quick-menu.md",
+   "title": "Quick Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Header",
+    "Quick Menu"
+   ],
+   "images": "editors/graph-editor/header/quick-menu",
+   "parts": [
+    {
+     "src": "18.1.2 Editors - Graph Editor - Header - Quick Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.header.view-menu",
+   "file": "content/editors/graph-editor/header/view-menu.md",
+   "title": "View Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Header",
+    "View Menu"
+   ],
+   "images": "editors/graph-editor/header/view-menu",
+   "parts": [
+    {
+     "src": "18.1.3 Editors - Graph Editor - View Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.header.select-menu",
+   "file": "content/editors/graph-editor/header/select-menu.md",
+   "title": "Select Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Header",
+    "Select Menu"
+   ],
+   "images": "editors/graph-editor/header/select-menu",
+   "parts": [
+    {
+     "src": "18.1.4 Editors - Graph Editor - Select Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.header.marker-menu",
+   "file": "content/editors/graph-editor/header/marker-menu.md",
+   "title": "Marker Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Header",
+    "Marker Menu"
+   ],
+   "images": "editors/graph-editor/header/marker-menu",
+   "parts": [
+    {
+     "src": "18.1.5 Editors - Graph Editor - Marker Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.header.channel-menu",
+   "file": "content/editors/graph-editor/header/channel-menu.md",
+   "title": "Channel Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Header",
+    "Channel Menu"
+   ],
+   "images": "editors/graph-editor/header/channel-menu",
+   "parts": [
+    {
+     "src": "18.1.6 Editors - Graph Editor - Channel Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.header.key-menu",
+   "file": "content/editors/graph-editor/header/key-menu.md",
+   "title": "Key Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Header",
+    "Key Menu"
+   ],
+   "images": "editors/graph-editor/header/key-menu",
+   "parts": [
+    {
+     "src": "18.1.7 Editors - Graph Editor - Key Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.channel-list",
+   "file": "content/editors/graph-editor/channel-list.md",
+   "title": "Channel list",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Channel list"
+   ],
+   "images": "editors/graph-editor/channel-list",
+   "parts": [
+    {
+     "src": "18.2 Editors - Graph Editor - Channel list",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.sidebar",
+   "file": "content/editors/graph-editor/sidebar/index.md",
+   "title": "Sidebar",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Sidebar"
+   ],
+   "images": "editors/graph-editor/sidebar",
+   "parts": [
+    {
+     "src": "18.3 Editors - Graph Editor - Sidebar",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.sidebar.f-curve-tab",
+   "file": "content/editors/graph-editor/sidebar/f-curve-tab.md",
+   "title": "F-Curve Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Sidebar",
+    "F-Curve Tab"
+   ],
+   "images": "editors/graph-editor/sidebar/f-curve-tab",
+   "parts": [
+    {
+     "src": "18.3.1 Editors - Graph Editor - Sidebar - F-Curve Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.sidebar.modifiers-tab",
+   "file": "content/editors/graph-editor/sidebar/modifiers-tab.md",
+   "title": "Modifiers Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Sidebar",
+    "Modifiers Tab"
+   ],
+   "images": "editors/graph-editor/sidebar/modifiers-tab",
+   "parts": [
+    {
+     "src": "18.3.2 Editors - Graph Editor - Sidebar - Modifiers Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.sidebar.view-tab",
+   "file": "content/editors/graph-editor/sidebar/view-tab.md",
+   "title": "View Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Sidebar",
+    "View Tab"
+   ],
+   "images": "editors/graph-editor/sidebar/view-tab",
+   "parts": [
+    {
+     "src": "18.3.3 Editors - Graph Editor - Sidebar - View Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.graph-editor.footer-tools-and-options",
+   "file": "content/editors/graph-editor/footer-tools-and-options.md",
+   "title": "Footer tools and options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Graph Editor",
+    "Footer tools and options"
+   ],
+   "images": "editors/graph-editor/footer-tools-and-options",
+   "parts": [
+    {
+     "src": "18.4 Editors - Graph Editor - Footer tools and options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor",
+   "file": "content/editors/drivers-editor/index.md",
+   "title": "Drivers Editor",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor"
+   ],
+   "images": "editors/drivers-editor",
+   "parts": [
+    {
+     "src": "19 Editors - Drivers Editor",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor.header",
+   "file": "content/editors/drivers-editor/header/index.md",
+   "title": "Header",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor",
+    "Header"
+   ],
+   "images": "editors/drivers-editor/header",
+   "parts": [
+    {
+     "note": "The pages of this part are listed in the sidebar under *Header*."
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor.header.header-tools-and-options",
+   "file": "content/editors/drivers-editor/header/header-tools-and-options.md",
+   "title": "Header tools and options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor",
+    "Header",
+    "Header tools and options"
+   ],
+   "images": "editors/drivers-editor/header/header-tools-and-options",
+   "parts": [
+    {
+     "src": "19.1.1 Editors - Drivers Editor - Header tools and options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor.header.quick-menu",
+   "file": "content/editors/drivers-editor/header/quick-menu.md",
+   "title": "Quick Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor",
+    "Header",
+    "Quick Menu"
+   ],
+   "images": "editors/drivers-editor/header/quick-menu",
+   "parts": [
+    {
+     "src": "19.1.2 Editors - Drivers Editor - Header - Quick Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor.header.view-menu",
+   "file": "content/editors/drivers-editor/header/view-menu.md",
+   "title": "View Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor",
+    "Header",
+    "View Menu"
+   ],
+   "images": "editors/drivers-editor/header/view-menu",
+   "parts": [
+    {
+     "src": "19.1.3 Editors - Drivers Editor - View Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor.header.select-menu",
+   "file": "content/editors/drivers-editor/header/select-menu.md",
+   "title": "Select Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor",
+    "Header",
+    "Select Menu"
+   ],
+   "images": "editors/drivers-editor/header/select-menu",
+   "parts": [
+    {
+     "src": "19.1.4 Editors - Drivers Editor - Select Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor.header.channel-menu",
+   "file": "content/editors/drivers-editor/header/channel-menu.md",
+   "title": "Channel Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor",
+    "Header",
+    "Channel Menu"
+   ],
+   "images": "editors/drivers-editor/header/channel-menu",
+   "parts": [
+    {
+     "src": "19.1.5 Editors - Drivers Editor - Channel Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor.header.key-menu",
+   "file": "content/editors/drivers-editor/header/key-menu.md",
+   "title": "Key Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor",
+    "Header",
+    "Key Menu"
+   ],
+   "images": "editors/drivers-editor/header/key-menu",
+   "parts": [
+    {
+     "src": "19.1.6 Editors - Drivers Editor - Key Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor.channel-list",
+   "file": "content/editors/drivers-editor/channel-list.md",
+   "title": "Channel list",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor",
+    "Channel list"
+   ],
+   "images": "editors/drivers-editor/channel-list",
+   "parts": [
+    {
+     "src": "19.2 Editors - Drivers Editor - Channel list",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor.sidebar",
+   "file": "content/editors/drivers-editor/sidebar/index.md",
+   "title": "Sidebar",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor",
+    "Sidebar"
+   ],
+   "images": "editors/drivers-editor/sidebar",
+   "parts": [
+    {
+     "note": "The pages of this part are listed in the sidebar under *Sidebar*."
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor.sidebar.f-curve-tab",
+   "file": "content/editors/drivers-editor/sidebar/f-curve-tab.md",
+   "title": "F-Curve Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor",
+    "Sidebar",
+    "F-Curve Tab"
+   ],
+   "images": "editors/drivers-editor/sidebar/f-curve-tab",
+   "parts": [
+    {
+     "src": "19.3.1 Editors - Drivers Editor - Sidebar - F-Curve Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor.sidebar.drivers-tab",
+   "file": "content/editors/drivers-editor/sidebar/drivers-tab.md",
+   "title": "Drivers Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor",
+    "Sidebar",
+    "Drivers Tab"
+   ],
+   "images": "editors/drivers-editor/sidebar/drivers-tab",
+   "parts": [
+    {
+     "src": "19.3.2 Editors - Drivers Editor - Sidebar - Drivers Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor.sidebar.modifiers-tab",
+   "file": "content/editors/drivers-editor/sidebar/modifiers-tab.md",
+   "title": "Modifiers Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor",
+    "Sidebar",
+    "Modifiers Tab"
+   ],
+   "images": "editors/drivers-editor/sidebar/modifiers-tab",
+   "parts": [
+    {
+     "src": "19.3.3 Editors - Drivers Editor - Sidebar - Modifiers Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.drivers-editor.sidebar.driver-editor-sidebar-view-tab",
+   "file": "content/editors/drivers-editor/sidebar/driver-editor-sidebar-view-tab.md",
+   "title": "Driver Editor - Sidebar - View Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Drivers Editor",
+    "Sidebar",
+    "Driver Editor - Sidebar - View Tab"
+   ],
+   "images": "editors/drivers-editor/sidebar/driver-editor-sidebar-view-tab",
+   "parts": [
+    {
+     "src": "19.3.4 Editors - Driver Editor - Sidebar - View Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor",
+   "file": "content/editors/nonlinear-animation-editor/index.md",
+   "title": "Nonlinear Animation Editor",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor"
+   ],
+   "images": "editors/nonlinear-animation-editor",
+   "parts": [
+    {
+     "src": "20 Editors - Nonlinear Animation Editor",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.header",
+   "file": "content/editors/nonlinear-animation-editor/header/index.md",
+   "title": "Header",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "Header"
+   ],
+   "images": "editors/nonlinear-animation-editor/header",
+   "parts": [
+    {
+     "note": "The pages of this part are listed in the sidebar under *Header*."
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.header.nla-editor-header-tools-and-options",
+   "file": "content/editors/nonlinear-animation-editor/header/nla-editor-header-tools-and-options.md",
+   "title": "NLA Editor - Header tools and options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "Header",
+    "NLA Editor - Header tools and options"
+   ],
+   "images": "editors/nonlinear-animation-editor/header/nla-editor-header-tools-and-options",
+   "parts": [
+    {
+     "src": "20.1.1 Editors - NLA Editor - Header tools and options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.header.nla-editor-header-quick-menu",
+   "file": "content/editors/nonlinear-animation-editor/header/nla-editor-header-quick-menu.md",
+   "title": "NLA Editor - Header - Quick Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "Header",
+    "NLA Editor - Header - Quick Menu"
+   ],
+   "images": "editors/nonlinear-animation-editor/header/nla-editor-header-quick-menu",
+   "parts": [
+    {
+     "src": "20.1.2 Editors - NLA Editor - Header - Quick Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.header.nla-editor-view-menu",
+   "file": "content/editors/nonlinear-animation-editor/header/nla-editor-view-menu.md",
+   "title": "NLA Editor - View Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "Header",
+    "NLA Editor - View Menu"
+   ],
+   "images": "editors/nonlinear-animation-editor/header/nla-editor-view-menu",
+   "parts": [
+    {
+     "src": "20.1.3 Editors - NLA Editor - View Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.header.nla-editor-select-menu",
+   "file": "content/editors/nonlinear-animation-editor/header/nla-editor-select-menu.md",
+   "title": "NLA Editor - Select Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "Header",
+    "NLA Editor - Select Menu"
+   ],
+   "images": "editors/nonlinear-animation-editor/header/nla-editor-select-menu",
+   "parts": [
+    {
+     "src": "20.1.4 Editors - NLA Editor - Select Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.header.nla-editor-marker-menu",
+   "file": "content/editors/nonlinear-animation-editor/header/nla-editor-marker-menu.md",
+   "title": "NLA Editor - Marker Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "Header",
+    "NLA Editor - Marker Menu"
+   ],
+   "images": "editors/nonlinear-animation-editor/header/nla-editor-marker-menu",
+   "parts": [
+    {
+     "src": "20.1.5 Editors - NLA Editor - Marker Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.header.nla-editor-add-menu",
+   "file": "content/editors/nonlinear-animation-editor/header/nla-editor-add-menu.md",
+   "title": "NLA Editor - Add Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "Header",
+    "NLA Editor - Add Menu"
+   ],
+   "images": "editors/nonlinear-animation-editor/header/nla-editor-add-menu",
+   "parts": [
+    {
+     "src": "20.1.6 Editors - NLA Editor - Add Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.header.nla-editor-track-menu",
+   "file": "content/editors/nonlinear-animation-editor/header/nla-editor-track-menu.md",
+   "title": "NLA Editor - Track Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "Header",
+    "NLA Editor - Track Menu"
+   ],
+   "images": "editors/nonlinear-animation-editor/header/nla-editor-track-menu",
+   "parts": [
+    {
+     "src": "20.1.7 Editors - NLA Editor - Track Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.header.nla-editor-strip-menu",
+   "file": "content/editors/nonlinear-animation-editor/header/nla-editor-strip-menu.md",
+   "title": "NLA Editor - Strip Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "Header",
+    "NLA Editor - Strip Menu"
+   ],
+   "images": "editors/nonlinear-animation-editor/header/nla-editor-strip-menu",
+   "parts": [
+    {
+     "src": "20.1.8 Editors - NLA Editor - Strip Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.nla-editor-channel-list",
+   "file": "content/editors/nonlinear-animation-editor/nla-editor-channel-list.md",
+   "title": "NLA Editor - Channel list",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "NLA Editor - Channel list"
+   ],
+   "images": "editors/nonlinear-animation-editor/nla-editor-channel-list",
+   "parts": [
+    {
+     "src": "20.2 Editors - NLA Editor - Channel list",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.sidebar",
+   "file": "content/editors/nonlinear-animation-editor/sidebar/index.md",
+   "title": "Sidebar",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "Sidebar"
+   ],
+   "images": "editors/nonlinear-animation-editor/sidebar",
+   "parts": [
+    {
+     "note": "The pages of this part are listed in the sidebar under *Sidebar*."
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.sidebar.nla-editor-sidebar-animation-data-panel",
+   "file": "content/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel.md",
+   "title": "NLA Editor - Sidebar - Animation Data panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "Sidebar",
+    "NLA Editor - Sidebar - Animation Data panel"
+   ],
+   "images": "editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel",
+   "parts": [
+    {
+     "src": "20.3.1 Editors - NLA Editor - Sidebar - Animation Data panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.sidebar.nla-editor-sidebar-strip-tab",
+   "file": "content/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab.md",
+   "title": "NLA Editor - Sidebar - Strip tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "Sidebar",
+    "NLA Editor - Sidebar - Strip tab"
+   ],
+   "images": "editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab",
+   "parts": [
+    {
+     "src": "20.3.2 Editors - NLA Editor - Sidebar - Strip tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.sidebar.nla-editor-sidebar-modifiers-tab",
+   "file": "content/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab.md",
+   "title": "NLA Editor - Sidebar - Modifiers Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "Sidebar",
+    "NLA Editor - Sidebar - Modifiers Tab"
+   ],
+   "images": "editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab",
+   "parts": [
+    {
+     "src": "20.3.3 Editors - NLA Editor - Sidebar - Modifiers Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.nonlinear-animation-editor.nla-editor-footer-tools-and-options",
+   "file": "content/editors/nonlinear-animation-editor/nla-editor-footer-tools-and-options.md",
+   "title": "NLA Editor - Footer tools and options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Nonlinear Animation Editor",
+    "NLA Editor - Footer tools and options"
+   ],
+   "images": "editors/nonlinear-animation-editor/nla-editor-footer-tools-and-options",
+   "parts": [
+    {
+     "src": "20.4 Editors - NLA Editor - Footer tools and options",
+     "select": "*"
+    }
+   ]
   }
  ],
  "snippets": [
