@@ -946,6 +946,2031 @@
      "select": "*"
     }
    ]
+  },
+  {
+   "id": "editors.3d-viewport",
+   "file": "content/editors/3d-viewport/index.md",
+   "title": "3D Viewport",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport"
+   ],
+   "images": "editors/3d-viewport",
+   "parts": [
+    {
+     "src": "7 Editors - 3D Viewport",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus",
+   "file": "content/editors/3d-viewport/context-menus/index.md",
+   "title": "Context menus",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus"
+   ],
+   "images": "editors/3d-viewport/context-menus",
+   "parts": [
+    {
+     "note": "The pages of this part are listed in the sidebar under *Context menus*."
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.object-mode-object-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/object-mode-object-context-menu.md",
+   "title": "Object mode - Object Context Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Object mode - Object Context Menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/object-mode-object-context-menu",
+   "parts": [
+    {
+     "src": "7.0.1 Editors - 3D Viewport - Object mode - Object Context Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.mesh-object-edit-mode-vertex-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu.md",
+   "title": "Mesh Object - Edit Mode - Vertex Context Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Mesh Object - Edit Mode - Vertex Context Menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu",
+   "parts": [
+    {
+     "src": "7.0.2 Editors - 3D Viewport - Mesh Object - Edit Mode - Vertex Context Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.mesh-object-edit-mode-edge-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu.md",
+   "title": "Mesh Object - Edit Mode - Edge Context Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Mesh Object - Edit Mode - Edge Context Menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu",
+   "parts": [
+    {
+     "src": "7.0.3 Editors - 3D Viewport - Mesh Object - Edit Mode - Edge Context Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.mesh-object-edit-mode-face-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu.md",
+   "title": "Mesh Object - Edit Mode - Face Context Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Mesh Object - Edit Mode - Face Context Menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu",
+   "parts": [
+    {
+     "src": "7.0.4 Editors - 3D Viewport - Mesh Object - Edit Mode - Face Context Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.mesh-object-sculpt-mode-brushes-context-menus",
+   "file": "content/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus.md",
+   "title": "Mesh Object - Sculpt Mode - Brushes context menus",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Mesh Object - Sculpt Mode - Brushes context menus"
+   ],
+   "images": "editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus",
+   "parts": [
+    {
+     "src": "7.0.5 Editors - 3D Viewport - Mesh Object - Sculpt Mode - Brushes context menus",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.mesh-object-vertex-paint-mode-brushes-context-menus",
+   "file": "content/editors/3d-viewport/context-menus/mesh-object-vertex-paint-mode-brushes-context-menus.md",
+   "title": "Mesh Object - Vertex Paint Mode - Brushes context menus",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Mesh Object - Vertex Paint Mode - Brushes context menus"
+   ],
+   "images": "editors/3d-viewport/context-menus/mesh-object-vertex-paint-mode-brushes-context-menus",
+   "parts": [
+    {
+     "src": "7.0.6 Editors - 3D Viewport - Mesh Object - Vertex Paint Mode - Brushes context menus",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.mesh-object-weight-paint-mode-brushes-context-menus",
+   "file": "content/editors/3d-viewport/context-menus/mesh-object-weight-paint-mode-brushes-context-menus.md",
+   "title": "Mesh Object - Weight Paint Mode - Brushes context menus",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Mesh Object - Weight Paint Mode - Brushes context menus"
+   ],
+   "images": "editors/3d-viewport/context-menus/mesh-object-weight-paint-mode-brushes-context-menus",
+   "parts": [
+    {
+     "src": "7.0.7 Editors - 3D Viewport - Mesh Object - Weight Paint Mode - Brushes context menus",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.mesh-object-texture-paint-mode-brushes-context-menus",
+   "file": "content/editors/3d-viewport/context-menus/mesh-object-texture-paint-mode-brushes-context-menus.md",
+   "title": "Mesh Object - Texture Paint Mode - Brushes context menus",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Mesh Object - Texture Paint Mode - Brushes context menus"
+   ],
+   "images": "editors/3d-viewport/context-menus/mesh-object-texture-paint-mode-brushes-context-menus",
+   "parts": [
+    {
+     "src": "7.0.8 Editors - 3D Viewport - Mesh Object - Texture Paint Mode - Brushes context menus",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.curve-surface-object-edit-mode-curve-context-menus",
+   "file": "content/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus.md",
+   "title": "Curve + Surface Object - Edit Mode - Curve context menus",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Curve + Surface Object - Edit Mode - Curve context menus"
+   ],
+   "images": "editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus",
+   "parts": [
+    {
+     "src": "7.0.9 Editors - 3D Viewport - Curve + Surface Object - Edit Mode - Curve context menus",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.metaball-edit-mode-metaball-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu.md",
+   "title": "Metaball - Edit Mode - Metaball context menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Metaball - Edit Mode - Metaball context menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu",
+   "parts": [
+    {
+     "src": "7.0.10 Editors - 3D Viewport - Metaball - Edit Mode - Metaball context menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.text-edit-mode-text-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu.md",
+   "title": "Text - Edit Mode - Text context menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Text - Edit Mode - Text context menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/text-edit-mode-text-context-menu",
+   "parts": [
+    {
+     "src": "7.0.11 Editors - 3D Viewport - Text - Edit Mode - Text context menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.grease-pencil-object-edit-mode-point-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu.md",
+   "title": "Grease Pencil object - Edit Mode - Point context menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Grease Pencil object - Edit Mode - Point context menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu",
+   "parts": [
+    {
+     "src": "7.0.12 Editors - 3D Viewport - Grease Pencil object - Edit Mode - Point context menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.grease-pencil-object-edit-mode-stroke-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu.md",
+   "title": "Grease Pencil object - Edit Mode - Stroke context menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Grease Pencil object - Edit Mode - Stroke context menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu",
+   "parts": [
+    {
+     "src": "7.0.13 Editors - 3D Viewport - Grease Pencil object - Edit Mode - Stroke context menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.grease-pencil-object-sculpt-mode-brushes-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu.md",
+   "title": "Grease Pencil object - Sculpt Mode - Brushes context menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Grease Pencil object - Sculpt Mode - Brushes context menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu",
+   "parts": [
+    {
+     "src": "7.0.14 Editors - 3D Viewport - Grease Pencil object - Sculpt Mode - Brushes context menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.grease-pencil-object-draw-mode-brushes-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/grease-pencil-object-draw-mode-brushes-context-menu.md",
+   "title": "Grease Pencil object - Draw Mode - Brushes context menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Grease Pencil object - Draw Mode - Brushes context menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/grease-pencil-object-draw-mode-brushes-context-menu",
+   "parts": [
+    {
+     "src": "7.0.15 Editors - 3D Viewport - Grease Pencil object - Draw Mode - Brushes context menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.grease-pencil-object-vertex-paint-mode-brushes-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu.md",
+   "title": "Grease Pencil object - Vertex Paint Mode - Brushes context menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Grease Pencil object - Vertex Paint Mode - Brushes context menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu",
+   "parts": [
+    {
+     "src": "7.0.16 Editors - 3D Viewport - Grease Pencil object - Vertex Paint Mode - Brushes context menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.grease-pencil-object-weight-paint-mode-brushes-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/grease-pencil-object-weight-paint-mode-brushes-context-menu.md",
+   "title": "Grease Pencil object - Weight Paint Mode - Brushes context menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Grease Pencil object - Weight Paint Mode - Brushes context menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/grease-pencil-object-weight-paint-mode-brushes-context-menu",
+   "parts": [
+    {
+     "src": "7.0.17 Editors - 3D Viewport - Grease Pencil object - Weight Paint Mode - Brushes context menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.armature-edit-mode-armature-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu.md",
+   "title": "Armature - Edit Mode - Armature context menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Armature - Edit Mode - Armature context menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu",
+   "parts": [
+    {
+     "src": "7.0.18 Editors - 3D Viewport - Armature - Edit Mode - Armature context menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.armature-pose-mode-pose-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu.md",
+   "title": "Armature - Pose Mode - Pose context menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Armature - Pose Mode - Pose context menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu",
+   "parts": [
+    {
+     "src": "7.0.19 Editors - 3D Viewport - Armature - Pose Mode - Pose context menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.armature-edit-mode-lattice-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/armature-edit-mode-lattice-context-menu.md",
+   "title": "Armature - Edit Mode - Lattice context menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Armature - Edit Mode - Lattice context menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/armature-edit-mode-lattice-context-menu",
+   "parts": [
+    {
+     "src": "7.0.20 Editors - 3D Viewport - Armature - Edit Mode - Lattice context menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.context-menus.hair-curves-edit-mode-curves-context-menu",
+   "file": "content/editors/3d-viewport/context-menus/hair-curves-edit-mode-curves-context-menu.md",
+   "title": "Hair Curves - Edit Mode - Curves context menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Context menus",
+    "Hair Curves - Edit Mode - Curves context menu"
+   ],
+   "images": "editors/3d-viewport/context-menus/hair-curves-edit-mode-curves-context-menu",
+   "parts": [
+    {
+     "src": "7.0.21 Editors - 3D Viewport - Hair Curves - Edit Mode - Curves context menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header",
+   "file": "content/editors/3d-viewport/header/index.md",
+   "title": "Header",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header"
+   ],
+   "images": "editors/3d-viewport/header",
+   "parts": [
+    {
+     "src": "7.1 Editors - 3D Viewport - Header",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.header-tools-and-options",
+   "file": "content/editors/3d-viewport/header/header-tools-and-options.md",
+   "title": "Header tools and Options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Header tools and Options"
+   ],
+   "images": "editors/3d-viewport/header/header-tools-and-options",
+   "parts": [
+    {
+     "src": "7.1.1 Editors - 3D Viewport - Header tools and Options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.quick-menu",
+   "file": "content/editors/3d-viewport/header/quick-menu.md",
+   "title": "Quick Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Quick Menu"
+   ],
+   "images": "editors/3d-viewport/header/quick-menu",
+   "parts": [
+    {
+     "src": "7.1.2 Editors - 3D Viewport - Header - Quick Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.view-menu",
+   "file": "content/editors/3d-viewport/header/view-menu.md",
+   "title": "View Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "View Menu"
+   ],
+   "images": "editors/3d-viewport/header/view-menu",
+   "parts": [
+    {
+     "src": "7.1.3 Editors - 3D Viewport - Header - View Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.navigation-menu",
+   "file": "content/editors/3d-viewport/header/navigation-menu.md",
+   "title": "Navigation Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Navigation Menu"
+   ],
+   "images": "editors/3d-viewport/header/navigation-menu",
+   "parts": [
+    {
+     "src": "7.1.4 Editors - 3D Viewport - Header - Navigation Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.select-menu",
+   "file": "content/editors/3d-viewport/header/select-menu.md",
+   "title": "Select Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Select Menu"
+   ],
+   "images": "editors/3d-viewport/header/select-menu",
+   "parts": [
+    {
+     "src": "7.1.5 Editors - 3D Viewport - Header - Select Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.add-menu",
+   "file": "content/editors/3d-viewport/header/add-menu.md",
+   "title": "Add Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Add Menu"
+   ],
+   "images": "editors/3d-viewport/header/add-menu",
+   "parts": [
+    {
+     "src": "7.1.6 Editors - 3D Viewport - Header - Add Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.edit-mode-add-menu",
+   "file": "content/editors/3d-viewport/header/edit-mode-add-menu.md",
+   "title": "Edit mode - Add menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Edit mode - Add menu"
+   ],
+   "images": "editors/3d-viewport/header/edit-mode-add-menu",
+   "parts": [
+    {
+     "src": "7.1.7 Editors - 3D Viewport - Header - Edit mode - Add menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.object-menu",
+   "file": "content/editors/3d-viewport/header/object-menu.md",
+   "title": "Object menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Object menu"
+   ],
+   "images": "editors/3d-viewport/header/object-menu",
+   "parts": [
+    {
+     "src": "7.1.8 Editors - 3D Viewport - Header - Object menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.mesh-edit-mode-mesh-menu",
+   "file": "content/editors/3d-viewport/header/mesh-edit-mode-mesh-menu.md",
+   "title": "Mesh - Edit mode - Mesh menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Mesh - Edit mode - Mesh menu"
+   ],
+   "images": "editors/3d-viewport/header/mesh-edit-mode-mesh-menu",
+   "parts": [
+    {
+     "src": "7.1.9 Editors - 3D Viewport - Header - Mesh - Edit mode - Mesh menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.mesh-edit-mode-vertex-menu",
+   "file": "content/editors/3d-viewport/header/mesh-edit-mode-vertex-menu.md",
+   "title": "Mesh - Edit Mode - Vertex Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Mesh - Edit Mode - Vertex Menu"
+   ],
+   "images": "editors/3d-viewport/header/mesh-edit-mode-vertex-menu",
+   "parts": [
+    {
+     "src": "7.1.10 Editors - 3D Viewport - Header - Mesh - Edit Mode - Vertex Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.mesh-edit-mode-edge-menu",
+   "file": "content/editors/3d-viewport/header/mesh-edit-mode-edge-menu.md",
+   "title": "Mesh - Edit mode - Edge Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Mesh - Edit mode - Edge Menu"
+   ],
+   "images": "editors/3d-viewport/header/mesh-edit-mode-edge-menu",
+   "parts": [
+    {
+     "src": "7.1.11 Editors - 3D Viewport - Header - Mesh - Edit mode - Edge Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.mesh-edit-mode-face-menu",
+   "file": "content/editors/3d-viewport/header/mesh-edit-mode-face-menu.md",
+   "title": "Mesh - Edit mode - Face menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Mesh - Edit mode - Face menu"
+   ],
+   "images": "editors/3d-viewport/header/mesh-edit-mode-face-menu",
+   "parts": [
+    {
+     "src": "7.1.12 Editors - 3D Viewport - Header - Mesh - Edit mode - Face menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.mesh-edit-mode-uv-menu",
+   "file": "content/editors/3d-viewport/header/mesh-edit-mode-uv-menu.md",
+   "title": "Mesh - Edit mode - UV menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Mesh - Edit mode - UV menu"
+   ],
+   "images": "editors/3d-viewport/header/mesh-edit-mode-uv-menu",
+   "parts": [
+    {
+     "src": "7.1.13 Editors - 3D Viewport - Header - Mesh - Edit mode - UV menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.mesh-sculpt-mode-sculpt-menu",
+   "file": "content/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu.md",
+   "title": "Mesh - Sculpt mode - Sculpt menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Mesh - Sculpt mode - Sculpt menu"
+   ],
+   "images": "editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu",
+   "parts": [
+    {
+     "src": "7.1.14 Editors - 3D Viewport - Header - Mesh - Sculpt mode - Sculpt menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.mesh-sculpt-mode-mask-menu",
+   "file": "content/editors/3d-viewport/header/mesh-sculpt-mode-mask-menu.md",
+   "title": "Mesh - Sculpt mode - Mask menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Mesh - Sculpt mode - Mask menu"
+   ],
+   "images": "editors/3d-viewport/header/mesh-sculpt-mode-mask-menu",
+   "parts": [
+    {
+     "src": "7.1.15 Editors - 3D Viewport - Header - Mesh - Sculpt mode - Mask menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.mesh-sculpt-mode-face-sets-menu",
+   "file": "content/editors/3d-viewport/header/mesh-sculpt-mode-face-sets-menu.md",
+   "title": "Mesh - Sculpt mode - Face Sets menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Mesh - Sculpt mode - Face Sets menu"
+   ],
+   "images": "editors/3d-viewport/header/mesh-sculpt-mode-face-sets-menu",
+   "parts": [
+    {
+     "src": "7.1.16 Editors - 3D Viewport - Header - Mesh - Sculpt mode - Face Sets menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.mesh-vertex-paint-mode-paint-menu",
+   "file": "content/editors/3d-viewport/header/mesh-vertex-paint-mode-paint-menu.md",
+   "title": "Mesh - Vertex Paint mode - Paint menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Mesh - Vertex Paint mode - Paint menu"
+   ],
+   "images": "editors/3d-viewport/header/mesh-vertex-paint-mode-paint-menu",
+   "parts": [
+    {
+     "src": "7.1.17 Editors - 3D Viewport - Header - Mesh - Vertex Paint mode - Paint menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.mesh-vertex-paint-mode-brush-menu",
+   "file": "content/editors/3d-viewport/header/mesh-vertex-paint-mode-brush-menu.md",
+   "title": "Mesh - Vertex Paint mode - Brush menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Mesh - Vertex Paint mode - Brush menu"
+   ],
+   "images": "editors/3d-viewport/header/mesh-vertex-paint-mode-brush-menu",
+   "parts": [
+    {
+     "src": "7.1.18 Editors - 3D Viewport - Header - Mesh - Vertex Paint mode - Brush menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.mesh-weight-paint-mode-weights-menu",
+   "file": "content/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu.md",
+   "title": "Mesh - Weight Paint mode - Weights menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Mesh - Weight Paint mode - Weights menu"
+   ],
+   "images": "editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu",
+   "parts": [
+    {
+     "src": "7.1.19 Editors - 3D Viewport - Header - Mesh - Weight Paint mode - Weights menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.mesh-texture-paint-mode-brush-menu",
+   "file": "content/editors/3d-viewport/header/mesh-texture-paint-mode-brush-menu.md",
+   "title": "Mesh - Texture Paint mode - Brush menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Mesh - Texture Paint mode - Brush menu"
+   ],
+   "images": "editors/3d-viewport/header/mesh-texture-paint-mode-brush-menu",
+   "parts": [
+    {
+     "src": "7.1.20 Editors - 3D Viewport - Header - Mesh - Texture Paint mode - Brush menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.curve-edit-mode-curve-menu",
+   "file": "content/editors/3d-viewport/header/curve-edit-mode-curve-menu.md",
+   "title": "Curve - Edit mode - Curve menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Curve - Edit mode - Curve menu"
+   ],
+   "images": "editors/3d-viewport/header/curve-edit-mode-curve-menu",
+   "parts": [
+    {
+     "src": "7.1.21 Editors - 3D Viewport - Header - Curve - Edit mode - Curve menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.surface-edit-mode-surface-menu",
+   "file": "content/editors/3d-viewport/header/surface-edit-mode-surface-menu.md",
+   "title": "Surface - Edit mode - Surface menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Surface - Edit mode - Surface menu"
+   ],
+   "images": "editors/3d-viewport/header/surface-edit-mode-surface-menu",
+   "parts": [
+    {
+     "src": "7.1.22 Editors - 3D Viewport - Header - Surface - Edit mode - Surface menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.curve-surface-edit-mode-control-points-menu",
+   "file": "content/editors/3d-viewport/header/curve-surface-edit-mode-control-points-menu.md",
+   "title": "Curve & Surface - Edit mode - Control points menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Curve & Surface - Edit mode - Control points menu"
+   ],
+   "images": "editors/3d-viewport/header/curve-surface-edit-mode-control-points-menu",
+   "parts": [
+    {
+     "src": "7.1.23 Editors - 3D Viewport - Header - Curve & Surface - Edit mode - Control points menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.curve-surface-edit-mode-segments-menu",
+   "file": "content/editors/3d-viewport/header/curve-surface-edit-mode-segments-menu.md",
+   "title": "Curve & Surface - Edit mode - Segments menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Curve & Surface - Edit mode - Segments menu"
+   ],
+   "images": "editors/3d-viewport/header/curve-surface-edit-mode-segments-menu",
+   "parts": [
+    {
+     "src": "7.1.24 Editors - 3D Viewport - Header - Curve & Surface - Edit mode - Segments menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.metaball-edit-mode-metaball-menu",
+   "file": "content/editors/3d-viewport/header/metaball-edit-mode-metaball-menu.md",
+   "title": "Metaball - Edit mode - Metaball menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Metaball - Edit mode - Metaball menu"
+   ],
+   "images": "editors/3d-viewport/header/metaball-edit-mode-metaball-menu",
+   "parts": [
+    {
+     "src": "7.1.25 Editors - 3D Viewport - Header - Metaball - Edit mode - Metaball menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.text-edit-mode-text-menu",
+   "file": "content/editors/3d-viewport/header/text-edit-mode-text-menu.md",
+   "title": "Text - Edit mode - Text menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Text - Edit mode - Text menu"
+   ],
+   "images": "editors/3d-viewport/header/text-edit-mode-text-menu",
+   "parts": [
+    {
+     "src": "7.1.26 Editors - 3D Viewport - Header - Text - Edit mode - Text menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.grease-pencil-edit-mode-grease-pencil-menu",
+   "file": "content/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu.md",
+   "title": "Grease Pencil - Edit mode - Grease Pencil menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Grease Pencil - Edit mode - Grease Pencil menu"
+   ],
+   "images": "editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu",
+   "parts": [
+    {
+     "src": "7.1.27 Editors - 3D Viewport - Header - Grease Pencil - Edit mode - Grease Pencil menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.point-cloud-edit-mode-point-cloud-menu",
+   "file": "content/editors/3d-viewport/header/point-cloud-edit-mode-point-cloud-menu.md",
+   "title": "Point Cloud - Edit mode - Point Cloud menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Point Cloud - Edit mode - Point Cloud menu"
+   ],
+   "images": "editors/3d-viewport/header/point-cloud-edit-mode-point-cloud-menu",
+   "parts": [
+    {
+     "src": "7.1.28 Editors - 3D Viewport - Header - Point Cloud - Edit mode - Point Cloud menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.grease-pencil-edit-mode-point-menu",
+   "file": "content/editors/3d-viewport/header/grease-pencil-edit-mode-point-menu.md",
+   "title": "Grease Pencil - Edit mode - Point menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Grease Pencil - Edit mode - Point menu"
+   ],
+   "images": "editors/3d-viewport/header/grease-pencil-edit-mode-point-menu",
+   "parts": [
+    {
+     "src": "7.1.29 Editors - 3D Viewport - Header - Grease Pencil - Edit mode - Point menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.grease-pencil-edit-mode-stroke-menu",
+   "file": "content/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu.md",
+   "title": "Grease Pencil - Edit mode - Stroke menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Grease Pencil - Edit mode - Stroke menu"
+   ],
+   "images": "editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu",
+   "parts": [
+    {
+     "src": "7.1.30 Editors - 3D Viewport - Header - Grease Pencil - Edit mode - Stroke menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.grease-pencil-draw-mode-draw-menu",
+   "file": "content/editors/3d-viewport/header/grease-pencil-draw-mode-draw-menu.md",
+   "title": "Grease Pencil - Draw mode - Draw menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Grease Pencil - Draw mode - Draw menu"
+   ],
+   "images": "editors/3d-viewport/header/grease-pencil-draw-mode-draw-menu",
+   "parts": [
+    {
+     "src": "7.1.31 Editors - 3D Viewport - Header - Grease Pencil - Draw mode - Draw menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.grease-pencil-vertex-paint-mode-paint-menu",
+   "file": "content/editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu.md",
+   "title": "Grease Pencil - Vertex Paint mode - Paint menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Grease Pencil - Vertex Paint mode - Paint menu"
+   ],
+   "images": "editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu",
+   "parts": [
+    {
+     "src": "7.1.32 Editors - 3D Viewport - Header - Grease Pencil - Vertex Paint mode - Paint menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.grease-pencil-weight-paint-mode-weights-menu",
+   "file": "content/editors/3d-viewport/header/grease-pencil-weight-paint-mode-weights-menu.md",
+   "title": "Grease Pencil - Weight Paint Mode - Weights Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Grease Pencil - Weight Paint Mode - Weights Menu"
+   ],
+   "images": "editors/3d-viewport/header/grease-pencil-weight-paint-mode-weights-menu",
+   "parts": [
+    {
+     "src": "7.1.33 Editors - 3D Viewport - Header - Grease Pencil - Weight Paint Mode - Weights Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.armature-edit-mode-armature-menu",
+   "file": "content/editors/3d-viewport/header/armature-edit-mode-armature-menu.md",
+   "title": "Armature - Edit mode - Armature menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Armature - Edit mode - Armature menu"
+   ],
+   "images": "editors/3d-viewport/header/armature-edit-mode-armature-menu",
+   "parts": [
+    {
+     "src": "7.1.34 Editors - 3D Viewport - Header - Armature - Edit mode - Armature menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.armature-pose-mode-pose-menu",
+   "file": "content/editors/3d-viewport/header/armature-pose-mode-pose-menu.md",
+   "title": "Armature - Pose mode - Pose menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Armature - Pose mode - Pose menu"
+   ],
+   "images": "editors/3d-viewport/header/armature-pose-mode-pose-menu",
+   "parts": [
+    {
+     "src": "7.1.35 Editors - 3D Viewport - Header - Armature - Pose mode - Pose menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.lattice-edit-mode-lattice-menu",
+   "file": "content/editors/3d-viewport/header/lattice-edit-mode-lattice-menu.md",
+   "title": "Lattice - Edit mode - Lattice menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Lattice - Edit mode - Lattice menu"
+   ],
+   "images": "editors/3d-viewport/header/lattice-edit-mode-lattice-menu",
+   "parts": [
+    {
+     "src": "7.1.36 Editors - 3D Viewport - Header - Lattice - Edit mode - Lattice menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.particle-particle-mode-particle-menu",
+   "file": "content/editors/3d-viewport/header/particle-particle-mode-particle-menu.md",
+   "title": "Particle - Particle mode - Particle menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Particle - Particle mode - Particle menu"
+   ],
+   "images": "editors/3d-viewport/header/particle-particle-mode-particle-menu",
+   "parts": [
+    {
+     "src": "7.1.37 Editors - 3D Viewport - Header - Particle - Particle mode - Particle menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.hair-curve-edit-mode-curves-menu",
+   "file": "content/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu.md",
+   "title": "Hair Curve - Edit mode - Curves menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Hair Curve - Edit mode - Curves menu"
+   ],
+   "images": "editors/3d-viewport/header/hair-curve-edit-mode-curves-menu",
+   "parts": [
+    {
+     "src": "7.1.38 Editors - 3D Viewport - Header - Hair Curve - Edit mode - Curves menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.hair-curve-edit-mode-control-points-menu",
+   "file": "content/editors/3d-viewport/header/hair-curve-edit-mode-control-points-menu.md",
+   "title": "Hair Curve - Edit mode - Control Points menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Hair Curve - Edit mode - Control Points menu"
+   ],
+   "images": "editors/3d-viewport/header/hair-curve-edit-mode-control-points-menu",
+   "parts": [
+    {
+     "src": "7.1.39 Editors - 3D Viewport - Header - Hair Curve - Edit mode - Control Points menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.hair-curve-edit-mode-segments-menu",
+   "file": "content/editors/3d-viewport/header/hair-curve-edit-mode-segments-menu.md",
+   "title": "Hair Curve - Edit mode - Segments menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Hair Curve - Edit mode - Segments menu"
+   ],
+   "images": "editors/3d-viewport/header/hair-curve-edit-mode-segments-menu",
+   "parts": [
+    {
+     "src": "7.1.40 Editors - 3D Viewport - Header - Hair Curve - Edit mode - Segments menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.header.hair-curve-sculpt-mode-curves-menu",
+   "file": "content/editors/3d-viewport/header/hair-curve-sculpt-mode-curves-menu.md",
+   "title": "Hair Curve - Sculpt mode - Curves menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Header",
+    "Hair Curve - Sculpt mode - Curves menu"
+   ],
+   "images": "editors/3d-viewport/header/hair-curve-sculpt-mode-curves-menu",
+   "parts": [
+    {
+     "src": "7.1.41 Editors - 3D Viewport - Header - Hair Curve - Sculpt mode - Curves menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf",
+   "file": "content/editors/3d-viewport/tool-shelf/index.md",
+   "title": "Tool Shelf",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf"
+   ],
+   "images": "editors/3d-viewport/tool-shelf",
+   "parts": [
+    {
+     "src": "7.2 Editors - 3D Viewport - Tool Shelf",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.object-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/object-mode.md",
+   "title": "Object Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Object Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/object-mode",
+   "parts": [
+    {
+     "src": "7.2.1 Editors - 3D Viewport - Tool Shelf - Object Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.mesh-edit-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/mesh-edit-mode.md",
+   "title": "Mesh - Edit Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Mesh - Edit Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/mesh-edit-mode",
+   "parts": [
+    {
+     "src": "7.2.2 Editors - 3D Viewport - Tool Shelf - Mesh - Edit Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.mesh-sculpt-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/mesh-sculpt-mode.md",
+   "title": "Mesh - Sculpt Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Mesh - Sculpt Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/mesh-sculpt-mode",
+   "parts": [
+    {
+     "src": "7.2.3 Editors - 3D Viewport - Tool Shelf - Mesh - Sculpt Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.mesh-vertex-paint-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/mesh-vertex-paint-mode.md",
+   "title": "Mesh - Vertex Paint Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Mesh - Vertex Paint Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/mesh-vertex-paint-mode",
+   "parts": [
+    {
+     "src": "7.2.4 Editors - 3D Viewport - Tool Shelf - Mesh - Vertex Paint Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.mesh-weight-paint-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode.md",
+   "title": "Mesh - Weight Paint Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Mesh - Weight Paint Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/mesh-weight-paint-mode",
+   "parts": [
+    {
+     "src": "7.2.5 Editors - 3D Viewport - Tool Shelf - Mesh - Weight Paint Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.mesh-texture-paint-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/mesh-texture-paint-mode.md",
+   "title": "Mesh - Texture Paint Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Mesh - Texture Paint Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/mesh-texture-paint-mode",
+   "parts": [
+    {
+     "src": "7.2.6 Editors - 3D Viewport - Tool Shelf - Mesh - Texture Paint Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.mesh-particle-edit-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode.md",
+   "title": "Mesh - Particle Edit Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Mesh - Particle Edit Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/mesh-particle-edit-mode",
+   "parts": [
+    {
+     "src": "7.2.7 Editors - 3D Viewport - Tool Shelf - Mesh - Particle Edit Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.curve-edit-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/curve-edit-mode.md",
+   "title": "Curve - Edit Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Curve - Edit Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/curve-edit-mode",
+   "parts": [
+    {
+     "src": "7.2.8 Editors - 3D Viewport - Tool Shelf - Curve - Edit Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.surface-edit-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/surface-edit-mode.md",
+   "title": "Surface - Edit Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Surface - Edit Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/surface-edit-mode",
+   "parts": [
+    {
+     "src": "7.2.9 Editors - 3D Viewport - Tool Shelf - Surface - Edit Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.metaball-edit-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/metaball-edit-mode.md",
+   "title": "Metaball - Edit Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Metaball - Edit Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/metaball-edit-mode",
+   "parts": [
+    {
+     "src": "7.2.10 Editors - 3D Viewport - Tool Shelf - Metaball - Edit Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.text-edit-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/text-edit-mode.md",
+   "title": "Text - Edit Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Text - Edit Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/text-edit-mode",
+   "parts": [
+    {
+     "src": "7.2.11 Editors - 3D Viewport - Tool Shelf - Text - Edit Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.grease-pencil-edit-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode.md",
+   "title": "Grease Pencil - Edit Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Grease Pencil - Edit Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/grease-pencil-edit-mode",
+   "parts": [
+    {
+     "src": "7.2.12 Editors - 3D Viewport - Tool Shelf - Grease Pencil - Edit Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.grease-pencil-sculpt-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/grease-pencil-sculpt-mode.md",
+   "title": "Grease Pencil - Sculpt Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Grease Pencil - Sculpt Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/grease-pencil-sculpt-mode",
+   "parts": [
+    {
+     "src": "7.2.13 Editors - 3D Viewport - Tool Shelf - Grease Pencil - Sculpt Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.grease-pencil-draw-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/grease-pencil-draw-mode.md",
+   "title": "Grease Pencil - Draw Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Grease Pencil - Draw Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/grease-pencil-draw-mode",
+   "parts": [
+    {
+     "src": "7.2.14 Editors - 3D Viewport - Tool Shelf - Grease Pencil - Draw Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.grease-pencil-vertex-paint-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/grease-pencil-vertex-paint-mode.md",
+   "title": "Grease Pencil - Vertex Paint Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Grease Pencil - Vertex Paint Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/grease-pencil-vertex-paint-mode",
+   "parts": [
+    {
+     "src": "7.2.15 Editors - 3D Viewport - Tool Shelf - Grease Pencil - Vertex Paint Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.grease-pencil-weight-paint-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/grease-pencil-weight-paint-mode.md",
+   "title": "Grease Pencil - Weight Paint Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Grease Pencil - Weight Paint Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/grease-pencil-weight-paint-mode",
+   "parts": [
+    {
+     "src": "7.2.16 Editors - 3D Viewport - Tool Shelf - Grease Pencil - Weight Paint Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.armature-edit-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/armature-edit-mode.md",
+   "title": "Armature - Edit Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Armature - Edit Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/armature-edit-mode",
+   "parts": [
+    {
+     "src": "7.2.17 Editors - 3D Viewport - Tool Shelf - Armature - Edit Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.armature-pose-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/armature-pose-mode.md",
+   "title": "Armature - Pose Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Armature - Pose Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/armature-pose-mode",
+   "parts": [
+    {
+     "src": "7.2.18 Editors - 3D Viewport - Tool Shelf - Armature - Pose Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.lattice-edit-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/lattice-edit-mode.md",
+   "title": "Lattice - Edit Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Lattice - Edit Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/lattice-edit-mode",
+   "parts": [
+    {
+     "src": "7.2.19 Editors - 3D Viewport - Tool Shelf - Lattice - Edit Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.hair-curve-edit-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/hair-curve-edit-mode.md",
+   "title": "Hair Curve - Edit Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Hair Curve - Edit Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/hair-curve-edit-mode",
+   "parts": [
+    {
+     "src": "7.2.20 Editors - 3D Viewport - Tool Shelf - Hair Curve - Edit Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.tool-shelf.hair-curve-sculpt-mode",
+   "file": "content/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode.md",
+   "title": "Hair Curve - Sculpt Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Tool Shelf",
+    "Hair Curve - Sculpt Mode"
+   ],
+   "images": "editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode",
+   "parts": [
+    {
+     "src": "7.2.21 Editors - 3D Viewport - Tool Shelf - Hair Curve - Sculpt Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar",
+   "file": "content/editors/3d-viewport/sidebar/index.md",
+   "title": "Sidebar",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar"
+   ],
+   "images": "editors/3d-viewport/sidebar",
+   "parts": [
+    {
+     "src": "7.3 Editors - 3D Viewport - Sidebar",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.item-tab",
+   "file": "content/editors/3d-viewport/sidebar/item-tab.md",
+   "title": "Item tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Item tab"
+   ],
+   "images": "editors/3d-viewport/sidebar/item-tab",
+   "parts": [
+    {
+     "src": "7.3.1 Editors - 3D Viewport - Sidebar - Item tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab.md",
+   "title": "Tool Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab",
+   "parts": [
+    {
+     "src": "7.3.2 Editors - 3D Viewport - Sidebar - Tool Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-object-mode",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-object-mode.md",
+   "title": "Tool Tab - Object Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Object Mode"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-object-mode",
+   "parts": [
+    {
+     "src": "7.3.3 Editors - 3D Viewport - Sidebar - Tool Tab - Object Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-edit-mode",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-edit-mode.md",
+   "title": "Tool Tab - Edit Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Edit Mode"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-edit-mode",
+   "parts": [
+    {
+     "src": "7.3.4 Editors - 3D Viewport - Sidebar - Tool Tab - Edit Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-pose-mode",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-pose-mode.md",
+   "title": "Tool Tab - Pose Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Pose Mode"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-pose-mode",
+   "parts": [
+    {
+     "src": "7.3.5 Editors - 3D Viewport - Sidebar - Tool Tab - Pose Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-mesh-sculpt-mode",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode.md",
+   "title": "Tool Tab - Mesh - Sculpt Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Mesh - Sculpt Mode"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode",
+   "parts": [
+    {
+     "src": "7.3.6 Editors - 3D Viewport - Sidebar - Tool Tab - Mesh - Sculpt Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-mesh-vertex-paint-mode",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode.md",
+   "title": "Tool Tab - Mesh - Vertex Paint Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Mesh - Vertex Paint Mode"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode",
+   "parts": [
+    {
+     "src": "7.3.7 Editors - 3D Viewport - Sidebar - Tool Tab - Mesh - Vertex Paint Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-mesh-texture-paint-mode",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-mesh-texture-paint-mode.md",
+   "title": "Tool Tab - Mesh - Texture Paint Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Mesh - Texture Paint Mode"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-mesh-texture-paint-mode",
+   "parts": [
+    {
+     "src": "7.3.8 Editors - 3D Viewport - Sidebar - Tool Tab - Mesh - Texture Paint Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-mesh-weight-paint-mode",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode.md",
+   "title": "Tool Tab - Mesh - Weight Paint Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Mesh - Weight Paint Mode"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode",
+   "parts": [
+    {
+     "src": "7.3.9 Editors - 3D Viewport - Sidebar - Tool Tab - Mesh - Weight Paint Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-particle-edit-mode",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode.md",
+   "title": "Tool Tab - Particle Edit Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Particle Edit Mode"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-particle-edit-mode",
+   "parts": [
+    {
+     "src": "7.3.10 Editors - 3D Viewport - Sidebar - Tool Tab - Particle Edit Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-grease-pencil-sculpt-mode",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-sculpt-mode.md",
+   "title": "Tool Tab - Grease Pencil - Sculpt Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Grease Pencil - Sculpt Mode"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-grease-pencil-sculpt-mode",
+   "parts": [
+    {
+     "src": "7.3.11 Editors - 3D Viewport - Sidebar - Tool Tab - Grease Pencil - Sculpt Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-grease-pencil-draw-mode",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-draw-mode.md",
+   "title": "Tool Tab - Grease Pencil - Draw Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Grease Pencil - Draw Mode"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-grease-pencil-draw-mode",
+   "parts": [
+    {
+     "src": "7.3.12 Editors - 3D Viewport - Sidebar - Tool Tab - Grease Pencil - Draw Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-grease-pencil-vertex-paint-mode",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-vertex-paint-mode.md",
+   "title": "Tool Tab - Grease Pencil - Vertex Paint Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Grease Pencil - Vertex Paint Mode"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-grease-pencil-vertex-paint-mode",
+   "parts": [
+    {
+     "src": "7.3.13 Editors - 3D Viewport - Sidebar - Tool Tab - Grease Pencil - Vertex Paint Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-grease-pencil-weight-paint-mode",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-weight-paint-mode.md",
+   "title": "Tool Tab - Grease Pencil - Weight Paint Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Grease Pencil - Weight Paint Mode"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-grease-pencil-weight-paint-mode",
+   "parts": [
+    {
+     "src": "7.3.14 Editors - 3D Viewport - Sidebar - Tool Tab - Grease Pencil - Weight Paint Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-grease-pencil-layer-panel",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-layer-panel.md",
+   "title": "Tool Tab - Grease Pencil - Layer Panel",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Grease Pencil - Layer Panel"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-grease-pencil-layer-panel",
+   "parts": [
+    {
+     "src": "7.3.15 Editors - 3D Viewport - Sidebar - Tool Tab - Grease Pencil - Layer Panel",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.tool-tab-hair-curve-sculpt-mode",
+   "file": "content/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode.md",
+   "title": "Tool Tab - Hair Curve - Sculpt Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Tool Tab - Hair Curve - Sculpt Mode"
+   ],
+   "images": "editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode",
+   "parts": [
+    {
+     "src": "7.3.16 Editors - 3D Viewport - Sidebar - Tool Tab - Hair Curve - Sculpt Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.view-tab",
+   "file": "content/editors/3d-viewport/sidebar/view-tab.md",
+   "title": "View Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "View Tab"
+   ],
+   "images": "editors/3d-viewport/sidebar/view-tab",
+   "parts": [
+    {
+     "src": "7.3.17 Editors - 3D Viewport - Sidebar - View Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.sidebar.animation-tab",
+   "file": "content/editors/3d-viewport/sidebar/animation-tab.md",
+   "title": "Animation Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Sidebar",
+    "Animation Tab"
+   ],
+   "images": "editors/3d-viewport/sidebar/animation-tab",
+   "parts": [
+    {
+     "src": "7.3.18 Editors - 3D Viewport - Sidebar - Animation Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.3d-viewport.asset-shelf",
+   "file": "content/editors/3d-viewport/asset-shelf.md",
+   "title": "Asset Shelf",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "3D Viewport",
+    "Asset Shelf"
+   ],
+   "images": "editors/3d-viewport/asset-shelf",
+   "parts": [
+    {
+     "src": "7.4 Editors - 3D Viewport - Asset Shelf",
+     "select": "*"
+    }
+   ]
   }
  ],
  "snippets": [
