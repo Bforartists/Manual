@@ -5874,6 +5874,1339 @@
      "select": "*"
     }
    ]
+  },
+  {
+   "id": "editors.shader-editor",
+   "file": "content/editors/shader-editor/index.md",
+   "title": "Shader Editor",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor"
+   ],
+   "images": "editors/shader-editor",
+   "parts": [
+    {
+     "src": "13 Editors - Shader Editor",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header",
+   "file": "content/editors/shader-editor/header/index.md",
+   "title": "Header",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header"
+   ],
+   "images": "editors/shader-editor/header",
+   "parts": [
+    {
+     "src": "13.1 Editors - Shader Editor - Header",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.tools-and-options",
+   "file": "content/editors/shader-editor/header/tools-and-options.md",
+   "title": "Tools and Options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Tools and Options"
+   ],
+   "images": "editors/shader-editor/header/tools-and-options",
+   "parts": [
+    {
+     "src": "13.1.1 Editors - Shader Editor - Header - Tools and Options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.quick-menu",
+   "file": "content/editors/shader-editor/header/quick-menu.md",
+   "title": "Quick Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Quick Menu"
+   ],
+   "images": "editors/shader-editor/header/quick-menu",
+   "parts": [
+    {
+     "src": "13.1.2 Editors - Shader Editor - Header - Quick Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.view-menu",
+   "file": "content/editors/shader-editor/header/view-menu.md",
+   "title": "View Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "View Menu"
+   ],
+   "images": "editors/shader-editor/header/view-menu",
+   "parts": [
+    {
+     "src": "13.1.3 Editors - Shader Editor - Header - View Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.select-menu",
+   "file": "content/editors/shader-editor/header/select-menu.md",
+   "title": "Select Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Select Menu"
+   ],
+   "images": "editors/shader-editor/header/select-menu",
+   "parts": [
+    {
+     "src": "13.1.4 Editors - Shader Editor - Header - Select Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.add-menu",
+   "file": "content/editors/shader-editor/header/add-menu.md",
+   "title": "Add Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Add Menu"
+   ],
+   "images": "editors/shader-editor/header/add-menu",
+   "parts": [
+    {
+     "src": "13.1.5 Editors - Shader Editor - Header - Add Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.add-menu-input",
+   "file": "content/editors/shader-editor/header/add-menu-input.md",
+   "title": "Add Menu - Input",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Add Menu - Input"
+   ],
+   "images": "editors/shader-editor/header/add-menu-input",
+   "parts": [
+    {
+     "src": "13.1.6 Editors - Shader Editor - Header - Add Menu - Input",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.add-menu-output",
+   "file": "content/editors/shader-editor/header/add-menu-output.md",
+   "title": "Add Menu - Output",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Add Menu - Output"
+   ],
+   "images": "editors/shader-editor/header/add-menu-output",
+   "parts": [
+    {
+     "src": "13.1.7 Editors - Shader Editor - Header - Add Menu - Output",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.add-menu-shader",
+   "file": "content/editors/shader-editor/header/add-menu-shader.md",
+   "title": "Add Menu - Shader",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Add Menu - Shader"
+   ],
+   "images": "editors/shader-editor/header/add-menu-shader",
+   "parts": [
+    {
+     "src": "13.1.8 Editors - Shader Editor - Header - Add Menu - Shader",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.add-menu-color",
+   "file": "content/editors/shader-editor/header/add-menu-color.md",
+   "title": "Add Menu - Color",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Add Menu - Color"
+   ],
+   "images": "editors/shader-editor/header/add-menu-color",
+   "parts": [
+    {
+     "src": "13.1.9 Editors - Shader Editor - Header - Add Menu - Color",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.add-menu-texture",
+   "file": "content/editors/shader-editor/header/add-menu-texture.md",
+   "title": "Add Menu - Texture",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Add Menu - Texture"
+   ],
+   "images": "editors/shader-editor/header/add-menu-texture",
+   "parts": [
+    {
+     "src": "13.1.10 Editors - Shader Editor - Header - Add Menu - Texture",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.add-menu-utilities-math",
+   "file": "content/editors/shader-editor/header/add-menu-utilities-math.md",
+   "title": "Add Menu - Utilities - Math",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Add Menu - Utilities - Math"
+   ],
+   "images": "editors/shader-editor/header/add-menu-utilities-math",
+   "parts": [
+    {
+     "src": "13.1.11 Editors - Shader Editor - Header - Add Menu - Utilities - Math",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.add-menu-utilities-vector",
+   "file": "content/editors/shader-editor/header/add-menu-utilities-vector.md",
+   "title": "Add Menu - Utilities - Vector",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Add Menu - Utilities - Vector"
+   ],
+   "images": "editors/shader-editor/header/add-menu-utilities-vector",
+   "parts": [
+    {
+     "src": "13.1.12 Editors - Shader Editor - Header - Add Menu - Utilities - Vector",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.add-menu-utilities",
+   "file": "content/editors/shader-editor/header/add-menu-utilities.md",
+   "title": "Add Menu - Utilities",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Add Menu - Utilities"
+   ],
+   "images": "editors/shader-editor/header/add-menu-utilities",
+   "parts": [
+    {
+     "src": "13.1.13 Editors - Shader Editor - Header - Add Menu - Utilities",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.add-menu-group",
+   "file": "content/editors/shader-editor/header/add-menu-group.md",
+   "title": "Add Menu - Group",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Add Menu - Group"
+   ],
+   "images": "editors/shader-editor/header/add-menu-group",
+   "parts": [
+    {
+     "src": "13.1.14 Editors - Shader Editor - Header - Add Menu - Group",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.add-menu-layout",
+   "file": "content/editors/shader-editor/header/add-menu-layout.md",
+   "title": "Add Menu - Layout",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Add Menu - Layout"
+   ],
+   "images": "editors/shader-editor/header/add-menu-layout",
+   "parts": [
+    {
+     "src": "13.1.15 Editors - Shader Editor - Header - Add Menu - Layout",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.swap-menu",
+   "file": "content/editors/shader-editor/header/swap-menu.md",
+   "title": "Swap menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Swap menu"
+   ],
+   "images": "editors/shader-editor/header/swap-menu",
+   "parts": [
+    {
+     "src": "13.1.16 Editors - Shader Editor - Header - Swap menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.header.node-menu",
+   "file": "content/editors/shader-editor/header/node-menu.md",
+   "title": "Node menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Header",
+    "Node menu"
+   ],
+   "images": "editors/shader-editor/header/node-menu",
+   "parts": [
+    {
+     "src": "13.1.17 Editors - Shader Editor - Header - Node menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.tool-shelf",
+   "file": "content/editors/shader-editor/tool-shelf.md",
+   "title": "Tool Shelf",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Tool Shelf"
+   ],
+   "images": "editors/shader-editor/tool-shelf",
+   "parts": [
+    {
+     "src": "13.2 Editors - Shader Editor - Tool Shelf",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.sidebar",
+   "file": "content/editors/shader-editor/sidebar/index.md",
+   "title": "Sidebar",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Sidebar"
+   ],
+   "images": "editors/shader-editor/sidebar",
+   "parts": [
+    {
+     "src": "13.3 Editors - Shader Editor - Sidebar",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.sidebar.node-tab",
+   "file": "content/editors/shader-editor/sidebar/node-tab.md",
+   "title": "Node Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Sidebar",
+    "Node Tab"
+   ],
+   "images": "editors/shader-editor/sidebar/node-tab",
+   "parts": [
+    {
+     "src": "13.3.1 Editors - Shader Editor - Sidebar - Node Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.sidebar.tool-tab",
+   "file": "content/editors/shader-editor/sidebar/tool-tab.md",
+   "title": "Tool Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Sidebar",
+    "Tool Tab"
+   ],
+   "images": "editors/shader-editor/sidebar/tool-tab",
+   "parts": [
+    {
+     "src": "13.3.2 Editors - Shader Editor - Sidebar - Tool Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.sidebar.view-tab",
+   "file": "content/editors/shader-editor/sidebar/view-tab.md",
+   "title": "View Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Sidebar",
+    "View Tab"
+   ],
+   "images": "editors/shader-editor/sidebar/view-tab",
+   "parts": [
+    {
+     "src": "13.3.3 Editors - Shader Editor - Sidebar - View Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.sidebar.options-tab",
+   "file": "content/editors/shader-editor/sidebar/options-tab.md",
+   "title": "Options Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Sidebar",
+    "Options Tab"
+   ],
+   "images": "editors/shader-editor/sidebar/options-tab",
+   "parts": [
+    {
+     "src": "13.3.4 Editors - Shader Editor - Sidebar - Options Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.sidebar.add-tab",
+   "file": "content/editors/shader-editor/sidebar/add-tab.md",
+   "title": "Add Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Sidebar",
+    "Add Tab"
+   ],
+   "images": "editors/shader-editor/sidebar/add-tab",
+   "parts": [
+    {
+     "src": "13.3.5 Editors - Shader Editor - Sidebar - Add Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.sidebar.relations-tab",
+   "file": "content/editors/shader-editor/sidebar/relations-tab.md",
+   "title": "Relations tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Sidebar",
+    "Relations tab"
+   ],
+   "images": "editors/shader-editor/sidebar/relations-tab",
+   "parts": [
+    {
+     "src": "13.3.6 Editors - Shader Editor - Sidebar - Relations tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.shader-editor.sidebar.group-tab",
+   "file": "content/editors/shader-editor/sidebar/group-tab.md",
+   "title": "Group tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Shader Editor",
+    "Sidebar",
+    "Group tab"
+   ],
+   "images": "editors/shader-editor/sidebar/group-tab",
+   "parts": [
+    {
+     "src": "13.3.7 Editors - Shader Editor - Sidebar - Group tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor",
+   "file": "content/editors/video-sequence-editor/index.md",
+   "title": "Video Sequence Editor",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor"
+   ],
+   "images": "editors/video-sequence-editor",
+   "parts": [
+    {
+     "src": "14 Editors - Video Sequence Editor",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.header",
+   "file": "content/editors/video-sequence-editor/header/index.md",
+   "title": "Header",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Header"
+   ],
+   "images": "editors/video-sequence-editor/header",
+   "parts": [
+    {
+     "src": "14.1 Editors - Video Sequence Editor - Header",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.header.tools-and-options",
+   "file": "content/editors/video-sequence-editor/header/tools-and-options.md",
+   "title": "Tools and Options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Header",
+    "Tools and Options"
+   ],
+   "images": "editors/video-sequence-editor/header/tools-and-options",
+   "parts": [
+    {
+     "src": "14.1.1 Editors - Video Sequence Editor - Header - Tools and Options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.header.quick-menu",
+   "file": "content/editors/video-sequence-editor/header/quick-menu.md",
+   "title": "Quick Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Header",
+    "Quick Menu"
+   ],
+   "images": "editors/video-sequence-editor/header/quick-menu",
+   "parts": [
+    {
+     "src": "14.1.2 Editors - Video Sequence Editor - Header - Quick Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.header.view-menu",
+   "file": "content/editors/video-sequence-editor/header/view-menu.md",
+   "title": "View Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Header",
+    "View Menu"
+   ],
+   "images": "editors/video-sequence-editor/header/view-menu",
+   "parts": [
+    {
+     "src": "14.1.3 Editors - Video Sequence Editor - Header - View Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.header.export-menu",
+   "file": "content/editors/video-sequence-editor/header/export-menu.md",
+   "title": "Export Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Header",
+    "Export Menu"
+   ],
+   "images": "editors/video-sequence-editor/header/export-menu",
+   "parts": [
+    {
+     "src": "14.1.4 Editors - Video Sequence Editor - Header - Export Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.header.navigation-menu",
+   "file": "content/editors/video-sequence-editor/header/navigation-menu.md",
+   "title": "Navigation Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Header",
+    "Navigation Menu"
+   ],
+   "images": "editors/video-sequence-editor/header/navigation-menu",
+   "parts": [
+    {
+     "src": "14.1.5 Editors - Video Sequence Editor - Header - Navigation Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.header.select-menu",
+   "file": "content/editors/video-sequence-editor/header/select-menu.md",
+   "title": "Select Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Header",
+    "Select Menu"
+   ],
+   "images": "editors/video-sequence-editor/header/select-menu",
+   "parts": [
+    {
+     "src": "14.1.6 Editors - Video Sequence Editor - Header - Select Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.header.marker-menu",
+   "file": "content/editors/video-sequence-editor/header/marker-menu.md",
+   "title": "Marker Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Header",
+    "Marker Menu"
+   ],
+   "images": "editors/video-sequence-editor/header/marker-menu",
+   "parts": [
+    {
+     "src": "14.1.7 Editors - Video Sequence Editor - Header - Marker Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.header.add-menu",
+   "file": "content/editors/video-sequence-editor/header/add-menu.md",
+   "title": "Add Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Header",
+    "Add Menu"
+   ],
+   "images": "editors/video-sequence-editor/header/add-menu",
+   "parts": [
+    {
+     "src": "14.1.8 Editors - Video Sequence Editor - Header - Add Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.header.strip-menu",
+   "file": "content/editors/video-sequence-editor/header/strip-menu.md",
+   "title": "Strip Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Header",
+    "Strip Menu"
+   ],
+   "images": "editors/video-sequence-editor/header/strip-menu",
+   "parts": [
+    {
+     "src": "14.1.9 Editors - Video Sequence Editor - Header - Strip Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.header.image-menu",
+   "file": "content/editors/video-sequence-editor/header/image-menu.md",
+   "title": "Image Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Header",
+    "Image Menu"
+   ],
+   "images": "editors/video-sequence-editor/header/image-menu",
+   "parts": [
+    {
+     "src": "14.1.10 Editors - Video Sequence Editor - Header - Image Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.header.text-menu",
+   "file": "content/editors/video-sequence-editor/header/text-menu.md",
+   "title": "Text Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Header",
+    "Text Menu"
+   ],
+   "images": "editors/video-sequence-editor/header/text-menu",
+   "parts": [
+    {
+     "src": "14.1.11 Editors - Video Sequence Editor - Header - Text Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.header.scene-menu",
+   "file": "content/editors/video-sequence-editor/header/scene-menu.md",
+   "title": "Scene Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Header",
+    "Scene Menu"
+   ],
+   "images": "editors/video-sequence-editor/header/scene-menu",
+   "parts": [
+    {
+     "src": "14.1.12 Editors - Video Sequence Editor - Header - Scene Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.tool-shelf",
+   "file": "content/editors/video-sequence-editor/tool-shelf.md",
+   "title": "Tool Shelf",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Tool Shelf"
+   ],
+   "images": "editors/video-sequence-editor/tool-shelf",
+   "parts": [
+    {
+     "src": "14.2 Editors - Video Sequence Editor - Tool Shelf",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.sidebar",
+   "file": "content/editors/video-sequence-editor/sidebar/index.md",
+   "title": "Sidebar",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Sidebar"
+   ],
+   "images": "editors/video-sequence-editor/sidebar",
+   "parts": [
+    {
+     "src": "14.3 Editors - Video Sequence Editor - Sidebar",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.sidebar.preview-tool-tab",
+   "file": "content/editors/video-sequence-editor/sidebar/preview-tool-tab.md",
+   "title": "Preview - Tool tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Sidebar",
+    "Preview - Tool tab"
+   ],
+   "images": "editors/video-sequence-editor/sidebar/preview-tool-tab",
+   "parts": [
+    {
+     "src": "14.3.1 Editors - Video Sequence Editor - Sidebar - Preview - Tool tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.sidebar.preview-view-tab",
+   "file": "content/editors/video-sequence-editor/sidebar/preview-view-tab.md",
+   "title": "Preview - View tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Sidebar",
+    "Preview - View tab"
+   ],
+   "images": "editors/video-sequence-editor/sidebar/preview-view-tab",
+   "parts": [
+    {
+     "src": "14.3.2 Editors - Video Sequence Editor - Sidebar - Preview - View tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.sidebar.sequencer-strip-tab",
+   "file": "content/editors/video-sequence-editor/sidebar/sequencer-strip-tab.md",
+   "title": "Sequencer - Strip tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Sidebar",
+    "Sequencer - Strip tab"
+   ],
+   "images": "editors/video-sequence-editor/sidebar/sequencer-strip-tab",
+   "parts": [
+    {
+     "src": "14.3.3 Editors - Video Sequence Editor - Sidebar - Sequencer - Strip tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.sidebar.sequencer-tool-tab",
+   "file": "content/editors/video-sequence-editor/sidebar/sequencer-tool-tab.md",
+   "title": "Sequencer - Tool tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Sidebar",
+    "Sequencer - Tool tab"
+   ],
+   "images": "editors/video-sequence-editor/sidebar/sequencer-tool-tab",
+   "parts": [
+    {
+     "src": "14.3.4 Editors - Video Sequence Editor - Sidebar - Sequencer - Tool tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.sidebar.sequencer-cache-tab",
+   "file": "content/editors/video-sequence-editor/sidebar/sequencer-cache-tab.md",
+   "title": "Sequencer - Cache tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Sidebar",
+    "Sequencer - Cache tab"
+   ],
+   "images": "editors/video-sequence-editor/sidebar/sequencer-cache-tab",
+   "parts": [
+    {
+     "src": "14.3.5 Editors - Video Sequence Editor - Sidebar - Sequencer - Cache tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.sidebar.sequencer-proxy-tab",
+   "file": "content/editors/video-sequence-editor/sidebar/sequencer-proxy-tab.md",
+   "title": "Sequencer - Proxy tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Sidebar",
+    "Sequencer - Proxy tab"
+   ],
+   "images": "editors/video-sequence-editor/sidebar/sequencer-proxy-tab",
+   "parts": [
+    {
+     "src": "14.3.6 Editors - Video Sequence Editor - Sidebar - Sequencer - Proxy tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.sidebar.sequencer-view-tab",
+   "file": "content/editors/video-sequence-editor/sidebar/sequencer-view-tab.md",
+   "title": "Sequencer - View tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Sidebar",
+    "Sequencer - View tab"
+   ],
+   "images": "editors/video-sequence-editor/sidebar/sequencer-view-tab",
+   "parts": [
+    {
+     "src": "14.3.7 Editors - Video Sequence Editor - Sidebar - Sequencer - View tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.video-sequence-editor.footer-tools-and-options",
+   "file": "content/editors/video-sequence-editor/footer-tools-and-options.md",
+   "title": "Footer tools and options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Video Sequence Editor",
+    "Footer tools and options"
+   ],
+   "images": "editors/video-sequence-editor/footer-tools-and-options",
+   "parts": [
+    {
+     "src": "14.4 Editors - Video Sequence Editor - Footer tools and options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor",
+   "file": "content/editors/movie-clip-editor/index.md",
+   "title": "Movie Clip Editor",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor"
+   ],
+   "images": "editors/movie-clip-editor",
+   "parts": [
+    {
+     "src": "15 Editors - Movie Clip Editor",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.header",
+   "file": "content/editors/movie-clip-editor/header/index.md",
+   "title": "Header",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Header"
+   ],
+   "images": "editors/movie-clip-editor/header",
+   "parts": [
+    {
+     "src": "15.1 Editors - Movie Clip Editor - Header",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.header.header-tools-and-options",
+   "file": "content/editors/movie-clip-editor/header/header-tools-and-options.md",
+   "title": "Header Tools and Options",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Header",
+    "Header Tools and Options"
+   ],
+   "images": "editors/movie-clip-editor/header/header-tools-and-options",
+   "parts": [
+    {
+     "src": "15.1.1 Editors - Movie Clip Editor - Header Tools and Options",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.header.quick-menu",
+   "file": "content/editors/movie-clip-editor/header/quick-menu.md",
+   "title": "Quick Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Header",
+    "Quick Menu"
+   ],
+   "images": "editors/movie-clip-editor/header/quick-menu",
+   "parts": [
+    {
+     "src": "15.1.2 Editors - Movie Clip Editor - Header - Quick Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.header.view-menu",
+   "file": "content/editors/movie-clip-editor/header/view-menu.md",
+   "title": "View Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Header",
+    "View Menu"
+   ],
+   "images": "editors/movie-clip-editor/header/view-menu",
+   "parts": [
+    {
+     "src": "15.1.3 Editors - Movie Clip Editor - Header - View Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.header.select-menu",
+   "file": "content/editors/movie-clip-editor/header/select-menu.md",
+   "title": "Select Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Header",
+    "Select Menu"
+   ],
+   "images": "editors/movie-clip-editor/header/select-menu",
+   "parts": [
+    {
+     "src": "15.1.4 Editors - Movie Clip Editor - Header - Select Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.header.tracking-mode-clip-submode-clip-menu",
+   "file": "content/editors/movie-clip-editor/header/tracking-mode-clip-submode-clip-menu.md",
+   "title": "Tracking Mode - Clip Submode - Clip Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Header",
+    "Tracking Mode - Clip Submode - Clip Menu"
+   ],
+   "images": "editors/movie-clip-editor/header/tracking-mode-clip-submode-clip-menu",
+   "parts": [
+    {
+     "src": "15.1.5 Editors - Movie Clip Editor - Header - Tracking Mode - Clip Submode - Clip Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.header.tracking-mode-clip-submode-track-menu",
+   "file": "content/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu.md",
+   "title": "Tracking Mode - Clip Submode - Track Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Header",
+    "Tracking Mode - Clip Submode - Track Menu"
+   ],
+   "images": "editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu",
+   "parts": [
+    {
+     "src": "15.1.6 Editors - Movie Clip Editor - Header - Tracking Mode - Clip Submode - Track Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.header.tracking-mode-graph-submode-graph-menu",
+   "file": "content/editors/movie-clip-editor/header/tracking-mode-graph-submode-graph-menu.md",
+   "title": "Tracking Mode - Graph Submode - Graph Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Header",
+    "Tracking Mode - Graph Submode - Graph Menu"
+   ],
+   "images": "editors/movie-clip-editor/header/tracking-mode-graph-submode-graph-menu",
+   "parts": [
+    {
+     "src": "15.1.7 Editors - Movie Clip Editor - Header - Tracking Mode - Graph Submode - Graph Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.header.mask-mode-clip-menu",
+   "file": "content/editors/movie-clip-editor/header/mask-mode-clip-menu.md",
+   "title": "Mask Mode - Clip Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Header",
+    "Mask Mode - Clip Menu"
+   ],
+   "images": "editors/movie-clip-editor/header/mask-mode-clip-menu",
+   "parts": [
+    {
+     "src": "15.1.8 Editors - Movie Clip Editor - Header - Mask Mode - Clip Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.header.mask-mode-add-menu",
+   "file": "content/editors/movie-clip-editor/header/mask-mode-add-menu.md",
+   "title": "Mask Mode - Add Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Header",
+    "Mask Mode - Add Menu"
+   ],
+   "images": "editors/movie-clip-editor/header/mask-mode-add-menu",
+   "parts": [
+    {
+     "src": "15.1.9 Editors - Movie Clip Editor - Header - Mask Mode - Add Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.header.mask-mode-mask-menu",
+   "file": "content/editors/movie-clip-editor/header/mask-mode-mask-menu.md",
+   "title": "Mask Mode - Mask Menu",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Header",
+    "Mask Mode - Mask Menu"
+   ],
+   "images": "editors/movie-clip-editor/header/mask-mode-mask-menu",
+   "parts": [
+    {
+     "src": "15.1.10 Editors - Movie Clip Editor - Header - Mask Mode - Mask Menu",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.tool-shelf",
+   "file": "content/editors/movie-clip-editor/tool-shelf/index.md",
+   "title": "Tool shelf",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Tool shelf"
+   ],
+   "images": "editors/movie-clip-editor/tool-shelf",
+   "parts": [
+    {
+     "src": "15.2 Editors - Movie Clip Editor - Tool shelf",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.tool-shelf.tracking-mode",
+   "file": "content/editors/movie-clip-editor/tool-shelf/tracking-mode.md",
+   "title": "Tracking Mode",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Tool shelf",
+    "Tracking Mode"
+   ],
+   "images": "editors/movie-clip-editor/tool-shelf/tracking-mode",
+   "parts": [
+    {
+     "src": "15.2.1 Editors - Movie Clip Editor - Tool shelf - Tracking Mode",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.sidebar",
+   "file": "content/editors/movie-clip-editor/sidebar/index.md",
+   "title": "Sidebar",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Sidebar"
+   ],
+   "images": "editors/movie-clip-editor/sidebar",
+   "parts": [
+    {
+     "src": "15.3 Editors - Movie Clip Editor - Sidebar",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.sidebar.footage-tab",
+   "file": "content/editors/movie-clip-editor/sidebar/footage-tab.md",
+   "title": "Footage Tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Sidebar",
+    "Footage Tab"
+   ],
+   "images": "editors/movie-clip-editor/sidebar/footage-tab",
+   "parts": [
+    {
+     "src": "15.3.1 Editors - Movie Clip Editor - Sidebar - Footage Tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.sidebar.track-tab",
+   "file": "content/editors/movie-clip-editor/sidebar/track-tab.md",
+   "title": "Track tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Sidebar",
+    "Track tab"
+   ],
+   "images": "editors/movie-clip-editor/sidebar/track-tab",
+   "parts": [
+    {
+     "src": "15.3.2 Editors - Movie Clip Editor - Sidebar - Track tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.sidebar.tracking-mode-stabilization-tab",
+   "file": "content/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab.md",
+   "title": "Tracking Mode - Stabilization tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Sidebar",
+    "Tracking Mode - Stabilization tab"
+   ],
+   "images": "editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab",
+   "parts": [
+    {
+     "src": "15.3.3 Editors - Movie Clip Editor - Sidebar - Tracking Mode - Stabilization tab",
+     "select": "*"
+    }
+   ]
+  },
+  {
+   "id": "editors.movie-clip-editor.sidebar.tracking-mode-view-tab",
+   "file": "content/editors/movie-clip-editor/sidebar/tracking-mode-view-tab.md",
+   "title": "Tracking Mode - View tab",
+   "section": "editors",
+   "path": [
+    "Editors",
+    "Movie Clip Editor",
+    "Sidebar",
+    "Tracking Mode - View tab"
+   ],
+   "images": "editors/movie-clip-editor/sidebar/tracking-mode-view-tab",
+   "parts": [
+    {
+     "src": "15.3.4 Editors - Movie Clip Editor - Sidebar - Tracking Mode -  View tab",
+     "select": "*"
+    }
+   ]
   }
  ],
  "snippets": [

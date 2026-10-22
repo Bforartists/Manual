@@ -4581,7 +4581,7 @@
    ],
    "images": "editors/geometry-node-editor",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "12",
    "parts": [
     {
@@ -4592,29 +4592,6 @@
    "words": 1276,
    "images_count": 34,
    "legacy_path": "/documentation/editors/geometry-node-editor",
-   "split_candidate": false
-  },
-  {
-   "id": "editors.geometry-node-editor.header",
-   "file": "content/editors/geometry-node-editor/header/index.md",
-   "title": "Header",
-   "section": "editors",
-   "path": [
-    "Editors",
-    "Geometry Node Editor",
-    "Header"
-   ],
-   "images": "editors/geometry-node-editor/header",
-   "kind": "group",
-   "status": "planned",
-   "number": "12.1",
-   "parts": [
-    {
-     "note": "The pages of this part are listed in the sidebar under *Header*."
-    }
-   ],
-   "words": 0,
-   "images_count": 0,
    "split_candidate": false
   },
   {
@@ -4630,7 +4607,7 @@
    ],
    "images": "editors/geometry-node-editor/header/tools-and-options",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.1",
    "parts": [
     {
@@ -4655,7 +4632,7 @@
    ],
    "images": "editors/geometry-node-editor/header/quick-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.2",
    "parts": [
     {
@@ -4680,7 +4657,7 @@
    ],
    "images": "editors/geometry-node-editor/header/view-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.3",
    "parts": [
     {
@@ -4705,7 +4682,7 @@
    ],
    "images": "editors/geometry-node-editor/header/select-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.4",
    "parts": [
     {
@@ -4730,7 +4707,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.5",
    "parts": [
     {
@@ -4755,7 +4732,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-input-constant",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.6",
    "parts": [
     {
@@ -4780,7 +4757,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-input-gizmo",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.7",
    "parts": [
     {
@@ -4805,7 +4782,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-input-import",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.8",
    "parts": [
     {
@@ -4830,7 +4807,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-input-scene",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.9",
    "parts": [
     {
@@ -4855,7 +4832,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-output",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.10",
    "parts": [
     {
@@ -4880,7 +4857,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-attribute",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.11",
    "parts": [
     {
@@ -4905,7 +4882,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-read",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.12",
    "parts": [
     {
@@ -4930,7 +4907,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-sample",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.13",
    "parts": [
     {
@@ -4955,7 +4932,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-write",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.14",
    "parts": [
     {
@@ -4980,7 +4957,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-material",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.15",
    "parts": [
     {
@@ -5005,7 +4982,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-operations",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.16",
    "parts": [
     {
@@ -5030,7 +5007,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.17",
    "parts": [
     {
@@ -5055,7 +5032,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-curve-read",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.18",
    "parts": [
     {
@@ -5080,7 +5057,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-curve-sample",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.19",
    "parts": [
     {
@@ -5105,7 +5082,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-curve-write",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.20",
    "parts": [
     {
@@ -5130,7 +5107,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-curve-operations",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.21",
    "parts": [
     {
@@ -5155,7 +5132,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-curve-primitives",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.22",
    "parts": [
     {
@@ -5180,7 +5157,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-curve-topology",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.23",
    "parts": [
     {
@@ -5205,7 +5182,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-grease-pencil-read",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.24",
    "parts": [
     {
@@ -5230,7 +5207,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-grease-pencil-write",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.25",
    "parts": [
     {
@@ -5255,7 +5232,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-grease-pencil-operations",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.26",
    "parts": [
     {
@@ -5280,7 +5257,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-instances",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.27",
    "parts": [
     {
@@ -5305,7 +5282,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-mesh-read",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.28",
    "parts": [
     {
@@ -5330,7 +5307,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-mesh-sample",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.29",
    "parts": [
     {
@@ -5355,7 +5332,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-mesh-write",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.30",
    "parts": [
     {
@@ -5380,7 +5357,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-mesh-operations",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.31",
    "parts": [
     {
@@ -5405,7 +5382,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-mesh-primitives",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.32",
    "parts": [
     {
@@ -5430,7 +5407,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-mesh-topology",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.33",
    "parts": [
     {
@@ -5455,7 +5432,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-mesh-uv",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.34",
    "parts": [
     {
@@ -5480,7 +5457,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-point",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.35",
    "parts": [
     {
@@ -5505,7 +5482,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-volume-read",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.36",
    "parts": [
     {
@@ -5530,7 +5507,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-volume-sample",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.37",
    "parts": [
     {
@@ -5555,7 +5532,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-volume-write",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.38",
    "parts": [
     {
@@ -5580,7 +5557,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-volume-operations",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.39",
    "parts": [
     {
@@ -5605,7 +5582,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-volume-primitives",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.40",
    "parts": [
     {
@@ -5630,7 +5607,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-simulation",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.41",
    "parts": [
     {
@@ -5655,7 +5632,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-color",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.42",
    "parts": [
     {
@@ -5680,7 +5657,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-texture",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.43",
    "parts": [
     {
@@ -5705,7 +5682,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-utilities-math",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.44",
    "parts": [
     {
@@ -5730,7 +5707,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-utilities-text",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.45",
    "parts": [
     {
@@ -5755,7 +5732,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-utilities-vector",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.46",
    "parts": [
     {
@@ -5780,7 +5757,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-utilities-bundle",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.47",
    "parts": [
     {
@@ -5805,7 +5782,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-utilities-closure",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.48",
    "parts": [
     {
@@ -5830,7 +5807,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-utilities-field",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.49",
    "parts": [
     {
@@ -5855,7 +5832,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-utilities-matrix",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.50",
    "parts": [
     {
@@ -5880,7 +5857,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-utilities-rotation",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.51",
    "parts": [
     {
@@ -5905,7 +5882,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-utilities-deprecated",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.52",
    "parts": [
     {
@@ -5930,7 +5907,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-utilities",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.53",
    "parts": [
     {
@@ -5955,7 +5932,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-generate",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.54",
    "parts": [
     {
@@ -5980,7 +5957,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.55",
    "parts": [
     {
@@ -6005,7 +5982,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.56",
    "parts": [
     {
@@ -6030,7 +6007,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.57",
    "parts": [
     {
@@ -6055,7 +6032,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.58",
    "parts": [
     {
@@ -6080,7 +6057,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.59",
    "parts": [
     {
@@ -6105,7 +6082,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.60",
    "parts": [
     {
@@ -6130,7 +6107,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.61",
    "parts": [
     {
@@ -6155,7 +6132,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.62",
    "parts": [
     {
@@ -6180,7 +6157,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.63",
    "parts": [
     {
@@ -6205,7 +6182,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.64",
    "parts": [
     {
@@ -6230,7 +6207,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.65",
    "parts": [
     {
@@ -6255,7 +6232,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.66",
    "parts": [
     {
@@ -6280,7 +6257,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-instances",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.67",
    "parts": [
     {
@@ -6305,7 +6282,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-material",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.68",
    "parts": [
     {
@@ -6330,7 +6307,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.69",
    "parts": [
     {
@@ -6355,7 +6332,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.70",
    "parts": [
     {
@@ -6380,7 +6357,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-normals",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.71",
    "parts": [
     {
@@ -6405,7 +6382,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.72",
    "parts": [
     {
@@ -6430,7 +6407,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.73",
    "parts": [
     {
@@ -6455,7 +6432,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utility",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.74",
    "parts": [
     {
@@ -6480,7 +6457,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-normals",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.75",
    "parts": [
     {
@@ -6505,7 +6482,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-group",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.76",
    "parts": [
     {
@@ -6530,7 +6507,7 @@
    ],
    "images": "editors/geometry-node-editor/header/add-menu-layout",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.77",
    "parts": [
     {
@@ -6555,7 +6532,7 @@
    ],
    "images": "editors/geometry-node-editor/header/swap-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.78",
    "parts": [
     {
@@ -6580,7 +6557,7 @@
    ],
    "images": "editors/geometry-node-editor/header/node-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.1.79",
    "parts": [
     {
@@ -6604,7 +6581,7 @@
    ],
    "images": "editors/geometry-node-editor/tool-shelf",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "12.2",
    "parts": [
     {
@@ -6628,7 +6605,7 @@
    ],
    "images": "editors/geometry-node-editor/sidebar",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "12.3",
    "parts": [
     {
@@ -6653,7 +6630,7 @@
    ],
    "images": "editors/geometry-node-editor/sidebar/group-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.3.1",
    "parts": [
     {
@@ -6678,7 +6655,7 @@
    ],
    "images": "editors/geometry-node-editor/sidebar/node-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.3.2",
    "parts": [
     {
@@ -6703,7 +6680,7 @@
    ],
    "images": "editors/geometry-node-editor/sidebar/tool-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.3.4",
    "parts": [
     {
@@ -6728,7 +6705,7 @@
    ],
    "images": "editors/geometry-node-editor/sidebar/view-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.3.5",
    "parts": [
     {
@@ -6753,7 +6730,7 @@
    ],
    "images": "editors/geometry-node-editor/sidebar/add",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.3.6",
    "parts": [
     {
@@ -6778,7 +6755,7 @@
    ],
    "images": "editors/geometry-node-editor/sidebar/relations-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "12.3.7",
    "parts": [
     {
@@ -6801,7 +6778,7 @@
    ],
    "images": "editors/shader-editor",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "13",
    "parts": [
     {
@@ -6826,7 +6803,7 @@
    ],
    "images": "editors/shader-editor/header",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "13.1",
    "parts": [
     {
@@ -6851,7 +6828,7 @@
    ],
    "images": "editors/shader-editor/header/tools-and-options",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.1",
    "parts": [
     {
@@ -6876,7 +6853,7 @@
    ],
    "images": "editors/shader-editor/header/quick-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.2",
    "parts": [
     {
@@ -6901,7 +6878,7 @@
    ],
    "images": "editors/shader-editor/header/view-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.3",
    "parts": [
     {
@@ -6926,7 +6903,7 @@
    ],
    "images": "editors/shader-editor/header/select-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.4",
    "parts": [
     {
@@ -6951,7 +6928,7 @@
    ],
    "images": "editors/shader-editor/header/add-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.5",
    "parts": [
     {
@@ -6976,7 +6953,7 @@
    ],
    "images": "editors/shader-editor/header/add-menu-input",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.6",
    "parts": [
     {
@@ -7001,7 +6978,7 @@
    ],
    "images": "editors/shader-editor/header/add-menu-output",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.7",
    "parts": [
     {
@@ -7026,7 +7003,7 @@
    ],
    "images": "editors/shader-editor/header/add-menu-shader",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.8",
    "parts": [
     {
@@ -7051,7 +7028,7 @@
    ],
    "images": "editors/shader-editor/header/add-menu-color",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.9",
    "parts": [
     {
@@ -7076,7 +7053,7 @@
    ],
    "images": "editors/shader-editor/header/add-menu-texture",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.10",
    "parts": [
     {
@@ -7101,7 +7078,7 @@
    ],
    "images": "editors/shader-editor/header/add-menu-utilities-math",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.11",
    "parts": [
     {
@@ -7126,7 +7103,7 @@
    ],
    "images": "editors/shader-editor/header/add-menu-utilities-vector",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.12",
    "parts": [
     {
@@ -7151,7 +7128,7 @@
    ],
    "images": "editors/shader-editor/header/add-menu-utilities",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.13",
    "parts": [
     {
@@ -7176,7 +7153,7 @@
    ],
    "images": "editors/shader-editor/header/add-menu-group",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.14",
    "parts": [
     {
@@ -7201,7 +7178,7 @@
    ],
    "images": "editors/shader-editor/header/add-menu-layout",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.15",
    "parts": [
     {
@@ -7226,7 +7203,7 @@
    ],
    "images": "editors/shader-editor/header/swap-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.16",
    "parts": [
     {
@@ -7251,7 +7228,7 @@
    ],
    "images": "editors/shader-editor/header/node-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.1.17",
    "parts": [
     {
@@ -7275,7 +7252,7 @@
    ],
    "images": "editors/shader-editor/tool-shelf",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "13.2",
    "parts": [
     {
@@ -7299,7 +7276,7 @@
    ],
    "images": "editors/shader-editor/sidebar",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "13.3",
    "parts": [
     {
@@ -7324,7 +7301,7 @@
    ],
    "images": "editors/shader-editor/sidebar/node-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.3.1",
    "parts": [
     {
@@ -7349,7 +7326,7 @@
    ],
    "images": "editors/shader-editor/sidebar/tool-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.3.2",
    "parts": [
     {
@@ -7374,7 +7351,7 @@
    ],
    "images": "editors/shader-editor/sidebar/view-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.3.3",
    "parts": [
     {
@@ -7399,7 +7376,7 @@
    ],
    "images": "editors/shader-editor/sidebar/options-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.3.4",
    "parts": [
     {
@@ -7424,7 +7401,7 @@
    ],
    "images": "editors/shader-editor/sidebar/add-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.3.5",
    "parts": [
     {
@@ -7449,7 +7426,7 @@
    ],
    "images": "editors/shader-editor/sidebar/relations-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.3.6",
    "parts": [
     {
@@ -7474,7 +7451,7 @@
    ],
    "images": "editors/shader-editor/sidebar/group-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "13.3.7",
    "parts": [
     {
@@ -7497,7 +7474,7 @@
    ],
    "images": "editors/video-sequence-editor",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "14",
    "parts": [
     {
@@ -7522,7 +7499,7 @@
    ],
    "images": "editors/video-sequence-editor/header",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "14.1",
    "parts": [
     {
@@ -7547,7 +7524,7 @@
    ],
    "images": "editors/video-sequence-editor/header/tools-and-options",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.1.1",
    "parts": [
     {
@@ -7572,7 +7549,7 @@
    ],
    "images": "editors/video-sequence-editor/header/quick-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.1.2",
    "parts": [
     {
@@ -7597,7 +7574,7 @@
    ],
    "images": "editors/video-sequence-editor/header/view-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.1.3",
    "parts": [
     {
@@ -7622,7 +7599,7 @@
    ],
    "images": "editors/video-sequence-editor/header/export-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.1.4",
    "parts": [
     {
@@ -7647,7 +7624,7 @@
    ],
    "images": "editors/video-sequence-editor/header/navigation-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.1.5",
    "parts": [
     {
@@ -7672,7 +7649,7 @@
    ],
    "images": "editors/video-sequence-editor/header/select-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.1.6",
    "parts": [
     {
@@ -7697,7 +7674,7 @@
    ],
    "images": "editors/video-sequence-editor/header/marker-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.1.7",
    "parts": [
     {
@@ -7722,7 +7699,7 @@
    ],
    "images": "editors/video-sequence-editor/header/add-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.1.8",
    "parts": [
     {
@@ -7747,7 +7724,7 @@
    ],
    "images": "editors/video-sequence-editor/header/strip-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.1.9",
    "parts": [
     {
@@ -7772,7 +7749,7 @@
    ],
    "images": "editors/video-sequence-editor/header/image-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.1.10",
    "parts": [
     {
@@ -7797,7 +7774,7 @@
    ],
    "images": "editors/video-sequence-editor/header/text-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.1.11",
    "parts": [
     {
@@ -7822,7 +7799,7 @@
    ],
    "images": "editors/video-sequence-editor/header/scene-menu",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.1.12",
    "parts": [
     {
@@ -7846,7 +7823,7 @@
    ],
    "images": "editors/video-sequence-editor/tool-shelf",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "14.2",
    "parts": [
     {
@@ -7870,7 +7847,7 @@
    ],
    "images": "editors/video-sequence-editor/sidebar",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "14.3",
    "parts": [
     {
@@ -7895,7 +7872,7 @@
    ],
    "images": "editors/video-sequence-editor/sidebar/preview-tool-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.3.1",
    "parts": [
     {
@@ -7920,7 +7897,7 @@
    ],
    "images": "editors/video-sequence-editor/sidebar/preview-view-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.3.2",
    "parts": [
     {
@@ -7945,7 +7922,7 @@
    ],
    "images": "editors/video-sequence-editor/sidebar/sequencer-strip-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.3.3",
    "parts": [
     {
@@ -7970,7 +7947,7 @@
    ],
    "images": "editors/video-sequence-editor/sidebar/sequencer-tool-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.3.4",
    "parts": [
     {
@@ -7995,7 +7972,7 @@
    ],
    "images": "editors/video-sequence-editor/sidebar/sequencer-cache-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.3.5",
    "parts": [
     {
@@ -8020,7 +7997,7 @@
    ],
    "images": "editors/video-sequence-editor/sidebar/sequencer-proxy-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.3.6",
    "parts": [
     {
@@ -8045,7 +8022,7 @@
    ],
    "images": "editors/video-sequence-editor/sidebar/sequencer-view-tab",
    "kind": "leaf",
-   "status": "planned",
+   "status": "done",
    "number": "14.3.7",
    "parts": [
     {
@@ -8069,7 +8046,7 @@
    ],
    "images": "editors/video-sequence-editor/footer-tools-and-options",
    "kind": "sub",
-   "status": "planned",
+   "status": "done",
    "number": "14.4",
    "parts": [
     {
