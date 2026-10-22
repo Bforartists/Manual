@@ -981,6 +981,7 @@ def main(manual_dir, cfg_path, out_dir, work):
     report["images"] = sorted(IMAGE_INDEX.values(), key=lambda r: r["path"])
     report["warnings"] = WARN
     json.dump(report, open(os.path.join(work, "convert-report.json"), "w"), indent=1)
+    os.makedirs(os.path.join(out_dir, "images"), exist_ok=True)     # a chapter can have no images
     with open(os.path.join(out_dir, "images", "index.csv"), "w") as f:
         f.write("path,sha256_16,width_px,height_px,bytes,uses,source_odt_media\n")
         for r in report["images"]:

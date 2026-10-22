@@ -4557,7 +4557,7 @@
    ],
    "images": "editors/texture-node-editor",
    "kind": "chapter",
-   "status": "planned",
+   "status": "done",
    "number": "11",
    "parts": [
     {
