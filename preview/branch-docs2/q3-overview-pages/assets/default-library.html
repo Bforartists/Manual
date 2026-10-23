@@ -1,0 +1,1432 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Default Library · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/q3-overview-pages · <code>docs2/q3-overview-pages</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<a href="../getting-started/introduction.html">Introduction</a>
+<a href="../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../getting-started/installation.html">Installation</a>
+<a href="../getting-started/quick-start.html">Quick Start</a>
+<a href="../getting-started/data-structure.html">Data Structure</a>
+<a href="../getting-started/differences.html">Comparison with Blender</a>
+<a href="../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<span>Interface</span>
+<a href="../interface/overview.html">Overview</a>
+<a href="../interface/windows.html">Windows</a>
+<a href="../interface/areas.html">Areas</a>
+<a href="../interface/editors.html">Editors</a>
+<a href="../interface/headers.html">Headers</a>
+<a href="../interface/footers.html">Footers</a>
+<a href="../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../interface/side-bars.html">Side Bars</a>
+<a href="../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../interface/properties.html">Properties</a>
+<a href="../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../interface/context-menus.html">Context Menus</a>
+<a href="../interface/floating-menus.html">Floating Menus</a>
+<a href="../interface/pie-menus.html">Pie Menus</a>
+<a href="../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<a href="../workspaces/workspaces.html">Managing Workspaces</a>
+<a href="../workspaces/main.html">Main</a>
+<a href="../workspaces/uv-editing.html">UV Editing</a>
+<a href="../workspaces/modeling.html">Modeling</a>
+<a href="../workspaces/nodes.html">Nodes</a>
+<a href="../workspaces/animation.html">Animation</a>
+<a href="../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../workspaces/shading.html">Shading</a>
+<a href="../workspaces/rendering.html">Rendering</a>
+<a href="../workspaces/sculpting.html">Sculpting</a>
+<a href="../workspaces/compositing.html">Compositing</a>
+<a href="../workspaces/scripting.html">Scripting</a>
+<a href="../workspaces/2d-animation.html">2D Animation</a>
+<a href="../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../workspaces/masking.html">Masking</a>
+<a href="../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../workspaces/video-editing.html">Video Editing</a>
+<a href="../workspaces/assets.html">Assets</a>
+<a href="../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<span>Editors</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span>Editors introduction</span>
+<span>3D Viewport</span>
+<span style="padding-left:2.5rem">Object mode - Object Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Vertex Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Edge Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Face Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Sculpt Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Vertex Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Weight Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Texture Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Curve + Surface Object - Edit Mode - Curve context menus</span>
+<span style="padding-left:2.5rem">Metaball - Edit Mode - Metaball context menu</span>
+<span style="padding-left:2.5rem">Text - Edit Mode - Text context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Edit Mode - Point context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Edit Mode - Stroke context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Sculpt Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Draw Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Vertex Paint Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Weight Paint Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode - Armature context menu</span>
+<span style="padding-left:2.5rem">Armature - Pose Mode - Pose context menu</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode - Lattice context menu</span>
+<span style="padding-left:2.5rem">Hair Curves - Edit Mode - Curves context menu</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Edit mode - Add menu</span>
+<span style="padding-left:2.5rem">Object menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Mesh menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit Mode - Vertex Menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Edge Menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Face menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - UV menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Sculpt menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Mask menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Face Sets menu</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint mode - Paint menu</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint mode - Brush menu</span>
+<span style="padding-left:2.5rem">Mesh - Weight Paint mode - Weights menu</span>
+<span style="padding-left:2.5rem">Mesh - Texture Paint mode - Brush menu</span>
+<span style="padding-left:2.5rem">Curve - Edit mode - Curve menu</span>
+<span style="padding-left:2.5rem">Surface - Edit mode - Surface menu</span>
+<span style="padding-left:2.5rem">Curve &amp; Surface - Edit mode - Control points menu</span>
+<span style="padding-left:2.5rem">Curve &amp; Surface - Edit mode - Segments menu</span>
+<span style="padding-left:2.5rem">Metaball - Edit mode - Metaball menu</span>
+<span style="padding-left:2.5rem">Text - Edit mode - Text menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Grease Pencil menu</span>
+<span style="padding-left:2.5rem">Point Cloud - Edit mode - Point Cloud menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Point menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Stroke menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Draw mode - Draw menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Vertex Paint mode - Paint menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Weight Paint Mode - Weights Menu</span>
+<span style="padding-left:2.5rem">Armature - Edit mode - Armature menu</span>
+<span style="padding-left:2.5rem">Armature - Pose mode - Pose menu</span>
+<span style="padding-left:2.5rem">Lattice - Edit mode - Lattice menu</span>
+<span style="padding-left:2.5rem">Particle - Particle mode - Particle menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Curves menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Control Points menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Segments menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Sculpt mode - Curves menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Mesh - Edit Mode</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Texture Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Particle Edit Mode</span>
+<span style="padding-left:2.5rem">Curve - Edit Mode</span>
+<span style="padding-left:2.5rem">Surface - Edit Mode</span>
+<span style="padding-left:2.5rem">Metaball - Edit Mode</span>
+<span style="padding-left:2.5rem">Text - Edit Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Draw Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode</span>
+<span style="padding-left:2.5rem">Armature - Pose Mode</span>
+<span style="padding-left:2.5rem">Lattice - Edit Mode</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit Mode</span>
+<span style="padding-left:2.5rem">Hair Curve - Sculpt Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Item tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">Tool Tab - Object Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Edit Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Pose Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Texture Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Particle Edit Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Draw Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Layer Panel</span>
+<span style="padding-left:2.5rem">Tool Tab - Hair Curve - Sculpt Mode</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Animation Tab</span>
+<span style="padding-left:1.5rem">Asset Shelf</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View menu</span>
+<span style="padding-left:2.5rem">Image menu</span>
+<span style="padding-left:2.5rem">Select menu</span>
+<span style="padding-left:2.5rem">Add menu</span>
+<span style="padding-left:2.5rem">Mask menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Tool Tab in Paint Mode</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Scopes Tab</span>
+<span style="padding-left:2.5rem">Mask Tab</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">UV menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span>Compositor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Color - Adjust</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Creative</span>
+<span style="padding-left:2.5rem">Add Menu - Filter - Blur</span>
+<span style="padding-left:2.5rem">Add Menu - Filter</span>
+<span style="padding-left:2.5rem">Add Menu - Keying</span>
+<span style="padding-left:2.5rem">Add Menu - Mask</span>
+<span style="padding-left:2.5rem">Add Menu - Tracking</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Transform</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Geometry Nodes Editor - Header - Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Texture Node Editor</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Gizmo</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Import</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Attribute</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - UV</span>
+<span style="padding-left:2.5rem">Add Menu - Point</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Simulation</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Text</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Bundle</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Closure</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Field</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Matrix</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Rotation</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Deprecated</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Generate</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Selection</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Deformation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Generation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Guides</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span style="padding-left:2.5rem">Node tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Add</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span>Shader Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Shader</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Video Sequence Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Export Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Strip Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">Text Menu</span>
+<span style="padding-left:2.5rem">Scene Menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Preview - Tool tab</span>
+<span style="padding-left:2.5rem">Preview - View tab</span>
+<span style="padding-left:2.5rem">Sequencer - Strip tab</span>
+<span style="padding-left:2.5rem">Sequencer - Tool tab</span>
+<span style="padding-left:2.5rem">Sequencer - Cache tab</span>
+<span style="padding-left:2.5rem">Sequencer - Proxy tab</span>
+<span style="padding-left:2.5rem">Sequencer - View tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Movie Clip Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Clip Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Track Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Graph Submode - Graph Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Clip Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Add Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Mask Menu</span>
+<span style="padding-left:1.5rem">Tool shelf</span>
+<span style="padding-left:2.5rem">Tracking Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Footage Tab</span>
+<span style="padding-left:2.5rem">Track tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - Stabilization tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - View tab</span>
+<span>Dope Sheet</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:2.5rem">Action Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span>Graph Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Drivers Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Drivers Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">Driver Editor - Sidebar - View Tab</span>
+<span>Nonlinear Animation Editor</span>
+<span style="padding-left:2.5rem">NLA Editor - Header tools and options</span>
+<span style="padding-left:2.5rem">NLA Editor - Header - Quick Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - View Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Select Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Marker Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Add Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Track Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Strip Menu</span>
+<span style="padding-left:1.5rem">NLA Editor - Channel list</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Animation Data panel</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Strip tab</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Modifiers Tab</span>
+<span style="padding-left:1.5rem">NLA Editor - Footer tools and options</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:1.5rem">Render Properties Tab</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:1.5rem">Output Properties Tab</span>
+<span style="padding-left:1.5rem">View Layer Properties Tab</span>
+<span style="padding-left:1.5rem">Scene Properties Tab</span>
+<span style="padding-left:1.5rem">World Properties Tab</span>
+<span style="padding-left:1.5rem">Collection Properties Tab</span>
+<span style="padding-left:1.5rem">Object Properties Tab</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Particle Properties Tab</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:1.5rem">Visual Effects Properties Tab</span>
+<span style="padding-left:1.5rem">Physics Properties Tab</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:1.5rem">Object Constraints Properties Tab</span>
+<span style="padding-left:1.5rem">Object Data Properties Tab</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span style="padding-left:1.5rem">Material Properties Tab</span>
+<span style="padding-left:1.5rem">Texture Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Constraint Properties</span>
+<span style="padding-left:1.5rem">Strip Tab</span>
+<span style="padding-left:1.5rem">Strip Modifiers Tab</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Context menus</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<h4>Assets</h4>
+<a href="../assets.html">Assets</a>
+<a href="essentials-library.html">Essentials Library</a>
+<a class="is-current" href="default-library.html">Default Library</a>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../extensions/coworker.html">Coworker</a>
+<a href="../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Standard Keymap</span>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<a href="../advanced/advanced-command-line.html">Command Line</a>
+<a href="../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../appendix.html">Information</a>
+<a href="../appendix/glossary.html">Glossary</a>
+<a href="../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../appendix/manual-update-history.html">Documentation History</a>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Asset Browser › Asset Browser - Default Asset LIbrary</div><h1 class="pv-title">Default Library</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 18 min read</span></div><article class="ui-doc-body"><h2 id="introduction">Introduction</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/introduction.png" alt="Introduction" loading="lazy"></figure>
+<p>Bforartists comes with a default asset library – registered by addon. This is enabled by default. With this asset library you can find numerous default assets to get you up and running with your art quickly and efficiently.</p>
+<h3 id="the-asset-browser-library">The Asset Browser Library</h3>
+<p>The Asset Browser is an editor in the Asset Workspace that gives you some standard lighting settings for the Cycles and Eevee renderer, obects in collections, node groups, materials and more. It contains for example the classical three-point setup. But also some basic volumetrics examples – or a shader ball or color checker reference stand.</p>
+<p>The default library addon can be turned off in the User Preferences.</p>
+<p><em>Note that the Eevee light setup is rudimentary. Eevee is a realtime render engine. To achieve more realistic results you may want to use Light probes, and bake the lights and shadows. This cannot be done by the addon though. Light probes requires a scene, light and object specific setup.</em></p>
+<h4 id="library-contents">Library Contents</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/library-contents.png" alt="Library Contents" loading="lazy"></figure>
+<p>To select the Default Library, choose it from drop-down box that contains the libraries that comes with Bforartists. Here you can select what asset you want to load. You also have a Geometry Nodes Library.</p>
+<p>The assets are grouped by categories.</p>
+<h4 id="categories">Categories</h4>
+<ul>
+<li>Collections</li>
+<li>Lights</li>
+<li>Static Meshes</li>
+<li>Backgrounds</li>
+<li>Utility</li>
+<li>Materials</li>
+<li>Ceramic</li>
+<li>Cloth</li>
+<li>Foilage</li>
+<li>Glass</li>
+<li>Liquids</li>
+<li>Metals</li>
+<li>Misc</li>
+<li>Paint</li>
+<li>Plastic</li>
+<li>Rubber</li>
+<li>Templates</li>
+<li>Utility</li>
+<li>Wood</li>
+<li>Shader nodegroups</li>
+<li>Color</li>
+<li>Layers</li>
+<li>Mapping</li>
+<li>Masks</li>
+<li>Patterns</li>
+<li>Shaders</li>
+<li>Shapes</li>
+<li>Utility</li>
+<li>Geometry Nodes</li>
+<li>Grease Pencil</li>
+<li>Operations</li>
+<li>Read</li>
+<li>Write</li>
+<li>Material</li>
+<li>Mesh</li>
+<li>Normals</li>
+<li>Primitives</li>
+</ul>
+<p>&lt;!-- --&gt;</p>
+<ul>
+<li></li>
+</ul>
+<h3 id="simple-usage">Simple Usage</h3>
+<h4 id="preparation">Preparation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/preparation.png" alt="Preparation" loading="lazy"></figure>
+<p>Select the <strong>Assets Workspace</strong> or alternatively change and editor by toggling the Hide Editor Type and changing it to the Asset Browser.</p>
+<p>Once you have an asset browser open, select the Default Library from the drop down to the top left of the editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/header-catalog-menu.png" alt="Preparation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/preparation-2.png" alt="Preparation" loading="lazy"></figure>
+<p>If you don’t see any assets, press the refresh icon.</p>
+<h4 id="loading-assets">Loading Assets</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/loading-assets.png" alt="Loading Assets" loading="lazy"></figure>
+<p>Click on any categories in the left sidebar, then click and drag on an item to then add it into either the Node editors or the 3D View.</p>
+<p>The asset and editor context may influence where you can drag and drop. Example: A collection can only be added to the 3D Viewport, but a Node Group can only be added to the Node Editor in the correct mode (Shader, Geometry Nodes, etc)</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/loading-assets-2.png" alt="Loading Assets" loading="lazy"></figure>
+<p>You can also drag and drop the assets onto data slots.</p>
+<ul>
+<li></li>
+</ul>
+<h3 id="preferences">Preferences</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/preferences.png" alt="Preferences" loading="lazy"></figure>
+<p>The Default Asset Library is an addon which comes with various functions like modular library management, additional operators and wizards and extended asset interfacing.</p>
+<p>When you enable the addon, it will copy the asset library to a central library location.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Bforartists ships with one asset library addon, but you can get support the project by purchasing individual asset library addons available from the Trinumedia sponsor.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instructions</td>
+<td>This is a note on where to find the libraries, how to use them and what they are called.</td>
+</tr>
+<tr>
+<td>Library Management</td>
+<td>Contains operators to manually add/remove libraries from preferences. · <strong>Remove Libraries</strong>: Removes the addon libraries to the central library. If there are no other library addons used, this will remove all library files. · <strong>Re-add Libraries</strong>: Re-adds the addon libraries to the central library.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="library-information">Library Information</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td>Shows the path of the central library.</td>
+</tr>
+<tr>
+<td>Active Libraries</td>
+<td>Shows how many addon libraries are used.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="status">Status</h5>
+<p>Shows if the addon library is registered and available.</p>
+<ul>
+<li></li>
+</ul>
+<h3 id="wizards">Wizards</h3>
+<h4 id="triggering-the-wizard">Triggering the Wizard</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/triggering-the-wizard.png" alt="Triggering the Wizard" loading="lazy"></figure>
+<p>Smart assets contain a “Wizard” to help set the asset up. When you drag in an asset with a Wizard hat icon, this means the asset has a wizard enabled. After adding the Smart asset, the Wizard will popup a setup panel to help adjust quick settings to get the advanced asset running.</p>
+<p>This wizard can also be used to run and re-run operations to ease the use of the asset.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> You can only trigger a wizard on a wizard enabled asset added or linked and overriden in the scene.</p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/triggering-the-wizard-2.png" alt="Triggering the Wizard" loading="lazy"></figure>
+<p>To re-trigger the wizard, you can go to the 3D View – Sidebar – Item tab – Asset Properties panel and run the “Open Asset Wizard” or use the Asset Operators in the asset modifier stack.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/triggering-the-wizard-3.png" alt="Triggering the Wizard" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/triggering-the-wizard-4.png" alt="Triggering the Wizard" loading="lazy"></figure>
+<p>You can also go to the 3D View - Header – Object – Assets – Open Asset Wizard or use the Sidebar to re-trigger the asset.</p>
+<h4 id="using-the-sidebar-to-change-asset-properties">Using the Sidebar to change asset properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/triggering-the-wizard-3.png" alt="Using the Sidebar to change asset properties" loading="lazy"><figcaption>Using the Sidebar to change asset properties</figcaption></figure>
+<p>You can adjust Geometry Nodes Asset Modifier settings and common properties through slider properties and check boxes directly from the 3D View in the Sidebar.</p>
+<p>You can modify numerical inputs for quick parameter changes by size, distance or angle.</p>
+<p>Access these properties from the 3D View sidebar in the Item tab, in the Primitive Properties panel.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This panel will only enable for specific assets like Primitives or Blend mesh by Proximity</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open Asset Wizard</td>
+<td>This will re-trigger the wizard for the selected asset.</td>
+</tr>
+<tr>
+<td>Modifier Name</td>
+<td>The selected asset name.</td>
+</tr>
+<tr>
+<td>Modifier Properties</td>
+<td>These are the asset properties also found in the Properties Editor in the Modifier stack.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="default-library">Default Library</h2>
+<h3 id="collections-lights">Collections - Lights</h3>
+<p>Here you can get an overview how the result looks like for the different lighting set-ups. Note that just the Cycles results are showing here.</p>
+<p>Be careful with the volumetrics examples. Especially the Musgrave example can render eons.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/collections-lights.png" alt="Collections - Lights" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/collections-lights-2.png" alt="Collections - Lights" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/collections-lights-3.png" alt="Collections - Lights" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/collections-lights-4.png" alt="Collections - Lights" loading="lazy"></figure>
+<h3 id="collections-static-meshes">Collections – Static Meshes</h3>
+<p>This category contains static meshes with the prefix <code>“SM_”</code>, which are collections with objects and materials to be used in various situations.</p>
+<h4 id="backgrounds">Backgrounds</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/backgrounds.png" alt="Backgrounds" loading="lazy"></figure>
+<p>This category contains quick photographic backdrops.</p>
+<h4 id="utility">Utility</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/utility.png" alt="Utility" loading="lazy"></figure>
+<p>This category contains utility meshes for object scale, lighting and others, including a shader ball.</p>
+<h3 id="curve">Curve</h3>
+<p>These are Geometry Nodes nodegroups for Curve and Curves objects.</p>
+<h4 id="grease-pencil">Grease Pencil</h4>
+<p>This category contains Geometry Nodes nodegroups for Grease Pencil Objects, you can find them in the Geometry Nodes Add Curve menu.</p>
+<h3 id="materials">Materials</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/materials.png" alt="Materials" loading="lazy"></figure>
+<p>This category contains materials useful to quickly apply materials to your objects via drag and drop. You can then later modify the materials in the Properties Editor Materials tab or in the Shader Editor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ceramic</td>
+<td>Procedural ceramic materials</td>
+</tr>
+<tr>
+<td>Clay</td>
+<td>Procedural ceramic materials</td>
+</tr>
+<tr>
+<td>Fabric</td>
+<td>Procedural fabric materials</td>
+</tr>
+<tr>
+<td>Foliage</td>
+<td>Foilage materials</td>
+</tr>
+<tr>
+<td>Glass</td>
+<td>Procedural glass materials</td>
+</tr>
+<tr>
+<td>Liquid</td>
+<td>Procedural liquid materials</td>
+</tr>
+<tr>
+<td>Metal</td>
+<td>Procedural metal materials</td>
+</tr>
+<tr>
+<td>Miscellaneous</td>
+<td>Various materials for miscellaneous use cases</td>
+</tr>
+<tr>
+<td>Paint</td>
+<td>Procedural paint materials</td>
+</tr>
+<tr>
+<td>Plaster</td>
+<td>Procedural plaster materials</td>
+</tr>
+<tr>
+<td>Plastic</td>
+<td>Procedural plastic materials</td>
+</tr>
+<tr>
+<td>Rubber</td>
+<td>Procedural rubber materials</td>
+</tr>
+<tr>
+<td>Templates</td>
+<td>Material templates to help setup various material setups</td>
+</tr>
+<tr>
+<td>Utility</td>
+<td>Varopis utility materials</td>
+</tr>
+<tr>
+<td>Wood</td>
+<td>Procedural wood materials</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shader-nodegroups">Shader Nodegroups</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/shader-nodegroups.png" alt="Shader Nodegroups" loading="lazy"></figure>
+<p>This category contains shader nodegroups useful to create procedural materials in the Shader Editor.</p>
+<h4 id="color">Color</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/color.png" alt="Color" loading="lazy"></figure>
+<p>These nodegroups are used to define color halftone effects or a simple PBR layer mix node.</p>
+<h4 id="vector-mapping">(Vector) Mapping</h4>
+<p>These nodegroups are used as vector UV mapping nodes to define vector interactions from various texture projections types, from tiling to deformations.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/vector-mapping.png" alt="(Vector) Mapping" loading="lazy"></figure>
+<h4 id="masks">Masks</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/masks.png" alt="Masks" loading="lazy"></figure>
+<p>These nodegroups are useful to create masks for edgewear and other effects when layering materials or textures.</p>
+<p>Most of these edge masks nodes work exclusively with Cycles, though one works with Eevee. They also contain edge noise, edge breakup and ambient occlusion masking for more control.</p>
+<p>They work best when you bake the results as a texture mask to your meshes that have been unwrapped.</p>
+<h4 id="patterns">Patterns</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/patterns.png" alt="Patterns" loading="lazy"></figure>
+<p>These nodegroups are useful to create procedural patterns for masks or textures in your materials. Each comes with their own set of parameters and data outputs, from UVs, tile position, random color, random values and more.</p>
+<h4 id="shader">Shader</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/shader.png" alt="Shader" loading="lazy"></figure>
+<p>These nodegroups are useful to select shaders via ID or color switches.</p>
+<h4 id="shapes">Shapes</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/shapes.png" alt="Shapes" loading="lazy"></figure>
+<p>These nodegroups are procedural shapes that you can use with a combination of mapping and pattern nodegroups to then create masks or new patterns. Useful for creating new textures, brushes and motion graphics.</p>
+<h4 id="utility-2">Utility</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/utility-2.png" alt="Utility" loading="lazy"></figure>
+<p>These nodegroups are useful to assist various miscellaneous tasks with shader nodes from normals, colour and masks.</p>
+<h2 id="geometry-nodes-library">Geometry Nodes Library</h2>
+<h3 id="grease-pencil-2">Grease Pencil</h3>
+<h4 id="operations">Operations</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/operations.png" alt="Operations" loading="lazy"></figure>
+<h5 id="delete-empty-layers">Delete Empty Layers</h5>
+<p>Removes all grease pencil layers that contain no strokes or data—helps performance.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This is only available for the Node Editor asset shelf.</p></div>
+<h4 id="read">Read</h4>
+<h5 id="layer-size">Layer Size</h5>
+<p>Displays the resolution or size setting of selected grease pencil layers.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This is only available for the Node Editor asset shelf.</p></div>
+<p>Reveals fill material details for strokes in the selected grease pencil object.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This is only available for the Node Editor asset shelf.</p></div>
+<p>Shows stroke-related grease pencil information. Ideal for optimization or debugging.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This is only available for the Node Editor asset shelf.</p></div>
+<h4 id="write">Write</h4>
+<p>Applies a consistent stroke thickness based on screen space (rather than object scale), helping ensure visual uniformity regardless of zoom or resolution. This depends on the Camera View.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Available for the Node Editor and 3D View asset shelf as a modifier.</p></div>
+<p>Controls edge softness or blending falloff of strokes. Enables more painterly or smooth transitions.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Available for the Node Editor and 3D View asset shelf as a modifier.</p></div>
+<p>Applies predefined color values to both stroke and fill channels of selected grease pencil elements.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Available for the Node Editor and 3D View asset shelf as a modifier.</p></div>
+<p>Adjusts transparency levels for stroke and fill independently. Useful for layering and compositing effects.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Available for the Node Editor and 3D View asset shelf as a modifier.</p></div>
+<h3 id="materials-2">Materials</h3>
+<h4 id="inherit-material">Inherit Material</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/inherit-material.png" alt="Inherit Material" loading="lazy"></figure>
+<p>This uses the material in the Material tab of the Properties editor as a Geometry Nodes material override.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/inherit-material-2.png" alt="Inherit Material" loading="lazy"></figure>
+<p>This utility transfers the first material slot from an assigned material from the parent object that holds the Geometry Nodes modifier object to the Geometry Nodes procedural geometry. It’s especially useful in workflows where instanced or procedural generated geometry needs to adopt top level material settings through top level manual assignment.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source Geometry</td>
+<td>The source object material, typically the top level geometry of the parent object.</td>
+</tr>
+<tr>
+<td>Target Geometry</td>
+<td>The procedural geometry to pass the material to.</td>
+</tr>
+<tr>
+<td>Material Index</td>
+<td>Selects the material slot index.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mesh">Mesh</h3>
+<h4 id="mesh-lines-and-silhouette">Mesh Lines and Silhouette</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/mesh-lines-and-silhouette.png" alt="Mesh Lines and Silhouette" loading="lazy"><figcaption>Mesh Lines and Silhouette</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/mesh-lines-and-silhouette-2.png" alt="Mesh Lines and Silhouette" loading="lazy"><figcaption>Mesh Lines and Silhouette</figcaption></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> A<em>vailable for the Node Editor and 3D View asset shelf as a modifier.</em></p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Screenspace Radius</td>
+<td>When enabled, line thickness is adjusted based on screen space, ensuring consistent appearance regardless of distance or object scale. This is based on the camera view only.</td>
+</tr>
+<tr>
+<td>Overall Width</td>
+<td>Controls both the silhouette and lines width with a general size control.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="variation">Variation</h5>
+<h6 id="randomization">Randomization</h6>
+<p>Introduces procedural noise into line generation for organic or sketchy effects.</p>
+<p><strong>Factor</strong></p>
+<p>Intensity of variation.</p>
+<p><strong>Scale / Detail / Lacunarity / Distortion / Roughness</strong></p>
+<p>Fine-tunes the procedural noise characteristics.</p>
+<h6 id="weight-map">Weight Map</h6>
+<p>Customizes variation intensity via a vertex group.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vertex Group</td>
+<td>Name of influencing vertex group</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td><strong>Shifts the vertex group weight and offsets the width of the inverse hull lines</strong></td>
+</tr>
+</tbody>
+</table>
+<h5 id="inner-lines">Inner Lines</h5>
+<p>Adds an inverse hull mesh to simulate lines across surface features to emphasize internal geometry.</p>
+<h6 id="width">Width</h6>
+<p>Controls thickness of inner lines.</p>
+<h5 id="silhouette">Silhouette</h5>
+<p>Highlights mesh contours by drawing a backdrop mesh that has been flattened behind the camera angle. This creates a silhouette line or mesh. This is based on the camera view only.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Width</td>
+<td>Sets the silhouette line thickness.</td>
+</tr>
+<tr>
+<td>Flatten Factor</td>
+<td>Compresses and flattens the silhouette backdrop shape. Less values returns the backdrop silhouette mesh to a 3D shape.</td>
+</tr>
+<tr>
+<td>Camera Offset</td>
+<td>Shifts silhouette backdrop mesh closer or further away from the camera relative to the object position.</td>
+</tr>
+<tr>
+<td>Polygonize</td>
+<td>Enables silhouette line segmentation based on surface polygons by welding geometry by distance. · <strong>Factor</strong>: Controls degree of welding influence for polygonization.</td>
+</tr>
+<tr>
+<td>Intersections</td>
+<td>Adds silhouette strokes where geometry intersects or overlaps. · <strong>Width Offest</strong>: Sets the silhouette intersection line thickness. · <strong>Object</strong>: Selects the intersection object to draw lines · <strong>Use a Collection</strong>: Defines if the intersection should be defined by a collection · <strong>Collection</strong>: Selects the intersection collection to draw lines</td>
+</tr>
+</tbody>
+</table>
+<h6 id="weight-map-override">Weight Map Override</h6>
+<p>Applies custom width influence from a vertex groups. To use, select an existing vertex group to use, then use the Weight Paint mode to paint. Weight of 1.0 is maximum influence that displaces the width of the inverse hull lines or silhouette, and weight of 0.0 is minimum influence.</p>
+<p><strong>Factor</strong></p>
+<p>Strength of the effect of the weight map.</p>
+<h5 id="color-2">Color</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Silhouette Color</td>
+<td>Sets color for silhouette backdrop mesh.</td>
+</tr>
+<tr>
+<td>Inner Lines Color</td>
+<td>Sets color for inner lines.</td>
+</tr>
+<tr>
+<td>Use Silhouette Color</td>
+<td>Forces internal lines to inherit silhouette color.</td>
+</tr>
+<tr>
+<td>Material Override</td>
+<td>Defines a custom material for material overrides.</td>
+</tr>
+<tr>
+<td>Line Override</td>
+<td>Applies material override to the inner mesh lines.</td>
+</tr>
+<tr>
+<td>Silhouette Override</td>
+<td>Applies override specifically to the silhouette backdrop mesh.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="normals">Normals</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/normals.png" alt="Normals" loading="lazy"></figure>
+<h4 id="blend-normals-by-proximity">Blend Normals by Proximity</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/triggering-the-wizard.png" alt="Blend Normals by Proximity" loading="lazy"><figcaption>Blend Normals by Proximity</figcaption></figure>
+<p>Adds an object that references a collection to merge all children mesh objects with blended normals and materials by proximity, through intersection distance and blur. This also displaces meshes at intersections.</p>
+<p>This asset is ideal for smoothing transitions between intersecting surfaces, faking lighting continuity, or unifying shading across modular components.</p>
+<h5 id="use">Use</h5>
+<p>This contains a setup wizard to begin.</p>
+<ol>
+<li>Drag and drop the asset into the scene</li>
+<li>You will be prompted to select a target collection</li>
+<li>This will then convert the target collection into driver objects with optional bounding visibility, relative position and material blending – then it create a new mesh with blended normals.</li>
+<li>Now you can add new objects to the target collection to influence the new blended normals mesh.</li>
+<li>When you are ready, apply the modifier to remesh, start sculpting or modeling. The normals will remain on the applied mesh.</li>
+</ol>
+<h6 id="target-collection">Target Collection</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/target-collection.png" alt="Target Collection" loading="lazy"></figure>
+<p>Specifies the collection of the group of objects used to influence the normal blending.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apply Blend to Materials</td>
+<td>This applies an intersection gradient alpha to the target collection objects. This will iterate through all objects and materials and applies the alpha at the intersection. <strong>Note:</strong> <em>If you add new materials or objects to the target collection, re-running the wizard will re-apply.</em> If you turn it off and reapply the wizard, it will remove the material blend from all materials and objects in the target collection.</td>
+</tr>
+<tr>
+<td>Use Relative Position</td>
+<td>This will enable the relative position of the source target collection objects, making the new blended mesh snap to the original position. If you keep this off, the new blended mesh will spawn or move to it’s asset placement position.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="enable-bounds-display">Enable Bounds Display</h6>
+<p>This will turn on Bounds display for all the objects in the target collection, useful to remove any z-fighting normals when using a Relative Position on the new blended normals mesh object.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> If you add new objects to the target collection, re-running the wizard will re-apply the visibility settings on the new objects.</p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/enable-bounds-display.png" alt="Enable Bounds Display" loading="lazy"></figure>
+<p>If you turn it off and reapply the wizard, it will remove the Bounds display from all objects in the target collection.</p>
+<h5 id="modifier-properties">Modifier Properties</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target Collection</td>
+<td>Specifies the group of objects used to influence the normal blending.</td>
+</tr>
+<tr>
+<td>Normal Distance</td>
+<td>Sets the range within which intersecting geometry will contribute to the normal blending by proximity process.</td>
+</tr>
+<tr>
+<td>Blending Iterations</td>
+<td>Adds another blending iteration to the group of objects to assist in solving self-intersecting blending issues. This will affect performance as this repeats the operation. When enabled, calculates blending based on object-relative coordinates. Useful for maintaining orientation consistency with source objects from the target collection.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="quality">Quality</h6>
+<p>This defines the quality of the normal blending which affects performance.</p>
+<ul>
+<li><strong>High</strong>: Uses blending by proximity. Default. This can be low on performance if there are many islands or instances being evaluated.</li>
+<li><strong>Low</strong>: Uses a “nuetral” normal at the intersections. This is more performant but less noticeable.</li>
+</ul>
+<h6 id="material-blend">Material Blend</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/enable-bounds-display.png" alt="Material Blend" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strength</td>
+<td>Controls how strongly materials are blended at the intersections.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Shifts the blend region inward or outward from the intersection. Fine-tunes where the material transition begins.</td>
+</tr>
+<tr>
+<td>Debug Intersections</td>
+<td>Visualizes intersection zones for troubleshooting. Helpful for verifying blend boundaries or for using it to bake to a new texture.</td>
+</tr>
+<tr>
+<td>Noise</td>
+<td>Adds procedural noise to the blend region. Useful for organic or stylized transitions. · <strong>Scale</strong>: Controls the scale of the noise pattern. Higher values produce larger, more visible noise features.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="intersection-displacement">Intersection Displacement</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/enable-bounds-display.png" alt="Intersection Displacement" loading="lazy"></figure>
+<p>Enables geometry displacement at intersection zones. Controls how intersection regions between meshes are offset and displaced before normal blending. Used to create bulges, dents, or organic merging effects</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distance</td>
+<td>The threshold for detecting intersections. This defines how far the geometry is displaced from its original surface.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Shifts the displacement region relative to the intersection. Moves vertices slightly to resolve overlap artifacts.</td>
+</tr>
+<tr>
+<td>Blur</td>
+<td>Softens the influence of blended normals across adjacent geometry · <strong>Iterations</strong>: Number of smoothing passes on the displacement. · <strong>Weight</strong>: Intensity of smoothing. Higher values lead to broader averaging.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="normal-blur">Normal Blur</h6>
+<p>Optional secondary blur targeting only normals.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This only blurs normals at the intersections. Object normals are preserved.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Iterations</td>
+<td>Number of blur passes applied to normals.</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>Strength of normals blur smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="material-override">Material Override</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/material-override.png" alt="Material Override" loading="lazy"></figure>
+<p>Toggles material overrides, otherwise it will inherit each objects from the target collections' material.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Material</td>
+<td>Selects the material for the material override.</td>
+</tr>
+<tr>
+<td>Inherit Material</td>
+<td>This toggles the use of the material in the Material tab of the Properties editor as the override.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="info">Info</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/enable-bounds-display.png" alt="Info" loading="lazy"></figure>
+<p>Displays how many mesh islands are currently being blended. Useful for performance monitoring and debugging.</p>
+<h4 id="inherit-smoothness">Inherit Smoothness</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/inherit-smoothness.png" alt="Inherit Smoothness" loading="lazy"></figure>
+<p>This utility transfers the smoothness (normals) of the parent object that holds the Geometry Nodes modifier object to the Geometry Nodes procedural geometry. It’s especially useful in workflows where instanced or procedural generated geometry needs to adopt top level smoothness settings through top level manual assignment.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source Geometry</td>
+<td>The source object smoothness, typically the top level geometry of the parent object.</td>
+</tr>
+<tr>
+<td>Target Geometry</td>
+<td>The procedural geometry to pass the smoothness to.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="primitives">Primitives</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/primitives.png" alt="Primitives" loading="lazy"></figure>
+<p>These smart primitives are procedural shapes with gizmos to control width, height, resolution, radius, revolutions angles, and other settings including bevel, bevel resolution and other controls.</p>
+<h4 id="use-2">Use</h4>
+<h5 id="using-the-gizmos">Using the Gizmos</h5>
+<p>When the modifier is selected, you can use gizmos directly in the viewport to adjust values of the primitives in an intuitive sense. They are color coded to specific functions.</p>
+<p><strong>Red/Green/Blue Square</strong> is XYZ scale respectively</p>
+<p><strong>Red/Green/Blue Arrow</strong> is XYZ loop resolution respectively</p>
+<p>Primary Yellow</p>
+<p><strong>Circle:</strong> Revolve Angle</p>
+<p><strong>Square:</strong> Scale all axis’</p>
+<p><strong>Arrow:</strong> Adjust all loop resolutions</p>
+<p>Secondary Cyan</p>
+<p><strong>Arrow:</strong> Bevel Resolution</p>
+<p><strong>Square:</strong> Bevel Scale</p>
+<p><strong>Circle</strong>: Twist</p>
+<h5 id="using-the-sidebar-and-modifier-properties">Using the Sidebar and Modifier properties</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/426c1b30dbf5f35b9037a031f95987d1c94a1a58/docs2/images/editors/asset-browser/asset-browser-default-asset-library/using-the-sidebar-and-modifier-properties.png" alt="Using the Sidebar and Modifier properties" loading="lazy"><figcaption>Using the Sidebar and Modifier properties</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Top-Level Properties</td>
+<td>Adjust settings affecting all primitives with common properties through slider properties and check boxes Modify numerical inputs for quick parameter changes by size, distance or angle. Access these properties from the 3D View sidebar in the Item tab, in the Primitive Properties panel.</td>
+</tr>
+<tr>
+<td>Bevel Properties</td>
+<td>Set bevel depth and resolution.</td>
+</tr>
+<tr>
+<td>Resolution Properties</td>
+<td>Modify loop resolution Set subdivision detail</td>
+</tr>
+<tr>
+<td>UV Properties</td>
+<td>Enable relative scale UV's, when applicable Modify UV scaling and alignment (Coming soon) Modify UV type, relative or absolute (In Progress)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="basic-shapes">Basic Shapes</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cube</td>
+<td>A standard six-sided shape, great for solid modeling. Includes relative Uvs and resolution gizmos.</td>
+</tr>
+<tr>
+<td>Cube Rounded</td>
+<td>A cube with softened edges for a more organic feel.</td>
+</tr>
+<tr>
+<td>Sphere</td>
+<td>A perfect round primitive, ideal for smooth surfaces. Includes relative resolution controls.</td>
+</tr>
+<tr>
+<td>Icosphere</td>
+<td>A low-poly spherical shape made of triangles, great for optimization with various levels of resolution.</td>
+</tr>
+<tr>
+<td>Cone</td>
+<td>A tapered shape with a circular base, useful for pointed structures.</td>
+</tr>
+<tr>
+<td>Cone Rounded</td>
+<td>A cone with a smoother, more organic tip.</td>
+</tr>
+<tr>
+<td>Cylinder</td>
+<td>A uniform circular primitive, essential for pipes and tubes.</td>
+</tr>
+<tr>
+<td>Cylinder Rounded</td>
+<td>A cylinder with softened edges for better transitions.</td>
+</tr>
+<tr>
+<td>Tube</td>
+<td>A hollow cylindrical primitive, great for mechanical parts.</td>
+</tr>
+<tr>
+<td>Tube Rounded</td>
+<td>A tube with smooth edges for a more natural look.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="advanced-forms">Advanced Forms</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capsule</td>
+<td>A stretched sphere useful for stylized characters and smooth objects.</td>
+</tr>
+<tr>
+<td>Capsule Revolved</td>
+<td>A capsule rotated for unique geometry shaping. Includes the abilty to revolve around an angle.</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>A flat subdivided plane useful for ground surfaces and mesh guides. Includes relative Uvs.</td>
+</tr>
+<tr>
+<td>Torus</td>
+<td>A ring-shaped primitive, ideal for looped structures.</td>
+</tr>
+<tr>
+<td>Torus Revolved</td>
+<td>A torus rotated for specialized forms. Includes the abilty to revolve around an angle.</td>
+</tr>
+<tr>
+<td>Spiral</td>
+<td>A coiled shape, useful for decorative and mechanical designs.</td>
+</tr>
+<tr>
+<td>Circle</td>
+<td>A simple 2D shape for base geometry and cutouts. Includes stamped or path based UV's.</td>
+</tr>
+<tr>
+<td>Circle Revolved</td>
+<td>A circular shape rotated into a 3D form. Includes the abilty to revolve around an angle.</td>
+</tr>
+<tr>
+<td>Curve Lofted</td>
+<td>Generates complex surfaces using loftes curves with a central profile gizmo system. Includes taper, bend, swell and volume bevel controls.</td>
+</tr>
+<tr>
+<td>Cylinder Revolved</td>
+<td>A cylindrical shape rotated for varied effects. Includes the abilty to revolve around an angle.</td>
+</tr>
+<tr>
+<td>Cylinder Rounded Revolved</td>
+<td>A rounded cylinder adapted for more curvature. Includes the abilty to revolve around an angle.</td>
+</tr>
+<tr>
+<td>Tube Revolved</td>
+<td>A tube rotated for improved modeling flexibility. Includes the abilty to revolve around an angle.</td>
+</tr>
+<tr>
+<td>Tube Rounded Revolved</td>
+<td>A smoothed, rotated tube for streamlined designs. Includes the abilty to revolve around an angle.</td>
+</tr>
+<tr>
+<td>Cone Rounded Revolved</td>
+<td>A tapered primitive that blends sharpness with curvature. Includes the abilty to revolve around an angle.</td>
+</tr>
+<tr>
+<td>Sphere Revolved</td>
+<td>A sphere adjusted through rotation for unique formations. Includes the abilty to revolve around an angle.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-overview-pages/collection/docs/edit/docs2%2Fcontent%2Fassets%2Fdefault-library.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-overview-pages/docs2/content/assets/default-library.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#introduction">Introduction</a><a class="h3" href="#the-asset-browser-library">The Asset Browser Library</a><a class="h3" href="#simple-usage">Simple Usage</a><a class="h3" href="#preferences">Preferences</a><a class="h3" href="#wizards">Wizards</a><a class="h2" href="#default-library">Default Library</a><a class="h3" href="#collections-lights">Collections - Lights</a><a class="h3" href="#collections-static-meshes">Collections – Static Meshes</a><a class="h3" href="#curve">Curve</a><a class="h3" href="#materials">Materials</a><a class="h3" href="#shader-nodegroups">Shader Nodegroups</a><a class="h2" href="#geometry-nodes-library">Geometry Nodes Library</a><a class="h3" href="#grease-pencil-2">Grease Pencil</a><a class="h3" href="#materials-2">Materials</a><a class="h3" href="#mesh">Mesh</a><a class="h3" href="#normals">Normals</a><a class="h3" href="#primitives">Primitives</a></aside></div></body></html>
