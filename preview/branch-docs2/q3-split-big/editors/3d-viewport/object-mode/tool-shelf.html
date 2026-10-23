@@ -1,0 +1,1985 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tool Shelf · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/q3-split-big · <code>docs2/q3-split-big</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Overview</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../all-modes.html">All Modes</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../mesh/edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../mesh/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../mesh/sculpt/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:3.5rem" href="../all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../all-modes/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="../mesh/edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../object-mode.html">Object Mode</a>
+<a class="is-current" style="padding-left:2.5rem" href="tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">File menu</span>
+<a style="padding-left:3.5rem" href="../all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../all-modes/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="../mesh/edit/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../mesh/sculpt/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<a style="padding-left:2.5rem" href="sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Edit menu</span>
+<a style="padding-left:2.5rem" href="../all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<a style="padding-left:3.5rem" href="../mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../mesh/sculpt/context-menus.html">Context Menus</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="context-menus.html">Context Menus</a>
+<span style="padding-left:2.5rem">Render menu</span>
+<a style="padding-left:3.5rem" href="../all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span>3D Viewport</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View menu</span>
+<span style="padding-left:2.5rem">Image menu</span>
+<span style="padding-left:2.5rem">Select menu</span>
+<span style="padding-left:2.5rem">Add menu</span>
+<span style="padding-left:2.5rem">Mask menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Tool Tab in Paint Mode</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Scopes Tab</span>
+<span style="padding-left:2.5rem">Mask Tab</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">UV menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span>Compositor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Color - Adjust</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Creative</span>
+<span style="padding-left:2.5rem">Add Menu - Filter - Blur</span>
+<span style="padding-left:2.5rem">Add Menu - Filter</span>
+<span style="padding-left:2.5rem">Add Menu - Keying</span>
+<span style="padding-left:2.5rem">Add Menu - Mask</span>
+<span style="padding-left:2.5rem">Add Menu - Tracking</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Transform</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Geometry Nodes Editor - Header - Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Texture Node Editor</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Gizmo</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Import</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Attribute</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - UV</span>
+<span style="padding-left:2.5rem">Add Menu - Point</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Simulation</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Text</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Bundle</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Closure</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Field</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Matrix</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Rotation</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Deprecated</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Generate</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Selection</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Deformation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Generation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Guides</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span style="padding-left:2.5rem">Node tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Add</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span>Shader Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Shader</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Video Sequence Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Export Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Strip Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">Text Menu</span>
+<span style="padding-left:2.5rem">Scene Menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Preview - Tool tab</span>
+<span style="padding-left:2.5rem">Preview - View tab</span>
+<span style="padding-left:2.5rem">Sequencer - Strip tab</span>
+<span style="padding-left:2.5rem">Sequencer - Tool tab</span>
+<span style="padding-left:2.5rem">Sequencer - Cache tab</span>
+<span style="padding-left:2.5rem">Sequencer - Proxy tab</span>
+<span style="padding-left:2.5rem">Sequencer - View tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Movie Clip Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Clip Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Track Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Graph Submode - Graph Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Clip Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Add Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Mask Menu</span>
+<span style="padding-left:1.5rem">Tool shelf</span>
+<span style="padding-left:2.5rem">Tracking Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Footage Tab</span>
+<span style="padding-left:2.5rem">Track tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - Stabilization tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - View tab</span>
+<span>Dope Sheet</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:2.5rem">Action Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span>Graph Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Drivers Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Drivers Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">Driver Editor - Sidebar - View Tab</span>
+<span>Nonlinear Animation Editor</span>
+<span style="padding-left:2.5rem">NLA Editor - Header tools and options</span>
+<span style="padding-left:2.5rem">NLA Editor - Header - Quick Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - View Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Select Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Marker Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Add Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Track Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Strip Menu</span>
+<span style="padding-left:1.5rem">NLA Editor - Channel list</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Animation Data panel</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Strip tab</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Modifiers Tab</span>
+<span style="padding-left:1.5rem">NLA Editor - Footer tools and options</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:1.5rem">Render Properties Tab</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:1.5rem">Output Properties Tab</span>
+<span style="padding-left:1.5rem">View Layer Properties Tab</span>
+<span style="padding-left:1.5rem">Scene Properties Tab</span>
+<span style="padding-left:1.5rem">World Properties Tab</span>
+<span style="padding-left:1.5rem">Collection Properties Tab</span>
+<span style="padding-left:1.5rem">Object Properties Tab</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Particle Properties Tab</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:1.5rem">Visual Effects Properties Tab</span>
+<span style="padding-left:1.5rem">Physics Properties Tab</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:1.5rem">Object Constraints Properties Tab</span>
+<span style="padding-left:1.5rem">Object Data Properties Tab</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span style="padding-left:1.5rem">Material Properties Tab</span>
+<span style="padding-left:1.5rem">Texture Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Constraint Properties</span>
+<span style="padding-left:1.5rem">Strip Tab</span>
+<span style="padding-left:1.5rem">Strip Modifiers Tab</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<a href="../../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Standard Keymap</span>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Object Mode › Tool Shelf</div><h1 class="pv-title">Tool Shelf</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 29 min read</span></div><article class="ui-doc-body"><h1 id="tools">Tools</h1>
+<h2 id="tool-shelf-object-mode">Tool Shelf - Object Mode</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/tool-shelf.png" alt="Tool Shelf - Object Mode" loading="lazy"><figcaption>Tool Shelf - Object Mode</figcaption></figure>
+<p>In Object mode you will see mainly the general select and transform tools.</p>
+<p>Those tools will also appear in other modes like Edit mode. We will not cover it again there.</p>
+<h2 id="select-tools-group">Select Tools Group</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/select-tools-group.png" alt="Select Tools Group" loading="lazy"></figure>
+<p>Tools with a triangle down right are a group of tools. Click and hold to reveal the content. Then choose the tool that you need.</p>
+<h3 id="tweak">Tweak</h3>
+<p>Allows you to select or tweak single elements by clicking at it.</p>
+<p>Note that Tweak is a transform tool, and therefore contains the same modal hotkeys with further functionality like the regular transform tools.</p>
+<h3 id="select-box">Select Box</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/select-box.png" alt="Select Box" loading="lazy"></figure>
+<p>Draws a box to select several elements at once. Click at the start point, then drag.</p>
+<h4 id="tool-settings">Tool Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings.png" alt="Tool Settings" loading="lazy"></figure>
+<h5 id="mode">Mode</h5>
+<p>The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set a new selection</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Extend existing selection</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Subtract existing selection</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Inverts existing selection</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Intersect existing selection</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="select-circle">Select Circle</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/select-circle.png" alt="Select Circle" loading="lazy"></figure>
+<p>Draws a box to select several elements at once. Click at the start point, then drag.</p>
+<h4 id="tool-settings-2">Tool Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-2.png" alt="Tool Settings" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode</td>
+<td>The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here. · <strong>Set a new selection</strong> · <strong>Extend existing selection</strong> · <strong>Subtract existing selection</strong></td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The brush radius.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="select-lasso">Select Lasso</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/select-circle.png" alt="Select Lasso" loading="lazy"></figure>
+<p>Draws a box to select several elements at once. Click at the start point, then drag.</p>
+<h4 id="tool-settings-3">Tool Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-3.png" alt="Tool Settings" loading="lazy"></figure>
+<h5 id="mode-2">Mode</h5>
+<p>The available selection modes. The mode titles are pretty self explaining. So i won't go into detail here.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set a new selection</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Extend existing selection</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Subtract existing selection</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Inverts existing selection</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Intersect existing selection</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cursor">Cursor</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/cursor.png" alt="Cursor" loading="lazy"></figure>
+<p>The cursor tool allows you to move the 3d cursor around.</p>
+<h3 id="tool-settings-4">Tool Settings</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-4.png" alt="Tool Settings" loading="lazy"></figure>
+<h4 id="surface-project">Surface Project</h4>
+<p>Project the 3D cursor onto the surface.</p>
+<h4 id="orientation">Orientation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The 3d cursor can have different orientations. The menu items should be self explaining.</p>
+<h2 id="move-rotate-scale-transform">Move Rotate Scale Transform</h2>
+<p>The transformation tools.</p>
+<h3 id="move">Move</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/move.png" alt="Move" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/move-2.png" alt="Move" loading="lazy"></figure>
+<p>Activates the move tool. Activating the move tool also reveals a move widget at the object. This widget allows you to move the object around, by using the corresponding axis.</p>
+<p>When you click at one of the square buttons at the icon, then you can move the object along the plane of the two adjacent axis. The rectangle buttons between the arrows allows you to move in direction of the blue and green arrows. This can also be done by clicking at the tip of the arrow and holding down shift. Then you can move the cube along the two other axis.</p>
+<h4 id="snapping">Snapping</h4>
+<p>Holding down Ctrl activates temporary global snapping.</p>
+<h5 id="precision-movement">Precision movement</h5>
+<p>When you hold down shift, then you will have a much slower but also much preciser movement.</p>
+<h4 id="header-values">Header Values</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/navigation-menu/header-values.png" alt="Header Values" loading="lazy"></figure>
+<p>When you move your object then you will see some values in the header, which defines the current position of the object.</p>
+<p>The value m stands for the default metric system. Meters. You can change the units in the Properties editor in the Scene properties in the Units panel. When you choose kilometers here then you will see a km instead m.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/navigation-menu/header-values-2.png" alt="Header Values" loading="lazy"></figure>
+<p>The value D stands for the distance of the current selected axis. This can also be two axis. Then you have two d values. The value in the brackets is then the direct distance to the starting point.</p>
+<p>These values are always relative to the starting point. You always start with zero, regardless of the real world position.</p>
+<h4 id="numerical-input">Numerical Input</h4>
+<p>When you move the object, and hold down the mouse and type in a value, like 20, then the movement will be performed by the value that you have typed in. In this case by 20 units in direction of the selected axis.</p>
+<h4 id="move-without-widget">Move without widget</h4>
+<p>You don't have to use the widget to move the object. You can also click aside of it, and drag the object around. The mouse turns into a move cursor. The standard behavior then is to move in screen space. When you want to move into a specific axis, then press X or Y or Z to limit the movement to this axis.</p>
+<h5 id="limit-axis">Limit Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/limit-axis.png" alt="Limit Axis" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/navigation-menu/header-values.png" alt="Limit Axis" loading="lazy"></figure>
+<p>When you want to rotate a specific axis, then press X or Y or Z to limit the rotation to this axis. You usually start in global orientation. But you can change this in the Orientation settings.</p>
+<p>By holding down the mouse button and pressing the X, Y or Z key twice you can toggle this to local. But also to other orientations. This depends in what orientation you start. With normal you can toggle that way between Normal and global.</p>
+<p>This can be combined with the numerical input. Type in X, type in X again to use the local space, type in 20 to move by 20 units in local orientation. Release the mouse to confirm.</p>
+<h4 id="tool-settings-5">Tool Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-5.png" alt="Tool Settings" loading="lazy"></figure>
+<h5 id="orientation-2">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/orientation-2.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h5 id="drag">Drag</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.</p>
+<h4 id="last-operator-move">Last Operator Move</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png" alt="Last Operator Move" loading="lazy"></figure>
+<h5 id="move-2">Move</h5>
+<p>Adjust in which directions you want to transform.</p>
+<h5 id="orientation-3">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/object-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<h5 id="mirror-editing">Mirror Editing</h5>
+<p>Enable mirror editing.</p>
+<h5 id="proportional-editing">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rotate">Rotate</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/rotate.png" alt="Rotate" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/rotate-2.png" alt="Rotate" loading="lazy"></figure>
+<p>Activates the Rotate tool. Activating the move tool also reveals a rotate widget at the object. This widget allows you to rotate the object, by using the corresponding axis.</p>
+<h4 id="snapping-2">Snapping</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/navigation-menu/snapping.png" alt="Snapping" loading="lazy"></figure>
+<p>Holding down Ctrl activates temporary global snapping. It snaps then by 5 degrees steps.</p>
+<p>When you use the white circle to rotate, then the widget also shows a division circle around the widget. This divisions shows even finer when you do precision rotation.</p>
+<h4 id="precision-rotation">Precision rotation</h4>
+<p>When you hold down shift, then you will have a much slower but also much preciser rotation.</p>
+<h4 id="header-values-2">Header Values</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/navigation-menu/header-values-3.png" alt="Header Values" loading="lazy"></figure>
+<p>When you rotate your object then you will see some values in the header, which defines the current rotation of the object. The rotation is shown in degrees.</p>
+<h4 id="numerical-input-2">Numerical Input</h4>
+<p>When you rotate the object, and hold down the mouse and type in a value, like 20, then the rotation will be performed by the value that you have typed in. In this case by 20 degree around the selected axis.</p>
+<h4 id="rotate-without-widget">Rotate without widget</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/rotate-without-widget.png" alt="Rotate without widget" loading="lazy"></figure>
+<p>You don't have to use the widget to rotate the object. You can also click asides and drag the object around. A black arrow will appear. The standard behavior then is to rotate in viewport orientation.</p>
+<h5 id="limit-axis-2">Limit Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/limit-axis.png" alt="Limit Axis" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/navigation-menu/limit-axis-2.png" alt="Limit Axis" loading="lazy"></figure>
+<p>When you want to rotate a specific axis, then press X or Y or Z to limit the rotation to this axis. You usually start in global orientation. But you can change this in the Orientation settings.</p>
+<p>By holding down the mouse button and pressing the X, Y or Z key twice you can toggle this to local. But also to other orientations. This depends in what orientation you start. With normal you can toggle that way between Normal and Global.</p>
+<p>This can be combined with the numerical input. Type in X, type in X again to use the local space, type in 20 to rotate by 20 degree. Release the mouse to confirm.</p>
+<h5 id="tool-settings-6">Tool Settings</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-6.png" alt="Tool Settings" loading="lazy"></figure>
+<h4 id="orientation-4">Orientation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/orientation-2.png" alt="Orientation" loading="lazy"></figure>
+<p>The 3d cursor can have different orientations. The menu items should be self explaining.</p>
+<h5 id="drag-2">Drag</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.</p>
+<h4 id="last-operator-rotate">Last Operator Rotate</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-rotate.png" alt="Last Operator Rotate" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Which axis to rotate.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-5">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/object-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<h5 id="mirror-editing-2">Mirror Editing</h5>
+<p>Enable mirror editing.</p>
+<h5 id="proportional-editing-2">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scale-tools-group">Scale Tools Group</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/scale-tools-group.png" alt="Scale Tools Group" loading="lazy"></figure>
+<p>You can use two scale tools with different widget styles.</p>
+<h4 id="scale">Scale</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/scale.png" alt="Scale" loading="lazy"></figure>
+<p>Activates the Scale tool. Activating the scale tool also reveals a traditional scale widget at the object. This widget allows you to scale the object, by using the corresponding axis. When you click at the outer white circle and drag, then you can scale the object uniformly.</p>
+<p>The rectangle buttons between the arrows allows you to scale in direction of the adjacent arrows. This can also be done by clicking at the tip of the arrow and holding down shift. Then you can scale the cube along the two other axis.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snapping</td>
+<td>Holding down Ctrl activates temporary global snapping.</td>
+</tr>
+<tr>
+<td>Precision Scale</td>
+<td>When you hold down shift, then you will have a much slower but also much preciser scale.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="header-values-3">Header Values</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/navigation-menu/header-values-4.png" alt="Header Values" loading="lazy"></figure>
+<p>When you scale your object then you will see some values in the header, which defines the current scale of the object.</p>
+<p>These values are always relative to the starting point. You always start with 1, regardless of the real world scale.</p>
+<h4 id="numerical-input-3">Numerical Input</h4>
+<p>When you scale the object, and hold down the mouse and type in a value, like 20, then the scale will be performed by the value that you have typed in. In this case by factor 20 along the selected axis.</p>
+<h4 id="scale-without-widget">Scale without widget</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/scale-without-widget.png" alt="Scale without widget" loading="lazy"></figure>
+<p>You don't have to use the widget to scale the object. You can also click asides and drag the object around. A black arrow will appear. The standard behavior then is to scale uniformly. When you want to scale into a specific axis, then press X or Y or Z to limit the scale to this axis.</p>
+<h5 id="limit-axis-3">Limit Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/limit-axis.png" alt="Limit Axis" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/navigation-menu/limit-axis-2.png" alt="Limit Axis" loading="lazy"></figure>
+<p>When you want to rotate a specific axis, then press X or Y or Z to limit the scale to this axis. You usually start in global orientation. But you can change this in the Orientation settings.</p>
+<p>By holding down the mouse button and pressing the X, Y or Z key twice you can toggle this to local. But also to other orientations. This depends in what orientation you start. With normal you can toggle that way between Normal and Global.</p>
+<p>This can be combined with the numerical input. Hold down mouse, type in X, type in X again to use the local space, type in 20 to scale by 20 units. Release the mouse to confirm.</p>
+<h5 id="tool-settings-7">Tool Settings</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-7.png" alt="Tool Settings" loading="lazy"></figure>
+<h5 id="orientation-6">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/orientation-2.png" alt="Orientation" loading="lazy"></figure>
+<p>The 3d cursor can have different orientations. The menu items should be self explaining.</p>
+<h5 id="drag-3">Drag</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.</p>
+<h4 id="last-operator-resize">Last Operator Resize</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png" alt="Last Operator Resize" loading="lazy"></figure>
+<h5 id="scale-2">Scale</h5>
+<p>Adjust in which directions you want to transform.</p>
+<h5 id="orientation-7">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/object-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<h5 id="mirror-editing-3">Mirror Editing</h5>
+<p>Enable mirror editing.</p>
+<h5 id="proportional-editing-3">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="scale-cage">Scale Cage</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/scale-cage.png" alt="Scale Cage" loading="lazy"></figure>
+<p>Activates the Scale tool. Activating the scale tool also reveals a scale widget in cage style at the object. This widget allows you to scale the object by clicking at the white handler points and drag them in the desired direction.</p>
+<h4 id="snapping-3">Snapping</h4>
+<p>Holding down Ctrl activates temporary global snapping.</p>
+<h4 id="header-values-4">Header Values</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/navigation-menu/header-values-4.png" alt="Header Values" loading="lazy"></figure>
+<p>When you scale your object then you will see some values in the header, which defines the current scale of the object.</p>
+<p>These values are always relative to the starting point. You always start with 1, regardless of the real world scale.</p>
+<h4 id="scale-without-widget-2">Scale without widget</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/scale-without-widget.png" alt="Scale without widget" loading="lazy"></figure>
+<p>You don't have to use the widget to scale the object. You can also click asides and drag the object around. A black arrow will appear. The standard behavior then is to scale uniformly. When you want to scale into a specific axis, then press X or Y or Z to limit the scale to this axis.</p>
+<h5 id="limit-axis-4">Limit Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/limit-axis.png" alt="Limit Axis" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/navigation-menu/header-values-4.png" alt="Limit Axis" loading="lazy"></figure>
+<p>When you want to rotate a specific axis, then press X or Y or Z to limit the rotation to this axis. You usually start in global orientation. But you can change this in the Orientation settings.</p>
+<p>By holding down the mouse button and pressing the X, Y or Z key twice you can toggle this to local. But also to other orientations. This depends in what orientation you start. With normal you can toggle that way between Normal and Global.</p>
+<h5 id="tool-settings-8">Tool Settings</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-8.png" alt="Tool Settings" loading="lazy"></figure>
+<h5 id="orientation-8">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/orientation-2.png" alt="Orientation" loading="lazy"></figure>
+<p>The 3d cursor can have different orientations. The menu items should be self explaining.</p>
+<h5 id="drag-4">Drag</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>What to do at dragging with the mouse with an active tool. Active Tool means the current tool is used then. When you choose Select Box then a mouse drag will rectangle select instead.</p>
+<h4 id="last-operator-resize-2">Last Operator Resize</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png" alt="Last Operator Resize" loading="lazy"></figure>
+<h5 id="scale-3">Scale</h5>
+<p>Adjust in which directions you want to transform.</p>
+<h5 id="orientation-9">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/object-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<h5 id="mirror-editing-4">Mirror Editing</h5>
+<p>Enable mirror editing.</p>
+<h5 id="proportional-editing-4">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transform">Transform</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/transform.png" alt="Transform" loading="lazy"></figure>
+<p>Transform reveals a multi transform widget with all three transform methods available at once. Move, Rotate and Scale.</p>
+<p>The rules are the same than for the single tools, and also the last operators. Dependent of which widget part you pull here. So i won't go into detail again here.</p>
+<h4 id="tool-settings-9">Tool Settings</h4>
+<h5 id="drag-action">Drag Action</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/drag-action.png" alt="Drag Action" loading="lazy"></figure>
+<p>Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.</p>
+<h5 id="orientation-10">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/orientation-2.png" alt="Orientation" loading="lazy"></figure>
+<p>The 3d cursor can have different orientations. The menu items should be self explaining.</p>
+<h5 id="drag-5">Drag</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>What to do at dragging with the mouse with an active tool. Active Tool means the current tool is used then. When you choose Select Box then a mouse drag will rectangle select instead.</p>
+<h3 id="modal-operators-for-the-transform-tools">Modal Operators for the Transform tools</h3>
+<p>Every transform tool has a sub set of modal operators that extends the functionality. These modal operators are shown at the bottom in the info bar. Usually they are self explaining. But the transform tools contains a few tools that needs further explanation.</p>
+<p>Note that these hotkeys are hardcoded, and cannot be changed in the keymap manager.</p>
+<p>To use these tools you must start the transform operation by moving and holding the mouse. Then press one of the hotkeys to perform this operator.</p>
+<h4 id="general-transform-modal-tools">General transform modal tools</h4>
+<h5 id="confirm">Confirm</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/confirm.png" alt="Confirm" loading="lazy"></figure>
+<p>Left Mouse button confirms the tool.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cancel</td>
+<td>Right mouse button cancels the operation</td>
+</tr>
+<tr>
+<td>X Axis</td>
+<td>Constraint the transformation to the X axis.</td>
+</tr>
+<tr>
+<td>Y Axis</td>
+<td>Constraint the transformation to the Y axis.</td>
+</tr>
+<tr>
+<td>Z Axis</td>
+<td>Constraint the transformation to the Z axis.</td>
+</tr>
+<tr>
+<td>X Plane</td>
+<td>Constraint the transformation to the X plane. You can transform in Y Z direction.</td>
+</tr>
+<tr>
+<td>Y Plane</td>
+<td>Constraint the transformation to the Y plane. You can transform in X Z direction.</td>
+</tr>
+<tr>
+<td>Z Plane</td>
+<td>Constraint the transformation to the Z plane. You can transform in Y Z direction.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="sert-snap-base">Sert Snap Base</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/sert-snap-base.jpg" alt="Sert Snap Base" loading="lazy"></figure>
+<p>Usually the snap base is the center of the object. This tool allows you to move the snap base to another point. The corner of another mesh for example.</p>
+<p>Hold down B and move the mouse to the location that you want to be the snap base. The new snap base will be displayed as an orange circle.</p>
+<p>Pressing b again while in transformation will now snap the object to this new snap base.</p>
+<p>Note that you cannot place this tool freely, it needs geometry to snap to.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snap Invert</td>
+<td>Snap in incremental steps.</td>
+</tr>
+<tr>
+<td>Snap Toggle</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Tab</kbd></span> toggles to snap in incremental steps.</td>
+</tr>
+<tr>
+<td>Automatic Constraints</td>
+<td>Displays all the three axis and allows you to snap to one of it to constraint the operation to this axis then.</td>
+</tr>
+<tr>
+<td>Automatic Constraints Plane</td>
+<td>Same as with Automatic Constraints, but this time you can snap to a plane to constraint the operation to this plane then.</td>
+</tr>
+<tr>
+<td>Precision Mode</td>
+<td>Activates the precision mode to allow much more accurate transform operations.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move tool in Object mode</td>
+<td><strong>Rotate</strong>: Rotate around the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it rotates towards the mouse. · <strong>Resize</strong>: Resize along the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it scales towards the mouse.</td>
+</tr>
+<tr>
+<td>Move Tool in Edit mode</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vert-edge-slide">Vert/Edge Slide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/vert-edge-slide.png" alt="Vert/Edge Slide" loading="lazy"></figure>
+<p>Edit Mode with the move tool. Slide the selected edges or vertices along their corner or face.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rotate</td>
+<td>Rotate the selection around the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it rotates towards the mouse.</td>
+</tr>
+<tr>
+<td>Resize</td>
+<td>Resize the selection along the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it scales towards the mouse.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rotate Tool in Object mode</td>
+<td><strong>Move</strong>: Move around the chosen axis instead of rotating the selection. When you didn't use one of the widget arrows then it moves towards the mouse. · <strong>Trackball</strong>: Use trackball rotation. · <strong>Resize</strong>: Resize along the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it scales towards the mouse.</td>
+</tr>
+<tr>
+<td>Rotate Tool in Edit mode</td>
+<td><strong>Move</strong>: Move the selection around the chosen axis instead of rotating the selection. When you didn't use one of the widget arrows then it moves towards the mouse. · <strong>Trackball</strong>: Use trackball rotation. · <strong>Resize</strong>: Resize the selection along the chosen axis instead of moving the selection. When you didn't use one of the widget arrows then it scales towards the mouse. · <strong>Rotate Normals</strong>: Rotates the normals instead of the selection. Note that it might be a good idea to turn on display normals in the overlays.</td>
+</tr>
+<tr>
+<td>Scale Tool in Object mode and Edit Mode</td>
+<td><strong>Move</strong>: Move around the chosen axis instead of scaling the selection. When you didn't use one of the widget arrows then it moves towards the mouse. · <strong>Rotate</strong>: Rotate around the chosen axis instead of scaling the selection. When you didn't use one of the widget arrows then it rotates towards the mouse.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="annotate-tools-group">Annotate Tools group</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/annotate-tools-group.png" alt="Annotate Tools group" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/annotate-tools-group-2.png" alt="Annotate Tools group" loading="lazy"></figure>
+<p>The annotation tool is available in multiple editors. With this tool you can write notes at the screen. The annotate tools is the little brother of the grease pencil objects.</p>
+<p>Further settings for annotate can be found in the sidebar. Here you can also remove an annotation when you don't longer need it. And here you can also adjust the size of the stroke.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/annotate-tools-group.jpg" alt="Annotate Tools group" loading="lazy"></figure>
+<h3 id="annotate-tool">Annotate tool</h3>
+<p>Draw free-hand strokes in the main window.</p>
+<h4 id="tool-settings-10">Tool Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-9.png" alt="Tool Settings" loading="lazy"></figure>
+<p>The tool settings for the Annotate tool.</p>
+<h5 id="color">Color</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/color.png" alt="Color" loading="lazy"></figure>
+<p>Clicking at the left color field reveals a color picker. Define the color for the annotation stroke.</p>
+<h5 id="note">Note</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/note.png" alt="Note" loading="lazy"></figure>
+<p>Clicking at the Note drop down box reveals a panel with further settings. It's the same content than in the annotations in the View tab.</p>
+<h5 id="annotations-list">Annotations list</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/annotations-list.png" alt="Annotations list" loading="lazy"></figure>
+<p>Add, remove and rename new annotations.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Box</td>
+<td>The name of the current annotation. You can rename the annotation to your needs here.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</td>
+</tr>
+<tr>
+<td>Add Annotation</td>
+<td>Add a new annotation.</td>
+</tr>
+<tr>
+<td>Remove Annotation</td>
+<td>Delete the annotation.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="active-layer-index">Active Layer Index</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/active-layer-index.png" alt="Active Layer Index" loading="lazy"></figure>
+<p>The list of annotation layers.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Annotation Layer</td>
+<td>Add a new annotation layer.</td>
+</tr>
+<tr>
+<td>Remove Annotation Layer</td>
+<td>Remove the selected annotation layer.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="opacity">Opacity</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/opacity.png" alt="Opacity" loading="lazy"></figure>
+<p>The opacity of the stroke.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thickness</td>
+<td>The thickness of the annotation stroke.</td>
+</tr>
+<tr>
+<td>Frame Locked/Unlocked</td>
+<td>Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.</td>
+</tr>
+<tr>
+<td>Delete Active Frame</td>
+<td>Deletes the active frame from the active grease pencil layer.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="placement">Placement</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/placement.png" alt="Placement" loading="lazy"></figure>
+<p>Define how annotation strokes are aligned in the 3d space.</p>
+<h5 id="stabilize-stroke">Stabilize Stroke</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/stabilize-stroke.png" alt="Stabilize Stroke" loading="lazy"></figure>
+<p>Helper to draw smooth and clean lines. Pressing shift inverts the effect.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>The radius for the stroke stabilization.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Stabilizer stroke factor. Higher values gives a smoother stroke.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="drag-6">Drag</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/drag-2.png" alt="Drag" loading="lazy"></figure>
+<p>Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.</p>
+<h3 id="annotate-line">Annotate Line</h3>
+<p>Click and drag to create a line.</p>
+<h4 id="tool-settings-11">Tool Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-10.png" alt="Tool Settings" loading="lazy"></figure>
+<p>The tool settings for the Annotate tool.</p>
+<h4 id="color-2">Color</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/color.png" alt="Color" loading="lazy"></figure>
+<p>Clicking at the left color field reveals a color picker. Define the color for the annotation stroke.</p>
+<h5 id="note-2">Note</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/note.png" alt="Note" loading="lazy"></figure>
+<p>Clicking at the Note drop down box reveals a panel with further settings. It's the same content than in the annotations in the View tab.</p>
+<h5 id="annotations-list-2">Annotations list</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/annotations-list.png" alt="Annotations list" loading="lazy"></figure>
+<p>Add, remove and rename new annotations.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Box</td>
+<td>The name of the current annotation. You can rename the annotation to your needs here.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</td>
+</tr>
+<tr>
+<td>Add Annotation</td>
+<td>Add a new annotation.</td>
+</tr>
+<tr>
+<td>Remove Annotation</td>
+<td>Delete the annotation.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="active-layer-index-2">Active Layer Index</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/active-layer-index.png" alt="Active Layer Index" loading="lazy"></figure>
+<p>The list of annotation layers.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Annotation Layer</td>
+<td>Add a new annotation layer.</td>
+</tr>
+<tr>
+<td>Remove Annotation Layer</td>
+<td>Remove the selected annotation layer.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>The opacity of the stroke.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="thickness">Thickness</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/opacity.png" alt="Thickness" loading="lazy"></figure>
+<p>The thickness of the annotation stroke.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame Locked/Unlocked</td>
+<td>Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.</td>
+</tr>
+<tr>
+<td>Delete Active Frame</td>
+<td>Deletes the active frame from the active grease pencil layer.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="placement-2">Placement</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/placement-2.png" alt="Placement" loading="lazy"></figure>
+<p>Define how annotation strokes are aligned in the 3d space.</p>
+<h5 id="style-start">Style Start</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/style-start.png" alt="Style Start" loading="lazy"></figure>
+<p>The stroke start style. With an arrow for example you place an arrow at the start of the stroke.</p>
+<h5 id="end">End</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/end.png" alt="End" loading="lazy"></figure>
+<p>The stroke end style. With an arrow for example you place an arrow at the end of the stroke.</p>
+<h5 id="drag-7">Drag</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/drag-2.png" alt="Drag" loading="lazy"></figure>
+<p>Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.</p>
+<h3 id="annotate-polygon">Annotate Polygon</h3>
+<p>Click multiple times to create multiple connected lines. The current polygon is finished when Esc or RMB is pressed.</p>
+<h4 id="tool-settings-12">Tool Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-11.png" alt="Tool Settings" loading="lazy"></figure>
+<p>The tool settings for AnnotatePolygon.</p>
+<h4 id="color-3">Color</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/color.png" alt="Color" loading="lazy"></figure>
+<p>Clicking at the left color field reveals a color picker. Define the color for the annotation stroke.</p>
+<h5 id="note-3">Note</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/note.png" alt="Note" loading="lazy"></figure>
+<p>Clicking at the Note drop down box reveals a panel with further settings. It's the same content than in the annotations in the View tab.</p>
+<h5 id="annotations-list-3">Annotations list</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/annotations-list.png" alt="Annotations list" loading="lazy"></figure>
+<p>Add, remove and rename new annotations.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Box</td>
+<td>The name of the current annotation. You can rename the annotation to your needs here.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</td>
+</tr>
+<tr>
+<td>Add Annotation</td>
+<td>Add a new annotation.</td>
+</tr>
+<tr>
+<td>Remove Annotation</td>
+<td>Delete the annotation.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="active-layer-index-3">Active Layer Index</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/active-layer-index.png" alt="Active Layer Index" loading="lazy"></figure>
+<p>The list of annotation layers.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Annotation Layer</td>
+<td>Add a new annotation layer.</td>
+</tr>
+<tr>
+<td>Remove Annotation Layer</td>
+<td>Remove the selected annotation layer.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>The opacity of the stroke.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="thickness-2">Thickness</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/opacity.png" alt="Thickness" loading="lazy"></figure>
+<p>The thickness of the annotation stroke.</p>
+<h5 id="frame-locked-unlocked">Frame Locked/Unlocked</h5>
+<p>Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.</p>
+<h5 id="delete-active-frame">Delete Active Frame</h5>
+<p>Deletes the active frame from the active grease pencil layer.</p>
+<p><strong>Placement</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/placement.jpg" alt="Placement" loading="lazy"></figure>
+<p>Define how annotation strokes are aligned in the 3d space.</p>
+<h5 id="drag-8">Drag</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/drag-2.png" alt="Drag" loading="lazy"></figure>
+<p>Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.</p>
+<h3 id="annotate-eraser">Annotate Eraser</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/annotate-eraser.png" alt="Annotate Eraser" loading="lazy"></figure>
+<p>Click and drag to remove annotate lines.</p>
+<h4 id="tool-settings-13">Tool Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-12.png" alt="Tool Settings" loading="lazy"></figure>
+<h5 id="radius">Radius</h5>
+<p>The radius of the eraser pencil.</p>
+<h4 id="drag-9">Drag</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/drag-2.png" alt="Drag" loading="lazy"></figure>
+<p>Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.</p>
+<h2 id="measure">Measure</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/measure.png" alt="Measure" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/measure-2.png" alt="Measure" loading="lazy"></figure>
+<p>Measure allows you to draw measure lines into the view.</p>
+<p>The measure tool has a few options, which are described in the tool tip.</p>
+<p>New measure lines gets created by left clicking and dragging.</p>
+<p>When you change the tool then the measure lines becomes visible. But they are not removed. When you activate the measure tool then they reappear.</p>
+<h3 id="restrict-to-global-axis">Restrict to global axis</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/restrict-to-global-axis.jpg" alt="Restrict to global axis" loading="lazy"><figcaption>Restrict to global axis</figcaption></figure>
+<p>You can constraint the measure tool to a single global axis by pressing the corresponding X Y or Z key once while holding down the mouse.</p>
+<p>To escape this constraint, press the axis key twice again.</p>
+<h3 id="measuring-angles">Measuring angles</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/measuring-angles.png" alt="Measuring angles" loading="lazy"></figure>
+<p>When you want to measure an angle, first create a straight measure line. Then grab it in the middle to drag out a new point at the line. Then align everything proper.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snapping</td>
+<td>Holding down Ctrl activates temporary global snapping.</td>
+</tr>
+<tr>
+<td>Delete measure lines</td>
+<td>Select them and press delete. When you have selected an angle point then first this angle point gets deleted. You need to have to select an endpoint to make the whole stroke active.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="primitives-add-tools-group">Primitives Add tools group</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/primitives-add-tools-group.png" alt="Primitives Add tools group" loading="lazy"><figcaption>Primitives Add tools group</figcaption></figure>
+<p>This tools appears in object and edit mode with the correct object types. The tools allows you to create primitives by dragging with the mouse. First you create a ground plane by dragging a rectangle. Then you release the mouse and drag the mouse upwards to create the third dimension of it. And a left click makes the object real then.</p>
+<p>You can choose between five primitive types. Cube, Cone, Cylinder, UV Sphere and Icosphere.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/primitives-add-tools-group-2.png" alt="Primitives Add tools group" loading="lazy"><figcaption>Primitives Add tools group</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/primitives-add-tools-group-3.png" alt="Primitives Add tools group" loading="lazy"><figcaption>Primitives Add tools group</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/primitives-add-tools-group-4.png" alt="Primitives Add tools group" loading="lazy"><figcaption>Primitives Add tools group</figcaption></figure>
+<p>By default the ground plane starts to scale from one of the edges.</p>
+<p>Holding down Alt key while dragging scales from the center instead of the default corner.</p>
+<p>Holding down Shift key while dragging allows you to scale uniformly.</p>
+<p>Holding down Ctrl while dragging snaps to other objects.</p>
+<h3 id="add-cube">Add Cube</h3>
+<p>Adds a cube primitive.</p>
+<h4 id="tool-settings-14">Tool Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-13.png" alt="Tool Settings" loading="lazy"></figure>
+<h5 id="depth">Depth</h5>
+<h5 id="position">Position</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/position.png" alt="Position" loading="lazy"></figure>
+<p>How to position the primitive.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface</td>
+<td>Start placing on the surface. The 3d cursor acts as a fallback.</td>
+</tr>
+<tr>
+<td>3D Cursor Plane</td>
+<td>Start placement using a point that is projected at the selected axis at the 3d cursor position</td>
+</tr>
+<tr>
+<td>3D Cursor View</td>
+<td>Start placement using the mouse cursor projected onto the view plane.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-11">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/orientation-3.png" alt="Orientation" loading="lazy"></figure>
+<p>In which orientation the new object to create.</p>
+<h5 id="snap-to">Snap To</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/snap-to.png" alt="Snap To" loading="lazy"></figure>
+<p>The target for snapping. Geometry snaps to existing mesh geometry. Default snaps to the ground.</p>
+<h5 id="plane-axis">Plane Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/plane-axis.png" alt="Plane Axis" loading="lazy"></figure>
+<p>What plane axis to use.</p>
+<h5 id="auto-axis">Auto Axis</h5>
+<p>Select the closest axis when placing objects. Surface overrides.</p>
+<h5 id="base">Base</h5>
+<p><strong>Origin</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png" alt="Origin" loading="lazy"></figure>
+<p>From where to scale the primitive. From one of its corners or from the center.</p>
+<p><strong>Aspect</strong></p>
+<p>Scale uniformly or in drag direction.</p>
+<h5 id="height">Height</h5>
+<p><strong>Origin</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png" alt="Origin" loading="lazy"></figure>
+<p>From where to scale the primitive. From one of its corners or from the center.</p>
+<p><strong>Aspect</strong></p>
+<p>Scale uniformly or in drag direction.</p>
+<h4 id="last-operator-add-cube-panel">Last Operator Add Cube Panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-cube-panel.png" alt="Last Operator Add Cube Panel" loading="lazy"><figcaption>Last Operator Add Cube Panel</figcaption></figure>
+<p>Size is in real the size of the Cube.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generate UV's</td>
+<td>Creates UV's for this primitive.</td>
+</tr>
+<tr>
+<td>Align to view</td>
+<td>Aligns the geometry to the chosen view. World, View or 3D cursor.</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Defines the location of the Cube.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>defines the rotation of the Cube.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="add-cone">Add Cone</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/add-cone.png" alt="Add Cone" loading="lazy"></figure>
+<p>Adds a cone primitive.</p>
+<h4 id="tool-settings-15">Tool Settings</h4>
+<h5 id="depth-2">Depth</h5>
+<h5 id="position-2">Position</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/position.png" alt="Position" loading="lazy"></figure>
+<p>How to position the primitive.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface</td>
+<td>Start placing on the surface. The 3d cursor acts as a fallback.</td>
+</tr>
+<tr>
+<td>3D Cursor Plane</td>
+<td>Start placement using a point that is projected at the selected axis at the 3d cursor position</td>
+</tr>
+<tr>
+<td>3D Cursor View</td>
+<td>Start placement using the mouse cursor projected onto the view plane.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-12">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/orientation-3.png" alt="Orientation" loading="lazy"></figure>
+<p>In which orientation the new object to create.</p>
+<h5 id="snap-to-2">Snap To</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/snap-to.png" alt="Snap To" loading="lazy"></figure>
+<p>The target for snapping. Geometry snaps to existing mesh geometry. Default snaps to the ground.</p>
+<h5 id="plane-axis-2">Plane Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/plane-axis.png" alt="Plane Axis" loading="lazy"></figure>
+<p>What plane axis to use.</p>
+<h5 id="auto-axis-2">Auto Axis</h5>
+<p>Select the closest axis when placing objects. Surface overrides.</p>
+<h5 id="base-2">Base</h5>
+<p><strong>Origin</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png" alt="Origin" loading="lazy"></figure>
+<p>From where to scale the primitive. From one of its corners or from the center.</p>
+<p><strong>Aspect</strong></p>
+<p>Scale uniformly or in drag direction.</p>
+<h5 id="height-2">Height</h5>
+<p><strong>Origin</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png" alt="Origin" loading="lazy"></figure>
+<p>From where to scale the primitive. From one of its corners or from the center.</p>
+<p><strong>Aspect</strong></p>
+<p>Scale uniformly or in drag direction.</p>
+<h5 id="vertices">Vertices</h5>
+<p>The number of vertices for the cone ground plane.</p>
+<h5 id="base-fill-type">Base Fill Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/add-menu/fill-type.png" alt="Base Fill Type" loading="lazy"></figure>
+<p>Defines how the Base face is filled.<br />
+Nothing means you have no base face.<br />
+N-Gon means that the base face is an N-Gon face.<br />
+Triangle Fan means that the base face is triangulated.</p>
+<h4 id="last-operator-add-cone-panel">Last Operator Add Cone Panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-cone-panel.png" alt="Last Operator Add Cone Panel" loading="lazy"><figcaption>Last Operator Add Cone Panel</figcaption></figure>
+<h5 id="vertices-2">Vertices</h5>
+<p>Defines of how much vertices the circle is made.</p>
+<h4 id="radius-1">Radius 1</h4>
+<p>Defines the base radius of the Cone.</p>
+<h5 id="radius-2">Radius 2</h5>
+<p>Defines the top radius of the Cone.</p>
+<h5 id="depth-3">Depth</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/add-menu/fill-type.png" alt="Depth" loading="lazy"></figure>
+<p>Defines the length of the Cone.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base Fill Type</td>
+<td>Defines how the Base face is filled. Nothing means you have no base face. N-Gon means that the base face is an N-Gon face. Triangle Fan means that the base face is triangulated.</td>
+</tr>
+<tr>
+<td>Generate UV's</td>
+<td>creates UV's for this primitive.</td>
+</tr>
+<tr>
+<td>Align to view</td>
+<td>Aligns the geometry to the chosen view. World, View or 3D cursor.</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Defines the location of the Cone.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Defines the rotation of the Cone.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="add-cylinder">Add Cylinder</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/add-cylinder.png" alt="Add Cylinder" loading="lazy"></figure>
+<p>Adds a cylinder primitive.</p>
+<h4 id="tool-settings-16">Tool Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/position.png" alt="Tool Settings" loading="lazy"></figure>
+<h5 id="depth-4">Depth</h5>
+<h5 id="position-3">Position</h5>
+<p>How to position the primitive.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface</td>
+<td>Start placing on the surface. The 3d cursor acts as a fallback.</td>
+</tr>
+<tr>
+<td>3D Cursor Plane</td>
+<td>Start placement using a point that is projected at the selected axis at the 3d cursor position</td>
+</tr>
+<tr>
+<td>3D Cursor View</td>
+<td>Start placement using the mouse cursor projected onto the view plane.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-13">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/orientation-3.png" alt="Orientation" loading="lazy"></figure>
+<p>In which orientation the new object to create.</p>
+<h5 id="snap-to-3">Snap To</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/snap-to.png" alt="Snap To" loading="lazy"></figure>
+<p>The target for snapping. Geometry snaps to existing mesh geometry. Default snaps to the ground.</p>
+<h5 id="plane-axis-3">Plane Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/plane-axis.png" alt="Plane Axis" loading="lazy"></figure>
+<p>What plane axis to use.</p>
+<h5 id="auto-axis-3">Auto Axis</h5>
+<p>Select the closest axis when placing objects. Surface overrides.</p>
+<h5 id="base-3">Base</h5>
+<p><strong>Origin</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png" alt="Origin" loading="lazy"></figure>
+<p>From where to scale the primitive. From one of its corners or from the center.</p>
+<p><strong>Aspect</strong></p>
+<p>Scale uniformly or in drag direction.</p>
+<h5 id="height-3">Height</h5>
+<p><strong>Origin</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png" alt="Origin" loading="lazy"></figure>
+<p>From where to scale the primitive. From one of its corners or from the center.</p>
+<p><strong>Aspect</strong></p>
+<p>Scale uniformly or in drag direction.</p>
+<h5 id="vertices-3">Vertices</h5>
+<p>The number of vertices.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/add-menu/fill-type.png" alt="Vertices" loading="lazy"></figure>
+<p><strong>Cap Fill Type</strong> defines how the cap face is filled.</p>
+<ul>
+<li>Nothing means you have no face at the top and the bottom of the Cylinder.</li>
+<li>N-Gon means that the cap face is an N-Gon face.</li>
+<li>Triangle Fan means that the cap face is triangulated.</li>
+</ul>
+<h4 id="last-operator-add-circle-panel">Last Operator Add Circle Panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-circle-panel.png" alt="Last Operator Add Circle Panel" loading="lazy"><figcaption>Last Operator Add Circle Panel</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vertices</td>
+<td>Defines of how much vertices the circle is made.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>Defines the radius of the Cylinder.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="depth-5">Depth</h5>
+<p>Defines the length of the Cylinder.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/header/add-menu/fill-type.png" alt="Depth" loading="lazy"></figure>
+<p><strong>Cap Fill Type</strong></p>
+<p>defines how the cap face is filled.</p>
+<p>Nothing means you have no face at the top and the bottom of the Cylinder.</p>
+<p>N-Gon means that the cap face is an N-Gon face.<br />
+Triangle Fan means that the cap face is triangulated.</p>
+<p><strong>Generate UV's</strong></p>
+<p>Creates UV's for this primitive.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Align to view</td>
+<td>Aligns the geometry to the chosen view. World, View or 3D cursor.</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Defines the location of the Cylinder.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Defines the rotation of the Cylinder.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="add-uv-sphere">Add UV Sphere</h3>
+<p>Adds a UV sphere primitive.</p>
+<h4 id="tool-settings-17">Tool Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/tool-settings-14.png" alt="Tool Settings" loading="lazy"></figure>
+<h5 id="depth-6">Depth</h5>
+<h5 id="position-4">Position</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/position.png" alt="Position" loading="lazy"></figure>
+<p>How to position the primitive.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface</td>
+<td>Start placing on the surface. The 3d cursor acts as a fallback.</td>
+</tr>
+<tr>
+<td>3D Cursor Plane</td>
+<td>Start placement using a point that is projected at the selected axis at the 3d cursor position</td>
+</tr>
+<tr>
+<td>3D Cursor View</td>
+<td>Start placement using the mouse cursor projected onto the view plane.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-14">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/orientation-3.png" alt="Orientation" loading="lazy"></figure>
+<p>In which orientation the new object to create.</p>
+<h5 id="snap-to-4">Snap To</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/snap-to.png" alt="Snap To" loading="lazy"></figure>
+<p>The target for snapping. Geometry snaps to existing mesh geometry. Default snaps to the ground.</p>
+<h5 id="plane-axis-4">Plane Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/plane-axis.png" alt="Plane Axis" loading="lazy"></figure>
+<p>What plane axis to use.</p>
+<h5 id="auto-axis-4">Auto Axis</h5>
+<p>Select the closest axis when placing objects. Surface overrides.</p>
+<h5 id="base-4">Base</h5>
+<p><strong>Origin</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png" alt="Origin" loading="lazy"></figure>
+<p>From where to scale the primitive. From one of its corners or from the center.</p>
+<p><strong>Aspect</strong></p>
+<p>Scale uniformly or in drag direction.</p>
+<h5 id="height-4">Height</h5>
+<p><strong>Origin</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png" alt="Origin" loading="lazy"></figure>
+<p>From where to scale the primitive. From one of its corners or from the center.</p>
+<p><strong>Aspect</strong></p>
+<p>Scale uniformly or in drag direction.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Segments</td>
+<td>Defines of how much segments the sphere has vertically.</td>
+</tr>
+<tr>
+<td>Rings</td>
+<td>Defines how much rings the sphere has horizontally.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-add-uv-sphere-panel">Last Operator Add UV Sphere Panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-uv-sphere-panel.png" alt="Last Operator Add UV Sphere Panel" loading="lazy"><figcaption>Last Operator Add UV Sphere Panel</figcaption></figure>
+<p>Segments defines of how much segments the sphere has vertically.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rings</td>
+<td>Defines how much rings the sphere has horizontally.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Defines the radius of the UV Sphere.</td>
+</tr>
+<tr>
+<td>Generate UV's</td>
+<td>Creates UV's for this primitive.</td>
+</tr>
+<tr>
+<td>Align to view</td>
+<td>Aligns the geometry to the chosen view. World, View or 3D cursor.</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Defines the location of the Sphere.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Defines the rotation of the Sphere.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="add-icosphere">Add Icosphere</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/add-icosphere.png" alt="Add Icosphere" loading="lazy"></figure>
+<p>Adds an icosphere primitive.</p>
+<h4 id="tool-settings-18">Tool Settings</h4>
+<h5 id="depth-7">Depth</h5>
+<h5 id="position-5">Position</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/position.png" alt="Position" loading="lazy"></figure>
+<p>How to position the primitive.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface</td>
+<td>Start placing on the surface. The 3d cursor acts as a fallback.</td>
+</tr>
+<tr>
+<td>3D Cursor Plane</td>
+<td>Start placement using a point that is projected at the selected axis at the 3d cursor position</td>
+</tr>
+<tr>
+<td>3D Cursor View</td>
+<td>Start placement using the mouse cursor projected onto the view plane.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-15">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/orientation-3.png" alt="Orientation" loading="lazy"></figure>
+<p>In which orientation the new object to create.</p>
+<h5 id="snap-to-5">Snap To</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/snap-to.png" alt="Snap To" loading="lazy"></figure>
+<p>The target for snapping. Geometry snaps to existing mesh geometry. Default snaps to the ground.</p>
+<h5 id="plane-axis-5">Plane Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/plane-axis.png" alt="Plane Axis" loading="lazy"></figure>
+<p>What plane axis to use.</p>
+<h5 id="auto-axis-5">Auto Axis</h5>
+<p>Select the closest axis when placing objects. Surface overrides.</p>
+<h5 id="base-5">Base</h5>
+<p><strong>Origin</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin.png" alt="Origin" loading="lazy"></figure>
+<p>From where to scale the primitive. From one of its corners or from the center.</p>
+<p><strong>Aspect</strong></p>
+<p>Scale uniformly or in drag direction.</p>
+<h5 id="height-5">Height</h5>
+<p><strong>Origin</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/origin-2.png" alt="Origin" loading="lazy"></figure>
+<p>From where to scale the primitive. From one of its corners or from the center.</p>
+<p><strong>Aspect</strong></p>
+<p>Scale uniformly or in drag direction.</p>
+<h4 id="subdivisions">Subdivisions</h4>
+<p>The subdivision level of the Ico Sphere.</p>
+<h4 id="last-operator-add-ico-sphere-panel">Last Operator Add Ico Sphere Panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-ico-sphere-panel.png" alt="Last Operator Add Ico Sphere Panel" loading="lazy"><figcaption>Last Operator Add Ico Sphere Panel</figcaption></figure>
+<p><strong>Subdivisions</strong></p>
+<p>Defines the subdivision level of the Ico Sphere.</p>
+<p><strong>Size</strong></p>
+<p>Defines the radius of the Ico Sphere.</p>
+<p><strong>Generate UV's</strong></p>
+<p>Creates UV's for this primitive.</p>
+<p><strong>Align to view</strong></p>
+<p>Aligns the geometry to the chosen view. World, View or 3D cursor.</p>
+<p><strong>Location</strong></p>
+<p>Defines the location of the Sphere.</p>
+<p><strong>Rotation</strong></p>
+<p>Defines the rotation of the Sphere.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-split-big/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fobject-mode%2Ftool-shelf.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-split-big/docs2/content/editors/3d-viewport/object-mode/tool-shelf.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#tool-shelf-object-mode">Tool Shelf - Object Mode</a><a class="h2" href="#select-tools-group">Select Tools Group</a><a class="h3" href="#tweak">Tweak</a><a class="h3" href="#select-box">Select Box</a><a class="h3" href="#select-circle">Select Circle</a><a class="h3" href="#select-lasso">Select Lasso</a><a class="h2" href="#cursor">Cursor</a><a class="h3" href="#tool-settings-4">Tool Settings</a><a class="h2" href="#move-rotate-scale-transform">Move Rotate Scale Transform</a><a class="h3" href="#move">Move</a><a class="h3" href="#rotate">Rotate</a><a class="h3" href="#scale-tools-group">Scale Tools Group</a><a class="h3" href="#transform">Transform</a><a class="h3" href="#modal-operators-for-the-transform-tools">Modal Operators for the Transform tools</a><a class="h2" href="#annotate-tools-group">Annotate Tools group</a><a class="h3" href="#annotate-tool">Annotate tool</a><a class="h3" href="#annotate-line">Annotate Line</a><a class="h3" href="#annotate-polygon">Annotate Polygon</a><a class="h3" href="#annotate-eraser">Annotate Eraser</a><a class="h2" href="#measure">Measure</a><a class="h3" href="#restrict-to-global-axis">Restrict to global axis</a><a class="h3" href="#measuring-angles">Measuring angles</a><a class="h2" href="#primitives-add-tools-group">Primitives Add tools group</a><a class="h3" href="#add-cube">Add Cube</a><a class="h3" href="#add-cone">Add Cone</a><a class="h3" href="#add-cylinder">Add Cylinder</a><a class="h3" href="#add-uv-sphere">Add UV Sphere</a><a class="h3" href="#add-icosphere">Add Icosphere</a></aside></div></body></html>
