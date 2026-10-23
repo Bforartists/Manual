@@ -1,7 +1,8 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3)
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.0
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
- * Served from this repository through jsDelivr, pinned to a commit, and applied to the template
+ * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
+ * Webflow integrity hash never breaks) and applied to the template
  * page as a registered Webflow script. Change it here, then register the new version.
  *
  *   1 🎛️  sidebar: the same ▶/▼ triangle on every level, the page scrollbar, icons everywhere (CSS)
