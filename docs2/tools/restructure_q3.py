@@ -25,11 +25,11 @@ def split_fm(text):
 
 
 def sections(body, level=2):
-    """Body → [(heading or None, text)] cut at headings of this level."""
+    """Body → [(heading or None, text)] cut at headings of this level or higher."""
     out, cur, buf = [], None, []
     for line in body.splitlines(keepends=True):
         m = re.match(r"^(#{1,6})\s+(.*?)\s*$", line)
-        if m and len(m.group(1)) == level:
+        if m and len(m.group(1)) <= level:
             out.append((cur, "".join(buf)))
             cur, buf = m.group(2), [line]
         else:
