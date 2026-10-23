@@ -11,6 +11,8 @@ status: draft
 screenshots: "5.1"
 source:
   - 31 Data System.odt
+summary: "How scenes, objects and data blocks relate, so you know how to get, change and set what you want."
+cta: "Explore"
 ---
 ## Data System
 

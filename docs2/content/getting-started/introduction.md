@@ -12,6 +12,8 @@ screenshots: "5.1"
 source:
   - 1 Introduction.odt
   - webflow:introduction
+summary: "Welcome to the Documentation! Let's get started."
+cta: "Welcome"
 ---
 This is the official **reference manual** for Bforartists 5. This explains the tools, operators, panels, and concepts you’ll encounter in the software. Each chapter and section is designed to help you understand how features work and how to use them effectively in detail.
 

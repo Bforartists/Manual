@@ -10,6 +10,7 @@
 #   5. 🌐 on the publish branch only (after a merge): syncs the pages to Webflow and
 #      publishes the webflow.io staging site. Custom domains are never published here.
 #   6. 🧭 on the publish branch: publishes nav.json (the whole sidebar tree) to GitHub Pages
+#   7. 🎛️ on the publish branch: publishes the docs layer as webflow/docs-layer-<version>.js
 #      at /nav/nav.json, where the website's docs script reads it.
 #
 # One-time repository setup (maintainer):
@@ -184,6 +185,25 @@ jobs:
           destination_dir: nav
           keep_files: true
           commit_message: "nav: ${{ github.sha }} [docs-bot]"
+
+      - name: 🎛️ Prepare the docs layer (one file per version)
+        if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH
+        run: |
+          v=$(head -1 docs2/webflow/docs-layer.js | sed -n 's/.*@version \([0-9.]*\).*/\1/p')
+          mkdir -p _layer && cp docs2/webflow/docs-layer.js "_layer/docs-layer-$v.js"
+          echo "Docs layer $v: https://bforartists.github.io/Manual/webflow/docs-layer-$v.js" >> "$GITHUB_STEP_SUMMARY"
+          echo "sha384-$(openssl dgst -sha384 -binary docs2/webflow/docs-layer.js | openssl base64 -A)" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: 🎛️ Publish the docs layer to GitHub Pages
+        if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH && hashFiles('_layer/*.js') != ''
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: _layer
+          destination_dir: webflow
+          keep_files: true
+          commit_message: "docs layer: ${{ github.sha }} [docs-bot]"
 
       - name: Fail when checks found problems
         if: steps.check.outcome == 'failure'

@@ -9,6 +9,8 @@ path:
 version: "5.1"
 status: draft
 screenshots: "5.1"
+summary: "This is Blender deep down, with some fundamental differences. Learn how to translate the ecosystem."
+cta: "Compare"
 ---
 This is **Blender** deep down, but there are some fundamental differences. Learn how to translate the ecosystem!
 

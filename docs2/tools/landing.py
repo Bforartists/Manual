@@ -125,25 +125,89 @@ def add_cards(body, page, children, kids, url_of, categories=None, section_id=No
     return body + cards
 
 
-def nav_tree(tree, kids, icons, section_slug, page_slug, commit=""):
-    """The sidebar as data: sections → pages (any depth); short keys keep the file small."""
-    cfg = sections_cfg()
+PLACEHOLDER_ICON = "file_text"     # pages without an icon of their own still get one in the sidebar
 
-    def node(n):
+
+def words_of(page):
+    return len(re.sub(r"[#>*_`|\[\]()!-]", " ", page.body or "").split())
+
+
+def nav_tree(tree, kids, icons, section_slug, page_slug, commit=""):
+    """The sidebar as data: sections → pages (any depth); short keys keep the file small.
+
+    Per page:    t title · s slug · i icon (placeholder when none, then ph: 1) · c children
+                 b button label (front matter `cta`) · m reading minutes of the page
+    Top level:   d summary (for the cards and the Docs home)
+    Per section: t, s, i, c as above · d summary · n pages · m minutes (whole section)
+    """
+    cfg = sections_cfg()
+    ph = icon_file(PLACEHOLDER_ICON, icons)
+
+    def node(n, top=False):
         d = {"t": str(n.page.fm.get("title") or n.id), "s": page_slug(n)}
         ic = icon_file(n.page.fm.get("icon"), icons)
-        if ic:
-            d["i"] = ic
+        d["i"] = ic or ph
+        if not ic:
+            d["ph"] = 1
+        if n.page.fm.get("cta"):
+            d["b"] = str(n.page.fm["cta"])
+        d["m"] = max(1, round(words_of(n.page) / 200))
+        if top:
+            summ = plain_summary(n.page, 120)
+            if summ:
+                d["d"] = summ
         sub = kids.get(n.id, [])
         if sub:
             d["c"] = [node(k) for k in sub]
         return d
+
+    def count(c):
+        return sum(1 + count(x.get("c", [])) for x in c)
+
+    def total(c):
+        return count(c), total_m(c)
+
+    def total_m(c):
+        return sum(x["m"] + total_m(x.get("c", [])) for x in c)
 
     secs = []
     for sec in tree:
         if not sec.nodes and not sec.index:
             continue
         ic = icon_file((sec.index.fm.get("icon") if sec.index else None) or cfg.get(sec.id, {}).get("icon"), icons)
-        secs.append({"id": sec.id, "t": str(sec.title), "s": section_slug(sec), "i": ic,
-                     "c": [node(n) for n in kids.get(sec.id, [])]})
-    return {"v": 1, "commit": commit, "sections": secs}
+        c = [node(n, True) for n in kids.get(sec.id, [])]
+        n_pages, minutes = total(c)
+        d = {"id": sec.id, "t": str(sec.title), "s": section_slug(sec), "i": ic or ph,
+             "n": n_pages, "m": minutes, "c": c}
+        summ = plain_summary(sec.index, 140) if sec.index else ""
+        if summ:
+            d["d"] = summ
+        secs.append(d)
+    return {"v": 2, "commit": commit, "sections": secs}
+
+
+def home_html(page, icons, url_of_rel, img_url):
+    """The Docs home as plain lists the docs script turns into the page (see home.md)."""
+    fm = page.fm
+    esc = htmllib.escape
+
+    def li(kind, title, link="", **data):
+        attrs = "".join(f' data-{k}="{esc(str(v))}"' for k, v in data.items() if v not in (None, ""))
+        href = url_of_rel(link) if link else ""
+        inner = f'<a href="{esc(href)}">{esc(str(title))}</a>' if href else esc(str(title))
+        return f'<li data-k="{kind}"{attrs}>{inner}</li>'
+
+    out = ['<div class="ui-doc-home"><ul>',
+           li("eyebrow", fm.get("eyebrow", "")), li("headline", fm.get("headline", "")),
+           li("lead", fm.get("summary", ""))]
+    for p in fm.get("popular") or []:
+        out.append(li("popular", p.get("title"), p.get("link"), i=icon_file(p.get("icon"), icons)))
+    ex = fm.get("explore") or {}
+    if ex:
+        out.append(li("explore", ex.get("title", ""), ex.get("link"), img=img_url(ex.get("image", "")),
+                      text=ex.get("text", "")))
+    for p in fm.get("paths") or []:
+        out.append(li("path", p.get("title"), p.get("link"), area=p.get("area"), level=p.get("level"),
+                      min=p.get("minutes"), i=icon_file(p.get("icon"), icons)))
+    out.append("</ul></div>")
+    return "".join(out)
