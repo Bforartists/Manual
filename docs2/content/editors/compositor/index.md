@@ -1,6 +1,8 @@
 ---
 id: editors.compositor
 title: Compositor
+icon: node_compositing
+summary: "Post-process renders with nodes: colour, blur, keying and more."
 section: editors
 path:
   - Editors

@@ -1,6 +1,8 @@
 ---
 id: editors.graph-editor
 title: Graph Editor
+icon: graph
+summary: "Edit animation curves and their interpolation."
 section: editors
 path:
   - Editors

@@ -1,6 +1,8 @@
 ---
 id: editors.spreadsheet
 title: Spreadsheet
+icon: spreadsheet
+summary: "Inspect geometry data as a table."
 section: editors
 path:
   - Editors

@@ -1,6 +1,8 @@
 ---
 id: editors.introduction
 title: Editors introduction
+icon: window
+summary: "How editors, areas and workspaces fit together, and what every editor has in common."
 section: editors
 path:
   - Editors

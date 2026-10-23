@@ -1,6 +1,8 @@
 ---
 id: editors.asset-browser
 title: Asset Browser
+icon: asset_manager
+summary: "Browse, drag in and manage assets from your libraries."
 section: editors
 path:
   - Editors

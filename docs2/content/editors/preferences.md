@@ -1,6 +1,8 @@
 ---
 id: editors.preferences
 title: Preferences
+icon: preferences
+summary: "Set up Bforartists: interface, themes, keymap, add-ons and more."
 section: editors
 path:
   - Editors

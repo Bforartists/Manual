@@ -1,6 +1,8 @@
 ---
 id: editors.drivers-editor
 title: Drivers Editor
+icon: driver
+summary: "Drive one property with another, using curves and expressions."
 section: editors
 path:
   - Editors

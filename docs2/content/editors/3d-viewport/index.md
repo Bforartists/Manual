@@ -1,6 +1,8 @@
 ---
 id: editors.3d-viewport
 title: 3D Viewport
+icon: view3d
+summary: "The main editor: see your scene, and add, select, model, sculpt and paint objects in it."
 section: editors
 path:
   - Editors

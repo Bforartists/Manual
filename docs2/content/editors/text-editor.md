@@ -1,6 +1,8 @@
 ---
 id: editors.text-editor
 title: Text Editor
+icon: text
+summary: "Write and run scripts and keep notes inside the file."
 section: editors
 path:
   - Editors

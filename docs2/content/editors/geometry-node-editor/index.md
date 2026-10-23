@@ -1,6 +1,8 @@
 ---
 id: editors.geometry-node-editor
 title: Geometry Node Editor
+icon: geometry_nodes
+summary: "Generate and change geometry with nodes."
 section: editors
 path:
   - Editors

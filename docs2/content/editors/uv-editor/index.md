@@ -1,6 +1,8 @@
 ---
 id: editors.uv-editor
 title: UV Editor
+icon: uv
+summary: "Unwrap meshes and edit their UV maps for texturing."
 section: editors
 path:
   - Editors

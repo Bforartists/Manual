@@ -1,6 +1,8 @@
 ---
 id: editors.video-sequence-editor
 title: Video Sequence Editor
+icon: sequence
+summary: "Cut and edit video, images and sound on a timeline."
 section: editors
 path:
   - Editors

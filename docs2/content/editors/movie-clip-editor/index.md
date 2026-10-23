@@ -1,6 +1,8 @@
 ---
 id: editors.movie-clip-editor
 title: Movie Clip Editor
+icon: clip
+summary: "Track motion and make masks in video clips."
 section: editors
 path:
   - Editors
