@@ -1,6 +1,8 @@
 ---
 id: editors.toolbar
 title: Toolbar
+icon: toolbar
+summary: "Build your own toolbars from the tools you use most."
 section: editors
 path:
   - Editors

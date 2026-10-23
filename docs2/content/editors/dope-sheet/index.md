@@ -1,6 +1,8 @@
 ---
 id: editors.dope-sheet
 title: Dope Sheet
+icon: action
+summary: "See and edit the keyframes of everything in the scene at once."
 section: editors
 path:
   - Editors

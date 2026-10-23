@@ -1,6 +1,8 @@
 ---
 id: editors.texture-node-editor
 title: Texture Node Editor
+icon: node_texture
+summary: "Build procedural textures with nodes."
 section: editors
 path:
   - Editors

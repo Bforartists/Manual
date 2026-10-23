@@ -1,6 +1,8 @@
 ---
 id: editors.nonlinear-animation-editor
 title: Nonlinear Animation Editor
+icon: nla
+summary: "Layer, mix and reuse actions as strips."
 section: editors
 path:
   - Editors

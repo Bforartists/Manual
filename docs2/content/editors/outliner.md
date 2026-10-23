@@ -1,6 +1,8 @@
 ---
 id: editors.outliner
 title: Outliner
+icon: outliner
+summary: "The tree of everything in the file: scenes, collections, objects and data."
 section: editors
 path:
   - Editors

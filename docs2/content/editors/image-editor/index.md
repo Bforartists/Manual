@@ -1,6 +1,8 @@
 ---
 id: editors.image-editor
 title: Image Editor
+icon: image
+summary: "Show, paint and edit images and textures, and view renders."
 section: editors
 path:
   - Editors

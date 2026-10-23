@@ -1,6 +1,8 @@
 ---
 id: editors.info-editor
 title: Info Editor
+icon: info
+summary: "The log of operators run, warnings and errors."
 section: editors
 path:
   - Editors

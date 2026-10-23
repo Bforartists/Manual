@@ -1,6 +1,8 @@
 ---
 id: editors.topbar-and-statusbar
 title: Topbar and Statusbar
+icon: topbar
+summary: "The menus and workspace tabs at the top of the window, and the status bar at the bottom."
 section: editors
 path:
   - Editors

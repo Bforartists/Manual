@@ -1,6 +1,8 @@
 ---
 id: editors.python-console
 title: Python Console
+icon: console
+summary: "Run Python commands live."
 section: editors
 path:
   - Editors

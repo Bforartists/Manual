@@ -1,6 +1,8 @@
 ---
 id: editors.file-browser
 title: File browser
+icon: filebrowser
+summary: "Open, save, link and append files."
 section: editors
 path:
   - Editors

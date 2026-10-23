@@ -1,6 +1,8 @@
 ---
 id: editors.shader-editor
 title: Shader Editor
+icon: node_material
+summary: "Build materials, worlds and line styles with nodes."
 section: editors
 path:
   - Editors

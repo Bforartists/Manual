@@ -1,6 +1,8 @@
 ---
 id: editors.timeline
 title: Timeline
+icon: time
+summary: "Play back the animation and set keyframes and markers."
 section: editors
 path:
   - Editors

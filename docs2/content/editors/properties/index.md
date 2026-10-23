@@ -1,6 +1,8 @@
 ---
 id: editors.properties
 title: Properties Editor
+icon: properties
+summary: "Every setting of the scene, object and its data, tab by tab."
 section: editors
 path:
   - Editors

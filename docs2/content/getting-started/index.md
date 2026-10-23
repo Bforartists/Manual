@@ -7,6 +7,7 @@ path:
   - Getting Started
 version: "5.1"
 status: draft
+cards: false
 screenshots: "5.1"
 source:
   - webflow:overview
