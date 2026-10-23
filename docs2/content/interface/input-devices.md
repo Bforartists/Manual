@@ -1,6 +1,6 @@
 ---
 id: interface.input-devices
-title: Input devices
+title: "Input Devices"
 section: interface
 path:
   - The Interface
@@ -10,6 +10,8 @@ status: draft
 screenshots: "5.1"
 source:
   - 3 Interface.odt
+icon: keyingset
+summary: "Mouse, keyboard, tablet and NDOF devices, and non-English keyboards."
 ---
 Bforartists supports various types of input devices:
 

@@ -7,30 +7,59 @@
   pages:
     - { id: "getting-started.index", title: "Getting Started", file: "content/getting-started/index.md", icon: null }
     - { id: "getting-started.introduction", title: "Introduction", file: "content/getting-started/introduction.md", icon: null }
-    - { id: "getting-started.about-documentation", title: "About Documentation", file: "content/getting-started/about-documentation.md", icon: null }
+    - { id: "getting-started.about-documentation", title: "Using the Documentation", file: "content/getting-started/about-documentation.md", icon: null }
     - { id: "getting-started.installation", title: "Installation", file: "content/getting-started/installation.md", icon: null }
     - { id: "getting-started.quick-start", title: "Quick Start", file: "content/getting-started/quick-start.md", icon: null }
     - { id: "getting-started.data-structure", title: "Data Structure", file: "content/getting-started/data-structure.md", icon: null }
-    - { id: "getting-started.differences", title: "Comparing to Blender", file: "content/getting-started/differences.md", icon: null }
+    - { id: "getting-started.differences", title: "Comparison with Blender", file: "content/getting-started/differences.md", icon: null }
     - { id: "getting-started.migrating-from-blender", title: "Migrating from Blender", file: "content/getting-started/migrating-from-blender.md", icon: null }
 
 - section: interface
   title: "Interface"
   slug: interface
   pages:
-    - { id: "interface.basics", title: "Interface basics", file: "content/interface/basics.md", icon: null }
-    - { id: "interface.header", title: "Header", file: "content/interface/components/header.md", icon: null }
-    - { id: "interface.panels-and-tabs", title: "Panels and tabs", file: "content/interface/components/panels-and-tabs.md", icon: null }
-    - { id: "interface.controls", title: "Menus, buttons and controls", file: "content/interface/components/menus-buttons-controls.md", icon: null }
-    - { id: "interface.tool-shelf", title: "Tool shelf", file: "content/interface/components/tool-shelf.md", icon: null }
-    - { id: "interface.sidebar", title: "Sidebar", file: "content/interface/components/sidebar.md", icon: null }
-    - { id: "interface.input-devices", title: "Input devices", file: "content/interface/input-devices.md", icon: null }
+    - { id: "interface.basics", title: "Overview", file: "content/interface/overview.md", icon: null }
+    - { id: "interface.windows", title: "Windows", file: "content/interface/windows.md", icon: null }
+    - { id: "interface.areas", title: "Areas", file: "content/interface/areas.md", icon: null }
+    - { id: "interface.editors", title: "Editors", file: "content/interface/editors.md", icon: null }
+    - { id: "interface.header", title: "Headers", file: "content/interface/headers.md", icon: null }
+    - { id: "interface.footers", title: "Footers", file: "content/interface/footers.md", icon: null }
+    - { id: "interface.tool-shelf", title: "Tool Shelves", file: "content/interface/tool-shelves.md", icon: null }
+    - { id: "interface.sidebar", title: "Side Bars", file: "content/interface/side-bars.md", icon: null }
+    - { id: "interface.panels-and-tabs", title: "Tabs & Panels", file: "content/interface/tabs-and-panels.md", icon: null }
+    - { id: "interface.controls", title: "Properties", file: "content/interface/properties.md", icon: null }
+    - { id: "interface.asset-shelves", title: "Asset Shelves", file: "content/interface/asset-shelves.md", icon: null }
+    - { id: "interface.context-menus", title: "Context Menus", file: "content/interface/context-menus.md", icon: null }
+    - { id: "interface.floating-menus", title: "Floating Menus", file: "content/interface/floating-menus.md", icon: null }
+    - { id: "interface.pie-menus", title: "Pie Menus", file: "content/interface/pie-menus.md", icon: null }
+    - { id: "interface.last-operator-panel", title: "Last Operator Panel", file: "content/interface/last-operator-panel.md", icon: null }
+    - { id: "interface.floating-dialogues", title: "Floating Dialogues", file: "content/interface/floating-dialogues.md", icon: null }
+    - { id: "interface.input-devices", title: "Input Devices", file: "content/interface/input-devices.md", icon: null }
 
 - section: workspaces
   title: "Workspaces"
   slug: workspaces
   pages:
-    - { id: "workspaces.workspaces", title: "Workspaces", file: "content/workspaces/workspaces.md", icon: null }
+    - { id: "workspaces.workspaces", title: "Managing Workspaces", file: "content/workspaces/workspaces.md", icon: null }
+    - { id: "workspaces.main", title: "Main", file: "content/workspaces/main.md", icon: null }
+    - { id: "workspaces.uv-editing", title: "UV Editing", file: "content/workspaces/uv-editing.md", icon: null }
+    - { id: "workspaces.modeling", title: "Modeling", file: "content/workspaces/modeling.md", icon: null }
+    - { id: "workspaces.nodes", title: "Nodes", file: "content/workspaces/nodes.md", icon: null }
+    - { id: "workspaces.animation", title: "Animation", file: "content/workspaces/animation.md", icon: null }
+    - { id: "workspaces.texture-paint", title: "Texture Paint", file: "content/workspaces/texture-paint.md", icon: null }
+    - { id: "workspaces.shading", title: "Shading", file: "content/workspaces/shading.md", icon: null }
+    - { id: "workspaces.rendering", title: "Rendering", file: "content/workspaces/rendering.md", icon: null }
+    - { id: "workspaces.sculpting", title: "Sculpting", file: "content/workspaces/sculpting.md", icon: null }
+    - { id: "workspaces.compositing", title: "Compositing", file: "content/workspaces/compositing.md", icon: null }
+    - { id: "workspaces.scripting", title: "Scripting", file: "content/workspaces/scripting.md", icon: null }
+    - { id: "workspaces.2d-animation", title: "2D Animation", file: "content/workspaces/2d-animation.md", icon: null }
+    - { id: "workspaces.2d-full-canvas", title: "2D Full Canvas", file: "content/workspaces/2d-full-canvas.md", icon: null }
+    - { id: "workspaces.masking", title: "Masking", file: "content/workspaces/masking.md", icon: null }
+    - { id: "workspaces.motion-tracking", title: "Motion Tracking", file: "content/workspaces/motion-tracking.md", icon: null }
+    - { id: "workspaces.video-editing", title: "Video Editing", file: "content/workspaces/video-editing.md", icon: null }
+    - { id: "workspaces.assets", title: "Assets", file: "content/workspaces/assets.md", icon: null }
+    - { id: "workspaces.3d-sequencer", title: "3D Sequencer", file: "content/workspaces/3d-sequencer.md", icon: null }
+    - { id: "workspaces.color-balance", title: "Color Balance", file: "content/workspaces/color-balance.md", icon: null }
 
 - section: editors
   title: "Editors"
@@ -44,111 +73,6 @@
     - { id: "editors.topbar-and-statusbar.topbar-menus.help-menu", title: "Help menu", file: "content/editors/topbar-and-statusbar/topbar-menus/help-menu.md", icon: null }
     - { id: "editors.introduction", title: "Editors introduction", file: "content/editors/introduction.md", icon: null }
     - { id: "editors.3d-viewport", title: "3D Viewport", file: "content/editors/3d-viewport/index.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.object-mode-object-context-menu", title: "Object mode - Object Context Menu", file: "content/editors/3d-viewport/context-menus/object-mode-object-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.mesh-object-edit-mode-vertex-context-menu", title: "Mesh Object - Edit Mode - Vertex Context Menu", file: "content/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.mesh-object-edit-mode-edge-context-menu", title: "Mesh Object - Edit Mode - Edge Context Menu", file: "content/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.mesh-object-edit-mode-face-context-menu", title: "Mesh Object - Edit Mode - Face Context Menu", file: "content/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.mesh-object-sculpt-mode-brushes-context-menus", title: "Mesh Object - Sculpt Mode - Brushes context menus", file: "content/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.mesh-object-vertex-paint-mode-brushes-context-menus", title: "Mesh Object - Vertex Paint Mode - Brushes context menus", file: "content/editors/3d-viewport/context-menus/mesh-object-vertex-paint-mode-brushes-context-menus.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.mesh-object-weight-paint-mode-brushes-context-menus", title: "Mesh Object - Weight Paint Mode - Brushes context menus", file: "content/editors/3d-viewport/context-menus/mesh-object-weight-paint-mode-brushes-context-menus.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.mesh-object-texture-paint-mode-brushes-context-menus", title: "Mesh Object - Texture Paint Mode - Brushes context menus", file: "content/editors/3d-viewport/context-menus/mesh-object-texture-paint-mode-brushes-context-menus.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.curve-surface-object-edit-mode-curve-context-menus", title: "Curve + Surface Object - Edit Mode - Curve context menus", file: "content/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.metaball-edit-mode-metaball-context-menu", title: "Metaball - Edit Mode - Metaball context menu", file: "content/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.text-edit-mode-text-context-menu", title: "Text - Edit Mode - Text context menu", file: "content/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.grease-pencil-object-edit-mode-point-context-menu", title: "Grease Pencil object - Edit Mode - Point context menu", file: "content/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.grease-pencil-object-edit-mode-stroke-context-menu", title: "Grease Pencil object - Edit Mode - Stroke context menu", file: "content/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.grease-pencil-object-sculpt-mode-brushes-context-menu", title: "Grease Pencil object - Sculpt Mode - Brushes context menu", file: "content/editors/3d-viewport/context-menus/grease-pencil-object-sculpt-mode-brushes-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.grease-pencil-object-draw-mode-brushes-context-menu", title: "Grease Pencil object - Draw Mode - Brushes context menu", file: "content/editors/3d-viewport/context-menus/grease-pencil-object-draw-mode-brushes-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.grease-pencil-object-vertex-paint-mode-brushes-context-menu", title: "Grease Pencil object - Vertex Paint Mode - Brushes context menu", file: "content/editors/3d-viewport/context-menus/grease-pencil-object-vertex-paint-mode-brushes-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.grease-pencil-object-weight-paint-mode-brushes-context-menu", title: "Grease Pencil object - Weight Paint Mode - Brushes context menu", file: "content/editors/3d-viewport/context-menus/grease-pencil-object-weight-paint-mode-brushes-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.armature-edit-mode-armature-context-menu", title: "Armature - Edit Mode - Armature context menu", file: "content/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.armature-pose-mode-pose-context-menu", title: "Armature - Pose Mode - Pose context menu", file: "content/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.armature-edit-mode-lattice-context-menu", title: "Armature - Edit Mode - Lattice context menu", file: "content/editors/3d-viewport/context-menus/armature-edit-mode-lattice-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus.hair-curves-edit-mode-curves-context-menu", title: "Hair Curves - Edit Mode - Curves context menu", file: "content/editors/3d-viewport/context-menus/hair-curves-edit-mode-curves-context-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header", title: "Header", file: "content/editors/3d-viewport/header/index.md", icon: null }
-    - { id: "editors.3d-viewport.header.header-tools-and-options", title: "Header tools and Options", file: "content/editors/3d-viewport/header/header-tools-and-options.md", icon: null }
-    - { id: "editors.3d-viewport.header.quick-menu", title: "Quick Menu", file: "content/editors/3d-viewport/header/quick-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.view-menu", title: "View Menu", file: "content/editors/3d-viewport/header/view-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.navigation-menu", title: "Navigation Menu", file: "content/editors/3d-viewport/header/navigation-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.select-menu", title: "Select Menu", file: "content/editors/3d-viewport/header/select-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.add-menu", title: "Add Menu", file: "content/editors/3d-viewport/header/add-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.edit-mode-add-menu", title: "Edit mode - Add menu", file: "content/editors/3d-viewport/header/edit-mode-add-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.object-menu", title: "Object menu", file: "content/editors/3d-viewport/header/object-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.mesh-edit-mode-mesh-menu", title: "Mesh - Edit mode - Mesh menu", file: "content/editors/3d-viewport/header/mesh-edit-mode-mesh-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.mesh-edit-mode-vertex-menu", title: "Mesh - Edit Mode - Vertex Menu", file: "content/editors/3d-viewport/header/mesh-edit-mode-vertex-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.mesh-edit-mode-edge-menu", title: "Mesh - Edit mode - Edge Menu", file: "content/editors/3d-viewport/header/mesh-edit-mode-edge-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.mesh-edit-mode-face-menu", title: "Mesh - Edit mode - Face menu", file: "content/editors/3d-viewport/header/mesh-edit-mode-face-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.mesh-edit-mode-uv-menu", title: "Mesh - Edit mode - UV menu", file: "content/editors/3d-viewport/header/mesh-edit-mode-uv-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.mesh-sculpt-mode-sculpt-menu", title: "Mesh - Sculpt mode - Sculpt menu", file: "content/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.mesh-sculpt-mode-mask-menu", title: "Mesh - Sculpt mode - Mask menu", file: "content/editors/3d-viewport/header/mesh-sculpt-mode-mask-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.mesh-sculpt-mode-face-sets-menu", title: "Mesh - Sculpt mode - Face Sets menu", file: "content/editors/3d-viewport/header/mesh-sculpt-mode-face-sets-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.mesh-vertex-paint-mode-paint-menu", title: "Mesh - Vertex Paint mode - Paint menu", file: "content/editors/3d-viewport/header/mesh-vertex-paint-mode-paint-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.mesh-vertex-paint-mode-brush-menu", title: "Mesh - Vertex Paint mode - Brush menu", file: "content/editors/3d-viewport/header/mesh-vertex-paint-mode-brush-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.mesh-weight-paint-mode-weights-menu", title: "Mesh - Weight Paint mode - Weights menu", file: "content/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.mesh-texture-paint-mode-brush-menu", title: "Mesh - Texture Paint mode - Brush menu", file: "content/editors/3d-viewport/header/mesh-texture-paint-mode-brush-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.curve-edit-mode-curve-menu", title: "Curve - Edit mode - Curve menu", file: "content/editors/3d-viewport/header/curve-edit-mode-curve-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.surface-edit-mode-surface-menu", title: "Surface - Edit mode - Surface menu", file: "content/editors/3d-viewport/header/surface-edit-mode-surface-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.curve-surface-edit-mode-control-points-menu", title: "Curve & Surface - Edit mode - Control points menu", file: "content/editors/3d-viewport/header/curve-surface-edit-mode-control-points-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.curve-surface-edit-mode-segments-menu", title: "Curve & Surface - Edit mode - Segments menu", file: "content/editors/3d-viewport/header/curve-surface-edit-mode-segments-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.metaball-edit-mode-metaball-menu", title: "Metaball - Edit mode - Metaball menu", file: "content/editors/3d-viewport/header/metaball-edit-mode-metaball-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.text-edit-mode-text-menu", title: "Text - Edit mode - Text menu", file: "content/editors/3d-viewport/header/text-edit-mode-text-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.grease-pencil-edit-mode-grease-pencil-menu", title: "Grease Pencil - Edit mode - Grease Pencil menu", file: "content/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.point-cloud-edit-mode-point-cloud-menu", title: "Point Cloud - Edit mode - Point Cloud menu", file: "content/editors/3d-viewport/header/point-cloud-edit-mode-point-cloud-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.grease-pencil-edit-mode-point-menu", title: "Grease Pencil - Edit mode - Point menu", file: "content/editors/3d-viewport/header/grease-pencil-edit-mode-point-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.grease-pencil-edit-mode-stroke-menu", title: "Grease Pencil - Edit mode - Stroke menu", file: "content/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.grease-pencil-draw-mode-draw-menu", title: "Grease Pencil - Draw mode - Draw menu", file: "content/editors/3d-viewport/header/grease-pencil-draw-mode-draw-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.grease-pencil-vertex-paint-mode-paint-menu", title: "Grease Pencil - Vertex Paint mode - Paint menu", file: "content/editors/3d-viewport/header/grease-pencil-vertex-paint-mode-paint-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.grease-pencil-weight-paint-mode-weights-menu", title: "Grease Pencil - Weight Paint Mode - Weights Menu", file: "content/editors/3d-viewport/header/grease-pencil-weight-paint-mode-weights-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.armature-edit-mode-armature-menu", title: "Armature - Edit mode - Armature menu", file: "content/editors/3d-viewport/header/armature-edit-mode-armature-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.armature-pose-mode-pose-menu", title: "Armature - Pose mode - Pose menu", file: "content/editors/3d-viewport/header/armature-pose-mode-pose-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.lattice-edit-mode-lattice-menu", title: "Lattice - Edit mode - Lattice menu", file: "content/editors/3d-viewport/header/lattice-edit-mode-lattice-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.particle-particle-mode-particle-menu", title: "Particle - Particle mode - Particle menu", file: "content/editors/3d-viewport/header/particle-particle-mode-particle-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.hair-curve-edit-mode-curves-menu", title: "Hair Curve - Edit mode - Curves menu", file: "content/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.hair-curve-edit-mode-control-points-menu", title: "Hair Curve - Edit mode - Control Points menu", file: "content/editors/3d-viewport/header/hair-curve-edit-mode-control-points-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.hair-curve-edit-mode-segments-menu", title: "Hair Curve - Edit mode - Segments menu", file: "content/editors/3d-viewport/header/hair-curve-edit-mode-segments-menu.md", icon: null }
-    - { id: "editors.3d-viewport.header.hair-curve-sculpt-mode-curves-menu", title: "Hair Curve - Sculpt mode - Curves menu", file: "content/editors/3d-viewport/header/hair-curve-sculpt-mode-curves-menu.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf", title: "Tool Shelf", file: "content/editors/3d-viewport/tool-shelf/index.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.object-mode", title: "Object Mode", file: "content/editors/3d-viewport/tool-shelf/object-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.mesh-edit-mode", title: "Mesh - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/mesh-edit-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.mesh-sculpt-mode", title: "Mesh - Sculpt Mode", file: "content/editors/3d-viewport/tool-shelf/mesh-sculpt-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.mesh-vertex-paint-mode", title: "Mesh - Vertex Paint Mode", file: "content/editors/3d-viewport/tool-shelf/mesh-vertex-paint-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.mesh-weight-paint-mode", title: "Mesh - Weight Paint Mode", file: "content/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.mesh-texture-paint-mode", title: "Mesh - Texture Paint Mode", file: "content/editors/3d-viewport/tool-shelf/mesh-texture-paint-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.mesh-particle-edit-mode", title: "Mesh - Particle Edit Mode", file: "content/editors/3d-viewport/tool-shelf/mesh-particle-edit-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.curve-edit-mode", title: "Curve - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/curve-edit-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.surface-edit-mode", title: "Surface - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/surface-edit-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.metaball-edit-mode", title: "Metaball - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/metaball-edit-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.text-edit-mode", title: "Text - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/text-edit-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.grease-pencil-edit-mode", title: "Grease Pencil - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.grease-pencil-sculpt-mode", title: "Grease Pencil - Sculpt Mode", file: "content/editors/3d-viewport/tool-shelf/grease-pencil-sculpt-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.grease-pencil-draw-mode", title: "Grease Pencil - Draw Mode", file: "content/editors/3d-viewport/tool-shelf/grease-pencil-draw-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.grease-pencil-vertex-paint-mode", title: "Grease Pencil - Vertex Paint Mode", file: "content/editors/3d-viewport/tool-shelf/grease-pencil-vertex-paint-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.grease-pencil-weight-paint-mode", title: "Grease Pencil - Weight Paint Mode", file: "content/editors/3d-viewport/tool-shelf/grease-pencil-weight-paint-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.armature-edit-mode", title: "Armature - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/armature-edit-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.armature-pose-mode", title: "Armature - Pose Mode", file: "content/editors/3d-viewport/tool-shelf/armature-pose-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.lattice-edit-mode", title: "Lattice - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/lattice-edit-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.hair-curve-edit-mode", title: "Hair Curve - Edit Mode", file: "content/editors/3d-viewport/tool-shelf/hair-curve-edit-mode.md", icon: null }
-    - { id: "editors.3d-viewport.tool-shelf.hair-curve-sculpt-mode", title: "Hair Curve - Sculpt Mode", file: "content/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar", title: "Sidebar", file: "content/editors/3d-viewport/sidebar/index.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.item-tab", title: "Item tab", file: "content/editors/3d-viewport/sidebar/item-tab.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab", title: "Tool Tab", file: "content/editors/3d-viewport/sidebar/tool-tab.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-object-mode", title: "Tool Tab - Object Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-object-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-edit-mode", title: "Tool Tab - Edit Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-edit-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-pose-mode", title: "Tool Tab - Pose Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-pose-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-mesh-sculpt-mode", title: "Tool Tab - Mesh - Sculpt Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-mesh-vertex-paint-mode", title: "Tool Tab - Mesh - Vertex Paint Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-mesh-texture-paint-mode", title: "Tool Tab - Mesh - Texture Paint Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-mesh-texture-paint-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-mesh-weight-paint-mode", title: "Tool Tab - Mesh - Weight Paint Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-particle-edit-mode", title: "Tool Tab - Particle Edit Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-particle-edit-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-grease-pencil-sculpt-mode", title: "Tool Tab - Grease Pencil - Sculpt Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-sculpt-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-grease-pencil-draw-mode", title: "Tool Tab - Grease Pencil - Draw Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-draw-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-grease-pencil-vertex-paint-mode", title: "Tool Tab - Grease Pencil - Vertex Paint Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-vertex-paint-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-grease-pencil-weight-paint-mode", title: "Tool Tab - Grease Pencil - Weight Paint Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-weight-paint-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-grease-pencil-layer-panel", title: "Tool Tab - Grease Pencil - Layer Panel", file: "content/editors/3d-viewport/sidebar/tool-tab-grease-pencil-layer-panel.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.tool-tab-hair-curve-sculpt-mode", title: "Tool Tab - Hair Curve - Sculpt Mode", file: "content/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.view-tab", title: "View Tab", file: "content/editors/3d-viewport/sidebar/view-tab.md", icon: null }
-    - { id: "editors.3d-viewport.sidebar.animation-tab", title: "Animation Tab", file: "content/editors/3d-viewport/sidebar/animation-tab.md", icon: null }
-    - { id: "editors.3d-viewport.asset-shelf", title: "Asset Shelf", file: "content/editors/3d-viewport/asset-shelf.md", icon: null }
     - { id: "editors.image-editor", title: "Image Editor", file: "content/editors/image-editor/index.md", icon: null }
     - { id: "editors.image-editor.header", title: "Header", file: "content/editors/image-editor/header/index.md", icon: null }
     - { id: "editors.image-editor.header.header-tools-and-options", title: "Header Tools and Options", file: "content/editors/image-editor/header/header-tools-and-options.md", icon: null }
@@ -524,12 +448,9 @@
     - { id: "editors.properties.strip-modifiers-tab", title: "Strip Modifiers Tab", file: "content/editors/properties/strip-modifiers-tab.md", icon: null }
     - { id: "editors.file-browser", title: "File browser", file: "content/editors/file-browser.md", icon: null }
     - { id: "editors.asset-browser", title: "Asset Browser", file: "content/editors/asset-browser/index.md", icon: null }
-    - { id: "editors.asset-browser.asset-browser-default-asset-library", title: "Asset Browser - Default Asset LIbrary", file: "content/editors/asset-browser/asset-browser-default-asset-library.md", icon: null }
-    - { id: "editors.asset-browser.asset-browser-essentials-asset-library", title: "Asset Browser - Essentials Asset Library", file: "content/editors/asset-browser/asset-browser-essentials-asset-library.md", icon: null }
     - { id: "editors.spreadsheet", title: "Spreadsheet", file: "content/editors/spreadsheet.md", icon: null }
     - { id: "editors.preferences", title: "Preferences", file: "content/editors/preferences.md", icon: null }
     - { id: "editors.topbar-and-statusbar.topbar-menus", title: "Topbar menus", file: "content/editors/topbar-and-statusbar/topbar-menus/index.md", icon: null }
-    - { id: "editors.3d-viewport.context-menus", title: "Context menus", file: "content/editors/3d-viewport/context-menus/index.md", icon: null }
     - { id: "editors.geometry-node-editor.header", title: "Header", file: "content/editors/geometry-node-editor/header/index.md", icon: null }
     - { id: "editors.dope-sheet.header", title: "Header", file: "content/editors/dope-sheet/header/index.md", icon: null }
     - { id: "editors.graph-editor.header", title: "Header", file: "content/editors/graph-editor/header/index.md", icon: null }
@@ -539,24 +460,35 @@
     - { id: "editors.nonlinear-animation-editor.sidebar", title: "Sidebar", file: "content/editors/nonlinear-animation-editor/sidebar/index.md", icon: null }
     - { id: "editors.timeline.viewport", title: "Timeline viewport", file: "content/editors/timeline/viewport.md", icon: null }
 
+- section: assets
+  title: "Assets"
+  slug: assets
+  pages:
+    - { id: "editors.asset-browser.asset-browser-essentials-asset-library", title: "Essentials Library", file: "content/assets/essentials-library.md", icon: null }
+    - { id: "editors.asset-browser.asset-browser-default-asset-library", title: "Default Library", file: "content/assets/default-library.md", icon: null }
+
 - section: advanced
   title: "Advanced"
   slug: advanced
   pages:
-    - { id: "advanced.advanced-command-line", title: "Advanced - Command Line", file: "content/advanced/advanced-command-line.md", icon: null }
-    - { id: "advanced.advanced-scripting-extending-bforartists", title: "Advanced - Scripting & Extending Bforartists", file: "content/advanced/advanced-scripting-extending-bforartists.md", icon: null }
-    - { id: "advanced.advanced-working-limits", title: "Advanced - Working Limits", file: "content/advanced/advanced-working-limits.md", icon: null }
+    - { id: "advanced.advanced-command-line", title: "Command Line", file: "content/advanced/advanced-command-line.md", icon: null }
+    - { id: "advanced.advanced-scripting-extending-bforartists", title: "Scripting", file: "content/advanced/advanced-scripting-extending-bforartists.md", icon: null }
+    - { id: "advanced.advanced-working-limits", title: "Working Limits", file: "content/advanced/advanced-working-limits.md", icon: null }
     - { id: "advanced.troubleshooting", title: "Troubleshooting", file: "content/advanced/troubleshooting.md", icon: null }
+    - { id: "advanced.reporting-a-bug", title: "Reporting a Bug", file: "content/advanced/reporting-a-bug.md", icon: null }
+    - { id: "advanced.requesting-a-feature", title: "Requesting a Feature", file: "content/advanced/requesting-a-feature.md", icon: null }
+    - { id: "advanced.how-to-help", title: "How to Help", file: "content/advanced/how-to-help.md", icon: null }
 
 - section: extensions
-  title: "Extensions"
+  title: "Extensions and Addons"
   slug: extensions
   pages:
-    - { id: "extensions.bforartists-extensions", title: "Bforartists Extensions", file: "content/extensions/bforartists-extensions/index.md", icon: null }
-    - { id: "extensions.bforartists-extensions.core-extension-brush-panels", title: "Core Extension - Brush Panels", file: "content/extensions/bforartists-extensions/core-extension-brush-panels.md", icon: null }
-    - { id: "extensions.bforartists-extensions.core-extension-presentation-slider", title: "Core Extension - Presentation Slider", file: "content/extensions/bforartists-extensions/core-extension-presentation-slider.md", icon: null }
-    - { id: "extensions.bforartists-extensions.core-extension-3d-sequencer", title: "Core Extension- 3D Sequencer", file: "content/extensions/bforartists-extensions/core-extension-3d-sequencer.md", icon: null }
-    - { id: "extensions.bforartists-extensions.core-extension-power-user-tools", title: "Core Extension - Power User Tools", file: "content/extensions/bforartists-extensions/core-extension-power-user-tools.md", icon: null }
+    - { id: "extensions.bforartists-extensions.core-extension-3d-sequencer", title: "3D Sequencer", file: "content/extensions/core-extension-3d-sequencer.md", icon: null }
+    - { id: "extensions.bforartists-extensions.core-extension-power-user-tools", title: "Power User Tools", file: "content/extensions/core-extension-power-user-tools.md", icon: null }
+    - { id: "extensions.bforartists-extensions.core-extension-presentation-slider", title: "Presentation Slides", file: "content/extensions/core-extension-presentation-slider.md", icon: null }
+    - { id: "extensions.coworker", title: "Coworker", file: "content/extensions/coworker.md", icon: null }
+    - { id: "extensions.bforartists-extensions.core-extension-brush-panels", title: "Brush Panels", file: "content/extensions/core-extension-brush-panels.md", icon: null }
+    - { id: "extensions.bforartists-extensions", title: "Built-in Addons and Extensions", file: "content/extensions/built-in-addons.md", icon: null }
 
 - section: appendix
   title: "Appendix"
@@ -564,7 +496,7 @@
   pages:
     - { id: "appendix.glossary", title: "Glossary", file: "content/appendix/glossary.md", icon: null }
     - { id: "appendix.bforartists-history", title: "Bforartists History", file: "content/appendix/bforartists-history.md", icon: null }
-    - { id: "appendix.manual-update-history", title: "Manual Update History", file: "content/appendix/manual-update-history.md", icon: null }
+    - { id: "appendix.manual-update-history", title: "Documentation History", file: "content/appendix/manual-update-history.md", icon: null }
 
 - section: keymap
   title: "Keymap"

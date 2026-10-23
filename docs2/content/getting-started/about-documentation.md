@@ -1,6 +1,6 @@
 ---
 id: getting-started.about-documentation
-title: About Documentation
+title: "Using the Documentation"
 slug: about-documentation
 section: getting-started
 path:
@@ -15,6 +15,7 @@ source:
   - webflow:about-documentation
 summary: "Expand the view, print and download, and use the sidebars to navigate."
 cta: "How to use the docs"
+icon: documents
 ---
 The question of how to use the manual sounds odd in the first moment. Yousimply read it! But there are a few things to know before you canreally find easily what you are looking for. Because using a 3dsoftware requires some special 3d knowledge. And it needs a bit ofknowledge about Bforartists to understand the structure of themanual. So that you can find what you need, both, from coming thesoftware side, and from coming the manual side.
 

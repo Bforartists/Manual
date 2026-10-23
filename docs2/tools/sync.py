@@ -226,6 +226,8 @@ def build(repo, cfg):
             p = n.page
             body = html_build.page_html(repo, p, by_rel, md, **urls)
             body = tidy(landing.add_cards(body, p, kids.get(n.id, []), kids, url_of))
+            if p.fm.get("generate") == "index":                     # Information › Index, A to Z
+                body = tidy(body + landing.index_html(tree, url_of))
             words = len(re.sub(r"<[^>]+>", " ", body).split())
             f = {"page-id": n.id, "name": str(p.fm.get("title") or n.id), "section-id": sec.id,
                  "section-title": sec.title, "order": n.order, "level": n.level,
@@ -272,7 +274,7 @@ def parse_checksum(value):
         return h, None
 
 
-def apply_collection(wf, cid, key_field, wanted, report, force, extra=lambda w: {}):
+def apply_collection(wf, cid, key_field, wanted, report, force, extra=lambda w: {}, prune=False):
     existing = {it["fieldData"].get(key_field): it for it in wf.items(cid) if it["fieldData"].get(key_field)}
     ids, pending = {}, []
     for w in wanted:
@@ -307,9 +309,18 @@ def apply_collection(wf, cid, key_field, wanted, report, force, extra=lambda w: 
             report.append(("🆕", w["key"], "created"))
     if pending:
         wf.update_many(cid, pending)
-    for k in existing:
-        if k not in {w["key"] for w in wanted}:
+    keys = {w["key"] for w in wanted}
+    gone = []
+    for k, it in existing.items():
+        if k in keys or it.get("isArchived"):
+            continue
+        if prune and it["fieldData"].get("checksum"):          # made by the sync, gone from the repo
+            gone.append({"id": it["id"], "isArchived": True, "fieldData": {"name": it["fieldData"].get("name", k)}})
+            report.append(("🗄️", k, "gone from the repo; archived"))
+        else:
             report.append(("🧹", k, "in Webflow but not in the repo; left alone"))
+    for i in range(0, len(gone), 25):
+        wf.req("PATCH", f"/collections/{cid}/items", {"items": gone[i:i + 25]})
     return ids
 
 
@@ -361,7 +372,8 @@ def main(argv):
                 return {"section": sec_ids.get(w["section"]),
                         "snippets": [snip_by_path[s] for s in w["shared"] if snip_by_path.get(s)],
                         "status": status_ids.get(w["fields"]["status"], w["fields"]["status"])}
-            apply_collection(wf, col["pages"], "page-id", plan["pages"], report, "--force" in opts, page_extra)
+            apply_collection(wf, col["pages"], "page-id", plan["pages"], report, "--force" in opts, page_extra,
+                             prune="--prune" in opts)
             changed = sum(1 for r in report if r[0] in ("🔄", "🆕"))
             lines += [f"{changed} item(s) created or updated · {wf.calls} API calls", "",
                       "| | Item | Result |", "|---|---|---|"]

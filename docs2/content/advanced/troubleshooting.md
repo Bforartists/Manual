@@ -10,6 +10,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 36 Troubleshooting.odt
+icon: question
 ---
 ## Troubleshooting
 

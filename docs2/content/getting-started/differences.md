@@ -1,6 +1,6 @@
 ---
 id: getting-started.differences
-title: Comparing to Blender
+title: "Comparison with Blender"
 slug: differences
 section: getting-started
 path:
@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 summary: "This is Blender deep down, with some fundamental differences. Learn how to translate the ecosystem."
 cta: "Compare"
+icon: float_compare
 ---
 This is **Blender** deep down, but there are some fundamental differences. Learn how to translate the ecosystem!
 

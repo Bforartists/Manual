@@ -1,6 +1,6 @@
 ---
 id: appendix.manual-update-history
-title: Manual Update History
+title: "Documentation History"
 section: appendix
 path:
   - Appendix
@@ -10,6 +10,8 @@ status: draft
 screenshots: "5.1"
 source:
   - 40 Manual Update History.odt
+icon: time
+order: 20
 ---
 23.04.2026 – Updated the manual to Bforartists 5 version 5.1.1
 

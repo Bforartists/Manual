@@ -13,6 +13,7 @@ source:
   - 2 Installing Bforartists.odt
 summary: "How to install from the various distributions available."
 cta: "Get going"
+icon: external_drive
 ---
 ## Getting Bforartists
 

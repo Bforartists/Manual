@@ -171,7 +171,7 @@ jobs:
         run: |
           export DOCS_SHA=$(git rev-parse HEAD)     # includes the bot's commit, so image links match
           status=0
-          python docs2/tools/sync.py . --apply --publish --report _sync.md --nav _nav/nav.json || status=$?
+          python docs2/tools/sync.py . --apply --publish --prune --report _sync.md --nav _nav/nav.json || status=$?
           [ -f _sync.md ] && cat _sync.md >> "$GITHUB_STEP_SUMMARY"
           exit $status
 

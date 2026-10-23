@@ -1,0 +1,32 @@
+# 🧊 Refactor map · 3d-viewport
+
+Each **target page** combines the regions of one mode. Inside it, every region is an H1 (the right-hand
+sidebar groups), every old page becomes an H2 under its region, and its headings move down one level.
+Old pages become redirects to `new page#anchor`. Nothing has moved yet: review, then `refactor_apply.py`.
+
+| | Target page | Level | Regions → old pages | Words | Images |
+|---|---|---|---|---|---|
+| 📄 | Header, View and Select (all modes) ⚠️ | 2 | **Header:** Header tools and Options, Header, Navigation Menu, Quick Menu, Select Menu, View Menu<br>**Tool Shelf:** Tool Shelf<br>**Sidebar:** Animation Tab, Sidebar, Item tab, View Tab<br>**Context Menus:** Context menus<br>**Other:** Asset Shelf | 34,860 | 671 |
+| 📄 | Object Mode ⚠️ | 2 | **Header:** Add Menu, Object menu<br>**Tool Shelf:** Object Mode<br>**Sidebar:** Tool Tab - Object Mode, Tool Tab<br>**Context Menus:** Object mode - Object Context Menu | 30,136 | 618 |
+| 📄 | Mesh › Edit Mode ⚠️ | 3 | **Header:** Edit mode - Add menu, Mesh - Edit mode - Edge Menu, Mesh - Edit mode - Face menu, Mesh - Edit mode - Mesh menu, Mesh - Edit mode - UV menu, Mesh - Edit Mode - Vertex Menu<br>**Tool Shelf:** Mesh - Edit Mode<br>**Sidebar:** Tool Tab - Edit Mode<br>**Context Menus:** Mesh Object - Edit Mode - Edge Context Menu, Mesh Object - Edit Mode - Face Context Menu, Mesh Object - Edit Mode - Vertex Context Menu | 36,579 | 751 |
+| 📄 | Mesh › Sculpt Mode | 3 | **Header:** Mesh - Sculpt mode - Face Sets menu, Mesh - Sculpt mode - Mask menu, Mesh - Sculpt mode - Sculpt menu<br>**Tool Shelf:** Mesh - Sculpt Mode<br>**Sidebar:** Tool Tab - Mesh - Sculpt Mode<br>**Context Menus:** Mesh Object - Sculpt Mode - Brushes context menus | 21,283 | 506 |
+| 📄 | Mesh › Vertex Paint | 3 | **Header:** Mesh - Vertex Paint mode - Brush menu, Mesh - Vertex Paint mode - Paint menu<br>**Tool Shelf:** Mesh - Vertex Paint Mode<br>**Sidebar:** Tool Tab - Mesh - Vertex Paint Mode<br>**Context Menus:** Mesh Object - Vertex Paint Mode - Brushes context menus | 5,783 | 105 |
+| 📄 | Mesh › Weight Paint | 3 | **Header:** Mesh - Weight Paint mode - Weights menu<br>**Tool Shelf:** Mesh - Weight Paint Mode<br>**Sidebar:** Tool Tab - Mesh - Weight Paint Mode<br>**Context Menus:** Mesh Object - Weight Paint Mode - Brushes context menus | 5,636 | 117 |
+| 📄 | Mesh › Texture Paint | 3 | **Header:** Mesh - Texture Paint mode - Brush menu<br>**Tool Shelf:** Mesh - Texture Paint Mode<br>**Sidebar:** Tool Tab - Mesh - Texture Paint Mode<br>**Context Menus:** Mesh Object - Texture Paint Mode - Brushes context menus | 7,015 | 135 |
+| 📄 | Mesh › Particle Edit | 3 | **Header:** Particle - Particle mode - Particle menu<br>**Tool Shelf:** Mesh - Particle Edit Mode<br>**Sidebar:** Tool Tab - Particle Edit Mode | 1,897 | 31 |
+| 📄 | Curve and Surface › Edit Mode | 3 | **Header:** Curve - Edit mode - Curve menu, Curve & Surface - Edit mode - Control points menu, Curve & Surface - Edit mode - Segments menu, Surface - Edit mode - Surface menu<br>**Tool Shelf:** Curve - Edit Mode, Surface - Edit Mode<br>**Context Menus:** Curve + Surface Object - Edit Mode - Curve context menus | 9,388 | 212 |
+| 📄 | Metaball › Edit Mode | 3 | **Header:** Metaball - Edit mode - Metaball menu<br>**Tool Shelf:** Metaball - Edit Mode<br>**Context Menus:** Metaball - Edit Mode - Metaball context menu | 2,551 | 58 |
+| 📄 | Text › Edit Mode | 3 | **Header:** Text - Edit mode - Text menu<br>**Tool Shelf:** Text - Edit Mode<br>**Context Menus:** Text - Edit Mode - Text context menu | 883 | 17 |
+| 📄 | Lattice › Edit Mode | 3 | **Header:** Lattice - Edit mode - Lattice menu<br>**Tool Shelf:** Lattice - Edit Mode<br>**Context Menus:** Armature - Edit Mode - Lattice context menu | 4,634 | 93 |
+| 📄 | Armature › Edit Mode | 3 | **Header:** Armature - Edit mode - Armature menu<br>**Tool Shelf:** Armature - Edit Mode<br>**Context Menus:** Armature - Edit Mode - Armature context menu | 6,746 | 148 |
+| 📄 | Armature › Pose Mode | 3 | **Header:** Armature - Pose mode - Pose menu<br>**Tool Shelf:** Armature - Pose Mode<br>**Sidebar:** Tool Tab - Pose Mode<br>**Context Menus:** Armature - Pose Mode - Pose context menu | 5,726 | 128 |
+| 📄 | Grease Pencil › Draw Mode | 3 | **Header:** Grease Pencil - Draw mode - Draw menu<br>**Tool Shelf:** Grease Pencil - Draw Mode<br>**Sidebar:** Tool Tab - Grease Pencil - Draw Mode, Tool Tab - Grease Pencil - Layer Panel<br>**Context Menus:** Grease Pencil object - Draw Mode - Brushes context menu | 8,410 | 187 |
+| 📄 | Grease Pencil › Edit Mode | 3 | **Header:** Grease Pencil - Edit mode - Grease Pencil menu, Grease Pencil - Edit mode - Point menu, Grease Pencil - Edit mode - Stroke menu<br>**Tool Shelf:** Grease Pencil - Edit Mode<br>**Context Menus:** Grease Pencil object - Edit Mode - Point context menu, Grease Pencil object - Edit Mode - Stroke context menu | 8,414 | 174 |
+| 📄 | Grease Pencil › Sculpt Mode | 3 | **Tool Shelf:** Grease Pencil - Sculpt Mode<br>**Sidebar:** Tool Tab - Grease Pencil - Sculpt Mode<br>**Context Menus:** Grease Pencil object - Sculpt Mode - Brushes context menu | 4,024 | 97 |
+| 📄 | Grease Pencil › Vertex Paint | 3 | **Header:** Grease Pencil - Vertex Paint mode - Paint menu<br>**Tool Shelf:** Grease Pencil - Vertex Paint Mode<br>**Sidebar:** Tool Tab - Grease Pencil - Vertex Paint Mode<br>**Context Menus:** Grease Pencil object - Vertex Paint Mode - Brushes context menu | 2,019 | 42 |
+| 📄 | Grease Pencil › Weight Paint | 3 | **Header:** Grease Pencil - Weight Paint Mode - Weights Menu<br>**Tool Shelf:** Grease Pencil - Weight Paint Mode<br>**Sidebar:** Tool Tab - Grease Pencil - Weight Paint Mode<br>**Context Menus:** Grease Pencil object - Weight Paint Mode - Brushes context menu | 1,254 | 22 |
+| 📄 | Hair Curves › Edit Mode | 3 | **Header:** Hair Curve - Edit mode - Control Points menu, Hair Curve - Edit mode - Curves menu, Hair Curve - Edit mode - Segments menu<br>**Tool Shelf:** Hair Curve - Edit Mode<br>**Context Menus:** Hair Curves - Edit Mode - Curves context menu | 3,428 | 87 |
+| 📄 | Hair Curves › Sculpt Mode | 3 | **Header:** Hair Curve - Sculpt mode - Curves menu<br>**Tool Shelf:** Hair Curve - Sculpt Mode<br>**Sidebar:** Tool Tab - Hair Curve - Sculpt Mode | 3,165 | 64 |
+| 📄 | Point Cloud › Edit Mode | 3 | **Header:** Point Cloud - Edit mode - Point Cloud menu | 1,719 | 38 |
+
+106 old pages → 22 target pages. ⚠️ = over 25,000 words: very long for one web page.

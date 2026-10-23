@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 summary: "Bring your Blender hotkeys, settings, add-ons and theme with you."
 cta: "Migrate"
+icon: align_transform
 ---
 You can use your **Blender** hotkeys, settings, addons and theme with Bforartists! Learn how to migrate here.
 
