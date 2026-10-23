@@ -50,7 +50,8 @@
     '.dk-btn{display:inline-flex;align-items:center;gap:.5rem;min-height:2.5rem;padding:.45rem 1rem;border:2px solid var(--_bfa---edge--outline);border-radius:var(--_bfa---shape--bevel-tight,.2875rem);background:var(--_bfa---surface--raised);color:var(--_bfa---text--primary);font:600 .9375rem/1.2 Inter,sans-serif;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease;cursor:pointer}',
     '.dk-btn img{width:16px;height:16px;object-fit:contain}',
     '.dk-btn:hover{background:var(--_bfa---surface--hover,#555);box-shadow:0 2px 3px #0006,4px 10px 14px -6px #0009;transform:translateY(-2px)}',
-    '.dk-btn.is-primary{background:#5aa9f0;border-color:#0006;color:#0b1a2a}',
+    '.dk-home-page a,.dk-chapters a,.dk-hero a,.dk-help a{color:var(--dk-text)!important;text-decoration:none!important}',
+    '.dk-btn.is-primary{background:#5aa9f0;border-color:#0006;color:#0b1a2a!important}',
     '.dk-btn.is-primary:hover{background:#75bfff}',
     '.dk-btn.is-small{min-height:2rem;padding:.25rem .75rem;font-size:.8125rem}',
     '.dk-card{border-radius:var(--_bfa---shape--bevel,.625rem);background-color:var(--_bfa---surface--card);box-shadow:0 1px 2px #0006,calc(var(--sx,0)*8px) 10px 16px -10px var(--dk-drop)}',
@@ -103,7 +104,7 @@
     '.dk-help a{display:flex;align-items:center;gap:.5rem;padding:.45rem .5rem;border-radius:4px;color:var(--dk-text);text-decoration:none;font-size:.8125rem}',
     '.dk-help a:hover{background:var(--dk-hover,#ffffff10)}',
     '.dk-help a img{width:16px;height:16px;object-fit:contain}',
-    '.dk-help a.is-pro{color:#f2994a}',
+    '.dk-help a.is-pro{color:#f2994a!important}',
     'html.dk-overview .ui-doc-outline>.ui-panel:not(.dk-help),html.dk-overview .ui-doc-subp,html.dk-overview .ui-doc-subp-label{display:none!important}',
 
     /* 4 Docs home */
@@ -176,7 +177,7 @@
     '.dk-help-card p{margin:0 0 .75rem;font-size:.875rem;color:var(--dk-muted)}',
     '.dk-help-card .dk-btns{display:flex;flex-wrap:wrap;gap:.5rem}',
     '.dk-help-card.is-pro{box-shadow:inset 0 0 0 1px #f2994a99,0 1px 2px #0006}',
-    '.dk-help-card.is-pro .dk-btn{background:#f2994a;color:#2a1600}',
+    '.dk-help-card.is-pro .dk-btn{background:#f2994a;color:#2a1600!important}',
     '.dk-fresh{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem}',
     '.dk-fresh b{display:block;font:700 1.15rem Inter,sans-serif;margin:0 0 .25rem}',
     '.dk-fresh p{margin:0;color:var(--dk-muted);font-size:.875rem}',

@@ -81,7 +81,7 @@ sections:
 
   - id: appendix
     title: Information
-    icon: help
+    icon: info
     legacy: /documentation/appendix
     chapters: [37, 39, 40]
 
