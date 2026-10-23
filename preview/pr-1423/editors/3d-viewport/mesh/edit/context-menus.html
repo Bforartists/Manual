@@ -1,0 +1,2931 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Context Menus · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1423 · <code>docs2/q3-split-big</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Overview</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../../all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../../all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../all-modes.html">All Modes</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="header.html">Header</a>
+<a style="padding-left:2.5rem" href="../edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../sculpt/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../../object-mode/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:3.5rem" href="../../all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../../all-modes/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../../object-mode/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">File menu</span>
+<a style="padding-left:3.5rem" href="../../all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../all-modes/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../sculpt/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<a style="padding-left:2.5rem" href="../../object-mode/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Edit menu</span>
+<a style="padding-left:2.5rem" href="../../all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<a class="is-current" style="padding-left:3.5rem" href="context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../sculpt/context-menus.html">Context Menus</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../../object-mode/context-menus.html">Context Menus</a>
+<span style="padding-left:2.5rem">Render menu</span>
+<a style="padding-left:3.5rem" href="../../all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span>3D Viewport</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View menu</span>
+<span style="padding-left:2.5rem">Image menu</span>
+<span style="padding-left:2.5rem">Select menu</span>
+<span style="padding-left:2.5rem">Add menu</span>
+<span style="padding-left:2.5rem">Mask menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Tool Tab in Paint Mode</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Scopes Tab</span>
+<span style="padding-left:2.5rem">Mask Tab</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">UV menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span>Compositor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Color - Adjust</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Creative</span>
+<span style="padding-left:2.5rem">Add Menu - Filter - Blur</span>
+<span style="padding-left:2.5rem">Add Menu - Filter</span>
+<span style="padding-left:2.5rem">Add Menu - Keying</span>
+<span style="padding-left:2.5rem">Add Menu - Mask</span>
+<span style="padding-left:2.5rem">Add Menu - Tracking</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Transform</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Geometry Nodes Editor - Header - Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Texture Node Editor</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Gizmo</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Import</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Attribute</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - UV</span>
+<span style="padding-left:2.5rem">Add Menu - Point</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Simulation</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Text</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Bundle</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Closure</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Field</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Matrix</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Rotation</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Deprecated</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Generate</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Selection</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Deformation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Generation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Guides</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span style="padding-left:2.5rem">Node tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Add</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span>Shader Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Shader</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Video Sequence Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Export Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Strip Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">Text Menu</span>
+<span style="padding-left:2.5rem">Scene Menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Preview - Tool tab</span>
+<span style="padding-left:2.5rem">Preview - View tab</span>
+<span style="padding-left:2.5rem">Sequencer - Strip tab</span>
+<span style="padding-left:2.5rem">Sequencer - Tool tab</span>
+<span style="padding-left:2.5rem">Sequencer - Cache tab</span>
+<span style="padding-left:2.5rem">Sequencer - Proxy tab</span>
+<span style="padding-left:2.5rem">Sequencer - View tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Movie Clip Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Clip Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Track Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Graph Submode - Graph Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Clip Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Add Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Mask Menu</span>
+<span style="padding-left:1.5rem">Tool shelf</span>
+<span style="padding-left:2.5rem">Tracking Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Footage Tab</span>
+<span style="padding-left:2.5rem">Track tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - Stabilization tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - View tab</span>
+<span>Dope Sheet</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:2.5rem">Action Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span>Graph Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Drivers Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Drivers Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">Driver Editor - Sidebar - View Tab</span>
+<span>Nonlinear Animation Editor</span>
+<span style="padding-left:2.5rem">NLA Editor - Header tools and options</span>
+<span style="padding-left:2.5rem">NLA Editor - Header - Quick Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - View Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Select Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Marker Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Add Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Track Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Strip Menu</span>
+<span style="padding-left:1.5rem">NLA Editor - Channel list</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Animation Data panel</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Strip tab</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Modifiers Tab</span>
+<span style="padding-left:1.5rem">NLA Editor - Footer tools and options</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:1.5rem">Render Properties Tab</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:1.5rem">Output Properties Tab</span>
+<span style="padding-left:1.5rem">View Layer Properties Tab</span>
+<span style="padding-left:1.5rem">Scene Properties Tab</span>
+<span style="padding-left:1.5rem">World Properties Tab</span>
+<span style="padding-left:1.5rem">Collection Properties Tab</span>
+<span style="padding-left:1.5rem">Object Properties Tab</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Particle Properties Tab</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:1.5rem">Visual Effects Properties Tab</span>
+<span style="padding-left:1.5rem">Physics Properties Tab</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:1.5rem">Object Constraints Properties Tab</span>
+<span style="padding-left:1.5rem">Object Data Properties Tab</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span style="padding-left:1.5rem">Material Properties Tab</span>
+<span style="padding-left:1.5rem">Texture Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Constraint Properties</span>
+<span style="padding-left:1.5rem">Strip Tab</span>
+<span style="padding-left:1.5rem">Strip Modifiers Tab</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<a href="../../../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Standard Keymap</span>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Mesh › Edit Mode › Context Menus</div><h1 class="pv-title">Context Menus</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 40 min read</span></div><article class="ui-doc-body"><h1 id="edge-context-menu">Edge Context Menu</h1>
+<h2 id="edge-context-menu-2">Edge Context Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/edge-context-menu.png" alt="Edge Context Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/edge-context-menu-2.png" alt="Edge Context Menu" loading="lazy"></figure>
+<p>Call this menu with double right click in the 3D viewport. You need to be in Edit mode with a Mesh object. And in selection mode Edge.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/edge-context-menu-3.png" alt="Edge Context Menu" loading="lazy"></figure>
+<p>Select geometry to reveal all content.</p>
+<h3 id="subdivide">Subdivide</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/subdivide.png" alt="Subdivide" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/subdivide-2.png" alt="Subdivide" loading="lazy"></figure>
+<p>Subdivide divides the selected edges. It subdivides the involved faces too, and can create new vertices.</p>
+<p>A more unknown functionality is that it can also randomize the result with the Fractal slider in the Last operator panel.</p>
+<h4 id="last-operator-subdivide">Last Operator Subdivide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-subdivide.png" alt="Last Operator Subdivide" loading="lazy"></figure>
+<h5 id="number-of-cuts">Number of Cuts</h5>
+<p>The number of cuts defines the amount of subdivisions.</p>
+<h5 id="smoothness">Smoothness</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/smoothness.png" alt="Smoothness" loading="lazy"></figure>
+<p>This value defines how smooth the subdivision result is. From flat to bent.</p>
+<h5 id="create-n-gons">Create N-Gons</h5>
+<p>Create N-Gons if required. Else subdividing N-Gons creates Tris.</p>
+<h5 id="quad-corner-type">Quad Corner Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/quad-corner-type.png" alt="Quad Corner Type" loading="lazy"></figure>
+<p>Adjust the corner type.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fractal</td>
+<td>Randomize the selected vertices.</td>
+</tr>
+<tr>
+<td>Along Normal</td>
+<td>When randomized, this value defines how strong the subdivision follows the normals of the initial vertices.</td>
+</tr>
+<tr>
+<td>Random Seed</td>
+<td>Randomizing value for fractal randomizing.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extrude-edges">Extrude Edges</h3>
+<p>Extrudes out the selected edges by moving the mouse.</p>
+<h4 id="last-operator-extrude-only-edges-and-move">Last Operator Extrude Only Edges and Move</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-extrude-only-edges-and-move.png" alt="Last Operator Extrude Only Edges and Move" loading="lazy"><figcaption>Last Operator Extrude Only Edges and Move</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flip Normals</td>
+<td>Flip the normals at the involved faces.</td>
+</tr>
+<tr>
+<td>Move X Y Z</td>
+<td>The coordinates for the extruded geometry.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="orientation">Orientation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the type of orientation, in which coordinate system the action should happen.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constraint Axis</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="proportional-editing">Proportional editing</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bevel-edges">Bevel Edges</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/bevel-edges.png" alt="Bevel Edges" loading="lazy"></figure>
+<p>Adds a bevel at the selected edges.</p>
+<h4 id="last-operator-bevel">Last Operator Bevel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-bevel.png" alt="Last Operator Bevel" loading="lazy"></figure>
+<h5 id="affect">Affect</h5>
+<p>Affect vertices or edges.</p>
+<h5 id="width-type">Width Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/width-type.png" alt="Width Type" loading="lazy"></figure>
+<p>The width type.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Width</td>
+<td>The bevel amount.</td>
+</tr>
+<tr>
+<td>Segments</td>
+<td>How many segments gets created.</td>
+</tr>
+<tr>
+<td>Profile Shape</td>
+<td>Controls the Profile shape. 0.5 means round.</td>
+</tr>
+<tr>
+<td>Material Index</td>
+<td>Assigns a material slot to the new bevel faces. -1 is the surrounding material.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="harden-normals">Harden Normals</h5>
+<p>When enabled, the per-vertex face normals of the bevel faces are adjusted to match the surrounding faces, and the normals of the surrounding faces are not affected. This will keep the surrounding faces flat (if they were before), with the bevel faces shading smoothly into them. For this effect to work, custom split normals need to be enabled, which requires Auto Smooth to be enabled (see Normals). As a convenience, that option will be enabled for you if it is not already when you enable Harden Normals here.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clamp Overlap</td>
+<td>Do not allow beveled geometry to overlap each other. Prevents bevel geometry from intersecting itself.   Helps avoid messy geometry in tight corners.</td>
+</tr>
+<tr>
+<td>Loop Slide</td>
+<td>Slides new edges along adjacent geometry for better topology flow</td>
+</tr>
+<tr>
+<td>Mark</td>
+<td><strong>Seams</strong>: Mark the edges of the new created geometry as seams. · <strong>Sharp</strong>: Mark the edges of the new created geometry sharp.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="miter-type">Miter Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/miter-type.png" alt="Miter Type" loading="lazy"></figure>
+<h5 id="miter-outer">Miter Outer</h5>
+<p>How the outer miter is set. Miter is how the bevel rounding at a corner is done.</p>
+<p><strong>Sharp</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png" alt="Sharp" loading="lazy"></figure>
+<p>Creates a sharp miter.</p>
+<p><strong>Patch</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/patch.png" alt="Patch" loading="lazy"></figure>
+<p>This replaces the outside vertex of a miter with 3 vertices. And uses a patch pattern there.</p>
+<p><strong>Arc</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png" alt="Arc" loading="lazy"></figure>
+<p>This replaces the vertex of a miter with 2 vertices, joined by an arc. A separate Spread parameter says how far to move the vertices away from their original position.</p>
+<h5 id="inner-miter">Inner Miter</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/miter-type.png" alt="Inner Miter" loading="lazy"></figure>
+<p>How the inner miter is set. Miter is how the bevel rounding at a corner is done.</p>
+<p><strong>Sharp</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png" alt="Sharp" loading="lazy"></figure>
+<p>Creates a sharp miter.</p>
+<p><strong>Arc</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png" alt="Arc" loading="lazy"></figure>
+<p>This replaces the vertex of a miter with 2 vertices, joined by an arc. A separate Spread parameter says how far to move the vertices away from their original position.</p>
+<p><strong>Spread</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/spread.png" alt="Spread" loading="lazy"></figure>
+<p>Belongs to inner miter method Arc. Adjust how strong the inner radius is bent.</p>
+<h5 id="intersection-type">Intersection type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/intersection-type.png" alt="Intersection type" loading="lazy"></figure>
+<p>The method to use to create meshes at intersections. Bevel can create self intersecting geometry.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid Fill</td>
+<td>Fills intersections with a grid-like topology.</td>
+</tr>
+<tr>
+<td>Cutoff</td>
+<td>Trims or removes overlapping geometry at intersections</td>
+</tr>
+</tbody>
+</table>
+<h5 id="face-strength">Face Strength</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/face-strength.png" alt="Face Strength" loading="lazy"></figure>
+<p>Set Face Strength on the faces involved in the bevel, according to the specified mode. This can be used in conjunction with a Weight Normals Modifier (with the Face Influence option checked).</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Do not set face strength.</td>
+</tr>
+<tr>
+<td>New</td>
+<td>Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak.</td>
+</tr>
+<tr>
+<td>Affected</td>
+<td>In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>In addition to those set for the Affected option, also set all the rest of the faces of the model to have strength Strong.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="profile-type">Profile Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/profile-type.png" alt="Profile Type" loading="lazy"></figure>
+<p>The profile type.</p>
+<p><strong>Superellipse</strong></p>
+<p>Uses a mathematically smooth curve for bevel profiles</p>
+<p><strong>Custom</strong></p>
+<p>Allows manual control of the bevel profile shape via a curve widget.</p>
+<p><strong>Presets</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/presets.png" alt="Presets" loading="lazy"></figure>
+<p>Curve presets.</p>
+<p><strong>Navigation elements</strong></p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in and out</td>
+<td>The two buttons with the magnifying glass at it zooms in and out in the curve window.</td>
+</tr>
+<tr>
+<td>Reverse Path</td>
+<td>Reverses the curve path.</td>
+</tr>
+<tr>
+<td>Toggle Profile Clipping</td>
+<td>Turns the profile clipping on or off.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tools menu</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/tools-menu.png" alt="Tools menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="curve-view">Curve view</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/curve-view.png" alt="Curve view" loading="lazy"></figure>
+<p>Adjust the profile curve.</p>
+<p>Left click where no point is adds a new point. Left click at a point allows you to move it.</p>
+<p>Holding down Shift while moving a node point activates precision movement.</p>
+<p>Holding down ctrl while moving activates temporary snapping.</p>
+<p>When a point is selected then the curve view reveals a sub menu at the bottom.</p>
+<p><strong>Handler and node position</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/handler-and-node-position.png" alt="Handler and node position" loading="lazy"><figcaption>Handler and node position</figcaption></figure>
+<p>When you select a node, then the handler and node position tools shows below the curve window.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Handle Type Auto Handle</td>
+<td>Sets the handle type of this curve point to smooth.</td>
+</tr>
+<tr>
+<td>Handle Type Vector Handle</td>
+<td>Sets the handle type of this curve point to sharp.</td>
+</tr>
+<tr>
+<td>Handle Type Free Handle</td>
+<td>Sets the handle type of this curve to Free handles. The curve point has now two handles with which you can adjust the curve before and after the point each.</td>
+</tr>
+<tr>
+<td>Handle Type Aligned Free Handle</td>
+<td>Sets the handle type of this curve to Free handles. The curve point has now a handle with which you can adjust the curve.</td>
+</tr>
+<tr>
+<td>X Y Values</td>
+<td>The position of the currently selected curve point</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sample straigt edges</td>
+<td>Sample edges with vector handles.</td>
+</tr>
+<tr>
+<td>Sample even length</td>
+<td>Sample edges with even lengths.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="make-edge-face">Make Edge/Face</h3>
+<p>Adds a face when you have edges selected. And Edges when you have Vertices selected. It's a Bridge tool.</p>
+<p>You can have either the one method or the other. When you select two adjacent vertices, then you select the edge too. And the tool works in edge mode then. In this case just the possible faces gets created. Not edges between single vertices.</p>
+<p>First select the edges or Vertices that you want to bridge. Then click the New Edge/Face from Vertices Button.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/make-edge-face.png" alt="Make Edge/Face" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/make-edge-face-2.png" alt="Make Edge/Face" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/make-edge-face-3.png" alt="Make Edge/Face" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/make-edge-face-4.png" alt="Make Edge/Face" loading="lazy"></figure>
+<h3 id="bridge-edge-loops">Bridge Edge loops</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/bridge-edge-loops.png" alt="Bridge Edge loops" loading="lazy"></figure>
+<p>The Bridge edge loops tool bridges selected edges, and adds a polygon between them. You need to have at least two edges selected.</p>
+<h4 id="last-operator-bridge-edge-loops">Last Operator Bridge Edge loops</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-bridge-edge-loops.png" alt="Last Operator Bridge Edge loops" loading="lazy"><figcaption>Last Operator Bridge Edge loops</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Connect Loops</td>
+<td>Choose the method how to deal with bridging multiple loops.</td>
+</tr>
+<tr>
+<td>Merge</td>
+<td>With merge ticked it will not create a bridge face, but merge the selected edges. · <strong>Merge Factor</strong>: The merge factor determines at which distance between the selected edges the merge happens. 0.5 is the middle of the selected edges.</td>
+</tr>
+<tr>
+<td>Twist</td>
+<td>The twist offset for closed loops.</td>
+</tr>
+<tr>
+<td>Number of Cuts</td>
+<td>Adds cuts to the bridge face.</td>
+</tr>
+<tr>
+<td>Interpolation</td>
+<td>Choose the interpolation mode for the cuts.</td>
+</tr>
+<tr>
+<td>Smoothness</td>
+<td>Adjust the smoothness for the cuts.</td>
+</tr>
+<tr>
+<td>Profile Factor</td>
+<td>Adjust the profile factor for the cuts.</td>
+</tr>
+<tr>
+<td>Profile shape</td>
+<td>Adjust the profile shape for the cuts.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fill">Fill</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/fill.png" alt="Fill" loading="lazy"></figure>
+<p>Fill closes holes in the selected mesh geometry, and triangulates the faces.</p>
+<h4 id="last-operator-fill">Last Operator Fill</h4>
+<h5 id="beauty">Beauty</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/beauty.png" alt="Beauty" loading="lazy"></figure>
+<p>Uses the best possible triangulation.</p>
+<h3 id="loop-cut-and-slide">Loop Cut and Slide</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/loop-cut-and-slide.png" alt="Loop Cut and Slide" loading="lazy"><figcaption>Loop Cut and Slide</figcaption></figure>
+<p>Loop Cut and Slide adds edge loops to divide faces</p>
+<p>When you click once, then this edge gets created. When you click and hold, then you can move this edge to a new location.</p>
+<p>Loop cut and Slide ignores selections. It will try to divide the face under the mouse, and continue the loop until it is closed, or until it cannot continue.</p>
+<h4 id="last-operator-loop-cut-and-slide">Last Operator Loop Cut and Slide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-loop-cut-and-slide.png" alt="Last Operator Loop Cut and Slide" loading="lazy"><figcaption>Last Operator Loop Cut and Slide</figcaption></figure>
+<p>Note that all settings here just changes the latest added loop. Not all added loops in the current session.</p>
+<h5 id="number-of-cuts-2">Number of Cuts</h5>
+<p>The number of cuts that gets added. It can be more than one loop at once.</p>
+<h5 id="smoothness-2">Smoothness</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/smoothness.png" alt="Smoothness" loading="lazy"></figure>
+<p>This value defines how smooth the loop cut gets added. From flat to bent.</p>
+<h5 id="falloff">Falloff</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/falloff.png" alt="Falloff" loading="lazy"></figure>
+<p>Adjust the Falloff type for smoothness.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>Change the center of the added loop.</td>
+</tr>
+<tr>
+<td>Even</td>
+<td>Make the edge loop match the shape of the adjacent edge loop</td>
+</tr>
+<tr>
+<td>Flipped</td>
+<td>When Even mode is active, flips between the two adjacent edge loops.</td>
+</tr>
+<tr>
+<td>Clamp</td>
+<td>Clamp within the edge extend.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+<tr>
+<td>Correct UV's</td>
+<td>Corrects the UV's when modifying the geometry.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="offset-edge-slide">Offset Edge Slide</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/offset-edge-slide.png" alt="Offset Edge Slide" loading="lazy"></figure>
+<p>Adds left and right an edge from the selected edge and slides it outwards.</p>
+<h4 id="last-operator-offset-edge-slide">Last Operator Offset Edge Slide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-offset-edge-slide.png" alt="Last Operator Offset Edge Slide" loading="lazy"><figcaption>Last Operator Offset Edge Slide</figcaption></figure>
+<h5 id="cap-endpoint">Cap Endpoint</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/cap-endpoint.png" alt="Cap Endpoint" loading="lazy"></figure>
+<p>Connects the endpoints of the slided edges.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>The amount of sliding.</td>
+</tr>
+<tr>
+<td>Even</td>
+<td>Make the edge loop match the shape of the adjacent edge loop</td>
+</tr>
+<tr>
+<td>Flipped</td>
+<td>Connected with Even. When even mode is active then flips between the two adjacent edge loops.</td>
+</tr>
+<tr>
+<td>Clamp</td>
+<td>Clamp within the edge extends.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+<tr>
+<td>Correct UV's</td>
+<td>Correct UV coordinates when transforming.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="knife-topology">Knife Topology</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/knife-topology.png" alt="Knife Topology" loading="lazy"></figure>
+<p>The Knife tool cuts the geometry, and adds edges. When it crosses existing geometry then it adds a vertice at the crossing point.</p>
+<p>Usage: activate the tool, left click to define the starting point. This can also be a point in the middle of a face. But ideally you choose an existing vertice or an edge as the start and endpoints. The knife tool tries to snap to them when you get close with the mouse cursor.</p>
+<p>When done press Enter or Space bar to confirm. Right click abandons the operation.</p>
+<p>When you create a vertice in the middle of a face, then the knife tool will try to connect this vertice by an existing vertice of this face when you confirm with space bar.</p>
+<h4 id="hotkey-functionality-in-the-footer-text">Hotkey functionality in the footer text</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/hotkey-functionality-in-the-footer-text.png" alt="Hotkey functionality in the footer text" loading="lazy"><figcaption>Hotkey functionality in the footer text</figcaption></figure>
+<p>Have a look at the footer when you work with this tool. Here you will find further instructions and hotkeys.</p>
+<p>Enter, Pad Enter, Space bar - confirm</p>
+<p>Esc key, RMB - cancel the operation</p>
+<p>LMB start the cut</p>
+<p>Double LMB - close the cut</p>
+<p>E - create new cut</p>
+<p>Ctrl or Shift while dragging - Snap to the middle of an edge</p>
+<p>Z - cut through the whole geometry, also the back faces.</p>
+<p>MMB - pan the view.</p>
+<p>Alt MMB - rotate the view.</p>
+<h3 id="rotate-edge-cw">Rotate Edge CW</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/rotate-edge-cw.png" alt="Rotate Edge CW" loading="lazy"></figure>
+<p>Rotate Edge rotates the selected edge clockwise.</p>
+<h4 id="last-operator-rotate-selected-edge">Last Operator Rotate Selected Edge</h4>
+<h5 id="counter-clockwise">Counter Clockwise</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/counter-clockwise.png" alt="Counter Clockwise" loading="lazy"></figure>
+<p>Rotate selected edges counter clockwise.</p>
+<h3 id="edge-split">Edge Split</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/edge-split.png" alt="Edge Split" loading="lazy"></figure>
+<p>Splits selected edges so that each neighbor face gets its own copy. You have two methods here.</p>
+<h4 id="last-operator-edge-split">Last Operator Edge Split</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-edge-split.png" alt="Last Operator Edge Split" loading="lazy"><figcaption>Last Operator Edge Split</figcaption></figure>
+<h5 id="type">Type</h5>
+<p>Choose the method again.</p>
+<h3 id="edge-crease">Edge Crease</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/edge-crease.png" alt="Edge Crease" loading="lazy"></figure>
+<p>When you use a Subdivision Surface Modifier, then you can define the sharpness of selected edges with this tool. Crease edges will be marked colored in edit mode.</p>
+<p>You will see a value in the header that indicates the current strength when you activate the tool. Move with the mouse to increase or decrease the value. Or type in a value while you are in this mode. You can also scale into negative range.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/vertex-crease-2.png" alt="Edge Crease" loading="lazy"></figure>
+<p>A negative crease value will subtract from the current active crease value in case it exists already from a former crease operation. A Crease value of -1 removes the crease from this edge.</p>
+<h4 id="last-operator-edge-crease">Last Operator Edge Crease</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-edge-crease.png" alt="Last Operator Edge Crease" loading="lazy"><figcaption>Last Operator Edge Crease</figcaption></figure>
+<h5 id="factor">Factor</h5>
+<p>Adjust the crease factor.</p>
+<h3 id="edge-bevel-weight">Edge Bevel Weight</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/edge-bevel-weight.png" alt="Edge Bevel Weight" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/edge-bevel-weight-2.png" alt="Edge Bevel Weight" loading="lazy"></figure>
+<p>This tool adjusts the edge bevel weight for selected edges when you use the Bevel modifier at the mesh.</p>
+<p>You need to have set the limit method to Weight. This way you can achieve a bevel weight for every individual selected edge if you want, and achieve different bevel strengths at the mesh.</p>
+<p>You will see a value in the header that indicates the current strength when you activate the tool. Move with the mouse to increase or decrease the value. Or type in a value while you are in this mode. You can also scale into negative range.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/edge-bevel-weight-3.png" alt="Edge Bevel Weight" loading="lazy"></figure>
+<p>A negative Edge Bevel Weight value will subtract from the current active crease value in case it exists already from a former crease operation. An Edge Bevel Weight value of -1 removes the weight from this edge.</p>
+<h4 id="last-operator-edge-bevel-weight">Last Operator Edge Bevel Weight</h4>
+<h5 id="factor-2">Factor</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/factor.png" alt="Factor" loading="lazy"></figure>
+<p>Adjust the Edge Bevel Weight factor.</p>
+<h3 id="mark-sharp">Mark Sharp</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/mark-sharp.png" alt="Mark Sharp" loading="lazy"></figure>
+<p>Mark Sharp is a tool that you need for the Edge Split modifier. Marked edges are displayed and rendered as sharp edges.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/mark-sharp-2.png" alt="Mark Sharp" loading="lazy"></figure>
+<h4 id="last-operator-mark-sharp">Last Operator Mark Sharp</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-mark-sharp.png" alt="Last Operator Mark Sharp" loading="lazy"><figcaption>Last Operator Mark Sharp</figcaption></figure>
+<h5 id="vertices">Vertices</h5>
+<p>Calculate by the selected vertices instead of edges to mark the edges.</p>
+<h3 id="clear-sharp">Clear Sharp</h3>
+<p>Clears formerly as sharp marked selected edges.</p>
+<h4 id="last-operator-mark-sharp-2">Last Operator Mark Sharp</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-mark-sharp-2.png" alt="Last Operator Mark Sharp" loading="lazy"><figcaption>Last Operator Mark Sharp</figcaption></figure>
+<h5 id="vertices-2">Vertices</h5>
+<p>Calculate by the selected vertices instead of edges to mark the edges.</p>
+<h3 id="set-sharpness-by-angle">Set sharpness by Angle</h3>
+<p>Sets the sharpness of edges by their angle to the neighbour face.</p>
+<h4 id="last-operator-set-sharpness-by-angle">Last Operator Set sharpness by Angle</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-set-sharpness-by-angle.png" alt="Last Operator Set sharpness by Angle" loading="lazy"><figcaption>Last Operator Set sharpness by Angle</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>The angle after which the edge counts as sharp.</td>
+</tr>
+<tr>
+<td>Extend</td>
+<td>Add new sharp edges without clearing existing sharp edges.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mark Freestyle Edge</td>
+<td>Mark the selected edges as a Freestyle feature edges.</td>
+</tr>
+<tr>
+<td>Clear Freestyle Edge</td>
+<td>Clears formerly as freestyle feature edges marked edges.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="un-subdivide">Un-Subdivide</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/un-subdivide.png" alt="Un-Subdivide" loading="lazy"></figure>
+<p>Decimates the geometry by trying to make one quad out of four quads. But can also end in Tris where this is not possible.</p>
+<h4 id="last-operator-un-subdivide">Last Operator Un-Subdivide</h4>
+<h5 id="iterations">Iterations</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/iterations.png" alt="Iterations" loading="lazy"></figure>
+<p>Number of iterations. This means how deep the calculation should go. One level of SDS, two levels, three levels, etc. . Down to the point where you cannot decimate any geometry anymore.</p>
+<h3 id="split">Split</h3>
+<p>Splits the edges between the selected vertices. It creates two edges out of one. And splits the edge by that.</p>
+<h3 id="separate-submenu">Separate submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/separate-submenu.png" alt="Separate submenu" loading="lazy"></figure>
+<p>Separate separates the selected geometry, and creates a new object. The geometry becomes uneditable, since it is now a new object. You will have to leave the Edit mode, select the new object, and re-enter Edit mode when you want to edit it.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selection</td>
+<td>Selection separates the current selection.</td>
+</tr>
+<tr>
+<td>By Material</td>
+<td>By Material separates all geometry that has the same material than the current selection.</td>
+</tr>
+<tr>
+<td>By Loose Parts</td>
+<td>By Loose parts separates all geometry that is connected by edges to the current selection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dissolve-edges">Dissolve Edges</h3>
+<p>Dissolve Edges dissolves the selected edges.</p>
+<p>Note that pressing Del in Vertice select mode calls Dissolve Vertices already. It's the same operator. But you don't get the Last operator that way.</p>
+<h4 id="last-operator-dissolve-edges">Last Operator Dissolve Edges</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-dissolve-edges.png" alt="Last Operator Dissolve Edges" loading="lazy"><figcaption>Last Operator Dissolve Edges</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dissolve Vertices</td>
+<td>Dissolve remaining vertices which connect to only two edges.</td>
+</tr>
+<tr>
+<td>Angle threshold</td>
+<td>Remaining vertices which separate edge pairs are preserved if their edge angle exceeds this threshold.</td>
+</tr>
+<tr>
+<td>Face Split</td>
+<td>Split off Face corners to maintain surrounding geometry</td>
+</tr>
+</tbody>
+</table>
+<h3 id="delete-edges">Delete Edges</h3>
+<p>Deletes the selected Edges.</p>
+<h3 id="show-hide">Show/Hide</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/show-hide.png" alt="Show/Hide" loading="lazy"></figure>
+<p>Sub-menu with shows or hide selection, unselected or hidden operators.</p>
+<h4 id="show-hidden">Show Hidden</h4>
+<p>Makes all geometry in the scene visible again.</p>
+<h4 id="hide-selected">Hide Selected</h4>
+<p>Hides the selected geometry.</p>
+<h5 id="last-operator-hide-selected">Last Operator Hide Selected</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-hide-selected.png" alt="Last Operator Hide Selected" loading="lazy"><figcaption>Last Operator Hide Selected</figcaption></figure>
+<h5 id="unselected">Unselected</h5>
+<p>Hides the not selected geometry.</p>
+<h4 id="hide-unselected">Hide Unselected</h4>
+<p>Hides the not selected geometry. The selected geometry stays visible.</p>
+<h1 id="face-context-menu">Face Context Menu</h1>
+<h2 id="face-context-menu-2">Face Context Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/face-context-menu.png" alt="Face Context Menu" loading="lazy"></figure>
+<p>Call this menu with double right click in the 3D viewport. You need to be in Edit mode with a Mesh object. And in selection mode Edge.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/face-context-menu-2.png" alt="Face Context Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/face-context-menu-3.png" alt="Face Context Menu" loading="lazy"></figure>
+<p>Select geometry to reveal all content.</p>
+<h3 id="subdivide-2">Subdivide</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/subdivide.png" alt="Subdivide" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/subdivide-2.png" alt="Subdivide" loading="lazy"></figure>
+<p>Subdivide divides the selected edges. It subdivides the involved faces too, and can create new vertices.</p>
+<p>A more unknown functionality is that it can also randomize the result with the Fractal slider in the Last operator panel.</p>
+<h4 id="last-operator-subdivide-2">Last Operator Subdivide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-subdivide.png" alt="Last Operator Subdivide" loading="lazy"></figure>
+<h5 id="number-of-cuts-3">Number of Cuts</h5>
+<p>The number of cuts defines the amount of subdivisions.</p>
+<h5 id="smoothness-3">Smoothness</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/smoothness.png" alt="Smoothness" loading="lazy"></figure>
+<p>This value defines how smooth the subdivision result is. From flat to bent.</p>
+<h5 id="create-n-gons-2">Create N-Gons</h5>
+<p>Create N-Gons if required. Else subdividing N-Gons creates Tris.</p>
+<h5 id="quad-corner-type-2">Quad Corner Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/quad-corner-type.png" alt="Quad Corner Type" loading="lazy"></figure>
+<p>Adjust the corner type.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fractal</td>
+<td>Randomize the selected vertices.</td>
+</tr>
+<tr>
+<td>Along Normal</td>
+<td>When randomized, this value defines how strong the subdivision follows the normals of the initial vertices.</td>
+</tr>
+<tr>
+<td>Random Seed</td>
+<td>Randomizing value for fractal randomizing.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extrude-faces">Extrude Faces</h3>
+<p>Extrudes out the selected faces into the face direction by moving the mouse. When it's more than one face, then the middle will be used.</p>
+<h4 id="last-operator-extrude-region-and-move">Last Operator Extrude Region and Move</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-extrude-region-and-move.png" alt="Last Operator Extrude Region and Move" loading="lazy"><figcaption>Last Operator Extrude Region and Move</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flip Normals</td>
+<td>Flips the normals of the extruded faces.</td>
+</tr>
+<tr>
+<td>Dissolve Orthogonal Edges</td>
+<td>Dissolves orthogonal edges.</td>
+</tr>
+<tr>
+<td>Move X, Y Z</td>
+<td>The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-2">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h4 id="mirror-editing">Mirror Editing</h4>
+<p>Enable mirror editing.</p>
+<h5 id="proportional-editing-2">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extrude-faces-along-normals">Extrude Faces Along Normals</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/extrude-faces-along-normals.png" alt="Extrude Faces Along Normals" loading="lazy"><figcaption>Extrude Faces Along Normals</figcaption></figure>
+<p>Extrudes the selection along local normals.</p>
+<h4 id="header-value">Header Value</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/header-value.png" alt="Header Value" loading="lazy"></figure>
+<p>This tool works like a shrink fatten extrude. And so you will see a corresponding set of values in the header.</p>
+<h4 id="last-operator-extrude-region-and-shrink-fatten">Last Operator Extrude Region and Shrink/Fatten</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-extrude-region-and-shrink-fatten.png" alt="Last Operator Extrude Region and Shrink/Fatten" loading="lazy"><figcaption>Last Operator Extrude Region and Shrink/Fatten</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flip Normals</td>
+<td>Flips the normals of the extruded faces. · <strong>Dissolve Orthogonal Edges</strong>: Dissolves orthogonal edges.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The current extrude amount.</td>
+</tr>
+<tr>
+<td>Offset Even</td>
+<td>Scales the offset to give more even thickness. Without this checked the farer away faces will have a bigger extrude amount.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="proportional-editing-3">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extrude-individual">Extrude Individual</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/extrude-individual.png" alt="Extrude Individual" loading="lazy"></figure>
+<p>Extrudes the selection along local normals of each individual face.</p>
+<p>The method works the same in all Mesh select modes. Vertice, Edge and Face Mode.</p>
+<h4 id="header-value-2">Header Value</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/header-value.png" alt="Header Value" loading="lazy"></figure>
+<p>This tool works like a shrink fatten extrude. And so you will see a corresponding set of values in the header.</p>
+<h4 id="last-operator-extrude-individual-faces-and-move">Last Operator Extrude Individual Faces and Move</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-extrude-individual-faces-and-move.png" alt="Last Operator Extrude Individual Faces and Move" loading="lazy"><figcaption>Last Operator Extrude Individual Faces and Move</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>The current extrude amount.</td>
+</tr>
+<tr>
+<td>Offset Even</td>
+<td>Scales the offset to give more even thickness. Without this checked the farer away faces will have a bigger extrude amount.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="proportional-editing-4">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inset-faces">Inset Faces</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/inset-faces.jpg" alt="Inset Faces" loading="lazy"></figure>
+<p>Inset insets edges into the selected faces. Think of it as an extrude inwards the face.</p>
+<p>Activate the tool, drag the mouse. But carefully. The control is not the best. You better adjust the amount in the last operator.</p>
+<h4 id="last-operator-inset-faces">Last Operator Inset Faces</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-inset-faces.png" alt="Last Operator Inset Faces" loading="lazy"><figcaption>Last Operator Inset Faces</figcaption></figure>
+<h5 id="boundary">Boundary</h5>
+<p>With Boundary ticked you will get the connect edges in the corners. Without the edges ends straight.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/boundary.png" alt="Boundary" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset Even</td>
+<td>Scales the offset to give more even thickness.</td>
+</tr>
+<tr>
+<td>Offset Relative</td>
+<td>Scales the offset by surrounding geometry.</td>
+</tr>
+<tr>
+<td>Edge Rail</td>
+<td>Inset the region along existing edges.</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>Thickness adjusts the thickness of the inset geometry.</td>
+</tr>
+<tr>
+<td>Depth</td>
+<td>With depth you can bevel the inset geometry. It is then not longer co planar to the initial face.</td>
+</tr>
+<tr>
+<td>Outset</td>
+<td>With outset ticked the Inset will not extrude inwards but outwards.</td>
+</tr>
+<tr>
+<td>Select Outer</td>
+<td>With Select Outer the outer ring will be selected after the Inset.</td>
+</tr>
+<tr>
+<td>Individual</td>
+<td>Inset every face individually.</td>
+</tr>
+<tr>
+<td>Interpolate</td>
+<td>Blend Face Data across the inset.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bridge-faces">Bridge Faces</h3>
+<p>The Bridge Faces tool bridges selected faces, and adds polygons between them. You need to have at least two faces selected.</p>
+<p>This tool is basically the Bridge Edge Loops tool, just that it operates in Face mode.</p>
+<p>Note that this tool just shows when you are in Face Select Mode.</p>
+<h4 id="last-operator-bridge-edge-loops-2">Last Operator Bridge Edge loops</h4>
+<h5 id="connect-loops">Connect Loops</h5>
+<p>Choose the method how to deal with bridging multiple loops.</p>
+<h5 id="merge">Merge</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/merge.png" alt="Merge" loading="lazy"></figure>
+<p>With merge ticked it will not create a bridge face, but merge the selected edges.</p>
+<h5 id="merge-factor">Merge Factor</h5>
+<p>The merge factor determines at which distance between the selected edges the merge happens. 0.5 is the middle of the selected edges.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Twist</td>
+<td>The twist offset for closed loops.</td>
+</tr>
+<tr>
+<td>Number of Cuts</td>
+<td>Adds cuts to the bridge face.</td>
+</tr>
+<tr>
+<td>Interpolation</td>
+<td>Choose the interpolation mode for the cuts.</td>
+</tr>
+<tr>
+<td>Smoothness</td>
+<td>Adjust the smoothness for the cuts.</td>
+</tr>
+<tr>
+<td>Profile Factor</td>
+<td>Adjust the profile factor for the cuts.</td>
+</tr>
+<tr>
+<td>Profile shape</td>
+<td>Adjust the profile shape for the cuts.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="poke-faces">Poke Faces</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/poke-faces.png" alt="Poke Faces" loading="lazy"></figure>
+<p>Splits the selected faces to create a triangulated geometry.</p>
+<h4 id="last-operator-poke-faces">Last Operator Poke Faces</h4>
+<h5 id="poke-offset">Poke Offset</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/poke-offset.png" alt="Poke Offset" loading="lazy"></figure>
+<p>Normally the center vertice of the poke operation is planar with the rest. Adjust an offset.</p>
+<h5 id="offset-relative">Offset Relative</h5>
+<p>Scale the offset by surrounding geometry.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/offset-relative.png" alt="Offset Relative" loading="lazy"></figure>
+<h5 id="poke-center">Poke Center</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/poke-center.png" alt="Poke Center" loading="lazy"></figure>
+<p>Poke Center is a drop-down box choose what the center of the poke operation should be. You can choose between weighted mean, mean and bounds.</p>
+<h3 id="uv-unwrap-faces-submenu">UV Unwrap Faces submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/uv-unwrap-faces-submenu.png" alt="UV Unwrap Faces submenu" loading="lazy"><figcaption>UV Unwrap Faces submenu</figcaption></figure>
+<p>The UV menu from the header.</p>
+<p>Here you find the UV mapping methods and some further functionality. You use it best in the U Editing layout. There you can see the result in the UV Editor then.</p>
+<p>The UV menu is just available for Mesh objects</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unwrap ABF</td>
+<td>Unwrap ABF unwraps the selected geometry with the method Angle based. ABF stands for Angle Based Flattening. ABF can give a bit better result than LSCM when unwrapping organic shapes.</td>
+</tr>
+<tr>
+<td>Unwrap Conformal</td>
+<td>Unwrap Conformal unwraps the selected geometry with the method LSCM, which is the short for Least Square Conformal Mapping. LSCM can give a bit better results than ABF with geometric shapes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-unwrap">Last Operator Unwrap</h4>
+<h5 id="method">Method</h5>
+<p>Method is a drop down box where you can choose the unwrap method.</p>
+<h5 id="method-angle-based-conformal">Method Angle based + Conformal</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/method-angle-based-conformal.png" alt="Method Angle based + Conformal" loading="lazy"><figcaption>Method Angle based + Conformal</figcaption></figure>
+<p>Unwrap ABF and Unwrap LSCM shares the same Last Operator.</p>
+<p><strong>Method</strong></p>
+<p>Method is a drop down box where you can choose between Unwrap method Angle Based and Conformal.</p>
+<p><strong>Fill Holes</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/fill-holes.png" alt="Fill Holes" loading="lazy"></figure>
+<p>Fill holes in the mesh before unwrapping.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Subdivision Surface</td>
+<td>Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.</td>
+</tr>
+<tr>
+<td>Correct Aspect</td>
+<td>Take the Image Aspect Ratio into account.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Margin Method</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/margin-method.png" alt="Margin Method" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scaled</td>
+<td>Use the scale of existing UV to multiply margin.</td>
+</tr>
+<tr>
+<td>Add</td>
+<td>Just add the margin and ignore any existing UV.</td>
+</tr>
+<tr>
+<td>Fraction</td>
+<td>Specify a precise fraction of specific UV.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Margin</strong></p>
+<p>The distance between the single UV patches.</p>
+<h5 id="method-minimum-stretch">Method Minimum Stretch</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/method-minimum-stretch.png" alt="Method Minimum Stretch" loading="lazy"></figure>
+<h5 id="iterations-2">Iterations</h5>
+<p>Number of iterations.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No Flip</td>
+<td>Prevent flipping UV's</td>
+</tr>
+<tr>
+<td>Importance Weight</td>
+<td>Take per vertex importance weights into account.</td>
+</tr>
+<tr>
+<td>Use Subdivision Surface</td>
+<td>Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.</td>
+</tr>
+<tr>
+<td>Correct Aspect</td>
+<td>Take the Image Aspect Ratio into account.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Margin Method</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/margin-method.png" alt="Margin Method" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scaled</td>
+<td>Use the scale of existing UV to multiply margin.</td>
+</tr>
+<tr>
+<td>Add</td>
+<td>Just add the margin and ignore any existing UV.</td>
+</tr>
+<tr>
+<td>Fraction</td>
+<td>Specify a precise fraction of specific UV.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Margin</strong></p>
+<p>The distance between the single UV patches.</p>
+<h3 id="smart-uv-project">Smart UV Project</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/smart-uv-project.png" alt="Smart UV Project" loading="lazy"></figure>
+<p>Smart UV Project projects the UV mapping from different angles.</p>
+<h4 id="smart-uv-project-settings-dialogue">Smart UV Project Settings dialogue</h4>
+<h5 id="angle-limit">Angle Limit</h5>
+<p>The Angle Limit defines after which angle the mapping happens from the next side. With an angle of 66 you have around six sides to map from. The calculation is 360/66.</p>
+<h5 id="margin-method">Margin Method</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/margin-method.png" alt="Margin Method" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scaled</td>
+<td>Use the scale of existing UV to multiply margin.</td>
+</tr>
+<tr>
+<td>Add</td>
+<td>Just add the margin and ignore any existing UV.</td>
+</tr>
+<tr>
+<td>Fraction</td>
+<td>Specify a precise fraction of specific UV.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="rotation-method">Rotation Method</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/rotation-method.png" alt="Rotation Method" loading="lazy"></figure>
+<p>How to rotate islands.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Island Margin</td>
+<td>Island Margin defines the distance between the UV patches.</td>
+</tr>
+<tr>
+<td>Area Weight</td>
+<td>Weight Projection Vector by faces with larger areas.</td>
+</tr>
+<tr>
+<td>Correct Aspect</td>
+<td>Take the Image Aspect Ratio into account.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-smart-uv-project">Last Operator Smart UV Project</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-smart-uv-project.png" alt="Last Operator Smart UV Project" loading="lazy"><figcaption>Last Operator Smart UV Project</figcaption></figure>
+<p>The Last Operator for Smart UV Project contains the same settings than the Smart UV Project Settings dialogue.</p>
+<h3 id="lightmap-pack">Lightmap Pack</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/lightmap-pack.png" alt="Lightmap Pack" loading="lazy"></figure>
+<p>Lightmap Pack maps each face individually, and puts the result into the UV space. Without margin.</p>
+<p>Lightmap Pack has no Last Operator.</p>
+<h4 id="settings">Settings</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selection</td>
+<td>Selection is a drop-down box where you can choose what will be packed, either Selected Faces or All Faces.</td>
+</tr>
+<tr>
+<td>Share Tex Space</td>
+<td>Map all objects into one lightmap.</td>
+</tr>
+<tr>
+<td>New UV Map</td>
+<td>Create a new UV map for every new mesh.</td>
+</tr>
+<tr>
+<td>Pack Quality</td>
+<td>The pack quality.</td>
+</tr>
+<tr>
+<td>Margin</td>
+<td>The distance between the single UV patches.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="follow-active-quads">Follow Active Quads</h4>
+<p>Follow Active quads maps UV coordinates starting from an active face, and maps all adjacent faces in quad shape then. This way you can for example unwrap a pipe or a road. You first need to have a face selected. Then select everything. And then click at Follow Active Quads.</p>
+<h5 id="settings-2">Settings</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/settings.png" alt="Settings" loading="lazy"></figure>
+<h5 id="edge-length-mode">Edge Length Mode</h5>
+<p>Edge Length Mode is a drop-down box where you can choose the Length method.</p>
+<h5 id="last-operator-follow-active-quads">Last Operator Follow Active Quads</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-follow-active-quads.png" alt="Last Operator Follow Active Quads" loading="lazy"><figcaption>Last Operator Follow Active Quads</figcaption></figure>
+<p>The Last Operator contains the same settings than the Settings dialogue.</p>
+<h4 id="cube-projection">Cube Projection</h4>
+<p>Cube Projection maps the mesh from six sides, means cubic.</p>
+<h5 id="last-operator-cube-projection">Last Operator Cube Projection</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-cube-projection.png" alt="Last Operator Cube Projection" loading="lazy"><figcaption>Last Operator Cube Projection</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cube Size</td>
+<td>Cube Size defines the size of the UV mesh in the UV space.</td>
+</tr>
+<tr>
+<td>Correct Aspect</td>
+<td>Take Image Aspect ratio into account.</td>
+</tr>
+<tr>
+<td>Clip to Bounds</td>
+<td>Clip UV Coordinates to bounds after unwrapping.</td>
+</tr>
+<tr>
+<td>Scale to Bounds</td>
+<td>Scale UV Coordinates to bounds after unwrapping.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cylinder-projection">Cylinder Projection</h4>
+<p>Cylinder Projection tries to map the geometry cylindric.</p>
+<h5 id="last-operator-cylinder-projection">Last Operator Cylinder Projection</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-cylinder-projection.png" alt="Last Operator Cylinder Projection" loading="lazy"><figcaption>Last Operator Cylinder Projection</figcaption></figure>
+<h5 id="direction">Direction</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/direction.png" alt="Direction" loading="lazy"></figure>
+<p>Direction is a drop-down box where you can choose in which direction the spherical projection will be mapped.</p>
+<h5 id="align">Align</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/align.png" alt="Align" loading="lazy"></figure>
+<p>Align is a drop-down box where you can choose the Align method.</p>
+<h5 id="pole">Pole</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/pole.png" alt="Pole" loading="lazy"></figure>
+<p>How to handle the faces at the poles.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preserve Seams</td>
+<td>Keep existing seams intact.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>Radius defines the Polar size of the UV mesh in the UV space.</td>
+</tr>
+<tr>
+<td>Correct Aspect</td>
+<td>Take Image Aspect ratio into account.</td>
+</tr>
+<tr>
+<td>Clip to Bounds</td>
+<td>Clip UV Coordinates to bounds after unwrapping.</td>
+</tr>
+<tr>
+<td>Scale to Bounds</td>
+<td>Scale UV Coordinates to bounds after unwrapping.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sphere-projection">Sphere Projection</h4>
+<p>Sphere Projection tries to map the geometry spherical.</p>
+<h5 id="last-operator-sphere-projection">Last Operator Sphere Projection</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-sphere-projection.png" alt="Last Operator Sphere Projection" loading="lazy"><figcaption>Last Operator Sphere Projection</figcaption></figure>
+<h5 id="direction-2">Direction</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/direction.png" alt="Direction" loading="lazy"></figure>
+<p>Direction is a drop-down box where you can choose in which direction the spherical projection will be mapped.</p>
+<h5 id="align-2">Align</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/align.png" alt="Align" loading="lazy"></figure>
+<p>Align is a drop-down box where you can choose the Align method.</p>
+<h5 id="pole-2">Pole</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/pole.png" alt="Pole" loading="lazy"></figure>
+<p>How to handle the faces at the poles.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preserve Seams</td>
+<td>Keep existing seams intact.</td>
+</tr>
+<tr>
+<td>Correct Aspect</td>
+<td>Take Image Aspect ratio into account.</td>
+</tr>
+<tr>
+<td>Clip to Bounds</td>
+<td>Clip UV Coordinates to bounds after unwrapping.</td>
+</tr>
+<tr>
+<td>Scale to Bounds</td>
+<td>Scale UV Coordinates to bounds after unwrapping.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="project-from-view">Project from View</h4>
+<p>Project from View projects the UV from the current 3D view.</p>
+<h5 id="last-operator-project-from-view">Last Operator Project from View</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-project-from-view.png" alt="Last Operator Project from View" loading="lazy"><figcaption>Last Operator Project from View</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Orthographic</td>
+<td>User orthographic projection.</td>
+</tr>
+<tr>
+<td>Camera Bounds</td>
+<td>Map UV's to the camera region taking resolution and aspect into account.</td>
+</tr>
+<tr>
+<td>Correct Aspect</td>
+<td>Take Image Aspect ratio into account.</td>
+</tr>
+<tr>
+<td>Clip to Bounds</td>
+<td>Clip UV Coordinates to bounds after unwrapping.</td>
+</tr>
+<tr>
+<td>Scale to Bounds</td>
+<td>Scale UV Coordinates to bounds after unwrapping.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="project-from-view-bounds">Project from View (Bounds)</h4>
+<p>Project from View projects the UV from the current 3D view.</p>
+<p>Same as Project from View, but with Scale to Bounds ticked in the Last operator. And so it scales to the bounds.</p>
+<h4 id="mark-seam">Mark Seam</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/mark-seam.png" alt="Mark Seam" loading="lazy"></figure>
+<p>The unwrap algorithms Angle based and Conformal requires to have edges marked as seams. Think of it as a cutting pattern for a trouser for example. Such a trouser is also made of fabric patterns.</p>
+<p>Same goes for the UV patches when you use Angle based or conformal unwrapping. You need to cut your mesh into parts and mark edges as seams, so that the algorithm knows where the seams are.</p>
+<p>Mark seam marks the currently selected edge(s) as a seam. Seam edges will be displayed as red in the 3D viewport.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear Seam</td>
+<td>Clear seam removes the seam from the currently selected edge(s).</td>
+</tr>
+<tr>
+<td>Reset</td>
+<td>Resets the UV Projection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="triangulate-faces">Triangulate Faces</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/triangulate-faces.png" alt="Triangulate Faces" loading="lazy"></figure>
+<p>Triangulate Faces triangulates the faces of the selected geometry.</p>
+<h4 id="last-operator-triangulate-faces">Last Operator Triangulate Faces</h4>
+<h5 id="quad-method">Quad Method</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/quad-method.png" alt="Quad Method" loading="lazy"></figure>
+<p>Choose how quads should be triangulated.</p>
+<h5 id="shortest-diagonal">Shortest diagonal</h5>
+<p>Splits the quads based on their distance between vertices.</p>
+<h5 id="fixed-alternate">Fixed Alternate</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/fixed-alternate.png" alt="Fixed Alternate" loading="lazy"></figure>
+<p>Splits the quads on the second and fourth vertice.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixed</td>
+<td>Splits the quads on the first and third vertice.</td>
+</tr>
+<tr>
+<td>Beauty</td>
+<td>Tries to optimize the triangulation.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="polygon-method">Polygon Method</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/polygon-method.png" alt="Polygon Method" loading="lazy"></figure>
+<p>Choose how N-Gons should be triangulated.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clip</td>
+<td>Splits the polygons with an ear clipping algorithm.</td>
+</tr>
+<tr>
+<td>Beauty</td>
+<td>Tries to optimize the triangulation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="triangles-to-quads">Triangles to Quads</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/triangles-to-quads.png" alt="Triangles to Quads" loading="lazy"></figure>
+<p>Tris to quads tries to convert triangulated geometry back to a quad geometry by removing the edges inside of the quads.</p>
+<h4 id="last-operator-tris-to-quads">Last Operator Tris to Quads</h4>
+<h5 id="max-face-angle">Max Face Angle</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/max-face-angle.png" alt="Max Face Angle" loading="lazy"></figure>
+<p>Adjust the threshold to adjacent triangles.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Max Shape Angle</td>
+<td>Adjust the shape angle limit.</td>
+</tr>
+<tr>
+<td>Topology influence</td>
+<td>How much to priorize regular grids of qads as well as quads that touch existing quads.</td>
+</tr>
+<tr>
+<td>Compare UV's</td>
+<td>Takes the UV patches for the calculation into account. Border geometry will not be calculated.</td>
+</tr>
+<tr>
+<td>Compare Color attributes</td>
+<td>Takes the Vertex colors for the calculation into account. Border geometry will not be calculated.</td>
+</tr>
+<tr>
+<td>Compare Seam</td>
+<td>Takes the Vertex colors for the calculation into account. Border geometry will not be calculated.</td>
+</tr>
+<tr>
+<td>Compare Sharp</td>
+<td>Takes the as sharp marked edges for the calculation into account. Border geometry will not be calculated.</td>
+</tr>
+<tr>
+<td>Compare Materials</td>
+<td>Takes the Materials colors for the calculation into account. Border geometry will not be calculated.</td>
+</tr>
+<tr>
+<td>Deselect Joined</td>
+<td>Only select remaining triangles that were not merged.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shade-smooth">Shade Smooth</h3>
+<p>Sets the shading for the object to smooth. Flat means that every face of the object shows facettet, with a sharp edge. Smooth means that the edges are not longer to see.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/shade-flat.png" alt="Shade Smooth" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/shade-smooth.png" alt="Shade Smooth" loading="lazy"></figure>
+<h3 id="shade-flat">Shade Flat</h3>
+<p>Sets the shading for the object to flat. Flat means that every face of the object shows facettet, with a sharp edge. Smooth means that the edges are not longer to see.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/shade-flat.png" alt="Shade Flat" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/shade-smooth.png" alt="Shade Flat" loading="lazy"></figure>
+<h3 id="un-subdivide-2">Un-Subdivide</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/un-subdivide.png" alt="Un-Subdivide" loading="lazy"></figure>
+<p>Decimates the geometry by trying to make one quad out of four quads. But can also end in Tris where this is not possible.</p>
+<h4 id="last-operator-un-subdivide-2">Last Operator Un-Subdivide</h4>
+<h5 id="iterations-3">Iterations</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/iterations.png" alt="Iterations" loading="lazy"></figure>
+<p>Number of iterations. This means how deep the calculation should go. One level of SDS, two levels, three levels, etc. . Down to the point where you cannot decimate any geometry anymore.</p>
+<h3 id="split-2">Split</h3>
+<p>Splits the edges between the selected vertices. It creates two edges out of one. And splits the edge by that.</p>
+<h3 id="separate-submenu-2">Separate submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/separate.png" alt="Separate submenu" loading="lazy"></figure>
+<p>Separate separates the selected geometry, and creates a new object. The geometry becomes uneditable, since it is now a new object. You will have to leave the Edit mode, select the new object, and re-enter Edit mode when you want to edit it.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selection</td>
+<td>Selection separates the current selection.</td>
+</tr>
+<tr>
+<td>By Material</td>
+<td>By Material separates all geometry that has the same material than the current selection.</td>
+</tr>
+<tr>
+<td>By Loose Parts</td>
+<td>By Loose parts separates all geometry that is connected by edges to the current selection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dissolve-faces">Dissolve Faces</h3>
+<p>Dissolves the selected faces, which unions the involved faces to one.</p>
+<h4 id="last-operator-dissolve-vertices">Last Operator Dissolve Vertices</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-dissolve-vertices.png" alt="Last Operator Dissolve Vertices" loading="lazy"><figcaption>Last Operator Dissolve Vertices</figcaption></figure>
+<h5 id="dissolve-vertices">Dissolve Vertices</h5>
+<p>Dissolve remaining vertices.</p>
+<h3 id="delete-faces">Delete Faces</h3>
+<p>Deletes the selected faces.</p>
+<h3 id="show-hide-2">Show/Hide</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/show-hide.png" alt="Show/Hide" loading="lazy"></figure>
+<p>Sub-menu with shows or hide selection, unselected or hidden operators.</p>
+<h4 id="show-hidden-2">Show Hidden</h4>
+<p>Makes all geometry in the scene visible again.</p>
+<h4 id="hide-selected-2">Hide Selected</h4>
+<p>Hides the selected geometry.</p>
+<h5 id="last-operator-hide-selected-2">Last Operator Hide Selected</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-hide-selected.png" alt="Last Operator Hide Selected" loading="lazy"><figcaption>Last Operator Hide Selected</figcaption></figure>
+<h5 id="unselected-2">Unselected</h5>
+<p>Hides the not selected geometry.</p>
+<h4 id="hide-unselected-2">Hide Unselected</h4>
+<p>Hides the not selected geometry. The selected geometry stays visible.</p>
+<h1 id="vertex-context-menu">Vertex Context Menu</h1>
+<h2 id="vertex-context-menu-2">Vertex Context Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/vertex-context-menu.png" alt="Vertex Context Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/vertex-context-menu-2.png" alt="Vertex Context Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/vertex-context-menu-3.png" alt="Vertex Context Menu" loading="lazy"></figure>
+<p>Call this menu with double right click in the 3D viewport. You need to be in Edit mode with a Mesh object. And in selection mode Vertice to see all its content.</p>
+<p>Select geometry to reveal all content.</p>
+<h3 id="subdivide-3">Subdivide</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/subdivide.png" alt="Subdivide" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/subdivide-2.png" alt="Subdivide" loading="lazy"></figure>
+<p>Subdivide divides the selected edges. It subdivides the involved faces too, and can create new vertices.</p>
+<p>A more unknown functionality is that it can also randomize the result with the Fractal slider in the Last operator panel.</p>
+<h4 id="last-operator-subdivide-3">Last Operator Subdivide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-subdivide.png" alt="Last Operator Subdivide" loading="lazy"></figure>
+<h5 id="number-of-cuts-4">Number of Cuts</h5>
+<p>The number of cuts defines the amount of subdivisions.</p>
+<h5 id="smoothness-4">Smoothness</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/smoothness.png" alt="Smoothness" loading="lazy"></figure>
+<p>This value defines how smooth the subdivision result is. From flat to bent.</p>
+<h5 id="create-n-gons-3">Create N-Gons</h5>
+<p>Create N-Gons if required. Else subdividing N-Gons creates Tris.</p>
+<h5 id="quad-corner-type-3">Quad Corner Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/quad-corner-type.png" alt="Quad Corner Type" loading="lazy"></figure>
+<p>Adjust the corner type.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fractal</td>
+<td>Randomize the selected vertices.</td>
+</tr>
+<tr>
+<td>Along Normal</td>
+<td>When randomized, this value defines how strong the subdivision follows the normals of the initial vertices.</td>
+</tr>
+<tr>
+<td>Random Seed</td>
+<td>Randomizing value for fractal randomizing.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extrude-vertices">Extrude Vertices</h3>
+<p>Extrudes out the selected vertices by moving the mouse.</p>
+<h4 id="last-operator-extrude-only-vertices-and-move">Last Operator Extrude Only Vertices and Move</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-extrude-only-vertices-and-move.png" alt="Last Operator Extrude Only Vertices and Move" loading="lazy"><figcaption>Last Operator Extrude Only Vertices and Move</figcaption></figure>
+<h5 id="move-x-y-z">Move X Y Z</h5>
+<p>The coordinates for the extruded geometry.</p>
+<h5 id="orientation-3">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the type of orientation, in which coordinate system the action should happen.</p>
+<h5 id="mirror-editing-2">Mirror Editing</h5>
+<p>Enable mirror editing.</p>
+<h5 id="proportional-editing-5">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bevel-vertices">Bevel Vertices</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/bevel-vertices.png" alt="Bevel Vertices" loading="lazy"></figure>
+<p>Adds a bevel at the selected vertices.</p>
+<h4 id="last-operator-bevel-2">Last Operator Bevel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-bevel.png" alt="Last Operator Bevel" loading="lazy"></figure>
+<h5 id="affect-2">Affect</h5>
+<p>Affect vertices or edges.</p>
+<h5 id="width-type-2">Width Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/width-type.png" alt="Width Type" loading="lazy"></figure>
+<p>The width type.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Width</td>
+<td>The bevel amount.</td>
+</tr>
+<tr>
+<td>Segments</td>
+<td>How many segments gets created.</td>
+</tr>
+<tr>
+<td>Profile Shape</td>
+<td>Controls the Profile shape. 0.5 means round.</td>
+</tr>
+<tr>
+<td>Material Index</td>
+<td>Assigns a material slot to the new bevel faces. -1 is the surrounding material.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="harden-normals-2">Harden Normals</h5>
+<p>When enabled, the per-vertex face normals of the bevel faces are adjusted to match the surrounding faces, and the normals of the surrounding faces are not affected. This will keep the surrounding faces flat (if they were before), with the bevel faces shading smoothly into them. For this effect to work, custom split normals need to be enabled, which requires Auto Smooth to be enabled (see Normals). As a convenience, that option will be enabled for you if it is not already when you enable Harden Normals here.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clamp Overlap</td>
+<td>Do not allow beveled geometry to overlap each other. Prevents bevel geometry from intersecting itself.   Helps avoid messy geometry in tight corners.</td>
+</tr>
+<tr>
+<td>Loop Slide</td>
+<td>Slides new edges along adjacent geometry for better topology flow</td>
+</tr>
+<tr>
+<td>Mark</td>
+<td><strong>Seams</strong>: Mark the edges of the new created geometry as seams. · <strong>Sharp</strong>: Mark the edges of the new created geometry sharp.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="miter-type-2">Miter Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/miter-type.png" alt="Miter Type" loading="lazy"></figure>
+<h5 id="miter-outer-2">Miter Outer</h5>
+<p>How the outer miter is set. Miter is how the bevel rounding at a corner is done.</p>
+<p><strong>Sharp</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png" alt="Sharp" loading="lazy"></figure>
+<p>Creates a sharp miter.</p>
+<p><strong>Patch</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/patch.png" alt="Patch" loading="lazy"></figure>
+<p>This replaces the outside vertex of a miter with 3 vertices. And uses a patch pattern there.</p>
+<p><strong>Arc</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png" alt="Arc" loading="lazy"></figure>
+<p>This replaces the vertex of a miter with 2 vertices, joined by an arc. A separate Spread parameter says how far to move the vertices away from their original position.</p>
+<h5 id="inner-miter-2">Inner Miter</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/miter-type.png" alt="Inner Miter" loading="lazy"></figure>
+<p>How the inner miter is set. Miter is how the bevel rounding at a corner is done.</p>
+<p><strong>Sharp</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/sharp.png" alt="Sharp" loading="lazy"></figure>
+<p>Creates a sharp miter.</p>
+<p><strong>Arc</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/arc.png" alt="Arc" loading="lazy"></figure>
+<p>This replaces the vertex of a miter with 2 vertices, joined by an arc. A separate Spread parameter says how far to move the vertices away from their original position.</p>
+<p><strong>Spread</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/spread.png" alt="Spread" loading="lazy"></figure>
+<p>Belongs to inner miter method Arc. Adjust how strong the inner radius is bent.</p>
+<h5 id="intersection-type-2">Intersection type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/intersection-type.png" alt="Intersection type" loading="lazy"></figure>
+<p>The method to use to create meshes at intersections. Bevel can create self intersecting geometry.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid Fill</td>
+<td>Fills intersections with a grid-like topology.</td>
+</tr>
+<tr>
+<td>Cutoff</td>
+<td>Trims or removes overlapping geometry at intersections</td>
+</tr>
+</tbody>
+</table>
+<h5 id="face-strength-2">Face Strength</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/face-strength.png" alt="Face Strength" loading="lazy"></figure>
+<p>Set Face Strength on the faces involved in the bevel, according to the specified mode. This can be used in conjunction with a Weight Normals Modifier (with the Face Influence option checked).</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Do not set face strength.</td>
+</tr>
+<tr>
+<td>New</td>
+<td>Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak.</td>
+</tr>
+<tr>
+<td>Affected</td>
+<td>In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>In addition to those set for the Affected option, also set all the rest of the faces of the model to have strength Strong.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="profile-type-2">Profile Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/profile-type.png" alt="Profile Type" loading="lazy"></figure>
+<p>The profile type.</p>
+<p><strong>Superellipse</strong></p>
+<p>Uses a mathematically smooth curve for bevel profiles</p>
+<p><strong>Custom</strong></p>
+<p>Allows manual control of the bevel profile shape via a curve widget.</p>
+<p><strong>Presets</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/presets.png" alt="Presets" loading="lazy"></figure>
+<p>Curve presets.</p>
+<p><strong>Navigation elements</strong></p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in and out</td>
+<td>The two buttons with the magnifying glass at it zooms in and out in the curve window.</td>
+</tr>
+<tr>
+<td>Reverse Path</td>
+<td>Reverses the curve path.</td>
+</tr>
+<tr>
+<td>Toggle Profile Clipping</td>
+<td>Turns the profile clipping on or off.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tools menu</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/tools-menu.png" alt="Tools menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="curve-view-2">Curve view</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/curve-view.png" alt="Curve view" loading="lazy"></figure>
+<p>Adjust the profile curve.</p>
+<p>Left click where no point is adds a new point. Left click at a point allows you to move it.</p>
+<p>Holding down Shift while moving a node point activates precision movement.</p>
+<p>Holding down ctrl while moving activates temporary snapping.</p>
+<p>When a point is selected then the curve view reveals a sub menu at the bottom.</p>
+<p><strong>Handler and node position</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/handler-and-node-position.png" alt="Handler and node position" loading="lazy"><figcaption>Handler and node position</figcaption></figure>
+<p>When you select a node, then the handler and node position tools shows below the curve window.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Handle Type Auto Handle</td>
+<td>Sets the handle type of this curve point to smooth.</td>
+</tr>
+<tr>
+<td>Handle Type Vector Handle</td>
+<td>Sets the handle type of this curve point to sharp.</td>
+</tr>
+<tr>
+<td>Handle Type Free Handle</td>
+<td>Sets the handle type of this curve to Free handles. The curve point has now two handles with which you can adjust the curve before and after the point each.</td>
+</tr>
+<tr>
+<td>Handle Type Aligned Free Handle</td>
+<td>Sets the handle type of this curve to Free handles. The curve point has now a handle with which you can adjust the curve.</td>
+</tr>
+<tr>
+<td>X Y Values</td>
+<td>The position of the currently selected curve point</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sample straigt edges</td>
+<td>Sample edges with vector handles.</td>
+</tr>
+<tr>
+<td>Sample even length</td>
+<td>Sample edges with even lengths.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="make-edge-face-2">Make Edge/Face</h3>
+<p>Adds a face when you have edges selected. And Edges when you have Vertices selected. It's a Bridge tool.</p>
+<p>You can have either the one method or the other. When you select two adjacent vertices, then you select the edge too. And the tool works in edge mode then. In this case just the possible faces gets created. Not edges between single vertices.</p>
+<p>First select the edges or Vertices that you want to bridge. Then click the New Edge/Face from Vertices Button.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/make-edge-face.png" alt="Make Edge/Face" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/make-edge-face-2.png" alt="Make Edge/Face" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/make-edge-face-3.png" alt="Make Edge/Face" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/make-edge-face-4.png" alt="Make Edge/Face" loading="lazy"></figure>
+<h3 id="connect-vertex-path">Connect Vertex Path</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/connect-vertex-path.png" alt="Connect Vertex Path" loading="lazy"></figure>
+<p>Connect Vertex path connects selected vertices, but takes the vertex order into account in which you selected the vertices. It just creates edges between vertices that are not connected in this order.</p>
+<h3 id="connect-vertex-pair">Connect Vertex Pair</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/connect-vertex-pair.png" alt="Connect Vertex Pair" loading="lazy"></figure>
+<p>Connect Vertex pair connects selected vertices and makes a face of the pairs.</p>
+<h3 id="push-pull">Push/Pull</h3>
+<p>It pushes or pulls the object positions relative to the center of the selection.</p>
+<p>In Object mode this tool requires to have more than one object selected.</p>
+<h4 id="last-operator-push-pull">Last Operator Push/Pull</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-push-pull.png" alt="Last Operator Push/Pull" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distance</td>
+<td>Adjust the strength of influence of the tool.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="proportional-editing-6">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shrink-fatten">Shrink/Fatten</h3>
+<p>Shrink/Fatten scales the selected geometry along its normals. Transform orientation and Pivot point gets ignored.</p>
+<p>A positive value pushes the vertices outwards. A negative value pushes the vertices inwards.</p>
+<h4 id="last-operator-shrink-fatten">Last Operator Shrink/Fatten</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-shrink-fatten.png" alt="Last Operator Shrink/Fatten" loading="lazy"></figure>
+<p>The Last Operator Shrink/Fatten panel gives you tools to adjust the Shrink/Fatten operation. Here you have numeric input for the strength and a few more options.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Offset is the strength of the offset for Shrink/Fatten.</td>
+</tr>
+<tr>
+<td>Offset Even</td>
+<td>Offset Even scales the selection to give more thickness in even areas.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="proportional-editing-7">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shear">Shear</h3>
+<p>Shear shears the selection.</p>
+<h4 id="last-operator-shear">Last Operator Shear</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-shear.png" alt="Last Operator Shear" loading="lazy"></figure>
+<p>The shear tool works along a imaginary 2d plane. The shear axis controls if the items are sheared along the x or the y axes of this plane. This is the plane along which the transformation happens. You can shear along the x or the y axis of this plane.</p>
+<p>To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Adjust an offset.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Defines one axis of the imaginary shear axis plane.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="axis-ortho">Axis Ortho</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png" alt="Axis Ortho" loading="lazy"></figure>
+<p>Defines the other axis of the imaginary shear axis plane.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Orientation</td>
+<td>Choose the orientation for the shear action.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="randomize-vertices">Randomize Vertices</h3>
+<p>This tool allows randomizes the positions of the selected vertices.</p>
+<h4 id="last-operator-randomize">Last Operator Randomize</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png" alt="Last Operator Randomize" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amount</td>
+<td>Adjust the amount.</td>
+</tr>
+<tr>
+<td>Uniform</td>
+<td>The uniform offset distance.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Align the offset direction to the normals.</td>
+</tr>
+<tr>
+<td>Random Seed</td>
+<td>The seed value for randomization.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="smooth-laplacian">Smooth Laplacian</h3>
+<p>Laplacian Smooth Vertex smooths out the angles between the selected vertices. It is a tool to reduce noise at the mesh. It works a bit different than the normal Smooth Vertex tool. And gives a different result. The Laplacian method allows you to preserve the volume, and to adjust border smoothing.</p>
+<h4 id="last-operator-laplacian-smooth-vertices">Last Operator Laplacian Smooth Vertices</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-laplacian-smooth-vertices.png" alt="Last Operator Laplacian Smooth Vertices" loading="lazy"><figcaption>Last Operator Laplacian Smooth Vertices</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of Iterations</td>
+<td>Number of Iterations is the number of iterations that the smoothing action gets repeated. With 1 the smoothing is just performed once. With 10 it is performed ten times.</td>
+</tr>
+<tr>
+<td>Lambda Factor</td>
+<td>Lambda Factor is the strength of the smoothing.</td>
+</tr>
+<tr>
+<td>Lambda Factor in border</td>
+<td>Lambda Factor is the strength of the smoothing in border areas.</td>
+</tr>
+<tr>
+<td>Smooth Axis</td>
+<td>The Smooth Axis check boxes allows you to limit the smoothing to specific world axis.</td>
+</tr>
+<tr>
+<td>Preserve Volume</td>
+<td>Preserve Volume preserves the volume of the object.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="snap-vertices">Snap Vertices</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/snap-vertices.png" alt="Snap Vertices" loading="lazy"></figure>
+<p>Choose several methods to snap one element to another. The menu items should be self explaining.</p>
+<h3 id="last-operator-snap">Last Operator Snap</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-snap.png" alt="Last Operator Snap" loading="lazy"></figure>
+<p>Some snap operations shows a last operation panel, some not.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>If the selection should snap as a whole, or if each individual element of the selection should snap.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Rotate to match the cursor.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mirror-vertices">Mirror Vertices</h3>
+<p>Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored.</p>
+<h4 id="last-operator-mirror">Last Operator Mirror</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-mirror.png" alt="Last Operator Mirror" loading="lazy"></figure>
+<p>The Last Operator Mirror panel gives you tools to adjust the mirror action.</p>
+<h5 id="orientation-4">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/orientation-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box choose the type of orientation for the mirroring action.</p>
+<h5 id="constraint-axis">Constraint Axis</h5>
+<p>Constraint Axis gives you again the possibility to define the mirror axis. You can choose more than one axis here.</p>
+<h3 id="vertex-crease">Vertex Crease</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/vertex-crease.png" alt="Vertex Crease" loading="lazy"></figure>
+<p>When you use a Subdivision Surface Modifier, then you can define the sharpness of selected vertices with this tool. Crease vertices will be marked colored in edit mode.</p>
+<p>You will see a value in the header that indicates the current strength when you activate the tool. Move with the mouse to increase or decrease the value. Or type in a value while you are in this mode. You can also scale into negative range.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/vertex-crease-2.png" alt="Vertex Crease" loading="lazy"></figure>
+<p>A negative crease value will subtract from the current active crease value in case it exists already from a former crease operation. A Crease value of -1 removes the crease from this edge.</p>
+<h4 id="last-operator-vertex-crease">Last Operator Vertex Crease</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-vertex-crease.png" alt="Last Operator Vertex Crease" loading="lazy"><figcaption>Last Operator Vertex Crease</figcaption></figure>
+<h5 id="factor-3">Factor</h5>
+<p>Adjust the crease factor.</p>
+<h3 id="merge-vertices">Merge Vertices</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/merge-vertices.png" alt="Merge Vertices" loading="lazy"></figure>
+<p>Merges the geometry.</p>
+<h4 id="at-center-at-cursor-collapse">At Center, At Cursor, Collapse</h4>
+<p>Merges the geometry with the given methods.</p>
+<h4 id="last-operator-merge">Last Operator Merge</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-merge.png" alt="Last Operator Merge" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Choose the merge method again.</td>
+</tr>
+<tr>
+<td>UV's</td>
+<td>Move the UV's according to the merge.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="by-distance">By Distance</h4>
+<p>Merge the vertices by their distance to each other. This tool is meant to remove double vertices at the same location.</p>
+<h4 id="last-operator-merge-by-distance">Last Operator Merge by Distance</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-merge-by-distance.png" alt="Last Operator Merge by Distance" loading="lazy"><figcaption>Last Operator Merge by Distance</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Merge Distance</td>
+<td>Adjust the distance below which the vertices gets merged. Merge selected vertices to unselected vertices.</td>
+</tr>
+<tr>
+<td>Unselected</td>
+<td>Merge also unselected vertices</td>
+</tr>
+<tr>
+<td>Sharp Edges</td>
+<td>Calculate sharp edges if possible.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="split-3">Split</h3>
+<p>Splits the edges between the selected vertices. It creates two edges out of one. And splits the edge by that.</p>
+<h3 id="separate">Separate</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/separate.png" alt="Separate" loading="lazy"></figure>
+<p>Separate separates the selected geometry, and creates a new object. The geometry becomes uneditable, since it is now a new object. You will have to leave the Edit mode, select the new object, and re-enter Edit mode when you want to edit it.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selection</td>
+<td>Selection separates the current selection.</td>
+</tr>
+<tr>
+<td>By Material</td>
+<td>By Material separates all geometry that has the same material than the current selection.</td>
+</tr>
+<tr>
+<td>By Loose Parts</td>
+<td>By Loose parts separates all geometry that is connected by edges to the current selection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dissolve-vertices-2">Dissolve Vertices</h3>
+<p>Dissolve Vertices dissolves the selected Vertices.</p>
+<p>Note that pressing Del in Vertice select mode calls Dissolve Vertices already. It's the same operator. But you don't get the Last operator that way.</p>
+<h4 id="last-operator-dissolve-vertices-2">Last Operator Dissolve Vertices</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-dissolve-vertices.png" alt="Last Operator Dissolve Vertices" loading="lazy"><figcaption>Last Operator Dissolve Vertices</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Face Split</td>
+<td>Split off Face corners to maintain surrounding geometry</td>
+</tr>
+<tr>
+<td>Tear Boundary</td>
+<td>Split off Face corners instead of merging faces.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="delete-vertices">Delete Vertices</h3>
+<p>Deletes the selected vertices.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/delete-vertices.png" alt="Delete Vertices" loading="lazy"></figure>
+<p>The Show/Hide menu is available for all object types and in all modes. It is usually in the object related menu to find. In Object mode it's the Object menu, for a curve object in edit mode it is the Curve menu. It always contains three menu items. Show Hidden, Hide Selected and Hide Unselected.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show Hidden</td>
+<td>Makes all hidden elements in the scene visible again.</td>
+</tr>
+<tr>
+<td>Hide Selected</td>
+<td>Hides the selected elements.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hide-unselected-3">Hide Unselected</h3>
+<p>Hides the not selected elements. The selected elements stays visible.</p>
+<h4 id="last-operator-reveal-hidden-hide-selected">Last Operator Reveal Hidden / Hide Selected</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-reveal-hidden-hide-selected.png" alt="Last Operator Reveal Hidden / Hide Selected" loading="lazy"><figcaption>Last Operator Reveal Hidden / Hide Selected</figcaption></figure>
+<h5 id="select">Select</h5>
+<p>Define if the selected or the unselected elements gets hidden or revealed.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-split-big/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fmesh%2Fedit%2Fcontext-menus.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-split-big/docs2/content/editors/3d-viewport/mesh/edit/context-menus.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#edge-context-menu-2">Edge Context Menu</a><a class="h3" href="#subdivide">Subdivide</a><a class="h3" href="#extrude-edges">Extrude Edges</a><a class="h3" href="#bevel-edges">Bevel Edges</a><a class="h3" href="#make-edge-face">Make Edge/Face</a><a class="h3" href="#bridge-edge-loops">Bridge Edge loops</a><a class="h3" href="#fill">Fill</a><a class="h3" href="#loop-cut-and-slide">Loop Cut and Slide</a><a class="h3" href="#offset-edge-slide">Offset Edge Slide</a><a class="h3" href="#knife-topology">Knife Topology</a><a class="h3" href="#rotate-edge-cw">Rotate Edge CW</a><a class="h3" href="#edge-split">Edge Split</a><a class="h3" href="#edge-crease">Edge Crease</a><a class="h3" href="#edge-bevel-weight">Edge Bevel Weight</a><a class="h3" href="#mark-sharp">Mark Sharp</a><a class="h3" href="#clear-sharp">Clear Sharp</a><a class="h3" href="#set-sharpness-by-angle">Set sharpness by Angle</a><a class="h3" href="#un-subdivide">Un-Subdivide</a><a class="h3" href="#split">Split</a><a class="h3" href="#separate-submenu">Separate submenu</a><a class="h3" href="#dissolve-edges">Dissolve Edges</a><a class="h3" href="#delete-edges">Delete Edges</a><a class="h3" href="#show-hide">Show/Hide</a><a class="h2" href="#face-context-menu-2">Face Context Menu</a><a class="h3" href="#subdivide-2">Subdivide</a><a class="h3" href="#extrude-faces">Extrude Faces</a><a class="h3" href="#extrude-faces-along-normals">Extrude Faces Along Normals</a><a class="h3" href="#extrude-individual">Extrude Individual</a><a class="h3" href="#inset-faces">Inset Faces</a><a class="h3" href="#bridge-faces">Bridge Faces</a><a class="h3" href="#poke-faces">Poke Faces</a><a class="h3" href="#uv-unwrap-faces-submenu">UV Unwrap Faces submenu</a><a class="h3" href="#smart-uv-project">Smart UV Project</a><a class="h3" href="#lightmap-pack">Lightmap Pack</a><a class="h3" href="#triangulate-faces">Triangulate Faces</a><a class="h3" href="#triangles-to-quads">Triangles to Quads</a><a class="h3" href="#shade-smooth">Shade Smooth</a><a class="h3" href="#shade-flat">Shade Flat</a><a class="h3" href="#un-subdivide-2">Un-Subdivide</a><a class="h3" href="#split-2">Split</a><a class="h3" href="#separate-submenu-2">Separate submenu</a><a class="h3" href="#dissolve-faces">Dissolve Faces</a><a class="h3" href="#delete-faces">Delete Faces</a><a class="h3" href="#show-hide-2">Show/Hide</a><a class="h2" href="#vertex-context-menu-2">Vertex Context Menu</a><a class="h3" href="#subdivide-3">Subdivide</a><a class="h3" href="#extrude-vertices">Extrude Vertices</a><a class="h3" href="#bevel-vertices">Bevel Vertices</a><a class="h3" href="#make-edge-face-2">Make Edge/Face</a><a class="h3" href="#connect-vertex-path">Connect Vertex Path</a><a class="h3" href="#connect-vertex-pair">Connect Vertex Pair</a><a class="h3" href="#push-pull">Push/Pull</a><a class="h3" href="#shrink-fatten">Shrink/Fatten</a><a class="h3" href="#shear">Shear</a><a class="h3" href="#randomize-vertices">Randomize Vertices</a><a class="h3" href="#smooth-laplacian">Smooth Laplacian</a><a class="h3" href="#snap-vertices">Snap Vertices</a><a class="h3" href="#last-operator-snap">Last Operator Snap</a><a class="h3" href="#mirror-vertices">Mirror Vertices</a><a class="h3" href="#vertex-crease">Vertex Crease</a><a class="h3" href="#merge-vertices">Merge Vertices</a><a class="h3" href="#split-3">Split</a><a class="h3" href="#separate">Separate</a><a class="h3" href="#dissolve-vertices-2">Dissolve Vertices</a><a class="h3" href="#delete-vertices">Delete Vertices</a><a class="h3" href="#hide-unselected-3">Hide Unselected</a></aside></div></body></html>

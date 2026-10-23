@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Context Menus · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1423 · <code>docs2/q3-split-big</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Overview</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../../all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../../all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../all-modes.html">All Modes</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../../object-mode/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:3.5rem" href="../../all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../../all-modes/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="../edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../../object-mode/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">File menu</span>
+<a style="padding-left:3.5rem" href="../../all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../all-modes/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="../edit/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<a style="padding-left:2.5rem" href="../../object-mode/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Edit menu</span>
+<a style="padding-left:2.5rem" href="../../all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<a style="padding-left:3.5rem" href="../edit/context-menus.html">Context Menus</a>
+<a class="is-current" style="padding-left:3.5rem" href="context-menus.html">Context Menus</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../../object-mode/context-menus.html">Context Menus</a>
+<span style="padding-left:2.5rem">Render menu</span>
+<a style="padding-left:3.5rem" href="../../all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span>3D Viewport</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View menu</span>
+<span style="padding-left:2.5rem">Image menu</span>
+<span style="padding-left:2.5rem">Select menu</span>
+<span style="padding-left:2.5rem">Add menu</span>
+<span style="padding-left:2.5rem">Mask menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Tool Tab in Paint Mode</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Scopes Tab</span>
+<span style="padding-left:2.5rem">Mask Tab</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">UV menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span>Compositor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Color - Adjust</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Creative</span>
+<span style="padding-left:2.5rem">Add Menu - Filter - Blur</span>
+<span style="padding-left:2.5rem">Add Menu - Filter</span>
+<span style="padding-left:2.5rem">Add Menu - Keying</span>
+<span style="padding-left:2.5rem">Add Menu - Mask</span>
+<span style="padding-left:2.5rem">Add Menu - Tracking</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Transform</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Geometry Nodes Editor - Header - Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Texture Node Editor</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Gizmo</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Import</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Attribute</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - UV</span>
+<span style="padding-left:2.5rem">Add Menu - Point</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Simulation</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Text</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Bundle</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Closure</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Field</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Matrix</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Rotation</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Deprecated</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Generate</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Selection</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Deformation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Generation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Guides</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span style="padding-left:2.5rem">Node tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Add</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span>Shader Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Shader</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Video Sequence Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Export Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Strip Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">Text Menu</span>
+<span style="padding-left:2.5rem">Scene Menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Preview - Tool tab</span>
+<span style="padding-left:2.5rem">Preview - View tab</span>
+<span style="padding-left:2.5rem">Sequencer - Strip tab</span>
+<span style="padding-left:2.5rem">Sequencer - Tool tab</span>
+<span style="padding-left:2.5rem">Sequencer - Cache tab</span>
+<span style="padding-left:2.5rem">Sequencer - Proxy tab</span>
+<span style="padding-left:2.5rem">Sequencer - View tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Movie Clip Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Clip Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Track Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Graph Submode - Graph Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Clip Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Add Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Mask Menu</span>
+<span style="padding-left:1.5rem">Tool shelf</span>
+<span style="padding-left:2.5rem">Tracking Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Footage Tab</span>
+<span style="padding-left:2.5rem">Track tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - Stabilization tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - View tab</span>
+<span>Dope Sheet</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:2.5rem">Action Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span>Graph Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Drivers Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Drivers Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">Driver Editor - Sidebar - View Tab</span>
+<span>Nonlinear Animation Editor</span>
+<span style="padding-left:2.5rem">NLA Editor - Header tools and options</span>
+<span style="padding-left:2.5rem">NLA Editor - Header - Quick Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - View Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Select Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Marker Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Add Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Track Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Strip Menu</span>
+<span style="padding-left:1.5rem">NLA Editor - Channel list</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Animation Data panel</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Strip tab</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Modifiers Tab</span>
+<span style="padding-left:1.5rem">NLA Editor - Footer tools and options</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:1.5rem">Render Properties Tab</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:1.5rem">Output Properties Tab</span>
+<span style="padding-left:1.5rem">View Layer Properties Tab</span>
+<span style="padding-left:1.5rem">Scene Properties Tab</span>
+<span style="padding-left:1.5rem">World Properties Tab</span>
+<span style="padding-left:1.5rem">Collection Properties Tab</span>
+<span style="padding-left:1.5rem">Object Properties Tab</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Particle Properties Tab</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:1.5rem">Visual Effects Properties Tab</span>
+<span style="padding-left:1.5rem">Physics Properties Tab</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:1.5rem">Object Constraints Properties Tab</span>
+<span style="padding-left:1.5rem">Object Data Properties Tab</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span style="padding-left:1.5rem">Material Properties Tab</span>
+<span style="padding-left:1.5rem">Texture Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Constraint Properties</span>
+<span style="padding-left:1.5rem">Strip Tab</span>
+<span style="padding-left:1.5rem">Strip Modifiers Tab</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<a href="../../../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Standard Keymap</span>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Mesh › Sculpt Mode › Context Menus</div><h1 class="pv-title">Context Menus</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 2 min read</span></div><article class="ui-doc-body"><h1 id="brushes-context-menus">Brushes context menus</h1>
+<h2 id="brushes-context-menus-2">Brushes context menus</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus/brushes-context-menus.png" alt="Brushes context menus" loading="lazy"></figure>
+<p>Call this menu with right click in the 3D viewport. You need to be in Sculpt mode with a mesh object.</p>
+<p>In Sculpt mode you will call a context menu with the sliders from the Brush settings. The content depends of the chosen brush. Every brush has different settings. We just cover the usual ones here. For the brush specific settings see the chapter Editors - 3D View - Tool Shelf - Mesh - Sculpt Mode</p>
+<h3 id="radius">Radius</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus/radius.png" alt="Radius" loading="lazy"></figure>
+<p>The Radius edit box allows you to adjust the radius of the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size Pressure</td>
+<td>The first button behind the edit box enables tablet pressure sensitivity for radius.</td>
+</tr>
+<tr>
+<td>Use Unified Radius</td>
+<td>The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="strength">Strength</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus/strength.png" alt="Strength" loading="lazy"></figure>
+<p>The Strength edit box allows you to adjust the strength of the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size Pressure</td>
+<td>The first button behind the edit box enables tablet pressure sensitivity for radius.</td>
+</tr>
+<tr>
+<td>Use Unified Radius</td>
+<td>The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="auto-smooth">Auto smooth</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus/auto-smooth.png" alt="Auto smooth" loading="lazy"></figure>
+<p>The auto smooth edit box allows you to adjust the amount of smoothing that gets automatically applied to each stroke.</p>
+<h4 id="tablet-pressure">Tablet Pressure</h4>
+<p>The button behind the edit box enables tablet pressure sensitivity for auto smooth.</p>
+<h3 id="plane-offset">Plane Offset</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus/plane-offset.png" alt="Plane Offset" loading="lazy"></figure>
+<p>Clay brush setting. Adjust the plane on which the brush acts towards or away from the objects surface. Sculpting with the Clay brush happens in a plane defined by the view you are in and the first vertices hit by the brush.</p>
+<h3 id="distance">Distance</h3>
+<p>Adjust the plane trim distance.</p>
+<h3 id="height">Height</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus/height.png" alt="Height" loading="lazy"></figure>
+<p>Layer brush setting. The height that can be affected by the layer brush.</p>
+<h3 id="magnify">Magnify</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus/magnify.png" alt="Magnify" loading="lazy"></figure>
+<p>Blob Brush setting. The Crease Brush Pinch Factor.</p>
+<h3 id="pinch">Pinch</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus/pinch.png" alt="Pinch" loading="lazy"></figure>
+<p>Crease Brush setting. The Crease Brush Pinch Factor.</p>
+<h3 id="normal-weight">Normal Weight</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus/normal-weight.png" alt="Normal Weight" loading="lazy"></figure>
+<p>Various brushes like Grab or Elastic Deform. How much grab will pull vertexes out of surface during grab.</p>
+<h3 id="magnify-2">Magnify</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus/magnify.png" alt="Magnify" loading="lazy"></figure>
+<p>Blob Brush setting. The Crease Brush Pinch Factor.</p>
+<h3 id="rake">Rake</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1cda8ba5ed9cf6be90e6e1795e0c8c34752ad27a/docs2/images/editors/3d-viewport/context-menus/mesh-object-sculpt-mode-brushes-context-menus/rake.png" alt="Rake" loading="lazy"></figure>
+<p>Snake Hook brush setting. How much grab will follow cursor rotation.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-split-big/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fmesh%2Fsculpt%2Fcontext-menus.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-split-big/docs2/content/editors/3d-viewport/mesh/sculpt/context-menus.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#brushes-context-menus-2">Brushes context menus</a><a class="h3" href="#radius">Radius</a><a class="h3" href="#strength">Strength</a><a class="h3" href="#auto-smooth">Auto smooth</a><a class="h3" href="#plane-offset">Plane Offset</a><a class="h3" href="#distance">Distance</a><a class="h3" href="#height">Height</a><a class="h3" href="#magnify">Magnify</a><a class="h3" href="#pinch">Pinch</a><a class="h3" href="#normal-weight">Normal Weight</a><a class="h3" href="#magnify-2">Magnify</a><a class="h3" href="#rake">Rake</a></aside></div></body></html>

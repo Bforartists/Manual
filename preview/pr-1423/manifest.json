@@ -1,0 +1,32 @@
+{
+ "pages": {
+  "docs2/content/assets/geometry-nodes-library.md": "assets/geometry-nodes-library.html",
+  "docs2/content/editors/3d-viewport/all-modes/context-menus.md": "editors/3d-viewport/all-modes/context-menus.html",
+  "docs2/content/editors/3d-viewport/all-modes/header/header-tools-and-options.md": "editors/3d-viewport/all-modes/header/header-tools-and-options.html",
+  "docs2/content/editors/3d-viewport/all-modes/header/index.md": "editors/3d-viewport/all-modes/header.html",
+  "docs2/content/editors/3d-viewport/all-modes/header/navigation-menu.md": "editors/3d-viewport/all-modes/header/navigation-menu.html",
+  "docs2/content/editors/3d-viewport/all-modes/header/quick-menu.md": "editors/3d-viewport/all-modes/header/quick-menu.html",
+  "docs2/content/editors/3d-viewport/all-modes/header/select-menu.md": "editors/3d-viewport/all-modes/header/select-menu.html",
+  "docs2/content/editors/3d-viewport/all-modes/header/view-menu.md": "editors/3d-viewport/all-modes/header/view-menu.html",
+  "docs2/content/editors/3d-viewport/all-modes/index.md": "editors/3d-viewport/all-modes.html",
+  "docs2/content/editors/3d-viewport/all-modes/more.md": "editors/3d-viewport/all-modes/more.html",
+  "docs2/content/editors/3d-viewport/all-modes/sidebar.md": "editors/3d-viewport/all-modes/sidebar.html",
+  "docs2/content/editors/3d-viewport/all-modes/tool-shelf.md": "editors/3d-viewport/all-modes/tool-shelf.html",
+  "docs2/content/editors/3d-viewport/mesh/edit/context-menus.md": "editors/3d-viewport/mesh/edit/context-menus.html",
+  "docs2/content/editors/3d-viewport/mesh/edit/header.md": "editors/3d-viewport/mesh/edit/header.html",
+  "docs2/content/editors/3d-viewport/mesh/edit/index.md": "editors/3d-viewport/mesh/edit.html",
+  "docs2/content/editors/3d-viewport/mesh/edit/sidebar.md": "editors/3d-viewport/mesh/edit/sidebar.html",
+  "docs2/content/editors/3d-viewport/mesh/edit/tool-shelf.md": "editors/3d-viewport/mesh/edit/tool-shelf.html",
+  "docs2/content/editors/3d-viewport/mesh/sculpt/context-menus.md": "editors/3d-viewport/mesh/sculpt/context-menus.html",
+  "docs2/content/editors/3d-viewport/mesh/sculpt/header.md": "editors/3d-viewport/mesh/sculpt/header.html",
+  "docs2/content/editors/3d-viewport/mesh/sculpt/index.md": "editors/3d-viewport/mesh/sculpt.html",
+  "docs2/content/editors/3d-viewport/mesh/sculpt/sidebar.md": "editors/3d-viewport/mesh/sculpt/sidebar.html",
+  "docs2/content/editors/3d-viewport/mesh/sculpt/tool-shelf.md": "editors/3d-viewport/mesh/sculpt/tool-shelf.html",
+  "docs2/content/editors/3d-viewport/object-mode/context-menus.md": "editors/3d-viewport/object-mode/context-menus.html",
+  "docs2/content/editors/3d-viewport/object-mode/header.md": "editors/3d-viewport/object-mode/header.html",
+  "docs2/content/editors/3d-viewport/object-mode/index.md": "editors/3d-viewport/object-mode.html",
+  "docs2/content/editors/3d-viewport/object-mode/sidebar.md": "editors/3d-viewport/object-mode/sidebar.html",
+  "docs2/content/editors/3d-viewport/object-mode/tool-shelf.md": "editors/3d-viewport/object-mode/tool-shelf.html"
+ },
+ "images": 1761
+}
