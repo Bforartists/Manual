@@ -6,6 +6,6 @@ path:
   - Information
 version: "5.1"
 status: draft
-summary: "The history of Bforartists and of this manual, and the glossary."
+summary: "Where Bforartists comes from: its history, the license, the community, the glossary and an index of every page."
 ---
 The history of Bforartists and of this manual, and the glossary.

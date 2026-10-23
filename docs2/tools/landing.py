@@ -211,3 +211,25 @@ def home_html(page, icons, url_of_rel, img_url):
                       min=p.get("minutes"), i=icon_file(p.get("icon"), icons)))
     out.append("</ul></div>")
     return "".join(out)
+
+
+def index_html(tree, url_of):
+    """Information › Index: every page A to Z, grouped by first letter."""
+    rows = []
+    for sec in tree:
+        for n in sec.nodes:
+            if n.page.fm.get("generate") == "index":
+                continue
+            rows.append((str(n.page.fm.get("title") or n.id), str(sec.title), url_of(n)))
+    rows.sort(key=lambda r: r[0].lower())
+    out, letter = ['<div class="ui-doc-index">'], None
+    for t, s, u in rows:
+        first = t[:1].upper() if t[:1].isalpha() else "#"
+        if first != letter:
+            if letter is not None:
+                out.append("</ul>")
+            out.append(f"<h2>{htmllib.escape(first)}</h2><ul>")
+            letter = first
+        out.append(f'<li><a href="{htmllib.escape(u)}">{htmllib.escape(t)}</a> · <em>{htmllib.escape(s)}</em></li>')
+    out.append("</ul></div>")
+    return "".join(out)

@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.0
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.1
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -9,6 +9,7 @@
  *   2 🧭  breadcrumb: Documentation → Docs home, then every level down to the page
  *   3 🗂️  group overview pages (/docs/<group>): hero, "Start here", chapter cards, help panels
  *   4 🏠  Docs home (/docs/home): search, Quick Start paths, sections at a glance, help cards
+ *   5 👁️  every sidebar group starts with an Overview row (its group page)
  */
 (function () {
   var d = document, R = d.documentElement;
@@ -372,10 +373,29 @@
     d.addEventListener('keydown', function (e) { if (e.key === 'F3') { e.preventDefault(); e.stopImmediatePropagation(); inp.focus(); } }, true);
   }
 
+  /* ---------------------------------------------------------------- 5 every group starts with its Overview */
+  var OV_ICON = CDN + '68b9b48a3442dd4ded92a8d8_hide_off.svg';
+  function overviews() {
+    qa('.ui-doc-navp').forEach(function (p) {
+      var tree = q('.ui-doc-tree', p), t = q('.ui-panel-title', p);
+      if (!tree || !t || q('.dk-ov', tree)) return;
+      var href = t.getAttribute('href') || '', on = slugOf(href) === here;
+      var w = el('div', 'ui-doc-node dk-ov');
+      w.innerHTML = '<div class="ui-doc-row"><a class="ui-panel-link' + (on ? ' is-current' : '') + '" data-level="1" href="' + href + '"' + (on ? ' aria-current="page"' : '') +
+        '><img class="ui-icon is-color" alt="" src="' + OV_ICON + '"><span>Overview</span></a></div>';
+      tree.insertBefore(w, tree.firstChild);
+    });
+  }
+  function watchSide() {
+    var side = q('.ui-doc-side'); if (!side || !window.MutationObserver) return;
+    var t = 0; new MutationObserver(function () { clearTimeout(t); t = setTimeout(overviews, 30); }).observe(side, { childList: true, subtree: true });
+  }
+
   /* ---------------------------------------------------------------- start */
   function apply(nav) {
     if (!nav || !nav.sections) return;
     NAV = nav; IDX = index(nav);
+    overviews(); watchSide();
     crumbs();
     if (here === 'home') return home();
     var n = IDX.by[here];

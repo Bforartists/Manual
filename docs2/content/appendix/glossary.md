@@ -11,6 +11,7 @@ screenshots: "5.1"
 source:
   - 37 Glossary.odt
 icon: text
+order: 50
 ---
 This page lists definitions for terms used in Bforartists and this manual.
 

@@ -1,0 +1,98 @@
+old_path,new_path,how
+/documentation,/docs/home,by hand
+/documentation/advanced,/docs/advanced,matched
+/documentation/advanced/command-line,/docs/advanced-advanced-command-line,by hand
+/documentation/advanced/how-to-help,/docs/advanced-how-to-help,matched
+/documentation/advanced/reporting-a-bug,/docs/advanced-reporting-a-bug,matched
+/documentation/advanced/requesting-a-feature,/docs/advanced-requesting-a-feature,matched
+/documentation/advanced/scripting,/docs/advanced-advanced-scripting-extending-bforartists,by hand
+/documentation/advanced/troubleshooting,/docs/advanced-troubleshooting,matched
+/documentation/advanced/working-limits,/docs/advanced-advanced-working-limits,by hand
+/documentation/appendix/chapters,/docs/appendix-index-a-z,by hand
+/documentation/appendix/documentation-history,/docs/appendix-manual-update-history,by hand
+/documentation/appendix/glossary,/docs/appendix-glossary,matched
+/documentation/appendix/history,/docs/appendix-bforartists-history,by hand
+/documentation/assets,/docs/assets,matched
+/documentation/assets/geometry-nodes/grease-pencil,/docs/assets,group page (no page of its own yet)
+/documentation/assets/geometry-nodes/material,/docs/assets,group page (no page of its own yet)
+/documentation/assets/geometry-nodes/mesh,/docs/assets,group page (no page of its own yet)
+/documentation/assets/geometry-nodes/normals,/docs/assets,group page (no page of its own yet)
+/documentation/assets/geometry-nodes/primitives,/docs/assets,group page (no page of its own yet)
+/documentation/assets/geometry-nodes/utilities,/docs/assets,group page (no page of its own yet)
+/documentation/development/compiling-on-windows,/docs/advanced-how-to-help,by hand
+/documentation/development/doing-documentation,/docs/advanced-how-to-help,by hand
+/documentation/editors,/docs/editors,matched
+/documentation/editors/3d-viewport,/docs/editors-3d-viewport,matched
+/documentation/editors/compositor,/docs/editors-compositor,matched
+/documentation/editors/dope-sheet,/docs/editors-dope-sheet,matched
+/documentation/editors/drivers-editor,/docs/editors-drivers-editor,matched
+/documentation/editors/file-browser,/docs/editors-file-browser,matched
+/documentation/editors/geometry-node-editor,/docs/editors-geometry-node-editor,matched
+/documentation/editors/graph-editor,/docs/editors-graph-editor,matched
+/documentation/editors/image-editor,/docs/editors-image-editor,matched
+/documentation/editors/info-editor,/docs/editors-info-editor,matched
+/documentation/editors/movie-clip-editor,/docs/editors-movie-clip-editor,matched
+/documentation/editors/nonlinear-animation,/docs/editors-nonlinear-animation-editor,by hand
+/documentation/editors/outliner,/docs/editors-outliner,matched
+/documentation/editors/preferences,/docs/editors-preferences,matched
+/documentation/editors/properties-editor,/docs/editors-properties,by hand
+/documentation/editors/python-console,/docs/editors-python-console,matched
+/documentation/editors/shader-editor,/docs/editors-shader-editor,matched
+/documentation/editors/spreadsheet,/docs/editors-spreadsheet,matched
+/documentation/editors/status-bar,/docs/editors-topbar-and-statusbar,by hand
+/documentation/editors/text-editor,/docs/editors-text-editor,matched
+/documentation/editors/texture-node-editor,/docs/editors-texture-node-editor,matched
+/documentation/editors/timeline,/docs/editors-timeline,matched
+/documentation/editors/tool-bar-editor,/docs/editors-toolbar,by hand
+/documentation/editors/top-bar,/docs/editors-topbar-and-statusbar,by hand
+/documentation/editors/uv-editor,/docs/editors-uv-editor,matched
+/documentation/editors/video-sequencer,/docs/editors-video-sequence-editor,by hand
+/documentation/extensions,/docs/extensions,matched
+/documentation/information,/docs/appendix,matched
+/documentation/interface,/docs/interface,matched
+/documentation/interface/areas,/docs/interface-areas,matched
+/documentation/interface/asset-shelves,/docs/interface-asset-shelves,matched
+/documentation/interface/context-menus,/docs/interface-context-menus,matched
+/documentation/interface/editors,/docs/interface-editors,matched
+/documentation/interface/floating-dialogues,/docs/interface-floating-dialogues,matched
+/documentation/interface/floating-menus,/docs/interface-floating-menus,matched
+/documentation/interface/footers,/docs/interface-footers,matched
+/documentation/interface/headers,/docs/interface-header,by hand
+/documentation/interface/interface,/docs/interface-basics,by hand
+/documentation/interface/last-operator-panel,/docs/interface-last-operator-panel,matched
+/documentation/interface/pie-menus,/docs/interface-pie-menus,matched
+/documentation/interface/properties,/docs/interface-controls,by hand
+/documentation/interface/side-bars,/docs/interface-sidebar,by hand
+/documentation/interface/tabs-panels,/docs/interface-panels-and-tabs,by hand
+/documentation/interface/tool-shelves,/docs/interface-tool-shelf,by hand
+/documentation/interface/windows,/docs/interface-windows,matched
+/documentation/keymap,/docs/keymap,matched
+/documentation/keymap/important,/docs/keymap-important-hotkeys,by hand
+/documentation/keymap/standard,/docs/keymap-standard-keymap,by hand
+/documentation/overview,/docs/getting-started,matched
+/documentation/overview/about-documentation,/docs/getting-started-about-documentation,matched
+/documentation/overview/data-structure,/docs/getting-started-data-structure,matched
+/documentation/overview/differences,/docs/getting-started-differences,matched
+/documentation/overview/installation,/docs/getting-started-installation,matched
+/documentation/overview/introduction,/docs/getting-started-introduction,matched
+/documentation/overview/migrating-from-blender,/docs/getting-started-migrating-from-blender,matched
+/documentation/overview/quick-start,/docs/getting-started-quick-start,matched
+/documentation/workspaces,/docs/workspaces,matched
+/documentation/workspaces/2d-animation,/docs/workspaces-2d-animation,matched
+/documentation/workspaces/2d-full-canvas,/docs/workspaces-2d-full-canvas,matched
+/documentation/workspaces/3d-sequencer,/docs/workspaces-3d-sequencer,matched
+/documentation/workspaces/animation,/docs/workspaces-animation,matched
+/documentation/workspaces/color-balance,/docs/workspaces-color-balance,matched
+/documentation/workspaces/compositing,/docs/workspaces-compositing,matched
+/documentation/workspaces/main,/docs/workspaces-main,matched
+/documentation/workspaces/masking,/docs/workspaces-masking,matched
+/documentation/workspaces/modeling,/docs/workspaces-modeling,matched
+/documentation/workspaces/motion-tracking,/docs/workspaces-motion-tracking,matched
+/documentation/workspaces/nodes,/docs/workspaces-nodes,matched
+/documentation/workspaces/rendering,/docs/workspaces-rendering,matched
+/documentation/workspaces/scripting,/docs/workspaces-scripting,matched
+/documentation/workspaces/sculpting,/docs/workspaces-sculpting,matched
+/documentation/workspaces/shading,/docs/workspaces-shading,matched
+/documentation/workspaces/texture-paint,/docs/workspaces-texture-paint,matched
+/documentation/workspaces/uv-editing,/docs/workspaces-uv-editing,matched
+/documentation/workspaces/video-editing,/docs/workspaces-video-editing,matched

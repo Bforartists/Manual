@@ -14,6 +14,7 @@ source:
 icon: asset_manager
 cta: "Browse"
 summary: "The Bforartists library: brushes, collections, materials and objects."
+order: 20
 ---
 ## Introduction
 

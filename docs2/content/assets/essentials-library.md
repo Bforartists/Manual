@@ -14,6 +14,7 @@ source:
 icon: brush_data
 cta: "Browse"
 summary: "The library Bforartists ships from Blender: brushes, hair node groups and normals tools."
+order: 10
 ---
 ## Essentials Asset Library
 

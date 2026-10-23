@@ -11,6 +11,7 @@ screenshots: "5.1"
 source:
   - 39 Bforartists History.odt
 icon: blender
+order: 10
 ---
 ## Bforartists 5 History
 
