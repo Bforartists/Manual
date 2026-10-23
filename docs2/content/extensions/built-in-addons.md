@@ -1,6 +1,6 @@
 ---
 id: extensions.bforartists-extensions
-title: Bforartists Extensions
+title: "Built-in Addons and Extensions"
 section: extensions
 path:
   - Extensions
@@ -10,6 +10,8 @@ status: draft
 screenshots: "5.1"
 source:
   - 35 Bforartists Extensions.odt
+icon: plugin
+summary: "The add-ons and themes that come with Bforartists, on by default or ready to turn on."
 ---
 ## Bforartists Extensions
 

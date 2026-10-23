@@ -1,6 +1,6 @@
 ---
 id: advanced.advanced-scripting-extending-bforartists
-title: Advanced - Scripting & Extending Bforartists
+title: "Scripting"
 section: advanced
 path:
   - Advanced
@@ -10,6 +10,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 33 Advanced - Scripting & Extending Bforartists.odt
+icon: script
 ---
 ## Scripting & Extending Bforartists
 

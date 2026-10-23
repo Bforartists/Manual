@@ -1,6 +1,6 @@
 ---
 id: interface.controls
-title: Menus, buttons and controls
+title: "Properties"
 section: interface
 path:
   - The Interface
@@ -11,20 +11,10 @@ status: draft
 screenshots: "5.1"
 source:
   - 3 Interface.odt
+icon: toggle_node_options
+summary: "Buttons, toggles, fields, drop-downs, colour pickers and value editing, with expressions and units."
 ---
-The UI contains various control elements. Buttons, Menus, toggles, etc.
-
-## Menu
-
-![Menu](/docs2/images/ui/interface/controls/menu.png)
-
-In the header you may find text menus. A text menu contains usually buttons. But it can also contain toggles. Or other menus.
-
-### Menu Search
-
-![Menu Search](/docs2/images/ui/interface/controls/menu-search.png)
-
-You can search any header menu while it is open with the search menu operator by pressing Space. This will allow filtering the menu contents without navigating into the sub-menus.
+The interface is built from a small set of controls: buttons, toggles, fields, drop-down boxes, colour pickers and other widgets. They work the same in every editor.
 
 ## Button
 
@@ -160,12 +150,4 @@ Metric Units
 | hectometer | *hm* | 100.0 |
 | kilometer | *km* | 1000.0 |
 
-
-## Menu shortcuts
-
-- Arrow keys can be used to navigate into a menu
-- Each menu item has an underlined character which can be pressed to activate it.
-- Number keys or numpad can be used to access menu items. (Where *1* is the first menu item, *2* the second... etc. For larger menus *Alt-1* the 11th... up to *Alt-0* the 20th)
-- Press **Enter** to activate the selected menu item.
-- Press **Esc** to cancel the menu.
 

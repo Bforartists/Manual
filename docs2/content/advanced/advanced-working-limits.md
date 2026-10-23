@@ -1,6 +1,6 @@
 ---
 id: advanced.advanced-working-limits
-title: Advanced - Working Limits
+title: "Working Limits"
 section: advanced
 path:
   - Advanced
@@ -10,6 +10,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 34 Advanced - Working Limits.odt
+icon: error
 ---
 ## Working Limits
 

@@ -1,6 +1,6 @@
 ---
 id: appendix.bforartists-history
-title: Bforartists History
+title: "Bforartists History"
 section: appendix
 path:
   - Appendix
@@ -10,6 +10,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 39 Bforartists History.odt
+icon: blender
 ---
 ## Bforartists 5 History
 

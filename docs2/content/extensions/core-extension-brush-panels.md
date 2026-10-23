@@ -1,6 +1,6 @@
 ---
 id: extensions.bforartists-extensions.core-extension-brush-panels
-title: Core Extension - Brush Panels
+title: "Brush Panels"
 section: extensions
 path:
   - Extensions
@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 35.1 Core Extension - Brush Panels.odt
+icon: brush_data
 ---
 ## Brush Panels
 

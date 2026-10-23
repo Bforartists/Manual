@@ -1,6 +1,6 @@
 ---
 id: interface.sidebar
-title: Sidebar
+title: "Side Bars"
 section: interface
 path:
   - The Interface
@@ -11,6 +11,8 @@ status: draft
 screenshots: "5.1"
 source:
   - 3 Interface.odt
+icon: sidebar
+summary: "The tabs on the right side of an editor: open, close and resize them."
 ---
 ![Sidebar](/docs2/images/ui/interface/sidebar/sidebar.png)
 

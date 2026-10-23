@@ -1,6 +1,6 @@
 ---
 id: interface.panels-and-tabs
-title: Panels and tabs
+title: "Tabs & Panels"
 section: interface
 path:
   - The Interface
@@ -11,6 +11,8 @@ status: draft
 screenshots: "5.1"
 source:
   - 3 Interface.odt
+icon: new_window
+summary: "How settings are grouped: collapse, reorder and pin panels, and switch tabs."
 ---
 ## Panels
 
