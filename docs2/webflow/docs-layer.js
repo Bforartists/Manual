@@ -73,6 +73,10 @@
     '.dk-seg button.is-on{background:var(--_bfa---surface--raised);color:var(--dk-text)}',
     '.dk-cat{margin:1.5rem 0 .75rem;font:700 1rem Inter,sans-serif;color:var(--dk-text)}',
     '.dk-cat:first-of-type{margin-top:0}',
+    '.dk-cat::before,.dk-cat::after{display:none!important;content:none!important}',
+    'html.dk-overview .ui-doc-body>.ui-doc-subsec{padding:0;background:none;box-shadow:none}',
+    'html.dk-overview .ui-doc-body>.ui-doc-subsec>p{margin:0 0 1.25rem}',
+    'html.dk-overview .ui-doc-now{display:none!important}',
     '.dk-cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:1rem}',
     '.dk-ccard{display:grid;grid-template-columns:4.5rem minmax(0,1fr);gap:1rem;align-items:start;padding:1rem;color:var(--dk-text);text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}',
     '.dk-ccard:hover{transform:translateY(-2px);box-shadow:0 2px 3px #0006,calc(var(--sx,0)*12px) 16px 22px -12px var(--dk-drop)}',
@@ -176,6 +180,7 @@
   function ico(f, cls) { return '<img alt="" class="' + (cls || 'is-color') + '" src="' + (iu(f) || CDN + IC.doc) + '">'; }
   function ls(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
   function plural(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
+  function mins(m) { m = m || 1; return m < 120 ? m + ' min' : Math.round(m / 60) + ' h'; }
 
   var NAV = null, IDX = null;
   function index(nav) {
@@ -248,10 +253,10 @@
     hero.innerHTML = '<div class="dk-sticker">' + ico(sec.i) + '</div><div class="dk-hero-tx"><div class="dk-eyebrow">Section ' + (si + 1) + ' of ' + secs.length + ' · Documentation</div>' +
       '<h1 class="type-h1 ui-doc-title">' + esc(title) + '</h1><p class="type-lead ui-doc-summary">' + esc(summary) + '</p><div class="dk-hero-go">' +
       (first ? '<a class="dk-btn is-primary" href="/docs/' + first.s + '">' + ico(first.i) + 'Start with ' + esc(first.t) + '</a>' : '') +
-      '<span>' + plural(chapters.length, 'chapter', 'chapters') + ' · ' + plural(sec.n || 0, 'page', 'pages') + ' · about ' + (sec.m || 1) + ' min</span></div></div>';
+      '<span>' + plural(chapters.length, 'chapter', 'chapters') + ' · ' + plural(sec.n || 0, 'page', 'pages') + ' · about ' + mins(sec.m) + ' of reading</span></div></div>';
     art.insertBefore(hero, art.firstChild);
     /* the intro text that repeats the summary goes */
-    qa('p', body).slice(0, 2).forEach(function (p) { if (p.textContent.trim() === summary) p.remove(); });
+    qa('p', body).slice(0, 2).forEach(function (p) { var t = p.textContent.trim(); if (summary && t.indexOf(summary.replace(/[.…]+$/, '')) === 0) { var rest = t.slice(summary.length).trim(); if (rest) p.textContent = rest; else p.remove(); } });
     /* chapter cards: categories (h3) and links from the synced list, details from nav.json */
     var src = q('.ui-doc-cards', body); if (!src) return;
     var box = el('div', 'dk-chapters' + (ls('bfa-docs-cards') === 'list' ? ' is-list' : ''));
