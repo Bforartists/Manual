@@ -20,6 +20,7 @@ from urllib.parse import quote
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from docs_io import DOCS_ROOT, iter_pages, site_tree  # noqa: E402
 import html_build  # noqa: E402
+import landing  # noqa: E402
 
 REPO_URL = os.environ.get("DOCS_REPO_URL", "https://github.com/Bforartists/Manual")
 CMS_URL = os.environ.get("DOCS_CMS_URL", "https://app.pagescms.org/Bforartists/Manual")
@@ -92,12 +93,21 @@ class Builder:
         self.images = set()
 
     def body_html(self, page, out_file):
-        return html_build.page_html(
+        page_url = lambda t: rel_url(out_file, out_name(t)) if t.rel in self.targets else None  # noqa: E731
+        html = html_build.page_html(
             self.repo, page, self.pages, self.md,
             img_url=lambda r: (RAW_BASE + r) if RAW_BASE else rel_url(out_file, r),
-            page_url=lambda t: rel_url(out_file, out_name(t)) if t.rel in self.targets else None,
+            page_url=page_url,
             file_url=lambda r: f"{REPO_URL}/blob/{self.branch}/{r}",
             used_images=self.images)
+        if not hasattr(self, "_kids"):
+            self._kids = landing.children_map(self.tree)
+            self._node = {n.page.rel: n for sec in self.tree for n in sec.nodes}
+        node = self._node.get(page.rel)
+        if node is not None:               # cards for the sub-pages, as on the website
+            url_of = lambda n: page_url(n.page) or f"{REPO_URL}/blob/{self.branch}/{n.page.rel}"  # noqa: E731
+            html = landing.add_cards(html, page, self._kids.get(node.id, []), self._kids, url_of)
+        return html
 
     def sidebar(self, current, out_file):
         rows = []

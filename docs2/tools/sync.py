@@ -31,6 +31,7 @@ import urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from docs_io import iter_pages, site_tree, slugify  # noqa: E402
 import html_build  # noqa: E402
+import landing  # noqa: E402
 
 API = "https://api.webflow.com/v2"
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -199,10 +200,32 @@ def build(repo, cfg):
         f = {"snippet-id": sid, "name": str(p.fm.get("title") or sid),
              "body": tidy(html_build.page_html(repo, p, by_rel, md, **urls, snippet=True)), "source-path": p.rel}
         snippets.append({"key": sid, "slug": slugify(sid.split(".", 1)[-1]), "fields": f, "rel": p.rel, "create": {}})
+    kids = landing.children_map(tree)
+    url_of = lambda n: cfg["page_url"] + n.web_slug                  # noqa: E731
+    sec_cfg = landing.sections_cfg()
+    for sec in tree:                       # each section is a page too: /docs/<section id>, intro + cards
+        idx = sec.index
+        body = html_build.page_html(repo, idx, by_rel, md, **urls) if idx else ""
+        body = tidy(landing.add_cards(body, idx, kids.get(sec.id, []), kids, url_of,
+                                      sec_cfg.get(sec.id, {}).get("categories"), sec.id, heading=None))
+        if not body:
+            continue
+        key = str(idx.fm.get("id")) if idx and idx.fm.get("id") else f"{sec.id}.index"
+        f = {"page-id": key, "name": str(sec.title), "section-id": sec.id, "section-title": sec.title,
+             "order": 0, "level": 0, "parent-page-id": "", "body": body,
+             "version": str((idx.fm.get("version") if idx else "") or ""),
+             "status": str((idx.fm.get("status") if idx else None) or "draft"),
+             "reading-minutes": 1, "source-path": idx.rel if idx else ""}
+        if idx and idx.fm.get("summary"):
+            f["summary"] = str(idx.fm["summary"])
+        docs.append({"key": key, "slug": slugify(sec.id), "fields": f,
+                     "create": {"summary": html_build.first_paragraph(body)},
+                     "section": sec.id, "shared": [str(s) for s in ((idx.fm.get("shared") if idx else None) or [])]})
     for sec in tree:
         for n in sec.nodes:
             p = n.page
-            body = tidy(html_build.page_html(repo, p, by_rel, md, **urls))
+            body = html_build.page_html(repo, p, by_rel, md, **urls)
+            body = tidy(landing.add_cards(body, p, kids.get(n.id, []), kids, url_of))
             words = len(re.sub(r"<[^>]+>", " ", body).split())
             f = {"page-id": n.id, "name": str(p.fm.get("title") or n.id), "section-id": sec.id,
                  "section-title": sec.title, "order": n.order, "level": n.level,
@@ -219,7 +242,10 @@ def build(repo, cfg):
             docs.append({"key": n.id, "slug": n.web_slug, "fields": f,
                          "create": {"summary": html_build.first_paragraph(body)},   # only for new items
                          "section": sec.id, "shared": [str(s) for s in (p.fm.get("shared") or [])]})
-    return {"sha": sha, "sections": sections, "snippets": snippets, "pages": docs}
+    base, icons = landing.load_icons()
+    nav = landing.nav_tree(tree, kids, icons, lambda sec: slugify(sec.id), lambda n: n.web_slug, sha[:7])
+    nav["base"], nav["page_url"] = base, cfg["page_url"]
+    return {"sha": sha, "sections": sections, "snippets": snippets, "pages": docs, "nav": nav}
 
 
 # ---------------------------------------------------------------- apply
@@ -281,12 +307,14 @@ KNOWN = {}      # collection id -> field slugs it has (sections have no checksum
 def main(argv):
     opts = {a for a in argv if a.startswith("--")}
     args, it = [], iter(argv)
-    plan_out = report_out = None
+    plan_out = report_out = nav_out = None
     for a in it:
         if a == "--plan":
             plan_out = next(it)
         elif a == "--report":
             report_out = next(it)
+        elif a == "--nav":
+            nav_out = next(it)
         elif not a.startswith("--"):
             args.append(a)
     repo = args[0] if args else "."
@@ -294,6 +322,9 @@ def main(argv):
     plan = build(repo, cfg)
     if plan_out:
         json.dump(plan, open(plan_out, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
+    if nav_out:                            # the sidebar for the docs script (published to GitHub Pages)
+        os.makedirs(os.path.dirname(os.path.abspath(nav_out)), exist_ok=True)
+        json.dump(plan["nav"], open(nav_out, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     lines = [f"### 🌐 Webflow sync{'' if '--apply' in opts else ' (plan only)'}", "",
              f"{len(plan['sections'])} section(s) · {len(plan['pages'])} page(s) · {len(plan['snippets'])} shared section(s) "
              f"from commit `{plan['sha'][:7]}`", ""]
