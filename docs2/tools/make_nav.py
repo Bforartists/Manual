@@ -20,7 +20,7 @@ import yaml
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DOCS = os.path.dirname(HERE)
-KEEP = {"getting-started", "interface"}          # hand-ordered sections
+KEEP = {"getting-started", "interface", "workspaces", "assets"}   # hand-ordered sections
 
 
 def q(s):

@@ -61,6 +61,12 @@ sections:
       "20.1": Header
       "20.3": Sidebar
 
+  - id: assets
+    title: Assets
+    icon: asset_manager
+    legacy: /documentation/assets
+    chapters: []
+
   - id: extensions
     title: Extensions and Addons
     icon: plugin

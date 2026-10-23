@@ -1,7 +1,7 @@
 ---
 id: editors.asset-browser.asset-browser-essentials-asset-library
-title: Asset Browser - Essentials Asset Library
-section: editors
+title: "Essentials Library"
+section: assets
 path:
   - Editors
   - Asset Browser
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 28.2 Asset Browser - Essentials Asset Library.odt
+icon: brush_data
+cta: "Browse"
+summary: "The library Bforartists ships from Blender: brushes, hair node groups and normals tools."
 ---
 ## Essentials Asset Library
 

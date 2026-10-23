@@ -1,6 +1,6 @@
 ---
 id: appendix.index
-title: Information
+title: "Information"
 section: appendix
 path:
   - Information
