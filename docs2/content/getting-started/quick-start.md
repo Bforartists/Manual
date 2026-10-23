@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 summary: "A mini tutorial: basic navigation, then your first render."
 cta: "Let's go"
+icon: pose_data
 ---
 Dive in and start a mini tutorial to get started. Cover basic navigation and make your first render!
 

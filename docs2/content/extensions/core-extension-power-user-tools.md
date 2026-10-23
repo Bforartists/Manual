@@ -1,6 +1,6 @@
 ---
 id: extensions.bforartists-extensions.core-extension-power-user-tools
-title: Core Extension - Power User Tools
+title: "Power User Tools"
 section: extensions
 path:
   - Extensions
@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 35.4 Core Extension - Power User Tools.odt
+icon: settings
 ---
 ## Power User Tools
 

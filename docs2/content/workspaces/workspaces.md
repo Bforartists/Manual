@@ -1,6 +1,6 @@
 ---
 id: workspaces.workspaces
-title: Workspaces
+title: "Managing Workspaces"
 section: workspaces
 path:
   - Workspaces
@@ -10,7 +10,13 @@ status: draft
 screenshots: "5.1"
 source:
   - 4 Workspaces.odt
+icon: workspace
+summary: "Create, change, save and load workspaces, and the workspace tab menu."
+cta: "Manage"
+order: 10
 ---
+A **workspace** is a ready-made layout of editors for one kind of work, with its own tab in the Top Bar. This page explains how to create, change, save and load workspaces. The pages after it introduce each workspace that comes with Bforartists and the editors it shows.
+
 ## Introduction
 
 ![Introduction](/docs2/images/workspaces/workspaces/introduction.png)
@@ -22,101 +28,6 @@ To switch between the workspaces simply click at the tabs.
 The chapter tabs and default workspaces is explained in the chapter Topbar. It is menu functionality. And menu functionality gets explained where the menu is.
 
 This chapter here is about the general functionality of workspaces.
-
-## Modifying Workspaces
-
-### Resizing Editor Windows
-
-![Resizing Editor Windows](/docs2/images/workspaces/workspaces/resizing-editor-windows.png)
-
-Move the mouse over a border between the editors. The mouse cursor will turn into a double arrow. Drag the arrow around and the editor will resize with your moving mouse.
-
-In the Default layout there are two editors that are collapsed to just show the menu. The menu bar at the top is an own editor. The Info editor. You can drag it down to reveal a text field. Here Bforartists displays all the former actions as strings. When you create a primitive for example, then it displays a string with the python command for it.
-
-![Resizing Editor Windows](/docs2/images/workspaces/workspaces/resizing-editor-windows-2.png)
-
-The other collapsed editor is at the bottom. The timeline.
-
-### Splitting Editor Windows
-
-When you move the mouse over the upper corner of an editor window, then the mouse pointer turns into a white cross.
-
-![Splitting Editor Windows](/docs2/images/workspaces/workspaces/splitting-editor-windows.png)
-
-![Splitting Editor Windows](/docs2/images/workspaces/workspaces/splitting-editor-windows-2.png)
-
-When you click and drag the mouse inwards of the current editor, then the editor splits up. You open a second 3D view for example.
-
-### Unioning Editor Windows
-
-![Unioning Editor Windows](/docs2/images/workspaces/workspaces/unioning-editor-windows.png)
-
-The method is nearly the same than with splitting the editor windows. When you move the mouse over the upper corner of an editor window, then the mouse pointer turns into a white cross.
-
-When you click and drag the mouse outwards of the current editor, then the editor unions with the neighbor editor. Note that this just works when they are in one row, horizontally or vertically.
-
-### Swapping Contents
-
-You can swap the contents between two editors with clicking at the corner area, holding Ctrl, and drag into the target editor. The mouse pointer will turn into a swap icon. When you release the mouse the two editors will swap their positions.
-
-![Swapping Contents](/docs2/images/workspaces/workspaces/swapping-contents.png)
-
-![Swapping Contents](/docs2/images/workspaces/workspaces/swapping-contents-2.png)
-
-### Make Editor Window floating
-
-![Make Editor Window floating](/docs2/images/workspaces/workspaces/make-editor-window-floating.png)
-
-When you move the mouse over the upper corner of an editor window, then the mouse pointer turns into a white cross.
-
-Hold down Shift, and drag the mouse. The editor will detach from the Blender surface. This is useful for a multi monitor setup for example. Now you can place this editor at Monitor 2.
-
-Note that there is no way to reintegrate this floating editor window back into the Blender UI once it is detached. You have to close it.
-
-## Change Editor Type
-
-![Change Editor Type](/docs2/images/workspaces/workspaces/change-editor-type.png)
-
-![Change Editor Type](/docs2/images/workspaces/workspaces/change-editor-type-2.png)
-
-There is a Editor Type menu in every header. This menu is usually hidden in the default layouts. It can be revealed by either splitting the editor window. Or in the right click menu in the header. Hide editortype menu. See next point.
-
-![Change Editor Type](/docs2/images/workspaces/workspaces/change-editor-type-3.png)
-
-When you click at this button then a menu with all available editor types opens up. And you can change the current editor to another editor type.
-
-## Show / Hide the editor type menu
-
-![Show / Hide the editor type menu](/docs2/images/workspaces/workspaces/change-editor-type-2.png)
-
-You might have noticed that the editor type menu is not available in the editors of the standard layouts. This is to reduce visual noise and to free some UI space.
-
-You can show and hide this editor type menu. To do so right click at an empty space somewhere at the menu bar of an editor. You will see a menu now. Check or uncheck the menu item Hide Editortype Menu to show or hide the Editor Type menu.
-
-## Collapse Menus
-
-![Collapse Menus](/docs2/images/workspaces/workspaces/collapse-menus.png)
-
-The text menus can be collapsed to free some UI space. Right click at an empty space somewhere at the menu bar of an editor. You will see a menu now. Choose if you want to display the text menu collapsed or expanded.
-
-## Resize Tool Shelf and Properties content
-
-![Resize Tool Shelf and Properties content](/docs2/images/workspaces/workspaces/resize-tool-shelf-and-properties-content.png)
-
-You can resize the Tool Shelf content and the Properties Sidebar content. This means that you can zoom in or out. This trick also works in the Properties Editor.  
-  
-Move the mouse over the upper region of the Tool Shelf.  
-Hold down Ctrl key  
-Click with Middle Mouse button. The mouse pointer will turn into two white triangles.
-
-Now drag up or down to resize the area content
-
-OR
-
-Move the mouse over the upper region of the Tool Shelf.  
-Simply press Numpad + or Numpad -
-
-To reset the area content to default scale move the mouse over the area and press Home key ( german keyboard layout Pos 1)
 
 ## Create new Workspace
 
@@ -197,98 +108,4 @@ Note that now all Blend files that you open will load the workspace layout that 
 ![Load Workspace layout from Blend Files](/docs2/images/workspaces/workspaces/load-workspace-layout-from-blend-files-2.png)
 
 You can also do this at a file by file base. The file browser allows you to load a blend file with the saved layout. This setting can be found down left in the file browser.
-
-## Standard Workspaces
-
-
-|  |  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
-| This layout is for general 3D work. Here you work at your 3D scene. Here happens modeling, texturing, etc. . It is also the workspace with which Bforartists opens up. It contains a 3D View editor, an Info editor, a Timeline editor, a Outliner editor and a Properties editor. It starts in Object Mode. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces.png) |
-
-
-|  |  |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| The UV Editing is made for texturing and UV mapping. It contains an Info Editor, a UV Editor and a 3D View editor. The 3D View starts in Edit mode. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-2.png) |
-
-
-|  |  |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| Same as the Default workspace. It starts in Object Mode. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-3.png) |
-
-
-|  |  |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| The workspace to work with the geometry nodes. Basic 3d view with the geometry nodes editor plus the spreadsheet editor to have access to the mesh data. A timeline at the bottom. And the usual outliner and properties editor. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-4.png) |
-
-
-|  |  |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| This workspace provides you with a layout that is optimized for Animation tasks. It contains two 3D View editors, an Info Editor, a Outliner Editor, a Properties Editor, a Timeline Editor, a Dope Sheet Editor. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-5.png) |
-
-
-|  |  |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| The texture painting workspace is made to do texture painting work. It contains an Info Editor, a Image Editor and a 3D View editor. The 3D View starts in Edit mode. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-6.png) |
-
-
-|  |  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| The workspace to do all the shader and material work. It comes with a file browser, an image editor, the 3D view in a special view look setup, the shader editor, outliner and properties editor. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-7.png) |
-
-
-|  |  |
-| ------------------------------ | ------------------------------------------------------------------------------- |
-| A workspace for the rendering. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-8.png) |
-
-
-|  |  |
-| ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| This workspace is dedicated to sculpting. It starts in Sculpt Mode in case you have an object in the scene. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-9.png) |
-
-
-|  |  |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------- |
-| The workspace to do compositing and post processing. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-10.png) |
-
-
-|  |  |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| The scripting workspace gives you a layout where you can write Python code. It contains an Info editor, a 3D View editor, a Console editor, a Text editor, a Outliner Editor and a Properties Editor. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-11.png) |
-
-
-|  |  |
-| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| A workspace to work with the grease pencil and to create 2D animation. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-12.png) |
-
-
-|  |  |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| A workspace to work with the grease pencil and to create 2D animation. The 3D view is maximized. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-13.png) |
-
-
-|  |  |
-| -------------------------------------------------- | -------------------------------------------------------------------------------- |
-| A workspace for the VFX workflow, to mask content. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-14.png) |
-
-
-|  |  |
-| ------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| A workspace for the VFX workflow. The Motion tracking layout. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-15.png) |
-
-
-|  |  |
-| --------------------------- | -------------------------------------------------------------------------------- |
-| A workspace to edit videos. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-16.png) |
-
-
-|  |  |
-| ------------------------------------------------ | -------------------------------------------------------------------------------- |
-| A workspace that provides you the asset browser. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-17.png) |
-
-
-|  |  |
-| ------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| A 3d sequencer workspace. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-18.png) |
-| A video editing workspace especially made for color balance. | ![Standard Workspaces](/docs2/images/workspaces/workspaces/standard-workspaces-18.png) |
-
 

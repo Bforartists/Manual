@@ -1,6 +1,6 @@
 ---
 id: advanced.advanced-command-line
-title: Advanced - Command Line
+title: "Command Line"
 section: advanced
 path:
   - Advanced
@@ -10,6 +10,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 32 Advanced - Command Line.odt
+icon: console
 ---
 ## Command Line Arguments
 

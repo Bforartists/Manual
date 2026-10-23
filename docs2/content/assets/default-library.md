@@ -1,7 +1,7 @@
 ---
 id: editors.asset-browser.asset-browser-default-asset-library
-title: Asset Browser - Default Asset LIbrary
-section: editors
+title: "Default Library"
+section: assets
 path:
   - Editors
   - Asset Browser
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 28.1 Asset Browser - Default Asset LIbrary.odt
+icon: asset_manager
+cta: "Browse"
+summary: "The Bforartists library: brushes, collections, materials and objects."
 ---
 ## Introduction
 

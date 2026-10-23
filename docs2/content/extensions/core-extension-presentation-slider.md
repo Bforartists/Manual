@@ -1,6 +1,6 @@
 ---
 id: extensions.bforartists-extensions.core-extension-presentation-slider
-title: Core Extension - Presentation Slider
+title: "Presentation Slides"
 section: extensions
 path:
   - Extensions
@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 35.2 Core Extension- Presentation Slider.odt
+icon: image
 ---
 ## Presentation Slides
 

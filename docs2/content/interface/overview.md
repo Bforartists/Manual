@@ -1,6 +1,6 @@
 ---
 id: interface.basics
-title: Interface basics
+title: "Overview"
 section: interface
 path:
   - The Interface
@@ -10,6 +10,8 @@ status: draft
 screenshots: "5.1"
 source:
   - 3 Interface.odt
+icon: hide_off
+summary: "The ideas behind the Bforartists interface, tooltips, and the splash screen."
 ---
 ## Interface
 
