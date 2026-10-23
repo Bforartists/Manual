@@ -1,0 +1,2865 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Edit Mode · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/q3-editors-split · <code>docs2/q3-editors-split</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Overview</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<a href="../../../workspaces/storyboarding.html">Storyboarding</a>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<a href="../../../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:1.5rem" href="../all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="../armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../lattice/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../mesh/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../text/edit.html">Edit Mode</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:2.5rem" href="../armature/pose.html">Pose Mode</a>
+<a class="is-current" style="padding-left:2.5rem" href="edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:2.5rem" href="../mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:1.5rem" href="../object-mode.html">Object Mode</a>
+<span style="padding-left:2.5rem">File menu</span>
+<a style="padding-left:2.5rem" href="sculpt.html">Sculpt Mode</a>
+<a style="padding-left:1.5rem" href="../mesh.html">Mesh</a>
+<a style="padding-left:2.5rem" href="../mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Edit menu</span>
+<a style="padding-left:1.5rem" href="../curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../mesh/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Render menu</span>
+<a style="padding-left:2.5rem" href="weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../mesh/texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="../metaball.html">Metaball</a>
+<span style="padding-left:2.5rem">Window menu</span>
+<a style="padding-left:2.5rem" href="../mesh/particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="../text.html">Text</a>
+<span style="padding-left:2.5rem">Help menu</span>
+<a style="padding-left:1.5rem" href="../lattice.html">Lattice</a>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="../armature.html">Armature</a>
+<span>3D Viewport</span>
+<a style="padding-left:1.5rem" href="../grease-pencil.html">Grease Pencil</a>
+<span>Image Editor</span>
+<a style="padding-left:1.5rem" href="../hair-curves.html">Hair Curves</a>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../point-cloud.html">Point Cloud</a>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View menu</span>
+<span style="padding-left:2.5rem">Image menu</span>
+<span style="padding-left:2.5rem">Select menu</span>
+<span style="padding-left:2.5rem">Add menu</span>
+<span style="padding-left:2.5rem">Mask menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Tool Tab in Paint Mode</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Scopes Tab</span>
+<span style="padding-left:2.5rem">Mask Tab</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">UV menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span>Compositor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Color - Adjust</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Creative</span>
+<span style="padding-left:2.5rem">Add Menu - Filter - Blur</span>
+<span style="padding-left:2.5rem">Add Menu - Filter</span>
+<span style="padding-left:2.5rem">Add Menu - Keying</span>
+<span style="padding-left:2.5rem">Add Menu - Mask</span>
+<span style="padding-left:2.5rem">Add Menu - Tracking</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Transform</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Geometry Nodes Editor - Header - Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Texture Node Editor</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Gizmo</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Import</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Attribute</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - UV</span>
+<span style="padding-left:2.5rem">Add Menu - Point</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Simulation</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Text</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Bundle</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Closure</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Field</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Matrix</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Rotation</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Deprecated</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Generate</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Selection</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Deformation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Generation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Guides</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span style="padding-left:2.5rem">Node tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Add</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span>Shader Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Shader</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Video Sequence Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Export Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Strip Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">Text Menu</span>
+<span style="padding-left:2.5rem">Scene Menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Preview - Tool tab</span>
+<span style="padding-left:2.5rem">Preview - View tab</span>
+<span style="padding-left:2.5rem">Sequencer - Strip tab</span>
+<span style="padding-left:2.5rem">Sequencer - Tool tab</span>
+<span style="padding-left:2.5rem">Sequencer - Cache tab</span>
+<span style="padding-left:2.5rem">Sequencer - Proxy tab</span>
+<span style="padding-left:2.5rem">Sequencer - View tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Movie Clip Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Clip Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Track Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Graph Submode - Graph Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Clip Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Add Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Mask Menu</span>
+<span style="padding-left:1.5rem">Tool shelf</span>
+<span style="padding-left:2.5rem">Tracking Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Footage Tab</span>
+<span style="padding-left:2.5rem">Track tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - Stabilization tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - View tab</span>
+<span>Dope Sheet</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:2.5rem">Action Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span>Graph Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Drivers Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Drivers Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">Driver Editor - Sidebar - View Tab</span>
+<span>Nonlinear Animation Editor</span>
+<span style="padding-left:2.5rem">NLA Editor - Header tools and options</span>
+<span style="padding-left:2.5rem">NLA Editor - Header - Quick Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - View Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Select Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Marker Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Add Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Track Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Strip Menu</span>
+<span style="padding-left:1.5rem">NLA Editor - Channel list</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Animation Data panel</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Strip tab</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Modifiers Tab</span>
+<span style="padding-left:1.5rem">NLA Editor - Footer tools and options</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:1.5rem">Render Properties Tab</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:1.5rem">Output Properties Tab</span>
+<span style="padding-left:1.5rem">View Layer Properties Tab</span>
+<span style="padding-left:1.5rem">Scene Properties Tab</span>
+<span style="padding-left:1.5rem">World Properties Tab</span>
+<span style="padding-left:1.5rem">Collection Properties Tab</span>
+<span style="padding-left:1.5rem">Object Properties Tab</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Particle Properties Tab</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:1.5rem">Visual Effects Properties Tab</span>
+<span style="padding-left:1.5rem">Physics Properties Tab</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:1.5rem">Object Constraints Properties Tab</span>
+<span style="padding-left:1.5rem">Object Data Properties Tab</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span style="padding-left:1.5rem">Material Properties Tab</span>
+<span style="padding-left:1.5rem">Texture Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Constraint Properties</span>
+<span style="padding-left:1.5rem">Strip Tab</span>
+<span style="padding-left:1.5rem">Strip Modifiers Tab</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<a href="../../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../../assets/default-library.html">Default Library</a>
+<a href="../../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Standard Keymap</span>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<a href="../../../appendix.html">Information</a>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../../appendix/gpl-license.html">About the GPL License</a>
+<a href="../../../appendix/community-influences.html">The Community Influences</a>
+<a href="../../../appendix/glossary.html">Glossary</a>
+<a href="../../../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Grease Pencil › Edit Mode</div><h1 class="pv-title">Edit Mode</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 37 min read</span></div><article class="ui-doc-body"><p><span class="ui-doc-menu">Grease Pencil › Edit Mode</span>: every menu, tool, sidebar tab and context menu of this mode, on one page. Use the panels on the right to jump between the regions.</p>
+<h1 id="header">Header</h1>
+<h2 id="grease-pencil-menu">Grease Pencil menu</h2>
+<h3 id="edit-mode-grease-pencil-menu">Edit Mode - Grease Pencil Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/edit-mode-grease-pencil-menu.png" alt="Edit Mode - Grease Pencil Menu" loading="lazy"><figcaption>Edit Mode - Grease Pencil Menu</figcaption></figure>
+<h3 id="transform-submenu">Transform submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/transform-submenu.png" alt="Transform submenu" loading="lazy"></figure>
+<h4 id="to-sphere">To Sphere</h4>
+<p>Transforms the selected geometry into a sphere shape.</p>
+<h5 id="last-operator-to-sphere">Last Operator To Sphere</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-to-sphere.png" alt="Last Operator To Sphere" loading="lazy"><figcaption>Last Operator To Sphere</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>The transform factor.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Edit mirror geometry too.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="proportional-editing">Proportional Editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/proportional-editing.png" alt="Proportional Editing" loading="lazy"></figure>
+<h6 id="proportional-editing-2">Proportional editing</h6>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="shear">Shear</h4>
+<p>Shear shears the selection.</p>
+<p>In Object mode this tools requires to have more than one object selected.</p>
+<p>The shear tool works along a imaginary 2d plane. The shear axis controls if the items are sheared along the x or the y axes of this plane. This is the plane along which the transformation happens. You can shear along the x or the y axis of this plane.</p>
+<p>To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.</p>
+<h5 id="last-operator-shear">Last Operator Shear</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png" alt="Last Operator Shear" loading="lazy"></figure>
+<h6 id="offset">Offset</h6>
+<p>Adjust an offset.</p>
+<h6 id="axis">Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/object-menu/axis.png" alt="Axis" loading="lazy"></figure>
+<p>Defines one axis of the imaginary shear axis plane.</p>
+<h6 id="axis-ortho">Axis Ortho</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/object-menu/axis.png" alt="Axis Ortho" loading="lazy"></figure>
+<p>Defines the other axis of the imaginary shear axis plane.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Orientation</td>
+<td>Choose the orientation for the shear action.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="proportional-editing-3">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bend">Bend</h4>
+<p>Bends the selection.</p>
+<h4 id="push-pull">Push/Pull</h4>
+<p>It pushes or pulls the object positions relative to the center of the selection.</p>
+<p>In Object mode this tool requires to have more than one object selected.</p>
+<h5 id="last-operator-push-pull">Last Operator Push/Pull</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png" alt="Last Operator Push/Pull" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distance</td>
+<td>Adjust the distance of influence of the tool.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="proportional-editing-4">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="radius">Radius</h4>
+<p>Scales the selected geometry of a curve along its normals. Grease pencil is under the hood a curve. Transform orientation and Pivot point gets ignored.</p>
+<p>A positive value pushes the vertices outwards. A negative value pushes the vertices inwards.</p>
+<h5 id="last-operator-transform">Last Operator Transform</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png" alt="Last Operator Transform" loading="lazy"></figure>
+<h6 id="values">Values</h6>
+<p>The transform values.</p>
+<h6 id="axis-2">Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/axis.png" alt="Axis" loading="lazy"></figure>
+<p>The transform axis.</p>
+<h6 id="orientation">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable Mirror Editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="opacity">Opacity</h5>
+<p>Changes the transparency of selected Grease Pencil vertices. Higher values = more opaque; lower values = more transparent. This is useful for shading, layering, or fade effects in drawings.</p>
+<p>To use, activate then drag left or right to change the stroke opacity.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This does not affect fill opacity, only stroke.</p></div>
+<h5 id="last-operator-transform-2">Last Operator Transform</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png" alt="Last Operator Transform" loading="lazy"></figure>
+<h6 id="values-2">Values</h6>
+<p>The transform values.</p>
+<h6 id="axis-3">Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/axis.png" alt="Axis" loading="lazy"></figure>
+<p>The transform axis.</p>
+<h6 id="orientation-2">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable Mirror Editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mirror-submenu">Mirror submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/mirror.png" alt="Mirror submenu" loading="lazy"></figure>
+<p>Mirror mirrors the selected geometry along the defined axis.</p>
+<h4 id="interactive-mirror">Interactive Mirror</h4>
+<p>Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored</p>
+<h4 id="x-global-y-global-etc">X Global, Y Global etc.</h4>
+<p>Mirrors the selection around the chosen axis.</p>
+<h5 id="last-operator-mirror">Last Operator Mirror</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/x-global-y-global-etc.png" alt="Last Operator Mirror" loading="lazy"></figure>
+<p>The Last Operator Mirror panel gives you tools to adjust the mirror action.</p>
+<h6 id="orientation-3">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box . Choose the type of orientation for the mirroring action.</p>
+<h6 id="constraint-axis">Constraint Axis</h6>
+<p>Constraint Axis gives you again the possibility to define the mirror axis. You can choose more than one axis here.</p>
+<h3 id="snap-submenu">Snap submenu</h3>
+<h4 id="snap">Snap</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/snap-sub-menu.png" alt="Snap" loading="lazy"></figure>
+<p>Choose several methods to snap one element to another. The menu items should be self explaining.</p>
+<h5 id="last-operator-snap-selection-to-cursor">Last operator Snap Selection to Cursor</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-snap.png" alt="Last operator Snap Selection to Cursor" loading="lazy"><figcaption>Last operator Snap Selection to Cursor</figcaption></figure>
+<p>Some snap operations shows a last operation panel, some not.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>If the selection should snap as a whole, or if each individual element of the selection should snap.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>If the selection should be rotated to match the cursor.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active-layer">Active Layer</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/active-layer.png" alt="Active Layer" loading="lazy"></figure>
+<p>Set the active layer</p>
+<h4 id="new-layer">New Layer</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/new-layer.png" alt="New Layer" loading="lazy"></figure>
+<p>Add a new greasepencil layer. A popup will appear where you can add the name.</p>
+<h4 id="layers">Layers</h4>
+<p>The list of the available layers.</p>
+<h3 id="animation">Animation</h3>
+<h4 id="insert-blank-key-frame-active-layer">Insert Blank Key frame ( Active Layer )</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/insert-blank-key-frame-active-layer.png" alt="Insert Blank Key frame ( Active Layer )" loading="lazy"><figcaption>Insert Blank Key frame ( Active Layer )</figcaption></figure>
+<p>Inserts a key frame into the active layer.</p>
+<h4 id="insert-blank-key-frame-all-layers">Insert Blank Key frame ( All Layers )</h4>
+<p>Inserts a key frame into all layers.</p>
+<h4 id="last-operator-insert-blank-frame">Last Operator Insert Blank Frame</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-insert-blank-frame.png" alt="Last Operator Insert Blank Frame" loading="lazy"><figcaption>Last Operator Insert Blank Frame</figcaption></figure>
+<p>Some snap operations shows a last operation panel, some not.</p>
+<h5 id="all-layers">All Layers</h5>
+<p>Insert into active layer or into all layers.</p>
+<h4 id="duplicate-active-key-frame-active-layer">Duplicate Active Key frame ( Active Layer )</h4>
+<p>Duplicates the active key frame in the active layer.</p>
+<h4 id="duplicate-active-key-frame-all-layers">Duplicate Active Key frame ( All Layers )</h4>
+<p>Duplicates the active key frame in all layers.</p>
+<h4 id="last-operator-insert-blank-frame-2">Last Operator Insert Blank Frame</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-insert-blank-frame-2.png" alt="Last Operator Insert Blank Frame" loading="lazy"><figcaption>Last Operator Insert Blank Frame</figcaption></figure>
+<p>Some snap operations shows a last operation panel, some not.</p>
+<h5 id="mode">Mode</h5>
+<p>Duplicate the active key frame in the active layer or in all layers.</p>
+<h4 id="delete-active-key-frame-active-layer">Delete Active Key frame ( Active Layer )</h4>
+<p>Deletes the active key frame in the active layer.</p>
+<h4 id="delete-active-key-frame-all-layers">Delete Active Key frame ( All Layers )</h4>
+<p>Deletes the active key frame in all layers</p>
+<h3 id="single-operators">Single Operators</h3>
+<h4 id="interpolate-sequence">Interpolate Sequence</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/interpolate-sequence.png" alt="Interpolate Sequence" loading="lazy"></figure>
+<p>Interpolate strokes between the previous and next keyframe by adding multiple keyframes. When you are on a frame between two keyframes and click the sequence button, then a breakdown keyframe will be added on every frame between the previous and next keyframe.</p>
+<h4 id="duplicate">Duplicate</h4>
+<p>Duplicates the current selection. This can be a single control point or a whole curve.</p>
+<p>The copy sticks to the mouse until you release it. A Right click while moving will reset the position of the duplicate. The duplicated part will be part of the same object.</p>
+<p>When you drag the duplicate around you will see the position values in the header.</p>
+<h5 id="last-operator-duplicate">Last Operator Duplicate</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-duplicate.png" alt="Last Operator Duplicate" loading="lazy"></figure>
+<h6 id="move-x-y-z">Move X , Y , Z</h6>
+<h6 id="orientation-4">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable Mirror Editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Split</td>
+<td>Split selected points to a new stroke.</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Copies the selection.</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Pastes a copied selection to active layer. You can have more than one layer.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="paste-by-layer">Paste by Layer</h4>
+<p>Pastes a copied selection to same, original layer. You can have more than one layer.</p>
+<h5 id="last-operator-paste-strokes">Last operator Paste Strokes</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-paste-strokes.png" alt="Last operator Paste Strokes" loading="lazy"><figcaption>Last operator Paste Strokes</figcaption></figure>
+<h6 id="type">Type</h6>
+<p>Choose between the paste methods again.</p>
+<h4 id="dissolve">Dissolve</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/dissolve.png" alt="Dissolve" loading="lazy"></figure>
+<p>Dissolve is a union operation. Two edges becomes one edge by removing the vertice in between.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dissolve</td>
+<td>Dissolves the selection.</td>
+</tr>
+<tr>
+<td>Dissolve Between</td>
+<td>Dissolves the vertices between the selected vertices.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="dissolve-unselect">Dissolve Unselect</h5>
+<p>Dissolves the vertices that are not selected.</p>
+<h6 id="last-operator-dissolve">Last Operator Dissolve</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-dissolve.png" alt="Last Operator Dissolve" loading="lazy"></figure>
+<h6 id="type-2">Type</h6>
+<p>Choose how you want to dissolve.</p>
+<h4 id="delete">Delete</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/delete.png" alt="Delete" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete</td>
+<td>Delete selected stroke points.</td>
+</tr>
+<tr>
+<td>Delete Active Key frame(Active Layer)</td>
+<td>Deletes the active key frame in the current active layer.</td>
+</tr>
+<tr>
+<td>Delete Active Key frame(All Layers)</td>
+<td>Deletes the active key frame in all layers.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cleanup-sub-menu">Cleanup sub menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/cleanup-sub-menu.png" alt="Cleanup sub menu" loading="lazy"></figure>
+<h5 id="clean-loose-points">Clean Loose Points</h5>
+<p>Deletes not connected stroke geometry that is made of loose points.</p>
+<h6 id="last-operator-clean-loose-points">Last Operator Clean Loose Points</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-loose-points.png" alt="Last Operator Clean Loose Points" loading="lazy"><figcaption>Last Operator Clean Loose Points</figcaption></figure>
+<h6 id="limit">Limit</h6>
+<p>The number of vertices below which a stroke gets counted as a loose point.</p>
+<h5 id="delete-duplicated-frames">Delete Duplicated Frames</h5>
+<p>Deletes all duplicated frames.</p>
+<h6 id="last-operator-clean-duplicated-frames">Last Operator Clean Duplicated Frames</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-clean-duplicated-frames.png" alt="Last Operator Clean Duplicated Frames" loading="lazy"><figcaption>Last Operator Clean Duplicated Frames</figcaption></figure>
+<h6 id="type-3">Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/type.png" alt="Type" loading="lazy"></figure>
+<p>Delete just in the selected frames or in all frames.</p>
+<h5 id="merge-by-distance">Merge by Distance</h5>
+<p>Merge selected geometry that is in a specific range to each other.</p>
+<h6 id="last-operator-merge-by-distance">Last Operator Merge by Distance</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-merge-by-distance.png" alt="Last Operator Merge by Distance" loading="lazy"><figcaption>Last Operator Merge by Distance</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Threshold</td>
+<td>Delete just in the selected frames or in all frames.</td>
+</tr>
+<tr>
+<td>Unselected</td>
+<td>Also merge geometry by distance that is not selected but part of the stroke.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="re-project-strokes">Re project Strokes</h5>
+<p>Re project the selected strokes onto a new plane from the current viewport. So that all strokes are on one plane.</p>
+<h6 id="re-project-strokes-menu">Re project Strokes menu</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/re-project-strokes-menu.png" alt="Re project Strokes menu" loading="lazy"><figcaption>Re project Strokes menu</figcaption></figure>
+<p>Using this tool opens a popup menu. Choose the projection type method.</p>
+<h6 id="last-operator-re-projectstrokes">Last Operator Re projectStrokes</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-re-projectstrokes.png" alt="Last Operator Re projectStrokes" loading="lazy"><figcaption>Last Operator Re projectStrokes</figcaption></figure>
+<h6 id="projection-type">Projection Type</h6>
+<p>A popup menu. Choose the projection type method.</p>
+<h5 id="remove-fill-guides">Remove Fill Guides</h5>
+<p>In Draw mode with the fill tool you are able to draw so called fill guide with holding down the Alt key. They act as the boundary of the fill area. This tool removes these fill guides.</p>
+<h6 id="last-operator-remove-fill-guides">Last Operator Remove Fill Guides</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-remove-fill-guides.png" alt="Last Operator Remove Fill Guides" loading="lazy"><figcaption>Last Operator Remove Fill Guides</figcaption></figure>
+<h6 id="mode-2">Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/mode.png" alt="Mode" loading="lazy"></figure>
+<p>All frames or just the current frame.</p>
+<h4 id="show-hide">Show / Hide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/curve-edit-mode-curve-menu/show-hide.png" alt="Show / Hide" loading="lazy"></figure>
+<h5 id="show-hidden">Show Hidden</h5>
+<p>Makes all curve geometry in the scene visible again.</p>
+<h5 id="hide-selected">Hide Selected</h5>
+<p>Hides the selected curve geometry.</p>
+<h6 id="last-operator-hide-selected">Last Operator Hide Selected</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/curve-edit-mode-curve-menu/last-operator-hide-selected.png" alt="Last Operator Hide Selected" loading="lazy"><figcaption>Last Operator Hide Selected</figcaption></figure>
+<h6 id="unselected">Unselected</h6>
+<p>Hides the not selected curve geometry.</p>
+<h5 id="hide-unselected">Hide Unselected</h5>
+<p>Hides the not selected curve geometry. The selected geometry stays visible.</p>
+<h4 id="outline">Outline</h4>
+<p>Convert selected strokes to perimeter.</p>
+<h5 id="last-operator-outline">Last Operator Outline</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/last-operator-outline.png" alt="Last Operator Outline" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Projection mode</td>
+<td>Hides the not selected layers.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The radius.</td>
+</tr>
+<tr>
+<td>Offset Factor</td>
+<td>The offset factor.</td>
+</tr>
+<tr>
+<td>Corner Subdivision</td>
+<td>The corner subdivision resolution.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="separate-sub-menu">Separate sub menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-grease-pencil-menu/separate-sub-menu.jpg" alt="Separate sub menu" loading="lazy"></figure>
+<p>Separates the selection into a new grease pencil object.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected Points</td>
+<td>Separate the selected points with its edges.</td>
+</tr>
+<tr>
+<td>Selected Strokes</td>
+<td>Separate the whole stroke of the current selection.</td>
+</tr>
+<tr>
+<td>Active Layer</td>
+<td>Separate all the strokes at the current active layer.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="last-operator-separate-strokes">Last Operator Separate Strokes</h5>
+<h6 id="mode-3">Mode</h6>
+<h6 id="active-layer-2">Active Layer</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/active-layer.png" alt="Active Layer" loading="lazy"></figure>
+<p>Separate all the strokes at the current active layer.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected Strokes</td>
+<td>Separate the whole stroke of the current selection.</td>
+</tr>
+<tr>
+<td>Selected Points</td>
+<td>Separate the selected points with its edges.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="point-menu">Point menu</h2>
+<h3 id="edit-mode-point-menu">Edit Mode - Point Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-point-menu/edit-mode-point-menu.png" alt="Edit Mode - Point Menu" loading="lazy"><figcaption>Edit Mode - Point Menu</figcaption></figure>
+<h4 id="extrude">Extrude</h4>
+<p>Extrude selected points and move them. The new points stay connected with the original points of the stroke.</p>
+<p>Extrude does not show in Select mode Stroke.</p>
+<h5 id="last-operator-extrude-stroke-points">Last Operator Extrude Stroke Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-extrude-stroke-points.png" alt="Last Operator Extrude Stroke Points" loading="lazy"><figcaption>Last Operator Extrude Stroke Points</figcaption></figure>
+<h6 id="move">Move</h6>
+<p>The vector coordinates. They start relative to the initial vector.</p>
+<h6 id="orientation-5">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The orientation in which the extrude happens.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="smooth">Smooth</h4>
+<p>Smoothens out the selected geometry.</p>
+<h5 id="last-operator-smooth-stroke">Last Operator Smooth Stroke</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-point-menu/last-operator-smooth-stroke.png" alt="Last Operator Smooth Stroke" loading="lazy"><figcaption>Last Operator Smooth Stroke</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repeat</td>
+<td>How often to repeat the procedure.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>The amount of the smoothness to apply.</td>
+</tr>
+<tr>
+<td>Selected points</td>
+<td>When enabled, limits the effect to only the selected points within the stroke.</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>When enabled, the operator affect the points location.</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>When enabled, the operator affect the points thickness.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>When enabled, the operator affect the points strength (alpha).</td>
+</tr>
+<tr>
+<td>UV's</td>
+<td>When enabled, the operator affect the UV rotation on the points.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vertex-groups">Vertex Groups</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-point-menu/vertex-groups.png" alt="Vertex Groups" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-point-menu/vertex-groups-2.png" alt="Vertex Groups" loading="lazy"></figure>
+<p>This menu contains just the Add New Group button.</p>
+<h5 id="add-new-group">Add New Group</h5>
+<p>Adds a new group.</p>
+<h4 id="set-corner-type-submenu">Set Corner Type submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-point-menu/set-corner-type-submenu.png" alt="Set Corner Type submenu" loading="lazy"><figcaption>Set Corner Type submenu</figcaption></figure>
+<p>Sets the corner type of the selected corners to the methods round, flat or sharp.</p>
+<h2 id="stroke-menu">Stroke menu</h2>
+<h3 id="edit-mode-stroke-menu">Edit Mode - Stroke Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/edit-mode-stroke-menu.png" alt="Edit Mode - Stroke Menu" loading="lazy"><figcaption>Edit Mode - Stroke Menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/edit-mode-stroke-menu-2.png" alt="Edit Mode - Stroke Menu" loading="lazy"><figcaption>Edit Mode - Stroke Menu</figcaption></figure>
+<p>The menu content changes dependant of the Select mode. In Select mode Stroke a few menu items are not displayed. Since they do not work in that mode.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/edit-mode-stroke-menu-3.png" alt="Edit Mode - Stroke Menu" loading="lazy"><figcaption>Edit Mode - Stroke Menu</figcaption></figure>
+<h4 id="subdivide">Subdivide</h4>
+<p>Subdivides the selected grease pencil geometry.</p>
+<h5 id="last-operator-subdivide">Last Operator Subdivide</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-subdivide.png" alt="Last Operator Subdivide" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of Cuts</td>
+<td>Number of subdivision cuts.</td>
+</tr>
+<tr>
+<td>Selected Points</td>
+<td>Limits the effect to only the selected points within the stroke.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="subdivide-and-smooth">Subdivide and smooth</h4>
+<p>Subdivides the selected grease pencil geometry, and smoothens it.</p>
+<h5 id="last-operator-subdivide-2">Last Operator Subdivide</h5>
+<h6 id="number-of-cuts">Number of Cuts</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/number-of-cuts.png" alt="Number of Cuts" loading="lazy"></figure>
+<p>Number of subdivision cuts.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected Points</td>
+<td>Limits the effect to only the selected points within the stroke.</td>
+</tr>
+<tr>
+<td>Iterations</td>
+<td>How often to smooth.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>The smoothing factor</td>
+</tr>
+<tr>
+<td>Smooth Endpoints</td>
+<td>Smoothen the endpoints.</td>
+</tr>
+<tr>
+<td>Keep Shape</td>
+<td>Try to keep the original shape.</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>The operator affects the points location.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The smooth radius around vertices.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>The smooth opacity.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="simplify-strokes-sub-menu">Simplify Strokes - Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/simplify-strokes-sub-menu.png" alt="Simplify Strokes - Sub Menu" loading="lazy"><figcaption>Simplify Strokes - Sub Menu</figcaption></figure>
+<p>Stroke mode. Simplify the stroke.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixed</td>
+<td>Deletes every second point in the stroke, except the start and end points.</td>
+</tr>
+<tr>
+<td>Adaptive</td>
+<td>This method uses an algorithm called RDP algorithm (Ramer-Douglas-Peucker algorithm) for points deletion. The algorithm tries to keep the shape with the remaining points.</td>
+</tr>
+<tr>
+<td>Sample</td>
+<td>Samples points along the shape of the stroke, and increases the length of the edges.</td>
+</tr>
+<tr>
+<td>Merge</td>
+<td>Simplify the stroke by merging vertices closer than a given distance.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="last-operator-simplify-stroke">Last Operator Simplify Stroke</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-simplify-stroke.png" alt="Last Operator Simplify Stroke" loading="lazy"><figcaption>Last Operator Simplify Stroke</figcaption></figure>
+<p>The simplify strokes operators share the same last operator.</p>
+<h6 id="mode-4">Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mode-2.png" alt="Mode" loading="lazy"></figure>
+<p>The method.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steps (Fixed)</td>
+<td>How much levels of simplifying.</td>
+</tr>
+<tr>
+<td>Factor (Adaptive)</td>
+<td>How strong the simplification should be performed.</td>
+</tr>
+<tr>
+<td>Length (Sample)</td>
+<td>The sample length.</td>
+</tr>
+<tr>
+<td>Distance (Merge)</td>
+<td>The distance. Below this value the vertices gets merged.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="join-sub-menu">Join - Sub Menu</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Join and Copy</td>
+<td>Copy the selection in the new stroke.</td>
+</tr>
+<tr>
+<td>Join</td>
+<td>Move the selection to the new stroke.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="adjust-last-operator-join-selection">Adjust last operator Join Selection</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/adjust-last-operator-join-selection.png" alt="Adjust last operator Join Selection" loading="lazy"><figcaption>Adjust last operator Join Selection</figcaption></figure>
+<h6 id="type-4">Type</h6>
+<p>Choose the join method.</p>
+<h4 id="outline-2">Outline</h4>
+<p>Convert selected strokes to perimeter.</p>
+<h5 id="adjust-last-operator-outline">Adjust last operator Outline</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/adjust-last-operator-outline.png" alt="Adjust last operator Outline" loading="lazy"><figcaption>Adjust last operator Outline</figcaption></figure>
+<h6 id="projection-mode">Projection mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/projection-mode.png" alt="Projection mode" loading="lazy"></figure>
+<p>How to project the stroke.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>How big.</td>
+</tr>
+<tr>
+<td>Offset Factor</td>
+<td>Offset from the stroke.</td>
+</tr>
+<tr>
+<td>Corner Subdivisions</td>
+<td>How much subdivisions at corners.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="move-to-layer-sub-menu">Move to Layer – Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/move-to-layer-sub-menu-2.png" alt="Move to Layer – Sub Menu" loading="lazy"><figcaption>Move to Layer – Sub Menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/move-to-layer-sub-menu.png" alt="Move to Layer – Sub Menu" loading="lazy"><figcaption>Move to Layer – Sub Menu</figcaption></figure>
+<p>Move the current selected stroke to another grease pencil layer. It lists the current layers.</p>
+<h5 id="new-layer-2">New Layer</h5>
+<p>New Layer button adds a new grease pencil layer.</p>
+<h6 id="last-operator-move-strokes-to-layer">Last Operator Move Strokes to Layer</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-move-strokes-to-layer.png" alt="Last Operator Move Strokes to Layer" loading="lazy"><figcaption>Last Operator Move Strokes to Layer</figcaption></figure>
+<h6 id="grease-pencil-layer">Grease Pencil Layer</h6>
+<p>Internal the layers are enumerated. So here you move by number.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/grease-pencil-layer.png" alt="Grease Pencil Layer" loading="lazy"></figure>
+<p>The number of a layer can be found out in the tool tip, in the Python part of it.</p>
+<h4 id="assign-material-sub-menu">Assign Material – Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/assign-material-sub-menu.png" alt="Assign Material – Sub Menu" loading="lazy"><figcaption>Assign Material – Sub Menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/assign-material-sub-menu-2.png" alt="Assign Material – Sub Menu" loading="lazy"><figcaption>Assign Material – Sub Menu</figcaption></figure>
+<p>Assign a new material to the current selected stroke geometry.</p>
+<p>The materials can be found and edited in the Properties editor. Here you can also create new materials.</p>
+<h5 id="last-operator-change-stroke-color">Last Operator Change Stroke Color</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-change-stroke-color.png" alt="Last Operator Change Stroke Color" loading="lazy"><figcaption>Last Operator Change Stroke Color</figcaption></figure>
+<h6 id="material">Material</h6>
+<p>The materials are defined by its name. So when you want to use another material, then change the name here.</p>
+<h4 id="set-as-active-material">Set as active material</h4>
+<p>Sets the current selected material as the active material.</p>
+<h4 id="arrange-strokes-sub-menu">Arrange Strokes - Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/arrange-strokes-sub-menu.png" alt="Arrange Strokes - Sub Menu" loading="lazy"><figcaption>Arrange Strokes - Sub Menu</figcaption></figure>
+<p>Changes the drawing order of the strokes in the 2D layer.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bring Forward</td>
+<td>Moves the selected points/strokes upper the next one in the drawing order.</td>
+</tr>
+<tr>
+<td>Send Backward</td>
+<td>Moves the selected points/strokes below the previous one in the drawing order.</td>
+</tr>
+<tr>
+<td>Bring to Front</td>
+<td>Moves to the top the selected points/strokes.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="send-to-back">Send to Back</h5>
+<p>Moves to the bottom the selected points/strokes.</p>
+<h6 id="last-operator-arrange-stroke">Last Operator Arrange Stroke</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-arrange-stroke.png" alt="Last Operator Arrange Stroke" loading="lazy"><figcaption>Last Operator Arrange Stroke</figcaption></figure>
+<h6 id="direction">Direction</h6>
+<p>Choose the method again.</p>
+<h4 id="close">Close</h4>
+<p>Closes the current stroke by connecting the first vertice with the last vertice by a stroke. See also Toggle Cyclic.</p>
+<h4 id="toggle-cyclic">Toggle Cyclic</h4>
+<p>When the curve is open, then it Closes the current stroke by connecting the first vertice with the last vertice by a stroke. When the curve is closed, then it removes the connection between first and last vertice, and makes the curve open.</p>
+<h5 id="last-operator-set-cyclical-state">Last Operator Set Cyclical State</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-set-cyclical-state.png" alt="Last Operator Set Cyclical State" loading="lazy"><figcaption>Last Operator Set Cyclical State</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Choose the method again. · <strong>Close all</strong>: Close all open selected strokes. · <strong>Open all</strong>: Open all closed selected strokes. · <strong>Toggle</strong>: Close or Open selected strokes as required.</td>
+</tr>
+<tr>
+<td>Create geometry</td>
+<td>When enabled, points are added for closing the strokes like when using the Close tool. If disabled, the stroke is closed with just one edge.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-caps-sub-menu">Set Caps - Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/set-caps-sub-menu.png" alt="Set Caps - Sub Menu" loading="lazy"><figcaption>Set Caps - Sub Menu</figcaption></figure>
+<p>Toggles if the start and endpoints of the strokes are rounded or flat.</p>
+<h5 id="default">Default</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/default.png" alt="Default" loading="lazy"></figure>
+<p>Sets stroke start and end points to rounded (default).</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Both</td>
+<td>Toggle stroke start and end points caps to flat or rounded.</td>
+</tr>
+<tr>
+<td>Start</td>
+<td>Toggle stroke start point cap to flat or rounded.</td>
+</tr>
+<tr>
+<td>End</td>
+<td>Toggle stroke end point cap to flat or rounded.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="last-operator-set-caps-mode">Last Operator Set Caps Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-set-caps-mode.png" alt="Last Operator Set Caps Mode" loading="lazy"><figcaption>Last Operator Set Caps Mode</figcaption></figure>
+<h6 id="type-5">Type</h6>
+<p>Choose the method again.</p>
+<h4 id="switch-direction">Switch Direction</h4>
+<p>Switches the direction of the stroke geometry.</p>
+<h4 id="set-start-point">Set Start Point</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/set-start-point.png" alt="Set Start Point" loading="lazy"></figure>
+<p>Select which point is the start point of the grease pencil curve. This defines the order of point indices, useful for Geometry nodes.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Not available in stroke selection mode.</p></div>
+<h4 id="normalize-thickness">Normalize Thickness</h4>
+<p>Adjust the thickness of the stroke.</p>
+<h4 id="normalize-opacity">Normalize Opacity</h4>
+<p>Adjust the opacity of the stroke.</p>
+<h5 id="last-operator-normalize-stroke">Last operator Normalize Stroke</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/last-operator-normalize-stroke.png" alt="Last operator Normalize Stroke" loading="lazy"><figcaption>Last operator Normalize Stroke</figcaption></figure>
+<p>This last operator works for both tools, Normalize Thickness and Normalize Opacity.</p>
+<h6 id="mode-5">Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/mode.png" alt="Mode" loading="lazy"></figure>
+<p>Adjust thickness or opacity.</p>
+<h6 id="value">Value</h6>
+<p>The value to adjust the opacity or thickness.</p>
+<h4 id="set-spline-type-sub-menu">Set Spline Type – Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/set-spline-type-sub-menu.png" alt="Set Spline Type – Sub Menu" loading="lazy"><figcaption>Set Spline Type – Sub Menu</figcaption></figure>
+<p>Set the curve type.</p>
+<h4 id="set-curve-resolution">Set Curve Resolution</h4>
+<p>Set the resolution of the curve.</p>
+<h5 id="ajust-last-operator-set-curve-resolution">Ajust last operator Set Curve Resolution</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/ajust-last-operator-set-curve-resolution.png" alt="Ajust last operator Set Curve Resolution" loading="lazy"><figcaption>Ajust last operator Set Curve Resolution</figcaption></figure>
+<h6 id="resolution">Resolution</h6>
+<p>The resolution that you want to choose.</p>
+<h4 id="set-stroke-type-sub-menu">Set Stroke Type - Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/set-stroke-type-sub-menu.png" alt="Set Stroke Type - Sub Menu" loading="lazy"><figcaption>Set Stroke Type - Sub Menu</figcaption></figure>
+<p>Defines how selected points are interpreted on the Grease Pencil.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stroke</td>
+<td>Points are treated as part of a line stroke.</td>
+</tr>
+<tr>
+<td>Fill</td>
+<td>Points are treated as part of a filled region.</td>
+</tr>
+<tr>
+<td>Both</td>
+<td>Points contribute to both stroke and fill.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reset-uvs">Reset UVs</h4>
+<p>Reset UV Transformation values to zero.</p>
+<h4 id="join-fills">Join Fills</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/join-fills.png" alt="Join Fills" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/join-fills-2.png" alt="Join Fills" loading="lazy"></figure>
+<p>Combines selected strokes into a single fill region. If they overlap, it will create a subtractive boolean. Useful for merging complex shapes into one continuous fill for coloring or shading.</p>
+<ul>
+<li>Creates unified fill areas, even across multiple strokes.<br />
+– Automatically generates holes if overlapping strokes define enclosed spaces.</li>
+</ul>
+<h4 id="separate-fills">Separate Fills</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/header/grease-pencil-edit-mode-stroke-menu/separate-fills.png" alt="Separate Fills" loading="lazy"></figure>
+<p>Splits a combined fill back into individual fill regions. Useful for isolating specific areas for recoloring, shading, or animation. Restores stroke-based independence after a join operation.</p>
+<h1 id="tool-shelf">Tool Shelf</h1>
+<h2 id="tools">Tools</h2>
+<h3 id="tool-shelf-grease-pencil-edit-mode">Tool Shelf - Grease Pencil - Edit Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/tool-shelf-grease-pencil-edit-mode.png" alt="Tool Shelf - Grease Pencil - Edit Mode" loading="lazy"><figcaption>Tool Shelf - Grease Pencil - Edit Mode</figcaption></figure>
+<p>Here you can find tools to edit the curve geometry of the grease pencil strokes.</p>
+<h4 id="tweak-select-transform-3d-cursor-measure-and-annotate-tools">Tweak, Select, Transform, 3D Cursor Measure and Annotate tools</h4>
+<p>The tweak, select, transform, 3d cursor, measure and annotate tools at the end of the list are explained in the chapter 7.1.1 Editors - 3D View - Tool Shelf - Object Mode. We won't cover this tools again here.</p>
+<h4 id="pen">Pen</h4>
+<p>Extrude selected curve points to the mouse click position.</p>
+<h5 id="tool-settings">Tool Settings</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/tool-settings.png" alt="Tool Settings" loading="lazy"></figure>
+<h6 id="radius-2">Radius</h6>
+<p>The thickness of the generated stroke.</p>
+<h6 id="stroke-placement">Stroke Placement</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/stroke-placement.png" alt="Stroke Placement" loading="lazy"></figure>
+<p>Where to place the stroke, relative to what element.</p>
+<h6 id="drawing-plane">Drawing Plane</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/drawing-plane.png" alt="Drawing Plane" loading="lazy"></figure>
+<p>What view plane to use for drawing.</p>
+<h4 id="radius-3">Radius</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/radius.png" alt="Radius" loading="lazy"></figure>
+<p>Bezier curves have a radius. This is displayed by the black lines that points away from the curve. The radius tool allows you to resize this radius.</p>
+<h5 id="header-value">Header Value</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/header-value-2.png" alt="Header Value" loading="lazy"></figure>
+<p>When you resize the curve radius then you will see a value in the header. It tells you the current scale factor. This factor always starts with 1.</p>
+<h6 id="tool-settings-2">Tool Settings</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-settings-4.png" alt="Tool Settings" loading="lazy"></figure>
+<h6 id="drag">Drag</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active Tool</td>
+<td>When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.</td>
+</tr>
+<tr>
+<td>Tweak, Select Box, Circle and Lasso</td>
+<td>When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="last-operator-transform-3">Last Operator Transform</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform.png" alt="Last Operator Transform" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Values X Y Z W</td>
+<td>The axis to increase the radius. Just X has an effect with the curve radius.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>The axis to use. This has no effect with a curve object.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-6">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Adjust the orientation of the extrusion. It usually starts with Normal.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bend-2">Bend</h4>
+<p>Bends the selection.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snapping</td>
+<td>Holding down Ctrl activates temporary global snapping.</td>
+</tr>
+<tr>
+<td>Precision movement</td>
+<td>When you hold down shift, then you will have a much slower but also much preciser movement.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="header-values">Header Values</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/header-values.png" alt="Header Values" loading="lazy"></figure>
+<p>When you move the mouse then you will see some values in the header, which shows the current scale factor. This value is relative to the starting value, which always starts with 1.</p>
+<h4 id="shear-to-sphere-tools-group">Shear / To Sphere Tools group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/shear-to-sphere-tools-group.png" alt="Shear / To Sphere Tools group" loading="lazy"><figcaption>Shear / To Sphere Tools group</figcaption></figure>
+<h5 id="shear-2">Shear</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snapping</td>
+<td>Holding down Ctrl activates temporary global snapping.</td>
+</tr>
+<tr>
+<td>Precision movement</td>
+<td>When you hold down shift, then you will have a much slower but also much preciser movement.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="header-values-2">Header Values</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/header-values-2.png" alt="Header Values" loading="lazy"></figure>
+<p>When you move the mouse then you will see some values in the header, which shows the current scale factor. This value is relative to the starting value, which always starts with 1.</p>
+<h6 id="hotkeys">Hotkeys</h6>
+<p>As shown in the header, you can press X or Y to set the shear axis.</p>
+<h6 id="tool-settings-3">Tool Settings</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-settings-6.png" alt="Tool Settings" loading="lazy"></figure>
+<h6 id="orientation-7">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation for the shear action.</p>
+<h6 id="drag-2">Drag</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active Tool</td>
+<td>When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.</td>
+</tr>
+<tr>
+<td>Tweak, Select Box, Circle and Lasso</td>
+<td>When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="last-operator-shear-2">Last Operator Shear</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-shear.png" alt="Last Operator Shear" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Adjust an offset.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Defines one axis of the imaginary shear axis plane.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="axis-ortho-2">Axis Ortho</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/orientation.png" alt="Axis Ortho" loading="lazy"></figure>
+<p>Defines the other axis of the imaginary shear axis plane.</p>
+<h6 id="orientation-8">Orientation</h6>
+<p>Choose the orientation for the shear action.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="to-sphere-2">To Sphere</h5>
+<p>Transforms the selection into a sphere shape.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snapping</td>
+<td>Holding down Ctrl activates temporary global snapping.</td>
+</tr>
+<tr>
+<td>Precision movement</td>
+<td>When you hold down shift, then you will have a much slower but also much preciser movement.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="header-values-3">Header Values</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/header-values-3.png" alt="Header Values" loading="lazy"></figure>
+<p>When you move the mouse then you will see some values in the header, which shows the current to sphere factor. This value is relative to the starting value, which always starts with 0.</p>
+<h5 id="last-operator-to-sphere-2">Last Operator To Sphere</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-to-sphere.png" alt="Last Operator To Sphere" loading="lazy"><figcaption>Last Operator To Sphere</figcaption></figure>
+<h6 id="factor">Factor</h6>
+<p>The factor to transform the selection into a shape form.</p>
+<h6 id="mirror-editing">Mirror Editing</h6>
+<p>Enables Mirror Editing.</p>
+<h6 id="proportional-editing-5">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="interpolate">Interpolate</h4>
+<p>Interpolate grease pencil strokes between animation frames.</p>
+<h5 id="active-tool-panel">Active Tool panel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/active-tool-panel.png" alt="Active Tool panel" loading="lazy"></figure>
+<h6 id="layer">Layer</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/layer.png" alt="Layer" loading="lazy"></figure>
+<p>Layers included in the interpolation.</p>
+<h6 id="exclude-breakdowns">Exclude Breakdowns</h6>
+<p>Exclude existing breakdowns keyframes as interpolation extremes.</p>
+<h6 id="flip-mode">Flip Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-edit-mode/flip-mode.png" alt="Flip Mode" loading="lazy"></figure>
+<p>The method to invert destination stroke to match start and end with source stroke.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Smooth</td>
+<td>Amount of smoothing to apply to interpolate strokes, to reduce jitter and noise.</td>
+</tr>
+<tr>
+<td>Iterations</td>
+<td>Number of times to smooth newly created strokes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="gradient">Gradient</h4>
+<p>Draw a line to set the fill material gradient for the selected stroke.</p>
+<h1 id="context-menus">Context Menus</h1>
+<h2 id="point-context-menu">Point context menu</h2>
+<h3 id="edit-mode-point-context-menu">Edit Mode - Point Context Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/edit-mode-point-context-menu.png" alt="Edit Mode - Point Context Menu" loading="lazy"><figcaption>Edit Mode - Point Context Menu</figcaption></figure>
+<p>Call this menu with right click in the 3D viewport.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/edit-mode-point-context-menu-2.png" alt="Edit Mode - Point Context Menu" loading="lazy"><figcaption>Edit Mode - Point Context Menu</figcaption></figure>
+<h4 id="extrude-2">Extrude</h4>
+<p>Extrude selected points and move them. The new points stay connected with the original points of the stroke.</p>
+<h5 id="last-operator-extrude-stroke-points-2">Last Operator Extrude Stroke Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-extrude-stroke-points.png" alt="Last Operator Extrude Stroke Points" loading="lazy"><figcaption>Last Operator Extrude Stroke Points</figcaption></figure>
+<h6 id="move-2">Move</h6>
+<p>The vector coordinates. They start relative to the initial vector.</p>
+<h6 id="orientation-9">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The orientation in which the extrude happens.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Edit along a mirror axis.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="subdivide-2">Subdivide</h4>
+<p>Subdivides the selected grease pencil geometry.</p>
+<h5 id="last-operator-subdivide-3">Last Operator Subdivide</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-subdivide.png" alt="Last Operator Subdivide" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of Cuts</td>
+<td>Number of subdivision cuts.</td>
+</tr>
+<tr>
+<td>Smooth</td>
+<td>Smoothen the stroke, not just the new added vertices</td>
+</tr>
+<tr>
+<td>Repeat</td>
+<td>The number of times to repeat the procedure.</td>
+</tr>
+<tr>
+<td>Selected Points</td>
+<td>Limits the effect to only the selected points within the stroke.</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>The operator affects the points location.</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>The operator affect the points thickness.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>The operator affect the points strength (alpha).</td>
+</tr>
+<tr>
+<td>UV</td>
+<td>The operator affect the UV rotation on the points.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="subdivide-and-smooth-2">Subdivide and Smooth</h4>
+<p>Subdivides the selected grease pencil geometry.</p>
+<h5 id="last-operator-subdivide-and-smooth">Last Operator Subdivide and Smooth</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-subdivide-and-smooth.png" alt="Last Operator Subdivide and Smooth" loading="lazy"><figcaption>Last Operator Subdivide and Smooth</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of Cuts</td>
+<td>Number of subdivision cuts.</td>
+</tr>
+<tr>
+<td>Selected Points</td>
+<td>Limits the effect to only the selected points within the stroke.</td>
+</tr>
+<tr>
+<td>Iterations</td>
+<td>Number of iterations.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Smooth factor</td>
+</tr>
+<tr>
+<td>Smooth Endpoints</td>
+<td>Smooth endpoints too.</td>
+</tr>
+<tr>
+<td>Keep Shape</td>
+<td>Keep the overall shape.</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>The operator affects the points location.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>Smooth radius.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>Smooth Opacity.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-stroke-type-sub-menu-2">Set Stroke Type - Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/set-stroke-type-sub-menu.png" alt="Set Stroke Type - Sub Menu" loading="lazy"><figcaption>Set Stroke Type - Sub Menu</figcaption></figure>
+<p>Defines how selected points are interpreted in the<br />
+Options:</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stroke</td>
+<td>Points are treated as part of a line stroke.</td>
+</tr>
+<tr>
+<td>Fill</td>
+<td>Points are treated as part of a filled region.</td>
+</tr>
+<tr>
+<td>Both</td>
+<td>Points contribute to both stroke and fill.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="transform-sub-menu">Transform – Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/transform-sub-menu.png" alt="Transform – Sub Menu" loading="lazy"><figcaption>Transform – Sub Menu</figcaption></figure>
+<p>Provides geometric and visual transformations for selected Grease Pencil points or strokes.<br />
+Useful for reshaping, stylizing, and refining drawings with precise control</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>To Sphere</td>
+<td>Moves selected points toward a spherical distribution.   – Strength slider controls how tightly points conform to a sphere.   – Useful for rounding shapes or creating circular strokes.</td>
+</tr>
+<tr>
+<td>Shear</td>
+<td>Skews selected points along a chosen axis.   – Creates slanted or diagonal distortions.   – Ideal for stylized perspective effects or dynamic motion exaggeration.</td>
+</tr>
+<tr>
+<td>Bend</td>
+<td>Bends selected points around a pivot.   – Angle and pivot settings define curvature.   – Useful for wrapping strokes into arcs or circular motifs.</td>
+</tr>
+<tr>
+<td>Push/Pull</td>
+<td>Moves selected points outward or inward relative to their median center.   – Push expands the shape; Pull contracts it.   – Useful for inflating or compressing stroke geometry.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>Adjusts the thickness (point radius) of selected vertices.   – Larger radius = thicker stroke segments.   – Useful for line weight variation or emphasis.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>Changes the transparency of selected vertices.   – Higher values = more opaque; lower values = more transparent.   – Useful for shading, layering, or fade effects in drawings.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="smooth-points">Smooth Points</h4>
+<p>Smoothens out the selected geometry.</p>
+<h5 id="last-operator-smooth-stroke-2">Last Operator Smooth Stroke</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-smooth-stroke.png" alt="Last Operator Smooth Stroke" loading="lazy"><figcaption>Last Operator Smooth Stroke</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repeat</td>
+<td>How often to repeat the procedure.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>The amount of the smoothness to apply.</td>
+</tr>
+<tr>
+<td>Selected points</td>
+<td>When enabled, limits the effect to only the selected points within the stroke.</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>When enabled, the operator affect the points location.</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>When enabled, the operator affect the points thickness.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>When enabled, the operator affect the points strength (alpha).</td>
+</tr>
+<tr>
+<td>UV's</td>
+<td>When enabled, the operator affect the UV rotation on the points. in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-start-point-2">Set Start Point</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/set-start-point.png" alt="Set Start Point" loading="lazy"></figure>
+<p>Select which point is the start point of the grease pencil curve. This defines the order of point indices, useful for Geometry nodes.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Not available in stroke selection mode.</p></div>
+<h4 id="set-corner-type-sub-menu">Set Corner Type - Sub Menu</h4>
+<p>Defines how selected corners are treated on the vertices of the Grease Pencil Useful for controlling the visual style, sharpness, and behavior of corners in strokes.</p>
+<h5 id="round">Round</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/round.png" alt="Round" loading="lazy"></figure>
+<p>Smooths the corner into a curved transition. Ideal for organic shapes, soft edges, or stylized drawing. Automatically adjusts point handles to create a rounded arc.</p>
+<h5 id="flat">Flat</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/flat.png" alt="Flat" loading="lazy"></figure>
+<p>Creates a straight, flat corner with no curvature. Useful for blocky, mechanical, or architectural forms. Ensures the corner remains linear and angular.</p>
+<h5 id="sharp">Sharp</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/sharp.png" alt="Sharp" loading="lazy"></figure>
+<p>Marks the corner as a sharp transition. Preserves a distinct angle between segments.<br />
+Commonly used for precise, technical shapes or hard edges.</p>
+<h4 id="mirror-sub-menu">Mirror - Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mirror-sub-menu.png" alt="Mirror - Sub Menu" loading="lazy"><figcaption>Mirror - Sub Menu</figcaption></figure>
+<p>Mirror mirrors the selected geometry along the defined axis.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interactive Mirror</td>
+<td>Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored.</td>
+</tr>
+<tr>
+<td>X Global, Y Global etc.</td>
+<td>Mirrors the selection around the chosen axis.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="last-operator-mirror-2">Last Operator Mirror</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu/last-operator-mirror.png" alt="Last Operator Mirror" loading="lazy"></figure>
+<p>The Last Operator Mirror panel gives you tools to adjust the mirror action.</p>
+<h6 id="orientation-10">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box. Choose the type of orientation for the mirroring action.</p>
+<h6 id="constraint-axis-2">Constraint Axis</h6>
+<p>Constraint Axis gives you again the possibility to define the mirror axis. You can choose more than one axis here.</p>
+<h4 id="snap-sub-menu">Snap- Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/snap-sub-menu.png" alt="Snap- Sub Menu" loading="lazy"></figure>
+<p>Choose several methods to snap one element to another. The menu items should be self explaining.</p>
+<h5 id="last-operator-snap">Last Operator Snap</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-snap.png" alt="Last Operator Snap" loading="lazy"></figure>
+<p>Some snap operations shows a last operation panel, some not.</p>
+<h5 id="with-offset">With Offset</h5>
+<p>If the selection should snap as a whole, or if each individual element of the selection should snap.</p>
+<h4 id="duplicate-2">Duplicate</h4>
+<p>Duplicates the current selection.</p>
+<p>When you duplicate a selection, then it sticks to the mouse until you left click. And moves around. A right click repositions the duplicated geometry at its original location.</p>
+<h5 id="last-operator-duplicate-strokes">Last Operator Duplicate Strokes</h5>
+<h6 id="mode-6">Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mode.png" alt="Mode" loading="lazy"></figure>
+<p>Not to find out. No tool tip, no entry in the Blender manual. Good Job Blender Developers.</p>
+<h6 id="move-x-y-z-2">Move X, Y, Z</h6>
+<p>Adjust the position.</p>
+<h6 id="orientation-11">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box. Choose the type of orientation for the mirroring action.</p>
+<h6 id="mirror-editing-2">Mirror Editing</h6>
+<p>Edit along a mirror axis.</p>
+<h6 id="proportional-editing-6">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="copy">Copy</h4>
+<p>Copies the selection.</p>
+<h4 id="paste">Paste</h4>
+<p>Pastes a copied selection to active layer. You can have more than one layer.</p>
+<h5 id="last-operator-paste-strokes-2">Last operator Paste Strokes</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-paste-strokes.png" alt="Last operator Paste Strokes" loading="lazy"><figcaption>Last operator Paste Strokes</figcaption></figure>
+<h6 id="type-6">Type</h6>
+<p>Choose between the paste methods again.</p>
+<h4 id="merge-by-distance-2">Merge by Distance</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/merge-by-distance.png" alt="Merge by Distance" loading="lazy"></figure>
+<p>Merges seleceted vertices by distance.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dissolve</td>
+<td>Dissolves the selection.</td>
+</tr>
+<tr>
+<td>Dissolve Between</td>
+<td>Dissolves the vertices between the selected vertices.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dissolve-unselect-2">Dissolve Unselect</h4>
+<p>Dissolves the vertices that are not selected.</p>
+<h5 id="last-operator-dissolve-2">Last Operator Dissolve</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-dissolve.png" alt="Last Operator Dissolve" loading="lazy"></figure>
+<h6 id="type-7">Type</h6>
+<p>Choose how you want to dissolve.</p>
+<h4 id="simplify-strokes-sub-menu-2">Simplify Strokes - Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/simplify-strokes-sub-menu.png" alt="Simplify Strokes - Sub Menu" loading="lazy"><figcaption>Simplify Strokes - Sub Menu</figcaption></figure>
+<p>Stroke mode. Simplify the stroke.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixed</td>
+<td>Deletes every second point in the stroke, except the start and end points.</td>
+</tr>
+<tr>
+<td>Adaptive</td>
+<td>This method uses an algorithm called RDP algorithm (Ramer-Douglas-Peucker algorithm) for points deletion. The algorithm tries to keep the shape with the remaining points.</td>
+</tr>
+<tr>
+<td>Sample</td>
+<td>Samples points along the shape of the stroke, and increases the length of the edges.</td>
+</tr>
+<tr>
+<td>Merge</td>
+<td>Simplify the stroke by merging vertices closer than a given distance.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="last-operator-simplify-stroke-2">Last Operator Simplify Stroke</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-simplify-stroke.png" alt="Last Operator Simplify Stroke" loading="lazy"><figcaption>Last Operator Simplify Stroke</figcaption></figure>
+<p>The simplify strokes operators share the same last operator.</p>
+<h6 id="mode-7">Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mode-2.png" alt="Mode" loading="lazy"></figure>
+<p>The method.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steps (Fixed)</td>
+<td>How much levels of simplifying.</td>
+</tr>
+<tr>
+<td>Factor (Adaptive)</td>
+<td>How strong the simplification should be performed.</td>
+</tr>
+<tr>
+<td>Length (Sample)</td>
+<td>The sample length.</td>
+</tr>
+<tr>
+<td>Distance (Merge)</td>
+<td>The distance. Below this value the vertices gets merged.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outline-3">Outline</h4>
+<p>Adds an outline to the grease pencil.</p>
+<h5 id="last-operator-outline-2">Last Operator Outline</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-outline.png" alt="Last Operator Outline" loading="lazy"></figure>
+<h6 id="projection-mode-2">Projection Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/projection-mode.png" alt="Projection Mode" loading="lazy"></figure>
+<p>The orientation to project the outline.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Thickness of the outline</td>
+</tr>
+<tr>
+<td>Offset Factor</td>
+<td>Offset from original outline.</td>
+</tr>
+<tr>
+<td>Corner Subdivisions</td>
+<td>How much iterations to subdivide the corners.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="separate">Separate</h4>
+<p>Separates the selection into a new grease pencil object.</p>
+<h5 id="last-operator-separate-strokes-2">Last Operator Separate Strokes</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-separate-strokes.png" alt="Last Operator Separate Strokes" loading="lazy"><figcaption>Last Operator Separate Strokes</figcaption></figure>
+<h6 id="mode-8">Mode</h6>
+<h6 id="active-layer-3">Active Layer</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/active-layer.png" alt="Active Layer" loading="lazy"></figure>
+<p>Separate all the strokes at the current active layer.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected Strokes</td>
+<td>Separate the whole stroke of the current selection.</td>
+</tr>
+<tr>
+<td>Selected Points</td>
+<td>Separate the selected points with its edges.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-spline-type-sub-menu-2">Set Spline Type – Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/set-spline-type-sub-menu.png" alt="Set Spline Type – Sub Menu" loading="lazy"><figcaption>Set Spline Type – Sub Menu</figcaption></figure>
+<p>Convert the curve type of the grease pencil to another curve type. These different curve types allows you different ways of modification.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Catmull Rom</td>
+<td>Generates smooth curves passing through all control points.   Produces natural, flowing strokes with minimal manual adjustment.   Best for organic shapes and freehand drawing cleanup.</td>
+</tr>
+<tr>
+<td>Poly</td>
+<td>Represents strokes as straight line segments between points. No interpolation is applied.</td>
+</tr>
+<tr>
+<td>Bézier</td>
+<td>Converts strokes into Bézier curves with editable handles. Provides precise control over curvature and tangents.</td>
+</tr>
+<tr>
+<td>NURBS</td>
+<td>Uses Non-Uniform Rational B-Splines for interpolation. Allows smooth curves with weighted control points.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="last-operator-separate-strokes-3">Last Operator Separate Strokes</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-separate-strokes-2.png" alt="Last Operator Separate Strokes" loading="lazy"><figcaption>Last Operator Separate Strokes</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>The curve types.</td>
+</tr>
+<tr>
+<td>Threshold</td>
+<td>The distance that the resulting points are allowed to be within.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-handle-type-sub-menu">Set Handle Type – Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/set-handle-type-sub-menu.png" alt="Set Handle Type – Sub Menu" loading="lazy"><figcaption>Set Handle Type – Sub Menu</figcaption></figure>
+<p>Defines how control point handles behave when editing curves or strokes.<br />
+Useful for shaping curvature, controlling tangents, and refining stroke flow in both Grease Pencil and curve objects.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto</td>
+<td>Automatically positions handles to create smooth, natural curves.   Handles adjust dynamically as points are moved.</td>
+</tr>
+<tr>
+<td>Vector</td>
+<td>Creates straight, angular transitions at the control point.   Handles point directly toward adjacent vertices.</td>
+</tr>
+<tr>
+<td>Align</td>
+<td>Keeps both handles aligned in opposite directions.   Ensures smooth, symmetrical transitions through the control point.</td>
+</tr>
+<tr>
+<td>Free</td>
+<td>Allows each handle to move independently.   Provides maximum flexibility for custom curve shaping.   Best for fine-tuning irregular or stylized strokes.</td>
+</tr>
+<tr>
+<td>Toggle Free/Align</td>
+<td>Switches between Free and Align modes for the selected point.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stroke-context-menu">Stroke context menu</h2>
+<h3 id="edit-mode-stroke-context-menu">Edit Mode - Stroke Context Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/edit-mode-stroke-context-menu.png" alt="Edit Mode - Stroke Context Menu" loading="lazy"><figcaption>Edit Mode - Stroke Context Menu</figcaption></figure>
+<p>Call this menu with right click in the 3D viewport. The stroke menu appears in select mode stroke and segment</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/edit-mode-point-context-menu-2.png" alt="Edit Mode - Stroke Context Menu" loading="lazy"><figcaption>Edit Mode - Stroke Context Menu</figcaption></figure>
+<h4 id="subdivide-3">Subdivide</h4>
+<p>Subdivides the selected grease pencil geometry.</p>
+<h5 id="last-operator-subdivide-4">Last Operator Subdivide</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-subdivide.png" alt="Last Operator Subdivide" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of Cuts</td>
+<td>Number of subdivision cuts.</td>
+</tr>
+<tr>
+<td>Smooth</td>
+<td>Smoothen the stroke, not just the new added vertices</td>
+</tr>
+<tr>
+<td>Repeat</td>
+<td>The number of times to repeat the procedure.</td>
+</tr>
+<tr>
+<td>Selected Points</td>
+<td>Limits the effect to only the selected points within the stroke.</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>The operator affects the points location.</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>The operator affect the points thickness.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>The operator affect the points strength (alpha).</td>
+</tr>
+<tr>
+<td>UV</td>
+<td>The operator affect the UV rotation on the points.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="subdivide-and-smooth-3">Subdivide and Smooth</h4>
+<p>Subdivides the selected grease pencil geometry.</p>
+<h5 id="last-operator-subdivide-and-smooth-2">Last Operator Subdivide and Smooth</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-subdivide-and-smooth.png" alt="Last Operator Subdivide and Smooth" loading="lazy"><figcaption>Last Operator Subdivide and Smooth</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of Cuts</td>
+<td>Number of subdivision cuts.</td>
+</tr>
+<tr>
+<td>Selected Points</td>
+<td>Limits the effect to only the selected points within the stroke.</td>
+</tr>
+<tr>
+<td>Iterations</td>
+<td>Number of iterations.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Smooth factor</td>
+</tr>
+<tr>
+<td>Smooth Endpoints</td>
+<td>Smooth endpoints too.</td>
+</tr>
+<tr>
+<td>Keep Shape</td>
+<td>Keep the overall shape.</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>The operator affects the points location.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>Smooth radius.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>Smooth Opacity.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-stroke-type-sub-menu-3">Set Stroke Type - Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/set-stroke-type-sub-menu.png" alt="Set Stroke Type - Sub Menu" loading="lazy"><figcaption>Set Stroke Type - Sub Menu</figcaption></figure>
+<p>Defines how selected points are interpreted on the Grease Pencil.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stroke</td>
+<td>Points are treated as part of a line stroke.</td>
+</tr>
+<tr>
+<td>Fill</td>
+<td>Points are treated as part of a filled region.</td>
+</tr>
+<tr>
+<td>Both</td>
+<td>Points contribute to both stroke and fill.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="transform-sub-menu-2">Transform – Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/transform-sub-menu.png" alt="Transform – Sub Menu" loading="lazy"><figcaption>Transform – Sub Menu</figcaption></figure>
+<p>Provides geometric and visual transformations for selected Grease Pencil points or strokes.<br />
+Useful for reshaping, stylizing, and refining drawings with precise control</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>To Sphere</td>
+<td>Moves selected points toward a spherical distribution.   – Strength slider controls how tightly points conform to a sphere.   – Useful for rounding shapes or creating circular strokes.</td>
+</tr>
+<tr>
+<td>Shear</td>
+<td>Skews selected points along a chosen axis.   – Creates slanted or diagonal distortions.   – Ideal for stylized perspective effects or dynamic motion exaggeration.</td>
+</tr>
+<tr>
+<td>Bend</td>
+<td>Bends selected points around a pivot.   – Angle and pivot settings define curvature.   – Useful for wrapping strokes into arcs or circular motifs.</td>
+</tr>
+<tr>
+<td>Push/Pull</td>
+<td>Moves selected points outward or inward relative to their median center.   – Push expands the shape; Pull contracts it.   – Useful for inflating or compressing stroke geometry.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>Adjusts the thickness (point radius) of selected vertices.   – Larger radius = thicker stroke segments.   – Useful for line weight variation or emphasis.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>Changes the transparency of selected vertices.   – Higher values = more opaque; lower values = more transparent.   – Useful for shading, layering, or fade effects in drawings.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="smooth-2">Smooth</h4>
+<p>Smoothens out the selected geometry.</p>
+<h5 id="last-operator-smooth-stroke-3">Last Operator Smooth Stroke</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-smooth-stroke.png" alt="Last Operator Smooth Stroke" loading="lazy"><figcaption>Last Operator Smooth Stroke</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repeat</td>
+<td>How often to repeat the procedure.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>The amount of the smoothness to apply.</td>
+</tr>
+<tr>
+<td>Selected points</td>
+<td>When enabled, limits the effect to only the selected points within the stroke.</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>When enabled, the operator affect the points location.</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>When enabled, the operator affect the points thickness.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>When enabled, the operator affect the points strength (alpha).</td>
+</tr>
+<tr>
+<td>UV's</td>
+<td>When enabled, the operator affect the UV rotation on the points.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="move-to-layer-sub-menu-2">Move to Layer - Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/move-to-layer-sub-menu.png" alt="Move to Layer - Sub Menu" loading="lazy"><figcaption>Move to Layer - Sub Menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/move-to-layer-sub-menu-2.png" alt="Move to Layer - Sub Menu" loading="lazy"><figcaption>Move to Layer - Sub Menu</figcaption></figure>
+<p>Move the current selected stroke to another grease pencil layer. It lists the current layers.</p>
+<h5 id="new-layer-3">New Layer</h5>
+<p>New Layer button adds a new grease pencil layer.</p>
+<h6 id="last-operator-move-strokes-to-layer-2">Last Operator Move Strokes to Layer</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-move-strokes-to-layer.png" alt="Last Operator Move Strokes to Layer" loading="lazy"><figcaption>Last Operator Move Strokes to Layer</figcaption></figure>
+<h6 id="grease-pencil-layer-2">Grease Pencil Layer</h6>
+<p>Internal the layers are enumerated. So here you move by number.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/grease-pencil-layer.png" alt="Grease Pencil Layer" loading="lazy"></figure>
+<p>The number of a layer can be found out in the tool tip, in the Python part of it.</p>
+<h4 id="assign-material-sub-menu-2">Assign Material - Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/assign-material-sub-menu.png" alt="Assign Material - Sub Menu" loading="lazy"><figcaption>Assign Material - Sub Menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/assign-material-sub-menu-2.png" alt="Assign Material - Sub Menu" loading="lazy"><figcaption>Assign Material - Sub Menu</figcaption></figure>
+<p>Assign a new material to the current selected stroke geometry.</p>
+<p>The materials can be found and edited in the Properties editor. Here you can also create new materials.</p>
+<h5 id="last-operator-change-stroke-color-2">Last Operator Change Stroke Color</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-change-stroke-color.png" alt="Last Operator Change Stroke Color" loading="lazy"><figcaption>Last Operator Change Stroke Color</figcaption></figure>
+<h6 id="material-2">Material</h6>
+<p>The materials are defined by its name. So when you want to use another material, then change the name here.</p>
+<h4 id="set-as-active-material-2">Set as active material</h4>
+<p>Sets the current selected material as the active material.</p>
+<h4 id="arrange-strokes-sub-menu-2">Arrange Strokes - Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/arrange-strokes-sub-menu.png" alt="Arrange Strokes - Sub Menu" loading="lazy"><figcaption>Arrange Strokes - Sub Menu</figcaption></figure>
+<p>Changes the drawing order of the strokes in the 2D layer.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bring Forward</td>
+<td>Moves the selected points/strokes upper the next one in the drawing order.</td>
+</tr>
+<tr>
+<td>Send Backward</td>
+<td>Moves the selected points/strokes below the previous one in the drawing order.</td>
+</tr>
+<tr>
+<td>Bring to Front</td>
+<td>Moves to the top the selected points/strokes.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="send-to-back-2">Send to Back</h5>
+<p>Moves to the bottom the selected points/strokes.</p>
+<h6 id="last-operator-arrange-stroke-2">Last Operator Arrange Stroke</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-stroke-context-menu/last-operator-arrange-stroke.png" alt="Last Operator Arrange Stroke" loading="lazy"><figcaption>Last Operator Arrange Stroke</figcaption></figure>
+<h6 id="direction-2">Direction</h6>
+<p>Choose the method again.</p>
+<h4 id="mirror-sub-menu-2">Mirror - Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mirror-sub-menu.png" alt="Mirror - Sub Menu" loading="lazy"><figcaption>Mirror - Sub Menu</figcaption></figure>
+<p>Mirror mirrors the selected geometry along the defined axis.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interactive Mirror</td>
+<td>Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored.</td>
+</tr>
+<tr>
+<td>X Global, Y Global etc.</td>
+<td>Mirrors the selection around the chosen axis.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="last-operator-mirror-3">Last Operator Mirror</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu/last-operator-mirror.png" alt="Last Operator Mirror" loading="lazy"></figure>
+<p>The Last Operator Mirror panel gives you tools to adjust the mirror action.</p>
+<h6 id="orientation-12">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box. Choose the type of orientation for the mirroring action.</p>
+<h6 id="constraint-axis-3">Constraint Axis</h6>
+<p>Constraint Axis gives you again the possibility to define the mirror axis. You can choose more than one axis here.</p>
+<h4 id="snap-sub-menu-2">Snap – Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/snap-sub-menu.png" alt="Snap – Sub Menu" loading="lazy"><figcaption>Snap – Sub Menu</figcaption></figure>
+<p>Choose several methods to snap one element to another. The menu items should be self explaining.</p>
+<h5 id="last-operator-snap-2">Last Operator Snap</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-snap.png" alt="Last Operator Snap" loading="lazy"></figure>
+<p>Some snap operations shows a last operation panel, some not.</p>
+<h5 id="offset-2">Offset</h5>
+<p>If the selection should snap as a whole, or if each individual element of the selection should snap.</p>
+<h4 id="duplicate-3">Duplicate</h4>
+<p>Duplicates the current selection.</p>
+<p>When you duplicate a selection, then it sticks to the mouse until you left click. And moves around. A right click repositions the duplicated geometry at its original location.</p>
+<h5 id="last-operator-duplicate-strokes-2">Last Operator Duplicate Strokes</h5>
+<h6 id="mode-9">Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mode.png" alt="Mode" loading="lazy"></figure>
+<p>Not to find out. No tool tip, no entry in the Blender manual. Good Job Blender Developers.</p>
+<h6 id="move-x-y-z-3">Move X, Y, Z</h6>
+<p>Adjust the position.</p>
+<h6 id="orientation-13">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/metaball-edit-mode-metaball-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box. Choose the type of orientation for the mirroring action.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constraint Axis</td>
+<td>Constraint Axis gives you again the possibility to define the mirror axis. You can choose more than one axis here.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Edit along a mirror axis.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="proportional-editing-7">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy</td>
+<td>Copies the selection.</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Pastes a copied selection to active layer. You can have more than one layer.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="paste-by-layer-2">Paste by Layer</h4>
+<p>Pastes a copied selection to same, original layer. You can have more than one layer.</p>
+<h5 id="last-operator-paste-strokes-3">Last operator Paste Strokes</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-paste-strokes.png" alt="Last operator Paste Strokes" loading="lazy"><figcaption>Last operator Paste Strokes</figcaption></figure>
+<h6 id="type-8">Type</h6>
+<p>Choose between the paste methods again.</p>
+<h4 id="outline-4">Outline</h4>
+<p>Adds an outline to the grease pencil.</p>
+<h5 id="last-operator-outline-3">Last Operator Outline</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-outline.png" alt="Last Operator Outline" loading="lazy"></figure>
+<h6 id="projection-mode-3">Projection Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/projection-mode.png" alt="Projection Mode" loading="lazy"></figure>
+<p>The orientation to project the outline.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Thickness of the outline</td>
+</tr>
+<tr>
+<td>Offset Factor</td>
+<td>Offset from original outline.</td>
+</tr>
+<tr>
+<td>Corner Subdivisions</td>
+<td>How much iterations to subdivide the corners.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="split">Split</h4>
+<p>Splits the selection.</p>
+<h4 id="separate-2">Separate</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/last-operator-separate-strokes.png" alt="Separate" loading="lazy"></figure>
+<p>Separates the selection into a new grease pencil object.</p>
+<h5 id="last-operator-separate-strokes-4">Last Operator Separate Strokes</h5>
+<h6 id="mode-10">Mode</h6>
+<h6 id="active-layer-4">Active Layer</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/920dad1ec535277be114b754bf5da7757105e605/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/active-layer.png" alt="Active Layer" loading="lazy"></figure>
+<p>Separate all the strokes at the current active layer.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selected Strokes</td>
+<td>Separate the whole stroke of the current selection.</td>
+</tr>
+<tr>
+<td>Selected Points</td>
+<td>Separate the selected points with its edges.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-editors-split/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fgrease-pencil%2Fedit.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-editors-split/docs2/content/editors/3d-viewport/grease-pencil/edit.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#grease-pencil-menu">Grease Pencil menu</a><a class="h3" href="#edit-mode-grease-pencil-menu">Edit Mode - Grease Pencil Menu</a><a class="h3" href="#transform-submenu">Transform submenu</a><a class="h3" href="#mirror-submenu">Mirror submenu</a><a class="h3" href="#snap-submenu">Snap submenu</a><a class="h3" href="#active-layer">Active Layer</a><a class="h3" href="#animation">Animation</a><a class="h3" href="#single-operators">Single Operators</a><a class="h2" href="#point-menu">Point menu</a><a class="h3" href="#edit-mode-point-menu">Edit Mode - Point Menu</a><a class="h2" href="#stroke-menu">Stroke menu</a><a class="h3" href="#edit-mode-stroke-menu">Edit Mode - Stroke Menu</a><a class="h2" href="#tools">Tools</a><a class="h3" href="#tool-shelf-grease-pencil-edit-mode">Tool Shelf - Grease Pencil - Edit Mode</a><a class="h2" href="#point-context-menu">Point context menu</a><a class="h3" href="#edit-mode-point-context-menu">Edit Mode - Point Context Menu</a><a class="h2" href="#stroke-context-menu">Stroke context menu</a><a class="h3" href="#edit-mode-stroke-context-menu">Edit Mode - Stroke Context Menu</a></aside></div></body></html>
