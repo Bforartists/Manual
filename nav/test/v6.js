@@ -151,7 +151,7 @@ var NAVURL='https://bforartists.github.io/Manual/nav/nav.json',NK='bfa-docs-nav'
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
 function iu(f){return!f?'':(/^https?:/.test(f)?f:CDN+f)}
 function sKey(p){return p.dataset.sect||((q('.ui-panel-title',p)||{}).textContent||'').trim()}
-function saveOrder(){ls(OK,JSON.stringify(qa('.ui-doc-side .ui-doc-sect').map(sKey)))}
+function saveOrder(){ls(OK,JSON.stringify(qa('.ui-doc-side .ui-doc-sect').filter(function(p){return!p.hidden}).map(sKey)))}
 function restoreOrder(){var o;try{o=JSON.parse(ls(OK)||'[]')}catch(e){o=[]}var ps=qa('.ui-doc-side .ui-doc-sect');if(!o.length||ps.length<2)return;var mk=el('i');ps[0].parentNode.insertBefore(mk,ps[0]);ps.sort(function(a,b){var ia=o.indexOf(sKey(a)),ib=o.indexOf(sKey(b));return(ia<0?999:ia)-(ib<0?999:ib)});ps.forEach(function(p){mk.parentNode.insertBefore(p,mk)});mk.remove()}
 function gripEl(){var g=el('img','ui-panel-grip dk-grip');g.src=GRIP;g.alt='';g.tabIndex=0;g.setAttribute('role','button');g.setAttribute('aria-label','Move panel');return g}
 if(!R.dataset.dkDrag){R.dataset.dkDrag='1';
@@ -181,6 +181,7 @@ q('.ui-panel-title',p).addEventListener('click',function(e){e.stopPropagation()}
 restoreOrder();
 var ca=q('.ui-doc-side a.is-current');if(ca){var sc=ca.closest('.ui-doc-side');if(sc&&sc.scrollHeight>sc.clientHeight+4){var top=ca.getBoundingClientRect().top-sc.getBoundingClientRect().top;if(top>sc.clientHeight*.6)sc.scrollTop+=top-sc.clientHeight/3}}
 if(pg&&cur){var i=flat.indexOf(cur),A=function(n){if(!n)return null;var a=el('a');a.href=base+n.s;a.textContent=n.t;if(n.i){var im=el('img');im.alt='';im.src=iu(n.i);a.appendChild(im)}return a},rw=q('.ui-doc-foot-row',pg);if(rw)rw.innerHTML=half(A(flat[i-1]),'is-prev','Previous Chapter',-1)+half(A(flat[i+1]),'is-next','Next Chapter',1)}
+var ti=q('.ui-doc-tile-icon');if(ti&&cur&&cur.i){ti.src=iu(cur.i);ti.classList.add('is-color')}
 var cs=q('.ui-doc-crumb-section');if(cs&&curS&&cs.tagName==='A')cs.href=base+curS.s;
 if(typeof pages!=='undefined'&&pages){pages.length=0;flat.forEach(function(n){pages.push({t:n.t,h:base+n.s,i:iu(n.i),s:n.land?'':n._sec.t})})}
 cards(bySlug,base);R.classList.add('dk-nav');return true}
