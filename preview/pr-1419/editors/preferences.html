@@ -1,0 +1,2693 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Preferences · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1419 · <code>docs2/q2-nav-landing</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../getting-started.html">Getting Started</a>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<a href="../interface.html">Interface</a>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<a href="../workspaces.html">Workspaces</a>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<a href="../editors.html">Editors</a>
+<a href="topbar-and-statusbar.html">Topbar and Statusbar</a>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<a href="introduction.html">Editors introduction</a>
+<a href="3d-viewport.html">3D Viewport</a>
+<span style="padding-left:2.5rem">Object mode - Object Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Vertex Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Edge Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Face Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Sculpt Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Vertex Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Weight Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Texture Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Curve + Surface Object - Edit Mode - Curve context menus</span>
+<span style="padding-left:2.5rem">Metaball - Edit Mode - Metaball context menu</span>
+<span style="padding-left:2.5rem">Text - Edit Mode - Text context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Edit Mode - Point context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Edit Mode - Stroke context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Sculpt Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Draw Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Vertex Paint Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Weight Paint Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode - Armature context menu</span>
+<span style="padding-left:2.5rem">Armature - Pose Mode - Pose context menu</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode - Lattice context menu</span>
+<span style="padding-left:2.5rem">Hair Curves - Edit Mode - Curves context menu</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Edit mode - Add menu</span>
+<span style="padding-left:2.5rem">Object menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Mesh menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit Mode - Vertex Menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Edge Menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Face menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - UV menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Sculpt menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Mask menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Face Sets menu</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint mode - Paint menu</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint mode - Brush menu</span>
+<span style="padding-left:2.5rem">Mesh - Weight Paint mode - Weights menu</span>
+<span style="padding-left:2.5rem">Mesh - Texture Paint mode - Brush menu</span>
+<span style="padding-left:2.5rem">Curve - Edit mode - Curve menu</span>
+<span style="padding-left:2.5rem">Surface - Edit mode - Surface menu</span>
+<span style="padding-left:2.5rem">Curve &amp; Surface - Edit mode - Control points menu</span>
+<span style="padding-left:2.5rem">Curve &amp; Surface - Edit mode - Segments menu</span>
+<span style="padding-left:2.5rem">Metaball - Edit mode - Metaball menu</span>
+<span style="padding-left:2.5rem">Text - Edit mode - Text menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Grease Pencil menu</span>
+<span style="padding-left:2.5rem">Point Cloud - Edit mode - Point Cloud menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Point menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Stroke menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Draw mode - Draw menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Vertex Paint mode - Paint menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Weight Paint Mode - Weights Menu</span>
+<span style="padding-left:2.5rem">Armature - Edit mode - Armature menu</span>
+<span style="padding-left:2.5rem">Armature - Pose mode - Pose menu</span>
+<span style="padding-left:2.5rem">Lattice - Edit mode - Lattice menu</span>
+<span style="padding-left:2.5rem">Particle - Particle mode - Particle menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Curves menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Control Points menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Segments menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Sculpt mode - Curves menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Mesh - Edit Mode</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Texture Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Particle Edit Mode</span>
+<span style="padding-left:2.5rem">Curve - Edit Mode</span>
+<span style="padding-left:2.5rem">Surface - Edit Mode</span>
+<span style="padding-left:2.5rem">Metaball - Edit Mode</span>
+<span style="padding-left:2.5rem">Text - Edit Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Draw Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode</span>
+<span style="padding-left:2.5rem">Armature - Pose Mode</span>
+<span style="padding-left:2.5rem">Lattice - Edit Mode</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit Mode</span>
+<span style="padding-left:2.5rem">Hair Curve - Sculpt Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Item tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">Tool Tab - Object Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Edit Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Pose Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Texture Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Particle Edit Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Draw Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Layer Panel</span>
+<span style="padding-left:2.5rem">Tool Tab - Hair Curve - Sculpt Mode</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Animation Tab</span>
+<span style="padding-left:1.5rem">Asset Shelf</span>
+<a href="image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View menu</span>
+<span style="padding-left:2.5rem">Image menu</span>
+<span style="padding-left:2.5rem">Select menu</span>
+<span style="padding-left:2.5rem">Add menu</span>
+<span style="padding-left:2.5rem">Mask menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Tool Tab in Paint Mode</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Scopes Tab</span>
+<span style="padding-left:2.5rem">Mask Tab</span>
+<a href="uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">UV menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<a href="compositor.html">Compositor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Color - Adjust</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Creative</span>
+<span style="padding-left:2.5rem">Add Menu - Filter - Blur</span>
+<span style="padding-left:2.5rem">Add Menu - Filter</span>
+<span style="padding-left:2.5rem">Add Menu - Keying</span>
+<span style="padding-left:2.5rem">Add Menu - Mask</span>
+<span style="padding-left:2.5rem">Add Menu - Tracking</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Transform</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Geometry Nodes Editor - Header - Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<a href="texture-node-editor.html">Texture Node Editor</a>
+<a href="geometry-node-editor.html">Geometry Node Editor</a>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Gizmo</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Import</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Attribute</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - UV</span>
+<span style="padding-left:2.5rem">Add Menu - Point</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Simulation</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Text</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Bundle</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Closure</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Field</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Matrix</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Rotation</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Deprecated</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Generate</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Selection</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Deformation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Generation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Guides</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span style="padding-left:2.5rem">Node tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Add</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<a href="shader-editor.html">Shader Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Shader</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<a href="video-sequence-editor.html">Video Sequence Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Export Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Strip Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">Text Menu</span>
+<span style="padding-left:2.5rem">Scene Menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Preview - Tool tab</span>
+<span style="padding-left:2.5rem">Preview - View tab</span>
+<span style="padding-left:2.5rem">Sequencer - Strip tab</span>
+<span style="padding-left:2.5rem">Sequencer - Tool tab</span>
+<span style="padding-left:2.5rem">Sequencer - Cache tab</span>
+<span style="padding-left:2.5rem">Sequencer - Proxy tab</span>
+<span style="padding-left:2.5rem">Sequencer - View tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<a href="movie-clip-editor.html">Movie Clip Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Clip Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Track Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Graph Submode - Graph Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Clip Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Add Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Mask Menu</span>
+<span style="padding-left:1.5rem">Tool shelf</span>
+<span style="padding-left:2.5rem">Tracking Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Footage Tab</span>
+<span style="padding-left:2.5rem">Track tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - Stabilization tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - View tab</span>
+<a href="dope-sheet.html">Dope Sheet</a>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:2.5rem">Action Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<a href="timeline.html">Timeline</a>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<a href="graph-editor.html">Graph Editor</a>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<a href="drivers-editor.html">Drivers Editor</a>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Drivers Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">Driver Editor - Sidebar - View Tab</span>
+<a href="nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<span style="padding-left:2.5rem">NLA Editor - Header tools and options</span>
+<span style="padding-left:2.5rem">NLA Editor - Header - Quick Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - View Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Select Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Marker Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Add Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Track Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Strip Menu</span>
+<span style="padding-left:1.5rem">NLA Editor - Channel list</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Animation Data panel</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Strip tab</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Modifiers Tab</span>
+<span style="padding-left:1.5rem">NLA Editor - Footer tools and options</span>
+<a href="text-editor.html">Text Editor</a>
+<a href="python-console.html">Python Console</a>
+<a href="info-editor.html">Info Editor</a>
+<a href="toolbar.html">Toolbar</a>
+<a href="outliner.html">Outliner</a>
+<a href="properties.html">Properties Editor</a>
+<span style="padding-left:1.5rem">Render Properties Tab</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:1.5rem">Output Properties Tab</span>
+<span style="padding-left:1.5rem">View Layer Properties Tab</span>
+<span style="padding-left:1.5rem">Scene Properties Tab</span>
+<span style="padding-left:1.5rem">World Properties Tab</span>
+<span style="padding-left:1.5rem">Collection Properties Tab</span>
+<span style="padding-left:1.5rem">Object Properties Tab</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Particle Properties Tab</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:1.5rem">Visual Effects Properties Tab</span>
+<span style="padding-left:1.5rem">Physics Properties Tab</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:1.5rem">Object Constraints Properties Tab</span>
+<span style="padding-left:1.5rem">Object Data Properties Tab</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span style="padding-left:1.5rem">Material Properties Tab</span>
+<span style="padding-left:1.5rem">Texture Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Constraint Properties</span>
+<span style="padding-left:1.5rem">Strip Tab</span>
+<span style="padding-left:1.5rem">Strip Modifiers Tab</span>
+<a href="file-browser.html">File browser</a>
+<a href="asset-browser.html">Asset Browser</a>
+<span style="padding-left:1.5rem">Asset Browser - Default Asset LIbrary</span>
+<span style="padding-left:1.5rem">Asset Browser - Essentials Asset Library</span>
+<a href="spreadsheet.html">Spreadsheet</a>
+<a class="is-current" href="preferences.html">Preferences</a>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Context menus</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<h4>Extensions and Addons</h4>
+<a href="../extensions.html">Extensions and Addons</a>
+<span>Bforartists Extensions</span>
+<span style="padding-left:1.5rem">Core Extension - Brush Panels</span>
+<span style="padding-left:1.5rem">Core Extension - Presentation Slider</span>
+<span style="padding-left:1.5rem">Core Extension- 3D Sequencer</span>
+<span style="padding-left:1.5rem">Core Extension - Power User Tools</span>
+<h4>Keymap</h4>
+<a href="../keymap.html">Keymap</a>
+<span>Standard Keymap</span>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<a href="../advanced.html">Advanced</a>
+<span>Advanced - Command Line</span>
+<span>Advanced - Scripting &amp; Extending Bforartists</span>
+<span>Advanced - Working Limits</span>
+<span>Troubleshooting</span>
+<h4>Information</h4>
+<a href="../appendix.html">Information</a>
+<span>Glossary</span>
+<span>Bforartists History</span>
+<span>Manual Update History</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Preferences</div><h1 class="pv-title">Preferences</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 49 min read</span></div><article class="ui-doc-body"><h2 id="preferences">Preferences</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/preferences.png" alt="Preferences" loading="lazy"></figure>
+<p>The Preferences is the place where you can tweak several settings to your needs. It can be opened in the Edit menu in the top bar.</p>
+<p>The Preferences contains several tabs. And every tab contains several rows or panels with content. We will go through them one by one.</p>
+<p>When you have changed something, and want that changes to be permanent, then you are required to save the user settings. See the Save User Settings button in the header.</p>
+<h3 id="navigation-sidebar">Navigation Sidebar</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/navigation-sidebar.png" alt="Navigation Sidebar" loading="lazy"></figure>
+<p>At the left side you will find the navigation elements to access the different categories. Including a search bar where you can search for specific items.</p>
+<p>At the bottom resides the Save Preferences menu.</p>
+<h4 id="save-preferences-menu">Save Preferences menu</h4>
+<h5 id="auto-save-preferences">Auto Save preferences</h5>
+<p>Changes at the preferences are saved automatically when Auto Save Preferences is ticked. When this option is off, then changes needs to be saved manually. When you don't save the changes, then Bforartists loads the next time with the status before the changes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/auto-save-preferences.jpg" alt="Auto Save preferences" loading="lazy"></figure>
+<p>Note that when Auto Save Preferecnes is unticked, then the Save Preferences button is displayed in the sidebar besides the Save Preferences menu, and not longer in the Save Preferences menu.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Save Preferences</td>
+<td>Manually saves the current state.</td>
+</tr>
+<tr>
+<td>Revert to Saved Preferences</td>
+<td>This option is just available when Auto Save preferences is off. It reverts the settings to the last saved state.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="load-factory-preferences">Load Factory Preferences</h5>
+<p>Resets the settings to the factory defaults.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> <img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/load-factory-preferences.png" alt="Load Factory Preferences" /></p>
+<p>Not everything can be changed from the Preferences. Everything regarding layout is stored in the Startup File, and not in the Preferences. So when you want to save a layout change then you have to save the startup file. The menu item is right above the Preferences button in the Edit menu.</p></div>
+<h2 id="interface-tab">Interface Tab</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/interface-tab.png" alt="Interface Tab" loading="lazy"></figure>
+<p>The Interface category contains settings to change how UI elements are displayed and how they react.</p>
+<h3 id="display-panel">Display Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/display-panel.png" alt="Display Panel" loading="lazy"></figure>
+<h4 id="resolution-scale">Resolution Scale</h4>
+<p>At 4K displays the whole UI elements are usually ways too small. Scale the whole UI size display by moving the slider to the needed value.</p>
+<h4 id="line-width">Line Width</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/line-width.png" alt="Line Width" loading="lazy"></figure>
+<p>Define the size of the line between the editors. This is a theming setting.</p>
+<h4 id="viewport-line-width">Viewport Line Width</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/viewport-line-width.png" alt="Viewport Line Width" loading="lazy"></figure>
+<p>Changes the appearance of only lines in the 3D Viewport.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Splash Screen</td>
+<td>Display the Splash Screen when starting Bforartists.</td>
+</tr>
+<tr>
+<td>Tool tips</td>
+<td>Display tool tips in the UI. With this feature unticked you won't see any tool tips anymore. It is not recommended to turn this feature off. The icon buttons needs the tool tips to display the tool name.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="python-tool-tips">Python Tool tips</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/python-tool-tips.png" alt="Python Tool tips" loading="lazy"></figure>
+<p>Every tool tip can also display the Python code tag for the tool. It may look like noise in the first moment. But can give you some further hints here and there. Some tool tips, like the Node editor buttons, doesn't have a proper tool description by design. Here the Python tool tip can tell you the function when you turn it into pure icon buttons.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/python-tool-tips-2.png" alt="Python Tool tips" loading="lazy"></figure>
+<p>The tools in the tool shelf doesn't have a Python tool tip by design. This buttons sits on top of the normal operators, and doesn't access the tool tip of it.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> It is not recommended to turn the Python tool tips off.</p></div>
+<h4 id="developer-extras">Developer Extras</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/developer-extras.png" alt="Developer Extras" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/developer-extras-2.png" alt="Developer Extras" loading="lazy"></figure>
+<p>This tick box turns on or off the developer entries in the right click menus.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sort Search by Most Recent</td>
+<td>This affects all search fields. Sort the recently searched items at the top.</td>
+</tr>
+<tr>
+<td>Show Hidden</td>
+<td>Show hidden data that are hidden away with a dot before the name in search menus.</td>
+</tr>
+<tr>
+<td>Disable Search on Key Press</td>
+<td>Ignore menus toggling with Search on Key Press, and fallback to using accelerator keys instead. This is a Bforartists only feature.</td>
+</tr>
+<tr>
+<td>Disable Material Icon Rendering</td>
+<td>Stops the preview icons on the material properties from rendering, which helps avoid causing the UI to stutter or freeze. This is a Bforartists only feature.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="editors-panel">Editors Panel</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/editors-panel.png" alt="Editors Panel" loading="lazy"></figure>
+<h4 id="region-overlap">Region Overlap</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/region-overlap.png" alt="Region Overlap" loading="lazy"></figure>
+<p>This checkbox will enable Blender to draw the Header, Tool Shelf and the Sidebar overlapping the 3D View. The transparent areas becomes workspace area. You can for example select vertices now in the transparent areas.</p>
+<p>If you have a capable graphics card and drivers with <em>Triple Buffer</em> support, clicking the checkbox will enable the overlapping regions to be drawn using the <em>Triple Buffer</em> method, which will also enable them to be drawn using Alpha, showing the 3D View contents trough the <em>Object Tools</em> and <em>Transform Properties</em> regions.</p>
+<h4 id="corner-handles">Corner Handles</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/corner-handles.png" alt="Corner Handles" loading="lazy"></figure>
+<p>Displays small clickable handles in the <strong>corners of editor regions</strong>. Makes it easier to <strong>resize or split</strong> editors by dragging from the corners, especially in dense layouts. mproves discoverability and precision for users who prefer visual cues over edge-hovering in the editors.</p>
+<h4 id="numeric-input-arrows">Numeric Input Arrows</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/numeric-input-arrows.png" alt="Numeric Input Arrows" loading="lazy"></figure>
+<p>Adds <strong>left/right arrow buttons</strong> beside numeric fields. Lets you increment or decrement values by clicking, rather than typing or dragging. Offers a more tactile, UI-friendly way to adjust numbers—especially useful for tablets, styluses, or keyboard-free setups.</p>
+<h4 id="navigation-controls">Navigation Controls</h4>
+<p>Show the navigation controls in the 2d and 3d views</p>
+<h4 id="vertical-navigation-gizmos-alignment">Vertical Navigation Gizmos Alignment</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/vertical-navigation-gizmos-alignment.png" alt="Vertical Navigation Gizmos Alignment" loading="lazy"><figcaption>Vertical Navigation Gizmos Alignment</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/vertical-navigation-gizmos-alignment-2.png" alt="Vertical Navigation Gizmos Alignment" loading="lazy"><figcaption>Vertical Navigation Gizmos Alignment</figcaption></figure>
+<p>Revert Navigation Controls to be vertical instead of Bforartists default horizontal alignment. Default is off.</p>
+<h4 id="border-width">Border Width</h4>
+<p>Size of the padding around each editor.</p>
+<h4 id="color-picker-type">Color Picker Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/color-picker-type.png" alt="Color Picker Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/color-picker-type-2.png" alt="Color Picker Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/color-picker-type-3.png" alt="Color Picker Type" loading="lazy"></figure>
+<p>Choose the type of Color picker that will show when you click on a color field. You can choose between three square types and two circle types.</p>
+<h4 id="header-position">Header Position</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/header-position.png" alt="Header Position" loading="lazy"></figure>
+<p>Define at which default position the headers of the editors should reside.</p>
+<h4 id="factor-display-type">Factor Display Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/factor-display-type.png" alt="Factor Display Type" loading="lazy"></figure>
+<p>Display factor values either as percentage or as factor.</p>
+<h4 id="temporary-editors-subpanel">Temporary Editors subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/temporary-editors-subpanel.png" alt="Temporary Editors subpanel" loading="lazy"></figure>
+<p>How the temporary editors behave.</p>
+<h5 id="render-in">Render in</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/render-in.png" alt="Render in" loading="lazy"></figure>
+<p>Where to display the rendered image.</p>
+<h5 id="file-browser">File browser</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/file-browser.png" alt="File browser" loading="lazy"></figure>
+<p>Where to open the file browser.</p>
+<h4 id="status-bar-subpanel">Status Bar subpanel</h4>
+<p>These checkboxes let you customize what info appears in the status bar at the footer of the main window. The list is explicit.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/status-bar-subpanel.png" alt="Status Bar subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/status-bar-subpanel-2.png" alt="Status Bar subpanel" loading="lazy"></figure>
+<h3 id="language-panel">Language Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/language-panel.png" alt="Language Panel" loading="lazy"></figure>
+<p>Choose another default language for Bforartists.</p>
+<h4 id="language">Language</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/language.png" alt="Language" loading="lazy"></figure>
+<p>Choose between automatic language detection. In this case the system language gets chosen. Or pick a language that you want to use.</p>
+<h4 id="translate">Translate</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tool tips</td>
+<td>Tool tips translates the tool tips too.</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>Interface translates all the interface texts.</td>
+</tr>
+<tr>
+<td>Reports</td>
+<td>Translate report and error messages too.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="new-data">New Data</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/new-data.png" alt="New Data" loading="lazy"></figure>
+<p>New data is meant to edit the localization texts.</p>
+<p>This can be done in the right click menus of the tools when everything is set up in the correct way.</p>
+<p>This is a development feature. You need a repository of Bforartists!</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This feature is currently not functional in Bforartists. It ends in an error message.</p></div>
+<p>Let's nevertheless document the way how it should work. Note that you need a Bforartists repository for that. The binary version does not come with the editable <code>*.po</code> files, but with already compiled <code>*.mo</code> files for the translation.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/new-data-2.png" alt="New Data" loading="lazy"></figure>
+<p>Note that you first need to set the path to the translation files for that. Or you will get an error. This is done in the File tab. The |18n string.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/new-data-3.png" alt="New Data" loading="lazy"></figure>
+<p>The path should lead to the <code>*.po</code> files that you want to translate. Which can be found in the Bforartists repository.</p>
+<p>And you need to enable the Manage UI translations add-on. And to fix the paths in this add-on. The default paths are currently set for Blender.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/new-data-4.png" alt="New Data" loading="lazy"></figure>
+<p>And then you might end in this error here ...</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/new-data-5.png" alt="New Data" loading="lazy"></figure>
+<p>In case somebody has an idea what's going on here, every hint is welcome …</p>
+<h3 id="accessibility-panel">Accessibility Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/accessibility-panel.png" alt="Accessibility Panel" loading="lazy"></figure>
+<h4 id="reduced-motion">Reduced Motion</h4>
+<p>T<strong>he Reduce Motion optio</strong>n is designed to improve usability for users sensitive to motion effects. When enabled, the interface minimizes or disables non-essential animations in the interface.</p>
+<h3 id="text-rendering-panel">Text Rendering Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/text-rendering-panel.png" alt="Text Rendering Panel" loading="lazy"></figure>
+<p>Text related settings for the font of the interface.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anti-Aliasing</td>
+<td>Use Anti Alias at the UI elements to prevent pixelated look of the font.</td>
+</tr>
+<tr>
+<td>Subpixel Anti-Aliasing</td>
+<td>Use subpixel calculations to refine the horizontal spacing between characters.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="hinting">Hinting</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/hinting.png" alt="Hinting" loading="lazy"></figure>
+<p>What sharpening method to use to make the text render sharp.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interface Font</td>
+<td>Define a custom interface font. The font in the whole UI.</td>
+</tr>
+<tr>
+<td>Monospace Font</td>
+<td>Define a custom Monospace font. That's the one used in the python console for example.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="menus-panel">Menus Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/menus-panel.png" alt="Menus Panel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open on Mouse Over</td>
+<td>Normally you click at a menu to open it. With Open on Mouse Over the menu opens up when you just hover with the mouse over it. · <strong>Top Level</strong>: Adjust the time delay before the top level menu opens on mouse over. · <strong>Sub Level</strong>: Adjust the time delay before a sub level menu opens on mouse over.</td>
+</tr>
+<tr>
+<td>Pie Menus</td>
+<td>Bforartists has some pie menus that can be called by hotkeys. Here you find some settings for it. · <strong>Animation Timeout</strong>: The pie menu fades in with an animation. Adjust the time needed to fully unfold the pie menu. · <strong>Top Key Timeout</strong>: Pie menu button longer held than this time will dismiss the menu on release. · <strong>Recenter Timeout</strong>: Pie menus will use the initial mouse position as center for this amount of time. The value is in 1/100 seconds. · <strong>Radius</strong>: The pie menu size in pixels. · <strong>Threshold</strong>: The distance that is needed from the center to move the mouse so that a selection can be made. · <strong>Confirm Threshold</strong>: Distance threshold after which selection is made. A value of zero disables this feature.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="viewport">Viewport</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/viewport.png" alt="Viewport" loading="lazy"></figure>
+<p>Contains the settings for the 3D Viewport.</p>
+<h3 id="display">Display</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/display.png" alt="Display" loading="lazy"></figure>
+<h4 id="text-info-overlay">Text Info Overlay</h4>
+<h5 id="object-info">Object Info</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/object-info.png" alt="Object Info" loading="lazy"></figure>
+<p>Display current frame, collection name and Object name in the upper left edge of the 3D view.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/object-info-2.png" alt="Object Info" loading="lazy"></figure>
+<p>The letters appears in yellow when the current frame of the selected object has a keyframe.</p>
+<h5 id="view-name">View Name</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/view-name.png" alt="View Name" loading="lazy"></figure>
+<p>Display the name of the current view up left in the 3D view.</p>
+<h5 id="playback-frame-rate-fps">Playback Frame Rate (FPS)</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/playback-frame-rate-fps.png" alt="Playback Frame Rate (FPS)" loading="lazy"><figcaption>Playback Frame Rate (FPS)</figcaption></figure>
+<p>Show the frames per second screen refresh rate while an animation is played back. It appears in the viewport corner, displaying red if the frame rate set cannot be reached. And replaces the View name while the animation is playing.</p>
+<h6 id="frame-rate-samples">Frame Rate Samples</h6>
+<p>The number of frames to use for calculating the fps average. A value of zero calculates the fps automatically, where the nunber of samples matches the target fps.</p>
+<h5 id="gizmo-size">Gizmo Size</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/gizmo-size.png" alt="Gizmo Size" loading="lazy"></figure>
+<p>Adjust the size of the transform gizmo that appears when you have one of the transform tools activated.</p>
+<h5 id="reference-sphere-size">Reference Sphere Size</h5>
+<p>How big the preview spheres are displayed.</p>
+<h5 id="3d-viewport-axis">3D Viewport Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/3d-viewport-axis.png" alt="3D Viewport Axis" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/3d-viewport-axis.jpg" alt="3D Viewport Axis" loading="lazy"></figure>
+<p>Adjust the apperance of the 3D Viewport mini axis widget.</p>
+<h6 id="off">Off</h6>
+<p>Hides the Mini axis widget</p>
+<h6 id="simple-axis">Simple Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/simple-axis.png" alt="Simple Axis" loading="lazy"></figure>
+<p>Shows simple axis. This widget type is not interactive. It just shows the state of the viewport rotation.</p>
+<p><strong>Size</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/size.png" alt="Size" loading="lazy"></figure>
+<p>The size of the simple mini axis widget.</p>
+<p><strong>Brightness</strong></p>
+<p>The brighness of th simple mini axis widget.</p>
+<h6 id="interactive-navigation">Interactive Navigation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/interactive-navigation.png" alt="Interactive Navigation" loading="lazy"></figure>
+<p>The default mini axis widget. This widget is interactive. Clicking and dragging will rotate the viewport. Clicking at one of the colored spots at the end of the axis will snap to the neares orthographic view.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>The size of the interactive navigation widget.</td>
+</tr>
+<tr>
+<td>Fresnel in Edit Mode</td>
+<td>Enable a fresnel effect on edit mesh overlays. This feature improves shape readability of very dense meshes. But can increase eye fatigue when modeling lower poly.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quality">Quality</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/quality.png" alt="Quality" loading="lazy"></figure>
+<p>Contains the settings to adjust the display quality in the viewport.</p>
+<h4 id="viewport-anti-aliasing">Viewport Anti-Aliasing</h4>
+<p>The anti alias quality settings for the solid mode rendering in the 3d viewport.</p>
+<h4 id="multi-sampling">Multi sampling</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/multi-sampling.png" alt="Multi sampling" loading="lazy"></figure>
+<p>Set the OpenGL Multi sampling in case your system supports it.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grease Pencil Multi sampling</td>
+<td>The grease pencil drawing has its own OpenGL Multi sampling. Set the OpenGL Multi sampling in case your system supports it.</td>
+</tr>
+<tr>
+<td>Edit Mode Smooth Wires</td>
+<td>Enable Edit Mode edge smoothing which reduces anti alias and makes the edge more sharp. A change requires a restart of the software.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="textures">Textures</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/textures.png" alt="Textures" loading="lazy"></figure>
+<h4 id="limit-size">Limit Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/limit-size.png" alt="Limit Size" loading="lazy"></figure>
+<p>Limit the maximum resolution for pictures used in textured display to save memory. The limit options are specified in a square of pixels, (e.g.: the option 256 means a texture of 256×256 pixels) This is useful for game engineers, whereas the texture limit matches paging blocks of the textures in the target graphic card memory. Available Options are: <em>Off</em> (No limit), <em>128</em>, <em>256</em>, <em>512</em>, <em>1024</em>, <em>2048</em>, <em>4096</em>, and <em>8192</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anisotropic Filtering</td>
+<td>Sets the level of anisotropic filtering. This improves the quality of how textures are drawn at the cost of performance. Available Options are: <em>Off</em> (No Filtering), <em>2x</em>, <em>4x</em>, <em>8x</em>, and <em>16x</em>.</td>
+</tr>
+<tr>
+<td>Clip Alpha</td>
+<td>Clip alpha when the value is below the here defined value.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="image-display-method">Image Display Method</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/image-display-method.png" alt="Image Display Method" loading="lazy"></figure>
+<p>The method that is used to draw textures in the viewport.</p>
+<h3 id="subdivisions">Subdivisions</h3>
+<h4 id="gpu-subdivisions">GPU Subdivisions</h4>
+<p>Enable GPU acceleration for evaluating the last subdivision surface modifier at the bottom of the modifier stack. This greatly improves subdivision performance on playback and evaluation.</p>
+<h2 id="lights">Lights</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/lights.png" alt="Lights" loading="lazy"></figure>
+<p>The viewport uses different light setups in different situations. You can switch between them in the shading drop down in the 3d view up right.</p>
+<p>This tab allows you to customize these light setups. And install custom light setups.</p>
+<h3 id="studio-lights">Studio Lights</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/studio-lights.png" alt="Studio Lights" loading="lazy"></figure>
+<p>The 3D view uses Solid OpenGL lamps to light the 3D view. You can enable four different light sources here. These lamps does not affect the rendering. Their only purpose is to light the 3D view.</p>
+<p>You can turn on or off the lamps. But there should be at least one light enabled.</p>
+<h4 id="install">Install</h4>
+<p>Install an external studio light.</p>
+<h4 id="preview-window">Preview Window</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/preview-window.png" alt="Preview Window" loading="lazy"></figure>
+<p>This window appears when you have a studio light saved, or a new studio light installed.</p>
+<p>Down left you can see the name of the saved library. mystudio.sl .</p>
+<p>This window gives you a preview of how this studio light looks like in the 3D view then.</p>
+<p>Up right you can find two buttons.</p>
+<h5 id="delete-studio-light">Delete Studio Light</h5>
+<p>Deletes the studio light.</p>
+<h5 id="copy-studio-light-settings-to-the-studio-light-editor">Copy Studio Light settings to the Studio Light Editor</h5>
+<p>The editor settings does not update immediately. It shows the default studio light setting. So when you want to edit the studio light, then you want to press this button to update the editor values first.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Studio Light</td>
+<td>Enable the editing of the studio light setup.</td>
+</tr>
+<tr>
+<td>Save as Studio Light</td>
+<td>Save the current light setup as a studio light setup. Note that this does not export the light, but saves its settings internally in the appdata directory.</td>
+</tr>
+<tr>
+<td>Use Light</td>
+<td>Turn on or off this specific light.</td>
+</tr>
+<tr>
+<td>Diffuse</td>
+<td><strong>Diffuse</strong> color is the constant color of the lamp.</td>
+</tr>
+<tr>
+<td>Specular</td>
+<td><strong>Specular</strong> is the highlight color of the lamp.</td>
+</tr>
+<tr>
+<td>Smooth</td>
+<td>Smooth the lighting from this specific light.</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>Adjust the direction. Click into the field and drag the sphere around until you have your desired light setup.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="matcaps">MatCaps</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/matcaps.png" alt="MatCaps" loading="lazy"></figure>
+<p>Matcaps is a special material that can be assigned quickly to preview geometry. Usually matcaps are used while sculpting. You can switch between them in the shading drop down in the 3d view up right.</p>
+<p>Install and manage custom matcaps.</p>
+<h3 id="lookdevhdri-s">LookDevHDRI's</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/lookdevhdri-s.png" alt="LookDevHDRI&#x27;s" loading="lazy"></figure>
+<p>You can light the scene with an environment image instead of lights. This is done with hdri images.</p>
+<p>The viewport can do this in realtime when the shading is set to Viewport Shading.</p>
+<p>Install and manage custom LookDev HDRI's. Basically every image could do the trick here. But the hdri's uses a special spherical mapping. So you better use hdri images for this purpose.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/lookdevhdri-s-2.png" alt="LookDevHDRI&#x27;s" loading="lazy"></figure>
+<h2 id="editing">Editing</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/editing.png" alt="Editing" loading="lazy"></figure>
+<p>Contains the settings around editing. Objects, Data, etc.</p>
+<h3 id="objects">Objects</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/objects.png" alt="Objects" loading="lazy"></figure>
+<h4 id="new-objects">New Objects</h4>
+<h5 id="link-materials-to">Link Materials To</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/link-materials-to.png" alt="Link Materials To" loading="lazy"></figure>
+<p>Define how materials will be linked to its objects. Almost everything in Bforartists is organized in a hierarchy of data-blocks. A data-block can be thought of as containers for certain pieces of information. For example, the Object data-block contains information about the Object’s location while the Object Data <em>ObData</em> data-block contains information about the mesh.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ObData</td>
+<td>Any created material will be created as part of the ObData data-block.</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>Any created material will be created as part of the Object data-block.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="align-to">Align To</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/align-to.png" alt="Align To" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>World</td>
+<td>New objects align with world coordinates.</td>
+</tr>
+<tr>
+<td>View</td>
+<td>New object align with view coordinates.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enter Edit Mode</td>
+<td>If selected, Edit Mode is automatically activated when you create a new object.</td>
+</tr>
+<tr>
+<td>Instance Empty Size</td>
+<td>Increase or decrease the size of collection empties.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="copy-on-duplicate-data-subtab">Copy on Duplicate Data subtab</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/copy-on-duplicate-data-subtab.png" alt="Copy on Duplicate Data subtab" loading="lazy"><figcaption>Copy on Duplicate Data subtab</figcaption></figure>
+<p>When you duplicate data, then most or all its subpart gets duplicated too. Define which supports should be duplicated when you duplicate an object.</p>
+<h3 id="3d-cursor">3D Cursor</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/3d-cursor.png" alt="3D Cursor" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface Project</td>
+<td>Use the surface depth to place the 3D cursor. That way you can place the 3D cursor at the surface of an object.</td>
+</tr>
+<tr>
+<td>Lock Adjust</td>
+<td>Place the cursor without a jumping effect at the new location when lock to cursor is used.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="annotations">Annotations</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/annotations.png" alt="Annotations" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default Color</td>
+<td>The default color for the annotations pencil.</td>
+</tr>
+<tr>
+<td>Eraser radius</td>
+<td>The eraser radius.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="weight-paint">Weight Paint</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/weight-paint.png" alt="Weight Paint" loading="lazy"></figure>
+<h4 id="use-custom-colors">Use Custom Colors</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/use-custom-colors.png" alt="Use Custom Colors" loading="lazy"></figure>
+<p>Bforartists uses by default a gradient that goes from red to green to blue to black to display the different weight at a mesh.</p>
+<p>Setup a custom gradient for the colors of a weight paint.</p>
+<p><strong>The + Button</strong> adds a color stop point, which can be moved around. That way you can have more than one color in the gradient.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/use-custom-colors-2.png" alt="Use Custom Colors" loading="lazy"></figure>
+<p><strong>The - Button</strong> removes the currently selected color stop point.</p>
+<h5 id="tools-menu">Tools Menu</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/tools-menu.png" alt="Tools Menu" loading="lazy"></figure>
+<p><strong>Flip Color ramp</strong> flips the color ramp.</p>
+<p><strong>Distribute Stops from Left</strong> distributes the color stops from the left. The position at the right will remain empty.</p>
+<p><strong>Distribute Stops evenly</strong> distributes the color stops evenly across the gradient.</p>
+<p>Eyedropper allows you to pick a color from the gradient.</p>
+<p><strong>Reset color ramp</strong> resets the color ramp to the default state.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/tools-menu-2.png" alt="Tools Menu" loading="lazy"></figure>
+<p><strong>Color Mode</strong> is a drop down box to choose the color mode for the gradient.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/tools-menu-3.png" alt="Tools Menu" loading="lazy"></figure>
+<p><strong>Interpolation</strong> is a drop down box to choose the interpolation mode for the gradient.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/tools-menu-4.png" alt="Tools Menu" loading="lazy"></figure>
+<p>In the <strong>Color Ramp element</strong> you will see the color ramp with the single color stops.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/tools-menu-5.png" alt="Tools Menu" loading="lazy"></figure>
+<p><strong>Choose Active Color Stop</strong> is the stop point of the gradient.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/tools-menu-6.png" alt="Tools Menu" loading="lazy"></figure>
+<p><strong>Position</strong> is an edit box where you can numerically fine tune the position of the currently selected color stop.</p>
+<p><strong>Color Ramp Element</strong> displays the color of the current selected color stop. When you click at it then you can open a color picker to change the color of the current color stop.</p>
+<h5 id="background-color">Background Color</h5>
+<p>Background color is the same color than the secondary color from the color picker. When you click at it then you can open a color picker to change the secondary color.</p>
+<h5 id="gradient-stroke-mode">Gradient Stroke Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/gradient-stroke-mode.png" alt="Gradient Stroke Mode" loading="lazy"></figure>
+<p>Set the gradient stroke mode.</p>
+<h3 id="grease-pencil">Grease Pencil</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/grease-pencil.png" alt="Grease Pencil" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manhattan Distance</td>
+<td>The minimum number of pixels the mouse has to move horizontally or vertically before the movement is recorded.</td>
+</tr>
+<tr>
+<td>Euclidean Distance</td>
+<td>The minimum distance that mouse has to travel before movement is recorded.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="text">Text</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/text.png" alt="Text" loading="lazy"></figure>
+<h4 id="auto-close-character-pairs">Auto-close Character Pairs</h4>
+<p>Automatically close relevant character pairs when typing in the text editor.</p>
+<h3 id="node-editor">Node Editor</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/node-editor.png" alt="Node Editor" loading="lazy"></figure>
+<h4 id="auto-offset">Auto Offset</h4>
+<p>Use Auto Offset.</p>
+<h4 id="auto-offset-margin">Auto Offset Margin</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/auto-offset-margin.png" alt="Auto Offset Margin" loading="lazy"></figure>
+<p>Minimum distance in the node editor between nodes for auto offsetting.</p>
+<p>When you insert a new node between two existing connected nodes, then the two nodes gets pushed to left and right, with an offset. Adjust this offset.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preview Resolution</td>
+<td>Resolution used for shader node previews, which are displayed above the nodes.</td>
+</tr>
+<tr>
+<td>Auto position Viewer Node</td>
+<td>Automatically reposition the Viewer node near the selected socket when viewing data.</td>
+</tr>
+<tr>
+<td>Node Color Blend</td>
+<td>Bforartists blends node type color to its body, disable if the color is enabled.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="video-sequencer">Video Sequencer</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/video-sequencer.png" alt="Video Sequencer" loading="lazy"></figure>
+<h4 id="connect-movie-strips-by-default">Connect Movie Strips by Default</h4>
+<p>Connect new Movie Strips by Default if they have multiple channels.</p>
+<h3 id="outliner">Outliner</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/outliner.png" alt="Outliner" loading="lazy"></figure>
+<h4 id="colored-collection-rows">Colored Collection Rows</h4>
+<p>Displays collections in the outliner with a colored line and background. You need to give the collection a color first in the right click menu to show this colored line.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/colored-collection-rows.png" alt="Colored Collection Rows" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/colored-collection-rows.png" alt="Colored Collection Rows" loading="lazy"></figure>
+<h3 id="miscellaneous">Miscellaneous</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/miscellaneous.png" alt="Miscellaneous" loading="lazy"></figure>
+<h4 id="sculpt-overlay-color">Sculpt Overlay Color</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/sculpt-overlay-color.png" alt="Sculpt Overlay Color" loading="lazy"></figure>
+<p>This color button allows the user to define a color to be used in the inner part of the brushes circle when in sculpt mode, and it is placed as an overlay to the brush, representing the focal point of the brush influence.</p>
+<p>The overlay color is visible only when the overlay visibility is selected (clicking at the <em>eye</em> to set its visibility), and the transparency of the overlay is controlled by the alpha slider located at the brush pop-up, located at the top of the tool shelf, when in sculpt mode.</p>
+<h2 id="animation">Animation</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/animation.png" alt="Animation" loading="lazy"></figure>
+<p>Contains the settings for the animation editors.</p>
+<h3 id="timeline">Timeline</h3>
+<h4 id="allow-negative-frames">Allow negative Frames</h4>
+<h4 id="minimum-grid-spacing">Minimum Grid Spacing</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/minimum-grid-spacing.png" alt="Minimum Grid Spacing" loading="lazy"></figure>
+<p>Adjust the minimum number of pixels between grid lines in a 2D viewport. This affects for example Timeline, Dope sheet, Graph or NLE Editor.</p>
+<h4 id="time-code-style">Time Code Style</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/time-code-style.png" alt="Time Code Style" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/time-code-style-2.png" alt="Time Code Style" loading="lazy"></figure>
+<p>In Timeline, Dope sheet, Graph and NLE editor you can either display the keyframe number or the time in the timeline. Define how the time gets displayed when you have chosen to display time.</p>
+<h4 id="zoom-to-frame-type">Zoom To Frame Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/zoom-to-frame-type.png" alt="Zoom To Frame Type" loading="lazy"><figcaption>Zoom To Frame Type</figcaption></figure>
+<p>Timeline, Dope sheet, Graph and NLE. Define how zooming to frame focuses around current frame.</p>
+<h4 id="keyframes">Keyframes</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/keyframes.png" alt="Keyframes" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default Key channels</td>
+<td>Define which channels are recorded by default In case no keyingset is defined.</td>
+</tr>
+<tr>
+<td>Visual Keying</td>
+<td>When an object is using constraints, the objects property value doesn't actually change. <em>Visual Keying</em> will add keyframes to the object property, with a value based on the visual transformation from the constraint.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="only-insert-needed">Only Insert Needed</h5>
+<p>With Auto it will only insert keyframes if the value of the property is different.</p>
+<p>If there is a keyframe on the current frame, and it has no changes, it will skip recording over the keyframe.</p>
+<p>If there is no keyframe, and it has no changes, skip recording the keyframe.</p>
+<h6 id="auto-keyframing-subpanel">Auto Keyframing subpanel</h6>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show Warning</td>
+<td>Displays a warning at the top right of the <em>3D View</em>, when moving objects, if <em>Auto Keyframe</em> is on.</td>
+</tr>
+<tr>
+<td>Only Insert Available</td>
+<td>This will only add keyframes to channel F-Curves that already exist.</td>
+</tr>
+<tr>
+<td>Enable in new scenes</td>
+<td>Automatic keyframe insertion for objects and bones as Default setting for new scenes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="f-curves">F-Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/f-curves.png" alt="F-Curves" loading="lazy"></figure>
+<h5 id="unselected-opacity">Unselected Opacity</h5>
+<p>The amount that unselected F-curves stands out from the background in the Graph Editor.</p>
+<h5 id="default-smoothing-mode">Default Smoothing Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/default-smoothing-mode.png" alt="Default Smoothing Mode" loading="lazy"></figure>
+<p>Auto handle smoothing mode for new added curves. None or Continuous accelleration.</p>
+<h5 id="default-interpolation">Default Interpolation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/default-interpolation.png" alt="Default Interpolation" loading="lazy"></figure>
+<p>This controls how the state between two keyframes is computed. Default interpolation for new keyframes is Bezier which provides smooth acceleration and de-acceleration whereas Linear or Constant is more abrupt.</p>
+<h5 id="default-handles">Default Handles</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/default-handles.png" alt="Default Handles" loading="lazy"></figure>
+<p>The default handle types for F-Curves.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XYZ to RGB</td>
+<td>Color for X, Y or Z animation curves (location, scale or rotation) are the same as the color for the X, Y and Z axis.</td>
+</tr>
+<tr>
+<td>Channel Group Colors</td>
+<td>Use animation channel group colors. Uses the bone group colors.</td>
+</tr>
+<tr>
+<td>Only Show Selected F-Curve Keyframes</td>
+<td>Just show the keyframes from the selected curves only.</td>
+</tr>
+<tr>
+<td>F-Curve High Quality Drawing</td>
+<td>Display the curves in highest quality.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="extensions">Extensions</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/extensions.png" alt="Extensions" loading="lazy"></figure>
+<p>In this section you can manage the availability of online add-ons and themes. Blender has an online repository with it. And you can download the ones that you need.</p>
+<p>A theme allows you to customize the colors of the user interface. An extension add-on is external software written by other developers. Add-ons are a way to extend the core functionality of Bforartists. Bforartists already comes with lots of extensions add-ons. Some already activated. Here you can manage them, and add even more extension add-ons if required.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> All add-ons are generally compatible with Bforartists. Please note, however, that we are always one release version ahead of Blender. We merge our code from the Blender main branch. This means that when Blender releases version 4.1, for example, we've already been using version 4.2 of Blender for at least a month. Blender switches to a release branch one month before release and then develops the next version in the main branch. This means that some add-ons might not work because they've become too old. And there is little that we can do here.</p></div>
+<p>Some addons and themes are included. Some addons and themes can now be downloaded externally when you opt-in to Allow Online Access. And this is what the Extensions tab is good for.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/extensions-2.png" alt="Extensions" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Bforartists comes with some add-ons that are required by Bforartists to work properly. You will see a warning in those addons. Don't turn them off. If off, vital parts of Bforartists will not longer work, ei the toolbar settings.</p></div>
+<h3 id="search-extensions">Search Extensions</h3>
+<p>You need to have online access granted so that you can see and search the available themes and/or addons.</p>
+<h3 id="filter-extensions">Filter Extensions</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/filter-extensions.png" alt="Filter Extensions" loading="lazy"></figure>
+<p>Filters the extensions content by tags and repositories. This allows users to filter, organize, and manage extensionsand themes based on functional tags.</p>
+<h4 id="filter-extensions-settings-dropdown">Filter Extensions Settings Dropdown</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dropdown – Repository Filter</td>
+<td>Filters extensions by repository source. Selecting a repository updates the tag list and extension visibility accordingly.</td>
+</tr>
+<tr>
+<td>Show Tags</td>
+<td>Toggles the visibility of the tag filter list. When enabled, displays all available functional tags as checkboxes or none.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="tag-list-checkboxes">Tag List (Checkboxes)</h5>
+<p>Each tag corresponds to a functional area in Blender. Checking a tag includes extensions related to that domain.</p>
+<ul>
+<li></li>
+</ul>
+<h3 id="repositories">Repositories</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/repositories.png" alt="Repositories" loading="lazy"></figure>
+<p>Manage the extension repositories.</p>
+<p>Extensions are managed in so called repositories. A place where the addons are stored. This includes the online sources, but also where the addons are stored at your local installation.</p>
+<h3 id="repository-list">Repository List</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/repository-list.png" alt="Repository List" loading="lazy"></figure>
+<p>The list of currently available repositories.</p>
+<p>extensions.blender.org is the official extension repository from Blender, which we rely at. It is online.</p>
+<p>User Default is the offline default repository. This includes the core addons and the addons that you have installed.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enable</td>
+<td>Enable the repository.</td>
+</tr>
+<tr>
+<td>URL field</td>
+<td>In case the selected repository is a online source you will see the URL property to this repository. You can also edit this URL here.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="add">Add</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/add.png" alt="Add" loading="lazy"></figure>
+<p>Add a repository.</p>
+<h4 id="add-remote-repository">Add Remote Repository</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/add-remote-repository.png" alt="Add Remote Repository" loading="lazy"></figure>
+<p>Add a repository from an online source. It should ideally contain extensions. A dialog will pop up.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add New Extension Repository dialog</td>
+<td>—</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>The url for the online repository</td>
+</tr>
+<tr>
+<td>Check for Updates on Startup</td>
+<td>Check if updates are available.</td>
+</tr>
+<tr>
+<td>Authentification</td>
+<td>For addons that requires an authentification. · <strong>Requires Access Token</strong>: Enable Requires Access Token. · <strong>Secret</strong>: The secret password for the authentification.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="custom-directory">Custom Directory</h4>
+<p><code>Use a custom install directory. By default it installs in \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\scripts\addons</code></p>
+<p>VERSIONNUMBER stands for the Blender version number here.</p>
+<p><code>Note that the custom directory needs still to be in the \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\ path.</code></p>
+<h5 id="custom-directory-2">Custom Directory</h5>
+<p>The custom directory that you want to use.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create</td>
+<td>Create the new repository.</td>
+</tr>
+<tr>
+<td>Cancel</td>
+<td>Cancel.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="add-local-repository">Add Local Repository</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/add-local-repository.png" alt="Add Local Repository" loading="lazy"></figure>
+<p>Add a local repository.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>The name of the repository</td>
+</tr>
+<tr>
+<td>Use Custom Directory</td>
+<td><code>Use a custom install directory. By default it installs in \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\scripts\addons VERSIONNUMBER stands for the Blender version number here. Note that the custom directory needs still to be in the \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\ path.</code></td>
+</tr>
+<tr>
+<td>Custom Directory</td>
+<td>The custom directory that you want to use.</td>
+</tr>
+<tr>
+<td>Create</td>
+<td>Create the new repository.</td>
+</tr>
+<tr>
+<td>Cancel</td>
+<td>Cancel.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="remove">Remove</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/remove.png" alt="Remove" loading="lazy"></figure>
+<p>Remove the chosen repository.</p>
+<h3 id="remove-repository">Remove Repository</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/remove-repository.png" alt="Remove Repository" loading="lazy"></figure>
+<p>Removes the repository from the repository list. But keeps the files locally.</p>
+<h4 id="remove-repository-files">Remove Repository &amp; Files</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/remove-repository-and-files.png" alt="Remove Repository &amp; Files" loading="lazy"><figcaption>Remove Repository &amp; Files</figcaption></figure>
+<p>Removes the repository from the repository list. And removes the local files too.</p>
+<h3 id="refresh-remote">Refresh Remote</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/refresh-remote.png" alt="Refresh Remote" loading="lazy"></figure>
+<p>Refreshes the content. You must be online to set the menu item to active.</p>
+<h3 id="active-extension-repository">Active Extension Repository</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/active-extension-repository.png" alt="Active Extension Repository" loading="lazy"></figure>
+<p>You must be online to set the menu items to active.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Install Available Updates</td>
+<td>Install all available updates. Note that this feature requires to allow online access. Also note that this feature works at the selected repository only.</td>
+</tr>
+<tr>
+<td>Force Unlock Repository</td>
+<td>Remove the repository file-system lock in case it is locked.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="check-for-updates-on-startup">Check for Updates on Startup</h3>
+<p>In case the selected repository is an online source you will see the Check for Updates on Startup properties to this repository.</p>
+<p>Checks for available updates. And notifies you about it in the list of extensions then. You can also turn on the Extensions Updates notification in the footer.</p>
+<h3 id="advanced-subpanel">Advanced Subpanel</h3>
+<p>Adjust settings for the repositories.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/advanced-subpanel.png" alt="Advanced Subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/advanced-subpanel-2.png" alt="Advanced Subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/advanced-subpanel-3.png" alt="Advanced Subpanel" loading="lazy"></figure>
+<p>The content differs, dependant of the chosen repository.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Custom Directory</td>
+<td><code>Use a custom install directory. By default it installs in \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\scripts\addons VERSIONNUMBER stands for the Blender version number here. Note that the custom directory needs still to be in the \AppData\Roaming\Bforartists\Bforartists\VERSIONNUMBER\ path.</code></td>
+</tr>
+<tr>
+<td>Directory</td>
+<td>The custom directory that you want to use. · <strong>Browse</strong>: Browse for the directoriy that you want to use</td>
+</tr>
+</tbody>
+</table>
+<h4 id="source">Source</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/source.png" alt="Source" loading="lazy"></figure>
+<p>Select if the repository is a system directory, or a user directory. Normally this updates automatically when you use a system or a user directory in the list above. But here you can customize it.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authentification</td>
+<td>For addons that requires an authentification. · <strong>Requires Access Token</strong>: Enable Requires Access Token. · <strong>Secret</strong>: The secret password for the authentification.</td>
+</tr>
+<tr>
+<td>Module</td>
+<td>The unique module identifier. It identifies the repositories.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extensions-settings">Extensions Settings</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/extensions-settings.png" alt="Extensions Settings" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visit extensions website</td>
+<td>Opens the Blender extension page in a web browser. · <strong>Install Available Updates</strong>: Install all available updates. Note that this feature requires to allow online access. · <strong>Refresh Remote</strong>: Check if updates for extensions are available for the online extensions. Note that this feature requires to allow online access. Also note that this feature works on ALL repositories.</td>
+</tr>
+<tr>
+<td>Install from Disk</td>
+<td>You can optionally also install addons and extensions from a disk location using the install from disk operators. · <strong>Refresh Local</strong>: Refresh local extensions to apply changes. Note that this feature works on ALL repositories.</td>
+</tr>
+<tr>
+<td>Enable Built-in Legacy Add-ons</td>
+<td>Blender does by default just use online add-ons. But Bforartists comes with some add-ons that are vital to run the software. And these offline add-ons must be on so that Bforartists is fully functional. By Default these add-ons are already enabled. So no action is required. But if you by accident disable a Bforartists core add-on, this is the place to re-enable them all.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allow-online-access">Allow Online Access</h3>
+<p>Allow internet access to download extensions. Bforartists may access configured online extension repositories to download and update. And installed third party extensions may access the internet for their own functionality.</p>
+<h3 id="online-extensions">Online Extensions</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/online-extensions.png" alt="Online Extensions" loading="lazy"></figure>
+<p>An explicit dialog suggests that to access Extensions, you must allow internet access. This is so you can download and work with the online Blender extensions repository.</p>
+<p>To install extensions from the internet, internet access is required. You can adjust this later from the “System” preferences in the Network panel. Once you have allowed online access, you will access the default Blender extensions website with free addons and themes.</p>
+<h4 id="continue-offline">Continue Offline</h4>
+<p>Closes the dialog. Note that you can always (re) enable the online access from the Extension settings menu.</p>
+<h4 id="allow-online-access-2">Allow Online Access</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/allow-online-access.jpg" alt="Allow Online Access" loading="lazy"></figure>
+<p>Allow Bforartists to access the internet to load and display and also install available online add-ons and themes. You will see a list of all available online extensions then.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/allow-online-access.png" alt="Allow Online Access" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> y<em>ou can change your choice afterwards in the System preferences.</em></p></div>
+<p>Also that you can also install extensions from disk or drag and drop extensions to install from disk when you are offline.</p>
+<h3 id="repository-acccess-errors">Repository Acccess Errors</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/repository-acccess-errors.png" alt="Repository Acccess Errors" loading="lazy"></figure>
+<p>In case you have added an invalid online repository you might be faced with a warning. You might want to fix the invalid extension repository then.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Bforartists doesn't host extensions. This URL was just added for demonstration purposes.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enable/Remove Built-in Legacy Add-ons</td>
+<td>Bforartists comes with some core add-ons that are vital to run the software, but this also alternatively ships with legacy Built-In addons. These addons are opt-in and have Extension equivalents also included offline. Core add-ons must be on so that Bforartists is fully functional. Built-In Legacy addons are optionally provided for complete offline extended usability.</td>
+</tr>
+<tr>
+<td>Install Pre-downlaoded Extensions Equivalents</td>
+<td>If you have enabled legacy addons, you also have the options to remove and alternatively install the Extensions equivalents while remaining offline. This will copy the extensions to your user settings, and if you want to continue updating them when being online, they will then be available locally with online access to their repository for future updates. This helps to you to migrate your legacy addons to Extensions.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="add-ons">Add-ons</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/add-ons.png" alt="Add-ons" loading="lazy"></figure>
+<p>Manage the available addons. Note that for online addons you head over to the Extensions tab, and install it from there. The not installed but available online addons will not show here.</p>
+<h3 id="drag-and-drop">Drag and Drop</h3>
+<p>One of the methods to install an addon is to drag an extension zip file from the internet or from the computer into Bforartists from the operating system expolorer. This will automatically install and activate the addon or theme extension.</p>
+<h3 id="search-field">Search field</h3>
+<p>Search for specific addons.</p>
+<h4 id="enabled-only">Enabled only</h4>
+<p>Just display the enabled addons.</p>
+<h4 id="install-from-disk">Install from Disk</h4>
+<p>You can install addons and extensions from a disk location. It will open a file browser where you can locate and load your add-on.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/install-from-disk.png" alt="Install from Disk" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extension Tags</td>
+<td>Filter the content by tags.</td>
+</tr>
+<tr>
+<td>Refresh Local</td>
+<td>Refresh the local add-ons. Any probems will be reported.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-of-addons">List of Addons</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/list-of-addons.jpg" alt="List of Addons" loading="lazy"></figure>
+<p>The actual list with the addons.</p>
+<p>The addons with the warning sign is no error. It marks the bforartists legacy addons that are built in. But may have a conflict with the online version then.</p>
+<h2 id="themes">Themes</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/themes.png" alt="Themes" loading="lazy"></figure>
+<p>The <strong>Themes</strong> tab allows you to customize interface appearance and colors. There are various elements that can be themed.</p>
+<p>Any change here will appear in real-time on your screen in the corresponding editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/themes-2.png" alt="Themes" loading="lazy"></figure>
+<p>To change a color for a UI element, simply click at one of the color fields. A color dialog will open up to choose a new color.</p>
+<h3 id="presets">Presets</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/presets.png" alt="Presets" loading="lazy"></figure>
+<p>Bforartists comes with several theme presets. You can choose between them in the drop down box. Don't forget to save the user settings to make the change to the new preset permanent.</p>
+<h4 id="create-new-theme">Create new Theme</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/create-new-theme.png" alt="Create new Theme" loading="lazy"></figure>
+<p>To create a new theme, click the <em>+</em> button next to the preset selection drop-down and enter a name. This will save the theme to an XML file in the <em>./scripts/presets/interface_theme/</em> sub directory of one of the configuration directories.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/create-new-theme-2.png" alt="Create new Theme" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/create-new-theme-3.png" alt="Create new Theme" loading="lazy"></figure>
+<p>To share the new created theme you have to copy it from that folder. This XML file can then be loaded as a theme at another computer with Bforartists installed.</p>
+<h4 id="remove-theme">Remove Theme</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/create-new-theme.png" alt="Remove Theme" loading="lazy"></figure>
+<p>To remove a custom theme, click the <em>-</em> button next</p>
+<h4 id="save-theme">Save Theme</h4>
+<p>To save changes to a custom theme, click on the save icon.</p>
+<h3 id="install-2">Install</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/install.png" alt="Install" loading="lazy"></figure>
+<p>Install an external theme. This button will open a file browser.</p>
+<h3 id="reset">Reset</h3>
+<p>Resets all made changes, and resets the current theme to its initial state.</p>
+<h3 id="list-of-editors">List of Editors</h3>
+<p>The list of the editors that you can theme. Every editor can have its own theming.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/list-of-editors.png" alt="List of Editors" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User Interface</td>
+<td>Controls the global look of Blender’s UI—buttons, panels, headers, and background colors across all editors.</td>
+</tr>
+<tr>
+<td>Text Style</td>
+<td>Defines font colors and styles used in labels, tooltips, and text-based editors.</td>
+</tr>
+<tr>
+<td>Bone Color Sets</td>
+<td>Lets you assign custom colors to bone groups in Pose Mode, useful for rigging and animation clarity.</td>
+</tr>
+<tr>
+<td>Collection Colors</td>
+<td>Sets colors for collections in the Outliner, helping visually organize scene hierarchies.</td>
+</tr>
+<tr>
+<td>Strip Color Tags</td>
+<td>Applies tag colors to strips in the Video Sequencer and Nonlinear Animation editors for quick identification.</td>
+</tr>
+<tr>
+<td>Regions</td>
+<td>Handles the common region areas like Asset Shelves, channels, scrubbing and marker settings and toolbars and sidebars.</td>
+</tr>
+<tr>
+<td>Common</td>
+<td>Handles shared UI elements like animation and curve settings.</td>
+</tr>
+<tr>
+<td>Asset Shelf</td>
+<td>Customizes the appearance of the Asset Shelf, including preview thumbnails, labels, and background styling.</td>
+</tr>
+<tr>
+<td>3D Viewport</td>
+<td>Controls mesh display, overlays, selection highlights, and shading in the main modeling and animation workspace.</td>
+</tr>
+<tr>
+<td>Dope Sheet / Timeline</td>
+<td>Defines keyframe colors, channel backgrounds, and marker styles for animation timelines.</td>
+</tr>
+<tr>
+<td>File / Asset Browser</td>
+<td>Sets visual styles for file lists, asset previews, and tag indicators in the browser interface.</td>
+</tr>
+<tr>
+<td>Graph Editor / Drivers</td>
+<td>Colors for animation curves, handles, and driver indicators—essential for fine-tuning motion.</td>
+</tr>
+<tr>
+<td>Image / UV Editor</td>
+<td>Controls UV line colors, grid backgrounds, selection highlights, and image overlays.</td>
+</tr>
+<tr>
+<td>Info</td>
+<td>Styles the header and system log messages, including warnings, errors, and notifications.</td>
+</tr>
+<tr>
+<td>Movie Clip Editor</td>
+<td>Customizes tracking marker colors, clip overlays, and annotation visuals for motion tracking workflows.</td>
+</tr>
+<tr>
+<td>Node Editor</td>
+<td>Defines node socket colors, wire styles, backdrop shading, and node selection highlights.</td>
+</tr>
+<tr>
+<td>Nonlinear Animation</td>
+<td>Sets strip colors, selection highlights, and timeline overlays in the NLA editor for layered animation.</td>
+</tr>
+<tr>
+<td>Outliner</td>
+<td>Controls tree view colors, selection highlights, and hierarchy lines for scene organization.</td>
+</tr>
+<tr>
+<td>Preferences</td>
+<td>Applies theme settings to the Preferences window itself, including tabs and panels.</td>
+</tr>
+<tr>
+<td>Properties</td>
+<td>Styles the Properties editor, which includes modifiers, materials, constraints, and more.</td>
+</tr>
+<tr>
+<td>Spreadsheet</td>
+<td>Controls cell background, grid lines, and selection colors for data views and attribute inspection.</td>
+</tr>
+<tr>
+<td>Text Editor</td>
+<td>Defines syntax highlighting, background, cursor, and line number colors for scripting and notes.</td>
+</tr>
+<tr>
+<td>Top Bar</td>
+<td>Customizes the global top menu bar and tool headers for consistent branding or visibility.</td>
+</tr>
+<tr>
+<td>Video Sequencer</td>
+<td>Sets strip colors, waveform display, and timeline elements for video editing workflows.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="input">Input</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/input.png" alt="Input" loading="lazy"></figure>
+<p>This tab contains some input related settings.</p>
+<h3 id="keyboard">Keyboard</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Emulate Numpad</td>
+<td>Laptops usually doesn't have Numpad keys. Choose to use the number keys above the letters as Numpad keys.</td>
+</tr>
+<tr>
+<td>Default to advanced numeric input</td>
+<td>When entering numbers while transforming default to advanced mode for full math expression evaluation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mouse">Mouse</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/mouse.png" alt="Mouse" loading="lazy"></figure>
+<h4 id="emulate-3-button-mouse">Emulate 3 Button Mouse</h4>
+<p>In the Windows world 3 button mouses are common. But Apple for example has a single mouse button. Bforartists can emulate a 3 button mouse. The third mouse button will then be emulated by a key combination.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>LMB</em></td>
+<td><em>LMB</em></td>
+<td><em>LMB</em> (mouse button)</td>
+</tr>
+<tr>
+<td><em>MMB</em></td>
+<td><em><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>LMB</kbd></span></em></td>
+<td><em><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>LMB</kbd></span></em> (Option/Alt key + mouse button)</td>
+</tr>
+<tr>
+<td><em>RMB</em></td>
+<td><em>RMB</em></td>
+<td><em><span class="ui-doc-keys"><kbd>Cmd</kbd> + <kbd>LMB</kbd></span></em> (Command/Apple key + mouse button)</td>
+</tr>
+</tbody>
+</table>
+<p>Mouse/Keyboard combinations referenced in this manual can be expressed with the combinations shown in the table. For example, <em>MMB</em> drag becomes <em><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>LMB</kbd></span></em> drag. <em><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>RMB</kbd></span></em> becomes <em><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>Cmd</kbd> + <kbd>LMB</kbd></span></em> on a single-button mouse.</p>
+<h3 id="tablet">Tablet</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/tablet.png" alt="Tablet" loading="lazy"></figure>
+<p>This panel contains some tablet related settings.</p>
+<h4 id="tablet-api">Tablet API</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/tablet-api.png" alt="Tablet API" loading="lazy"></figure>
+<p>Choose which API Bforartists should choose for the pressure sensitivity of your tablet.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Max Threshold</td>
+<td>The raw input pressure value which is interpreted as 100 % by Bforartists.</td>
+</tr>
+<tr>
+<td>Softness</td>
+<td>Adjust the pressure softness of the low pressure response onset using a gamma curve.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="touchpad">Touchpad</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/touchpad.png" alt="Touchpad" loading="lazy"></figure>
+<h4 id="multi-touch-gestures">Multi Touch Gestures</h4>
+<p>Use multi touch gestures for navigation with touchpad instead of scroll wheel emulation.</p>
+<h3 id="ndof">NDOF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/ndof.png" alt="NDOF" loading="lazy"></figure>
+<p>You can use a 3D mouse in Bforartists. Here you find some 3D mouse related settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pan Sensitivity</td>
+<td>Adjust the pan sensitivity.</td>
+</tr>
+<tr>
+<td>Orbit Sensitivity</td>
+<td>Adjust the orbit sensitivity</td>
+</tr>
+<tr>
+<td>Deadzone</td>
+<td>The initial movement that is needed before the movement gets recognized.</td>
+</tr>
+<tr>
+<td>Navigation</td>
+<td>Choose the navigation style between Free and Orbit.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Adjust in what style you rotate the 3D View. Turntable and Trackball navigation reacts a bit different. Turntable navigation tries to hold the horizon line while rotation. Turntable rotation rotates also the horizon line.</td>
+</tr>
+<tr>
+<td>Show Navigation Guide</td>
+<td>Display the axis and center during rotation.</td>
+</tr>
+<tr>
+<td>Invert Zoom</td>
+<td>Zoom using opposite direction.</td>
+</tr>
+<tr>
+<td>Lock Camera Pan/Zoom</td>
+<td>Pan / Zoom the camera view instead of leaving the camera view when orbitting.</td>
+</tr>
+<tr>
+<td>Pan Swap Y and X Axes</td>
+<td>Pan uses up - down instead of forward - backward</td>
+</tr>
+<tr>
+<td>Invert Axis Pan</td>
+<td>The invert axis for panning. Inactive axis are not inverted.</td>
+</tr>
+<tr>
+<td>Orbit</td>
+<td>The axis to orbit around when panning.</td>
+</tr>
+<tr>
+<td>Fly / Walk</td>
+<td><strong>Lock Horizon</strong>: Keep horizon level while flying with 3D mouse. · <strong>Helicopter Mode</strong>: Using up/down directly controls the Z position in the 3D viewport.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="navigation">Navigation</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/navigation.png" alt="Navigation" loading="lazy"></figure>
+<p>The navigation section contains the settings for navigating in the 3D view.</p>
+<h3 id="orbit-pan">Orbit &amp; Pan</h3>
+<h4 id="orbit-method">Orbit Method</h4>
+<p>Adjust in what style you rotate the 3D View. Turntable and Trackball navigation reacts a bit different. Turntable navigation tries to hold the horizon line while rotation. Turntable rotation rotates also the horizon line.</p>
+<h4 id="orbit-around-selection">Orbit around selection</h4>
+<p>The selected object becomes the rotation center of the viewport. When there is no selection the point of the last selection will be used.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Perspective</td>
+<td>With Auto perspective off when you switch to one of the side views, then the chosen orthographic or perspectivic view is kept. Means when you have the distorted perspectivic view, and switch to top view, then your mesh will be perspectivic distorted here too. With Auto Perspective the view in the side views will be orthographic, and not perspectivic, no matter what View Persp/Ortho is chosen.</td>
+</tr>
+<tr>
+<td>Auto Depth</td>
+<td>Use the depth under the mouse to improve view pan, rotate, zoom functionality.</td>
+</tr>
+<tr>
+<td>Smooth View</td>
+<td>The switch to change to another view is animated. Adjust the length of time the animation takes when changing the view with the Numpad (Top/Side/Front/Camera...). A value of zero will remove the animation, and immediately switch to the chosen view.</td>
+</tr>
+<tr>
+<td>Rotation Angle</td>
+<td>Rotation step size in degrees, when <strong>Numpad4</strong>, <strong>Numpad6</strong>, <strong>Numpad8</strong>, or <strong>Numpad2</strong> are used to rotate the 3D View.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="zoom">Zoom</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/zoom.png" alt="Zoom" loading="lazy"></figure>
+<h4 id="zoom-method">Zoom Method</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/zoom-method.png" alt="Zoom Method" loading="lazy"></figure>
+<p>Adjust the zoom style.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Continue</td>
+<td>The <em>Continue</em> zooming option allows you to control the speed (and not the value) of zooming by moving away from the initial click point. Moving up from the initial click-point or to the right will zoom out, moving down or to the left will zoom in. The further away you move, the faster the zoom movement will be.</td>
+</tr>
+<tr>
+<td>Dolly</td>
+<td><em>Dolly</em> zooming works similarly to <em>Continue</em> zooming except that zoom speed is constant.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td><em>Scale</em> zooming depends on where you first click in the view.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="zoom-axis">Zoom Axis</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/zoom-axis.png" alt="Zoom Axis" loading="lazy"></figure>
+<p>With Vertical moving up zooms out and moving down zooms in. With Horizontal moving left zooms in and moving right zooms out.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invert Mouse Zoom Direction</td>
+<td>Inverts the Zoom direction for <strong>Dolly</strong> and <strong>Continue</strong> zooming.</td>
+</tr>
+<tr>
+<td>Invert Wheel Zoom Direction</td>
+<td>Inverts the direction of the mouse wheel zoom.</td>
+</tr>
+<tr>
+<td>Zoom to Mouse Position</td>
+<td>When enabled, the mouse pointer position becomes the focus point of zooming instead of the 2D window center.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fly-walk">Fly &amp; Walk</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/fly-and-walk.png" alt="Fly &amp; Walk" loading="lazy"></figure>
+<p>Fly and walk are special navigation modes. They can be found in the Navi menu. The Fly &amp; walk section also contains some settings from the View navigation style, since this style uses elements from walk and fly navigation too.</p>
+<h4 id="view-navigation">View Navigation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/view-navigation.png" alt="View Navigation" loading="lazy"></figure>
+<p>Adjust how the View navigation in the 3D view behaves. You can choose between walk and fly.</p>
+<h4 id="walk">Walk</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/walk.png" alt="Walk" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reverse Mouse</td>
+<td>Reverse the mouse movement when you move upwards or downwards</td>
+</tr>
+<tr>
+<td>Horizontal Lock</td>
+<td>Locks horizontal movement in Walk Mode, keeping the viewpoint level and aligned with the ground. This ensures stable navigation within scenes, preventing any vertical shifts and maintaining a consistent horizontal plane. This is a Bforartists exclusive feature.</td>
+</tr>
+<tr>
+<td>Mouse Sensitivity</td>
+<td>Adjust how strong the viewport movement reacts to the mouse movement</td>
+</tr>
+<tr>
+<td>Teleport Duration</td>
+<td>Adjust the teleport duration when teleporting in navigation mode.</td>
+</tr>
+<tr>
+<td>Walk Speed</td>
+<td>Adjust the walk speed</td>
+</tr>
+<tr>
+<td>Speed Factor</td>
+<td>Adjust the run speed.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="gravity">Gravity</h4>
+<p>Choose if the virtual character, your point of view, uses gravity.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View Height</td>
+<td>Adjust the height of the point of view for your virtual character. This setting requires to have Gravity on.</td>
+</tr>
+<tr>
+<td>Jump Height</td>
+<td>Adjust the maximal jump height for your virtual character. This setting requires to have Gravity on.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fly">Fly</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/fly.png" alt="Fly" loading="lazy"></figure>
+<p>Fly has no further settings.</p>
+<h2 id="keymap">Keymap</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/keymap.png" alt="Keymap" loading="lazy"></figure>
+<p>The key map allows you to customize how Bforartists reacts to mouse and keyboard, and change key map entries. All Input behavior is defined in the key map.</p>
+<h3 id="header">Header</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/header.png" alt="Header" loading="lazy"></figure>
+<h4 id="key-configs">Key Configs</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/key-configs.png" alt="Key Configs" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/key-configs-2.png" alt="Key Configs" loading="lazy"></figure>
+<p>A drop down menu to choose existing key maps. The + button at the right adds a new key map. The current configuration will then be saved as a new key map.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Import</td>
+<td>Import an external key map. This opens up a file selector to choose the python file.</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>Export a key configuration python file from Bforartists.</td>
+</tr>
+<tr>
+<td>Filter Type</td>
+<td>Define if you want to search for a tool name or for a hotkey. By tool name, or by the hotkey name</td>
+</tr>
+<tr>
+<td>Search Field</td>
+<td>Enter a search string.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-map-editor">Key map Editor</h3>
+<p>The Key map editor is the list where the single inputs are defined. Every input can have several specific operator settings in the lower area. The upper area defines the general things like the key combos. The lower area those operator specific settings.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/key-map-editor.png" alt="Key map Editor" loading="lazy"></figure>
+<p>Normally you don't edit those key entries manually. Most of the usual tools have an entry in the right click menu to create or to change the hotkey. But sometimes you have to do this task manually.</p>
+<h4 id="map-type">Map Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/map-type.png" alt="Map Type" loading="lazy"></figure>
+<p>Here you define what input will control the function.</p>
+<h4 id="type-of-event">Type of Event</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/type-of-event.png" alt="Type of Event" loading="lazy"></figure>
+<p>Here you define your main hotkey. In our case the right mouse.</p>
+<h4 id="operator">Operator</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/operator.png" alt="Operator" loading="lazy"></figure>
+<p>The Python operator name for the tool.</p>
+<h4 id="type-of-event-2">Type of Event</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/type-of-event-2.png" alt="Type of Event" loading="lazy"></figure>
+<p>The main hotkey again. For special events like mouse events you have a drop down box here.</p>
+<h4 id="value">Value</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/value.png" alt="Value" loading="lazy"></figure>
+<p>What key action is required. On click, on double click, etc. ...</p>
+<h4 id="secondary-hotkeys">Secondary hotkeys</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/secondary-hotkeys.png" alt="Secondary hotkeys" loading="lazy"></figure>
+<p>Many hotkeys uses a key combination, for example Shift D for select. Define those secondary hotkeys.</p>
+<h4 id="specific-settings">Specific settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/specific-settings.png" alt="Specific settings" loading="lazy"></figure>
+<p>Every operator can have several settings. And some tools even just defines itself by those different settings. Here you can see two different zoom view operators. They just differ in the Delta value.</p>
+<p>What is equal in the key map in all cases is the RNA entry. That's the name of the operator again. But this time not the Python code operator name. But the C code operator name.</p>
+<h4 id="restore">Restore</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/restore.png" alt="Restore" loading="lazy"></figure>
+<p>When you modify a key map item, then you will see a Restore button appear at the right side. This indicates that this key map item got modified. A click at the Restore button will restore the original hotkey.</p>
+<h2 id="system">System</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/system.png" alt="System" loading="lazy"></figure>
+<p>The system tab contains system relevant settings. Such as Cuda for Cycles renderer or OpenCL or Memory related settings.</p>
+<h3 id="cycles-render-devices">Cycles Render Devices</h3>
+<p>The Options here will set the compute device used by the Cycles render engine.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>When set to <em>None</em> or the only option is <em>None</em>: your CPU will be used as a computing device for Cycles Render Engine.</td>
+</tr>
+<tr>
+<td>CUDA</td>
+<td>If the system has a compatible Nvidia CUDA enabled graphics card you will be able to use it to render with the Cycles render engine.</td>
+</tr>
+<tr>
+<td>OptiX</td>
+<td>Optix is a raytracing framework from Nvidia that runs on the GPU.</td>
+</tr>
+<tr>
+<td>HIP</td>
+<td>If the system has a compatible HIP device, it will show up has an option for rendering cycles.</td>
+</tr>
+<tr>
+<td>OneAPI</td>
+<td>If the system has a compatible oneAPI device, it will show up has an option for rendering cycles.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="metal-mac-os-only">Metal (Mac-OS only)</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/metal-mac-os-only.png" alt="Metal (Mac-OS only)" loading="lazy"></figure>
+<p>If the system has a M1/M2 chip, users can use the Metal back-end for rendering in cycles.</p>
+<h3 id="display-graphics">Display Graphics</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/display-graphics.png" alt="Display Graphics" loading="lazy"></figure>
+<h4 id="backend">Backend</h4>
+<p>This setting is which display graphics will be used in the viewport.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Changing this will require restarting Bforaritsts.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenGL</td>
+<td>Use the OpenGL backend.</td>
+</tr>
+<tr>
+<td>Vulkan (Experimental)</td>
+<td>Use the Vulkan backend. Bare in mind this is experimental.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operating-system-settings">Operating System Settings</h3>
+<p>Windows only.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/operating-system-settings.png" alt="Operating System Settings" loading="lazy"></figure>
+<p>Register or unregister to connect the blend file with this Bforartists version.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>For all Users</td>
+<td>Register the file association for all users, or just for the current user.</td>
+</tr>
+<tr>
+<td>Make default</td>
+<td>Associates the .blend file with this installation of Bforartists. This means that double clicking at a .blend file will now open this file with the currently open Bforartists installation. This is useful when you work with different versions of Bforartists, and want to open the files with an older or newer version.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="network">Network</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/network.png" alt="Network" loading="lazy"></figure>
+<p>Allow or disallow Online Access.</p>
+<p>Online access is required to install extensions from external online repositories, and to update them.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allow Online Access</td>
+<td>Allow internet access. Bforartists may access configured online extension repositories. Installed third party add-ons may access the internet for their own functionality.</td>
+</tr>
+<tr>
+<td>Time Out</td>
+<td>The time in seconds to wait for online operattions before a connection may fail with a time-out error. Zero uses the system defaults.</td>
+</tr>
+<tr>
+<td>Connection Limit</td>
+<td>Limit the number of simultaneous internet connections online operations may make at once. Zero disables the limit.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="memory-and-limits">Memory and Limits</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/memory-and-limits.png" alt="Memory and Limits" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Undo Steps</td>
+<td>Number of Undo steps available.</td>
+</tr>
+<tr>
+<td>Undo Memory Limit</td>
+<td>Maximum memory usage in Mb (0 is unlimited).</td>
+</tr>
+<tr>
+<td>Global Undo</td>
+<td>Bforartists Undo system is split in several subpart. Global undo stores the undo step outside of Edit mode. For example for duplicating Objects, changing panel settings or switching between modes.</td>
+</tr>
+<tr>
+<td>Console Scrollback Lines</td>
+<td>Maximum number of lines to store for the console buffer.</td>
+</tr>
+<tr>
+<td>Texture Time Out</td>
+<td>Time since last access of a GL texture in seconds, after which it is freed. Set to 0 to keep textures allocated. Minimum: <em>0</em>, Maximum: <em>3600</em>.</td>
+</tr>
+<tr>
+<td>Garbage Collection Rate</td>
+<td>Number of seconds between each run of the GL texture garbage collector. Minimum: <em>0</em>, Maximum: <em>3600</em>.</td>
+</tr>
+<tr>
+<td>VBO Time Out</td>
+<td>Time since last access of a GL Vertex buffer object, in short VBO, in seconds after which it is freed. Set to 0 to keep VBO allocated.</td>
+</tr>
+<tr>
+<td>Garbage Collection Rate</td>
+<td>Number of seconds between each run of the GL vertex buffer garbage collector. Minimum: <em>0</em>, Maximum: <em>3600</em>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="video-sequencer-2">Video Sequencer</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/video-sequencer-2.png" alt="Video Sequencer" loading="lazy"></figure>
+<h4 id="memory-cache-limit">Memory Cache Limit</h4>
+<p>Upper limit of the sequence's memory cache (megabytes). For optimum clip editor and sequencer performance, high values are recommended.</p>
+<h4 id="use-disk-cache">Use Disk Cache</h4>
+<p>Store cached images to disk.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Directory</td>
+<td>The disk cache directory.</td>
+</tr>
+<tr>
+<td>Cache Limit</td>
+<td>The disk cache limit in gigabytes.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="compression">Compression</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/compression.png" alt="Compression" loading="lazy"></figure>
+<p>What compression method to use. Note that compression saves space, but costs performance.</p>
+<h4 id="proxy-setup">Proxy Setup</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/proxy-setup.png" alt="Proxy Setup" loading="lazy"></figure>
+<p>Proxies are preview objects, reduced in size to make a smooth working possible. Images for example.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Automatic</td>
+<td>Automatically create proxies for each image material.</td>
+</tr>
+<tr>
+<td>Manual</td>
+<td>You have to create the proxies by hand.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sound">Sound</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/sound.png" alt="Sound" loading="lazy"></figure>
+<h4 id="audio-device">Audio Device</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/audio-device.png" alt="Audio Device" loading="lazy"></figure>
+<p>Set the audio device.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenAL</td>
+<td>Provides buffered sound rendering with 3D/spatial support.</td>
+</tr>
+<tr>
+<td>OpenAL - OpenAL Soft</td>
+<td>Provides buffered sound rendering with 3D/spatial support.</td>
+</tr>
+<tr>
+<td>SDL</td>
+<td>Uses Simple Direct Media Layer API from libsdl.org to render sounds directly to the sound device output.</td>
+</tr>
+<tr>
+<td>Null</td>
+<td>No Audio support. No audio output, but audio strips can be loaded normally.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="channels">Channels</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/channels.png" alt="Channels" loading="lazy"></figure>
+<p>Set the audio channel count. Available options are: Mono, <strong>Stereo</strong>, <strong>4 Channels</strong> , <strong>5.1 Surround</strong> , <strong>7.1 Surround</strong></p>
+<h4 id="mixing-buffer">Mixing Buffer</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/mixing-buffer.png" alt="Mixing Buffer" loading="lazy"></figure>
+<p>Set the number of samples used by the audio mixing buffer. Available options are: <em>512</em> , <em>1024</em> , <em>2048</em>, <em>4096</em> , <em>8192</em>, <em>16384</em>, and <em>32768</em></p>
+<h4 id="sample-rate">Sample Rate</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/sample-rate.png" alt="Sample Rate" loading="lazy"></figure>
+<p>Set the audio sample rate. Available options are: <em>44.1 Khz</em>, <em>48 Khs</em>, <em>96 Khz</em> and <em>192Khz</em></p>
+<h4 id="sample-format">Sample Format</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/sample-format.png" alt="Sample Format" loading="lazy"></figure>
+<p>Set the audio sample format. Available options are: <em>32 bit float</em>, <em>8 bit Unsigned</em>, <em>16 Bits Signed</em>, <em>24 Bits Signed</em>, <em>32 Bits Signed</em>, <em>32 Bits Float</em>, and <em>64 Bits Float</em>.</p>
+<h2 id="save-load">Save &amp; Load</h2>
+<h3 id="blend-files">Blend Files</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/blend-files.png" alt="Blend Files" loading="lazy"></figure>
+<p>Blend file related settings. What happens at load, what happens at save …</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Save Prompt</td>
+<td>Ask for confirmation when quitting with unsaved changes.</td>
+</tr>
+<tr>
+<td>Relative Paths</td>
+<td>By default, external files use a relative path.</td>
+</tr>
+<tr>
+<td>Compress File</td>
+<td>Compress blend-file when saving. The option to Compress files will compact your files whenever Blender is saving them. Dense meshes, large packed textures or lots of elements in your scene will result in a large blend being created. This option may slow down Blender when you quit, or under normal operation when Blender is saving your backup files. Using this option traces processor time for file-size.</td>
+</tr>
+<tr>
+<td>Load UI</td>
+<td>In Bforartists you can load the scene in the screen layout in which you have saved it. Default is off. This can also be changed individually when loading a file from the <em>Open blend-file</em> panel of the File Browser.</td>
+</tr>
+<tr>
+<td>Tabs as Spaces</td>
+<td>For text files, automatically convert tabs into spaces when loading a blend file that contains a text file. Correct indentation is relevant for python scripts.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="save-versions">Save Versions</h4>
+<p>Number of versions created for the same file (for backup).</p>
+<p>This option tells Bforartists to keep the indicated number of saved versions of your file in your current working directory when you manually save a file. These files will have the extension: <em>.blend1</em>, <em>.blend2</em>, etc., with the number increasing to the number of versions you specify. Older files will be named with a higher number. e.g. With the default setting of 2, you will have three versions of your file: <code>*.blend</code> (your last save), <code>*.blend1</code> (your second last save) and <code>*.blend2</code> (your third last save).</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recent Files</td>
+<td>The number of recent files to display in the Recent panel.</td>
+</tr>
+<tr>
+<td>Save Modified Images</td>
+<td><strong>Ask Every Time</strong>: Show dialog to save modified images when saving the .blend file. · <strong>Always Save</strong>: Always save modified images when saving the .blend file. · <strong>Never Save</strong>: Never save modified images when saving the .blend file.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="file-preview">File Preview</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>When this option is off, previews of images and materials in the File Browser are created on demand.</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td>Automatically create previews of images and materials in the File Browser. The best preview type is chosen automatically.</td>
+</tr>
+<tr>
+<td>Screenshot</td>
+<td>Capture the entire window to create previews of images and materials in the File Browser.</td>
+</tr>
+<tr>
+<td>Camera Preview</td>
+<td>Use a workbench render to create the previews of images and materials in the File Browser.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="auto-save">Auto Save</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Save Temporary File</td>
+<td>Enable Auto Save. Auto save creates a temporary file. Checking this box tells Blender to <strong>automatically</strong> save a backup copy of your work-in-progress to the Temp directory (refer to the <strong>File</strong> tab in the <strong>Preferences</strong> for its location). The Auto Saved files are named using a random number and have a blend extension.</td>
+</tr>
+<tr>
+<td>Timer</td>
+<td>Adjust the number of minutes between each Auto Save. The minimum is 1, and the Maximum is 60 (Save at every one hour).</td>
+</tr>
+</tbody>
+</table>
+<h5 id="auto-run-python-scripts">Auto Run Python Scripts</h5>
+<p>Run the python scripts at loading a blend file that includes these scripts.</p>
+<h6 id="excluded-paths">Excluded paths</h6>
+<p>Define file paths where loaded blend files should not run the included scripts even when auto run python scripts is ticked.</p>
+<h3 id="file-browser-2">File Browser</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/file-browser-2.png" alt="File Browser" loading="lazy"></figure>
+<p>File browser related settings.</p>
+<h4 id="filter-files">Filter Files</h4>
+<p>By activating this, the file dialog in the File Browser will only show appropriate files in the Load dialog. Blend files for example.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/filter-files.png" alt="Filter Files" loading="lazy"></figure>
+<p>The selection of file types can also be changed in the header of the file dialog.</p>
+<h4 id="show-hidden-file-data">Show Hidden File/Data</h4>
+<p>On non Windows systems like Linux and Mac OS X files are hidden by a dot in front of the file name. Here you can make them visible in the file browser if you want. Note that this feature does not work with Windows.</p>
+<h4 id="show-recent-locations">Show Recent Locations</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/show-recent-locations.png" alt="Show Recent Locations" loading="lazy"></figure>
+<p>Hides the <em>Recent</em> panel of the File Browser which displays recently accessed folders.</p>
+<h4 id="show-system-bookmarks">Show System Bookmarks</h4>
+<p>Hides the System Bookmarks panel of the File Browser which displays the system bookmarks.</p>
+<h2 id="file-paths">File Paths</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/file-paths.png" alt="File Paths" loading="lazy"></figure>
+<p>Contains everything file path related.</p>
+<h3 id="data">Data</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fonts</td>
+<td>Default location when searching for font files.</td>
+</tr>
+<tr>
+<td>Textures</td>
+<td>Default location when searching for image textures.</td>
+</tr>
+<tr>
+<td>Sounds</td>
+<td>Default location when searching for sound files.</td>
+</tr>
+<tr>
+<td>Temporary Files</td>
+<td>The location where temporary files are stored.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="script-directories">Script Directories</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/script-directories.png" alt="Script Directories" loading="lazy"></figure>
+<p>An additional location to search for Python scripts.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/script-directories-2.png" alt="Script Directories" loading="lazy"></figure>
+<p>By default Bforartists looks in several directories (OS dependent) for scripts. Here you can add another directory to check for scripts. This can be used to store certain scripts/templates/presets independently of the currently used Blender Version.</p>
+<p>Inside the specified folder specific folders have to be created to tell Bforartists what to look for where. This folder structure has to mirror the structure of the scripts folder found in the installation directory of :</p>
+<ul>
+<li>scripts</li>
+<li>add-ons</li>
+<li>modules</li>
+<li>presets</li>
+<li>camera</li>
+<li>cloth</li>
+<li>interface_theme</li>
+<li>operator</li>
+<li>render</li>
+<li>...</li>
+<li>startup</li>
+<li>templates</li>
+</ul>
+<p>Not all of the folders have to be present.</p>
+<p>Python scripts (including driver expressions) are not executed by default for security reasons.</p>
+<h3 id="render">Render</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/render.png" alt="Render" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Render Output</td>
+<td>Where rendered images/videos are saved.</td>
+</tr>
+<tr>
+<td>Render Cache</td>
+<td>The location where cached render images are stored.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="applications">Applications</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/applications.png" alt="Applications" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image Editor</td>
+<td>The path to an external image editing software to use for image editing. Photoshop, Gimp, etc.</td>
+</tr>
+<tr>
+<td>Animation Player</td>
+<td>By default Bforartists uses the internal player to play back animations. Choose an external program to use for playback of rendered animations. There are also some presets available.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="text-editor">Text Editor</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/text-editor.png" alt="Text Editor" loading="lazy"></figure>
+<p>Here you can define an external text editor. Which allows you to edit text files externally. Which then can be done from the File menu in the text editor.</p>
+<h5 id="program">Program</h5>
+<p>Enter the path to the external text editor.</p>
+<h5 id="arguments">Arguments</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/arguments.png" alt="Arguments" loading="lazy"></figure>
+<p>Enter at least a filepath argument so that the code can be opened by the external editor. More arguments can be found in the tooltip.</p>
+<h3 id="development">Development</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/development.png" alt="Development" loading="lazy"></figure>
+<h4 id="i18n-branches">I18n Branches</h4>
+<p>The path to the <em>/branches</em> directory in your local repository translation copy. This allows translating the UI. See interface tab, the translation panel.</p>
+<h3 id="asset-libraries">Asset Libraries</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/asset-libraries.png" alt="Asset Libraries" loading="lazy"></figure>
+<p>The default paths for custom asset libraries. The functionality should be self explaining.</p>
+<p>To change the path simply type in a path, or use the path picker at the end.</p>
+<p>To add a new path to an asset library click at the + button below the list.</p>
+<p>To remove a path click at the X button at the end.</p>
+<h4 id="asset-list">Asset List</h4>
+<p>The list of available asset libraries. You can deactivate and activate single libraries.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add</td>
+<td>Add a new asset library to the asset list.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Remove the selected library from the asset list.</td>
+</tr>
+<tr>
+<td>Move Up/Down</td>
+<td>Move the selected library up or down the list.</td>
+</tr>
+<tr>
+<td>Path</td>
+<td>The path to the current selected asset library.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="import-method">Import Method</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/import-method.png" alt="Import Method" loading="lazy"></figure>
+<p>How to import the assets from the asset library into the scene.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Append (Reuse Data)</td>
+<td>Imports the assets as a copied data. The data is fully imported, and not linked to the asset library. This method reuses existing materials or meshes.</td>
+</tr>
+<tr>
+<td>Append</td>
+<td>Imports the assets as a copied data. The data is fully imported, and not linked to the asset library. This method also imports every material and mesh from scratch, and can create duplicated redundant data.</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>Links the assets to the assets in the asset library. The data is linked to the asset library. When you remove the asset library then the linked data is also removed.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relative-path">Relative Path</h4>
+<p>Use relative paths when linking from this library.</p>
+<h2 id="developer-tools">Developer Tools</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/developer-tools.png" alt="Developer Tools" loading="lazy"></figure>
+<p>This section contains special debug features, which you can turn on or off here.</p>
+<p>This panel just shows when you turn on the Developer Extras in the Interface tab.</p>
+<h2 id="experimental">Experimental</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/preferences/experimental.png" alt="Experimental" loading="lazy"></figure>
+<p>Here you may find some experimental settings from the Blender development. We will not cover them here. They change very quick. Use at own risk!</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq2-nav-landing/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fpreferences.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q2-nav-landing/docs2/content/editors/preferences.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#preferences">Preferences</a><a class="h3" href="#navigation-sidebar">Navigation Sidebar</a><a class="h2" href="#interface-tab">Interface Tab</a><a class="h3" href="#display-panel">Display Panel</a><a class="h3" href="#editors-panel">Editors Panel</a><a class="h3" href="#language-panel">Language Panel</a><a class="h3" href="#accessibility-panel">Accessibility Panel</a><a class="h3" href="#text-rendering-panel">Text Rendering Panel</a><a class="h3" href="#menus-panel">Menus Panel</a><a class="h2" href="#viewport">Viewport</a><a class="h3" href="#display">Display</a><a class="h3" href="#quality">Quality</a><a class="h3" href="#textures">Textures</a><a class="h3" href="#subdivisions">Subdivisions</a><a class="h2" href="#lights">Lights</a><a class="h3" href="#studio-lights">Studio Lights</a><a class="h3" href="#matcaps">MatCaps</a><a class="h3" href="#lookdevhdri-s">LookDevHDRI's</a><a class="h2" href="#editing">Editing</a><a class="h3" href="#objects">Objects</a><a class="h3" href="#3d-cursor">3D Cursor</a><a class="h3" href="#annotations">Annotations</a><a class="h3" href="#weight-paint">Weight Paint</a><a class="h3" href="#grease-pencil">Grease Pencil</a><a class="h3" href="#text">Text</a><a class="h3" href="#node-editor">Node Editor</a><a class="h3" href="#video-sequencer">Video Sequencer</a><a class="h3" href="#outliner">Outliner</a><a class="h3" href="#miscellaneous">Miscellaneous</a><a class="h2" href="#animation">Animation</a><a class="h3" href="#timeline">Timeline</a><a class="h2" href="#extensions">Extensions</a><a class="h3" href="#search-extensions">Search Extensions</a><a class="h3" href="#filter-extensions">Filter Extensions</a><a class="h3" href="#repositories">Repositories</a><a class="h3" href="#repository-list">Repository List</a><a class="h3" href="#add">Add</a><a class="h3" href="#remove">Remove</a><a class="h3" href="#remove-repository">Remove Repository</a><a class="h3" href="#refresh-remote">Refresh Remote</a><a class="h3" href="#active-extension-repository">Active Extension Repository</a><a class="h3" href="#check-for-updates-on-startup">Check for Updates on Startup</a><a class="h3" href="#advanced-subpanel">Advanced Subpanel</a><a class="h3" href="#extensions-settings">Extensions Settings</a><a class="h3" href="#allow-online-access">Allow Online Access</a><a class="h3" href="#online-extensions">Online Extensions</a><a class="h3" href="#repository-acccess-errors">Repository Acccess Errors</a><a class="h2" href="#add-ons">Add-ons</a><a class="h3" href="#drag-and-drop">Drag and Drop</a><a class="h3" href="#search-field">Search field</a><a class="h3" href="#list-of-addons">List of Addons</a><a class="h2" href="#themes">Themes</a><a class="h3" href="#presets">Presets</a><a class="h3" href="#install-2">Install</a><a class="h3" href="#reset">Reset</a><a class="h3" href="#list-of-editors">List of Editors</a><a class="h2" href="#input">Input</a><a class="h3" href="#keyboard">Keyboard</a><a class="h3" href="#mouse">Mouse</a><a class="h3" href="#tablet">Tablet</a><a class="h3" href="#touchpad">Touchpad</a><a class="h3" href="#ndof">NDOF</a><a class="h2" href="#navigation">Navigation</a><a class="h3" href="#orbit-pan">Orbit &amp; Pan</a><a class="h3" href="#zoom">Zoom</a><a class="h3" href="#fly-walk">Fly &amp; Walk</a><a class="h2" href="#keymap">Keymap</a><a class="h3" href="#header">Header</a><a class="h3" href="#key-map-editor">Key map Editor</a><a class="h2" href="#system">System</a><a class="h3" href="#cycles-render-devices">Cycles Render Devices</a><a class="h3" href="#display-graphics">Display Graphics</a><a class="h3" href="#operating-system-settings">Operating System Settings</a><a class="h3" href="#network">Network</a><a class="h3" href="#memory-and-limits">Memory and Limits</a><a class="h3" href="#video-sequencer-2">Video Sequencer</a><a class="h3" href="#sound">Sound</a><a class="h2" href="#save-load">Save &amp; Load</a><a class="h3" href="#blend-files">Blend Files</a><a class="h3" href="#file-browser-2">File Browser</a><a class="h2" href="#file-paths">File Paths</a><a class="h3" href="#data">Data</a><a class="h3" href="#script-directories">Script Directories</a><a class="h3" href="#render">Render</a><a class="h3" href="#applications">Applications</a><a class="h3" href="#development">Development</a><a class="h3" href="#asset-libraries">Asset Libraries</a><a class="h2" href="#developer-tools">Developer Tools</a><a class="h2" href="#experimental">Experimental</a></aside></div></body></html>

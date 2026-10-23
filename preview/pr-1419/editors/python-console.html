@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Python Console · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1419 · <code>docs2/q2-nav-landing</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../getting-started.html">Getting Started</a>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<a href="../interface.html">Interface</a>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<a href="../workspaces.html">Workspaces</a>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<a href="../editors.html">Editors</a>
+<a href="topbar-and-statusbar.html">Topbar and Statusbar</a>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<a href="introduction.html">Editors introduction</a>
+<a href="3d-viewport.html">3D Viewport</a>
+<span style="padding-left:2.5rem">Object mode - Object Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Vertex Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Edge Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Face Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Sculpt Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Vertex Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Weight Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Texture Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Curve + Surface Object - Edit Mode - Curve context menus</span>
+<span style="padding-left:2.5rem">Metaball - Edit Mode - Metaball context menu</span>
+<span style="padding-left:2.5rem">Text - Edit Mode - Text context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Edit Mode - Point context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Edit Mode - Stroke context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Sculpt Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Draw Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Vertex Paint Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Weight Paint Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode - Armature context menu</span>
+<span style="padding-left:2.5rem">Armature - Pose Mode - Pose context menu</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode - Lattice context menu</span>
+<span style="padding-left:2.5rem">Hair Curves - Edit Mode - Curves context menu</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Edit mode - Add menu</span>
+<span style="padding-left:2.5rem">Object menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Mesh menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit Mode - Vertex Menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Edge Menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Face menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - UV menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Sculpt menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Mask menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Face Sets menu</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint mode - Paint menu</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint mode - Brush menu</span>
+<span style="padding-left:2.5rem">Mesh - Weight Paint mode - Weights menu</span>
+<span style="padding-left:2.5rem">Mesh - Texture Paint mode - Brush menu</span>
+<span style="padding-left:2.5rem">Curve - Edit mode - Curve menu</span>
+<span style="padding-left:2.5rem">Surface - Edit mode - Surface menu</span>
+<span style="padding-left:2.5rem">Curve &amp; Surface - Edit mode - Control points menu</span>
+<span style="padding-left:2.5rem">Curve &amp; Surface - Edit mode - Segments menu</span>
+<span style="padding-left:2.5rem">Metaball - Edit mode - Metaball menu</span>
+<span style="padding-left:2.5rem">Text - Edit mode - Text menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Grease Pencil menu</span>
+<span style="padding-left:2.5rem">Point Cloud - Edit mode - Point Cloud menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Point menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Stroke menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Draw mode - Draw menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Vertex Paint mode - Paint menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Weight Paint Mode - Weights Menu</span>
+<span style="padding-left:2.5rem">Armature - Edit mode - Armature menu</span>
+<span style="padding-left:2.5rem">Armature - Pose mode - Pose menu</span>
+<span style="padding-left:2.5rem">Lattice - Edit mode - Lattice menu</span>
+<span style="padding-left:2.5rem">Particle - Particle mode - Particle menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Curves menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Control Points menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Segments menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Sculpt mode - Curves menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Mesh - Edit Mode</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Texture Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Particle Edit Mode</span>
+<span style="padding-left:2.5rem">Curve - Edit Mode</span>
+<span style="padding-left:2.5rem">Surface - Edit Mode</span>
+<span style="padding-left:2.5rem">Metaball - Edit Mode</span>
+<span style="padding-left:2.5rem">Text - Edit Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Draw Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode</span>
+<span style="padding-left:2.5rem">Armature - Pose Mode</span>
+<span style="padding-left:2.5rem">Lattice - Edit Mode</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit Mode</span>
+<span style="padding-left:2.5rem">Hair Curve - Sculpt Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Item tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">Tool Tab - Object Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Edit Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Pose Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Texture Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Particle Edit Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Draw Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Layer Panel</span>
+<span style="padding-left:2.5rem">Tool Tab - Hair Curve - Sculpt Mode</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Animation Tab</span>
+<span style="padding-left:1.5rem">Asset Shelf</span>
+<a href="image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View menu</span>
+<span style="padding-left:2.5rem">Image menu</span>
+<span style="padding-left:2.5rem">Select menu</span>
+<span style="padding-left:2.5rem">Add menu</span>
+<span style="padding-left:2.5rem">Mask menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Tool Tab in Paint Mode</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Scopes Tab</span>
+<span style="padding-left:2.5rem">Mask Tab</span>
+<a href="uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">UV menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<a href="compositor.html">Compositor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Color - Adjust</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Creative</span>
+<span style="padding-left:2.5rem">Add Menu - Filter - Blur</span>
+<span style="padding-left:2.5rem">Add Menu - Filter</span>
+<span style="padding-left:2.5rem">Add Menu - Keying</span>
+<span style="padding-left:2.5rem">Add Menu - Mask</span>
+<span style="padding-left:2.5rem">Add Menu - Tracking</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Transform</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Geometry Nodes Editor - Header - Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<a href="texture-node-editor.html">Texture Node Editor</a>
+<a href="geometry-node-editor.html">Geometry Node Editor</a>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Gizmo</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Import</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Attribute</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - UV</span>
+<span style="padding-left:2.5rem">Add Menu - Point</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Simulation</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Text</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Bundle</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Closure</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Field</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Matrix</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Rotation</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Deprecated</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Generate</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Selection</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Deformation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Generation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Guides</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span style="padding-left:2.5rem">Node tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Add</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<a href="shader-editor.html">Shader Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Shader</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<a href="video-sequence-editor.html">Video Sequence Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Export Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Strip Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">Text Menu</span>
+<span style="padding-left:2.5rem">Scene Menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Preview - Tool tab</span>
+<span style="padding-left:2.5rem">Preview - View tab</span>
+<span style="padding-left:2.5rem">Sequencer - Strip tab</span>
+<span style="padding-left:2.5rem">Sequencer - Tool tab</span>
+<span style="padding-left:2.5rem">Sequencer - Cache tab</span>
+<span style="padding-left:2.5rem">Sequencer - Proxy tab</span>
+<span style="padding-left:2.5rem">Sequencer - View tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<a href="movie-clip-editor.html">Movie Clip Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Clip Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Track Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Graph Submode - Graph Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Clip Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Add Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Mask Menu</span>
+<span style="padding-left:1.5rem">Tool shelf</span>
+<span style="padding-left:2.5rem">Tracking Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Footage Tab</span>
+<span style="padding-left:2.5rem">Track tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - Stabilization tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - View tab</span>
+<a href="dope-sheet.html">Dope Sheet</a>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:2.5rem">Action Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<a href="timeline.html">Timeline</a>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<a href="graph-editor.html">Graph Editor</a>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<a href="drivers-editor.html">Drivers Editor</a>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Drivers Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">Driver Editor - Sidebar - View Tab</span>
+<a href="nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<span style="padding-left:2.5rem">NLA Editor - Header tools and options</span>
+<span style="padding-left:2.5rem">NLA Editor - Header - Quick Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - View Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Select Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Marker Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Add Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Track Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Strip Menu</span>
+<span style="padding-left:1.5rem">NLA Editor - Channel list</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Animation Data panel</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Strip tab</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Modifiers Tab</span>
+<span style="padding-left:1.5rem">NLA Editor - Footer tools and options</span>
+<a href="text-editor.html">Text Editor</a>
+<a class="is-current" href="python-console.html">Python Console</a>
+<a href="info-editor.html">Info Editor</a>
+<a href="toolbar.html">Toolbar</a>
+<a href="outliner.html">Outliner</a>
+<a href="properties.html">Properties Editor</a>
+<span style="padding-left:1.5rem">Render Properties Tab</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:1.5rem">Output Properties Tab</span>
+<span style="padding-left:1.5rem">View Layer Properties Tab</span>
+<span style="padding-left:1.5rem">Scene Properties Tab</span>
+<span style="padding-left:1.5rem">World Properties Tab</span>
+<span style="padding-left:1.5rem">Collection Properties Tab</span>
+<span style="padding-left:1.5rem">Object Properties Tab</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Particle Properties Tab</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:1.5rem">Visual Effects Properties Tab</span>
+<span style="padding-left:1.5rem">Physics Properties Tab</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:1.5rem">Object Constraints Properties Tab</span>
+<span style="padding-left:1.5rem">Object Data Properties Tab</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span style="padding-left:1.5rem">Material Properties Tab</span>
+<span style="padding-left:1.5rem">Texture Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Constraint Properties</span>
+<span style="padding-left:1.5rem">Strip Tab</span>
+<span style="padding-left:1.5rem">Strip Modifiers Tab</span>
+<a href="file-browser.html">File browser</a>
+<a href="asset-browser.html">Asset Browser</a>
+<span style="padding-left:1.5rem">Asset Browser - Default Asset LIbrary</span>
+<span style="padding-left:1.5rem">Asset Browser - Essentials Asset Library</span>
+<a href="spreadsheet.html">Spreadsheet</a>
+<a href="preferences.html">Preferences</a>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Context menus</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<h4>Extensions and Addons</h4>
+<a href="../extensions.html">Extensions and Addons</a>
+<span>Bforartists Extensions</span>
+<span style="padding-left:1.5rem">Core Extension - Brush Panels</span>
+<span style="padding-left:1.5rem">Core Extension - Presentation Slider</span>
+<span style="padding-left:1.5rem">Core Extension- 3D Sequencer</span>
+<span style="padding-left:1.5rem">Core Extension - Power User Tools</span>
+<h4>Keymap</h4>
+<a href="../keymap.html">Keymap</a>
+<span>Standard Keymap</span>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<a href="../advanced.html">Advanced</a>
+<span>Advanced - Command Line</span>
+<span>Advanced - Scripting &amp; Extending Bforartists</span>
+<span>Advanced - Working Limits</span>
+<span>Troubleshooting</span>
+<h4>Information</h4>
+<a href="../appendix.html">Information</a>
+<span>Glossary</span>
+<span>Bforartists History</span>
+<span>Manual Update History</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Python Console</div><h1 class="pv-title">Python Console</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 7 min read</span></div><article class="ui-doc-body"><h2 id="python-console">Python Console</h2>
+<p>The Python console is a quick way to execute commands, with access to the entire Python API, command history and auto-complete. It's a research tool for addon- and script developers. But also a place to quickly execute single operators or to try out some simple code.</p>
+<h2 id="console-menu">Console Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/console-menu.png" alt="Console Menu" loading="lazy"></figure>
+<p>The Console menu provides some console editor window specific functionality.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Console Execute</td>
+<td>The expressions in the python console are not read only. You can execute them like you would do from a script. This button executes a selected command.</td>
+</tr>
+<tr>
+<td>Clear</td>
+<td>Clears all lines. The blue help text remains.</td>
+</tr>
+<tr>
+<td>Clear Line</td>
+<td>Clears the selected line(s).</td>
+</tr>
+<tr>
+<td>Copy as Script</td>
+<td>Copies the whole content of the console as a script that can be pasted into the Text editor.</td>
+</tr>
+<tr>
+<td>Cut</td>
+<td>Cuts out selected content.</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Copies selected content.</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Pastes copied content.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="zoom-text-out">Zoom Text Out</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/zoom-text-out.png" alt="Zoom Text Out" loading="lazy"></figure>
+<p>Zooms out the text in the console window.</p>
+<h3 id="zoom-text-in">Zoom Text In</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/zoom-text-in.png" alt="Zoom Text In" loading="lazy"></figure>
+<p>Zooms in the text in the console window.</p>
+<h3 id="languages">Languages</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/languages.png" alt="Languages" loading="lazy"></figure>
+<p>Languages is a sub menu where you can choose the language.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/languages-2.png" alt="Languages" loading="lazy"></figure>
+<p>This menu looks pretty useless, since there is just one language available. Python. But it has its usage. With a click at the Python button you can restart the console when you have lost yourself in the deeps of the API.</p>
+<h3 id="area-menu">Area Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/area-menu.png" alt="Area Menu" loading="lazy"></figure>
+<p>Area is a menu with window related settings.</p>
+<h4 id="horizontal-split">Horizontal Split</h4>
+<p>Splits the editor horizontally into two editors.</p>
+<h4 id="vertical-split">Vertical Split</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/vertical-split.png" alt="Vertical Split" loading="lazy"></figure>
+<p>Splits the editor vertically into two editors.</p>
+<h4 id="duplicate-area-into-new-window">Duplicate Area into new Window</h4>
+<p>Creates a floating window out of the current editor.</p>
+<h4 id="toggle-maximize-area">Toggle Maximize Area</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/toggle-maximize-area.png" alt="Toggle Maximize Area" loading="lazy"></figure>
+<p>Displays the editor maximized with menus.</p>
+<p>To return to split view press hotkey Ctrl Spacebar, or reuse the menu item in the View menu.</p>
+<h4 id="toggle-fullscreen-area">Toggle Fullscreen Area</h4>
+<p>Displays the editor maximized without menus.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/toggle-fullscreen-area.png" alt="Toggle Fullscreen Area" loading="lazy"></figure>
+<p>To return from the full screen view press hotkey Ctrl Alt Spacebar, or use the little button that appears up right when you move the mouse in this corner.</p>
+<h4 id="close-area">Close Area</h4>
+<p>Closes the area window.</p>
+<h2 id="edit-menu">Edit Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/edit-menu.png" alt="Edit Menu" loading="lazy"></figure>
+<p>The Edit menu provides you with text specific functionality. Its content should be used by hotkeys. The menu is more to show that this functionality exists.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Indent</td>
+<td>Indents the selected text.</td>
+</tr>
+<tr>
+<td>Unindent</td>
+<td>Removes indention of the selected text.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="select-text-sub-menu">Select Text sub menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/select-text-sub-menu.png" alt="Select Text sub menu" loading="lazy"><figcaption>Select Text sub menu</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select all</td>
+<td>Selects all text.</td>
+</tr>
+<tr>
+<td>Line Begin</td>
+<td>Selects the text to line begin.</td>
+</tr>
+<tr>
+<td>Line End</td>
+<td>Selects the text to line end.</td>
+</tr>
+<tr>
+<td>Previous word</td>
+<td>Selects the text in front of the current word.</td>
+</tr>
+<tr>
+<td>Next word</td>
+<td>Selects the text behind the current word.</td>
+</tr>
+<tr>
+<td>Previous Character</td>
+<td>Selects the previous character.</td>
+</tr>
+<tr>
+<td>Next character</td>
+<td>Selects the next character.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="move-cursor-sub-menu">Move Cursor sub menu</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cursor to Next character</td>
+<td>Sets the caret in front of the next character.</td>
+</tr>
+<tr>
+<td>Cursor to Previous word</td>
+<td>Sets the caret in front of the previous word.</td>
+</tr>
+<tr>
+<td>Cursor to Next word</td>
+<td>Sets the caret in front of the next word.</td>
+</tr>
+<tr>
+<td>Cursor to Line Begin</td>
+<td>Sets the caret to line begin.</td>
+</tr>
+<tr>
+<td>Cursor to Line End</td>
+<td>Sets the caret to line end.</td>
+</tr>
+<tr>
+<td>Cursor to Previous Character</td>
+<td>Sets the caret in front of the previous character.</td>
+</tr>
+<tr>
+<td>Cursor to Next character</td>
+<td>Sets the caret in front of the next character.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="delete">Delete</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/delete.png" alt="Delete" loading="lazy"></figure>
+<p>Delete is a sub menu with several delete methods.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Next character</td>
+<td>Deletes the character beyond the caret.</td>
+</tr>
+<tr>
+<td>Previous Character</td>
+<td>Deletes the character before the caret.</td>
+</tr>
+<tr>
+<td>Next Word</td>
+<td>Deletes the word beyond the caret.</td>
+</tr>
+<tr>
+<td>Previous Word</td>
+<td>Deletes the word before the caret.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="history-cycle">History Cycle</h3>
+<p>Cycles through the history.</p>
+<p>Up arrow cycles forwards through the history. Down arrow cycles backwards through the history.</p>
+<p>What does this mean? When you write some text, then add something more, delete something, then all this steps are entries in the history. And with History cycle you can access this steps.</p>
+<h2 id="auto-complete">Auto complete</h2>
+<p>Auto complete is a functionality to auto complete what you have written in the console. It lists for example all available bpy operators when you type in bpy.context.area. , and then hit the Auto complete button. That way you can go through the whole bpy hierarchy down to what you need for your code, starting with bpy. , and having a look at what is available.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/auto-complete.png" alt="Auto complete" loading="lazy"></figure>
+<h2 id="usage">Usage</h2>
+<h3 id="accessing-built-in-python-console">Accessing Built-in Python Console</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/accessing-built-in-python-console.png" alt="Accessing Built-in Python Console" loading="lazy"><figcaption>Accessing Built-in Python Console</figcaption></figure>
+<p>From the screen shot above, you will notice that by clicking at the Auto complete button you can enable Auto-complete feature.</p>
+<p>The command prompt is typical for Python 3.x, the interpreter is loaded and is ready to accept commands at the prompt <em>&gt;&gt;&gt;</em></p>
+<h3 id="first-look-at-the-console-environment">First look at the Console Environment</h3>
+<p>To check what is loaded into the interpreter environment, type dir() at the prompt and execute it.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/first-look-at-the-console-environment.png" alt="First look at the Console Environment" loading="lazy"><figcaption>First look at the Console Environment</figcaption></figure>
+<p>Following is a quick overview of the output</p>
+<p><strong>C</strong></p>
+<p>Quick access to <em>bpy.context</em></p>
+<p><strong>D</strong></p>
+<p>Quick access to <em>bpy.data</em></p>
+<p><em>bpy</em></p>
+<p>Top level Bforartists Python API module.</p>
+<p>The rest of the commands are of various content. Most of them are mathematical expressions.</p>
+<h3 id="auto-completion-at-work">Auto Completion at work</h3>
+<p>Type bpy. and then press the Auto complete button.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/auto-completion-at-work.png" alt="Auto Completion at work" loading="lazy"><figcaption>Auto Completion at work</figcaption></figure>
+<p>A list of sub-modules inside of bpy will appear. These modules encapsulate all that we can do with Bforartists Python API.</p>
+<p>Lets list all the contents of bpy.app module.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/auto-completion-at-work-2.png" alt="Auto Completion at work" loading="lazy"><figcaption>Auto Completion at work</figcaption></figure>
+<p>Notice the green output above the prompt where you enabled auto-completion. What you see is the result of auto completion listing. In the above listing all are module attribute names, but if you see any name end with ‘(‘, then that is a function.</p>
+<p>We will make use of this a lot to help our learning the API faster. Now that you got a hang of this, lets proceed to investigate some of modules in bpy.</p>
+<h3 id="before-working-with-the-modules">Before working with the modules.</h3>
+<p>If you look at the 3D Viewport in the default Bforartists scene, you will notice some objects. We have added a cube here too.</p>
+<ul>
+<li><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/before-working-with-the-modules.png" alt="Before working with the modules." />
+All objects exist in a context and there can be various modes under which they are operated upon.</li>
+<li>At any instance, only one object is active and there can be more than one selected objects.</li>
+<li>All objects are data in the Bforartists file.</li>
+<li>There are operators/functions that create and modify these objects.</li>
+</ul>
+<p>For all the scenarios listed above the bpy module provides functionality to access and modify data.</p>
+<h2 id="examples">Examples</h2>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> For the commands below to show the proper output, make sure you have selected object(s) in the 3D view.</p></div>
+<h3 id="bpy-context">bpy.context</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/bpy-context.png" alt="bpy.context" loading="lazy"></figure>
+<h4 id="try-it-out">Try it out!</h4>
+<p>bpy.context.mode</p>
+<p>Will print the current 3D View mode (Object, Edit, Sculpt etc.,)</p>
+<p>bpy.context.object or bpy.context.active_object</p>
+<p>Will give access to the active object in the 3D View</p>
+<p>&gt;&gt;&gt; bpy.context.object.location.x = 1</p>
+<p>Change x location to a value of 1</p>
+<p>&gt;&gt;&gt; bpy.context.object.location.x += 0.5</p>
+<p>Move object from previous x location by 0.5 unit</p>
+<p>&gt;&gt;&gt; bpy.context.object.location = (1, 2, 3)</p>
+<p>Changes x, y, z location</p>
+<p>&gt;&gt;&gt; bpy.context.object.location.xyz = (1, 2, 3)</p>
+<p>Same as above</p>
+<p>&gt;&gt;&gt; type(bpy.context.object.location)</p>
+<p>Data type of objects location</p>
+<p>&gt;&gt;&gt; dir(bpy.context.object.location)</p>
+<p>Now that is a lot of data that you have access to</p>
+<p>bpy.context.selected_objects</p>
+<p>Will give access to a list of all selected objects.</p>
+<p>&gt;&gt;&gt; bpy.context.selected_objects</p>
+<p>... then press <em>Ctrl-Spacebar</em></p>
+<p>&gt;&gt;&gt; <code>bpy.context.selected_objects[0]</code></p>
+<p>Prints out name of first object in the list</p>
+<p>&gt;&gt;&gt; <code>[object</code> for object in bpy.context.selected_objects if object != <code>bpy.context.object]</code></p>
+<p>Complex one... But this prints a list of objects not including the active object</p>
+<h3 id="bpy-data">bpy.data</h3>
+<p><em>bpy.data</em> has functions and attributes that give you access to all the data in the Bforartists file.</p>
+<p>You can access following data in the current Bforartists file: objects, meshes, materials, textures, scenes, screens, sounds, scripts, ... etc.</p>
+<p>That’s a lot of data.</p>
+<h4 id="try-it-out-2">Try it out!</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/python-console/try-it-out.png" alt="Try it out!" loading="lazy"></figure>
+<h4 id="exercise">Exercise</h4>
+<p>&gt;&gt;&gt; for object in <code>bpy.data.scenes['Scene'].objects</code>: print(object.name)</p>
+<p><strong>Enter</strong> twice Prints the names of all objects belonging to the Bforartists scene with name “Scene”</p>
+<p>&gt;&gt;&gt; <code>bpy.data.scenes['Scene'].objects.unlink(bpy.context.active_object</code>)</p>
+<p>Unlink the active object from the Bforartists scene named ‘Scene’</p>
+<p>&gt;&gt;&gt; <code>bpy.data.materials['Material'].shadows</code></p>
+<p>&gt;&gt;&gt; <code>bpy.data.materials['Material'].shadows</code> = False</p>
+<h3 id="bpy-ops">bpy.ops</h3>
+<p>The tool/action system in Bforartists is built around the concept of operators. These operators can be called directly from console or can be executed by click of a button or packaged in a python script. Very powerful they are..</p>
+<p>Lets create a set of five Cubes in the 3D Viewport. First, delete the existing Cube object by selecting it and pressing <strong>X</strong></p>
+<h4 id="try-it-out-3">Try it out!</h4>
+<p>The following commands are used to specify that the objects are created in layer 1. So first we define an array variable for later reference:</p>
+<p>&gt;&gt;&gt; mylayers = <code>[False]</code> <code>*</code> 20</p>
+<p>&gt;&gt;&gt; <code>mylayers[0]</code> = True</p>
+<p>We create a reference to the operator that is used for creating a cube mesh primitive</p>
+<p>&gt;&gt;&gt; add_cube = bpy.ops.mesh.primitive_cube_add</p>
+<p>Now in a for loop, we create the five objects like this (In the screenshot above, I used another method) Press Enter-KEY twice after entering the command at the shell prompt.</p>
+<p>&gt;&gt;&gt; for index in range(0, 5): add_cube(location=(index <code>*</code> 3, 0, 0), layers=mylayers)</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq2-nav-landing/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fpython-console.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q2-nav-landing/docs2/content/editors/python-console.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#python-console">Python Console</a><a class="h2" href="#console-menu">Console Menu</a><a class="h3" href="#zoom-text-out">Zoom Text Out</a><a class="h3" href="#zoom-text-in">Zoom Text In</a><a class="h3" href="#languages">Languages</a><a class="h3" href="#area-menu">Area Menu</a><a class="h2" href="#edit-menu">Edit Menu</a><a class="h3" href="#select-text-sub-menu">Select Text sub menu</a><a class="h3" href="#move-cursor-sub-menu">Move Cursor sub menu</a><a class="h3" href="#delete">Delete</a><a class="h3" href="#history-cycle">History Cycle</a><a class="h2" href="#auto-complete">Auto complete</a><a class="h2" href="#usage">Usage</a><a class="h3" href="#accessing-built-in-python-console">Accessing Built-in Python Console</a><a class="h3" href="#first-look-at-the-console-environment">First look at the Console Environment</a><a class="h3" href="#auto-completion-at-work">Auto Completion at work</a><a class="h3" href="#before-working-with-the-modules">Before working with the modules.</a><a class="h2" href="#examples">Examples</a><a class="h3" href="#bpy-context">bpy.context</a><a class="h3" href="#bpy-data">bpy.data</a><a class="h3" href="#bpy-ops">bpy.ops</a></aside></div></body></html>

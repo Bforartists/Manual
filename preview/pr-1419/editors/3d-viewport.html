@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3D Viewport · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1419 · <code>docs2/q2-nav-landing</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../getting-started.html">Getting Started</a>
+<span>Introduction</span>
+<span>About Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparing to Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<a href="../interface.html">Interface</a>
+<span>Interface basics</span>
+<span>Header</span>
+<span>Panels and tabs</span>
+<span>Menus, buttons and controls</span>
+<span>Tool shelf</span>
+<span>Sidebar</span>
+<span>Input devices</span>
+<h4>Workspaces</h4>
+<a href="../workspaces.html">Workspaces</a>
+<span>Workspaces</span>
+<h4>Editors</h4>
+<a href="../editors.html">Editors</a>
+<a href="topbar-and-statusbar.html">Topbar and Statusbar</a>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:2.5rem">Window menu</span>
+<span style="padding-left:2.5rem">Help menu</span>
+<a href="introduction.html">Editors introduction</a>
+<a class="is-current" href="3d-viewport.html">3D Viewport</a>
+<span style="padding-left:2.5rem">Object mode - Object Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Vertex Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Edge Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Edit Mode - Face Context Menu</span>
+<span style="padding-left:2.5rem">Mesh Object - Sculpt Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Vertex Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Weight Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Mesh Object - Texture Paint Mode - Brushes context menus</span>
+<span style="padding-left:2.5rem">Curve + Surface Object - Edit Mode - Curve context menus</span>
+<span style="padding-left:2.5rem">Metaball - Edit Mode - Metaball context menu</span>
+<span style="padding-left:2.5rem">Text - Edit Mode - Text context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Edit Mode - Point context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Edit Mode - Stroke context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Sculpt Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Draw Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Vertex Paint Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Grease Pencil object - Weight Paint Mode - Brushes context menu</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode - Armature context menu</span>
+<span style="padding-left:2.5rem">Armature - Pose Mode - Pose context menu</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode - Lattice context menu</span>
+<span style="padding-left:2.5rem">Hair Curves - Edit Mode - Curves context menu</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Edit mode - Add menu</span>
+<span style="padding-left:2.5rem">Object menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Mesh menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit Mode - Vertex Menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Edge Menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - Face menu</span>
+<span style="padding-left:2.5rem">Mesh - Edit mode - UV menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Sculpt menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Mask menu</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt mode - Face Sets menu</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint mode - Paint menu</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint mode - Brush menu</span>
+<span style="padding-left:2.5rem">Mesh - Weight Paint mode - Weights menu</span>
+<span style="padding-left:2.5rem">Mesh - Texture Paint mode - Brush menu</span>
+<span style="padding-left:2.5rem">Curve - Edit mode - Curve menu</span>
+<span style="padding-left:2.5rem">Surface - Edit mode - Surface menu</span>
+<span style="padding-left:2.5rem">Curve &amp; Surface - Edit mode - Control points menu</span>
+<span style="padding-left:2.5rem">Curve &amp; Surface - Edit mode - Segments menu</span>
+<span style="padding-left:2.5rem">Metaball - Edit mode - Metaball menu</span>
+<span style="padding-left:2.5rem">Text - Edit mode - Text menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Grease Pencil menu</span>
+<span style="padding-left:2.5rem">Point Cloud - Edit mode - Point Cloud menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Point menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit mode - Stroke menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Draw mode - Draw menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Vertex Paint mode - Paint menu</span>
+<span style="padding-left:2.5rem">Grease Pencil - Weight Paint Mode - Weights Menu</span>
+<span style="padding-left:2.5rem">Armature - Edit mode - Armature menu</span>
+<span style="padding-left:2.5rem">Armature - Pose mode - Pose menu</span>
+<span style="padding-left:2.5rem">Lattice - Edit mode - Lattice menu</span>
+<span style="padding-left:2.5rem">Particle - Particle mode - Particle menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Curves menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Control Points menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit mode - Segments menu</span>
+<span style="padding-left:2.5rem">Hair Curve - Sculpt mode - Curves menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Mesh - Edit Mode</span>
+<span style="padding-left:2.5rem">Mesh - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Mesh - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Texture Paint Mode</span>
+<span style="padding-left:2.5rem">Mesh - Particle Edit Mode</span>
+<span style="padding-left:2.5rem">Curve - Edit Mode</span>
+<span style="padding-left:2.5rem">Surface - Edit Mode</span>
+<span style="padding-left:2.5rem">Metaball - Edit Mode</span>
+<span style="padding-left:2.5rem">Text - Edit Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Edit Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Draw Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Grease Pencil - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Armature - Edit Mode</span>
+<span style="padding-left:2.5rem">Armature - Pose Mode</span>
+<span style="padding-left:2.5rem">Lattice - Edit Mode</span>
+<span style="padding-left:2.5rem">Hair Curve - Edit Mode</span>
+<span style="padding-left:2.5rem">Hair Curve - Sculpt Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Item tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">Tool Tab - Object Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Edit Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Pose Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Texture Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Mesh - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Particle Edit Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Sculpt Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Draw Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Vertex Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Weight Paint Mode</span>
+<span style="padding-left:2.5rem">Tool Tab - Grease Pencil - Layer Panel</span>
+<span style="padding-left:2.5rem">Tool Tab - Hair Curve - Sculpt Mode</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Animation Tab</span>
+<span style="padding-left:1.5rem">Asset Shelf</span>
+<a href="image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View menu</span>
+<span style="padding-left:2.5rem">Image menu</span>
+<span style="padding-left:2.5rem">Select menu</span>
+<span style="padding-left:2.5rem">Add menu</span>
+<span style="padding-left:2.5rem">Mask menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Tool Tab in Paint Mode</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Scopes Tab</span>
+<span style="padding-left:2.5rem">Mask Tab</span>
+<a href="uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">UV menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<a href="compositor.html">Compositor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Color - Adjust</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Creative</span>
+<span style="padding-left:2.5rem">Add Menu - Filter - Blur</span>
+<span style="padding-left:2.5rem">Add Menu - Filter</span>
+<span style="padding-left:2.5rem">Add Menu - Keying</span>
+<span style="padding-left:2.5rem">Add Menu - Mask</span>
+<span style="padding-left:2.5rem">Add Menu - Tracking</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Transform</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Geometry Nodes Editor - Header - Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<a href="texture-node-editor.html">Texture Node Editor</a>
+<a href="geometry-node-editor.html">Geometry Node Editor</a>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Constant</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Gizmo</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Import</span>
+<span style="padding-left:2.5rem">Add Menu - Input - Scene</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Attribute</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Curve - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - Topology</span>
+<span style="padding-left:2.5rem">Add Menu - Mesh - UV</span>
+<span style="padding-left:2.5rem">Add Menu - Point</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Sample</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Volume - Primitives</span>
+<span style="padding-left:2.5rem">Add Menu - Simulation</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Text</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Bundle</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Closure</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Field</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Matrix</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Rotation</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Deprecated</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Generate</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Geometry - Selection</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Operations</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Grease Pencil - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Deformation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Generation</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Guides</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Hair - Write</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Instances</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Material</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Mesh - Read</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Geometry Nodegroups - Utility</span>
+<span style="padding-left:2.5rem">Add Menu - Normals</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span style="padding-left:2.5rem">Node tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Add</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<a href="shader-editor.html">Shader Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu - Input</span>
+<span style="padding-left:2.5rem">Add Menu - Output</span>
+<span style="padding-left:2.5rem">Add Menu - Shader</span>
+<span style="padding-left:2.5rem">Add Menu - Color</span>
+<span style="padding-left:2.5rem">Add Menu - Texture</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Math</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities - Vector</span>
+<span style="padding-left:2.5rem">Add Menu - Utilities</span>
+<span style="padding-left:2.5rem">Add Menu - Group</span>
+<span style="padding-left:2.5rem">Add Menu - Layout</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<a href="video-sequence-editor.html">Video Sequence Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Export Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Strip Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">Text Menu</span>
+<span style="padding-left:2.5rem">Scene Menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Preview - Tool tab</span>
+<span style="padding-left:2.5rem">Preview - View tab</span>
+<span style="padding-left:2.5rem">Sequencer - Strip tab</span>
+<span style="padding-left:2.5rem">Sequencer - Tool tab</span>
+<span style="padding-left:2.5rem">Sequencer - Cache tab</span>
+<span style="padding-left:2.5rem">Sequencer - Proxy tab</span>
+<span style="padding-left:2.5rem">Sequencer - View tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<a href="movie-clip-editor.html">Movie Clip Editor</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Clip Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Track Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Graph Submode - Graph Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Clip Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Add Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Mask Menu</span>
+<span style="padding-left:1.5rem">Tool shelf</span>
+<span style="padding-left:2.5rem">Tracking Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Footage Tab</span>
+<span style="padding-left:2.5rem">Track tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - Stabilization tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - View tab</span>
+<a href="dope-sheet.html">Dope Sheet</a>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:2.5rem">Action Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<a href="timeline.html">Timeline</a>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<a href="graph-editor.html">Graph Editor</a>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<a href="drivers-editor.html">Drivers Editor</a>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Drivers Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">Driver Editor - Sidebar - View Tab</span>
+<a href="nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<span style="padding-left:2.5rem">NLA Editor - Header tools and options</span>
+<span style="padding-left:2.5rem">NLA Editor - Header - Quick Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - View Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Select Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Marker Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Add Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Track Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Strip Menu</span>
+<span style="padding-left:1.5rem">NLA Editor - Channel list</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Animation Data panel</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Strip tab</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Modifiers Tab</span>
+<span style="padding-left:1.5rem">NLA Editor - Footer tools and options</span>
+<a href="text-editor.html">Text Editor</a>
+<a href="python-console.html">Python Console</a>
+<a href="info-editor.html">Info Editor</a>
+<a href="toolbar.html">Toolbar</a>
+<a href="outliner.html">Outliner</a>
+<a href="properties.html">Properties Editor</a>
+<span style="padding-left:1.5rem">Render Properties Tab</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:1.5rem">Output Properties Tab</span>
+<span style="padding-left:1.5rem">View Layer Properties Tab</span>
+<span style="padding-left:1.5rem">Scene Properties Tab</span>
+<span style="padding-left:1.5rem">World Properties Tab</span>
+<span style="padding-left:1.5rem">Collection Properties Tab</span>
+<span style="padding-left:1.5rem">Object Properties Tab</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Particle Properties Tab</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:1.5rem">Visual Effects Properties Tab</span>
+<span style="padding-left:1.5rem">Physics Properties Tab</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:1.5rem">Object Constraints Properties Tab</span>
+<span style="padding-left:1.5rem">Object Data Properties Tab</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span style="padding-left:1.5rem">Material Properties Tab</span>
+<span style="padding-left:1.5rem">Texture Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Constraint Properties</span>
+<span style="padding-left:1.5rem">Strip Tab</span>
+<span style="padding-left:1.5rem">Strip Modifiers Tab</span>
+<a href="file-browser.html">File browser</a>
+<a href="asset-browser.html">Asset Browser</a>
+<span style="padding-left:1.5rem">Asset Browser - Default Asset LIbrary</span>
+<span style="padding-left:1.5rem">Asset Browser - Essentials Asset Library</span>
+<a href="spreadsheet.html">Spreadsheet</a>
+<a href="preferences.html">Preferences</a>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Context menus</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<h4>Extensions and Addons</h4>
+<a href="../extensions.html">Extensions and Addons</a>
+<span>Bforartists Extensions</span>
+<span style="padding-left:1.5rem">Core Extension - Brush Panels</span>
+<span style="padding-left:1.5rem">Core Extension - Presentation Slider</span>
+<span style="padding-left:1.5rem">Core Extension- 3D Sequencer</span>
+<span style="padding-left:1.5rem">Core Extension - Power User Tools</span>
+<h4>Keymap</h4>
+<a href="../keymap.html">Keymap</a>
+<span>Standard Keymap</span>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<a href="../advanced.html">Advanced</a>
+<span>Advanced - Command Line</span>
+<span>Advanced - Scripting &amp; Extending Bforartists</span>
+<span>Advanced - Working Limits</span>
+<span>Troubleshooting</span>
+<h4>Information</h4>
+<a href="../appendix.html">Information</a>
+<span>Glossary</span>
+<span>Bforartists History</span>
+<span>Manual Update History</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport</div><h1 class="pv-title">3D Viewport</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 12 min read</span></div><article class="ui-doc-body"><figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/3d-viewport.png" alt="3D Viewport" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/3d-viewport-2.png" alt="3D Viewport" loading="lazy"></figure>
+<p>The 3D Cursor is simply a point in 3D space which can be used for a number of purposes. It is often in the way. You can hide it in the properties sidebar in the 3D Cursor panel at the right.</p>
+<p>The 3D View editor is the editor where you edit your 3D data. Here you can display and modify all the scene data like meshes, curves, metalballs, etc.</p>
+<p>It has a grid overlay in the middle per default, and you can navigate around in this view with your mouse.</p>
+<p>Each part of this editor will be explained in their own individual chapter.</p>
+<p>In this chapter you will find general GUI information that doesn't fit elsewhere.</p>
+<p>The 3D View has several areas highlighted with colour overlays:</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/3d-viewport-3.png" alt="3D Viewport" loading="lazy"></figure>
+<p>In the center is the actual 3D viewport. Here you see and modify your mesh data as an example.</p>
+<h2 id="a-header">A. Header</h2>
+<p>The light blue area is the Header. This area contains menus, viewport settings, tools and settings.</p>
+<h2 id="b-tool-settings">B. Tool Settings</h2>
+<p>The pink area at the top is the Tool Settings. Here you can find settings for the currently active tool and viewport options.</p>
+<h2 id="c-toolbar">C. Toolbar</h2>
+<p>The green area at the left is the Tool Shelf. This contains all the modal tools.</p>
+<h2 id="d-tabbed-toolbar">D. Tabbed Toolbar</h2>
+<p>The orange area are additional optional tabs and panels with act-once tools also found in the header.</p>
+<h2 id="e-sidebar">E. Sidebar</h2>
+<p>The dark blue area to the right is the Sidebar. This contains settings and transform values. This is also the place where addons add their additional panels.</p>
+<h2 id="f-asset-shelf">F. Asset Shelf</h2>
+<p>The purple area to the botton is the Asset Shelf. Here you can quickly access asset library assets from the 3D Viewport.</p>
+<h2 id="g-adjust-last-operator-panel">G. Adjust Last Operator Panel</h2>
+<p>The red area at the bottom left you is the Adjust Last Operation panel. This panel appears after you do an operation, like move the mesh to another location, and allows you to adjust the values for the operation afterwards.</p>
+<h2 id="h-navigation-widgets">H. Navigation Widgets</h2>
+<p>The yellow area is the navigation widgets.</p>
+<h2 id="viewport-navigation">Viewport Navigation</h2>
+<p>Navigation in the viewport happens mainly by mouse or hotkeys. Some of them does not have a menu entry. And needs to be explained here.</p>
+<p>For the rest of the available navigation functionality have a look into the Navi menu in the header.</p>
+<h3 id="navigation-elements">Navigation Elements</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/navigation-elements.png" alt="Navigation Elements" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/navigation-elements-2.png" alt="Navigation Elements" loading="lazy"></figure>
+<p>From left to right.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Perspective / Orthographic</td>
+<td>Switch the view between perspectivic and orthographic view.</td>
+</tr>
+<tr>
+<td>Camera View</td>
+<td>Enter and leave the camera view. You need to have an active camera in the scene.</td>
+</tr>
+<tr>
+<td>Move</td>
+<td>Moves the view.</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td>Zooms in and out.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mini-axis">Mini Axis</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/mini-axis.png" alt="Mini Axis" loading="lazy"></figure>
+<p>A mini axis. It allows rotation of the view and snap to the nearest ortho view when it is in interactive navigation mode. See Viewport gizmos for more options. There you can turn it to a simple widget, or turn it even completely off.</p>
+<h4 id="lock-camera-to-view">Lock camera to view</h4>
+<p>Available when you are in camera view. Either navigate the passepartout around the camera, or navigate in the camera view.</p>
+<h3 id="viewport-navigation-hotkeys">Viewport navigation hotkeys</h3>
+<p>Right mouse button rotates the view.</p>
+<p>Middle mouse button pans the view.</p>
+<p>Holding <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>MMB</kbd></span> zooms the view.</p>
+<p>Scroll Wheel zooms the view.</p>
+<p>Holding down Alt and middle mouse button snaps the view to the next available orthographic view. Front, Left, etc. . When you continue dragging then you continue to the next orthographic view.</p>
+<p>Numpad <code>*</code> resets the 3D view.</p>
+<p>Left clicking into an empty space deselects what is currently selected. Exception: when you are in one of the navigation modes and drag the mouse, then the navigation takes over.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object navigation</td>
+<td>Hotkey W moves the selected object/s Hotkey E rotates the selected object/s Hotkey R scales the selected object/s</td>
+</tr>
+<tr>
+<td>Trackball Navigation</td>
+<td>Pressing the hotkey for object rotation once (by default the E key in the Bforartists key map) will rotate the object around the screen axis. Pressing the hotkey for rotation twice will activate trackball rotation. Now you can rotate the object freely around all three axis.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="context-menus">Context Menus</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/context-menus.png" alt="Context Menus" loading="lazy"></figure>
+<p>Not every functionality has a menu entry. Some is hotkey only.</p>
+<p>One of it is calling the so called context menu. You will find it in several places in the UI. Normally it's a simple right click in the viewport.</p>
+<p>The content of this menus is to 100% double content to already existing menus. And it is, despite the name, not contextual. The different menu types comes from the object modes, not from a context.</p>
+<p>The single context menus are described in their own chapters in the corresponding editors.</p>
+<h2 id="right-click-menus">Right click Menus</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/right-click-menus.jpg" alt="Right click Menus" loading="lazy"></figure>
+<p>Not every functionality has a menu entry. Some is even a right click at an existing menu. Like clicking at an operator or a property in the UI to add it to the quick favourites menu or to add a shortcut.</p>
+<p>Note that not all right click menu functionality might be documented.</p>
+<h2 id="add-to-selection-with-shift">Add to selection with Shift</h2>
+<p>When you want to parent two objects together, then you need to select them. You can do this with border select for example. Or you select the first object, hold down shift, then the second object. The first object selected will be the child object then when you parent them together.</p>
+<h2 id="constraining-the-scaling-axis-axis-locking">Constraining the scaling axis (axis locking)</h2>
+<p>Scaling can be constrained to a particular axis or axes through the use of <em>Axis Locking</em>. To constrain scaling, the following shortcuts can be used:</p>
+<ul>
+<li><em>Scale Hotkey</em>, <strong>X</strong>: Scale only along the <strong>X Axis</strong></li>
+<li><em>Scale Hotkey</em>, <strong>Y</strong>: Scale only along the <strong>Y Axis</strong></li>
+<li><em>Scale Hotkey</em>, <strong>Z</strong>: Scale only along the <strong>Z Axis</strong></li>
+</ul>
+<p>Axis locking can also be enabled by pressing the <em>MMB</em> after enabling scaling and moving the mouse in the desired direction e.g.</p>
+<ul>
+<li><em>Scale Hotkey</em>, move the mouse along the X axis, <em>MMB</em>: Scale only along the <strong>X Axis</strong></li>
+</ul>
+<h2 id="object-snapping-with-increment-snap">Object Snapping with Increment snap</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/object-snapping-with-increment-snap.png" alt="Object Snapping with Increment snap" loading="lazy"><figcaption>Object Snapping with Increment snap</figcaption></figure>
+<p>Holding <strong>Ctrl</strong> during a transform operation (such as grab, rotate or scale) will temporary activate Transform Snapping. When the Snap Element is set to <em>Increment</em>, this allows the transformation to be performed in fixed steps.</p>
+<h2 id="slider-snapping">Slider snapping</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/slider-snapping.png" alt="Slider snapping" loading="lazy"></figure>
+<p>Snapping also works at sliders for example. Hover with the mouse over the slider, start to slide, and holding down <strong>Ctrl</strong> will snap the sliders in incremental steps.</p>
+<p>When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.</p>
+<p>Note that this also works at brushes hotkeys for example. Hotkey F usually allows to change the radius. When you hold down ctrl too then it increases or decreases the size by incremental steps.</p>
+<h2 id="fine-tuning-transform">Fine tuning Transform</h2>
+<p>Holding <strong>Shift</strong> during a transform operation will transform the object at 1/10th the speed, allowing much finer control over the snapping.</p>
+<p>The magnitude of the transformation can be viewed in the 3D window header in the bottom left hand corner. Releasing <strong>Ctrl</strong> or <strong>Shift</strong> during the transformation will cause the movement to revert back to its normal mode of operation.</p>
+<p>This fine tune transform operation works with both, the transform hotkeys and the 3D widget.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> Combining with other controls</p>
+<p>All of the precision controls detailed on the page can be combined with the <em>Axis Locking</em> controls and used with the different <em>Pivot Points</em>.</p></div>
+<h3 id="rotation-transformations">Rotation transformations</h3>
+<p>Holding <strong>Ctrl</strong> will cause rotations of 5 degrees.<br />
+Holding <em><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Shift</kbd></span></em> will cause rotations of 1 degree.</p>
+<h3 id="scale-transformations">Scale transformations</h3>
+<p>Holding <strong>Ctrl</strong> will cause size changes in increments of 0.1 BU.<br />
+Hold <strong>Shift</strong> down while scaling to scale the selected element in very fine increments.<br />
+Hold <em><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span></em> down while scaling to scale the selected element in 0.01 BU increments.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> Orientation dependent scaling</p>
+<p>By default, all scaling happens around a Global Orientation. You can change the scaling orientation by pressing the axis key twice. For example, pressing <strong>S</strong>, <strong>X</strong>, <strong>X</strong> will by default set scaling to occur around the local orientation in X direction.
+<strong>Note:</strong> Snapping modes</p>
+<p>Note that if you have a Snap Element option enabled, holding <strong>Ctrl</strong> will cause the selection to snap to the nearest element.</p></div>
+<h2 id="numeric-input-for-transform">Numeric input for Transform</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/numeric-input-for-transform.png" alt="Numeric input for Transform" loading="lazy"><figcaption>Numeric input for Transform</figcaption></figure>
+<p>Using the mouse for transformations is convenient. But if you require more precise control, then you can also enter numeric values. After pressing one of the navigation hotkeys, type a number to indicate the magnitude of the transformation.</p>
+<p>You can see the numbers you enter in the bottom left hand corner of the 3D window header. Negative numbers and decimals can be entered by pressing the minus (<em>Minus</em>) and period (<em>.</em>) keys respectively.</p>
+<p>The process is the same for translation, rotation and scale. Press the corresponding navigation hotkey, the header will show the values, then type in the values that you need. And finally left click or press enter to confirm. A right click abandons the operation.</p>
+<p>For translation you have to define the axis in which you want to translate. So when you want to translate your object in X axis to 10, then press the translation hotkey, then type in X 10. And the object will arrive at X position 10. Keep in mind that pressing the navigation hotkey twice will work in local orientation.</p>
+<h2 id="placement">Placement</h2>
+<p>There are various methods to place this 3D cursor, including some snapping methods.</p>
+<p>The free placement method with a hotkey is with <span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>RMB</kbd></span> with the default Bforartists key map.</p>
+<h2 id="hotkey-only-functionality">Hotkey only functionality</h2>
+<div class="ui-doc-callout is-important"><p><strong>Important:</strong> These hotkeys works with the default Bforartists key map! And they do not list the Ndof hotkeys. Ndof is a 3d connexion mouse device that is also used for tablets.</p></div>
+<p>Most of the tools can be found in the graphical UI. But there are still some tools that are hotkey only. Some have a UI brother with equal functionality. For example, Pick shortest path is the hotkey sister of Select shortest path. Some are hotkey only since they cannot be integrated in the graphical UI. Like calling the File menu under the mouse. Or mouse position dependent functionality like selecting an edge loop.</p>
+<p>The navigation hotkeys and the context menus are excluded here since they are already covered.</p>
+<h3 id="file-menu-f4">File Menu - F4</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/file-menu-f4.png" alt="File Menu - F4" loading="lazy"><figcaption>File Menu - F4</figcaption></figure>
+<p>Calls the file menu under the mouse.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set 3D Cursor - Alt Right Mouse</td>
+<td>Sets the 3D cursor position to Mouse position.</td>
+</tr>
+<tr>
+<td>Frame All - Ctrl Home</td>
+<td>View all objects in the scene in all regions. This hotkey is for quad view.</td>
+</tr>
+<tr>
+<td>Frame All - Shift C</td>
+<td>View and center all objects in the scene.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pivot-point-pie-menu-german-keyboard">Pivot Point Pie menu - ` (german keyboard . )</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/pivot-point-pie-menu-german-keyboard.png" alt="Pivot Point Pie menu - ` (german keyboard . )" loading="lazy"><figcaption>Pivot Point Pie menu - ` (german keyboard . )</figcaption></figure>
+<p>Calls a pivot point pie menu. The content is the same than in the pivot menu in the header.</p>
+<h3 id="call-the-snap-pie-menu-shift-e">Call the Snap Pie menu - Shift E</h3>
+<p>Calls the Snap Pie Menu.</p>
+<h3 id="interactive-light-track-to-cursor-shift-t">Interactive Light Track to Cursor - Shift T</h3>
+<p>Navigate a lamp of type sun or spot light to point at objects. The lamp follows the mouse cursor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Call pivot pie menu - .</td>
+<td>Call pivot pie menu.</td>
+</tr>
+<tr>
+<td>Call orientation pie menu - ,</td>
+<td>Call orientation pie menu.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cycle-through-select-method-shift-q">Cycle through select method - Shift Q</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/cycle-through-select-method-shift-q.png" alt="Cycle through select method - Shift Q" loading="lazy"><figcaption>Cycle through select method - Shift Q</figcaption></figure>
+<p>Cycle through the select method in the tool shelf.</p>
+<h3 id="toggle-viewport-gizmos-tab">Toggle Viewport Gizmos - Tab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/toggle-viewport-gizmos-tab.png" alt="Toggle Viewport Gizmos - Tab" loading="lazy"><figcaption>Toggle Viewport Gizmos - Tab</figcaption></figure>
+<p>Toggles the display of the viewport gizmos.</p>
+<h3 id="loop-select-alt-left-mouse">Loop Select - Alt Left Mouse</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/loop-select-alt-left-mouse.png" alt="Loop Select - Alt Left Mouse" loading="lazy"><figcaption>Loop Select - Alt Left Mouse</figcaption></figure>
+<p>Selects an edge loop.</p>
+<h3 id="loop-select-shift-alt-left-mouse">Loop Select - Shift Alt Left Mouse</h3>
+<p>Selects an edge loop., adds to selection.</p>
+<h3 id="edge-ring-select-ctrl-alt-left-mouse">Edge Ring Select - Ctrl Alt Left Mouse</h3>
+<p>Selects a ring loop.</p>
+<p>Edge Ring Select - Shift Ctrl Alt Left Mouse</p>
+<p>Selects a ring loop, adds to selection.</p>
+<h3 id="pick-shortest-path-ctrl-left-mouse">Pick shortest path - Ctrl Left Mouse</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/pick-shortest-path-ctrl-left-mouse.png" alt="Pick shortest path - Ctrl Left Mouse" loading="lazy"><figcaption>Pick shortest path - Ctrl Left Mouse</figcaption></figure>
+<p>Mesh Object in Edit mode.</p>
+<p>Pick the shortest path by selecting the first element, holding down ctrl, then selecting the last element.</p>
+<h4 id="last-operator-pick-shortest-path">Last Operator Pick shortest path</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/last-operator-pick-shortest-path.png" alt="Last Operator Pick shortest path" loading="lazy"><figcaption>Last Operator Pick shortest path</figcaption></figure>
+<h5 id="face-stepping">Face Stepping</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/face-stepping.png" alt="Face Stepping" loading="lazy"></figure>
+<p>Traverse connected faces.</p>
+<h5 id="topology-distance">Topology Distance</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/topology-distance.png" alt="Topology Distance" loading="lazy"></figure>
+<p>Find the minimum number of steps instead of the shortest distance.</p>
+<h5 id="fill-region">Fill Region</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/fill-region.png" alt="Fill Region" loading="lazy"></figure>
+<p>Select the region faces too.</p>
+<h5 id="deselected">Deselected</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/deselected.png" alt="Deselected" loading="lazy"></figure>
+<p>Don't select the whole path, but just every nth element of it.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Skip</td>
+<td>This is connected to nth element. Number of elements to skip at once.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>This is connected to nth element. Start with an offset.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="curve-object-add-vertex-ctrl-right-mouse">Curve Object, Add Vertex - Ctrl Right mouse</h3>
+<p>Edit Mode. Adds a duplicate of the selected curve points under the mouse.</p>
+<h3 id="armature-object-extrude-forked-shift-s">Armature Object, Extrude Forked - Shift S</h3>
+<p>Edit Mode. Extrudes with option Forked enabled. Bones extrudes from the center of the selected joints.</p>
+<h3 id="armature-object-click-extrude-ctrl-right-mouse">Armature Object, Click Extrude - Ctrl Right mouse</h3>
+<p>Edit Mode. Extrudes the bone to mouse position.</p>
+<h3 id="armature-object-set-rotation-mode-alt-r">Armature Object, Set Rotation Mode - Alt R</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/armature-object-set-rotation-mode-alt-r.png" alt="Armature Object, Set Rotation Mode - Alt R" loading="lazy"><figcaption>Armature Object, Set Rotation Mode - Alt R</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/armature-object-set-rotation-mode-alt-r-2.png" alt="Armature Object, Set Rotation Mode - Alt R" loading="lazy"><figcaption>Armature Object, Set Rotation Mode - Alt R</figcaption></figure>
+<p>Pose Mode. Calls a menu under the mouse to set the rotation mode of the selected bone(s). The same menu is also in the Transform panel in the Item tab.</p>
+<h3 id="stencil-brush-control-hotkeys">Stencil Brush Control Hotkeys</h3>
+<p>This is for the paint modes where you have a stencil map available. Vertex Paint and Texture Paint. They move, rotate and scale the stencil image. There are two possible sets. A texture stencil map. And a mask stencil map.</p>
+<h4 id="texture-set">Texture set:</h4>
+<p>Alt Right Mouse</p>
+<p>Shift Right Mouse</p>
+<p>Ctrl Right Mouse</p>
+<h5 id="mask-set">Mask set:</h5>
+<p>Shift Ctrl Alt Right Mouse</p>
+<p>Shift Alt Right Mouse</p>
+<p>Ctrl Alt Right Mouse</p>
+<h3 id="radial-control">Radial Control</h3>
+<p>In Paint modes you can set the strength or radius of the brush not only by the sliders. But also by hotkeys.</p>
+<p>Sets the brush radius - F</p>
+<p>Sets the brush strength - Shift F</p>
+<p>Sets the brush direction - Ctrl F</p>
+<p>Sets the brush direction - Ctrl Alt F</p>
+<h3 id="face-sets-edit">Face sets edit</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/face-sets-edit.png" alt="Face sets edit" loading="lazy"></figure>
+<p>Sculpt mode. Calls a pie menu to set the face sets.</p>
+<h3 id="mask-expand">Mask Expand</h3>
+<p>Sculpt mode. Expands a Face mask.</p>
+<h3 id="edit-voxel-size">Edit Voxel Size</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/edit-voxel-size.png" alt="Edit Voxel Size" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2608d27afea5df74d9be005c4bf4fa1afdd6be34/docs2/images/editors/3d-viewport/edit-voxel-size-2.png" alt="Edit Voxel Size" loading="lazy"></figure>
+<p>Sculpt mode. Shows a grid and allows you to adjust the voxel resolution for remeshing. The slider in the remesh panel does not show the grid.</p>
+<h2 id="in-this-chapter">In this chapter</h2><div class="ui-doc-cards"><ul><li data-count="41"><a href="https://github.com/Bforartists/Manual/blob/docs2/q2-nav-landing/docs2/content/editors/3d-viewport/header/index.md">Header</a> — The 3D View editor is the editor where you edit your 3D data. Here you can display and modify all the scene data like meshes, curves,…</li><li data-count="21"><a href="https://github.com/Bforartists/Manual/blob/docs2/q2-nav-landing/docs2/content/editors/3d-viewport/tool-shelf/index.md">Tool Shelf</a> — Some editors have a tool shelf at the left. Here you can find and use various tools.</li><li data-count="18"><a href="https://github.com/Bforartists/Manual/blob/docs2/q2-nav-landing/docs2/content/editors/3d-viewport/sidebar/index.md">Sidebar</a> — The 3D View is made of several areas. At the right side you will find the sidebar.</li><li><a href="https://github.com/Bforartists/Manual/blob/docs2/q2-nav-landing/docs2/content/editors/3d-viewport/asset-shelf.md">Asset Shelf</a> — Click to switch the active brush.</li><li data-count="21"><a href="https://github.com/Bforartists/Manual/blob/docs2/q2-nav-landing/docs2/content/editors/3d-viewport/context-menus/index.md">Context menus</a></li></ul></div></article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq2-nav-landing/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q2-nav-landing/docs2/content/editors/3d-viewport/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#a-header">A. Header</a><a class="h2" href="#b-tool-settings">B. Tool Settings</a><a class="h2" href="#c-toolbar">C. Toolbar</a><a class="h2" href="#d-tabbed-toolbar">D. Tabbed Toolbar</a><a class="h2" href="#e-sidebar">E. Sidebar</a><a class="h2" href="#f-asset-shelf">F. Asset Shelf</a><a class="h2" href="#g-adjust-last-operator-panel">G. Adjust Last Operator Panel</a><a class="h2" href="#h-navigation-widgets">H. Navigation Widgets</a><a class="h2" href="#viewport-navigation">Viewport Navigation</a><a class="h3" href="#navigation-elements">Navigation Elements</a><a class="h3" href="#viewport-navigation-hotkeys">Viewport navigation hotkeys</a><a class="h2" href="#context-menus">Context Menus</a><a class="h2" href="#right-click-menus">Right click Menus</a><a class="h2" href="#add-to-selection-with-shift">Add to selection with Shift</a><a class="h2" href="#constraining-the-scaling-axis-axis-locking">Constraining the scaling axis (axis locking)</a><a class="h2" href="#object-snapping-with-increment-snap">Object Snapping with Increment snap</a><a class="h2" href="#slider-snapping">Slider snapping</a><a class="h2" href="#fine-tuning-transform">Fine tuning Transform</a><a class="h3" href="#rotation-transformations">Rotation transformations</a><a class="h3" href="#scale-transformations">Scale transformations</a><a class="h2" href="#numeric-input-for-transform">Numeric input for Transform</a><a class="h2" href="#placement">Placement</a><a class="h2" href="#hotkey-only-functionality">Hotkey only functionality</a><a class="h3" href="#file-menu-f4">File Menu - F4</a><a class="h3" href="#pivot-point-pie-menu-german-keyboard">Pivot Point Pie menu - ` (german keyboard . )</a><a class="h3" href="#call-the-snap-pie-menu-shift-e">Call the Snap Pie menu - Shift E</a><a class="h3" href="#interactive-light-track-to-cursor-shift-t">Interactive Light Track to Cursor - Shift T</a><a class="h3" href="#cycle-through-select-method-shift-q">Cycle through select method - Shift Q</a><a class="h3" href="#toggle-viewport-gizmos-tab">Toggle Viewport Gizmos - Tab</a><a class="h3" href="#loop-select-alt-left-mouse">Loop Select - Alt Left Mouse</a><a class="h3" href="#loop-select-shift-alt-left-mouse">Loop Select - Shift Alt Left Mouse</a><a class="h3" href="#edge-ring-select-ctrl-alt-left-mouse">Edge Ring Select - Ctrl Alt Left Mouse</a><a class="h3" href="#pick-shortest-path-ctrl-left-mouse">Pick shortest path - Ctrl Left Mouse</a><a class="h3" href="#curve-object-add-vertex-ctrl-right-mouse">Curve Object, Add Vertex - Ctrl Right mouse</a><a class="h3" href="#armature-object-extrude-forked-shift-s">Armature Object, Extrude Forked - Shift S</a><a class="h3" href="#armature-object-click-extrude-ctrl-right-mouse">Armature Object, Click Extrude - Ctrl Right mouse</a><a class="h3" href="#armature-object-set-rotation-mode-alt-r">Armature Object, Set Rotation Mode - Alt R</a><a class="h3" href="#stencil-brush-control-hotkeys">Stencil Brush Control Hotkeys</a><a class="h3" href="#radial-control">Radial Control</a><a class="h3" href="#face-sets-edit">Face sets edit</a><a class="h3" href="#mask-expand">Mask Expand</a><a class="h3" href="#edit-voxel-size">Edit Voxel Size</a><a class="h2" href="#in-this-chapter">In this chapter</a></aside></div></body></html>
