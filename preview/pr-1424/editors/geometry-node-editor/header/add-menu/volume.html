@@ -1,0 +1,1258 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Volume · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1424 · <code>docs2/q3-polish</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<a href="../../../../interface/overview.html">Interface Basics</a>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:3.5rem" href="input.html">Input</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/input.html">Input</a>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:3.5rem" href="output.html">Output</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/output.html">Output</a>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:3.5rem" href="attribute.html">Attribute</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/shader.html">Shader</a>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:3.5rem" href="geometry.html">Geometry</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/color.html">Color</a>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:3.5rem" href="curve.html">Curve</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/texture.html">Texture</a>
+<span style="padding-left:2.5rem">Window menu</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="instances.html">Instances</a>
+<span>Editors introduction</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/group.html">Group</a>
+<span style="padding-left:1.5rem">Armature</span>
+<span>3D Viewport</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/layout.html">Layout</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="point.html">Point</a>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/transform.html">Transform</a>
+<a class="is-current" style="padding-left:3.5rem" href="volume.html">Volume</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="simulation.html">Simulation</a>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:3.5rem" href="color.html">Color</a>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<a style="padding-left:3.5rem" href="texture.html">Texture</a>
+<span style="padding-left:2.5rem">View menu</span>
+<a style="padding-left:3.5rem" href="utilities.html">Utilities</a>
+<span style="padding-left:2.5rem">Image menu</span>
+<a style="padding-left:3.5rem" href="generate.html">Generate</a>
+<span style="padding-left:2.5rem">Select menu</span>
+<a style="padding-left:3.5rem" href="node-groups.html">Node Groups</a>
+<span style="padding-left:2.5rem">Add menu</span>
+<a style="padding-left:3.5rem" href="normals.html">Normals</a>
+<span style="padding-left:2.5rem">Mask menu</span>
+<a style="padding-left:3.5rem" href="group.html">Group</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:3.5rem" href="layout.html">Layout</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Tool Tab in Paint Mode</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Scopes Tab</span>
+<span style="padding-left:2.5rem">Mask Tab</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">UV menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span>Compositor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Geometry Nodes Editor - Header - Add Menu - Group</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Texture Node Editor</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span style="padding-left:2.5rem">Node tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Add</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span>Shader Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Video Sequence Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Export Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Strip Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">Text Menu</span>
+<span style="padding-left:2.5rem">Scene Menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Preview - Tool tab</span>
+<span style="padding-left:2.5rem">Preview - View tab</span>
+<span style="padding-left:2.5rem">Sequencer - Strip tab</span>
+<span style="padding-left:2.5rem">Sequencer - Tool tab</span>
+<span style="padding-left:2.5rem">Sequencer - Cache tab</span>
+<span style="padding-left:2.5rem">Sequencer - Proxy tab</span>
+<span style="padding-left:2.5rem">Sequencer - View tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Movie Clip Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Clip Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Track Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Graph Submode - Graph Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Clip Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Add Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Mask Menu</span>
+<span style="padding-left:1.5rem">Tool shelf</span>
+<span style="padding-left:2.5rem">Tracking Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Footage Tab</span>
+<span style="padding-left:2.5rem">Track tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - Stabilization tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - View tab</span>
+<span>Dope Sheet</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:2.5rem">Action Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span>Graph Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Drivers Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Drivers Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">Driver Editor - Sidebar - View Tab</span>
+<span>Nonlinear Animation Editor</span>
+<span style="padding-left:2.5rem">NLA Editor - Header tools and options</span>
+<span style="padding-left:2.5rem">NLA Editor - Header - Quick Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - View Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Select Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Marker Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Add Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Track Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Strip Menu</span>
+<span style="padding-left:1.5rem">NLA Editor - Channel list</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Animation Data panel</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Strip tab</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Modifiers Tab</span>
+<span style="padding-left:1.5rem">NLA Editor - Footer tools and options</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:1.5rem">Render Properties Tab</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:1.5rem">Output Properties Tab</span>
+<span style="padding-left:1.5rem">View Layer Properties Tab</span>
+<span style="padding-left:1.5rem">Scene Properties Tab</span>
+<span style="padding-left:1.5rem">World Properties Tab</span>
+<span style="padding-left:1.5rem">Collection Properties Tab</span>
+<span style="padding-left:1.5rem">Object Properties Tab</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Particle Properties Tab</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:1.5rem">Visual Effects Properties Tab</span>
+<span style="padding-left:1.5rem">Physics Properties Tab</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:1.5rem">Object Constraints Properties Tab</span>
+<span style="padding-left:1.5rem">Object Data Properties Tab</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span style="padding-left:1.5rem">Material Properties Tab</span>
+<span style="padding-left:1.5rem">Texture Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Constraint Properties</span>
+<span style="padding-left:1.5rem">Strip Tab</span>
+<span style="padding-left:1.5rem">Strip Modifiers Tab</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<a style="padding-left:2.5rem" href="../../../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../../shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Standard Keymap</span>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Volume</div><h1 class="pv-title">Volume</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 7 min read</span></div><article class="ui-doc-body"><h1 id="read">Read</h1>
+<h3 id="add-menu-volume-read">Add menu - Volume - Read</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/add-menu-volume-read.png" alt="Add menu - Volume - Read" loading="lazy"><figcaption>Add menu - Volume - Read</figcaption></figure>
+<p>Here you find nodes to modify the volume.</p>
+<h4 id="get-named-grid">Get Named Grid</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/get-named-grid.png" alt="Get Named Grid" loading="lazy"></figure>
+<p>Get volume grid from a volume geometry with the specified name</p>
+<h5 id="inputs">Inputs</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volume</td>
+<td>The input volume.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>The name of the grid.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes the grid from the volume after retreive.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="properties">Properties</h5>
+<h6 id="data-type">Data Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>The type of data stored in the grid. It determines both, the expected data type of the <strong>Grid</strong> output, and how it can be used in subsequent nodes.</p>
+<h5 id="output">Output</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volume</td>
+<td>The output grid.</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>The extracted grid.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="grid-info">Grid Info</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/grid-info.png" alt="Grid Info" loading="lazy"></figure>
+<p>Retreive informations about a grid.</p>
+<h5 id="inputs-2">Inputs</h5>
+<h6 id="grid">Grid</h6>
+<p>Standard geometry input.</p>
+<h5 id="properties-2">Properties</h5>
+<h6 id="data-type-2">Data type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/data-type-2.png" alt="Data type" loading="lazy"></figure>
+<p>The data type to retreive.</p>
+<h5 id="output-2">Output</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transform</td>
+<td>Transform from grid index space to object space.</td>
+</tr>
+<tr>
+<td>Background Value</td>
+<td>Default value outside of grid voxels.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="voxel-index">Voxel Index</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/voxel-index.png" alt="Voxel Index" loading="lazy"></figure>
+<p>Retreive the integer coordinates of the voxel that the field is evaluated on.</p>
+<h5 id="outputs">Outputs</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X / Y / Z</td>
+<td>Vector 3 output of the voxel.</td>
+</tr>
+<tr>
+<td>Tile subpanel</td>
+<td><strong>Is Tile</strong>: True when the field is evaluated on a tile. · <strong>Extend X / Y / Z</strong>: Number of voxels in the corresponding direction. Or 1 if the field is evaluated at a voxel.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="sample">Sample</h1>
+<h3 id="add-menu-volume">Add menu - Volume</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/add-menu-volume.png" alt="Add menu - Volume" loading="lazy"><figcaption>Add menu - Volume</figcaption></figure>
+<p>Here you find nodes to modify the volume.</p>
+<h4 id="sample-grid">Sample Grid</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/sample-grid.png" alt="Sample Grid" loading="lazy"></figure>
+<p>Retreive values from the specified volume grid.</p>
+<h5 id="inputs-3">Inputs</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid</td>
+<td>The input grid</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>The position field.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="interpolation">Interpolation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>How to interpolate the values between neighbouring voxels.</p>
+<h5 id="input">Input</h5>
+<h6 id="data-type-3">Data Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/data-type-2.png" alt="Data Type" loading="lazy"></figure>
+<p>Which data type to calculate.</p>
+<h5 id="output-3">Output</h5>
+<h6 id="value">Value</h6>
+<p>The output value.</p>
+<h4 id="sample-grid-index">Sample Grid Index</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/sample-grid.png" alt="Sample Grid Index" loading="lazy"></figure>
+<p>Retreive values from the specified volume grid.</p>
+<h5 id="inputs-4">Inputs</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid</td>
+<td>The input grid</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>The position field.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="interpolation-2">Interpolation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>How to interpolate the values between neighbouring voxels.</p>
+<h5 id="input-2">Input</h5>
+<h6 id="data-type-4">Data Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/data-type-2.png" alt="Data Type" loading="lazy"></figure>
+<p>Which data type to calculate.</p>
+<h5 id="output-4">Output</h5>
+<h6 id="value-2">Value</h6>
+<p>The output value.</p>
+<h4 id="advect-grid">Advect Grid</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/sample-grid.png" alt="Advect Grid" loading="lazy"></figure>
+<p>Move grid values through a velocity field using numerical integration. Supports multiple intetgration schemes for different accuracy and performance trade-offs.</p>
+<h5 id="inputs-5">Inputs</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid</td>
+<td>The input grid.</td>
+</tr>
+<tr>
+<td>Velocity</td>
+<td>The velocity.</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>The position field.</td>
+</tr>
+<tr>
+<td>Time step</td>
+<td>Time step for advection in seconds.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="integration-scheme">Integration scheme</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/integration-scheme.png" alt="Integration scheme" loading="lazy"></figure>
+<p>Numerical integration method for advection.</p>
+<h6 id="limiter">Limiter</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/limiter.png" alt="Limiter" loading="lazy"></figure>
+<p>Limiting strategy to prevent numerical artifacts.</p>
+<h5 id="output-5">Output</h5>
+<h6 id="grid-2">Grid</h6>
+<p>The output grid.</p>
+<h4 id="grid-curl">Grid Curl</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-curl.png" alt="Grid Curl" loading="lazy"></figure>
+<p>Calculate the magnitude and direction of ciruclation of a directional vector grid.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Grid</strong>: The input grid.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Curl</strong>: The output grid.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="grid-divergence">Grid Divergence</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-divergence.png" alt="Grid Divergence" loading="lazy"></figure>
+<p>Calculate the flow into and out of each point of a directional vector grid.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Grid</strong>: The input grid.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Divergence</strong>: The output grid.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="grid-gradient">Grid Gradient</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-gradient.png" alt="Grid Gradient" loading="lazy"></figure>
+<p>Calculate the direction and magnitude of the change in values of a scalar grid.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Grid</strong>: The input grid.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Gradient</strong>: The output grid.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="grid-laplacian">Grid Laplacian</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-laplacian.png" alt="Grid Laplacian" loading="lazy"></figure>
+<p>Compute the divergence of the gradient of the input grid.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Grid</strong>: The input grid.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Laplacian</strong>: The output grid.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="write">Write</h1>
+<h3 id="add-menu-volume-2">Add menu - Volume</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/add-menu-volume.png" alt="Add menu - Volume" loading="lazy"><figcaption>Add menu - Volume</figcaption></figure>
+<p>Here you find nodes to modify the volume.</p>
+<h4 id="grid-background">Grid Background</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/grid-background.png" alt="Grid Background" loading="lazy"></figure>
+<p>Set the background value used for inactive voxels and tiles.</p>
+<h5 id="inputs-6">Inputs</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid</td>
+<td>Standard geometry input.</td>
+</tr>
+<tr>
+<td>Background</td>
+<td>Volume density per voxel. Higher values makes it more dense.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="properties-3">Properties</h5>
+<h6 id="data-type-5">Data Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>What data type to calculate.</p>
+<h5 id="output-6">Output</h5>
+<h6 id="grid-3">Grid</h6>
+<p>The grid output.</p>
+<h4 id="set-grid-transform">Set Grid Transform</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/set-grid-transform.png" alt="Set Grid Transform" loading="lazy"></figure>
+<p>Set the transform for the grid from index space into object space.</p>
+<h5 id="inputs-7">Inputs</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid</td>
+<td>Standard geometry input.</td>
+</tr>
+<tr>
+<td>Transform</td>
+<td>The input transform.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="properties-4">Properties</h5>
+<h6 id="data-type-6">Data Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>What data type to calculate.</p>
+<h5 id="output-7">Output</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is Valid</td>
+<td>If the new transform is successfully applied and working.</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>The grid output.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="store-named-grid">Store Named Grid</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/set-grid-transform.png" alt="Store Named Grid" loading="lazy"></figure>
+<p>Set the transform for the grid from index space into object space.</p>
+<h5 id="inputs-8">Inputs</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volume</td>
+<td>The volume input.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>The name</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>Standard geometry input.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="properties-5">Properties</h5>
+<h6 id="data-type-7">Data Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>What data type to calculate.</p>
+<h5 id="output-8">Output</h5>
+<h6 id="volume-geometry">Volume Geometry</h6>
+<p>The volume geometry to add to.</p>
+<h1 id="operations">Operations</h1>
+<h3 id="add-menu-volume-operations">Add menu - Volume - Operations</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/add-menu-volume-operations.png" alt="Add menu - Volume - Operations" loading="lazy"><figcaption>Add menu - Volume - Operations</figcaption></figure>
+<p>Here you find nodes to modify the volume.</p>
+<h4 id="grid-to-mesh">Grid to Mesh</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-to-mesh.png" alt="Grid to Mesh" loading="lazy"></figure>
+<p>Generate a mesh on the surface of a volume grid.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Grid</strong>: Standard grid input. · <strong>Threshold</strong>: Values larger than the threshold are inside the generated mesh. · <strong>Adaptivity</strong>: The input radius</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Mesh</strong>: The generated mesh.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="volume-to-mesh">Volume to Mesh</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/volume-to-mesh.png" alt="Volume to Mesh" loading="lazy"></figure>
+<p>The Volume to Mesh node generates a mesh on the “surface” of a volume. The surface is defined by a threshold value. All voxels with a larger value than the threshold are considered to be outside.</p>
+<p>Note that currently this node only works on volumes generated using geometry nodes.</p>
+<h5 id="inputs-9">Inputs</h5>
+<h6 id="volume">Volume</h6>
+<p>Standard geometry input.</p>
+<h6 id="resolution">Resolution</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/resolution.png" alt="Resolution" loading="lazy"></figure>
+<p>Base the voxel resolution at the gridsize, the amount or the size of the point cloud.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Threshold</td>
+<td>The voxel amount to use.</td>
+</tr>
+<tr>
+<td>Adaptivity</td>
+<td>The input radius.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output-9">Output</h5>
+<h6 id="mesh">Mesh</h6>
+<p>The generated mesh.</p>
+<h4 id="sdf-grid-boolean">SDF Grid Boolean</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-boolean.png" alt="SDF Grid Boolean" loading="lazy"></figure>
+<p>Bool multiple sdf grids with each other.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Grid 1</strong>: The first input grid. · <strong>Grid 2</strong>: The second input grid</td>
+</tr>
+<tr>
+<td>Properties</td>
+<td><strong>Operation</strong>: The bool method.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Grid</strong>: The generated grid.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sdf-grid-fillet">SDF Grid Fillet</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-fillet.png" alt="SDF Grid Fillet" loading="lazy"></figure>
+<p>Round off concave internal corners in a signed distance field. Only affects areas with negataive principal curvature. This creates smoother transitions between surfaces.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Grid</strong>: The input grid. · <strong>Iterations</strong>: How often to run the algorithm.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Grid</strong>: The generated grid.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sdf-grid-laplacian">SDF Grid Laplacian</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-fillet.png" alt="SDF Grid Laplacian" loading="lazy"></figure>
+<p>Apply laplacian flow smoothing to a signed distance field.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Grid</strong>: The input grid. · <strong>Iterations</strong>: How often to run the algorithm.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Grid</strong>: The generated grid.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sdf-grid-mean">SDF Grid Mean</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-mean.png" alt="SDF Grid Mean" loading="lazy"></figure>
+<p>Apply lmean (box) filter smoothing to a signed distance field. Fast separable averaging filter for general smoothing of the distance field.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Grid</strong>: The input grid. · <strong>Width</strong>: Filter kernel radius in voxel. · <strong>Iterations</strong>: How often to run the algorithm.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Grid</strong>: The generated grid.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sdf-grid-mean-2">SDF Grid Mean</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-mean-2.png" alt="SDF Grid Mean" loading="lazy"></figure>
+<p>Apply mean filter smoothing to a signed distance field. Evolves the surface based on its mean curvature. This smooths high curvature regions more than flat areas.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Grid</strong>: The input grid. · <strong>Iterations</strong>: How often to run the algorithm.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Grid</strong>: The generated grid.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sdf-grid-median">SDF Grid Median</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-median.png" alt="SDF Grid Median" loading="lazy"></figure>
+<p>Apply median filter smoothing to a signed distance field. Reduces nioise while preserving sharp features and edges in the distance field.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Grid</strong>: The input grid. · <strong>Width</strong>: Filter kernel radius in voxel. · <strong>Iterations</strong>: How often to run the algorithm.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Grid</strong>: The generated grid.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sdf-grid-offset">SDF Grid Offset</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-offset.png" alt="SDF Grid Offset" loading="lazy"></figure>
+<p>Offset a signed distance field surface by a world space distance. It dilates or erodes while maintaining the signed distance property.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Grid</strong>: The input grid. · <strong>Distance</strong>: Object space distance to offset the sdf surface.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Grid</strong>: The generated grid.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="field-to-grid">Field to Grid</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/field-to-grid.png" alt="Field to Grid" loading="lazy"></figure>
+<p>Create new grids by evaulating new values on an existing volume grid topology.</p>
+<h5 id="inputs-10">Inputs</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Topology</td>
+<td>The input topology.</td>
+</tr>
+<tr>
+<td>Properties</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h6 id="data-type-8">Data Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>The data type to evaluate.</p>
+<h5 id="output-10">Output</h5>
+<h6 id="grid-4">Grid</h6>
+<p>The generated grid.</p>
+<h4 id="prune-grid">Prune Grid</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/prune-grid.png" alt="Prune Grid" loading="lazy"></figure>
+<p>Create new grids by evaulating new values on an existing volume grid topology.</p>
+<h5 id="inputs-11">Inputs</h5>
+<h6 id="grid-5">Grid</h6>
+<p>The input grid.</p>
+<h6 id="mode">Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/mode.png" alt="Mode" loading="lazy"></figure>
+<p>How to progress the state.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inactive</td>
+<td>Turn inactive voxels and tiels into inactive background tiles.</td>
+</tr>
+<tr>
+<td>Threshold</td>
+<td>Turn regioons where all voxels have the same value and active state into inactive background tiles. You will see a threshold slider.</td>
+</tr>
+<tr>
+<td>SDF</td>
+<td>Replace inactive tiles with inactive nodes.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="properties-6">Properties</h6>
+<h6 id="data-type-9">Data Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>The data type to evaluate.</p>
+<h5 id="output-11">Output</h5>
+<h6 id="grid-6">Grid</h6>
+<p>The generated grid.</p>
+<h4 id="prune-grid-2">Prune Grid</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/prune-grid-2.png" alt="Prune Grid" loading="lazy"></figure>
+<p>Create new grids by evaulating new values on an existing volume grid topology.</p>
+<h5 id="inputs-12">Inputs</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid</td>
+<td>The input grid.</td>
+</tr>
+<tr>
+<td>Properties</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h6 id="data-type-10">Data Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>The data type to evaluate.</p>
+<h5 id="output-12">Output</h5>
+<h6 id="grid-7">Grid</h6>
+<p>The generated grid.</p>
+<h1 id="primitives">Primitives</h1>
+<h3 id="add-menu-volume-primitives">Add menu - Volume - Primitives</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-primitives/add-menu-volume-primitives.png" alt="Add menu - Volume - Primitives" loading="lazy"><figcaption>Add menu - Volume - Primitives</figcaption></figure>
+<p>Here you find nodes to modify the volume.</p>
+<h4 id="volume-cube">Volume Cube</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-volume-primitives/volume-cube.png" alt="Volume Cube" loading="lazy"></figure>
+<p>The Volume Cube node generates a voxel based volume cube primitive that can be used for volume conversion to mesh in conjunction with the Volume to Mesh node.</p>
+<h5 id="inputs-13">Inputs</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>Standard geometry input.</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>Volume density per voxel. Higher values makes it more dense.</td>
+</tr>
+<tr>
+<td>Background</td>
+<td>Value per voxel outside the cube domain.</td>
+</tr>
+<tr>
+<td>Min:</td>
+<td>Minimum boundary of the volume cube. Max: Maximum boundary of the volume cube. Resolution X Number of volume voxules in the X axis. Resolution Y Number of volume voxules in the Y axis. Resolution Z Number of volume voxules in the Z axis.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-polish/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fgeometry-node-editor%2Fheader%2Fadd-menu%2Fvolume.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-polish/docs2/content/editors/geometry-node-editor/header/add-menu/volume.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h3" href="#add-menu-volume-read">Add menu - Volume - Read</a><a class="h3" href="#add-menu-volume">Add menu - Volume</a><a class="h3" href="#add-menu-volume-2">Add menu - Volume</a><a class="h3" href="#add-menu-volume-operations">Add menu - Volume - Operations</a><a class="h3" href="#add-menu-volume-primitives">Add menu - Volume - Primitives</a></aside></div></body></html>

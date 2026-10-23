@@ -1,0 +1,1993 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Node Groups · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1424 · <code>docs2/q3-polish</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<a href="../../../../interface/overview.html">Interface Basics</a>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:3.5rem" href="input.html">Input</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/input.html">Input</a>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:3.5rem" href="output.html">Output</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/output.html">Output</a>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:3.5rem" href="attribute.html">Attribute</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/shader.html">Shader</a>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:3.5rem" href="geometry.html">Geometry</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/color.html">Color</a>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:3.5rem" href="curve.html">Curve</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/texture.html">Texture</a>
+<span style="padding-left:2.5rem">Window menu</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="instances.html">Instances</a>
+<span>Editors introduction</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/group.html">Group</a>
+<span style="padding-left:1.5rem">Armature</span>
+<span>3D Viewport</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/layout.html">Layout</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="point.html">Point</a>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="volume.html">Volume</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="simulation.html">Simulation</a>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:3.5rem" href="color.html">Color</a>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<a style="padding-left:3.5rem" href="texture.html">Texture</a>
+<span style="padding-left:2.5rem">View menu</span>
+<a style="padding-left:3.5rem" href="utilities.html">Utilities</a>
+<span style="padding-left:2.5rem">Image menu</span>
+<a style="padding-left:3.5rem" href="generate.html">Generate</a>
+<span style="padding-left:2.5rem">Select menu</span>
+<a class="is-current" style="padding-left:3.5rem" href="node-groups.html">Node Groups</a>
+<span style="padding-left:2.5rem">Add menu</span>
+<a style="padding-left:3.5rem" href="normals.html">Normals</a>
+<span style="padding-left:2.5rem">Mask menu</span>
+<a style="padding-left:3.5rem" href="group.html">Group</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:3.5rem" href="layout.html">Layout</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Tool Tab in Paint Mode</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Scopes Tab</span>
+<span style="padding-left:2.5rem">Mask Tab</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">UV menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span>Compositor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Geometry Nodes Editor - Header - Add Menu - Group</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Texture Node Editor</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span style="padding-left:2.5rem">Node tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Add</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span>Shader Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Video Sequence Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Export Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Strip Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">Text Menu</span>
+<span style="padding-left:2.5rem">Scene Menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Preview - Tool tab</span>
+<span style="padding-left:2.5rem">Preview - View tab</span>
+<span style="padding-left:2.5rem">Sequencer - Strip tab</span>
+<span style="padding-left:2.5rem">Sequencer - Tool tab</span>
+<span style="padding-left:2.5rem">Sequencer - Cache tab</span>
+<span style="padding-left:2.5rem">Sequencer - Proxy tab</span>
+<span style="padding-left:2.5rem">Sequencer - View tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Movie Clip Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Clip Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Track Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Graph Submode - Graph Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Clip Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Add Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Mask Menu</span>
+<span style="padding-left:1.5rem">Tool shelf</span>
+<span style="padding-left:2.5rem">Tracking Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Footage Tab</span>
+<span style="padding-left:2.5rem">Track tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - Stabilization tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - View tab</span>
+<span>Dope Sheet</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:2.5rem">Action Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span>Graph Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Drivers Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Drivers Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">Driver Editor - Sidebar - View Tab</span>
+<span>Nonlinear Animation Editor</span>
+<span style="padding-left:2.5rem">NLA Editor - Header tools and options</span>
+<span style="padding-left:2.5rem">NLA Editor - Header - Quick Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - View Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Select Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Marker Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Add Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Track Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Strip Menu</span>
+<span style="padding-left:1.5rem">NLA Editor - Channel list</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Animation Data panel</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Strip tab</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Modifiers Tab</span>
+<span style="padding-left:1.5rem">NLA Editor - Footer tools and options</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:1.5rem">Render Properties Tab</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:1.5rem">Output Properties Tab</span>
+<span style="padding-left:1.5rem">View Layer Properties Tab</span>
+<span style="padding-left:1.5rem">Scene Properties Tab</span>
+<span style="padding-left:1.5rem">World Properties Tab</span>
+<span style="padding-left:1.5rem">Collection Properties Tab</span>
+<span style="padding-left:1.5rem">Object Properties Tab</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Particle Properties Tab</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:1.5rem">Visual Effects Properties Tab</span>
+<span style="padding-left:1.5rem">Physics Properties Tab</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:1.5rem">Object Constraints Properties Tab</span>
+<span style="padding-left:1.5rem">Object Data Properties Tab</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span style="padding-left:1.5rem">Material Properties Tab</span>
+<span style="padding-left:1.5rem">Texture Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Constraint Properties</span>
+<span style="padding-left:1.5rem">Strip Tab</span>
+<span style="padding-left:1.5rem">Strip Modifiers Tab</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<a style="padding-left:2.5rem" href="../../../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../../shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Standard Keymap</span>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Node Groups</div><h1 class="pv-title">Node Groups</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 30 min read</span></div><article class="ui-doc-body"><h1 id="geometry">Geometry</h1>
+<h3 id="add-menu-geometry-nodes-geometry">Add menu - Geometry nodes - Geometry</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry/add-menu-geometry-nodes-geometry.png" alt="Add menu - Geometry nodes - Geometry" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Geometry" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Geometry" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Geometry" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Geometry" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry</figcaption></figure>
+<h4 id="geometry-input">Geometry Input</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry/geometry-input.png" alt="Geometry Input" loading="lazy"></figure>
+<p>Geometry input</p>
+<h1 id="geometry-operations">Geometry › Operations</h1>
+<h3 id="add-menu-geometry-nodes-geometry-operations">Add menu - Geometry nodes - Geometry - Operations</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations/add-menu-geometry-nodes-geometry-operations.png" alt="Add menu - Geometry nodes - Geometry - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Operations</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Geometry - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Operations</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Geometry - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Operations</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Geometry - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Operations</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Geometry - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Operations</figcaption></figure>
+<h4 id="displace-geometry">Displace Geometry</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations/displace-geometry.png" alt="Displace Geometry" loading="lazy"></figure>
+<p>Displaces the geometry.</p>
+<h4 id="smooth-geometry">Smooth Geometry</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-operations/smooth-geometry.png" alt="Smooth Geometry" loading="lazy"></figure>
+<p>Smoothens the geometry.</p>
+<h1 id="geometry-selection">Geometry › Selection</h1>
+<h3 id="add-menu-geometry-nodes-geometry-selection">Add menu - Geometry nodes - Geometry - Selection</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/add-menu-geometry-nodes-geometry-selection.png" alt="Add menu - Geometry nodes - Geometry - Selection" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Selection</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Geometry - Selection" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Selection</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Geometry - Selection" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Selection</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Geometry - Selection" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Selection</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Geometry - Selection" loading="lazy"><figcaption>Add menu - Geometry nodes - Geometry - Selection</figcaption></figure>
+<h4 id="box-selection">Box Selection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/box-selection.png" alt="Box Selection" loading="lazy"></figure>
+<p>Box select geometry.</p>
+<h4 id="normal-selection">Normal Selection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/normal-selection.png" alt="Normal Selection" loading="lazy"></figure>
+<p>Select geometry by the normals direction.</p>
+<h4 id="sphere-selection">Sphere Selection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-geometry-selection/sphere-selection.png" alt="Sphere Selection" loading="lazy"></figure>
+<p>Select geometry by a sphere shape.</p>
+<h1 id="grease-pencil-operations">Grease Pencil › Operations</h1>
+<h3 id="add-menu-geometry-nodes-grease-pencil-operations">Add menu - Geometry nodes - Grease Pencil - Operations</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations/add-menu-geometry-nodes-grease-pencil-operations.png" alt="Add menu - Geometry nodes - Grease Pencil - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Operations</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Grease Pencil - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Operations</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Grease Pencil - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Operations</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Grease Pencil - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Operations</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Grease Pencil - Operations" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Operations</figcaption></figure>
+<h4 id="delete-empty-layers">Delete Empty Layers</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-operations/delete-empty-layers.png" alt="Delete Empty Layers" loading="lazy"></figure>
+<p>Deletes empty grease pencil layers</p>
+<h1 id="grease-pencil-read">Grease Pencil › Read</h1>
+<h3 id="add-menu-geometry-nodes-grease-pencil-read">Add menu - Geometry nodes - Grease Pencil - Read</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/add-menu-geometry-nodes-grease-pencil-read.png" alt="Add menu - Geometry nodes - Grease Pencil - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Read</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Grease Pencil - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Read</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Grease Pencil - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Read</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Grease Pencil - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Read</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Grease Pencil - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Read</figcaption></figure>
+<h4 id="layer-size">Layer Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/layer-size.png" alt="Layer Size" loading="lazy"></figure>
+<p>Retreive the point count and spline count of a grease pencil layer.</p>
+<h4 id="material-fill-info">Material Fill Info</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/material-fill-info.png" alt="Material Fill Info" loading="lazy"></figure>
+<p>Retreive the color and opacity of a grease pencil layer.</p>
+<h4 id="stroke-info">Stroke Info</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-read/stroke-info.png" alt="Stroke Info" loading="lazy"></figure>
+<p>Retreive the color, opacity and softness of a grease pencil stroke.</p>
+<h1 id="grease-pencil-write">Grease Pencil › Write</h1>
+<h3 id="add-menu-geometry-nodes-grease-pencil-write">Add menu - Geometry nodes - Grease Pencil - Write</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/add-menu-geometry-nodes-grease-pencil-write.png" alt="Add menu - Geometry nodes - Grease Pencil - Write" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Write</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Grease Pencil - Write" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Write</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Grease Pencil - Write" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Write</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Grease Pencil - Write" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Write</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Grease Pencil - Write" loading="lazy"><figcaption>Add menu - Geometry nodes - Grease Pencil - Write</figcaption></figure>
+<h4 id="set-screenspace-radius">Set Screenspace Radius</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-screenspace-radius.png" alt="Set Screenspace Radius" loading="lazy"></figure>
+<p>Set the screenspace radius of the grease pencil.</p>
+<h4 id="material-fill-info-2">Material Fill Info</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/material-fill-info.png" alt="Material Fill Info" loading="lazy"></figure>
+<p>Set the stroke softness of the grease pencil.</p>
+<h4 id="set-stroke-fill-color">Set Stroke / Fill Color</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-stroke-fill-color.png" alt="Set Stroke / Fill Color" loading="lazy"><figcaption>Set Stroke / Fill Color</figcaption></figure>
+<p>Set the stroke fill color of the grease pencil.</p>
+<h4 id="set-stroke-fill-opacity">Set Stroke / Fill Opacity</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-grease-pencil-write/set-stroke-fill-opacity.png" alt="Set Stroke / Fill Opacity" loading="lazy"><figcaption>Set Stroke / Fill Opacity</figcaption></figure>
+<p>Set the stroke fill opacity of the grease pencil.</p>
+<h1 id="hair-deformation">Hair › Deformation</h1>
+<h3 id="add-menu-hair-deformation">Add menu - Hair - Deformation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate.png" alt="Add menu - Hair - Deformation" loading="lazy"><figcaption>Add menu - Hair - Deformation</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Hair - Deformation" loading="lazy"><figcaption>Add menu - Hair - Deformation</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Hair - Deformation" loading="lazy"><figcaption>Add menu - Hair - Deformation</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Hair - Deformation" loading="lazy"><figcaption>Add menu - Hair - Deformation</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Hair - Deformation" loading="lazy"><figcaption>Add menu - Hair - Deformation</figcaption></figure>
+<h4 id="blend-hair-curves">Blend Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/blend-hair-curves.png" alt="Blend Hair Curves" loading="lazy"></figure>
+<p>Blends the shape between multiple hair curves in a certain radius together.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input geometry. · <strong>Factor</strong>: Factor to blend overall effect. · <strong>Blend Radius</strong>: Radius to select neighbors for blending. · <strong>Blend Neighbours</strong>: Amount of neighbors used for blending. · <strong>Preserve Length</strong>: Preserve the length of each curve during deformation.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Geometry</strong>: The output geometry.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="displace-hair-curves">Displace Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/displace-hair-curves.png" alt="Displace Hair Curves" loading="lazy"></figure>
+<p>Displaces hair curves by a vector based on options.</p>
+<h5 id="input">Input</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>The input geometry.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Factor to blend overall effect.</td>
+</tr>
+<tr>
+<td>Shape</td>
+<td>Shape of the influence along curves. 0 means constant. 0.5 means linear.</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>The object to determine the displacement space.</td>
+</tr>
+<tr>
+<td>Displace Vector</td>
+<td>The vector for the displacement.</td>
+</tr>
+<tr>
+<td>Surface Object</td>
+<td>Surface object used to sample the normal for displacement.</td>
+</tr>
+<tr>
+<td>Surface Geometry</td>
+<td>Surface geometry used to sample the normal for displacement.</td>
+</tr>
+<tr>
+<td>Surface UV Map</td>
+<td>Surface UV Map used to sample the normal for displacement.</td>
+</tr>
+<tr>
+<td>Surface Normal Displacement</td>
+<td>Amount of displacement along the surface normals.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output">Output</h5>
+<h6 id="geometry-2">Geometry</h6>
+<p>The output geometry.</p>
+<h4 id="frizz-hair-curves">Frizz Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/frizz-hair-curves.png" alt="Frizz Hair Curves" loading="lazy"></figure>
+<p>Deforms hair curves using a random vector per point to frizz them.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input geometry. · <strong>Cumulative Offset</strong>: Apply offset cumulatively. · <strong>Factor</strong>: Factor to blend overall effect. · <strong>Distance</strong>: Overall distance factor for the deformation. · <strong>Shape</strong>: Shape of the influence along curves. 0 means constant. 0.5 means linear. · <strong>Seed</strong>: Random seed for the operation. · <strong>Preserve Length</strong>: Preserve the length of each curve during deformation.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Geometry</strong>: The output geometry. · <strong>Offset Vector</strong>: The vector by which each point was offset during deformation.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="hair-curves-noise">Hair Curves Noise</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/hair-curves-noise.png" alt="Hair Curves Noise" loading="lazy"></figure>
+<p>Deforms hair curves using noise texture.</p>
+<h5 id="input-2">Input</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>The input geometry.</td>
+</tr>
+<tr>
+<td>Cumulative Offset</td>
+<td>Apply offset cumulatively.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Factor to blend overall effect.</td>
+</tr>
+<tr>
+<td>Distance</td>
+<td>Overall distance factor for the deformation.</td>
+</tr>
+<tr>
+<td>Shape</td>
+<td>Shape of the influence along curves. 0 means constant. 0.5 means linear.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Scale of the noise texture by root position.</td>
+</tr>
+<tr>
+<td>Scale along Curve</td>
+<td>Scale of the noise texture along the curve.</td>
+</tr>
+<tr>
+<td>Offset per curve</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Seed</td>
+<td>Random seed for the operation.</td>
+</tr>
+<tr>
+<td>Preserve Length</td>
+<td>Preserve the length of each curve during deformation.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output-2">Output</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>The output geometry.</td>
+</tr>
+<tr>
+<td>Offset Vector</td>
+<td>The vector by which each point was offset during deformation.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="roll-hair-curves">Roll Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/roll-hair-curves.png" alt="Roll Hair Curves" loading="lazy"></figure>
+<p>Rolls up hair curves, starting from their tips.</p>
+<h5 id="input-3">Input</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>Factor to blend overall effect.</td>
+</tr>
+<tr>
+<td>Subdivision</td>
+<td>Subdivision level applied before deformation.</td>
+</tr>
+<tr>
+<td>Variation Level</td>
+<td>Level of smoothing on the roll path to include shape variation.</td>
+</tr>
+<tr>
+<td>Roll Lenght</td>
+<td>Length of each curve to be rolled</td>
+</tr>
+<tr>
+<td>Roll Radius</td>
+<td>Radius of the rolls.</td>
+</tr>
+<tr>
+<td>Roll Depth</td>
+<td>Depth offset of the rolls.</td>
+</tr>
+<tr>
+<td>Roll Taper</td>
+<td>Taper of the roll.</td>
+</tr>
+<tr>
+<td>Retain Overall Shape</td>
+<td>Offset the roll along the original curve to retain shape.</td>
+</tr>
+<tr>
+<td>Roll Direction</td>
+<td>The axis around each curve is rolled.</td>
+</tr>
+<tr>
+<td>Random Orientation</td>
+<td>Amount of randomization of the direction of the roll.</td>
+</tr>
+<tr>
+<td>Seed</td>
+<td>Random seed for the operation.</td>
+</tr>
+<tr>
+<td>Preserve Length</td>
+<td>Preserve the length of each curve during deformation.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output-3">Output</h5>
+<h6 id="geometry-3">Geometry</h6>
+<p>The output geometry.</p>
+<h4 id="rotate-hair-curves">Rotate Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/rotate-hair-curves.png" alt="Rotate Hair Curves" loading="lazy"></figure>
+<p>Rotates each hair curve around an axis.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input geometry. · <strong>Factor</strong>: Factor to blend overall effect. · <strong>Axis</strong>: Rotation Axis. The default is tangent at root. · <strong>Angle</strong>: Angle of rotation · <strong>Random Off</strong>: Random offset to the rotation angle per curve. · <strong>Lock Ends</strong>: Lock rotation to the axis between the curve ends. · <strong>Seed</strong>: Random seed for the operation.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Geometry</strong>: The output geometry.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="shrinkwrap-hair-curves">Shrinkwrap Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/shrinkwrap-hair-curves.png" alt="Shrinkwrap Hair Curves" loading="lazy"></figure>
+<p>Shrinkwrap hair curves to a mesh surface from below and optionally from above.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input geometry. · <strong>Surface</strong>: Surface geometry used for shrinkwrap. · <strong>Surface Object</strong>: A surface object used for shrinkwrap. · <strong>Factor</strong>: Factor to blend overall effect. · <strong>Offset Distance</strong>: Distance of the surface to shrinkwrap. · <strong>Above Surface</strong>: Blend shrinkwrap for points above the surface. · <strong>Smoothing Steps</strong>: The steps of Smoothing applied after shrinkwrap. · <strong>Lock Roots</strong>: Lock the position of root points.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Geometry</strong>: The output geometry.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="smooth-hair-curves">Smooth Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/smooth-hair-curves.png" alt="Smooth Hair Curves" loading="lazy"></figure>
+<p>Smoothes the shape of hair curves.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input geometry. · <strong>Amount</strong>: Amount of smoothing. · <strong>Shape</strong>: Shape of the influence along curves. 0 means constant. 0.5 means linear. · <strong>Iterations</strong>: Amount of smoothing steps. · <strong>Weight</strong>: Smoothing weight. · <strong>Lock Tip</strong>: Lock the position of tip points. · <strong>Preserve Length</strong>: Preserve the length of each curve during deformation.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Geometry</strong>: The output geometry.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="straighten-hair-curves">Straighten Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/straighten-hair-curves.png" alt="Straighten Hair Curves" loading="lazy"></figure>
+<p>Straighten hair curves between root and tip.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input geometry. · <strong>Amount</strong>: Amount of smoothing. · <strong>Shape</strong>: Shape of the influence along curves. 0 means constant. 0.5 means linear. · <strong>Preserve Length</strong>: Preserve the length of each curve during deformation.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Geometry</strong>: The output geometry.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="trim-hair-curves">Trim Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-deformation/trim-hair-curves.png" alt="Trim Hair Curves" loading="lazy"></figure>
+<p>Trims or scales hair curves to a certain length.</p>
+<h5 id="input-4">Input</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>The input geometry.</td>
+</tr>
+<tr>
+<td>Scale Uniform</td>
+<td>Scale each curve uniformly to reach the target length.</td>
+</tr>
+<tr>
+<td>Length Factor</td>
+<td>Multiply the original length by a factor</td>
+</tr>
+<tr>
+<td>Replace Length</td>
+<td>Use the length input to fully replace the original length.</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Target length for the operation.</td>
+</tr>
+<tr>
+<td>Mask</td>
+<td>Mask to blend overall effect.</td>
+</tr>
+<tr>
+<td>Random Offset</td>
+<td>Trim hair curves randomly up to a certain amount.</td>
+</tr>
+<tr>
+<td>Pin at parameter</td>
+<td>Pin each curve at a certain point for the operation.</td>
+</tr>
+<tr>
+<td>Seed</td>
+<td>Random seed for the operation.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output-4">Output</h5>
+<h6 id="geometry-4">Geometry</h6>
+<p>The output geometry.</p>
+<h1 id="hair-generation">Hair › Generation</h1>
+<h3 id="add-menu-hair-generation">Add menu - Hair - Generation</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation/add-menu-hair-generation.png" alt="Add menu - Hair - Generation" loading="lazy"><figcaption>Add menu - Hair - Generation</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Hair - Generation" loading="lazy"><figcaption>Add menu - Hair - Generation</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Hair - Generation" loading="lazy"><figcaption>Add menu - Hair - Generation</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Hair - Generation" loading="lazy"><figcaption>Add menu - Hair - Generation</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Hair - Generation" loading="lazy"><figcaption>Add menu - Hair - Generation</figcaption></figure>
+<h4 id="duplicate-hair-curves">Duplicate Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation/duplicate-hair-curves.png" alt="Duplicate Hair Curves" loading="lazy"></figure>
+<p>Duplicates hair curves a certain amouunt of times in the given radius.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input geometry. · <strong>Amount</strong>: Amount of duplication per curve. · <strong>Viewport Amount</strong>: How much percent is used in the viewport. · <strong>Radius</strong>: The radius in which the duplicate curves are offset from the guides. · <strong>Distribution Shape</strong>: Shape of distriubution from center to the edge aroudn the guide. · <strong>Tip Roundness</strong>: Offset of the curves to round the tip. · <strong>Even Thickness</strong>: Keep an even thickness of the distribution of duplicates. · <strong>Seed</strong>: Random seed for the operation.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Geometry</strong>: The output geometry. · <strong>Guide Index</strong>: The guide index map that was used for the operation.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="generate-hair-curves">Generate Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation/generate-hair-curves.png" alt="Generate Hair Curves" loading="lazy"></figure>
+<p>Generates new hair curves on a surface mesh.</p>
+<h5 id="input-5">Input</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface</td>
+<td>The surface to generate the hairs on.</td>
+</tr>
+<tr>
+<td>Surface Object</td>
+<td>A surface object to generate the hairs on.</td>
+</tr>
+<tr>
+<td>Surface UV map</td>
+<td>Surface UV map used for attachment.</td>
+</tr>
+<tr>
+<td>Surface Rest Position</td>
+<td>Set the surface mesh into its rest position before attachment.</td>
+</tr>
+<tr>
+<td>Hair Length</td>
+<td>Length of the generated hair curves.</td>
+</tr>
+<tr>
+<td>Hair Material</td>
+<td>The material for the hair curves.</td>
+</tr>
+<tr>
+<td>Control Points</td>
+<td>Amount of control points for the generated hair curves.</td>
+</tr>
+<tr>
+<td>Poisson Disk Distribution</td>
+<td>Use Poisson Disk distribution to keep a minimum distance between the hair curves.</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>How dense the generated hair curves are.</td>
+</tr>
+<tr>
+<td>Density Mask</td>
+<td>Factor for the density of generated hair curves.</td>
+</tr>
+<tr>
+<td>Mask Texture</td>
+<td>Discard points based on a mask texture after distribution. This mask can be loaded here.</td>
+</tr>
+<tr>
+<td>Viewport Amount</td>
+<td>How dense the generated hair curves are displayed in the viewport.</td>
+</tr>
+<tr>
+<td>Seed</td>
+<td>Random seed for operation.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output-5">Output</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>The output geometry.</td>
+</tr>
+<tr>
+<td>Curves</td>
+<td>The output curves.</td>
+</tr>
+<tr>
+<td>Surface Normal</td>
+<td>The surface normals.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="interpolate-hair-curves">Interpolate Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-generation/interpolate-hair-curves.png" alt="Interpolate Hair Curves" loading="lazy"></figure>
+<p>Interpolates existing guide curves on a surface.</p>
+<h5 id="input-6">Input</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Guide Curves</td>
+<td>Input guide curves.</td>
+</tr>
+<tr>
+<td>Surface Geometry</td>
+<td>The surface geometry to generate the hairs on.</td>
+</tr>
+<tr>
+<td>Surface Object</td>
+<td>A surface object to generate the hairs on.</td>
+</tr>
+<tr>
+<td>Surface UV map</td>
+<td>Surface UV map used for attachment.</td>
+</tr>
+<tr>
+<td>Surface Rest Position</td>
+<td>Set the surface mesh into its rest position before attachment.</td>
+</tr>
+<tr>
+<td>Follow Surface Normal</td>
+<td>Align the interpolated curves to the surface normal.</td>
+</tr>
+<tr>
+<td>Part by Mesh Islands</td>
+<td>Use mesh islands of the surface geometry for painting.</td>
+</tr>
+<tr>
+<td>Interpolation Guides</td>
+<td>Amount of guides to be used for interploation per curve.</td>
+</tr>
+<tr>
+<td>Distance to Guides</td>
+<td>Distance aorund each guide to spawn interpollated curves.</td>
+</tr>
+<tr>
+<td>Poisson Disk Distribution</td>
+<td>Use Poisson Disk distribution to keep a minimum distance between the hair curves.</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>How dense the generated hair curves are.</td>
+</tr>
+<tr>
+<td>Density Mask</td>
+<td>Factor for the density of generated hair curves.</td>
+</tr>
+<tr>
+<td>Mask Texture</td>
+<td>Discard points based on a mask texture after distribution. This mask can be loaded here.</td>
+</tr>
+<tr>
+<td>Viewport Amount</td>
+<td>How dense the generated hair curves are displayed in the viewport.</td>
+</tr>
+<tr>
+<td>Seed</td>
+<td>Random seed for operation.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output-6">Output</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>The output geometry.</td>
+</tr>
+<tr>
+<td>Guide Index</td>
+<td>The output curves.</td>
+</tr>
+<tr>
+<td>Surface Normal</td>
+<td>The surface normals.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="hair-guides">Hair › Guides</h1>
+<h3 id="add-menu-hair-guides">Add menu - Hair - Guides</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/add-menu-hair-guides.png" alt="Add menu - Hair - Guides" loading="lazy"><figcaption>Add menu - Hair - Guides</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Hair - Guides" loading="lazy"><figcaption>Add menu - Hair - Guides</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Hair - Guides" loading="lazy"><figcaption>Add menu - Hair - Guides</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Hair - Guides" loading="lazy"><figcaption>Add menu - Hair - Guides</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Hair - Guides" loading="lazy"><figcaption>Add menu - Hair - Guides</figcaption></figure>
+<h4 id="braid-hair-curves">Braid Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/braid-hair-curves.png" alt="Braid Hair Curves" loading="lazy"></figure>
+<p>Deforms existing hair curves into braids.</p>
+<h5 id="input-7">Input</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>The input geometry.</td>
+</tr>
+<tr>
+<td>Guide Index</td>
+<td>Index map input. This input has priority.</td>
+</tr>
+<tr>
+<td>Guide Distance</td>
+<td>Minimum distance between two guides for new guide map.</td>
+</tr>
+<tr>
+<td>Guide Mask</td>
+<td>Mash for which curve are eligible to be selected as guides.</td>
+</tr>
+<tr>
+<td>Existing Guide Map</td>
+<td>Use the existing guide map attribute if available</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Factor to blend overall effect.</td>
+</tr>
+<tr>
+<td>Subdivision</td>
+<td>Subdivision level applied before deformation.</td>
+</tr>
+<tr>
+<td>Braid Start</td>
+<td>Where to start to blend deformation in percent from the root.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>Overall radius of the braids.</td>
+</tr>
+<tr>
+<td>Shape</td>
+<td>Shape of the braid radius along each curve.</td>
+</tr>
+<tr>
+<td>Factor Min</td>
+<td>Minimum radius of the braid.</td>
+</tr>
+<tr>
+<td>Factor Max</td>
+<td>Maximum radius of the braid.</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Frequency factor of the braids.</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>Thickness of the braids.</td>
+</tr>
+<tr>
+<td>Thickness Shape</td>
+<td>Shape adjsutment of the strand thickness for the braids.</td>
+</tr>
+<tr>
+<td>Shape Assymetry</td>
+<td>Asymetry of the shape adjustment of the strand thickness.</td>
+</tr>
+<tr>
+<td>Flare Length</td>
+<td>Length of the flare at the end of the braid.</td>
+</tr>
+<tr>
+<td>Flare Opening</td>
+<td>Opening radius of the flare at the tip of the braid.</td>
+</tr>
+<tr>
+<td>Hair Tie Object</td>
+<td>Object used for the hair tie instance.</td>
+</tr>
+<tr>
+<td>Hair Tie</td>
+<td>Geometry used for the hair tie instance. This has priority.</td>
+</tr>
+<tr>
+<td>Hair Tie Scale</td>
+<td>Scale of the hair tie instance.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output-7">Output</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>The output geometry.</td>
+</tr>
+<tr>
+<td>Guide Index</td>
+<td>The guide index map that was used for the operation.</td>
+</tr>
+<tr>
+<td>Flare Parameter</td>
+<td>Parameter between 0 and 1 along the flare.</td>
+</tr>
+<tr>
+<td>Strand Index</td>
+<td>Index of the strand within a braid that each curve belongs to.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clump-hair-curves">Clump Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/clump-hair-curves.png" alt="Clump Hair Curves" loading="lazy"></figure>
+<p>Clumps together existing hair curves.</p>
+<h5 id="input-8">Input</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>The input geometry.</td>
+</tr>
+<tr>
+<td>Guide Index</td>
+<td>Index map input. This input has priority.</td>
+</tr>
+<tr>
+<td>Guide Distance</td>
+<td>Minimum distance between two guides for new guide map.</td>
+</tr>
+<tr>
+<td>Guide Mask</td>
+<td>Mash for which curve are eligible to be selected as guides.</td>
+</tr>
+<tr>
+<td>Existing Guide Map</td>
+<td>Use the existing guide map attribute if available.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Factor to blend overall effect.</td>
+</tr>
+<tr>
+<td>Shape</td>
+<td>Shape of the influence along curves. 0 means constant. 0.5 means linear.</td>
+</tr>
+<tr>
+<td>Tip Spread</td>
+<td>Distance of random sread at the curve tips</td>
+</tr>
+<tr>
+<td>Clump Offset</td>
+<td>Offset of clump in a random direction.</td>
+</tr>
+<tr>
+<td>Distance Falloff</td>
+<td>Falloff distance for the clumping effect. 0 means no falloff.</td>
+</tr>
+<tr>
+<td>Distance Threshold</td>
+<td>Distance threshold for the clumping effect. 0 means no falloff.</td>
+</tr>
+<tr>
+<td>Preserve Length</td>
+<td>Preserve the length of each curve during deformation.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output-8">Output</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>The output geometry.</td>
+</tr>
+<tr>
+<td>Guide Index</td>
+<td>The guide index map that was used for the operation.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="create-guide-index-map">Create Guide Index Map</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/create-guide-index-map.png" alt="Create Guide Index Map" loading="lazy"><figcaption>Create Guide Index Map</figcaption></figure>
+<p>Creates an attribute that maps each curve to its nearest guide via index.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input geometry. · <strong>Guides</strong>: Index map input. This input has priority. · <strong>Guide Distance</strong>: Minimum distance between two guides for new guide map. · <strong>Guide Mask</strong>: Mash for which curve are eligible to be selected as guides. · <strong>Group ID</strong>: The id that is used to group curves togethert for guide map creation.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Geometry</strong>: The output geometry. · <strong>Guide Curves</strong>: The output guides · <strong>Guide Index</strong>: The guide index map that was used for the operation. · <strong>Guide Selection</strong>: The output guide selection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="curl-hair-curves">Curl Hair Curves</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-guides/curl-hair-curves.png" alt="Curl Hair Curves" loading="lazy"></figure>
+<p>Deform existing hair curves into curls.</p>
+<h5 id="input-9">Input</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>The input geometry.</td>
+</tr>
+<tr>
+<td>Guide Index</td>
+<td>Index map input. This input has priority.</td>
+</tr>
+<tr>
+<td>Guide Distance</td>
+<td>Minimum distance between two guides for new guide map.</td>
+</tr>
+<tr>
+<td>Guide Mask</td>
+<td>Mash for which curve are eligible to be selected as guides.</td>
+</tr>
+<tr>
+<td>Existing Guide Map</td>
+<td>Use the existing guide map attribute if available.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Factor to blend overall effect.</td>
+</tr>
+<tr>
+<td>Subdivision</td>
+<td>Subdivision level applied before deformation.</td>
+</tr>
+<tr>
+<td>Curl start</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Factor Start</td>
+<td>Form where to blend deformation in percent, starting from the root.</td>
+</tr>
+<tr>
+<td>Factor End</td>
+<td>Factor for the radius at the curl end.</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Frequency factor of the curls.</td>
+</tr>
+<tr>
+<td>Random Offset</td>
+<td>Amount of random offset per curve.</td>
+</tr>
+<tr>
+<td>Seed</td>
+<td>Random seed for the operation.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output-9">Output</h5>
+<h6 id="geometry-5">Geometry</h6>
+<p>The output geometry.</p>
+<h1 id="hair-read">Hair › Read</h1>
+<h3 id="add-menu-hair-read">Add menu - Hair - Read</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/add-menu-hair-read.png" alt="Add menu - Hair - Read" loading="lazy"><figcaption>Add menu - Hair - Read</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Hair - Read" loading="lazy"><figcaption>Add menu - Hair - Read</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Hair - Read" loading="lazy"><figcaption>Add menu - Hair - Read</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Hair - Read" loading="lazy"><figcaption>Add menu - Hair - Read</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Hair - Read" loading="lazy"><figcaption>Add menu - Hair - Read</figcaption></figure>
+<h4 id="curve-info">Curve Info</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/curve-info.png" alt="Curve Info" loading="lazy"></figure>
+<p>Reads information about each curve.</p>
+<h5 id="output-10">Output</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve Index</td>
+<td>Index of each curve.</td>
+</tr>
+<tr>
+<td>Curve ID</td>
+<td>ID of each curve.</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Length of each curve.</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>Direction of each curve.</td>
+</tr>
+<tr>
+<td>Random</td>
+<td>Random Vector of each curve.</td>
+</tr>
+<tr>
+<td>Surface UV</td>
+<td>Attachment surface UV coordinate of each curve.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="curve-root">Curve Root</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/curve-root.png" alt="Curve Root" loading="lazy"></figure>
+<p>Reads information about the root point of each curve.</p>
+<h5 id="output-11">Output</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Root Selection</td>
+<td>Boolean selection of curve root points.</td>
+</tr>
+<tr>
+<td>Root Position</td>
+<td>The position of a root point of a curve.</td>
+</tr>
+<tr>
+<td>Root Direction</td>
+<td>Direction of the root segment of a curve.</td>
+</tr>
+<tr>
+<td>Root Index</td>
+<td>Index of the root point of a curve.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="curve-segment">Curve Segment</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/curve-segment.png" alt="Curve Segment" loading="lazy"></figure>
+<p>Reads the information of the curve segment before the current point.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Segment Length</td>
+<td>Length of the segment</td>
+</tr>
+<tr>
+<td>Segment Direction</td>
+<td>Direction of the segment</td>
+</tr>
+<tr>
+<td>Neighbor Index</td>
+<td>Index of the neighbouring point on segment.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="curve-tip">Curve Tip</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/curve-tip.png" alt="Curve Tip" loading="lazy"></figure>
+<p>Reads information about the tip point of each curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Tip Selection</td>
+<td>Boolean selection of the tip points.</td>
+</tr>
+<tr>
+<td>Tip Position</td>
+<td>Position of the tip point of a curve.</td>
+</tr>
+<tr>
+<td>Tip Direction</td>
+<td>Direction of the segment of the tip point of a curve.</td>
+</tr>
+<tr>
+<td>Tip Index</td>
+<td>Index of the tip point of a curve.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="hair-attachment-info">Hair Attachment Info</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-read/hair-attachment-info.png" alt="Hair Attachment Info" loading="lazy"></figure>
+<p>Reads attatchment information regarding a surface mesh.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Surface Geometry</strong>: Surface geometry of the curve attachment. · <strong>Surface UV Map</strong>: Surface UV map used for attachment.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Attachment UV</strong>: Surface attachment UV coordinate stored on each curve. · <strong>Attachment is Valid</strong>: Is the attached UV coordinate valid? · <strong>Surface Normal</strong>: The normal direction of the surface mesh at the attachment point.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="hair-utility">Hair › Utility</h1>
+<h3 id="add-menu-hair-utility">Add menu - Hair - Utility</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility/add-menu-hair-utility.png" alt="Add menu - Hair - Utility" loading="lazy"><figcaption>Add menu - Hair - Utility</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Hair - Utility" loading="lazy"><figcaption>Add menu - Hair - Utility</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Hair - Utility" loading="lazy"><figcaption>Add menu - Hair - Utility</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Hair - Utility" loading="lazy"><figcaption>Add menu - Hair - Utility</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Hair - Utility" loading="lazy"><figcaption>Add menu - Hair - Utility</figcaption></figure>
+<h4 id="attach-hair-curves-to-surface">Attach Hair Curves to Surface</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility/attach-hair-curves-to-surface.png" alt="Attach Hair Curves to Surface" loading="lazy"><figcaption>Attach Hair Curves to Surface</figcaption></figure>
+<p>Attaches hair curves to a surface mesh.</p>
+<h5 id="input-10">Input</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>The input geometry.</td>
+</tr>
+<tr>
+<td>Surface Object</td>
+<td>A surface object to attach to. It needs to have matching transforms.</td>
+</tr>
+<tr>
+<td>Surface</td>
+<td>Surface geometry to attach hair curves to.</td>
+</tr>
+<tr>
+<td>Surface UV Map</td>
+<td>Surface UV Map used to attach hairs to.</td>
+</tr>
+<tr>
+<td>Surface Rest Position</td>
+<td>Set the surface into rest position before attachment.</td>
+</tr>
+<tr>
+<td>Sample Attachment UV</td>
+<td>Sample the surface UV mapp at the attachment point.</td>
+</tr>
+<tr>
+<td>Snap to Surface</td>
+<td>Snap the root of the curve to the closest surface point.</td>
+</tr>
+<tr>
+<td>Align to Surface Normal</td>
+<td>Align the curves to surface normals. Needs a guide as reference.</td>
+</tr>
+<tr>
+<td>Blend along Curve</td>
+<td>Blend deformation along eacah curve from the root.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output-12">Output</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry</td>
+<td>The output geometry.</td>
+</tr>
+<tr>
+<td>Surface UV Coordinate</td>
+<td>Surface UV Coordinate at the attachment point.</td>
+</tr>
+<tr>
+<td>Surface Normal</td>
+<td>Surface Normal at the attachment point.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="redistribute-curve-points">Redistribute Curve Points</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility/redistribute-curve-points.png" alt="Redistribute Curve Points" loading="lazy"></figure>
+<p>Redistributes existing control points evenly along each curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Curves</strong>: The input curve. · <strong>Factor</strong>: Factor to blend overall effect. · <strong>Feature Awareness</strong>: Use simple feature awareness to keep feature definition.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Curves</strong>: The output curves.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="restore-curve-segment-length">Restore Curve Segment Length</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-utility/restore-curve-segment-length.png" alt="Restore Curve Segment Length" loading="lazy"><figcaption>Restore Curve Segment Length</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Curves</strong>: The input curve. · <strong>Selection</strong>: A selection of the input curve. · <strong>Factor</strong>: Factor to blend overall effect. · <strong>Reference Position</strong>: Reference position before deformation. · <strong>Pin at Parameter</strong>: Pin each curve at a certain point for the operation.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Curves</strong>: The output curves.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="hair-write">Hair › Write</h1>
+<h3 id="add-menu-hair-write">Add menu - Hair - Write</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write/add-menu-hair-write.png" alt="Add menu - Hair - Write" loading="lazy"><figcaption>Add menu - Hair - Write</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Hair - Write" loading="lazy"><figcaption>Add menu - Hair - Write</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Hair - Write" loading="lazy"><figcaption>Add menu - Hair - Write</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Hair - Write" loading="lazy"><figcaption>Add menu - Hair - Write</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Hair - Write" loading="lazy"><figcaption>Add menu - Hair - Write</figcaption></figure>
+<h4 id="set-hair-curve-profile">Set Hair Curve Profile</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-hair-write/set-hair-curve-profile.png" alt="Set Hair Curve Profile" loading="lazy"><figcaption>Set Hair Curve Profile</figcaption></figure>
+<p>Set the radius attribute of hair curces according to a profile shape.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input geometry. · <strong>Replace Radius</strong>: Replace the original radius. · <strong>Radius</strong>: Base radius to be set when replace radius is enabled. · <strong>Shape</strong>: Shape of the radius along the curve. · <strong>Factor Min</strong>: Factor of the radius at the minimum. · <strong>Factor Max</strong>: Factor of the radius at the maximum.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><strong>Geometry</strong>: The output geometry.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="instances">Instances</h1>
+<h3 id="add-menu-geometry-nodes-instances">Add menu - Geometry nodes - Instances</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-instances/add-menu-geometry-nodes-instances.png" alt="Add menu - Geometry nodes - Instances" loading="lazy"><figcaption>Add menu - Geometry nodes - Instances</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Instances" loading="lazy"><figcaption>Add menu - Geometry nodes - Instances</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Instances" loading="lazy"><figcaption>Add menu - Geometry nodes - Instances</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Instances" loading="lazy"><figcaption>Add menu - Geometry nodes - Instances</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Instances" loading="lazy"><figcaption>Add menu - Geometry nodes - Instances</figcaption></figure>
+<h4 id="instance-on-elements">Instance on Elements</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-instances/instance-on-elements.png" alt="Instance on Elements" loading="lazy"></figure>
+<p>Create copies of referenced geometry on geometry elements.</p>
+<h4 id="randomize-transforms">Randomize Transforms</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-instances/randomize-transforms.png" alt="Randomize Transforms" loading="lazy"></figure>
+<p>Randomize the transform of instances.</p>
+<h1 id="material">Material</h1>
+<h3 id="add-menu-geometry-nodes-material">Add menu - Geometry nodes - Material</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-material/add-menu-geometry-nodes-material.png" alt="Add menu - Geometry nodes - Material" loading="lazy"><figcaption>Add menu - Geometry nodes - Material</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Material" loading="lazy"><figcaption>Add menu - Geometry nodes - Material</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Material" loading="lazy"><figcaption>Add menu - Geometry nodes - Material</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Material" loading="lazy"><figcaption>Add menu - Geometry nodes - Material</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Material" loading="lazy"><figcaption>Add menu - Geometry nodes - Material</figcaption></figure>
+<h4 id="inherit-material">Inherit Material</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-material/inherit-material.png" alt="Inherit Material" loading="lazy"></figure>
+<p>Applies an existing material from the source geometry at the target geometry.</p>
+<h1 id="mesh">Mesh</h1>
+<h3 id="add-menu-geometry-nodes-mesh">Add menu - Geometry nodes - Mesh</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh/add-menu-geometry-nodes-mesh.png" alt="Add menu - Geometry nodes - Mesh" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Mesh" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Mesh" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Mesh" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Mesh" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh</figcaption></figure>
+<h4 id="mesh-lines-and-silhouette">Mesh Lines and Silhouette</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-material/inherit-material.png" alt="Mesh Lines and Silhouette" loading="lazy"><figcaption>Mesh Lines and Silhouette</figcaption></figure>
+<p>Creates a Inverses Hull lines with a mesh silhouette. This also contains overrides, randomizatoin and other settings.</p>
+<h1 id="mesh-read">Mesh › Read</h1>
+<h3 id="add-menu-geometry-nodes-mesh-read">Add menu - Geometry nodes - Mesh - Read</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/add-menu-geometry-nodes-mesh-read.png" alt="Add menu - Geometry nodes - Mesh - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh - Read</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodes - Mesh - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh - Read</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodes - Mesh - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh - Read</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodes - Mesh - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh - Read</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodes - Mesh - Read" loading="lazy"><figcaption>Add menu - Geometry nodes - Mesh - Read</figcaption></figure>
+<h4 id="edge-length">Edge Length</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/edge-length.png" alt="Edge Length" loading="lazy"></figure>
+<p>Returns the length of an edge.</p>
+<h4 id="face-corner-angle">Face Corner Angle</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/face-corner-angle.png" alt="Face Corner Angle" loading="lazy"></figure>
+<p>Returns the angle between two edges.</p>
+<h4 id="is-edge-boundary">Is Edge Boundary</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-edge-boundary.png" alt="Is Edge Boundary" loading="lazy"></figure>
+<p>Returns a selection of boundary edges.</p>
+<h4 id="is-edge-loose">Is Edge Loose</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-edge-loose.png" alt="Is Edge Loose" loading="lazy"></figure>
+<p>Returns a selection of loose edges.</p>
+<h4 id="is-edge-manifold">Is Edge Manifold</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-edge-manifold.png" alt="Is Edge Manifold" loading="lazy"></figure>
+<p>Returns a selection of manifold edges.</p>
+<h4 id="is-uv-split">Is UV Split</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-mesh-read/is-uv-split.png" alt="Is UV Split" loading="lazy"></figure>
+<p>Returns a selection of seam edges at the border of UV patches.</p>
+<h1 id="normals">Normals</h1>
+<h3 id="add-menu-geometry-nodegroups-normals">Add menu - Geometry nodegroups - Normals</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-normals/add-menu-geometry-nodegroups-normals.png" alt="Add menu - Geometry nodegroups - Normals" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Normals</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodegroups - Normals" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Normals</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodegroups - Normals" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Normals</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodegroups - Normals" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Normals</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodegroups - Normals" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Normals</figcaption></figure>
+<h4 id="inherit-smoothness">Inherit Smoothness</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-normals/inherit-smoothness.png" alt="Inherit Smoothness" loading="lazy"></figure>
+<p>Passes normal smoothness of the parent object.</p>
+<h1 id="utilities">Utilities</h1>
+<h3 id="add-menu-geometry-nodegroups-utilities">Add menu - Geometry nodegroups - Utilities</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities/add-menu-geometry-nodegroups-utilities.png" alt="Add menu - Geometry nodegroups - Utilities" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodegroups - Utilities" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodegroups - Utilities" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodegroups - Utilities" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodegroups - Utilities" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities</figcaption></figure>
+<h4 id="random-rotation">Random Rotation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities/random-rotation.png" alt="Random Rotation" loading="lazy"></figure>
+<p>Returns a uniformly distributed random rotation</p>
+<h1 id="utilities-vector">Utilities › Vector</h1>
+<h3 id="add-menu-geometry-nodegroups-utilities-vector">Add menu - Geometry nodegroups - Utilities - Vector</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/add-menu-geometry-nodegroups-utilities-vector.png" alt="Add menu - Geometry nodegroups - Utilities - Vector" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities - Vector</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodegroups - Utilities - Vector" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities - Vector</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodegroups - Utilities - Vector" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities - Vector</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodegroups - Utilities - Vector" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities - Vector</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodegroups - Utilities - Vector" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utilities - Vector</figcaption></figure>
+<h4 id="combined-cylindrical">Combined Cylindrical</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/combined-cylindrical.png" alt="Combined Cylindrical" loading="lazy"></figure>
+<p>Create a vector from its cylindrical components.</p>
+<h4 id="combined-spherical">Combined Spherical</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/combined-spherical.png" alt="Combined Spherical" loading="lazy"></figure>
+<p>Create a vector from its spherical components.</p>
+<h4 id="separate-cylindrical">Separate Cylindrical</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/separate-cylindrical.png" alt="Separate Cylindrical" loading="lazy"></figure>
+<p>Decompose into its cylindrical components.</p>
+<h4 id="separate-spherical">Separate Spherical</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utilities-vector/separate-cylindrical.png" alt="Separate Spherical" loading="lazy"></figure>
+<p>Decompose into its spherical components.</p>
+<h1 id="utility">Utility</h1>
+<h3 id="add-menu-geometry-nodegroups-utility">Add menu - Geometry nodegroups - Utility</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utility/add-menu-geometry-nodegroups-utility.png" alt="Add menu - Geometry nodegroups - Utility" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utility</figcaption></figure>
+<p>The nodes in this submenu are node groups. They use the regular single nodes under the hood.</p>
+<p>It is virtually impossible to document these nodes in detail. So we will just list them.</p>
+<p>When you double click the header, then you will enter the first level of the group. When you then press tab, or click again at the header, then you will reach the single nodes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-2.png" alt="Add menu - Geometry nodegroups - Utility" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utility</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-3.png" alt="Add menu - Geometry nodegroups - Utility" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utility</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-4.png" alt="Add menu - Geometry nodegroups - Utility" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utility</figcaption></figure>
+<p>To leave the group you can use the breadcrumb up left in the header. These breadcrumbs are clickable. Or the Parent Node Tree button up right in the header.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-generate/add-menu-generate-5.png" alt="Add menu - Geometry nodegroups - Utility" loading="lazy"><figcaption>Add menu - Geometry nodegroups - Utility</figcaption></figure>
+<h4 id="g-index-mask-u">G Index Mask U</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/93b6a8dbbf39fe14096530a394ce46e303e2d8d5/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-nodegroups-utility/g-index-mask-u.png" alt="G Index Mask U" loading="lazy"><figcaption>G Index Mask U</figcaption></figure>
+<p>Selects an indicy by using various functions.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-polish/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fgeometry-node-editor%2Fheader%2Fadd-menu%2Fnode-groups.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-polish/docs2/content/editors/geometry-node-editor/header/add-menu/node-groups.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h3" href="#add-menu-geometry-nodes-geometry">Add menu - Geometry nodes - Geometry</a><a class="h3" href="#add-menu-geometry-nodes-geometry-operations">Add menu - Geometry nodes - Geometry - Operations</a><a class="h3" href="#add-menu-geometry-nodes-geometry-selection">Add menu - Geometry nodes - Geometry - Selection</a><a class="h3" href="#add-menu-geometry-nodes-grease-pencil-operations">Add menu - Geometry nodes - Grease Pencil - Operations</a><a class="h3" href="#add-menu-geometry-nodes-grease-pencil-read">Add menu - Geometry nodes - Grease Pencil - Read</a><a class="h3" href="#add-menu-geometry-nodes-grease-pencil-write">Add menu - Geometry nodes - Grease Pencil - Write</a><a class="h3" href="#add-menu-hair-deformation">Add menu - Hair - Deformation</a><a class="h3" href="#add-menu-hair-generation">Add menu - Hair - Generation</a><a class="h3" href="#add-menu-hair-guides">Add menu - Hair - Guides</a><a class="h3" href="#add-menu-hair-read">Add menu - Hair - Read</a><a class="h3" href="#add-menu-hair-utility">Add menu - Hair - Utility</a><a class="h3" href="#add-menu-hair-write">Add menu - Hair - Write</a><a class="h3" href="#add-menu-geometry-nodes-instances">Add menu - Geometry nodes - Instances</a><a class="h3" href="#add-menu-geometry-nodes-material">Add menu - Geometry nodes - Material</a><a class="h3" href="#add-menu-geometry-nodes-mesh">Add menu - Geometry nodes - Mesh</a><a class="h3" href="#add-menu-geometry-nodes-mesh-read">Add menu - Geometry nodes - Mesh - Read</a><a class="h3" href="#add-menu-geometry-nodegroups-normals">Add menu - Geometry nodegroups - Normals</a><a class="h3" href="#add-menu-geometry-nodegroups-utilities">Add menu - Geometry nodegroups - Utilities</a><a class="h3" href="#add-menu-geometry-nodegroups-utilities-vector">Add menu - Geometry nodegroups - Utilities - Vector</a><a class="h3" href="#add-menu-geometry-nodegroups-utility">Add menu - Geometry nodegroups - Utility</a></aside></div></body></html>
