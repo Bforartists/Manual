@@ -29,7 +29,7 @@ import urllib.parse
 import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from docs_io import iter_pages, site_tree, slugify  # noqa: E402
+from docs_io import DOCS_ROOT, Page, iter_pages, site_tree, slugify  # noqa: E402
 import html_build  # noqa: E402
 import landing  # noqa: E402
 
@@ -243,6 +243,18 @@ def build(repo, cfg):
                          "create": {"summary": html_build.first_paragraph(body)},   # only for new items
                          "section": sec.id, "shared": [str(s) for s in (p.fm.get("shared") or [])]})
     base, icons = landing.load_icons()
+    home_rel = f"{DOCS_ROOT}/home.md"
+    if os.path.exists(os.path.join(repo, home_rel)):          # the Docs home: /docs/home
+        hp = Page(repo, home_rel)
+        content = f"{DOCS_ROOT}/content/"
+        url_rel = lambda r: cfg["page_url"] + slug_of[content + r] if content + r in slug_of else ""  # noqa: E731
+        img_rel = lambda r: img_url(f"{DOCS_ROOT}/{r}") if r else ""                                  # noqa: E731
+        body = tidy(html_build.page_html(repo, hp, by_rel, md, **urls) + landing.home_html(hp, icons, url_rel, img_rel))
+        f = {"page-id": "docs.home", "name": str(hp.fm.get("title") or "Documentation"), "section-id": "home",
+             "section-title": "Documentation", "order": 0, "level": 0, "parent-page-id": "", "body": body,
+             "version": str(hp.fm.get("version") or ""), "status": str(hp.fm.get("status") or "draft"),
+             "reading-minutes": 1, "source-path": home_rel, "summary": str(hp.fm.get("summary") or "")}
+        docs.append({"key": "docs.home", "slug": "home", "fields": f, "create": {}, "section": "home", "shared": []})
     nav = landing.nav_tree(tree, kids, icons, lambda sec: slugify(sec.id), lambda n: n.web_slug, sha[:7])
     nav["base"], nav["page_url"] = base, cfg["page_url"]
     return {"sha": sha, "sections": sections, "snippets": snippets, "pages": docs, "nav": nav}

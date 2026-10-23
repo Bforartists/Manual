@@ -9,6 +9,8 @@ path:
 version: "5.1"
 status: draft
 screenshots: "5.1"
+summary: "A mini tutorial: basic navigation, then your first render."
+cta: "Let's go"
 ---
 Dive in and start a mini tutorial to get started. Cover basic navigation and make your first render!
 

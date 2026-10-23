@@ -11,6 +11,8 @@ status: draft
 screenshots: "5.1"
 source:
   - 2 Installing Bforartists.odt
+summary: "How to install from the various distributions available."
+cta: "Get going"
 ---
 ## Getting Bforartists
 
