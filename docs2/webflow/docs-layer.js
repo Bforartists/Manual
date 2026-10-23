@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.1
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.2
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -96,7 +96,10 @@
     '.dk-chapters.is-list .dk-cgrid{grid-template-columns:1fr;gap:.5rem}',
     '.dk-chapters.is-list .dk-ccard{grid-template-columns:2.5rem minmax(0,1fr);padding:.625rem .875rem;align-items:center}',
     '.dk-chapters.is-list .dk-ccard .dk-sticker{width:2.5rem;height:2.5rem;border-radius:.5rem}',
-    '.dk-chapters.is-list .dk-ccard p,.dk-chapters.is-list .dk-ccard .dk-btn,.dk-chapters.is-list .dk-ccard small{display:none}',
+    '.dk-chapters.is-list .dk-ccard .dk-btn,.dk-chapters.is-list .dk-ccard small{display:none}',
+    '.dk-chapters.is-list .dk-ccard p{margin:.125rem 0 0;font-size:.8125rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}',
+    '.dk-chapters.is-list .dk-ccard em{margin:0}',
+    '.dk-ccard .dk-btn .ui-doc-tri{border-top-width:.3rem;border-bottom-width:.3rem;border-left-width:.4rem;opacity:.7}',
     '.dk-chapters.is-list .dk-ccard b{font-size:1.05rem}',
     '.dk-chapters.is-list .dk-ccard b img{display:none}',
     '@media(max-width:767px){.dk-hero{grid-template-columns:1fr;gap:1rem}.dk-hero .dk-sticker{width:6rem;height:6rem}.dk-cgrid{grid-template-columns:1fr}.dk-ccard,.dk-ccard.is-start{grid-template-columns:3.5rem minmax(0,1fr)}.dk-ccard .dk-sticker,.dk-ccard.is-start .dk-sticker{width:3.5rem;height:3.5rem}}',
@@ -289,8 +292,8 @@
       num++;
       var start = num === 1, c = el('a', 'dk-card dk-ccard' + (start ? ' is-start' : ''));
       c.href = href;
-      c.innerHTML = '<div class="dk-sticker">' + ico(n.i) + '</div><div><small>' + (start ? 'Start here · 1' : num) + '</small><b>' + ico(n.i) + '<span>' + esc(t) + '</span></b>' +
-        (sum ? '<p>' + esc(sum) + '</p>' : '') + '<span class="dk-btn is-small">' + ico(n.i) + esc(n.b || 'Read') + '</span>' + (below ? '<em>' + plural(below, 'page', 'pages') + '</em>' : '') + '</div>';
+      c.innerHTML = '<div class="dk-sticker">' + ico(n.i) + '</div><div><small>' + (start ? 'Start here · 1' : num) + '</small><b><span>' + esc(t) + '</span></b>' +
+        (sum ? '<p>' + esc(sum) + '</p>' : '') + '<span class="dk-btn is-small">' + esc(n.b || 'Read') + ' <i class="ui-doc-tri"></i></span>' + (below ? '<em>' + plural(below, 'page', 'pages') + '</em>' : '') + '</div>';
       return c;
     }
     qa(':scope > *', src).forEach(function (x) {
@@ -400,6 +403,13 @@
     if (here === 'home') return home();
     var n = IDX.by[here];
     if (n && n.land) overview(n);
+    pagerLabels();
+  }
+  function pagerLabels() {
+    qa('[data-doc-pager] .ui-doc-foot-go').forEach(function (a) {
+      var t = IDX.by[slugOf(a.getAttribute('href'))], sp = q('span', a);
+      if (t && t.land && sp && !/overview$/i.test(sp.textContent)) sp.textContent = t.t + ' overview';
+    });
   }
   function start() {
     var cached = null; try { cached = JSON.parse(ls(NK) || 'null'); } catch (e) {}
