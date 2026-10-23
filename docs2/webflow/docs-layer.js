@@ -110,6 +110,18 @@
     'html.dk-home .ui-doc-side,html.dk-home .ui-doc-outline,html.dk-home .ui-doc-head,html.dk-home .ui-doc-pager,html.dk-home .ui-doc-quick{display:none!important}',
     'html.dk-home .ui-doc-grid{grid-template-columns:minmax(0,1fr)!important;max-width:72rem;margin:0 auto}',
     'html.dk-home .ui-doc-body>.ui-doc-subsec{padding:0;background:none;box-shadow:none}',
+    'html.dk-home .ui-doc-body{max-width:none!important}',
+    '.dk-home-page h2::before,.dk-home-page h2::after,.dk-home-page h1::after{display:none!important;content:none!important}',
+    '.dk-home-page img{max-width:none;margin:0;box-shadow:none;border-radius:0}',
+    '.dk-home-page .dk-path-art img{width:3.5rem!important;height:3.5rem!important}',
+    '.dk-home-page .dk-sticker img{width:58%!important;height:58%!important}',
+    '.dk-home-page .dk-pop img,.dk-home-page .dk-btn img,.dk-home-page .dk-search img,.dk-home-page .dk-results img{width:16px!important;height:16px!important}',
+    '.dk-home-page .dk-help-card>img{width:2.25rem!important;height:2.25rem!important}',
+    '.dk-home-page .dk-explore img.dk-shot{width:100%!important;height:auto!important;border-radius:.375rem}',
+    '.dk-home-page .dk-explore p img{width:1.75rem!important;height:1.75rem!important}',
+    '.dk-chapters img{margin:0;box-shadow:none;max-width:none}',
+    '.dk-chapters .dk-sticker img{width:58%!important;height:58%!important}',
+    '.dk-chapters b img,.dk-chapters .dk-btn img{width:16px!important;height:16px!important;border-radius:0}',
     '.dk-h{margin:0 0 3.5rem}',
     '.dk-h-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2.5rem;align-items:center}',
     '.dk-h h1{margin:0 0 1rem;font-family:"Titillium Web",Titillium,sans-serif;font-size:3.25rem;line-height:1.05;font-weight:700;color:var(--dk-text);background:none!important;border:0!important;box-shadow:none!important;padding:0!important;display:block!important}',
@@ -199,6 +211,7 @@
   function crumbs() {
     var c = q('.ui-doc-crumb'); if (!c || c.dataset.dk) return; c.dataset.dk = '1';
     var root = q('a', c); if (root) root.setAttribute('href', HOME);
+    if (here === 'home') { while (root && root.nextSibling) root.nextSibling.remove(); if (root) root.setAttribute('aria-current', 'page'); return; }
     var cur = IDX.by[here]; if (!cur) return;
     var sec = cur.land ? cur : IDX.by[cur._sec.s];
     var sa = q('.ui-doc-crumb-section', c), hereEl = q('.ui-doc-crumb-here', c);
