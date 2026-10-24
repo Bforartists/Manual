@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.5 Editors - Properties Editor - Object Data Properties Tab - Surface Object.odt
+summary: "The 3D Viewport resolution of the generated mesh."
 ---
 ## Shape panel
 

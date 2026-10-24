@@ -11,7 +11,7 @@ path:
 version: "5.1"
 status: draft
 icon: topbar
-summary: "Quick Menu: All Modes."
+summary: "The quick menu, or in long Quick Favorites menu, is a menu that can be customized to your needs."
 order: 30
 ---
 # Quick Menu
@@ -58,9 +58,7 @@ Besides that, operators and menus gets added in the order that you add them. The
 
 ## Removing an operator from the Quick menu
 
-![Removing an operator from the Quick menu](/docs2/images/editors/3d-viewport/header/quick-menu/removing-an-operator-from-the-quick-menu.png)
-
-Removing is as simple as adding. Right click at the operators in the Quick menu, and choose Remove from Quick favorites.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 ## Context and mode dependent content
 

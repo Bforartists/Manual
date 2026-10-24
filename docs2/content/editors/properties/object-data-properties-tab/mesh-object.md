@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.1 Editors - Properties Editor - Object Data Properties Tab - Mesh Object.odt
+summary: "A Vertex group is a group of vertices, a selection of the mesh."
 ---
 ## Vertex groups panel
 

@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.22 Editors - Properties Editor - Particle Properties Tab - Hair - Render panel.odt
+summary: "Hair particles can be rendered as a Path."
 ---
 ## Render Panel
 

@@ -15,6 +15,7 @@ replaces:
   - editors.drivers-editor.sidebar.modifiers-tab
   - editors.drivers-editor.sidebar.driver-editor-sidebar-view-tab
 order: 30
+summary: "This panel displays the properties for the active F-Curve."
 ---
 The pages of this part are listed in the sidebar under *Sidebar*.
 

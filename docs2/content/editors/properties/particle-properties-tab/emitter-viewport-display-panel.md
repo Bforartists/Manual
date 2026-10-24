@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.8 Editors - Properties Editor - Particle Properties Tab - Emitter - Viewport Display panel.odt
+summary: "How to display the particles in the 3d viewport."
 ---
 ## Viewport Display
 

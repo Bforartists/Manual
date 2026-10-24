@@ -92,7 +92,6 @@ Scroll Wheel zooms the view.
 
 When you right click into the channel area, then you will call the Channel context menu.
 
-
 | Entry | What it does |
 | ----------------------- | -------------------------------------------------------------------------------------- |
 | Frame selected channels | Centers the selected channels in view. |
@@ -104,13 +103,11 @@ When you right click into the channel area, then you will call the Channel conte
 | Group Channels | Groups channels together. |
 | Ungroup Channels | Ungroup grouped channels. Beware, the channels will not return to their initial group. |
 
-
 ### Extrapolation Mode submenu
 
 ![Extrapolation Mode submenu](/docs2/images/editors/nonlinear-animation-editor/extrapolation-mode-submenu.png)
 
 Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.
-
 
 | Entry | What it does |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -119,12 +116,10 @@ Sets the extrapolation mode for the selected F-Curves. Means how the curve acts 
 | Make Cyclic | Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame. |
 | Clear Cyclic | Removes the cyclic extrapolation. |
 
-
 | Entry | What it does |
 | ----------------- | ----------------------- |
 | Expand Channels | Expands the channels. |
 | Collapse Channels | Collapses the channels. |
-
 
 ### Move Channels submenu
 
@@ -194,12 +189,10 @@ Deletes the selected strips.
 
 Turns selected strips into a meta strip. A group of strips.
 
-
 | Entry | What it does |
 | ------------------ | --------------------------------------------------------- |
 | Remove Meta Strips | Ungroups the meta strips into its original action strips. |
 | Swap Strips | Swaps the selected strips. |
-
 
 ### Snap
 
@@ -209,21 +202,13 @@ Snaps the selected strips by the chosen method.
 
 ## Slider snapping
 
-![Slider snapping](/docs2/images/editors/nonlinear-animation-editor/slider-snapping.png)
-
-Snapping also works at sliders. Hover with the mouse over the slider, start to slide, and holding down **Ctrl** will snap the sliders in incremental steps.
-
-When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.
-
-![Slider snapping](/docs2/images/editors/nonlinear-animation-editor/slider-snapping-2.png)
-
-The increment snapping also works at the frame slider. here the incremental snapping happens by the frame rate that you have defined. With a frame rate of 24 it will snap in steps of 24 frames when holding down ctrl.
+> Hold **Ctrl** while dragging a slider to snap it. See **[Snapping](../../interface/properties.md#snapping)** in the Interface chapter.
 
 ## Quick Favorites menu
 
 ![Quick Favorites menu](/docs2/images/editors/nonlinear-animation-editor/quick-favorites-menu.png)
 
-When you right click at a menu or a button, then a right click menu will open. Tools have usually a Add to Quick Favorites menu entry.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 The Quick Menu is empty by default. With Add to Quick favorites you can add this menu to the Quick menu.
 

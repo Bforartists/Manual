@@ -65,13 +65,11 @@ There are two different menus. One in Paint mode. And one in Mask mode. The View
 
 A right click in paint mode opens a color picker with some further settings.
 
-
 | Entry | What it does |
 | ---------- | ---------------------------------- |
 | Blend Mode | Choose the blend mode for drawing. |
 | Radius | The Brush radius. |
 | Strength | The Brush strength. |
-
 
 ### Mask context menu
 
@@ -107,7 +105,6 @@ A curve has a start point and a end point. Here you can switch them. The end poi
 
 Closes or opens the spline.
 
-
 | Entry | What it does |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | Re-Key Shape Points | Recalculate animation data for the currently selected curve points for frames that are selected in the dope sheet. |
@@ -117,12 +114,11 @@ Closes or opens the spline.
 | Clear Parent | Clears the parent relationship. |
 | Delete | Deletes the selected spline(s) or spline points. |
 
-
 ## Quick Favorites menu
 
 ![Quick Favorites menu](/docs2/images/editors/image-editor/quick-favorites-menu.png)
 
-When you right click at a menu or a button, then a right click menu will open. Tools have usually a Add to Quick Favorites menu entry.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 The Quick Menu is empty by default. With Add to Quick favorites you can add this menu to the Quick menu.
 
@@ -132,11 +128,7 @@ In the 3D view we have a menu called Quick in the header, which shows this conte
 
 ## Slider snapping
 
-![Slider snapping](/docs2/images/editors/image-editor/slider-snapping.png)
-
-Snapping also works at sliders. Hover with the mouse over the slider, start to slide, and holding down **Ctrl** will snap the sliders in incremental steps.
-
-When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.
+> Hold **Ctrl** while dragging a slider to snap it. See **[Snapping](../../interface/properties.md#snapping)** in the Interface chapter.
 
 ## Hotkey only functionality
 

@@ -12,6 +12,7 @@ source:
   - 39 Bforartists History.odt
 icon: blender
 order: 10
+summary: "The Bforartists 4 release marks a milestone in the history of Bforartists, where for the first time, the project was presented at the Blender Conference 2023."
 ---
 ## Bforartists 5 History
 

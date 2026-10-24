@@ -12,6 +12,7 @@ screenshots: "5.1"
 source:
   - 8.2 Editors - Image Editor - Tool Shelf.odt
 order: 20
+summary: "This menu just appears when you are in Mask mode."
 ---
 ## Tool Shelf in View Mode
 

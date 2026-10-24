@@ -1471,7 +1471,7 @@ When you duplicate a selection, then it sticks to the mouse until you left click
 
 ![Mode](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mode.png)
 
-Not to find out. No tool tip, no entry in the Blender manual. Good Job Blender Developers.
+Not to find out. It has no tooltip and is not documented upstream.
 
 ###### Move X, Y, Z
 
@@ -1900,7 +1900,7 @@ When you duplicate a selection, then it sticks to the mouse until you left click
 
 ![Mode](/docs2/images/editors/3d-viewport/context-menus/grease-pencil-object-edit-mode-point-context-menu/mode.png)
 
-Not to find out. No tool tip, no entry in the Blender manual. Good Job Blender Developers.
+Not to find out. It has no tooltip and is not documented upstream.
 
 ###### Move X, Y, Z
 

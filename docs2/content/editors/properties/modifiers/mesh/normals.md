@@ -13,6 +13,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.9.2 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Normals modifiers.odt
+summary: "The Normal Edit modifier affects (or generates) custom normals."
 ---
 ## Normal Edit
 

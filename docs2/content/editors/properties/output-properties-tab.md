@@ -1,6 +1,6 @@
 ---
 id: editors.properties.output-properties-tab
-title: Output Properties Tab
+title: "Output"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.3 Editors - Properties Editor - Output Properties Tab.odt
+summary: "The Output properties contains all the settings to render the final image or movie."
+icon: output
+order: 20
 ---
 ## Output Properties Tab
 
@@ -753,7 +756,7 @@ Resets the Curve and the Black and White Level values to the default values.
 
 ![Use White Balance subpanel](/docs2/images/editors/properties/output-properties-tab/use-white-balance-subpanel.png)
 
-Enables manual control over the color temperature and tint of the scene or image. When checked, Blender applies the adjustments below to simulate camera-style white balance correction.
+Enables manual control over the color temperature and tint of the scene or image. When checked, Bforartists applies the adjustments below to simulate camera-style white balance correction.
 
 ###### Temperature
 

@@ -13,6 +13,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.9.6 Editors - Properties Editor - Modifiers Properties Tab - Mesh - Add Modifier menu - Physics modifiers.odt
+summary: "Physics modifiers are available for Mesh object, Curve + Text object and Lattice Object"
 ---
 Physics modifiers are available for Mesh object, Curve + Text object and Lattice Object
 

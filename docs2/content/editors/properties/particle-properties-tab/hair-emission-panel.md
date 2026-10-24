@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.17 Editors - Properties Editor - Particle Properties Tab - Hair - Emission Panel.odt
+summary: "The buttons in the Emission panel control the way particles are emitted over time."
 ---
 ## Emission Panel
 
@@ -23,7 +24,7 @@ The buttons in the Emission panel control the way particles are emitted over tim
 | Entry | What it does |
 | ----------- | ------------------------------------------------------------------------------------ |
 | Number | The amount of hair strands. |
-| Seed | Blender uses this as starting point to produce random numbers during the simulation. |
+| Seed | Bforartists uses this as starting point to produce random numbers during the simulation. |
 | Hair Length | Controls the length of the hair. |
 | Segments | How much segments each hair should have. |
 

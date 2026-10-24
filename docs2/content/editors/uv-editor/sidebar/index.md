@@ -16,6 +16,7 @@ replaces:
   - editors.uv-editor.sidebar.tool-tab
   - editors.uv-editor.sidebar.view-tab
 order: 30
+summary: "The Image Editor is made of several areas."
 ---
 ## Introduction
 

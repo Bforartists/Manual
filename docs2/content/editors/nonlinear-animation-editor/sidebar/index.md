@@ -14,6 +14,7 @@ replaces:
   - editors.nonlinear-animation-editor.sidebar.nla-editor-sidebar-strip-tab
   - editors.nonlinear-animation-editor.sidebar.nla-editor-sidebar-modifiers-tab
 order: 30
+summary: "When you select a cube action without content then you will get the Animation Data panel in the sidebar."
 ---
 The pages of this part are listed in the sidebar under *Sidebar*.
 

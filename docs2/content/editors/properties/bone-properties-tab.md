@@ -1,6 +1,6 @@
 ---
 id: editors.properties.bone-properties-tab
-title: Bone Properties Tab
+title: "Bone"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.17 Editors - Properties Editor - Bone Properties Tab.odt
+summary: "The bone tab contains bone related settings."
+icon: bone_data
+order: 140
 ---
 ## Editors - Properties Editor - Bone Tab
 

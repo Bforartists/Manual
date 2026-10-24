@@ -13,6 +13,7 @@ source:
   - 17 Editors - Timeline.odt
   - 17.2 Editors - Timeline - Channel list.odt
 order: 40
+summary: "The channel list contains your objects and their animation channels."
 ---
 ## Timeline - Channel List
 

@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.16 Editors - Properties Editor - Object Data Properties Tab - Force Field Object.odt
+summary: "The curve guide is a curve style object."
 ---
 ## Force field of type Curve Guide
 

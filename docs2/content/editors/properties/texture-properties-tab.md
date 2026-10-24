@@ -1,6 +1,6 @@
 ---
 id: editors.properties.texture-properties-tab
-title: Texture Properties Tab
+title: "Texture"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.16 Editors - Properties Editor - Texture Properties Tab.odt
+summary: "In this panel you can create or load textures for the brushes in the image painting modes."
+icon: texture
+order: 170
 ---
 ## Properties Editor - Texture Tab
 

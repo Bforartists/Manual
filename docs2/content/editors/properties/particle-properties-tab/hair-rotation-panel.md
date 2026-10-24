@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.20 Editors - Properties Editor - Particle Properties Tab - Hair - Rotation panel.odt
+summary: "Specify how the individual particles are rotated during their travel."
 ---
 ## Rotation Panel
 

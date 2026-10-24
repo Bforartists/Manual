@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.12.4 Editors - Properties Editor - Physics Properties Tab - Dynamic Paint panel.odt
+summary: "Dynamic paint is a modifier and physics system that allows to paint at the mesh surface of an object."
 ---
 ## Dynamic Paint
 

@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.18 Editors - Properties Editor - Particle Properties Tab - Hair - Cache Panel.odt
+summary: "Particle data can be cached in memory or stored on a drive."
 ---
 ## Cache Panel
 

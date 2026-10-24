@@ -1,6 +1,6 @@
 ---
 id: editors.properties.collection-properties-tab
-title: Collection Properties Tab
+title: "Collection"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.7 Editors - Properties Editor - Collection Properties Tab.odt
+summary: "The collection tab provides you with collection related settings."
+icon: group
+order: 60
 ---
 ## Collection Properties Tab
 

@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.14 Editors - Properties Editor - Object Data Properties Tab - Light Object.odt
+summary: "Provides a preview window for the light."
 ---
 ## Preview panel
 

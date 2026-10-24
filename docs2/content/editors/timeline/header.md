@@ -16,6 +16,7 @@ shared:
   - docs2/snippets/quick-menu.md
   - docs2/snippets/marker-menu.md
 order: 10
+summary: "The header contains various menus and tools."
 ---
 ## Introduction
 
@@ -41,7 +42,6 @@ Number of frames or seconds to jump forward or backward.
 
 What to use for the time jump. Frames or Seconds.
 
-
 | Property | What it changes |
 | --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | Jump to Endpoint - start | Jumps to the first frame. |
@@ -52,7 +52,6 @@ What to use for the time jump. Frames or Seconds.
 | Jump to Endpoint - end | Jumps to the last frame. |
 | Cancel animation | Cancels the animation and returns to the original frame. |
 | Current Frame | The edit box with the position of the current frame. Click at the value and type in another value to jump to another frame. |
-
 
 ### Set Start Frame
 
@@ -68,7 +67,6 @@ Toggle an alternative range used to preview animations. The Preview range works 
 
 The preview range is displayed in orange color. The original playback range that is used for rendering is still displayed in grey underneath. When Use Preview Range is on, then the animation will loop between the Preview range.
 
-
 | Property | What it changes |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Start | The start frame for the animation in current mode. |
@@ -76,7 +74,6 @@ The preview range is displayed in orange color. The original playback range that
 | Set End Frame | Sets the current frame position as the end frame. |
 | Insert Keyframe | Inserts a keyframe. If you do not have a keying set assigned, this will default to the default keying set defined in the Preferences. |
 | Delete Keyframe | Removes the keyframe at the current position in the current active keying set. |
-
 
 ## Active Keying Set
 
@@ -98,14 +95,12 @@ Note that Auto Keying just works with transform properties ( Objects and Bones) 
 
 Auto keying settings. These settings shows when you have auto keying activated.
 
-
 | Property | What it changes |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Auto keying mode | **Add & Replace**: Replace existing keyframes and add new ones where no keyframes exists. · **Replace**: Just replace existing keyframes. |
 | Only Active Keying Set | Automatic keyframe insertion using active keying set only. |
 | Layered Recording | Add a new nla track and strip for every loop or pass made over the animation. This allows non destructive tweaking. |
 | Cycle aware keying | For channels with cyclic extrapolation, the keyframe insertion is automatically remapped inside the cycle time range, and keeps the ends in sync. |
-
 
 ### Active Keying Set
 
@@ -123,13 +118,11 @@ Here you can find various options for playback.
 
 How to synchronize playback.
 
-
 | Property | What it changes |
 | -------------- | --------------------------------------------- |
 | No Sync | Don't synchronize. Play every frame. |
 | Frame Dropping | Drop frames if playback is too slow. |
 | AV Sync | Drop frames to synchronize to Audio Playback. |
-
 
 ### Audio Scrubbing
 
@@ -137,14 +130,12 @@ How to synchronize playback.
 
 Play existing audio from sequence editor when scrubbing.
 
-
 | Property | What it changes |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | Play Audio | Play back existing audio from sequence editor, otherwise mute the audio when deactivated. Use the Sequence Editor to add audio. |
 | Sub frames | Show current scene sub frame and allow to set it by using interface tools. |
 | Limit Playback to Frame Range | Don't allow frame selection with the mouse outside of the play range. |
 | Follow Current Frame | Follow current frame in editors. |
-
 
 ### Play in
 
@@ -168,13 +159,11 @@ Plays the animation in the chosen editor types.
 
 Playhead controls in animation editors help position the current frame indicator with precision, improving navigation and editing across the Timeline, Dope Sheet, Graph Editor, NLA, and Video Sequencer.
 
-
 | Property | What it changes |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Toggle Playhead Snapping On/Off | Toggles snapping behavior for the playhead with a visual indicator. When enabled, the playhead will snap to nearby time-based targets during scrubbing or dragging. **Tip:** *You can temporarily enable/disable the playhead snapping by holding down Ctrl while dragging the playhead.* |
 | Distance | Sets the snapping threshold in pixels. Determines how close the playhead must be to a target for snapping to occur. |
 | Snap Target | **Frames**: Snaps to whole frame numbers. Ideal for frame-accurate editing instead of sub-frame cursor placement. · **Seconds**: Snaps to time intervals measured in seconds. Useful for audio syncing or time-based pacing. · **Markers**: Snaps to the closest timeline marker. Great for aligning actions to scene events or beats. · **Keyframes**: Snaps to keyframe positions. Ensures precise alignment for editing and playback. · **Strips**: Snaps to the start or end of video/audio strips. Useful in the Video Sequencer and NLA editor. |
-
 
 ### Frame Step
 
@@ -206,29 +195,24 @@ Recolor the currently selected keyframes. Or create the new keyframes with this 
 
 ![Auto Keyframing](/docs2/images/ui/timeline/header/auto-keyframing.png)
 
-
 | Property | What it changes |
 | ------------------------------- | -------------------------------------------------------------- |
 | Auto Keying Mode | Just replace existing keyframes, or add keyframes too. |
 | Auto Keyframe Insert Keying Set | Automatic Keyframe Insertion using the active keying set only. |
-
 
 | Property | What it changes |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | Layered Recording | Add a new NLA Track and Strip for every loop/ pass made over the animation to allow non destructive tweaking. |
 | Cycle Aware Keying | For channels with cyclic extrapolation, keyframe insertion is automatically remapped inside the cycle time range, and keeps the ends in sync. |
 
-
 ## Options
 
 ![Options](/docs2/images/ui/timeline/header/options.png)
-
 
 | Property | What it changes |
 | ------------------ | ------------------------------------------------------- |
 | Only show errors | Only include f-curves that are disabled or have errors. |
 | Only show selected | Just show the keyframes from the selected object. |
-
 
 ### Show Seconds
 
@@ -236,14 +220,12 @@ Recolor the currently selected keyframes. Or create the new keyframes with this 
 
 Show the timing in the timeline area in seconds instead of frames.
 
-
 | Property | What it changes |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sync visible range | Synchronize the visible timeline range with other visible time based editors. When you zoom in or out in the one editor, then it zooms in or out in the other editor too. Each editor to sync needs to have Sync Visible Range ticked. |
 | Show Markers | Display the markers row at the bottom of the view. |
 | Lock Markers | Make the markers uneditable. |
 | Show Cache | Show animation information for cached objects like Particles. · **Softbody, Particles, etc.**: Include or exclude what kind of cache types you want to display. |
-
 
 ## Dope Sheet Overlays
 
@@ -281,7 +263,6 @@ Shows the adjust last operation panel down left.
 
 Shows the channels list at the left
 
-
 | Menu entry | What it does |
 | ------------------- | ----------------------------------------------------------------------------------------------------- |
 | Zoom In | Zooms in. |
@@ -292,35 +273,28 @@ Shows the channels list at the left
 | Frame Scene Range | With Use Preview Range off , reset the horizontal view to the current scene frame range. |
 | Frame Preview Range | With Use Preview Range on , reset the horizontal view to the current preview frame range. |
 
-
 ### Area submenu
 
 ![Area submenu](/docs2/images/ui/timeline/header/area-submenu.png)
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-
 | Menu entry | What it does |
 | ---------------- | ------------------------------------------------------------------------- |
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-
 #### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/ui/timeline/header/duplicate-area-into-new-window.png)
 
-Duplicate Area into New Window makes the selected editor window floating. You can then drag it around at the monitor. It is not connected with the rest of the UI anymore.
-
-A separated window cannot be merged into the main window again. You have to close it when not longer needed.
-
+> **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
 | Menu entry | What it does |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu. |
 | Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
 | Close Area | Closes the area window. |
-
 
 ## Marker menu
 

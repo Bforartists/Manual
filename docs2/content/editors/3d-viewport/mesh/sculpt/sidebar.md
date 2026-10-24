@@ -55,7 +55,6 @@ This menu becomes active when you create a new brush. Which can be done wiht the
 
 Calls a popup where you can adjust further informations and settings for the brush.
 
-
 | Entry | What it does |
 | ------------------ | ----------------------------------------------- |
 | Catalog | The asset catalog in which the brush is stored. |
@@ -64,12 +63,10 @@ Calls a popup where you can adjust further informations and settings for the bru
 | OK / Cancel | Accept or decline the changes. |
 | Edit Preview Image | Allows you to load a custom preview image. |
 
-
 | Entry | What it does |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | Save Brush Asset | This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush. |
 | Revert Brush Asset | Reverts the brush settings to the default values of the brush in the asset library. |
-
 
 #### Name
 
@@ -129,12 +126,10 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-
 | Entry | What it does |
 | -------- | ------------ |
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
-
 
 ##### Clipping options
 
@@ -148,12 +143,10 @@ Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-
 | Entry | What it does |
 | ----------- | -------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
-
 
 ##### Handles
 
@@ -213,12 +206,10 @@ The ratio between the brush radius and the radius that is going to be used to sa
 
 How close the brush fallow starts from the edge of the brush.
 
-
 | Entry | What it does |
 | ---------------------------- | -------------------------------------------------- |
 | Invert Pressure for Hardness | Invert the modulation of pressure in hardness. |
 | Use pressure for hardness | Tablet feature. Use pressure to modulate hardness. |
-
 
 ### Autosmooth
 
@@ -300,12 +291,10 @@ Various brushes like Clay, Clay Thumb, Fill and Scrape brush. Enable Plane Trim.
 
 Adjust the plane trim distance.
 
-
 | Entry | What it does |
 | ------------- | -------------------------------- |
 | Tip roundness | Roundness of the brush tip. |
 | Tip Scale X | Scale of the tip in x direction. |
-
 
 ## Brush Settings Panel - Clay Thumb brush
 
@@ -453,30 +442,25 @@ Adjust the plane on which the brush acts towards or away from the objects surfac
 
 Just a warning that the plane trim option is not available for this brush.
 
-
 | Entry | What it does |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Height | The maximum distance above the plane for affected vertices. Increasing the height affects vertices farther above the plane. |
 | Depth | The maximum distance below the plane for affected vertices. Increasing the height affects vertices farther above the plane. |
 | Area Radius | The ratio between the brush radius and the radius that is going to be used to sample the area center. · **Size Pressure**: Enables tablet pressure sensitivity for radius. |
 
-
 ### Inversion Mode
 
 ![Inversion Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/inversion-mode.png)
-
 
 | Entry | What it does |
 | --------------------- | ----------------------------------------- |
 | Invert Displacement | Displace the vertice away from the plane. |
 | Swap Height and Depth | Swaps the roles of height and depth. |
 
-
 | Entry | What it does |
 | ---------------- | --------------------------------------------- |
 | Stabilize Normal | Stabilize the orientation of the brush plane. |
 | Stabilize Plane | Stabilize the orientation of the brush plane. |
-
 
 ## Brush Settings Panel - Flatten/Contrast brush
 
@@ -502,30 +486,25 @@ Adjust the plane on which the brush acts towards or away from the objects surfac
 
 Just a warning that the plane trim option is not available for this brush.
 
-
 | Entry | What it does |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Height | The maximum distance above the plane for affected vertices. Increasing the height affects vertices farther above the plane. |
 | Depth | The maximum distance below the plane for affected vertices. Increasing the height affects vertices farther above the plane. |
 | Area Radius | The ratio between the brush radius and the radius that is going to be used to sample the area center. · **Size Pressure**: Enables tablet pressure sensitivity for radius. |
 
-
 ### Inversion Mode
 
 ![Inversion Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/inversion-mode.png)
-
 
 | Entry | What it does |
 | --------------------- | ----------------------------------------- |
 | Invert Displacement | Displace the vertice away from the plane. |
 | Swap Height and Depth | Swaps the roles of height and depth. |
 
-
 | Entry | What it does |
 | ---------------- | --------------------------------------------- |
 | Stabilize Normal | Stabilize the orientation of the brush plane. |
 | Stabilize Plane | Stabilize the orientation of the brush plane. |
-
 
 ## Brush Settings Panel - Plateau brush
 
@@ -551,30 +530,25 @@ Adjust the plane on which the brush acts towards or away from the objects surfac
 
 Just a warning that the plane trim option is not available for this brush.
 
-
 | Entry | What it does |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Height | The maximum distance above the plane for affected vertices. Increasing the height affects vertices farther above the plane. |
 | Depth | The maximum distance below the plane for affected vertices. Increasing the height affects vertices farther above the plane. |
 | Area Radius | The ratio between the brush radius and the radius that is going to be used to sample the area center. · **Size Pressure**: Enables tablet pressure sensitivity for radius. |
 
-
 ### Inversion Mode
 
 ![Inversion Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/inversion-mode.png)
-
 
 | Entry | What it does |
 | --------------------- | ----------------------------------------- |
 | Invert Displacement | Displace the vertice away from the plane. |
 | Swap Height and Depth | Swaps the roles of height and depth. |
 
-
 | Entry | What it does |
 | ---------------- | --------------------------------------------- |
 | Stabilize Normal | Stabilize the orientation of the brush plane. |
 | Stabilize Plane | Stabilize the orientation of the brush plane. |
-
 
 ## Brush Settings Panel - Scrape Multi-plane brush
 
@@ -624,30 +598,25 @@ Adjust the plane on which the brush acts towards or away from the objects surfac
 
 Just a warning that the plane trim option is not available for this brush.
 
-
 | Entry | What it does |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Height | The maximum distance above the plane for affected vertices. Increasing the height affects vertices farther above the plane. |
 | Depth | The maximum distance below the plane for affected vertices. Increasing the height affects vertices farther above the plane. |
 | Area Radius | The ratio between the brush radius and the radius that is going to be used to sample the area center. · **Size Pressure**: Enables tablet pressure sensitivity for radius. |
 
-
 ### Inversion Mode
 
 ![Inversion Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/inversion-mode.png)
-
 
 | Entry | What it does |
 | --------------------- | ----------------------------------------- |
 | Invert Displacement | Displace the vertice away from the plane. |
 | Swap Height and Depth | Swaps the roles of height and depth. |
 
-
 | Entry | What it does |
 | ---------------- | --------------------------------------------- |
 | Stabilize Normal | Stabilize the orientation of the brush plane. |
 | Stabilize Plane | Stabilize the orientation of the brush plane. |
-
 
 ## Brush Settings Panel - Smooth brush
 
@@ -667,12 +636,10 @@ Smooth or enhance the surface detail.
 
 Smooth or enhance the surface detail.
 
-
 | Entry | What it does |
 | --------- | ----------------------------------------------- |
 | Laplacian | Smoothens the surface and the volume. |
 | Surface | Smoothens the surface and preserves the volume. |
-
 
 ## Brush Settings Panel - Trim brush
 
@@ -698,30 +665,25 @@ Adjust the plane on which the brush acts towards or away from the objects surfac
 
 Just a warning that the plane trim option is not available for this brush.
 
-
 | Entry | What it does |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Height | The maximum distance above the plane for affected vertices. Increasing the height affects vertices farther above the plane. |
 | Depth | The maximum distance below the plane for affected vertices. Increasing the height affects vertices farther above the plane. |
 | Area Radius | The ratio between the brush radius and the radius that is going to be used to sample the area center. · **Size Pressure**: Enables tablet pressure sensitivity for radius. |
 
-
 ### Inversion Mode
 
 ![Inversion Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/inversion-mode.png)
-
 
 | Entry | What it does |
 | --------------------- | ----------------------------------------- |
 | Invert Displacement | Displace the vertice away from the plane. |
 | Swap Height and Depth | Swaps the roles of height and depth. |
 
-
 | Entry | What it does |
 | ---------------- | --------------------------------------------- |
 | Stabilize Normal | Stabilize the orientation of the brush plane. |
 | Stabilize Plane | Stabilize the orientation of the brush plane. |
-
 
 ## Brush Settings Panel - Boundary brush
 
@@ -935,7 +897,6 @@ Pose Brush setting. Define the rotation origins.
 
 Pose Brush setting. Offset of the pose origin in relation to the brush radius.
 
-
 | Entry | What it does |
 | -------------------- | ----------------------------------------------------------------------------------------------- |
 | Smooth Iterations | Pose Brush setting. Smooth iterations applied after calculating the pose factor of each vertex. |
@@ -943,7 +904,6 @@ Pose Brush setting. Offset of the pose origin in relation to the brush radius.
 | Keep Anchor Point | Pose Brush setting. Keep the position of the last segment in the IK chain fixed. |
 | Connected only | Affect only topology connected elements. |
 | Max Element Distance | Maximum distance to search for disconnected loose parts in the mesh. |
-
 
 ## Brush Settings Panel - Pull brush
 
@@ -1119,19 +1079,16 @@ Set the primary and secondary color for painting.
 
 Clicking at one of the colors will reveal a color wheel where you can adjust your color.
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------- |
 | Swap Colors | Swaps the primary color with the secondary color. |
 | Use Unified Color | The colors are shared across the brushes. |
-
 
 ### Blend Mode
 
 ![Blend Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/blend-mode.png)
 
 The blend mode of the brush. How the color is applied.
-
 
 | Entry | What it does |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1142,7 +1099,6 @@ The blend mode of the brush. How the color is applied.
 | Density | How dense the stroke is. |
 | Tip roundness | Roundness of the brush tip. |
 | Tip Scale X | Scale of the tip in x direction. |
-
 
 ## Brush Settings Panel - Blend Hard brush
 
@@ -1162,19 +1118,16 @@ Set the primary and secondary color for painting.
 
 Clicking at one of the colors will reveal a color wheel where you can adjust your color.
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------- |
 | Swap Colors | Swaps the primary color with the secondary color. |
 | Use Unified Color | The colors are shared across the brushes. |
-
 
 ### Blend Mode
 
 ![Blend Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/blend-mode.png)
 
 The blend mode of the brush. How the color is applied.
-
 
 | Entry | What it does |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1185,7 +1138,6 @@ The blend mode of the brush. How the color is applied.
 | Density | How dense the stroke is. |
 | Tip roundness | Roundness of the brush tip. |
 | Tip Scale X | — |
-
 
 ## Brush Settings Panel - Blend Soft brush
 
@@ -1205,19 +1157,16 @@ Set the primary and secondary color for painting.
 
 Clicking at one of the colors will reveal a color wheel where you can adjust your color.
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------- |
 | Swap Colors | Swaps the primary color with the secondary color. |
 | Use Unified Color | The colors are shared across the brushes. |
-
 
 ### Blend Mode
 
 ![Blend Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/blend-mode.png)
 
 The blend mode of the brush. How the color is applied.
-
 
 | Entry | What it does |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1228,7 +1177,6 @@ The blend mode of the brush. How the color is applied.
 | Density | How dense the stroke is. |
 | Tip roundness | Roundness of the brush tip. |
 | Tip Scale X | The scale of the tip in X direction. |
-
 
 ## Brush Settings Panel - Blend Square brush
 
@@ -1248,19 +1196,16 @@ Set the primary and secondary color for painting.
 
 Clicking at one of the colors will reveal a color wheel where you can adjust your color.
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------- |
 | Swap Colors | Swaps the primary color with the secondary color. |
 | Use Unified Color | The colors are shared across the brushes. |
-
 
 ### Blend Mode
 
 ![Blend Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/blend-mode.png)
 
 The blend mode of the brush. How the color is applied.
-
 
 | Entry | What it does |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1271,7 +1216,6 @@ The blend mode of the brush. How the color is applied.
 | Density | How dense the stroke is. |
 | Tip roundness | Roundness of the brush tip. |
 | Tip Scale X | The scale of the tip in X direction. |
-
 
 ## Brush Settings Panel - Paint Blend brush
 
@@ -1291,19 +1235,16 @@ Set the primary and secondary color for painting.
 
 Clicking at one of the colors will reveal a color wheel where you can adjust your color.
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------- |
 | Swap Colors | Swaps the primary color with the secondary color. |
 | Use Unified Color | The colors are shared across the brushes. |
-
 
 ### Blend Mode
 
 ![Blend Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/blend-mode.png)
 
 The blend mode of the brush. How the color is applied.
-
 
 | Entry | What it does |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1314,7 +1255,6 @@ The blend mode of the brush. How the color is applied.
 | Density | How dense the stroke is. |
 | Tip roundness | Roundness of the brush tip. |
 | Tip Scale X | The scale of the tip in X direction. |
-
 
 ## Brush Settings Panel - Paint Hard brush
 
@@ -1334,19 +1274,16 @@ Set the primary and secondary color for painting.
 
 Clicking at one of the colors will reveal a color wheel where you can adjust your color.
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------- |
 | Swap Colors | Swaps the primary color with the secondary color. |
 | Use Unified Color | The colors are shared across the brushes. |
-
 
 ### Blend Mode
 
 ![Blend Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/blend-mode.png)
 
 The blend mode of the brush. How the color is applied.
-
 
 | Entry | What it does |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1357,7 +1294,6 @@ The blend mode of the brush. How the color is applied.
 | Density | How dense the stroke is. |
 | Tip roundness | Roundness of the brush tip. |
 | Tip Scale X | The scale of the tip in X direction. |
-
 
 ## Brush Settings Panel - Paint Hard Pressure brush
 
@@ -1377,19 +1313,16 @@ Set the primary and secondary color for painting.
 
 Clicking at one of the colors will reveal a color wheel where you can adjust your color.
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------- |
 | Swap Colors | Swaps the primary color with the secondary color. |
 | Use Unified Color | The colors are shared across the brushes. |
-
 
 ### Blend Mode
 
 ![Blend Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/blend-mode.png)
 
 The blend mode of the brush. How the color is applied.
-
 
 | Entry | What it does |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1400,7 +1333,6 @@ The blend mode of the brush. How the color is applied.
 | Density | How dense the stroke is. |
 | Tip roundness | Roundness of the brush tip. |
 | Tip Scale X | The scale of the tip in X direction. |
-
 
 ## Brush Settings Panel - Paint Soft brush
 
@@ -1420,19 +1352,16 @@ Set the primary and secondary color for painting.
 
 Clicking at one of the colors will reveal a color wheel where you can adjust your color.
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------- |
 | Swap Colors | Swaps the primary color with the secondary color. |
 | Use Unified Color | The colors are shared across the brushes. |
-
 
 ### Blend Mode
 
 ![Blend Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/blend-mode.png)
 
 The blend mode of the brush. How the color is applied.
-
 
 | Entry | What it does |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1443,7 +1372,6 @@ The blend mode of the brush. How the color is applied.
 | Density | How dense the stroke is. |
 | Tip roundness | Roundness of the brush tip. |
 | Tip Scale X | The scale of the tip in X direction. |
-
 
 ## Brush Settings Panel - Paint Soft Pressure brush
 
@@ -1463,19 +1391,16 @@ Set the primary and secondary color for painting.
 
 Clicking at one of the colors will reveal a color wheel where you can adjust your color.
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------- |
 | Swap Colors | Swaps the primary color with the secondary color. |
 | Use Unified Color | The colors are shared across the brushes. |
-
 
 ### Blend Mode
 
 ![Blend Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/blend-mode.png)
 
 The blend mode of the brush. How the color is applied.
-
 
 | Entry | What it does |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1486,7 +1411,6 @@ The blend mode of the brush. How the color is applied.
 | Density | How dense the stroke is. |
 | Tip roundness | Roundness of the brush tip. |
 | Tip Scale X | The scale of the tip in X direction. |
-
 
 ## Brush Settings Panel - Paint Square brush
 
@@ -1506,19 +1430,16 @@ Set the primary and secondary color for painting.
 
 Clicking at one of the colors will reveal a color wheel where you can adjust your color.
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------- |
 | Swap Colors | Swaps the primary color with the secondary color. |
 | Use Unified Color | The colors are shared across the brushes. |
-
 
 ### Blend Mode
 
 ![Blend Mode](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/blend-mode.png)
 
 The blend mode of the brush. How the color is applied.
-
 
 | Entry | What it does |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1529,7 +1450,6 @@ The blend mode of the brush. How the color is applied.
 | Density | How dense the stroke is. |
 | Tip roundness | Roundness of the brush tip. |
 | Tip Scale X | The scale of the tip in X direction. |
-
 
 ## Brush Settings Panel - Sharpen brush
 
@@ -1607,7 +1527,6 @@ What kind of deformation to apply.
 
 The point to bend or twist around.
 
-
 | Entry | What it does |
 | -------------------- | ----------------------------------------------------------------------------- |
 | Pose Origin Offset | Offset of the boundary origin in relation to the brush radius. |
@@ -1616,7 +1535,6 @@ The point to bend or twist around.
 | Keep Anchor Point | Keep the position of the last segment in the ik chain fixed. |
 | Connected only | Affect only topological connected geometry. |
 | Max Element Distance | Maximum distance to search for disconnected loose parts in the mesh |
-
 
 ## Brush Settings Panel - Drag Cloth brush
 
@@ -1640,12 +1558,10 @@ This button resets the base so that you can add another layer.
 
 What data to affect. The simulation or the geometry.
 
-
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------------------- |
 | Simulation Limit | Factor to limit the cloth simulation effects. |
 | Simulation Falloff | Area to apply the deformation falloff to the effects of the simulation. |
-
 
 ### Deformation
 
@@ -1659,14 +1575,12 @@ What kind of deformation.
 
 Brush shape to apply force.
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------- |
 | Cloth Mass | Mass of each simulation particle. |
 | Cloth Damping | How much the applied forces are propagated through the cloth. |
 | Soft Body Plasticity | How much the cloth preserves the original shap, acting as a softbody. |
 | Enable Collision | Enable the collision with objects during the simulation. |
-
 
 ## Brush Settings Panel - Expand/Contract Cloth brush
 
@@ -1690,12 +1604,10 @@ This button resets the base so that you can add another layer.
 
 What data to affect. The simulation or the geometry.
 
-
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------------------- |
 | Simulation Limit | Factor to limit the cloth simulation effects. |
 | Simulation Falloff | Area to apply the deformation falloff to the effects of the simulation. |
-
 
 ### Deformation
 
@@ -1709,14 +1621,12 @@ What kind of deformation.
 
 Brush shape to apply force.
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------- |
 | Cloth Mass | Mass of each simulation particle. |
 | Cloth Damping | How much the applied forces are propagated through the cloth. |
 | Soft Body Plasticity | How much the cloth preserves the original shap, acting as a softbody. |
 | Enable Collision | Enable the collision with objects during the simulation. |
-
 
 ## Brush Settings Panel - Grab Cloth brush
 
@@ -1740,13 +1650,11 @@ This button resets the base so that you can add another layer.
 
 What data to affect. The simulation or the geometry.
 
-
 | Entry | What it does |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Simulation Limit | Factor to limit the cloth simulation effects. |
 | Simulation Falloff | Area to apply the deformation falloff to the effects of the simulation. |
 | Pin Simulation Boundary | Lock the position of the vertices in the simulation falloff area. This can help to avoid artifacts, and creates a softer transition with unaffected areas. |
-
 
 ### Deformation
 
@@ -1760,14 +1668,12 @@ What kind of deformation.
 
 Brush shape to apply force.
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------- |
 | Cloth Mass | Mass of each simulation particle. |
 | Cloth Damping | How much the applied forces are propagated through the cloth. |
 | Soft Body Plasticity | How much the cloth preserves the original shap, acting as a softbody. |
 | Enable Collision | Enable the collision with objects during the simulation. |
-
 
 ## Brush Settings Panel - Grab Planar Cloth brush
 
@@ -1791,12 +1697,10 @@ This button resets the base so that you can add another layer.
 
 What data to affect. The simulation or the geometry.
 
-
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------------------- |
 | Simulation Limit | Factor to limit the cloth simulation effects. |
 | Simulation Falloff | Area to apply the deformation falloff to the effects of the simulation. |
-
 
 ### Deformation
 
@@ -1810,14 +1714,12 @@ What kind of deformation.
 
 Brush shape to apply force.
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------- |
 | Cloth Mass | Mass of each simulation particle. |
 | Cloth Damping | How much the applied forces are propagated through the cloth. |
 | Soft Body Plasticity | How much the cloth preserves the original shap, acting as a softbody. |
 | Enable Collision | Enable the collision with objects during the simulation. |
-
 
 ## Brush Settings Panel - Grab Random Cloth brush
 
@@ -1841,13 +1743,11 @@ This button resets the base so that you can add another layer.
 
 What data to affect. The simulation or the geometry.
 
-
 | Entry | What it does |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Simulation Limit | Factor to limit the cloth simulation effects. |
 | Simulation Falloff | Area to apply the deformation falloff to the effects of the simulation. |
 | Pin Simulation Boundary | Lock the position of the vertices in the simulation falloff area. This can help to avoid artifacts, and creates a softer transition with unaffected areas. |
-
 
 ### Deformation
 
@@ -1861,14 +1761,12 @@ What kind of deformation.
 
 Brush shape to apply force.
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------- |
 | Cloth Mass | Mass of each simulation particle. |
 | Cloth Damping | How much the applied forces are propagated through the cloth. |
 | Soft Body Plasticity | How much the cloth preserves the original shap, acting as a softbody. |
 | Enable Collision | Enable the collision with objects during the simulation. |
-
 
 ## Brush Settings Panel - Inflate Cloth brush
 
@@ -1892,12 +1790,10 @@ This button resets the base so that you can add another layer.
 
 What data to affect. The simulation or the geometry.
 
-
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------------------- |
 | Simulation Limit | Factor to limit the cloth simulation effects. |
 | Simulation Falloff | Area to apply the deformation falloff to the effects of the simulation. |
-
 
 ### Deformation
 
@@ -1911,14 +1807,12 @@ What kind of deformation.
 
 Brush shape to apply force.
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------- |
 | Cloth Mass | Mass of each simulation particle. |
 | Cloth Damping | How much the applied forces are propagated through the cloth. |
 | Soft Body Plasticity | How much the cloth preserves the original shap, acting as a softbody. |
 | Enable Collision | Enable the collision with objects during the simulation. |
-
 
 ## Brush Settings Panel - Pinch Folds Cloth brush
 
@@ -1942,12 +1836,10 @@ This button resets the base so that you can add another layer.
 
 What data to affect. The simulation or the geometry.
 
-
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------------------- |
 | Simulation Limit | Factor to limit the cloth simulation effects. |
 | Simulation Falloff | Area to apply the deformation falloff to the effects of the simulation. |
-
 
 ### Deformation
 
@@ -1961,14 +1853,12 @@ What kind of deformation.
 
 Brush shape to apply force.
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------- |
 | Cloth Mass | Mass of each simulation particle. |
 | Cloth Damping | How much the applied forces are propagated through the cloth. |
 | Soft Body Plasticity | How much the cloth preserves the original shap, acting as a softbody. |
 | Enable Collision | Enable the collision with objects during the simulation. |
-
 
 ## Brush Settings Panel - Pinch Point Cloth brush
 
@@ -1992,12 +1882,10 @@ This button resets the base so that you can add another layer.
 
 What data to affect. The simulation or the geometry.
 
-
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------------------- |
 | Simulation Limit | Factor to limit the cloth simulation effects. |
 | Simulation Falloff | Area to apply the deformation falloff to the effects of the simulation. |
-
 
 ### Deformation
 
@@ -2011,14 +1899,12 @@ What kind of deformation.
 
 Brush shape to apply force.
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------- |
 | Cloth Mass | Mass of each simulation particle. |
 | Cloth Damping | How much the applied forces are propagated through the cloth. |
 | Soft Body Plasticity | How much the cloth preserves the original shap, acting as a softbody. |
 | Enable Collision | Enable the collision with objects during the simulation. |
-
 
 ## Brush Settings Panel - Push Cloth brush
 
@@ -2042,12 +1928,10 @@ This button resets the base so that you can add another layer.
 
 What data to affect. The simulation or the geometry.
 
-
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------------------- |
 | Simulation Limit | Factor to limit the cloth simulation effects. |
 | Simulation Falloff | Area to apply the deformation falloff to the effects of the simulation. |
-
 
 ### Deformation
 
@@ -2061,14 +1945,12 @@ What kind of deformation.
 
 Brush shape to apply force.
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------- |
 | Cloth Mass | Mass of each simulation particle. |
 | Cloth Damping | How much the applied forces are propagated through the cloth. |
 | Soft Body Plasticity | How much the cloth preserves the original shap, acting as a softbody. |
 | Enable Collision | Enable the collision with objects during the simulation. |
-
 
 ## Brush Settings Panel - Stretch/Move Cloth brush
 
@@ -2094,7 +1976,6 @@ The deformation type to use.
 
 The point to bend or twist around.
 
-
 | Entry | What it does |
 | -------------------------- | --------------------------------------------------------------------------- |
 | Pose Origin Offset | Offset of the boundary origin in relation to the brush radius. |
@@ -2103,7 +1984,6 @@ The point to bend or twist around.
 | Keep Anchor Point | Keep the position of the last segment in the ik chain fixed. |
 | Connected only | Affect only topological connected geometry. |
 | Max Element Distance | Maximum distance to search for disconnected loose parts in the mesh. |
-
 
 ## Brush Settings Panel - Twist Boundary Cloth brush
 
@@ -2141,12 +2021,10 @@ Paint brushes only. This sub panel is for the vertex painting paint tool. Define
 
 ### Mode
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Color / Gradient | Choose the color mode. |
 | Color picker mode | **Colorpicker**: The color wheel of the color picker. · **Primary / Secondary color**: Set the primary and secondary color for painting. · **Swap colors**: Swap the primary with the secondary color. · **Use Unified Color**: Use the same color over all editors and modes. |
-
 
 #### Gradient mode
 
@@ -2160,17 +2038,14 @@ Color Ramps enables the user to specify a range of colors based on color stops. 
 
 ##### Controls
 
-
 | Entry | What it does |
 | ----- | ------------------------------------------------------------------------------------------------------------ |
 | + | Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one. |
 | - | Deletes the selected color stop from the list. |
 
-
 ##### Tools menu
 
 ![Tools menu](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools-menu.png)
-
 
 | Entry | What it does |
 | --------------------------- | -------------------------------------------------------------------------------------------- |
@@ -2178,7 +2053,6 @@ Color Ramps enables the user to specify a range of colors based on color stops. 
 | Distribute Stops from Left | Rearrange the stops so that every step has the same space to the right. |
 | Distribute Stops Evenly | Space between all neighboring stops becomes equal. |
 | Eyedropper (pipette icon) E | An Eyedropper to sample a color or gradient from the interface to be used in the color ramp. |
-
 
 **Reset Color Ramp**
 
@@ -2188,17 +2062,14 @@ Resets the color ramp to its default state.
 
 ##### Color Mode
 
-
 | Entry | What it does |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | RGB | Blends color by mixing each color channel and combining. |
 | HSV/HSL | Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient. |
 
-
 ##### Interpolation
 
 ![Interpolation](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/interpolation.png)
-
 
 | Entry | What it does |
 | -------- | -------------------------------------------------- |
@@ -2207,7 +2078,6 @@ Resets the color ramp to its default state.
 | Linear | Uses a Linear Interpolation for the color stops. |
 | B-Spline | Uses a B-Spline Interpolation for the color stops. |
 | Constant | Uses a Constant Interpolation for the color stops. |
-
 
 ##### Color Ramp
 
@@ -2301,7 +2171,6 @@ The elements are explained from left to right.
 
 The button at the left opens a dropdown list. Choose between your palettes.
 
-
 | Entry | What it does |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Edit Box | The name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable. |
@@ -2311,7 +2180,6 @@ The button at the left opens a dropdown list. Choose between your palettes.
 | Remove Palette | Clicking at this button removes the palette. Note that you need to save, close Bforartists and reload the blend file to remove the palette completely. |
 | Add color | Adjust a color in the color picker. Then click at the add button to add this color to the palette. |
 | Remove color | Select the color in the palette, then click at the minus button to remove it. |
-
 
 ### Sort By
 
@@ -2337,12 +2205,10 @@ Dropdown box to display and to change the brush type. Note that the brush type i
 
 In this group of properties toggles you can define Auto-Masking settings per brush. The same content can also be found in the header. But here as global settings. **Note:***These override any brush Auto-Masking settings.*
 
-
 | Entry | What it does |
 | --------- | ------------------------------------------------------------------------------------- |
 | Topology | Affect only vertices that are connected to the current active vertex under the brush. |
 | Face Sets | Affect only vertices that share face sets with the active vertex. |
-
 
 #### Mesh Boundary
 
@@ -2372,13 +2238,11 @@ Do not affect vertices in valleys. This feature is based on the surface curvatur
 
 The setting that appears on activation and is valid for both, Cavity, and Cavity (Inverted).
 
-
 | Entry | What it does |
 | ----------- | ----------------------------------------------------- |
 | Create Mask | Creates a mask based on the curvature of the surface. |
 | Factor | The contrast of the cavity mask. |
 | Blur | The number of times the cavity mask is blurred |
-
 
 ##### Custom Curve
 
@@ -2430,13 +2294,11 @@ The values for the clipping area.
 
 Affect only vertices with a normal that faces the viewer.
 
-
 | Entry | What it does |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Occlusion | Only affect vertices that are not occluded by other faces. With Occlusion on the Limit and Falloff options are not available. |
 | Limit | View normal limit. The range of angles that will be affected. |
 | Falloff | Extend the angular range with a falloff gradient. |
-
 
 #### Area Normal
 
@@ -2444,12 +2306,10 @@ Affect only vertices with a normal that faces the viewer.
 
 Affect only vertices with a similar normal to where the stroke starts.
 
-
 | Entry | What it does |
 | ------- | ------------------------------------------------------------- |
 | Limit | Area normal limit. The range of angles that will be affected. |
 | Falloff | Extend the angular range with a falloff gradient. |
-
 
 ### Sculpt Plane
 
@@ -2459,12 +2319,10 @@ Affect only vertices with a similar normal to where the stroke starts.
 
 The sculpt plane defines how the sculpting is aligned. It is a dropdown box. Choose different methods. By default the Area Plane gets used.
 
-
 | Entry | What it does |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Use Original | **Normal**: When ticked keep using normal of the surface where the stroke was initiated. · **Plane**: When ticked keep using plane origin of the surface where the stroke was initiated. |
 | Accumulate | Accumulate stroke daubts on top of each other. · **Front Faces Only**: The brush only affects the vertices that faces the viewer. Projected Falloff Only. |
-
 
 ### Modes
 
@@ -2544,7 +2402,6 @@ The brush mapping method Area Plane maps the brush onto the surface of the objec
 
 Adjust the angle of the brush.
 
-
 | Entry | What it does |
 | ------------------- | ----------------------------------------------------------------------------------- |
 | Rake | The angle follows the direction of the brush stroke. |
@@ -2555,7 +2412,6 @@ Adjust the angle of the brush.
 | Sample Bias | Add to or subtract from the amount that gets added by the brush texture. |
 | Vector Displacement | Just Area Plane. Handles each pixel color as an individual vector for displacement. |
 
-
 ### Brush Mapping with mapping method Tiled
 
 ![Brush Mapping with mapping method Tiled](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/brush-mapping-with-mapping-method-tiled.png)
@@ -2564,14 +2420,12 @@ The brush mapping method View Plane maps the brush onto the surface of the objec
 
 ![Brush Mapping with mapping method Tiled](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/brush-mapping-with-mapping-method-tiled-2.png)
 
-
 | Entry | What it does |
 | -------------- | ------------------------------------------------------------------------ |
 | Angle edit box | Adjust the angle of the brush. |
 | Offset | Fine tune the offset of the texture in the brush. |
 | Size | Fine tune the size of the texture in the brush. |
 | Sample Bias | Add to or subtract from the amount that gets added by the brush texture. |
-
 
 ### Brush Mapping with mapping method 3D
 
@@ -2585,12 +2439,10 @@ The brush mapping method View Plane and Area Plane sculpts where the pencil is. 
 
 Fine tune the offset of the texture in the brush.
 
-
 | Entry | What it does |
 | ----------- | ------------------------------------------------------------------------ |
 | Size | Fine tune the size of the texture in the brush. |
 | Sample Bias | Add to or subtract from the amount that gets added by the brush texture. |
-
 
 ### Brush Mapping with mapping method Random
 
@@ -2599,7 +2451,6 @@ Fine tune the offset of the texture in the brush.
 ![Brush Mapping with mapping method Random](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/brush-mapping-with-mapping-method-random-2.png)
 
 The brush mapping method Random randomizes the texture position of the pencil texture. And so it sculpts random fragments of the pencil.
-
 
 | Entry | What it does |
 | --------------- | ----------------------------------------------------------------------------------- |
@@ -2610,7 +2461,6 @@ The brush mapping method Random randomizes the texture position of the pencil te
 | Offset | Fine tune the offset of the texture in the brush. |
 | Size | Fine tune the size of the texture in the brush. |
 | Sample Bias | Add to or subtract from the amount that gets added by the brush texture. |
-
 
 ### Brush Mapping with mapping method Stencil
 
@@ -2662,12 +2512,10 @@ This is the default Stroke method. The sculpt stroke gets added continuously wit
 
 The sculpt drawing happens by mapping the pencil onto the mouse position. And when you move the mouse then the next mapping happens. Adjust the spacing after what mouse movement the next mapping should happen. The lower the value, the lower the distance between the single dots.
 
-
 | Entry | What it does |
 | ---------------- | ----------------------------------------------------------------------------- |
 | Spacing Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
 | Spacing Distance | If the spacing happens in View or in Scene distance. |
-
 
 #### Adjust Strength for Spacing
 
@@ -2675,12 +2523,10 @@ The sculpt drawing happens by mapping the pencil onto the mouse position. And wh
 
 Automatically adjust the strength to give consistent results for different spacing.
 
-
 | Entry | What it does |
 | ----------- | ------------------------------------------------------ |
 | Dash Ratio | Ratio of samples in a cycle that the brush is enabled. |
 | Dash Length | Length of a dash cycle measured in stroke samples. |
-
 
 #### Jitter Edit Box
 
@@ -2688,13 +2534,11 @@ Automatically adjust the strength to give consistent results for different spaci
 
 Add Jitter to the brush while painting.
 
-
 | Entry | What it does |
 | ---------------------- | ------------------------------------------------------------------------------- |
 | Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
 | Jitter Unit | If the jitter happens in screen space in pixels, or relative to the brush size. |
 | Input Samples Edit Box | Average multiple input samples together to smooth the brush stroke. |
-
 
 ##### StabilizeStroke
 
@@ -2702,12 +2546,10 @@ Add Jitter to the brush while painting.
 
 When activated then the brush lags behind the mouse position, and produces a much smoother stroke by that. It is a sub panel with two settings.
 
-
 | Entry | What it does |
 | ----------------------------- | ----------------------------------- |
 | Smooth Stroke Radius Edit Box | Adjust the radius of the smoothing. |
 | Smooth Stroke Factor Edit Box | Adjust the factor of the smoothing. |
-
 
 ### Stroke Panel with Stroke method Curve
 
@@ -2731,12 +2573,10 @@ The sculpt drawing happens by mapping the pencil onto the mouse position. And wh
 
 The icon behind the edit box enables tablet pressure sensitivity for tablets.
 
-
 | Entry | What it does |
 | --------------------------- | ----------------------------------------------------------------------------------- |
 | Spacing Distance | If the spacing happens in View or in Scene distance. |
 | Adjust Strength for Spacing | Automatically adjust the strength to give consistent results for different spacing. |
-
 
 ##### Paint Curve edit box
 
@@ -2764,12 +2604,10 @@ A click at it to turns the curve into a sculpt stroke.
 
 Add Jitter to the brush while painting.
 
-
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------------------- |
 | Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
 | Jitter Unit | If the jitter happens in screen space in pixels, or relative to the brush size. |
-
 
 ##### Input Samples Edit Box
 
@@ -2795,12 +2633,10 @@ The sculpt drawing happens by mapping the pencil onto the mouse position. And wh
 
 The icon behind the edit box enables tablet pressure sensitivity for tablets.
 
-
 | Entry | What it does |
 | --------------------------- | ----------------------------------------------------------------------------------- |
 | Spacing Distance | If the spacing happens in View or in Scene distance. |
 | Adjust Strength for Spacing | Automatically adjust the strength to give consistent results for different spacing. |
-
 
 #### Jitter Edit Box
 
@@ -2808,12 +2644,10 @@ The icon behind the edit box enables tablet pressure sensitivity for tablets.
 
 Add Jitter to the brush while painting.
 
-
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------------------- |
 | Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
 | Jitter Unit | If the jitter happens in screen space in pixels, or relative to the brush size. |
-
 
 #### Input Samples Edit Box
 
@@ -2845,12 +2679,10 @@ If the spacing happens in View or in Scene distance.
 
 Add Jitter to the brush while painting.
 
-
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------------------- |
 | Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
 | Jitter Unit | If the jitter happens in screen space in pixels, or relative to the brush size. |
-
 
 #### Input Samples Edit Box
 
@@ -2864,12 +2696,10 @@ Average multiple input samples together to smooth the brush stroke.
 
 When activated then the brush lags behind the mouse position, and produces a much smoother stroke by that. Smooth stroke has two settings.
 
-
 | Entry | What it does |
 | ----------------------------- | ----------------------------------------------------------------------------------- |
 | Smooth Stroke Radius Edit Box | Adjust the radius of the smoothing. |
 | Smooth Stroke Factor Edit Box | Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing. |
-
 
 ### Stroke Panel with Stroke method Anchored
 
@@ -2945,12 +2775,10 @@ Average multiple input samples together to smooth the brush stroke.
 
 When activated then the brush lags behind the mouse position, and produces a much smoother stroke by that. Smooth stroke has two settings.
 
-
 | Entry | What it does |
 | ----------------------------- | ----------------------------------- |
 | Smooth Stroke Radius Edit Box | Adjust the radius of the smoothing. |
 | Smooth Stroke Factor Edit Box | Adjust the factor of the smoothing. |
-
 
 ## Brush Settings Panel - Falloff Sub panel
 
@@ -2976,9 +2804,7 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 
 #### Adding Points
 
-![Adding Points](/docs2/images/editors/3d-viewport/header/header-tools-and-options/adding-points.png)
-
-You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
+> This setting uses the **curve widget**: click to add points, drag to move them. See **[Curve Widget](../../../../interface/properties.md#curve-widget)** in the Interface chapter.
 
 #### Navigation elements
 
@@ -2986,12 +2812,10 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 The navigation elements at the top are described from left to right.
 
-
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
 | Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Vector Handle**: Set handle type to Vector. · **Auto Handle**: Set handle type to Auto. · **Auto Clamped Handle**: Set handle type to Auto Clamped. · **Reset Curve**: Resets the curve to the initial shape. |
-
 
 #### Use Clipping
 
@@ -3021,13 +2845,11 @@ Use projected or spherical falloff.
 
 Change the appearance of the brush cursor.
 
-
 | Entry | What it does |
 | ------------------------- | ------------------------------------------ |
 | Cursor checkbox in header | Show or hide the brush cursor. |
 | Cursor Color | The cursor color with add operations. |
 | Inverse Color | The cursor color with subtract operations. |
-
 
 ### Falloff Opacity
 
@@ -3035,23 +2857,19 @@ Change the appearance of the brush cursor.
 
 You can turn on the cursor overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.
 
-
 | Entry | What it does |
 | ------------------ | -------------------------------------- |
 | Override Overlay | Hide the Cursor Overlay when painting. |
 | Use Cursor Overlay | Turn on Cursor Overlay. |
 
-
 ### Texture Opacity
 
 This is for the case when you paint with a texture brush. You can turn on the Texture overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.
-
 
 | Entry | What it does |
 | ------------------ | --------------------------------------- |
 | Override Overlay | Hide the Texture Overlay when painting. |
 | Use Cursor Overlay | Turn on Texture Overlay. |
-
 
 ## Dyntopo Panel
 
@@ -3077,7 +2895,6 @@ The topology will also not update if the stroke mode is Anchored or Drag Dot.
 
 Define the Detail Type method.
 
-
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------ |
 | Relative Detail | Mesh Detail is relative to brush size and detail size |
@@ -3085,20 +2902,17 @@ Define the Detail Type method.
 | Constant Detail | Mesh detail is constant in object space according to detail size. |
 | Manual Detail | Mesh detail does not change on each stroke. But just on flood fill |
 
-
 ### Refine method
 
 ![Refine method](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/refine-method.png)
 
 Define the Detail refine method.
 
-
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Subdivide Collapse | Both methods in one. Subdivide long edges to add mesh detail where needed. And collapse short edges to remove mesh detail where possible. |
 | Collapse Edges | Collapse short edges to remove mesh detail where possible. |
 | Subdivide Edges | Subdivide long edges to add mesh detail where needed. |
-
 
 ### Resolution
 
@@ -3130,7 +2944,6 @@ Remesh does not work with Dyntopo enabled. You need to turn it off for remeshing
 
 The Remesher in Sculpt mode uses the Voxel remesher by default. When you want to remesh with the Quadriflow method, then switch to Quad remesher. Quad remesher has no further options.
 
-
 | Entry | What it does |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Voxel Size | Adjust the density of the new created geometry · **Sample Detail Size**: With this picker you can pick the density from an area of your mesh. |
@@ -3139,7 +2952,6 @@ The Remesher in Sculpt mode uses the Voxel remesher by default. When you want to
 | Smooth Normals | Smooths the normals of the result. |
 | Preserve | **Volume**: Tries to preserves the volume of the original mesh. · **Attributes**: Keep existing paint masks, face sets, vertex color and other generic mesh attributes on the new mesh. |
 | Voxel Remesh / Quadriflow Remesh | Starts the remesh operation. |
-
 
 ## Symmetry Panel
 
@@ -3155,13 +2967,11 @@ Mirror sculpt along activated axis. By default the mirroring is activated around
 
 The same buttons plus the whole Symmetry Lock Panel as a drop down menu can also be found in the tool settings bar as icon buttons. This allows quicker access and better visual control which mirror axis is currently active.
 
-
 | Entry | What it does |
 | ------- | --------------------------------------------------------------------- |
 | Lock | Disallow vertices movement in locked axis direction. |
 | Tiling | Produces a mesh that is tilable in the activated directions. |
 | Feather | Reduce the strength of the brush where it overlaps symmetrical daubs. |
-
 
 ### Radial
 
@@ -3179,13 +2989,11 @@ Adjust the offset of the tiling.
 
 ### Symmetrize
 
-
 | Entry | What it does |
 | -------------- | ------------------------------------------------- |
 | Direction | The direction in which the mirroring happens. |
 | Merge Distance | The distance to merge vertices with symmetrizing. |
 | Symmetrize | Symmetrize the topology modifications. |
-
 
 ## Options Panel
 
@@ -3193,16 +3001,13 @@ Adjust the offset of the tiling.
 
 ![Display](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/display.png)
 
-
 | Entry | What it does |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | Fast Navigate | For Multires, show Low Res mesh when navigating. |
 | Delay Viewport Updates | Update the geometry when it enters the view. This enables a faster viewport navigation. |
 | Use Deform only | Use only deformation modifiers ( The other constructive modifiers except multi-resolution gets temporary disabled) |
 
-
 ### Display
-
 
 | Entry | What it does |
 | ------------------ | ------------------------------------------------------------------------------------------------- |
@@ -3216,13 +3021,11 @@ Adjust the offset of the tiling.
 | View Normal | Affect only vertices with a normal that faces to the view. |
 | Propagation Steps | Distance where boundary edge automasking is going to protect vertices from the fully masked edge. |
 
-
 ### Gravity sub panel
 
 ![Gravity sub panel](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/gravity-sub-panel.png)
 
 A panel with the gravity settings. Add gravity after each stroke.
-
 
 | Entry | What it does |
 | ----------- | ------------------------------------------------------------------------------------------------------------ |

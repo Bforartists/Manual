@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.12.1 Editors - Properties Editor - Physics Properties Tab - Force Field panel.odt
+summary: "Force Fields offer a way to add extra movement to dynamic systems like Particles, Soft Bodies, Rigid Bodies and Cloth objects."
 ---
 ## Force Fields panel
 

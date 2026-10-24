@@ -53,12 +53,10 @@ The clip editor contains the footage related tools and settings. Here you deal w
 
 In the upper right corner you will find two navigation elements.
 
-
 | Entry | What it does |
 | -------------------- | ---------------- |
 | Pan the View | Pans the view |
 | Zoom In/Out the View | Zooms in or out. |
-
 
 ### Timeline
 
@@ -102,12 +100,10 @@ Masks are defined by splines. Means you work with splines, and you have a bunch 
 
 In the upper right corner you will find two navigation elements.
 
-
 | Entry | What it does |
 | -------------------- | ---------------- |
 | Pan the View | Pans the view |
 | Zoom In/Out the View | Zooms in or out. |
-
 
 ### 2D Cursor
 
@@ -155,7 +151,6 @@ When you double right click into the viewport, then you will open a menu. The Co
 
 Graph and Dope sheet sub modes does not have a context menu.
 
-
 | Entry | What it does |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Copy Track Settings | Copies track settings from active to selected track. You need to select the source track first, then hold down shift, then select the target track. Then perform copy track settings. |
@@ -164,7 +159,6 @@ Graph and Dope sheet sub modes does not have a context menu.
 | Copy Tracks | Copies the selected tracks. |
 | Paste Tracks | Pastes the selected tracks. |
 | Disable Markers | Disables the currently selected marker(s) |
-
 
 ### Enable Markers
 
@@ -210,12 +204,10 @@ Unlocks the selected tracks. You will see the locks in the Dopesheet view.
 
 Lock or unlock the selected tracks.
 
-
 | Entry | What it does |
 | ------------ | ---------------------------- |
 | Join Tracks | Joins the selected tracks. |
 | Delete Track | Deletes the selected tracks. |
-
 
 ## Mask mode - Context menu
 
@@ -245,14 +237,12 @@ In this sub menu you can set the handle type for the currently selected spline p
 
 Choose the handle type again.
 
-
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Switch Direction | Switch the direction in which the spline points. A spline has a direction. A starting point and an endpoint. By switching the starting point becomes the end point, the end point becomes the starting point. |
 | Toggle Cyclic | Make the spline closed or open. |
 | Copy Splines | Copies the currently selected spline. |
 | Paste Splines | Pastes a copied spline. |
-
 
 ### Re-key Shape Points
 
@@ -270,12 +260,10 @@ Besides the handles, every control point also has points that define the feather
 
 Resets the feather offset across all animated frames.
 
-
 | Entry | What it does |
 | ------------ | ---------------------------- |
 | Make Parent | Set the mask's parenting. |
 | Clear Parent | Clears the mask's parenting. |
-
 
 ### Delete
 
@@ -351,7 +339,7 @@ And you can see the curves for this track(s) in the Graph editor.
 
 ![Quick Favourites menu](/docs2/images/editors/movie-clip-editor/quick-favourites-menu.png)
 
-When you right click at a menu or a button, then a right click menu will open. Tools have usually a Add to Quick Favourites menu entry.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 ![Quick Favourites menu](/docs2/images/editors/movie-clip-editor/quick-favourites-menu-2.png)
 
@@ -361,15 +349,7 @@ In the 3D view we have a menu called Quick in the header, which shows this conte
 
 ## Slider snapping
 
-![Slider snapping](/docs2/images/editors/movie-clip-editor/slider-snapping.png)
-
-Snapping also works at sliders. Hover with the mouse over the slider, start to slide, and holding down **Ctrl** will snap the sliders in incremental steps.
-
-When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.
-
-![Slider snapping](/docs2/images/editors/movie-clip-editor/slider-snapping-2.png)
-
-The increment snapping also works at the frame slider. here the incremental snapping happens by the frame rate that you have defined. With a frame rate of 24 it will snap in steps of 24 frames when holding down ctrl.
+> Hold **Ctrl** while dragging a slider to snap it. See **[Snapping](../../interface/properties.md#snapping)** in the Interface chapter.
 
 ## Short tutorial
 

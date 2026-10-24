@@ -93,12 +93,10 @@ When the handlers are active you will see the frame numbers at the start and/or 
 
 This adjust last operator shows for both, move strips and resize strips.
 
-
 | Entry | What it does |
 | -------- | --------------------------------------------------------------------------- |
 | Offset X | The modified frame position, relative to the start position of the strip. |
 | Y | The modified channel position, relative to the start position of the strip. |
-
 
 ### Strip States
 
@@ -156,7 +154,6 @@ When you double right click into the Sequencer view, then you will open a menu. 
 
 The menu content differs, dependant of which sort of strip is selected.
 
-
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Split | Splits the selected strips at the chosen playhead position. |
@@ -164,13 +161,11 @@ The menu content differs, dependant of which sort of strip is selected.
 | Paste | Pastes the copied strips. The strip will be pasted to the next free channel. |
 | Duplicate Strips | Duplicates the selected strips. The duplicate will stick to the mouse. Move the duplicate with the mouse, then click to release. In case of overlapping strips the duplicate will snap behind the strip under the mouse. |
 
-
 ### Rename
 
 ![Rename](/docs2/images/editors/video-sequence-editor/rename.png)
 
 Allows you to rename the current active strip. A popup opens up where you can type in another name.
-
 
 | Entry | What it does |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -180,7 +175,6 @@ Allows you to rename the current active strip. A popup opens up where you can ty
 | Set Preview Range to Strips | Sets the preview range to the selected strips. The playback will then happen in this range. |
 | Remove Gaps | Snaps the selected strip to the end of the strip before the selected one. |
 | Insert Gaps | Insert a gap of frames before the selected strip. |
-
 
 ### Cross fade Sounds
 
@@ -208,12 +202,10 @@ Clears the fade effects at the selected strips.
 
 ![Movie Strip](/docs2/images/editors/video-sequence-editor/movie-strip.png)
 
-
 | Entry | What it does |
 | ------------------ | ---------------------------------------------------------------------- |
 | Set Render Size | Sets the render resolution and aspect to match the strip’s resolution. |
 | Deinterlace Movies | Converts interlaced video into progressive video. |
-
 
 ### Effect Strip
 
@@ -221,12 +213,10 @@ Clears the fade effects at the selected strips.
 
 Strip type Effects.
 
-
 | Entry | What it does |
 | --------------- | -------------------------------------------------------------------------------------- |
 | Reassign Inputs | Reassigns the input of the strips. Unfortunately not to find out how this works. |
 | Swap Inputs | Swaps the inputs of the selected strips. Unfortunately not to find out how this works. |
-
 
 ### Change Effect Type
 
@@ -280,7 +270,6 @@ Unlock locked strips.
 
 Mutes the selected strips. They do not play anymore, and they appear greyed out.
 
-
 | Entry | What it does |
 | ------------------------ | ------------------------------ |
 | Unmute Strips | Unmutes selected muted strip. |
@@ -289,22 +278,13 @@ Mutes the selected strips. They do not play anymore, and they appear greyed out.
 | Connect Strips | Link selected strips together. |
 | Disconnect Strips | Unlink linked strips. |
 
-
 ## Quick Favorites menu
 
-![Quick Favorites menu](/docs2/images/editors/video-sequence-editor/quick-favorites-menu.png)
-
-When you right click at a menu or a button, then a right click menu will open. Tools have usually a Add to Quick Favorites menu entry.
-
-The Quick Favorites Menu is empty by default. With Add to Quick favorites you can add this menu to the Quick menu.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 ## Slider snapping
 
-![Slider snapping](/docs2/images/editors/video-sequence-editor/slider-snapping.png)
-
-Snapping also works at sliders. Hover with the mouse over the slider, start to slide, and holding down **Ctrl** will snap the sliders in incremental steps.
-
-When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.
+> Hold **Ctrl** while dragging a slider to snap it. See **[Snapping](../../interface/properties.md#snapping)** in the Interface chapter.
 
 ## Hotkey only functionality
 

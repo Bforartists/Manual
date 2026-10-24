@@ -16,6 +16,7 @@ replaces:
   - editors.graph-editor.sidebar.modifiers-tab
   - editors.graph-editor.sidebar.view-tab
 order: 30
+summary: "The Movie Clip Editor is made of several areas."
 ---
 ## Introduction
 

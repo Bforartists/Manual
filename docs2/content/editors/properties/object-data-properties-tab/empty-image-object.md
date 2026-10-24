@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.11 Editors - Properties Editor - Object Data Properties Tab - Empty&Image Object.odt
+summary: "Empties are objects without additional geometry."
 ---
 ## Empty panel
 

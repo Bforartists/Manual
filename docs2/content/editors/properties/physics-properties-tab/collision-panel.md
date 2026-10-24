@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.12.2 Editors - Properties Editor - Physics Properties Tab - Collision panel.odt
+summary: "Collision sets the mesh object as a static collider."
 ---
 ## Collision
 

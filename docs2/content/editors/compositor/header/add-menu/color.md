@@ -61,24 +61,20 @@ The Alpha Over node is used to layer images with an alpha channel on top of one 
 
 Where the foreground image pixels have an alpha greater than 0, the background image will be overlaid.
 
-
 | Entry | What it does |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Inputs | **Background**: Input for the background image. · **Foreground**: Input for the foreground image. · **Factor**: Controls the amount of foreground image. A factor less than 1 will make the foreground more transparent. |
 | Straight Alpha | Defines wether teh foreground ins in straight alpha form, which is necessary to konw for proper alpha composing. Images in the compositor are in premultiplied alpha form by default. So it should be false in most cases. But if, and only if, the foreground was converted to straight alpha form for some reason, this should be set to true. |
 
-
 #### Properties
 
 ![Properties](/docs2/images/editors/compositor/header/add-menu-color/properties.png)
-
 
 | Entry | What it does |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Over | The foreground goes over the background according to the alpha of the foreground. |
 | Disjoint Over | The foreground goes over the background according to the alpha of the foreground while assuming the background is being held out by the foreground. |
 | Conjoint Over | The foreground goes over the background according to the alpha of the foreground. But the foreground completely covers the background if it is more opaque but not necessarily completely opaque. |
-
 
 #### Outputs
 
@@ -94,23 +90,19 @@ The Set Alpha Node adds an alpha channel to an image.
 
 #### Inputs
 
-
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------- |
 | Image | Standard image input. |
 | Alpha | The amount of Alpha can be set for the whole image by using the input field or per pixel by connecting to the socket. |
 
-
 ##### Type
 
 ![Type](/docs2/images/editors/compositor/header/add-menu-color/type.png)
-
 
 | Entry | What it does |
 | ------------- | ----------------------------------------------------------------------- |
 | Apply Mask | Multiply the alpha channel of the input image by the alpha input value. |
 | Replace Alpha | Replace the alpha channel of the input image by the alpha input value. |
-
 
 #### Outputs
 
@@ -138,13 +130,11 @@ Combine single RGBA floating point channels into a single image.
 - YUV converts an YUVA image to RGBA color space. Note that U and V values range
     from -0.5 to +0.5.
 
-
 | Entry | What it does |
 | ---------------- | --------------------------------------------------------------------------- |
 | Input – RGB mode | **R, G, B and A**: The red, green, blue and alpha channels of an image. |
 | Input – HSV mode | **H , S and V**: The Hue, Saturation and Value channels of an image. |
 | Input – HSL mode | **H , S and L**: The Hue, Saturation and Luminescence channels of an image. |
-
 
 #### Input – YCbCRA mode
 
@@ -154,13 +144,11 @@ Combine single RGBA floating point channels into a single image.
 
 Luminance, Chrominance Blue, Chrominance Red and Alpha input.
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------------------------------------------------- |
 | Properties | **Modes**: ITU 601, ITU 709, Jpeg. These are encoding standards for the YCbCrA color space. |
 | Input – YUVA mode | **Y, U, V and A**: Luminance, Chrominance U, Chrominance V and Alpha channel. |
 | Output | **Image**: The output image. |
-
 
 ### Separate Color
 
@@ -184,25 +172,21 @@ Separates the single RGBA channels from a single image.
 
 #### Output – RGB mode
 
-
 | Entry | What it does |
 | ----------------- | --------------------------------------------------------------------------- |
 | R, G, B and A | The red, green, blue and alpha channels of an image. |
 | Output – HSV mode | **H , S and V**: The Hue, Saturation and Value channels of an image. |
 | Output – HSL mode | **H , S and L**: The Hue, Saturation and Luminescence channels of an image. |
 
-
 ##### Output – YCbCRA mode
 
 ![Output – YCbCRA mode](/docs2/images/editors/compositor/header/add-menu-color/input-ycbcra-mode.png)
-
 
 | Entry | What it does |
 | --------------- | -------------------------------------------------------------------------------- |
 | Y, Cb, Cr and A | Luminance, Chrominance Blue, Chrominance Red and Alpha input. |
 | Properties | — |
 | Modes | ITU 601, ITU 709, Jpeg. These are encoding standards for the YCbCrA color space. |
-
 
 #### Output – YUVA mode
 
@@ -218,7 +202,6 @@ The Depth Combine node combines two images based on their Z-depth maps. It overl
 
 #### Inputs
 
-
 | Entry | What it does |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | A | The background image. |
@@ -228,15 +211,12 @@ The Depth Combine node combines two images based on their Z-depth maps. It overl
 | Use Alpha | The chosen Image pixel alpha channel is also carried over. If a pixel is partially or totally transparent, the result of the Z Combine will also be partially transparent; in which case the background image will show through the foreground (chosen) pixel. |
 | Anti-Alias Z | Applies Anti-Aliasing to avoid artifacts at sharp edges or areas with a high contrast. |
 
-
 #### Outputs
-
 
 | Entry | What it does |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Result | If both Z values are equal, it will use the foreground image. Whichever Z value is less decides which image pixel is used. See Z-buffer. |
 | Depth | The combined Z depth, which allows to thread multiple Z-combines together. |
-
 
 ### Mix Color
 
@@ -244,13 +224,11 @@ The Depth Combine node combines two images based on their Z-depth maps. It overl
 
 The Mix Node mixes images by working on the individual and corresponding pixels of the two input images. Called “MixRGB” in the shader and texture context.
 
-
 | Entry | What it does |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Inputs | **Factor**: Controls the amount of influence the node exerts on the output image. · **Image 1**: Usually the background image. The image size and resolution sets the dimensions of the output image. · **Image 2**: Usually he foreground image. |
 | Properties | **Mix**: Choose the different blending modes. Add, Subtract, Multiply, Screen, Divide, Difference, Darken, Lighten, Overlay, Color Dodge, Color Burn, Hue, Saturation, Value, Color, Soft Light, Linear Light. · **Clamp**: Limit the highest color value to not exceed 1. |
 | Outputs | **Image**: Image output. |
-
 
 ### Blackbody
 
@@ -258,12 +236,10 @@ The Mix Node mixes images by working on the individual and corresponding pixels 
 
 Convert a blackbody temperature to a rgb value.
 
-
 | Entry | What it does |
 | ------- | ------------------------------------------- |
 | Inputs | **Temperature**: The blackbody temperature. |
 | Outputs | **Color**: The output RGB color. |
-
 
 ### ColorRamp
 
@@ -285,17 +261,14 @@ Color Ramps enables the user to specify a range of colors based on color stops. 
 
 ###### Controls
 
-
 | Entry | What it does |
 | ----- | ------------------------------------------------------------------------------------------------------------ |
 | + | Add a stop to your color ramp. The stop will be added after the selected one, in the middle to the next one. |
 | - | Deletes the selected color stop from the list. |
 
-
 **Tools menu**
 
 ![Tools menu](/docs2/images/editors/compositor/header/add-menu-color/tools-menu.png)
-
 
 | Entry | What it does |
 | --------------------------- | -------------------------------------------------------------------------------------------- |
@@ -303,7 +276,6 @@ Color Ramps enables the user to specify a range of colors based on color stops. 
 | Distribute Stops from Left | Rearrange the stops so that every step has the same space to the right. |
 | Distribute Stops Evenly | Space between all neighboring stops becomes equal. |
 | Eyedropper (pipette icon) E | An Eyedropper to sample a color or gradient from the interface to be used in the color ramp. |
-
 
 **Reset Color Ramp**
 
@@ -313,17 +285,14 @@ Resets the color ramp to its default state.
 
 **Color Mode**
 
-
 | Entry | What it does |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | RGB | Blends color by mixing each color channel and combining. |
 | HSV/HSL | Blends colors by first converting to HSV or HSL, mixing, then combining again. This has the advantage of maintaining saturation between different hues, where RGB would de-saturate, this allows for a richer gradient. |
 
-
 **Interpolation**
 
 ![Interpolation](/docs2/images/editors/compositor/header/add-menu-color/interpolation.png)
-
 
 | Entry | What it does |
 | -------- | -------------------------------------------------- |
@@ -332,7 +301,6 @@ Resets the color ramp to its default state.
 | Linear | Uses a Linear Interpolation for the color stops. |
 | B-Spline | Uses a B-Spline Interpolation for the color stops. |
 | Constant | Uses a Constant Interpolation for the color stops. |
-
 
 **Color Ramp**
 
@@ -346,21 +314,17 @@ The color band. A click at one of the color stops makes it the active one. You c
 
 Adjust the active color stop.
 
-
 | Entry | What it does |
 | ------------------------ | ------------------------------------------------------------------------- |
 | Choose active color stop | Choose the color stop by index. |
 | Pos | The position of the active color stop. The range goes from 0.000 to 1.000 |
 
-
 #### Outputs
-
 
 | Entry | What it does |
 | ----- | --------------------- |
 | Color | The color output. |
 | Alpha | Alpha channel output. |
-
 
 ### Convert Colorspace
 
@@ -402,12 +366,10 @@ Transforms an image from **scene-linear color space** into a **display-referred 
 
 #### Inputs
 
-
 | Entry | What it does |
 | ------ | ----------------------------------------------------------------------------------------------------------------------- |
 | Image | The input image in scene-linear space—typically the result of render layers, raw file input, or procedural compositing. |
 | Invert | Reverses the display transform—useful for decoding display-referred images back to linear. |
-
 
 #### Properties
 
@@ -446,14 +408,12 @@ The Invert Node inverts the colors in the input image, producing a negative.
 
 #### Inputs
 
-
 | Entry | What it does |
 | ------------ | --------------------------------------------------------------------- |
 | Color | Standard input. |
 | Factor | Controls the amount of influence the node exerts on the output image. |
 | Invert Color | Invert the RGB values. |
 | Invert Alpha | Invert the Alpha values. |
-
 
 #### Outputs
 
@@ -466,7 +426,6 @@ Standard image output.
 ### RGB to BW
 
 The RGB to BW Node converts an RGB color image to a gray-scale image based at its luminance.
-
 
 | Entry | What it does |
 | ------- | --------------------------------- |
@@ -489,13 +448,11 @@ Adjust the brightness and contrast.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Image | The image input |
 | Brightness | An additive-type factor by which to increase the overall brightness of the image. Use a negative number to darken an image. |
 | Contrast | A scaling type factor by which to make brighter pixels brighter, but keeping the darker pixels dark. Higher values make details stand out. Use a negative number to decrease the overall contrast in the image. |
-
 
 ##### Outputs
 
@@ -513,12 +470,10 @@ The Color Balance node can adjust the color and values of an image.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ------ | --------------------------------------------------------------------- |
 | Factor | Controls the amount of influence the node exerts on the output image. |
 | Image | Standard image input. |
-
 
 ##### Properties
 
@@ -532,13 +487,11 @@ You can choose between different formulas.
 
 ![Lift/Gamma/Gain](/docs2/images/editors/compositor/header/add-menu-color-adjust/lift-gamma-gain.png)
 
-
 | Entry | What it does |
 | ----- | ----------------------------------- |
 | Lift | Increases the value of dark colors. |
 | Gamma | Will adjust mid tones. |
 | Gain | Adjusts highlights. |
-
 
 ###### Color wheel
 
@@ -550,14 +503,12 @@ When you click at one of the colors then you will call a color wheel where you c
 
 ![Offset/Power/Slope (ASC-CDL)](/docs2/images/editors/compositor/header/add-menu-color-adjust/offset-power-slope-asc-cdl.png)
 
-
 | Entry | What it does |
 | ------ | ------------------------------------------------------------- |
 | Offset | Summand. (Adjusts the overall brightness.) |
 | Basis | Additional offset, allows to specify a negative Offset value. |
 | Power | Over-all exponent. (Adjusts the mid tones. |
 | Slope | Multiplier. (Adjusts the highlights.) |
-
 
 **Color wheel**
 
@@ -571,7 +522,6 @@ When you click at one of the colors then you will call a color wheel where you c
 
 Chromatic adaption from a different white point.
 
-
 | Entry | What it does |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Input | — |
@@ -580,7 +530,6 @@ Chromatic adaption from a different white point.
 | Picker | Pick an input whitepoint. The color that gets mapped to white. |
 | Output | — |
 | Temperature | Color temperature of the outputs white point. · **Tint**: Color tint of the outputs white point. · **Picker**: Pick an output whitepoint. The color which gets white gets mapped to. |
-
 
 ###### Outputs
 
@@ -614,19 +563,16 @@ With the Color Correction node you can adjust the color of an image. Separated i
 
 ##### Input
 
-
 | Entry | What it does |
 | ----- | ------------------------------------------------------------------- |
 | Image | Image Input. |
 | Mask | Input a mask to cover parts of the image so that they are affected. |
-
 
 ##### Properties
 
 ###### Master panel
 
 ![Master panel](/docs2/images/editors/compositor/header/add-menu-color-adjust/master-panel.png)
-
 
 | Entry | What it does |
 | ---------- | ------------------------------------------------------------------------------------------------------ |
@@ -636,11 +582,9 @@ With the Color Correction node you can adjust the color of an image. Separated i
 | Gain | Multiplier, stronger influence on the whole image. (Works like Slope in the Color Balance node.) |
 | Offset | Controls the offset of the entire image. |
 
-
 ###### Highlights panel
 
 ![Highlights panel](/docs2/images/editors/compositor/header/add-menu-color-adjust/highlights-panel.png)
-
 
 | Entry | What it does |
 | ---------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -650,11 +594,9 @@ With the Color Correction node you can adjust the color of an image. Separated i
 | Gain | Multiplier, stronger influence on the highlights. (Works like Slope in the Color Balance node.) |
 | Offset | Controls the offset of the of the highlights. |
 
-
 ###### Midtones panel
 
 ![Midtones panel](/docs2/images/editors/compositor/header/add-menu-color-adjust/midtones-panel.png)
-
 
 | Entry | What it does |
 | ---------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -664,11 +606,9 @@ With the Color Correction node you can adjust the color of an image. Separated i
 | Gain | Multiplier, stronger influence on the midtones. (Works like Slope in the Color Balance node.) |
 | Offset | Controls the offset of the of the midtones. |
 
-
 ###### Midtones panel
 
 ![Midtones panel](/docs2/images/editors/compositor/header/add-menu-color-adjust/midtones-panel.png)
-
 
 | Entry | What it does |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -677,11 +617,9 @@ With the Color Correction node you can adjust the color of an image. Separated i
 | Gamma | Exponential gamma correction, affecting the midtones of the image. (Works like Power in the Color Balance node.) |
 | Gain | Multiplier, stronger influence on the midtones. (Works like Slope in the Color Balance node.) · **Offset**: Controls the offset of the of the midtones. |
 
-
 ###### Shadows panel
 
 ![Shadows panel](/docs2/images/editors/compositor/header/add-menu-color-adjust/shadows-panel.png)
-
 
 | Entry | What it does |
 | ---------- | --------------------------------------------------------------------------------------------------------------- |
@@ -690,7 +628,6 @@ With the Color Correction node you can adjust the color of an image. Separated i
 | Gamma | Exponential gamma correction, affecting the shadows of the image. (Works like Power in the Color Balance node.) |
 | Gain | Multiplier, stronger influence on the shadows. (Works like Slope in the Color Balance node.) |
 | Offset | Controls the offset of the of the shadows. |
-
 
 ###### Tonal range panel
 
@@ -720,12 +657,10 @@ The image output.
 
 The Exposure Node node allows you to make areas of an image brighter or dimmer.
 
-
 | Entry | What it does |
 | ------- | ------------------------------------------------------------------------------------------------------- |
 | Inputs | **Image**: Standard image input. · **Exposure**: The scalar factor to adjust the exposure of the image. |
 | Outputs | **Image**: Standard image output. |
-
 
 #### Gamma
 
@@ -733,12 +668,10 @@ The Exposure Node node allows you to make areas of an image brighter or dimmer.
 
 Use this node to apply a gamma correction.
 
-
 | Entry | What it does |
 | ------- | ---------------------------------------------------------------------- |
 | Inputs | **Image**: Image input. · **Gamma**: An exponential brightness factor. |
 | Outputs | **Image**: Image output. |
-
 
 #### Hue Correct
 
@@ -748,12 +681,10 @@ With the Hue Correct Node you can adjust the Hue, Saturation, and Value of an im
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ------ | --------------------------------------------------------------------- |
 | Image | Standard image input. |
 | Factor | Controls the amount of influence the node exerts on the output image. |
-
 
 ##### Properties
 
@@ -765,7 +696,6 @@ With the Hue Correct Node you can adjust the Hue, Saturation, and Value of an im
 
 ![Tools menu](/docs2/images/editors/compositor/header/add-menu-color-adjust/tools-menu.png)
 
-
 | Entry | What it does |
 | ------------- | --------------------------------------------------------------------------------- |
 | Reset View | Resets the view. This menu item is here dysfunctional, you cannot view in or out. |
@@ -775,7 +705,6 @@ With the Hue Correct Node you can adjust the Hue, Saturation, and Value of an im
 | Auto Clamped | Sets the handle for the curve points to Auto Clamped. |
 | X / Y | The x and y position of the currently selected curve point. |
 | Delete Points | Deletes the currently selected curve point. |
-
 
 ##### Output
 
@@ -793,7 +722,6 @@ The Hue Saturation Node applies a color transformation in the HSV color space. C
 
 The inputs also works as properties when nothing is connected.
 
-
 | Entry | What it does |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Image | Plug in an image. |
@@ -802,7 +730,6 @@ The inputs also works as properties when nothing is connected.
 | Value | Value is the overall brightness of the image. De/Increasing values shift an image darker/lighter. |
 | Factor | Controls the amount of influence the node exerts on the output image. |
 | Image | Standard input. |
-
 
 ##### Outputs
 
@@ -838,14 +765,12 @@ The RGB Curves Node allows color corrections for each color channel and levels a
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ----------- | --------------------------------------------------------------------- |
 | Image | Standard image input. |
 | Factor | Controls the amount of influence the node exerts on the output image. |
 | Black Level | Defines the input color that is (linear) mapped to black. |
 | White level | Defines the input color that is (linear) mapped to white. |
-
 
 ##### Properties
 
@@ -887,7 +812,6 @@ Clipping options. Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-
 | Entry | What it does |
 | ------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
@@ -896,20 +820,15 @@ Tools is a menu where you can find some curve related tools.
 | Reset Curve | Resets the curve to the initial shape. |
 | Curve edit field | Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis). |
 
-
 **Selecting Points**
 
 ![Selecting Points](/docs2/images/editors/compositor/header/add-menu-color-adjust/selecting-points.png)
 
-You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.
-
-Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
+> This setting uses the **curve widget**: click to add points, drag to move them. See **[Curve Widget](../../../../interface/properties.md#curve-widget)** in the Interface chapter.
 
 **Adding Points**
 
 ![Adding Points](/docs2/images/editors/compositor/header/add-menu-color-adjust/adding-points.png)
-
-You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
 
 **Curve point settings**
 
@@ -917,13 +836,11 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 When you have a point selected then you will reveal further settings at the bottom.
 
-
 | Entry | What it does |
 | ------------------- | -------------------------------- |
 | Vector Handle | Set handle type to Vector. |
 | Auto Handle | Set handle type to Auto. |
 | Auto Clamped Handle | Set handle type to Auto Clamped. |
-
 
 ##### Outputs
 
@@ -955,18 +872,15 @@ There are two methods of tone mapping. Rh Simple and R/D Photo receptor.
 
 ![Rh Simple](/docs2/images/editors/compositor/header/add-menu-color-adjust/rh-simple.png)
 
-
 | Entry | What it does |
 | ------- | ------------------------------------------------------------------------------------- |
 | Key | The value the average luminance is mapped to. |
 | Balance | Normally always 1, but can be used as an extra control to alter the brightness curve. |
 | Gamma | If not used, set to 1. |
 
-
 ###### R/D Photo receptor
 
 ![R/D Photo receptor](/docs2/images/editors/compositor/header/add-menu-color-adjust/r-d-photo-receptor.png)
-
 
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------------------- |
@@ -974,7 +888,6 @@ There are two methods of tone mapping. Rh Simple and R/D Photo receptor.
 | Contrast | Set to 0 to use estimate from input image. |
 | Adaptation | If 0, global; if 1, based on pixel intensity. |
 | Color Correction | If 0, same for all channels; if 1, each independent. |
-
 
 ##### Outputs
 

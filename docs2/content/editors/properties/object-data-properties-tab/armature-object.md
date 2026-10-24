@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.9 Editors - Properties Editor - Object Data Properties Tab - Armature Object.odt
+summary: "This panel allows you to turn the display for bone and armature layers on and off."
 ---
 ## Pose panel
 

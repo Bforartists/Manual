@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.12.8 Editors - Properties Editor - Physics Properties Tab - Rigid Body Constraint panel.odt
+summary: "Rigid body constraints connects two rigid bodies with each other."
 ---
 ## Rigid Body Constraints
 

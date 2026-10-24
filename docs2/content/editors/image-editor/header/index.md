@@ -20,6 +20,7 @@ replaces:
   - editors.image-editor.header.add-menu
   - editors.image-editor.header.mask-menu
 order: 10
+summary: "The Header contains various menus, navigation elements, settings and tools for the viewport."
 ---
 ## Image Editor - Header
 
@@ -99,13 +100,11 @@ From left to right ...
 
 ![Image Prop](/docs2/images/editors/image-editor/header/header-tools-and-options/image-prop-3.png)
 
-
 | Entry | What it does |
 | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | List of images in the scene | This is a list of the images in the scene. This list allows you to switch to other images. |
 | Image Edit Box | Read the name of the currently selected image. And you can rename the image here too. |
 | Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
-
 
 ##### Search form
 
@@ -119,13 +118,11 @@ Create a new image.
 
 Creates a new image. You will get a dialog where you can define settings for the new image.
 
-
 | Entry | What it does |
 | ------ | ---------------------------- |
 | Name | The name of the new image |
 | Width | The width of the new image. |
 | Height | The height of the new image. |
-
 
 ###### Color
 
@@ -163,14 +160,12 @@ This deletes the selected image. Unfortunately not immediately. You need to save
 
 And you need to make sure that it is not linked to anything else. A mesh or a fake user for example. Have a look if there is a number besides the F button. When this is the case then the image has still a user, and so still loads with loading the scene.
 
-
 | Entry | What it does |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
 | Open Image | Opens the file browser to load an image. |
 | Unpack | Unpack packed files to a directory. |
 | User | The number of users that uses this data. Data with a user number of 0 will be removed with closing Bforartists. |
-
 
 #### Use Image Pin
 
@@ -206,12 +201,10 @@ Wit this button you assign a fake user to this selected mask. Masks gets created
 
 Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
 
-
 | Entry | What it does |
 | ----------- | --------------------------- |
 | Search form | Search for specific images. |
 | Create Mask | Adds a new mask. |
-
 
 ##### Unlink Datablock
 
@@ -277,12 +270,10 @@ Display the overlays in the viewport.
 
 Display overlay of UV layer.
 
-
 | Entry | What it does |
 | ----- | ----------------------------------------- |
 | Faces | The opacity of the faces of the UV layer. |
 | Edges | The opacity of the edges of the UV layer. |
-
 
 ###### Image
 
@@ -316,7 +307,6 @@ Show the alpha channel of the mask.
 
 Adjust what channels of the image gets displayed.
 
-
 | Entry | What it does |
 | --------------- | ---------------------------------------------------- |
 | Color and Alpha | Displays the whole image, including alpha channel. |
@@ -325,7 +315,6 @@ Adjust what channels of the image gets displayed.
 | Red | Displays the red channel of the image. |
 | Green | Displays the green channel of the image. |
 | Blue | Displays the blue channel of the image. |
-
 
 #### Mask Display
 
@@ -383,12 +372,10 @@ You can create more View Layers in the Properties editor. In the View Layer Tab.
 
 Here you can set the pass mode. Combined or Depth.
 
-
 | Entry | What it does |
 | -------- | ---------------------------------------------------------------- |
 | Combined | The final combination of render passes with everything included. |
 | Depth | Just the Depth render pass. |
-
 
 #### Show Stereo
 
@@ -408,12 +395,10 @@ Show the image from one of the cameras in the list.
 
 #### In View and Mask mode
 
-
 | Entry | What it does |
 | -------------------- | -------------------------------------------------------------------------------- |
 | Update Automatically | Update other editor windows simultaneously with the changes in the Image Editor. |
 | Show Metadata | Draw Metadata properties of the image. |
-
 
 #### In Paint Mode
 
@@ -485,9 +470,7 @@ Besides that, operators and menus gets added in the order that you add them. The
 
 #### Removing an operator from the Quick menu
 
-![Removing an operator from the Quick menu](/docs2/images/editors/image-editor/header/quick-menu/removing-an-operator-from-the-quick-menu.png)
-
-Removing is as simple as adding. Right click at the operators in the Quick menu, and choose Remove from Quick favorites.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 #### Context and mode dependent content
 
@@ -561,7 +544,6 @@ This group of operators is useful to take notes without changing tool-shelf oper
 
 > **Note:** These are legacy operators, meaning they are equally available in the Toolshelf as a modal operator.
 
-
 | Entry | What it does |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | Draw Annotation | Starts the annotation free hand draw tool in the editor. |
@@ -571,20 +553,17 @@ This group of operators is useful to take notes without changing tool-shelf oper
 | Add Annotation Layer | Starts a new annotation layer. |
 | Erase Annotation Active Keyframe | Erases the active keyframe of the annotation. |
 
-
 | Entry | What it does |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Zoom In | Zooms into the viewport. |
 | Zoom Out | Zooms out of the viewport. |
 | Zoom Border | Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button. |
 
-
 #### Zoom submenu
 
 ![Zoom submenu](/docs2/images/editors/image-editor/header/view-menu/zoom-submenu.png)
 
 A sub menu where you can choose between predefined zoom factors.
-
 
 | Entry | What it does |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -597,35 +576,28 @@ A sub menu where you can choose between predefined zoom factors.
 | Render Slot Cycle Next | Render result only. Cycle through the Render slots. |
 | Render Slot Cycle Previous | Render result only. Cycle through the Render slots. |
 
-
 #### Area submenu
 
 ![Area submenu](/docs2/images/editors/image-editor/header/view-menu/area-submenu.png)
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------- |
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-
 ##### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/image-editor/header/view-menu/duplicate-area-into-new-window.png)
 
-Duplicate Area into New Window makes the selected editor window floating. You can then drag it around at the monitor. It is not connected with the rest of the UI any more.
-
-A separated window cannot be merged into the main window again. You have to close it when not longer needed.
-
+> **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../../../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
 | Entry | What it does |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu. |
 | Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
 | Close Area | Closes the area window. |
-
 
 #### Pie menus submenu
 
@@ -653,13 +625,11 @@ It is available in all sub modes. But not all content shows in all combinations.
 
 Creates a new image. You will get a dialogue where you can define settings for the new image.
 
-
 | Entry | What it does |
 | ------ | ---------------------------- |
 | Name | The name of the new image |
 | Width | The width of the new image. |
 | Height | The height of the new image. |
-
 
 ##### Colour
 
@@ -701,7 +671,6 @@ Read all the current scene's render layers from cache, as needed. For this featu
 
 This feature can be be used to save RAM while rendering because the render layers do not have to be saved in RAM. It can also be used to recover some information from a fail render.
 
-
 | Entry | What it does |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Copy | Copy the image to the clipboard. |
@@ -713,7 +682,6 @@ This feature can be be used to save RAM while rendering because the render layer
 | Save As Image | Saves the currently selected image. |
 | Save Copy | Saves a copy of the currently selected image. This will save the file to a specified name, but will keep the old one open in the Image editor. |
 | Save all Images | Saves all images. Note that the images must already exist somewhere at your hard disk so that they can be saved. The item is greyed out as long as the image is not saved to disk. |
-
 
 #### Invert
 
@@ -737,7 +705,6 @@ Allows you to change the dimensions of the image. The tool calls a resize panel.
 
 > **Note:** These only shows when in the when not viewing the Viewer or Render Result.
 
-
 | Entry | What it does |
 | ---------------------------- | ---------------------------------------------------------------------------- |
 | Flip Horizontally | Flip the image horizontally around it’s central axis. |
@@ -745,7 +712,6 @@ Allows you to change the dimensions of the image. The tool calls a resize panel.
 | Rotate Clockwise 90° | Rotate the image to the right by 90 degrees. |
 | Rotate Counter-Clockwise 90° | Rotate the image to the left by 90 degrees. |
 | Rotate Flip 180° | Rotate the image to the right by 180 degrees and flip the image upside down. |
-
 
 #### Pack Image / Pack as PNG
 
@@ -777,7 +743,6 @@ Allows you to extract a color palette from a loaded image, useful for brush base
 
 This menu just appears when you are in Mask mode. And you need to create a new mask layer to set all items active. The select functionality in this menu covers the mask geometry. The splines.
 
-
 | Entry | What it does |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | All | Toggles between select all and deselect all. |
@@ -785,7 +750,6 @@ This menu just appears when you are in Mask mode. And you need to create a new m
 | Inverse | Inverts the current selection. |
 | Box Select | Border select enters the Border Select mode. This is a special select mode where you can select elements by dragging a rectangle. And what's inside of the rectangle gets selected then. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse. |
 | Circle Select | Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel. |
-
 
 #### Lasso Select submenu
 
@@ -800,7 +764,6 @@ Select all vertices linked to the active spline(s). The previous selection gets 
 #### More / Less submenu
 
 ![More / Less submenu](/docs2/images/editors/image-editor/header/select-menu/more-less-submenu.png)
-
 
 | Entry | What it does |
 | ----- | ---------------------------------------------- |
@@ -831,12 +794,10 @@ Adds a circle shaped spline curve.
 
 ![Last Operator Add Circle](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-circle.png)
 
-
 | Entry | What it does |
 | ------------ | --------------------------------------------------------------------------------------------------------------- |
 | Size | The size of the circle spline curve. |
 | Location X Y | The location of the circle spline curve. Calculation happens from the center of the spline. 0 / 0 is down left. |
-
 
 #### Square
 
@@ -848,12 +809,10 @@ Adds a square shaped spline curve.
 
 ![Last Operator Add Square](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-square.png)
 
-
 | Entry | What it does |
 | ------------ | --------------------------------------------------------------------------------------------------------------- |
 | Size | The size of the square spline curve. |
 | Location X Y | The location of the square spline curve. Calculation happens from the center of the spline. 0 / 0 is down left. |
-
 
 #### Add Vertex and Slide
 
@@ -927,14 +886,12 @@ Enables mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Proportional Falloff | Adjust the falloff methods. |
 | Proportional Size | See and adjust the falloff radius. |
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
 
 ##### Rotate
 
@@ -944,12 +901,10 @@ Rotate the selection.
 
 ![Last Operator Rotate](/docs2/images/editors/image-editor/header/mask-menu/last-operator-rotate.png)
 
-
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Angle | The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel. |
 | Axis | Which axis to rotate. |
-
 
 ###### Orientation
 
@@ -967,14 +922,12 @@ Enables mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Proportional Falloff | Adjust the falloff methods. |
 | Proportional Size | See and adjust the falloff radius. |
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
 
 ##### Scale
 
@@ -984,12 +937,10 @@ Scale the selection.
 
 ![Last Operator Resize](/docs2/images/editors/image-editor/header/mask-menu/last-operator-resize.png)
 
-
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Angle | The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel. |
 | Axis | Which axis to rotate. |
-
 
 ###### Orientation
 
@@ -1007,14 +958,12 @@ Enables mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Proportional Falloff | Adjust the falloff methods. |
 | Proportional Size | See and adjust the falloff radius. |
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
 
 ##### To Sphere
 
@@ -1034,12 +983,10 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 ![Last Operator To Sphere](/docs2/images/editors/image-editor/header/mask-menu/last-operator-to-sphere.png)
 
-
 | Entry | What it does |
 | -------------- | -------------------------------------------------------- |
 | Factor | The factor to transform the selection into a shape form. |
 | Mirror Editing | Enable mirror editing. |
-
 
 ###### Proportional editing
 
@@ -1047,13 +994,11 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 Enables proportional editing. Activating proportional editing reveals further settings
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------ |
 | Proportional Falloff | Adjust the falloff methods. |
 | Proportional Size | See and adjust the falloff radius. |
 | Connected | The proportional falloff gets calculated for connected parts only. |
-
 
 ###### Projected(2D)
 
@@ -1107,14 +1052,12 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Proportional Falloff | Adjust the falloff methods. |
 | Proportional Size | See and adjust the falloff radius. |
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
 
 ##### Push/Pull
 
@@ -1126,12 +1069,10 @@ In Object mode this tool requires to have more than one object selected.
 
 ![Last Operator Push/Pull](/docs2/images/editors/image-editor/header/mask-menu/last-operator-push-pull.png)
 
-
 | Entry | What it does |
 | -------------- | --------------------------------------------- |
 | Distance | Adjust the distance of influence of the tool. |
 | Mirror Editing | Enable mirror editing. |
-
 
 ###### Proportional editing
 
@@ -1139,14 +1080,12 @@ In Object mode this tool requires to have more than one object selected.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Proportional Falloff | Adjust the falloff methods. |
 | Proportional Size | See and adjust the falloff radius. |
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
 
 ##### Scale Feather
 
@@ -1186,14 +1125,12 @@ Enable mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Proportional Falloff | Adjust the falloff methods. |
 | Proportional Size | See and adjust the falloff radius. |
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
 
 | Entry | What it does |
 | ------------- | ------------------------------------------------------------------------------------------- |
@@ -1203,7 +1140,6 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Paste Splines | Pastes the copied spline(s) or spline points. |
 | Make Parent | Parents the selected spline points. Mask splines can be parented to motion tracker markers. |
 | Clear Parent | Clears the parent relationship. |
-
 
 #### Toggle Cyclic
 
@@ -1249,14 +1185,12 @@ Choose the handle type again.
 
 Masks can be animated.
 
-
 | Entry | What it does |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | Insert Shape Key | Inserts a shape key for the currently selected curve points |
 | Clear Shape Key | Removes the shape keys for the currently selected curve points at the current frame. |
 | Feather Reset Animation | Resets the feather weight on all selected curve points at the current frame. |
 | Re-Key Points of Selected Shapes | Recalculate animation data for the currently selected curve points for frames that are selected in the dope sheet. |
-
 
 #### Show/Hide submenu
 
@@ -1265,7 +1199,6 @@ Masks can be animated.
 ![Show/Hide Faces](/docs2/images/editors/image-editor/header/mask-menu/show-hide-faces.png)
 
 This is a sub menu where you can show or hide the selection.
-
 
 | Entry | What it does |
 | --------------- | ----------------------------------------------------------------------- |

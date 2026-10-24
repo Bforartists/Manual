@@ -12,6 +12,7 @@ screenshots: "5.1"
 source:
   - 35.3 Core Extension- 3D Sequencer.odt
 icon: seq_strip_meta
+summary: "This addon is activated by default."
 ---
 ![Core Extension- 3D Sequencer](/docs2/images/extensions/bforartists-extensions/core-extension-3d-sequencer/core-extension-3d-sequencer.png)
 

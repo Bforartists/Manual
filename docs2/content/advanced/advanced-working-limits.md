@@ -11,6 +11,7 @@ screenshots: "5.1"
 source:
   - 34 Advanced - Working Limits.odt
 icon: error
+summary: "There are some limits that you should take into account."
 ---
 ## Working Limits
 

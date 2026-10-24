@@ -12,6 +12,7 @@ screenshots: "5.1"
 source:
   - 16.2 Editors - Dope Sheet - Channel list.odt
 order: 40
+summary: "The channel list contains your objects and their animation channels."
 ---
 ## Dopesheet Editor - Channel List
 

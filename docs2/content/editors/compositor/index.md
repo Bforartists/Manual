@@ -18,7 +18,7 @@ source:
 ![Compositor Editor](/docs2/images/editors/compositor/compositor-editor.png)
 
 The Compositing editor allows you to do compositing. This means to modify and combine image layers in many different ways and by lots of available nodes. You can glue two pieces of footage together, colorize a whole image sequence at once and do all the traditional compositing steps that you usually would do in a 2d software.  
-  
+
 The editor is divided into several areas.
 
 Yellow – Header  
@@ -93,7 +93,6 @@ The whole add menu from the header.
 
 Search for nodes, and hilight them. When you are in a node group then it lists the content of the node group.
 
-
 | Entry | What it does |
 | ---------- | ---------------------------------------------------------------------------------------------------------- |
 | Cut Links | Calls a cut tool with which you can cut links between nodes |
@@ -103,13 +102,11 @@ Search for nodes, and hilight them. When you are in a node group then it lists t
 | Paste | Pastes the copied nodes. |
 | Duplicate | Duplicates the selected nodes. |
 
-
 ### Rename
 
 ![Rename](/docs2/images/editors/compositor/rename.png)
 
 Allows you to rename the current active node. A popup opens up where you can type in another name.
-
 
 | Entry | What it does |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -118,7 +115,6 @@ Allows you to rename the current active node. A popup opens up where you can typ
 | Make Links | Shows when you have at least two nodes connected. Tries to connect nodes where it makes sense. For example, the BSDF output of a Principled shader with the Surface input of the Material Output node. |
 | Make and Replace Links | Shows when you have at least two nodes connected. Same as Make Links. But it will replace existing links. |
 | Detach Links | Shows when you have at least two nodes connected. Removes all connections from the selected node, but tries to reconnect the remaining nodes. |
-
 
 ### Make Group
 
@@ -160,7 +156,6 @@ Select the node, hold down Shift, then select the node group so that both are se
 
 Enters a node group for editing. Or when you are in a node group, exits the node group editing.
 
-
 | Entry | What it does |
 | ----------------- | ----------------------------------------------------------------- |
 | Ungroup | Removes the selected nodes from a group. |
@@ -168,11 +163,9 @@ Enters a node group for editing. Or when you are in a node group, exits the node
 | Remove from Frame | Frame node functionality. Removes the selected node from a frame. |
 | Rename | Allows you to rename a node. |
 
-
 ### Select submenu
 
 ![Select submenu](/docs2/images/editors/compositor/select-submenu.png)
-
 
 | Entry | What it does |
 | --------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -181,7 +174,6 @@ Enters a node group for editing. Or when you are in a node group, exits the node
 | Linked To | Select the nodes that are linked to the currently selected nodes. The nodes behind in the hierarchy. |
 | Activate same type previous | Activate same node type before the current selection, step by step. |
 | Activate same type next | Activate same node type after the current selection, step by step. |
-
 
 ### Show/Hide submenu
 
@@ -243,7 +235,7 @@ Shows or hides unused sockets.
 
 ![Quick Favorites menu](/docs2/images/editors/compositor/quick-favorites-menu.png)
 
-When you right click at a menu or a button, then a right click menu will open. Tools have usually a Add to Quick Favorites menu entry.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 ![Quick Favorites menu](/docs2/images/editors/compositor/quick-favorites-menu-2.png)
 
@@ -253,11 +245,7 @@ In the 3D view we have a menu called Quick in the header, which shows this conte
 
 ## Slider snapping
 
-![Slider snapping](/docs2/images/editors/compositor/slider-snapping.png)
-
-Snapping also works at sliders. Hover with the mouse over the slider, start to slide, and holding down **Ctrl** will snap the sliders in incremental steps.
-
-When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.
+> Hold **Ctrl** while dragging a slider to snap it. See **[Snapping](../../interface/properties.md#snapping)** in the Interface chapter.
 
 ## Hotkey only functionality
 

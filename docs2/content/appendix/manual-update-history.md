@@ -12,6 +12,7 @@ source:
   - 40 Manual Update History.odt
 icon: time
 order: 20
+summary: "Documentation History: Appendix."
 ---
 23.04.2026 – Updated the manual to Bforartists 5 version 5.1.1
 

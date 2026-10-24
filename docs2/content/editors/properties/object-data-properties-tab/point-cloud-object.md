@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.6 Editors - Properties Editor - Object Data Properties Tab - Point Cloud Object.odt
+summary: "A list of the attributes at this object."
 ---
 ## Attributes panel
 

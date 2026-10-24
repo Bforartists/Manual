@@ -13,6 +13,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.9.10 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Color Modifiers.odt
+summary: "Color modifiers just exists for the Grease Pencil object."
 ---
 ![Color modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-color/color-modifiers-grease-pencil.png)
 

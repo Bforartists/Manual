@@ -87,24 +87,20 @@ Method is a drop down box where you can choose between Unwrap method Angle Based
 
 Fill holes in the mesh before unwrapping.
 
-
 | Entry | What it does |
 | ----------------------- | --------------------------------------------------------------------------------------- |
 | Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
-
 **Margin Method**
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
-
 
 | Entry | What it does |
 | -------- | ------------------------------------------------ |
 | Scaled | Use the scale of existing UV to multiply margin. |
 | Add | Just add the margin and ignore any existing UV. |
 | Fraction | Specify a precise fraction of specific UV. |
-
 
 **Margin**
 
@@ -118,7 +114,6 @@ The distance between the single UV patches.
 
 Number of iterations.
 
-
 | Entry | What it does |
 | ----------------------- | --------------------------------------------------------------------------------------- |
 | No Flip | Prevent flipping UV's |
@@ -126,18 +121,15 @@ Number of iterations.
 | Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
-
 **Margin Method**
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
-
 
 | Entry | What it does |
 | -------- | ------------------------------------------------ |
 | Scaled | Use the scale of existing UV to multiply margin. |
 | Add | Just add the margin and ignore any existing UV. |
 | Fraction | Specify a precise fraction of specific UV. |
-
 
 **Margin**
 
@@ -171,12 +163,10 @@ A use case is for example when you have a distorted result for symmetric geometr
 
 ![Last Operator Pin](/docs2/images/editors/uv-editor/last-operator-pin.png)
 
-
 | Entry | What it does |
 | ------ | ----------------------------------------------------------- |
 | Clear | Clear the pinning instead of setting it for the selection. |
 | Invert | Invert the pinning instead of setting it for the selection. |
-
 
 ### Unpin
 
@@ -222,7 +212,6 @@ Orientation is a drop-down box where you can choose the type of orientation for 
 
 Constraint Axis gives you the possibility to define the mirror axis. You can choose more than one axis here.
 
-
 | Entry | What it does |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Straighten | Straightens the selected geometry in both directions, X and Y axis. |
@@ -230,7 +219,6 @@ Constraint Axis gives you the possibility to define the mirror axis. You can cho
 | Straighten Y | Straightens the selected geometry along the Y axis. |
 | Align Auto | Aligns the selection. The align axis gets chosen from the selection itself. When it's higher than tall, then it aligns along the Y axis. When it's taller than high, then it aligns along the X axis. The align point is the pivot of the selection. |
 | Align Vertically | Aligns the selection along the X axis. The align point is the pivot of the selection. |
-
 
 ### Align Horizontally
 
@@ -252,12 +240,10 @@ Lists the straighten and align methods again.
 
 ![Merge](/docs2/images/editors/uv-editor/merge.png)
 
-
 | Entry | What it does |
 | --------- | --------------------------------------------- |
 | At Center | Merges the selected vertices at the center. |
 | At Cursor | Merges the selected vertices at the 2d cursor |
-
 
 #### By Distance
 
@@ -267,13 +253,11 @@ Merge vertices that are below a specified distance to each other.
 
 ![Last operator Merge UVs by Distance](/docs2/images/editors/uv-editor/last-operator-merge-uvs-by-distance.png)
 
-
 | Entry | What it does |
 | -------------- | ----------------------------------------------------- |
 | Merge Distance | Maximum distance for welding vertices. |
 | Unselected | Merge selected vertices to other unselected vertices. |
 | Shared Vertex | Weld uv’s based on shared vertices. |
-
 
 ### Stitch
 
@@ -289,7 +273,6 @@ Stitch tries to union UV patches along the selected edges or vertices.
 
 This last operator appears in the 3D view.
 
-
 | Entry | What it does |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Use Limit | Just snap when the elements are below a given distance. · **Snap Island**: Snap the whole UV patch, or just the selected edge(s)/vertices |
@@ -298,7 +281,6 @@ This last operator appears in the 3D view.
 | Active Object | Index of the active object. |
 | Snap at Midpoint | Snap at the center point of the two elements instead the first to the last. |
 | Clear Seams | Unmarks seams when stitching. |
-
 
 ##### Operation Mode
 
@@ -318,7 +300,7 @@ Split the selected geometry from the not selected geometry.
 
 ![Quick Favorites menu](/docs2/images/editors/uv-editor/quick-favorites-menu.png)
 
-When you right click at a menu or a button, then a right click menu will open. Tools have usually an Add to Quick Favorites menu entry.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 The Quick Favorites Menu is empty by default. With Add to Quick favorites you can add this menu to the Quick menu.
 
@@ -328,11 +310,7 @@ In the 3D view we have a menu called Quick in the header, which shows this conte
 
 ## Slider snapping
 
-![Slider snapping](/docs2/images/editors/uv-editor/slider-snapping.png)
-
-Snapping also works at sliders. Hover with the mouse over the slider, start to slide, and holding down **Ctrl** will snap the sliders in incremental steps.
-
-When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.
+> Hold **Ctrl** while dragging a slider to snap it. See **[Snapping](../../interface/properties.md#snapping)** in the Interface chapter.
 
 ## Hotkey only functionality
 
@@ -342,12 +320,10 @@ Most of the tools can be found in the graphical UI. But there are still some too
 
 The navigation hotkeys and the context menus are excluded here since they are already covered.
 
-
 | Entry | What it does |
 | ---------------------------------- | --------------------------------------- |
 | Loop Select - Alt Left Mouse | Select an edge loop. |
 | Loop Select - Shift Alt Left Mouse | Select an edge loop. Adds to selection. |
-
 
 ### Edge Ring Select - Ctrl Alt Left Mouse
 
@@ -383,24 +359,20 @@ Method is a drop down box where you can choose between Unwrap method Angle Based
 
 Fill holes in the mesh before unwrapping.
 
-
 | Entry | What it does |
 | ----------------------- | --------------------------------------------------------------------------------------- |
 | Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
-
 **Margin Method**
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
-
 
 | Entry | What it does |
 | -------- | ------------------------------------------------ |
 | Scaled | Use the scale of existing UV to multiply margin. |
 | Add | Just add the margin and ignore any existing UV. |
 | Fraction | Specify a precise fraction of specific UV. |
-
 
 **Margin**
 
@@ -414,7 +386,6 @@ The distance between the single UV patches.
 
 Number of iterations.
 
-
 | Entry | What it does |
 | ----------------------- | --------------------------------------------------------------------------------------- |
 | No Flip | Prevent flipping UV's |
@@ -422,18 +393,15 @@ Number of iterations.
 | Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
-
 **Margin Method**
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
-
 
 | Entry | What it does |
 | -------- | ------------------------------------------------ |
 | Scaled | Use the scale of existing UV to multiply margin. |
 | Add | Just add the margin and ignore any existing UV. |
 | Fraction | Specify a precise fraction of specific UV. |
-
 
 **Margin**
 
@@ -447,7 +415,6 @@ Click at the first edge or vertice, **hold down ctrl,click** at the last edge or
 
 ![Last operator Pick shortest path](/docs2/images/editors/uv-editor/last-operator-pick-shortest-path.png)
 
-
 | Entry | What it does |
 | ----------------- | --------------------------------------------------------------------- |
 | Face stepping | Traverse connected faces. Including diagonals and edge rings. |
@@ -456,5 +423,4 @@ Click at the first edge or vertice, **hold down ctrl,click** at the last edge or
 | Deselected | Don't select the whole path, but just every nth element of it. |
 | Selected | This is connected to nth element. Number of elements to skip at once. |
 | Offset | This is connected to nth element. Start with an offset. |
-
 

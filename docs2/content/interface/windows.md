@@ -30,9 +30,9 @@ Use **Window › New Main Window** to open a second full window with its own Top
 
 When you move the mouse over the upper corner of an editor window, then the mouse pointer turns into a white cross.
 
-Hold down Shift, and drag the mouse. The editor will detach from the Blender surface. This is useful for a multi monitor setup for example. Now you can place this editor at Monitor 2.
+Hold down Shift, and drag the mouse. The editor will detach from the Bforartists surface. This is useful for a multi monitor setup for example. Now you can place this editor at Monitor 2.
 
-Note that there is no way to reintegrate this floating editor window back into the Blender UI once it is detached. You have to close it.
+Note that there is no way to reintegrate this floating editor window back into the Bforartists UI once it is detached. You have to close it.
 
 ## Full screen
 

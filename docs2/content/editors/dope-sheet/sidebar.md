@@ -12,6 +12,7 @@ screenshots: "5.1"
 source:
   - 16.3 Editors - Dope Sheet - Sidebar.odt
 order: 30
+summary: "Opens a panel where you can adjust the settings for the custom property."
 ---
 ## Sidebar - Custom Properties
 

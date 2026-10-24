@@ -10,6 +10,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 42 Important Hotkeys.odt
+summary: "The usage of Bforartists is UI centered."
 ---
 |  |  |  |  |
 | -------------------- | ------------------------ | ---------------- | --- |

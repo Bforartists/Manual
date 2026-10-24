@@ -1,6 +1,6 @@
 ---
 id: editors.properties.modifiers
-title: Modifiers tab
+title: "Modifiers"
 section: editors
 path:
   - Editors
@@ -12,6 +12,9 @@ screenshots: "5.1"
 source:
   - 26.9 Editors - Properties Editor - Modifiers Properties Tab.odt
   - 26.9.1 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menus.odt
+summary: "Modifers are automatic operations that affects the geometry of objects in a non destructive way."
+icon: modifier_on
+order: 80
 ---
 ![Modifiers tab](/docs2/images/ui/properties/modifiers/modifiers-tab.png)
 

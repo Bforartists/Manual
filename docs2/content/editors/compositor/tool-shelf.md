@@ -12,6 +12,7 @@ screenshots: "5.1"
 source:
   - 10.2 Editors - Compositor Editor - Tool Shelf.odt
 order: 20
+summary: "Tools with a triangle down right are a group of tools."
 ---
 ## Tool Shelf
 

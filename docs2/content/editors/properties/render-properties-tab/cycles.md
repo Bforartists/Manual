@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.2.1 Editors - Properties Editor - Render Properties Tab - Cycles.odt
+summary: "There are three different render engines available."
 ---
 ## Render Tab
 

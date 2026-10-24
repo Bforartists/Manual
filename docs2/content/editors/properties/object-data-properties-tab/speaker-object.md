@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.12 Editors - Properties Editor - Object Data Properties Tab - Speaker Object.odt
+summary: "A list of available sounds in the scene."
 ---
 ## Sound panel
 

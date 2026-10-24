@@ -11,7 +11,7 @@ path:
 version: "5.1"
 status: draft
 icon: topbar
-summary: "Navigation Menu: All Modes."
+summary: "The Navigation menu provides you with all tools around viewport navigation."
 order: 20
 ---
 # All Modes - Navigation Menu

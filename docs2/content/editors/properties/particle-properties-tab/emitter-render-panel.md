@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.7 Editors - Properties Editor - Particle Properties Tab - Emitter - Render panel.odt
+summary: "The Render Panel controls how particles appear when they are rendered."
 ---
 ## Render Panel
 

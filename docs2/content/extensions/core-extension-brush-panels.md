@@ -12,6 +12,7 @@ screenshots: "5.1"
 source:
   - 35.1 Core Extension - Brush Panels.odt
 icon: brush_data
+summary: "This addon is optional and deactivated by default."
 ---
 ## Brush Panels
 

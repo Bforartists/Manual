@@ -1,6 +1,6 @@
 ---
 id: editors.properties.particle-properties-tab
-title: Particle Properties Tab
+title: "Particles"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10 Editors - Properties Editor - Particle Properties Tab.odt
+summary: "A particle system is used to animate lots of small objects at once."
+icon: particles
+order: 100
 ---
 ## Introduction
 

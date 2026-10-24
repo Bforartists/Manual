@@ -17,6 +17,7 @@ replaces:
   - editors.geometry-node-editor.header.swap-menu
   - editors.geometry-node-editor.header.node-menu
 order: 10
+summary: "The text menus are covered in an individual chapter each."
 ---
 The pages of this part are listed in the sidebar under *Header*.
 
@@ -46,12 +47,10 @@ Example: *You can create a node tree in the Tools mode of the Geometry Nodes edi
 
 ![Geometry Nodes Type](/docs2/images/editors/geometry-node-editor/header/tools-and-options/geometry-nodes-type-2.png)
 
-
 | Entry | What it does |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | Modifier | The context mode to create procedural modifier stack tool. |
 | Tool | The context mode to create act once operator tools. In this mode some exclusive nodes are displayed in the Add header menu and Add sidebar. |
-
 
 #### Use
 
@@ -158,13 +157,11 @@ Wit this button you assign a fake user to this selected geometry node tree.
 
 Data, like node trees, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
 
-
 | Entry | What it does |
 | --------- | --------------------------------------------------------------------------------------------------------------- |
 | Fake User | The number of users that uses this data. Data with a user number of 0 will be removed with closing Bforartists. |
 | Duplicate | Duplicates the current node group. |
 | Remove | Removes the geometry node tree. To delete it completely you need to purge it. See Fake user. |
-
 
 ### Options
 
@@ -172,12 +169,10 @@ Data, like node trees, that is not longer linked to anything else gets removed w
 
 At the right side you will see some options.
 
-
 | Entry | What it does |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Pin (pin icon) | The pin button will keep the current node tree selection fixed. When a node tree is pinned, it will remain visible in the shader editor even when another object is selected. |
 | Snap | Activates snapping. The snapping happens relative to the groundgrid. |
-
 
 #### Geometry node Overlays
 
@@ -285,9 +280,7 @@ Besides that, operators and menus gets added in the order that you add them. The
 
 #### Removing an operator from the Quick menu
 
-![Removing an operator from the Quick menu](/docs2/images/editors/geometry-node-editor/header/quick-menu/removing-an-operator-from-the-quick-menu.png)
-
-Removing is as simple as adding. Right click at the operators in the Quick menu, and choose Remove from Quick favorites.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 #### Context and mode dependent content
 
@@ -329,7 +322,6 @@ This group of operators is useful to take notes without changing tool-shelf oper
 
 > **Note:** These are legacy operators, meaning they are equally available in the Toolshelf as a modal operator.
 
-
 | Entry | What it does |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | Draw Annotation | Starts the annotation free hand draw tool in the editor. |
@@ -338,7 +330,6 @@ This group of operators is useful to take notes without changing tool-shelf oper
 | Erase Annotation | Starts the annotation erase tool in the editor which erases any strokes in the editor. |
 | Add Annotation Layer | Starts a new annotation layer. |
 | Erase Annotation Active Keyframe | Erases the active keyframe of the annotation. |
-
 
 | Entry | What it does |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -349,7 +340,6 @@ This group of operators is useful to take notes without changing tool-shelf oper
 | Zoom Border | Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button. |
 | Frame Selected | Zooms to the selection. |
 | Frame All | View all zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport. |
-
 
 #### Pie menus
 
@@ -363,21 +353,16 @@ Lists the available pie menus, and gives you the ability to read the hotkeys and
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------- |
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-
 ##### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/geometry-node-editor/header/view-menu/duplicate-area-into-new-window.png)
 
-Duplicate Area into New Window makes the selected editor window floating. You can then drag it around at the monitor. It is not connected with the rest of the UI any more.
-
-A separated window cannot be merged into the main window again. You have to close it when not longer needed.
-
+> **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../../../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
 | Entry | What it does |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -399,19 +384,16 @@ Here you will find the select functionality.
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
-
 | Entry | What it does |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
 | Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
-
 
 #### Lasso Select
 
 ![Lasso Select](/docs2/images/editors/geometry-node-editor/header/select-menu/lasso-select.png)
 
 A sub menu with the available lasso select modes.
-
 
 | Entry | What it does |
 | --------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -424,7 +406,6 @@ A sub menu with the available lasso select modes.
 | Grouped Extend | Select grouped nodes, and extend from the current selection. |
 | Activate same type previous | Activate same node type before the current selection, step by step. |
 | Activate same type next | Activate same node type after the current selection, step by step. |
-
 
 #### Find Node
 
@@ -448,7 +429,6 @@ Replace the selected node by another node from the swap menu.
 
 This menu contains further node functionality.
 
-
 | Entry | What it does |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Move | Moves the selected nodes. |
@@ -464,7 +444,6 @@ This menu contains further node functionality.
 | Join new Frame | Frame node functionality. Adds the selected node to a frame. |
 | Remove from Frame | Frame node functionality. Removes the selected node from a frame. |
 | Join Group Inputs | Merge selected group input nodes in one if possible. |
-
 
 #### Join in Named Frame
 
@@ -516,18 +495,15 @@ A group can be further collapsed by clicking at the triangle button in the upper
 
 The group can be renamed in the sidebar in the Item tab and in the Properties tab in the Node panel.
 
-
 | Entry | What it does |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Insert into Group | Allows you to insert a node into a node group. Select the node, hold down Shift, then select the node group so that both are selected. Then perform the operator. |
 | Ungroup | Ungroups an existing group. You need to be outside of the group edit mode. |
 | Toggle Edit Group | Enters a node group for editing. Or when you are in a node group, exits the node group editing. |
 
-
 #### Links
 
 ![Links](/docs2/images/editors/geometry-node-editor/header/node-menu/links.png)
-
 
 | Entry | What it does |
 | ---------------------- | ------------------------------------------------------------------------------------------- |
@@ -536,7 +512,6 @@ The group can be renamed in the sidebar in the Item tab and in the Properties ta
 | Cut Links | Mouse only tool. Cut links by moving with the mouse over the connection |
 | Detach Links | Removes all connections from the selected node, but tries to reconnect the remaining nodes. |
 | Detach Links Move | Removes all connections from the selected node by dragging. |
-
 
 ##### Mute Links
 
@@ -550,12 +525,10 @@ Allows you to mute links instead of disconnecting it by painting over the link c
 
 Node group functionality. You need to be in edit group mode.
 
-
 | Entry | What it does |
 | ----- | -------------------------------------------------------------------------------------------------------------- |
 | Copy | Copies the selected node, and pastes a copy of it outside of the node group. The node group remains unchanged. |
 | Move | Moves the selected to outside of the node group, and removes it from the node group. |
-
 
 #### Hide / Toggle
 

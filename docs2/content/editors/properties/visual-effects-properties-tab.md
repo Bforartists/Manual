@@ -1,6 +1,6 @@
 ---
 id: editors.properties.visual-effects-properties-tab
-title: Visual Effects Properties Tab
+title: "Visual Effects"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.11 Editors - Properties Editor - Visual Effects Properties Tab.odt
+summary: "Visual Effects are for the Grease Pencil object only."
+icon: shaderfx
+order: 90
 ---
 ## Visual Effects
 

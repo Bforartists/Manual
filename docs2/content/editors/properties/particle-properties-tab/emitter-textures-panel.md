@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.13 Editors - Properties Editor - Particle Properties Tab - Emitter - Textures panel.odt
+summary: "Particles density can be controlled by textures."
 ---
 ## Textures panel
 

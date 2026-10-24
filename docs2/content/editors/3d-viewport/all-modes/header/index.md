@@ -16,7 +16,7 @@ cta: "Open"
 ---
 ## Introduction
 
-The 3D View editor is the editor where you edit your 3D data. Here you can display and modify all the scene data like meshes, curves, metalballs, etc.
+The 3D View editor is the editor where you edit your 3D data. Here you can display and modify all the scene data like meshes, curves, metaballs, etc.
 
 It has by default a grid in the middle. And you can navigate around in this view.
 

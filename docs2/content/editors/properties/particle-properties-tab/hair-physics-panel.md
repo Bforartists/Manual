@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.21 Editors - Properties Editor - Particle Properties Tab - Hair - Physics panel.odt
+summary: "The movement of particles can be controlled and influenced in various ways."
 ---
 ## Physics Panel
 

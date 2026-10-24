@@ -180,6 +180,9 @@ def nav_tree(tree, kids, icons, section_slug, page_slug, commit=""):
             d["ph"] = 1
         if n.page.fm.get("cta"):
             d["b"] = str(n.page.fm["cta"])
+        st = str(n.page.fm.get("status") or "draft")
+        if st != "draft":
+            d["st"] = st
         d["m"] = max(1, round(words_of(n.page) / 200))
         if top:
             summ = plain_summary(n.page, 120)
@@ -262,3 +265,4 @@ def index_html(tree, url_of):
         out.append(f'<li><a href="{htmllib.escape(u)}">{htmllib.escape(t)}</a> · <em>{htmllib.escape(s)}</em></li>')
     out.append("</ul></div>")
     return "".join(out)
+

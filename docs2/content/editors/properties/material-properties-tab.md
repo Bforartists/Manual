@@ -1,6 +1,6 @@
 ---
 id: editors.properties.material-properties-tab
-title: Material Properties Tab
+title: "Material"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.15 Editors - Properties Editor - Material Properties Tab.odt
+summary: "Materials controls the appearance of meshes, curves, volumes and other objects."
+icon: material_data
+order: 160
 ---
 ## Preface
 

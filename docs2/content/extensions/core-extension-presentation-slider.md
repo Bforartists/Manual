@@ -12,6 +12,7 @@ screenshots: "5.1"
 source:
   - 35.2 Core Extension- Presentation Slider.odt
 icon: image
+summary: "This addon is optional and deactivated by default."
 ---
 ## Presentation Slides
 
