@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · workspace maps · @version 1.0.1
+/* Bforartists Docs 2.0 · workspace maps · @version 1.0.2
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer), next to the docs layer.
  * The sync writes plain lists from docs2/workspaces.yml; this script turns them into:
@@ -80,8 +80,8 @@
     '.wsx-info{padding:1.125rem;border-radius:.625rem;background:var(--wsx-card);display:flex;flex-direction:column;gap:.625rem;box-shadow:inset .6px 1px 0 #ffffff0f,0 1px 2px #000b,6px 14px 18px -10px #0009}',
     '.wsx-eb{display:flex;align-items:center;gap:.5rem;font:700 .75rem Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#5cb4f0}',
     '.wsx-dot{width:.75rem;height:.75rem;border-radius:3px;flex:none;background:var(--c,#9a9a9a)}',
-    '.wsx-info h3{display:flex;align-items:center;gap:.5rem;margin:0!important;font:700 1.375rem/1.2 Inter,sans-serif!important;color:var(--wsx-text)}',
-    '.wsx-info h3 img{width:22px;height:22px;margin:0!important}',
+    '.wsx-info .wsx-h{display:flex;align-items:center;gap:.5rem;margin:0!important;font:700 1.375rem/1.2 Inter,sans-serif!important;color:var(--wsx-text)}',
+    '.wsx-info .wsx-h img{width:22px;height:22px;margin:0!important}',
     '.wsx-info p{margin:0!important;color:var(--wsx-mute);font-size:.9375rem;line-height:1.55}',
     '.wsx-info .ui-btn{align-self:flex-start}',
     '.wsx-all{padding:.875rem;border-radius:.625rem;background:var(--wsx-sink);box-shadow:inset 2px 5px 10px #0006}',
@@ -195,12 +195,12 @@
       st.appendChild(h);
     });
     this.all.innerHTML = w.areas.length ? '<small>All areas here</small><div class="wsx-chips">' + w.areas.map(function (a, i) {
-      return '<button type="button" class="wsx-chip" data-n="' + i + '" style="--c:' + a.c + '"><span class="wsx-dot"></span>' + esc(a.name) + '</button>';
+      return '<button type="button" class="wsx-chip" data-n="' + i + '" style="--c:' + a.c + '">' + (a.i ? img(a.i) : '<span class="wsx-dot"></span>') + esc(a.name) + '</button>';
     }).join('') + '</div>' : '';
     this.all.style.display = w.areas.length ? '' : 'none';
     this.fit();
     if (w.areas.length) this.pick(hero(w));
-    else { this.info.innerHTML = '<div class="wsx-eb">' + img(IC.ws) + 'Workspace</div><h3>' + esc(w.name) + '</h3>' + (w.sum ? '<p>' + esc(w.sum) + '</p>' : '') + (w.href ? btn('Open the ' + w.name + ' page', IC.fwd, 'is-small', w.href) : ''); this.ov.innerHTML = ''; }
+    else { this.info.innerHTML = '<div class="wsx-eb">' + img(IC.ws) + 'Workspace</div><div class="wsx-h">' + esc(w.name) + '</div>' + (w.sum ? '<p>' + esc(w.sum) + '</p>' : '') + (w.href ? btn('Open the ' + w.name + ' page', IC.fwd, 'is-small', w.href) : ''); this.ov.innerHTML = ''; }
   };
   /* small areas: the label shows only the editor icon; very small ones skip the big icon */
   Map.prototype.fit = function () {
@@ -218,7 +218,7 @@
     var where = this.opts.title || w.name;
     var go = a.href ? btn('Open the ' + a.name + ' chapter', IC.fwd, 'is-small', a.href) : '';
     this.info.style.setProperty('--c', a.c);
-    this.info.innerHTML = '<div class="wsx-eb"><span class="wsx-dot"></span>Area' + (where ? ' in ' + esc(where) : '') + '</div><h3>' + (a.i ? img(a.i) : '') + esc(a.name) + '</h3>' + (a.note ? '<p>' + esc(a.note) + '</p>' : '') + go;
+    this.info.innerHTML = '<div class="wsx-eb"><span class="wsx-dot"></span>Area' + (where ? ' in ' + esc(where) : '') + '</div><div class="wsx-h">' + (a.i ? img(a.i) : '') + esc(a.name) + '</div>' + (a.note ? '<p>' + esc(a.note) + '</p>' : '') + go;
     this.ov.innerHTML = '<div><b>' + esc(a.name) + '</b>' + esc(a.note) + '</div>' + go;
   };
   Map.prototype.fs = function () {
