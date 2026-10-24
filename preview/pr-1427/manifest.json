@@ -1,0 +1,27 @@
+{
+ "pages": {
+  "docs2/content/workspaces/2d-animation.md": "workspaces/2d-animation.html",
+  "docs2/content/workspaces/2d-full-canvas.md": "workspaces/2d-full-canvas.html",
+  "docs2/content/workspaces/3d-sequencer.md": "workspaces/3d-sequencer.html",
+  "docs2/content/workspaces/animation.md": "workspaces/animation.html",
+  "docs2/content/workspaces/assets.md": "workspaces/assets.html",
+  "docs2/content/workspaces/color-balance.md": "workspaces/color-balance.html",
+  "docs2/content/workspaces/compositing.md": "workspaces/compositing.html",
+  "docs2/content/workspaces/main.md": "workspaces/main.html",
+  "docs2/content/workspaces/masking.md": "workspaces/masking.html",
+  "docs2/content/workspaces/modeling.md": "workspaces/modeling.html",
+  "docs2/content/workspaces/motion-tracking.md": "workspaces/motion-tracking.html",
+  "docs2/content/workspaces/nodes.md": "workspaces/nodes.html",
+  "docs2/content/workspaces/rendering.md": "workspaces/rendering.html",
+  "docs2/content/workspaces/scripting.md": "workspaces/scripting.html",
+  "docs2/content/workspaces/sculpting.md": "workspaces/sculpting.html",
+  "docs2/content/workspaces/sequencer-compositing.md": "workspaces/sequencer-compositing.html",
+  "docs2/content/workspaces/shading.md": "workspaces/shading.html",
+  "docs2/content/workspaces/storyboarding.md": "workspaces/storyboarding.html",
+  "docs2/content/workspaces/texture-paint.md": "workspaces/texture-paint.html",
+  "docs2/content/workspaces/uv-editing.md": "workspaces/uv-editing.html",
+  "docs2/content/workspaces/video-editing.md": "workspaces/video-editing.html",
+  "docs2/content/workspaces/workspaces.md": "workspaces/workspaces.html"
+ },
+ "images": 27
+}
