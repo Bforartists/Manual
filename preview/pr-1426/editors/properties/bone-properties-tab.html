@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bone · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1426 · <code>docs2/q3-phase345</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<a href="../../interface/windows.html">Windows</a>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/header.html">Header</a>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="view-layer-properties-tab.html">View Layer</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../graph-editor/channel-list.html">Channel List</a>
+<a href="../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<a style="padding-left:1.5rem" href="visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<a style="padding-left:1.5rem" href="physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="object-data-properties-tab.html">Object Data</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a class="is-current" style="padding-left:1.5rem" href="bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="bone-constraint-properties.html">Bone Constraints</a>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="texture-properties-tab.html">Texture</a>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../shader-editor.html">Shader Editor</a>
+<a href="../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../graph-editor.html">Graph Editor</a>
+<a href="../drivers-editor.html">Drivers Editor</a>
+<a href="../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<a href="../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/volume-object.html">Volume Object</a>
+<span>File browser</span>
+<span>Asset Browser</span>
+<a href="../spreadsheet.html">Spreadsheet</a>
+<a href="../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<a href="../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../advanced/troubleshooting.html">Troubleshooting</a>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../appendix/manual-update-history.html">Documentation History</a>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Bone Properties Tab</div><h1 class="pv-title">Bone</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 11 min read</span></div><article class="ui-doc-body"><h2 id="editors-properties-editor-bone-tab">Editors - Properties Editor - Bone Tab</h2>
+<p>The bone tab contains bone related settings. The content differs from mode to mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/editors-properties-editor-bone-tab.png" alt="Editors - Properties Editor - Bone Tab" /></td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/editors-properties-editor-bone-tab-2.png" alt="Editors - Properties Editor - Bone Tab" /></td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/editors-properties-editor-bone-tab-3.png" alt="Editors - Properties Editor - Bone Tab" /></td>
+</tr>
+<tr>
+<td>Object Mode</td>
+<td>Edit Mode</td>
+<td>Pose Mode</td>
+</tr>
+</tbody>
+</table>
+<h2 id="transform-panel">Transform panel</h2>
+<h3 id="edit-mode">Edit Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/edit-mode.png" alt="Edit Mode" loading="lazy"></figure>
+<p>Bones do have a head and a tail. You cannot position the whole bone by numeric values, but the head and tail joints.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Head</td>
+<td>Adjust the world position of the head joint in x, y and z coordinates. · <strong>Radius</strong>: This is just useful when you use Envelopes type bones. Adjust the Envelope radius of the head joint.</td>
+</tr>
+<tr>
+<td>Tail</td>
+<td>Adjust the world position of the tail joint in x, y and z coordinates. · <strong>Radius</strong>: This is just useful when you use Envelopes type bones. Adjust the Envelope radius of the tail joint.</td>
+</tr>
+<tr>
+<td>Roll</td>
+<td>Adjust the bone roll. · <strong>Length</strong>: Adjust the length of the bone. · <strong>Envelope</strong>: This is just useful when you use Envelopes type bones. Adjust the overall Envelope size. · <strong>Lock</strong>: Lock the transform of the bones in edit mode. The bones cannot be moved, rotated or scaled.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pose-mode">Pose Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/pose-mode.png" alt="Pose Mode" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location X Y Z</td>
+<td>The location of the root bone. Just the root bone can be re-positioned. For all other bones in the hierarchy the edit boxes are greyed out.</td>
+</tr>
+<tr>
+<td>Rotation W X Y Z</td>
+<td>The rotation of the current bone. With Mode Quaternion you will have the W axis too. With euler angles you will just have X Y and Z axis.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mode">Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/mode.png" alt="Mode" loading="lazy"></figure>
+<p>The rotation mode to use. Euler angles can run into a gimbal lock problem. This means the bone is not longer rotatable. Quaternion rotation avoids gimbal lock.</p>
+<h4 id="scale-x-y-z">Scale X Y Z</h4>
+<p>The scale of the bone.</p>
+<h2 id="bendy-bones-panel">Bendy Bones panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/bendy-bones-panel.png" alt="Bendy Bones panel" loading="lazy"></figure>
+<p>Settings for bendy bones. Bendy bones, also called Bbone, is a special bone mode that allows to divide bones into segments that can be bend and rotated. The “BBone Shape” Keying Set includes all Bendy Bones properties.</p>
+<p>You have to activate Bbone in the Object data in the Viewport Display panel. Display as.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/bendy-bones-panel-2.png" alt="Bendy Bones panel" loading="lazy"></figure>
+<p>The settings becomes activated when the number of segments is higher than 1.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Segments</td>
+<td>The Segments number field allows you to set the number of segments, which the given bone is subdivided into. Segments are small, rigid linked child bones that interpolate between the root and the tip. The higher this setting, the smoother “bends” the bone, but the heavier the pose calculations.</td>
+</tr>
+<tr>
+<td>Curve X Y Offsets</td>
+<td>Applies offsets to the curve handle positions on the plane perpendicular to the bone’s primary (Y) axis. As a result, the handle moves per axis (XY) further from its original location, causing the curve to bend.</td>
+</tr>
+<tr>
+<td>Roll</td>
+<td>Roll In, Out The roll value (or twisting around the main Y axis of the bone) is interpolated per segment, between the start and end roll values. It is applied as a rotational offset on top of the previous rotation.</td>
+</tr>
+<tr>
+<td>Inherit End Roll</td>
+<td>If enabled, the Roll Out value of the Start Handle bone (connected parent by default) will be implicitly added to the Roll In setting of the current bone.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Scale In X/Y, Scale Out X/Y Scaling factor that adjusts the thickness of each segment for the X and Y axes only, i.e. length (Z axis) is not affected. Similar to Roll it is interpolated per segment.</td>
+</tr>
+<tr>
+<td>Ease In , Ease Out</td>
+<td>The Ease In/Out number fields, change the “length” of the “auto” Bezier handle to control the “root handle” and “tip handle” of the bone, respectively. These values are proportional to the default length, which of course automatically varies depending on bone length, angle with the reference handle, and so on.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scale-easing">Scale Easing</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/scale-easing.png" alt="Scale Easing" loading="lazy"></figure>
+<p>Multiply the final easing values by the Scale In and Out Y value.</p>
+<h3 id="custom-handles">Custom Handles</h3>
+<p>B-Bones can use custom bones as their reference bone handles, instead of only using the connected parent/child bones.</p>
+<h3 id="start-end-handle-type">Start + End Handle Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/start-end-handle-type.png" alt="Start + End Handle Type" loading="lazy"><figcaption>Start + End Handle Type</figcaption></figure>
+<p>Specifies the type of the handle from the following choices:</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Automatic</td>
+<td>The connected parent (or first connected child) of the bone is chosen as the handle. Calculations are done according to the Absolute handle type below.</td>
+</tr>
+<tr>
+<td>Absolute</td>
+<td>The Bezier handle is controlled by the position of the head (tail) of the handle bone relative to the head (tail) of the current bone. If the handle is also a B-Bone, additional processing is applied to further smooth the transition, assuming that the bones in effect form a chain.</td>
+</tr>
+<tr>
+<td>Relative</td>
+<td>The Bezier handle is controlled by the offset of the head (tail) of the handle bone from its rest pose. The use of this type is not recommended due to numerical stability issues near zero offset.</td>
+</tr>
+<tr>
+<td>Tangent</td>
+<td>The Bezier handle is controlled by the orientation of the handle bone, independent of its location.</td>
+</tr>
+<tr>
+<td>Custom Handle</td>
+<td>For types other than Automatic, a bone to use as handle has to be manually selected. Switching to a custom handle type without selecting a bone can be used to effectively disable the handle. It is valid for two bones to refer to each other as handles – this correlation is applied in connected chains with Automatic handles.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Multiply the B Bone scale out channels by the local scale values of the start or end handle in x, y or z direction.</td>
+</tr>
+<tr>
+<td>Ease</td>
+<td>Use easing for the scaling, not linear.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="relations-panel">Relations panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/relations-panel.png" alt="Relations panel" loading="lazy"></figure>
+<p>Relation related settings. Note that in Edit mode relative parenting does not display.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parent</td>
+<td>Usually bones are in a hierarchy with parent and child bones. This parent edit box displays the parent bone. The parent bone can be edited in edit mode.</td>
+</tr>
+<tr>
+<td>Relative Parenting</td>
+<td>Object children will use relative transform. Like deform.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>Set the head of the bone to be connected with its parent root.</td>
+</tr>
+<tr>
+<td>Local Location</td>
+<td>When disabled, the location transform property is evaluated in the parent bone’s local space, rather than using the bone’s own rest pose local space orientation.</td>
+</tr>
+<tr>
+<td>Inherit Rotation</td>
+<td>When disabled, this will “break” the rotation relationship to the bone’s parent. This means that the child will keep its rotation in the armature object space when its parent is rotated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inherit-scale">Inherit Scale</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/inherit-scale.png" alt="Inherit Scale" loading="lazy"></figure>
+<p>Specifies which effects of parent scaling the bone inherits.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full</td>
+<td>The bone inherits all effects of parent scaling and shear.</td>
+</tr>
+<tr>
+<td>Fix Shear</td>
+<td>Corrects the transformation inherited from the parent to remove shear caused by non-uniform parent scaling and rotation. The process preserves the bone direction, length and volume, and minimally affects roll on average. If the inherited scale is non-uniform, this does not prevent shear from reappearing due to local rotation of the child bone, or of its children.</td>
+</tr>
+<tr>
+<td>Aligned</td>
+<td>Parent scaling is inherited as if the child was oriented the same as the parent, always applying parent X scale over child X scale, and so on. This mode never causes shear and is natural for connected chains like limbs and tentacles.</td>
+</tr>
+<tr>
+<td>Average</td>
+<td>Inherits a uniform scaling factor that is the total change in the volume of the parent. This effectively keeps the uniform part of the scaling of the parent, while removing squash and stretch effects. Uniform scaling never causes shear.</td>
+</tr>
+<tr>
+<td>None</td>
+<td>Ignores all scaling and shear of the parent.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="none-legacy">None (Legacy)</h4>
+<p>Ignores all scaling, provided the parent is not sheared. If it is, there are no guarantees.</p>
+<p>This choice replicates the behavior of the old Inherit Scale checkbox, and may be removed in a future release.</p>
+<p>These inheriting behaviors propagate along the bones’ hierarchy. So when you scale down a bone, all its descendants are by default scaled down accordingly. However, if you disable one bone’s Inherit Scale or Inherit Rotation property in this “family”, this will break the scaling propagation, i.e. this bone and all its descendants will no longer be affected when you scale one of its ancestors.</p>
+<h3 id="bone-collections-subpanel">Bone Collections subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/bone-collections-subpanel.png" alt="Bone Collections subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/bone-collections-subpanel-2.png" alt="Bone Collections subpanel" loading="lazy"></figure>
+<p>Bones can be organized and can exist in different collections. Here you can see and to some degree manage them. Creating the collections is not possible from here. This must be done in the data tab in the Bone Collection panel.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visible</td>
+<td>Make the collection visible or invisible.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes the bone from the bone collection. Attention, there is no way to add this bone back then. The remove functionality just works in edit and pose mode.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deform-panel">Deform panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/deform-panel.png" alt="Deform panel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deform</td>
+<td>Enable the bone to deform geometry. Toggling the checkbox in the panel header off, prevents the bone from deforming the geometry at all, overriding any weights that it might have been assigned before; It mutes its influence. It also excludes the active bone in the automatic weight calculation when the mesh is parented to the armature using the Armature Deform tool with the “With Automatic Weights” option.</td>
+</tr>
+<tr>
+<td>Envelope Distance</td>
+<td>Envelope is something like a hull around the bone, which defines an influence area for weighting. The Distance defines a volume which is the range within the bone has an influence on vertices of the deformed object. The geometry is less and less affected by the bone as it goes away by following a quadratic decay.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="envelope-weight">Envelope Weight</h3>
+<p>A bone property, that controls the global influence of the bone over the deformed object, when using the envelopes method.</p>
+<p>It is only useful for the parts of geometry that are “shared”, influenced by more than one bone (generally, at the joints…) – a bone with a high weight will have more influence on the result than one with a low weight… Note that when set to 0.0, it has the same effect as disabling the Deform option.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Envelope Multiply</td>
+<td>When deforming bone, multiply effects of vertex group weights with Envelope influence.</td>
+</tr>
+<tr>
+<td>Radius Head</td>
+<td>Set the radius for the head of envelope bones. Inside this volume, the geometry if fully affected by the bone.</td>
+</tr>
+<tr>
+<td>Tail</td>
+<td>Set the radius for the tail of envelope bones. Inside this volume, the geometry if fully affected by the bone.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="inverse-kinematics-panel">Inverse Kinematics panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/inverse-kinematics-panel.png" alt="Inverse Kinematics panel" loading="lazy"></figure>
+<p>Settings for inverse kinematics. This is for Pose mode only.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IK stretch</td>
+<td>Allow scaling of the bone for IK.</td>
+</tr>
+<tr>
+<td>Lock IK X Y Z</td>
+<td>Lock the single axis for IK.</td>
+</tr>
+<tr>
+<td>Stiffness X Y Z</td>
+<td>Add a stiffness around the axis.</td>
+</tr>
+<tr>
+<td>Limit X</td>
+<td>Limit movement around the X axis.</td>
+</tr>
+<tr>
+<td>Limit Y</td>
+<td>Limit movement around the X axis.</td>
+</tr>
+<tr>
+<td>Limit Z</td>
+<td>Limit movement around the X axis.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="control-rotation">Control Rotation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/control-rotation.png" alt="Control Rotation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/control-rotation-2.png" alt="Control Rotation" loading="lazy"></figure>
+<p>When you use Inverse Kinematics with the iTaSC solver in the object data properties in the Inverse Kinematics panel, then you will reveal this checkbox.</p>
+<p>Apply channel rotation as IK constraint.</p>
+<h4 id="ik-rotation-weight">IK Rotation Weight</h4>
+<p>Weight of rotation constraint for IK.</p>
+<h2 id="viewport-display-panel">Viewport Display panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/viewport-display-panel.png" alt="Viewport Display panel" loading="lazy"></figure>
+<p>This panel controls the viewport display settings of each bone.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> To apply settings to all bones, hold down Alt before selecting or toggling.</p></div>
+<h3 id="hide">Hide</h3>
+<p>Hides the selected bone in the viewport. This toggle is mode dependant. So it is possible for example to hide the bone in edit mode, but keep in pose and object mode.</p>
+<h4 id="selectable">Selectable</h4>
+<p>If the bone can be selected or not.</p>
+<h3 id="display-as">Display As</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/display-as.png" alt="Display As" loading="lazy"></figure>
+<p>How to display the armature in the viewport.</p>
+<h3 id="bone-color">Bone Color</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/bone-color.png" alt="Bone Color" loading="lazy"></figure>
+<p>Use a color theme for your bone group.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bone Color Set</td>
+<td>A set of predefined bone color sets for Edit Mode. Each set is made of three colors. · <strong>Normal</strong>: The first color field is the color of unselected bones. · <strong>Selected</strong>: The second color field is the outline color of selected bones. · <strong>Active</strong>: The third color field is the outline color of the active bone. The custom color set is editable. The other color sets are fixed.</td>
+</tr>
+<tr>
+<td>Copy Colors to to Selected</td>
+<td>Pose mode only. Copy the bone color of the active bone to all selected bones.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pose-bone-color">Pose Bone Color</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/pose-bone-color.png" alt="Pose Bone Color" loading="lazy"></figure>
+<p>A set of predefined bone color sets for Pose Mode. Like in the Edit Bone Colors, each set is made of three colours based on a normal colour, selected and active.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> You can change pose bone colour in Pose Mode too.</p></div>
+<h4 id="sync-to-selected">Sync to Selected</h4>
+<p>Pose mode. Copy the bone color of the active bone to all selected bones.</p>
+<h3 id="custom-shape">Custom Shape</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/custom-shape.png" alt="Custom Shape" loading="lazy"></figure>
+<p>Use a custom object to be displayed as the bone in Object and Pose mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Workflow</td>
+<td>Switch to Pose Mode. Select the relevant bone by clicking on it. Go to the Display panel Custom Shape field and select an object in the scene that you want to use as a display object.</td>
+</tr>
+<tr>
+<td>Custom Object</td>
+<td>The object that defines the custom shape of the selected bone.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>The scale of the custom object.</td>
+</tr>
+<tr>
+<td>Translation</td>
+<td>Position the custom object.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Rotate the custom object. This happens in Euler angles.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="override-transform">Override Transform</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/override-transform.png" alt="Override Transform" loading="lazy"></figure>
+<p>Bone that defines the display transform of the custom shape.</p>
+<h5 id="affect-gizmo">Affect Gizmo</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/affect-gizmo.png" alt="Affect Gizmo" loading="lazy"></figure>
+<p>Use the orientation of the custom shape transform bone for the transform gizmos and other transform operators in the 3d view.</p>
+<h5 id="use-as-pivot">Use As Pivot</h5>
+<p>Transform the bone as if it would be child of the custom shape transform bone.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale to Bone Length</td>
+<td>Scale the custom object.</td>
+</tr>
+<tr>
+<td>Scale to Bone Length</td>
+<td>Option not to use bones length, so that changes in Edit Mode don’t resize the custom shape.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="wireframe">Wireframe</h4>
+<p>Display wireframe on bones regardless of viewport shading mode.</p>
+<h5 id="wire-width">Wire width</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/bone-properties-tab/wire-width.png" alt="Wire width" loading="lazy"></figure>
+<p>The width of the wireframe of the custom shape.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-phase345/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fbone-properties-tab.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-phase345/docs2/content/editors/properties/bone-properties-tab.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#editors-properties-editor-bone-tab">Editors - Properties Editor - Bone Tab</a><a class="h2" href="#transform-panel">Transform panel</a><a class="h3" href="#edit-mode">Edit Mode</a><a class="h3" href="#pose-mode">Pose Mode</a><a class="h2" href="#bendy-bones-panel">Bendy Bones panel</a><a class="h3" href="#scale-easing">Scale Easing</a><a class="h3" href="#custom-handles">Custom Handles</a><a class="h3" href="#start-end-handle-type">Start + End Handle Type</a><a class="h2" href="#relations-panel">Relations panel</a><a class="h3" href="#inherit-scale">Inherit Scale</a><a class="h3" href="#bone-collections-subpanel">Bone Collections subpanel</a><a class="h2" href="#deform-panel">Deform panel</a><a class="h3" href="#envelope-weight">Envelope Weight</a><a class="h2" href="#inverse-kinematics-panel">Inverse Kinematics panel</a><a class="h3" href="#control-rotation">Control Rotation</a><a class="h2" href="#viewport-display-panel">Viewport Display panel</a><a class="h3" href="#hide">Hide</a><a class="h3" href="#display-as">Display As</a><a class="h3" href="#bone-color">Bone Color</a><a class="h3" href="#pose-bone-color">Pose Bone Color</a><a class="h3" href="#custom-shape">Custom Shape</a></aside></div></body></html>

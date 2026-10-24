@@ -1,0 +1,1011 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grease Pencil Object · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1426 · <code>docs2/q3-phase345</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<a href="../../../interface/windows.html">Windows</a>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/header.html">Header</a>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../view-layer-properties-tab.html">View Layer</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../../graph-editor/channel-list.html">Channel List</a>
+<a href="../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="../collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="../object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="../modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<a style="padding-left:1.5rem" href="../visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="../particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<a style="padding-left:1.5rem" href="../physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../object-data-properties-tab.html">Object Data</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="../bone-constraint-properties.html">Bone Constraints</a>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="../material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../texture-properties-tab.html">Texture</a>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="../strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="../strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../../dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<a href="../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../../text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<a href="../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="text-object.html">Text Object</a>
+<a class="is-current" style="padding-left:2.5rem" href="grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="volume-object.html">Volume Object</a>
+<span>File browser</span>
+<span>Asset Browser</span>
+<a href="../../spreadsheet.html">Spreadsheet</a>
+<a href="../../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="../../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<a href="../../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../../advanced/troubleshooting.html">Troubleshooting</a>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/manual-update-history.html">Documentation History</a>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../../../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Object Data Properties Tab › Grease Pencil Object</div><h1 class="pv-title">Grease Pencil Object</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 10 min read</span></div><article class="ui-doc-body"><h2 id="layers-panel">Layers panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/layers-panel.png" alt="Layers panel" loading="lazy"></figure>
+<p>Grease Pencil objects each have a list of 2D layers for grouping and arranging strokes in a List view. Any stroke can only belong to a single 2D layer. There is always only one active layer in the list (the selected one). When you draw, the new strokes are added to the active layer. By default the view order of the layers in the viewport is top to bottom.</p>
+<p>Every layer correspond to a channel in the Dope Sheet editor (in Grease Pencil mode). Layers can also be used together with Modifiers to only affects part of your drawing.</p>
+<h3 id="layer-list">Layer list</h3>
+<h4 id="layer-name">Layer name</h4>
+<p>The name of the layer.</p>
+<h5 id="grease-pencil-layers-right-click-menu">Grease pencil layers right click menu</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/grease-pencil-layers-right-click-menu.png" alt="Grease pencil layers right click menu" loading="lazy"><figcaption>Grease pencil layers right click menu</figcaption></figure>
+<p>A right click at a group in the list reveals a menu with further options.</p>
+<p>When you click at a group layer, then you will reveal further options.</p>
+<h6 id="edit-source">Edit Source</h6>
+<p>Allows you to edit the source code.</p>
+<h6 id="reset-panel-zoom">Reset Panel Zoom</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/reset-panel-zoom.png" alt="Reset Panel Zoom" loading="lazy"></figure>
+<p>Resets the zoom of the panel to the default value. Note that this entry is dysfunctional. You cannot zoom the panel.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete Group</td>
+<td>Deletes the selected group. It does not keep the children, and deletes the whole hierarchy.</td>
+</tr>
+<tr>
+<td>Ungroup</td>
+<td>Ungroups the selected group.</td>
+</tr>
+<tr>
+<td>Merge Group</td>
+<td>Combine the layers in this group into a single layer.</td>
+</tr>
+<tr>
+<td>Colors</td>
+<td>Allows you to color your layer groups in the list. It does not show</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mask Layer</td>
+<td>Toggle the Masks visibility in the layer.</td>
+</tr>
+<tr>
+<td>Onion Skinning</td>
+<td>Toggle the use the layer for Onion Skinning.</td>
+</tr>
+<tr>
+<td>Viewport/Render Visibility</td>
+<td>Toggle layer visibility in the viewport and in render.</td>
+</tr>
+<tr>
+<td>Lock</td>
+<td>Toggle layer from being editable.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="search-field">Search Field</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/search-field.png" alt="Search Field" loading="lazy"></figure>
+<p>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term.</p>
+<h3 id="add-new-layer">Add New Layer</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/add-new-layer.png" alt="Add New Layer" loading="lazy"></figure>
+<p>Adds a new layer.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add New Layer Group</td>
+<td>Adds a group. You can then drag n drop layers into it.</td>
+</tr>
+<tr>
+<td>Remove Layer Group</td>
+<td>Deletes the selected group. But keeps the children, and the hierarchy.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="add-extra-menu">Add Extra menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/add-extra-menu.png" alt="Add Extra menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/add-extra-menu-2.png" alt="Add Extra menu" loading="lazy"></figure>
+<p>Extra operators per layer or layer group.</p>
+<h4 id="add-group">Add Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/add-new-layer.png" alt="Add Group" loading="lazy"></figure>
+<p>Adds a group. You can then drag n drop layers into it. The group will be added as a child when you have a group selected.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete Group</td>
+<td>Deletes the selected group. Note: <em>Only shows on Layer Groups</em></td>
+</tr>
+<tr>
+<td>Ungroup</td>
+<td>Ungroups the selected group. Note: <em>Only shows on Layer Groups</em></td>
+</tr>
+<tr>
+<td>Merge Group</td>
+<td>Merges any children groups with parent group. If there are no children groups, it will merge no layer groups. <strong>Note:</strong> <em>Only shows on Layer Groups</em></td>
+</tr>
+<tr>
+<td>Move To Top</td>
+<td>Moves the active selected grease pencil layer to top</td>
+</tr>
+<tr>
+<td>Move To Bottom</td>
+<td>Moves the active selected grease pencil layer to bottom</td>
+</tr>
+<tr>
+<td>Duplicate Layer</td>
+<td>Makes an exact copy of the selected layer appending a number to differentiate its name. This method does not duplicate empty keyframes.</td>
+</tr>
+<tr>
+<td>Duplicate Empty Keyframes</td>
+<td>Makes an exact copy of the selected layer appending a number to differentiate its name. This method does duplicate empty keyframes.</td>
+</tr>
+<tr>
+<td>Show All</td>
+<td>Turns on the visibility of every layer in the list.</td>
+</tr>
+<tr>
+<td>Hide Others</td>
+<td>Turns off the visibility of every layer in the list except the active one.</td>
+</tr>
+<tr>
+<td>Lock All</td>
+<td>Locks edition of all the layers in the list</td>
+</tr>
+<tr>
+<td>Unlock All</td>
+<td>Unlocks edition of all the layers in the list.</td>
+</tr>
+<tr>
+<td>Merge Down</td>
+<td>Merge the selected layer with the layer below. The new layer keeps the name of the lower layer.</td>
+</tr>
+<tr>
+<td>Merge All</td>
+<td>Merge the selected layer with all layers. The new layer keeps the name of the active layer.</td>
+</tr>
+<tr>
+<td>Mask with Layer Above</td>
+<td>Mask the active layer with the layer above.</td>
+</tr>
+<tr>
+<td>Mask with Layer Below</td>
+<td>Mask the active layer with the layer below</td>
+</tr>
+<tr>
+<td>Copy Layer to Selected</td>
+<td>Appends the active layer to the selected object.</td>
+</tr>
+<tr>
+<td>Copy all Layers to Selected</td>
+<td>Appends all layers to the selected object.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reorder Layer</td>
+<td>Move the selected layer up or down in the list.</td>
+</tr>
+<tr>
+<td>Isolate Layers</td>
+<td>Locks and hides all not active layers.</td>
+</tr>
+<tr>
+<td>Isolate layers</td>
+<td>Locks all not active layers.</td>
+</tr>
+<tr>
+<td>Autolock Inactive layers</td>
+<td>Automatically lock all layers except the active one to avoid accidental changes</td>
+</tr>
+<tr>
+<td>Ignore Material Locking</td>
+<td>Allow editing strokes even if they use locked materials.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="blend-mode">Blend Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/blend-mode.png" alt="Blend Mode" loading="lazy"></figure>
+<p>The layer blending operation to perform. See Color Blend Modes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opacity</td>
+<td>Used to set the opacity of the layer.</td>
+</tr>
+<tr>
+<td>Use Scene Lighting</td>
+<td>When enabled, the layer is affected by lights.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="layers-panel-masks-subpanel">Layers panel - Masks subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/layers-panel-masks-subpanel.png" alt="Layers panel - Masks subpanel" loading="lazy"><figcaption>Layers panel - Masks subpanel</figcaption></figure>
+<p>Use another grease pencil layer as a mask.</p>
+<h3 id="list-view">List view</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name of the grease pencil layer</td>
+<td>The name of the layer.</td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>Invert the mask.</td>
+</tr>
+<tr>
+<td>Hide</td>
+<td>Set mask layer visible or invisible.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="search-field-2">Search Field</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/search-field.png" alt="Search Field" loading="lazy"></figure>
+<p>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term.</p>
+<h3 id="add">Add</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/add.png" alt="Add" loading="lazy"></figure>
+<p>Add a grease pencil layer as a mask layer. The layer must already exist.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subtract</td>
+<td>Remove the grease pencil layer from the list.</td>
+</tr>
+<tr>
+<td>Move Up / Down</td>
+<td>Move the selected grease pencil mask one up or one down.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="layers-panel-transform-subpanel">Layers panel - Transform subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/layers-panel-transform-subpanel.png" alt="Layers panel - Transform subpanel" loading="lazy"><figcaption>Layers panel - Transform subpanel</figcaption></figure>
+<p>Allows to transform the current grease pencil layer in the 3d view.</p>
+<h2 id="layers-panel-adjustment-subpanel">Layers panel - Adjustment subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/layers-panel-adjustment-subpanel.png" alt="Layers panel - Adjustment subpanel" loading="lazy"><figcaption>Layers panel - Adjustment subpanel</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tint Color</td>
+<td>Color that tint any material colors used in the layer. · <strong>Factor</strong>: The Factor controls the amount of tint color to apply.</td>
+</tr>
+<tr>
+<td>Stroke Thickness</td>
+<td>Thickness value that override the strokes thickness in the layer.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="layers-panel-relations-subpanel">Layers panel - Relations subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/layers-panel-relations-subpanel.png" alt="Layers panel - Relations subpanel" loading="lazy"><figcaption>Layers panel - Relations subpanel</figcaption></figure>
+<p>Select a Parent object and Type to manipulate the layer. The layer will inherit the transformations of the parent.</p>
+<p>This can be used for rigging for cut-out animation.</p>
+<h3 id="parent">Parent</h3>
+<p>The Parent object.</p>
+<h3 id="type">Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/type.png" alt="Type" loading="lazy"></figure>
+<p>What type of object. When the parent is an armature, then you can choose between object, armature or bone.</p>
+<h3 id="bone">Bone</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/bone.png" alt="Bone" loading="lazy"></figure>
+<p>When the type is a bone, then choose which bone of the armature.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pass Index</td>
+<td>The layer index number. It can be used with some modifiers to restrict changes to only certain areas.</td>
+</tr>
+<tr>
+<td>View Layer</td>
+<td>Defines the View Layer to use for the Grease Pencil layer. If empty, the layer will be included in all View Layers. This is useful to separate drawings parts for compositing. · <strong>Use Masks in Render</strong>: Include the mask layer when you render the view layer. You need to have a view layer selected to reveal this option.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="layers-panel-display-subpanel">Layers panel - Display subpanel</h2>
+<h3 id="custom-channel-color">Custom Channel Color</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/custom-channel-color.png" alt="Custom Channel Color" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/custom-channel-color-2.png" alt="Custom Channel Color" loading="lazy"></figure>
+<p>Sets the color to use in the channel region of the Dope Sheet.</p>
+<h3 id="show-only-on-keyframed">Show Only On Keyframed</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/show-only-on-keyframed.png" alt="Show Only On Keyframed" loading="lazy"><figcaption>Show Only On Keyframed</figcaption></figure>
+<p>The layer is just visible in the viewport if it has a keyframe in the actual frame.</p>
+<h2 id="onion-skinning-panel">Onion Skinning Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/onion-skinning-panel.png" alt="Onion Skinning Panel" loading="lazy"></figure>
+<p>Onion Skinning show ghosts of the keyframes before and after the current frame. This allows animators to judge and pose in between two frames.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/onion-skinning-panel-2.png" alt="Onion Skinning Panel" loading="lazy"></figure>
+<h3 id="mode">Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/mode.png" alt="Mode" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frames</td>
+<td>Shows Frames in the range determined by the Before/After settings.</td>
+</tr>
+<tr>
+<td>Keyframes</td>
+<td>Shows Keyframes in the range determined by the Before/After settings.</td>
+</tr>
+<tr>
+<td>Selected</td>
+<td>Shows only on the manually selected keyframes in the Dope Sheet.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="opacity">Opacity</h3>
+<p>Control the opacity of the ghost frames.</p>
+<h3 id="filter-by-type">Filter By Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/filter-by-type.png" alt="Filter By Type" loading="lazy"></figure>
+<p>Filters what type of frames to show in the Onion Skinning range.</p>
+<h3 id="keyframes-before-after">Keyframes Before/After</h3>
+<p>Sets how many frames or keyframes, depending on the Mode, to show before and after the current frame.</p>
+<h3 id="custom-colors">Custom Colors</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/custom-colors.png" alt="Custom Colors" loading="lazy"></figure>
+<p>Before/After</p>
+<p>Custom color of the ghost frames before and after the current frame.</p>
+<h3 id="display">Display</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/display.png" alt="Display" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fade</td>
+<td>Opacity of the ghosts frames decrease the further away from the current frame.</td>
+</tr>
+<tr>
+<td>Show Start Frame</td>
+<td>Display onion keyframes on looping animations.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="settings-panel">Settings Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/settings-panel.png" alt="Settings Panel" loading="lazy"></figure>
+<h3 id="stroke-depth-order">Stroke depth order</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/stroke-depth-order.png" alt="Stroke depth order" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2D Layers</td>
+<td>Display strokes by using the Grease Pencil layer order and stroke order to define depth.</td>
+</tr>
+<tr>
+<td>3D Location</td>
+<td>Display strokes by using the real 3D position in 3D space.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attributes-panel">Attributes panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/attributes-panel.png" alt="Attributes panel" loading="lazy"></figure>
+<p>A list of the attributes at this object. Attributes can be used to identify an object in the shader editor or the geometry nodes editor</p>
+<h3 id="add-attribute">Add Attribute +</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/add-attribute.png" alt="Add Attribute +" loading="lazy"></figure>
+<p>A List of the attributes for this mesh.</p>
+<h3 id="remove-attribute">Remove Attribute -</h3>
+<p>Delete the selected attribute.</p>
+<h3 id="attribute-specials-menu">Attribute Specials menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/mesh-object/attribute-specials-menu.png" alt="Attribute Specials menu" loading="lazy"></figure>
+<h4 id="convert-attrribute">Convert Attrribute</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/mesh-object/convert-attrribute.png" alt="Convert Attrribute" loading="lazy"></figure>
+<p>Change how the selected attribute is stored.</p>
+<p>This operator opens a popup menu where you can change the settings of the attribute.</p>
+<h5 id="name">Name</h5>
+<p>The name of the attribute.</p>
+<h5 id="domain">Domain</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/domain.png" alt="Domain" loading="lazy"></figure>
+<p>Type of element that the attribute is stored on. In this case the grease pencil layer.</p>
+<h5 id="data-type">Data Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>Just Generic. What data type to use for the attribute calculation.</p>
+<h2 id="vertex-groups-panel">Vertex groups panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/vertex-groups-panel.png" alt="Vertex groups panel" loading="lazy"></figure>
+<p>A Vertex group is a group of vertices, a selection of the mesh. It is for example used to weight a specific mesh part to a bone. Or to control the growth of hair particles.</p>
+<p>This panel allows you to manage and edit vertex groups. Weight painting creates vertex groups automatically.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/vertex-groups-panel-2.png" alt="Vertex groups panel" loading="lazy"></figure>
+<p>In Edit mode this panel shows the inactive controls active.</p>
+<p>Vertex groups exists for mesh and lattice objects.</p>
+<h3 id="active-vertex-group-list">Active Vertex Group list</h3>
+<p>A List of the vertex groups for this mesh.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Group name</td>
+<td>The name of the group. It can be renamed by double clicking at it.</td>
+</tr>
+<tr>
+<td>Lock</td>
+<td>The lock icon at the end of a group name locks the group from being editable.</td>
+</tr>
+<tr>
+<td>Drag Handler</td>
+<td>The two vertical lines at the end is a handler with which you can expand the list.</td>
+</tr>
+<tr>
+<td>Search Field</td>
+<td>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · <strong>Invert</strong>: Exclude the search term instead of searching for it. · <strong>Sort by Name</strong>: Sort the List by name.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add +</td>
+<td>Create an empty vertex group.</td>
+</tr>
+<tr>
+<td>Remove -</td>
+<td>Deletes the active vertex group.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vertex-group-specials-menu">Vertex Group Specials menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/vertex-group-specials-menu.png" alt="Vertex Group Specials menu" loading="lazy"><figcaption>Vertex Group Specials menu</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sort by Name</td>
+<td>Sorts the vertex groups alphabetically by name.</td>
+</tr>
+<tr>
+<td>Sort by Bone Hierarchy</td>
+<td>Sorts the vertex groups by the hierarchy of the assigned bones.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="copy-vertex-group">Copy Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/mesh-object/copy-vertex-group.png" alt="Copy Vertex Group" loading="lazy"></figure>
+<p>Add a copy of the active vertex group as a new group. The new group will be named like the original group with <code>“_copy”</code> appended at the end of its name. And it will contain associations to exactly the same vertices with the exact same weights as in the source vertex group.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy Vertex Groups to Linked</td>
+<td>Copy vertex groups of this mesh to all linked objects which use the same mesh data (all users of the data).</td>
+</tr>
+<tr>
+<td>Copy Vertex Group to Selected</td>
+<td>Copy all vertex groups to other selected objects provided they have matching indices (typically this is true for copies of the mesh which are only deformed and not otherwise edited).</td>
+</tr>
+<tr>
+<td>Mirror Vertex Group</td>
+<td>Mirrors weights and/or flips group names from one side of a symmetrical mesh to the other. Only mirroring along local X axis is supported. Vertices that have no corresponding vertex on the other side will not be affected. Note, the weights are not transferred to the corresponding opposite bone weight group.</td>
+</tr>
+<tr>
+<td>Mirror Vertex Group (Topology)</td>
+<td>Performs the Mirror Vertex Group with the Topology Mirror option enabled.</td>
+</tr>
+<tr>
+<td>Remove from All Groups</td>
+<td>Unassigns the selected vertices from all groups. Even locked.</td>
+</tr>
+<tr>
+<td>Clear Active Group</td>
+<td>Remove all assigned vertices from the active group. The group is made empty. Note that the vertices may still be assigned to other vertex groups of the object. This feature does not affect locked groups.</td>
+</tr>
+<tr>
+<td>Delete All Unlocked Groups</td>
+<td>Remove all vertex groups from the object that are not locked.</td>
+</tr>
+<tr>
+<td>Delete All Groups</td>
+<td>Remove all vertex groups from the object.</td>
+</tr>
+<tr>
+<td>Lock All</td>
+<td>Lock all groups.</td>
+</tr>
+<tr>
+<td>Unlock All</td>
+<td>Unlock all groups.</td>
+</tr>
+<tr>
+<td>Lock Invert All</td>
+<td>Invert group locks.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move Vertex Group Up</td>
+<td>Moves the selected vertex group up in the list.</td>
+</tr>
+<tr>
+<td>Move Vertex Group Down</td>
+<td>Moves the selected vertex group down in the list.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="assign">Assign</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/grease-pencil-object/assign.png" alt="Assign" loading="lazy"></figure>
+<p>Assign the selected vertices to the active vertex group.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remove</td>
+<td>Remove the selected vertices from the active group.</td>
+</tr>
+<tr>
+<td>Select</td>
+<td>Select all vertices in the group.</td>
+</tr>
+<tr>
+<td>Deselect</td>
+<td>Deselect all vertices in the group.</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>The weight value that gets assigned to the selected vertices.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="custom-properties-panel">Custom Properties Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/view-layer-properties-tab/custom-properties-panel.png" alt="Custom Properties Panel" loading="lazy"></figure>
+<p>Here you can define custom properties that can be used for scripting.</p>
+<p>Here you might also find custom properties from addons or scripts.</p>
+<h3 id="add-2">Add</h3>
+<p>Adds a new property.</p>
+<h3 id="edit">Edit</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/view-layer-properties-tab/edit.png" alt="Edit" loading="lazy"></figure>
+<p>Opens a panel where you can adjust the settings for the custom property.</p>
+<h3 id="remove">Remove</h3>
+<p>Removes the property.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-phase345/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fobject-data-properties-tab%2Fgrease-pencil-object.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-phase345/docs2/content/editors/properties/object-data-properties-tab/grease-pencil-object.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#layers-panel">Layers panel</a><a class="h3" href="#layer-list">Layer list</a><a class="h3" href="#add-new-layer">Add New Layer</a><a class="h3" href="#add-extra-menu">Add Extra menu</a><a class="h3" href="#blend-mode">Blend Mode</a><a class="h2" href="#layers-panel-masks-subpanel">Layers panel - Masks subpanel</a><a class="h3" href="#list-view">List view</a><a class="h3" href="#add">Add</a><a class="h2" href="#layers-panel-transform-subpanel">Layers panel - Transform subpanel</a><a class="h2" href="#layers-panel-adjustment-subpanel">Layers panel - Adjustment subpanel</a><a class="h2" href="#layers-panel-relations-subpanel">Layers panel - Relations subpanel</a><a class="h3" href="#parent">Parent</a><a class="h3" href="#type">Type</a><a class="h3" href="#bone">Bone</a><a class="h2" href="#layers-panel-display-subpanel">Layers panel - Display subpanel</a><a class="h3" href="#custom-channel-color">Custom Channel Color</a><a class="h3" href="#show-only-on-keyframed">Show Only On Keyframed</a><a class="h2" href="#onion-skinning-panel">Onion Skinning Panel</a><a class="h3" href="#mode">Mode</a><a class="h3" href="#opacity">Opacity</a><a class="h3" href="#filter-by-type">Filter By Type</a><a class="h3" href="#keyframes-before-after">Keyframes Before/After</a><a class="h3" href="#custom-colors">Custom Colors</a><a class="h3" href="#display">Display</a><a class="h2" href="#settings-panel">Settings Panel</a><a class="h3" href="#stroke-depth-order">Stroke depth order</a><a class="h2" href="#attributes-panel">Attributes panel</a><a class="h3" href="#add-attribute">Add Attribute +</a><a class="h3" href="#remove-attribute">Remove Attribute -</a><a class="h3" href="#attribute-specials-menu">Attribute Specials menu</a><a class="h2" href="#vertex-groups-panel">Vertex groups panel</a><a class="h3" href="#active-vertex-group-list">Active Vertex Group list</a><a class="h3" href="#vertex-group-specials-menu">Vertex Group Specials menu</a><a class="h3" href="#assign">Assign</a><a class="h2" href="#custom-properties-panel">Custom Properties Panel</a><a class="h3" href="#add-2">Add</a><a class="h3" href="#edit">Edit</a><a class="h3" href="#remove">Remove</a></aside></div></body></html>

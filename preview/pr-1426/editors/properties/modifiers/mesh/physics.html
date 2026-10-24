@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Physics modifiers (Mesh) · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1426 · <code>docs2/q3-phase345</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<a href="../../../../interface/windows.html">Windows</a>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/header.html">Header</a>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../../../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../../../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../view-layer-properties-tab.html">View Layer</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../../../graph-editor/channel-list.html">Channel List</a>
+<a href="../../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../../../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="../../collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="../../object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="../../modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<a style="padding-left:1.5rem" href="../../visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="../../particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<a style="padding-left:1.5rem" href="../../physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../object-data-properties-tab.html">Object Data</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../../object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../../bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="../../bone-constraint-properties.html">Bone Constraints</a>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="../../material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../../texture-properties-tab.html">Texture</a>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="../../strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="../../strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../../../shader-editor.html">Shader Editor</a>
+<a href="../../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../../../dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../../../graph-editor.html">Graph Editor</a>
+<a href="../../../drivers-editor.html">Drivers Editor</a>
+<a href="../../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../../../text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<a href="../../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../../render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../../render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../../render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="deform.html">Deform modifiers (Mesh)</a>
+<a class="is-current" style="padding-left:2.5rem" href="physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/volume-object.html">Volume Object</a>
+<span>File browser</span>
+<span>Asset Browser</span>
+<a href="../../../spreadsheet.html">Spreadsheet</a>
+<a href="../../../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../../../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../../../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="../../../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<a href="../../../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../../../advanced/troubleshooting.html">Troubleshooting</a>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../../appendix/manual-update-history.html">Documentation History</a>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../../../../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties › Mesh › Modifiers tab › Physics modifiers</div><h1 class="pv-title">Physics modifiers (Mesh)</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 13 min read</span></div><article class="ui-doc-body"><p>Physics modifiers are available for Mesh object, Curve + Text object and Lattice Object</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/physics-modifiers-mesh.png" alt="Physics modifiers (Mesh)" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/physics-modifiers-mesh-2.png" alt="Physics modifiers (Mesh)" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/physics-modifiers-mesh-3.png" alt="Physics modifiers (Mesh)" loading="lazy"></figure>
+<ul>
+<li></li>
+</ul>
+<h2 id="cloth">Cloth</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/cloth.png" alt="Cloth" loading="lazy"></figure>
+<p>The cloth modifier gets added into the modifier stack when you add a cloth physics in the Physics tab. It enables cloth simulation for the mesh.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/cloth-2.png" alt="Cloth" loading="lazy"></figure>
+<p>All the cloth settings and adjustments happens in the Physics tab. The cloth modifier has no further settings.</p>
+<p>The modifier can only be removed in the physics tab by clicking the cloth button.</p>
+<h2 id="collision">Collision</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/collision.png" alt="Collision" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/collision-2.png" alt="Collision" loading="lazy"></figure>
+<p>The collision modifier gets added into the modifier stack when you add a collision physics in the Physics tab. It enables collision for the mesh.</p>
+<p>All the collision settings and adjustments happens in the Physics tab. The collision modifier has no further settings.</p>
+<p>The modifier can only be removed in the physics tab by clicking the collision button.</p>
+<h2 id="dynamic-paint">Dynamic Paint</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/dynamic-paint.png" alt="Dynamic Paint" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/dynamic-paint-2.png" alt="Dynamic Paint" loading="lazy"></figure>
+<p>The dynamic paint modifier gets added into the modifier stack when you add a dynamic paint physics in the Physics tab. It enables dynamic painting. Which turns objects into paintable canvasses to modify vertex colors or displacement. Like footsteps in snow.</p>
+<p>All the collision settings and adjustments happens in the Physics tab. The dynamic paint modifier has no further settings.</p>
+<p>The modifier can only be removed in the physics tab by clicking the dynamic paint button.</p>
+<h2 id="explode">Explode</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/explode.png" alt="Explode" loading="lazy"></figure>
+<p>The Explode modifier gets added into the modifier stack when you add a Quick Explode quick effect, together with a particle system. It splits the object apart, and uses the split parts as particles for an explosion like particle animation.</p>
+<p>The modifier requires particles to work. The particles effect controls how the explosion looks like. And the explode modifier must come after the particles modifier.</p>
+<p>The Explode modifier has some further settings. But all the particles settings and adjustments happens in the Physics tab.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/explode-2.png" alt="Explode" loading="lazy"></figure>
+<h3 id="particle-uv">Particle UV</h3>
+<p>The UV map to change with particle age. The U value of the coordinates in that UV map will be overwritten with the age of the particle attached to the matching mesh face. In proportion, from 0 for not yet born particles, to 1 for dead ones.</p>
+<p>The V value is set to a constant 0.5 value.</p>
+<p>This allows to make the color of a fragment (face) vary during it ‘explosion’ phase, by using a texture with a gradient of colors along its U axis.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alive / Dead / Unborn</td>
+<td><strong>Alive</strong>: Show faces when their attached particles are alive. · <strong>Dead</strong>: Show faces when their attached particles are dead. · <strong>Unborn</strong>: Show faces when their attached particles are unborn.</td>
+</tr>
+<tr>
+<td>Cut Edges</td>
+<td>Split the mesh in pieces based on location of emitted particles, instead of using existing faces. This will produce a splitting that appears more random.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Scale each face using the size of its attached particle, once that particle is alive.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Limit the modifier effect to a vertex group. · <strong>Invert</strong>: Inverts the influence of the selected vertex group. · <strong>Protect</strong>: Clean vertex group edges. Depending on the weights assigned to that vertex group. A value of 1 completely protect those faces from being affected by the Explode modifier. A value of 0 fully applies the modifier to the faces.</td>
+</tr>
+<tr>
+<td>Refresh</td>
+<td>Refresh data in the Explode modifier.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fluid">Fluid</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/fluid.png" alt="Fluid" loading="lazy"></figure>
+<p>The fluid modifier gets added into the modifier stack when you add a fluid physics in the Physics tab. It enables fluid simulations.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/fluid-2.png" alt="Fluid" loading="lazy"></figure>
+<p>All the settings and adjustments happens in the Physics tab. The fluid modifier has no further settings.</p>
+<p>The modifier can only be removed in the physics tab by clicking the fluid button.</p>
+<h2 id="ocean">Ocean</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/ocean.png" alt="Ocean" loading="lazy"></figure>
+<p>The Ocean modifier is a tool to simulate and generate a deforming ocean surface. It is intended to simulate deep ocean waves and foam.</p>
+<p>By default, the simulator only generates displacement data, since it takes the least amount of work and gives the fastest feedback. Additional simulation data can be generated for rendering as well.</p>
+<h3 id="geometry">Geometry</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/geometry.png" alt="Geometry" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generate</td>
+<td>Creates a tiled mesh grid. The existing mesh object is replaced by the ocean grid. The generated mesh comes with UV mapping.</td>
+</tr>
+<tr>
+<td>Displace</td>
+<td>The ocean modifier displaces the existing mesh.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="repeat-x-repeat-y">Repeat X, Repeat Y</h3>
+<p>How often the grid is tiled in X and Y directions. The UV's gets repeated.</p>
+<h3 id="resolution">Resolution</h3>
+<p>The resolution of the internal 2D grids generated by the simulation.</p>
+<p>The internal grids are powers of two of the resolution value. So a resolution value of 16 will create simulation data of size 256×256. The higher the resolution, the more details will be produced, but the slower it will be to calculate.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> When using the Generate modifier geometry option, this resolution value also determines the resolution of the generated mesh surface, equal to the resolution of the internal simulation data.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time</td>
+<td>The time at which the ocean surface is being evaluated. To make an animated ocean, you will need to animate this value by adding keyframes. The speed that the time value is changing will determine the speed of the wave animation.</td>
+</tr>
+<tr>
+<td>Depth</td>
+<td>The constant depth of the ocean floor under the simulated area. Lower values simulate shallower waters by producing higher frequency details and smaller waves.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>A simple scaling factor that does not affect the height of the waves or behavior of the simulation.</td>
+</tr>
+<tr>
+<td>Spatial Size</td>
+<td>The width of the ocean surface area being simulated, in meters. This also determines the size of the generated mesh, or the displaced area. Of course, you can scale the object with the Ocean modifier in Object Mode to tweak the apparent size in your scene.</td>
+</tr>
+<tr>
+<td>Random Seed</td>
+<td>A different seed will produce a different simulation result.</td>
+</tr>
+<tr>
+<td>Generate Normals</td>
+<td>Simulates additional normal map data. When mapped to Normals, this can be used by the Ocean texture as a bump map. And enables generating normal map image sequences when baking.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="waves">Waves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/waves.png" alt="Waves" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>An overall scale control for the amplitude of the waves. It approximates the height or depth of the waves above or below zero. Rather than just scaling the ocean object in Z, it scales all aspects of the simulation, displacement in X and Y, and corresponding foam and normals too.</td>
+</tr>
+<tr>
+<td>Smallest Wave</td>
+<td>A minimum limit for the size of generated waves. Acts similarly to a low-pass filter, removing higher frequency wave detail.</td>
+</tr>
+<tr>
+<td>Choppiness</td>
+<td>The choppiness of the wave peaks. With a choppiness of 0, the ocean surface is only displaced up and down in the Z direction, but with higher choppiness, the waves are also displaced laterally in X and Y, to create sharper wave peaks.</td>
+</tr>
+<tr>
+<td>Wind Velocity</td>
+<td>Wind speed in meters/second. With a low velocity, waves are restricted to smaller surface waves.</td>
+</tr>
+<tr>
+<td>Alignment</td>
+<td>The directionality of the wave shapes due to wind. At a value of 0, the wind and waves are randomly, uniformly oriented. With higher Alignment values, the wind is blowing in a more constant direction, making the waves appear more compressed and aligned to a single direction.</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>The direction in degrees that the waves are aligned to. X axis is used as reference.</td>
+</tr>
+<tr>
+<td>Damping</td>
+<td>The amount that inter-reflected waves are damped out. This has the effect of making the wave motion more directional, and not just the wave shape. With a Damping of 0.0, waves are reflected off each other in every direction, with a Damping of 1.0, these inter-reflected waves are damped out, leaving only waves traveling in the direction of the wind.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="foam">Foam</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/foam.png" alt="Foam" loading="lazy"></figure>
+<p>Simulate extra foam data.</p>
+<h4 id="data-layer">Data Layer</h4>
+<p>Type in a name. This name defines a vertex data layer which is used by the Ocean Modifier to store a foam map as vertex colors. This name is then used to access this vertex data layer by an Attribute node in the ocean material.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/data-layer.png" alt="Data Layer" loading="lazy"></figure>
+<p>Note that creating the full working ocean material is an own chapter, which cannot be covered here.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coverage</td>
+<td>The amount of foam covering the waves. Negative values will reduce the amount of foam, and leave only the topmost peaks. Positive values will add to it.</td>
+</tr>
+<tr>
+<td>Spray</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h4 id="data-layer-2">Data Layer</h4>
+<p>Type in a name. This name defines a vertex data layer which is used by the Ocean Modifier to store a spray direction map as vertex colors. This name is then used to access this vertex data layer by an Attribute node in the ocean material.</p>
+<h5 id="invert">Invert</h5>
+<p>Inverts the spray direction map.</p>
+<h3 id="spectrum">Spectrum</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/spectrum.png" alt="Spectrum" loading="lazy"></figure>
+<h4 id="spectrum-2">Spectrum</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/spectrum-2.png" alt="Spectrum" loading="lazy"></figure>
+<p>What wave spectrum model to use. Wave spectra are used to describe how energy moves through the waves at different frequencies. Energy travels through waves differently depending on the depth of the water and the wind speed.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Turbulent Ocean</td>
+<td>Use for turbulent seas with foam (Phillips).</td>
+</tr>
+<tr>
+<td>Established Ocean</td>
+<td>Use for a large area, established ocean where the ocean would extend for miles with wind blowing for days allowing the waves to reach a point of equilibrium (Pierson-Moskowitz method).</td>
+</tr>
+<tr>
+<td>Established Ocean (Sharp Peaks)</td>
+<td>Similar to regular Established Ocean however, waves will continue to grow with time creating sharper peaks (JONSWAP and Pierson-Moskowitz method). An extra parameter is used to define the sharpness of these peaks.</td>
+</tr>
+<tr>
+<td>Shallow Water</td>
+<td>Use for shallow water with depths less than about 10 meters which makes it great for small lakes and ponds without heavy wind (JONSWAP and TMA – Texel-Marsen-Arsloe methods).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bake">Bake</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/bake.png" alt="Bake" loading="lazy"></figure>
+<p>The data for the ocean modifier can be baked to files in a given directory. When a simulation is baked, the simulator engine is completely bypassed, and the modifier/texture retrieves all information from the baked files. Baked files are faster, allows rendering in external renderers, and enables more advanced foam maps.</p>
+<p>The created images are stored in exr format. And can be opened and modified in any graphics software that is able to handle the format.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bake Ocean</td>
+<td>Bake an image sequence of ocean data.</td>
+</tr>
+<tr>
+<td>Cache Path</td>
+<td>Folder to store the baked EXR files in. The sequences will be in the form <code>disp_####.exr</code>, <code>normal_####.exr</code>, and <code>foam_####.exr</code>, where #### is the four digit frame number. If the cache path folder does not exist, it will be created.</td>
+</tr>
+<tr>
+<td>Frame Start, End</td>
+<td>Frames of the simulation to bake (inclusive). The start and end frames of the bake are repeated when accessing frames outside of the baked range.</td>
+</tr>
+<tr>
+<td>Foam Fade</td>
+<td>How much the foam accumulates over time. This feature is for baked ocean only.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="particle-instance">Particle Instance</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/particle-instance.jpg" alt="Particle Instance" loading="lazy"></figure>
+<p>Adds a copy of the mesh to the particle positions of a particle system. This happens relative to the object origin.</p>
+<p>To use this modifier you must have at least one other object that has a Particles System attached.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/particle-instance.png" alt="Particle Instance" loading="lazy"></figure>
+<p>Because of how the Particle Instance modifier influences the underlying particle systems on other objects, some of the effects generated by the modifier can look and act different. This depends on the underlying settings of the particle systems it is associated with.</p>
+<h3 id="object">Object</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/object.png" alt="Object" loading="lazy"></figure>
+<p>Add the target object with the particle system.</p>
+<h3 id="particle-system">Particle System</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/particle-system.png" alt="Particle System" loading="lazy"></figure>
+<p>The particle system from the target Object to use.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create Instances</td>
+<td>Instance settings.</td>
+</tr>
+<tr>
+<td>Regular</td>
+<td>The modifier will use the regular (parents) particles to duplicate the mesh of the modified object.</td>
+</tr>
+<tr>
+<td>Children</td>
+<td>The modifier will use the children particles to duplicate the mesh of the modified object.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Scale the instanced copies of the mesh by the particle size attribute. When disabled, all the copies appear the same size as the origin.</td>
+</tr>
+<tr>
+<td>Show</td>
+<td>Particle display settings. · <strong>Unborn</strong>: Use the unborn particles to duplicate the mesh to. · <strong>Alive</strong>: Use the alive particles to duplicate the mesh to. · <strong>Dead</strong>: Use the dead particles to duplicate the mesh to.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amount">Amount</h3>
+<p>Allows you to randomly skip particles to adjust the amount of instances.</p>
+<div class="ui-doc-callout is-warning"><p><strong>Warning:</strong> The random algorithm used currently only ensures that relative amount to be respected statistically. The actual amount of instances generated will differ from the theoretical one, depending on the Seed value of the target particle system (and the Offset value described below, too).</p></div>
+<p>That deviation is not significant with high number of particles, but it will be highly noticeable with low numbers (e.g. with 100 particles in the target system, and an Amount value of 0.1, it can generate either up to 15 or 5 instances, instead of the 10 expected).</p>
+<h3 id="offset">Offset</h3>
+<p>A relative offset in the range of particles used for instantiation. Allows you to avoid overlapping of the used particles, when the same particle system is used in multiple modifier instances.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> If you want to fully avoid overlaps, your Offset value must be at least as high as your Amount value.</p></div>
+<h3 id="coordinate-space">Coordinate Space</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/coordinate-space.png" alt="Coordinate Space" loading="lazy"></figure>
+<p>What coordinate system to use for the target object. World space or Local space.</p>
+<p>With World space the locations of the copies of the modified mesh will depend on the location of the modified object and of the target object.</p>
+<p>With Local space the locations of the copies of the modified mesh will depend only on the location of the modified object.</p>
+<h3 id="axis">Axis</h3>
+<p>Which axis of the modified object to use as pole axis to apply the rotation from the instantiated particles. Only one axis can be chosen.</p>
+<h3 id="create-along-paths">Create Along Paths</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/create-along-paths.png" alt="Create Along Paths" loading="lazy"></figure>
+<p>By default, the instances are placed depending on the particles position in the current frame. By enabling Create Along Paths, the instance of the modified object follows deforms its shape along the particle path (or the hair strand). This allows you to select the position along the particles path regardless of the current frame.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> You can adjust the path of particles on the Render panel of the Particle System tab by adjusting the Path visualization type
+<strong>Note:</strong> When the type is not Hair or Keyed Physics, the particle system must be baked.
+<strong>Note:</strong> When you use Strands you must also have Dead activated in the Show settings. Since they die immediately.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Position</td>
+<td>What percentage of the path that the instance fills. Or the position on the path if the Keep Shape option is enabled. · <strong>Random</strong>: Adds randomness to the Position value of each instance.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Specifies the rotation around the path. · <strong>Random</strong>: Adds randomness to the Rotation value of each instance.</td>
+</tr>
+<tr>
+<td>Keep Shape</td>
+<td>Enabling this prevents the instance from being deformed, and places it on the path according to the Position value.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="layers">Layers</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/layers.png" alt="Layers" loading="lazy"></figure>
+<p>Select vertex color layers. These layers will be filled with colors based on the particles information. And can be used in a shader to add variance to a material.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/layers-2.png" alt="Layers" loading="lazy"></figure>
+<p>You can create vertex color layers in the Object Data properties in the Vertex Colors panel.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Index</td>
+<td>A vertex color layer for values based on the particles index.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>A vertex color layer for random per-particle values.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="particle-system-2">Particle System</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/particle-system-2.png" alt="Particle System" loading="lazy"></figure>
+<p>The Particle System modifier gets added into the modifier stack when you add a particle system in the Particles tab. It enables particle simulation at the object.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/particle-system-3.png" alt="Particle System" loading="lazy"></figure>
+<p>All the particle settings and adjustments happens in the Particles tab. The Particle System modifier has no further settings.</p>
+<p>The modifier can only be removed in the particle tab in the particle settings list.</p>
+<h2 id="soft-body">Soft body</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/soft-body.png" alt="Soft body" loading="lazy"></figure>
+<p>The Soft body modifier gets added into the modifier stack when you add a Soft Body physics in the Physics tab. It enables Soft Body simulation for the mesh.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/ui/properties/modifiers/mesh-physics/soft-body-2.png" alt="Soft body" loading="lazy"></figure>
+<p>All the Soft body settings and adjustments happens in the Physics tab. The Soft body modifier has no further settings.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-phase345/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fmodifiers%2Fmesh%2Fphysics.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-phase345/docs2/content/editors/properties/modifiers/mesh/physics.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#cloth">Cloth</a><a class="h2" href="#collision">Collision</a><a class="h2" href="#dynamic-paint">Dynamic Paint</a><a class="h2" href="#explode">Explode</a><a class="h3" href="#particle-uv">Particle UV</a><a class="h2" href="#fluid">Fluid</a><a class="h2" href="#ocean">Ocean</a><a class="h3" href="#geometry">Geometry</a><a class="h3" href="#repeat-x-repeat-y">Repeat X, Repeat Y</a><a class="h3" href="#resolution">Resolution</a><a class="h3" href="#waves">Waves</a><a class="h3" href="#foam">Foam</a><a class="h3" href="#spectrum">Spectrum</a><a class="h3" href="#bake">Bake</a><a class="h2" href="#particle-instance">Particle Instance</a><a class="h3" href="#object">Object</a><a class="h3" href="#particle-system">Particle System</a><a class="h3" href="#amount">Amount</a><a class="h3" href="#offset">Offset</a><a class="h3" href="#coordinate-space">Coordinate Space</a><a class="h3" href="#axis">Axis</a><a class="h3" href="#create-along-paths">Create Along Paths</a><a class="h2" href="#particle-system-2">Particle System</a><a class="h2" href="#soft-body">Soft body</a></aside></div></body></html>

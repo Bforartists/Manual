@@ -1,0 +1,1175 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Material · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1426 · <code>docs2/q3-phase345</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<a href="../../interface/windows.html">Windows</a>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/header.html">Header</a>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="view-layer-properties-tab.html">View Layer</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../graph-editor/channel-list.html">Channel List</a>
+<a href="../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<a style="padding-left:1.5rem" href="visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<a style="padding-left:1.5rem" href="physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="object-data-properties-tab.html">Object Data</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="bone-constraint-properties.html">Bone Constraints</a>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a class="is-current" style="padding-left:1.5rem" href="material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="texture-properties-tab.html">Texture</a>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../shader-editor.html">Shader Editor</a>
+<a href="../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../graph-editor.html">Graph Editor</a>
+<a href="../drivers-editor.html">Drivers Editor</a>
+<a href="../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<a href="../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/volume-object.html">Volume Object</a>
+<span>File browser</span>
+<span>Asset Browser</span>
+<a href="../spreadsheet.html">Spreadsheet</a>
+<a href="../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<a href="../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../advanced/troubleshooting.html">Troubleshooting</a>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../appendix/manual-update-history.html">Documentation History</a>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Material Properties Tab</div><h1 class="pv-title">Material</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 16 min read</span></div><article class="ui-doc-body"><h2 id="preface">Preface</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/preface.png" alt="Preface" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/preface-2.png" alt="Preface" loading="lazy"></figure>
+<p>Materials controls the appearance of meshes, curves, volumes and other objects.</p>
+<p>A material is the container that contains all the necessary data to define the look of an object. I is made of a code part, the shaders. They control how the surface reacts. And color data like textures. A black and white texture can also control what areas of a shader reacts in what way. Like a gloss map.</p>
+<p>Materials can be created in either the Material properties, or in the Shader Editor. The content that is displayed is the same. But the way how it is represented is different.</p>
+<p>Materials can be assigned to one or more objects, and different materials can be assigned to different parts of meshes.</p>
+<p>The material system is built with physically-based rendering in mind. But can also be used to create toon style materials.</p>
+<h3 id="affected-renderer">Affected Renderer</h3>
+<p>The material system is for Eeevee and Cycles. Workbench renderer is meant for fast preview display. It does not use materials like Eevee or Cycles. All you can choose is a color.</p>
+<p>Eevee and Cycles have nearly the same nodes available. But some nodes differs. Eevee is a realtime renderer. Cycles is a physically based render. That's two different approaches. So you should take that into account when creating the materials.</p>
+<h2 id="material-header">Material header</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/material-header.png" alt="Material header" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/preface-2.png" alt="Material header" loading="lazy"></figure>
+<p>The header area contains the list of materials and the functionality to create new materials and to remove them.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/material-header-2.png" alt="Material header" loading="lazy"></figure>
+<p>Note that a material for a grease pencil object differs from the rest. It is basically the same. But grease pencil objects have other icons in the material browser.</p>
+<h3 id="material-list">Material List</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/material-list.png" alt="Material List" loading="lazy"></figure>
+<p>The list of assigned materials to this object. The list shows the material slots. A material slot that has the red material icon assigned has no material content yet. It is just an empty slot. You have to create it first by clicking at the New button below, in the material property.</p>
+<p>Clicking at the name allows renaming of the material.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/material-list-2.png" alt="Material List" loading="lazy"></figure>
+<p>Grease pencil materials have additional functionality in the list.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show in ghosts</td>
+<td>Turn on onion skinning for this material. Onion skinning displays strokes before and after the current frame.</td>
+</tr>
+<tr>
+<td>Hide</td>
+<td>Show or hide the material.</td>
+</tr>
+<tr>
+<td>Locked</td>
+<td>Protect color from further editing.</td>
+</tr>
+<tr>
+<td>Drag Handler</td>
+<td>The two vertical lines at the end is a handler with which you can expand the list.</td>
+</tr>
+<tr>
+<td>Search Field</td>
+<td>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · <strong>Sort by Name</strong>: Sort the List by name. · <strong>Reverse</strong>: Exclude the search term instead of searching for it.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Material Slot</td>
+<td>Add a new material slot</td>
+</tr>
+<tr>
+<td>Remove Material Slot</td>
+<td>Remove the selected material slot.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="materials-specials-menu">Materials Specials menu</h3>
+<h4 id="with-a-mesh-or-curve-or-other-object-type">With a mesh or curve or other object type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/with-a-mesh-or-curve-or-other-object-type.png" alt="With a mesh or curve or other object type" loading="lazy"><figcaption>With a mesh or curve or other object type</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy Material</td>
+<td>Copy the material settings and nodes.</td>
+</tr>
+<tr>
+<td>Copy Material to selected</td>
+<td>Copy material to selected objects. First select the object without material. Hold down shift and select the object with material. Perform Copy material to selected.</td>
+</tr>
+<tr>
+<td>Paste Material</td>
+<td>Pastes a copied material.</td>
+</tr>
+<tr>
+<td>Remove Unused Slots</td>
+<td>Remove material slots that does not contain a material.</td>
+</tr>
+<tr>
+<td>Remove All Materials</td>
+<td>Removes all material slots</td>
+</tr>
+</tbody>
+</table>
+<h4 id="with-a-grease-pencil-stroke-object">With a grease pencil stroke object</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/with-a-grease-pencil-stroke-object.png" alt="With a grease pencil stroke object" loading="lazy"><figcaption>With a grease pencil stroke object</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show All</td>
+<td>Show all materials.</td>
+</tr>
+<tr>
+<td>Hide Others</td>
+<td>Hide unselected materials.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="material-data-property">Material data property</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/material-data-property.png" alt="Material data property" loading="lazy"></figure>
+<h4 id="material-browser">Material Browser</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/material-browser.png" alt="Material Browser" loading="lazy"></figure>
+<p>A list of the available materials in the scene where you can choose a material from.</p>
+<h4 id="new">New</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/new.png" alt="New" loading="lazy"></figure>
+<p>When the object has no material yet. Creates a new default material and adds a first material slot to the list.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>The name of the active material. Double clicking allows to rename it.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Keep this data even when it has no user in the scene.</td>
+</tr>
+<tr>
+<td>New</td>
+<td>Creates a new default material, and assigns it to the active material slot.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h4 id="link">Link</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/link.png" alt="Link" loading="lazy"></figure>
+<p>Specifies whether the material is to be linked to the Object or to the Object Data.</p>
+<p>Different objects may share the same mesh data. And if the material is linked to the mesh, every object will share it. If the material is linked directly to the object data, the objects can have different materials and still share the same mesh. Default is Data.</p>
+<h4 id="right-click-menus">Right Click menus</h4>
+<p>When you right click at the material property then you will reveal context menus with different content, dependant of where you click. Most of the content is explained in chapter 6, the general right click menu functionality. The rest should be self explaining.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/right-click-menus.png" alt="Right Click menus" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/right-click-menus-2.png" alt="Right Click menus" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/right-click-menus-3.png" alt="Right Click menus" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/right-click-menus-4.png" alt="Right Click menus" loading="lazy"></figure>
+<h3 id="edit-mode">Edit Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/edit-mode.png" alt="Edit Mode" loading="lazy"></figure>
+<p>In Edit mode you can assign different materials at different mesh or curve parts.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Workflow</td>
+<td>Enter Edit Mode. Select the material that you want to assign. Select the mesh or curve part. Click at the assign button.</td>
+</tr>
+<tr>
+<td>Assign</td>
+<td>Assign active material slot and material to the selected faces in the mesh, strokes in a Grease Pencil, and similar for other object types.</td>
+</tr>
+<tr>
+<td>Select</td>
+<td>Select faces assigned to the active material slot.</td>
+</tr>
+<tr>
+<td>Deselect</td>
+<td>Deselect faces assigned to the active material slot.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="preview-panel">Preview Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/preview-panel.png" alt="Preview Panel" loading="lazy"></figure>
+<p>A preview window to judge the material.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flat, Sphere, Cube, etc.</td>
+<td>Different shaped preview objects.</td>
+</tr>
+<tr>
+<td>Preview World</td>
+<td>Include the world settings into the preview rendering.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="surface-panel">Surface Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/surface-panel.png" alt="Surface Panel" loading="lazy"></figure>
+<p>This panel displays the Surface part of the material as a list. And allows you to edit its values.</p>
+<h3 id="use-nodes">Use Nodes</h3>
+<p>Choose if you want to use nodes or not. Unticked it will use a default material with just basic values. Ticked it will use the material as defined in the shader editor in the Shading workspace. And display its values.</p>
+<p>The values with unticked Use Nodes will not appear in the material node editor.</p>
+<h4 id="use-nodes-unticked-with-eevee">Use Nodes unticked with Eevee</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/use-nodes-unticked-with-eevee.png" alt="Use Nodes unticked with Eevee" loading="lazy"><figcaption>Use Nodes unticked with Eevee</figcaption></figure>
+<p>Gives you the values for a very basic PBR realtime shader.</p>
+<h4 id="use-nodes-unticked-with-cycles">Use Nodes unticked with Cycles</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/use-nodes-unticked-with-cycles.png" alt="Use Nodes unticked with Cycles" loading="lazy"><figcaption>Use Nodes unticked with Cycles</figcaption></figure>
+<p>Gives you a base color.</p>
+<h4 id="use-nodes-ticked">Use Nodes ticked</h4>
+<p>Displays the content of the material in the shader editor as a list.</p>
+<p>Triangle buttons indicates that there is a node connected to this input. You can expand this triangle to access the values of the connected node.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/use-nodes-ticked.png" alt="Use Nodes ticked" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/use-nodes-ticked-2.png" alt="Use Nodes ticked" loading="lazy"></figure>
+<p>For the nodes and the values please have a look in the shader editor.</p>
+<h2 id="surface-panel-grease-pencil-object">Surface Panel - Grease Pencil Object</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/surface-panel-grease-pencil-object.png" alt="Surface Panel - Grease Pencil Object" loading="lazy"><figcaption>Surface Panel - Grease Pencil Object</figcaption></figure>
+<p>The content of the surface panel with a grease pencil object is a bit different from other object types since Grease pencil objects uses materials for the drawing color.</p>
+<h3 id="presets">Presets</h3>
+<p>The presets in the header allows you to use and store presets.</p>
+<h3 id="stroke-subpanel">Stroke Subpanel</h3>
+<p>Stroke related settings.</p>
+<h4 id="mode-type">Mode Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/mode-type.png" alt="Mode Type" loading="lazy"></figure>
+<p>The draw mode for the stroke. The modes should be self explaining. Most settings are the same in all modes.</p>
+<h5 id="mode-type-line">Mode Type Line</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/mode-type-line.png" alt="Mode Type Line" loading="lazy"></figure>
+<h6 id="style">Style</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/style.png" alt="Style" loading="lazy"></figure>
+<p>The draw style.</p>
+<p><strong>Solid</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/solid.png" alt="Solid" loading="lazy"></figure>
+<p><strong>Base Color</strong></p>
+<p>The color of the stroke.</p>
+<p><strong>Texture</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/texture.png" alt="Texture" loading="lazy"></figure>
+<p><strong>Base Color</strong></p>
+<p>The base color of the stroke. You can blend the texture with this color.</p>
+<p><strong>Image Prop</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/image-prop.png" alt="Image Prop" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/image-prop-2.png" alt="Image Prop" loading="lazy"></figure>
+<p>This property contains the list of loaded images. When no image is loaded then it displays the Open Buttons. When an image exists then it displays the name of the currently selected image.</p>
+<p>From left to right ...</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image browser</td>
+<td>This is a list of the images in the scene. This list allows you to switch to other images.</td>
+</tr>
+<tr>
+<td>Search form</td>
+<td>Search for specific images.</td>
+</tr>
+<tr>
+<td>Image Edit Box</td>
+<td>Read the name of the currently selected image. And you can rename the image here too.</td>
+</tr>
+<tr>
+<td>Number of Fake Users</td>
+<td>In case this file has a fake user assigned, then this number displays the number of fake users.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a new image.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes the image.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Self Overlap</td>
+<td>Disable stencil and allow self intersections with alpha materials.</td>
+</tr>
+<tr>
+<td>Holdout</td>
+<td>Remove the color from underneath this stroke by using the stroke as a mask.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="mode-type-dots-squares">Mode Type Dots + Squares</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/mode-type-dots-squares.png" alt="Mode Type Dots + Squares" loading="lazy"><figcaption>Mode Type Dots + Squares</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/mode-type-dots-squares-2.png" alt="Mode Type Dots + Squares" loading="lazy"><figcaption>Mode Type Dots + Squares</figcaption></figure>
+<h6 id="style-2">Style</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/style.png" alt="Style" loading="lazy"></figure>
+<p>The draw style.</p>
+<p><strong>Solid</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/solid.png" alt="Solid" loading="lazy"></figure>
+<p><strong>Base Color</strong></p>
+<p>The color of the stroke.</p>
+<p><strong>Texture</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/texture.png" alt="Texture" loading="lazy"></figure>
+<p><strong>Base Color</strong></p>
+<p>The base color of the stroke. You can blend the texture with this color.</p>
+<p><strong>Image Prop</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/image-prop.png" alt="Image Prop" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/image-prop-2.png" alt="Image Prop" loading="lazy"></figure>
+<p>This property contains the list of loaded images. When no image is loaded then it displays the Open Buttons. When an image exists then it displays the name of the currently selected image.</p>
+<p>From left to right ...</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image browser</td>
+<td>This is a list of the images in the scene. This list allows you to switch to other images.</td>
+</tr>
+<tr>
+<td>Search form</td>
+<td>Search for specific images.</td>
+</tr>
+<tr>
+<td>Image Edit Box</td>
+<td>Read the name of the currently selected image. And you can rename the image here too.</td>
+</tr>
+<tr>
+<td>Number of Fake Users</td>
+<td>In case this file has a fake user assigned, then this number displays the number of fake users.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a new image.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes the image.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="alignment">Alignment</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/alignment.png" alt="Alignment" loading="lazy"></figure>
+<p>Dots and Squares mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Path</td>
+<td>Alignment follows stroke drawing path and object rotation.</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>Alignment follows object rotation only.</td>
+</tr>
+<tr>
+<td>Fixed</td>
+<td>Keeps aligned with viewport.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="self-overlap">Self Overlap</h4>
+<p>Disable stencil and allow self intersections with alpha materials.</p>
+<h5 id="rotation">Rotation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/rotation.png" alt="Rotation" loading="lazy"></figure>
+<p>Additional rotation applied to dot and square strokes.</p>
+<h4 id="holdout">Holdout</h4>
+<p>Remove the color from underneath this stroke by using the stroke as a mask.</p>
+<h3 id="fill-subpanel">Fill Subpanel</h3>
+<p>Fill color related settings.</p>
+<h4 id="style-3">Style</h4>
+<h5 id="solid">Solid</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/solid-2.png" alt="Solid" loading="lazy"></figure>
+<h6 id="base-color">Base Color</h6>
+<p>The color of the stroke.</p>
+<h4 id="holdout-2">Holdout</h4>
+<p>Remove the color from underneath this stroke by using the stroke as a mask.</p>
+<h5 id="gradient">Gradient</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/gradient.png" alt="Gradient" loading="lazy"></figure>
+<h6 id="gradient-type">Gradient Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/gradient-type.png" alt="Gradient Type" loading="lazy"></figure>
+<p>Draw a linear or a radial gradient.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base Color</td>
+<td>The first color of the gradient.</td>
+</tr>
+<tr>
+<td>Secondary Color</td>
+<td>The second color of the gradient.</td>
+</tr>
+<tr>
+<td>Blend</td>
+<td>The mix factor between the first and second gradient color.</td>
+</tr>
+<tr>
+<td>Flip Colors</td>
+<td>Flip the filling colors.</td>
+</tr>
+<tr>
+<td>Location X / Y</td>
+<td>The location of the gradient.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>The rotation of the gradient.</td>
+</tr>
+<tr>
+<td>Scale X / Y</td>
+<td>The scale of the gradient.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="holdout-3">Holdout</h4>
+<p>Remove the color from underneath this stroke by using the stroke as a mask.</p>
+<h4 id="texture">Texture</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/texture-2.png" alt="Texture" loading="lazy"></figure>
+<h5 id="base-color-2">Base Color</h5>
+<p>The base color of the stroke. You can blend the texture with this color.</p>
+<h5 id="image-prop">Image Prop</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/image-prop.png" alt="Image Prop" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/image-prop-2.png" alt="Image Prop" loading="lazy"></figure>
+<p>This property contains the list of loaded images. When no image is loaded then it displays the Open Buttons. When an image exists then it displays the name of the currently selected image.</p>
+<p>From left to right ...</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image browser</td>
+<td>This is a list of the images in the scene. This list allows you to switch to other images. · <strong>Search form</strong>: Search for specific images.</td>
+</tr>
+<tr>
+<td>Image Edit Box</td>
+<td>Read the name of the currently selected image. And you can rename the image here too.</td>
+</tr>
+<tr>
+<td>Number of Fake Users</td>
+<td>In case this file has a fake user assigned, then this number displays the number of fake users.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a new image.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes the image.</td>
+</tr>
+<tr>
+<td>Location X / Y</td>
+<td>The location of the image.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>The rotation of the image.</td>
+</tr>
+<tr>
+<td>Scale X / Y</td>
+<td>The scale of the image.</td>
+</tr>
+<tr>
+<td>Clip Image</td>
+<td>Do not repeat the image, but clamp it to one instance.</td>
+</tr>
+<tr>
+<td>Holdout</td>
+<td>Remove the color from underneath this stroke by using the stroke as a mask.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="volume-panel">Volume Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/surface-panel.png" alt="Volume Panel" loading="lazy"></figure>
+<p>This panel displays the Volume part of the material as a list. And allows you to edit its values.</p>
+<h3 id="use-nodes-2">Use Nodes</h3>
+<p>Choose if you want to use a volume node or not.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/use-nodes.png" alt="Use Nodes" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/use-nodes-2.png" alt="Use Nodes" loading="lazy"></figure>
+<p>Removing the volume node in the shader editor will clear the volume panel.</p>
+<h2 id="displacement-panel">Displacement Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/displacement-panel.png" alt="Displacement Panel" loading="lazy"></figure>
+<p>This panel displays the Displacement part of the material as a list. And allows you to edit its values.</p>
+<h3 id="use-nodes-3">Use Nodes</h3>
+<p>Choose if you want to use a displacement node or not.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/use-nodes-3.png" alt="Use Nodes" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/use-nodes-4.png" alt="Use Nodes" loading="lazy"></figure>
+<p>Removing the displacement node in the shader editor will clear the panel.</p>
+<h2 id="thicknes-panel">Thicknes Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/thicknes-panel.png" alt="Thicknes Panel" loading="lazy"></figure>
+<p>This shader panel displays whatever you plug in into the Thickness input of the Material Output node.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/thicknes-panel-2.png" alt="Thicknes Panel" loading="lazy"></figure>
+<h2 id="settings-panel-eevee-renderer">Settings Panel - Eevee renderer</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/settings-panel-eevee-renderer.png" alt="Settings Panel - Eevee renderer" loading="lazy"><figcaption>Settings Panel - Eevee renderer</figcaption></figure>
+<h3 id="pass-index">Pass Index</h3>
+<p>Index number for the material index pass.</p>
+<h3 id="surface-subpanel">Surface subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/surface-subpanel.png" alt="Surface subpanel" loading="lazy"></figure>
+<h4 id="backface-culling">Backface Culling</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Camera</td>
+<td>Use back face culling to hide the back side of faces.</td>
+</tr>
+<tr>
+<td>Shadow</td>
+<td>Use back face culling when casting shadows.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="displacement">Displacement</h4>
+<p>The maximum distance that a vertex can be displaced. Displacement over this threshold may cause visibility issues.</p>
+<h5 id="method">Method</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/method.png" alt="Method" loading="lazy"></figure>
+<h6 id="bump-only">Bump only</h6>
+<p>Bump mapping simulates the displacement mapping.</p>
+<h6 id="displacement-only">Displacement only</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/displacement-only.png" alt="Displacement only" loading="lazy"></figure>
+<p>Use true displacement. Requires fine subdivision.</p>
+<p><strong>Max distance</strong></p>
+<p>The maximum distance the vertices can be displaced.</p>
+<h6 id="displacement-and-bump">Displacement and Bump</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/displacement-and-bump.png" alt="Displacement and Bump" loading="lazy"></figure>
+<p>Uses a mixture of displacement and bump mapping.</p>
+<p><strong>Max distance</strong></p>
+<p>The maximum distance the vertices can be displaced.</p>
+<h4 id="transparency">Transparency</h4>
+<h5 id="transparent-shadows">Transparent Shadows</h5>
+<p>Use transparent shadows for this material.</p>
+<h4 id="method-2">Method</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/method-2.png" alt="Method" loading="lazy"></figure>
+<p>Controls the blending and the compatibility with certain features.</p>
+<h5 id="dithered">Dithered</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/dithered.png" alt="Dithered" loading="lazy"></figure>
+<p>Allows for grayscale hashed transparency, and is compatible with render passes and raytracing. This is also known als deferred rendering.</p>
+<h6 id="raytraced-refraction">Raytraced refraction</h6>
+<p>Use raytracing to determine refracted color instead of using only light probes. This prevents the surface from contributing to the lighting of surfaces not using this setting.</p>
+<h6 id="from-shadow">From Shadow</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/from-shadow.png" alt="From Shadow" loading="lazy"></figure>
+<p>Use the shadow map from shadow casting lights to refine the thickness defined by the material node tree.</p>
+<h5 id="blended">Blended</h5>
+<p>Allows for colored transparency, but is incompatible with render passes and raytracing. This is also known als forward rendering.</p>
+<h6 id="transparency-overlap">Transparency Overlap</h6>
+<p>Render multiple transparent layers. Note that this may introduce transparency sorting problems.</p>
+<h4 id="render">Render</h4>
+<h5 id="thickness">Thickness</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/thickness.png" alt="Thickness" loading="lazy"></figure>
+<p>The thickness model to consider geometry to be inside the object.</p>
+<h4 id="light-probe-volume">Light Probe Volume</h4>
+<h5 id="light-probe-volume-backfaces">Light Probe Volume Backfaces</h5>
+<p>Consider materials single sided for light probe volume capture.</p>
+<h3 id="volume-subpanel">Volume subpanel</h3>
+<h4 id="intersection">Intersection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/intersection.png" alt="Intersection" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fast</td>
+<td>Each face is considered as a medium interface. It gives correct results for manifold geometry that contains no inner parts.</td>
+</tr>
+<tr>
+<td>Accurate</td>
+<td>Faces are considered as a medium interface only when they have different consectuive facing. It gives correct results as longa s the max ray depth is not exceeded. This method also has a significant higher memory requirement.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="settings-panel-cycles-renderer">Settings Panel - Cycles renderer</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/settings-panel-cycles-renderer.png" alt="Settings Panel - Cycles renderer" loading="lazy"><figcaption>Settings Panel - Cycles renderer</figcaption></figure>
+<p>Material settings.</p>
+<h3 id="pass-index-2">Pass Index</h3>
+<p>The index number of this material. This material index can be used for masking in post processing for example.</p>
+<h3 id="surface-subpanel-2">Surface subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/surface-subpanel-2.png" alt="Surface subpanel" loading="lazy"></figure>
+<p>Surface related settings.</p>
+<h4 id="displacement-2">Displacement</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/displacement.png" alt="Displacement" loading="lazy"></figure>
+<p>What method to use for displacement.</p>
+<h4 id="emission-sampling">Emission Sampling</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/emission-sampling.png" alt="Emission Sampling" loading="lazy"></figure>
+<p>Sampling strategy for emission surfaces.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transparent Shadows</td>
+<td>Use transparent shadows if the material contains a transparent bsdf node.</td>
+</tr>
+<tr>
+<td>Bump map correction</td>
+<td>Correwct shadow terminator artifacts caused by bump mapping.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="volume-subpanel-2">Volume subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/volume-subpanel.png" alt="Volume subpanel" loading="lazy"></figure>
+<h4 id="sampling">Sampling</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/sampling.png" alt="Sampling" loading="lazy"></figure>
+<p>What sampling method to use for volume rendering.</p>
+<h4 id="interpolation">Interpolation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>What interpolation method to use for volume rendering.</p>
+<h2 id="line-art">Line Art</h2>
+<h3 id="material-mask">Material Mask</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/material-mask.png" alt="Material Mask" loading="lazy"></figure>
+<p>Use material masks to filter out occluded strokes. You can filter out up to eight mask bits. The index starts with 0.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Levels</td>
+<td>Faces with this material will behave as if it has set nubmers of layers in occlusion.</td>
+</tr>
+<tr>
+<td>Intersection Priority</td>
+<td>Overwrite object and collection priority value. · <strong>Intersection Priority Value</strong>: The intersection line will be included into the object with the higher intersection priority value.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="viewport-display">Viewport Display</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/viewport-display.png" alt="Viewport Display" loading="lazy"></figure>
+<p>Display settings for viewport display mode Solid. The items should be self explaining.</p>
+<p>In solid mode the material colors are not displayed. With the viewport display color you can change this, and give each material its own color. Which can be any color, not necessarily the color from the material. Each material can have its own viewport display color.</p>
+<p>Note that the Workbench renderer does not use materials and its colors at all. It relies completely at the viewport display color, even for rendering. But you can also here use different materials to have different colors at the mesh.</p>
+<h3 id="settings-subpanel">Settings Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/settings-subpanel.png" alt="Settings Subpanel" loading="lazy"></figure>
+<p>Cycles only. And with Cycles these settings are just relevant for the viewport rendering in Material Preview mode. That's why they are in the viewport display panel.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/settings-subpanel-2.png" alt="Settings Subpanel" loading="lazy"></figure>
+<h4 id="backface-culling-2">Backface Culling</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Camera</td>
+<td>Use back face culling to hide the back side of faces.</td>
+</tr>
+<tr>
+<td>Shadow</td>
+<td>Use back face culling when casting shadows.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="displacement-3">Displacement</h4>
+<p>The maximum distance that a vertex can be displaced. Displacement over this threshold may cause visibility issues.</p>
+<h5 id="method-3">Method</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/method.png" alt="Method" loading="lazy"></figure>
+<h6 id="bump-only-2">Bump only</h6>
+<p>Bump mapping simulates the displacement mapping.</p>
+<h6 id="displacement-only-2">Displacement only</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/displacement-only.png" alt="Displacement only" loading="lazy"></figure>
+<p>Use true displacement. Requires fine subdivision.</p>
+<p><strong>Max distance</strong></p>
+<p>The maximum distance the vertices can be displaced.</p>
+<h6 id="displacement-and-bump-2">Displacement and Bump</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/displacement-and-bump.png" alt="Displacement and Bump" loading="lazy"></figure>
+<p>Uses a mixture of displacement and bump mapping.</p>
+<p><strong>Max distance</strong></p>
+<p>The maximum distance the vertices can be displaced.</p>
+<h4 id="transparency-2">Transparency</h4>
+<h5 id="transparent-shadows-2">Transparent Shadows</h5>
+<p>Use transparent shadows for this material.</p>
+<h4 id="method-4">Method</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/method-2.png" alt="Method" loading="lazy"></figure>
+<p>Controls the blending and the compatibility with certain features.</p>
+<h5 id="dithered-2">Dithered</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/dithered.png" alt="Dithered" loading="lazy"></figure>
+<p>Allows for grayscale hashed transparency, and is compatible with render passes and raytracing. This is also known als deferred rendering.</p>
+<h6 id="raytraced-refraction-2">Raytraced refraction</h6>
+<p>Use raytracing to determine refracted color instead of using only light probes. This prevents the surface from contributing to the lighting of surfaces not using this setting.</p>
+<h6 id="from-shadow-2">From Shadow</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/from-shadow.png" alt="From Shadow" loading="lazy"></figure>
+<p>Use the shadow map from shadow casting lights to refine the thickness defined by the material node tree.</p>
+<h5 id="blended-2">Blended</h5>
+<p>Allows for colored transparency, but is incompatible with render passes and raytracing. This is also known als forward rendering.</p>
+<h6 id="transparency-overlap-2">Transparency Overlap</h6>
+<p>Render multiple transparent layers. Note that this may introduce transparency sorting problems.</p>
+<h4 id="render-2">Render</h4>
+<h5 id="thickness-2">Thickness</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/thickness.png" alt="Thickness" loading="lazy"></figure>
+<p>The thickness model to consider geometry to be inside the object.</p>
+<h4 id="light-probe-volume-2">Light Probe Volume</h4>
+<h5 id="light-probe-volume-backfaces-2">Light Probe Volume Backfaces</h5>
+<p>Consider materials single sided for light probe volume capture.</p>
+<h4 id="volume-intersection">Volume Intersection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/material-properties-tab/volume-intersection.png" alt="Volume Intersection" loading="lazy"></figure>
+<p>The volume intersection method.</p>
+<h2 id="custom-properties-panel">Custom Properties panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/custom-properties-panel.png" alt="Custom Properties panel" loading="lazy"></figure>
+<p>This panel exists for all object types in the Object Data Properties. Allows you to add custom properties that can be used in various ways then. For scripting, or to drive animation etc.</p>
+<p>In this panel you might also find custom properties from addons or scripts.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add</td>
+<td>Adds a new property.</td>
+</tr>
+<tr>
+<td>Property Value</td>
+<td>The value of the property.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="edit">Edit</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/edit.png" alt="Edit" loading="lazy"></figure>
+<p>Opens a panel where you can adjust the settings for the custom property. The settings should be self explaining.</p>
+<h3 id="remove">Remove</h3>
+<p>Removes the property.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-phase345/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fmaterial-properties-tab.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-phase345/docs2/content/editors/properties/material-properties-tab.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#preface">Preface</a><a class="h3" href="#affected-renderer">Affected Renderer</a><a class="h2" href="#material-header">Material header</a><a class="h3" href="#material-list">Material List</a><a class="h3" href="#materials-specials-menu">Materials Specials menu</a><a class="h3" href="#material-data-property">Material data property</a><a class="h3" href="#edit-mode">Edit Mode</a><a class="h2" href="#preview-panel">Preview Panel</a><a class="h2" href="#surface-panel">Surface Panel</a><a class="h3" href="#use-nodes">Use Nodes</a><a class="h2" href="#surface-panel-grease-pencil-object">Surface Panel - Grease Pencil Object</a><a class="h3" href="#presets">Presets</a><a class="h3" href="#stroke-subpanel">Stroke Subpanel</a><a class="h3" href="#fill-subpanel">Fill Subpanel</a><a class="h2" href="#volume-panel">Volume Panel</a><a class="h3" href="#use-nodes-2">Use Nodes</a><a class="h2" href="#displacement-panel">Displacement Panel</a><a class="h3" href="#use-nodes-3">Use Nodes</a><a class="h2" href="#thicknes-panel">Thicknes Panel</a><a class="h2" href="#settings-panel-eevee-renderer">Settings Panel - Eevee renderer</a><a class="h3" href="#pass-index">Pass Index</a><a class="h3" href="#surface-subpanel">Surface subpanel</a><a class="h3" href="#volume-subpanel">Volume subpanel</a><a class="h2" href="#settings-panel-cycles-renderer">Settings Panel - Cycles renderer</a><a class="h3" href="#pass-index-2">Pass Index</a><a class="h3" href="#surface-subpanel-2">Surface subpanel</a><a class="h3" href="#volume-subpanel-2">Volume subpanel</a><a class="h2" href="#line-art">Line Art</a><a class="h3" href="#material-mask">Material Mask</a><a class="h2" href="#viewport-display">Viewport Display</a><a class="h3" href="#settings-subpanel">Settings Subpanel</a><a class="h2" href="#custom-properties-panel">Custom Properties panel</a><a class="h3" href="#edit">Edit</a><a class="h3" href="#remove">Remove</a></aside></div></body></html>

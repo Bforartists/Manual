@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Armature Object · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1426 · <code>docs2/q3-phase345</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<a href="../../../interface/windows.html">Windows</a>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/header.html">Header</a>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../view-layer-properties-tab.html">View Layer</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../../graph-editor/channel-list.html">Channel List</a>
+<a href="../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="../collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="../object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="../modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<a style="padding-left:1.5rem" href="../visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="../particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<a style="padding-left:1.5rem" href="../physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../object-data-properties-tab.html">Object Data</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="../bone-constraint-properties.html">Bone Constraints</a>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="../material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../texture-properties-tab.html">Texture</a>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="../strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="../strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../../dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<a href="../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../../text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<a href="../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="grease-pencil-object.html">Grease Pencil Object</a>
+<a class="is-current" style="padding-left:2.5rem" href="armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="volume-object.html">Volume Object</a>
+<span>File browser</span>
+<span>Asset Browser</span>
+<a href="../../spreadsheet.html">Spreadsheet</a>
+<a href="../../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="../../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<a href="../../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../../advanced/troubleshooting.html">Troubleshooting</a>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/manual-update-history.html">Documentation History</a>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../../../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Object Data Properties Tab › Armature Object</div><h1 class="pv-title">Armature Object</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 16 min read</span></div><article class="ui-doc-body"><h2 id="pose-panel">Pose panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/pose-panel.jpg" alt="Pose panel" loading="lazy"></figure>
+<p>This panel allows you to turn the display for bone and armature layers on and off.</p>
+<h3 id="position">Position</h3>
+<p>Switch between Pose Position and Rest Position.</p>
+<p>Pose position shows the armature in the currently posed state.</p>
+<p>Rest Position shows the armature in the rest position. In Rest Pose mode there is no posing possible.</p>
+<h2 id="bone-collections-panel">Bone Collections panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/bone-collections-panel.png" alt="Bone Collections panel" loading="lazy"></figure>
+<p>This panel allows the creation, deletion and editing of Bone Collections.</p>
+<p>Bone Collection can be used for bone selections.</p>
+<p>Bone Collections is a Pose Mode and Edit Mode feature. The controls will be disabled in Object mode.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/bone-collections-panel-2.png" alt="Bone Collections panel" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Using collection selections, you can then assign a color to the bone group in the Properties Editor &gt; Bone Properties Tab. For example, you can color the left parts of the rig as blue and right parts as red – and you can also assign a color per edit and pose mode.</p></div>
+<h3 id="list-view">List View</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/list-view.png" alt="List View" loading="lazy"></figure>
+<p>The List view with the bone collections. Double clicking at the name makes it editable.</p>
+<p>In the list view, you can drag and drop collection order, drag and drop to create child Bone Collections and show/hide collections by using the eye column. You can also Solo a collection by pressing on the star column.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> To add a child Bone Collection, which creates a collapsible hierarchy of bone collections, you will need to drag a Bone Collection into a parent Bone Collection. This allows to toggle parent visibility to inherently toggle children visibility.</p></div>
+<h4 id="right-click-menu-at-a-list-item">Right click menu at a list item</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/right-click-menu-at-a-list-item.png" alt="Right click menu at a list item" loading="lazy"><figcaption>Right click menu at a list item</figcaption></figure>
+<p>When you right click at one of the menu items then you will reveal a context menu. Most of these menu items exists in the regular menu. So we will not explain it here. But explain it in the regular menu entries below.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset Panel Zoom</td>
+<td>Resets the panel zoom factor. You can zoom in and out with holding ctrl and moving the left mouse.</td>
+</tr>
+<tr>
+<td>Add / Remove</td>
+<td>Add or remove a bone collection. To create a child collection, click and drag an existing collection onto a parent collection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bone-collection-specials">Bone collection specials</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/bone-collection-specials.png" alt="Bone collection specials" loading="lazy"></figure>
+<p>This group of operators show additional options. You can alternatively use the context menu.</p>
+<h3 id="move-bone-group-up-down">Move Bone Group Up / Down</h3>
+<p>Move the selected bone group up or down in the list.</p>
+<h4 id="remove-unused-collections">Remove Unused Collections</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/remove-unused-collections.png" alt="Remove Unused Collections" loading="lazy"></figure>
+<p>Removes all empty collections that have no bones assigned to them.</p>
+<h4 id="show-all">Show All</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/show-all.png" alt="Show All" loading="lazy"></figure>
+<p>Show all collections.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Un-Solo All</td>
+<td>Toggles and clears all Solo stars to show all collections again.</td>
+</tr>
+<tr>
+<td>Rename</td>
+<td>Rename the current collection. Note that you can also rename it by simply double clicking at it in the list.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="assign">Assign</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/assign.png" alt="Assign" loading="lazy"></figure>
+<p>Not in object mode. Assigns the selected bones to the active bone collection.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> A bone can belong to multiple collections.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remove</td>
+<td>Not in object mode. Removes the selected bones from the active bone collection.</td>
+</tr>
+<tr>
+<td>Select</td>
+<td>Not in object mode. Selects the bones in the active bone collection.</td>
+</tr>
+<tr>
+<td>Deselect</td>
+<td>Not in object mode. Deselects the bones in the active bone collection.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="motion-paths-panel">Motion Paths panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/motion-paths-panel.png" alt="Motion Paths panel" loading="lazy"></figure>
+<p>Motion paths allows you to visualize motion paths of animated bones.</p>
+<h3 id="workflow">Workflow</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/workflow.png" alt="Workflow" loading="lazy"></figure>
+<p>Select the bones that you want to calculate a path for. Note that they should have an animation. No animation, no motion path.</p>
+<p>Click at the Calculate button.</p>
+<p>When you change the animation then you might need to update the paths.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/workflow-2.png" alt="Workflow" loading="lazy"></figure>
+<p>To remove the paths, click at the X button at the Update paths button.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Remember that only selected bones and their paths are affected by these actions!</p></div>
+<p>The paths are shown in a light shade of gray for unselected points, and a slightly blueish gray for selected ones. Around the current frame a glow indicate the direction of movement: blue towards future frames and green towards the past. Each frame is displayed by a small white dot on the paths.</p>
+<p>The paths are automatically updated when you edit your poses/keyframes, and they are also active during animation playback. Playing the animation affects the paths only when the Around Current Frame option is enabled.</p>
+<h3 id="paths-type">Paths Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/paths-type.png" alt="Paths Type" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Around Frame</td>
+<td>Display paths of points within a fixed number of frames around the current frame. When you enable this button, you get paths for a given number of frames before and after the current one (again, as with ghosts).</td>
+</tr>
+<tr>
+<td>In Range</td>
+<td>Display paths of points within specified range.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="calculation-range">Calculation range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/calculation-range.png" alt="Calculation range" loading="lazy"></figure>
+<p>Type of range to calculate for motion paths.</p>
+<h5 id="all-keys-selected-keys-scene-frame-range">All Keys / Selected Keys / Scene Frame Range</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/all-keys-selected-keys-scene-frame-range.png" alt="All Keys / Selected Keys / Scene Frame Range" loading="lazy"><figcaption>All Keys / Selected Keys / Scene Frame Range</figcaption></figure>
+<h6 id="step">Step</h6>
+<p>The number of frames between paths shown.</p>
+<h5 id="manual-range">Manual range</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/manual-range.png" alt="Manual range" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame Range Start</td>
+<td>The start frame for the paths calculation. (not for Around Current Frame Onion-skinning method).</td>
+</tr>
+<tr>
+<td>End</td>
+<td>The end frame for the paths calculation. (not for Around Current Frame Onion-skinning method).</td>
+</tr>
+<tr>
+<td>Step</td>
+<td>Display one point for every n frames on the path.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bake-to-active-camera">Bake to Active Camera</h3>
+<p>Bake the motion points into the camera space of the active camera. Switching cameras will look wrong then.</p>
+<h3 id="calculate">Calculate ...</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/calculate.png" alt="Calculate ..." loading="lazy"></figure>
+<p>Calculate Paths will create a new motion path in cache. It will open a popup where you can adjust the settings.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/calculate-2.png" alt="Calculate ..." loading="lazy"></figure>
+<h4 id="display-type">Display Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/display-type.png" alt="Display Type" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Around Frame</td>
+<td>Display paths fo poses within a fixed number of frames around the current frame.</td>
+</tr>
+<tr>
+<td>In Range</td>
+<td>Display paths of points within specified range.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="computation-range">Computation Range</h4>
+<p>Type of range to calculate.</p>
+<h4 id="bake-location">Bake Location</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/bake-location.png" alt="Bake Location" loading="lazy"></figure>
+<p>Where to display the path. At the heads of the bones or at the tail of the bones.</p>
+<h3 id="update-paths">Update Paths</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/update-paths.png" alt="Update Paths" loading="lazy"></figure>
+<p>If a path has already been calculated, Update Paths will update the path shape to the current animation. To change the frame range of the calculated path, you need to delete the path and calculate it again.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Update All Paths</td>
+<td>Update all paths will update not just the path for the selected object, but also for all other paths in the object hierarchy.</td>
+</tr>
+<tr>
+<td>Clear Paths</td>
+<td>Removes all paths in the hierarchy. Bone Calculate From and To is internal, and cannot be edited. Just ignore.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="display-subpanel">Display subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/display-subpanel.png" alt="Display subpanel" loading="lazy"></figure>
+<h4 id="frame-numbers">Frame Numbers</h4>
+<p>Show a small number of the corresponding frame next to each frame dot on the path.</p>
+<h4 id="keyframes">Keyframes</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/keyframes.png" alt="Keyframes" loading="lazy"></figure>
+<p>Show the keyframes at the path, with frame number.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+ Non-Grouped Keyframes</td>
+<td>For bone motion paths, it searches the whole Action for keyframes instead of in groups with matching name only (this is slower).</td>
+</tr>
+<tr>
+<td>Keyframe Numbers</td>
+<td>When enabled, you will see the numbers of the displayed keyframes, so this option is obviously only valid when Show Keys is enabled.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="viewport-display-panel">Viewport Display panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/viewport-display-panel.png" alt="Viewport Display panel" loading="lazy"></figure>
+<p>Display options for the armature.</p>
+<h3 id="display-as">Display As</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/display-as.png" alt="Display As" loading="lazy"></figure>
+<p>How the bones are displayed in the 3D Viewport.</p>
+<h4 id="octahedral">Octahedral</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/octahedral.png" alt="Octahedral" loading="lazy"></figure>
+<p>Bones are displayed as a octahedral. With a thick and a thin end.</p>
+<h4 id="stick">Stick</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/stick.png" alt="Stick" loading="lazy"></figure>
+<p>Bones are displayed as a stick.</p>
+<h4 id="b-bone">B-Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/b-bone.png" alt="B-Bone" loading="lazy"></figure>
+<p>Bones are displayed as a cuboid. This bone display type also allows to display bendy bones subdivisions.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/b-bone-2.png" alt="B-Bone" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/b-bone-3.png" alt="B-Bone" loading="lazy"></figure>
+<h4 id="envelope">Envelope</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/envelope.png" alt="Envelope" loading="lazy"></figure>
+<p>Bones are displayed with its envelopes. The bone deformation influence areas.</p>
+<h4 id="wire">Wire</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/wire.png" alt="Wire" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/wire-2.png" alt="Wire" loading="lazy"></figure>
+<p>Bones are displayed as thin wire lines. This bone display type also allows to display bendy bones subdivisions.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Names</td>
+<td>Displays the name of each bone.</td>
+</tr>
+<tr>
+<td>Shapes</td>
+<td>When enabled, the default standard bone shape is replaced, in Object Mode and Pose Mode, by the shape of a chosen object (see Shaped Bones for details).</td>
+</tr>
+<tr>
+<td>Bone Colors</td>
+<td>Display Bone Collection colors to color the bone, if a color set is assigned in the Bone Tab &gt; Viewport Display panel.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="in-front">In Front</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/in-front.png" alt="In Front" loading="lazy"></figure>
+<p>Display the armature always in front of mesh objects, even when they are inside.</p>
+<h3 id="axes">Axes</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/axes.png" alt="Axes" loading="lazy"></figure>
+<p>When enabled, the (local) axes of each bone are displayed (only relevant for Edit Mode and Pose Mode).</p>
+<h4 id="position-2">Position</h4>
+<p>You can give the axes widget an offset. Higher values moves the axes more to the tip. Lower values moves the axes more to the root.</p>
+<h3 id="relations">Relations</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/relations.png" alt="Relations" loading="lazy"></figure>
+<p>Display the start point of the relation lines.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Head</td>
+<td>The start position of the relation lines from parent to child bones.</td>
+</tr>
+<tr>
+<td>Tail</td>
+<td>The end position of the relation lines from parent to child bones.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="inverse-kinematics-panel">Inverse Kinematics panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/inverse-kinematics-panel.png" alt="Inverse Kinematics panel" loading="lazy"></figure>
+<p>Inverse Kinematics settings.</p>
+<h3 id="ik-solver">IK Solver</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/ik-solver.png" alt="IK Solver" loading="lazy"></figure>
+<p>The available IK solver solution. Standard and iTaSC.</p>
+<h4 id="standard">Standard</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/inverse-kinematics-panel.png" alt="Standard" loading="lazy"></figure>
+<p>The standard IK solver. It has no further settings.</p>
+<h4 id="itasc">iTaSC</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/itasc.png" alt="iTaSC" loading="lazy"></figure>
+<p>iTaSC stands for instantaneous Task Specification using Constraints. It is a generic multi-constraint IK solver. It has more settings and works a bit different than the standard IK solver.</p>
+<h5 id="mode">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/mode.png" alt="Mode" loading="lazy"></figure>
+<p>The itasc mode. Animation or Simulation.</p>
+<h6 id="animation">Animation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/animation.png" alt="Animation" loading="lazy"></figure>
+<p>In Animation mode, iTaSC operates like an IK solver: it is stateless and uses the pose from F-curves interpolation as the start pose before the IK convergence. The target velocity is ignored and the solver converges until the given precision is obtained. Still the new solver is usually faster than the old one and provides features that are inherent to iTaSC: multiple targets per bone and multiple types of constraints.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Translate Roots</td>
+<td>Translate root bones to the armature origin.</td>
+</tr>
+<tr>
+<td>Precision</td>
+<td>The maximum variation of the end effector between two successive iterations at which a pose is obtained that is stable enough and the solver should stop the iterations. Lower values means higher precision on the end effector position.</td>
+</tr>
+<tr>
+<td>Iterations</td>
+<td>The upper bound for the number of iterations.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Solver</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/solver.png" alt="Solver" loading="lazy"></figure>
+<p>Select the inverse Jacobian solver that iTaSC will use.</p>
+<p><strong>SDLS</strong></p>
+<p>Computes the damping automatically by estimating the level of ‘cancellation’ in the armature kinematics. This method works well with the Copy Pose constraint but has the drawback of damping more than necessary around the singular pose, which means slower movements. Note that this is only noticeable in Simulation mode.</p>
+<p>The SDLS solver does not work together with a Distance constraint. You must use the DLS solver if you are going to have a singular pose in your animation with the Distance constraint.</p>
+<p><strong>DLS</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/dls.png" alt="DLS" loading="lazy"></figure>
+<p>Computes the damping manually. Damping and Epsilon must be tuned for each armature. You should use the smallest values that preserve stability.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Damping Max</td>
+<td>Maximum amount of damping. Smaller values means less damping, hence more velocity and better precision but also more risk of oscillation at singular pose. 0 means no damping at all.</td>
+</tr>
+<tr>
+<td>Damping Epsilon</td>
+<td>Range of the damping zone around singular pose. Smaller values means a smaller zone of control and greater risk of passing over the singular pose, which means oscillation.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="simulation">Simulation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/simulation.png" alt="Simulation" loading="lazy"></figure>
+<p>The Simulation mode estimates the target’s velocity, operates in a ‘true time’ context, ignores rotation from keyframes (except via a joint rotation constraint) and builds up a state cache automatically.</p>
+<p><strong>Translate Roots</strong></p>
+<p>Translate root bones to the armature origin.</p>
+<p><strong>ReiterationNever</strong></p>
+<p>The solver starts from the rest pose and does not reiterate (converges) even for the first frame. This means that it will take a few frames to get to the target at the start of the animation.</p>
+<p>Never will grey out most of the options.</p>
+<p><strong>Initial</strong></p>
+<p>The solver starts from the rest pose and re-iterates until the given precision is achieved, but only on the first frame (i.e. a frame which doesn’t have any previous frame in the cache). This option basically allows you to choose a different start pose than the rest pose and it is the default value. For the subsequent frames, the solver will track the target by integrating the joint velocity computed by the Jacobian solver over the time interval that the frame represents. The precision of the tracking depends on the feedback coefficient, number of substeps and velocity of the target.</p>
+<p><strong>Always</strong></p>
+<p>The solver re-iterates on each frame until the given precision is achieved. This option omits most of the iTaSC dynamic behavior: the maximum joint velocity and the continuity between frames is not guaranteed anymore in compensation of better precision on the end effector positions. It is an intermediate mode between Animation and real-time Simulation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precision</td>
+<td>The maximum variation of the end effector between two successive iterations at which a pose is obtained that is stable enough and the solver should stop the iterations. Lower values means higher precision on the end effector position.</td>
+</tr>
+<tr>
+<td>Iterations</td>
+<td>The upper bound for the number of iterations.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Solver</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/solver.png" alt="Solver" loading="lazy"></figure>
+<p>Select the inverse Jacobian solver that iTaSC will use.</p>
+<p><strong>SDLS</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/sdls.png" alt="SDLS" loading="lazy"></figure>
+<p>Computes the damping automatically by estimating the level of ‘cancellation’ in the armature kinematics. This method works well with the Copy Pose constraint but has the drawback of damping more than necessary around the singular pose, which means slower movements. Note that this is only noticeable in Simulation mode.</p>
+<p>The SDLS solver does not work together with a Distance constraint. You must use the DLS solver if you are going to have a singular pose in your animation with the Distance constraint.</p>
+<p><strong>Feedback</strong></p>
+<p>Coefficient on end effector position error to set corrective joint velocity. The time constant of the error correction is the inverse of this value. However, this parameter has little effect on the dynamic of the armature since the algorithm evaluates the target velocity in any case. Setting this parameter to 0 means ‘opening the loop’: the solver tracks the velocity but not the position; the error will accumulate rapidly. Setting this value too high means an excessive amount of correction and risk of instability. The value should be in the range 20-100. Default value is 20, which means that tracking errors are corrected in a typical time of 100-200 ms. The feedback coefficient is the reason why the armature continues to move slightly in Simulation mode even if the target has stopped moving: the residual error is progressively suppressed frame after frame.</p>
+<p><strong>Max Velocity</strong></p>
+<p>Indicative maximum joint velocity in radian per second. This parameter has an important effect on the armature dynamic. Smaller value will cause the armature to move slowly and lag behind if the targets are moving rapidly. You can simulate an inertia by setting this parameter to a low value.</p>
+<p><strong>DLS</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/dls-2.png" alt="DLS" loading="lazy"></figure>
+<p>Computes the damping manually. Damping and Epsilon must be tuned for each armature. You should use the smallest values that preserve stability.</p>
+<p><strong>Feedback</strong></p>
+<p>Coefficient on end effector position error to set corrective joint velocity. The time constant of the error correction is the inverse of this value. However, this parameter has little effect on the dynamic of the armature since the algorithm evaluates the target velocity in any case. Setting this parameter to 0 means ‘opening the loop’: the solver tracks the velocity but not the position; the error will accumulate rapidly. Setting this value too high means an excessive amount of correction and risk of instability. The value should be in the range 20-100. Default value is 20, which means that tracking errors are corrected in a typical time of 100-200 ms. The feedback coefficient is the reason why the armature continues to move slightly in Simulation mode even if the target has stopped moving: the residual error is progressively suppressed frame after frame.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Max Velocity</td>
+<td>Indicative maximum joint velocity in radian per second. This parameter has an important effect on the armature dynamic. Smaller value will cause the armature to move slowly and lag behind if the targets are moving rapidly. You can simulate an inertia by setting this parameter to a low value.</td>
+</tr>
+<tr>
+<td>Damping Max</td>
+<td>Maximum amount of damping. Smaller values means less damping, hence more velocity and better precision but also more risk of oscillation at singular pose. 0 means no damping at all.</td>
+</tr>
+<tr>
+<td>Damping Epsilon</td>
+<td>Range of the damping zone around singular pose. Smaller values means a smaller zone of control and greater risk of passing over the singular pose, which means oscillation.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="auto-step">Auto Step</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/auto-step.png" alt="Auto Step" loading="lazy"></figure>
+<p>Let the solver set how many substeps should be executed for each frame.</p>
+<p>A sub step is a subdivision on the time between two frames for which the solver evaluates the IK equation and updates the joint position. More substeps means more processing but better precision on tracking the targets. The auto step algorithm estimates the optimal number of steps to get the best trade-off between processing and precision. It works by estimation of the non linearity of the pose and by limiting the amplitude of joint variation during a sub step. It can be configured with the min and max parameters.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steps</td>
+<td>Auto Step off. Choose a fixed number of substeps with this parameter. Sub step should not be longer than 10 ms, which means the number of steps is 4 for a 25 fps animation. If the armature seems unstable (vibrates) between frames, you can improve the stability by increasing the number of steps.</td>
+</tr>
+<tr>
+<td>Steps Min</td>
+<td>Auto Step on. Proposed minimum sub step duration (in second). The auto step algorithm may reduce the sub step further based on joint velocity.</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>Auto Step on. Maximum sub step duration (in second). The auto step algorithm will not allow sub step longer than this value.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="selection-sets">Selection Sets</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/selection-sets.png" alt="Selection Sets" loading="lazy"></figure>
+<p>This panel allows the creation, deletion and editing of Selection Sets. Bone collections are for edit and pose mode. Selection sets is for pose modes only.</p>
+<h3 id="list-view-2">List View</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/list-view-2.png" alt="List View" loading="lazy"></figure>
+<p>The List view with the selection sets. Double clicking at the name makes it editable.</p>
+<p>In the list view, you can drag and drop collection order, drag and drop to create child Bone Collections and show/hide collections by using the eye column. You can also Solo a collection by pressing on the star column.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> To add a child Bone Collection, which creates a collapsible hierarchy of bone collections, you will need to drag a Bone Collection into a parent Bone Collection. This allows to toggle parent visibility to inherently toggle children visibility.</p></div>
+<h4 id="right-click-menu-at-a-list-item-2">Right click menu at a list item</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/right-click-menu-at-a-list-item-2.png" alt="Right click menu at a list item" loading="lazy"><figcaption>Right click menu at a list item</figcaption></figure>
+<p>When you right click at one of the menu items then you will reveal a context menu. The content is the usual entries. So we will not explain it here.</p>
+<h5 id="reset-panel-zoom">Reset Panel Zoom</h5>
+<p>Resets the panel zoom factor. You can zoom in and out with holding ctrl and moving the left mouse.</p>
+<h3 id="add-remove">Add / Remove</h3>
+<p>Add or remove a selection set.</p>
+<h3 id="selection-set-specials">Selection Set specials</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/selection-set-specials.png" alt="Selection Set specials" loading="lazy"></figure>
+<p>This group of operators show additional options. You can alternatively use the context menu.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete all Sets</td>
+<td>Removes all selection sets.</td>
+</tr>
+<tr>
+<td>Remove selected Bones from all Sets</td>
+<td>Remove the selected Bones from all Selection Sets.</td>
+</tr>
+<tr>
+<td>Copy Selection Set(s)</td>
+<td>Copies the selected Selection sets.</td>
+</tr>
+<tr>
+<td>Paste Selection Set(s)</td>
+<td>Pastes the selected Selection sets.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="move-selection-set-up-down">Move Selection Set Up / Down</h3>
+<p>Move the selected bone group up or down in the list.</p>
+<h3 id="assign-2">Assign</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/object-data-properties-tab/armature-object/assign.png" alt="Assign" loading="lazy"></figure>
+<p>Assigns the selected bones to the Selection Set.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> A bone can belong to multiple collections.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remove</td>
+<td>Removes the selected bones from the Selection Set.</td>
+</tr>
+<tr>
+<td>Select</td>
+<td>Selects the bones in the Selection Set.</td>
+</tr>
+<tr>
+<td>Deselect</td>
+<td>Deselects the selected bones in the Selection Set.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="custom-properties-panel">Custom Properties Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/view-layer-properties-tab/custom-properties-panel.png" alt="Custom Properties Panel" loading="lazy"></figure>
+<p>Here you can define custom properties that can be used for scripting.</p>
+<p>Here you might also find custom properties from addons or scripts.</p>
+<h3 id="add">Add</h3>
+<p>Adds a new property.</p>
+<h3 id="edit">Edit</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f6652d202d4c22babf033bee441d16d25a56d2ff/docs2/images/editors/properties/view-layer-properties-tab/edit.png" alt="Edit" loading="lazy"></figure>
+<p>Opens a panel where you can adjust the settings for the custom property.</p>
+<h3 id="remove">Remove</h3>
+<p>Removes the property.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-phase345/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fobject-data-properties-tab%2Farmature-object.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-phase345/docs2/content/editors/properties/object-data-properties-tab/armature-object.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#pose-panel">Pose panel</a><a class="h3" href="#position">Position</a><a class="h2" href="#bone-collections-panel">Bone Collections panel</a><a class="h3" href="#list-view">List View</a><a class="h3" href="#bone-collection-specials">Bone collection specials</a><a class="h3" href="#move-bone-group-up-down">Move Bone Group Up / Down</a><a class="h3" href="#assign">Assign</a><a class="h2" href="#motion-paths-panel">Motion Paths panel</a><a class="h3" href="#workflow">Workflow</a><a class="h3" href="#paths-type">Paths Type</a><a class="h3" href="#bake-to-active-camera">Bake to Active Camera</a><a class="h3" href="#calculate">Calculate ...</a><a class="h3" href="#update-paths">Update Paths</a><a class="h3" href="#display-subpanel">Display subpanel</a><a class="h2" href="#viewport-display-panel">Viewport Display panel</a><a class="h3" href="#display-as">Display As</a><a class="h3" href="#in-front">In Front</a><a class="h3" href="#axes">Axes</a><a class="h3" href="#relations">Relations</a><a class="h2" href="#inverse-kinematics-panel">Inverse Kinematics panel</a><a class="h3" href="#ik-solver">IK Solver</a><a class="h2" href="#selection-sets">Selection Sets</a><a class="h3" href="#list-view-2">List View</a><a class="h3" href="#add-remove">Add / Remove</a><a class="h3" href="#selection-set-specials">Selection Set specials</a><a class="h3" href="#move-selection-set-up-down">Move Selection Set Up / Down</a><a class="h3" href="#assign-2">Assign</a><a class="h2" href="#custom-properties-panel">Custom Properties Panel</a><a class="h3" href="#add">Add</a><a class="h3" href="#edit">Edit</a><a class="h3" href="#remove">Remove</a></aside></div></body></html>
