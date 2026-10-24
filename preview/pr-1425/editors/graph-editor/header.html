@@ -1,0 +1,1755 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Header · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1425 · <code>docs2/q3-combine-regions</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a class="is-current" style="padding-left:1.5rem" href="header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../image-editor/tool-shelf.html">Tool Shelf</a>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="channel-list.html">Channel List</a>
+<span>Image Editor</span>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Color</span>
+<a style="padding-left:1.5rem" href="../timeline/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:1.5rem">Render Properties Tab</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:1.5rem">Output Properties Tab</span>
+<span style="padding-left:1.5rem">View Layer Properties Tab</span>
+<span style="padding-left:1.5rem">Scene Properties Tab</span>
+<span style="padding-left:1.5rem">World Properties Tab</span>
+<span style="padding-left:1.5rem">Collection Properties Tab</span>
+<span style="padding-left:1.5rem">Object Properties Tab</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Particle Properties Tab</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:1.5rem">Visual Effects Properties Tab</span>
+<span style="padding-left:1.5rem">Physics Properties Tab</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:1.5rem">Object Constraints Properties Tab</span>
+<span style="padding-left:1.5rem">Object Data Properties Tab</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span style="padding-left:1.5rem">Material Properties Tab</span>
+<span style="padding-left:1.5rem">Texture Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Constraint Properties</span>
+<span style="padding-left:1.5rem">Strip Tab</span>
+<span style="padding-left:1.5rem">Strip Modifiers Tab</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Standard Keymap</span>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Graph Editor › Header</div><h1 class="pv-title">Header</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 27 min read</span></div><article class="ui-doc-body"><p>The pages of this part are listed in the sidebar under <em>Header</em>.</p>
+<h1 id="header-tools-and-options">Header Tools and Options</h1>
+<h3 id="introduction">Introduction</h3>
+<p>The header contains various menus and tools. This chapter here is about the tools, modes and options elements in the header.</p>
+<p>The text menus are covered in a own chapter each. They vary too much, dependent of mode and object type.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/introduction.png" alt="Introduction" loading="lazy"></figure>
+<h3 id="header-tabs">Header Tabs</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/header-tabs.png" alt="Header Tabs" loading="lazy"></figure>
+<p>The tabs at the very left allows you to switch between the four most important editor types by one click. Dope sheet Editor, Graph Editor, Driver Editor, NLA Editor.</p>
+<h3 id="use-normalization-create-ghost-curves">Use Normalization, Create Ghost Curves</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Normalization</td>
+<td>Normalizes the curves so that the maximum does not exceed 1 and the minimum does not go lower than -1</td>
+</tr>
+<tr>
+<td>Create Ghost Curves</td>
+<td>Creates a snapshot of the current curves, and displays it as a background image in the viewport. This background image is not permanent, and will be deleted when you close Bforartists. When a ghost background image is created then the button turns into a delete button with which you can remove the ghost image.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="snapping-panel">Snapping Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/snapping-panel.png" alt="Snapping Panel" loading="lazy"></figure>
+<p>Snapping in animation editors helps align the <strong>playhead</strong> and <strong>keyframes</strong> to meaningful time-based elements, improving precision and workflow efficiency across the <strong>Timeline</strong>, <strong>Dope Sheet</strong>, <strong>Graph Editor</strong>, <strong>NLA</strong>, and <strong>Video Sequencer</strong>.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This sub-subpanel is not available for Grease Pencil Dopesheet Mode</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Snapping On/Off</td>
+<td>Toggles the snapping on or off with a visual indicator.</td>
+</tr>
+<tr>
+<td>Frame</td>
+<td>Snaps to whole frame numbers. Ideal for frame-accurate editing instead of sub-frame timeline cursor placement.</td>
+</tr>
+<tr>
+<td>Second</td>
+<td>Snaps to time intervals measured in seconds. Useful for audio syncing or time-based pacing.</td>
+</tr>
+<tr>
+<td>Nearest Market</td>
+<td>Snaps to the closest timeline marker. Great for aligning actions to scene events or beats.</td>
+</tr>
+<tr>
+<td>Absolute Time Snap</td>
+<td>When enabled, snapping uses absolute time rather than relative pixel proximity. Ensures consistent snapping behavior regardless of zoom level or cursor position.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="show-hide-elements">Show Hide elements</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/show-hide-elements.png" alt="Show Hide elements" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Only Show Selected</td>
+<td>Display only the data for the selected object in the list of elements. If off it displays all available animation data of the whole scene.</td>
+</tr>
+<tr>
+<td>Show Hidden</td>
+<td>Include channels from objects / bones that are not visible. This feature just works with Only Selected off.</td>
+</tr>
+<tr>
+<td>Only Show Errors</td>
+<td>Only display F-Curves and Drivers that have errors or are disabled.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filters">Filters</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/filters.png" alt="Filters" loading="lazy"></figure>
+<p>The show hide elements allows you to filter out the general elements. The Filters panel allows you to filter out further elements.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filter by Collection</td>
+<td>Just display the content from the chosen collection in the list of elements.</td>
+</tr>
+<tr>
+<td>Filter by Type</td>
+<td>In this section you can choose what type of animation data should be displayed. The names should be self explaining.</td>
+</tr>
+<tr>
+<td>Options</td>
+<td><strong>Sort Data Blocks</strong>: Alphabetically sort the data in the list of elements.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="proportional-editing">Proportional Editing</h3>
+<h4 id="enable-proportional-editing">Enable proportional editing</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/enable-proportional-editing.png" alt="Enable proportional editing" loading="lazy"></figure>
+<p>Proportional editing allows you for example to scale two keyframes and influence the not selected neighbor keyframes in a proportional way. Or the proportional editing of fcurve points.</p>
+<h4 id="proportional-editing-falloff">Proportional Editing Falloff</h4>
+<p>The drop down menu to choose the proportional editing falloff method. It is just available when the proportional tool is active.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Falloff Type</td>
+<td>The falloff method</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>Display size of the proportional editing circle.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pivot-point">Pivot Point</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/pivot-point.png" alt="Pivot Point" loading="lazy"></figure>
+<p>The pivot point defines the center of manipulations.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bounding Box Center</td>
+<td>Transformation happens around the bounding box center.</td>
+</tr>
+<tr>
+<td>2D Cursor</td>
+<td>Transformation happens around the timeline cursor.</td>
+</tr>
+<tr>
+<td>Individual Centers</td>
+<td>Transformation happens around the individual centers of the selected elements.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="easing-mode">Easing Mode</h3>
+<h4 id="easing-mode-2">Easing Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/easing-mode.png" alt="Easing Mode" loading="lazy"></figure>
+<p>The easing methods in the interpolation mode menu are for the easing shape. This menu allows you to choose an easing method.</p>
+<h5 id="last-operator-set-keyframe-easing-type">Last Operator Set Keyframe Easing Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/type-4.png" alt="Last Operator Set Keyframe Easing Type" loading="lazy"><figcaption>Last Operator Set Keyframe Easing Type</figcaption></figure>
+<h6 id="type">Type</h6>
+<p>Set the easing type.</p>
+<h3 id="keyframe-handle-type">Keyframe Handle Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/keyframe-handle-type.png" alt="Keyframe Handle Type" loading="lazy"></figure>
+<p>Set the handle type for the currently selected keyframes.</p>
+<p>This is a feature for the Graph editor, where each curve point has its own handler with which you can influence the curve behavior. But the handler type also influences how the animation curve acts at the chosen keyframes. So it has its use in the dope sheet editor too.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/handle-type-submenu-2.png" alt="Keyframe Handle Type" loading="lazy"></figure>
+<h4 id="last-operator-set-keyframe-handle-type">Last Operator Set Keyframe Handle Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/type-2.png" alt="Last Operator Set Keyframe Handle Type" loading="lazy"><figcaption>Last Operator Set Keyframe Handle Type</figcaption></figure>
+<h5 id="type-2">Type</h5>
+<p>Set the handle type for the currently selected curve point.</p>
+<h3 id="keyframe-interpolation">Keyframe Interpolation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/keyframe-interpolation.png" alt="Keyframe Interpolation" loading="lazy"></figure>
+<p>The keyframe interpolation mode defines how the curve acts from keyframe to keyframe. You can have a linear curve between two keyframes instead of a bent one for example.</p>
+<p>The easing methods here in the interpolation mode menu are for the easing shape. There is also an easing menu where you can choose a easing method.</p>
+<h4 id="last-operator-set-keyframe-interpolation">Last Operator Set Keyframe Interpolation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/type-3.png" alt="Last Operator Set Keyframe Interpolation" loading="lazy"><figcaption>Last Operator Set Keyframe Interpolation</figcaption></figure>
+<h5 id="type-3">Type</h5>
+<p>Set the interpolation mode.</p>
+<h3 id="options">Options</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/options.png" alt="Options" loading="lazy"></figure>
+<h4 id="real-time-updates">Real-time Updates</h4>
+<p>When transforming keyframes then this transformation is also immediately visible in other editors.</p>
+<h4 id="show-seconds">Show Seconds</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/show-seconds.png" alt="Show Seconds" loading="lazy"></figure>
+<p>Show the timing in the timeline area in seconds instead of frames.</p>
+<h4 id="sync-visible-range">Sync visible range</h4>
+<p>Synchronize the visible timeline range with other visible time based editors. When you zoom in or out in the one editor, then it zooms in or out in the other editor too. Each editor to sync needs to have Sync Visible Range ticked.</p>
+<h4 id="show-sliders">Show Sliders</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/show-sliders.png" alt="Show Sliders" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/header-tools-and-options/show-sliders-2.png" alt="Show Sliders" loading="lazy"></figure>
+<p>Shows the value sliders for f-curve channels in the channel list.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AutoMerge Keyframes</td>
+<td>Automatically merge nearby keyframes.</td>
+</tr>
+<tr>
+<td>Auto Lock Key Axis</td>
+<td>Automatically locks the movement fo keyframes to the dominant axis.</td>
+</tr>
+<tr>
+<td>Show Extrapolation</td>
+<td>Shows the curves after the last keyframe.</td>
+</tr>
+<tr>
+<td>Show Handles</td>
+<td>Show the handles at the keyframes.</td>
+</tr>
+<tr>
+<td>Only Selected Keyframes Handles</td>
+<td>Just show the handles of the keyframes from the selected curves.</td>
+</tr>
+<tr>
+<td>Show Markers</td>
+<td>Display the markers row at the bottom of the view.</td>
+</tr>
+<tr>
+<td>Lock Markers</td>
+<td>Make the markers uneditable.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="quick-menu">Quick Menu</h1>
+<h3 id="quick-menu-2">Quick Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/quick-menu/quick-menu.png" alt="Quick Menu" loading="lazy"></figure>
+<p>The quick menu, or in long Quick Favorites menu, is a menu that can be customized to your needs. Here you can add operators for quick access.</p>
+<p>It is located in the header. But it can be called by hotkey Q directly under the mouse. This hotkey works in other editors too.</p>
+<p>When the menu is empty, then you will see the message &quot;No Menu Items found&quot;. This means that you first have to add some tools to the menu. It is a user configurable menu.</p>
+<p>Note that added operators in this menu does not have icons. Just text.</p>
+<p>Note that Graph Editor and Drivers Editor shares the same quick menu.</p>
+<h4 id="adding-an-operator-to-the-quick-menu">Adding an operator to the Quick menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/quick-menu/adding-an-operator-to-the-quick-menu.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
+<p>Open the panel or the menu where your operator is that you want to add.</p>
+<p>Let's add the open command from the File menu. Open the File menu, right click at open, and choose Add to Quick Favorites.</p>
+<p>Do the same with Save As. We should now have two new menu items in the Quick menu, which you can use now.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/quick-menu/adding-an-operator-to-the-quick-menu-2.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
+<p>As a rule of thumb, when the right click menu has an Add to Quick Favorites, then you can add it to the quick menu.</p>
+<p>Note that you can also add operators from the tool shelf at the left. And also operators from other editor types. Some other editors have their own quick menu though. The Image Editor for example. These operators gets added in the quick menu of the image editor then. And does not show in the quick menu in the header of the 3D view.</p>
+<h4 id="adding-a-menu-to-the-quick-menu">Adding a menu to the Quick menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/quick-menu/adding-a-menu-to-the-quick-menu.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
+<p>It is also possible to add a menu to the Quick menu. For example the whole Add menu. The way is the same. Right click at it, and choose Add to Quick Favorites.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/quick-menu/adding-a-menu-to-the-quick-menu-2.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
+<h4 id="order">Order</h4>
+<p>You might notice that the add menu adds at the top of the menu, and not at the bottom as you would expect. First comes menus, then comes operators. And they get added in the order in which you add them.</p>
+<p>Besides that, operators and menus gets added in the order that you add them. They cannot be sorted afterwards. So be careful how you add them. You can of course always remove operators and menus, and re-add them at the end of the list.</p>
+<h4 id="removing-an-operator-from-the-quick-menu">Removing an operator from the Quick menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/quick-menu/removing-an-operator-from-the-quick-menu.png" alt="Removing an operator from the Quick menu" loading="lazy"><figcaption>Removing an operator from the Quick menu</figcaption></figure>
+<p>Removing is as simple as adding. Right click at the operators in the Quick menu, and choose Remove from Quick favorites.</p>
+<h4 id="context-and-mode-dependent-content">Context and mode dependent content</h4>
+<p>The quick favorites. menu exists in nearly all editors. But it is just in the 3D view available in the header. So that you know this functionality exists. In the other editors you call it with hotkey Q.</p>
+<p>The content of the quick favorites. menu changes, dependent over which editor you are, and in what mode you are. When you add for example an operator from the image editor, then this operator just shows in the quick menu when you call the menu from the image editor. Same goes for the modes. Edit mode tools will just show in edit mode. And so on.</p>
+<h1 id="view-menu">View Menu</h1>
+<h3 id="graph-editor-view-menu">Graph Editor - View Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/view-menu/graph-editor-view-menu.png" alt="Graph Editor - View Menu" loading="lazy"><figcaption>Graph Editor - View Menu</figcaption></figure>
+<p>The View menu contains all View related tools.</p>
+<p>The content is for all modes the same.</p>
+<h4 id="channels">Channels</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/view-menu/channels.png" alt="Channels" loading="lazy"></figure>
+<p>Shows or hides the Channels list at the left in the viewport.</p>
+<h4 id="sidebar">Sidebar</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/view-menu/sidebar.png" alt="Sidebar" loading="lazy"></figure>
+<p>Shows or hides the sidebar at the right in the viewport.</p>
+<h4 id="adjust-last-operation">Adjust last Operation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/view-menu/adjust-last-operation.png" alt="Adjust last Operation" loading="lazy"></figure>
+<p>Show the Adjust Last Operation panel down left when you perform a tool.</p>
+<h4 id="playback-controls">Playback Controls</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/view-menu/playback-controls.png" alt="Playback Controls" loading="lazy"></figure>
+<p>Reveals the footer.</p>
+<h4 id="set-preview-range">Set Preview Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/view-menu/set-preview-range.png" alt="Set Preview Range" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/view-menu/set-preview-range-2.png" alt="Set Preview Range" loading="lazy"></figure>
+<p>Rectangle select an area of the timeline that gets previewed. The playback now just happens in this marked area.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear Preview Range</td>
+<td>Clears an existing preview range.</td>
+</tr>
+<tr>
+<td>Set Preview Range to selected</td>
+<td>Sets the preview range to fit the first and last selected keyframe.</td>
+</tr>
+<tr>
+<td>Frame Scene Range</td>
+<td>With Use Preview Range off , reset the horizontal view to the current scene frame range.</td>
+</tr>
+<tr>
+<td>Frame Preview Range</td>
+<td>With Use Preview Range on , reset the horizontal view to the current preview frame range.</td>
+</tr>
+<tr>
+<td>Zoom In</td>
+<td>Zooms into the viewport.</td>
+</tr>
+<tr>
+<td>Zoom Out</td>
+<td>Zooms out of the viewport.</td>
+</tr>
+<tr>
+<td>Zoom to Border</td>
+<td>Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button.</td>
+</tr>
+<tr>
+<td>Frame All</td>
+<td>Zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport.</td>
+</tr>
+<tr>
+<td>Frame Selected</td>
+<td>Centers the view at the currently selected keyframe(s).</td>
+</tr>
+<tr>
+<td>Go to current Frame</td>
+<td>Centers the view at the frame slider.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="area-submenu">Area submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/view-menu/area-submenu.png" alt="Area submenu" loading="lazy"></figure>
+<p>This menu contains general view functionality. And exists in most other editor types too.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal Split</td>
+<td>Splits the current view horizontally into two independent editor windows.</td>
+</tr>
+<tr>
+<td>Vertical Split</td>
+<td>Splits the current view vertically into two independent editor windows.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="duplicate-area-into-new-window">Duplicate Area into New Window</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/view-menu/duplicate-area-into-new-window.png" alt="Duplicate Area into New Window" loading="lazy"><figcaption>Duplicate Area into New Window</figcaption></figure>
+<p>Duplicate Area into New Window makes the selected editor window floating. You can then drag it around at the monitor. It is not connected with the rest of the UI anymore.</p>
+<p>A separated window cannot be merged into the main window again. You have to close it when not longer needed.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Maximize Area</td>
+<td>Displays the editor maximized with menus. To return from the maximized view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Space</kbd></span>. Or reuse the menu item in the area menu.</td>
+</tr>
+<tr>
+<td>Toggle Full screen Area</td>
+<td>Displays the editor maximized without menus. To return from the full screen view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd></span>.</td>
+</tr>
+<tr>
+<td>Close Area</td>
+<td>Closes the area window.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pie-menus">Pie menus</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/view-menu/pie-menus.png" alt="Pie menus" loading="lazy"></figure>
+<p>Lists the available pie menus, and gives you the ability to read the hotkeys and assign own hotkeys.</p>
+<h4 id="toggle-dope-sheet">Toggle Dope Sheet</h4>
+<p>Switch to the Dope Sheet Editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/view-menu/toggle-dope-sheet.png" alt="Toggle Dope Sheet" loading="lazy"></figure>
+<p>Note that this is a Blender relict. In Bforartists we already have a convenient top level UI menu entry to switch between the editors. We haven't removed this Blender entry for two reasons. It can be hotkeyed. And the entry shows that this Blender functionality exists.</p>
+<h1 id="select-menu">Select Menu</h1>
+<h3 id="graph-editor-select-menu">Graph Editor - Select Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/select-menu/graph-editor-select-menu.png" alt="Graph Editor - Select Menu" loading="lazy"><figcaption>Graph Editor - Select Menu</figcaption></figure>
+<p>The Select menu contains various tools to select elements.<br />
+The content is the same in all modes. With one exception. Grease Pencil mode is missing the More / Less menu items.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All</td>
+<td>Select everything.</td>
+</tr>
+<tr>
+<td>None</td>
+<td>Select nothing.</td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>Inverts the current selection.</td>
+</tr>
+<tr>
+<td>Box Select</td>
+<td>Box select enters the Border Select mode. Select elements by dragging a rectangle around it. Just what's inside of the rectangle gets selected then. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse.</td>
+</tr>
+<tr>
+<td>Box Select (Axis Range)</td>
+<td>Box select enters the Border Select mode. Select elements by dragging a rectangle around it. And what's inside the horizontal range of the rectangle gets selected then. Even when the keyframes are outside of the rectangle. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="box-select-include-handles">Box Select (Include Handles)</h4>
+<p>Box select enters the Border Select mode. Select elements by dragging a rectangle around it. And what's inside the horizontal range of the rectangle gets selected then. Even when the keyframes are outside of the rectangle. It includes also the handles.</p>
+<p>It adds to selection by default. To subtract from selection hold down Shift key.</p>
+<p>The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse.</p>
+<h4 id="circle-select">Circle Select</h4>
+<p>Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default.</p>
+<p>To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button.</p>
+<p>The pencil radius of the circle select tool can be adjusted with the scroll wheel.</p>
+<h4 id="lasso-select-submenu">Lasso Select submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/select-menu/lasso-select-submenu.png" alt="Lasso Select submenu" loading="lazy"></figure>
+<p>A sub menu with the available lasso select modes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Columns on Selected Keys</td>
+<td>Select the keyframes in the columns of the currently selected keyframe.</td>
+</tr>
+<tr>
+<td>Columns on Current Frame</td>
+<td>Select the keyframes in the columns of the current frame.</td>
+</tr>
+<tr>
+<td>Columns on Selected Markers</td>
+<td>Select the keyframes in the columns of the selected markers.</td>
+</tr>
+<tr>
+<td>Between Selected Markers</td>
+<td>Select the keyframes between the selected markers. You need to have markers in the view for this feature.</td>
+</tr>
+<tr>
+<td>Linked</td>
+<td>Select all UV vertices linked to the active UV map. The previous selection gets cleared.</td>
+</tr>
+<tr>
+<td>Before current Frame</td>
+<td>Select the keyframes before the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="after-current-frame">After current Frame</h4>
+<p>Select the keyframes after the current frame.</p>
+<h5 id="last-operator-select-left-right">Last Operator Select Left/Right</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/select-menu/last-operator-select-left-right.png" alt="Last Operator Select Left/Right" loading="lazy"><figcaption>Last Operator Select Left/Right</figcaption></figure>
+<h6 id="mode">Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/select-menu/mode.png" alt="Mode" loading="lazy"></figure>
+<p>The selection mode to use.</p>
+<h6 id="extend-select">Extend Select</h6>
+<p>Extend the current selection.</p>
+<h4 id="handles">Handles</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/select-menu/handles.png" alt="Handles" loading="lazy"></figure>
+<p>Selects the handles of the selected keyframes.</p>
+<h5 id="last-operator-select-key-handles">Last Operator Select Key / Handles</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/select-menu/last-operator-select-key-handles.png" alt="Last Operator Select Key / Handles" loading="lazy"><figcaption>Last Operator Select Key / Handles</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left Handle</td>
+<td>What to do with the left handle, either select, deselect or keep selection status.</td>
+</tr>
+<tr>
+<td>Right Handle</td>
+<td>What to do with the right handle, either select, deselect or keep selection status.</td>
+</tr>
+<tr>
+<td>Key</td>
+<td>What to do with the center keyframe, either select, deselect or keep selection status.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="key">Key</h4>
+<p>Deselects the handles of the selected keyframes, only selecting the keyframe.</p>
+<h5 id="last-operator-select-key-handles-2">Last Operator Select Key / Handles</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/select-menu/last-operator-select-key-handles.png" alt="Last Operator Select Key / Handles" loading="lazy"><figcaption>Last Operator Select Key / Handles</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left Handle</td>
+<td>What to do with the left handle, either select, deselect or keep selection status.</td>
+</tr>
+<tr>
+<td>Right Handle</td>
+<td>What to do with the right handle, either select, deselect or keep selection status.</td>
+</tr>
+<tr>
+<td>Key</td>
+<td>What to do with the center keyframe, either select, deselect or keep selection status.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="more-less-sub-menu">More/Less Sub-menu</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>More</td>
+<td>Grow the selection.</td>
+</tr>
+<tr>
+<td>Less</td>
+<td>Shrink the selection.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="marker-menu">Marker Menu</h1>
+<h3 id="dopesheet-editor-marker-menu">Dopesheet Editor - Marker Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/marker-menu/dopesheet-editor-marker-menu.png" alt="Dopesheet Editor - Marker Menu" loading="lazy"><figcaption>Dopesheet Editor - Marker Menu</figcaption></figure>
+<p>Markers are visual landmarks. They can mark a start of a specific animation sequence, the end of a camera movement, and so on.</p>
+<p>When you add one then a marker area appears at the bottom of the timeline.</p>
+<p>Markers can be pulled around by clicking at them and dragging them left or right. The active marker is yellow.</p>
+<p>By holding down shift you can select more than one marker.</p>
+<h4 id="add-marker">Add Marker</h4>
+<p>Adds a marker at the current frame position.</p>
+<h4 id="duplicate-marker">Duplicate Marker</h4>
+<p>Duplicates the selected marker(s). The duplicate(s) sticks at the mouse until you click to give it the target destination.</p>
+<h5 id="last-operator-duplicate-time-marker">Last Operator Duplicate Time Marker</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/marker-menu/last-operator-duplicate-time-marker.png" alt="Last Operator Duplicate Time Marker" loading="lazy"><figcaption>Last Operator Duplicate Time Marker</figcaption></figure>
+<h6 id="frames">Frames</h6>
+<p>The target frame to position the duplicated marker.</p>
+<h4 id="duplicate-marker-to-scene">Duplicate Marker to Scene</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/marker-menu/duplicate-marker-to-scene.png" alt="Duplicate Marker to Scene" loading="lazy"><figcaption>Duplicate Marker to Scene</figcaption></figure>
+<p>Duplicate markers to other scenes. A blend file can contain more than one scene. See Scene Properties in the Properties editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/marker-menu/duplicate-marker-to-scene-2.png" alt="Duplicate Marker to Scene" loading="lazy"><figcaption>Duplicate Marker to Scene</figcaption></figure>
+<h5 id="last-operator-make-links-to-scene">Last Operator Make Links to Scene</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/marker-menu/last-operator-make-links-to-scene.png" alt="Last Operator Make Links to Scene" loading="lazy"><figcaption>Last Operator Make Links to Scene</figcaption></figure>
+<h6 id="scene">Scene</h6>
+<p>The target scene to duplicate the markers.</p>
+<h4 id="delete-marker">Delete Marker</h4>
+<p>Deletes the selected marker(s).</p>
+<h4 id="bind-camera-to-markers">Bind Camera to Markers</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/marker-menu/bind-camera-to-markers.png" alt="Bind Camera to Markers" loading="lazy"><figcaption>Bind Camera to Markers</figcaption></figure>
+<p>Bind camera to markers turns an object into a camera object. This can be any object in the scene. Not just camera objects.</p>
+<p>When the current frame position does not have a marker yet, then it creates a marker at the current frame position.</p>
+<p>By binding different objects or cameras at different marker locations you can switch cameras automatically.</p>
+<p>The marker with a bind camera attached will show a camera icon.</p>
+<h4 id="rename-marker">Rename Marker</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/marker-menu/rename-marker.png" alt="Rename Marker" loading="lazy"></figure>
+<p>A menu will open up where you can rename the active marker.</p>
+<h5 id="last-operator-rename-marker">Last Operator Rename Marker</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/marker-menu/last-operator-rename-marker.png" alt="Last Operator Rename Marker" loading="lazy"><figcaption>Last Operator Rename Marker</figcaption></figure>
+<h5 id="name">Name</h5>
+<p>Rename the active marker.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grab/Move Marker</td>
+<td>Hotkey only functionality! This menu item exists to show the hotkey to move the marker.</td>
+</tr>
+<tr>
+<td>Jump to Next Marker</td>
+<td>Sets the frame position to the next marker.</td>
+</tr>
+<tr>
+<td>Jump to Previous Marker</td>
+<td>Sets the frame position to the previous marker.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="channel-menu">Channel Menu</h1>
+<h3 id="dopesheet-editor-channel-menu">Dopesheet Editor - Channel Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/channel-menu/dopesheet-editor-channel-menu.png" alt="Dopesheet Editor - Channel Menu" loading="lazy"><figcaption>Dopesheet Editor - Channel Menu</figcaption></figure>
+<p>This menu contains functionality to manage the channels in the channels list at the left. Here you manage channels and fcurve baking. You can also manage channel groups and other settings here.</p>
+<p>The menu doesn't exist in all modes. It exists in Dope sheet, Action Editor and Grease Pencil mode. And has different content.</p>
+<h3 id="channel-menu-dope-sheet-action-editor-mode">Channel Menu - Dope sheet + Action Editor mode</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete Channels</td>
+<td>Deletes the selected channels and all its keyframes.</td>
+</tr>
+<tr>
+<td>Delete Invalid Drivers</td>
+<td>Removes all invalid drivers.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="group-channels">Group Channels</h4>
+<p>Creates a custom group from the selected channels.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/channel-menu/group-channels.png" alt="Group Channels" loading="lazy"></figure>
+<h4 id="ungroup-channels">Ungroup Channels</h4>
+<p>Removes the selected channels from the group, and adds them back to the original hierarchy.</p>
+<h4 id="channel-settings">Channel Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/channel-menu/channel-settings.png" alt="Channel Settings" loading="lazy"></figure>
+<p>This sub menu adjusts the locks and check boxes in the channels list from outside of the channels list for all selected elements at once. With Toggle Mute you could, for example, disable all selected channels at once.</p>
+<p>The menu items should be self explaining.</p>
+<h5 id="toggle-protect">Toggle Protect</h5>
+<p>Toggles the locks in the channel list from their previous state to locked and back. This toggles all the selected channels’ editability to inverse its protected or unprotected state. This means whatever was protected, now is not protected – and whatever is unprotected is now protected. Consider this an inverse toggle.</p>
+<h6 id="last-operator-toggle-channel-settings">Last Operator Toggle Channel Settings</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/channel-menu/last-operator-toggle-channel-settings.png" alt="Last Operator Toggle Channel Settings" loading="lazy"><figcaption>Last Operator Toggle Channel Settings</figcaption></figure>
+<h6 id="type-4">Type</h6>
+<p>The type to toggle.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Mute</td>
+<td>Toggles the checkbox in the channel list from the previous state to muted and back. This toggles all the selected channels’ influence to inverse its muted or unmutedstate. This means whatever was activated, now is muted, and whatever was de-activated is now un-muted. Consider this an inverse toggle.</td>
+</tr>
+<tr>
+<td>Enable Protect</td>
+<td>This sets the editability on the selected channels to be locked. This makes sue you cannot edit these channels.</td>
+</tr>
+<tr>
+<td>Disable Protect</td>
+<td>This sets the editability on the selected channels to be unlocked. This means you can now edit them.</td>
+</tr>
+<tr>
+<td>Enable Mute</td>
+<td>This sets the editability on the selected channels to be locked. This makes sue you cannot edit these channels.</td>
+</tr>
+<tr>
+<td>Disable Mute</td>
+<td>This sets the editability on the selected channels to be unlocked. This means you can now edit them.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="add-f-curve-modifier">Add F-Curve Modifier</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/channel-menu/add-f-curve-modifier.png" alt="Add F-Curve Modifier" loading="lazy"></figure>
+<p>This group of operators addes modifiers to the the selected curve channel. This is useful for procedural animation. To access the modifier stack, open the Property Shelf and switch to the Modifier tab.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generator</td>
+<td>Generator creates a polynomial function. These are basic mathematical formulas that represent lines, parabolas, and other more complex curves, depending on the values used.</td>
+</tr>
+<tr>
+<td>Built-In Function</td>
+<td>These are additional formulas, each with the same options to control their shape.</td>
+</tr>
+<tr>
+<td>Envelope</td>
+<td>Allows you to adjust the overall shape of a curve with control points.</td>
+</tr>
+<tr>
+<td>Cycles</td>
+<td>Cycles allows you add cyclic motion to a curve that has two or more control points. The options can be set for before and after the curve.</td>
+</tr>
+<tr>
+<td>Noise</td>
+<td>Modifies the curve with a noise formula. This is useful for creating subtle or extreme randomness to animated movements, like camera shake.</td>
+</tr>
+<tr>
+<td>Limits</td>
+<td>Limit curve values to specified X and Y ranges.</td>
+</tr>
+<tr>
+<td>Stepped Interpolation</td>
+<td>Gives the curve a stepped appearance by rounding values down within a certain range of frames.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="extrapolation-mode">Extrapolation Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/channel-menu/extrapolation-mode.png" alt="Extrapolation Mode" loading="lazy"></figure>
+<p>Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constant Extrapolation</td>
+<td>The animation curve continues straight at the end.</td>
+</tr>
+<tr>
+<td>Linear Extrapolation</td>
+<td>The animation curve continues the last direction.</td>
+</tr>
+<tr>
+<td>Make Cyclic</td>
+<td>Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame.</td>
+</tr>
+<tr>
+<td>Clear Cyclic</td>
+<td>Removes the cyclic extrapolation.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="last-operator-set-keyframe-interpolation-2">Last Operator Set Keyframe Interpolation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/channel-menu/last-operator-set-keyframe-interpolation.png" alt="Last Operator Set Keyframe Interpolation" loading="lazy"><figcaption>Last Operator Set Keyframe Interpolation</figcaption></figure>
+<h6 id="type-5">Type</h6>
+<p>Set the extrapolation mode for the selected F-Curves.</p>
+<h4 id="reveal-curves">Reveal Curves</h4>
+<p>Reveals all hidden curves.</p>
+<h5 id="last-operator-reveal-curves">Last Operator Reveal Curves</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/last-operator-reveal-curves.png" alt="Last Operator Reveal Curves" loading="lazy"><figcaption>Last Operator Reveal Curves</figcaption></figure>
+<h6 id="select">Select</h6>
+<p>Select all revealed curves.</p>
+<h4 id="hide-selected-curves">Hide selected Curves</h4>
+<p>Hides the selected curves.</p>
+<h4 id="hide-unselected-curves">Hide unselected curves</h4>
+<p>Hides the unselected curves.</p>
+<h5 id="last-operator-hide-curves">Last Operator Hide Curves</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/last-operator-hide-curves.png" alt="Last Operator Hide Curves" loading="lazy"><figcaption>Last Operator Hide Curves</figcaption></figure>
+<h6 id="unselected">Unselected</h6>
+<p>Hide the unselected or selected curves.</p>
+<h4 id="expand-channels">Expand Channels</h4>
+<p>Expands all channels in the channel list.</p>
+<h5 id="last-operator-expand-channels">Last Operator Expand Channels</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/channel-menu/last-operator-expand-channels.png" alt="Last Operator Expand Channels" loading="lazy"><figcaption>Last Operator Expand Channels</figcaption></figure>
+<h6 id="all">All</h6>
+<p>Expand all Channels, or just the selected channels.</p>
+<h4 id="collapse-channels">Collapse Channels</h4>
+<p>Collapses all channels in the channels list.</p>
+<h5 id="last-operator-collapse-channels">Last Operator Collapse Channels</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/channel-menu/last-operator-collapse-channels.png" alt="Last Operator Collapse Channels" loading="lazy"><figcaption>Last Operator Collapse Channels</figcaption></figure>
+<h6 id="all-2">All</h6>
+<p>Collapse all Channels, or just the selected channels.</p>
+<h4 id="move">Move</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/channel-menu/move.png" alt="Move" loading="lazy"></figure>
+<p>Sort the items in the channels list.</p>
+<h5 id="last-operator-move-channels">Last Operator Move Channels</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/channel-menu/last-operator-move-channels.png" alt="Last Operator Move Channels" loading="lazy"><figcaption>Last Operator Move Channels</figcaption></figure>
+<h6 id="direction">Direction</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/channel-menu/direction.png" alt="Direction" loading="lazy"></figure>
+<p>Sort the items in the channels list.</p>
+<h5 id="frame-selected-channels">Frame selected Channels</h5>
+<p>Centers the view at the selected channels.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revive Disabled F-Curves</td>
+<td>Clears the disabled tag from all f-curves to get broken F-Curves working again.</td>
+</tr>
+<tr>
+<td>Discontinuity (Euler) Filter</td>
+<td>Try to fix large jumps and flips in the selected F Curve. This jumps can appear when rotation values are clipping by baking physics.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="key-menu">Key Menu</h1>
+<p>Detailed table of content</p>
+<h3 id="graph-editor-key-menu">Graph Editor - Key Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/graph-editor-key-menu.png" alt="Graph Editor - Key Menu" loading="lazy"><figcaption>Graph Editor - Key Menu</figcaption></figure>
+<p>This menu contains functionality to manage the keyframes.</p>
+<h4 id="transform">Transform</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/transform.png" alt="Transform" loading="lazy"></figure>
+<h5 id="grab-move">Grab/Move</h5>
+<p>Moves the selected keyframe(s).</p>
+<h6 id="last-operator-move">Last Operator Move</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/last-operator-move.png" alt="Last Operator Move" loading="lazy"></figure>
+<h6 id="move-x-y-z">Move X, Y Z</h6>
+<p>The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.</p>
+<h6 id="orientation">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h6 id="mirror-editing">Mirror Editing</h6>
+<p>Enable Mirror Editing.</p>
+<h6 id="proportional-editing-2">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="extend">Extend</h5>
+<p>Moves the last keyframes of the selection.</p>
+<h6 id="last-operator-transform">Last Operator Transform</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/last-operator-transform.png" alt="Last Operator Transform" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Values X, Y Z, W</td>
+<td>The new position.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Which axis to transform.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-2">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h6 id="mirror-editing-2">Mirror Editing</h6>
+<p>Enable Mirror Editing.</p>
+<h6 id="proportional-editing-3">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="rotate">Rotate</h5>
+<p>Rotates the selection.</p>
+<h6 id="last-operator-rotate">Last Operator Rotate</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/last-operator-rotate.png" alt="Last Operator Rotate" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Which axis to rotate.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-3">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h6 id="mirror-editing-3">Mirror Editing</h6>
+<p>Enable Mirror Editing.</p>
+<h6 id="proportional-editing-4">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/proportional-editing-2.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="scale">Scale</h5>
+<p>Scales the selected keyframes. You need to have more than one keyframe selected.</p>
+<h6 id="last-operator-resize">Last Operator Resize</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/last-operator-resize.png" alt="Last Operator Resize" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Which axis to rotate.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-4">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h6 id="mirror-editing-4">Mirror Editing</h6>
+<p>Enable Mirror Editing.</p>
+<h6 id="proportional-editing-5">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="snap">Snap</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/snap.png" alt="Snap" loading="lazy"></figure>
+<p>Snaps the selected keyframes by the chosen method.</p>
+<h5 id="last-operator-snap-keys">Last Operator Snap Keys</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/last-operator-snap-keys.png" alt="Last Operator Snap Keys" loading="lazy"><figcaption>Last Operator Snap Keys</figcaption></figure>
+<h6 id="type-6">Type</h6>
+<p>Snaps the selected keyframes by the chosen method.</p>
+<h4 id="mirror">Mirror</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/mirror.png" alt="Mirror" loading="lazy"></figure>
+<p>Flips the selected keyframes over the current frame position.</p>
+<h5 id="last-operator-mirror-keys">Last Operator Mirror Keys</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/last-operator-mirror-keys.png" alt="Last Operator Mirror Keys" loading="lazy"><figcaption>Last Operator Mirror Keys</figcaption></figure>
+<h6 id="type-7">Type</h6>
+<p>Flips the selected keyframes over the current frame position by the chosen method.</p>
+<h4 id="insert-keyframes">Insert Keyframes</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/insert-keyframes.png" alt="Insert Keyframes" loading="lazy"></figure>
+<p>Choose a method how to insert a new keyframe at the current frame position.</p>
+<h5 id="last-operator-insert-keyframes">Last Operator Insert Keyframes</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/last-operator-insert-keyframes.png" alt="Last Operator Insert Keyframes" loading="lazy"><figcaption>Last Operator Insert Keyframes</figcaption></figure>
+<h6 id="type-8">Type</h6>
+<p>Choose a method how to insert a new keyframe at the current frame position.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jump to Selected</td>
+<td>Sets the frame marker at the average position of the currently selected keyframes.</td>
+</tr>
+<tr>
+<td>Copy Keyframes</td>
+<td>Copy selected keyframes.</td>
+</tr>
+<tr>
+<td>Paste Keyframes</td>
+<td>Pastes copied keyframes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="paste-flipped">Paste Flipped</h4>
+<p>Pastes copied keyframes, but flipped.</p>
+<h5 id="last-operator-paste-keyframes-flipped">Last Operator Paste Keyframes / Flipped</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/last-operator-paste-keyframes-flipped.png" alt="Last Operator Paste Keyframes / Flipped" loading="lazy"><figcaption>Last Operator Paste Keyframes / Flipped</figcaption></figure>
+<h6 id="offset">Offset</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/offset.png" alt="Offset" loading="lazy"></figure>
+<p>Define an offset for the paste position.</p>
+<h6 id="type-9">Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/type.png" alt="Type" loading="lazy"></figure>
+<p>Choose a method how to paste the copied keyframes.</p>
+<h6 id="flipped">Flipped</h6>
+<p>Pastes keyframes from mirrored bones if they exists.</p>
+<h4 id="duplicate">Duplicate</h4>
+<p>Duplicate selected keyframes.</p>
+<h5 id="last-operator-duplicate">Last Operator Duplicate</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/last-operator-duplicate.png" alt="Last Operator Duplicate" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Values X / Y</td>
+<td>The x and y values for the pasted keyframes. Note that these values starts at the position of the original copied keyframe. These values are relative. Values Z and W have no effect here.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>These values have no effect.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-5">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/orientation-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Transformation orientation. These values have no effect.</p>
+<h6 id="mirror-editing-5">Mirror Editing</h6>
+<p>Enables Mirror Editing. These values have no effect.</p>
+<h6 id="proportional-editing-6">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/proportional-editing-3.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete Keyframes</td>
+<td>Deletes selected keyframes.</td>
+</tr>
+<tr>
+<td>Smooth Keys</td>
+<td>Smoothens the curve for the selected keys</td>
+</tr>
+</tbody>
+</table>
+<h4 id="keys-to-samples">Keys to Samples</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/keys-to-samples.png" alt="Keys to Samples" loading="lazy"></figure>
+<p>Bake selected F-Curves to a set of sampled points. This makes the curve not longer editable.</p>
+<h4 id="sample-to-keys">Sample to Keys</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/sample-to-keys.png" alt="Sample to Keys" loading="lazy"></figure>
+<p>Un-bake a sampled point F-Curve to make it editable again.</p>
+<h4 id="sound-to-samples">Sound to Samples</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/sound-to-samples.png" alt="Sound to Samples" loading="lazy"></figure>
+<p><strong>This</strong>operator takes a sound file and uses its sound wave to create the animation data. When running it, you will be prompted to load an audio file to apply to the selected channels.</p>
+<h4 id="bake-channels">Bake Channels</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/bake-channels.png" alt="Bake Channels" loading="lazy"></figure>
+<p>Creates keyframes following the current shape of F-Curves of selected channels for the entire channel within the frame range.</p>
+<h4 id="density-submenu">Density submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/density-submenu.png" alt="Density submenu" loading="lazy"></figure>
+<h5 id="decimate-ratio">Decimate (Ratio)</h5>
+<p>Decimate F-Curves by removing keyframes that that has the least influence to the curve shape.</p>
+<h5 id="decimate-allowed-change">Decimate (Allowed Change)</h5>
+<p>Decimate F-Curves by specifying how much it can derivate from the original curve.</p>
+<h6 id="last-operator-decimate-keyframes">Last Operator Decimate Keyframes</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/last-operator-decimate-keyframes.png" alt="Last Operator Decimate Keyframes" loading="lazy"><figcaption>Last Operator Decimate Keyframes</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode</td>
+<td>The decimate mode. Error margin is Allowed change.</td>
+</tr>
+<tr>
+<td>Remove or Max Error Margin</td>
+<td>The percentage of keyframes to remove.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bake Keyframes</td>
+<td>Add keyframe on every frame between selected keyframes.</td>
+</tr>
+<tr>
+<td>Clean Keyframes</td>
+<td>Simplify FCurces by deleting keyframes that are close to each other in all channels.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="blend-submenu">Blend submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/blend-submenu.png" alt="Blend submenu" loading="lazy"></figure>
+<p>Blending methods.</p>
+<h5 id="breakdown">Breakdown</h5>
+<p>Move selected keyframes to an inbetween position relative to adjacent keys.</p>
+<h6 id="adjust-last-operator-breakdown">Adjust Last operator Breakdown</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-breakdown.png" alt="Adjust Last operator Breakdown" loading="lazy"><figcaption>Adjust Last operator Breakdown</figcaption></figure>
+<h6 id="factor">Factor</h6>
+<p>Favour either the left or the right key. The range goes from -1 to +1</p>
+<h5 id="blend-to-neighbor">Blend to Neighbor</h5>
+<p>Blend the keyframe to either the left or the right neighbor.</p>
+<h6 id="adjust-last-operator-blend-to-neighbor">Adjust Last operator Blend to Neighbor</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-blend-to-neighbor.png" alt="Adjust Last operator Blend to Neighbor" loading="lazy"><figcaption>Adjust Last operator Blend to Neighbor</figcaption></figure>
+<h6 id="blend">Blend</h6>
+<p>Blend factor.</p>
+<h5 id="blend-to-default-value">Blend to Default Value</h5>
+<p>Blend selected keys to their default value from their current position.</p>
+<h6 id="adjust-last-operator-blend-to-default-value">Adjust Last operator Blend to Default Value</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-blend-to-default-value.png" alt="Adjust Last operator Blend to Default Value" loading="lazy"><figcaption>Adjust Last operator Blend to Default Value</figcaption></figure>
+<h6 id="factor-2">Factor</h6>
+<p>Blend factor.</p>
+<h5 id="ease">Ease</h5>
+<p>Align keyframes on an ease in or ease out curve.</p>
+<h6 id="adjust-last-operator-ease-keyframes">Adjust Last operator Ease Keyframes</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-ease-keyframes.png" alt="Adjust Last operator Ease Keyframes" loading="lazy"><figcaption>Adjust Last operator Ease Keyframes</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve Blend</td>
+<td>Blend factor.</td>
+</tr>
+<tr>
+<td>Sharpness</td>
+<td>Higher values makes the change more abrupt.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="blend-to-ease">Blend to Ease</h5>
+<p>Blends keyframes from current state to an ease in or ease out curve.</p>
+<h6 id="adjust-last-operator-blend-to-ease-keyframes">Adjust Last operator Blend to Ease Keyframes</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-blend-to-ease-keyframes.png" alt="Adjust Last operator Blend to Ease Keyframes" loading="lazy"><figcaption>Adjust Last operator Blend to Ease Keyframes</figcaption></figure>
+<h6 id="blend-2">Blend</h6>
+<p>Blend factor.</p>
+<h5 id="blend-offset">Blend Offset</h5>
+<p>Shift selected keys to ther value of the neighboring keys as a block.</p>
+<h6 id="adjust-last-operator-blend-offset-keyframes">Adjust Last operator Blend Offset Keyframes</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-blend-offset-keyframes.png" alt="Adjust Last operator Blend Offset Keyframes" loading="lazy"><figcaption>Adjust Last operator Blend Offset Keyframes</figcaption></figure>
+<h6 id="offset-factor">Offset Factor</h6>
+<p>The offset factor.</p>
+<h5 id="match-slope">Match Slope</h5>
+<p>Blend selected keys to the slope of neighboring ones.</p>
+<h6 id="adjust-last-operator-match-slope">Adjust Last operator Match Slope</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-match-slope.png" alt="Adjust Last operator Match Slope" loading="lazy"><figcaption>Adjust Last operator Match Slope</figcaption></figure>
+<h6 id="factor-3">Factor</h6>
+<p>Blend factor.</p>
+<h5 id="push-pull">Push Pull</h5>
+<p>Exaggerate or minimize the value of the selected keys.</p>
+<h6 id="adjust-last-operator-push-pull-keyframes">Adjust Last operator Push Pull Keyframes</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-push-pull-keyframes.png" alt="Adjust Last operator Push Pull Keyframes" loading="lazy"><figcaption>Adjust Last operator Push Pull Keyframes</figcaption></figure>
+<h6 id="factor-4">Factor</h6>
+<p>Blend factor.</p>
+<h5 id="shear-keys">Shear Keys</h5>
+<p>Shears the selected keys linearly. But keeps the same relationship between them. By either using the left or the right key as a reference.</p>
+<h6 id="adjust-last-operator-push-pull-keyframes-2">Adjust Last operator Push Pull Keyframes</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-push-pull-keyframes-2.png" alt="Adjust Last operator Push Pull Keyframes" loading="lazy"><figcaption>Adjust Last operator Push Pull Keyframes</figcaption></figure>
+<h6 id="shear-factor">Shear Factor</h6>
+<p>The shear factor.</p>
+<h6 id="direction-2">Direction</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/direction.png" alt="Direction" loading="lazy"></figure>
+<p>Which end of the segment to use as a reference to shear from.</p>
+<h5 id="scale-average">Scale Average</h5>
+<p>Scale selected key values by their combined average.</p>
+<h6 id="adjust-last-operator-scale-average-keyframes">Adjust Last operator Scale Average Keyframes</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-scale-average-keyframes.png" alt="Adjust Last operator Scale Average Keyframes" loading="lazy"><figcaption>Adjust Last operator Scale Average Keyframes</figcaption></figure>
+<h6 id="scale-factor">Scale Factor</h6>
+<p>Scale factor.</p>
+<h5 id="scale-from-neighbour">Scale from Neighbour</h5>
+<p>increase or decrease the value of selected keys in relationship to the neighbor keyrframe.</p>
+<h6 id="adjust-last-operator-scale-from-neighbor">Adjust Last operator Scale from Neighbor</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-scale-from-neighbor.png" alt="Adjust Last operator Scale from Neighbor" loading="lazy"><figcaption>Adjust Last operator Scale from Neighbor</figcaption></figure>
+<h6 id="factor-5">Factor</h6>
+<p>The blend factor.</p>
+<h6 id="reference-key">Reference Key</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/direction.png" alt="Reference Key" loading="lazy"></figure>
+<p>Which key to use as the reference key.</p>
+<h5 id="time-offset">Time Offset</h5>
+<p>Shifts the selected keyframes in time.</p>
+<h6 id="adjust-last-operator-frame-offset">Adjust Last operator Frame Offset</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-frame-offset.png" alt="Adjust Last operator Frame Offset" loading="lazy"><figcaption>Adjust Last operator Frame Offset</figcaption></figure>
+<h6 id="frame-offset">Frame Offset</h6>
+<p>The frame offset.</p>
+<h4 id="smooth-submenu">Smooth submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/smooth-submenu.png" alt="Smooth submenu" loading="lazy"></figure>
+<p>Make selected curves less bumpy.</p>
+<h5 id="smooth-gaussian">Smooth Gaussian</h5>
+<p>Smoothens the curve with the method Gaussian.</p>
+<h6 id="adjust-last-operator-frame-offset-2">Adjust Last operator Frame Offset</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-frame-offset-2.png" alt="Adjust Last operator Frame Offset" loading="lazy"><figcaption>Adjust Last operator Frame Offset</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>Blend factor.</td>
+</tr>
+<tr>
+<td>Sigma</td>
+<td>The strength of the gaussian distribution. Higher value makes it smoother.</td>
+</tr>
+<tr>
+<td>Filter Width</td>
+<td>How much keyframes at the left or right are influenced.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="smooth-legacy">Smooth Legacy</h5>
+<p>Smoothens the curve with a simple method.</p>
+<h5 id="butterworth-smooth">Butterworth Smooth</h5>
+<p>Smooth the f-curve while maintaining the general shape of the curve.</p>
+<h6 id="adjust-last-operator-butterworth-smooth">Adjust Last operator Butterworth Smooth</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/graph-editor/header/key-menu/adjust-last-operator-butterworth-smooth.png" alt="Adjust Last operator Butterworth Smooth" loading="lazy"><figcaption>Adjust Last operator Butterworth Smooth</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frequency Cutoff</td>
+<td>The frequency cutoff in Hz. Lower values gives a smoother curve.</td>
+</tr>
+<tr>
+<td>Filter Order</td>
+<td>Higher values gives a harder frequency cutoff.</td>
+</tr>
+<tr>
+<td>Samples per Frequency</td>
+<td>How many samples to calculate per frame.</td>
+</tr>
+<tr>
+<td>Blend</td>
+<td>Blend factor.</td>
+</tr>
+<tr>
+<td>Blend In/Out</td>
+<td>How much keyframes at the left or right are influenced.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-combine-regions/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fgraph-editor%2Fheader%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-combine-regions/docs2/content/editors/graph-editor/header/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h3" href="#introduction">Introduction</a><a class="h3" href="#header-tabs">Header Tabs</a><a class="h3" href="#use-normalization-create-ghost-curves">Use Normalization, Create Ghost Curves</a><a class="h3" href="#snapping-panel">Snapping Panel</a><a class="h3" href="#show-hide-elements">Show Hide elements</a><a class="h3" href="#filters">Filters</a><a class="h3" href="#proportional-editing">Proportional Editing</a><a class="h3" href="#pivot-point">Pivot Point</a><a class="h3" href="#easing-mode">Easing Mode</a><a class="h3" href="#keyframe-handle-type">Keyframe Handle Type</a><a class="h3" href="#keyframe-interpolation">Keyframe Interpolation</a><a class="h3" href="#options">Options</a><a class="h3" href="#quick-menu-2">Quick Menu</a><a class="h3" href="#graph-editor-view-menu">Graph Editor - View Menu</a><a class="h3" href="#graph-editor-select-menu">Graph Editor - Select Menu</a><a class="h3" href="#dopesheet-editor-marker-menu">Dopesheet Editor - Marker Menu</a><a class="h3" href="#dopesheet-editor-channel-menu">Dopesheet Editor - Channel Menu</a><a class="h3" href="#channel-menu-dope-sheet-action-editor-mode">Channel Menu - Dope sheet + Action Editor mode</a><a class="h3" href="#graph-editor-key-menu">Graph Editor - Key Menu</a></aside></div></body></html>

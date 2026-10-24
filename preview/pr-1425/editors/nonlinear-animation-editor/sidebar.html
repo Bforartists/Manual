@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sidebar · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1425 · <code>docs2/q3-combine-regions</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../image-editor/tool-shelf.html">Tool Shelf</a>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/sidebar.html">Sidebar</a>
+<a class="is-current" style="padding-left:1.5rem" href="sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../graph-editor/channel-list.html">Channel List</a>
+<span>Image Editor</span>
+<a style="padding-left:1.5rem" href="nla-editor-channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Color</span>
+<a style="padding-left:1.5rem" href="../timeline/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="nla-editor-footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:1.5rem">Render Properties Tab</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:1.5rem">Output Properties Tab</span>
+<span style="padding-left:1.5rem">View Layer Properties Tab</span>
+<span style="padding-left:1.5rem">Scene Properties Tab</span>
+<span style="padding-left:1.5rem">World Properties Tab</span>
+<span style="padding-left:1.5rem">Collection Properties Tab</span>
+<span style="padding-left:1.5rem">Object Properties Tab</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Particle Properties Tab</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:1.5rem">Visual Effects Properties Tab</span>
+<span style="padding-left:1.5rem">Physics Properties Tab</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:1.5rem">Object Constraints Properties Tab</span>
+<span style="padding-left:1.5rem">Object Data Properties Tab</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span style="padding-left:1.5rem">Material Properties Tab</span>
+<span style="padding-left:1.5rem">Texture Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Constraint Properties</span>
+<span style="padding-left:1.5rem">Strip Tab</span>
+<span style="padding-left:1.5rem">Strip Modifiers Tab</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Standard Keymap</span>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Nonlinear Animation Editor › Sidebar</div><h1 class="pv-title">Sidebar</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 12 min read</span></div><article class="ui-doc-body"><p>The pages of this part are listed in the sidebar under <em>Sidebar</em>.</p>
+<h1 id="animation-data-panel">Animation Data Panel</h1>
+<p><strong>Animation Data panel</strong></p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel/nla-editor-sidebar-animation-data-panel.png" alt="NLA Editor - Sidebar - Animation Data panel" loading="lazy"><figcaption>NLA Editor - Sidebar - Animation Data panel</figcaption></figure>
+<p>When you select a cube action without content then you will get the Animation Data panel in the sidebar.</p>
+<p>This panel allows you to edit existing actions or add more actions. This way you can add several actions to an object. Add action, record keyframes, and then push down the action to create an action strip of it.</p>
+<p>With selecting an action channel, with a not pushed down action, it shows the current action. When you select a track channel then it shows a New button where you can add more action channels.</p>
+<h3 id="animation-data-property">Animation data property</h3>
+<h4 id="data-browser">Data Browser</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel/data-browser.png" alt="Data Browser" loading="lazy"></figure>
+<p>The list of available actions in the scene.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action Edit Box</td>
+<td>The name of the current active action. You can rename the action here too.</td>
+</tr>
+<tr>
+<td>Number of users</td>
+<td>The number of users for this data.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Has this data a fake user assigned. Fake user is a concept to keep data in the scene even when it has no users.</td>
+</tr>
+<tr>
+<td>Add</td>
+<td>Adds a new blank Action.</td>
+</tr>
+<tr>
+<td>Remove Action</td>
+<td>Removes the action from the current channel.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extrapolation">Extrapolation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel/extrapolation.png" alt="Extrapolation" loading="lazy"></figure>
+<p>Action to take for gaps past the strip extents.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hold</td>
+<td>Affects both sides of the strip. This should only be set on the very first strip.</td>
+</tr>
+<tr>
+<td>Hold Forward</td>
+<td>Affects the region after the clip, only. This can be set on any strip.</td>
+</tr>
+<tr>
+<td>Nothing</td>
+<td>Affects only the region of the strip itself. This can be set on any strip.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="blending">Blending</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel/blending.png" alt="Blending" loading="lazy"></figure>
+<p>Affects how the property values directly produced by the strip are combined with the result of evaluating the stack below. The bottom-most strip is blended on top of the default values of the properties.</p>
+<h4 id="replace">Replace</h4>
+<p>The top strip is linearly blended in with the accumulated result according to influence, completely overwriting it if influence is set to 100%.</p>
+<h4 id="combine">Combine</h4>
+<p>Depending on the type of each property, one of the following methods is automatically chosen:</p>
+<p>Axis/Angle Rotation</p>
+<p><code>result=previous+value*influence</code></p>
+<p>This results in averaging the axis and adding the amount of rotation.</p>
+<p>Quaternion Rotation</p>
+<p>Quaternion math is applied to all four channels of the property at once:</p>
+<p>result=previous×valueinfluence</p>
+<p>Proportional (Scale)</p>
+<p><code>result=previous*(value/default)influence</code></p>
+<p>Others</p>
+<p><code>result=previous+(value-default)*influence</code></p>
+<p>This allows layering actions that can also be used as a standalone. Properties keyframed at their default values remain at default.</p>
+<h4 id="add-subtract-multiply">Add, Subtract, Multiply</h4>
+<p>The result of the strip is multiplied, subtracted, or added to the accumulated results, and then blended in according to influence.</p>
+<p><code>result=mix(previous,previous(+-*)value,influence</code>)</p>
+<h3 id="influence">Influence</h3>
+<p>Amount the active Action contributes to the result of the NLA stack.</p>
+<h1 id="strip-tab">Strip Tab</h1>
+<h3 id="strip-tab-2">Strip Tab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/strip-tab.png" alt="Strip Tab" loading="lazy"></figure>
+<p>The settings for the currently selected action strip. You need to have a action strip selected to show this tab.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>The name of the currently selected action strip. To rename the strip click into the edit field, change the name and press enter.</td>
+</tr>
+<tr>
+<td>Mute</td>
+<td>Disable the action strip.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active-strip-panel">Active Strip panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/active-strip-panel.png" alt="Active Strip panel" loading="lazy"></figure>
+<h4 id="frame-start-end">Frame Start + End</h4>
+<p>The start and end position of the strip.</p>
+<h4 id="extrapolation-2">Extrapolation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel/extrapolation.png" alt="Extrapolation" loading="lazy"></figure>
+<p>Action to take for gaps past the strip extents.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hold</td>
+<td>Affects both sides of the strip. This should only be set on the very first strip.</td>
+</tr>
+<tr>
+<td>Hold Forward</td>
+<td>Affects the region after the clip, only. This can be set on any strip.</td>
+</tr>
+<tr>
+<td>Nothing</td>
+<td>Affects only the region of the strip itself. This can be set on any strip.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="blending-2">Blending</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel/blending.png" alt="Blending" loading="lazy"></figure>
+<p>Affects how the property values directly produced by the strip are combined with the result of evaluating the stack below. The bottom-most strip is blended on top of the default values of the properties.</p>
+<h5 id="replace-2">Replace</h5>
+<p>The top strip is linearly blended in with the accumulated result according to influence, completely overwriting it if influence is set to 100%.</p>
+<h5 id="combine-2">Combine</h5>
+<p>Depending on the type of each property, one of the following methods is automatically chosen:</p>
+<p>Axis/Angle Rotation</p>
+<p><code>result=previous+value*influence</code></p>
+<p>This results in averaging the axis and adding the amount of rotation.</p>
+<p>Quaternion Rotation</p>
+<p>Quaternion math is applied to all four channels of the property at once:</p>
+<p>result=previous×valueinfluence</p>
+<p>Proportional (Scale)</p>
+<p><code>result=previous*(value/default)influence</code></p>
+<p>Others</p>
+<p><code>result=previous+(value-default)*influence</code></p>
+<p>This allows layering actions that can also be used as a standalone. Properties keyframed at their default values remain at default.</p>
+<h5 id="add-subtract-multiply-2">Add, Subtract, Multiply</h5>
+<p>The result of the strip is multiplied, subtracted, or added to the accumulated results, and then blended in according to influence.</p>
+<p><code>result=mix(previous,previous(+-*)value,influence</code>)</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blend In + Out</td>
+<td>Number of frames to fade in or out the action strip.</td>
+</tr>
+<tr>
+<td>Auto Blend In/Out</td>
+<td>Number of frames for blending in and out is automatically calculated from overlapping strips.</td>
+</tr>
+<tr>
+<td>Playback</td>
+<td><strong>Reversed</strong>: The action strip is played in reversed order. This just works when timing is determined automatic. · <strong>Cyclic Strip Time</strong>: Cycle the action strip.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="animated-influence-subpanel">Animated Influence subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/animated-influence-subpanel.png" alt="Animated Influence subpanel" loading="lazy"></figure>
+<p>Control the influence settings by an F-Curve instead of automatically determined. The F-Curve can be edited in the Graph Editor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Influence</td>
+<td>The influence value.</td>
+</tr>
+<tr>
+<td>Animate Property</td>
+<td>Set or remove a keyframe at current position.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="animated-strip-time-subpanel">Animated Strip Time subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/animated-strip-time-subpanel.png" alt="Animated Strip Time subpanel" loading="lazy"><figcaption>Animated Strip Time subpanel</figcaption></figure>
+<p>Control the Strip time settings by an F-Curve instead of automatically determined. The F-Curve can be edited in the Graph Editor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Influence</td>
+<td>The influence value.</td>
+</tr>
+<tr>
+<td>Animate Property</td>
+<td>Set or remove a keyframe at current position.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="action-clip-panel">Action Clip panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/action-clip-panel.png" alt="Action Clip panel" loading="lazy"></figure>
+<p>This represents the ‘object data’ of the strip. Much like the transform values of an object.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>The action that is referenced in the strip. This can be changed to replace the current strip’s value with another Action in the scene.</td>
+</tr>
+<tr>
+<td>Slot</td>
+<td>Define which subset is meant for this strip.</td>
+</tr>
+<tr>
+<td>Frame Start / End</td>
+<td>The start and end frame values of the strip. Note. To loop the animation you might need to reduce the End Frame by one frame to have a loopable animation. Note. If you select values that are above or below the actual keyframe count of the Action, then the F-curve Extrapolation will be applied.</td>
+</tr>
+<tr>
+<td>Sync Length</td>
+<td>Set the Start and End Frames to the first and last keyframed frames of the Action.</td>
+</tr>
+<tr>
+<td>Now</td>
+<td>Causes the Start and End Frames, above, to be reset to the first and last keyframed frames of the Action.</td>
+</tr>
+<tr>
+<td>Playback Scale</td>
+<td>Stretches the strip.</td>
+</tr>
+<tr>
+<td>Repeat</td>
+<td>Repeats the strip by the chosen value. With a value of 1 the strip plays once.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="action-panel">Action panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/action-panel.png" alt="Action panel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manual Frame Range</td>
+<td>Set the playback frame range manually. · <strong>Start</strong>: The start frame. · <strong>End</strong>: The end frame.</td>
+</tr>
+<tr>
+<td>Cyclic Animation</td>
+<td>Make the animation loop.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="modifiers-tab">Modifiers Tab</h1>
+<h3 id="modifiers-tab-modifiers-panel">Modifiers Tab - Modifiers Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/modifiers-tab-modifiers-panel.png" alt="Modifiers Tab - Modifiers Panel" loading="lazy"><figcaption>Modifiers Tab - Modifiers Panel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/modifiers-tab-modifiers-panel-2.png" alt="Modifiers Tab - Modifiers Panel" loading="lazy"><figcaption>Modifiers Tab - Modifiers Panel</figcaption></figure>
+<p>F-Curve modifiers are similar to Object modifiers. They allow to add adjustable non destructive effects. And they can be layered on top of each other.</p>
+<p>Different to the Object modifiers you can't reorder this modifiers. You have to create it in the order that you need it.</p>
+<h4 id="add-modifier">Add Modifier</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/add-modifier.png" alt="Add Modifier" loading="lazy"></figure>
+<p>The list of modifiers. Choose by clicking.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy F-Curve Modifiers</td>
+<td>Copy the F-Curve Modifiers of the active F-Curve.</td>
+</tr>
+<tr>
+<td>Paste F-Curve Modifiers</td>
+<td>Paste copied F-Curve modifiers to the active F-Curve.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-add-f-curve-modifier">Last Operator Add F-Curve Modifier</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/last-operator-add-f-curve-modifier.png" alt="Last Operator Add F-Curve Modifier" loading="lazy"><figcaption>Last Operator Add F-Curve Modifier</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>A drop down list with the Type of modifier to add.</td>
+</tr>
+<tr>
+<td>Only Active</td>
+<td>Only add a modifier to the currently active curve.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modifier-header">Modifier header</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/modifier-header.png" alt="Modifier header" loading="lazy"></figure>
+<p>Every modifier is a panel. And every panel has a header area with some general UI elements.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Triangle button</td>
+<td>Every modifier panel can be expanded or collapsed by clicking at this triangle button.</td>
+</tr>
+<tr>
+<td>Active</td>
+<td>This is the panel that you currently edit. When you edit a panel while it is not set to the active one, then the changes will not be applied.</td>
+</tr>
+<tr>
+<td>Modifier name</td>
+<td>The name of the modifier. Read only.</td>
+</tr>
+<tr>
+<td>Muted</td>
+<td>Enable or disable this modifier.</td>
+</tr>
+<tr>
+<td>Delete F-Curve Modifier</td>
+<td>Delete this modifier.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="generator-modifier">Generator modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/generator-modifier.png" alt="Generator modifier" loading="lazy"></figure>
+<h4 id="polynomial-mode">Polynomial Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/polynomial-mode.png" alt="Polynomial Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/polynomial-mode-2.png" alt="Polynomial Mode" loading="lazy"></figure>
+<p>Use Expanded Polynominal or Factorized Polynominal algorithm. With these mathematical formulas you can create lines, parabolas, and other more complex curves by changing the values in the poly order field.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Additive</td>
+<td>Add on top of the existing curve instead of replacing the existing curve.</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>The hightes value of X for this polynominal.</td>
+</tr>
+<tr>
+<td>Coefficient</td>
+<td>Coefficient for X.</td>
+</tr>
+<tr>
+<td>x^1</td>
+<td>Coefficient for X.</td>
+</tr>
+<tr>
+<td>Use Influence</td>
+<td>Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · <strong>Influence</strong>: The influence factor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="restrict-frame-range">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>Blend In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="built-in-function-modifier">Built- in Function modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/built-in-function-modifier.png" alt="Built- in Function modifier" loading="lazy"><figcaption>Built- in Function modifier</figcaption></figure>
+<p>Generate a curve by built in functions.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/built-in-function-modifier-2.png" alt="Built- in Function modifier" loading="lazy"><figcaption>Built- in Function modifier</figcaption></figure>
+<h4 id="curve-type">Curve Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/curve-type.png" alt="Curve Type" loading="lazy"></figure>
+<p>The available wave forms for the curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Additive</td>
+<td>Add on top of the existing curve instead of replacing the existing curve.</td>
+</tr>
+<tr>
+<td>Amplitude</td>
+<td>The amplitude of the curve wave. Adjusts the Y scaling.</td>
+</tr>
+<tr>
+<td>Phase Multiplier</td>
+<td>A phase multiplier for the curve wave. Adjusts the X scaling.</td>
+</tr>
+<tr>
+<td>Phase Offset</td>
+<td>A phase offset for the curve wave. Adjusts the Y scaling.</td>
+</tr>
+<tr>
+<td>Value Offset</td>
+<td>A constant value offset for the whole curve. Adjusts the X scaling.</td>
+</tr>
+<tr>
+<td>Use Influence</td>
+<td>Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · <strong>Influence</strong>: The influence factor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="restrict-frame-range-2">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="envelope-modifier">Envelope modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/envelope-modifier.png" alt="Envelope modifier" loading="lazy"></figure>
+<p>The Envelope modifier allows you to modify the overall shape of the curve by control points.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/envelope-modifier-2.png" alt="Envelope modifier" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/envelope-modifier-3.png" alt="Envelope modifier" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Envelope</td>
+<td><strong>Reference Value</strong>: Set the Y value to center the envelope around. · <strong>Min</strong>: The lower distance from reference value for 1:1 default influence. · <strong>Max</strong>: The higher distance from reference value for 1:1 default influence.</td>
+</tr>
+<tr>
+<td>Add Control Point</td>
+<td>Add a control point. A control point has two sub points, a lower control point and a higher control point.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="use-influence">Use Influence</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/use-influence.png" alt="Use Influence" loading="lazy"></figure>
+<p>Temper the F-Curve Modifier effect by a default influence factor.</p>
+<p>Expanding the Use Influence sets it to active. It reveals a value slider then.</p>
+<h5 id="influence-2">Influence</h5>
+<p>The influence factor.</p>
+<h4 id="restrict-frame-range-3">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cycles-modifier">Cycles modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/cycles-modifier.png" alt="Cycles modifier" loading="lazy"></figure>
+<p>Add a cyclic motion to a curve that has two or more control points. The option can be set before or after the curve.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/cycles-modifier-2.png" alt="Cycles modifier" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/cycles-modifier-3.png" alt="Cycles modifier" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/cycles-modifier-4.png" alt="Cycles modifier" loading="lazy"></figure>
+<h4 id="trivially-cyclic-curves">Trivially Cyclic Curves</h4>
+<p>When the Cycle Mode for both ends is set to either Repeat Motion or Repeat with Offset, and no other options of the modifier are changed from their defaults, it defines a simple infinite cycle.</p>
+<p>This special case receives some additional support from other areas of Blender:</p>
+<p>Automatic Bezier handle placement is aware of the cycle and adjusts to achieve a smooth transition.</p>
+<p>The Cycle-Aware Keying option can be enabled to take the cycle into account when inserting new keyframes.</p>
+<h4 id="before-mode">Before Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/before-mode.png" alt="Before Mode" loading="lazy"></figure>
+<p>Set the cycle mode before the first keyframe.</p>
+<h5 id="count">Count</h5>
+<p>Maximum number of cycles to allow before first keyframes. A value of 0 means infinite.</p>
+<h4 id="after-mode">After Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/after-mode.png" alt="After Mode" loading="lazy"></figure>
+<p>Set the cycle mode after the first keyframe.</p>
+<h5 id="count-2">Count</h5>
+<p>Maximum number of cycles to allow after last keyframes. A value of 0 means infinite.</p>
+<h4 id="use-influence-2">Use Influence</h4>
+<p>Temper the F-Curve Modifier effect by a default influence factor.</p>
+<p>Expanding the Use Influence sets it to active. It reveals a value slider then.</p>
+<h5 id="influence-3">Influence</h5>
+<p>The influence factor.</p>
+<h4 id="restrict-frame-range-4">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="noise-modifier">Noise modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/noise-modifier.png" alt="Noise modifier" loading="lazy"></figure>
+<p>Adds noise to the curve.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/noise-modifier-2.png" alt="Noise modifier" loading="lazy"></figure>
+<h4 id="blend-type">Blend Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/blend-type.png" alt="Blend Type" loading="lazy"></figure>
+<p>How to blend the noise with the curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>The overall size of the noise. The bigger the value the less frequent the noise.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>Adjust the Y value of the noise.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Time offset of the noise.</td>
+</tr>
+<tr>
+<td>Phase</td>
+<td>The random seed for the noise.</td>
+</tr>
+<tr>
+<td>Depth</td>
+<td>How detailed the noise function is.</td>
+</tr>
+<tr>
+<td>Legacy Noise</td>
+<td>Use the legacy way of generating noise.</td>
+</tr>
+<tr>
+<td>Lacunarity</td>
+<td>Gap between successive frequencies. A value of 0 disables the feature.</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>Amount of high frequency details.</td>
+</tr>
+<tr>
+<td>Use Influence</td>
+<td>Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · <strong>Influence</strong>: The influence factor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="restrict-frame-range-5">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="limits-modifier">Limits modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/limits-modifier.png" alt="Limits modifier" loading="lazy"></figure>
+<p>Sets limits to the curve in specified x and y range values.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/limits-modifier-2.png" alt="Limits modifier" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minimum / Maximum X</td>
+<td>Cuts the curve at these minimum and maximum frame values.</td>
+</tr>
+<tr>
+<td>Minimum / Maximum Y</td>
+<td>Clamps the curve at these minimum and maximum values.</td>
+</tr>
+<tr>
+<td>Use Influence</td>
+<td>Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · <strong>Influence</strong>: The influence factor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="restrict-frame-range-6">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stepped-interpolation-modifier">Stepped Interpolation modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/stepped-interpolation-modifier.png" alt="Stepped Interpolation modifier" loading="lazy"></figure>
+<p>Adds steps to the curve by rounding the values.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/stepped-interpolation-modifier-2.png" alt="Stepped Interpolation modifier" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Step Size</td>
+<td>The number of frames to hold each frame</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>A number of offset frames before frames get held.</td>
+</tr>
+<tr>
+<td>Start Frame</td>
+<td>Restrict the modifier so that it just acts before its end frame.</td>
+</tr>
+<tr>
+<td>End Frame</td>
+<td>Restrict the modifier so that it just acts after its start frame.</td>
+</tr>
+<tr>
+<td>Use Influence</td>
+<td>Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · <strong>Influence</strong>: The influence factor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="restrict-frame-range-7">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/ca2005f5dc19846f271e705f51d282ec72ba913d/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-combine-regions/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fnonlinear-animation-editor%2Fsidebar%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-combine-regions/docs2/content/editors/nonlinear-animation-editor/sidebar/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h3" href="#animation-data-property">Animation data property</a><a class="h3" href="#extrapolation">Extrapolation</a><a class="h3" href="#blending">Blending</a><a class="h3" href="#influence">Influence</a><a class="h3" href="#strip-tab-2">Strip Tab</a><a class="h3" href="#active-strip-panel">Active Strip panel</a><a class="h3" href="#action-clip-panel">Action Clip panel</a><a class="h3" href="#action-panel">Action panel</a><a class="h3" href="#modifiers-tab-modifiers-panel">Modifiers Tab - Modifiers Panel</a><a class="h3" href="#modifier-header">Modifier header</a><a class="h3" href="#generator-modifier">Generator modifier</a><a class="h3" href="#built-in-function-modifier">Built- in Function modifier</a><a class="h3" href="#envelope-modifier">Envelope modifier</a><a class="h3" href="#cycles-modifier">Cycles modifier</a><a class="h3" href="#noise-modifier">Noise modifier</a><a class="h3" href="#limits-modifier">Limits modifier</a><a class="h3" href="#stepped-interpolation-modifier">Stepped Interpolation modifier</a></aside></div></body></html>
