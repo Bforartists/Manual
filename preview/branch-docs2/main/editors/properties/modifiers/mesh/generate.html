@@ -1,0 +1,2353 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Generate modifiers (Mesh) · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/main · <code>docs2/main</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<a href="../../../../interface/windows.html">Windows</a>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/header.html">Header</a>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../../../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../../../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../view-layer-properties-tab.html">View Layer</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../../../graph-editor/channel-list.html">Channel List</a>
+<a href="../../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../../../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="../../collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="../../object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="../../modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<a style="padding-left:1.5rem" href="../../visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="../../particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<a style="padding-left:1.5rem" href="../../physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../object-data-properties-tab.html">Object Data</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../../object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../../bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="../../bone-constraint-properties.html">Bone Constraints</a>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="../../material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../../texture-properties-tab.html">Texture</a>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="../../strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="../../strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../../../shader-editor.html">Shader Editor</a>
+<a href="../../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../../../dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../../../graph-editor.html">Graph Editor</a>
+<a href="../../../drivers-editor.html">Drivers Editor</a>
+<a href="../../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../../../text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<a href="../../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../../render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../../render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../../render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="edit.html">Edit modifiers (Mesh)</a>
+<a class="is-current" style="padding-left:2.5rem" href="generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/volume-object.html">Volume Object</a>
+<span>File browser</span>
+<span>Asset Browser</span>
+<a href="../../../spreadsheet.html">Spreadsheet</a>
+<a href="../../../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../../../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../../../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="../../../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<a href="../../../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../../../advanced/troubleshooting.html">Troubleshooting</a>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../../appendix/manual-update-history.html">Documentation History</a>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../../../../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties › Mesh › Modifiers tab › Generate modifiers</div><h1 class="pv-title">Generate modifiers (Mesh)</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 42 min read</span></div><article class="ui-doc-body"><p>Generate modifiers are available for mesh objects, curve + text objects and volume objects.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/generate-modifiers-mesh.png" alt="Generate modifiers (Mesh)" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/generate-modifiers-mesh-2.png" alt="Generate modifiers (Mesh)" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/generate-modifiers-mesh-3.png" alt="Generate modifiers (Mesh)" loading="lazy"></figure>
+<h2 id="array">Array</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/array.png" alt="Array" loading="lazy"></figure>
+<p>The Array modifier creates an array of copies of the base object. Each copy can offset from the previous one in any of a number of possible ways. Vertices in adjacent copies can be merged if they are nearby, allowing smooth Subdivision Surface frameworks to be generated.</p>
+<p>Multiple Array modifiers may be active for an object at the same time. This allows to create complex three-dimensional constructs.</p>
+<p>Hint for Offset Calculation. The transformation applied from one copy to the next is calculated as the sum of the three different components (Relative, Constant and Object), each of which can be enabled/disabled independently of the others. This allows, for example, a relative offset of (1.0, 0.0, 0.0) and a constant offset of (0.1, 0.0, 0.0), giving an array of objects neatly spaced along the X axis with a constant 0.1 unit between them, whatever the original object’s size.</p>
+<h3 id="shape">Shape</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/shape.png" alt="Shape" loading="lazy"></figure>
+<p>Method used to arrange the duplicates.</p>
+<h4 id="method-line">Method Line</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Count</td>
+<td>The number of copies to generate.</td>
+</tr>
+<tr>
+<td>Offset Method</td>
+<td>How to offset the copies.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The actual offset vector of the copies.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>The rotation vector of the copies.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>The scale vector of the copies.</td>
+</tr>
+<tr>
+<td>Realize Instances</td>
+<td>Turn the output into a single geometry.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="randomize-subpanel">Randomize subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/randomize-subpanel.png" alt="Randomize subpanel" loading="lazy"></figure>
+<p>Randomize the copies.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Random offset amount.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Random rotation amount.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="scale-axes">Scale Axes</h6>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Method Uniform</td>
+<td>randomizes uniform and equlaly along all axes.</td>
+</tr>
+<tr>
+<td>Method Axes</td>
+<td>randomizes each axis individually. · <strong>Scale</strong>: Random scale amount. · <strong>Flipping</strong>: Random flipping amount. · <strong>Exclude First</strong>: Exclude the first copy. · <strong>Exclude Last</strong>: Exclude the last copy. · <strong>Seed</strong>: The seed to use for the randomness.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="merge-subpanel">Merge subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/merge-subpanel.png" alt="Merge subpanel" loading="lazy"></figure>
+<p>Merges the vertices below the given threshold. Realize Instances needs to be activated.</p>
+<h6 id="distance">Distance</h6>
+<p>The threshold distance. Everything below this distance will be merged.</p>
+<h4 id="method-circle">Method Circle</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/method-circle.png" alt="Method Circle" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Count Method</td>
+<td>The method to choose the number of duplicates.</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>The number of copies to generate.</td>
+</tr>
+<tr>
+<td>Central Axis</td>
+<td>The axis to rotate the geometry around.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="sweep-angle">Sweep Angle</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/sweep-angle.png" alt="Sweep Angle" loading="lazy"></figure>
+<p>Just with method Arc. The sweep angle for the arc.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Circle segment</td>
+<td>Generate a full circle, or an arc of elements.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The distance of the elements to the origin.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="align-rotation-subpanel">Align Rotation subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/align-rotation-subpanel.png" alt="Align Rotation subpanel" loading="lazy"></figure>
+<p>Rotate instances based on the circle shape.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary Axis</td>
+<td>The forward direction along the curve.</td>
+</tr>
+<tr>
+<td>Secondary Axis</td>
+<td>The secondary direction along the curve.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="randomize-subpanel-2">Randomize subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/randomize-subpanel.png" alt="Randomize subpanel" loading="lazy"></figure>
+<p>Randomize the copies.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Random offset amount.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Random rotation amount.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="scale-axes-2">Scale Axes</h6>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Method Uniform</td>
+<td>randomizes uniform and equlaly along all axes.</td>
+</tr>
+<tr>
+<td>Method Axes</td>
+<td>randomizes each axis individually. · <strong>Scale</strong>: Random scale amount. · <strong>Flipping</strong>: Random flipping amount. · <strong>Exclude First</strong>: Exclude the first copy. · <strong>Exclude Last</strong>: Exclude the last copy. · <strong>Seed</strong>: The seed to use for the randomness.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="merge-subpanel-2">Merge subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/merge-subpanel.png" alt="Merge subpanel" loading="lazy"></figure>
+<p>Merges the vertices below the given threshold. Realize Instances needs to be activated.</p>
+<h6 id="distance-2">Distance</h6>
+<p>The threshold distance. Everything below this distance will be merged.</p>
+<h4 id="method-curve">Method Curve</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/method-curve.png" alt="Method Curve" loading="lazy"></figure>
+<p>Distributes the duplicates along a selected curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Count Method</td>
+<td>The method to choose the number of duplicates.</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>The number of copies to generate.</td>
+</tr>
+<tr>
+<td>Per Curve</td>
+<td>Specify the number of copies for each curve separately.</td>
+</tr>
+<tr>
+<td>Curve Object</td>
+<td>Select the curve object. You need to have a curve in the scene.</td>
+</tr>
+<tr>
+<td>Relative Space</td>
+<td>Use relative space for the input geometry. This makes sure that the transform of both inputs in relation are considered.</td>
+</tr>
+<tr>
+<td>Realize Instances</td>
+<td>Turn the output into a single geometry.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="align-rotation-subpanel-2">Align Rotation subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/align-rotation-subpanel.png" alt="Align Rotation subpanel" loading="lazy"></figure>
+<p>Rotate instances based on the circle shape.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary Axis</td>
+<td>The forward direction along the curve.</td>
+</tr>
+<tr>
+<td>Secondary Axis</td>
+<td>The secondary direction along the curve.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="randomize-subpanel-3">Randomize subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/randomize-subpanel.png" alt="Randomize subpanel" loading="lazy"></figure>
+<p>Randomize the copies.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Random offset amount.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Random rotation amount.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="scale-axes-3">Scale Axes</h6>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Method Uniform</td>
+<td>randomizes uniform and equlaly along all axes.</td>
+</tr>
+<tr>
+<td>Method Axes</td>
+<td>randomizes each axis individually. · <strong>Scale</strong>: Random scale amount. · <strong>Flipping</strong>: Random flipping amount. · <strong>Exclude First</strong>: Exclude the first copy. · <strong>Exclude Last</strong>: Exclude the last copy. · <strong>Seed</strong>: The seed to use for the randomness.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="merge-subpanel-3">Merge subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/merge-subpanel.png" alt="Merge subpanel" loading="lazy"></figure>
+<p>Merges the vertices below the given threshold. Realize Instances needs to be activated.</p>
+<h6 id="distance-3">Distance</h6>
+<p>The threshold distance. Everything below this distance will be merged.</p>
+<h4 id="method-transform">Method Transform</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/method-transform.png" alt="Method Transform" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Count</td>
+<td>The number of copies to generate.</td>
+</tr>
+<tr>
+<td>Transform Reference</td>
+<td>How to define the transform. Locally (Input), or by an object.</td>
+</tr>
+<tr>
+<td>Translation</td>
+<td>The actual translaten vector of the copies.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>The rotation vector of the copies.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>The scale vector of the copies.</td>
+</tr>
+<tr>
+<td>Realize Instances</td>
+<td>Turn the output into a single geometry.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="randomize-subpanel-4">Randomize subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/randomize-subpanel.png" alt="Randomize subpanel" loading="lazy"></figure>
+<p>Randomize the copies.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Random offset amount.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Random rotation amount.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="scale-axes-4">Scale Axes</h6>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Method Uniform</td>
+<td>randomizes uniform and equlaly along all axes.</td>
+</tr>
+<tr>
+<td>Method Axes</td>
+<td>randomizes each axis individually. · <strong>Scale</strong>: Random scale amount. · <strong>Flipping</strong>: Random flipping amount. · <strong>Exclude First</strong>: Exclude the first copy. · <strong>Exclude Last</strong>: Exclude the last copy. · <strong>Seed</strong>: The seed to use for the randomness.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="merge-subpanel-4">Merge subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/merge-subpanel.png" alt="Merge subpanel" loading="lazy"></figure>
+<p>Merges the vertices below the given threshold. Realize Instances needs to be activated.</p>
+<h6 id="distance-4">Distance</h6>
+<p>The threshold distance. Everything below this distance will be merged.</p>
+<h2 id="array-legacy">Array ( Legacy )</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/array-legacy.png" alt="Array ( Legacy )" loading="lazy"><figcaption>Array ( Legacy )</figcaption></figure>
+<p>The Array modifier creates an array of copies of the base object. Each copy can offset from the previous one in any of a number of possible ways. Vertices in adjacent copies can be merged if they are nearby, allowing smooth Subdivision Surface frameworks to be generated.</p>
+<p>This modifier can be useful when combined with tillable meshes for quickly developing large scenes. It is also useful for creating complex repetitive shapes.</p>
+<p>Multiple Array modifiers may be active for an object at the same time. This allows to create complex three-dimensional constructs.</p>
+<p>Hint for Offset Calculation. The transformation applied from one copy to the next is calculated as the sum of the three different components (Relative, Constant and Object), each of which can be enabled/disabled independently of the others. This allows, for example, a relative offset of (1.0, 0.0, 0.0) and a constant offset of (0.1, 0.0, 0.0), giving an array of objects neatly spaced along the X axis with a constant 0.1 unit between them, whatever the original object’s size.</p>
+<h3 id="fit-type">Fit Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/fit-type.png" alt="Fit Type" loading="lazy"></figure>
+<p>Controls how the length of the array is determined.</p>
+<h4 id="fixed-count">Fixed Count</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/fixed-count.png" alt="Fixed Count" loading="lazy"></figure>
+<p>Generates the number of copies specified in Count.</p>
+<h4 id="fit-length">Fit Length</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/fit-length.png" alt="Fit Length" loading="lazy"></figure>
+<p>Generates copies to fit within the fixed length given by Length.</p>
+<h4 id="fit-curve">Fit Curve</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/fit-curve.png" alt="Fit Curve" loading="lazy"></figure>
+<p>Generates copies to fit within the length of the curve object specified in Curve. You need to select a curve object.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Both Fit Curve and Fit Length use the local coordinate system size of the base object, which means that scaling the base object in Object Mode will not change the number of copies generated by the modifier.</p></div>
+<p>Fit Length uses the local coordinate system length of the curve, which means that scaling the curve in Object Mode will not change the number of copies generated by the modifier.</p>
+<p>Applying the scale can be useful for both.</p>
+<h3 id="relative-offset">Relative Offset</h3>
+<h4 id="factor-x-y-z">Factor X/Y/Z</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/factor-x-y-z.png" alt="Factor X/Y/Z" loading="lazy"></figure>
+<p>Adds a translation equal to the object’s bounding box size along each axis to the offset, multiplied by a scaling factor. X, Y and Z scaling factors can be specified.</p>
+<h3 id="constant-offset">Constant Offset</h3>
+<h4 id="distance-x-y-z">Distance X/Y/Z</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/distance-x-y-z.png" alt="Distance X/Y/Z" loading="lazy"></figure>
+<p>Adds a constant translation component to the duplicate object’s offset. X, Y and Z constant components can be specified.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object Offset</td>
+<td>Adds a transformation taken from a chosen object relative to the current object to the offset. · <strong>Object</strong>: Choose an object.</td>
+</tr>
+<tr>
+<td>Merge</td>
+<td>If enabled, vertices in each copy will be merged with vertices in the next copy that are within the given Distance. · <strong>Distance</strong>: The merge distance between the vertices. Vertices below this distance will be merged. · <strong>First and Last Copies</strong>: Merge vertices in first and last duplicates.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uv-s">UV's</h3>
+<h4 id="offset-u-v">Offset U/V</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/offset-u-v.png" alt="Offset U/V" loading="lazy"></figure>
+<p>Shifts UV's of each new duplicate by a settable amount.</p>
+<h4 id="caps">Caps</h4>
+<h5 id="cap-start-end">Cap Start / End</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/cap-start-end.png" alt="Cap Start / End" loading="lazy"><figcaption>Cap Start / End</figcaption></figure>
+<p>Adds a chosen mesh at the start and end of the array. The start object is added at position -1. The end object at position +1. When Merge is activated, and the cap vertices are within the Distance threshold, they will be merged.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The start/end cap objects currently do not support the First and Last Copies option.</p></div>
+<h2 id="bevel">Bevel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/bevel.png" alt="Bevel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/bevel-2.png" alt="Bevel" loading="lazy"></figure>
+<p>The Bevel modifier bevels the edges of the mesh. It is a non-destructive alternative to the Bevel Operation in Edit Mode.</p>
+<h3 id="affect">Affect</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/affect.png" alt="Affect" loading="lazy"></figure>
+<h4 id="vertices">Vertices</h4>
+<p>Only the areas near vertices are beveled, the edges remain unchanged.</p>
+<h4 id="edges">Edges</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/edges.png" alt="Edges" loading="lazy"></figure>
+<p>Bevels both edges and vertices.</p>
+<h3 id="width-type">Width Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/width-type.png" alt="Width Type" loading="lazy"></figure>
+<p>Defines how Width will be interpreted to determine the amount of bevel.</p>
+<h4 id="offset">Offset</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/offset.png" alt="Offset" loading="lazy"></figure>
+<p>Value is interpreted as the distance from the original edge to the edge of the beveled face.</p>
+<h4 id="width">Width</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/width.png" alt="Width" loading="lazy"></figure>
+<p>Value is interpreted as the distance between the two new edges formed by the bevel.</p>
+<h4 id="depth">Depth</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/depth.png" alt="Depth" loading="lazy"></figure>
+<p>Value is the perpendicular distance from the new bevel face to original edge.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Percent</td>
+<td>Similar to Offset but the value is interpreted as a percentage of the adjacent edge length.</td>
+</tr>
+<tr>
+<td>Absolute</td>
+<td>Amount is absolute along adjacent edge.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amount</td>
+<td>The bevel amount.</td>
+</tr>
+<tr>
+<td>Segments</td>
+<td>The number of edge loops added along the bevel’s face.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="limit-method">Limit Method</h3>
+<p>Used to control where a bevel is applied to the mesh.</p>
+<h4 id="none">None</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/none.png" alt="None" loading="lazy"></figure>
+<p>No limit, all edges will be beveled.</p>
+<h4 id="angle">Angle</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/angle.png" alt="Angle" loading="lazy"></figure>
+<p>Only edges where the adjacent faces form an angle smaller than the defined threshold will be beveled. Intended to allow you to bevel only the sharp edges of an object without affecting its smooth surfaces.</p>
+<h5 id="angle-2">Angle</h5>
+<p>The angle above which to bevel.</p>
+<h4 id="weight">Weight</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/weight.png" alt="Weight" loading="lazy"></figure>
+<p>Use each edge’s bevel weight to determine the width of the bevel. When the bevel weight is 0.0, no bevel is applied.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/weight-2.png" alt="Weight" loading="lazy"></figure>
+<p>Edge bevel weight can be set in Edit mode in the Edge menu with the Edge Bevel Weight tool.</p>
+<h5 id="edge-weight">Edge Weight</h5>
+<p>The geometry attribute that is used for the weight method. The geometry attribute is <strong>bevel_weight_edge</strong>, but you can use any attribute defined by Geometry Nodes here.</p>
+<h4 id="vertex-group">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/vertex-group.png" alt="Vertex Group" loading="lazy"></figure>
+<p>Use weights from a vertex group to determine the width of the bevel. When the vertex weight is 0.0, no bevel is applied. An edge is only beveled if both of its vertices are in the vertex group. See here about adjusting vertex group weights.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vertex Group</td>
+<td>Choose the vertex group.</td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>Inverts the influence of the selected vertex group.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="profile-subpanel">Profile subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/profile-subpanel.png" alt="Profile subpanel" loading="lazy"></figure>
+<p>The profile defines the shape of the bevel. Profile has no effect if the number of segments is below 2.</p>
+<h4 id="super-ellipse">Super Ellipse</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/super-ellipse.png" alt="Super Ellipse" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/super-ellipse.jpg" alt="Super Ellipse" loading="lazy"></figure>
+<p>Defines a rounded bevel corner.</p>
+<h5 id="shape-2">Shape</h5>
+<p>The shape of the rounded bevel corner. A value close to 0 bends the roundness to inside. A value towards 1 bends the curve to outside. A value of 0.5 defines a radius around the center point of the bevel.</p>
+<h4 id="custom">Custom</h4>
+<p>Here you can define a custom shape profile for the bevel.</p>
+<h5 id="miter-shape">Miter Shape</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/miter-shape.png" alt="Miter Shape" loading="lazy"></figure>
+<p>The shape of the custom bevel corner. Has no effect when the miter type is sharp. You need to set it to Arc in the geometry section.</p>
+<h5 id="custom-profile">Custom Profile</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/custom-profile.png" alt="Custom Profile" loading="lazy"></figure>
+<p>Choose and adjust a custom bevel profile. This feature needs more than one segment to work.</p>
+<h6 id="preset">Preset</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/preset.png" alt="Preset" loading="lazy"></figure>
+<p>Choose some profile presets.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in</td>
+<td>Zooms into the curve view.</td>
+</tr>
+<tr>
+<td>Zoom out</td>
+<td>Zooms out of the curve view.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="tools">Tools</h6>
+<p><strong>Reset View</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/reset-view.png" alt="Reset View" loading="lazy"></figure>
+<p>Resets the zoom factor of the curve view.</p>
+<p><strong>Reset Curve</strong></p>
+<p>Resets the curve to the defaults. This means when you choose a curve preset to reset it to the values of the latest chosen preset.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reverse Path</td>
+<td>The path gets reversed. The first point becomes the last and vice versa.</td>
+</tr>
+<tr>
+<td>Toggle Profile Clipping</td>
+<td>Toggles the profile clipping.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="curve-view">Curve view</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/curve-view.png" alt="Curve view" loading="lazy"></figure>
+<p>Adjust the profile curve.</p>
+<p>Left click where no point is adds a new point. Left click at a point allows you to move it.</p>
+<p>Holding down Shift while moving a node point activates precision movement.</p>
+<p>Holding down ctrl while moving activates temporary snapping.</p>
+<p>When a point is selected then the curve view reveals a sub menu at the bottom.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Handle Type Auto Handle</td>
+<td>Sets the handle type of this curve point to smooth.</td>
+</tr>
+<tr>
+<td>Handle Type Vector Handle</td>
+<td>Sets the handle type of this curve point to sharp.</td>
+</tr>
+<tr>
+<td>Handle Type Free Handle</td>
+<td>Sets the handle type of this curve to Free handles. The curve point has now two handles with which you can adjust the curve before and after the point each.</td>
+</tr>
+<tr>
+<td>Handle Type Aligned Free Handle</td>
+<td>Sets the handle type of this curve to Free handles. The curve point has now a handle with which you can adjust the curve.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X Y Values</td>
+<td>The position of the currently selected curve point.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Delete the selected curve point.</td>
+</tr>
+<tr>
+<td>Sample Straight Edges</td>
+<td>Sample edges with vector handles.</td>
+</tr>
+<tr>
+<td>Sample Even Lengths</td>
+<td>Sample edges with even lengths.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="geometry-subpanel">Geometry subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/geometry-subpanel.png" alt="Geometry subpanel" loading="lazy"></figure>
+<h4 id="miter-inner">Miter Inner</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/miter-inner.png" alt="Miter Inner" loading="lazy"></figure>
+<p>How the inner miter is set. Miter is how the bevel rounding at a corner is done.</p>
+<h5 id="sharp">Sharp</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/sharp.png" alt="Sharp" loading="lazy"></figure>
+<p>Creates a sharp miter.</p>
+<h5 id="arc">Arc</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/arc.png" alt="Arc" loading="lazy"></figure>
+<p>This replaces the vertex of a miter with 2 vertices, joined by an arc. A separate Spread parameter says how far to move the vertices away from their original position.</p>
+<h4 id="outer">Outer</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/outer.png" alt="Outer" loading="lazy"></figure>
+<p>How the outer miter is set. Miter is how the bevel rounding at a corner is done.</p>
+<h5 id="sharp-2">Sharp</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/sharp.png" alt="Sharp" loading="lazy"></figure>
+<p>Creates a sharp miter.</p>
+<h5 id="patch">Patch</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/patch.png" alt="Patch" loading="lazy"></figure>
+<p>This replaces the outside vertex of a miter with 3 vertices. And uses a patch pattern there.</p>
+<h5 id="arc-2">Arc</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/arc.png" alt="Arc" loading="lazy"></figure>
+<p>This replaces the vertex of a miter with 2 vertices, joined by an arc. A separate Spread parameter says how far to move the vertices away from their original position.</p>
+<h4 id="intersections">Intersections</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/intersections.png" alt="Intersections" loading="lazy"></figure>
+<p>If a bevel corner is filled or not. Needs minimum two segments to have effect.</p>
+<p>When the inner corners of the cutoff profiles faces meet at the same location with a three way intersection, then no center face is created.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/intersections-2.png" alt="Intersections" loading="lazy"></figure>
+<p>The direction of the cutoff faces depends on the original vertex’s normal.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clamp Overlap</td>
+<td>Limits the width of each beveled edge so that edges cannot cause overlapping intersections with other geometry.</td>
+</tr>
+<tr>
+<td>Loop Slide</td>
+<td>If there are unbeveled edges along with beveled edges into a vertex, the bevel tries to slide along those edges when possible. Turning the option off can lead to more even bevel widths.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shading-subpanel">Shading subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/shading-subpanel.png" alt="Shading subpanel" loading="lazy"></figure>
+<h4 id="harden-normals">Harden Normals</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/harden-normals.png" alt="Harden Normals" loading="lazy"></figure>
+<p>Match normals of new faces to adjacent faces.</p>
+<p>Autosmooth needs to be enabled for this feature. And the shading needs to be smooth.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mark</td>
+<td><strong>Seam</strong>: When the beveled edge is a seam edge, then the bevel will also contain a seam to keep the seam into account. · <strong>Sharp</strong>: When the beveled edge is a sharp edge, then the bevel will also contain a sharp edge to keep the sharp edge into account.</td>
+</tr>
+<tr>
+<td>Material Index</td>
+<td>The index of the material slot to use for the bevel. When set to -1, the material of the nearest original face will be used.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="face-strength">Face Strength</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/face-strength.png" alt="Face Strength" loading="lazy"></figure>
+<p>Set the Face Strength on the faces involved in the bevel by the mode specified here.</p>
+<p>This face strength then can be used in conjunction with a following Weighted Normals modifier (with the Face Influence option checked).</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Do not set face strength.</td>
+</tr>
+<tr>
+<td>New</td>
+<td>Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak.</td>
+</tr>
+<tr>
+<td>Affected</td>
+<td>In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>In addition to those set for the Affected case, also set all the rest of the faces of the model to have strength Strong.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="boolean">Boolean</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/boolean.png" alt="Boolean" loading="lazy"></figure>
+<p>The Boolean modifier uses one of the three available Boolean operations to create a single mesh out of two mesh objects. Union, Difference and Intersect. This modifier needs a second object to be the target of the operation.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/boolean-2.png" alt="Boolean" loading="lazy"></figure>
+<p>Boolean operations may or may not deliver useful results. And requires nearly always manual cleanup afterwards since it tends to create N-Gon geometry and can create micro triangles. You should also avoid co-planar faces. Manifold meshes works best.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> Tick Wireframe, and All Edges in the Viewport Display panel to see the bool result in realtime happen. And hide the bool object. That way you can tweak the positions of the objects if needed.</p></div>
+<h3 id="operation">Operation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/operation.png" alt="Operation" loading="lazy"></figure>
+<p>The Boolean operation to use.</p>
+<p>Demonstrated at a cube with the modifier applied, and a sphere as the target object.</p>
+<h4 id="intersect">Intersect</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/intersect.png" alt="Intersect" loading="lazy"></figure>
+<p>Keeps the intersecting geometry, removes the non intersecting geometry.</p>
+<h4 id="union">Union</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/union.png" alt="Union" loading="lazy"></figure>
+<p>The target mesh is added to the modified mesh.</p>
+<h4 id="difference">Difference</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/difference.png" alt="Difference" loading="lazy"></figure>
+<p>Keeps the non intersecting geometry, removes the intersecting geometry.</p>
+<h3 id="operand-type">Operand Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/operand-type.png" alt="Operand Type" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>The target mesh object. You need to choose a target mesh object for the boolean operation.</td>
+</tr>
+<tr>
+<td>Solver</td>
+<td>Fast, Exact or Manifold. Manifold works only on manifold meshes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="solver-options-sub-panel">Solver Options sub panel</h3>
+<h4 id="with-solver-method-fast">With solver method fast</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/with-solver-method-fast.png" alt="With solver method fast" loading="lazy"><figcaption>With solver method fast</figcaption></figure>
+<h5 id="overlap-threshold">Overlap Threshold</h5>
+<p>The threshold for overlapping geometry. This value determines above which value a boolean operation happens.</p>
+<h4 id="with-solver-method-exact">With Solver Method Exact</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/with-solver-method-exact.png" alt="With Solver Method Exact" loading="lazy"><figcaption>With Solver Method Exact</figcaption></figure>
+<h5 id="materials">Materials</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/materials.png" alt="Materials" loading="lazy"></figure>
+<p>Method for setting the materials on new faces.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Self Intersection</td>
+<td>Allow self intersection in operanding objects.</td>
+</tr>
+<tr>
+<td>Hole Tolerant</td>
+<td>Better results when the mesh contains holes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="with-solver-method-manifold">With Solver Method Manifold</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/with-solver-method-manifold.png" alt="With Solver Method Manifold" loading="lazy"><figcaption>With Solver Method Manifold</figcaption></figure>
+<h5 id="materials-2">Materials</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/materials.png" alt="Materials" loading="lazy"></figure>
+<p>Method for setting the materials on new faces.</p>
+<h2 id="build">Build</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/build.png" alt="Build" loading="lazy"></figure>
+<p>The Build modifier lets the faces of the mesh object to appear or disappear one after the other over time when you play the animation.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/build-2.png" alt="Build" loading="lazy"></figure>
+<p>By default, faces appear in the order in which they are stored in memory, which follows the order how they are created. This face/vertex order can be altered in Edit Mode by using Sort Mesh Elements in the Mesh menu.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start</td>
+<td>The start frame of the building process.</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>The number of frames over which to rebuild the object.</td>
+</tr>
+<tr>
+<td>Reversed</td>
+<td>The modifier will operate in reverse, and start with the full mesh. And deconstruct it towards the end frame.</td>
+</tr>
+<tr>
+<td>Randomize</td>
+<td>Randomizes the order in which the faces are built. · <strong>Seed</strong>: The random seed. Changing this value gives a different “random” order when Randomize is checked. This order is always the same for a given seed/mesh set.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="decimate">Decimate</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/decimate.png" alt="Decimate" loading="lazy"></figure>
+<p>The Decimate modifier allows you to reduce the vertex/face count of a mesh with minimal shape changes. The result is just displayed in Object mode. In Edit mode the unaltered mesh is shown.</p>
+<h3 id="mode">Mode</h3>
+<h4 id="collapse">Collapse</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/collapse.png" alt="Collapse" loading="lazy"></figure>
+<p>This algorithm uses progressive merging of vertices, taking the shape of the mesh into account.</p>
+<h5 id="ratio">Ratio</h5>
+<p>The ratio of faces to keep after decimation. 1.0 is not altered. The lower the value the stronger the reduction.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Although the Ratio is directly proportional to the number of remaining faces, triangles are used when calculating the ratio.</p></div>
+<p>This means that if your mesh contains quads or other polygons, the number of remaining faces will be larger than expected, because those will remain unchanged if their edges are not collapsed.</p>
+<p>This is only true if the Triangulate option is disabled.</p>
+<h5 id="symmetry">Symmetry</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/symmetry.png" alt="Symmetry" loading="lazy"></figure>
+<p>Maintains symmetry on a single axis.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Triangulate</td>
+<td>Keeps any resulting triangulated geometry from the decimation process.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>A vertex group that controls what parts of the mesh are decimated. · <strong>Invert</strong>: Decimate the geometry except the vertex group. · <strong>Factor</strong>: The influence factor of the vertex group.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="un-subdivide">Un-Subdivide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/un-subdivide.png" alt="Un-Subdivide" loading="lazy"></figure>
+<p>This algorithm tries to unsubdivide divided faces.</p>
+<h5 id="iterations">Iterations</h5>
+<p>The number of times to perform the unsubdivide operation. Two iterations is the same as one subdivide operation, so you will usually want to use even numbers.</p>
+<h4 id="planar">Planar</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/planar.png" alt="Planar" loading="lazy"></figure>
+<p>This algorithm reduces details by unioning adjacent faces that are below an angle limit.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle Limit</td>
+<td>Dissolve geometry which form angles (between surfaces) higher than this setting.</td>
+</tr>
+<tr>
+<td>Delimit</td>
+<td>Prevent dissolving geometry in certain places. · <strong>Normal</strong>: Does not dissolve edges on the borders of areas where the face normals are reversed. · <strong>Material</strong>: Does not dissolve edges on the borders of where different materials are assigned. · <strong>Seam</strong>: Does not dissolve edges marked as seams. · <strong>All Boundaries</strong>: When enabled, all vertices along the boundaries of faces are dissolved.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="face-count">Face Count</h3>
+<p>The face count of the decimated mesh.</p>
+<h2 id="edge-split">Edge Split</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/edge-split.png" alt="Edge Split" loading="lazy"></figure>
+<p>The Edge Split modifier splits single edges into two independent edges when the adjacent faces are below the defined angle. Or when the edge is marked as sharp. Which can be done in edit mode in the Edge menu with the Mark Sharp tool.</p>
+<p>Splitting an edge affects vertex normal generation at that edge, and makes the edge appear sharp. So this modifier can be used to achieve the same effect as Auto Smooth. And make edges appear sharp when their angle is above a certain threshold. It can also be used for manual control of the smoothing process, where the user defines which edges should appear smooth or sharp (see Mesh Smoothing for other ways to do this). If desired, both modes can be active at once.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This modifier is kept mostly for historical/compatibility reasons. Everything it can do in shading, and much more, can now be achieved using custom normals. Unless you really need the topology changes it generates, it is not advised to use it in new projects.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edge Angle</td>
+<td>The angle above which to split edges.</td>
+</tr>
+<tr>
+<td>Sharp Edges</td>
+<td>When you have marked edges as sharp, then these edges will be split. Note! Non-manifold edges will always be split.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mask">Mask</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/mask.png" alt="Mask" loading="lazy"></figure>
+<p>The Mask modifier allows to hide vertices of an object dynamically based on vertex groups or an Armature.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode</td>
+<td>Use Vertex Groups or an armature to hide the mesh Vertex Group works in Object mode. Armature works in Pose mode, and uses the active bone for masking.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Here you can select the vertex group that you want to use for masking. The geometry from this vertex group is shown.</td>
+</tr>
+<tr>
+<td>Smooth</td>
+<td>Use vertex group weighs to cut faces at the weight contour.</td>
+</tr>
+<tr>
+<td>Armature</td>
+<td>When in Pose Mode, vertices belonging to the vertex group associated with the active bone (same names) will be visible. Vertices not in that group will be hidden. · <strong>Invert</strong>: Show the not selected geometry instead of the selected.</td>
+</tr>
+<tr>
+<td>Threshold</td>
+<td>Vertices with weights less or equal to this value will be hidden.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mirror">Mirror</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/mirror.png" alt="Mirror" loading="lazy"></figure>
+<p>The Mirror modifier mirrors a mesh along its local X, Y and/or Z axes, across the Object Origin. It can also use another object as the mirror center, then use that object’s local axes instead of its own.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Workflow</td>
+<td>Usually this modifier is used for mirror modeling in edit mode. In Edit mode just the original side is editable then. Recommend is to remove half of the mesh before starting. The missing part will then be added by the Mirror modifier. But you can also use the Bisect feature.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>The axis to mirror along. You can select more than one of these axes. And will then get more mirrored copies. With one axis you get a single mirror, with two axes four mirrors, and with all three axes eight mirrors.</td>
+</tr>
+<tr>
+<td>Bisect</td>
+<td>If the mesh is already on both sides of the mirror plane, it is cut by that plane. And only one side (the “negative” one by default) is kept to perform the mirror process. Note. When you turn Bisect on and pull at the mirror part, then you won't have the mirroring effect to the original side.</td>
+</tr>
+<tr>
+<td>Flip</td>
+<td>When Bisect is enabled on an axis, you can use this setting to switch the side kept and mirrored (i.e. when it is enabled, the “positive” side will be kept, instead of the “negative” one).</td>
+</tr>
+<tr>
+<td>Mirror Object</td>
+<td>An Object Selector to select an object (usually an empty), which position and rotation will be used to define mirror planes (instead of using the ones from the modified object). You can animate it to move the mirror axis.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="clipping">Clipping</h3>
+<p>Prevents vertices from moving through the mirror plane(s) when you transform them in Edit Mode.</p>
+<p>If it is enabled but vertices are beyond the mirror plane and outside of the Merge Distance, the vertices will not be merged. But as soon as the vertices are within Merge Distance they are snapped together and cannot be moved beyond the mirror plane.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Vertices on the mirror plane will be unable to move away from the mirror plane as long as Clipping is enabled. You must disable it to be able to move the vertices along the mirror axis again.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Merge</td>
+<td>Where a vertex is in the same place (within the Merge Distance) as its mirror it will be merged with the mirrored vertex.</td>
+</tr>
+<tr>
+<td>Bisect Distance</td>
+<td>Vertices are removed up to this distance from the bisect plane. · <strong>Merge Distance</strong>: The maximum distance between a vertex and its mirror copy at which they are merged together (being snapped on the mirror plane). Needs Merge to be enabled.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-subpanel">Data subpanel</h3>
+<h4 id="mirror-uv">Mirror UV</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/mirror-uv.png" alt="Mirror UV" loading="lazy"></figure>
+<p>Mirror the UV texture coordinates across the middle of the image.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset UV</td>
+<td>Mirrored UV Offset along u and v axis.</td>
+</tr>
+<tr>
+<td>Vertex Groups</td>
+<td>Try to mirror existing vertex groups. Note! The vertex groups you want to mirror must be named following the usual left/right pattern (i.e. with suffixes like “.R”, “.right”, “.L”, etc.). The mirror side vertex group must already exist (it will not be created automatically). It must also be completely empty (no vertices assigned to it).</td>
+</tr>
+<tr>
+<td>Flip UDIM</td>
+<td>Mirror the texture coordinates around each tile center.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="multiresolution">Multiresolution</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/multiresolution.png" alt="Multiresolution" loading="lazy"></figure>
+<p>The Multiresolution modifier, in short “Multires”) allows you to subdivide a mesh similarly to the Subdivision Surface modifier, but also allows you to edit the new subdivision levels in Sculpt Mode.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Multiresolution cannot be re-positioned in the stack after any modifier that will change geometry or other object data (This means all Generate, some Modify and some Simulate modifiers cannot come before the Multiresolution modifier). It needs to work at the unaltered base mesh.</p></div>
+<h3 id="workflow">Workflow</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/workflow.png" alt="Workflow" loading="lazy"></figure>
+<p>Add the modifier. Switch to Sculpt mode. Click at the Subdivide button. The Levels sculpt slider will now turn to 1. Do some sculpting. Click at the Subdivide button again. The Levels sculpt slider will now turn to 2. You have added a second sds layer now. Do some sculpt now. Click at the Subdivide button again, and you have a third sds sculpting level. Do some sculpt now.</p>
+<p>To work at level 1 SDS simply change the Levels sculpt value back to 1. Or to 2 when you want to work at layer 2.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Level Viewport</td>
+<td>Number of subdivisions in the viewport when not in sculpt mode.</td>
+</tr>
+<tr>
+<td>Sculpt</td>
+<td>Number of subdivisions to use in sculpt mode.</td>
+</tr>
+<tr>
+<td>Render</td>
+<td>Number of subdivisions when rendering the image.</td>
+</tr>
+<tr>
+<td>Sculpt Base Mesh</td>
+<td>Sculpt at the base mesh, not at the multires sds layer. Note that this property is greyed out when you are not in sculpt mode.</td>
+</tr>
+<tr>
+<td>Optimal Display</td>
+<td>In object mode the subdivided edges will not be drawn. Only the edges of the base geometry.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="subdivision-subpanel">Subdivision Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/subdivision-subpanel.png" alt="Subdivision Subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subdivision Mode</td>
+<td><strong>Subdivide</strong>: Adds another layer of subdivision. This subivision method divides the mesh smooth with the catmull clark algorithm. · <strong>Simple</strong>: Adds another layer of subdivision. The simple method just divides the existing faces. · <strong>Linear</strong>: Adds another layer of subdivision. The linear method divides the existing faces and interpolates linear.</td>
+</tr>
+<tr>
+<td>Unsubdivide</td>
+<td>Removes all subdivision layers.</td>
+</tr>
+<tr>
+<td>Delete Higher</td>
+<td>Removes the highest subdivision layer.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shape-subpanel">Shape subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/shape-subpanel.png" alt="Shape subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reshape</td>
+<td>Copies vertex coordinates from another mesh. Usage: first select a different mesh object with matching topology and vertex indices. Shift select the object you wish to copy vertex coordinates to. Click Reshape.</td>
+</tr>
+<tr>
+<td>Apply Base</td>
+<td>Modifies the original unsubdivided mesh to match the form of the subdivided sculpted mesh.</td>
+</tr>
+<tr>
+<td>Conform Base</td>
+<td>Modifies the base mesh to conform to the displaced mesh.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="generate-subpanel">Generate Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/generate-subpanel.png" alt="Generate Subpanel" loading="lazy"></figure>
+<p>Rebuild all possible sds levels to generate a lower resolution base mesh</p>
+<h3 id="save-externall">Save Externall</h3>
+<p>Saves displacements to an external .btx file. The Multiresolution sds information is then stored externally, so that the blend files doesn't become too big.</p>
+<h4 id="file-path">File path</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/file-path.png" alt="File path" loading="lazy"></figure>
+<p>Once saved you will see the path to the btx file below the save external button. The save external button has turned into Pack external then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Sets the type of subdivision. Note! You need to set the subdivision type before you start. You can't change it afterwards. · <strong>Catmull-Clark</strong>: Creates a smoothed surface, using the standard Catmull-Clark subdivision surface algorithm. · <strong>Simple</strong>: Maintains the current shape, and simply subdivides edges.</td>
+</tr>
+<tr>
+<td>Levels Sculpt</td>
+<td>The subdivision layer.</td>
+</tr>
+<tr>
+<td>Viewport</td>
+<td>Set the level of subdivisions to show in Object Mode. In Sculpt mode this value has no effect.</td>
+</tr>
+<tr>
+<td>Render</td>
+<td>Set the level of subdivisions to show when rendering.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advanced-subpanel">Advanced Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/advanced-subpanel.png" alt="Advanced Subpanel" loading="lazy"></figure>
+<h4 id="quality">Quality</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/quality.png" alt="Quality" loading="lazy"></figure>
+<p>How precisely the vertices are positioned. This settings becomes active when you have an edge crease applied. This can be done in edit mode in the edge menu.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UV Smooth</td>
+<td>How to handle UV's during subdivision. · <strong>Smooth, keep corners</strong>: UV islands are smoothed, but their boundary remain sharp. · <strong>Sharp</strong>: UV remain unchanged.</td>
+</tr>
+<tr>
+<td>Use Creases</td>
+<td>Use the crease information. This settings becomes active when you have an edge crease applied.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remesh">Remesh</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/remesh.png" alt="Remesh" loading="lazy"></figure>
+<p>The Remesh modifier generates new mesh topology. The output follows the surface curvature of the input. But its topology contains quads.</p>
+<p>The output and also the settings of the three basic modes Blocks, Smooth and Sharp is almost identical. Except the smoothing.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blocks, Smooth, Sharp</td>
+<td>Blocks has no smoothing at all. Smooth outputs a smooth surface. Sharp outputs a smooth surface but preserves sharp edges and corners. · <strong>Octree Depth</strong>: The resolution of the Octree. Higher values gives finer details. · <strong>Scale</strong>: The ratio of the largest dimension of the model over the size of the grid. · <strong>Sharpness</strong>: Sharp mode only. Tolerance for outliers. Higher values produce edges more similar to the input, while lower values filter out noise. · <strong>Remove Disconnected</strong>: Filter out small disconnected pieces of the output. · <strong>Threshold</strong>: Use this to control how small a disconnected component must be to be removed. · <strong>Smooth Shading</strong>: Output faces with smooth shading. The smooth/flat shading of the input faces is not preserved.</td>
+</tr>
+<tr>
+<td>Voxel</td>
+<td>Generate a new manifold mesh from the current geometry while trying to preserve the mesh’s original volume. · <strong>Voxel Size</strong>: The voxel size. Defines the resolution of the created mesh. · <strong>Adaptivity</strong>: Reduces the final face count by simplifying geometry where detail is not needed. This feature triangulates faces that do not need as much detail. · <strong>Smooth Shading</strong>: Output faces with smooth shading. The smooth/flat shading of the input faces is not preserved.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="screw">Screw</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/screw.png" alt="Screw" loading="lazy"></figure>
+<p>The Screw modifier takes a profile object, a mesh or a curve, to create a helix-like shape.</p>
+<p>The profile should be properly aligned to the cardinal direction of the object.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>Degrees for a single helix iteration.</td>
+</tr>
+<tr>
+<td>Screw</td>
+<td>Offsets the iteration along its axis.</td>
+</tr>
+<tr>
+<td>Iterations</td>
+<td>Number of iterations.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>The axis along which the helix will be built.</td>
+</tr>
+<tr>
+<td>Screw</td>
+<td>The height of one helix iteration.</td>
+</tr>
+<tr>
+<td>Axis Object</td>
+<td>Pick an object to define the axis direction. The helix will then point into the direction of this object.</td>
+</tr>
+<tr>
+<td>Object Screw</td>
+<td>Use the distance from the Axis Object to define the height of one helix iteration.</td>
+</tr>
+<tr>
+<td>Steps Viewport</td>
+<td>Number of steps used for a single revolution displayed in the 3D Viewport.</td>
+</tr>
+<tr>
+<td>Render</td>
+<td>Number of steps used for a single revolution used during render time. Higher values gives higher quality.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="merge">Merge</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/merge-2.png" alt="Merge" loading="lazy"></figure>
+<p>Merge vertices that lie on the axis of rotation. Closes off end points with a triangle fan.</p>
+<h4 id="merge-distance">Merge Distance</h4>
+<p>Vertices under this distance to the axis are merged.</p>
+<h3 id="stretch-uv-s">Stretch UV's</h3>
+<p>Stretch the UV coordinates from (0.0 to 1.0) when UV's are present.</p>
+<h3 id="normals">Normals</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/normals.png" alt="Normals" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Smooth Shading</td>
+<td>Output faces with smooth shading. The smooth/flat shading of the input geometry is not preserved.</td>
+</tr>
+<tr>
+<td>Calculate Order</td>
+<td>Order of edges is calculated to avoid problems with normals and shading. Only needed for meshes, not curves.</td>
+</tr>
+<tr>
+<td>Flip</td>
+<td>Flip normals direction.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="skin">Skin</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/skin.png" alt="Skin" loading="lazy"></figure>
+<p>The Skin modifier uses vertices and edges to create a skinned surface. The output is mostly quads. But intersections can also produce triangles.</p>
+<p>You can use geometry with faces as the base geometry. But the modifier just uses the vertices and edges information.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/skin-2.png" alt="Skin" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Faces in the original geometry are ignored. The modifier works with the edges and vertices of the geometry. The faces of a cube for example gets removed. The new geometry appears around the edges.</p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/skin-3.png" alt="Skin" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The thickness of the created geometry can be adjusted in Edit mode with the Skin Resize tool.
+<strong>Note:</strong> The Edit mode also activates most of the in Object mode greyed out tools.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Branch Smoothing</td>
+<td>A branch point is a vertex with three or more connected edges. These areas tend to produce more complicated topology, some of which may overlap. This setting relaxes the surface around these points, with the side effect of shrinking it.</td>
+</tr>
+<tr>
+<td>Symmetry Axes X/Y/Z</td>
+<td>Keep the output topology symmetrical in their here chosen axes. Note! They do not add geometry flipped across an axis. For that, the Mirror modifier should be used, typically placed above the Skin modifier.</td>
+</tr>
+<tr>
+<td>Smooth Shading</td>
+<td>Output faces with smooth shading rather than flat shading. The smooth/flat shading of the input geometry is not preserved.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-armature">Create Armature</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/create-armature.png" alt="Create Armature" loading="lazy"></figure>
+<p>Creates an armature modifier below the Skin modifier. Each edge becomes a bone. And the generated mesh of the Skin modifier is assigned to this armature, with automatic weights. Deforming the armature will then deform the mesh.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> If the root vertex has more than one adjacent edge, an extra bone will be created to serve as the root.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Skin Data</td>
+<td>The Skin modifier uses a custom set of data in the mesh. This data is generated automatically when you add the Skin modifier the first time. There are use cases where this data can get lost, and the Skin modifier quits working. Add Skin Data then becomes available, and you can update the data.</td>
+</tr>
+<tr>
+<td>Mark / Clear Loose</td>
+<td>You need to be in Edit Mode to make this tool active. By default, a branch vertex (vertex with three or more connected edges) will generate extra edge loops along adjacent edges in order to keep the output tight. Branches can be made loose by clicking Mark Loose, which will allow the output to stretch between all adjacent vertices. This can be disabled again by clicking Clear Loose.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mark-root">Mark Root</h3>
+<p>You need to be in Edit Mode to make this tool active.</p>
+<p>Marking a vertex as root causes that vertex to be used for calculating rotations for connected limbs. Root vertices also affect the armature output, they will be used as the origin for the root bones.</p>
+<p>Each set of connected vertices should have one root node (one is selected by default if you do not assign any manually). Mark Root enforces the one-root per set rule, so it is not necessary to manually unmark roots.</p>
+<h3 id="equalize-radii">Equalize Radii</h3>
+<p>You need to be in Edit Mode to make this tool active.</p>
+<p>Makes the skin radii of selected vertices equal on each axis.</p>
+<h2 id="solidify">Solidify</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/solidify.png" alt="Solidify" loading="lazy"></figure>
+<p>The Solidify modifier adds depth and thickness to the faces of a geometry.</p>
+<p>Example. A cube with one face removed.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/solidify-2.png" alt="Solidify" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/solidify-3.png" alt="Solidify" loading="lazy"></figure>
+<h3 id="mode-2">Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/mode.png" alt="Mode" loading="lazy"></figure>
+<h4 id="simple">Simple</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/simple.png" alt="Simple" loading="lazy"></figure>
+<p>This algorithm simply extrudes the geometry. It does not work on geometry where edges have more than two adjacent faces.</p>
+<div class="ui-doc-callout is-important"><p><strong>Important:</strong> Simple mode will not be able to solidify the boundary between two adjacent faces that does not point into the same direction.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thickness</td>
+<td>The extrude amount.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>A value between (-1 to 1) to locate the solidified output inside or outside the original mesh. The inside and outside is determined by the face normals. Set to 0.0, the solidified output will be centered on the original mesh.</td>
+</tr>
+<tr>
+<td>Even Thickness</td>
+<td>Maintain the thickness by adjusting for sharp corners. Note! Solidify thickness is an approximation. The final wall thickness is not guaranteed. The best option to preserve wall thickness is complex mode with constraints thickness mode. But even this is not guaranteed to work perfect in every case.</td>
+</tr>
+<tr>
+<td>Fill Rim</td>
+<td>Fills the gap between the inner and outer edges. Note! Fill Rim and Only Rim only make a difference on Non-manifold objects, since the rims are generated from the borders of the original geometry. · <strong>Only Rim</strong>: Will not extrude surfaces parallel to the original one, but instead will only add the perpendicular rim.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="complex">Complex</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/complex.png" alt="Complex" loading="lazy"></figure>
+<p>This solidify algorithm can handle every geometric situation to guarantee a manifold output geometry. It is able to solidify shapes like Möbius strips, Klein bottles, architectural wall layouts and many more which the Simple Mode isn’t able to do.</p>
+<p>If the special cases are not present it is recommended to choose Simple because the extra logic makes this algorithm much slower.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> There are no options for crease in the Modifier tab because crease is handled in a dynamic way. The modifier will transfer the creases of the original mesh in a smart way to the output mesh to work with the Subdivision Surface modifier.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thickness Mode</td>
+<td>Choose the kind of thickness handling. · <strong>Fixed</strong>: The new vertices are always in a fixed distance to the old ones. · <strong>Even</strong>: Adjusts for sharp corners, but may not always work when more than three faces come together. · <strong>Constraints</strong>: For up to three faces it is always guaranteed to find an optimal solution.</td>
+</tr>
+<tr>
+<td>Boundary</td>
+<td>Choose the kind of boundary handling. · <strong>None</strong>: No boundary fix is applied. Results are stable. · <strong>Round</strong>: Adjusts the boundary for an opening to face inwards (like a hole in an egg). · <strong>Flat</strong>: Adjusts the boundary of a planar opening to be a flat (like a cut sphere).</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>The extrude amount. Important! The modifier thickness is calculated using local vertex coordinates. If the object has a non-uniform scale, the thickness will vary on different sides of the object. To fix this, either Apply or Clear the scale.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>A value between (-1 to 1) to locate the solidified output inside or outside the original mesh. The inside and outside is determined by the face normals. Set to 0.0, the solidified output will be centered on the original mesh.</td>
+</tr>
+<tr>
+<td>Merge Threshold</td>
+<td>The distance within which degenerated geometry is merged.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="rim">Rim</h5>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Fill and Only Rim only make a difference on Non-manifold objects, since the rims are generated from the borders of the original geometry.</p></div>
+<h6 id="fill-rim">Fill Rim</h6>
+<p>Fills the gap between the inner and outer edges.</p>
+<p><strong>Only Rim</strong></p>
+<p>Will only leave the generated perpendicular rim</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Fill and Only Rim only make a difference on Non-manifold objects, since the rims are generated from the borders of the original geometry.</p></div>
+<h4 id="vertex-group-2">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/vertex-group-2.png" alt="Vertex Group" loading="lazy"></figure>
+<p>Only vertices in this group are solidified. Their weights are multiplied by the thickness, so vertices with lower weights will be less thick.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invert</td>
+<td>Reverses the vertex group, so that only vertices which are not in the vertex group are solidified.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>How much the vertex weights are taken into account. You need to have a vertex group assigned to activate this item. On 0.0, vertices with zero weight will have no thickness at all (creates duplicate vertices).   On 0.5, vertices with zero weight will be half as thick as those with full weight.   On 1.0 , the weights are ignored and the Thickness value is used for every vertex.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="flat-faces">Flat Faces</h4>
+<p>Just in Complex Mode. Use the minimal vertex weight assigned to the vertices of a face to make sure that new faces stays parallel to their original ones. This is slow, so disable it when it is not needed.</p>
+<h4 id="normals-subpanel">Normals subpanel</h4>
+<h5 id="flip-normals">Flip Normals</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/flip-normals.png" alt="Flip Normals" loading="lazy"></figure>
+<p>Reverse the normals of all geometry (both the inner and outer surfaces).</p>
+<h5 id="high-quality-normals">High Quality Normals</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/high-quality-normals.png" alt="High Quality Normals" loading="lazy"></figure>
+<p>Just Simple Mode. Normals are calculated to produce a more even thickness.</p>
+<h4 id="materials-subpanel">Materials subpanel</h4>
+<h5 id="material-offset">Material Offset</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/material-offset.png" alt="Material Offset" loading="lazy"></figure>
+<p>Choose a different material for the new geometry. This is applied as an offset from the original material of the face from which it was solidified.</p>
+<p>A value of 0 means it will use the same material.<br />
+A value of 1 means it will use the material immediately below the original material.<br />
+A value of -2 means the material two positions above the original material will be used.</p>
+<p>These values are clamped to the top-most and bottom-most material slots.</p>
+<h5 id="rim-2">Rim</h5>
+<p>Choose a different material for the rim faces.</p>
+<h4 id="edge-data">Edge Data</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/edge-data.png" alt="Edge Data" loading="lazy"></figure>
+<p>Inner, Outer and Rim are simple mode only.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inner</td>
+<td>Set a crease to the inner edges.</td>
+</tr>
+<tr>
+<td>Outer</td>
+<td>Set a crease to the outer edges.</td>
+</tr>
+<tr>
+<td>Rim</td>
+<td>Set a crease to the rim.</td>
+</tr>
+<tr>
+<td>Bevel Convex</td>
+<td>Edge bevel weight to be added to outside edges.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="thickness-clamp">Thickness Clamp</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/thickness-clamp.png" alt="Thickness Clamp" loading="lazy"></figure>
+<h5 id="clamp">Clamp</h5>
+<p>A value between (0 to 2) to clamp offsets to avoid self-intersection. The amount is determined by the length of the shortest adjacent edge.</p>
+<h6 id="angle-clamp">Angle Clamp</h6>
+<p>If enabled clamping will also consider angles in the geometry, not only lengths. Becomes active when the clamp value is above 0.0.</p>
+<h4 id="output-vertex-groups">Output Vertex Groups</h4>
+<h5 id="shell">Shell</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/shell.png" alt="Shell" loading="lazy"></figure>
+<p>Vertex group that the generated shell geometry will be weighted to. This allows you to use other modifiers to only affect the shell geometry by using a that modifier’s vertex group influence control.</p>
+<h5 id="rim-3">Rim</h5>
+<p>Same as Shell Vertex Group, but for the generated rim geometry.</p>
+<h2 id="subdivision-surface">Subdivision Surface</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/subdivision-surface.png" alt="Subdivision Surface" loading="lazy"></figure>
+<p>The Subdivision Surface modifier subdivides the faces of the mesh. With Simple it just divides the faces. The Catmull-Clark algorithm allows you to smoothen the result.</p>
+<h3 id="type">Type</h3>
+<h4 id="catmull-clark">Catmull-Clark</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/catmull-clark.png" alt="Catmull-Clark" loading="lazy"></figure>
+<p>Subdivides and smooths the surfaces.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Catmull-Clark subdivision rounds off edges. And sometimes this is not what you want. There are several solutions that allow you to control the subdivision. You can add a so called support edge or a support loop to keep the edge sharp.</p></div>
+<p>Or you can change the crease of the edges in question. Edge Crease can be adjusted in the Transform panel in the Item tab of the sidebar in the 3D view. You need to be in Edit mode.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Abrupt normal changes in the surface can produce ugly black gouges, even when these flipped normals are not an issue for the shape itself. A quick way to fix this is to use the Recalculate Normals operation in Edit Mode. If you still have some ugly black gouges you can try to manually flip the normals in question.</p></div>
+<h4 id="simple-2">Simple</h4>
+<p>Only subdivides the surfaces, without any smoothing.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Levels Viewport</td>
+<td>The number of subdivision levels shown in the 3D Viewport.</td>
+</tr>
+<tr>
+<td>Render</td>
+<td>The number of subdivision levels shown in the final render.</td>
+</tr>
+<tr>
+<td>Optimal Display</td>
+<td>When rendering the wire frame of this object, the wires of the new subdivided edges will be skipped. Only the edges of the original geometry will be displayed.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="adaptive-subdivision-cycles-experimental-feature-set">Adaptive Subdivision (Cycles Experimental Feature Set)</h3>
+<h4 id="dicing-scale">Dicing Scale</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/dicing-scale.png" alt="Dicing Scale" loading="lazy"></figure>
+<p>Multiplier for scene dicing rate</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Viewport</td>
+<td>Current dicing rate for Viewport (Adjustable via the Subdivision Panel under Render Properties Tab)</td>
+</tr>
+<tr>
+<td>Render</td>
+<td>Current dicing rate for Render (Adjustable via the Subdivision Panel under Render Properties Tab)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advanced">Advanced</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/advanced.png" alt="Advanced" loading="lazy"></figure>
+<h4 id="quality-2">Quality</h4>
+<p>How precisely the vertices are positioned, relatively to their theoretical position of an infinitely subdivided mesh.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This value can have an affect on how accurate Edge Creases can be. Using a higher Quality value will allow for a wider range of crease values to work accurately.</p></div>
+<h4 id="uv-smooth">UV Smooth</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/uv-smooth.png" alt="UV Smooth" loading="lazy"></figure>
+<p>How to handle UV's during subdivision.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Uvs are not smoothed, boundaries are kept sharp.</td>
+</tr>
+<tr>
+<td>Keep Corners</td>
+<td>UV's are smoothed, corners on discontinued boundaries are kept sharp.</td>
+</tr>
+<tr>
+<td>Keep Corners, Junctions</td>
+<td>UV's are smoothed, corners on discontinued boundaries are kept sharp. And conjunctions of three or more regions are kept sharp.</td>
+</tr>
+<tr>
+<td>Keep Corners, Junctions, Concave</td>
+<td>UV's are smoothed, corners on discontinued boundaries are kept sharp. And conjunctions of three or more regions and darts and concave corners are kept sharp.</td>
+</tr>
+<tr>
+<td>Keep Boundaries</td>
+<td>UV's are smoothed, boundaries are kept sharp.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>UV's and boundaries are smoothed.</td>
+</tr>
+<tr>
+<td>Smooth, keep corners</td>
+<td>UV islands are smoothed, but their boundary remain sharp.</td>
+</tr>
+<tr>
+<td>Sharp</td>
+<td>UV remain unchanged.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="boundary-smooth">Boundary Smooth</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/boundary-smooth.png" alt="Boundary Smooth" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keep Corners</td>
+<td>Smooth boundaries, but corners are kept sharp.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>Smooth boundaries, including corners.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Creases</td>
+<td>Use the Weighted Edge Creases values stored in edges to control the smoothness of the edges.</td>
+</tr>
+<tr>
+<td>Use Custom Normals</td>
+<td>Interpolates existing custom normals to resulting mesh.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="triangulate">Triangulate</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/triangulate.png" alt="Triangulate" loading="lazy"></figure>
+<p>The Triangulate modifier triangulates all faces in a mesh.</p>
+<h3 id="quad-method">Quad Method</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/quad-method.png" alt="Quad Method" loading="lazy"></figure>
+<p>How to triangulate quads.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beauty</td>
+<td>Tries to split the quads in a way that takes the topology into account.</td>
+</tr>
+<tr>
+<td>Fixed</td>
+<td>Split the quads on their 1st and 3rd vertices.</td>
+</tr>
+<tr>
+<td>Fixed Alternate</td>
+<td>Split the quads on their 2nd and 4th vertices.</td>
+</tr>
+<tr>
+<td>Shortest Diagonal</td>
+<td>Split the quads based on the diagonal distance between their vertices.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="n-gon-method">N-Gon Method</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/n-gon-method.png" alt="N-Gon Method" loading="lazy"></figure>
+<p>How to triangulate N-Gons.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beauty</td>
+<td>Tries to split the N-Gons in a way that takes the topology into account.</td>
+</tr>
+<tr>
+<td>Clip</td>
+<td>Split the N-Gons by using an ear-clipping algorithm</td>
+</tr>
+</tbody>
+</table>
+<h3 id="minimum-vertices">Minimum Vertices</h3>
+<p>Minimum number of vertices a face must have to be triangulated. For example, setting this value to 5, will prevent triangulation of Quads and only triangulate N-gons.</p>
+<h2 id="volume-to-mesh">Volume to mesh</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/volume-to-mesh.png" alt="Volume to mesh" loading="lazy"></figure>
+<p>This modifier is the inverse of the Mesh to Volume modifier. It takes an existing volume object and converts one of its grids to a mesh. Only scalar grids (such as the density grid) can be converted.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> To copy and move the generated mesh separately from the volume object, use a collection instance.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>The source volume object. Pick the volume object here.</td>
+</tr>
+<tr>
+<td>Grid Name</td>
+<td>The name of the grid to convert. The grid has to be a scalar grid.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resolution-mode">Resolution Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/resolution-mode.png" alt="Resolution Mode" loading="lazy"></figure>
+<p>How the resolution of the final mesh is controlled.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid</td>
+<td>This makes the resolution dependent on the resolution of the grid that is converted. Higher resolution grids result in a higher resolution mesh. In many cases, that is the most efficient mode.</td>
+</tr>
+<tr>
+<td>Voxel Amount</td>
+<td>Specifies the approximate resolution of the final mesh. The voxel size is adapted to the size of the entire volume.</td>
+</tr>
+<tr>
+<td>Voxel Size</td>
+<td>Use a fixed resolution that does not change when the volume changes.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Threshold</td>
+<td>Voxels with a larger value are considered to be inside the mesh and all other voxels outside. The mesh will be generated on the boundary of inside and outside voxels. This is sometimes also called the “iso value”.</td>
+</tr>
+<tr>
+<td>Adaptivity</td>
+<td>This is similar to decimating the final to reduce resolution where it is not needed.</td>
+</tr>
+<tr>
+<td>Smooth Shading</td>
+<td>Enables smooth shading on the generated mesh.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="weld">Weld</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/weld.png" alt="Weld" loading="lazy"></figure>
+<p>The Weld modifier merges vertices within a threshold.</p>
+<h3 id="mode-3">Mode</h3>
+<h4 id="all">All</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/all.png" alt="All" loading="lazy"></figure>
+<p>Full merge by distance.</p>
+<h4 id="connected">Connected</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/connected.png" alt="Connected" loading="lazy"></figure>
+<p>Just along the edges.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distance</td>
+<td>The maximum distance to merge vertices.</td>
+</tr>
+<tr>
+<td>Only Loose Edges</td>
+<td>Just with Connected. Welds only loose edges.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Only merge vertices from this vertex group. · <strong>Invert</strong>: Inverts the influence of the selected vertex group. Only vertices outside of this vertex group will be merged.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wireframe">Wireframe</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/wireframe.png" alt="Wireframe" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/wireframe-2.png" alt="Wireframe" loading="lazy"></figure>
+<p>The Wireframe modifier hides the faces of a mesh, and turns the edges into four sided polygon geometry. The result then looks like you would have a wire frame view of the mesh.</p>
+<p>The mesh needs to have faces.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thickness</td>
+<td>The depth or size of the wire frames.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>A value between (-1 to 1) to change whether the wire frames. are generated inside or outside of the original mesh. Set to zero, Offset will center the wire frames. around the original edges.</td>
+</tr>
+<tr>
+<td>Boundary</td>
+<td>Creates wire frames. on mesh island boundaries.</td>
+</tr>
+<tr>
+<td>Replace Original</td>
+<td>Replace the original mesh by the generated wire frame mesh. If not, the wire frame is generated on top of it.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="thickness">Thickness</h3>
+<div class="ui-doc-callout is-warning"><p><strong>Warning:</strong> Wireframe thickness is an approximation. While Even Thickness should yield good results in many cases, skinny faces can cause ugly spikes. In this case you can either reduce the extreme angles in the geometry or disable the Even Thickness option.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Even</td>
+<td>Maintain thickness by adjusting for sharp corners. Sometimes improves quality but also increases computation time.</td>
+</tr>
+<tr>
+<td>Relative</td>
+<td>Determines the edge thickness by the length of the edge. Longer edges will be thicker.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Crease Edges</td>
+<td>This option is intended for usage with the Subdivision modifier. Enable this option to crease edges on their junctions and prevent large curved intersections.</td>
+</tr>
+<tr>
+<td>Crease Weight</td>
+<td>Define how much crease (0 to 1, nothing to full) the junctions should receive.</td>
+</tr>
+<tr>
+<td>Material Offset</td>
+<td>Uses the chosen material index as the material for the wire frame; this is applied as an offset from the first material.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vertex-group-3">Vertex Group</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/vertex-group-3.png" alt="Vertex Group" loading="lazy"></figure>
+<p>Restrict the modifier to only this vertex group, and use its weighting for thickness.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invert</td>
+<td>Inverts the vertex group weights.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Percentage that the vertex has influence over the final wire frame result.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mesh-to-volume">Mesh to Volume</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/mesh-to-volume.png" alt="Mesh to Volume" loading="lazy"></figure>
+<p>You need a volume object.</p>
+<p>The Mesh to Volume modifier uses a mesh to create a new volume grid. All previously existing volume grids on the volume object are discarded. So this modifier is usually added to an empty volume object. The new volume grid is called “density”.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> To copy and move the generated volume separately from the mesh object, use a collection instance.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>The mesh object to use for the volume generation. Pick a mesh object here.</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>Makes the generated volume appear denser or less dense when rendering.</td>
+</tr>
+<tr>
+<td>Interior Band Width</td>
+<td>The maximum distance of the included voxels to the surface on the inside of the mesh. Activating Fill Volume is similar to increasing the interior band width to a high number.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resolution-mode-2">Resolution Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/546b38d9a0871fbfb4952e346f458a14600572c9/docs2/images/ui/properties/modifiers/mesh-generate/resolution-mode-2.png" alt="Resolution Mode" loading="lazy"></figure>
+<p>Mode for how the voxel size is specified.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Voxel Amount</td>
+<td>This allows setting an approximate number of voxels that will be used to represent mesh along its diagonal. When the dimensions of the mesh changes, the voxel size will change as well. For final rendering of animations, it’s better to specify the voxel size explicitly to avoid artifacts.</td>
+</tr>
+<tr>
+<td>Voxel Size</td>
+<td>This allows setting the exact voxel size that will be used. This is idea for rendering when the voxel size should not change between frames.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fmain/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fmodifiers%2Fmesh%2Fgenerate.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/main/docs2/content/editors/properties/modifiers/mesh/generate.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#array">Array</a><a class="h3" href="#shape">Shape</a><a class="h2" href="#array-legacy">Array ( Legacy )</a><a class="h3" href="#fit-type">Fit Type</a><a class="h3" href="#relative-offset">Relative Offset</a><a class="h3" href="#constant-offset">Constant Offset</a><a class="h3" href="#uv-s">UV's</a><a class="h2" href="#bevel">Bevel</a><a class="h3" href="#affect">Affect</a><a class="h3" href="#width-type">Width Type</a><a class="h3" href="#limit-method">Limit Method</a><a class="h3" href="#profile-subpanel">Profile subpanel</a><a class="h3" href="#geometry-subpanel">Geometry subpanel</a><a class="h3" href="#shading-subpanel">Shading subpanel</a><a class="h2" href="#boolean">Boolean</a><a class="h3" href="#operation">Operation</a><a class="h3" href="#operand-type">Operand Type</a><a class="h3" href="#solver-options-sub-panel">Solver Options sub panel</a><a class="h2" href="#build">Build</a><a class="h2" href="#decimate">Decimate</a><a class="h3" href="#mode">Mode</a><a class="h3" href="#face-count">Face Count</a><a class="h2" href="#edge-split">Edge Split</a><a class="h2" href="#mask">Mask</a><a class="h2" href="#mirror">Mirror</a><a class="h3" href="#clipping">Clipping</a><a class="h3" href="#data-subpanel">Data subpanel</a><a class="h2" href="#multiresolution">Multiresolution</a><a class="h3" href="#workflow">Workflow</a><a class="h3" href="#subdivision-subpanel">Subdivision Subpanel</a><a class="h3" href="#shape-subpanel">Shape subpanel</a><a class="h3" href="#generate-subpanel">Generate Subpanel</a><a class="h3" href="#save-externall">Save Externall</a><a class="h3" href="#advanced-subpanel">Advanced Subpanel</a><a class="h2" href="#remesh">Remesh</a><a class="h2" href="#screw">Screw</a><a class="h3" href="#merge">Merge</a><a class="h3" href="#stretch-uv-s">Stretch UV's</a><a class="h3" href="#normals">Normals</a><a class="h2" href="#skin">Skin</a><a class="h3" href="#create-armature">Create Armature</a><a class="h3" href="#mark-root">Mark Root</a><a class="h3" href="#equalize-radii">Equalize Radii</a><a class="h2" href="#solidify">Solidify</a><a class="h3" href="#mode-2">Mode</a><a class="h2" href="#subdivision-surface">Subdivision Surface</a><a class="h3" href="#type">Type</a><a class="h3" href="#adaptive-subdivision-cycles-experimental-feature-set">Adaptive Subdivision (Cycles Experimental Feature Set)</a><a class="h3" href="#advanced">Advanced</a><a class="h2" href="#triangulate">Triangulate</a><a class="h3" href="#quad-method">Quad Method</a><a class="h3" href="#n-gon-method">N-Gon Method</a><a class="h3" href="#minimum-vertices">Minimum Vertices</a><a class="h2" href="#volume-to-mesh">Volume to mesh</a><a class="h3" href="#resolution-mode">Resolution Mode</a><a class="h2" href="#weld">Weld</a><a class="h3" href="#mode-3">Mode</a><a class="h2" href="#wireframe">Wireframe</a><a class="h3" href="#thickness">Thickness</a><a class="h3" href="#vertex-group-3">Vertex Group</a><a class="h2" href="#mesh-to-volume">Mesh to Volume</a><a class="h3" href="#resolution-mode-2">Resolution Mode</a></aside></div></body></html>
