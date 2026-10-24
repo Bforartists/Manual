@@ -1,6 +1,6 @@
 ---
 id: editors.dope-sheet.channel-list
-title: Channel list
+title: "Channel List"
 section: editors
 path:
   - Editors
@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 16.2 Editors - Dope Sheet - Channel list.odt
+order: 40
 ---
 ## Dopesheet Editor - Channel List
 

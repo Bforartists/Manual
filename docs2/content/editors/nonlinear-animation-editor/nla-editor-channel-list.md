@@ -1,6 +1,6 @@
 ---
 id: editors.nonlinear-animation-editor.nla-editor-channel-list
-title: NLA Editor - Channel list
+title: "Channel List"
 section: editors
 path:
   - Editors
@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 20.2 Editors - NLA Editor - Channel list.odt
+order: 40
 ---
 ## NLA Editor - Channel List
 

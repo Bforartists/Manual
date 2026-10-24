@@ -1,6 +1,6 @@
 ---
 id: editors.timeline.header
-title: Timeline header
+title: "Header"
 section: editors
 path:
   - Editors
@@ -15,6 +15,7 @@ source:
 shared:
   - docs2/snippets/quick-menu.md
   - docs2/snippets/marker-menu.md
+order: 10
 ---
 ## Introduction
 

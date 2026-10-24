@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 13.2 Editors - Shader Editor - Tool Shelf.odt
+order: 20
 ---
 ## Tool Shelf
 

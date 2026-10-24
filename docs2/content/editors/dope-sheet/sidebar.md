@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 16.3 Editors - Dope Sheet - Sidebar.odt
+order: 30
 ---
 ## Sidebar - Custom Properties
 

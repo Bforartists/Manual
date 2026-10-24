@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 9.2 Editors - UV Editor - Tool Shelf.odt
+order: 20
 ---
 ## Tool Shelf
 

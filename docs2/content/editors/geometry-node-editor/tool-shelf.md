@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 12.2 Editors - Geometry Nodes Editor - Tool Shelf.odt
+order: 20
 ---
 ## Tool Shelf
 
