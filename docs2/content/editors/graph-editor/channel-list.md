@@ -1,6 +1,6 @@
 ---
 id: editors.graph-editor.channel-list
-title: Channel list
+title: "Channel List"
 section: editors
 path:
   - Editors
@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 18.2 Editors - Graph Editor - Channel list.odt
+order: 40
 ---
 ## Dopesheet Editor - Channel List
 

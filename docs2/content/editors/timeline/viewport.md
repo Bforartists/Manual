@@ -1,6 +1,7 @@
 ---
 id: editors.timeline.viewport
-title: Timeline viewport
+title: "Viewport"
+icon: time
 section: editors
 path:
   - Editors

@@ -1,6 +1,6 @@
 ---
 id: editors.dope-sheet.footer-tools-and-options
-title: Footer tools and options
+title: "Footer"
 section: editors
 path:
   - Editors
@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 16.4 Editors - Dope Sheet - Footer tools and options.odt
+order: 50
 ---
 ## Introduction
 

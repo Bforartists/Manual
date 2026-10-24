@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 8.2 Editors - Image Editor - Tool Shelf.odt
+order: 20
 ---
 ## Tool Shelf in View Mode
 

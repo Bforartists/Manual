@@ -1,6 +1,6 @@
 ---
 id: editors.nonlinear-animation-editor.nla-editor-footer-tools-and-options
-title: NLA Editor - Footer tools and options
+title: "Footer"
 section: editors
 path:
   - Editors
@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 20.4 Editors - NLA Editor - Footer tools and options.odt
+order: 50
 ---
 ## Introduction
 

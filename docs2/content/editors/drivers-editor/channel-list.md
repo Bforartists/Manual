@@ -1,6 +1,6 @@
 ---
 id: editors.drivers-editor.channel-list
-title: Channel list
+title: "Channel List"
 section: editors
 path:
   - Editors
@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 19.2 Editors - Drivers Editor - Channel list.odt
+order: 40
 ---
 ## Drivers Editor - Channel List
 

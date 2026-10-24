@@ -1,6 +1,6 @@
 ---
 id: editors.timeline.channel-list
-title: Timeline channel list
+title: "Channel List"
 section: editors
 path:
   - Editors
@@ -12,6 +12,7 @@ screenshots: "5.1"
 source:
   - 17 Editors - Timeline.odt
   - 17.2 Editors - Timeline - Channel list.odt
+order: 40
 ---
 ## Timeline - Channel List
 

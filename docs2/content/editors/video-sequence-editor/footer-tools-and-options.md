@@ -1,6 +1,6 @@
 ---
 id: editors.video-sequence-editor.footer-tools-and-options
-title: Footer tools and options
+title: "Footer"
 section: editors
 path:
   - Editors
@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 14.4 Editors - Video Sequence Editor - Footer tools and options.odt
+order: 50
 ---
 ## Introduction
 

@@ -1,6 +1,6 @@
 ---
 id: editors.graph-editor.footer-tools-and-options
-title: Footer tools and options
+title: "Footer"
 section: editors
 path:
   - Editors
@@ -11,6 +11,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 18.4 Editors - Graph Editor - Footer tools and options.odt
+order: 50
 ---
 ## Introduction
 
