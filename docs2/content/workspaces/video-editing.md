@@ -23,7 +23,3 @@ A workspace to edit videos.
 - [Video Sequence Editor](../editors/video-sequence-editor/index.md)
 - [File Browser](../editors/file-browser.md)
 - [Properties](../editors/properties/index.md)
-
-
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.

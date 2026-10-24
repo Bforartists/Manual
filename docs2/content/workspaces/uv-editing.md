@@ -28,5 +28,3 @@ The UV Editing is made for texturing and UV mapping. It contains an Info Editor,
 ## Starts in
 
 The workspace opens the 3D Viewport in **Edit Mode** when the scene has an object for it.
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.

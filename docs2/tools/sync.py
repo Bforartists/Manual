@@ -202,10 +202,21 @@ def build(repo, cfg):
         snippets.append({"key": sid, "slug": slugify(sid.split(".", 1)[-1]), "fields": f, "rel": p.rel, "create": {}})
     kids = landing.children_map(tree)
     url_of = lambda n: cfg["page_url"] + n.web_slug                  # noqa: E731
+    base, icons = landing.load_icons()
+    content = f"{DOCS_ROOT}/content/"
+    url_rel = lambda r: cfg["page_url"] + slug_of[content + r] if content + r in slug_of else ""  # noqa: E731
+    img_rel = lambda r: img_url(f"{DOCS_ROOT}/{r}") if r else ""                                  # noqa: E731
+    ws_editors, ws_pages, ws_order = landing.load_workspaces()
+
+    def ws_title(r):
+        pg = by_rel.get(content + r)
+        return (str(pg.fm.get("title") or r), str(pg.fm.get("summary") or "")) if pg else (r, "")
     sec_cfg = landing.sections_cfg()
     for sec in tree:                       # each section is a page too: /docs/<section id>, intro + cards
         idx = sec.index
         body = html_build.page_html(repo, idx, by_rel, md, **urls) if idx else ""
+        if sec.id == "workspaces":
+            body = landing.workspace_explorer(body, ws_order, ws_editors, icons, url_rel, img_rel, ws_title)
         body = tidy(landing.add_cards(body, idx, kids.get(sec.id, []), kids, url_of,
                                       sec_cfg.get(sec.id, {}).get("categories"), sec.id, heading=None))
         if not body:
@@ -225,6 +236,9 @@ def build(repo, cfg):
         for n in sec.nodes:
             p = n.page
             body = html_build.page_html(repo, p, by_rel, md, **urls)
+            ws = ws_pages.get(p.rel[len(content):]) if p.rel.startswith(content) else None
+            if ws:
+                body = landing.workspace_map(body, ws, ws_editors, icons, url_rel, img_rel)
             body = tidy(landing.add_cards(body, p, kids.get(n.id, []), kids, url_of))
             if p.fm.get("generate") == "index":                     # Information › Index, A to Z
                 body = tidy(body + landing.index_html(tree, url_of))
@@ -244,13 +258,9 @@ def build(repo, cfg):
             docs.append({"key": n.id, "slug": n.web_slug, "fields": f,
                          "create": {"summary": html_build.first_paragraph(body)},   # only for new items
                          "section": sec.id, "shared": [str(s) for s in (p.fm.get("shared") or [])]})
-    base, icons = landing.load_icons()
     home_rel = f"{DOCS_ROOT}/home.md"
     if os.path.exists(os.path.join(repo, home_rel)):          # the Docs home: /docs/home
         hp = Page(repo, home_rel)
-        content = f"{DOCS_ROOT}/content/"
-        url_rel = lambda r: cfg["page_url"] + slug_of[content + r] if content + r in slug_of else ""  # noqa: E731
-        img_rel = lambda r: img_url(f"{DOCS_ROOT}/{r}") if r else ""                                  # noqa: E731
         body = tidy(html_build.page_html(repo, hp, by_rel, md, **urls) + landing.home_html(hp, icons, url_rel, img_rel))
         f = {"page-id": "docs.home", "name": str(hp.fm.get("title") or "Documentation"), "section-id": "home",
              "section-title": "Documentation", "order": 0, "level": 0, "parent-page-id": "", "body": body,

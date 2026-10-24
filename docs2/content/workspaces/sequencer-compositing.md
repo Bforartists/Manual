@@ -21,5 +21,3 @@ A workspace that brings the compositor to video editing: build node effects for 
 - [Video Sequence Editor](../editors/video-sequence-editor/index.md)
 - [Compositor](../editors/compositor/index.md)
 - [Properties](../editors/properties/index.md)
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.

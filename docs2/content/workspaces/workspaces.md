@@ -82,7 +82,6 @@ So when you work at a layout be sure that you don't accidentally do changes at o
 Creates a copy of the current workspace, including its editor layout and active tools.  
 Useful for experimenting with variations without losing the original setup.
 
-
 | Entry | What it does |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Delete | Workspace can also be deleted. To do so right click at the tab that you want to delete, and choose delete in the menu. Note that you can remove your own created workspaces this way. But the default workspaces will remain in the menus. They will just vanish from the tabs. These workspaces are protected so that you cannot remove them completely. |
@@ -91,7 +90,6 @@ Useful for experimenting with variations without losing the original setup.
 | Previous Workspace | Switches to the workspace tab immediately to the left of the current one.   Shortcut-friendly navigation for rapid layout switching. |
 | Next Workspace | Switches to the workspace tab immediately to the right.   Complements the previous operator for fluid tab cycling. |
 | Delete Other Workspaces | Deletes all workspaces **except** the currently selected one.   Great for cleaning up clutter or preparing a minimal layout for export or sharing. |
-
 
 ## Load Workspace layout from Blend Files
 
@@ -108,4 +106,3 @@ Note that now all Blend files that you open will load the workspace layout that 
 ![Load Workspace layout from Blend Files](/docs2/images/workspaces/workspaces/load-workspace-layout-from-blend-files-2.png)
 
 You can also do this at a file by file base. The file browser allows you to load a blend file with the saved layout. This setting can be found down left in the file browser.
-

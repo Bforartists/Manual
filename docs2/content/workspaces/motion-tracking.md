@@ -22,7 +22,3 @@ A workspace for the VFX workflow. The Motion tracking layout.
 
 - [Movie Clip Editor](../editors/movie-clip-editor/index.md)
 - [Properties](../editors/properties/index.md)
-
-
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.

@@ -160,6 +160,34 @@ def check_nav(repo, rep):
                 rep.passed["🧭 Sidebar"] += 1
 
 
+def check_workspaces(repo, rep):
+    """docs2/workspaces.yml: every area names a known editor, every page and screenshot exists."""
+    f = os.path.join(repo, DOCS_ROOT, "workspaces.yml")
+    if not os.path.exists(f):
+        return
+    import yaml
+    rel = f"{DOCS_ROOT}/workspaces.yml"
+    try:
+        data = yaml.safe_load(open(f, encoding="utf-8")) or {}
+    except yaml.YAMLError as e:
+        rep.error(rel, 1, "🗺️ Workspace maps", f"not valid YAML ({str(e).splitlines()[0]})")
+        return
+    eds = data.get("editors") or {}
+    for k, e in eds.items():
+        if not os.path.exists(os.path.join(repo, DOCS_ROOT, "content", str(e.get("page", "")))):
+            rep.error(rel, 1, "🗺️ Workspace maps", f"editor `{k}`: page `{e.get('page')}` does not exist")
+    for w in data.get("workspaces") or []:
+        if not os.path.exists(os.path.join(repo, DOCS_ROOT, "content", str(w.get("page", "")))):
+            rep.error(rel, 1, "🗺️ Workspace maps", f"`{w.get('page')}` does not exist")
+        if w.get("image") and not os.path.exists(os.path.join(repo, DOCS_ROOT, w["image"])):
+            rep.error(rel, 1, "🗺️ Workspace maps", f"screenshot `{w['image']}` does not exist")
+        for a in w.get("areas") or []:
+            if a.get("ed") not in eds or len(a.get("box") or []) != 4:
+                rep.error(rel, 1, "🗺️ Workspace maps", f"`{w.get('page')}`: area `{a.get('ed')}` needs a known editor and a box of 4 numbers")
+            else:
+                rep.passed["🗺️ Workspace maps"] += 1
+
+
 def markdown(rep, changed, n_pages):
     errs, warns = rep.errors, rep.warnings
     if changed:
@@ -204,6 +232,7 @@ def main(argv):
     check_shared(repo, pages, rep)
     check_editor_safe(pages, rep)
     check_nav(repo, rep)
+    check_workspaces(repo, rep)
     md = markdown(rep, changed, len(pages))
     if report:
         open(report, "w", encoding="utf-8").write(md)

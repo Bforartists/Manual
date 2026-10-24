@@ -26,7 +26,3 @@ The workspace to work with the geometry nodes. Basic 3d view with the geometry n
 - [Timeline](../editors/timeline/index.md)
 - [Outliner](../editors/outliner.md)
 - [Properties](../editors/properties/index.md)
-
-
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.

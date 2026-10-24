@@ -26,7 +26,3 @@ The workspace to do all the shader and material work. It comes with a file brows
 - [Shader Editor](../editors/shader-editor/index.md)
 - [Outliner](../editors/outliner.md)
 - [Properties](../editors/properties/index.md)
-
-
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.

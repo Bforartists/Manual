@@ -27,5 +27,3 @@ This workspace is dedicated to sculpting. It starts in Sculpt Mode in case you h
 ## Starts in
 
 The workspace opens the 3D Viewport in **Sculpt Mode** when the scene has an object for it.
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.
