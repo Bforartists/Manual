@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · workspace maps · @version 1.0.0
+/* Bforartists Docs 2.0 · workspace maps · @version 1.0.1
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer), next to the docs layer.
  * The sync writes plain lists from docs2/workspaces.yml; this script turns them into:
@@ -49,6 +49,14 @@
     '.wsx-tag{position:absolute;left:.375rem;top:.375rem;display:none;align-items:center;gap:.375rem;max-width:calc(100% - .75rem);padding:.2rem .5rem .2rem .3rem;border-radius:.25rem;background:#1d1d1df0;color:#fff;font:600 .75rem/1.2 Inter,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;pointer-events:none;box-shadow:0 2px 6px #0008}',
     '.wsx-tag img{width:14px;height:14px;margin:0!important}',
     '.wsx-hot.is-on .wsx-tag,.wsx.is-labels .wsx-hot .wsx-tag{display:inline-flex}',
+    /* a big editor icon in the middle of the active area (every area with labels on) */
+    '.wsx-big{position:absolute;left:50%;top:50%;display:none;place-items:center;width:min(42%,5.5rem);max-height:72%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:22%;background:radial-gradient(circle at 35% 30%,#ffffff26,#ffffff05 60%),#2b2b2be6;box-shadow:0 0 0 2px var(--c),0 4px 14px #000a;pointer-events:none}',
+    '.wsx-big img{width:62%;height:62%;object-fit:contain;margin:0!important;filter:drop-shadow(0 2px 3px #0009)}',
+    '.wsx-hot.is-on .wsx-big,.wsx.is-labels .wsx-hot .wsx-big{display:grid}',
+    '.wsx-hot.is-on .wsx-big{animation:wsxpop .18s ease-out}',
+    '@keyframes wsxpop{from{transform:translate(-50%,-50%) scale(.8);opacity:0}}',
+    '.wsx-hot.is-narrow .wsx-tag b{display:none}.wsx-hot.is-narrow .wsx-tag{padding:.2rem}',
+    '.wsx-hot.is-tiny .wsx-big{display:none!important}',
     '.wsx-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;padding:1rem;text-align:center;color:var(--wsx-mute);font-size:.875rem}',
     '.wsx-empty b{color:var(--wsx-text);font-size:1.125rem}',
     /* buttons on the image */
@@ -80,7 +88,8 @@
     '.wsx-all>small,.wsx-for>small{display:block;margin:0 0 .5rem;font:700 .6875rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--wsx-mute)}',
     '.wsx-chips{display:flex;flex-wrap:wrap;gap:.375rem}',
     '.wsx-chip{display:inline-flex;align-items:center;gap:.375rem;height:1.75rem;padding:0 .625rem;border:1px solid #ffffff10;border-radius:.25rem;background:var(--wsx-panel);color:var(--wsx-text);cursor:pointer;font:600 .75rem Inter,sans-serif}',
-    '.wsx-chip .wsx-dot{width:.5rem;height:.5rem;border-radius:2px}',
+    '.wsx-chip img{width:14px;height:14px;margin:0!important}',
+    '.wsx-chip{box-shadow:inset 0 -2px 0 var(--c)}',
     '.wsx-chip.is-on{background:var(--wsx-sel);color:#fff}',
     '.wsx-for{padding:1rem 1.125rem;border-radius:.625rem;background:var(--wsx-sink);box-shadow:inset 2px 5px 10px #0006;display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center;justify-content:space-between}',
     '.wsx-for p{margin:0!important;flex:1 1 18rem;color:var(--wsx-text);font-size:.9375rem;line-height:1.55}',
@@ -95,7 +104,7 @@
     '.wsx-ov b{display:block;font-size:1rem}',
     '.wsx-ov .ui-btn{flex:none}',
     'html.wsx-lock{overflow:hidden}',
-    '@media (max-width:767px){.wsx-edge,.wsx-ib[data-act=labels]{display:none}.wsx-tools{top:.75rem;right:.75rem}.wsx-ib{width:2rem;height:2rem}.wsx-side{max-width:none}.wsx-pager{grid-template-columns:1fr 1fr}.wsx-pos{display:none}}',
+    '@media (max-width:767px){.wsx-tag b{display:none}.wsx-tag{padding:.2rem}.wsx-edge,.wsx-ib[data-act=labels]{display:none}.wsx-tools{top:.75rem;right:.75rem}.wsx-ib{width:2rem;height:2rem}.wsx-side{max-width:none}.wsx-pager{grid-template-columns:1fr 1fr}.wsx-pos{display:none}}',
     '@media (hover:none){.wsx-hot{border-color:#ffffff40}}'
   ].join('\n');
 
@@ -158,6 +167,7 @@
       if (b.dataset.act === 'fs') self.fs();
     });
     this.all.addEventListener('click', function (e) { var c = e.target.closest('.wsx-chip'); if (c) self.pick(+c.dataset.n); });
+    if (window.ResizeObserver) new ResizeObserver(function () { self.fit(); }).observe(this.stage);
   }
   Map.prototype.show = function (w) {
     var self = this, st = this.stage;
@@ -178,7 +188,7 @@
       if (a.href) h.href = a.href; else h.type = 'button';
       h.style.cssText = 'left:' + a.box[0] + '%;top:' + a.box[1] + '%;width:' + a.box[2] + '%;height:' + a.box[3] + '%;--c:' + a.c;
       h.setAttribute('aria-label', a.name + (a.note ? ': ' + a.note : ''));
-      h.innerHTML = '<span class="wsx-tag">' + (a.i ? img(a.i) : '') + esc(a.name) + '</span>';
+      h.innerHTML = '<span class="wsx-tag">' + (a.i ? img(a.i) : '') + '<b>' + esc(a.name) + '</b></span>' + (a.i ? '<span class="wsx-big">' + img(a.i) + '</span>' : '');
       h.addEventListener('mouseenter', function () { self.pick(i); });
       h.addEventListener('focus', function () { self.pick(i); });
       h.addEventListener('click', function (e) { if (coarse && self.on !== i) { e.preventDefault(); self.pick(i); } });
@@ -188,8 +198,17 @@
       return '<button type="button" class="wsx-chip" data-n="' + i + '" style="--c:' + a.c + '"><span class="wsx-dot"></span>' + esc(a.name) + '</button>';
     }).join('') + '</div>' : '';
     this.all.style.display = w.areas.length ? '' : 'none';
+    this.fit();
     if (w.areas.length) this.pick(hero(w));
     else { this.info.innerHTML = '<div class="wsx-eb">' + img(IC.ws) + 'Workspace</div><h3>' + esc(w.name) + '</h3>' + (w.sum ? '<p>' + esc(w.sum) + '</p>' : '') + (w.href ? btn('Open the ' + w.name + ' page', IC.fwd, 'is-small', w.href) : ''); this.ov.innerHTML = ''; }
+  };
+  /* small areas: the label shows only the editor icon; very small ones skip the big icon */
+  Map.prototype.fit = function () {
+    qa('.wsx-hot', this.stage).forEach(function (h) {
+      var w = h.offsetWidth, ht = h.offsetHeight, tag = q('.wsx-tag b', h);
+      h.classList.toggle('is-narrow', w < Math.max(110, (tag ? tag.textContent.length : 10) * 8 + 40) || ht < 34);
+      h.classList.toggle('is-tiny', w < 56 || ht < 44);
+    });
   };
   Map.prototype.pick = function (i) {
     var w = this.w, a = w && w.areas[i]; if (!a || this.on === i) return;
@@ -208,6 +227,7 @@
     var b = q('[data-act=fs]', this.tools);
     b.innerHTML = img(on ? IC.fsOut : IC.fsIn); b.title = on ? 'Exit full screen (Esc)' : 'Full screen'; b.setAttribute('aria-label', b.title);
     if (on) this.root.focus({ preventScroll: true });
+    this.fit();
   };
 
   /* ---------------------------------------------------------------- a workspace page */
