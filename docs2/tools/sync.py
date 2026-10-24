@@ -267,6 +267,15 @@ def search_index(docs):
     """search.json for the instant search: every page, its summary, and its H1–H3 headings with
     their anchors ([text, id]), taken from the HTML that goes to Webflow."""
     out = []
+    by = {d["key"]: d["fields"] for d in docs}
+
+    def chain(f):
+        names, pid, guard = [], f.get("parent-page-id"), 0
+        while pid and pid in by and guard < 8:
+            names.insert(0, by[pid]["name"])
+            pid, guard = by[pid].get("parent-page-id"), guard + 1
+        return names
+
     for d in docs:
         f = d["fields"]
         heads, seen = [], set()
@@ -276,7 +285,7 @@ def search_index(docs):
                 seen.add(t.lower())
                 heads.append([t, hid])
         summ = f.get("summary") or d.get("create", {}).get("summary") or ""
-        out.append({"t": f["name"], "s": d["slug"], "g": f.get("section-title", ""), "d": re.sub(r"\s+", " ", str(summ))[:160],
+        out.append({"t": f["name"], "s": d["slug"], "g": " › ".join([f.get("section-title", "")] + chain(f)), "d": re.sub(r"\s+", " ", str(summ))[:160],
                     "h": heads[:100]})
     return out
 
