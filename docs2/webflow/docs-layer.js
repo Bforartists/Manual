@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.2
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.3
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -23,7 +23,8 @@
     doc: '68b9b72e6ab175721a9bf7cb_documents.svg', file: '68b8d6fe76b8096ac09f74e5_file_text.svg',
     comm: '68b9b70677b5a3b5b8606647_community.svg', light: '68b9b7c5219bda8870e7cee9_light.svg',
     time: '68b9bb9cc5062fa217606ff2_time.svg', world: '68b9b4b69f8eb147bccde6cf_world.svg',
-    zoom: '68b9bbd23fb07538f848b579_viewzoom.svg', caret: '68b9bbb397785a50ab1c6b64_tria_down.svg'
+    zoom: '68b9bbd23fb07538f848b579_viewzoom.svg', caret: '68b9bbb397785a50ab1c6b64_tria_down.svg',
+    fwd: '68b9b76aa841ed4158a2f249_forward.svg'
   };
 
   /* ---------------------------------------------------------------- 1 styles */
@@ -44,18 +45,29 @@
     '.ui-doc-side::-webkit-scrollbar-thumb,.ui-doc-outline::-webkit-scrollbar-thumb{background:#858585;border-radius:4px}',
     '.ui-doc-side::-webkit-scrollbar-thumb:hover,.ui-doc-outline::-webkit-scrollbar-thumb:hover{background:#75bfff}',
     '.ui-doc-side::-webkit-scrollbar-thumb:active,.ui-doc-outline::-webkit-scrollbar-thumb:active{background:#fff}',
+    /* status (public) */
+    '.ui-doc-chip.dk-st{gap:.375rem;cursor:help}',
+    '.ui-doc-chip.dk-st::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:currentColor}',
+    '.ui-doc-chip.dk-st.is-draft{color:#f2c14a}.ui-doc-chip.dk-st.is-review{color:#7cc4f4}.ui-doc-chip.dk-st.is-reviewed{color:#8fd16a}',
+    '.dk-bar{display:flex;height:.375rem;width:100%;overflow:hidden;border-radius:999px;background:#f2c14a55}',
+    '.dk-bar.is-big{height:.625rem}',
+    '.dk-bar i{display:block;height:100%}.dk-bar i.is-reviewed{background:#8fd16a}.dk-bar i.is-review{background:#7cc4f4}',
+    '.dk-sec .dk-bar{margin-top:.5rem}',
+    '.dk-status{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.75rem 1.5rem;align-items:center;padding:1.25rem}',
+    '.dk-status b{display:block;font:700 1.15rem Inter,sans-serif;margin:0 0 .25rem}',
+    '.dk-status p{margin:0;color:var(--dk-muted);font-size:.875rem}',
+    '.dk-status .dk-bar{grid-column:1/-1}',
+    '.dk-legend{display:flex;flex-wrap:wrap;gap:.5rem 1rem;font-size:.8125rem;color:var(--dk-muted)}',
+    '.dk-legend span::before{content:"";display:inline-block;width:.5rem;height:.5rem;margin-right:.375rem;border-radius:50%;background:#f2c14a}',
+    '.dk-legend .is-review::before{background:#7cc4f4}.dk-legend .is-reviewed::before{background:#8fd16a}',
+    '.dk-ccard .dk-stb{font:600 .6875rem Inter,sans-serif;padding:.1rem .4rem;border-radius:.25rem;background:#0003}',
+    '.dk-ccard .dk-stb.is-review{color:#7cc4f4}.dk-ccard .dk-stb.is-reviewed{color:#8fd16a}',
     /* breadcrumb */
     '.ui-doc-crumb img.is-color{filter:none}',
     '.ui-doc-crumb .dk-crumb-x{display:inline-flex;align-items:center;gap:.5rem}',
     /* shared bits */
     '.dk-eyebrow{font:700 .75rem/1.2 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#5cb4f0;margin:0 0 .75rem}',
-    '.dk-btn{display:inline-flex;align-items:center;gap:.5rem;min-height:2.5rem;padding:.45rem 1rem;border:2px solid var(--_bfa---edge--outline);border-radius:var(--_bfa---shape--bevel-tight,.2875rem);background:var(--_bfa---surface--raised);color:var(--_bfa---text--primary);font:600 .9375rem/1.2 Inter,sans-serif;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease;cursor:pointer}',
-    '.dk-btn img{width:16px;height:16px;object-fit:contain}',
-    '.dk-btn:hover{background:var(--_bfa---surface--hover,#555);box-shadow:0 2px 3px #0006,4px 10px 14px -6px #0009;transform:translateY(-2px)}',
     '.dk-home-page a,.dk-chapters a,.dk-hero a,.dk-help a{color:var(--dk-text)!important;text-decoration:none!important}',
-    '.dk-btn.is-primary{background:#5aa9f0;border-color:#0006;color:#0b1a2a!important}',
-    '.dk-btn.is-primary:hover{background:#75bfff}',
-    '.dk-btn.is-small{min-height:2rem;padding:.25rem .75rem;font-size:.8125rem}',
     '.dk-card{border-radius:var(--_bfa---shape--bevel,.625rem);background-color:var(--_bfa---surface--card);box-shadow:0 1px 2px #0006,calc(var(--sx,0)*8px) 10px 16px -10px var(--dk-drop)}',
     '.dk-sticker{display:grid;place-items:center;border-radius:1.25rem;background:radial-gradient(circle at 35% 30%,#ffffff1f,#ffffff05 60%),var(--_bfa---surface--panel);box-shadow:inset 0 0 0 2px #ffffff14,0 2px 4px #0006,6px 14px 24px -12px var(--dk-drop)}',
     '.dk-sticker img{width:58%;height:58%;object-fit:contain;filter:drop-shadow(0 3px 4px #0008)}',
@@ -89,7 +101,16 @@
     '.dk-ccard b img{flex:0 0 18px;width:18px;height:18px;object-fit:contain}',
     '.dk-ccard p{margin:.375rem 0 .75rem;font-size:.875rem;line-height:1.45;color:var(--dk-text);opacity:.8}',
     '.dk-ccard .dk-btn{pointer-events:none}',
-    '.dk-ccard em{margin-left:.75rem;font-style:normal;font-size:.75rem;color:var(--dk-muted)}',
+    '.dk-btn .ui-btn-icon img{width:16px!important;height:16px!important;margin:0!important;box-shadow:none!important}',
+    '.dk-btn{text-decoration:none!important}',
+    '.dk-btn.is-accent,.dk-btn.is-accent .ui-btn-label{color:#fff!important}',
+    '.dk-btn.is-primary,.dk-btn.is-primary .ui-btn-label{color:var(--_bfa---accent--orange-ink)!important}',
+    '.dk-ccard .dk-sticker{position:relative}',
+    '.dk-num{position:absolute;left:-.4rem;top:-.4rem;min-width:1.5rem;height:1.5rem;padding:0 .35rem;display:grid;place-items:center;border-radius:999px;background:var(--_bfa---surface--raised);box-shadow:0 0 0 2px var(--_bfa---surface--panel),0 2px 4px #0006;color:var(--dk-text);font:700 .75rem/1 Inter,sans-serif}',
+    '.dk-ccard.is-start .dk-num{background:var(--_bfa---accent--selected,#4f7fc0);color:#fff}',
+    '.dk-card-foot{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}',
+    '.dk-chapters.is-list .dk-num{left:-.3rem;top:-.3rem;min-width:1.15rem;height:1.15rem;font-size:.625rem}',
+    '.dk-ccard em{font-style:normal;font-size:.75rem;color:var(--dk-muted)}',
     '.dk-ccard.is-start{grid-column:1/-1;grid-template-columns:6rem minmax(0,1fr);border:1px solid #5aa9f0;box-shadow:0 0 0 1px #5aa9f033,0 1px 2px #0006,calc(var(--sx,0)*8px) 10px 16px -10px var(--dk-drop)}',
     '.dk-ccard.is-start .dk-sticker{width:6rem;height:6rem}',
     '.dk-ccard.is-start small{color:#5cb4f0}',
@@ -99,7 +120,6 @@
     '.dk-chapters.is-list .dk-ccard .dk-btn,.dk-chapters.is-list .dk-ccard small{display:none}',
     '.dk-chapters.is-list .dk-ccard p{margin:.125rem 0 0;font-size:.8125rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}',
     '.dk-chapters.is-list .dk-ccard em{margin:0}',
-    '.dk-ccard .dk-btn .ui-doc-tri{border-top-width:.3rem;border-bottom-width:.3rem;border-left-width:.4rem;opacity:.7}',
     '.dk-chapters.is-list .dk-ccard b{font-size:1.05rem}',
     '.dk-chapters.is-list .dk-ccard b img{display:none}',
     '@media(max-width:767px){.dk-hero{grid-template-columns:1fr;gap:1rem}.dk-hero .dk-sticker{width:6rem;height:6rem}.dk-cgrid{grid-template-columns:1fr}.dk-ccard,.dk-ccard.is-start{grid-template-columns:3.5rem minmax(0,1fr)}.dk-ccard .dk-sticker,.dk-ccard.is-start .dk-sticker{width:3.5rem;height:3.5rem}}',
@@ -182,7 +202,6 @@
     '.dk-help-card p{margin:0 0 .75rem;font-size:.875rem;color:var(--dk-muted)}',
     '.dk-help-card .dk-btns{display:flex;flex-wrap:wrap;gap:.5rem}',
     '.dk-help-card.is-pro{box-shadow:inset 0 0 0 1px #f2994a99,0 1px 2px #0006}',
-    '.dk-help-card.is-pro .dk-btn{background:#f2994a;color:#2a1600!important}',
     '.dk-fresh{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem}',
     '.dk-fresh b{display:block;font:700 1.15rem Inter,sans-serif;margin:0 0 .25rem}',
     '.dk-fresh p{margin:0;color:var(--dk-muted);font-size:.875rem}',
@@ -200,6 +219,13 @@
   function ico(f, cls) { return '<img alt="" class="' + (cls || 'is-color') + '" src="' + (iu(f) || CDN + IC.doc) + '">'; }
   function ls(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
   function plural(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
+  /* the site's own button: ui-btn (+ is-small / is-accent / is-primary), icon box + label */
+  function btn(label, icon, mods, href, attrs) {
+    var inner = '<span class="ui-btn-icon"><img class="ui-icon is-color" alt="" src="' + (iu(icon) || CDN + IC.fwd) + '"></span><span class="ui-btn-label">' + esc(label) + '</span>';
+    var cls = 'ui-btn dk-btn' + (mods ? ' ' + mods : '');
+    if (href == null) return '<span class="' + cls + '">' + inner + '</span>';
+    return '<a class="' + cls + '" href="' + href + '"' + (attrs || '') + '>' + inner + '</a>';
+  }
   function mins(m) { m = m || 1; return m < 120 ? m + ' min' : Math.round(m / 60) + ' h'; }
 
   var NAV = null, IDX = null;
@@ -214,6 +240,29 @@
   }
   function slugOf(href) { return String(href || '').split('#')[0].split('?')[0].replace(/\/$/, '').split('/').pop(); }
   var here = slugOf(location.pathname);
+
+  /* ---------------------------------------------------------------- 6 status: draft → in review → reviewed (public) */
+  var STATUS = {
+    'draft': ['Draft', 'is-draft', 'Converted from the old manual and not checked yet. It may be out of date.'],
+    'needs-review': ['In review', 'is-review', 'Written or updated, waiting for a second look.'],
+    'reviewed': ['Reviewed', 'is-reviewed', 'Checked against Bforartists ' + '5.1' + '.']
+  };
+  function statusOf(n) { return (n && n.st) || 'draft'; }
+  function statusChip() {
+    var c = q('.ui-doc-chip.is-status'); if (!c || c.dataset.dk) return; c.dataset.dk = '1';
+    var v = (c.textContent || '').trim().toLowerCase(), S = STATUS[v] || STATUS.draft;
+    c.classList.add('dk-st', S[1]); c.title = S[2];
+    var inner = q('.ui-doc-inline', c) || c; inner.textContent = S[0];
+  }
+  function counts(nodes) {
+    var o = { 'draft': 0, 'needs-review': 0, 'reviewed': 0 };
+    (function walk(c) { (c || []).forEach(function (n) { o[statusOf(n)] = (o[statusOf(n)] || 0) + 1; walk(n.c); }); })(nodes);
+    return o;
+  }
+  function bar(o, big) {
+    var t = o['draft'] + o['needs-review'] + o['reviewed'] || 1, w = function (k) { return (100 * o[k] / t).toFixed(1) + '%'; };
+    return '<span class="dk-bar' + (big ? ' is-big' : '') + '" title="Reviewed ' + o.reviewed + ' · In review ' + o['needs-review'] + ' · Draft ' + o.draft + '"><i class="is-reviewed" style="width:' + w('reviewed') + '"></i><i class="is-review" style="width:' + w('needs-review') + '"></i></span>';
+  }
 
   /* ---------------------------------------------------------------- 2 breadcrumb */
   function crumbs() {
@@ -273,7 +322,7 @@
     var hero = el('div', 'dk-hero');
     hero.innerHTML = '<div class="dk-sticker">' + ico(sec.i) + '</div><div class="dk-hero-tx"><div class="dk-eyebrow">Section ' + (si + 1) + ' of ' + secs.length + ' · Documentation</div>' +
       '<h1 class="type-h1 ui-doc-title">' + esc(title) + '</h1><p class="type-lead ui-doc-summary">' + esc(summary) + '</p><div class="dk-hero-go">' +
-      (first ? '<a class="dk-btn is-primary" href="/docs/' + first.s + '">' + ico(first.i) + 'Start with ' + esc(first.t) + '</a>' : '') +
+      (first ? btn('Start with ' + first.t, first.i, 'is-accent', '/docs/' + first.s) : '') +
       '<span>' + plural(chapters.length, 'chapter', 'chapters') + ' · ' + plural(sec.n || 0, 'page', 'pages') + ' · about ' + mins(sec.m) + ' of reading</span></div></div>';
     art.insertBefore(hero, art.firstChild);
     /* the intro text that repeats the summary goes */
@@ -292,8 +341,8 @@
       num++;
       var start = num === 1, c = el('a', 'dk-card dk-ccard' + (start ? ' is-start' : ''));
       c.href = href;
-      c.innerHTML = '<div class="dk-sticker">' + ico(n.i) + '</div><div><small>' + (start ? 'Start here · 1' : num) + '</small><b><span>' + esc(t) + '</span></b>' +
-        (sum ? '<p>' + esc(sum) + '</p>' : '') + '<span class="dk-btn is-small">' + esc(n.b || 'Read') + ' <i class="ui-doc-tri"></i></span>' + (below ? '<em>' + plural(below, 'page', 'pages') + '</em>' : '') + '</div>';
+      c.innerHTML = '<div class="dk-sticker">' + ico(n.i) + '<span class="dk-num">' + num + '</span></div><div>' + (start ? '<small>Start here</small>' : '') + '<b><span>' + esc(t) + '</span></b>' +
+        (sum ? '<p>' + esc(sum) + '</p>' : '') + '<div class="dk-card-foot">' + btn(n.b || 'Read', IC.fwd, 'is-small' + (start ? ' is-accent' : '')) + (below ? '<em>' + plural(below, 'page', 'pages') + '</em>' : '') + (statusOf(n) !== 'draft' ? '<span class="dk-stb ' + STATUS[statusOf(n)][1] + '">' + STATUS[statusOf(n)][0] + '</span>' : '') + '</div></div>';
       return c;
     }
     qa(':scope > *', src).forEach(function (x) {
@@ -331,7 +380,7 @@
         '<h1>' + esc(F.headline ? F.headline.t : 'Documentation') + '</h1>' +
         '<p class="type-lead">' + esc(F.lead ? F.lead.t : '') + '</p>' +
         '<form class="dk-search" role="search" action="/search"><label>' + ico(IC.zoom, '') + '<input name="query" type="search" autocomplete="off" placeholder="Search tools, menus, hotkeys…" aria-label="Search the documentation"><kbd>F3</kbd></label>' +
-        '<button class="dk-btn is-primary" type="submit">' + ico(IC.zoom, '') + 'Discover</button><div class="dk-results" role="listbox"></div></form>' +
+        '<button class="ui-btn is-accent dk-btn" type="submit"><span class="ui-btn-icon"><img class="ui-icon" alt="" src="' + CDN + IC.zoom + '"></span><span class="ui-btn-label">Discover</span></button><div class="dk-results" role="listbox"></div></form>' +
         '<div class="dk-pop"><span>Popular:</span>' + F.popular.map(function (p) { return '<a href="' + esc(p.h) + '">' + ico(p.ds.i) + esc(p.t) + '</a>'; }).join('') + '</div>' +
       '</div>' + (ex ? '<a class="dk-card dk-explore" href="' + esc(ex.h || '#') + '"><img class="dk-shot" alt="The Bforartists interface" src="' + esc(ex.ds.img) + '"><p>' + ico('68b8f4efa40047ddcec7c6ae_view3d.svg') + '<span><b>' + esc(ex.t) + '</b> ' + esc(ex.ds.text || '') + '</span></p></a>' : '') +
       '</div></section>' +
@@ -343,12 +392,15 @@
         }).join('') + '</div></section>' : '') +
       '<section class="dk-h"><div class="dk-sec-head"><div><div class="dk-eyebrow">Reference · The whole manual at a glance</div><h2>' + esc(['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve'][secs.length] || secs.length) + ' sections, same as the sidebar</h2><p>Same order and icons as the sidebar panels, so this page also teaches you the sidebar. ' + total + ' pages in all.</p></div></div>' +
         '<div class="dk-secs">' + secs.map(function (s) {
-          return '<a class="dk-card dk-sec" href="/docs/' + s.s + '"><div class="dk-sticker">' + ico(s.i) + '</div><div><b>' + esc(s.t) + '</b>' + (s.d ? '<p>' + esc(s.d) + '</p>' : '') + '<small>' + plural((s.c || []).length, 'chapter', 'chapters') + ' · ' + plural(s.n || 0, 'page', 'pages') + '</small></div></a>';
+          return '<a class="dk-card dk-sec" href="/docs/' + s.s + '"><div class="dk-sticker">' + ico(s.i) + '</div><div><b>' + esc(s.t) + '</b>' + (s.d ? '<p>' + esc(s.d) + '</p>' : '') + '<small>' + plural((s.c || []).length, 'chapter', 'chapters') + ' · ' + plural(s.n || 0, 'page', 'pages') + '</small>' + bar(counts(s.c)) + '</div></a>';
         }).join('') + '</div></section>' +
-      '<section class="dk-h"><div class="dk-card dk-fresh"><div><div class="dk-eyebrow">What changed · 5.1</div><b>Fresh from development</b><p>Pulled from the manual repository every time a docs task closes, so new tools show up here first.</p></div><a class="dk-btn" href="https://github.com/Bforartists/Manual/commits/docs2/main" target="_blank" rel="noopener">' + ico(IC.file, '') + 'All changes</a></div></section>' +
+      (function () { var all = { 'draft': 0, 'needs-review': 0, 'reviewed': 0 }; secs.forEach(function (s) { var c = counts(s.c); for (var k in c) all[k] += c[k]; });
+        return '<section class="dk-h"><div class="dk-card dk-status"><div><div class="dk-eyebrow">Review progress</div><b>' + all.reviewed + ' of ' + total + ' pages reviewed</b><p>Every page shows its status at the top. Draft pages come from the old manual and have not been checked yet; reviewed pages are checked against Bforartists 5.1.</p></div>' +
+          '<div class="dk-legend"><span class="is-reviewed">Reviewed ' + all.reviewed + '</span><span class="is-review">In review ' + all['needs-review'] + '</span><span>Draft ' + all.draft + '</span></div>' + bar(all, true) + '</div></section>'; })() +
+      '<section class="dk-h"><div class="dk-card dk-fresh"><div><div class="dk-eyebrow">What changed · 5.1</div><b>Fresh from development</b><p>Pulled from the manual repository every time a docs task closes, so new tools show up here first.</p></div>' + btn('All changes', IC.file, 'is-small', 'https://github.com/Bforartists/Manual/commits/docs2/main', ' target="_blank" rel="noopener"') + '</div></section>' +
       '<section class="dk-h dk-two">' +
-        '<div class="dk-card dk-help-card">' + ico(IC.comm, '') + '<div><b>Stuck? Ask the community</b><p>Artists and developers answer on Discord every day. Share a screenshot and the page you were on.</p><div class="dk-btns"><a class="dk-btn is-small" href="' + DISCORD + '" target="_blank" rel="noopener">' + ico(IC.comm, '') + 'Discord</a><a class="dk-btn is-small" href="' + ISSUE + '" target="_blank" rel="noopener">' + ico(IC.light, '') + 'Report a doc issue</a></div></div></div>' +
-        '<div class="dk-card dk-help-card is-pro">' + ico(IC.world, '') + '<div><b>Need it done? Pro support</b><p>Training, pipeline help and custom tools for studios and schools, from the team behind Bforartists at Trinumedia.</p><div class="dk-btns"><a class="dk-btn is-small" href="' + PRO + '" target="_blank" rel="noopener">Talk to Trinumedia ↗</a></div></div></div>' +
+        '<div class="dk-card dk-help-card">' + ico(IC.comm, '') + '<div><b>Stuck? Ask the community</b><p>Artists and developers answer on Discord every day. Share a screenshot and the page you were on.</p><div class="dk-btns">' + btn('Discord', IC.comm, 'is-small', DISCORD, ' target="_blank" rel="noopener"') + btn('Report a doc issue', IC.light, 'is-small', ISSUE, ' target="_blank" rel="noopener"') + '</div></div></div>' +
+        '<div class="dk-card dk-help-card is-pro">' + ico(IC.world, '') + '<div><b>Need it done? Pro support</b><p>Training, pipeline help and custom tools for studios and schools, from the team behind Bforartists at Trinumedia.</p><div class="dk-btns">' + btn('Talk to Trinumedia ↗', IC.world, 'is-small is-primary', PRO, ' target="_blank" rel="noopener"') + '</div></div></div>' +
       '</section>';
     body.innerHTML = ''; body.appendChild(h);
     homeSearch(q('.dk-search', h));
@@ -399,7 +451,7 @@
     if (!nav || !nav.sections) return;
     NAV = nav; IDX = index(nav);
     overviews(); watchSide();
-    crumbs();
+    crumbs(); statusChip();
     if (here === 'home') return home();
     var n = IDX.by[here];
     if (n && n.land) overview(n);

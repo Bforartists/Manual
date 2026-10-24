@@ -1,6 +1,6 @@
 ---
 id: editors.properties.scene-properties-tab
-title: Scene Properties Tab
+title: "Scene"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.5 Editors - Properties Editor - Scene Properties Tab.odt
+summary: "Scenes are a way to organize your work."
+icon: scene_data
+order: 40
 ---
 ## Scene Tab
 

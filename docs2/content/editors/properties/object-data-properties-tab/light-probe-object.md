@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.15 Editors - Properties Editor - Object Data Properties Tab - Light Probe Object.odt
+summary: "Light Probe objects are just useful for EEVEE and Cycles."
 ---
 ## Light Probes Introduction
 

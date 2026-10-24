@@ -11,6 +11,7 @@ screenshots: "5.1"
 source:
   - 32 Advanced - Command Line.odt
 icon: console
+summary: "You can start Bforartists from the command line to perform a specific task."
 ---
 ## Command Line Arguments
 

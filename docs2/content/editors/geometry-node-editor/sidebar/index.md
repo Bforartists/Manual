@@ -19,6 +19,7 @@ replaces:
   - editors.geometry-node-editor.sidebar.add
   - editors.geometry-node-editor.sidebar.relations-tab
 order: 30
+summary: "The Geometry Node Editor is made of several areas."
 ---
 ## Introduction
 

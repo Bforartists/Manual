@@ -45,7 +45,6 @@ The image input.
 
 ![Properties](/docs2/images/editors/compositor/header/add-menu-utilities/properties.png)
 
-
 | Entry | What it does |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Channel | The Red, Green, Blue or Luminance channels |
@@ -53,19 +52,16 @@ The image input.
 | Mean | The mean is the average value of all image pixels in specified channel (combined, red, green, blue, luminance). It tells you how dark or bright the image is and can be used as such for setups that depend on how is input “bright” or “dark”. |
 | Standard Deviation | How much those pixel values differ from the mean. A low standard deviation indicates that the pixel values tend to be very close to the mean. A high standard deviation indicates that the values are spread out over a large range of values. The visualization of such data is just a gray rectangle. |
 
-
 ### Normalize
 
 ![Normalize](/docs2/images/editors/compositor/header/add-menu-utilities/normalize.png)
 
 Find the minimum and maximum values of a single channel. Then map the values to a range of 0 and 1.
 
-
 | Entry | What it does |
 | ------- | --------------------------------- |
 | Inputs | **Value**: Standard value input. |
 | Outputs | **Value**: Standard value output. |
-
 
 ### Split
 
@@ -73,12 +69,10 @@ Find the minimum and maximum values of a single channel. Then map the values to 
 
 Allows to combine two images horizontally or vertically
 
-
 | Entry | What it does |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Inputs | **Position**: Line position where the image should be split. · **Rotation**: Line angle where the image should be split. · **Image**: The first image. · **Image**: The second image. |
 | Outputs | **Image**: Image output. |
-
 
 ### Switch
 
@@ -86,12 +80,10 @@ Allows to combine two images horizontally or vertically
 
 The Switch node is akin to a boolean, where you can use a toggle to choose what is shown with on or off.
 
-
 | Entry | What it does |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Properties | **Switch**: The toggle that turns the switch on or off resulting in the final output being whatever is in the on or off input. |
 | Inputs | **Off**: The image that is shown when the toggle is off. · **On**: The image that is shown when the toggle is on. · **Image**: Standard RGB image output. |
-
 
 ### Index Switch
 
@@ -111,13 +103,11 @@ What data type to evaluate.
 
 The content changes. dependant of the data type.
 
-
 | Entry | What it does |
 | ----- | ---------------------- |
 | Index | The index input value. |
 | 0 | The 0 value |
 | 1 | The 1 value |
-
 
 #### Output
 
@@ -149,15 +139,12 @@ The content changes. dependant of the data type.
 
 The default menu.
 
-
 | Entry | What it does |
 | ----- | ------------ |
 | A | The A input. |
 | B | The B input. |
 
-
 #### Output
-
 
 | Entry | What it does |
 | ------ | ------------------ |
@@ -165,19 +152,16 @@ The default menu.
 | A | The A output |
 | B | The B output |
 
-
 ### Switch Stereo View
 
 ![Switch Stereo View](/docs2/images/editors/compositor/header/add-menu-utilities/switch-stereo-view.png)
 
 The Switch View node combines the views (left and right) into a single Stereo 3D output. This can be useful if for example, you need to treat the view as separate images by combining each of the views.
 
-
 | Entry | What it does |
 | ------- | ------------------------------------------------------------------- |
 | Inputs | **Left**: Left-eye image input. · **Right**: Right-eye image input. |
 | Outputs | **Image**: Stereo 3D image output. |
-
 
 ### Relative to Pixel
 
@@ -200,12 +184,10 @@ Using **Per Dimension **type, each component of the vector is multiplied by its 
 
 #### Inputs
 
-
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------- |
 | Value | The input float value to convert. This would be your absolute value. |
 | Image | The reference image used to determine pixel dimensions. If not connected, the active compositing image is used. |
-
 
 #### Properties
 
@@ -249,13 +231,11 @@ The converted float value, based on the selected mode and input type.
 
 The **Clamp** node restricts a value to lie within a specified range. It’s commonly used in compositing to prevent values from exceeding a desired minimum or maximum, which helps avoid unwanted brightness spikes or clipping in image processing.
 
-
 | Entry | What it does |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Inputs | **Value**: Standard Value input. (Value refers to each vector in the set.) |
 | Properties | **Clamp Type**: A dropdown that determines how the clamping is applied: Min / Max or Range. · **Min / Max**: The minimum and maximum allowed value. Any input lower or higher than this will be lowered or raised to this value. |
 | Outputs | **Value**: Standard value output. |
-
 
 #### Float Curve
 
@@ -263,12 +243,10 @@ The **Clamp** node restricts a value to lie within a specified range. It’s com
 
 The Float Curves node maps an input value to a curve.
 
-
 | Entry | What it does |
 | ------ | --------------------------- |
 | Inputs | **Factor**: Input factor. |
 | Value | Standard float value input. |
-
 
 ##### Properties
 
@@ -278,11 +256,7 @@ Create and tweak a Bezier curve that varies the input levels (X axis) to produce
 
 ###### Selecting Points
 
-![Selecting Points](/docs2/images/editors/compositor/header/add-menu-utilities-math/selecting-points.png)
-
-You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.
-
-Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
+> This setting uses the **curve widget**: click to add points, drag to move them. See **[Curve Widget](../../../../interface/properties.md#curve-widget)** in the Interface chapter.
 
 ###### Adding Points
 
@@ -290,12 +264,10 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 
 You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
 
-
 | Entry | What it does |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
 | Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Extend horizontal**: Extends the curve before the first curve point and behind the last curve point horizontally. · **Extend extrapolated**: Extends the curve before the first curve point and behind the last curve point extrapolated. · **Reset Curve**: Resets the curve to the initial shape. |
-
 
 ###### Clipping Options
 
@@ -315,14 +287,12 @@ Deletes selected curve points.
 
 Set handle type to Vector.
 
-
 | Entry | What it does |
 | ------------------- | ----------------------------------------- |
 | Auto Handle | Set handle type to Auto. |
 | Auto Clamped Handle | Set handle type to Auto Clamped. |
 | X / Y value | The position of the selected curve point. |
 | Delete | Deletes the selected curve point. |
-
 
 ##### Outputs
 
@@ -336,12 +306,10 @@ Standard float value output.
 
 This node allows to convert (map) an input value range into a destination range. By default, values outside the specified input range will be proportionally mapped as well. This node is similar to Map Value node but provides a more intuitive way to specify the desired output range.
 
-
 | Entry | What it does |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Usage | One important use case is to easily map the original range of the Z-depth channel to a more usable range (i.e: 0.0 - 1.0) for use as a matte for colorization or filtering operations. |
 | Inputs | This chapter deals with the input type Float. The same node exists in the Vector menu too. With preselected type Vector. · **Value**: Standard value input. · **From Min/Max**: Start/End of the input value range. · **To Min/Max**: Start/End of the destination range. · **Steps**: The amount of steps. **Note:** *Only shows when using the Stepped Linear interpolation type.* |
-
 
 ##### Properties
 
@@ -375,12 +343,10 @@ The Math Node performs math operations.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Value | First numerical value. The trigonometric functions accept values in radians. |
 | Value | Second numerical value. This value is not used in functions that accept only one parameter like the trigonometric functions, Round and Absolute. |
-
 
 ##### Properties
 
@@ -406,7 +372,6 @@ Numerical value output.
 
 The Mix Node mixes float values by working on the individual and corresponding pixels of the two input values. Called “Mix” in the shader, Geometry Nodes and texture context.
 
-
 | Entry | What it does |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | Inputs | **Factor**: Controls the amount of influence the node exerts on the output Value. · **Value A**: The back value. · **Value B**: The top value. |
@@ -427,12 +392,10 @@ Here you find mainly nodes for vector data manipulation.
 
 Same as with Combine RGB node. It combines color values. But instead combining rgb values, which are in the range of 0 to 255, it uses values in the range from 0 to 1.
 
-
 | Entry | What it does |
 | ------ | --------------------------------- |
 | Input | **X Y and Z**: X, Y and Z values. |
 | Output | **Color**: Color output. |
-
 
 #### Map Range
 
@@ -440,12 +403,10 @@ Same as with Combine RGB node. It combines color values. But instead combining r
 
 This node allows to convert (map) an input value range into a destination range. By default, values outside the specified input range will be proportionally mapped as well. This node is similar to Map Value node but provides a more intuitive way to specify the desired output range.
 
-
 | Entry | What it does |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Usage | One important use case is to easily map the original range of the Z-depth channel to a more usable range (i.e: 0.0 - 1.0) for use as a matte for colorization or filtering operations. |
 | Inputs | This chapter deals with the input type Float. The same node exists in the Math menu too. With preselected type Float. · **Vector**: Standard vector input. · **From Min/Max**: Vector 3 of the Start/End of the input value range. · **To Min/Max**: Vector 3 of the Start/End of the destination range. · **Steps**: The amount of steps. **Note:** *Only shows when using the Stepped Linear interpolation type.* |
-
 
 ##### Properties
 
@@ -479,13 +440,11 @@ The **Mix Vector** node blends two vector inputs using a specified factor. It’
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ------- | ---------------------------------------------------------------------- |
 | Factor | Controls the amount of influence the node exerts on the output result. |
 | Value A | The back value. |
 | Value B | The top value. |
-
 
 ###### Properties
 
@@ -516,12 +475,10 @@ Vector output.
 
 Same as with Separate RGB node. It separates color values. But instead separating rgb values, which are in the range of 0 to 255, it uses a vector with the values in the range from 0 to 1.
 
-
 | Entry | What it does |
 | ------ | ------------------------------------------------- |
 | Input | **Vector**: The Input vector. |
 | Output | **X, Y and Z**: The output vectors for X, Y and Z |
-
 
 #### Radial Tiling
 
@@ -529,12 +486,10 @@ Same as with Separate RGB node. It separates color values. But instead separatin
 
 Transform coordinate system for radial tiling.
 
-
 | Entry | What it does |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Input | **Vector**: Vector 2 input · **Sides**: Number of angular segments for tiling. A non integer value results in an irrgeluar segment. · **Roundness**: Roundness of the segment coordindates system. |
 | Properties | **Normalize**: Normalize the X coordinate of the segment coordinates output to a `[` 0 / 1 `]` interval and offset the Y coordinate into a `[0`, `infinity]` interval. This stretches the textures to fit into each angular segment. Else they are cropped. |
-
 
 #### Vector Curves
 
@@ -594,7 +549,6 @@ Clipping options. Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-
 | Entry | What it does |
 | ------------------- | -------------------------------------------------------------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
@@ -602,13 +556,11 @@ Tools is a menu where you can find some curve related tools.
 | Extend extrapolated | Extends the curve before the first curve point and behind the last curve point extrapolated. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-
 ###### Vector Handle
 
 ![Vector Handle](/docs2/images/editors/compositor/header/add-menu-utilities-vector/vector-handle.png)
 
 Set handle type to Vector.
-
 
 | Entry | What it does |
 | ------------------- | ---------------------------------------------------------------------------- |
@@ -616,7 +568,6 @@ Set handle type to Vector.
 | Auto Clamped Handle | Set handle type to Auto Clamped. |
 | X / Y position | The x y coordinate of the selected curve point. The range goes from -1 to +1 |
 | Delete Points | Deletes selected curve points. |
-
 
 ##### Outputs
 
@@ -632,12 +583,10 @@ The Vector Math Node performs math operations.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Vector | First numerical value. The trigonometric functions accept values in radians. |
 | Vector | Second numerical value. This value is not used in functions that accept only one parameter like the trigonometric functions, Round and Absolute. |
-
 
 ##### Properties
 
@@ -661,14 +610,12 @@ The **Vector Rotate** node rotates a vector around a specified axis and center p
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ------ | ------------------------------------------------------- |
 | Vector | The input vector to be rotated. |
 | Center | The pivot point around which the vector is rotated. |
 | Axis | The axis of rotation, defined as am XYZ based 3D vector |
 | Angle | The amount of rotation in **degrees**. |
-
 
 ##### Properties
 

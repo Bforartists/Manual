@@ -1,6 +1,6 @@
 ---
 id: editors.properties.object-properties-tab
-title: Object Properties Tab
+title: "Object"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.8 Editors - Properties Editor - Object Properties Tab.odt
+summary: "The Object tab contains all general object related settings like Transform, Relation or Collection related things."
+icon: object_data
+order: 70
 ---
 ## Object Tab
 
@@ -154,7 +157,7 @@ An object must be at least in one collection. Or it gets deleted. But an object 
 
 ![Link to existing collection](/docs2/images/editors/properties/object-properties-tab/link-to-existing-collection.png)
 
-A drop down box where you can choose the collection that you want to add the object to. Different from the Link to collection tool in the outliner, this tool lists all collections in the Blender file. Also collections that are not to see in the Scenes or View Layer view.
+A drop down box where you can choose the collection that you want to add the object to. Different from the Link to collection tool in the outliner, this tool lists all collections in the .blend file. Also collections that are not to see in the Scenes or View Layer view.
 
 ### Add to new Collection
 

@@ -1,6 +1,6 @@
 ---
 id: editors.properties.view-layer-properties-tab
-title: View Layer Properties Tab
+title: "View Layer"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.4 Editors - Properties Editor - View Layer Properties Tab.odt
+summary: "View Layers reference to Scene collections."
+icon: render_result
+order: 30
 ---
 ## View Layer
 
@@ -417,7 +420,7 @@ How the edge detection happens.
 
 This panel appears with Control Mode Python Scripting. Add a python script that defines the style.
 
-The structure of such a style is not defined nor described. Please ask the Blender developers.
+The structure of such a style is not defined nor described. It is not documented upstream.
 
 ## Freestyle Line Set Panel
 

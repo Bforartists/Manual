@@ -1,6 +1,6 @@
 ---
 id: editors.properties.render-properties-tab
-title: Render Properties Tab
+title: "Render"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.2 Editors - Properties Editor - Render Properties Tab.odt
+summary: "Rendering is the process of calculating a 2D image (or video) from your 3D scene."
+icon: scene
+order: 10
 ---
 ## Render Tab
 
@@ -258,7 +261,7 @@ Resets the Curve and the Black and White Level values to the default values.
 
 ![White Balance](/docs2/images/editors/properties/render-properties-tab/white-balance.png)
 
-Enables manual control over the color temperature and tint of the scene or image. When checked, Blender applies the adjustments below to simulate camera-style white balance correction.
+Enables manual control over the color temperature and tint of the scene or image. When checked, Bforartists applies the adjustments below to simulate camera-style white balance correction.
 
 ##### Header Operators
 

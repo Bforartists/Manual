@@ -29,11 +29,7 @@ You can scroll through the tabs by holding down ctrl and using the scroll wheel.
 
 ## Slider snapping
 
-![Slider snapping](/docs2/images/editors/properties/slider-snapping.png)
-
-Snapping also works at sliders. Hover with the mouse over the slider, start to slide, and holding down **Ctrl** will snap the sliders in incremental steps.
-
-When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.
+> Hold **Ctrl** while dragging a slider to snap it. See **[Snapping](../../interface/properties.md#snapping)** in the Interface chapter.
 
 ## Header and Tabs
 
@@ -41,12 +37,10 @@ When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. Wh
 
 The header contains a button to switch to Outliner and back. And it contains a search and a context pin.
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Cycle space type set | Switch between outliner and properties editor. Sometimes you want more space for the outliner. And before you start to pull around the editor windows you can simply switch to the outliner from the properties editor. And back. |
 | Search | Allows you to search for specific terms. All not matching content is greyed out. When the matching term is in one of the closed panels, then this panel will open up. |
-
 
 ### Options
 
@@ -56,13 +50,11 @@ The header contains a button to switch to Outliner and back. And it contains a s
 
 Adjust if properties editor is in sync with the outliner. It can make sense to turn off sync for performance reasons.
 
-
 | Entry | What it does |
 | ------ | ----------------------------------------------------------------------------- |
 | Always | Always sync outliner with properties editor. |
 | Never | Never sync outliner with properties editor. |
 | Auto | Sync outliner with properties editor when they share an edge with each other. |
-
 
 #### Visible Tabs
 
@@ -116,27 +108,21 @@ When you click into an empty area of the Properties editor then you call the con
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------- |
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-
 #### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/properties/duplicate-area-into-new-window.png)
 
-Duplicate Area into New Window makes the selected editor window floating. You can then drag it around at the monitor. It is not connected with the rest of the UI anymore.
-
-A separated window cannot be merged into the main window again. You have to close it when not longer needed.
-
+> **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
 | Entry | What it does |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu. |
 | Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
-
 
 ## Properties Editor - Right click menu
 

@@ -78,7 +78,6 @@ To manipulate a curve point, grab one of its handlers and drag.
 
 When you right click into the channel area, then you will call the Dope Sheet Channel context menu.
 
-
 | Entry | What it does |
 | -------------------------- | -------------------------------------------------------------------------------------- |
 | Frame selected channels | Centers the selected channels in view. |
@@ -92,13 +91,11 @@ When you right click into the channel area, then you will call the Dope Sheet Ch
 | Toggle Channel Editability | Protects or unprotects the selected channels. |
 | Extrapolation Mode submenu | — |
 
-
 ### Extrapolation Mode
 
 ![Extrapolation Mode](/docs2/images/editors/drivers-editor/extrapolation-mode.png)
 
 Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.
-
 
 | Entry | What it does |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -106,7 +103,6 @@ Sets the extrapolation mode for the selected F-Curves. Means how the curve acts 
 | Linear Extrapolation | The animation curve continues the last direction. |
 | Make Cyclic | Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame. |
 | Clear Cyclic | Removes the cyclic extrapolation. |
-
 
 | Entry | What it does |
 | ---------------------- | ---------------------------- |
@@ -116,19 +112,16 @@ Sets the extrapolation mode for the selected F-Curves. Means how the curve acts 
 | Expand Channels | Expands the channels. |
 | Collapse Channels | Collapses the channels. |
 
-
 ### Move submenu
 
 ![Move submenu](/docs2/images/editors/drivers-editor/move-submenu.png)
 
 Sort the order of the channels. The menu items should be self explaining.
 
-
 | Entry | What it does |
 | ---------------------- | ------------------------------ |
 | Delete Channels | Removes the selected channels. |
 | Delete Invalid Drivers | Deletes Invalid Drivers. |
-
 
 ## F-Curve Context Menu
 
@@ -136,12 +129,10 @@ Sort the order of the channels. The menu items should be self explaining.
 
 When you double right click into the viewport then you will call the F-Curve context menu.
 
-
 | Entry | What it does |
 | ----- | --------------------------------------------- |
 | Copy | Copies the currently selected curve point(s). |
 | Paste | Pastes copied curve point(s) |
-
 
 ### Paste Flipped
 
@@ -231,13 +222,11 @@ Duplicate the selected curve point(s).
 
 ![Last Operator Duplicate](/docs2/images/editors/drivers-editor/last-operator-duplicate.png)
 
-
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Mode | — |
 | Values X / Y | The x and y values for the pasted keyframes. Note that these values starts at the position of the original copied keyframe. These values are relative. Values Z and W have no effect here. |
 | Axis | These values have no effect. |
-
 
 ##### Orientation
 
@@ -255,14 +244,12 @@ Enable Mirror Editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Proportional Falloff | Adjust the falloff methods. |
 | Proportional Size | See and adjust the falloff radius. |
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
 
 ### Delete Keyframes
 
@@ -298,21 +285,13 @@ Snaps the selected keyframes by the chosen method.
 
 ## Slider snapping
 
-![Slider snapping](/docs2/images/editors/drivers-editor/slider-snapping.png)
-
-Snapping also works at sliders. Hover with the mouse over the slider, start to slide, and holding down **Ctrl** will snap the sliders in incremental steps.
-
-When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.
-
-![Slider snapping](/docs2/images/editors/drivers-editor/slider-snapping-2.png)
-
-The increment snapping also works at the frame slider. Here the incremental snapping happens by the frame rate that you have defined. With a frame rate of 24 it will snap in steps of 24 frames when holding down ctrl.
+> Hold **Ctrl** while dragging a slider to snap it. See **[Snapping](../../interface/properties.md#snapping)** in the Interface chapter.
 
 ## Quick Favorites menu
 
 ![Quick Favorites menu](/docs2/images/editors/drivers-editor/quick-favorites-menu.png)
 
-When you right click at a menu or a button, then a right click menu will open. Tools have usually a Add to Quick Favorites menu entry.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 The Quick Menu is empty by default. With Add to Quick favorites you can add this menu to the Quick menu.
 
@@ -334,7 +313,6 @@ When you click into the edit box, then the expression for the driver will appear
 
 There are some advanced expression methods, called Simple Expressions.
 
-
 | Entry | What it does |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Variable Names | Use only ASCII characters. |
@@ -342,8 +320,7 @@ There are some advanced expression methods, called Simple Expressions.
 | Globals | frame |
 | Constants | pi, True, False |
 | Operators | +, -, `*`, /, ==, !=, &lt;, &lt;=, &gt;, &gt;=, and, or, not, conditional operator/ ternary if |
-| Functions | min, max, radians, degrees, abs, fabs, floor, ceil, trunc, int, sin, cos, tan, asin, acos, atan, atan2, exp, log, sqrt, pow, fmod Simple expressions are evaluated even when Python script execution is disabled. When an expression outside of this subset is used, Blender displays a “Slow Python expression” warning. However, as long as the majority of drivers use simple expressions, using a complex expression in select few is OK. |
-
+| Functions | min, max, radians, degrees, abs, fabs, floor, ceil, trunc, int, sin, cos, tan, asin, acos, atan, atan2, exp, log, sqrt, pow, fmod Simple expressions are evaluated even when Python script execution is disabled. When an expression outside of this subset is used, Bforartists displays a “Slow Python expression” warning. However, as long as the majority of drivers use simple expressions, using a complex expression in select few is OK. |
 
 ## Drivers setup example
 

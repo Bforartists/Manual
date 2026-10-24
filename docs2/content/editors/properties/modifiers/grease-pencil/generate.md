@@ -13,6 +13,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.9.8 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Generate Modifiers.odt
+summary: "Some of the modifiers are just available for specific object types."
 ---
 ![Generate modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-generate/generate-modifiers-grease-pencil.png)
 

@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.14 Editors - Properties Editor - Particle Properties Tab - Emitter - Animation panel.odt
+summary: "Animation panels are about the Animation Slots for scene wide animation clips."
 ---
 ## Animation panel
 

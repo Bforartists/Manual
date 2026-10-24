@@ -31,13 +31,11 @@ The detailed description happens for every editor one by one then.
 
 Each header has a header menu that appears when you right click at it.
 
-
 | Entry | What it does |
 | -------------------- | ---------------------------------------------------------------------------------------------- |
 | Toggle Header | Hides the header. To reveal it you have to click at the small triangle at the right side then. |
 | Flip to Bottom / Top | Displays the header at the top or the bottom of the editor. |
 | Collapse Menus | Displays the text menus as one collapsed icon. |
-
 
 ### Hide Editortype Menu
 
@@ -57,10 +55,7 @@ Splits the current view vertically into two independent editor windows.
 
 ![Duplicate Area into New Window](/docs2/images/editors/introduction/duplicate-area-into-new-window.png)
 
-Duplicate Area into New Window makes the selected editor window floating. You can then drag it around at the monitor. It is not connected with the rest of the UI anymore.
-
-A separated window cannot be merged into the main window again. You have to close it when not longer needed.
-
+> **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
 | Entry | What it does |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -68,13 +63,11 @@ A separated window cannot be merged into the main window again. You have to clos
 | Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
 | Close Area | Closes the editor. |
 
-
 ## Area Options
 
 ![Area Options](/docs2/images/editors/introduction/area-options.png)
 
 When you right click at a border of an editor, then you will call the Area options menu.
-
 
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------- |
@@ -82,7 +75,6 @@ When you right click at a border of an editor, then you will call the Area optio
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 | Join Areas | Joins the two editors that shares the border. |
 | Swap Areas | Swaps the content of the editors that shares the border. |
-
 
 ## Editor Type menu
 
@@ -142,13 +134,11 @@ Right click at an empty space somewhere at the menu bar of an editor. You will s
 
 ![General right click menu at Toolshelf and Sidebar panel headers](/docs2/images/editors/introduction/general-right-click-menu-at-toolshelf-and-sideba.png)
 
-
 | Entry | What it does |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | Pin | Show the pinned panel on all tabs. |
 | Reset Panel Zoom | You can zoom the panels with holding down control and move the mouse. Reset Panel Zoom resets this zoom to 100% |
 | Flip Region to Left / Right | Flips the positions of sidebar and toolshelf. You can also display the tools at the right, and the sidebar at the left. |
-
 
 ### General right click menus at menu operators
 
@@ -204,17 +194,14 @@ A few examples below. But we will cover important right click functionality also
 
 Note that there are also right click menus that are pure double entries that exists in the regular UI. Like this Library Override example here.
 
-
 |  |  |  |  |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --- | -------------------------------------------------------------------------------------------------------------------------- |
 | ![Right click menus at tools and properties](/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-5.png) ![Right click menus at tools and properties](/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-4.png) ![Right click menus at tools and properties](/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-3.png) | ![Right click menus at tools and properties](/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-6.png) |  | ![Right click menus at tools and properties](/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-7.png) |
 | ![Right click menus at tools and properties](/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-8.png) | ![Right click menus at tools and properties](/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-9.png) |  |  |
 
-
 ### Assign Shortcut / Change Shortcut / Non Keyboard Shortcut / Remove Shortcut
 
 These buttons allows you to assign or to remove a new shortcut to the tool or to change an existing shortcut for the tool. Note that this may or may not work proper. For some tools you might need to change the shortcut in the User preferences. Non Keyboard shortcut is such a case.
-
 
 | Entry | What it does |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -231,13 +218,11 @@ These buttons allows you to assign or to remove a new shortcut to the tool or to
 | Copy Driver to Selected | Copies the driver from the active to the selected object. You need to have more than one object selected. Select first object, hold shift, select second object. |
 | Copy all Drivers to Selected | Copies all driver from the active to the selected object. You need to have more than one object selected. Select first object, hold shift, select second object. |
 
-
 ### Edit Driver
 
 ![Edit Driver](/docs2/images/editors/introduction/edit-driver.png)
 
 Opens the driver settings where you can edit the driver. It is the same settings that are covered in the driver editor. So we won't cover it here.
-
 
 | Entry | What it does |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -255,11 +240,10 @@ Opens the driver settings where you can edit the driver. It is the same settings
 | Mark as Asset | Marks the current property as an asset. It will be added to the active asset library then. |
 | Clear Asset | Removes the asset from the asset library. |
 
-
 ## Resize Tool Shelf and Properties content
 
 You can resize the Tool Shelf content and the Properties Sidebar content. This means that you can zoom in or out. This trick also works in the Properties Editor.  
-  
+
 Move the mouse over the upper region of the Tool Shelf.  
 Hold down Ctrl key  
 Click with Middle Mouse button. The mouse pointer will turn into two white triangles.
@@ -286,106 +270,85 @@ A special behavior shows the sidebars here. They are part of the editors. But to
 
 Bforartists provides a number of different **Editor** types for different purposes. For example, the 3D view is made to modify the 3D data, such as meshes or curves. You can have more than one editor window open at the same time.
 
-
 |  |  |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | The 3D View is the editor where you do your 3D work. The 3D view is the editor to model meshes, etc. . It's the core editor for everything where you work at your 3D data. You will find it in every layout where you need to display your 3d data. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-2.png) |
-
 
 |  |  |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------ |
 | The Image Editor is the place where you work with textures. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-3.png) |
 
-
 |  |  |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | The UV Editor is the place where you work with UV mapping. It starts pretty similar to the Image editor. But contains the UV tools. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-4.png) |
-
 
 |  |  |
 | --------------------------------------------------- | ------------------------------------------------------------------------ |
 | The editor to do post processing. It is node based. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-5.png) |
 
-
 |  |  |
 | ------------------------------------------------ | ------------------------------------------------------------------------ |
 | The editor to do texture work. It is node based. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-5.png) |
-
 
 |  |  |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | This editor allows you to manipulate geometry. It is node based. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-6.png) |
 
-
 |  |  |
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | The shader Node editor is to create the materials for your objects. It is node based. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-7.png) |
-
 
 |  |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | The video sequence editor allows you to work with video and audio clips. Here you can cut videos. This editor can be found in the video editing layout. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-8.png) |
 
-
 |  |  |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | The movie clip editor is for tracking purposes. You will find it in the Motion Tracking layout. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-9.png) |
-
 
 |  |  |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | The Dope Sheet Editor is the place where you deal with key frames. The Dope Sheet Editor is one of five special editors for animation needs. You will find it in the animation layout. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-9.png) |
 
-
 |  |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
 | The timeline editor provides you with a toolbar for all animation needs. Start, stop, record, set keying set, etc. The Timeline Editor is one of five special editors for animation needs. You will find it in the animation layout. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-10.png) |
-
 
 |  |  |
 | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | The Graph Editor is the place where you work with function curves. The Graph Editor is one of five special editors for animation needs. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-11.png) |
 
-
 |  |  |
 | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | See and edit drivers. The Drivers Editor is one of five special editors for animation needs. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-12.png) |
-
 
 |  |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | The Nonlinear Animation Editor, in short NLA Editor, is the place where you work with Clips and Actions. The Nonlinear Animation Editor is one of five special editors for animation needs. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-12.png) |
 
-
 |  |  |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | The Text Editor is the place where you write code. The scripts for addons for example. You will find it in the Scripting layout. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-12.png) |
-
 
 |  |  |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
 | The Python console gives you access to the Python API. You will find it in the Scripting layout. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-13.png) |
 
-
 |  |  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | The Info Editor provides you with a list of the last performed operations. Including error messages. You will find it in the Scripting layout. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-13.png) |
-
 
 |  |  |
 | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | It is as the name says a toolbar. Usually just the header area is visible. The rest of the editor has no purpose. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-14.png) |
 
-
 |  |  |
 | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | The Outliner is the place that gives you an overview of what is in the scene and in the file. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-15.png) |
 
-
 |  |  |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | The Properties editor is the place where you can see and tweak all properties for the 3D scene. The range goes from render settings across object settings up to particle settings. It is the data heart. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-16.png) |
-
 
 &lt;table&gt;
 &lt;tbody&gt;
@@ -398,11 +361,9 @@ This editor is not part of the standard workspaces. It usually gets called when 
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-
 |  |  |
 | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | The spreadsheet editor provides you with mesh informations. This information can then for example be used in the geometry nodes editor. | ![The editor types](/docs2/images/editors/introduction/the-editor-types-18.png) |
-
 
 &lt;table&gt;
 &lt;tbody&gt;

@@ -1,6 +1,6 @@
 ---
 id: editors.properties.physics-properties-tab
-title: Physics Properties Tab
+title: "Physics"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.12 Editors - Properties Editor - Physics Properties Tab.odt
+summary: "Gravity or collisions are real time physical effects."
+icon: physics
+order: 110
 ---
 ## Physics
 

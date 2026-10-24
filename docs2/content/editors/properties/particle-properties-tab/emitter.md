@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.1 Editors - Properties Editor - Particle Properties Tab - Emitter.odt
+summary: "There are two types of particles."
 ---
 ## Introduction
 

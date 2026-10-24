@@ -11,7 +11,7 @@ path:
 version: "5.1"
 status: draft
 icon: topbar
-summary: "Select Menu: All Modes."
+summary: "The Select menu provides you with all functionality around selecting."
 order: 40
 ---
 # Select menu

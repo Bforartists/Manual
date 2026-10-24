@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.19 Editors - Properties Editor - Particle Properties Tab - Hair- Velocity panel.odt
+summary: "Hair - Velocity panel in Properties Editor › Particle Properties Tab."
 ---
 ## Velocity Panel
 

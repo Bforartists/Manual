@@ -19,12 +19,12 @@ source:
 
 The 3D Cursor is simply a point in 3D space which can be used for a number of purposes. It is often in the way. You can hide it in the properties sidebar in the 3D Cursor panel at the right.
 
-The 3D View editor is the editor where you edit your 3D data. Here you can display and modify all the scene data like meshes, curves, metalballs, etc.
+The 3D View editor is the editor where you edit your 3D data. Here you can display and modify all the scene data like meshes, curves, metaballs, etc.
 
 It has a grid overlay in the middle per default, and you can navigate around in this view with your mouse.
 
 Each part of this editor will be explained in their own individual chapter.  
-  
+
 In this chapter you will find general GUI information that doesn't fit elsewhere.
 
 The 3D View has several areas highlighted with colour overlays:
@@ -79,14 +79,12 @@ For the rest of the available navigation functionality have a look into the Navi
 
 From left to right.
 
-
 | Entry | What it does |
 | -------------------------- | -------------------------------------------------------------------------------- |
 | Perspective / Orthographic | Switch the view between perspectivic and orthographic view. |
 | Camera View | Enter and leave the camera view. You need to have an active camera in the scene. |
 | Move | Moves the view. |
 | Zoom | Zooms in and out. |
-
 
 #### Mini Axis
 
@@ -114,12 +112,10 @@ Numpad `*` resets the 3D view.
 
 Left clicking into an empty space deselects what is currently selected. Exception: when you are in one of the navigation modes and drag the mouse, then the navigation takes over.
 
-
 | Entry | What it does |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Object navigation | Hotkey W moves the selected object/s Hotkey E rotates the selected object/s Hotkey R scales the selected object/s |
 | Trackball Navigation | Pressing the hotkey for object rotation once (by default the E key in the Bforartists key map) will rotate the object around the screen axis. Pressing the hotkey for rotation twice will activate trackball rotation. Now you can rotate the object freely around all three axis. |
-
 
 ## Context Menus
 
@@ -169,7 +165,7 @@ Holding **Ctrl** during a transform operation (such as grab, rotate or scale) wi
 
 Snapping also works at sliders for example. Hover with the mouse over the slider, start to slide, and holding down **Ctrl** will snap the sliders in incremental steps.
 
-When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.
+> Hold **Ctrl** while dragging a slider to snap it. See **[Snapping](../../interface/properties.md#snapping)** in the Interface chapter.
 
 Note that this also works at brushes hotkeys for example. Hotkey F usually allows to change the radius. When you hold down ctrl too then it increases or decreases the size by incremental steps.
 
@@ -235,13 +231,11 @@ The navigation hotkeys and the context menus are excluded here since they are al
 
 Calls the file menu under the mouse.
 
-
 | Entry | What it does |
 | ------------------------------- | --------------------------------------------------------------------------- |
 | Set 3D Cursor - Alt Right Mouse | Sets the 3D cursor position to Mouse position. |
 | Frame All - Ctrl Home | View all objects in the scene in all regions. This hotkey is for quad view. |
 | Frame All - Shift C | View and center all objects in the scene. |
-
 
 ### Pivot Point Pie menu - ` (german keyboard . )
 
@@ -257,12 +251,10 @@ Calls the Snap Pie Menu.
 
 Navigate a lamp of type sun or spot light to point at objects. The lamp follows the mouse cursor.
 
-
 | Entry | What it does |
 | ----------------------------- | -------------------------- |
 | Call pivot pie menu - . | Call pivot pie menu. |
 | Call orientation pie menu - , | Call orientation pie menu. |
-
 
 ### Cycle through select method - Shift Q
 
@@ -330,12 +322,10 @@ Select the region faces too.
 
 Don't select the whole path, but just every nth element of it.
 
-
 | Entry | What it does |
 | ------ | --------------------------------------------------------------------- |
 | Skip | This is connected to nth element. Number of elements to skip at once. |
 | Offset | This is connected to nth element. Start with an offset. |
-
 
 ### Curve Object, Add Vertex - Ctrl Right mouse
 

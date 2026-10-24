@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.12.5 Editors - Properties Editor - Physics Properties Tab - Soft Body panel.odt
+summary: "Soft body simulation is used for simulating soft deformable objects."
 ---
 ## Soft Body
 
@@ -333,7 +334,7 @@ Estimate matrix, split to COM, ROT, SCALE.
 
 ![Helpers subpanel](/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/helpers-subpanel.png)
 
-These settings allow you to control how Blender will react (deform) the soft body once it either gets close to or actually intersects (cuts into) another collision object on the same layer.
+These settings allow you to control how Bforartists will react (deform) the soft body once it either gets close to or actually intersects (cuts into) another collision object on the same layer.
 
 
 | Entry | What it does |

@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.2.4 Editors - Properties Editor - Render Properties Tab - Workbench.odt
+summary: "There are three different render engines available."
 ---
 ## Render Tab
 

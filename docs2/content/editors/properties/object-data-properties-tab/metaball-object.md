@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.4 Editors - Properties Editor - Object Data Properties Tab - Metaball Object.odt
+summary: "The 3D Viewport resolution of the generated mesh."
 ---
 ## Metaball panel
 

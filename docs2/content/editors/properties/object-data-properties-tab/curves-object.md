@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.3 Editors - Properties Editor - Object Data Properties Tab - Curves Object.odt
+summary: "The Curves Object Data Properties tab provides access to the attributes, surface bindings, animation settings, and custom properties of curve-based objects."
 ---
 ## Curves Properties Tab
 

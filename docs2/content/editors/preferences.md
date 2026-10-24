@@ -1027,7 +1027,7 @@ Select if the repository is a system directory, or a user directory. Normally th
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Visit extensions website | Opens the Blender extension page in a web browser. · **Install Available Updates**: Install all available updates. Note that this feature requires to allow online access. · **Refresh Remote**: Check if updates for extensions are available for the online extensions. Note that this feature requires to allow online access. Also note that this feature works on ALL repositories. |
 | Install from Disk | You can optionally also install addons and extensions from a disk location using the install from disk operators. · **Refresh Local**: Refresh local extensions to apply changes. Note that this feature works on ALL repositories. |
-| Enable Built-in Legacy Add-ons | Blender does by default just use online add-ons. But Bforartists comes with some add-ons that are vital to run the software. And these offline add-ons must be on so that Bforartists is fully functional. By Default these add-ons are already enabled. So no action is required. But if you by accident disable a Bforartists core add-on, this is the place to re-enable them all. |
+| Enable Built-in Legacy Add-ons | Blender by default uses only online add-ons. But Bforartists comes with some add-ons that are vital to run the software. And these offline add-ons must be on so that Bforartists is fully functional. By Default these add-ons are already enabled. So no action is required. But if you by accident disable a Bforartists core add-on, this is the place to re-enable them all. |
 
 
 ### Allow Online Access
@@ -1500,7 +1500,7 @@ If the system has a M1/M2 chip, users can use the Metal back-end for rendering i
 
 This setting is which display graphics will be used in the viewport.
 
-> **Note:** Changing this will require restarting Bforaritsts.
+> **Note:** Changing this will require restarting Bforartists.
 
 
 | Entry | What it does |
@@ -1685,7 +1685,7 @@ This option tells Bforartists to keep the indicated number of saved versions of 
 
 | Entry | What it does |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Auto Save Temporary File | Enable Auto Save. Auto save creates a temporary file. Checking this box tells Blender to **automatically** save a backup copy of your work-in-progress to the Temp directory (refer to the **File** tab in the **Preferences** for its location). The Auto Saved files are named using a random number and have a blend extension. |
+| Auto Save Temporary File | Enable Auto Save. Auto save creates a temporary file. Checking this box tells Bforartists to **automatically** save a backup copy of your work-in-progress to the Temp directory (refer to the **File** tab in the **Preferences** for its location). The Auto Saved files are named using a random number and have a blend extension. |
 | Timer | Adjust the number of minutes between each Auto Save. The minimum is 1, and the Maximum is 60 (Save at every one hour). |
 
 

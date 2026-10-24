@@ -11,6 +11,7 @@ screenshots: "5.1"
 source:
   - 36 Troubleshooting.odt
 icon: question
+summary: "There are some common problems in Bforartists."
 ---
 ## Troubleshooting
 

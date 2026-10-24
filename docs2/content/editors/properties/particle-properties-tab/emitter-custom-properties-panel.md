@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.15 Editors - Properties Editor - Particle Properties Tab - Emitter - Custom Properties panel.odt
+summary: "Opens a panel where you can adjust the settings for the custom property."
 ---
 ## Custom Properties Panel
 

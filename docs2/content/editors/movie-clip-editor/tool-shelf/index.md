@@ -14,6 +14,7 @@ source:
 replaces:
   - editors.movie-clip-editor.tool-shelf.tracking-mode
 order: 20
+summary: "The Tool Shelf exists for the Tracking Mode in Clip submode."
 ---
 ## Tool Shelf
 

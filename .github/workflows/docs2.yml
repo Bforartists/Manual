@@ -186,13 +186,17 @@ jobs:
           keep_files: true
           commit_message: "nav: ${{ github.sha }} [docs-bot]"
 
-      - name: 🎛️ Prepare the docs layer (one file per version)
+      - name: 🎛️ Prepare the site scripts (one file per version)
         if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH
         run: |
-          v=$(head -1 docs2/webflow/docs-layer.js | sed -n 's/.*@version \([0-9.]*\).*/\1/p')
-          mkdir -p _layer && cp docs2/webflow/docs-layer.js "_layer/docs-layer-$v.js"
-          echo "Docs layer $v: https://bforartists.github.io/Manual/webflow/docs-layer-$v.js" >> "$GITHUB_STEP_SUMMARY"
-          echo "sha384-$(openssl dgst -sha384 -binary docs2/webflow/docs-layer.js | openssl base64 -A)" >> "$GITHUB_STEP_SUMMARY"
+          mkdir -p _layer
+          for f in docs2/webflow/*.js; do
+            v=$(head -1 "$f" | sed -n 's/.*@version \([0-9.]*\).*/\1/p')
+            [ -n "$v" ] || continue
+            n=$(basename "$f" .js)
+            cp "$f" "_layer/$n-$v.js"
+            echo "$n $v: https://bforartists.github.io/Manual/webflow/$n-$v.js sha384-$(openssl dgst -sha384 -binary "$f" | openssl base64 -A)" >> "$GITHUB_STEP_SUMMARY"
+          done
 
       - name: 🎛️ Publish the docs layer to GitHub Pages
         if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH && hashFiles('_layer/*.js') != ''

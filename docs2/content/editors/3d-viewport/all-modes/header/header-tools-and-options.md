@@ -11,7 +11,7 @@ path:
 version: "5.1"
 status: draft
 icon: topbar
-summary: "Header tools and Options: All Modes."
+summary: "The header in the 3D view contains various menus and tools."
 order: 10
 ---
 # Introduction
@@ -36,7 +36,6 @@ Modes are object states that allows you to edit and manipulate objects at differ
 
 The available modes can differ from object to object. An armature for example has an additional pose mode. And when you work with a grease pencil object, then several grease pencil modes becomes available.
 
-
 | Entry | What it does |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Object Mode | This mode allows to manipulate objects at Object level. Like move it around, rotate it, etc. This mode is available for all object types. |
@@ -48,7 +47,6 @@ The available modes can differ from object to object. An armature for example ha
 | Edit Strokes | Edit Strokes is a Grease Pencil only mode. It allows to manipulate the curves at a mesh level. |
 | Particle Edit | Particle edit is a Particle System mode only. When you apply a particle system to a mesh object then this mode becomes available. It allows you to manipulate the particle system at a mesh level. You can comb hair particles for example. |
 | Draw | Draw is a grease pencil object only mode. In this mode you draw grease pencil strokes. |
-
 
 # Mesh Object Sub Modes
 
@@ -230,13 +228,11 @@ Use Falloff when edit in Multi frame mode to compute brush effect by frame.
 
 The sculpt mode allows you to sculpt the grease pencil strokes.
 
-
 | Entry | What it does |
 | ---------------------------- | --------------------------------------------------------- |
 | Selection Mask Points | Just the selected vertices gets sculpted. |
 | Selection Mask Strokes | Just the selected strokes gets sculpted. |
 | Selection Mask other strokes | Only sculpt selected stroke points between other strokes. |
-
 
 ### Multi-frame
 
@@ -280,14 +276,12 @@ Relative to which plane to draw the strokes. Default orientation is view.
 
 When this mode is active, then you can edit strokes from multiple grease pencil frames at once. The key frames must be selected to be included.
 
-
 | Entry | What it does |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | Use Additive Drawing | When creating new frames, then the strokes from the previous or active frame gets included as the base for the new stroke. |
 | Automerge | Join last drawn strokes by distance with previous strokes in the active layer. |
 | Add Weight Data for new strokes | Add Weight data for new strokes, according to the current vertex group and weight. When no vertex group is selected, then no weight is added. |
 | Draw Strokes on Back | Usually a new stroke is drawn on top of existing strokes. Draw Strokes on Back adds the new strokes below the existing strokes. |
-
 
 ## Weight Paint Mode
 
@@ -385,7 +379,6 @@ The object settings just appears when the Tool Settings are hidden. This can be 
 
 You can display Transform Manipulators at your object or selection by activating them in the tool shelf. They allow you to scale, rotate or move objects by grabbing their controls, and moving your mouse in the corresponding axis. The widget can be oriented in different ways by using another method in this drop down box. The names should be self explaining.
 
-
 | Entry | What it does |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | View | The transform orientation aligns to the current view. |
@@ -395,7 +388,6 @@ You can display Transform Manipulators at your object or selection by activating
 | Global | Uses the global orientation for the selected elements. |
 | Cursor | Uses the orientation of the 3D cursor. |
 | Parent | Uses the orientation of the parent object. |
-
 
 ### Create Orientation
 
@@ -413,7 +405,6 @@ You can create more than one user orientation.
 
 Create Orientation has some settings.
 
-
 | Entry | What it does |
 | ------------------ | -------------------------------------------------------------------------------- |
 | Name | Rename the orientation. |
@@ -421,13 +412,11 @@ Create Orientation has some settings.
 | Use after creation | Use this orientation after creation. |
 | Overwrite Previous | Overwrite previous created orientation in case it has the same name. |
 
-
 ## Transform Pivot Point
 
 ![Transform Pivot Point](/docs2/images/editors/3d-viewport/header/header-tools-and-options/transform-pivot-point.png)
 
 The Pivot Point is the center of your object or your selection. When you rotate or scale an object, or a group of vertices/edges/faces, you may want to shift the pivot point in 3D space. The names should be self explaining.
-
 
 | Entry | What it does |
 | ------------------- | --------------------------------------------------------- |
@@ -436,7 +425,6 @@ The Pivot Point is the center of your object or your selection. When you rotate 
 | Individual Origins | Pivot around the center of each individual object. |
 | Median Point | Pivot around the median point of selected objects. |
 | Active Element | Pivot around the active element. |
-
 
 ## Snapping
 
@@ -462,7 +450,6 @@ Marking a point more than once will give it more weight in the averaged location
 
 Which part to snap onto the target.
 
-
 | Entry | What it does |
 | ------- | ------------------------------------------- |
 | Closest | Snap closest point onto the target. |
@@ -470,13 +457,11 @@ Which part to snap onto the target.
 | Median | Snap median onto the target. |
 | Active | Snap active onto the target. |
 
-
 ### Snap to
 
 ![Snap to](/docs2/images/editors/3d-viewport/header/header-tools-and-options/snap-to.png)
 
 To which part of the target to snap.
-
 
 | Entry | What it does |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -489,19 +474,16 @@ To which part of the target to snap.
 | Edge Center | Snaps to the center of an edge. |
 | Edge Perpendicular | Snap to the nearest point of an edge. |
 
-
 ### Snap Target for Individual Elements
 
 ![Snap Target for Individual Elements](/docs2/images/editors/3d-viewport/header/header-tools-and-options/snap-target-for-individual-elements.png)
 
 Type of element for individual transformed elements to snap to.
 
-
 | Entry | What it does |
 | ------------ | ------------------------------- |
 | Face Project | Snap by projecting onto faces. |
 | Face Nearest | Snap to nearest point on faces. |
-
 
 ### Snap Peel Object
 
@@ -541,12 +523,10 @@ Align rotation with the snapping target.
 
 Snap only onto objects that are selectable. This will ignore any objects that have been marked as un-selectable from the Outliner Editor.
 
-
 | Entry | What it does |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Affect | Adjust what transform methods should be affected by snapping. **Note:***You can selected multiple by holding down the SHIFT key and selecting additional transforms.* · **Move**: Move the affected by snapping settings. · **Rotate**: Rotate the affected by snapping settings. · **Scale**: Scale the affected by snapping settings. |
 | Rotation Increment | Snap in adjustable incremental steps. · **Rotation Increment Slider**: Angle used for rotation increments in the 3D editors. · **Precision Rotation Increment Slider**: Precision angle used for rotation increments in the 3D editors. |
-
 
 ## Proportional Editing
 
@@ -582,7 +562,6 @@ And it can also be read and edited at the Proportional Size slider in the Propor
 
 When you translate an object, move it around or rotate or scale it, then the last operator contains also proportional editing settings.
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------------------------------------------ |
 | Proportional Editing | Enable proportional editing. |
@@ -590,7 +569,6 @@ When you translate an object, move it around or rotate or scale it, then the las
 | Proportional Size | Adjust the falloff radius. Note that the white circle is not displayed when using this slider. |
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | In depth direction along the view the radius is ignored. It selects as deep as there is something to select. |
-
 
 # Selectability & Visibility
 
@@ -660,12 +638,10 @@ You can have all transform methods on at once.
 
 Shows the move part of the widget.
 
-
 | Entry | What it does |
 | ------ | ------------------------------------ |
 | Rotate | Shows the rotate part of the widget. |
 | Scale | Shows the scale part of the widget. |
-
 
 ### Empty
 
@@ -685,12 +661,10 @@ Some force field types have a gizmo. Shows the transform gizmo at a force field.
 
 ![Light](/docs2/images/editors/3d-viewport/header/header-tools-and-options/light.png)
 
-
 | Entry | What it does |
 | ------- | ------------------------------------------------------------------------------------------------------- |
 | Size | Show the gizmo to adjust the size of lights. That's the blue arrow here. |
 | Look At | Show the gizmo to adjust the direction of the light. That's the yellow dot in the middle of the circle. |
-
 
 ### Camera
 
@@ -724,12 +698,10 @@ Currently this panel is greyed out and dysfunctional in Sculpt mode. It is WIP.
 
 These override all brush settings, but you can also set these auto masking features per brush.
 
-
 | Entry | What it does |
 | --------- | ------------------------------------------------------------------------------------- |
 | Topology | Affect only vertices that are connected to the current active vertex under the brush. |
 | Face Sets | Affect only vertices that share face sets with the active vertex. |
-
 
 ## Mesh Boundary
 
@@ -763,13 +735,11 @@ Do not affect vertices in valleys. This feature is based on the surface curvatur
 
 The setting that appears on activation and is valid for both, Cavity, and Cavity (Inverted).
 
-
 | Entry | What it does |
 | ----------- | ----------------------------------------------------- |
 | Create Mask | Creates a mask based on the curvature of the surface. |
 | Factor | The contrast of the cavity mask. |
 | Blur | The number of times the cavity mask is blurred |
-
 
 ### Custom Curve
 
@@ -787,9 +757,7 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 
 ### Adding Points
 
-![Adding Points](/docs2/images/editors/3d-viewport/header/header-tools-and-options/adding-points.png)
-
-You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
+> This setting uses the **curve widget**: click to add points, drag to move them. See **[Curve Widget](../../../../interface/properties.md#curve-widget)** in the Interface chapter.
 
 ### Navigation elements
 
@@ -811,12 +779,10 @@ Set up clipping for the stroke.
 
 Turns clipping on or off.
 
-
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Min and Max X Y | The values for the clipping area. |
 | Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Extend horizontal**: Extends the curve before the first curve point and after the last curve point horizontally. · **Extend extrapolated**: Extends the curve before the first curve point and after the last curve point extrapolated. · **Reset Curve**: Resets the curve to the initial shape. |
-
 
 ### Handle Types
 
@@ -838,13 +804,11 @@ Deletes the current active curve point.
 
 Affect only vertices with a normal that faces the viewer.
 
-
 | Entry | What it does |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Occlusion | Only affect vertices that are not occluded by other faces. With Occlusion on the Limit and Falloff options are not available. |
 | Limit | View normal limit. The range of angles that will be affected. |
 | Falloff | Extend the angular range with a falloff gradient. |
-
 
 ## Area Normal
 
@@ -852,12 +816,10 @@ Affect only vertices with a normal that faces the viewer.
 
 Affect only vertices with a similar normal to where the stroke starts.
 
-
 | Entry | What it does |
 | ------- | ------------------------------------------------------------- |
 | Limit | Area normal limit. The range of angles that will be affected. |
 | Falloff | Extend the angular range with a falloff gradient. |
-
 
 # Mesh Object - Vertex Paint mode
 
@@ -877,7 +839,6 @@ A mesh can have more than one vertex color index and type. But just one index ca
 
 A List of the vertex color indexes for this mesh.
 
-
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Color index name | The name of the vertex color index. It can be renamed by double clicking at it. |
@@ -885,7 +846,6 @@ A List of the vertex color indexes for this mesh.
 | Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
 | Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
 | Add + | Create a vertex color index. |
-
 
 #### Add Color Attribute Popup
 
@@ -909,12 +869,10 @@ The the color attribute type.
 - Color stores RGBA color 32-bit floating point values
 - Byte Color stores RGBA color 32-bit positive integer values
 
-
 | Entry | What it does |
 | ----- | ----------------------- |
 | Color | The Default fill colour |
 | Ok | Confirm to apply |
-
 
 #### Remove -
 
@@ -960,7 +918,6 @@ Vertex groups exists for mesh and lattice objects.
 
 A List of the vertex groups for this mesh.
 
-
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Group name | The name of the group. It can be renamed by double clicking at it. |
@@ -968,30 +925,25 @@ A List of the vertex groups for this mesh.
 | Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
 | Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
 
-
 | Entry | What it does |
 | -------- | -------------------------------- |
 | Add + | Create an empty vertex group. |
 | Remove - | Deletes the active vertex group. |
 
-
 ### Specials menu
 
 ![Specials menu](/docs2/images/editors/3d-viewport/header/header-tools-and-options/specials-menu-2.png)
-
 
 | Entry | What it does |
 | ---------------------- | --------------------------------------------------------------- |
 | Sort by Name | Sorts the vertex groups alphabetically by name. |
 | Sort by Bone Hierarchy | Sorts the vertex groups by the hierarchy of the assigned bones. |
 
-
 #### Duplicate Vertex Group
 
 ![Duplicate Vertex Group](/docs2/images/editors/3d-viewport/header/header-tools-and-options/duplicate-vertex-group.png)
 
 Add a copy of the active vertex group as a new group. The new group will be named like the original group with `“_copy”` appended at the end of its name. And it will contain associations to exactly the same vertices with the exact same weights as in the source vertex group.
-
 
 | Entry | What it does |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1005,7 +957,6 @@ Add a copy of the active vertex group as a new group. The new group will be name
 | Lock All | Lock all groups. |
 | Unlock All | Unlock all groups. |
 | Lock Invert All | Invert group locks. |
-
 
 #### Move Vertex Group Up / Down
 
@@ -1049,12 +1000,10 @@ The texture gets added to the shader, and connected to the correct node. A base 
 
 ![Paint Slot with mode Material](/docs2/images/editors/3d-viewport/header/header-tools-and-options/texture-slots-4.png)
 
-
 | Entry | What it does |
 | ---------------------- | ------------------------------------------------------------------------- |
 | Material Paint Slot | A list of the available paint slot materials. |
 | Add Texture Paint Slot | The + button at the right. Add more materials to the Material Paint Slot. |
-
 
 ### Paint Slot with Mode Single Image
 
@@ -1076,14 +1025,12 @@ When no image is loaded then you can create a new image here, or load a new imag
 
 See the name of the image, and edit the name.
 
-
 | Entry | What it does |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fake User | When enabled then this image will be stored internally. But not the painted changes at it!! |
 | New Image | Create a new image. |
 | Open Image | Open an image |
 | Unlink Data Block | Delete the Image when saving the scene, closing and reopening Bforartists. Note that the number of Users must be zero. Or the image comes back. |
-
 
 #### UV Map
 
@@ -1159,7 +1106,6 @@ Inverts the stencil color.
 
 Cavity mask allows mask painting according to mesh geometry cavity. It is a sub menu tab. In expanded state it shows the falloff curve, which can be edited.
 
-
 | Entry | What it does |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Activate Cavity mask | Activates the Cavity mask. |
@@ -1167,7 +1113,6 @@ Cavity mask allows mask painting according to mesh geometry cavity. It is a sub 
 | Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
 | Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
 | Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Reset Curve**: Resets the curve to the initial shape. |
-
 
 #### Use Clipping
 
@@ -1181,14 +1126,12 @@ Clipping options. Set up clipping for the stroke.
 
 Set handle type to Vector.
 
-
 | Entry | What it does |
 | ------------------- | ------------------------------------------- |
 | Auto Handle | Set handle type to Auto. |
 | Auto Clamped Handle | Set handle type to Auto Clamped. |
 | X / Y | The x and y position of the selected point. |
 | Delete Points | Deletes selected curve points. |
-
 
 # Curve Object - Edit Mode
 
@@ -1198,13 +1141,11 @@ Set handle type to Vector.
 
 Handles defines the type of handle for the control points of the curve. You have the choice between Auto, Vector, Align and Free. And the Last Operator gives you a fifth possibility to toggle between Free and Align.
 
-
 | Entry | What it does |
 | ------ | -------------------------------------- |
 | Auto | Auto aligns the handles automatically. |
 | Vector | Set Handle type to Vector. |
 | Align | Set Handle type to Align. |
-
 
 ### Free
 
@@ -1232,12 +1173,10 @@ Turn on or off all overlays. This includes the ground grid, things like relation
 
 ## Guides
 
-
 | Entry | What it does |
 | ----- | ------------------------------------------------------------------------------------------------------------ |
 | Grid | Show the whole ground grid, including axes. You can also show the grid in orthographic mode of the viewport. |
 | Floor | Show the ground grid, the white part of it. |
-
 
 ### Axes
 
@@ -1357,12 +1296,10 @@ Geometry related settings.
 
 Show the wire frame in object mode.
 
-
 | Entry | What it does |
 | ------------------- | ----------------------------------------------------------------------------------------------------- |
 | Wireframe Threshold | With a wire frame value of 1 all edges are drawn. The lower the value, the more edges will disappear. |
 | Opacity | The opacity of the displayed edges. |
-
 
 ### Face Orientation
 
@@ -1406,12 +1343,10 @@ Show geometry attribute values that are connected to an enabled Geometry Nodes�
 
 Motion tracking related settings. When you turn it on, then some further options appears. These features just shows before you bake the solution. Not with the resolved solution.
 
-
 | Entry | What it does |
 | ------------ | ----------------------- |
 | Camera Path | Shows the camera path. |
 | Marker Names | Shows the marker names. |
-
 
 ### Track display type
 
@@ -1431,7 +1366,6 @@ The Viewport Overlays panel shows different content, dependent of mode and objec
 
 ## Mesh Edit Mode Overlays
 
-
 | Entry | What it does |
 | ------ | ----------------------------------------------------------------------------------------------------------------------------- |
 | Bevel | Display weights created for the Bevel Modifier. |
@@ -1440,7 +1374,6 @@ The Viewport Overlays panel shows different content, dependent of mode and objec
 | Sharp | Display sharp edges, used with the edge split modifier. |
 | Faces | Highlight faces by using a face overlay that applies to both selected and unselected faces. This affects all selection modes. |
 | Center | Show face-center points in solid shading modes. This is disabled in wireframe and xray mode. Only affects face-select mode. |
-
 
 ### Indices
 
@@ -1502,12 +1435,10 @@ The mesh analysis type.
 
 Extrusion 3D printers have a physical limit to the overhang that can be printed. The Overhang type shows the overhang in different ways. Angle and axis can be adjusted.
 
-
 | Entry | What it does |
 | --------------- | --------------------------------- |
 | Minimum/Maximum | Minimum/Maximum angle to display. |
 | Axis | Choose which angle to calculate. |
-
 
 #### Thickness
 
@@ -1579,12 +1510,10 @@ Shows the length of selected edges.
 
 Shows the angle of selected edges between two faces.
 
-
 | Entry | What it does |
 | ---------- | ---------------------------------------- |
 | Face Area | Show the area of selected faces. |
 | Face Angle | Show the angle of selected face corners. |
-
 
 ## Normals
 
@@ -1594,13 +1523,11 @@ Shows the angle of selected edges between two faces.
 
 Show the normals for the chosen elements. They will be displayed as lines.
 
-
 | Entry | What it does |
 | ---------------------- | ------------------------------------ |
 | Display vertex normals | Displays the normals of the vertices |
 | Display split normals | Displays the per vertex face normals |
 | Display normals | Displays the face normals. |
-
 
 ### Constant Screen Size Normals
 
@@ -1622,12 +1549,10 @@ Adjust the length of the line that represents the normal.
 
 Freestyle is the line renderer integrated into Bforartists. For freestyle you can mark edges and faces.
 
-
 | Entry | What it does |
 | ---------- | --------------------------------------------------------------- |
 | Edge Marks | Display Freestyle edge marks, used with the Freestyle renderer. |
 | Face Marks | Display Freestyle face marks, used with the Freestyle renderer. |
-
 
 # Viewport Overlays - Mesh Object - Sculpt Mode
 
@@ -1805,12 +1730,10 @@ Control the opacity of the not selected layers in the current grease pencil obje
 
 I have set the fade layers opacity to 1 here. When you select the other layer, then the inner part becomes visible again, and the black outlines hides.
 
-
 | Entry | What it does |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fade Objects | Fades everything in the viewport but the grease pencil color to black. · **Fade Grease Pencil Objects**: Fades the not active grease pencil objects to black too. |
 | Edit Lines | Show the edges of the curve when editing strokes. |
-
 
 ### Stroke Direction
 
@@ -1840,13 +1763,11 @@ With Curve Editing off. How strong the selected vertices of the stroke shows.
 
 With Curve Editing on. Limit the display of curve handles in edit mode.
 
-
 | Entry | What it does |
 | -------- | -------------------------------- |
 | None | Don't limit the handles. |
 | Selected | Just limit the selected handles. |
 | All | Limit all handles. |
-
 
 ## In Sculpt and Weight paint Mode
 
@@ -1876,14 +1797,12 @@ Control the opacity of the not selected layers in the current grease pencil obje
 
 I have set the fade layers opacity to 1 here. When you select the other layer, then the inner part becomes visible again, and the black outlines hides.
 
-
 | Entry | What it does |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fade Objects | Fades everything in the viewport but the grease pencil color to black. · **Fade Grease Pencil Objects**: Fades the not active grease pencil objects to black too. |
 | Edit Lines | Show the edges of the curve when editing strokes. |
 | Only in multi frame | Only show edges of the curve while in multi frame edition. |
 | Vertex Opacity | Sculpt mode only. How strong the selected vertices of the stroke shows. |
-
 
 ## In Draw Mode
 
@@ -1911,12 +1830,10 @@ Control the opacity of the not selected layers in the current grease pencil obje
 
 I have set the fade layers opacity to 1 here. When you select the other layer, then the inner part becomes visible again, and the black outlines hides.
 
-
 | Entry | What it does |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fade Objects | Fades everything in the viewport but the grease pencil color to black. · **Fade Grease Pencil Objects**: Fades the not active grease pencil objects to black too. |
 | Vertex Opacity | How strong the selected vertices of the stroke shows. |
-
 
 ## In Vertex Paint mode
 
@@ -1944,7 +1861,6 @@ Control the opacity of the not selected layers in the current grease pencil obje
 
 I have set the fade layers opacity to 1 here. When you select the other layer, then the inner part becomes visible again, and the black outlines hides.
 
-
 | Entry | What it does |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fade Objects | Fades everything in the viewport but the grease pencil color to black. · **Fade Grease Pencil Objects**: Fades the not active grease pencil objects to black too. |
@@ -1952,7 +1868,6 @@ I have set the fade layers opacity to 1 here. When you select the other layer, t
 | Only in multi frame | Only show edges of the curve while in multi frame edition. |
 | Vertex Opacity | How strong the selected vertices of the stroke shows. |
 | Opacity | The vertex paint opacity. |
-
 
 # Viewport Shading
 
@@ -1970,14 +1885,12 @@ This viewport setting is connected with the viewport shading. It allows you to s
 
 Defines how geometry gets displayed in the viewport.
 
-
 | Entry | What it does |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Wire frame | Displays the content in the viewport as Wire frame. |
 | Solid | Displays the content in the viewport with a solid white color. |
 | Material | Displays the content in the viewport with all material settings and with OpenGL rendering. Note that this does not exist when you choose the Workbench renderer. |
 | Rendered | Displays the content in the viewport like you would have rendered it. This mode is dependent of what render engine you have currently active. |
-
 
 ## Viewport Shading Settings
 
@@ -2009,12 +1922,10 @@ The selected object gets highlighted. The wire frame is a random wire frame colo
 
 #### Background
 
-
 | Entry | What it does |
 | ----- | ----------------------------------------------------------------- |
 | Theme | Uses the viewport background color as defined in the theme. |
 | World | Uses the world background color as the viewport background color. |
-
 
 #### Viewport
 
@@ -2030,13 +1941,11 @@ Defines a custom color for the viewport background color.
 
 This viewport setting is connected with the viewport shading. It allows you to show and edit the back geometry. Or hide it, so that you can just edit the geometry that points forwards.
 
-
 | Entry | What it does |
 | ------------- | ---------------------------------------------------------- |
 | X Ray Alpha | Adjust the amount of transparency. |
 | Outline | Show the not selected objects with an outline. |
 | Outline Color | Defines the color of the outline for not selected objects. |
-
 
 ### Viewport shading Settings with Solid
 
@@ -2054,12 +1963,10 @@ Uses a studio setup lighting. You can choose between several studio light setups
 
 ![Studio](/docs2/images/editors/3d-viewport/header/header-tools-and-options/studio.png)
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------------------------------- |
 | World Space Lighting | Make the lighting fixed to the world. And not follow the camera when you rotate around the scene. |
 | Rotation | The rotation of the light setup. This edit box is just active when you use World Space Lighting. |
-
 
 **Show Light Preferences**
 
@@ -2097,13 +2004,11 @@ Displays the wireframe color in a random color.
 
 Influence how the objects in the scene are colored. Just one setting can be active at one time.
 
-
 | Entry | What it does |
 | -------- | -------------------------------------------------------------------------------- |
 | Material | Uses the color of the material, in case a material is assigned to the object(s). |
 | Object | Uses the Object color. |
 | Vertex | Shows the vertex colors in case vertex colors exists. |
-
 
 #### Single
 
@@ -2111,12 +2016,10 @@ Influence how the objects in the scene are colored. Just one setting can be acti
 
 Define a custom color. A color picker box appears when you activate single.
 
-
 | Entry | What it does |
 | ------- | --------------------------------------------------------------------------------- |
 | Random | Colors the objects with a random color |
 | Texture | Shows the texture in case a material with a texture is assigned to the object(s). |
-
 
 #### Background
 
@@ -2124,12 +2027,10 @@ Define a custom color. A color picker box appears when you activate single.
 
 Define the look of the viewport background
 
-
 | Entry | What it does |
 | ----- | ------------------------------------------------------------------ |
 | Theme | Uses the background as defined in the theme. |
 | World | Uses the background as defined in the world settings of the scene. |
-
 
 #### Viewport
 
@@ -2174,13 +2075,11 @@ Here you adjust the strength of the shadow. Higher value means darker shadow.
 
 Adjust some settings of the light.
 
-
 | Entry | What it does |
 | --------------- | --------------------------------------------------------------------------------------------------- |
 | Light Direction | Click into the field and drag the mouse to change the direction of the light that casts the shadow. |
 | Shadow Shift | The shadow termination angle. This can be used to minimize self shadowing artifacts. |
 | Shadow Focus | The shadow hardness. It controls the falloff near the edge of the shadow. |
-
 
 #### Cavity
 
@@ -2228,13 +2127,11 @@ Draw the cavity shading in both, World Space and Screen space.
 
 Settings see above.
 
-
 | Entry | What it does |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Depth of Field | Use depth of field for the viewport. It uses the values from the active camera. |
 | Outline | Show the not selected objects with an outline. · **Outline Color**: Define the color of the outline for not selected objects. |
 | Specular Lighting | Render specular highlights. |
-
 
 #### Matcap
 
@@ -2262,13 +2159,11 @@ Some matcaps have a direction from which the light comes. With Flip Matcap you c
 
 Influence how the objects in the scene are colored. Just one setting can be active at one time.
 
-
 | Entry | What it does |
 | -------- | -------------------------------------------------------------------------------- |
 | Material | Uses the color of the material, in case a material is assigned to the object(s). |
 | Object | Uses the Object color. |
 | Vertex | Shows the vertex colors in case vertex colors exists. |
-
 
 #### Single
 
@@ -2276,12 +2171,10 @@ Influence how the objects in the scene are colored. Just one setting can be acti
 
 Define a custom color. A color picker box appears when you activate single.
 
-
 | Entry | What it does |
 | ------- | --------------------------------------------------------------------------------- |
 | Random | Colors the objects with a random color |
 | Texture | Shows the texture in case a material with a texture is assigned to the object(s). |
-
 
 #### Background
 
@@ -2289,12 +2182,10 @@ Define a custom color. A color picker box appears when you activate single.
 
 This defines the look of the viewport background
 
-
 | Entry | What it does |
 | ----- | ------------------------------------------------------------------ |
 | Theme | Uses the background as defined in the theme. |
 | World | Uses the background as defined in the world settings of the scene. |
-
 
 #### Viewport
 
@@ -2344,13 +2235,11 @@ Here you adjust the strength of the shadow. Higher value means darker shadow.
 
 Adjust some settings of the light.
 
-
 | Entry | What it does |
 | --------------- | --------------------------------------------------------------------------------------------------- |
 | Light Direction | Click into the field and drag the mouse to change the direction of the light that casts the shadow. |
 | Shadow Shift | The shadow termination angle. This can be used to minimize self shadowing artifacts. |
 | Shadow Focus | The shadow hardness. It controls the falloff near the edge of the shadow. |
-
 
 #### Cavity
 
@@ -2398,12 +2287,10 @@ Draw the cavity shading in both, World Space and Screen space.
 
 Settings see above.
 
-
 | Entry | What it does |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Outline | Show the not selected objects with an outline. · **Outline Color**: Define the color of the outline for not selected objects. |
 | Specular Lighting | Render specular highlights. |
-
 
 #### Flat
 
@@ -2419,13 +2306,11 @@ Lights the objects plain white.
 
 Influence how the objects in the scene are colored. Just one setting can be active at one time.
 
-
 | Entry | What it does |
 | -------- | -------------------------------------------------------------------------------- |
 | Material | Uses the color of the material, in case a material is assigned to the object(s). |
 | Object | Uses the Object color. |
 | Vertex | Shows the vertex colors in case vertex colors exists. |
-
 
 **Single**
 
@@ -2433,12 +2318,10 @@ Influence how the objects in the scene are colored. Just one setting can be acti
 
 Define a custom color. A color picker box appears when you activate single.
 
-
 | Entry | What it does |
 | ------- | --------------------------------------------------------------------------------- |
 | Random | Colors the objects with a random color |
 | Texture | Shows the texture in case a material with a texture is assigned to the object(s). |
-
 
 #### Background
 
@@ -2446,12 +2329,10 @@ Define a custom color. A color picker box appears when you activate single.
 
 Define the look of the viewport background.
 
-
 | Entry | What it does |
 | ----- | ------------------------------------------------------------------ |
 | Theme | Uses the background as defined in the theme. |
 | World | Uses the background as defined in the world settings of the scene. |
-
 
 **Viewport**
 
@@ -2501,13 +2382,11 @@ Here you adjust the strength of the shadow. Higher value means darker shadow.
 
 Adjust some settings of the light.
 
-
 | Entry | What it does |
 | --------------- | --------------------------------------------------------------------------------------------------- |
 | Light Direction | Click into the field and drag the mouse to change the direction of the light that casts the shadow. |
 | Shadow Shift | The shadow termination angle. This can be used to minimize self shadowing artifacts. |
 | Shadow Focus | The shadow hardness. It controls the falloff near the edge of the shadow. |
-
 
 #### Cavity
 
@@ -2555,12 +2434,10 @@ Draw the cavity shading in both, World Space and Screen space.
 
 Settings see above.
 
-
 | Entry | What it does |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Outline | Show the not selected objects with an outline. · **Outline Color**: This defines the color of the outline for not selected objects. |
 | Specular Lighting | Render specular highlights. |
-
 
 ### Viewport Shading with Material Preview
 
@@ -2570,13 +2447,11 @@ In this mode you can use a hdr file to light the scene.
 
 This mode is just available with Cycles and Eevee renderer. Workspace renderer does not have this mode.
 
-
 | Entry | What it does |
 | ------------ | ----------------------------------------------------------------------------------------------------------------- |
 | Lighting | — |
 | Scene Lights | Use the scene lights instead of the hdr to light the scene. |
 | Scene World | Use the scene world to light the scene. This turns off the hdr. And the further options are not longer available. |
-
 
 #### HDR File Browser
 
@@ -2590,7 +2465,6 @@ Pick a hdr file to light the world with.
 
 At the right of the library menu box you will see a tiny button. It will open the preferences, where you can edit the existing studio light setups, or add new Studio light setups. This chapter is explained in the preferences manual part.
 
-
 | Entry | What it does |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | World Space Lighting | Make the hdr rotation fixed, and not follow the camera. |
@@ -2598,7 +2472,6 @@ At the right of the library menu box you will see a tiny button. It will open th
 | Background | Show the studio light in the background. The higher the value the more the studio light gets mixed into the hdr. |
 | World Opacity | Show the studio light in the background |
 | Blur | The blur factor. |
-
 
 #### Wire Color
 
@@ -2634,13 +2507,11 @@ Choose what render passes to calculate.
 
 Alllows you to display the compositor result in the viewport. Note that you need to have a active compositor node setup for this to work.
 
-
 | Entry | What it does |
 | -------- | ------------------------------------------------------------- |
 | Disabled | To display the compositor result in the viewport is disabled. |
 | Camera | Displays the compositor result when you are in camera view. |
 | Always | Always displays the compositor result. |
-
 
 ### Viewport Shading with Rendered
 
@@ -2660,7 +2531,6 @@ Render lights and light probes in the scene.
 
 Use scene world for lighting. When you turn off Scene World then you reveal further settings.
 
-
 | Entry | What it does |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Studiolight Preview | Displays the current active hdri file to light the scene. A click at the display allows you to pick another hdri file. · **Show Light preferences**: Opens the light preferences in the preferences where you can pick more hdri files. |
@@ -2668,7 +2538,6 @@ Use scene world for lighting. When you turn off Scene World then you reveal furt
 | Strength | The strength of the studio light. |
 | World Opacity | The opacity of the hdri. |
 | Blur | Eevee. Blur the studiolight in the background. |
-
 
 #### Wire Color
 
@@ -2704,13 +2573,11 @@ Choose what render passes to calculate.
 
 Alllows you to display the compositor result in the viewport. Note that you need to have a active compositor node setup for this to work.
 
-
 | Entry | What it does |
 | -------- | ------------------------------------------------------------- |
 | Disabled | To display the compositor result in the viewport is disabled. |
 | Camera | Displays the compositor result when you are in camera view. |
 | Always | Always displays the compositor result. |
-
 
 ## Pause Preview
 
@@ -2738,7 +2605,6 @@ This panel shows in most of the modes. It is the same content than the Layers pa
 
 ## Layer list
 
-
 | Entry | What it does |
 | -------------------------- | ------------------------------------------------------ |
 | Layer name | The name of the layer. |
@@ -2747,24 +2613,20 @@ This panel shows in most of the modes. It is the same content than the Layers pa
 | Viewport/Render Visibility | Toggle layer visibility in the viewport and in render. |
 | Lock | Toggle layer from being editable. |
 
-
 ### Search Field
 
 ![Search Field](/docs2/images/editors/3d-viewport/header/header-tools-and-options/search-field-2.png)
 
 You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term.
 
-
 | Entry | What it does |
 | ------------- | --------------------------- |
 | Add new layer | Adds a new layer. |
 | Remove layer | Removes the selected layer. |
 
-
 ## Layer Specials
 
 ![Layer Specials](/docs2/images/editors/3d-viewport/header/header-tools-and-options/layer-specials.png)
-
 
 | Entry | What it does |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -2782,7 +2644,6 @@ You can expand a search field at the bottom of the list. Type in your term and h
 | Copy Layer to Selected | Makes a copy of the layer and move it to the selected Grease Pencil object. |
 | Copy all Layers to Selected | Makes a copy of all layers and moves it to the selected Grease Pencil object. |
 
-
 | Entry | What it does |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Reorder Layer up/down | Moves the selected layer up or down in the list. |
@@ -2791,19 +2652,16 @@ You can expand a search field at the bottom of the list. Type in your term and h
 | Autolock inactive layer | Locks automatically the edition of every layer in the list except the active one. This way you avoid to make unwanted changes in other layers without the need to lock them every time. |
 | Igonre Material Locking | Allow editing strokes even if they use locked materials. |
 
-
 ## Blend mode
 
 ![Blend mode](/docs2/images/editors/3d-viewport/header/header-tools-and-options/blend-mode.png)
 
 The layer blending operation to perform. See Color Blend Modes.
 
-
 | Entry | What it does |
 | ------- | ---------------------------------------------- |
 | Opacity | Used to set the opacity of the layer. |
 | Lights | When enabled, the layer is affected by lights. |
-
 
 # Grease Pencil - Options Panel
 
@@ -2815,13 +2673,11 @@ Options for the use of the grease pencil.
 
 ## Grease Pencil - all modes
 
-
 | Entry | What it does |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Onion Skin | Use onion skinning. Onion skinning shows ghosts of the keyframes before and after the current position. |
 | Fade Layers | Fade all layers except the active one. · **Opacity**: The fading opacity. |
 | Fade Objects | Fade all objects except the active one. · **Opacity**: The fading opacity. · **Fade Grease Pencil Objects**: Fade also all Grease Pencil Objects except the active one. |
-
 
 ## Canvas
 
@@ -2833,7 +2689,6 @@ Options for the use of the grease pencil.
 
 Use a reference grid behind the grease pencil.
 
-
 | Entry | What it does |
 | ------------ | ---------------------------------------------- |
 | Opacity | The opacity of the grid. |
@@ -2843,19 +2698,16 @@ Use a reference grid behind the grease pencil.
 | Scale X , Y | The size of the grid. |
 | Offset | The offset of the grid. |
 
-
 ## Grease Pencil - Edit mode
 
 ![Grease Pencil - Edit mode](/docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-edit-mode.png)
 
 In Edit mode a few more options appears
 
-
 | Entry | What it does |
 | ------------------ | ---------------------------------------- |
 | Edit Lines | Show editing lines when editing strokes. |
 | Only in Multiframe | Show edit lines only in multiframe. |
-
 
 ### Handles
 
@@ -2863,30 +2715,25 @@ In Edit mode a few more options appears
 
 Limit the display of curve handles in edit mode.
 
-
 | Entry | What it does |
 | -------- | ------------------------------------------------ |
 | None | Handles are not displayed. |
 | Selected | Just the handles of the selection are displayed. |
 | All | All handles are displayed. |
-
 
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------- |
 | Stroke Direction | Show stroke drawing direction. The direction is indicated by a green dot. |
 | Material Name | Show the material name that is assigned to each stroke. |
 
-
 ## Grease Pencil - Sculpt mode
 
 ![Grease Pencil - Sculpt mode](/docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-sculpt-mode.png)
-
 
 | Entry | What it does |
 | ------------------ | ---------------------------------------- |
 | Edit Lines | Show editing lines when editing strokes. |
 | Only in Multiframe | Show edit lines only in multiframe. |
-
 
 ### Handles
 
@@ -2894,13 +2741,11 @@ Limit the display of curve handles in edit mode.
 
 Limit the display of curve handles in edit mode.
 
-
 | Entry | What it does |
 | -------- | ------------------------------------------------ |
 | None | Handles are not displayed. |
 | Selected | Just the handles of the selection are displayed. |
 | All | All handles are displayed. |
-
 
 ## Grease Pencil - Draw mode
 
@@ -2916,12 +2761,10 @@ The vertex paint mix factor.
 
 ![Grease Pencil - Weight Paint mode](/docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-weight-paint-mode.png)
 
-
 | Entry | What it does |
 | ------------------ | ---------------------------------------- |
 | Edit Lines | Show editing lines when editing strokes. |
 | Only in Multiframe | Show edit lines only in multiframe. |
-
 
 ### Handles
 
@@ -2929,24 +2772,20 @@ The vertex paint mix factor.
 
 Limit the display of curve handles in edit mode.
 
-
 | Entry | What it does |
 | -------- | ------------------------------------------------ |
 | None | Handles are not displayed. |
 | Selected | Just the handles of the selection are displayed. |
 | All | All handles are displayed. |
-
 
 ## Grease Pencil - Vertex Paint mode
 
 ![Grease Pencil - Vertex Paint mode](/docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-vertex-paint-mode.png)
 
-
 | Entry | What it does |
 | ------------------ | ---------------------------------------- |
 | Edit Lines | Show editing lines when editing strokes. |
 | Only in Multiframe | Show edit lines only in multiframe. |
-
 
 ### Handles
 
@@ -2954,13 +2793,11 @@ Limit the display of curve handles in edit mode.
 
 Limit the display of curve handles in edit mode.
 
-
 | Entry | What it does |
 | -------- | ------------------------------------------------ |
 | None | Handles are not displayed. |
 | Selected | Just the handles of the selection are displayed. |
 | All | All handles are displayed. |
-
 
 ### Vertex Paint
 
@@ -2973,7 +2810,6 @@ The vertex paint mix factor.
 ![Grease Pencil - Sculpt mode - Auto-masking Panel](/docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-sculpt-mode-auto-masking-panel.png)
 
 Automasking settings.
-
 
 | Entry | What it does |
 | --------------- | ----------------------------------------------------------------- |

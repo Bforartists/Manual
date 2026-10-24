@@ -12,6 +12,7 @@ screenshots: "5.1"
 source:
   - 14.2 Editors - Video Sequence Editor - Tool Shelf.odt
 order: 20
+summary: "The strip menu contains strip related functionality."
 ---
 ## Tool shelf in Preview view
 

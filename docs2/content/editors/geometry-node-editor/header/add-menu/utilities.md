@@ -57,12 +57,10 @@ However, it's less efficient for handling tiny elements, like individual strands
 
 ##### Inputs
 
-
 | Entry | What it does |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Geometry | The input geometry whose elements will be processed individually. This can include meshes, curves, or other geometry types. |
 | Selection | Specifies which subset of elements to process. This allows filtering based on boolean attributes or conditions per field – typically used as a true/false mask. |
-
 
 ##### Properties
 
@@ -78,12 +76,10 @@ The input geometry is divided into individual geometries, each corresponding to 
 
 ##### Output
 
-
 | Entry | What it does |
 | ------- | ------------------------------------------------------------------------------------------ |
 | Index | Provides the Index integer of the current elements of the selected domain to be processed. |
 | Element | Returns a Geometry output with the list of elements for iteration. |
-
 
 #### For Each Element Output
 
@@ -111,12 +107,10 @@ The Generated inputs contain the individual geometry elements processed inside t
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/properties-2.png)
 
-
 | Entry | What it does |
 | ------------------ | --------------------------------------------- |
 | Main Geometry | The main geometry sockets. |
 | Generated Geometry | The generated geometry sockets from the zone. |
-
 
 ###### Socket Type
 
@@ -130,12 +124,10 @@ Iteration index that is used by inspection features like the viewer node or sock
 
 ##### Output
 
-
 | Entry | What it does |
 | -------- | ---------------------------------------------------------------------------------------- |
 | Geometry | The original input geometry with potentially new attributes that are output by the zone. |
 | Element | Result of joining generated geometries or attributes from each iteration. |
-
 
 ### Index Switch
 
@@ -183,11 +175,9 @@ Connecting multiple Menu Switch nodes to the same output creates a conflict. To 
 
 > **Note:** You cannot plug in the same value socket into the Menu selector. If you’d like to use the same value for various Menu Switches, group the Menu Switch into a Node Group and use the top-level switch override.
 
-
 |  |  |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | ![Menu Switch](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/menu-switch-3.png) ![Menu Switch](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/menu-switch-2.png) Top Level Grouped Menu Switches with same inputs: | Conflict caused by Same Level menu Switch inputs: |
-
 
 #### Inputs
 
@@ -229,14 +219,12 @@ Generates a random value.
 
 #### Input
 
-
 | Entry | What it does |
 | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Min | The minimum value of the range. This input is only available for Float, Integer, and Vector types. |
 | Max | The maximum value of the range. This input is only available for Float, Integer, and Vector types. |
 | ID | An ID to drive the random number generator seed. By default, this input uses the same value as if the ID Node, which is the id attribute of the context geometry if it exists, and otherwise the index. |
 | Seed | The random seed for the random number generation. |
-
 
 #### Properties
 
@@ -286,12 +274,10 @@ Standard geometry output.
 
 The result and output of the iteration or loop. You can define custom attributes outputs here from the
 
-
 | Entry | What it does |
 | ------ | --------------------------------------- |
 | Input | **Geometry**: Standard geometry output. |
 | Output | **Geometry**: Standard geometry output. |
-
 
 ### Switch
 
@@ -301,13 +287,11 @@ Switch between two inputs values based on a boolean.
 
 #### Inputs
 
-
 | Entry | What it does |
 | ------ | ----------------------------------------------- |
 | Switch | The boolean switch. |
 | A | The input value A. Used when the switch is off. |
 | B | The input value B. Used when the switch is on. |
-
 
 #### Properties
 
@@ -347,7 +331,6 @@ The inputs depends of the chosen method.
 
 ![Operation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation.png)
 
-
 | Entry | What it does |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------- |
 | And | Returns a value where the bits of A and B are both set. |
@@ -356,7 +339,6 @@ The inputs depends of the chosen method.
 | Not | Returns the opposite bit value of A, in decimal it is equivalent of A = -A -1 |
 | Shift | Shifts the bit values of A by the specified Shift amount. Positive values shift left, negative values shift right. |
 | Rotate | Rotates the bit values of A by the specified Shift amount. Positive values rotates left, negative values rotates right. |
-
 
 ##### Output
 
@@ -382,7 +364,6 @@ Two standard Boolean inputs.
 
 ![Operation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation-2.png)
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------------------ |
 | And | True if both inputs are true. |
@@ -394,7 +375,6 @@ Two standard Boolean inputs.
 | Not Equal (XOR) | True when both inputs are different. |
 | Imply (IMPLY) | True unless the first input is true and the second is false. |
 | Subtract (NIMPLY) | True when the first input is true and the second is false. |
-
 
 ##### Output
 
@@ -436,13 +416,11 @@ Clamps a value between a minimum and a maximum.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ----- | ------------------------------ |
 | Value | The input value to be clamped. |
 | Min | The minimum value. |
 | Max | The maximum value. |
-
 
 ##### Properties
 
@@ -450,12 +428,10 @@ Clamps a value between a minimum and a maximum.
 
 ![Clamp Type](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/clamp-type.png)
 
-
 | Entry | What it does |
 | ------- | --------------------------------------- |
 | Min Max | Clamp values using Min and Max values. |
 | Range | Clamp values between Min and Max range. |
-
 
 ##### Outputs
 
@@ -487,7 +463,6 @@ What kind of data to compare.
 
 ![Operation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation-3.png)
 
-
 | Entry | What it does |
 | ---------------------------- | ------------------------------------- |
 | A is less than B | True if A is smaller than B. |
@@ -496,7 +471,6 @@ What kind of data to compare.
 | A is greater than or equal B | True if A is bigger or equal than B. |
 | A is equal B | True if A and B are the same. |
 | A is not equal B | True if A and B are different. |
-
 
 ##### Output
 
@@ -512,12 +486,10 @@ The Float Curve node maps an input float to a curve and outputs a float value. T
 
 ##### Inputs
 
-
 | Entry | What it does |
 | --------- | ------------------------------------------------- |
 | Factor | How strong the input influences the output value. |
 | Attribute | The input value. |
-
 
 ##### Properties
 
@@ -553,14 +525,12 @@ Clipping options. Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-
 | Entry | What it does |
 | ------------------- | -------------------------------------------------------------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
 | Extend horizontal | Extends the curve before the first curve point and behind the last curve point horizontally. |
 | Extend extrapolated | Extends the curve before the first curve point and behind the last curve point extrapolated. |
 | Reset Curve | Resets the curve to the initial shape. |
-
 
 ###### Curve edit field
 
@@ -586,13 +556,11 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 When you have a point selected then you will reveal further settings at the bottom.
 
-
 | Entry | What it does |
 | ------------------- | -------------------------------- |
 | Vector Handle | Set handle type to Vector. |
 | Auto Handle | Set handle type to Auto. |
 | Auto Clamped Handle | Set handle type to Auto Clamped. |
-
 
 ##### Output
 
@@ -636,12 +604,10 @@ Note that Hashes cannot be relied upon to be used as unique identifiers because 
 
 ##### Input
 
-
 | Entry | What it does |
 | ----- | ------------------------------ |
 | Value | The input value. |
 | Seed | A seed to randomize the value. |
-
 
 ##### Properties
 
@@ -665,7 +631,6 @@ This node converts (maps) an input value range into a destination range. By defa
 
 ##### Inputs
 
-
 | Entry | What it does |
 | -------- | ------------------------------- |
 | Value | Standard value input. |
@@ -673,7 +638,6 @@ This node converts (maps) an input value range into a destination range. By defa
 | From Max | End of the input value range. |
 | To Min | Startof the destination range. |
 | To Max | End of the destination range. |
-
 
 ##### Properties
 
@@ -709,7 +673,6 @@ The Math Node performs math operations.
 
 The inputs of the node are dynamic. Some inputs are only available with certain operations. For example, the Addend input is only available in the Multiply Add operator.
 
-
 | Entry | What it does |
 | --------- | ---------------------------------------------------------------- |
 | Value | Input Value. Trigonometric functions read this value as radians. |
@@ -725,7 +688,6 @@ The inputs of the node are dynamic. Some inputs are only available with certain 
 | Degrees | Input Degrees. |
 | Radians | Input Radians. |
 
-
 ##### Properties
 
 ###### Operation
@@ -734,16 +696,13 @@ The inputs of the node are dynamic. Some inputs are only available with certain 
 
 The mathematical operator to be applied to the input values:
 
-
 | Entry | What it does |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Functions | **Add**: The sum of the two values. · **Subtract**: The difference between the two values. · **Multiply**: The product of the two values. · **Divide**: The division of the first value by the second value. · **Multiply Add**: The sum of the product of the two values with Addend. |
 | Power | The Base raised to the power of Exponent. · **Logarithm**: The log of the value with a Base as its base. · **Square Root**: The square root of the value. · **Inverse Square Root**: One divided by the square root of the value. · **Absolute**: The input value is read with without regard to its sign. This turns negative values into positive values. · **Exponent**: Raises Euler’s number to the power of the value. |
 | Comparison | **Minimum**: Outputs the smallest of the input values. · **Maximum**: Outputs the largest of two input values. · **Less Than**: Outputs 1.0 if the first value is smaller than the second value. Otherwise the output is 0.0. · **Greater Than**: Outputs 1.0 if the first value is larger than the second value. Otherwise the output is 0.0. · **Sign**: Extracts the sign of the input value. All positive numbers will output 1.0. All negative numbers will output -1.0. And 0.0 will output 0.0. · **Compare**: Outputs 1.0 if the difference between the two input values is less than or equal to Epsilon. · **Smooth Minimum**: Smooth Minimum. · **Smooth Maximum**: Smooth Maximum. |
 
-
 ###### Rounding
-
 
 | Entry | What it does |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -757,9 +716,7 @@ The mathematical operator to be applied to the input values:
 | Snap | Round the input value to down to the nearest integer multiple of Increment. |
 | Ping-pong | The output value is moved between 0.0 and the Scale based on the input value. |
 
-
 ###### Trigonometric
-
 
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------------------------------------------- |
@@ -774,16 +731,13 @@ The mathematical operator to be applied to the input values:
 | Hyperbolic Cosine | The Hyperbolic Cosine of the input value. |
 | Hyperbolic Tangent | The Hyperbolic Tangent of the input value. |
 
-
 ###### Conversion
-
 
 | Entry | What it does |
 | ---------- | ------------------------------------------------------- |
 | To Radians | Converts the input from degrees to radians. |
 | To Degrees | Converts the input from radians to degrees. |
 | Clamp | Limits the output to the range (0.0 to 1.0). See Clamp. |
-
 
 ##### Outputs
 
@@ -803,13 +757,11 @@ Allows to mix values and vectors in various ways. The node has three different m
 
 ###### Float
 
-
 | Entry | What it does |
 | ------ | -------------------- |
 | Factor | The mix factor. |
 | A | Float value A input. |
 | B | Float value B input. |
-
 
 ##### Properties
 
@@ -841,13 +793,11 @@ Insert Values into a string using a Python and path template compatible formatti
 
 The syntax can be found here: [https://docs.python.org/3/library/string.html#format-string-syntax](https://docs.python.org/3/library/string.html#format-string-syntax)
 
-
 | Entry | What it does |
 | ---------- | --------------------------------------------------- |
 | Inputs | **Strings**: The strings that you want to modify. |
 | Properties | **String**: The python syntax to modify the string. |
 | Output | **String**: The output string. |
-
 
 #### Join Strings
 
@@ -855,12 +805,10 @@ The syntax can be found here: [https://docs.python.org/3/library/string.html#for
 
 Allows you to join several string into a text string.
 
-
 | Entry | What it does |
 | ------ | ---------------------------------------------------------------------------------------------------------------- |
 | Inputs | **Delimiter**: Add a delimiter character. · **Strings**: The strings that you want to join into one text string. |
 | Output | **String**: The output string. |
-
 
 #### Match Strings
 
@@ -870,12 +818,10 @@ Allows you to compare strings to match conditions
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ------ | ----------------- |
 | String | The input string. |
 | Key | An input key. |
-
 
 ##### Properties
 
@@ -897,12 +843,10 @@ The output strings that matches the condition.
 
 Find and replace strings inside of the input string.
 
-
 | Entry | What it does |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Inputs | **String**: The input string. · **Find**: The string part that you want to replace. · **Replace**: The string part that you use to replace the selected string part. |
 | Output | **String**: The strings that you want to join into one text string. |
-
 
 #### Slice String
 
@@ -910,12 +854,10 @@ Find and replace strings inside of the input string.
 
 Allows you to extract a string from a substring at given position with given length.
 
-
 | Entry | What it does |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | Inputs | **String**: The source string. · **Position**: The start position of the sub string. · **Length**: The length of the substring. |
 | Outputs | **String**: The output substring. |
-
 
 #### Find in String
 
@@ -923,12 +865,10 @@ Allows you to extract a string from a substring at given position with given len
 
 Returns an integer of the total count of matching strings or the first integer position of a matching string
 
-
 | Entry | What it does |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Inputs | **String**: The string that you want to search in. · **Search**: The string that would be matched in the string search. |
 | Outputs | **First Found**: Returns the integer position of the first character of the found string. · **Count**: Returns an integer position of the first character of the found string. |
-
 
 #### String length
 
@@ -936,12 +876,10 @@ Returns an integer of the total count of matching strings or the first integer p
 
 Gives back the number of characters in this string.
 
-
 | Entry | What it does |
 | ------- | -------------------------------------------------- |
 | Inputs | **String**: The string that you want to calculate. |
 | Outputs | **Length**: How many characters the string has. |
-
 
 #### String to Curves
 
@@ -951,7 +889,6 @@ Converts the letters of a text into curve objects.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------ |
 | String | The text string to convert. |
@@ -960,7 +897,6 @@ Converts the letters of a text into curve objects.
 | Word Spacing | The word spacing of the string. |
 | Line Spacing | The line spacing of the string. |
 | Max Width | The maximum width of the string. |
-
 
 ##### Properties
 
@@ -974,15 +910,13 @@ Converts the letters of a text into curve objects.
 
 A list of the loaded fonts.
 
-
 | Entry | What it does |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Font Edit Box | The active font. |
 | Number of Users | The number of users for this font. |
-| Fake User | Keep this font in the blender file even when it has no users. The default font is special in this regards. It will not vanish when you close the file, even when it has no fake user assigned. |
+| Fake User | Keep this font in the .blend file even when it has no users. The default font is special in this regards. It will not vanish when you close the file, even when it has no fake user assigned. |
 | Open Font | Load a system font. |
 | Remove | Removes the active font. The default font is special in this regards. You cannot delete it. |
-
 
 ###### Overflow
 
@@ -1010,13 +944,11 @@ What point of the string to use as the pivot point.
 
 ##### Output
 
-
 | Entry | What it does |
 | --------------- | -------------------------------------------------------- |
 | Curve Instances | The curves output. |
 | Line | Outputs the line number of the character. |
 | Pivot Point | Outputs the selected pivot point position per character. |
-
 
 #### String to Value
 
@@ -1034,12 +966,10 @@ The input string.
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/properties-2.png)
 
-
 | Entry | What it does |
 | --------- | ------------------------------------------------------------------------------------------------------ |
 | Data Type | Specifies the target data type for conversion |
 | Outputs | **Value**: The output value. · **Length**: The number of characters in the input string as an Integer. |
-
 
 #### Value to String
 
@@ -1049,23 +979,19 @@ Converts a value to a string.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | -------- | -------------------------------- |
 | Value | The input value. |
 | Decimals | How many decimals the value has. |
 
-
 ##### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/properties-2.png)
-
 
 | Entry | What it does |
 | --------- | --------------------------------------------- |
 | Data Type | Specifies the target data type for conversion |
 | Outputs | **String**: The output string. |
-
 
 #### Special Character
 
@@ -1074,7 +1000,6 @@ Converts a value to a string.
 Adds special characters to the text string.
 
 ##### Outputs
-
 
 | Entry | What it does |
 | ---------- | ------------------------------------- |
@@ -1095,12 +1020,10 @@ Vector nodes are for calculating vector operations.
 
 The Combine XYZ Node combines a vector from its individual components.
 
-
 | Entry | What it does |
 | ------ | --------------------------------- |
 | Input | **X Y and Z**: X, Y and Z values. |
 | Output | **Color**: Color output. |
-
 
 #### Map Range
 
@@ -1110,14 +1033,12 @@ Remap a value from a range to a target range.
 
 ##### Input
 
-
 | Entry | What it does |
 | -------- | -------------------------------- |
 | From Min | Vector 3 from the minimum input. |
 | From Max | Vector 3 from the maximum input. |
 | To Min | Vector 3 to the minimum input. |
 | To Min | Vector 3 to the maximum input. |
-
 
 ##### Properties
 
@@ -1195,12 +1116,10 @@ The output value or vector.
 
 The Separate XYZ Node splits a vector into its individual components.
 
-
 | Entry | What it does |
 | ------ | -------------------------------------------------- |
 | Input | **Vector**: The Input vector. |
 | Output | **X, Y and Z**: The output vectors for X, Y and Z. |
-
 
 #### Radial Tiling
 
@@ -1208,13 +1127,11 @@ The Separate XYZ Node splits a vector into its individual components.
 
 The Separate XYZ Node splits a vector into its individual components.
 
-
 | Entry | What it does |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Input | **Vector**: The Input vector. · **Sides**: Number of angluar segments for tiling. · **Roundness**: Roundness of the segments coordinate systems. |
 | Properties | **Normalize**: Stretch the textures to fit into each angular segment. |
 | Output | **Segment Coordinates**: The segment coordinates for texture mapping. · **Segment ID**: Unique ID for every segment. · **Segment Width**: The width of every segment. · **Segment Rotation**: The rotation of every segment. |
-
 
 #### Vector Curves
 
@@ -1224,12 +1141,10 @@ The Vector Curves node maps an input vector components to a curve.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ------ | ---------------------- |
 | Factor | Standard vector input. |
 | Vector | Standard vector input. |
-
 
 ##### Properties
 
@@ -1257,7 +1172,7 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 
 ###### Adding Points
 
-You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
+> This setting uses the **curve widget**: click to add points, drag to move them. See **[Curve Widget](../../../../interface/properties.md#curve-widget)** in the Interface chapter.
 
 ###### Navigation elements
 
@@ -1281,7 +1196,6 @@ Clipping options. Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-
 | Entry | What it does |
 | ------------------- | -------------------------------------------------------------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
@@ -1289,25 +1203,21 @@ Tools is a menu where you can find some curve related tools.
 | Extend extrapolated | Extends the curve before the first curve point and behind the last curve point extrapolated. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-
 **Vector Handle**
 
 ![Vector Handle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/vector-handle.png)
 
 Set handle type to Vector.
 
-
 | Entry | What it does |
 | ------------------- | -------------------------------- |
 | Auto Handle | Set handle type to Auto. |
 | Auto Clamped Handle | Set handle type to Auto Clamped. |
 
-
 | Entry | What it does |
 | ------------- | ----------------------------------------------- |
 | X Y values | The x and y values of the selected curve point. |
 | Delete Points | Deletes selected curve points. |
-
 
 ##### Outputs
 
@@ -1325,13 +1235,11 @@ The Vector Math node performs the selected math operation on the input vectors.
 
 The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Scale input is only available in the Scale operator.
 
-
 | Entry | What it does |
 | ------ | --------------- |
 | Vector | Input vector A. |
 | Vector | Input vector B. |
 | Scale | Input Scale. |
-
 
 ##### Properties
 
@@ -1345,12 +1253,10 @@ The vector math operator to be applied on the input vectors.
 
 The output of the node is dynamic. It is either a vector or a scalar depending on the operator. For instance, the Length operator have a scalar output while the Add operator have a vector output.
 
-
 | Entry | What it does |
 | ------ | -------------- |
 | Vector | Output vector. |
 | Value | Output value. |
-
 
 #### Vector Rotate
 
@@ -1362,14 +1268,12 @@ The Vector Rotate node allows rotations by a vector.
 
 The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Angle input is just available with the Axis Angle type.
 
-
 | Entry | What it does |
 | ------ | ------------- |
 | Vector | Input vector. |
 | Center | Input Center |
 | Axis | Input Axis. |
 | Angle | Input Angle |
-
 
 ##### Properties
 
@@ -1423,12 +1327,10 @@ This node unpacks a bundle back into its individual components.
 
 ![Separate Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/separate-bundle-2.png)
 
-
 | Entry | What it does |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Inputs | The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Scale input is only available in the Scale operator. · **Bundle**: Standard bundle socket with a unified bundle containing all input elements from a Combine Bundle node. |
 | Outputs | **Sockets**: This is a dynamic series of socket that will populate with whatever is available from the incoming bundle line. Ouptuts one or more bundle-compatible data streams. These could represent attributes, geometry sets, vales, vectors, or grouped attributes depending on context. |
-
 
 #### Join Bundle
 
@@ -1439,7 +1341,6 @@ Merges two or more *Bundle* inputs into a single output bundle.
 ![Join Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/join-bundle-2.png)
 
 This enables modular data structuring, reuse, and override logic in procedural workflows—similar to combining structs in programming.
-
 
 | Entry | What it does |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1511,14 +1412,12 @@ These panel defines the **parameters** that the closure will pass when evaluated
 
 You can access these properties in the sidebar to the right in the Node tab.
 
-
 | Entry | What it does |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sync Button | Updates the sockets to what is actually used from a Closure Zone, meaning the input/output sockets update to what is evaluated in the logic of the closure automatically. Useful to not do this manually. |
 | Input Items | Parametersofvalues passed into the Closure logic (e.g., geometry, fields, values) for user customizability. |
 | Output Items | Whatever parameters the Closure logic returns—could be geometry, fields, instances, values, etc |
 | Common Properties | **Add / Remove / Reorder Controls**: **+ (Add)**: Creates a new input socket. **– (Remove)**: Deletes the selected input. **↑ / ↓ (Reorder)**: Adjusts the order of inputs for visual clarity and UX consistency. · **Name**: Identifier for the input. Must match the name used in Evaluate Closure. · **Socket Type**: Data type of the input (e.g., Float, Vector, Boolean, Geometry, Field). · **Structure Type**: Defines how the input is treated: *Auto, Dynamic, Field, Grid, List*, or *Single*. |
-
 
 #### Evaluate Closure
 
@@ -1528,12 +1427,10 @@ This node **calls** the logic stored in the Closure object.
 
 It **passes in** the provided parameters and **returns** the result of the closure’s internal node tree. Execution is **deferred**—the logic only runs when this node is evaluated in the context of the node group.
 
-
 | Entry | What it does |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Closure Input | A Closure socket input created by a Closure zone. This contains the logic to be executed from that Closure zone. |
 | Interface Inputs / Outputs | Named inputs/outputs from the Closure properties that match the Closure Zone’s expected parameters for the enclosed logic to be evaluated. |
-
 
 ##### Properties
 
@@ -1542,7 +1439,6 @@ It **passes in** the provided parameters and **returns** the result of the closu
 This panel defines the **parameters** that the closure will accept when evaluated. Each item becomes a socket in the Closure Zone.
 
 You can access these properties in the sidebar to the right in the Node tab.
-
 
 | Entry | What it does |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1568,12 +1464,10 @@ Creates a running total of a given Vector, Float, or Int field.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ----------- | --------------------------------------------------------------------------------------------------------------- |
 | Value | The field to be accumulated. |
 | Group Index | The values of this input are used to aggregate the input into separate 'bins', creating multiple accumulations. |
-
 
 ##### Properties
 
@@ -1591,12 +1485,10 @@ From which domain to use the data.
 
 ##### Outputs
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------------------------------------------ |
 | Leading and Trailing | Returns the running totals starting at either the first value of each accumulations or 0 if there is no data |
 | Total | Returns the total accumulation at all positions of the field. |
-
 
 #### Evaluate at Index
 
@@ -1609,12 +1501,10 @@ is used.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ----- | ------------ |
 | Index | Input Index. |
 | Value | Input Value. |
-
 
 ##### Properties
 
@@ -1676,12 +1566,10 @@ Calculate the mean and median of a given field.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | -------- | ------------------------------------ |
 | Value | The input value to get the field. |
 | Group ID | The input Group ID to get the field. |
-
 
 ##### Properties
 
@@ -1699,12 +1587,10 @@ The domain the Field evaluates. This gets and filters the field type. The domain
 
 ##### Outputs
 
-
 | Entry | What it does |
 | ------ | ------------------------ |
 | Mean | The Mean output value. |
 | Median | The Median output value. |
-
 
 #### Field Min & Max
 
@@ -1714,12 +1600,10 @@ Calculate the minimum and maximum of a given field.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | -------- | ------------------------------------ |
 | Value | The input value to get the field. |
 | Group ID | The input Group ID to get the field. |
-
 
 ##### Properties
 
@@ -1737,12 +1621,10 @@ The domain the Field evaluates. This gets and filters the field type. The domain
 
 ##### Outputs
 
-
 | Entry | What it does |
 | ----- | --------------------- |
 | Min | The Min output value. |
 | Max | The Max output value. |
-
 
 #### Field Variance
 
@@ -1752,12 +1634,10 @@ Calculate the standard derivation and variance of a given field.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | -------- | ------------------------------------ |
 | Value | The input value to get the field. |
 | Group ID | The input Group ID to get the field. |
-
 
 ##### Properties
 
@@ -1774,7 +1654,6 @@ Select the Data Type - which can be float, integer, vector, color and boolean.
 The domain the Field evaluates. This gets and filters the field type. The domain can be point, edge, face, face corner, spline or instance.
 
 ##### Outputs
-
 
 | Entry | What it does |
 | ------------------- | --------------------- |
@@ -1815,12 +1694,10 @@ The output matrix.
 
 Combines transforms.
 
-
 | Entry | What it does |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | Inputs | **Translation**: The translation input vector. · **Rotation**: The rotation input vector. · **Scale**: The scale input vector. |
 | Output | **Transform**: The output transform. |
-
 
 #### Matrix Determinant
 
@@ -1828,12 +1705,10 @@ Combines transforms.
 
 The Matrix Determinant Node is used for calculating the determinant of a given matrix. Use this node to evaluate whether a matrix has properties for invertibility, scaling, and orientation.
 
-
 | Entry | What it does |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Inputs | **Matgrix**: Accepts a matrix input. |
 | Output | **Determinant**: Returns a single numerical value representing the determinant of the input matrix. If the determinant is zero, the matrix is non-invertible. |
-
 
 #### Invert Matrix
 
@@ -1841,12 +1716,10 @@ The Matrix Determinant Node is used for calculating the determinant of a given m
 
 Inverts the matrix values.
 
-
 | Entry | What it does |
 | ------ | --------------------------------------------------------------------- |
 | Inputs | **Matrix**: The input matrix. |
 | Output | **Matrix**: The output matrix. · **Invertible**: The inverted values. |
-
 
 #### Multiply Matrix
 
@@ -1854,12 +1727,10 @@ Inverts the matrix values.
 
 Multiplies the values of two matrices.
 
-
 | Entry | What it does |
 | ------ | -------------------------------------- |
 | Inputs | **Matrix, Matrix**: The input matrices |
 | Output | **Matrix**: The output matrix. |
-
 
 #### Project Point
 
@@ -1867,12 +1738,10 @@ Multiplies the values of two matrices.
 
 Projects a transform point by a vector.
 
-
 | Entry | What it does |
 | ------ | ----------------------------------------------------------------------- |
 | Inputs | **Vector**: The input vector · **Transform**: The input transform point |
 | Output | **Vector**: The output vector. |
-
 
 #### Separate Matrix
 
@@ -1900,12 +1769,10 @@ Extract the values from a row in a column. A matrix is made of four vector 4 in 
 
 Extracts the translation, rotation or scale values from a transform.
 
-
 | Entry | What it does |
 | ------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | Inputs | **Transform**: The input transform. |
 | Output | **Translation**: The translation output vector. · **Rotation**: The rotation output vector. · **Scale**: The scale output vector. |
-
 
 #### Transform Direction
 
@@ -1913,12 +1780,10 @@ Extracts the translation, rotation or scale values from a transform.
 
 Set the direction of a transform.
 
-
 | Entry | What it does |
 | ------ | ------------------------------------------------------------------------ |
 | Inputs | **Direction**: The input vector 3. · **Transform**: The input transform. |
 | Output | **Direction**: The output direction. |
-
 
 #### Transform Point
 
@@ -1926,19 +1791,16 @@ Set the direction of a transform.
 
 Transform a transform point.
 
-
 | Entry | What it does |
 | ------ | --------------------------------------------------------------------- |
 | Inputs | **Vector**: The input vector 3. · **Transform**: The input transform. |
 | Output | **Direction**: The output vector. |
-
 
 #### Transpose Matrix
 
 ![Transpose Matrix](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/transpose-matrix.png)
 
 Retreive the transpose matrix from a matrix.
-
 
 | Entry | What it does |
 | ------ | ---------------------------------------- |
@@ -1961,13 +1823,11 @@ Aligns a rotation to a vector.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | -------- | -------------------------------------------------- |
 | Rotation | The input euler rotation vector. |
 | Factor | The factor to align the euler value to the vector. |
 | Vector | The vector to align to. |
-
 
 ##### Properties
 
@@ -1993,13 +1853,11 @@ The output rotation euler angle.
 
 Creates a rotation from a primary and a secondary axis. The axis should be ideally orthogonal.
 
-
 | Entry | What it does |
 | ---------- | --------------------------------------------------------------------------------------------------------------- |
 | Inputs | **Primary Axis**: The axis to rotate around. · **Secondary Axis**: The secondary axis that gives the alignment. |
 | Properties | **Primary axis**: Which axis to rotate around. · **Secondary Axis**: Which axis to align to. |
 | Output | **Rotation**: The output rotation euler angle. |
-
 
 #### Axis Angle to Rotation
 
@@ -2007,12 +1865,10 @@ Creates a rotation from a primary and a secondary axis. The axis should be ideal
 
 Converts an axis angle to a rotation.
 
-
 | Entry | What it does |
 | ------ | ------------------------------------------------------- |
 | Inputs | **Axis**: The input axis. · **Angle**: The input angle. |
 | Output | **Rotation**: The output rotation value. |
-
 
 #### Euler to Rotation
 
@@ -2020,12 +1876,10 @@ Converts an axis angle to a rotation.
 
 Converts an euler angle to a rotation.
 
-
 | Entry | What it does |
 | ------ | ---------------------------------------- |
 | Inputs | **Euler**: The input euler angle vector. |
 | Output | **Rotation**: The output rotation value. |
-
 
 #### Invert Rotation
 
@@ -2033,12 +1887,10 @@ Converts an euler angle to a rotation.
 
 Inverts a rotation
 
-
 | Entry | What it does |
 | ------ | ---------------------------------------- |
 | Inputs | **Rotation**: The input rotation vector. |
 | Output | **Rotation**: The output rotation value. |
-
 
 #### Mix Rotation
 
@@ -2048,12 +1900,10 @@ Rotates an euler rotation by another euler rotation.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | ------ | ---------------------------------------- |
 | Factor | amount of mixing between a and b inputs. |
 | A, B | The input. |
-
 
 ##### Properties
 
@@ -2077,23 +1927,19 @@ Rotates an euler rotation by another euler rotation.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | --------- | ----------------------------------------- |
 | Rotation | Use the rotation of an existing geometry. |
 | Rotate By | The input rotation. |
 
-
 ##### Properties
 
 ###### Rotate Space
-
 
 | Entry | What it does |
 | ------ | -------------------------------- |
 | Global | Rotate by the global orientation |
 | Local | Rotate by the local orientation |
-
 
 ##### Outputs
 
@@ -2107,12 +1953,10 @@ The euler angle output.
 
 Rotates a vector.
 
-
 | Entry | What it does |
 | ------ | ----------------------------------------------------------------- |
 | Inputs | **Vector**: The input vector. · **Rotation**: The input rotation. |
 | Output | **Rotation**: The output rotation value. |
-
 
 #### Rotation to Axis Angle
 
@@ -2120,12 +1964,10 @@ Rotates a vector.
 
 Converts a rotation vector to axis angle.
 
-
 | Entry | What it does |
 | ------ | --------------------------------------------------------- |
 | Inputs | **Rotation**: The input vector. |
 | Output | **Axis**: The axis output. · **Angle**: The angle output. |
-
 
 #### Rotation Euler
 
@@ -2133,12 +1975,10 @@ Converts a rotation vector to axis angle.
 
 Converts a rotation vector to an euler angle.
 
-
 | Entry | What it does |
 | ------ | ------------------------------- |
 | Inputs | **Rotation**: The input vector. |
 | Output | **Euler**: The euler angle. |
-
 
 #### Rotation to Quaternion
 
@@ -2146,19 +1986,16 @@ Converts a rotation vector to an euler angle.
 
 Converts a quaternion to a rotation vector.
 
-
 | Entry | What it does |
 | ------ | ----------------------------------------------------------- |
 | Inputs | **Rotation**: The input vector. |
 | Output | **W, X, Y, Z**: The single output values of the quaternion. |
-
 
 #### Quaternion to Rotation
 
 ![Quaternion to Rotation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/quaternion-to-rotation.png)
 
 Converts a rotation vector to a quaternion.
-
 
 | Entry | What it does |
 | ------ | ---------------------------------------------------------- |
@@ -2181,13 +2018,11 @@ Aligns a euler value to a vector.
 
 ##### Inputs
 
-
 | Entry | What it does |
 | -------- | -------------------------------------------------- |
 | Rotation | The input euler rotation vector. |
 | Factor | The factor to align the euler value to the vector. |
 | Vector | The vector to align to. |
-
 
 ##### Properties
 
@@ -2215,21 +2050,17 @@ Rotates an euler rotation. This node will be removed in the near future. Alterna
 
 ##### Inputs
 
-
 | Entry | What it does |
 | --------- | ----------------------------------------- |
 | Rotation | Use the rotation of an existing geometry. |
 | Rotate By | The input rotation. |
 
-
 ##### Properties
-
 
 | Entry | What it does |
 | ------------ | --------------------------------------------------------------------------------------------------------------- |
 | Rotate Type | **Axis Angle**: Rotate around an axis by an angle. · **Euler**: Rotate around the x, y and z axis. |
 | Rotate Space | **Object**: Rotate points in the local space of the object. · **Point**: Rotate every point in its local space. |
-
 
 ##### Outputs
 

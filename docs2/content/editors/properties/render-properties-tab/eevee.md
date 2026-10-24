@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.2.2 Editors - Properties Editor - Render Properties Tab - EEVEE.odt
+summary: "There are three different render engines available."
 ---
 ## Render Tab
 

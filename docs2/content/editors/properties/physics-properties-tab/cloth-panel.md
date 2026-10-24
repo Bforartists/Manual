@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.12.3 Editors - Properties Editor - Physics Properties Tab - Cloth panel.odt
+summary: "Cloth simulation tries to simulate the look and behaviour of fabric."
 ---
 ## Cloth Simulation
 

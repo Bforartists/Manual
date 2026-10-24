@@ -259,7 +259,26 @@ def build(repo, cfg):
         docs.append({"key": "docs.home", "slug": "home", "fields": f, "create": {}, "section": "home", "shared": []})
     nav = landing.nav_tree(tree, kids, icons, lambda sec: slugify(sec.id), lambda n: n.web_slug, sha[:7])
     nav["base"], nav["page_url"] = base, cfg["page_url"]
-    return {"sha": sha, "sections": sections, "snippets": snippets, "pages": docs, "nav": nav}
+    search = search_index(docs)
+    return {"search": search, "sha": sha, "sections": sections, "snippets": snippets, "pages": docs, "nav": nav}
+
+
+def search_index(docs):
+    """search.json for the instant search: every page, its summary, and its H1–H3 headings with
+    their anchors ([text, id]), taken from the HTML that goes to Webflow."""
+    out = []
+    for d in docs:
+        f = d["fields"]
+        heads, seen = [], set()
+        for hid, text in re.findall(r'<h[1-3] id="([^"]+)"[^>]*>(.*?)</h[1-3]>', f["body"]):
+            t = re.sub(r"<[^>]+>", "", text).strip()
+            if t and t.lower() not in seen and len(t) < 90:
+                seen.add(t.lower())
+                heads.append([t, hid])
+        summ = f.get("summary") or d.get("create", {}).get("summary") or ""
+        out.append({"t": f["name"], "s": d["slug"], "g": f.get("section-title", ""), "d": re.sub(r"\s+", " ", str(summ))[:160],
+                    "h": heads[:100]})
+    return out
 
 
 # ---------------------------------------------------------------- apply
@@ -348,6 +367,8 @@ def main(argv):
     if nav_out:                            # the sidebar for the docs script (published to GitHub Pages)
         os.makedirs(os.path.dirname(os.path.abspath(nav_out)), exist_ok=True)
         json.dump(plan["nav"], open(nav_out, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+        json.dump(plan["search"], open(os.path.join(os.path.dirname(os.path.abspath(nav_out)), "search.json"), "w", encoding="utf-8"),
+                  ensure_ascii=False, separators=(",", ":"))
     lines = [f"### 🌐 Webflow sync{'' if '--apply' in opts else ' (plan only)'}", "",
              f"{len(plan['sections'])} section(s) · {len(plan['pages'])} page(s) · {len(plan['snippets'])} shared section(s) "
              f"from commit `{plan['sha'][:7]}`", ""]

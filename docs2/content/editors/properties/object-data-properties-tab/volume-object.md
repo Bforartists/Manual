@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.17 Editors - Properties Editor - Object Data Properties Tab - Volume Object.odt
+summary: "OpenVDB can contain multiple grids which represent different “layers” of volume."
 ---
 ## Grids panel
 

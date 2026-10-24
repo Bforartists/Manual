@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.28 Editors - Properties Editor - Particle Properties Tab - Hair - Vertex Groups panel.odt
+summary: "The Vertex groups panel allows you to specify vertex groups to use for several child particle settings."
 ---
 ## Vertex Groups panel
 

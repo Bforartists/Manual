@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.26 Editors - Properties Editor - Particle Properties Tab - Hair - Field Weights panel.odt
+summary: "The Field Weight panel allows you to control how much influence each type of external force field, or effector, has on the particle system."
 ---
 ## Field weights panel
 

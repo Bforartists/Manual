@@ -19,6 +19,7 @@ replaces:
   - editors.dope-sheet.header.key-menu
   - editors.dope-sheet.header.action-menu
 order: 10
+summary: "The header contains various menus and tools."
 ---
 The pages of this part are listed in the sidebar under *Header*.
 
@@ -124,13 +125,11 @@ This is a group of header operators for animation channel visibility. This is pr
 
 Display the Summary label above the list of elements.
 
-
 | Entry | What it does |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Only Show Selected | Display only the data for the selected object in the list of elements. If off it displays all available animation data of the whole scene. |
 | Show Hidden | Include channels from objects / bones that are not visible. This feature just works with Only Selected off. |
 | Only Show Errors | Only display F-Curves and Drivers that have errors or are disabled. |
-
 
 ### Filters - Dope Sheet Mode
 
@@ -152,12 +151,10 @@ In this section you can choose what type of animation data should be displayed. 
 
 #### Options
 
-
 | Entry | What it does |
 | ----------------------- | ------------------------------------------------------------------ |
 | Sort Data Blocks | Alphabetically sort the data in the list of elements. |
 | Multi Word Match Search | Enable Multi Word matching for the search in the list of elements. |
-
 
 ### Snapping Panel – Most modes
 
@@ -167,7 +164,6 @@ Snapping in animation editors helps align the **playhead** and **keyframes** to 
 
 > **Note:** This sub-subpanel is not available for Grease Pencil Dopesheet Mode
 
-
 | Entry | What it does |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Toggle Snapping On/Off | Toggles the snapping on or off with a visual indicator. |
@@ -175,7 +171,6 @@ Snapping in animation editors helps align the **playhead** and **keyframes** to 
 | Second | Snaps to time intervals measured in seconds. Useful for audio syncing or time-based pacing. |
 | Nearest Market | Snaps to the closest timeline marker. Great for aligning actions to scene events or beats. |
 | Absolute Time Snap | When enabled, snapping uses absolute time rather than relative pixel proximity. Ensures consistent snapping behavior regardless of zoom level or cursor position. |
-
 
 ### Proportional Editing - All Modes
 
@@ -235,7 +230,6 @@ Recolor the currently selected keyframes. Or create the next keyframe with this 
 
 When there is more than one animated object in the scene then you have most probably more than one action in the scene too. The Action Data Browser allows you to display, select and rename the available actions in the scene.
 
-
 | Entry | What it does |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Action Data Browser | The list of available actions in the scene. |
@@ -244,20 +238,17 @@ When there is more than one animated object in the scene then you have most prob
 | New Action | Add a new blank action. |
 | Unlink Action | Delete the current active action. |
 
-
 #### Included data property
 
 ![Included data property](/docs2/images/editors/dope-sheet/header/header-tools-and-options/included-data-property.png)
 
 This slot identifies which data is included in the action clip. This is useful to animate multiple elements together. You can assign the objects in the Animation Panel or Dopesheet in Action Clip mode. Its identifier natge is used to find the right slot wehn assigning an Action.
 
-
 | Entry | What it does |
 | ------------- | -------------------------------------------------------- |
 | Data Browser | The list of available objects in the action. |
 | New Slot | Add a new object to the animation slot. |
 | Unassign Slot | Delete the current active object from the animation slot |
-
 
 #### Push Down
 
@@ -293,7 +284,6 @@ Removes the currently selected grease pencil layer.
 
 A menu with grease pencil functionality.
 
-
 | Entry | What it does |
 | --------------------------- | ------------------------------------------------------ |
 | Move to Top | Move the layer to Top |
@@ -310,14 +300,12 @@ A menu with grease pencil functionality.
 | Copy Layer to selected | Copies the grease pencil layer to the selected object. |
 | Copy All Layers to selected | Copies all grease pencil layer to the selected object. |
 
-
 | Entry | What it does |
 | ---------------------------------- | --------------------------------------------------------- |
 | Move Grease Pencil Layer upwards | Moves the grease pencil layer upwards in the hierarchy. |
 | Move Grease Pencil Layer downwards | Moves the grease pencil layer downwards in the hierarchy. |
 | Isolate Layer with visibility | Locks and hides the currently active grease pencil layer. |
 | Isolate Layer without visibility | Locks the currently active grease pencil layer. |
-
 
 ### Options
 
@@ -361,7 +349,6 @@ With this option off all keyframes shows as diamond shape.
 
 Shows the curve extremes at the keyframe icons.
 
-
 | Entry | What it does |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AutoMerge Keyframes | Automatically merge nearby keyframes. |
@@ -369,7 +356,6 @@ Shows the curve extremes at the keyframe icons.
 | Lock Markers | Make the markers uneditable. |
 | Sync Markers | Sync markers with keyframe edits. When you move the keyframes, then the markers will move too. |
 | Show Cache | Show the status of cached frames in the timeline. · **Softbody**: Show the status for softbody objects. · **Particles**: Show the status for Particles objects. · **Cloth**: Show the status for Cloth objects. · **Simulation Nodes**: Show the status for Simulation Nodes objects. · **Smoke**: Show the status for Smoke objects. · **Dynamic Paint**: Show the status for Dynamic Paint objects. · **Rigid Body**: Show the status for Rigid Body objects. |
-
 
 ### Show Overlays
 
@@ -433,9 +419,7 @@ Besides that, operators and menus gets added in the order that you add them. The
 
 #### Removing an operator from the Quick menu
 
-![Removing an operator from the Quick menu](/docs2/images/editors/dope-sheet/header/quick-menu/removing-an-operator-from-the-quick-menu.png)
-
-Removing is as simple as adding. Right click at the operators in the Quick menu, and choose Remove from Quick favorites.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 #### Context and mode dependent content
 
@@ -483,7 +467,6 @@ Rectangle select an area of the timeline that gets previewed. The playback now j
 
 ![Set Preview Range](/docs2/images/editors/dope-sheet/header/view-menu/set-preview-range-2.png)
 
-
 | Entry | What it does |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Clear Preview Range | Clears an existing preview range. |
@@ -497,7 +480,6 @@ Rectangle select an area of the timeline that gets previewed. The playback now j
 | Frame Selected | Centers the view at the currently selected keyframe(s). |
 | Go to current Frame | Centers the view at the frame slider. |
 
-
 #### Pie menus
 
 ![Pie menus](/docs2/images/editors/dope-sheet/header/view-menu/pie-menus.png)
@@ -510,28 +492,22 @@ Lists the available pie menus, and gives you the ability to read the hotkeys and
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------- |
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-
 ##### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/dope-sheet/header/view-menu/duplicate-area-into-new-window.png)
 
-Duplicate Area into New Window makes the selected editor window floating. You can then drag it around at the monitor. It is not connected with the rest of the UI anymore.
-
-A separated window cannot be merged into the main window again. You have to close it when not longer needed.
-
+> **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../../../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
 | Entry | What it does |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu. |
 | Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
 | Close Area | Closes the area window. |
-
 
 #### Toggle Graph Editor
 
@@ -551,7 +527,6 @@ The Select menu contains various tools to select elements.
 
 The content is the same in all modes. With one exception. Grease Pencil mode is missing the More / Less menu items.
 
-
 | Entry | What it does |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | All | Select everything. |
@@ -561,13 +536,11 @@ The content is the same in all modes. With one exception. Grease Pencil mode is 
 | Box Select(Axis Range) | Box select enters the Border Select mode. Select elements by dragging a rectangle around it. And what's inside the horizontal range of the rectangle gets selected then. Even when the keyframes are outside of the rectangle. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse. |
 | Circle Select | Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel. |
 
-
 #### Lasso Select
 
 ![Lasso Select](/docs2/images/editors/dope-sheet/header/select-menu/lasso-select.png)
 
 A sub menu with the available lasso select modes.
-
 
 | Entry | What it does |
 | --------------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -579,11 +552,9 @@ A sub menu with the available lasso select modes.
 | Before current Frame | Select the keyframes before the current frame. |
 | After current Frame | Select the keyframes after the current frame. |
 
-
 #### More/Less Sub-menu
 
 ![More/Less Sub-menu](/docs2/images/editors/dope-sheet/header/select-menu/more-less-sub-menu.png)
-
 
 | Entry | What it does |
 | ----- | --------------------- |
@@ -604,12 +575,10 @@ Markers can be pulled around by clicking at them and dragging them left or right
 
 By holding down shift you can select more than one marker.
 
-
 | Entry | What it does |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | Add Marker | Adds a marker at the current frame position |
 | Duplicate Marker | Duplicates the selected marker(s). The duplicate(s) sticks at the mouse until you click to give it the target destination. |
-
 
 #### Duplicate Marker to Scene
 
@@ -640,7 +609,6 @@ The marker with a bind camera attached will show a camera icon.
 ![Rename Marker](/docs2/images/editors/dope-sheet/header/marker-menu/rename-marker.png)
 
 A menu will open up where you can rename the active marker.
-
 
 | Entry | What it does |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -695,7 +663,6 @@ Toggles the locks in the channel list from their previous state to locked and ba
 
 Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.
 
-
 | Entry | What it does |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Constant Extrapolation | The animation curve continues straight at the end. |
@@ -703,12 +670,10 @@ Sets the extrapolation mode for the selected F-Curves. Means how the curve acts 
 | Make Cyclic | Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame. |
 | Clear Cyclic | Removes the cyclic extrapolation. |
 
-
 | Entry | What it does |
 | ----------------- | -------------------------------------------- |
 | Expand Channels | Expands all channels in the channel list. |
 | Collapse Channels | Collapses all channels in the channels list. |
-
 
 #### Move
 
@@ -728,13 +693,11 @@ Bakes the animation by adding a keyframe at every single frame.
 
 ![Adjust last operator Bake Channels](/docs2/images/editors/dope-sheet/header/channel-menu/adjust-last-operator-bake-channels.png)
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------ |
 | Frame Range | The frame range of the animation to bake. |
 | Frame Step | Create a keyframe every nth frame. |
 | Remove Outside Range | Removes keyframes that are outside of the frame range. |
-
 
 ###### Interpolation Type
 
@@ -746,12 +709,10 @@ Interpolation type for the animation curves.
 
 Bake modifiers into keyframes, and delete them.
 
-
 | Entry | What it does |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Frame Selected Channels | Resets the viewable area to show the selected channel keyframes. This will change the zoom to fit all in the selected chanel. |
 | Discontinuity (Euler Filter) | Fix large jumps and flips in the selected Euler Rotacion F-Curves arising from the rotation values being clipped when baking physics. This operator only affects Euler rotation animation. |
-
 
 ### Channel Menu - Grease Pencil mode
 
@@ -799,14 +760,12 @@ The grease pencil object is a special object in this regards. It can have keyfra
 
 ![Transform](/docs2/images/editors/dope-sheet/header/key-menu/transform.png)
 
-
 | Entry | What it does |
 | --------- | -------------------------------------------------------------------------------- |
 | Grab/Move | Moves the selected keyframe(s). |
 | Extend | Moves the last keyframes of the selection. |
 | Slide | Slides a selected keyframe between two other keyframes. |
 | Scale | Scales the selected keyframes. You need to have more than one keyframe selected. |
-
 
 ##### Last Operator Transform
 
@@ -840,14 +799,12 @@ Just with Grab/Move. Allow mirror edit the transform.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Proportional Falloff | Adjust the falloff methods. |
 | Proportional Size | See and adjust the falloff radius. |
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
 
 #### Snap
 
@@ -867,7 +824,6 @@ Flips the selected keyframes over the current frame position.
 
 Choose a method how to insert a new keyframe at the current frame position.
 
-
 | Entry | What it does |
 | ----------------- | ---------------------------------------------------------------------------------- |
 | Jump to Keyframes | Sets the frame marker at the average position of the currently selected keyframes. |
@@ -876,7 +832,6 @@ Choose a method how to insert a new keyframe at the current frame position.
 | Paste Flipped | Pastes copied keyframes, but flipped. |
 | Duplicate | Duplicate selected keyframes. |
 | Delete Keyframes | Deletes selected keyframes. |
-
 
 #### Delete Breakdown Frames
 
@@ -892,12 +847,10 @@ Grease Pencil in Draw mode. Generate two keyframes. Go to the Draw menu. Choose 
 
 Delete Breakdown Frames now becomes active, and you can delete the interpolated keyframes if you need.
 
-
 | Entry | What it does |
 | --------------- | ----------------------------------------------------------------------------------------- |
 | Clean Keyframes | Simplify FCurces by deleting keyframes that are close to each other in all channels |
 | Clean Channels | Simplify FCurces by deleting keyframes that are close to each other in selected channels. |
-
 
 #### Bake Keyframes
 
@@ -913,12 +866,10 @@ Adds keyframes at every unit between the selected keyframes.
 
 Just in Action Editor mode.
 
-
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Merge Animation | Merge the animation of the selected objects into the action of the active object. Actions are not deleted by this. But might end up with zero users. |
 | Separate Slots | Move all sorts of the action on the active object into newly created, separate actions. All users of those slots will be reassigned to the new actions. The current action won't be deleted. But will be empty. And might end up with zero users. |
-
 
 #### Replace Action
 

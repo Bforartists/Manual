@@ -15,6 +15,7 @@ replaces:
   - editors.topbar-and-statusbar.topbar-menus.render-menu
   - editors.topbar-and-statusbar.topbar-menus.window-menu
   - editors.topbar-and-statusbar.topbar-menus.help-menu
+summary: "The File menu contains file related functionality."
 ---
 The pages of this part are listed in the sidebar under *Topbar menus*.
 
@@ -1590,7 +1591,7 @@ The GL Transmission Format from the Khronos Group is a file format for 3D scenes
 | ------------------------ | ------------------------------------------------------------------------------ |
 | Format | Choose between three export formats. Binary, Embedded and Separate. |
 | Copyright | Enter a custom copyright string. |
-| Remember Export Settings | Store glTF settings in the blender project. You need to save the project then. |
+| Remember Export Settings | Store glTF settings in the .blend file. You need to save the project then. |
 
 
 ##### Include
@@ -2349,7 +2350,7 @@ This includes New File templates which contain various workspaces.
 
 It also includes quick links to get started, information about Bforartists, and common operators to recover your last session or open a new file.
 
-In the footer you will find the Bforaritsts version and Blender relevant version.
+In the footer you will find the Bforartists version and Blender relevant version.
 
 #### About
 

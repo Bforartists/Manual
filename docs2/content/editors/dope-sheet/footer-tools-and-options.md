@@ -12,6 +12,7 @@ screenshots: "5.1"
 source:
   - 16.4 Editors - Dope Sheet - Footer tools and options.odt
 order: 50
+summary: "The playback elements allows you to play your animation, and set the animation range."
 ---
 ## Introduction
 

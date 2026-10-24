@@ -12,6 +12,7 @@ source:
   - 37 Glossary.odt
 icon: text
 order: 50
+summary: "This page lists definitions for terms used in Bforartists and this manual."
 ---
 This page lists definitions for terms used in Bforartists and this manual.
 
@@ -249,7 +250,7 @@ Depth Of Field. The distance in front of and behind the subject which appears to
 
 Double Buffer
 
-Technique for rendering and displaying content on the screen. Blender uses two buffers (images) to render the interface, the content of one buffer is displayed while rendering occurs on the other buffer. When rendering is complete, the buffers are switched.
+Technique for rendering and displaying content on the screen. Bforartists uses two buffers (images) to render the interface, the content of one buffer is displayed while rendering occurs on the other buffer. When rendering is complete, the buffers are switched.
 
 Edge
 

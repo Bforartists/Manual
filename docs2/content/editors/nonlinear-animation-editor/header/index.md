@@ -19,6 +19,7 @@ replaces:
   - editors.nonlinear-animation-editor.header.nla-editor-track-menu
   - editors.nonlinear-animation-editor.header.nla-editor-strip-menu
 order: 10
+summary: "The header contains various menus and tools."
 ---
 The pages of this part are listed in the sidebar under *Header*.
 
@@ -66,13 +67,11 @@ There are similar Tweak mode tool in the Edit menu too where you can edit with t
 
 ![Show Hide elements](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-header-tools-and-options/show-hide-elements.png)
 
-
 | Entry | What it does |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Only Show Selected | Display only the data for the selected object in the list of elements. If off it displays all available animation data of the whole scene. |
 | Show Hidden | Include channels from objects / bones that are not visible. This feature just works with Only Selected off. |
 | Include Missing NLA | Include Animation data blocks without NLA data. |
-
 
 ### Filters
 
@@ -80,13 +79,11 @@ There are similar Tweak mode tool in the Edit menu too where you can edit with t
 
 The show hide elements allows you to filter out the general elements. The Filters panel allows you to filter out further elements.
 
-
 | Entry | What it does |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | Filter by Collection | Just display the content from the chosen collection in the list of elements. |
 | Filter by Type | In this section you can choose what type of animation data should be displayed. The names should be self explaining. |
 | Options | **Sort Data Blocks**: Alphabetically sort the data in the list of elements. |
-
 
 ### Snapping
 
@@ -96,12 +93,10 @@ Snapping in animation editors helps align the **playhead** and **keyframes** to 
 
 > **Note:** This sub-subpanel is not available for Grease Pencil Dopesheet Mode
 
-
 | Entry | What it does |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Toggle Snapping On/Off | Toggles the snapping on or off with a visual indicator. |
 | Snapping panel | **Frame**: Snaps to whole frame numbers. Ideal for frame-accurate editing instead of sub-frame timeline cursor placement. · **Second**: Snaps to time intervals measured in seconds. Useful for audio syncing or time-based pacing. · **Nearest Market**: Snaps to the closest timeline marker. Great for aligning actions to scene events or beats. · **Absolute Time Snap**: When enabled, snapping uses absolute time rather than relative pixel proximity. Ensures consistent snapping behavior regardless of zoom level or cursor position. |
-
 
 ### Options
 
@@ -126,7 +121,6 @@ Synchronize the visible timeline range with other visible time based editors. Wh
 ![Show Control F-Curves](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-header-tools-and-options/show-control-f-curves.png)
 
 Shows existing f-curves in the action strip. Like for keyframed Animated influence.
-
 
 | Entry | What it does |
 | ------------------ | ---------------------------------------- |
@@ -180,9 +174,7 @@ Besides that, operators and menus gets added in the order that you add them. The
 
 #### Removing an operator from the Quick menu
 
-![Removing an operator from the Quick menu](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-header-quick-menu/removing-an-operator-from-the-quick-menu.png)
-
-Removing is as simple as adding. Right click at the operators in the Quick menu, and choose Remove from Quick favorites.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 #### Context and mode dependent content
 
@@ -228,7 +220,6 @@ Rectangle select an area of the timeline that gets previewed. The playback now j
 
 ![Set Preview Range](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-view-menu/set-preview-range-2.png)
 
-
 | Entry | What it does |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Clear Preview Range | Clears an existing preview range. |
@@ -240,7 +231,6 @@ Rectangle select an area of the timeline that gets previewed. The playback now j
 | Frame All | Zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport. |
 | Frame Selected | Centers the view at the currently selected keyframe(s). |
 | Go to current Frame | Centers the view at the frame slider. |
-
 
 #### Pie menus submenu
 
@@ -254,21 +244,16 @@ Lists the available pie menus, and gives you the ability to read the hotkeys and
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------- |
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-
 ##### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-view-menu/duplicate-area-into-new-window.png)
 
-Duplicate Area into New Window makes the selected editor window floating. You can then drag it around at the monitor. It is not connected with the rest of the UI any more.
-
-A separated window cannot be merged into the main window again. You have to close it when not longer needed.
-
+> **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../../../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
 | Entry | What it does |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -285,14 +270,12 @@ A separated window cannot be merged into the main window again. You have to clos
 The Select menu contains various tools to select elements.  
 The content is the same in all modes. With one exception. Grease Pencil mode is missing the More / Less menu items.
 
-
 | Entry | What it does |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | All | Select everything. |
 | None | Select nothing. |
 | Invert | Invert the current selection. |
 | Box Select | Box select enters the Border Select mode. Select elements by dragging a rectangle around it. Just what's inside of the rectangle gets selected then. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse. |
-
 
 #### Box Select(Axis Range)
 
@@ -306,13 +289,11 @@ The selection gets applied when you release the mouse. You leave the mode automa
 
 ![Last Operator Box Select](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-select-menu/last-operator-box-select.png)
 
-
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------ |
 | Axis Range | What's inside the horizontal range of the rectangle gets selected. |
 | Include Handles | Also select the curve handles. |
 | Tweak | Operator has been activated using a tweak event. |
-
 
 ###### Mode
 
@@ -320,12 +301,10 @@ The selection gets applied when you release the mouse. You leave the mode automa
 
 The selection mode to use.
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Circle Select | Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel. |
 | Before current Frame | Select the keyframes before the current frame. |
-
 
 #### After current Frame
 
@@ -431,7 +410,6 @@ Hotkey only functionality! This menu item exists to show the hotkey to move the 
 
 ![Select sub menu](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-marker-menu/select-sub-menu.png)
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------- |
 | All | Select all markers. |
@@ -439,7 +417,6 @@ Hotkey only functionality! This menu item exists to show the hotkey to move the 
 | Invert | Inverts the current selection |
 | Before Current Frame | Selects the markers before the current frame. |
 | After Current Frame | Selects the markers after the current frame. |
-
 
 | Entry | What it does |
 | ----------------------- | ----------------------------------------------- |
@@ -480,7 +457,6 @@ A Sound Clip Controls when a speaker plays a sound. This strip type requires a S
 
 Turns selected strips into a meta strip. A group of strips.
 
-
 | Entry | What it does |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Remove Meta Strips | Ungroups the meta strips into its original action strips. |
@@ -495,7 +471,6 @@ Turns selected strips into a meta strip. A group of strips.
 ![NLA Editor - Track Menu](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-track-menu/nla-editor-track-menu.png)
 
 This menu contains functionality to manage the tracks.
-
 
 | Entry | What it does |
 | --------------------------- | ------------------------------ |
@@ -551,12 +526,10 @@ Moves the last keyframes of the selection.
 
 ![Last Operator Transform](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-strip-menu/last-operator-transform.png)
 
-
 | Entry | What it does |
 | ---------------- | ------------------------ |
 | Values X, Y Z, W | The new position. |
 | Axis | Which axis to transform. |
-
 
 ###### Orientation
 
@@ -582,12 +555,10 @@ Scales the selected keyframes. You need to have more than one keyframe selected.
 
 ![Last Operator Resize](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-strip-menu/last-operator-transform.png)
 
-
 | Entry | What it does |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Angle | The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel. |
 | Axis | Which axis to rotate. |
-
 
 ###### Orientation
 
@@ -611,12 +582,10 @@ Proportional editing is not available for this mode.
 
 Snaps the selected keyframes by the chosen method.
 
-
 | Entry | What it does |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Bake Action | Bakes all selected objects locations/scale/rotation animations to an action. To use this operator, a dialogue will prompt to define the parameters before applying the bake action. The final animation of the selected objects or bones is computed with all modifiers, drivers, and constraints applied with keyed results per frame step in a range. |
 | Duplicate | Duplicate selected keyframes. |
-
 
 #### Linked Duplicate
 
@@ -638,7 +607,6 @@ Splits the selected strip(s) at the marker position.
 
 Allows you to rename the current NLA strip. The operator calls a rename popup.
 
-
 | Entry | What it does |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Delete Strips | Deletes the selected strips. |
@@ -650,7 +618,6 @@ Allows you to rename the current NLA strip. The operator calls a rename popup.
 | Swap Strips | Swaps the selected strips. |
 | Move strips up | Moves the selected action strips upwards into the next track. |
 | Move Strips down | Moves the selected action strips downwards into the next track. |
-
 
 #### Tweak Action (Lower Stack)
 

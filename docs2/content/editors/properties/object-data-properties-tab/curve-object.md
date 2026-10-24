@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.2 Editors - Properties Editor - Object Data Properties Tab - Curve Object.odt
+summary: "A 3D curve has control points that are not located on the curve’s local XY plane."
 ---
 ## Shape panel
 

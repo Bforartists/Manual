@@ -47,12 +47,10 @@ The Time Cursor is the green line. It is used to set and display the current tim
 
 The timeline displays the function curves for the animation. This curve can also be manipulated in various ways.
 
-
 | Entry | What it does |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Keyframes | In the Graph editor every keyframe is represented by a dot and the handlers for it. |
 | Handles | Every keyframe has handles assigned. The curve can be manipulated by dragging these handlers. You can also change the handle type in the Keyframe Handle Type menu in the header. To make the curve sharp at this keyframe for example. |
-
 
 ### Markers
 
@@ -98,7 +96,6 @@ To manipulate a keyframe, grab one of its handlers and drag.
 
 When you right click into the channel area, then you will call the Channel context menu.
 
-
 | Entry | What it does |
 | -------------------------- | -------------------------------------------------------------------------------------- |
 | Frame selected channels | Centers the selected channels in view. |
@@ -110,13 +107,11 @@ When you right click into the channel area, then you will call the Channel conte
 | Ungroup Channels | Ungroup grouped channels. Beware, the channels will not return to their initial group. |
 | Toggle Channel Editability | Protects or unprotects the selected channels. |
 
-
 ### Extrapolation Mode submenu
 
 ![Extrapolation Mode submenu](/docs2/images/editors/graph-editor/extrapolation-mode-submenu.png)
 
 Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.
-
 
 | Entry | What it does |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -125,13 +120,11 @@ Sets the extrapolation mode for the selected F-Curves. Means how the curve acts 
 | Make Cyclic | Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame. |
 | Clear Cyclic | Removes the cyclic extrapolation. |
 
-
 ### Add F-Curve Modifier submenu
 
 ![Add F-Curve Modifier submenu](/docs2/images/editors/graph-editor/add-f-curve-modifier-submenu.png)
 
 This group of operators addes modifiers to the the selected curve channel. This is useful for procedural animation. To access the modifier stack, open the Property Shelf and switch to the Modifier tab.
-
 
 | Entry | What it does |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -142,7 +135,6 @@ This group of operators addes modifiers to the the selected curve channel. This 
 | Noise | Modifies the curve with a noise formula. This is useful for creating subtle or extreme randomness to animated movements, like camera shake. |
 | Limits | Limit curve values to specified X and Y ranges. |
 | Stepped Interpolation | Gives the curve a stepped appearance by rounding values down within a certain range of frames. |
-
 
 ### Reveal Curves
 
@@ -172,12 +164,10 @@ Hides the unselected curves.
 
 Hide the unselected or selected curves.
 
-
 | Entry | What it does |
 | ----------------- | ----------------------- |
 | Expand Channels | Expands the channels. |
 | Collapse Channels | Collapses the channels. |
-
 
 ### Move submenu
 
@@ -195,12 +185,10 @@ Removes the selected channels.
 
 When you right click into the viewport then you will call the F-Curve context menu.
 
-
 | Entry | What it does |
 | ----- | ------------------------------------------ |
 | Copy | Copies the currently selected keyframe(s). |
 | Paste | Pastes copied keyframe(s) |
-
 
 ### Paste Flipped
 
@@ -292,13 +280,11 @@ Duplicate the selected keyframe(s).
 
 ![Last Operator Duplicate](/docs2/images/editors/graph-editor/last-operator-duplicate.png)
 
-
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Mode | — |
 | Values X / Y | The x and y values for the pasted keyframes. Note that these values starts at the position of the original copied keyframe. These values are relative. Values Z and W have no effect here. |
 | Axis | These values have no effect. |
-
 
 ##### Orientation
 
@@ -316,14 +302,12 @@ Enables mirror editing.
 
 Enables proportional editing. Activating proportional editing reveals further settings.
 
-
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Proportional Falloff | Adjust the falloff methods. |
 | Proportional Size | See and adjust the falloff radius. |
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
 
 ### Delete Keyframes
 
@@ -371,30 +355,20 @@ If there is not Graph Editor open, then it will warn you that there is no Graph 
 
 Frame the individual property under the cursor in an open Graph Editor
 
-
 | Entry | What it does |
 | --------------------------- | ---------------------------------------------------------------------------------- |
 | View Single in Graph Editor | Frame one property of a set of properties under the cursor in an open Graph Editor |
 | View All in Graph Editor | Frame a set of properties under the cursor in an open Graph Editor. |
 
-
 ## Slider snapping
 
-![Slider snapping](/docs2/images/editors/graph-editor/slider-snapping.png)
-
-Snapping also works at sliders. Hover with the mouse over the slider, start to slide, and holding down **Ctrl** will snap the sliders in incremental steps.
-
-When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.
-
-![Slider snapping](/docs2/images/editors/graph-editor/slider-snapping-2.png)
-
-The increment snapping also works at the frame slider. Here the incremental snapping happens by the frame rate that you have defined. With a frame rate of 24 it will snap in steps of 24 frames when holding down ctrl.
+> Hold **Ctrl** while dragging a slider to snap it. See **[Snapping](../../interface/properties.md#snapping)** in the Interface chapter.
 
 ## Quick Favorites menu
 
 ![Quick Favorites menu](/docs2/images/editors/graph-editor/quick-favorites-menu.png)
 
-When you right click at a menu or a button, then a right click menu will open. Tools have usually a Add to Quick Favorites menu entry.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 ![Quick Favorites menu](/docs2/images/editors/graph-editor/quick-favorites-menu-2.png)
 

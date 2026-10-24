@@ -1,6 +1,6 @@
 ---
 id: editors.properties.object-constraints-properties-tab
-title: Object Constraints Properties Tab
+title: "Object Constraints"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.13 Editors - Properties Editor - Object Constraints Properties Tab.odt
+summary: "Object Constraints allows two objects to interact with each other."
+icon: constraint
+order: 130
 ---
 ## Object Constraints
 

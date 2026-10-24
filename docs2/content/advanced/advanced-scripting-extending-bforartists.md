@@ -11,6 +11,7 @@ screenshots: "5.1"
 source:
   - 33 Advanced - Scripting & Extending Bforartists.odt
 icon: script
+summary: "Python is an interpreted, interactive, object-oriented programming language."
 ---
 ## Scripting & Extending Bforartists
 
@@ -72,7 +73,7 @@ There are other ways scripts in a *blend* file may execute that require user int
 
 Blender files can also contain scripts. Which can be auto run when you load the blend file. Auto running scripts can be a security issue. There are two ways to control script execution in blend files. In the load dialog for a blend file. Or in the Preferences.
 
-In the Blender file selector you will see down left the checkbox **Trusted source**. Enable it to allow auto execution of the scripts in the blend file.
+In the .blend file selector you will see down left the checkbox **Trusted source**. Enable it to allow auto execution of the scripts in the blend file.
 
 **Auto-Run Python Scripts **in the Preferences in the Save & Load Panelallows you to run scripts in blend files automatically.
 

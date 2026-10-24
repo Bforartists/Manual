@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 17 Editors - Timeline.odt
+summary: "Navigation in the viewport happens by mouse or hotkeys."
 ---
 ## Viewport Navigation
 
@@ -37,13 +38,11 @@ To drag a keyframe click at it and drag the mouse.
 
 When you right click into the timeline viewport then you will call the Dope Sheet context menu. Despite being in the time line.
 
-
 | Menu entry | What it does |
 | ------------- | ------------------------------------------ |
 | Copy | Copies the currently selected keyframe(s). |
 | Paste | Pastes copied keyframe(s) |
 | Paste Flipped | Pastes copied keyframe(s), but flipped. |
-
 
 ### Keyframe Type submenu
 
@@ -75,13 +74,11 @@ The easing methods here in the interpolation mode menu are for the easing shape.
 
 The easing methods in the interpolation mode menu are for the easing shape. This menu allows you to choose an easing method.
 
-
 | Menu entry | What it does |
 | ---------------- | ------------------------------------------ |
 | Insert Keyframes | Insert a keyframe at the current position. |
 | Duplicate | Duplicate the selected keyframe(s). |
 | Delete Keyframes | Delete the selected keyframe(s). |
-
 
 ### Mirror submenu
 
@@ -97,21 +94,13 @@ Snaps the selected keyframes by the given method.
 
 ## Slider snapping
 
-![Slider snapping](/docs2/images/ui/timeline/viewport/slider-snapping.png)
-
-Snapping also works at sliders. Hover with the mouse over the slider, start to slide, and holding down **Ctrl** will snap the sliders in incremental steps.
-
-When it's a default value between 0 and 1 then it usually snaps in 0.1 steps. When it's a default value over 1 then it usually snaps in steps of 10.
-
-![Slider snapping](/docs2/images/ui/timeline/viewport/slider-snapping-2.png)
-
-The increment snapping also works at the frame slider. here the incremental snapping happens by the frame rate that you have defined. With a frame rate of 24 it will snap in steps of 24 frames when holding down ctrl.
+> Hold **Ctrl** while dragging a slider to snap it. See **[Snapping](../../interface/properties.md#snapping)** in the Interface chapter.
 
 ## Quick Favorites menu
 
 ![Quick Favorites menu](/docs2/images/ui/timeline/viewport/quick-favorites-menu.png)
 
-When you right click at a menu or a button, then a right click menu will open. Tools have usually a Add to Quick Favorites menu entry.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 The Quick Menu is empty by default. With Add to Quick favorites you can add this menu to the Quick menu.
 

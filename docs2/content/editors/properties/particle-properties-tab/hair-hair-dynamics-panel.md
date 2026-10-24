@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.10 Editors - Properties Editor - Particle Properties Tab - Hair - Hair Dynamics panel.odt
+summary: "Hair particles can have dynamic properties using physics."
 ---
 ## Hair Dynamics panel
 

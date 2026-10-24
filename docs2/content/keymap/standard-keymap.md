@@ -10,6 +10,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 41 Standard Keymap.odt
+summary: "The interaction concept for Bforartists is the graphical UI."
 ---
 |  |  |  |  |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------- |
@@ -160,6 +161,8 @@ Ndof hotkeys are for tablet or 3d mouse.
 | For Mac OS users |
 | When a hotkey is listed with “Ctrl”, this will mean the keyboard “Option” key. |
 
+
+# General
 
 ## Window
 
@@ -325,7 +328,9 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Select View Item | Extend and Range. Selects and extends between a range of two items in a UI list. |  | Shift + Left Mouse |
 
 
-## 3D View - Object Mode
+# 3D Viewport
+
+## Object Mode
 
 
 |  |  |  |  |
@@ -500,7 +505,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Add Primitive Object | Adds a primitive | Tool shelf | drag-Left Mouse |
 
 
-## 3D View - Mesh
+## Mesh
 
 
 |  |  |  |  |
@@ -839,7 +844,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Extend Vertices | Extend Vertices | Tool shelf | drag-Left Mouse |
 
 
-## 3D View - Curve
+## Curve
 
 
 |  |  |  |  |
@@ -1066,7 +1071,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Set Tool by Name | Circle Select | Tool shelf | G |
 
 
-## 3D View - Armature
+## Armature
 
 
 |  |  |  |  |
@@ -1263,7 +1268,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Shear | Shear | Tool shelf | drag-Left Mouse |
 
 
-## 3D View - Metaball
+## Metaball
 
 
 |  |  |  |  |
@@ -1431,7 +1436,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Shear | Shear | Tool shelf | drag-Left Mouse |
 
 
-## 3D View - Lattice
+## Lattice
 
 
 |  |  |  |  |
@@ -1597,7 +1602,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Shear | Shear | Tool shelf | drag-Left Mouse |
 
 
-## 3D View - Font
+## Font
 
 
 |  |  |  |  |
@@ -1705,7 +1710,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Set Tool by Name | Circle Select | Tool shelf | G |
 
 
-## 3D View - Pose
+## Pose
 
 
 |  |  |  |  |
@@ -1893,7 +1898,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Relax Pose | Relax Pose | Tool shelf | drag-Left Mouse |
 
 
-## 3D View - Vertex Paint
+## Vertex Paint
 
 
 |  |  |  |  |
@@ -1919,7 +1924,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Select | Select |  | Ctrl Left Mouse |
 
 
-## 3D View - Weight Paint
+## Weight Paint
 
 
 |  |  |  |  |
@@ -1960,7 +1965,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Weight Paint Sample Group |  | Tool shelf | Left Mouse |
 
 
-## 3D View - Paint Vertex Selection (Weight, Vertex)
+## Paint Vertex Selection (Weight, Vertex)
 
 
 |  |  |  |  |
@@ -1996,7 +2001,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Select Loop | Select Face loop | Select menu | Shift Ctrl Alt Left Mouse |
 
 
-## 3D View - Image Paint
+## Image Paint
 
 
 |  |  |  |  |
@@ -2023,7 +2028,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Set Tool by Name | builtin.select | Tool Shelf | D |
 
 
-## 3D View - Sculpt
+## Sculpt
 
 
 |  |  |  |  |
@@ -2121,7 +2126,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Transform from Gizmo |  | Tool shelf | drag-Left Mouse |
 
 
-## 3D View - Sculpt Curves
+## Sculpt Curves
 
 
 |  |  |  |  |
@@ -2142,7 +2147,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Set Select Mode | Set selection mode to curve | Header | Alt 2 |
 
 
-## 3D View - Particle
+## Particle
 
 
 |  |  |  |  |
@@ -2604,6 +2609,8 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Tool Shelf | Calls or hides the Tool Shelf sidebar | 3D View / View / Tool Shelf | T |
 
 
+# Animation
+
 ## Graph Editor
 
 
@@ -2767,6 +2774,356 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Enter Tweak Mode | Exit Tweak Mode. Isolate Action | NLA Editor / Edit / Stop tweaking Stashed Action | Shift Tab |
 | Exit Tweak Mode | Enter Tweak Mode. Isolate Action | NLA Editor / Edit / Start tweaking Stashed Action | Shift Tab |
 
+
+## Frames
+
+
+|  |  |  |  |
+| ---------------- | ---------------- | ----------------------------- | -------------------- |
+| Name | Function | Surface menu location | Hotkey |
+| Frame Offset | Frame Offset | None | Left Arrow |
+| Frame Offset | Frame Offset | None | Right Arrow |
+| Jump to Endpoint |  | Timeline / Header / Play prop | Shift Right Arrow |
+| Jump to Endpoint |  | Timeline / Header / Play prop | Shift Left Arrow |
+| Jump to Keyframe | Jump to Keyframe | None | Up Arrow |
+| Jump to Keyframe | Jump to Keyframe | None | Down Arrow |
+| Jump to Keyframe | Jump to Keyframe | None | Media Last |
+| Jump to Keyframe | Jump to Keyframe | None | Media First |
+| Frame Offset | Frame Offset | None | Alt Wheel Down |
+| Frame Offset | Frame Offset | None | Alt Wheel Up |
+| Play Animation |  | Navi | Shift Space Bar |
+| Play Animation |  | None | Shift Ctrl Space Bar |
+| Cancel Animation |  | None | Esc |
+| Play Animation |  | None | Media Play/Pause |
+| Cancel Animation | Cancel Animation | None | Media Stop |
+
+
+## Markers
+
+
+|  |  |  |  |
+| --------------------------- | --------------------- | ------------------------------------------------------------ | ----------------------- |
+| Name | Function | Surface menu location | Hotkey |
+| Move Time Marker | Move Time Marker | None | drag-Left Mouse |
+| Duplicate Time Marker | Duplicate Time Marker | Graph, Dope sheet, NLA Editor / Marker / Duplicate Marker | Shift D |
+| Select Time Marker | Select Time Marker | None | Left Mouse |
+| Markers /Select Time Marker | Select Time Marker | None | Shift Left Mouse |
+| Select Time Marker | Select Time Marker | None | Ctrl Left Mouse |
+| Select Time Marker | Select Time Marker | None | Shift Ctrl Left Mouse |
+| Marker Box Select | Marker Border Select | Graph, Dope sheet, NLA Editor / Select / Border Select | B |
+| (De)Select All markers | Select all markers | Marker / Select | A |
+| De)select all markers | Deselect all markers | Marker / Select | Alt A |
+| De)select all markers | Invert the selection | Marker / Select | Ctrl I |
+| De)select all markers | Deselect all markers | None | dbl-A |
+| Delete Markers | Delete Markers | Graph, Dope sheet, NLA Editor / Marker / Delete | Delete |
+| Rename Marker | Rename markers | Marker / | Left Mouse double click |
+| Rename Marker | Rename markers | Marker / | F2 |
+| Move Time Marker | Move Time Marker | None | W |
+| Bind Camera to Marker | Bind Camera to Marker | Graph, Dope sheet, NLA Editor / View / Bind Camera to Marker | Ctrl B |
+
+
+## Animation
+
+
+|  |  |  |  |
+| ------------------------ | ------------ | --------------------- | ---------------- |
+| Name | Function | Surface menu location | Hotkey |
+| Animation / Change Frame | Change Frame | None | drag-Right Mouse |
+
+
+## Animation Channels
+
+
+|  |  |  |  |
+| ------------------------------- | ------------------------------------------ | ----------------------------- | --------------------- |
+| Name | Function | Surface menu location | Hotkey |
+| Mouse on Channels | Select channel | None | Left Mouse |
+| Mouse on Channels | Select channel, extend selected | None | Shift Left Mouse |
+| Mouse on Channels | Select channel, extend range | None | Ctrl Left Mouse |
+| Mouse on Channels | Select channel, select children only | None | Shift Ctrl Left Mouse |
+| Rename Channels | Rename Channels | None | dbl-Left Mouse |
+| Set Channel Keyframes | Set Channel Keyframes | None | dbl-Left Mouse |
+| Set Channel Keyframes | Set Channel Keyframes | None | Shift dbl-Left Mouse |
+| Select All | Select All | / Select / Select All | A |
+| Select All |  | / Select / | Alt A |
+| Select All | Inverts Selection | / Select / Invert Selection | Ctrl I |
+| Select All |  | None | dbl-A |
+| Box Select | Box Select | / Select / Border Select | B |
+| Box Select | Border Select | None | drag-Left Mouse |
+| Delete Channels | Delete Channels | / Channel / Delete Channels | Delete |
+| Expands Channels | Expands Channels | / Channel / Expands Channels | Numpad + |
+| Collapse Channels | Collapse Channels | / Channel / Collapse Channels | Numpad - |
+| Expands Channels | Expands Channels | / Channel / Expands Channels | Ctrl Numpad + |
+| Collapse Channels | Collapse Channels | / Channel / Collapse Channels | Ctrl Numpad - |
+| Move Channels | Move Channels | / Channel / Move / To Top | Page Up |
+| Move Channels | Move Channels | / Channel / Move / Up | Page Down |
+| Move Channels | Move Channels | / Channel / Move / Down | Shift Page Up |
+| Move Channels | Move Channels | / Channel / Move / To Bottom | Shift Page Down |
+| Dope Sheet Channel Context Menu | calls the right click menu under the mouse | None | Right Mouse |
+| Frame selected Channels | Centers the view at the selected channels | View menu | F |
+| Channel | Calls the context menu | None | Application |
+
+
+# Gestures and Modal Maps
+
+## View 3D Gesture Circle
+
+
+|  |  |  |  |
+| ------------ | ------------ | --------------------- | ------------------ |
+| Name | Function | Surface menu location | Hotkey |
+| Cancel | Cancel | None | Esc |
+| Cancel | Cancel | None | Right Mouse |
+| Confirm | Confirm | None | Return |
+| Confirm | Confirm | None | Numpad Enter |
+| Select | Select | None | Left Mouse |
+| Deselect | Deselect | None | Shift Left Mouse |
+| No Operation | No Operation | None | Left Mouse |
+| Deselect | Deselect | None | Middle Mouse |
+| No Operation | No Operation | None | Left Mouse |
+| Subtract | Subtract | None | Wheel Up |
+| Subtract | Subtract | None | Numpad - |
+| Add | Add | None | Wheel Down |
+| Add | Add | None | Numpad + |
+| Size | Size | None | Mouse Trackpad/Pan |
+
+
+## Gesture Straight Line
+
+
+|  |  |  |  |
+| ------ | -------- | --------------------- | ----------- |
+| Name | Function | Surface menu location | Hotkey |
+| Cancel | Cancel | None | Esc |
+| Cancel | Cancel | None | Right Mouse |
+| Begin | Begin | None | Left Mouse |
+| Select | Select | None | Left Mouse |
+| Move | Move | None | Space Bar |
+| Snap | Snap | None | Left Ctrl |
+| Flip | Flip | None | F |
+
+
+## Gesture Zoom Border
+
+
+|  |  |  |  |
+| ------ | -------- | --------------------- | ------------ |
+| Name | Function | Surface menu location | Hotkey |
+| Cancel | Cancel | None | Esc |
+| Cancel | Cancel | None | Right Mouse |
+| Begin | Begin | None | Left Mouse |
+| In | In | None | Left Mouse |
+| Begin | Begin | None | Middle Mouse |
+| Out | Out | None | Middle Mouse |
+
+
+## Gesture Box
+
+
+|  |  |  |  |
+| -------- | -------- | --------------------- | ---------------- |
+|  | Function | Surface menu location | Hotkey |
+| Cancel | Cancel | None | Esc |
+| Cancel | Cancel | None | Right Mouse |
+| Select | Select | None | Right Mouse |
+| Begin | Begin | None | Shift Left Mouse |
+| Deselect | Deselect | None | Shift Left Mouse |
+| Begin | Begin | None | Left Mouse |
+| Select | Select | None | Left Mouse |
+| Begin | Begin | None | Middle Mouse |
+| Deselect | Deselect | None | Middle Mouse |
+| Move | Move | None | Space Bar |
+
+
+## Standard Modal Map
+
+
+|  |  |  |  |
+| -------- | -------- | --------------------- | ------------ |
+| Name | Function | Surface menu location | Hotkey |
+| Cancel | Cancel | None | Esc |
+| Apply | Apply | None | Left Mouse |
+| Apply | Apply | None | Return |
+| Apply | Apply | None | Numpad Enter |
+| Snap on | Snap on | None | Left Ctrl |
+| Snap off | Snap off | None | Left Ctrl |
+| Snap on | Snap on | None | Right Ctrl |
+| Snap off | Snap off | None | Right Ctrl |
+
+
+## Transform Modal Map
+
+
+|  |  |  |  |
+| ------------------------------------- | --------------------------------------------- | --------------------- | ------------------ |
+| Name | Function | Surface menu location | Hotkey |
+| Confirm | Confirm | None | Left Mouse |
+| Confirm | Confirm | None | Return |
+| Confirm | Confirm | None | Numpad Enter |
+| Cancel | Cancel | None | Right Mouse |
+| Cancel | Cancel | None | Esc |
+| X Axis |  |  | X |
+| Y Axis |  |  | Y |
+| Z Axis |  |  | Z |
+| X Plane |  |  | Alt X |
+| Y Plane |  |  | Alt Y |
+| Z Plane |  |  | Alt Z |
+| Clear Constraints |  |  | C |
+| Move | Translate | None | W |
+| Rotate | Rotate | None | E |
+| Resize | Resize | None | R |
+| Snap Toggle | Snap Toggle | None | Shift Tab |
+| Snap Invert | Invert Snap On | None | Left Ctrl |
+| Snap Invert (Off) | Invert Snap Off | None | Left Ctrl |
+| Snap Invert | Invert Snap On | None | Right Ctrl |
+| Snap Invert (Off) | Invert Snap Off | None | Right Ctrl |
+| Add Snap Point | Add Snap Point | None | A |
+| Remove last Snap Point | Remove last Snap Point | None | Alt A |
+| Set Snap Base | Set Snap Base | None | B |
+| Set Snap Base (Off) | Set Snap Base off | None | B |
+| Increase Proportional Influence | Increase Proportional Influence | None | Page Up |
+| Decrease Proportional Influence | Decrease Proportional Influence | None | Page Down |
+| Increase Proportional Influence | Increase Proportional Influence | None | Shift Page Up |
+| Decrease Proportional Influence | Decrease Proportional Influence | None | Shift Page Down |
+| Increase Proportional Influence | Increase Proportional Influence | None | Wheel Down |
+| Decrease Proportional Influence | Decrease Proportional Influence | None | Wheel Up |
+| Increase Proportional Influence | Increase Proportional Influence | None | Shift Wheel Down |
+| Decrease Proportional Influence | Decrease Proportional Influence | None | Shift Wheel Up |
+| Adjust proportional influence | Adjust Proportional Influence | None | Mouse/Trackpad Pan |
+| Increase Max AutoIK Chain Length | Increase Max AutoIK Chain Length | None | Shift Page Up |
+| Decrease Max AutoIK Chain Length | Decrease Max AutoIK Chain Length | None | Shift Page Down |
+| Increase Max AutoIK Chain Length | Increase Max AutoIK Chain Length | None | Shift Wheel Down |
+| Decrease Max AutoIK Chain Length | Decrease Max AutoIK Chain Length | None | Shift Wheel Up |
+| Toggle Direction for Node Auto-offset | Toggle Direction for Node Auto-offset | None | T |
+| Automatic Constraint | Limits to a chosen axis in the 3d view. | None | Middle Mouse |
+| Automatic Constraint | Limits to a chosen axis in the 3d view. | None | S |
+| Automatic Constraint Plane | Limits to a chosen axis plane in the 3d view. | None | Alt Middle Mouse |
+| Automatic Constraint Plane | Limits to a chosen axis plane in the 3d view. | None | Alt S |
+| Precision Mode |  |  | Left Shift |
+| Precision Mode |  |  | Right Shift |
+| Vert/Edge Slide |  |  | W |
+| Trackball |  |  | E |
+| Rotate Normals |  |  | N |
+| Navigate |  |  | Left Alt |
+
+
+## Eyedropper Modal Map
+
+
+|  |  |  |  |
+| ---------------- | ---------------- | --------------------- | ------------ |
+| Name | Function | Surface menu location | Hotkey |
+| Cancel | Cancel | None | Esc |
+| Cancel | Cancel | None | Right Mouse |
+| Confirm Sampling | Confirm Sampling | None | Return |
+| Confirm Sampling | Confirm Sampling | None | Numpad Enter |
+| Confirm Sampling | Confirm Sampling | None | Left Mouse |
+| Start Sampling | Start Sampling | None | Left Mouse |
+| Reset Sampling | Reset Sampling | None | Space Bar |
+
+
+## Eyedropper ColorBand Point Sampling Map
+
+
+|  |  |  |  |
+| ---------------- | ---------------- | --------------------- | ------------ |
+| Name | Function | Surface menu location | Hotkey |
+| Cancel | Cancel | None | Esc |
+| Cancel | Cancel | None | Back Space |
+| Confirm Sampling | Confirm Sampling | None | Right Mouse |
+| Confirm Sampling | Confirm Sampling | None | Return |
+| Confirm Sampling | Confirm Sampling | None | Numpad Enter |
+| Sample a point | Start Sampling | None | Left Mouse |
+| Reset Sampling | Reset Sampling | None | Space Bar |
+
+
+## Mesh Filter Modal Map
+
+
+|  |  |  |  |
+| ------- | -------- | --------------------- | ------------ |
+| Name | Function | Surface menu location | Hotkey |
+| Confirm | Confirm | None | Left Mouse |
+| Confirm | Confirm | None | Left Mouse |
+| Confirm | Confirm | None | Return |
+| Confirm | Confirm | None | Numpad Enter |
+| Cancel | Cancel | None | Esc |
+| Cancel | Cancel | None | Right Mouse |
+
+
+## Fill Tool Modal Map
+
+
+|  |  |  |  |
+| --------------------- | -------- | --------------------- | ------------ |
+| Name | Function | Surface menu location | Hotkey |
+| Cancel | Cancel | None | Esc |
+| Cancel | Cancel | None | Right Mouse |
+| Confirm | Confirm | None | Left Mouse |
+| Toggle Extension Mode |  |  | S |
+| Lengthen Extensions |  |  | Page Up |
+| Lengthen Extensions |  |  | Wheel Down |
+| Shorten Extensions |  |  | Page Down |
+| Shorten Extensions |  |  | Wheel Down |
+| Drag Extensions |  |  | Middle Mouse |
+| Collide Extensions |  |  | D |
+| Invert |  |  | Left Ctrl |
+| Invert |  |  | Right Ctrl |
+| Precision |  |  | Left Shift |
+| Precision |  |  | Right Shift |
+
+
+## Generic Gizmo
+
+
+|  |  |  |  |
+| ----------- | -------- | --------------------- | ---------- |
+| Name | Function | Surface menu location | Hotkey |
+| Gizmo Tweak |  | None | Left Mouse |
+
+
+|  |  |  |  |
+| ----------- | -------- | --------------------- | --------------- |
+| Name | Function | Surface menu location | Hotkey |
+| Gizmo Tweak |  | None | drag-Left Mouse |
+
+
+|  |  |  |  |
+| ----------- | -------- | --------------------- | --------------- |
+| Name | Function | Surface menu location | Hotkey |
+| Gizmo Tweak |  | None | Left Mouse |
+| Gizmo Tweak |  | None | drag-Left Mouse |
+
+
+|  |  |  |  |
+| ----------- | -------- | --------------------- | --------------- |
+| Name | Function | Surface menu location | Hotkey |
+| Gizmo Tweak |  | None | drag-Left Mouse |
+
+
+|  |  |  |  |
+| ----------- | -------- | --------------------- | ---------- |
+| Name | Function | Surface menu location | Hotkey |
+| Gizmo Tweak |  | None | Left Mouse |
+
+
+|  |  |  |  |
+| ----------------- | -------- | --------------------- | ------------ |
+| Name | Function | Surface menu location | Hotkey |
+| Cancel | Cancel | None | Esc |
+| Cancel | Cancel | None | Right Mouse |
+| Confirm | Confirm | None | Left Mouse |
+| Confirm | Confirm | None | Numpad Enter |
+| Enable Precision |  | None | Right Shift |
+| Disable Precision |  | None | Right Shift |
+| Enable Precision |  | None | Left Shift |
+| Disable Precision |  | None | Left Shift |
+| Enable Snap |  | None | Right Ctrl |
+| Disable Snap |  | None | Right Ctrl |
+| Enable Snap |  | None | Left Ctrl |
+| Disable Snap |  | None | Left Ctrl |
+
+# Editors
 
 ## Image
 
@@ -3878,6 +4235,8 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Delete Track | Deletes the track |  | Del |
 
 
+# Grease Pencil and Masks
+
 ## Grease Pencil
 
 
@@ -4066,352 +4425,3 @@ Ndof hotkeys are for tablet or 3d mouse.
 | Transform | Scale Feather | Image Editor / Mask / Transform | Alt S |
 | Set 2D Cursor |  | None | Alt Right Mouse |
 | Move |  | None | Shift drag-Right Mouse |
-
-
-## Frames
-
-
-|  |  |  |  |
-| ---------------- | ---------------- | ----------------------------- | -------------------- |
-| Name | Function | Surface menu location | Hotkey |
-| Frame Offset | Frame Offset | None | Left Arrow |
-| Frame Offset | Frame Offset | None | Right Arrow |
-| Jump to Endpoint |  | Timeline / Header / Play prop | Shift Right Arrow |
-| Jump to Endpoint |  | Timeline / Header / Play prop | Shift Left Arrow |
-| Jump to Keyframe | Jump to Keyframe | None | Up Arrow |
-| Jump to Keyframe | Jump to Keyframe | None | Down Arrow |
-| Jump to Keyframe | Jump to Keyframe | None | Media Last |
-| Jump to Keyframe | Jump to Keyframe | None | Media First |
-| Frame Offset | Frame Offset | None | Alt Wheel Down |
-| Frame Offset | Frame Offset | None | Alt Wheel Up |
-| Play Animation |  | Navi | Shift Space Bar |
-| Play Animation |  | None | Shift Ctrl Space Bar |
-| Cancel Animation |  | None | Esc |
-| Play Animation |  | None | Media Play/Pause |
-| Cancel Animation | Cancel Animation | None | Media Stop |
-
-
-## Markers
-
-
-|  |  |  |  |
-| --------------------------- | --------------------- | ------------------------------------------------------------ | ----------------------- |
-| Name | Function | Surface menu location | Hotkey |
-| Move Time Marker | Move Time Marker | None | drag-Left Mouse |
-| Duplicate Time Marker | Duplicate Time Marker | Graph, Dope sheet, NLA Editor / Marker / Duplicate Marker | Shift D |
-| Select Time Marker | Select Time Marker | None | Left Mouse |
-| Markers /Select Time Marker | Select Time Marker | None | Shift Left Mouse |
-| Select Time Marker | Select Time Marker | None | Ctrl Left Mouse |
-| Select Time Marker | Select Time Marker | None | Shift Ctrl Left Mouse |
-| Marker Box Select | Marker Border Select | Graph, Dope sheet, NLA Editor / Select / Border Select | B |
-| (De)Select All markers | Select all markers | Marker / Select | A |
-| De)select all markers | Deselect all markers | Marker / Select | Alt A |
-| De)select all markers | Invert the selection | Marker / Select | Ctrl I |
-| De)select all markers | Deselect all markers | None | dbl-A |
-| Delete Markers | Delete Markers | Graph, Dope sheet, NLA Editor / Marker / Delete | Delete |
-| Rename Marker | Rename markers | Marker / | Left Mouse double click |
-| Rename Marker | Rename markers | Marker / | F2 |
-| Move Time Marker | Move Time Marker | None | W |
-| Bind Camera to Marker | Bind Camera to Marker | Graph, Dope sheet, NLA Editor / View / Bind Camera to Marker | Ctrl B |
-
-
-## Animation
-
-
-|  |  |  |  |
-| ------------------------ | ------------ | --------------------- | ---------------- |
-| Name | Function | Surface menu location | Hotkey |
-| Animation / Change Frame | Change Frame | None | drag-Right Mouse |
-
-
-## Animation Channels
-
-
-|  |  |  |  |
-| ------------------------------- | ------------------------------------------ | ----------------------------- | --------------------- |
-| Name | Function | Surface menu location | Hotkey |
-| Mouse on Channels | Select channel | None | Left Mouse |
-| Mouse on Channels | Select channel, extend selected | None | Shift Left Mouse |
-| Mouse on Channels | Select channel, extend range | None | Ctrl Left Mouse |
-| Mouse on Channels | Select channel, select children only | None | Shift Ctrl Left Mouse |
-| Rename Channels | Rename Channels | None | dbl-Left Mouse |
-| Set Channel Keyframes | Set Channel Keyframes | None | dbl-Left Mouse |
-| Set Channel Keyframes | Set Channel Keyframes | None | Shift dbl-Left Mouse |
-| Select All | Select All | / Select / Select All | A |
-| Select All |  | / Select / | Alt A |
-| Select All | Inverts Selection | / Select / Invert Selection | Ctrl I |
-| Select All |  | None | dbl-A |
-| Box Select | Box Select | / Select / Border Select | B |
-| Box Select | Border Select | None | drag-Left Mouse |
-| Delete Channels | Delete Channels | / Channel / Delete Channels | Delete |
-| Expands Channels | Expands Channels | / Channel / Expands Channels | Numpad + |
-| Collapse Channels | Collapse Channels | / Channel / Collapse Channels | Numpad - |
-| Expands Channels | Expands Channels | / Channel / Expands Channels | Ctrl Numpad + |
-| Collapse Channels | Collapse Channels | / Channel / Collapse Channels | Ctrl Numpad - |
-| Move Channels | Move Channels | / Channel / Move / To Top | Page Up |
-| Move Channels | Move Channels | / Channel / Move / Up | Page Down |
-| Move Channels | Move Channels | / Channel / Move / Down | Shift Page Up |
-| Move Channels | Move Channels | / Channel / Move / To Bottom | Shift Page Down |
-| Dope Sheet Channel Context Menu | calls the right click menu under the mouse | None | Right Mouse |
-| Frame selected Channels | Centers the view at the selected channels | View menu | F |
-| Channel | Calls the context menu | None | Application |
-
-
-## View 3D Gesture Circle
-
-
-|  |  |  |  |
-| ------------ | ------------ | --------------------- | ------------------ |
-| Name | Function | Surface menu location | Hotkey |
-| Cancel | Cancel | None | Esc |
-| Cancel | Cancel | None | Right Mouse |
-| Confirm | Confirm | None | Return |
-| Confirm | Confirm | None | Numpad Enter |
-| Select | Select | None | Left Mouse |
-| Deselect | Deselect | None | Shift Left Mouse |
-| No Operation | No Operation | None | Left Mouse |
-| Deselect | Deselect | None | Middle Mouse |
-| No Operation | No Operation | None | Left Mouse |
-| Subtract | Subtract | None | Wheel Up |
-| Subtract | Subtract | None | Numpad - |
-| Add | Add | None | Wheel Down |
-| Add | Add | None | Numpad + |
-| Size | Size | None | Mouse Trackpad/Pan |
-
-
-## Gesture Straight Line
-
-
-|  |  |  |  |
-| ------ | -------- | --------------------- | ----------- |
-| Name | Function | Surface menu location | Hotkey |
-| Cancel | Cancel | None | Esc |
-| Cancel | Cancel | None | Right Mouse |
-| Begin | Begin | None | Left Mouse |
-| Select | Select | None | Left Mouse |
-| Move | Move | None | Space Bar |
-| Snap | Snap | None | Left Ctrl |
-| Flip | Flip | None | F |
-
-
-## Gesture Zoom Border
-
-
-|  |  |  |  |
-| ------ | -------- | --------------------- | ------------ |
-| Name | Function | Surface menu location | Hotkey |
-| Cancel | Cancel | None | Esc |
-| Cancel | Cancel | None | Right Mouse |
-| Begin | Begin | None | Left Mouse |
-| In | In | None | Left Mouse |
-| Begin | Begin | None | Middle Mouse |
-| Out | Out | None | Middle Mouse |
-
-
-## Gesture Box
-
-
-|  |  |  |  |
-| -------- | -------- | --------------------- | ---------------- |
-|  | Function | Surface menu location | Hotkey |
-| Cancel | Cancel | None | Esc |
-| Cancel | Cancel | None | Right Mouse |
-| Select | Select | None | Right Mouse |
-| Begin | Begin | None | Shift Left Mouse |
-| Deselect | Deselect | None | Shift Left Mouse |
-| Begin | Begin | None | Left Mouse |
-| Select | Select | None | Left Mouse |
-| Begin | Begin | None | Middle Mouse |
-| Deselect | Deselect | None | Middle Mouse |
-| Move | Move | None | Space Bar |
-
-
-## Standard Modal Map
-
-
-|  |  |  |  |
-| -------- | -------- | --------------------- | ------------ |
-| Name | Function | Surface menu location | Hotkey |
-| Cancel | Cancel | None | Esc |
-| Apply | Apply | None | Left Mouse |
-| Apply | Apply | None | Return |
-| Apply | Apply | None | Numpad Enter |
-| Snap on | Snap on | None | Left Ctrl |
-| Snap off | Snap off | None | Left Ctrl |
-| Snap on | Snap on | None | Right Ctrl |
-| Snap off | Snap off | None | Right Ctrl |
-
-
-## Transform Modal Map
-
-
-|  |  |  |  |
-| ------------------------------------- | --------------------------------------------- | --------------------- | ------------------ |
-| Name | Function | Surface menu location | Hotkey |
-| Confirm | Confirm | None | Left Mouse |
-| Confirm | Confirm | None | Return |
-| Confirm | Confirm | None | Numpad Enter |
-| Cancel | Cancel | None | Right Mouse |
-| Cancel | Cancel | None | Esc |
-| X Axis |  |  | X |
-| Y Axis |  |  | Y |
-| Z Axis |  |  | Z |
-| X Plane |  |  | Alt X |
-| Y Plane |  |  | Alt Y |
-| Z Plane |  |  | Alt Z |
-| Clear Constraints |  |  | C |
-| Move | Translate | None | W |
-| Rotate | Rotate | None | E |
-| Resize | Resize | None | R |
-| Snap Toggle | Snap Toggle | None | Shift Tab |
-| Snap Invert | Invert Snap On | None | Left Ctrl |
-| Snap Invert (Off) | Invert Snap Off | None | Left Ctrl |
-| Snap Invert | Invert Snap On | None | Right Ctrl |
-| Snap Invert (Off) | Invert Snap Off | None | Right Ctrl |
-| Add Snap Point | Add Snap Point | None | A |
-| Remove last Snap Point | Remove last Snap Point | None | Alt A |
-| Set Snap Base | Set Snap Base | None | B |
-| Set Snap Base (Off) | Set Snap Base off | None | B |
-| Increase Proportional Influence | Increase Proportional Influence | None | Page Up |
-| Decrease Proportional Influence | Decrease Proportional Influence | None | Page Down |
-| Increase Proportional Influence | Increase Proportional Influence | None | Shift Page Up |
-| Decrease Proportional Influence | Decrease Proportional Influence | None | Shift Page Down |
-| Increase Proportional Influence | Increase Proportional Influence | None | Wheel Down |
-| Decrease Proportional Influence | Decrease Proportional Influence | None | Wheel Up |
-| Increase Proportional Influence | Increase Proportional Influence | None | Shift Wheel Down |
-| Decrease Proportional Influence | Decrease Proportional Influence | None | Shift Wheel Up |
-| Adjust proportional influence | Adjust Proportional Influence | None | Mouse/Trackpad Pan |
-| Increase Max AutoIK Chain Length | Increase Max AutoIK Chain Length | None | Shift Page Up |
-| Decrease Max AutoIK Chain Length | Decrease Max AutoIK Chain Length | None | Shift Page Down |
-| Increase Max AutoIK Chain Length | Increase Max AutoIK Chain Length | None | Shift Wheel Down |
-| Decrease Max AutoIK Chain Length | Decrease Max AutoIK Chain Length | None | Shift Wheel Up |
-| Toggle Direction for Node Auto-offset | Toggle Direction for Node Auto-offset | None | T |
-| Automatic Constraint | Limits to a chosen axis in the 3d view. | None | Middle Mouse |
-| Automatic Constraint | Limits to a chosen axis in the 3d view. | None | S |
-| Automatic Constraint Plane | Limits to a chosen axis plane in the 3d view. | None | Alt Middle Mouse |
-| Automatic Constraint Plane | Limits to a chosen axis plane in the 3d view. | None | Alt S |
-| Precision Mode |  |  | Left Shift |
-| Precision Mode |  |  | Right Shift |
-| Vert/Edge Slide |  |  | W |
-| Trackball |  |  | E |
-| Rotate Normals |  |  | N |
-| Navigate |  |  | Left Alt |
-
-
-## Eyedropper Modal Map
-
-
-|  |  |  |  |
-| ---------------- | ---------------- | --------------------- | ------------ |
-| Name | Function | Surface menu location | Hotkey |
-| Cancel | Cancel | None | Esc |
-| Cancel | Cancel | None | Right Mouse |
-| Confirm Sampling | Confirm Sampling | None | Return |
-| Confirm Sampling | Confirm Sampling | None | Numpad Enter |
-| Confirm Sampling | Confirm Sampling | None | Left Mouse |
-| Start Sampling | Start Sampling | None | Left Mouse |
-| Reset Sampling | Reset Sampling | None | Space Bar |
-
-
-## Eyedropper ColorBand Point Sampling Map
-
-
-|  |  |  |  |
-| ---------------- | ---------------- | --------------------- | ------------ |
-| Name | Function | Surface menu location | Hotkey |
-| Cancel | Cancel | None | Esc |
-| Cancel | Cancel | None | Back Space |
-| Confirm Sampling | Confirm Sampling | None | Right Mouse |
-| Confirm Sampling | Confirm Sampling | None | Return |
-| Confirm Sampling | Confirm Sampling | None | Numpad Enter |
-| Sample a point | Start Sampling | None | Left Mouse |
-| Reset Sampling | Reset Sampling | None | Space Bar |
-
-
-## Mesh Filter Modal Map
-
-
-|  |  |  |  |
-| ------- | -------- | --------------------- | ------------ |
-| Name | Function | Surface menu location | Hotkey |
-| Confirm | Confirm | None | Left Mouse |
-| Confirm | Confirm | None | Left Mouse |
-| Confirm | Confirm | None | Return |
-| Confirm | Confirm | None | Numpad Enter |
-| Cancel | Cancel | None | Esc |
-| Cancel | Cancel | None | Right Mouse |
-
-
-## Fill Tool Modal Map
-
-
-|  |  |  |  |
-| --------------------- | -------- | --------------------- | ------------ |
-| Name | Function | Surface menu location | Hotkey |
-| Cancel | Cancel | None | Esc |
-| Cancel | Cancel | None | Right Mouse |
-| Confirm | Confirm | None | Left Mouse |
-| Toggle Extension Mode |  |  | S |
-| Lengthen Extensions |  |  | Page Up |
-| Lengthen Extensions |  |  | Wheel Down |
-| Shorten Extensions |  |  | Page Down |
-| Shorten Extensions |  |  | Wheel Down |
-| Drag Extensions |  |  | Middle Mouse |
-| Collide Extensions |  |  | D |
-| Invert |  |  | Left Ctrl |
-| Invert |  |  | Right Ctrl |
-| Precision |  |  | Left Shift |
-| Precision |  |  | Right Shift |
-
-
-## Generic Gizmo
-
-
-|  |  |  |  |
-| ----------- | -------- | --------------------- | ---------- |
-| Name | Function | Surface menu location | Hotkey |
-| Gizmo Tweak |  | None | Left Mouse |
-
-
-|  |  |  |  |
-| ----------- | -------- | --------------------- | --------------- |
-| Name | Function | Surface menu location | Hotkey |
-| Gizmo Tweak |  | None | drag-Left Mouse |
-
-
-|  |  |  |  |
-| ----------- | -------- | --------------------- | --------------- |
-| Name | Function | Surface menu location | Hotkey |
-| Gizmo Tweak |  | None | Left Mouse |
-| Gizmo Tweak |  | None | drag-Left Mouse |
-
-
-|  |  |  |  |
-| ----------- | -------- | --------------------- | --------------- |
-| Name | Function | Surface menu location | Hotkey |
-| Gizmo Tweak |  | None | drag-Left Mouse |
-
-
-|  |  |  |  |
-| ----------- | -------- | --------------------- | ---------- |
-| Name | Function | Surface menu location | Hotkey |
-| Gizmo Tweak |  | None | Left Mouse |
-
-
-|  |  |  |  |
-| ----------------- | -------- | --------------------- | ------------ |
-| Name | Function | Surface menu location | Hotkey |
-| Cancel | Cancel | None | Esc |
-| Cancel | Cancel | None | Right Mouse |
-| Confirm | Confirm | None | Left Mouse |
-| Confirm | Confirm | None | Numpad Enter |
-| Enable Precision |  | None | Right Shift |
-| Disable Precision |  | None | Right Shift |
-| Enable Precision |  | None | Left Shift |
-| Disable Precision |  | None | Left Shift |
-| Enable Snap |  | None | Right Ctrl |
-| Disable Snap |  | None | Right Ctrl |
-| Enable Snap |  | None | Left Ctrl |
-| Disable Snap |  | None | Left Ctrl |
-
-

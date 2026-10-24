@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.8 Editors - Properties Editor - Object Data Properties Tab - Grease Pencil Object.odt
+summary: "Grease Pencil objects each have a list of 2D layers for grouping and arranging strokes in a List view."
 ---
 ## Layers panel
 

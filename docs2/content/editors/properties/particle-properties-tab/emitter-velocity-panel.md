@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.4 Editors - Properties Editor - Particle Properties Tab - Emitter - Velocity panel.odt
+summary: "Emitter - Velocity panel in Properties Editor › Particle Properties Tab."
 ---
 ## Velocity Panel
 

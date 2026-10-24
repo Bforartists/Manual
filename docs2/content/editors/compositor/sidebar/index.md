@@ -20,6 +20,7 @@ replaces:
   - editors.compositor.sidebar.relations-tab
   - editors.compositor.sidebar.group-tab
 order: 30
+summary: "The Compositor Editor is made of several areas."
 ---
 ## Introduction
 

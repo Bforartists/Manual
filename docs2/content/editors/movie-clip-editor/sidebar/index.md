@@ -17,6 +17,7 @@ replaces:
   - editors.movie-clip-editor.sidebar.tracking-mode-stabilization-tab
   - editors.movie-clip-editor.sidebar.tracking-mode-view-tab
 order: 30
+summary: "The Movie Clip Editor is made of several areas."
 ---
 ## Introduction
 

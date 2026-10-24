@@ -20,6 +20,7 @@ replaces:
   - editors.video-sequence-editor.sidebar.sequencer-proxy-tab
   - editors.video-sequence-editor.sidebar.sequencer-view-tab
 order: 30
+summary: "The Video Sequence Editor is made of several areas."
 ---
 ## Introduction
 

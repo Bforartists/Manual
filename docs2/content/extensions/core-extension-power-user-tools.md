@@ -12,6 +12,7 @@ screenshots: "5.1"
 source:
   - 35.4 Core Extension - Power User Tools.odt
 icon: settings
+summary: "This addon is optional and deactivated by default."
 ---
 ## Power User Tools
 

@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.12.6 Editors - Properties Editor - Physics Properties Tab - Fluid panel.odt
+summary: "Fluid physics are used to simulate physical properties of liquids."
 ---
 ## Fluid Simulation
 

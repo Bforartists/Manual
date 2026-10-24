@@ -19,6 +19,7 @@ replaces:
   - editors.uv-editor.header.image-menu
   - editors.uv-editor.header.uv-menu
 order: 10
+summary: "The Header contains various menus, navigation elements, settings and tools for the viewport."
 ---
 ## UV Editor - Header
 
@@ -70,13 +71,11 @@ You can switch between the selection modes with hotkeys 1, 2, 3, 4
 
 Select vertices in the UV geometry.
 
-
 | Entry | What it does |
 | --------------------- | ------------------------------------------- |
 | Edge selection mode | Select edges in the UV geometry. |
 | Face selection mode | Select single faces in the UV geometry |
 | Island selection mode | Select whole UV patches in the UV geometry. |
-
 
 #### Sticky Selection mode
 
@@ -120,7 +119,6 @@ You can switch between the selection modes with hotkeys 1, 2, 3. Note that this 
 
 Select vertices in the UV geometry and at the 3D mesh object.
 
-
 | Entry | What it does |
 | ------------------- | ----------------------------------------------------------------- |
 | Edge selection mode | Select edges in the UV geometry and at the 3D mesh object. |
@@ -150,13 +148,11 @@ Activate snapping when transforming an element.
 
 Snapping can be temporarily activated by holding Ctrl key. So no need to turn snapping on and off all the time.
 
-
 | Entry | What it does |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Snap Target | You can snap to various scene elements. This menu allows you to define to which other elements the current active element should snap to. The names should be self explaining. Increment snaps by a grid unit. · **Snap Base**: Just with method Vertex. To which element to snap. |
 | Affect | Adjust what transform methods should be affected by snapping. |
 | Rotation Increment | Snap in adjustable incremental steps. |
-
 
 #### Proportional Editing
 
@@ -200,14 +196,12 @@ From left to right ...
 
 ![Image Prop](/docs2/images/editors/uv-editor/header/header-tools-and-options/image-prop-3.png)
 
-
 | Entry | What it does |
 | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | List of images in the scene | This is a list of the images in the scene. This list allows you to switch to other images. · **Search form**: Search for specific images. |
 | Image Edit Box | Read the name of the currently selected image. And you can rename the image here too. |
 | Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
 | Open | Open a new image. |
-
 
 ##### Remove
 
@@ -221,13 +215,11 @@ Create a new image.
 
 Creates a new image. You will get a dialog where you can define settings for the new image.
 
-
 | Entry | What it does |
 | ------ | ---------------------------- |
 | Name | The name of the new image |
 | Width | The width of the new image. |
 | Height | The height of the new image. |
-
 
 ###### Color
 
@@ -265,14 +257,12 @@ This deletes the selected image. Unfortunately not immediately. You need to save
 
 And you need to make sure that it is not linked to anything else. A mesh or a fake user for example. Have a look if there is a number besides the F button. When this is the case then the image has still a user, and so still loads with loading the scene.
 
-
 | Entry | What it does |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
 | Open Image | Opens the file browser to load an image. |
 | Unpack | Unpack packed files to a directory. |
 | User | The number of users that uses this data. Data with a user number of 0 will be removed with closing Bforartists. |
-
 
 #### Use Image Pin
 
@@ -338,12 +328,10 @@ Display the uv mapping with different colors, dependant of the stretchiness of t
 
 ![Display Stretch Type](/docs2/images/editors/uv-editor/header/header-tools-and-options/display-stretch-type.png)
 
-
 | Entry | What it does |
 | ----- | ---------------------------------------------------------- |
 | Area | Calculates the stretch between UV and 3D faces. |
 | Angle | Calculates the angular distortion between UV and 3D faces. |
-
 
 ###### Opacity
 
@@ -383,7 +371,6 @@ Display existing metadata in the viewport.
 
 Adjust what channels of the image gets displayed. It just shows when an image is loaded and active.
 
-
 | Entry | What it does |
 | --------------- | ---------------------------------------------------- |
 | Color and Alpha | Displays the whole image, including alpha channel. |
@@ -393,11 +380,9 @@ Adjust what channels of the image gets displayed. It just shows when an image is
 | Green | Displays the green channel of the image. |
 | Blue | Displays the blue channel of the image. |
 
-
 ### Options Panel
 
 ![Options Panel](/docs2/images/editors/uv-editor/header/header-tools-and-options/options-panel.png)
-
 
 | Entry | What it does |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -406,7 +391,6 @@ Adjust what channels of the image gets displayed. It just shows when an image is
 | Update Automatically | Update other editor windows simultaneously with the changes in the Image Editor. Refreshes the UV layout in real-time when changes occur. Keeps your view synced with modeling or shading edits. |
 | UV Custom Region | This enables user-defined regions in the UV space (e.g. for packing or alignment). Pairs well with the **Set User Region** operator. |
 | Show Metadata | Displays image metadata (resolution, color space, etc.) in the UV/Image Editor.   Helpful for debugging texture issues or verifying file properties. |
-
 
 #### Snap to Pixels
 
@@ -464,9 +448,7 @@ Besides that, operators and menus gets added in the order that you add them. The
 
 #### Removing an operator from the Quick menu
 
-![Removing an operator from the Quick menu](/docs2/images/editors/uv-editor/header/quick-menu/removing-an-operator-from-the-quick-menu.png)
-
-Removing is as simple as adding. Right click at the operators in the Quick menu, and choose Remove from Quick favorites.
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
 #### Context and mode dependent content
 
@@ -532,7 +514,6 @@ This group of operators is useful to take notes without changing tool-shelf oper
 
 > **Note:** These are legacy operators, meaning they are equally available in the Toolshelf as a modal operator.
 
-
 | Entry | What it does |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | Draw Annotation | Starts the annotation free hand draw tool in the editor. |
@@ -542,20 +523,17 @@ This group of operators is useful to take notes without changing tool-shelf oper
 | Add Annotation Layer | Starts a new annotation layer. |
 | Erase Annotation Active Keyframe | Erases the active keyframe of the annotation. |
 
-
 | Entry | What it does |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Zoom In | Zooms into the viewport. |
 | Zoom Out | Zooms out of the viewport. |
 | Zoom Border | Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button. |
 
-
 #### Zoom
 
 ![Zoom](/docs2/images/editors/uv-editor/header/view-menu/zoom.png)
 
 A sub menu where you can choose between predefined zoom factors.
-
 
 | Entry | What it does |
 | --------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -565,35 +543,28 @@ A sub menu where you can choose between predefined zoom factors.
 | Center View to Cursor | Centers the view to the 2D cursor. |
 | Cursor to Center View | Centers the cursor and the view to the center of the viewport. |
 
-
 #### Area
 
 ![Area](/docs2/images/editors/uv-editor/header/view-menu/area.png)
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------- |
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-
 ##### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/uv-editor/header/view-menu/duplicate-area-into-new-window.png)
 
-Duplicate Area into New Window makes the selected editor window floating. You can then drag it around at the monitor. It is not connected with the rest of the UI anymore.
-
-A separated window cannot be merged into the main window again. You have to close it when not longer needed.
-
+> **Duplicate Area into New Window** opens this editor in a floating window. See **[Floating editor windows](../../../interface/windows.md#floating-editor-windows)** in the Interface chapter.
 
 | Entry | What it does |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Toggle Maximize Area | Displays the editor maximized with menus. To return from the maximized view press hotkey Ctrl + Space. Or reuse the menu item in the area menu. |
 | Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
 | Close Area | Closes the editor. |
-
 
 #### Pie menus
 
@@ -615,19 +586,16 @@ This menu just appears when you are in Mask mode. And you need to create a new m
 
 The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.
 
-
 | Entry | What it does |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Box select | Draw a rectangle to select everything inside of the rectangle. It automatically adds to the current selection. Holding down shift subtracts from the selection. |
 | Circle select | Brush select content. The radius of the brush can be adjusted by holding down left mouse button and using the scroll wheel or the + or - button at the numpad. It automatically adds to the current selection. Holding down shift subtracts from the selection. To exit the circle select tool click with the right mouse button. |
-
 
 | Entry | What it does |
 | ------- | ----------------------------- |
 | All | Select everything. |
 | None | Select nothing. |
 | Inverse | Invert the current selection. |
-
 
 #### Box Select Pinned
 
@@ -657,13 +625,11 @@ Select all UV vertices linked to the active UV map. The previous selection gets 
 
 ![Last Operator Select Linked Pick](/docs2/images/editors/uv-editor/header/select-menu/last-operator-select-linked-pick.png)
 
-
 | Entry | What it does |
 | -------------- | --------------------------------------------------------------------------------------- |
 | Extend | The previous selection gets kept, the selection gets extended. |
 | Deselect | Deselect instead of select |
 | Location X / Y | The mouse position in the UV space, normalized to the 0.0 to 1.0 range of the UV space. |
-
 
 #### Shortest Path
 
@@ -675,7 +641,6 @@ Selects a continuous path of UV elements (vertices, edges, or faces) between two
 
 ![Last Operator Shortest Path](/docs2/images/editors/uv-editor/header/select-menu/last-operator-shortest-path.png)
 
-
 | Entry | What it does |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Face Stepping | When enabled, selection prefers paths that follow face adjacency. Useful for maintaining logical flow across quads or structured meshes. |
@@ -683,7 +648,6 @@ Selects a continuous path of UV elements (vertices, edges, or faces) between two
 | Fill Region | Expands the selection to include all elements of the UVs enclosed by the path. This will make a “patch” of the selection between the shortest bath. Useful for selecting entire UV islands or enclosed zones. |
 | Deselected / Selected | Define how many elements are selected or deselected. An example is it will select 10 faces between face A and B, but it will deselect every second group of faces, and then select 2 faces as that group of faces. So it will select the first two, skip one, select another 2, skip one, and so forth. |
 | Offset | Pushes the selected and unselected faces that have been interpolated between element A and B. Useful for nudging the path toward a specific direction or avoiding overlaps. |
-
 
 #### Shortest Path Pick
 
@@ -693,7 +657,6 @@ Like the Shortest Path operator, this will select the shortest path under the mo
 
 ##### Last Operator Shortest Path
 
-
 | Entry | What it does |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Face Stepping | When enabled, selection prefers paths that follow face adjacency. Useful for maintaining logical flow across quads or structured meshes. |
@@ -701,7 +664,6 @@ Like the Shortest Path operator, this will select the shortest path under the mo
 | Fill Region | Expands the selection to include all elements of the UVs enclosed by the path. This will make a “patch” of the selection between the shortest bath. Useful for selecting entire UV islands or enclosed zones. |
 | Deselected / Selected | Define how many elements are selected or deselected. An example is it will select 10 faces between face A and B, but it will deselect every second group of faces, and then select 2 faces as that group of faces. So it will select the first two, skip one, select another 2, skip one, and so forth. |
 | Offset | Pushes the selected and unselected faces that have been interpolated between element A and B. Useful for nudging the path toward a specific direction or avoiding overlaps. |
-
 
 #### Select Tile
 
@@ -728,12 +690,10 @@ Two numeric fields representing the UDIM tile coordinates:
 - **U (horizontal)**: selects the tile column.
 - **V (vertical)**: selects the tile row.
 
-
 | Entry | What it does |
 | ------ | ------------------------------------ |
 | Pinned | Select pinned UV vertices. |
 | Split | Select only entirely selected faces. |
-
 
 #### Overlap
 
@@ -779,7 +739,6 @@ Select UV edges that has the same length in the 3D View.
 
 Select UV edges that has the same area in the UV Space.
 
-
 | Entry | What it does |
 | ------------- | -------------------------------------------------------------- |
 | Area 3D | Select UV edges that has the same area in the 3D View. |
@@ -787,7 +746,6 @@ Select UV edges that has the same area in the UV Space.
 | Object | Select UV faces at the same object. |
 | Polygon Sides | Select UV faces that points into the same side in the 3D view. |
 | Winding | Select UV faces in winding order. |
-
 
 ##### Amount of Faces
 
@@ -799,13 +757,11 @@ With UV Select Mode Islands. Selects all UV Islands with the same amount of face
 
 ![Last Operator Select Similar](/docs2/images/editors/uv-editor/header/select-menu/last-operator-select-similar.png)
 
-
 | Entry | What it does |
 | --------- | ------------------------------------------------------------------------------------------------- |
 | Type | The select similar method. |
 | Compare | Compare if the element to select should be greater, equal or less big than the current selection. |
 | Threshold | A tolerance setting. |
-
 
 #### Shortest Path
 
@@ -841,15 +797,12 @@ Select the region faces too.
 
 Don't select the whole path, but just every nth element of it.
 
-
 | Entry | What it does |
 | ------ | --------------------------------------------------------------------- |
 | Skip | This is connected to nth element. Number of elements to skip at once. |
 | Offset | This is connected to nth element. Start with an offset. |
 
-
 #### More / Less submenu
-
 
 | Entry | What it does |
 | ----- | --------------------- |
@@ -878,13 +831,11 @@ Not all content shows with all image types. A Render Result shows a different me
 
 Creates a new image. You will get a dialog where you can define settings for the new image.
 
-
 | Entry | What it does |
 | ------ | ---------------------------- |
 | Name | The name of the new image |
 | Width | The width of the new image. |
 | Height | The height of the new image. |
-
 
 ##### Color
 
@@ -908,12 +859,10 @@ UV Grid is a checker texture in black and white.
 
 Color Grid is a colored checker texture.
 
-
 | Entry | What it does |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------- |
 | 32 Bit Float | Check this checkbox if the image should be in 32 Bit floating point bit depth per channel. Else it is in 8 bit per channel. |
 | Tiled | Create a tiled image. |
-
 
 #### Open
 
@@ -927,7 +876,6 @@ Read all the current scene's render layers from cache, as needed.
 
 This feature can be be used to save RAM while rendering because the render layers do not have to be saved in RAM. It can also be used to recover some information from a fail render.
 
-
 | Entry | What it does |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Replace | Replaces the currently active image by an image that you load. |
@@ -937,7 +885,6 @@ This feature can be be used to save RAM while rendering because the render layer
 | Save As Image | Saves the currently selected image. |
 | Save a Copy | Saves a copy of the currently selected image. This will save the file to a specified name, but will keep the old one open in the Image editor. |
 | Save all Images | Saves all images. Note that the images must already exist somewhere at your hard disk so that they can be saved. The item is greyed out as long as the image is not saved to disk. |
-
 
 #### Invert submenu
 
@@ -961,7 +908,6 @@ Allows you to change the dimensions of the image. The tool calls a resize panel.
 
 > **Note:** These only shows when in the when not viewing the Viewer or Render Result.
 
-
 | Entry | What it does |
 | ---------------------------- | ---------------------------------------------------------------------------- |
 | Flip Horizontally | Flip the image horizontally around it’s central axis. |
@@ -969,7 +915,6 @@ Allows you to change the dimensions of the image. The tool calls a resize panel.
 | Rotate Clockwise 90° | Rotate the image to the right by 90 degrees. |
 | Rotate Counter-Clockwise 90° | Rotate the image to the left by 90 degrees. |
 | Rotate Flip 180° | Rotate the image to the right by 180 degrees and flip the image upside down. |
-
 
 #### Pack
 
@@ -1015,12 +960,10 @@ Rotates the selection by 90 degree counter clockwise.
 
 ![Last Operator Rotate](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-rotate.png)
 
-
 | Entry | What it does |
 | ----- | --------------------------------------------------- |
 | Angle | The rotation angle. |
 | Axis | Defines one axis of the imaginary shear axis plane. |
-
 
 ###### Orientation
 
@@ -1028,12 +971,10 @@ Rotates the selection by 90 degree counter clockwise.
 
 Choose the orientation for the shear action.
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Mirror Editing | Enable mirror editing. |
 | Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
 
 ##### Shear
 
@@ -1043,12 +984,10 @@ Shear shears the selection.
 
 ![Last Operator Shear](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-shear.png)
 
-
 | Entry | What it does |
 | ------ | --------------------------------------------------- |
 | Offset | Adjust an offset. |
 | Axis | Defines one axis of the imaginary shear axis plane. |
-
 
 ###### Axis Ortho
 
@@ -1056,13 +995,11 @@ Shear shears the selection.
 
 Defines the other axis of the imaginary shear axis plane.
 
-
 | Entry | What it does |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Orientation | Choose the orientation for the shear action. |
 | Mirror Editing | Enable mirror editing. |
 | Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
-
 
 ##### Vertex Slide
 
@@ -1076,7 +1013,6 @@ Slide a vertex along the parent edge of the mesh UV.
 
 ![Last Operator Vertex Slide](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-vertex-slide.png)
 
-
 | Entry | What it does |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | Factor | The factor of the slide, moving the selection in a positive or negative direction from starting position. |
@@ -1084,7 +1020,6 @@ Slide a vertex along the parent edge of the mesh UV.
 | Flipped | When Even mode is active, this will flip between the two adjacent edge loops |
 | Clamp | Clamp within the edge constraints. |
 | Mirror Editing | Edit it in mirror mode. |
-
 
 ##### Edge Slide
 
@@ -1098,7 +1033,6 @@ Slide an edge along the adjacent edges of the mesh UV.
 
 ![Last Operator Edge Slide](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-edge-slide.png)
 
-
 | Entry | What it does |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | Factor | The factor of the slide, moving the selection in a positive or negative direction from starting position. |
@@ -1107,13 +1041,11 @@ Slide an edge along the adjacent edges of the mesh UV.
 | Clamp | Clamp within the edge constraints. |
 | Mirror Editing | Edit it in mirror mode. |
 
-
 ##### Randomize
 
 ###### Last Operator Randomize
 
 ![Last Operator Randomize](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-randomize.png)
-
 
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------- |
@@ -1125,7 +1057,6 @@ Slide an edge along the adjacent edges of the mesh UV.
 | Randomize Scale | Randomize the scale values. |
 | Scale Even | Randomize the scale values. |
 | Scale | The maximum scale the objects can scale over each axis. |
-
 
 #### Mirror
 
@@ -1217,24 +1148,20 @@ This operator inverts the pins to all selected pins, and unpins the set pins. Th
 
 This last operator appears in the 3D view to the bottom left of the editor. Pin, Unpin and Invert Pins shares the same last operator.
 
-
 | Entry | What it does |
 | ------ | -------------------------------------------------------------------------- |
 | Clear | Unpins pinned geometry. |
 | Invert | Inverts the pinned geometry to selected geometry, and unpins the set pins. |
 
-
 #### Unwrap
 
 ![Unwrap](/docs2/images/editors/uv-editor/header/uv-menu/unwrap.png)
-
 
 | Entry | What it does |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Angle Based | Unwraps the selected geometry with the method Angle based. ABF stands for Angle Based Flattening. ABF can give a bit better result than LSCM when unwrapping organic shapes. |
 | Conformal | Unwraps the selected geometry with the method LSCM, which is the short for Least Square Conformal Mapping. LSCM can give a bit better results than ABF with geometric shapes. |
 | Minimum Stretch | Unwraps the selected geometry with the method SLIM, which is a “state-of-the-art” iterative UV unwrapping algorithm. |
-
 
 ##### Last Operator Unwrap
 
@@ -1258,24 +1185,20 @@ Method is a drop down box where you can choose between Unwrap method Angle Based
 
 Fill holes in the mesh before unwrapping.
 
-
 | Entry | What it does |
 | ----------------------- | --------------------------------------------------------------------------------------- |
 | Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
-
 **Margin Method**
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
-
 
 | Entry | What it does |
 | -------- | ------------------------------------------------ |
 | Scaled | Use the scale of existing UV to multiply margin. |
 | Add | Just add the margin and ignore any existing UV. |
 | Fraction | Specify a precise fraction of specific UV. |
-
 
 **Margin**
 
@@ -1289,7 +1212,6 @@ The distance between the single UV patches.
 
 Number of iterations.
 
-
 | Entry | What it does |
 | ----------------------- | --------------------------------------------------------------------------------------- |
 | No Flip | Prevent flipping UV's |
@@ -1297,18 +1219,15 @@ Number of iterations.
 | Use Subdivision Surface | Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
-
 **Margin Method**
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
-
 
 | Entry | What it does |
 | -------- | ------------------------------------------------ |
 | Scaled | Use the scale of existing UV to multiply margin. |
 | Add | Just add the margin and ignore any existing UV. |
 | Fraction | Specify a precise fraction of specific UV. |
-
 
 **Margin**
 
@@ -1330,13 +1249,11 @@ The Angle Limit defines after which angle the mapping happens from the next side
 
 ![Margin Method](/docs2/images/editors/uv-editor/margin-method.png)
 
-
 | Entry | What it does |
 | -------- | ------------------------------------------------ |
 | Scaled | Use the scale of existing UV to multiply margin. |
 | Add | Just add the margin and ignore any existing UV. |
 | Fraction | Specify a precise fraction of specific UV. |
-
 
 ###### Rotation Method
 
@@ -1344,13 +1261,11 @@ The Angle Limit defines after which angle the mapping happens from the next side
 
 How to rotate islands.
 
-
 | Entry | What it does |
 | -------------- | ---------------------------------------------------------- |
 | Island Margin | Island Margin defines the distance between the UV patches. |
 | Area Weight | Weight Projection Vector by faces with larger areas. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
-
 
 ###### Last Operator Smart UV Project
 
@@ -1368,7 +1283,6 @@ Lightmap Pack has no Last Operator.
 
 ###### Settings
 
-
 | Entry | What it does |
 | --------------- | ---------------------------------------------------------------------- |
 | Selection | Selection is a drop-down box where you can choose what will be packed. |
@@ -1376,7 +1290,6 @@ Lightmap Pack has no Last Operator.
 | New UV Map | Create a new UV map for every new mesh. |
 | Pack Quality | The pack quality. |
 | Margin | The distance between the single UV patches. |
-
 
 ##### Follow Active Quads
 
@@ -1404,14 +1317,12 @@ Cube Projection maps the mesh from six sides, means cubic.
 
 ![Last Operator Cube Projection](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-cube-projection.png)
 
-
 | Entry | What it does |
 | --------------- | ---------------------------------------------------------- |
 | Cube Size | Cube Size defines the size of the UV mesh in the UV space. |
 | Correct Aspect | Take Image Aspect ratio into account. |
 | Clip to Bounds | Clip UV Coordinates to bounds after unwrapping. |
 | Scale to Bounds | Scale UV Coordinates to bounds after unwrapping. |
-
 
 ##### Cylinder Projection
 
@@ -1420,7 +1331,6 @@ Cylinder Projection tries to map the geometry cylindric.
 ###### Last Operator Cylinder Projection
 
 ![Last Operator Cylinder Projection](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-cylinder-projection.png)
-
 
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -1432,7 +1342,6 @@ Cylinder Projection tries to map the geometry cylindric.
 | Correct Aspect | Take Image Aspect ratio into account. |
 | Clip to Bounds | Clip UV Coordinates to bounds after unwrapping. |
 | Scale to Bounds | Scale UV Coordinates to bounds after unwrapping. |
-
 
 ##### Sphere Projection
 
@@ -1452,13 +1361,11 @@ Direction is a drop-down box where you can choose in which direction the spheric
 
 Align is a drop-down box where you can choose the Align method.
 
-
 | Entry | What it does |
 | -------------- | -------------------------------------------------- |
 | Pole | How to handle the faces at the poles. |
 | Preserve Seams | Separate Projections by islands isolated by seams. |
 | Correct Aspect | Take Image Aspect ratio into account. |
-
 
 ###### Clip to Bounds
 
@@ -1508,13 +1415,11 @@ Merge UV vertices when they are below a merge distance.
 
 ![Last Operator Merge UV's by Distance](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-merge-uv-s-by-distance.png)
 
-
 | Entry | What it does |
 | -------------- | -------------------------------------------------- |
 | Merge Distance | The merge distance below the vertices gets merged. |
 | Unselected | Merge selected vertices to unselected vertices. |
 | Shared Vertex | Weld UV’s based on shared vertices. |
-
 
 #### Split Selection
 
@@ -1540,13 +1445,11 @@ When you click the operator then you will see a popup panel where you can adjust
 
 How the islands are packed.
 
-
 | Entry | What it does |
 | ----------------------- | ------------------- |
 | Exact Shape (Concave) | Use exact geometry. |
 | Boundary Shape (Convex) | Use a convex hull. |
 | Bounding Box | Use a bounding box. |
-
 
 ###### Scale
 
@@ -1562,7 +1465,6 @@ Rotate islands to improve layout.
 
 The rotation method.
 
-
 | Entry | What it does |
 | ----------------------------- | ------------------------------------------------------------------------------------------- |
 | Any | Any angle is allowed for rotation. |
@@ -1570,7 +1472,6 @@ The rotation method.
 | Axis - aligned | Rotate to a minimal rectangle. Either horizontal or vertical towards the shortest distance. |
 | Axis - aligned ( Horizontal ) | Rotate to a minimal rectangle. Horizontal. |
 | Axis - aligned ( Vertical ) | Rotate to a minimal rectangle. Vertical. |
-
 
 ###### Margin
 
@@ -1604,14 +1505,12 @@ Constrain islands that contains any pinned UV's
 
 How to deal with pinned UV islands.
 
-
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------------------------- |
 | Scale | Pinned islands won't scale. |
 | Rotation | Pinned islands won't rotate. |
 | Rotation and Scale | Pinned islands won't scale and rotate |
 | All | Pinned islands will remain at their initial position and are locked in place. |
-
 
 ###### Merge Overlapping
 
@@ -1621,14 +1520,12 @@ Overlapping islands stick together.
 
 ![Pack To](/docs2/images/editors/uv-editor/header/uv-menu/pack-to.png)
 
-
 | Entry | What it does |
 | --------------------- | ------------------------------------------------------------------------------------------------ |
 | Closest Udim | Pack islands to closest UDIM image tile |
 | Active Udim | Pack islands to active UDIM image tile, or to the UDIM grid tile where the 2d cursor is located. |
 | Original Bounding Box | Pack to the starting bounding box of islands. |
 | Custom Region | Pack to custom region. |
-
 
 #### Average Island Scale
 
@@ -1662,13 +1559,11 @@ The header shows a help text while the algorithm works. The Blend factor is the 
 
 ##### Last Operator Minimize Stretch
 
-
 | Entry | What it does |
 | ---------- | ----------------------------------------------------------------------------------------------------- |
 | Fill Holes | Fill holes virtually fills holes before unwrapping to avoid overlapping and to preserve the geometry. |
 | Blend | The Blend factor is the value between the original and the maximum minimized stretch. |
 | Iterations | Number of iterations for the Minimize stretch algorithm. |
-
 
 #### Stitch
 
@@ -1684,7 +1579,6 @@ Stitch tries to union UV patches along the selected edges or vertices.
 
 This last operator appears in the 3D view.
 
-
 | Entry | What it does |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Use Limit | Just snap when the elements are below a given distance. · **Snap Island**: Snap the whole UV patch, or just the selected edge(s)/vertices |
@@ -1693,7 +1587,6 @@ This last operator appears in the 3D view.
 | Active Object | Index of the active object. |
 | Snap at Midpoint | Snap at the center point of the two elements instead the first to the last. |
 | Clear Seams | Unmarks seams when stitching. |
-
 
 ###### Operation Mode
 
@@ -1749,14 +1642,12 @@ Aligns selected UV islands along a chosen axis.
 
 Defines how the alignment reference is calculated for each island. This determines where each island "snaps" during alignment—e.g., top edge, center, or bottom edge.
 
-
 | Entry | What it does |
 | ------------ | --------------------------------------------------------------------- |
 | Bounding Box | Uses the outer bounds of each island. |
 | UV Grid | Aligns islands relative to the overall UV grid (typically 0–1 space). |
 | Active UDIM | Uses the currently active UDIM tile as the reference. |
 | 2D Cursor | Aligns islands based on the position of the UV Editor’s 2D cursor. |
-
 
 ###### Axis
 
@@ -1770,14 +1661,12 @@ Specifies the direction along which islands will be aligned. X or Y. Useful for 
 
 Controls which part of the island is aligned to the axis. This affects how islands are visually positioned relative to each other.
 
-
 | Entry | What it does |
 | ------ | ---------------------------------------------------- |
 | Min | Aligns the minimum bound (e.g., bottom or left edge) |
 | Center | Aligns the center of the island |
 | Max | Aligns the maximum bound (e.g., top or right edge) |
 | None | Preserves the island alignment. |
-
 
 ###### Order
 
@@ -1815,7 +1704,6 @@ To toggle visibility after defining it manually, use the Options drop down to th
 
 Align the selected geometry. Affected are the vertices.
 
-
 | Entry | What it does |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Straighten | Straightens the selected geometry in both directions, X and Y axis. |
@@ -1823,7 +1711,6 @@ Align the selected geometry. Affected are the vertices.
 | Straighten Y | Straightens the selected geometry along the Y axis. |
 | Align Auto | Aligns the selection. The align axis gets chosen from the selection itself. When it's higher than tall, then it aligns along the Y axis. When it's taller than high, then it aligns along the X axis. The align point is the pivot of the selection. |
 | Align X | Aligns the selection along the X axis. The align point is the pivot of the selection. |
-
 
 ##### Align Y
 
@@ -1871,19 +1758,16 @@ Checks for selection, and aligns then either the whole geometry or by the select
 
 ![Move on Axis submenu](/docs2/images/editors/uv-editor/header/uv-menu/move-on-axis-submenu.png)
 
-
 | Entry | What it does |
 | ------- | ---------------------------------- |
 | Dynamic | Move UV’s on an axis dynamically |
 | Pixel | Move UV’s on an axis by pixel |
 | UDIM | Move UV’s on an axis by UDIM tile. |
 
-
 | Entry | What it does |
 | -------- | -------------------------- |
 | Copy UV | Copy selected UV vertices. |
 | Paste UV | Pastes copied UV vertices. |
-
 
 #### Show / Hide Faces submenu
 
@@ -1891,13 +1775,11 @@ Checks for selection, and aligns then either the whole geometry or by the select
 
 Show or hide faces. This happens in both, the 3D View and the UV editor.
 
-
 | Entry | What it does |
 | --------------- | --------------------------------------------------------------------- |
 | Reveal Hidden | Makes all geometry visible again. |
 | Hide Selected | Hides the selected geometry. |
 | Hide Unselected | Hides the not selected geometry. The selected geometry stays visible. |
-
 
 ##### Last Operator Reveal Hidden / Hide Selected
 
@@ -1938,7 +1820,6 @@ Export UV's from the modified mesh.
 ![Format](/docs2/images/editors/uv-editor/header/uv-menu/format.png)
 
 Choose the export format.
-
 
 | Entry | What it does |
 | ------------ | ------------------------------------ |

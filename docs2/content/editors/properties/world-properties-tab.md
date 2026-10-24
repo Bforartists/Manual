@@ -1,6 +1,6 @@
 ---
 id: editors.properties.world-properties-tab
-title: World Properties Tab
+title: "World"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.6 Editors - Properties Editor - World Properties Tab.odt
+summary: "The world tab provides you with world settings."
+icon: world
+order: 50
 ---
 ## World Tab
 

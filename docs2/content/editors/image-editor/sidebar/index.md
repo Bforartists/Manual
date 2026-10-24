@@ -18,6 +18,7 @@ replaces:
   - editors.image-editor.sidebar.scopes-tab
   - editors.image-editor.sidebar.mask-tab
 order: 30
+summary: "The Image Editor is made of several areas."
 ---
 ## Introduction
 
@@ -79,7 +80,6 @@ This menu becomes active when you create a new brush. Which can be done wiht the
 
 Calls a popup where you can adjust further informations and settings for the brush.
 
-
 | Entry | What it does |
 | ------------------ | ----------------------------------------------- |
 | Catalog | The asset catalog in which the brush is stored. |
@@ -88,12 +88,10 @@ Calls a popup where you can adjust further informations and settings for the bru
 | OK / Cancel | Accept or decline the changes. |
 | Edit Preview Image | Allows you to load a custom preview image. |
 
-
 | Entry | What it does |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | Save Brush Asset | This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush. |
 | Revert Brush Asset | Reverts the brush settings to the default values of the brush in the asset library. |
-
 
 ### Brush settings Panel
 
@@ -141,12 +139,10 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/navigation-elements.png)
 
-
 | Entry | What it does |
 | -------- | ------------ |
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
-
 
 ###### Clipping options
 
@@ -160,12 +156,10 @@ Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-
 | Entry | What it does |
 | ----------- | -------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
-
 
 ###### Handles
 
@@ -225,12 +219,10 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/navigation-elements.png)
 
-
 | Entry | What it does |
 | -------- | ------------ |
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
-
 
 ###### Clipping options
 
@@ -244,12 +236,10 @@ Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-
 | Entry | What it does |
 | ----------- | -------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
-
 
 ###### Handles
 
@@ -287,12 +277,10 @@ The active color is the left one. When you click the button with the two arrows 
 
 A click at one of the color fields will open a more detailed color dialog, to set up the color by using rgb, hsv and hex colors and with value sliders.
 
-
 | Entry | What it does |
 | ----------------- | -------------------------------------------------------------------------------- |
 | Brush colors flip | Flips the primary color with the secondary color. |
 | Use unified Color | Choose if you want to use global colors or local color just for vertex painting. |
-
 
 ### Brush Settings Panel - Color Palette Sub panel
 
@@ -318,7 +306,6 @@ The elements are explained from left to right.
 
 The button at the left opens a drop down list where you can choose between your palettes.
 
-
 | Entry | What it does |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Edit Box | Read the name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable. |
@@ -326,7 +313,6 @@ The button at the left opens a drop down list where you can choose between your 
 | Fake User | Fake User sets the element to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user. |
 | Add palette | Add a new palette. |
 | Remove Palette | Clicking at this button removes the palette. Note that you need to save, close Bforartists and reload the blend file to remove the palette completely. |
-
 
 ### Brush Settings Panel - Advanced Sub panel
 
@@ -340,12 +326,10 @@ This sub panel contains brush specific settings.
 
 ![Brush type Draw](/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-draw-2.png)
 
-
 | Entry | What it does |
 | ------------- | --------------------------------------------- |
 | Anti Aliasing | Smooths the edges of the strokes. |
 | Accumulate | Accumulate stroke daubs on top of each other. |
-
 
 #### Brush type Soften
 
@@ -353,12 +337,10 @@ This sub panel contains brush specific settings.
 
 ![Brush type Soften](/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-soften-2.png)
 
-
 | Entry | What it does |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sharpen / Soften | **Sharp Threshold**: The threshold below which no sharpening is performed. · **Kernel Radius**: Radius of kernel used for soften and sharpen in pixels. |
 | Blur Mode | Choose the blur method. Gaussian or Box. |
-
 
 #### Brush type Smear
 
@@ -376,13 +358,11 @@ Smooths the edges of the strokes.
 
 ![Brush type Clone](/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-clone-2.png)
 
-
 | Entry | What it does |
 | ------------- | -------------------------------------------------------------------------------- |
 | Anti Aliasing | Smooths the edges of the strokes. |
 | Image | Choose an image to clone from. · **Alpha**: The alpha value for the clone image. |
 | Accumulate | Accumulate stroke daubs on top of each other. |
-
 
 #### Brush type Fill
 
@@ -400,13 +380,11 @@ Smooths the edges of the strokes.
 
 ![Brush type Mask](/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-mask-2.png)
 
-
 | Entry | What it does |
 | ------------- | --------------------------------------------- |
 | Anti Aliasing | Smooths the edges of the strokes. |
 | Mask Value | The vertex weight when brush is applied. |
 | Accumulate | Accumulate stroke daubs on top of each other. |
-
 
 #### Randomize Color subtab
 
@@ -414,13 +392,11 @@ Smooths the edges of the strokes.
 
 Jitter the brush color.
 
-
 | Entry | What it does |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Hue | **Hue Jitter**: The amount to jitter the Hue value. · **Stroke Random**: Activate the Jitter. · **Use Pressure**: Use tablet pressure when drawing. |
 | Saturation | **Saturation Jitter**: The amount to jitter the Saturation value. · **Stroke Random**: Activate the Jitter. · **Use Pressure**: Use tablet pressure when drawing. |
 | Value | **Value Jitter**: The amount to jitter the Value value. · **Stroke Random**: Activate the Jitter. · **Use Pressure**: Use tablet pressure when drawing. |
-
 
 #### Modes subpanel
 
@@ -468,12 +444,10 @@ What we need to do is to create a material first. And in this material we load o
 
 And when we go back to the texture panel, then the texture should be loaded here. And we can work with this texture.
 
-
 | Entry | What it does |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Texture Edit box | The Texture edit box is the edit box below the Image browser. When there's no image loaded then it displays the New button. When there's an image (or more) loaded, then you will see the name of the current texture. · **New Texture**: Creates a duplicate of the current texture. · **Remove**: Removes the current texture. · **Show Texture in Texture tab**: Reveals the current texture in the texture tab in the properties editor. |
 | Brush Mapping | Our texture can be mapped in different methods. The Brush mapping is a drop down box where you can choose this different brush mapping methods. The settings vary. So we will go through them by the different brush mapping methods. |
-
 
 ##### Brush Mapping with mapping method Tiled
 
@@ -487,12 +461,10 @@ The brush mapping method Tiled tiles the brush stroke at the surface. The mappin
 
 The angle of the brush.
 
-
 | Entry | What it does |
 | ------ | --------------------------------------- |
 | Offset | The offset of the texture in the brush. |
 | Size | The size of the texture in the brush. |
-
 
 ##### Brush Mapping with mapping method View Plane
 
@@ -518,12 +490,10 @@ The brush angle gets set random.
 
 Brush texture random angle.
 
-
 | Entry | What it does |
 | ------ | --------------------------------------- |
 | Offset | The offset of the texture in the brush. |
 | Size | The size of the texture in the brush. |
-
 
 ##### Brush Mapping with mapping method 3D
 
@@ -553,12 +523,10 @@ The brush mapping method Random paints onto the surface, and randomizes the text
 
 The angle of the brush.
 
-
 | Entry | What it does |
 | ------ | -------------------------------------------------------------------------------- |
 | Rake | The angle follows the direction of the brush stroke. |
 | Random | The brush angle gets set random. · **Random Angle**: Brush texture random angle. |
-
 
 ##### Brush Mapping with mapping method Stencil
 
@@ -574,7 +542,6 @@ Hotkeys ctrl right mouse, shift right mouse and alt right mouse.
 
 ![Brush Mapping with mapping method Stencil](/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-stencil-2.png)
 
-
 | Entry | What it does |
 | --------------- | --------------------------------------------------------- |
 | Image Aspect | Adjust the stencil size to fit to the image aspect ratio. |
@@ -582,7 +549,6 @@ Hotkeys ctrl right mouse, shift right mouse and alt right mouse.
 | Angle edit box | Adjust the angle of the brush. |
 | Offset | Fine tune the offset of the texture in the brush. |
 | Size | Fine tune the size of the texture in the brush. |
-
 
 ### Brush Settings Panel - Texture Mask Sub panel
 
@@ -654,12 +620,10 @@ The brush angle gets set random.
 
 Brush texture random angle.
 
-
 | Entry | What it does |
 | ------ | --------------------------------------- |
 | Offset | The offset of the texture in the brush. |
 | Size | The size of the texture in the brush. |
-
 
 ##### Brush Mapping with mapping method Tiled
 
@@ -679,12 +643,10 @@ Enable pressure masking when you use a tablet.
 
 The angle of the brush.
 
-
 | Entry | What it does |
 | ------ | --------------------------------------- |
 | Offset | The offset of the texture in the brush. |
 | Size | The size of the texture in the brush. |
-
 
 ##### Brush Mapping with mapping method Random
 
@@ -708,18 +670,15 @@ A drop down box to choose the mask pressure mode for tablets.
 
 The angle of the brush.
 
-
 | Entry | What it does |
 | ------ | -------------------------------------------------------------------------------- |
 | Rake | The angle follows the direction of the brush stroke. |
 | Random | The brush angle gets set random. · **Random Angle**: Brush texture random angle. |
 
-
 | Entry | What it does |
 | ------ | --------------------------------------- |
 | Offset | The offset of the texture in the brush. |
 | Size | The size of the texture in the brush. |
-
 
 ##### Brush Mapping with mapping method Stencil
 
@@ -731,12 +690,10 @@ The former methods uses the textures for the brush. The method Stencil works dif
 
 Note that the stencil texture is just visible when you are with the mouse over the viewport. It gets by default displayed down left. You have to position it where you need it. See Brush menu, Stencil Texture controls.
 
-
 | Entry | What it does |
 | --------------- | --------------------------------------------------------- |
 | Image Aspect | Adjust the stencil size to fit to the image aspect ratio. |
 | Reset Transform | Resets the stencil image to be down right in the 3D view. |
-
 
 ##### Pressure Masking
 
@@ -750,12 +707,10 @@ Enable pressure masking when you use a tablet.
 
 Adjust the angle of the brush. The button at the end allows you to set the radius by dragging the mouse. This should be done in the viewport and with the hotkey. This button is just a visible reminder.
 
-
 | Entry | What it does |
 | ------ | ------------------------------------------------- |
 | Offset | Fine tune the offset of the texture in the brush. |
 | Size | Fine tune the size of the texture in the brush. |
-
 
 ### Stroke Panel
 
@@ -783,18 +738,15 @@ The sculpt drawing happens by mapping the pencil onto the mouse position. And wh
 
 The icon behind the edit box enables tablet pressure sensitivity for tablets.
 
-
 | Entry | What it does |
 | --------------------------- | ------------------------------------------------------------------------------- |
 | Adjust Strength for Spacing | Automatically adjust strength to give consistent results for different spacing. |
 | Dash Ratio | Ratio of samples in a cycle that the brush is covering. |
 | Dash Length | Length of a dash cycle measured in stroke samples. |
 
-
 ##### Jitter Edit Box
 
 Add Jitter to the brush while painting.
-
 
 | Entry | What it does |
 | ---------------------- | ----------------------------------------------------------------------------- |
@@ -802,19 +754,16 @@ Add Jitter to the brush while painting.
 | Jitter Unit | Jitter in screen space, or relative to the brush size. |
 | Input Samples Edit Box | Average multiple input samples together to smooth the brush stroke. |
 
-
 ###### Stabilize Stroke subpanel
 
 ![Stabilize Stroke subpanel](/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png)
 
 The brush lags behind the mouse position, and produces a much smoother stroke by that.
 
-
 | Entry | What it does |
 | ------ | ----------------------------------- |
 | Radius | Adjust the radius of the smoothing. |
 | Factor | Adjust the factor of the smoothing. |
-
 
 ##### Stroke method Curve
 
@@ -856,7 +805,6 @@ Here you set the active curve.
 
 **The X button** deletes the brush as the active one. It does NOT delete it from the brushes list.
 
-
 | Entry | What it does |
 | ---------------------- | ----------------------------------------------------------------------------- |
 | Draw Curve Button | A click at it to turns the curve into curve. |
@@ -865,19 +813,16 @@ Here you set the active curve.
 | Jitter Unit | Jitter in screen space, or relative to the brush size. |
 | Input Samples Edit Box | Average multiple input samples together to smooth the brush stroke. |
 
-
 ###### Stabilize Stroke subpanel
 
 ![Stabilize Stroke subpanel](/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png)
 
 The brush lags behind the mouse position, and produces a much smoother stroke by that.
 
-
 | Entry | What it does |
 | ------ | ----------------------------------- |
 | Radius | Adjust the radius of the smoothing. |
 | Factor | Adjust the factor of the smoothing. |
-
 
 ##### Stroke method Line
 
@@ -899,12 +844,10 @@ The icon behind the edit box enables tablet pressure sensitivity for tablets.
 
 Add Jitter to the brush while painting.
 
-
 | Entry | What it does |
 | --------------- | ----------------------------------------------------------------------------- |
 | Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
 | Jitter Unit | Jitter in screen space, or relative to the brush size. |
-
 
 ##### Input Samples Edit Box
 
@@ -916,12 +859,10 @@ Average multiple input samples together to smooth the brush stroke.
 
 The brush lags behind the mouse position, and produces a much smoother stroke by that.
 
-
 | Entry | What it does |
 | ------ | ----------------------------------- |
 | Radius | Adjust the radius of the smoothing. |
 | Factor | Adjust the factor of the smoothing. |
-
 
 ##### Stroke method Anchored
 
@@ -939,13 +880,11 @@ Drag Anchor Brush from edge to edge.
 
 Add Jitter to the brush while painting.
 
-
 | Entry | What it does |
 | --------------------- | ----------------------------------------------------------------------------- |
 | Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
 | Jitter Unit | Jitter in screen space, or relative to the brush size. |
 | Input Sample Edit Box | Average multiple input samples together to smooth the brush stroke. |
-
 
 ###### Stabilize Stroke subpanel
 
@@ -953,12 +892,10 @@ Add Jitter to the brush while painting.
 
 The brush lags behind the mouse position, and produces a much smoother stroke by that.
 
-
 | Entry | What it does |
 | ------ | ----------------------------------- |
 | Radius | Adjust the radius of the smoothing. |
 | Factor | Adjust the factor of the smoothing. |
-
 
 ##### Stroke method Airbrush
 
@@ -968,12 +905,10 @@ The brush lags behind the mouse position, and produces a much smoother stroke by
 
 The stroke acts like an airbrush pencil. The dots gets placed randomly.
 
-
 | Entry | What it does |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Rate Edit Box | Define the rate of the drawing. |
 | Jitter Edit Box | Add Jitter to the brush while painting. · **Jitter Pressure**: The icon behind the edit box enables tablet pressure sensitivity for tablets. · **Jitter Unit**: Jitter in screen space, or relative to the brush size. |
-
 
 ##### Input Samples Edit Box
 
@@ -985,12 +920,10 @@ Average multiple input samples together to smooth the brush stroke.
 
 The brush lags behind the mouse position, and produces a much smoother stroke by that.
 
-
 | Entry | What it does |
 | ------ | ----------------------------------- |
 | Radius | Adjust the radius of the smoothing. |
 | Factor | Adjust the factor of the smoothing. |
-
 
 ##### Stroke method Drag Dot
 
@@ -1004,12 +937,10 @@ Paint a dot and drag it around. The actual painting happens then at releasing th
 
 Add Jitter to the brush while painting.
 
-
 | Entry | What it does |
 | --------------- | ----------------------------------------------------------------------------- |
 | Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
 | Jitter Unit | Jitter in screen space, or relative to the brush size. |
-
 
 ##### Input Samples Edit Box
 
@@ -1021,12 +952,10 @@ Average multiple input samples together to smooth the brush stroke.
 
 The brush lags behind the mouse position, and produces a much smoother stroke by that.
 
-
 | Entry | What it does |
 | ------ | ----------------------------------- |
 | Radius | Adjust the radius of the smoothing. |
 | Factor | Adjust the factor of the smoothing. |
-
 
 ##### Stroke method Dots
 
@@ -1040,12 +969,10 @@ The stroke method Dots draws dots of the pencil onto the surface. The mapping ha
 
 Add Jitter to the brush while painting.
 
-
 | Entry | What it does |
 | --------------- | ----------------------------------------------------------------------------- |
 | Jitter Pressure | The icon behind the edit box enables tablet pressure sensitivity for tablets. |
 | Jitter Unit | Jitter in screen space, or relative to the brush size. |
-
 
 ##### Input Samples Edit Box
 
@@ -1057,12 +984,10 @@ Average multiple input samples together to smooth the brush stroke.
 
 The brush lags behind the mouse position, and produces a much smoother stroke by that.
 
-
 | Entry | What it does |
 | ------ | ----------------------------------- |
 | Radius | Adjust the radius of the smoothing. |
 | Factor | Adjust the factor of the smoothing. |
-
 
 ### Brush Settings Panel - Falloff Sub panel
 
@@ -1080,9 +1005,7 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 
 #### Adding Points
 
-![Adding Points](/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/adding-points.png)
-
-You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
+> This setting uses the **curve widget**: click to add points, drag to move them. See **[Curve Widget](../../../interface/properties.md#curve-widget)** in the Interface chapter.
 
 #### Navigation elements
 
@@ -1106,12 +1029,10 @@ Clipping options. Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-
 | Entry | What it does |
 | ----------- | -------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
-
 
 | Entry | What it does |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1121,7 +1042,6 @@ Tools is a menu where you can find some curve related tools.
 | X / Y values | The position of the currently selected curve point. |
 | Auto Clamped Handle | Set handle type to Auto Clamped. |
 | Delete Points | Deletes selected curve points. |
-
 
 ##### Curve Presets
 
@@ -1151,34 +1071,28 @@ Choose another color for the brush cursor. Double clicking at the color field wi
 
 You can turn on the cursor overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.
 
-
 | Entry | What it does |
 | ------------------ | -------------------------------------- |
 | Override Overlay | Hide the Cursor Overlay when painting. |
 | Use Cursor Overlay | Turn on Cursor Overlay. |
 
-
 #### Texture Opacity
 
 This is for the case when you paint with a texture brush. You can turn on the Texture overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.
-
 
 | Entry | What it does |
 | ------------------ | --------------------------------------- |
 | Override Overlay | Hide the Texture Overlay when painting. |
 | Use Cursor Overlay | Turn on Texture Overlay. |
-
 
 #### Mask Texture Opacity
 
 This is for the case when you mask paint with a texture brush. You can turn on the Texture overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.
 
-
 | Entry | What it does |
 | ------------------ | --------------------------------------- |
 | Override Overlay | Hide the Texture Overlay when painting. |
 | Use Cursor Overlay | Turn on Texture Overlay. |
-
 
 ### Tiling panel
 
@@ -1214,14 +1128,12 @@ Generated images does not have a path.
 
 ![Path edit box](/docs2/images/editors/image-editor/sidebar/image-tab/path-edit-box.png)
 
-
 | Entry | What it does |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
 | Path edit box | See and edit the path to your movie or image sequence files. |
 | Open | Open a new movie or image sequence files. A file dialog will appear. |
 | Refresh | Reread the movie or image sequence files. |
-
 
 ###### Color Space
 
@@ -1259,14 +1171,12 @@ This option belongs to the UV Editor, and has no effect in the Image editor. Tak
 
 ![Path edit box](/docs2/images/editors/image-editor/sidebar/image-tab/path-edit-box-2.png)
 
-
 | Entry | What it does |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | Pack | With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time. |
 | Path edit box | See and edit the path to your movie or image sequence files. |
 | Open | Open a new movie or image sequence files. A file dialog will appear. |
 | Refresh | Reread the movie or image sequence files. |
-
 
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -1277,7 +1187,6 @@ This option belongs to the UV Editor, and has no effect in the Image editor. Tak
 | Cyclic | Cycle the images in the movie. |
 | Auto Refresh | Always refresh image on frame changes. |
 | Deinterlace | Deinterlace the movie file on load. |
-
 
 ###### Color Space
 
@@ -1405,13 +1314,11 @@ Manage UDIM tiles. This panel shows with source type UDIM.
 
 List all UDIM tiles associated with the main index (1000 tile). Double clicking on the tile name allows renaming.
 
-
 | Entry | What it does |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Number | The starting tile index number. UDIMs must start with the 1001 tile and typically increase in incremental order. |
 | Drag Handler | The two vertical lines at the end is a handler with which you can expand the list. |
 | Search Field | You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · **Invert**: Exclude the search term instead of searching for it. · **Sort by Name**: Sort the List by name. |
-
 
 #### Add Tile
 
@@ -1420,7 +1327,6 @@ Adds new UDIM tiles to the group.
 ##### Add Tile dialog
 
 ![Add Tile dialog](/docs2/images/editors/image-editor/sidebar/image-tab/add-tile-dialog.png)
-
 
 | Entry | What it does |
 | -------------- | ------------------------------------------------------------------------------------------- |
@@ -1431,7 +1337,6 @@ Adds new UDIM tiles to the group.
 | Color | The fill color for generated type Blank. |
 | Width / Height | The dimensions of the image. |
 | Alpha | Does the image have an alpha channel. |
-
 
 ###### Generated Type
 
@@ -1457,13 +1362,11 @@ Occupy the UDIM tile with a Generated Image. You can change the fill type and te
 
 ![Fill tile dialog](/docs2/images/editors/image-editor/sidebar/image-tab/fill-tile-dialog.png)
 
-
 | Entry | What it does |
 | -------------- | ---------------------------------------- |
 | Color | The fill color for generated type Blank. |
 | Width / Height | The dimensions of the image. |
 | Alpha | Does the image have an alpha channel. |
-
 
 ###### Generated Type
 
@@ -1553,12 +1456,10 @@ The View tab contains some view related settings. And it contains the annotation
 
 ![Display Panel](/docs2/images/editors/image-editor/sidebar/view-tab/display-panel.png)
 
-
 | Entry | What it does |
 | ------------------ | -------------------------------------------------------------- |
 | Aspect Ratio X , Y | Set the aspect ratio of the image. |
 | Repeat | With this ticked the image is repeated in the UV Image canvas. |
-
 
 ### Annotations Panel
 
@@ -1582,14 +1483,12 @@ Add, remove and rename new annotations.
 
 A list of the available annotation layers.
 
-
 | Entry | What it does |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Edit Box | The name of the current annotation. You can rename the annotation to your needs here. |
 | Fake User | Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene. |
 | Add Annotation | Add a new annotation. |
 | Delete Annotation | Delete the annotation. |
-
 
 #### List of Annotation Strokes
 
@@ -1602,7 +1501,6 @@ At the right side you find buttons to sort them and to add and remove new Annota
 You can change the color by clicking at the color field. A color dialog will pop up. You can rename annotation layers by double clicking at it.
 
 The eye icon allows you to make it invisible And it has a search field.
-
 
 | Entry | What it does |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1626,14 +1524,12 @@ Histogram is a graph that displays the color distribution of the pixels in the i
 
 The different display modes are:
 
-
 | Entry | What it does |
 | --------- | ---------------------------------------- |
 | Luma | Shows the luminosity of an image. |
 | RGB | Shows the RGB channels. |
 | R/G/B/A | Shows the R, G, B, A channels. |
 | Show line | Displays lines instead of filled shapes. |
-
 
 #### Waveform
 
@@ -1651,7 +1547,6 @@ Adjust the opacity of the pixels in the waveform histogram.
 
 This is a drop down box menu where you can choose further options.
 
-
 | Entry | What it does |
 | --------------- | ------------------------------------------------------------------------- |
 | Luma | Shows the luminosity of an image. |
@@ -1660,7 +1555,6 @@ This is a drop down box menu where you can choose further options.
 | YCbCr (ITU 709) | Displays the channels in the YCbCr standard, fitting to ITU 709 standard. |
 | YCbCr (ITU 601) | Displays the channels in the YCbCr standard, fitting to ITU 601 standard. |
 | Red Green Blue | Shows the RGB channels overlaid as a “Full color” waveform. |
-
 
 #### Vectorscope
 
@@ -1688,7 +1582,6 @@ Click at the Sample Line button above the histogram to draw a line. The pixels u
 
 The different display modes are:
 
-
 | Entry | What it does |
 | --------- | ---------------------------------------- |
 | Luma | Shows the luminosity of an image. |
@@ -1696,13 +1589,11 @@ The different display modes are:
 | R/G/B/A | Shows the R, G, B, A channels. |
 | Show line | Displays lines instead of filled shapes. |
 
-
 #### Samples
 
 ![Samples](/docs2/images/editors/image-editor/sidebar/scopes-tab/samples.png)
 
 The general sample settings for the above histograms. More accurate or more fast.
-
 
 | Entry | What it does |
 | ----------- | ---------------------------------------------------------- |
@@ -1725,12 +1616,10 @@ It contains tools and settings for the mask mode. Like a layer system.
 
 This values are of interest for the Sequencer, where you work with movies and image sequences.
 
-
 | Entry | What it does |
 | ----------- | -------------------------------- |
 | Start Frame | Set the first Frame of the mask. |
 | End Frame | Set the last Frame of the mask. |
-
 
 ### Mask Layers Panel
 
@@ -1772,13 +1661,11 @@ The two vertical lines at the end is a handler with which you can expand the lis
 
 You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term.
 
-
 | Entry | What it does |
 | ------------ | ---------------------------------------------------------------------- |
 | Invert | Exclude the search term instead of searching for it. |
 | Sort by Name | Sort the List by name. |
 | Revert | Revert the list. The last list item becomes the first, and vice versa. |
-
 
 #### Add Mask Layer
 
@@ -1794,12 +1681,10 @@ Rename the new created mask layer.
 
 Note that you can also rename it in the list.
 
-
 | Entry | What it does |
 | ----------------- | ------------------------------------------------------- |
 | Remove Mask Layer | Remove the currently selected mask layer from the list. |
 | Move Layer | Move the selected layer up or downwards in the list. |
-
 
 #### Opacity
 
@@ -1849,13 +1734,11 @@ The method to calculate the feather offset.
 
 The weight interpolation method.
 
-
 | Entry | What it does |
 | ----------------------- | --------------------------------------- |
 | Cyclic | Make the spline closed or open. |
 | Fill | Fill the spline. |
 | Self Intersection Check | Prevent feather from self intersecting. |
-
 
 ### Active Point Panel
 
@@ -1868,7 +1751,6 @@ When you select a point of one of the splines, then the Active Point Panel will 
 This panel is of interest for motion tracking. Control Points can be parented to motion tracks. And this allows to mask out parts of the motion tracked footage.
 
 The masking happens at the Viewer Node.
-
 
 | Entry | What it does |
 | ----------- | --------------------------------------------------------------------- |

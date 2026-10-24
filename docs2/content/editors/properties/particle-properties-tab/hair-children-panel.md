@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.24 Editors - Properties Editor - Particle Properties Tab - Hair - Children panel.odt
+summary: "Children are Hair or Emitter particles originating from individual particles."
 ---
 ## Children panel
 

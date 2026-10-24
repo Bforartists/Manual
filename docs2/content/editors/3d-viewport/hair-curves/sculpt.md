@@ -37,7 +37,6 @@ Move curves to the nearest deformed surface so that the first point is exactly o
 
 This only works when the topology of the surface mesh has not changed.
 
-
 | Entry | What it does |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Snap to Nearest Surface | Move curves to the nearest surface so that the first point is exactly on the surface mesh. This finds the closest point of the surface of the root point of every curve and moves the root there. |
@@ -191,7 +190,6 @@ This menu becomes active when you create a new brush. Which can be done wiht the
 
 Calls a popup where you can adjust further informations and settings for the brush.
 
-
 | Entry | What it does |
 | ------------------ | ----------------------------------------------- |
 | Catalog | The asset catalog in which the brush is stored. |
@@ -200,12 +198,10 @@ Calls a popup where you can adjust further informations and settings for the bru
 | OK / Cancel | Accept or decline the changes. |
 | Edit Preview Image | Allows you to load a custom preview image. |
 
-
 | Entry | What it does |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | Save Brush Asset | This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush. |
 | Revert Brush Asset | Reverts the brush settings to the default values of the brush in the asset library. |
-
 
 ##### Name
 
@@ -247,20 +243,16 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 
 ##### Adding Points
 
-![Adding Points](/docs2/images/editors/3d-viewport/header/header-tools-and-options/adding-points.png)
-
-You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
+> This setting uses the **curve widget**: click to add points, drag to move them. See **[Curve Widget](../../../interface/properties.md#curve-widget)** in the Interface chapter.
 
 ##### Navigation elements
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-
 | Entry | What it does |
 | -------- | ------------ |
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
-
 
 ##### Clipping options
 
@@ -274,12 +266,10 @@ Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-
 | Entry | What it does |
 | ----------- | -------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
-
 
 ##### Handles
 
@@ -287,12 +277,10 @@ Tools is a menu where you can find some curve related tools.
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-
 | Entry | What it does |
 | -------------- | ------------------------------------------ |
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
-
 
 ##### Curve Presets
 
@@ -320,14 +308,12 @@ The strength of the brush.
 
 The Size of the brush.
 
-
 | Entry | What it does |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Strength | The strength of the brush. |
 | Direction | Add or subtract the effect of the brush. Add grows hair curves, Subtract shorten the hair curves. |
 | Scale Uniform | Grow or shrink curves by changing their size uniformly instead of using trimming or extrapolation. This is useful for preserving control point count. |
 | Minimum Length | Avoids shrinking curves shorter than this length. |
-
 
 ### Brush Settings Panel - Pinch
 
@@ -369,12 +355,10 @@ The strength of the brush.
 
 ![Brush Settings Panel - Slide](/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/size-3.png)
 
-
 | Entry | What it does |
 | -------- | -------------------------- |
 | Size | The Size of the brush. |
 | Strength | The strength of the brush. |
-
 
 ### Brush Settings Panel - Smooth
 
@@ -392,7 +376,6 @@ The strength of the brush.
 
 ![Brush Settings Panel - Add](/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/brush-settings-panel-add.png)
 
-
 | Entry | What it does |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Size | The Size of the brush. |
@@ -401,7 +384,6 @@ The strength of the brush.
 | Interpolate | **Length**: Use length of the curve in close proximity. · **Size**: Use Size of the curve in close proximity. · **Shape**: Use shape of the curve in close proximity. · **Point Cloud**: Use the number of points from the curve in close proximity. |
 | (Curve) Length | Length of the newly added curves when it is not interpolated from other curves. · **(Curve) Size**: Size of the newly added curves when it is not interpolated from other curves. |
 | Points (per Curve) | Number of control points in a newly added curve. |
-
 
 ### Brush Settings Panel - Delete
 
@@ -419,7 +401,6 @@ The Size of the brush.
 
 The Size of the brush.
 
-
 | Entry | What it does |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Strength | The strength of the brush. |
@@ -427,7 +408,6 @@ The Size of the brush.
 | Interpolate | **Length**: Use length of the curve in close proximity. · **Size**: Use Size of the curve in close proximity. · **Shape**: Use shape of the curve in close proximity. · **Point Cloud**: Use the number of points from the curve in close proximity. |
 | (Curve) Length | Length of the newly added curves when it is not interpolated from other curves. · **(Curve) Size**: Size of the newly added curves when it is not interpolated from other curves. |
 | Points (per Curve) | Number of control points in a newly added curve. |
-
 
 ### Brush Settings Panel - Select
 
@@ -437,12 +417,10 @@ The Size of the brush.
 
 The Size of the brush.
 
-
 | Entry | What it does |
 | --------- | --------------------------- |
 | Strength | The strength of the brush. |
 | Direction | The direction of the brush. |
-
 
 ### Stroke Sub panel
 
@@ -480,12 +458,10 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 ![Navigation elements](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png)
 
-
 | Entry | What it does |
 | -------- | ------------ |
 | Zoom in | Zooms in. |
 | Zoom out | Zooms out. |
-
 
 ##### Clipping options
 
@@ -499,12 +475,10 @@ Set up clipping for the stroke.
 
 Tools is a menu where you can find some curve related tools.
 
-
 | Entry | What it does |
 | ----------- | -------------------------------------- |
 | Reset View | Resets the curve windows zoom. |
 | Reset Curve | Resets the curve to the initial shape. |
-
 
 ##### Handles
 
@@ -512,12 +486,10 @@ Tools is a menu where you can find some curve related tools.
 
 You can choose between Auto handle, Vector Handle and Auto Clamped.
 
-
 | Entry | What it does |
 | -------------- | ------------------------------------------ |
 | Position X / Y | The position of the selectedc curve point. |
 | Delete Points | Deletes the selected curve point. |
-
 
 ##### Curve Presets
 
@@ -537,7 +509,6 @@ Show the brush icon when painting.
 
 Apply paint on each mouse move step.
 
-
 | Entry | What it does |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Jitter | The position of the brush while painting. Pressure sensitivity can be activated here. |
@@ -545,13 +516,11 @@ Apply paint on each mouse move step.
 | Input Samples | Average multiple input samples together to smooth the brush stroke. |
 | Stabilize Stroke subpanel | Brush lags behind the mouse and followers a smoother path when activated. · **Size**: Smooth stroke Size: minimum distance from the last point before stroke continues. · **Factor**: Smooth stroke factor: higher values give a smoother stroke. |
 
-
 ##### Space
 
 ![Space](/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/space.png)
 
 Limit brush applications to the distance specified by spacing.
-
 
 | Entry | What it does |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -563,13 +532,11 @@ Limit brush applications to the distance specified by spacing.
 | Input Samples | Average multiple input samples together to smooth the brush stroke. |
 | Stabilize Stroke subpanel | Brush lags behind the mouse and followers a smoother path when activated. · **Size**: Smooth stroke Size: minimum distance from the last point before stroke continues. · **Factor**: Smooth stroke factor: higher values give a smoother stroke. |
 
-
 ##### Airbrush
 
 ![Airbrush](/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/airbrush.png)
 
 Keep applying paint effect while hiding mouse (spray).
-
 
 | Entry | What it does |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -579,13 +546,11 @@ Keep applying paint effect while hiding mouse (spray).
 | Input Samples | Average multiple input samples together to smooth the brush stroke. |
 | Stabilize Stroke | Brush lags behind the mouse and followers a smoother path when activated. · **Size**: Smooth stroke Size: minimum distance from the last point before stroke continues. · **Factor**: Smooth stroke factor: higher values give a smoother strok |
 
-
 ##### Line
 
 ![Line](/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/line.png)
 
 Drag a line with dabs separated according to spacing.
-
 
 | Entry | What it does |
 | ------------- | -------------------------------------------------------------------------------------------------- |
@@ -596,13 +561,11 @@ Drag a line with dabs separated according to spacing.
 | Jitter Unit | Jitter in view in screen space or relative to brush size. Buttons are View and Brush respectively. |
 | Input Samples | Average multiple input samples together to smooth the brush stroke. |
 
-
 ##### Curve
 
 ![Curve](/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/curve.png)
 
 Define the stroke curve with a bezier curve. Dabs are seperated according to spacing.
-
 
 | Entry | What it does |
 | ---------------- | -------------------------------------------------------------------------------------------------- |
@@ -614,7 +577,6 @@ Define the stroke curve with a bezier curve. Dabs are seperated according to spa
 | Jitter Unit | Jitter in view in screen space or relative to brush size. Buttons are View and Brush respectively. |
 | Input Samples | Average multiple input samples together to smooth the brush stroke. |
 
-
 ### Falloff Sub panel
 
 ![Falloff Sub panel](/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/falloff-sub-panel.png)
@@ -623,13 +585,11 @@ Define the stroke curve with a bezier curve. Dabs are seperated according to spa
 
 This subpanel shows with all brushes in the Brush settings panel. This customizes the fall off of the brush, where the left is the center and right is the outer circle of the brush. Higher values is stronger falloff.
 
-
 | Entry | What it does |
 | ------------ | ------------------------------ |
 | Curve Preset | Select a falloff curve preset. |
 | Zoom In | Zoom the graph in. |
 | Zoom Out | Zoom the graph out. |
-
 
 #### Clipping Options
 
@@ -659,13 +619,11 @@ Quickly draw some default curve profiles.
 
 This subpanel shows with all brushes in the Brush settings panel.
 
-
 | Entry | What it does |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Show Brush | Show the brush icon when painting. |
 | Cursor Color | The brush icon color with adding. |
 | Falloff Opacity | The brush icon falloff opacity. This is an overlay drawn by a percentage. · **Override Overlay**: When activated it won’t show the overlay when drawing. · **Use Cursor Overlay**: When activated, this will hide the overlay in the viewport completely. |
-
 
 ### Symmetry panel
 

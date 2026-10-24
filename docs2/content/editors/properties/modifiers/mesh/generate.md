@@ -13,6 +13,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.9.4 Editors - Properties Editor - Modifiers Properties Tab - Add Modifiers menu - Generate modifiers.odt
+summary: "Generate modifiers are available for mesh objects, curve + text objects and volume objects."
 ---
 Generate modifiers are available for mesh objects, curve + text objects and volume objects.
 

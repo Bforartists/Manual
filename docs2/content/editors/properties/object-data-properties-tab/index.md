@@ -1,6 +1,6 @@
 ---
 id: editors.properties.object-data-properties-tab
-title: Object Data Properties Tab
+title: "Object Data"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14 Editors - Properties Editor - Object Data Properties Tab.odt
+summary: "In the object data tab you will find all the object specific data settings."
+icon: mesh_data
+order: 120
 ---
 ## Properties Editor - Object Data Tab
 

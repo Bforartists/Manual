@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.7 Editors - Properties Editor - Object Data Properties Tab - Text Object.odt
+summary: "The resolution of the text curve geometry in the viewport."
 ---
 ## Shape panel
 

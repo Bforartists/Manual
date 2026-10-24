@@ -13,6 +13,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.9.3 Editors - Properties Editor - Modifiers Properties Tab - Add Modifier menu - Edit modifiers.odt
+summary: "Edit modifiers exists for the mesh object, the curve and text object, the point cloud and the lattice object."
 ---
 Edit modifiers exists for the mesh object, the curve and text object, the point cloud and the lattice object.
 

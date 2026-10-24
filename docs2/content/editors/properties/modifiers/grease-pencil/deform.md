@@ -13,6 +13,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.9.9 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Deform Modifiers.odt
+summary: "An armature system allows to deform objects accurately by posing bones."
 ---
 ![Deform modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-deform/deform-modifiers-grease-pencil.png)
 
@@ -62,7 +63,7 @@ The vertex groups are located in the Object Data Properties in the Properties ed
 
 Use the Bone envelopes to deform vertices or control points near them, defined by each bone’s envelope radius and distance.
 
-When envelopes are disabled, Blender uses the set of existing vertex group names to determine which bones influences what mesh part.
+When envelopes are disabled, Bforartists uses the set of existing vertex group names to determine which bones influences what mesh part.
 
 ![Bone Envelopes](/docs2/images/ui/properties/modifiers/mesh-deform/bone-envelopes.png)
 

@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.13 Editors - Properties Editor - Object Data Properties Tab - Camera Object.odt
+summary: "How to display the content in the camera view."
 ---
 ## Lens panel
 

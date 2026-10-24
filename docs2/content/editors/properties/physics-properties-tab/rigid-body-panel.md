@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.12.7 Editors - Properties Editor - Physics Properties Tab - Rigid Body panel.odt
+summary: "The rigid body simulation can be used to simulate the motion of solid objects."
 ---
 ## Rigid Body
 

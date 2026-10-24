@@ -96,7 +96,7 @@ You can also enter expressions in value edit boxes. And the result will be calcu
 
 #### Expressions as Drivers
 
-You may want your expression to be re-evaluated after its entered. Blender supports this using *Drivers* (a feature of the animation system).
+You may want your expression to be re-evaluated after its entered. Bforartists supports this using *Drivers* (a feature of the animation system).
 
 Expression beginning with *#*, have a special use. Instead of evaluating the value and discarding the expression, a driver is added to the property with the expression entered.
 
@@ -151,3 +151,35 @@ Metric Units
 | kilometer | *km* | 1000.0 |
 
 
+
+
+## Curve Widget
+
+Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis).
+
+**Selecting Points**
+
+![Selecting Points](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/selecting-points.png)
+
+You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.
+
+Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
+
+**Adding Points**
+
+![Adding Points](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/adding-points.png)
+
+You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.
+
+**Curve point settings**
+
+![Curve point settings](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/curve-point-settings.png)
+
+When you have a point selected then you will reveal further settings at the bottom.
+
+
+| Entry | What it does |
+| ------------------- | -------------------------------- |
+| Vector Handle | Set handle type to Vector. |
+| Auto Handle | Set handle type to Auto. |
+| Auto Clamped Handle | Set handle type to Auto Clamped. |

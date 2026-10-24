@@ -108,7 +108,7 @@ These are available asset libraries you can filter assets to the Asset Shelf.
 
 - The **All** category shows all Catalogs from all asst Libraries.
 - The **Current File** shows all Catalogs from the current Blend file.
-- The **Essentials** shows all default Catalogs built in to Bforaritsts.
+- The **Essentials** shows all default Catalogs built in to Bforartists.
 - The **User Library** shows all Catalogs from a user defined library.
 - If you have the Default Library addon by Bforartists, this will show the **Default Library** Catalogs.
 

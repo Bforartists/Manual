@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.16 Editors - Properties Editor - Particle Properties Tab - Hair.odt
+summary: "There are two types of particles."
 ---
 ## Introduction
 

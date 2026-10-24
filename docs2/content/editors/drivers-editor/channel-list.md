@@ -12,6 +12,7 @@ screenshots: "5.1"
 source:
   - 19.2 Editors - Drivers Editor - Channel list.odt
 order: 40
+summary: "The channel list contains your objects and their animation channels."
 ---
 ## Drivers Editor - Channel List
 

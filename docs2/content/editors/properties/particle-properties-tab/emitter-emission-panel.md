@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.2 Editors - Properties Editor - Particle Properties Tab - Emitter - Emission Panel.odt
+summary: "The buttons in the Emission panel control the way particles are emitted over time."
 ---
 ## Emission Panel
 
@@ -23,7 +24,7 @@ The buttons in the Emission panel control the way particles are emitted over tim
 | Entry | What it does |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Number | The maximum amount of parent particles used in the simulation. |
-| Seed | Blender uses this as starting point to produce random numbers during the simulation. |
+| Seed | Bforartists uses this as starting point to produce random numbers during the simulation. |
 | Frame Start | The start frame of particle emission. You may set negative values, which enables you to start the simulation before the actual rendering. |
 | End | The end frame of particle emission. |
 | Lifetime | The lifespan (in frames) of the particles. |

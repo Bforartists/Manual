@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.27 Editors - Properties Editor - Particle Properties Tab - Hair - Force Field Settings panel.odt
+summary: "The Force Field Settings panel allows you to make each individual act as a force field, allowing them to affect other dynamic systems, or even, each other."
 ---
 ## Force Field Settings panel
 

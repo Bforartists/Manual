@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.10.25 Editors - Properties Editor - Particle Properties Tab - Hair - Hair Shape panel.odt
+summary: "These settings control the shape of hair curves for rendering."
 ---
 ## Hair Shape panel
 

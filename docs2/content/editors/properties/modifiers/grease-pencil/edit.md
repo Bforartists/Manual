@@ -13,6 +13,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.9.7 Editors - Properties Editor - Modifiers Properties Tab - Grease Pencil - Edit modifiers.odt
+summary: "The Texture Mapping Modifier changes the strokes texture UV position."
 ---
 ![Edit modifiers (Grease Pencil)](/docs2/images/ui/properties/modifiers/grease-pencil-edit/edit-modifiers-grease-pencil.png)
 

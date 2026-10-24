@@ -12,6 +12,7 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.14.10 Editors - Properties Editor - Object Data Properties Tab - Lattice Object.odt
+summary: "Lattice objects can be used to deform child geometry by the cage of the lattice object."
 ---
 ## Lattice panel
 

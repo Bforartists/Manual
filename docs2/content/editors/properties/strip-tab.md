@@ -1,6 +1,6 @@
 ---
 id: editors.properties.strip-tab
-title: Strip Tab
+title: "Strip"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.19 Editors - Properties Editor - Strip Tab.odt
+summary: "The strip tab contains all the strip type related settings."
+icon: sequence
+order: 180
 ---
 ## Strip Tab
 

@@ -20,6 +20,7 @@ replaces:
   - editors.shader-editor.sidebar.relations-tab
   - editors.shader-editor.sidebar.group-tab
 order: 30
+summary: "The Shader Editor is made of several areas."
 ---
 ## Introduction
 

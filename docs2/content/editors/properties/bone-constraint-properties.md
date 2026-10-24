@@ -1,6 +1,6 @@
 ---
 id: editors.properties.bone-constraint-properties
-title: Bone Constraint Properties
+title: "Bone Constraints"
 section: editors
 path:
   - Editors
@@ -11,6 +11,9 @@ status: draft
 screenshots: "5.1"
 source:
   - 26.18 Editors - Properties Editor - Bone Constraint Properties.odt
+summary: "Constraints allows two objects to interact with each other."
+icon: constraint_bone
+order: 150
 ---
 ## Bone Constraints
 
