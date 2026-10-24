@@ -26,5 +26,3 @@ A workspace for storyboards and animatics: draw your shots with Grease Pencil, t
 ## Starts in
 
 The workspace opens the 3D Viewport in **Draw Mode** when the scene has a Grease Pencil object.
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.

@@ -27,5 +27,3 @@ A layout for modeling work, with a large 3D Viewport. It starts in Object Mode.
 ## Starts in
 
 The workspace opens the 3D Viewport in **Object Mode** when the scene has an object for it.
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.

@@ -1,0 +1,240 @@
+# Workspace maps (Docs 2.0). One entry per workspace page, in the app's tab order.
+# image:  the screenshot (docs2/…).  source: auto = boxes found by docs2/tools/ws_areas.py from the
+#         screenshot; capture = boxes from Bforartists itself (docs2/tools/ws_capture.py).
+# areas:  ed = the editor (Bforartists ui_type, see `editors`), box = left, top, width, height in % of
+#         the image, note = what this area is for in THIS workspace (one short line).
+# Write a note in your own words any time; re-running the tools keeps notes.
+
+editors:
+  TOPBAR: {name: "Topbar", page: "editors/topbar-and-statusbar/index.md", icon: topbar, color: "#9a9a9a", does: "Menus, the workspace tabs and the main toolbar."}
+  STATUSBAR: {name: "Statusbar", page: "editors/topbar-and-statusbar/index.md", icon: statusbar, color: "#9a9a9a", does: "Hints for the mouse buttons, and what Bforartists is doing."}
+  VIEW_3D: {name: "3D Viewport", page: "editors/3d-viewport/index.md", icon: view3d, color: "#f2994a", does: "See and edit your scene in 3D."}
+  IMAGE_EDITOR: {name: "Image Editor", page: "editors/image-editor/index.md", icon: image, color: "#c08cf2", does: "View, paint and save images and renders."}
+  UV: {name: "UV Editor", page: "editors/uv-editor/index.md", icon: uv, color: "#c08cf2", does: "Lay out the UV map of a mesh over its texture."}
+  ShaderNodeTree: {name: "Shader Editor", page: "editors/shader-editor/index.md", icon: node_material, color: "#5cb4f0", does: "Build materials and worlds with nodes."}
+  CompositorNodeTree: {name: "Compositor", page: "editors/compositor/index.md", icon: node_compositing, color: "#5cb4f0", does: "Post-process renders with nodes."}
+  GeometryNodeTree: {name: "Geometry Node Editor", page: "editors/geometry-node-editor/index.md", icon: geometry_nodes, color: "#5cb4f0", does: "Build and change geometry with nodes."}
+  TextureNodeTree: {name: "Texture Node Editor", page: "editors/texture-node-editor.md", icon: node_texture, color: "#5cb4f0", does: "Make textures with nodes."}
+  SEQUENCE_EDITOR: {name: "Video Sequence Editor", page: "editors/video-sequence-editor/index.md", icon: sequence, color: "#e8b84a", does: "Edit video, images and sound on a timeline."}
+  CLIP_EDITOR: {name: "Movie Clip Editor", page: "editors/movie-clip-editor/index.md", icon: clip, color: "#e8b84a", does: "Track footage and draw masks."}
+  DOPESHEET: {name: "Dope Sheet", page: "editors/dope-sheet/index.md", icon: action, color: "#8fd16a", does: "Every keyframe, to move and retime."}
+  TIMELINE: {name: "Timeline", page: "editors/timeline/index.md", icon: time, color: "#8fd16a", does: "Playback, frame range and keying."}
+  GRAPH_EDITOR: {name: "Graph Editor", page: "editors/graph-editor/index.md", icon: graph, color: "#8fd16a", does: "Shape animation curves."}
+  DRIVERS: {name: "Drivers Editor", page: "editors/drivers-editor/index.md", icon: driver, color: "#8fd16a", does: "Let one value drive another."}
+  NLA_EDITOR: {name: "Nonlinear Animation Editor", page: "editors/nonlinear-animation-editor/index.md", icon: nla, color: "#8fd16a", does: "Mix and layer actions."}
+  TEXT_EDITOR: {name: "Text Editor", page: "editors/text-editor.md", icon: text, color: "#7ad0c4", does: "Write and run scripts and notes."}
+  CONSOLE: {name: "Python Console", page: "editors/python-console.md", icon: console, color: "#7ad0c4", does: "Run Python one line at a time."}
+  INFO: {name: "Info Editor", page: "editors/info-editor.md", icon: info, color: "#7ad0c4", does: "Reports, and the Python of every action."}
+  OUTLINER: {name: "Outliner", page: "editors/outliner.md", icon: outliner, color: "#7ad0c4", does: "Everything in the scene, as a tree."}
+  PROPERTIES: {name: "Properties Editor", page: "editors/properties/index.md", icon: properties, color: "#e86f5c", does: "Settings of the scene and the selected item, in tabs."}
+  FILE_BROWSER: {name: "File Browser", page: "editors/file-browser.md", icon: filebrowser, color: "#e8b84a", does: "Find files on disk and drag them in."}
+  ASSETS: {name: "Asset Browser", page: "editors/asset-browser/index.md", icon: asset_manager, color: "#e8b84a", does: "Browse and organize asset libraries."}
+  SPREADSHEET: {name: "Spreadsheet", page: "editors/spreadsheet.md", icon: spreadsheet, color: "#7ad0c4", does: "Geometry data as rows and columns."}
+  PREFERENCES: {name: "Preferences", page: "editors/preferences.md", icon: preferences, color: "#9a9a9a", does: "Set up Bforartists to your liking."}
+
+workspaces:
+  - page: "workspaces/main.md"
+    image: "images/workspaces/workspaces/standard-workspaces.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.09, 100, 4.9]}
+      - {ed: VIEW_3D, box: [0, 7.07, 82.58, 88.54], note: "Your scene, with the Asset Shelf of ready-made objects and materials along the bottom."}
+      - {ed: TIMELINE, box: [0, 95.82, 82.58, 4.18], note: "Play your animation and set keyframes."}
+      - {ed: OUTLINER, box: [82.7, 7.07, 17.3, 22.06], note: "Every object in the scene; pick, hide and rename them."}
+      - {ed: PROPERTIES, box: [82.7, 29.34, 17.3, 70.66], note: "Settings for the render, scene, world and the selected object."}
+  - page: "workspaces/uv-editing.md"
+    image: "images/workspaces/workspaces/standard-workspaces-2.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.08, 100, 4.89]}
+      - {ed: VIEW_3D, box: [0, 7.05, 41.68, 92.95], note: "Select faces and mark seams on the model in Edit Mode."}
+      - {ed: UV, box: [41.8, 7.05, 40.78, 92.95], note: "The unwrapped faces laid flat over the texture; move, scale and pack them."}
+      - {ed: OUTLINER, box: [82.7, 7.05, 17.3, 22.5], note: "Pick the object to unwrap."}
+      - {ed: PROPERTIES, box: [82.7, 29.76, 17.3, 70.24], note: "UV maps live in the Object Data tab."}
+  - page: "workspaces/modeling.md"
+    image: "images/workspaces/workspaces/standard-workspaces-3.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.08, 100, 4.89]}
+      - {ed: VIEW_3D, box: [0, 7.05, 82.57, 92.95], note: "A big viewport for building and editing meshes, curves and other geometry."}
+      - {ed: OUTLINER, box: [82.69, 7.05, 17.31, 22.5], note: "Organize your objects in collections."}
+      - {ed: PROPERTIES, box: [82.69, 29.76, 17.31, 70.24], note: "Modifiers, object data and materials of the selected object."}
+  - page: "workspaces/nodes.md"
+    image: "images/workspaces/workspaces/standard-workspaces-4.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.09, 100, 4.89]}
+      - {ed: SPREADSHEET, box: [0, 7.05, 34.53, 34.6], note: "See the geometry's points, faces and attributes as numbers."}
+      - {ed: VIEW_3D, box: [34.65, 7.05, 47.97, 34.6], note: "The result of your node tree, live."}
+      - {ed: GeometryNodeTree, box: [0, 41.87, 82.62, 53.53], note: "Build the Geometry Nodes tree of the selected object."}
+      - {ed: OUTLINER, box: [82.73, 7.05, 17.27, 22.09], note: "Pick the object that carries the node modifier."}
+      - {ed: PROPERTIES, box: [82.73, 29.35, 17.27, 66.04], note: "Modifier stack and node group inputs."}
+      - {ed: TIMELINE, box: [0, 95.61, 100, 4.39], note: "Scrub frames to test animated node setups."}
+  - page: "workspaces/animation.md"
+    image: "images/workspaces/workspaces/standard-workspaces-5.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.09, 100, 4.89]}
+      - {ed: VIEW_3D, box: [0, 7.05, 34.36, 63.38], note: "A camera view to check your shot while you animate."}
+      - {ed: VIEW_3D, box: [34.48, 7.05, 48.11, 63.38], note: "Pose and key your characters and objects."}
+      - {ed: DOPESHEET, box: [0, 70.65, 82.58, 24.75], note: "All the keyframes of the selected objects; move and retime them."}
+      - {ed: TIMELINE, box: [0, 95.61, 82.58, 4.39], note: "Playback, frame range and auto keying."}
+      - {ed: OUTLINER, box: [82.7, 7.05, 17.3, 22.09], note: "Pick what to animate."}
+      - {ed: PROPERTIES, box: [82.7, 29.35, 17.3, 70.65], note: "Object, bone and constraint settings."}
+  - page: "workspaces/texture-paint.md"
+    image: "images/workspaces/workspaces/standard-workspaces-6.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.09, 100, 4.9]}
+      - {ed: VIEW_3D, box: [0, 7.06, 41.66, 92.94], note: "Paint straight onto the model in Texture Paint mode."}
+      - {ed: IMAGE_EDITOR, box: [41.78, 7.06, 40.8, 92.94], note: "The texture you paint, flat; paint here too."}
+      - {ed: OUTLINER, box: [82.7, 7.06, 17.3, 22.53], note: "Pick the object to paint."}
+      - {ed: PROPERTIES, box: [82.7, 29.81, 17.3, 70.19], note: "Brush, texture slots and material settings."}
+  - page: "workspaces/shading.md"
+    image: "images/workspaces/workspaces/standard-workspaces-7.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.08, 100, 4.89]}
+      - {ed: FILE_BROWSER, box: [0, 7.04, 15.19, 36.71], note: "Find textures on disk and drag them into the Shader Editor."}
+      - {ed: IMAGE_EDITOR, box: [15.31, 7.04, 24.87, 36.71], note: "Check the textures your material uses."}
+      - {ed: VIEW_3D, box: [40.3, 7.04, 42.29, 36.71], note: "Live material preview with studio lighting."}
+      - {ed: ShaderNodeTree, box: [0, 43.97, 82.58, 56.03], note: "Build the material by connecting nodes: the heart of this workspace."}
+      - {ed: OUTLINER, box: [82.7, 7.04, 17.3, 22.49], note: "Pick the object you are shading."}
+      - {ed: PROPERTIES, box: [82.7, 29.74, 17.3, 70.26], note: "Material and world settings without nodes."}
+  - page: "workspaces/rendering.md"
+    image: "images/workspaces/workspaces/standard-workspaces-8.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.09, 100, 4.89]}
+      - {ed: IMAGE_EDITOR, box: [0, 7.05, 82.58, 88.35], note: "The finished render: look at it, compare slots and save it."}
+      - {ed: TIMELINE, box: [0, 95.61, 82.58, 4.39], note: "Pick the frame to render."}
+      - {ed: PROPERTIES, box: [82.7, 7.05, 17.3, 92.95], note: "Render engine, samples, resolution and output."}
+  - page: "workspaces/sculpting.md"
+    image: "images/workspaces/workspaces/standard-workspaces-9.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.08, 100, 4.89]}
+      - {ed: VIEW_3D, box: [0, 7.05, 82.58, 92.95], note: "Sculpt Mode with the brushes in the Tool Shelf and the Asset Shelf."}
+      - {ed: OUTLINER, box: [82.7, 7.05, 17.3, 22.5], note: "Pick the object to sculpt."}
+      - {ed: PROPERTIES, box: [82.7, 29.76, 17.3, 70.24], note: "Remesh, multiresolution and object data."}
+  - page: "workspaces/compositing.md"
+    image: "images/workspaces/workspaces/standard-workspaces-10.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.08, 100, 4.89]}
+      - {ed: IMAGE_EDITOR, box: [0, 7.05, 42.01, 33.5], note: "The composited result (Viewer node)."}
+      - {ed: VIEW_3D, box: [42.13, 7.05, 40.49, 33.5], note: "The camera view of the scene you composite."}
+      - {ed: CompositorNodeTree, box: [0, 40.76, 82.62, 51.33], note: "Combine render passes and add effects with nodes."}
+      - {ed: TIMELINE, box: [0, 92.31, 82.62, 7.69], note: "Pick the frame to work on."}
+      - {ed: OUTLINER, box: [82.74, 7.05, 17.26, 25.38], note: "Scenes and view layers."}
+      - {ed: PROPERTIES, box: [82.74, 32.64, 17.26, 67.36], note: "View layer passes and render settings."}
+  - page: "workspaces/scripting.md"
+    image: "images/workspaces/workspaces/standard-workspaces-11.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.09, 100, 4.9]}
+      - {ed: VIEW_3D, box: [0, 7.06, 29.19, 34.63], note: "See what your script does to the scene."}
+      - {ed: CONSOLE, box: [0, 41.9, 29.19, 34.41], note: "Try Python one line at a time."}
+      - {ed: INFO, box: [0, 76.75, 29.19, 23.25], note: "Every action you take, as the Python line that does it; copy and reuse."}
+      - {ed: TEXT_EDITOR, box: [29.31, 7.06, 53.26, 92.94], note: "Write, open and run scripts."}
+      - {ed: OUTLINER, box: [82.69, 7.06, 17.31, 22.53], note: "Browse the scene and its data."}
+      - {ed: PROPERTIES, box: [82.69, 29.81, 17.31, 70.19], note: "Settings you can read and change from Python."}
+  - page: "workspaces/2d-animation.md"
+    image: "images/workspaces/workspaces/standard-workspaces-12.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.09, 100, 4.9]}
+      - {ed: VIEW_3D, box: [0, 7.06, 82.58, 72.71], note: "Draw on a white canvas with Grease Pencil, through the camera."}
+      - {ed: DOPESHEET, box: [0, 79.99, 82.58, 15.48], note: "Grease Pencil keyframes, one row per layer."}
+      - {ed: TIMELINE, box: [0, 95.68, 82.58, 4.32], note: "Playback and onion skin timing."}
+      - {ed: OUTLINER, box: [82.7, 7.06, 17.3, 21.81], note: "Your Grease Pencil objects and camera."}
+      - {ed: PROPERTIES, box: [82.7, 29.09, 17.3, 26.64], note: "Layers of the selected Grease Pencil object."}
+      - {ed: PROPERTIES, box: [82.7, 55.94, 17.3, 44.06], note: "Layer blend, opacity and masks."}
+  - page: "workspaces/2d-full-canvas.md"
+    image: "images/workspaces/workspaces/standard-workspaces-13.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.09, 100, 4.89]}
+      - {ed: VIEW_3D, box: [0, 7.05, 100, 83.45], note: "The whole window is your drawing canvas."}
+      - {ed: DOPESHEET, box: [0, 90.72, 100, 9.28], note: "A slim strip with the Grease Pencil keys and playback."}
+  - page: "workspaces/masking.md"
+    image: "images/workspaces/workspaces/standard-workspaces-14.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.09, 100, 4.9]}
+      - {ed: DOPESHEET, box: [0, 7.06, 46.78, 36.86], note: "Mask keyframes over time."}
+      - {ed: CompositorNodeTree, box: [46.89, 7.06, 35.68, 36.86], note: "Use the mask in the compositor."}
+      - {ed: CLIP_EDITOR, box: [0, 44.13, 82.57, 55.87], note: "Draw and animate masks over the footage."}
+      - {ed: OUTLINER, box: [82.69, 7.06, 17.31, 22.32], note: "Scenes and objects."}
+      - {ed: PROPERTIES, box: [82.69, 29.59, 17.31, 70.41], note: "Scene and render settings."}
+  - page: "workspaces/motion-tracking.md"
+    image: "images/workspaces/workspaces/standard-workspaces-15.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.09, 100, 4.9]}
+      - {ed: VIEW_3D, box: [0, 7.06, 43.44, 26.28], note: "Check the solved camera against the scene."}
+      - {ed: CLIP_EDITOR, box: [43.55, 7.06, 39.02, 26.28], note: "Tracks over time, as a dope sheet."}
+      - {ed: CLIP_EDITOR, box: [0, 33.55, 82.58, 47.66], note: "The footage: place and track markers, then solve the camera."}
+      - {ed: CLIP_EDITOR, box: [0, 81.43, 82.58, 14.04], note: "Track motion curves, to spot bad tracks."}
+      - {ed: TIMELINE, box: [0, 95.68, 82.58, 4.32], note: "Frame range and playback."}
+      - {ed: OUTLINER, box: [82.7, 7.06, 17.3, 22.1], note: "Camera and tracking objects."}
+      - {ed: PROPERTIES, box: [82.7, 29.37, 17.3, 70.63], note: "Scene and camera settings."}
+  - page: "workspaces/video-editing.md"
+    image: "images/workspaces/workspaces/standard-workspaces-16.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.09, 100, 4.89]}
+      - {ed: FILE_BROWSER, box: [0, 7.05, 19.99, 42.52], note: "Find clips, images and sounds; drag them into the sequencer."}
+      - {ed: SEQUENCE_EDITOR, box: [20.11, 7.05, 62.48, 42.52], note: "Preview: the edited picture at the current frame."}
+      - {ed: PROPERTIES, box: [82.7, 7.05, 17.3, 42.52], note: "Output format, resolution and frame rate."}
+      - {ed: SEQUENCE_EDITOR, box: [0, 49.78, 100, 45.61], note: "Cut, move and fade strips on channels."}
+      - {ed: TIMELINE, box: [0, 95.61, 100, 4.39], note: "Playback and frame range."}
+  - page: "workspaces/assets.md"
+    image: "images/workspaces/workspaces/standard-workspaces-17.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.09, 100, 4.89]}
+      - {ed: VIEW_3D, box: [0, 7.05, 40.34, 51.44], note: "Drag assets in and try them in the scene."}
+      - {ed: ShaderNodeTree, box: [40.45, 7.05, 42.13, 51.44], note: "Look inside a material asset."}
+      - {ed: ASSETS, box: [0, 58.71, 82.58, 41.29], note: "Browse, tag and organize your asset libraries."}
+      - {ed: OUTLINER, box: [82.7, 7.05, 17.3, 22.52], note: "Mark objects, materials and more as assets."}
+      - {ed: OUTLINER, box: [82.7, 29.78, 17.3, 70.22], note: "Blender File view: everything this file holds."}
+  - page: "workspaces/3d-sequencer.md"
+    image: "images/workspaces/workspaces/standard-workspaces-18.png"
+    captured: "4.5"
+    source: auto
+    areas:
+      - {ed: TOPBAR, box: [0, 2.09, 100, 4.89]}
+      - {ed: VIEW_3D, box: [0, 7.05, 40.13, 42.37], note: "The camera of the current shot, as the sequencer plays it."}
+      - {ed: VIEW_3D, box: [40.25, 7.05, 42.32, 42.37], note: "Stage and light the shot in 3D."}
+      - {ed: SEQUENCE_EDITOR, box: [0, 49.64, 82.57, 22.23], note: "Your shots as scene strips; cut and reorder them."}
+      - {ed: DOPESHEET, box: [0, 72.09, 82.57, 23.31], note: "Keys of the current shot."}
+      - {ed: OUTLINER, box: [82.69, 7.05, 17.31, 22.37], note: "Scenes, cameras and objects."}
+      - {ed: PROPERTIES, box: [82.69, 29.64, 17.31, 65.76], note: "Output and render settings."}
+      - {ed: TIMELINE, box: [0, 95.61, 100, 4.39], note: "Playback across all shots."}
+  - page: "workspaces/color-balance.md"
+    image: null      # screenshot to capture
+    areas: []
+  - page: "workspaces/storyboarding.md"
+    image: null      # screenshot to capture
+    areas: []
+  - page: "workspaces/sequencer-compositing.md"
+    image: null      # screenshot to capture
+    areas: []

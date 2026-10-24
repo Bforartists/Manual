@@ -24,7 +24,3 @@ The workspace to do compositing and post processing.
 - [Dope Sheet](../editors/dope-sheet/index.md)
 - [Outliner](../editors/outliner.md)
 - [Properties](../editors/properties/index.md)
-
-
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.

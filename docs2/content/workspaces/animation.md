@@ -25,7 +25,3 @@ This workspace provides you with a layout that is optimized for Animation tasks.
 - [Timeline](../editors/timeline/index.md)
 - [Outliner](../editors/outliner.md)
 - [Properties](../editors/properties/index.md)
-
-
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.

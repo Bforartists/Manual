@@ -23,7 +23,3 @@ A 3d sequencer workspace.
 - [Video Sequence Editor](../editors/video-sequence-editor/index.md)
 - [3D Viewport](../editors/3d-viewport/index.md)
 - [Properties](../editors/properties/index.md)
-
-
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.

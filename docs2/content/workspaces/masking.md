@@ -23,7 +23,3 @@ A workspace for the VFX workflow, to mask content.
 - [Movie Clip Editor](../editors/movie-clip-editor/index.md)
 - [Dope Sheet](../editors/dope-sheet/index.md)
 - [Properties](../editors/properties/index.md)
-
-
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.

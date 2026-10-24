@@ -266,3 +266,72 @@ def index_html(tree, url_of):
     out.append("</ul></div>")
     return "".join(out)
 
+
+
+# ---------------------------------------------------------------- workspace maps
+
+WS_FILE = os.path.join(os.path.dirname(HERE), "workspaces.yml")
+WS_MARK = re.compile(r"<!--\s*workspace-(map|explorer)\s*-->")
+
+
+def load_workspaces():
+    """docs2/workspaces.yml → (editors, {page rel under content/: entry}, [entries in order])."""
+    if not os.path.exists(WS_FILE):
+        return {}, {}, []
+    data = yaml.safe_load(open(WS_FILE, encoding="utf-8")) or {}
+    order = data.get("workspaces") or []
+    return data.get("editors") or {}, {str(w["page"]): w for w in order}, order
+
+
+def _area_items(entry, editors, icons, url_rel):
+    esc = htmllib.escape
+    out = []
+    for a in entry.get("areas") or []:
+        ed = editors.get(a.get("ed")) or {"name": a.get("ed", "Area"), "color": "#9a9a9a"}
+        box = ",".join(f"{float(v):g}" for v in a.get("box") or [])
+        href = url_rel(ed.get("page", "")) if ed.get("page") else ""
+        name = esc(str(ed.get("name")))
+        link = f'<a href="{esc(href)}">{name}</a>' if href else name
+        text = esc(str(a.get("note") or ed.get("does") or ""))
+        out.append(f'<li data-k="area" data-box="{box}" data-c="{esc(str(ed.get("color", "")))}" '
+                   f'data-i="{esc(icon_file(ed.get("icon"), icons))}">{link}{(" — " + text) if text else ""}</li>')
+    return out
+
+
+def workspace_map(body, entry, editors, icons, url_rel, img_url):
+    """A workspace page: the hover map's areas as a list right after the screenshot (the docs
+    script lays them over it). Placed at <!-- workspace-map --> when the page has one."""
+    if not entry or not entry.get("areas"):
+        return WS_MARK.sub("", body)
+    src = img_url(entry["image"]) if entry.get("image") else ""
+    shot = f'<li data-k="shot" data-img="{htmllib.escape(src)}" data-v="{htmllib.escape(str(entry.get("captured", "")))}">Screenshot</li>'
+    block = f'<div class="ui-ws-map"><ul>{shot}{"".join(_area_items(entry, editors, icons, url_rel))}</ul></div>'
+    if WS_MARK.search(body):
+        return WS_MARK.sub(lambda m: block, body, count=1)
+    m = re.search(r'<figure[^>]*>\s*<img src="' + re.escape(src) + r'"[^>]*>.*?</figure>', body, re.S) if src else None
+    if m:
+        return body[:m.end()] + block + body[m.end():]
+    return block + body
+
+
+def workspace_explorer(body, order, editors, icons, url_rel, img_url, title_of):
+    """The Workspaces overview: every workspace with its screenshot and areas, as one flat list
+    (a `ws` row, then its `area` rows) the docs script turns into the explorer."""
+    esc = htmllib.escape
+    rows = []
+    for w in order:
+        href = url_rel(w["page"])
+        if not href:
+            continue
+        title, summ = title_of(w["page"])
+        src = img_url(w["image"]) if w.get("image") else ""
+        rows.append(f'<li data-k="ws" data-img="{esc(src)}" data-v="{esc(str(w.get("captured", "")))}" data-sum="{esc(summ)}">'
+                    f'<a href="{esc(href)}">{esc(title)}</a></li>')
+        rows += _area_items(w, editors, icons, url_rel)
+    if not rows:
+        return WS_MARK.sub("", body)
+    block = f'<div class="ui-ws-explorer"><ul>{"".join(rows)}</ul></div>'
+    if WS_MARK.search(body):
+        return WS_MARK.sub(lambda m: block, body, count=1)
+    m = re.search(r"</p>", body)
+    return body[:m.end()] + block + body[m.end():] if m else block + body

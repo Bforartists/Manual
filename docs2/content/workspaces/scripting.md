@@ -26,7 +26,3 @@ The scripting workspace gives you a layout where you can write Python code. It c
 - [Text Editor](../editors/text-editor.md)
 - [Outliner](../editors/outliner.md)
 - [Properties](../editors/properties/index.md)
-
-
-
-> **Coming:** an interactive map of this workspace. Hover an area of the screenshot to see which editor it is and jump to its chapter.
