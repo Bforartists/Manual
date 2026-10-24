@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Force Field Object · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/q3-phase345 · <code>docs2/q3-phase345</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<a href="../../../interface/windows.html">Windows</a>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/header.html">Header</a>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../view-layer-properties-tab.html">View Layer</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../../graph-editor/channel-list.html">Channel List</a>
+<a href="../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="../collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="../object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="../modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<a style="padding-left:1.5rem" href="../visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="../particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<a style="padding-left:1.5rem" href="../physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../object-data-properties-tab.html">Object Data</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="../bone-constraint-properties.html">Bone Constraints</a>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="../material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../texture-properties-tab.html">Texture</a>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="../strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="../strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../../dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<a href="../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../../text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<a href="../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="light-probe-object.html">Light Probe Object</a>
+<a class="is-current" style="padding-left:2.5rem" href="force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="volume-object.html">Volume Object</a>
+<span>File browser</span>
+<span>Asset Browser</span>
+<a href="../../spreadsheet.html">Spreadsheet</a>
+<a href="../../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="../../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<a href="../../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../../advanced/troubleshooting.html">Troubleshooting</a>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/manual-update-history.html">Documentation History</a>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../../../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Object Data Properties Tab › Force Field Object</div><h1 class="pv-title">Force Field Object</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 4 min read</span></div><article class="ui-doc-body"><h2 id="force-field-of-type-curve-guide">Force field of type Curve Guide</h2>
+<p>The curve guide is a curve style object. And so it has the same settings and panels than a curve object.</p>
+<p>To keep the redundancies in the manual at a minimum, please have a look at the chapter for the object data properties for a curve object.</p>
+<p>25.12.2 Editors - Properties Editor - Object Data Tab - Curve Object</p>
+<h2 id="empty-panel">Empty panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/force-field-object/empty-panel.png" alt="Empty panel" loading="lazy"></figure>
+<p>Most of the force field types are displayed as an empty. And so you will see the same empty display settings as for a regular empty.</p>
+<p>Empties are objects without additional geometry. They do not render. A use case is that you use empties as handlers for a rigged character.</p>
+<h3 id="display-as">Display As</h3>
+<p>Empties have graphical elements to display the location. In this drop down list you can choose the shape of this graphical element.</p>
+<p>Further display settings can be found in the Object Properties tab in the Viewport Display panel.</p>
+<h4 id="size">Size</h4>
+<p>The size of the graphical element.</p>
+<h4 id="image">Image</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/force-field-object/image.png" alt="Image" loading="lazy"></figure>
+<p>Empties can display images. This images can be used to create reference images to model along. The image is always displayed, independent of the 3D display mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset X, Y</td>
+<td>Offset the image origin. 1.0 represents the width/height of the image.</td>
+</tr>
+<tr>
+<td>Depth</td>
+<td><strong>Default</strong>: Use normal depth behavior. · <strong>Front</strong>: Always display on top of other objects. · <strong>Back</strong>: Always display behind of other objects.</td>
+</tr>
+<tr>
+<td>Side</td>
+<td><strong>Both</strong>: Display both the front and back of the empty. · <strong>Front</strong>: Only display the front of the image. · <strong>Back</strong>: Only display the back of the image.</td>
+</tr>
+<tr>
+<td>Show in</td>
+<td><strong>Orthographic</strong>: Show in orthographic view. · <strong>Perspective</strong>: Show in perspective view. · <strong>Only Axis Aligned</strong>: Only displays the image contents when the view is aligned with the object’s local axis.</td>
+</tr>
+<tr>
+<td>Transparency</td>
+<td>Use alpha blending instead of alpha-test. The image then blends with the background but can have depth sorting artifacts. · <strong>Opacity</strong>: The opacity.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="image-panel">Image panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/image-panel.png" alt="Image panel" loading="lazy"></figure>
+<p>When you choose an empty of type Image then this panel with further settings appears.</p>
+<h3 id="image-property">Image property</h3>
+<h4 id="image-browser">Image Browser</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/image-browser.png" alt="Image Browser" loading="lazy"></figure>
+<p>A list of available images in the scene.</p>
+<h4 id="open">Open</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/open.png" alt="Open" loading="lazy"></figure>
+<p>When no image is loaded the open button is displayed. Open an image opens the file browser to load an image.</p>
+<h4 id="name">Name</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/name.png" alt="Name" loading="lazy"></figure>
+<p>The name of the currently active image.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fake User</td>
+<td>Keep this image in the scene even if it has no user.</td>
+</tr>
+<tr>
+<td>Open Image</td>
+<td>Open image opens the file browser to load an image.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="source">Source</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/source.png" alt="Source" loading="lazy"></figure>
+<p>What image type to choose.</p>
+<h4 id="source-type-single-image">Source Type Single Image</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/source-type-single-image.png" alt="Source Type Single Image" loading="lazy"><figcaption>Source Type Single Image</figcaption></figure>
+<h5 id="path-edit-box">Path edit box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/path-edit-box.png" alt="Path edit box" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pack</td>
+<td>With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.</td>
+</tr>
+<tr>
+<td>Path edit box</td>
+<td>See and edit the path to your movie or image sequence files.</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a new movie or image sequence files. A file dialog will appear.</td>
+</tr>
+<tr>
+<td>Refresh</td>
+<td>Reread the movie or image sequence files.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="color-space">Color Space</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/color-space.png" alt="Color Space" loading="lazy"></figure>
+<p>Choose the color space type for the movie or image sequence files.</p>
+<h4 id="source-type-movie-image-sequence">Source Type Movie + Image Sequence</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/source-type-movie-image-sequence-2.png" alt="Source Type Movie + Image Sequence" loading="lazy"><figcaption>Source Type Movie + Image Sequence</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/source-type-movie-image-sequence.png" alt="Source Type Movie + Image Sequence" loading="lazy"><figcaption>Source Type Movie + Image Sequence</figcaption></figure>
+<h5 id="path-edit-box-2">Path edit box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/path-edit-box-2.png" alt="Path edit box" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pack</td>
+<td>With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.</td>
+</tr>
+<tr>
+<td>Path edit box</td>
+<td>See and edit the path to your movie or image sequence files.</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a new movie or image sequence files. A file dialog will appear.</td>
+</tr>
+<tr>
+<td>Refresh</td>
+<td>Reread the movie or image sequence files.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Info string</td>
+<td>Some information about the currently loaded movie. Frames, resolution and color space.</td>
+</tr>
+<tr>
+<td>Frames</td>
+<td>The number of frames of the movie or image sequence.</td>
+</tr>
+<tr>
+<td>Start</td>
+<td>The start frame of the movie or image sequence</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Offset the number of the frame to use in the animation. -1 means off.</td>
+</tr>
+<tr>
+<td>Cyclic</td>
+<td>Cycle the images in the movie.</td>
+</tr>
+<tr>
+<td>Auto Refresh</td>
+<td>Always refresh image on frame changes.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="color-space-2">Color Space</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/color-space-2.png" alt="Color Space" loading="lazy"></figure>
+<p>Choose the color space type for the movie or image sequence files.</p>
+<p>4</p>
+<h4 id="source-type-generated">Source Type Generated</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/source-type-generated.png" alt="Source Type Generated" loading="lazy"></figure>
+<h5 id="x-y">X / Y</h5>
+<p>The image width and height.</p>
+<h5 id="float-buffer">Float Buffer</h5>
+<p>Use a floating point buffer. 8 Bit images uses integers. 32 Bit works with floats.</p>
+<h6 id="generated-type-blank">Generated Type Blank</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/generated-type-blank.png" alt="Generated Type Blank" loading="lazy"></figure>
+<p>This type displays an image with one blank color.</p>
+<h6 id="color">Color</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/color.png" alt="Color" loading="lazy"></figure>
+<p>The color of the blank image.</p>
+<h6 id="generated-type-uv-grid">Generated Type UV Grid</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/generated-type-uv-grid.png" alt="Generated Type UV Grid" loading="lazy"><figcaption>Generated Type UV Grid</figcaption></figure>
+<p>This type displays a with a black and white checker texture but colored dots.</p>
+<h6 id="generated-type-color-grid">Generated Type Color Grid</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/generated-type-color-grid.png" alt="Generated Type Color Grid" loading="lazy"><figcaption>Generated Type Color Grid</figcaption></figure>
+<p>This type displays a with a colored checker texture with numbers.</p>
+<h5 id="color-space-3">Color Space</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/color-space-3.png" alt="Color Space" loading="lazy"></figure>
+<p>Choose the color space type for the image.</p>
+<h4 id="source-type-udim">Source Type Udim</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-data-properties-tab/empty-image-object/source-type-udim.png" alt="Source Type Udim" loading="lazy"></figure>
+<p>UDIM is an enhancement to the UV mapping and texturing workflow. And does not belong here. But in the UV Editor. It is just in the list because it shares the same menus with the UV Editor.</p>
+<p>You can load a UDIM file. But it will just display the first tile of the UDIM image. And there is no way to adjust the UDIM settings since they are in the UV Editor, in Edit mode. And Empties have no Edit mode.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-phase345/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fobject-data-properties-tab%2Fforce-field-object.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-phase345/docs2/content/editors/properties/object-data-properties-tab/force-field-object.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#force-field-of-type-curve-guide">Force field of type Curve Guide</a><a class="h2" href="#empty-panel">Empty panel</a><a class="h3" href="#display-as">Display As</a><a class="h2" href="#image-panel">Image panel</a><a class="h3" href="#image-property">Image property</a><a class="h3" href="#source">Source</a></aside></div></body></html>

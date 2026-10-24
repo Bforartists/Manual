@@ -1,0 +1,1724 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Object Constraints · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/q3-phase345 · <code>docs2/q3-phase345</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<a href="../../interface/windows.html">Windows</a>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/header.html">Header</a>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="view-layer-properties-tab.html">View Layer</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../graph-editor/channel-list.html">Channel List</a>
+<a href="../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<a style="padding-left:1.5rem" href="visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<a style="padding-left:1.5rem" href="physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="object-data-properties-tab.html">Object Data</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a class="is-current" style="padding-left:1.5rem" href="object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="bone-constraint-properties.html">Bone Constraints</a>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="texture-properties-tab.html">Texture</a>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../shader-editor.html">Shader Editor</a>
+<a href="../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../graph-editor.html">Graph Editor</a>
+<a href="../drivers-editor.html">Drivers Editor</a>
+<a href="../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<a href="../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/volume-object.html">Volume Object</a>
+<span>File browser</span>
+<span>Asset Browser</span>
+<a href="../spreadsheet.html">Spreadsheet</a>
+<a href="../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<a href="../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../advanced/troubleshooting.html">Troubleshooting</a>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../appendix/manual-update-history.html">Documentation History</a>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Object Constraints Properties Tab</div><h1 class="pv-title">Object Constraints</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 33 min read</span></div><article class="ui-doc-body"><h2 id="object-constraints">Object Constraints</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/object-constraints.png" alt="Object Constraints" loading="lazy"></figure>
+<p>Object Constraints allows two objects to interact with each other. You can for example set the x position to the x position of another object with the Copy Location constraint.</p>
+<p>You can have more than one constraint at an object.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/object-constraints-2.png" alt="Object Constraints" loading="lazy"></figure>
+<p>There are four groups of object constraints:</p>
+<p><strong>Motion Tracking</strong> constraints constraints with Motion Tracking functionality.<br />
+<strong>Transform</strong> contains constraints around everything transform related.<br />
+<strong>Tracking</strong> contains constraints around animation functionality.<br />
+And <strong>Relationship</strong> contains constraints around relations.</p>
+<p>The different color has no deeper sense. It helps with navigating in the list of constraints.</p>
+<h2 id="general-functionality">General functionality</h2>
+<h3 id="add">Add</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/add.png" alt="Add" loading="lazy"></figure>
+<p>To add a constraint to an object, simply open the drop down menu, and choose the type of constraint that you want to add.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/add-2.png" alt="Add" loading="lazy"></figure>
+<p>This will add the constraint to the list.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/add-3.png" alt="Add" loading="lazy"></figure>
+<p>For some constraints you will also find menu items in the 3D view. The Inverse Kinematics / Add IK to Bone is such an example. It also fills in some vital information already in some cases, which you would need to choose by hand when you add the constraints in the constraint tab.</p>
+<p>This menu entries exists to simplify the workflow. This menu entries are described in other chapters.</p>
+<h3 id="type-to-search">Type to Search…</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/type-to-search.png" alt="Type to Search…" loading="lazy"></figure>
+<p>When the menu is open, you can press any key to start typing to search, this will filter the modifiers by name.</p>
+<h3 id="enable-disable">Enable / Disable</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/enable-disable.png" alt="Enable / Disable" loading="lazy"></figure>
+<p>You might want to disable a constraint temporarily. This can be done by clicking at the button with the eye icon in the header. To enable the constraint simply click it again.</p>
+<h3 id="apply">Apply</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/apply.png" alt="Apply" loading="lazy"></figure>
+<p>Applies the constraint. The current state becomes real. The constraint gets deleted.</p>
+<h3 id="dropdown-menu">Dropdown menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/dropdown-menu.png" alt="Dropdown menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apply</td>
+<td>Applies the constraint.</td>
+</tr>
+<tr>
+<td>Duplicate</td>
+<td>Duplicates the constraint.</td>
+</tr>
+<tr>
+<td>Copy to Selected</td>
+<td>Copies the constraint from the source to the target object. First select the source object, hold down shift and select the target object so that both are selected. Then perform Copy to Selected. The constraint will now also be at the target object.</td>
+</tr>
+<tr>
+<td>Move to First</td>
+<td>Moves the constraint to the first place in the constraint list.</td>
+</tr>
+<tr>
+<td>Move to Last</td>
+<td>Moves the constraint to the last place in the constraint list.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="remove">Remove</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/remove.png" alt="Remove" loading="lazy"></figure>
+<p>To remove a constraint from the object simply click the close button up right in the header.</p>
+<h3 id="collapse-panel">Collapse panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/collapse-panel.png" alt="Collapse panel" loading="lazy"></figure>
+<p>The whole constraints panel can be collapsed. Click at the arrow button up left in the header.</p>
+<h3 id="reorder">Reorder</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/reorder.png" alt="Reorder" loading="lazy"></figure>
+<p>You can have more than one constraint in the list. And sometimes the order of the constraints is very important.</p>
+<p>Grab the handler at the right and drag the constraint to the position where you want it to have.</p>
+<h3 id="animate-property">Animate Property</h3>
+<p>Some of the properties can be animated. Click at the animate property button at the right to add a keyframe.</p>
+<h3 id="object-specific-constraints">Object specific constraints</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/object-specific-constraints.png" alt="Object specific constraints" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/object-specific-constraints-2.png" alt="Object specific constraints" loading="lazy"></figure>
+<p>The Object Constraints tab does not contain all constraints. Some constraints are object specific. And appears in an own tab with this object selected. Bone constraints for example appears in the Bone Constraint tab.</p>
+<p>Unfortunately you will still see the whole constraint list, and have to pick the bone constraints from there.</p>
+<h2 id="motion-tracking-constraints">Motion Tracking Constraints</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/motion-tracking-constraints.png" alt="Motion Tracking Constraints" loading="lazy"></figure>
+<p>This constraints gets used in Motion Tracking.</p>
+<h3 id="camera-solver">Camera Solver</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/camera-solver.png" alt="Camera Solver" loading="lazy"></figure>
+<p>The Camera Solver constraint gives the owner of this constraint, the location and rotation of the «solved camera motion».</p>
+<p>The «solved camera motion» is where Blender reconstructs the position of the physical, real-world camera, when it filmed the video footage, relative to the thing being tracked.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This constraint only works after you have set up a minimum of eight markers and pressed Solve Camera Motion. See motion tracking chapter.</p></div>
+<h4 id="active-clip">Active Clip</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/active-clip.png" alt="Active Clip" loading="lazy"></figure>
+<p>Receive tracking data from the active clip in the Movie Clip editor. If unchecked, an option appears to choose from the other clips.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constraint to F-Curve</td>
+<td>Applies the constraint, and creates Keyframes for the transforms.</td>
+</tr>
+<tr>
+<td>Influence</td>
+<td>The influence level of this constraint.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="follow-track">Follow Track</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/follow-track.png" alt="Follow Track" loading="lazy"></figure>
+<p>This constraint makes objects have the same position at a frame as the track has. The motion of this object happens on a single plane defined by the camera and the original position of the object.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active Clip</td>
+<td>Receive tracking data from the active movie clip in the Movie Clip editor. If unchecked, an option appears to choose from the other available clips.</td>
+</tr>
+<tr>
+<td>3D Position</td>
+<td>Use the 3D position of the track to parent to.</td>
+</tr>
+<tr>
+<td>Undistorted</td>
+<td>Parent to the undistorted position of the 2D track.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="frame-method">Frame Method</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/frame-method.png" alt="Frame Method" loading="lazy"></figure>
+<p>Defines how the footage is fitted in the camera frame.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Camera</td>
+<td>Select the camera to which the motion is parented to (if active an empty scene camera is used).</td>
+</tr>
+<tr>
+<td>Depth Object</td>
+<td>If this object is set, constrained objects will be projected onto the surface of this depth object which can be used to create facial makeup visual effects.</td>
+</tr>
+<tr>
+<td>Constraint to F-Curve</td>
+<td>Creates F-Curves for the object that copies the movement caused by the constraint.</td>
+</tr>
+<tr>
+<td>Influence</td>
+<td>The influence level of this constraints.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="object-solver">Object Solver</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/object-solver.png" alt="Object Solver" loading="lazy"></figure>
+<p>The Object Solver constraint gives the owner of this constraint, the location and rotation of the «solved object motion».</p>
+<p>This can be used to add a mesh to video for example.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This constraint only works after you have set up a minimum of eight markers and pressed Solve object Motion.</p></div>
+<p>If it says Solve Camera Motion instead of Solve Object Motion then go into the Movie Clip Editor &gt; Properties region &gt; Objects and switch it from the camera, to an object.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active Clip</td>
+<td>Receive tracking data from the active movie clip in the Movie Clip editor. If unchecked, an option appears to choose from the other available clips.</td>
+</tr>
+<tr>
+<td>Camera</td>
+<td>Here you can choose the camera.</td>
+</tr>
+<tr>
+<td>Set Inverse / Clear Inverse</td>
+<td>Set the connection for the object solver constraint inverse. Clear the inversion.</td>
+</tr>
+<tr>
+<td>Constraint to F-Curve</td>
+<td>Creates F-Curves for the object that copies the movement caused by the constraint.</td>
+</tr>
+<tr>
+<td>Influence</td>
+<td>The influence level of this constraint.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="transform-constraints">Transform Constraints</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/transform-constraints.png" alt="Transform Constraints" loading="lazy"></figure>
+<p>This category contains transform constraints.</p>
+<h3 id="copy-location">Copy Location</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/copy-location.png" alt="Copy Location" loading="lazy"></figure>
+<p>The <em>Copy Location</em> constraint sets the position to the position of the target object.</p>
+<div class="ui-doc-callout is-warning"><p><strong>Warning:</strong> Using this constraint on a <em>connected</em> bone will have no effect. Because it is the parent’s tip which controls the position of your owner bone’s root.</p></div>
+<h4 id="target">Target</h4>
+<p>Here you can choose the target object to copy the location from.</p>
+<h4 id="bone">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone.png" alt="Bone" loading="lazy"></figure>
+<p>If the <em>Target</em> is an <em>Armature</em>, then you have the optional choice to set an individual bone as <em>Target</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Head/Tail</td>
+<td>If the target is a bone, then here you can adjust where along this bone the target point lies.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>If the <em>Target</em> is a <em>Mesh</em>, then you have the optional choice to set a <em>Vertex Group</em> as target.</td>
+</tr>
+<tr>
+<td>Axis X, Y, Z</td>
+<td>Here you can choose which axes to constraint.</td>
+</tr>
+<tr>
+<td>Invert X, Y, Z</td>
+<td>Inverts the coordinate input. Positive becomes negative, and vice versa.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Add an offset from the original position to the target position.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="target-space-for-target-and-owner">Target Space for Target and Owner</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner-2.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<p>Here you can choose the target space and its coordinate system to use for calculation. The local space uses local axis, the world space global axis. Custom space allows you to use custom data. Like a vertex group of an object.</p>
+<h4 id="influence">Influence</h4>
+<p>The influence level of this constraint.</p>
+<h3 id="copy-rotation">Copy Rotation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/copy-rotation.png" alt="Copy Rotation" loading="lazy"></figure>
+<p>The <em>Copy <em>Rotation</em></em> constraint sets the rotation to the rotation of the target object.</p>
+<h4 id="target-2">Target</h4>
+<p>Here you can choose the target object to copy the rotation from.</p>
+<h4 id="vertex-group">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/vertex-group.png" alt="Vertex Group" loading="lazy"></figure>
+<p>If the <em>Target</em> is a <em>Mesh</em>, a new field is displayed offering the optional choice to set a <em>Vertex Group</em> as target.</p>
+<h4 id="bone-2">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone-2.png" alt="Bone" loading="lazy"></figure>
+<p>If the <em>Target</em> is an <em>Armature</em>, a new field is displayed offering the optional choice to set an individual bone as <em>Target</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Axis X, Y, Z</td>
+<td>These buttons control which axes are constrained - by default, all three are on.</td>
+</tr>
+<tr>
+<td>Invert X, Y, Z</td>
+<td>Inverts the coordinate input. Positive becomes negative, and vice versa.</td>
+</tr>
+<tr>
+<td>Invert Rotation</td>
+<td>Inverts the final combined rotation. Positive becomes negative, and vice versa.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Add an offset from the original position to the target position.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="target-space-for-target-and-owner-2">Target Space for Target and Owner</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner-2.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<p>Here you can choose the target space and its coordinate system to use for calculation. The local space uses local axis, the world space global axis. Custom space allows you to use custom data. Like a vertex group of an object.</p>
+<h4 id="influence-2">Influence</h4>
+<p>The influence level of this constraint.</p>
+<h3 id="copy-scale">Copy Scale</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/copy-scale.png" alt="Copy Scale" loading="lazy"></figure>
+<p>The <em>Copy <em>Scale</em></em> constraint sets the size to the size of the target object.</p>
+<h4 id="target-3">Target</h4>
+<p>Here you can choose the target object to copy the size from.</p>
+<h4 id="vertex-group-2">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/vertex-group.png" alt="Vertex Group" loading="lazy"></figure>
+<p>If <em>Target</em> is a <em>Mesh</em>, a new field is displayed offering the optional choice to set a <em>Vertex Group</em> as target.</p>
+<h4 id="bone-3">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone-2.png" alt="Bone" loading="lazy"></figure>
+<p>If <em>Target</em> is an <em>Armature</em>, a new field is displayed offering the optional choice to set an individual bone as <em>Target</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Axis X, Y, Z</td>
+<td>These buttons control which axes are constrained - by default, all three are on.</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>Raise the target scale to the specified power.</td>
+</tr>
+<tr>
+<td>Make Uniform</td>
+<td>Redistribute the copied change in volume equaly between the three axes of the owner.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Add an offset from the original scale to the target scale.</td>
+</tr>
+<tr>
+<td>Additive</td>
+<td>Use Addition instead of Multiplication to combine scale. Activates with Offset on.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="target-space-for-target-and-owner-3">Target Space for Target and Owner</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner-2.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<p>Here you can choose the target space and its coordinate system to use for calculation. The local space uses local axis, the world space global axis. Custom space allows you to use custom data. Like a vertex group of an object.</p>
+<h4 id="influence-3">Influence</h4>
+<p>The influence level of this constraint.</p>
+<h3 id="copy-transforms">Copy Transforms</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/copy-transforms.png" alt="Copy Transforms" loading="lazy"></figure>
+<p>The <em>Copy <em>Transform</em></em> constraint copies the whole transform values from the target object. Location, Rotation and Scale.</p>
+<h4 id="target-4">Target</h4>
+<p>Here you can choose the target object to copy the location from.</p>
+<h4 id="vertex-group-3">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/vertex-group.png" alt="Vertex Group" loading="lazy"></figure>
+<p>If <em>Target</em> is a <em>Mesh</em>, a new field is displayed offering the optional choice to set a <em>Vertex Group</em> as target.</p>
+<h4 id="bone-4">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone-3.png" alt="Bone" loading="lazy"></figure>
+<p>If the <em>Target</em> is an <em>Armature</em>, a new field is displayed offering the optional choice to set an individual bone as <em>Target</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Head/Tail</td>
+<td>If the target is a bone, then here you can adjust where along this bone the target point lies.</td>
+</tr>
+<tr>
+<td>Remove Target Shear</td>
+<td>Remove shear from the target transformation before combining.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mix">Mix</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/mix.png" alt="Mix" loading="lazy"></figure>
+<p>The mix mode specifies how the copied and existing transformations are combined.</p>
+<h4 id="target-space-for-target-and-owner-4">Target Space for Target and Owner</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner-2.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<p>Here you can choose the target space and its coordinate system to use for calculation. The local space uses local axis, the world space global axis. Custom space allows you to use custom data. Like a vertex group of an object.</p>
+<h4 id="influence-4">Influence</h4>
+<p>The influence level of this constraint.</p>
+<h3 id="limit-distance">Limit Distance</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/limit-distance.png" alt="Limit Distance" loading="lazy"></figure>
+<p>The <em>Limit Distance</em> constraint constraints either outside, inside, or at the surface of a sphere centered at the target object.</p>
+<h4 id="target-5">Target</h4>
+<p>Here you can choose the target object.</p>
+<h4 id="vertex-group-4">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/vertex-group.png" alt="Vertex Group" loading="lazy"></figure>
+<p>If <em>Target</em> is a <em>Mesh</em>, a new field is displayed offering the optional choice to set a <em>Vertex Group</em> as target.</p>
+<h4 id="bone-5">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone-3.png" alt="Bone" loading="lazy"></figure>
+<p>If the <em>Target</em> is an <em>Armature</em>, a new field is displayed offering the optional choice to set an individual bone as <em>Target</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Head/Tail</td>
+<td>If the target is a bone, then here you can adjust where along this bone the target point lies.</td>
+</tr>
+<tr>
+<td>Distance</td>
+<td>This numeric field sets the limit distance, i.e. the radius of the constraining sphere.</td>
+</tr>
+<tr>
+<td>Reset Distance</td>
+<td>When clicked, this small button will reset the <em>Distance</em> value, so that it corresponds to the actual distance between the owner and its target (i.e. the distance before this constraint is applied).</td>
+</tr>
+<tr>
+<td>Clamp Region</td>
+<td>The <em>Limit Mode</em> drop-down menu allows you to choose how to use the sphere defined by the <em>Distance</em> setting and target’s center: · <strong>Inside</strong>: The owner is constrained <em>inside</em> the sphere. · <strong>Outside</strong>: The owner is constrained <em>outside</em> the sphere. · <strong>Surface</strong>: The owner is constrained <em>on the surface</em> of the sphere.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="target-space-for-target-and-owner-5">Target Space for Target and Owner</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner-2.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<p>Here you can choose the target space and its coordinate system to use for calculation. The local space uses local axis, the world space global axis. Custom space allows you to use custom data. Like a vertex group of an object.</p>
+<h4 id="influence-5">Influence</h4>
+<p>The influence level of this constraint.</p>
+<h3 id="limit-location">Limit Location</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/limit-location.png" alt="Limit Location" loading="lazy"></figure>
+<p>This constraint restricts the amount of allowed translations along each axis, through lower and upper bounds.</p>
+<p>The limits for an object are calculated from its center. Te limits of a bone are calculated from its root.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minimum X Y Z</td>
+<td>Restrict the minimum location. You can adjust the value in the edit box below.</td>
+</tr>
+<tr>
+<td>Maximum X Y Z</td>
+<td>Restrict the maximum location. You can adjust the value in the edit box below.</td>
+</tr>
+<tr>
+<td>For Transform</td>
+<td>The constraint limits the location. The values in the transform panel can still change above this limit though. With this option ticked the transform values are also clamped.</td>
+</tr>
+<tr>
+<td>Convert</td>
+<td>Calculate the constraint in local space or world space.</td>
+</tr>
+<tr>
+<td>Influence</td>
+<td>The influence level of this constraint.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="limit-rotation">Limit Rotation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/limit-rotation.png" alt="Limit Rotation" loading="lazy"></figure>
+<p>This constraint restricts the amount of allowed rotation along each axis, through lower and upper bounds.</p>
+<p>The limits for an object are calculated from its center. Te limits of a bone are calculated from its root.</p>
+<h4 id="limit-x-y-z">Limit X Y Z</h4>
+<p>Restrict the rotation. You can adjust the minimum and maximum value in the edit boxes below.</p>
+<h3 id="order">Order</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/order.png" alt="Order" loading="lazy"></figure>
+<p>Euler Order. Allows to specify the order of the euler angles.</p>
+<h4 id="affect-transform">Affect Transform</h4>
+<p>The constraint limits the rotation. The values in the transform panel can still change above this limit though. With this option ticked the transform values are also clamped.</p>
+<h4 id="owner-space">Owner Space</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/owner-space.png" alt="Owner Space" loading="lazy"></figure>
+<p>Calculate the constraint in custom space, local space or world space.</p>
+<h4 id="influence-6">Influence</h4>
+<p>The influence level of this constraint.</p>
+<h3 id="limit-scale">Limit Scale</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/limit-scale.png" alt="Limit Scale" loading="lazy"></figure>
+<p>This constraint restricts the amount of allowed scale along each axis, through lower and upper bounds.</p>
+<p>The limits for an object are calculated from its center. Te limits of a bone are calculated from its root.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minimum X Y Z</td>
+<td>The minimum size. You can adjust the value in the edit boxes below.</td>
+</tr>
+<tr>
+<td>Maximum X Y Z</td>
+<td>The maximum size. You can adjust the value in the edit boxes below.</td>
+</tr>
+<tr>
+<td>For Transform</td>
+<td>The constraint limits the location. The values in the transform panel can still change above this limit though. With this option ticked the transform values are also clamped.</td>
+</tr>
+<tr>
+<td>Convert</td>
+<td>Calculate the constraint in local space or world space.</td>
+</tr>
+<tr>
+<td>Influence</td>
+<td>The influence level of this constraint.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintain-volume">Maintain Volume</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/maintain-volume.png" alt="Maintain Volume" loading="lazy"></figure>
+<p>The <em>Maintain Volume</em> constraint limits the volume of a mesh or a bone to a given ratio of its original volume.</p>
+<h4 id="mode">Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/mode.png" alt="Mode" loading="lazy"></figure>
+<p>The way constrant treats original non free axis scaling.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strict</td>
+<td>Volume is strictly preservedm overriding the scaling of non-free axes.</td>
+</tr>
+<tr>
+<td>Uniform</td>
+<td>Volume is preserved when the object is scaled uniformly. Devitations from uniform scale on non free-axes are passed through.</td>
+</tr>
+<tr>
+<td>Single Axis</td>
+<td>Volume is preserved when the object is scaled only on the free axis. Non-free axis scaling is passed through.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free Axis X / Y / Z</td>
+<td>The free-scaling axis of the object.</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>The bone’s rest volume.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="owner-space-2">Owner Space</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/owner-space-2.png" alt="Owner Space" loading="lazy"></figure>
+<p>Calculate the constraint in local space or world space. Custom space allows you to use custom data. Like a vertex group of an object.</p>
+<h4 id="influence-7">Influence</h4>
+<p>The influence level of this constraint.</p>
+<h3 id="transformation">Transformation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/transformation.png" alt="Transformation" loading="lazy"></figure>
+<p>The Transformation constraint allows you to map one type of transform properties (i.e. location, rotation or scale) of the target, to the same or another type of transform properties of the owner, within a given range of values.</p>
+<div class="ui-doc-callout is-warning"><p><strong>Warning:</strong> Note that:</p>
+<ul>
+<li>When mapping transform properties to location (i.e. <em>Loc</em>, <em>Destination</em> button is enabled), the owner’s existing location is added to the result of evaluating this constraint (exactly like when the <em>Offset</em> button of the <em>Copy Location constraint</em> is enabled...).</li>
+<li>Conversely, when mapping transform properties to rotation or scale, the owner’s existing rotation or scale is overridden by the result of evaluating this constraint.</li>
+<li>When using the rotation transform properties of the target as input, whatever the real values are, the constraint will always “take them back” into the <em>-180, 180</em> range (e.g. if the target has a rotation of <em>420</em> around its X axis, the values used as X input by the constraint will be <em>((420 + 180) modulo 360) - 180 = 60- ...)</em>. This is why this constraint is not really suited for gears!</li>
+<li>Similarly, when using the scale transform properties of the target as input, whatever the real values are, the constraint will always take their absolute values (i.e. invert negative ones).</li>
+<li>When a <em>min</em> value is higher than its corresponding <em>max</em> one, both are considered equal to the <em>max</em> one. This implies you cannot create “reversed” mappings...</li>
+</ul></div>
+<h4 id="target-6">Target</h4>
+<p>Here you can choose the target object.</p>
+<h4 id="vertex-group-5">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/vertex-group.png" alt="Vertex Group" loading="lazy"></figure>
+<p>If the <em>Target</em> is a <em>Mesh</em>, a new field is displayed offering the optional choice to set a <em>Vertex Group</em> as target.</p>
+<h4 id="bone-6">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone-4.png" alt="Bone" loading="lazy"></figure>
+<p>If the <em>Target</em> is an <em>Armature</em>, a new field is displayed offering the optional choice to set an individual bone as <em>Target</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extrapolate</td>
+<td>With this option enabled the <strong>min</strong> and <strong>max</strong> values are no longer strict limits, but rather “markers” defining a proportional (linear) mapping between input and corresponding output values.</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>The target space that the target is evaluated in.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="owner">Owner</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/owner-space-2.png" alt="Owner" loading="lazy"></figure>
+<p>Calculate the constraint in local space or world space. Custom space allows you to use custom data. Like a vertex group of an object.</p>
+<h4 id="influence-8">Influence</h4>
+<p>The influence level of this constraint.</p>
+<h4 id="map-from-subpanel">Map From subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/map-from-subpanel.png" alt="Map From subpanel" loading="lazy"></figure>
+<h5 id="location-rotation-scale">Location Rotation Scale</h5>
+<p>A tab to switch between the available location, rotation and scale values.</p>
+<h6 id="x-y-z">X Y Z</h6>
+<p>The transform values. Here you can edit the minimum and maximum values for the source object.</p>
+<h4 id="map-to-subpanel">Map To subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/map-to-subpanel.png" alt="Map To subpanel" loading="lazy"></figure>
+<h5 id="location-rotation-scale-2">Location Rotation Scale</h5>
+<p>A tab to switch between the available location, rotation and scale values.</p>
+<h6 id="x-source-axis">X Source Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/x-source-axis.png" alt="X Source Axis" loading="lazy"></figure>
+<p>What axis to use for the X Source constraint.</p>
+<p><strong>Min Max</strong></p>
+<p>Edit the minimum and maximum values for the source object.</p>
+<h6 id="y-source-axis">Y Source Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/y-source-axis.png" alt="Y Source Axis" loading="lazy"></figure>
+<p>What axis to use for the Y Source constraint.</p>
+<p><strong>Min Max</strong></p>
+<p>Edit the minimum and maximum values for the source object.</p>
+<h6 id="z-source-axis">Z Source Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/z-source-axis.png" alt="Z Source Axis" loading="lazy"></figure>
+<p>What axis to use for the Z Source constraint.</p>
+<p><strong>Min Max</strong></p>
+<p>Edit the minimum and maximum values for the source object.</p>
+<h5 id="mix-2">Mix</h5>
+<p>The location mix mode.</p>
+<h3 id="transform-cache">Transform cache</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/transform-cache.png" alt="Transform cache" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/transform-cache-2.png" alt="Transform cache" loading="lazy"></figure>
+<p>The Transform Cache Constraint allows you to stream animations from Alembic files. The data that is read is at transformation matrix level (for example rigid bodies, or camera movements).</p>
+<p>Transform Cache constraints are automatically added to objects with animated transforms.</p>
+<p>For time-varying meshes (means deforming animations), the Mesh Sequence Cache modifier is used.</p>
+<h4 id="cache-file-property">Cache File property</h4>
+<p>Load the Alembic file.</p>
+<h5 id="dara-browser">Dara Browser</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/dara-browser.png" alt="Dara Browser" loading="lazy"></figure>
+<p>A list of available alembic files that are already loaded.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Box</td>
+<td>The name of the alembic file.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Keep the file in the scene even when it is not used.</td>
+</tr>
+<tr>
+<td>Open Cache File</td>
+<td>Load an alembic file.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Remove the alembic file as the active file. The file will remain in the scene until you purge it, close and reload the scene. Given that it has no fake user assigned to keep it in the scene anyways.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File Path</td>
+<td>The path to the Alembic file.</td>
+</tr>
+<tr>
+<td>Sequence</td>
+<td>Whether or not the cache is separated in a series of files. · <strong>Refresh Active</strong>: Update the files and paths.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="object-path">Object Path</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/object-path.png" alt="Object Path" loading="lazy"></figure>
+<p>The path to the Alembic object inside the archive.</p>
+<h4 id="influence-9">Influence</h4>
+<p>Controls the percentage of affect the constraint has on the object. See common constraint properties for more information.</p>
+<h4 id="time-subpanel">Time Subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/ui/properties/modifiers/mesh-edit/time-subpanel.png" alt="Time Subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sequence</td>
+<td>Whether or not the cache is separated in a series of files.</td>
+</tr>
+<tr>
+<td>Override Frame</td>
+<td>Whether to use a custom frame for looking up data in the cache file, instead of using the current scene frame. · <strong>Frame</strong>: The time to use for looking up the data in the cache file, or to determine which to use in a file sequence.</td>
+</tr>
+<tr>
+<td>Frame Offset</td>
+<td>Define a frame offset to the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="render-procedural-subpanel">Render Procedural subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/ui/properties/modifiers/mesh-edit/render-procedural-subpanel.png" alt="Render Procedural subpanel" loading="lazy"></figure>
+<h5 id="use-render-engine-procedural">Use Render Engine Procedural</h5>
+<p>This feature is just available for Cycles, and just in an experimental state.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/ui/properties/modifiers/mesh-edit/use-render-engine-procedural.png" alt="Use Render Engine Procedural" loading="lazy"><figcaption>Use Render Engine Procedural</figcaption></figure>
+<p>Display boxes as placeholders in the viewport.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Prefetch</td>
+<td>This feature is just available for Cycles, and just in an experimental state. When enabled, the Cycles procedural will preload animation data for faster update.</td>
+</tr>
+<tr>
+<td>Prefetch Cache Size</td>
+<td>This feature is just available for Cycles, and just in an experimental state. Memory usage limit for the cache. If the data size does not fit the renderer is aborted. 0 disables the feature.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="velocity-subpanel">Velocity subpanel</h4>
+<h5 id="velocity-attribute">Velocity Attribute</h5>
+<p>The name of the Alembic attribute used for generating motion blur data. By default, this is .velocities which is standard for most Alembic files.</p>
+<h5 id="velocity-unit">Velocity Unit</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/velocity-unit.png" alt="Velocity Unit" loading="lazy"></figure>
+<p>Defines how the velocity vectors are interpreted with regard to time.</p>
+<h2 id="tracking-constraints">Tracking Constraints</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/tracking-constraints.png" alt="Tracking Constraints" loading="lazy"></figure>
+<h3 id="clamp-to">Clamp To</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/clamp-to.png" alt="Clamp To" loading="lazy"></figure>
+<p>The <em>Clamp To</em> constraint clamps an object to a curve. So you need a curve object as the target.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target</td>
+<td>Here you can choose the target object.</td>
+</tr>
+<tr>
+<td>Main Axis</td>
+<td>Auto clamps to all three axis. X , Y, Z maps just to one axis,.</td>
+</tr>
+<tr>
+<td>Cyclic</td>
+<td>With cyclic enabled the object will jump from end point to start point once it has reached the end.</td>
+</tr>
+<tr>
+<td>Influence</td>
+<td>The influence level of this constraint.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="damped-track">Damped Track</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/damped-track.png" alt="Damped Track" loading="lazy"></figure>
+<p>Damped track makes the object always look at the target object. For example a camera always looking at an armature</p>
+<h4 id="target-7">Target</h4>
+<p>Here you can choose the target object.</p>
+<h4 id="vertex-group-6">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/vertex-group.png" alt="Vertex Group" loading="lazy"></figure>
+<p>If the <em>Target</em> is a <em>Mesh</em>, a new field is displayed offering the optional choice to set a <em>Vertex Group</em> as target.</p>
+<h4 id="bone-7">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone-3.png" alt="Bone" loading="lazy"></figure>
+<p>If the <em>Target</em> is an <em>Armature</em>, a new field is displayed offering the optional choice to set an individual bone as <em>Target</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Head/Tail</td>
+<td>If the target is a bone, then here you can adjust where along this bone the target point lies.</td>
+</tr>
+<tr>
+<td>To</td>
+<td>The axis to use to point towards the target object. For a camera you might want to use -Z</td>
+</tr>
+<tr>
+<td>Influence</td>
+<td>The influence level of this constraint.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="locked-track">Locked Track</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/locked-track.png" alt="Locked Track" loading="lazy"></figure>
+<p>Similar to Damped Track. Locked track makes the object always look at the target object. For example a camera always looking at an armature. But here you can lock single axis.</p>
+<p>Note, you cannot lock the axis where you look at. The constraint will show the name red then.</p>
+<h4 id="target-8">Target</h4>
+<p>Here you can choose the target object.</p>
+<h4 id="vertex-group-7">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/vertex-group.png" alt="Vertex Group" loading="lazy"></figure>
+<p>If the <em>Target</em> is a <em>Mesh</em>, a new field is displayed offering the optional choice to set a <em>Vertex Group</em> as target.</p>
+<h4 id="bone-8">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone-3.png" alt="Bone" loading="lazy"></figure>
+<p>If the <em>Target</em> is an <em>Armature</em>, a new field is displayed offering the optional choice to set an individual bone as <em>Target</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Head/Tail</td>
+<td>If the target is a bone, then here you can adjust where along this bone the target point lies.</td>
+</tr>
+<tr>
+<td>To</td>
+<td>The axis to use to point towards the target object. For a camera you might want to use -Z</td>
+</tr>
+<tr>
+<td>Lock</td>
+<td>The axis that you want to lock.</td>
+</tr>
+<tr>
+<td>Influence</td>
+<td>The influence level of this constraint.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stretch-to">Stretch To</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/stretch-to.png" alt="Stretch To" loading="lazy"></figure>
+<p>Stretch To makes the object always look at the target object. For example a cube always looking at another cube. And makes it stretch when the distance changes.</p>
+<p>With bones, the “volumetric” variation scales them along their own local axes (remember that the local Y axis of a bone is aligned with it, from root to tip).</p>
+<h4 id="target-9">Target</h4>
+<p>Here you can choose the target object.</p>
+<h4 id="vertex-group-8">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/vertex-group.png" alt="Vertex Group" loading="lazy"></figure>
+<p>If the <em>Target</em> is a <em>Mesh</em>, a new field is displayed offering the optional choice to set a <em>Vertex Group</em> as target.</p>
+<h4 id="bone-9">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone-3.png" alt="Bone" loading="lazy"></figure>
+<p>If the <em>Target</em> is an <em>Armature</em>, a new field is displayed offering the optional choice to set an individual bone as <em>Target</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Head/Tail</td>
+<td>If the target is a bone, then here you can adjust where along this bone the target point lies.</td>
+</tr>
+<tr>
+<td>Rest Length</td>
+<td>Here you can define the rest distance between the owner and its target. The rest length is the distance at which there is no deformation (stretching) of the owner.</td>
+</tr>
+<tr>
+<td>Reset</td>
+<td>Resets the Rest Length.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="volume-min-volume-max">Volume Min / Volume Max</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/volume-min-volume-max.png" alt="Volume Min / Volume Max" loading="lazy"><figcaption>Volume Min / Volume Max</figcaption></figure>
+<p>Here you can control the amount of “volume” variation proportionally to the stretching amount. Note that the 0.0 value is not allowed.</p>
+<h5 id="smooth">Smooth</h5>
+<p>Shows when either the volume min or volume max is ticked. Strength of volume stretching clamping.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volume</td>
+<td>Here you can adjust which of the X and/or Z axes should be affected to preserve the virtual volume while stretching along the Y axis. The NONE button disables the volumetric features.</td>
+</tr>
+<tr>
+<td>Plane</td>
+<td>Here you can control which of the X or Z axes should be as much as possible aligned with the global Z axis, while tracking the target with the Y axis.</td>
+</tr>
+<tr>
+<td>Influence</td>
+<td>The influence level of this constraint.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="track-to">Track To</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/track-to.png" alt="Track To" loading="lazy"></figure>
+<p>Track To makes the object always look at the target object. For example a cube always looking at another cube. Or a camera looking at a mesh.</p>
+<h4 id="target-10">Target</h4>
+<p>Here you can choose the target object.</p>
+<h4 id="vertex-group-9">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/vertex-group.png" alt="Vertex Group" loading="lazy"></figure>
+<p>If the <em>Target</em> is a <em>Mesh</em>, a new field is displayed offering the optional choice to set a <em>Vertex Group</em> as target.</p>
+<h4 id="bone-10">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone-3.png" alt="Bone" loading="lazy"></figure>
+<p>If the <em>Target</em> is an <em>Armature</em>, a new field is displayed offering the optional choice to set an individual bone as <em>Target</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Head/Tail</td>
+<td>If the target is a bone, then here you can adjust where along this bone the target point lies.</td>
+</tr>
+<tr>
+<td>To</td>
+<td>The axis to use to point towards the target object.</td>
+</tr>
+<tr>
+<td>Up</td>
+<td>The axis that points upwards</td>
+</tr>
+<tr>
+<td>Target Z</td>
+<td>Constrain the UP direction to the target's Z axis instead of the World Z Axis.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="target-space-for-target-and-owner-6">Target Space for Target and Owner</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner-2.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<p>Here you can choose the target space and its coordinate system to use for calculation. The local space uses local axis, the world space global axis. Custom space allows you to use custom data. Like a vertex group of an object.</p>
+<h4 id="influence-10">Influence</h4>
+<p>The influence level of this constraint.</p>
+<h2 id="relationship-constraints">Relationship Constraints</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/relationship-constraints.png" alt="Relationship Constraints" loading="lazy"></figure>
+<h3 id="action">Action</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/action.png" alt="Action" loading="lazy"></figure>
+<p>The Action constraints allows you control an <em>Action</em> using the animated transformations of another object. For example move a cube when another cube moves by animation, without the need to record this movement by a keyframe. There needs to be an animation in the scene, not necessarily at the target object, which is used as the Action for the constraint.</p>
+<p>The constraint accepts the <em>Mesh</em> action type. But only the <em>Object</em>, <em>Pose</em> and <em>Constraint</em> types are really working, since constraints can only affect objects’ or bones’ transform properties, and not meshes’ shapes.</p>
+<p>Only the object transformation (location, rotation, scale) is affected by the action. Keyframes for other properties are ignored. The constraints does not influence them.</p>
+<h4 id="example">Example:</h4>
+<p>Create a cube. Animate it to create the needed action. Move from a to b for example. And record the keyframes. This will create an action that is now available to the constraint.</p>
+<p>Moving the target in the <code>[0.0</code>, <code>2.0]</code> range along its X axis maps the action content on the owner in the <code>[0</code>, <code>100]</code> frame range. This will mean that when the target’s X property is <em>0.0</em> the owner will be as if in frame <em>0</em> of the linked action. With the target’s X property at <em>1.0</em> the owner will be as if in frame <em>50</em> of the linked action, etc.</p>
+<h4 id="target-11">Target</h4>
+<p>Here you can choose the target object.</p>
+<h5 id="vertex-group-10">Vertex Group</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/vertex-group.png" alt="Vertex Group" loading="lazy"></figure>
+<p>If the <em>Target</em> is a <em>Mesh</em>, a new field is displayed offering the optional choice to set a <em>Vertex Group</em> as target.</p>
+<h4 id="bone-11">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone-2.png" alt="Bone" loading="lazy"></figure>
+<p>If the <em>Target</em> is an <em>Armature</em>, a new field is displayed offering the optional choice to set an individual bone as <em>Target</em>.</p>
+<h4 id="evaluation-time">Evaluation Time</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/evaluation-time.png" alt="Evaluation Time" loading="lazy"></figure>
+<p>Interpolate between action start and endframe by using the slider value instead of using the target object.</p>
+<h4 id="influence-11">Influence</h4>
+<p>The influence level of this constraint.</p>
+<h4 id="target-subpanel">Target subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-subpanel.png" alt="Target subpanel" loading="lazy"></figure>
+<h5 id="channel">Channel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/channel.png" alt="Channel" loading="lazy"></figure>
+<p>The transform channel allows you to choose in which space to evaluate its target's transform properties.</p>
+<h5 id="target-space">Target Space</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space.png" alt="Target Space" loading="lazy"></figure>
+<p>The space in which the target is transformed in.</p>
+<p>World space transforms in the world space.</p>
+<p>Local space transforms in the local space.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-2.png" alt="Target Space" loading="lazy"></figure>
+<p>Custom space transforms in the space of the target object. You need to pick the target object.</p>
+<h5 id="target-range-min-max">Target Range Min / Max</h5>
+<p>The lower and upper bounds of the driving transform property value. By default, both values are set to 0.0</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> </p></div>
+<ul>
+<li>When using a rotation property as “driver”, these values are “mapped back” to the -180.0 , 180.0 range.</li>
+<li>When using a scale property as “driver”, these values are limited to null or positive values.</li>
+</ul>
+<h4 id="action-subpanel">Action subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/action-subpanel.png" alt="Action subpanel" loading="lazy"></figure>
+<h5 id="action-2">Action</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/action-2.png" alt="Action" loading="lazy"></figure>
+<p>Here you can choose the action that you want to use. Available actions appears in the drop down list.</p>
+<h6 id="object-action">Object Action</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/object-action.png" alt="Object Action" loading="lazy"></figure>
+<p>This is for bones only. This option will make the constrained bone use the “object” part of the linked action, instead of the “same-named pose” part. This allows you to apply the action of an object to a bone.</p>
+<h6 id="frame-start-end">Frame Start / End</h6>
+<p>The starting and ending frames of the action to be mapped.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> </p></div>
+<ul>
+<li>These values must be strictly positive.</li>
+<li>By default, both values are set to 0 which disables the mapping (i.e. the owner just gets the properties defined at frame 0 of the linked action...).</li>
+</ul>
+<h4 id="notes">Notes</h4>
+<ul>
+<li>When the linked action affects some location properties, the owner’s existing location is added to the result of evaluating this constraint (exactly as when the <em>Offset</em> button of the <em>Copy Location constraint</em> is enabled...).</li>
+<li>When the linked action affects some scale properties, the owner’s existing scale is multiplied with the result of evaluating this constraint.</li>
+<li>When the linked action affects some rotation properties, the owner’s existing rotation is overridden by the result of evaluating this constraint.</li>
+<li>Unlike usual, you can have a <em>Start</em> value higher than the <strong>End</strong> one, or a <em>Min</em> one higher than a <em>Max</em> one: this will reverse the mapping of the action (i.e. it will be “played” reversed...), unless you have both sets reversed, obviously!</li>
+<li>When using a <em>Constraint</em> action, it is the constraint <em>channel’s names</em> that are used to determine to which constraints of the owner apply the action. E.g. if you have a constraint channel named “trackto_empt1”, its keyed <em>Influence</em> and/or <em>Head/Tail</em> values (the only ones you can key) will be mapped to the ones of the owner’s constraint named “trackto_empt1”.</li>
+<li>Similarly, when using a <em>Pose</em> action (which is obviously only meaningful and working when constraining a bone!), it is the bone’s name that is used to determine which bone <em>channel’s names</em> from the action to use (e.g. if the constrained bone is named “arm”, it will use and only use the action’s bone channel named “arm”...). Unfortunately, using a <em>Pose</em> action on a whole armature object (to affect all the keyed bones in the action at once) won’t work...</li>
+<li>Note also that you can use the <em>pose library feature</em> to create/edit a <em>Pose</em> action data-block... just remember that in this situation, there’s one pose per frame!</li>
+</ul>
+<h3 id="armature">Armature</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/armature.png" alt="Armature" loading="lazy"></figure>
+<p>Armature is the constraint version of the Armature Modifier. It reproduces the weight-blended bone transformations and applies it to its owner orientation. It can be used like a variant of the Child Of constraint that can handle multiple parents at once, but requires all of them to be bones.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preserve Volume</td>
+<td>Tries to preserve the volume when deforming the mesh.</td>
+</tr>
+<tr>
+<td>Use Envelopes</td>
+<td>Multiply the weights by envelope for all bones instead of vertex group based blending. The specified weights are still used, and only the listed bones are considered.</td>
+</tr>
+<tr>
+<td>Add Target Bone</td>
+<td>Add a target bone. By clicking two edit boxes becomes available. You can add multiple armatures and bones here.</td>
+</tr>
+<tr>
+<td>Normalize Weights</td>
+<td>Normalize the weights of all target bones.</td>
+</tr>
+<tr>
+<td>Influence</td>
+<td>The influence level of this constraint.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bones-subpanel">Bones subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bones-subpanel.png" alt="Bones subpanel" loading="lazy"></figure>
+<p>When you ad a bone with the Add Target Bone, then you create a property in this panel.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First Edit Box</td>
+<td>Here you select the armature.</td>
+</tr>
+<tr>
+<td>Second Edit Box</td>
+<td>Here you select the bone.</td>
+</tr>
+<tr>
+<td>Remove Target</td>
+<td>Remove the target. Resets Add Target Bone.</td>
+</tr>
+<tr>
+<td>Blend Weight</td>
+<td>Blending Weight of this bone.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="child-of">Child Of</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/child-of.png" alt="Child Of" loading="lazy"></figure>
+<p>This constraints allows you to set a parent to this object. By using more than one constraint you can have more than one parent object here, and control the influence by the Influence slider. You can also just parent the movement of a specific axis.</p>
+<h4 id="target-12">Target</h4>
+<p>Here you can choose the target object.</p>
+<h4 id="vertex-group-11">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/vertex-group.png" alt="Vertex Group" loading="lazy"></figure>
+<p>If the <em>Target</em> is a <em>Mesh</em>, a new field is displayed offering the optional choice to set a <em>Vertex Group</em> as target.</p>
+<h4 id="bone-12">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone-5.png" alt="Bone" loading="lazy"></figure>
+<p>If the <em>Target</em> is an <em>Armature</em>, a new field is displayed offering the optional choice to set an individual bone as <em>Target</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location, Rotation, Scale</td>
+<td>Activate the parenting for the corresponding axis.</td>
+</tr>
+<tr>
+<td>Set Inverse / Clear Inverse</td>
+<td>Set the connection for the object solver constraint inverse. Clear the inversion.</td>
+</tr>
+<tr>
+<td>Influence</td>
+<td>The influence level of this constraint.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="floor">Floor</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/floor.png" alt="Floor" loading="lazy"></figure>
+<p>The Floor constraints allows to set an object as a floor or wall that cannot be passed by the object.</p>
+<p>Note that the center of the object is calculated as the collision point, not the surface. Means a cube with the pivot in the center can still sink half into a ground plane. This can be adjusted with the Offset value.</p>
+<h4 id="target-13">Target</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target.png" alt="Target" loading="lazy"></figure>
+<p>Here you can choose the target object.</p>
+<h4 id="vertex-group-12">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/vertex-group-2.png" alt="Vertex Group" loading="lazy"></figure>
+<p>If the <em>Target</em> is a <em>Mesh</em>, a new field is displayed offering the optional choice to set a <em>Vertex Group</em> as target.</p>
+<h4 id="bone-13">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone-6.png" alt="Bone" loading="lazy"></figure>
+<p>If the <em>Target</em> is an <em>Armature</em>, a new field is displayed offering the optional choice to set an individual bone as <em>Target</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sticky</td>
+<td>The object sticks at its position at contact. For example, it cannot slide around on the surface of a plane any more.</td>
+</tr>
+<tr>
+<td>Use Rotation</td>
+<td>Take the target’s rotation into account. This allows you to have a “floor” plane of any orientation you like, not just the global XY, XZ and YZ ones...</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Here you can define an offset from the pivot to the ground plane object.</td>
+</tr>
+<tr>
+<td>Min / Max</td>
+<td>Here you define which side of the target object will be the floor. By default, these normals are aligned with the global axes. If you enable Use Rotation (see above), they will be aligned with the local target’s axes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="target-space-for-target-and-owner-7">Target Space for Target and Owner</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-space-for-target-and-owner-2.png" alt="Target Space for Target and Owner" loading="lazy"><figcaption>Target Space for Target and Owner</figcaption></figure>
+<p>Here you can choose the target space and its coordinate system to use for calculation. The local space uses local axis, the world space global axis. Custom space allows you to use custom data. Like a vertex group of an object.</p>
+<h4 id="influence-12">Influence</h4>
+<p>The influence level of this constraint.</p>
+<h3 id="follow-path">Follow Path</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/follow-path.png" alt="Follow Path" loading="lazy"></figure>
+<p>Makes the object follow a curve path. This constraint requires a Bezier or Nurbs Curve. Follow Path is an animation only constraint.</p>
+<p>The movement happens in the global world.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/follow-path-2.png" alt="Follow Path" loading="lazy"></figure>
+<p>Click at Animate Path to create the animation. When you play the animation, then the object will move along the path now. The path length can be adjusted in the Path Animation panel of the curve. Here you can see that the value behind evaluation time is now green. And there is a keyframe symbol behind the edit box. Adjust the number of frames to your needs.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target</td>
+<td>Choose the target path.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The number of frames to offset from the “animation” defined by the path. It starts by default from frame 1.</td>
+</tr>
+<tr>
+<td>Forward Axis</td>
+<td>The axis that points forward at the path.</td>
+</tr>
+<tr>
+<td>Up Axis</td>
+<td>The axis that points upwards.</td>
+</tr>
+<tr>
+<td>Fixed position</td>
+<td>Object will stay locked to a single point somewhere along the length of the curve regardless of time.</td>
+</tr>
+<tr>
+<td>Curve Radius</td>
+<td>Objects scaled by the curve radius. See Curve Editing.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="follow-curve">Follow Curve</h4>
+<p>When this option is activated, the owner’s rotation is modified by:</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Forward</td>
+<td>The axis of the object that has to be aligned with the forward direction of the path (i.e. tangent to the curve at the owner’s position).</td>
+</tr>
+<tr>
+<td>Up</td>
+<td>The axis of the object that has to be aligned (as much as possible) with the world Z axis. In fact, with this option activated, the behavior of the owner shares some properties with the one caused by a Locked Track constraint, with the path as “axle”, and the world Z axis as “magnet”.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="animate-path">Animate Path</h4>
+<p>Add a default animation for the path constraint if it is not animated already.</p>
+<h3 id="geometry-attribute">Geometry Attribute</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/geometry-attribute.png" alt="Geometry Attribute" loading="lazy"></figure>
+<p>Retreive transform from target geometry attribute data.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target</td>
+<td>Here you can choose the target object.</td>
+</tr>
+<tr>
+<td>Offset with Target Transform</td>
+<td>Apply the world transform of the target object on top of the transform of the attribute.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="data-type">Data Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>The data type of the attribute.</p>
+<h4 id="domain">Domain</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/domain.png" alt="Domain" loading="lazy"></figure>
+<p>The domain type.</p>
+<h4 id="sample-index">Sample Index</h4>
+<p>The sample index of the domain.</p>
+<h4 id="mix-mode">Mix Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/mix-mode.png" alt="Mix Mode" loading="lazy"></figure>
+<p>Specify how the copied and existing transformations are combined.</p>
+<h4 id="influence-13">Influence</h4>
+<p>The influence level of this constraint.</p>
+<h3 id="pivot">Pivot</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/pivot.png" alt="Pivot" loading="lazy"></figure>
+<p>The <em>Pivot</em> constraint allows the owner to rotate around a target object.</p>
+<h4 id="target-14">Target</h4>
+<p>Here you can choose the target object.</p>
+<h4 id="vertex-group-13">Vertex Group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/vertex-group-3.png" alt="Vertex Group" loading="lazy"></figure>
+<p>If the <em>Target</em> is a <em>Mesh</em>, a new field is displayed offering the optional choice to set a <em>Vertex Group</em> as target.</p>
+<h4 id="bone-14">Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/bone-3.png" alt="Bone" loading="lazy"></figure>
+<p>If the <em>Target</em> is an <em>Armature</em>, a new field is displayed offering the optional choice to set an individual bone as <em>Target</em>.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Head/Tail</td>
+<td>If the target is a bone, then here you can adjust where along this bone the target point lies.</td>
+</tr>
+<tr>
+<td>Use Relative Offset</td>
+<td>Offset will be an absolute point in space instead of relative to the target.</td>
+</tr>
+<tr>
+<td>Pivot Offset X / Y / Z</td>
+<td>Here you can adjust an offset.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rotation-range">Rotation Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/rotation-range.png" alt="Rotation Range" loading="lazy"></figure>
+<p>Enable rotation range for specific axis.</p>
+<h4 id="influence-14">Influence</h4>
+<p>The influence level of this constraint.</p>
+<h3 id="shrinkwrap">Shrinkwrap</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/shrinkwrap.png" alt="Shrinkwrap" loading="lazy"></figure>
+<p>The <strong>Shrinkwrap</strong> constraint allows you to snap objects to the surface of mesh objects. The target object has to be a Mesh object. Other object types does not work.</p>
+<p>The snap point is the pivot point of the object.</p>
+<h4 id="distance">Distance</h4>
+<p>Here you can adjust an offset.</p>
+<h4 id="shrinkwrap-mode">Shrinkwrap Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/shrinkwrap-mode.png" alt="Shrinkwrap Mode" loading="lazy"></figure>
+<p>Here you can choose between different shrink-wrap methods.</p>
+<h5 id="target-normal-project">Target Normal Project</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/target-normal-project.png" alt="Target Normal Project" loading="lazy"></figure>
+<p>Target the nearest target surface along the interpolated vertex normals of the target.</p>
+<h5 id="nearest-vertex">Nearest Vertex</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/nearest-vertex.png" alt="Nearest Vertex" loading="lazy"></figure>
+<p>Target the nearest vertex at the target.</p>
+<h5 id="project">Project</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/project.png" alt="Project" loading="lazy"></figure>
+<p>Target the nearest surface point along a given axis.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Project Axis</td>
+<td>Here you can define the axis</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Here you can define the space that gets used for this axis.</td>
+</tr>
+<tr>
+<td>Distance</td>
+<td>Limit the distance used for projection. Zero disables the Project Distance.</td>
+</tr>
+<tr>
+<td>Project Opposite</td>
+<td>Project in both specified and opposite directions.</td>
+</tr>
+<tr>
+<td>Face Cull</td>
+<td>Stop vertices from projecting to a face on the target when facing towards or away.</td>
+</tr>
+<tr>
+<td>Invert Cull</td>
+<td>Invert the face cull mode.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="nearest-surface-point">Nearest Surface Point</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/nearest-surface-point.png" alt="Nearest Surface Point" loading="lazy"></figure>
+<p>Target the nearest surface point.</p>
+<h4 id="snap-mode">Snap Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/snap-mode.png" alt="Snap Mode" loading="lazy"></figure>
+<h4 id="align-to-normal">Align to Normal</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-constraints-properties-tab/align-to-normal.png" alt="Align to Normal" loading="lazy"></figure>
+<p>Align a specified axis to the surface normal.</p>
+<h4 id="influence-15">Influence</h4>
+<p>The influence level of this constraint.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-phase345/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fobject-constraints-properties-tab.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-phase345/docs2/content/editors/properties/object-constraints-properties-tab.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#object-constraints">Object Constraints</a><a class="h2" href="#general-functionality">General functionality</a><a class="h3" href="#add">Add</a><a class="h3" href="#type-to-search">Type to Search…</a><a class="h3" href="#enable-disable">Enable / Disable</a><a class="h3" href="#apply">Apply</a><a class="h3" href="#dropdown-menu">Dropdown menu</a><a class="h3" href="#remove">Remove</a><a class="h3" href="#collapse-panel">Collapse panel</a><a class="h3" href="#reorder">Reorder</a><a class="h3" href="#animate-property">Animate Property</a><a class="h3" href="#object-specific-constraints">Object specific constraints</a><a class="h2" href="#motion-tracking-constraints">Motion Tracking Constraints</a><a class="h3" href="#camera-solver">Camera Solver</a><a class="h3" href="#follow-track">Follow Track</a><a class="h3" href="#object-solver">Object Solver</a><a class="h2" href="#transform-constraints">Transform Constraints</a><a class="h3" href="#copy-location">Copy Location</a><a class="h3" href="#copy-rotation">Copy Rotation</a><a class="h3" href="#copy-scale">Copy Scale</a><a class="h3" href="#copy-transforms">Copy Transforms</a><a class="h3" href="#limit-distance">Limit Distance</a><a class="h3" href="#limit-location">Limit Location</a><a class="h3" href="#limit-rotation">Limit Rotation</a><a class="h3" href="#order">Order</a><a class="h3" href="#limit-scale">Limit Scale</a><a class="h3" href="#maintain-volume">Maintain Volume</a><a class="h3" href="#transformation">Transformation</a><a class="h3" href="#transform-cache">Transform cache</a><a class="h2" href="#tracking-constraints">Tracking Constraints</a><a class="h3" href="#clamp-to">Clamp To</a><a class="h3" href="#damped-track">Damped Track</a><a class="h3" href="#locked-track">Locked Track</a><a class="h3" href="#stretch-to">Stretch To</a><a class="h3" href="#track-to">Track To</a><a class="h2" href="#relationship-constraints">Relationship Constraints</a><a class="h3" href="#action">Action</a><a class="h3" href="#armature">Armature</a><a class="h3" href="#child-of">Child Of</a><a class="h3" href="#floor">Floor</a><a class="h3" href="#follow-path">Follow Path</a><a class="h3" href="#geometry-attribute">Geometry Attribute</a><a class="h3" href="#pivot">Pivot</a><a class="h3" href="#shrinkwrap">Shrinkwrap</a></aside></div></body></html>

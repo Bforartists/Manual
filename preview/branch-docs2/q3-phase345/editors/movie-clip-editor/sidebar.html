@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sidebar · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/q3-phase345 · <code>docs2/q3-phase345</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<a href="../../interface/windows.html">Windows</a>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/header.html">Header</a>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../properties/render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../properties/output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a class="is-current" style="padding-left:1.5rem" href="sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../properties/view-layer-properties-tab.html">View Layer</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../graph-editor/channel-list.html">Channel List</a>
+<a href="../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../properties/scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../properties/world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="../properties/collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="../properties/object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="../properties/modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<a style="padding-left:1.5rem" href="../properties/visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="../properties/particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<a style="padding-left:1.5rem" href="../properties/physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../properties/object-data-properties-tab.html">Object Data</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../properties/object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../properties/bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="../properties/bone-constraint-properties.html">Bone Constraints</a>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="../properties/material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../properties/texture-properties-tab.html">Texture</a>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="../properties/strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="../properties/strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../shader-editor.html">Shader Editor</a>
+<a href="../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../graph-editor.html">Graph Editor</a>
+<a href="../drivers-editor.html">Drivers Editor</a>
+<a href="../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<a href="../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/volume-object.html">Volume Object</a>
+<span>File browser</span>
+<span>Asset Browser</span>
+<a href="../spreadsheet.html">Spreadsheet</a>
+<a href="../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<a href="../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../advanced/troubleshooting.html">Troubleshooting</a>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../appendix/manual-update-history.html">Documentation History</a>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Movie Clip Editor › Sidebar</div><h1 class="pv-title">Sidebar</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 13 min read</span></div><article class="ui-doc-body"><h2 id="introduction">Introduction</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/introduction.png" alt="Introduction" loading="lazy"></figure>
+<p>The Movie Clip Editor is made of several areas. And it is made of several modes with different editor types.</p>
+<p>At the right side you will find the sidebar in Tracking Mode with Clip view. And in Masking mode. In the sidebar you will find further options and settings for the Movie Clip Editor and its tools.</p>
+<h2 id="right-click-menus">Right Click menus</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/right-click-menus.png" alt="Right Click menus" loading="lazy"></figure>
+<p>You will open the usual right click menus when clicking with the right mouse at elements in the sidebar. Its content is in big parts self explaining.</p>
+<p>The right click menus are explained in the chapter 6 Editors Introduction.</p>
+<h1 id="footage-tab">Footage Tab</h1>
+<h3 id="preface">Preface</h3>
+<p>Note that the correct mode is Tracking Mode in Clip View. In Graph and Dopesheet View there is no sidebar.</p>
+<p>Note also that some panels exists in both modes, tracking and masking. They have sometimes different content though.</p>
+<h3 id="footage-tab-metadata-panel">Footage Tab - Metadata Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/footage-tab-metadata-panel.png" alt="Footage Tab - Metadata Panel" loading="lazy"><figcaption>Footage Tab - Metadata Panel</figcaption></figure>
+<p>Displays the metadata of the footage if available. The panel stays empty if there is none.</p>
+<h3 id="footage-tab-proxy-time-code-panel">Footage Tab - Proxy/Time code Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/footage-tab-proxy-time-code-panel.png" alt="Footage Tab - Proxy/Time code Panel" loading="lazy"><figcaption>Footage Tab - Proxy/Time code Panel</figcaption></figure>
+<p>This content shows in Tracking Mode and Masking mode.</p>
+<p>A proxy is a smaller replacement image for the main image. Think of it as a thumbnail. The creation may take some time. But once done, all other calculations happens much faster. So it can make sense to use proxies for bigger footage.</p>
+<p>Make sure to disable the Proxy images before doing the final render!</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Proxy / Timecode</td>
+<td>Use Proxy / Timecode for this clip.</td>
+</tr>
+<tr>
+<td>Build Original</td>
+<td>Define the resolution of the proxy images.</td>
+</tr>
+<tr>
+<td>Build Undistorted</td>
+<td>Builds the proxy images from the undistorted original images for the sizes set above.</td>
+</tr>
+<tr>
+<td>Quality</td>
+<td>Defines the quality of the JPEG images used for proxies.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="proxy-custom-directory">Proxy Custom Directory</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/proxy-custom-directory.png" alt="Proxy Custom Directory" loading="lazy"></figure>
+<p>By default, all generated proxy images are storing to the <em>&lt;path of original footage&gt;/BL_proxy/&lt;clip name&gt;</em> folder. Define a custom directory.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Build Proxy / Time code</td>
+<td>(Re)creates the proxy images and the time code.</td>
+</tr>
+<tr>
+<td>Delete Proxy</td>
+<td>Deletes the proxy images and the time code.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="time-code-index">Time code Index</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/time-code-index.png" alt="Time code Index" loading="lazy"></figure>
+<p>When you are working with footage directly copied from a camera without pre-processing it, then there might be a bunch of artifacts. In this case the calculation can give errant result. One way to avoid this is to use the Proxy / Time code option. Another method would be to use a external tool like Mencoder to repair the file header and insert correct keyframes.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Record Run is recommended for most needs. Buf when the clip’s file is totally damaged, <em>Record Run No Gaps</em> will be the only chance of getting acceptable result.</p></div>
+<h4 id="proxy-size">Proxy Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/proxy-size.png" alt="Proxy Size" loading="lazy"></figure>
+<p>This setting defines which proxy image resolution is used for display in the viewport. If there is no generated proxies, render size is set to “No proxy, full render”.</p>
+<h3 id="footage-tab-footage-settings-panel">Footage Tab - Footage Settings Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/footage-tab-footage-settings-panel.png" alt="Footage Tab - Footage Settings Panel" loading="lazy"><figcaption>Footage Tab - Footage Settings Panel</figcaption></figure>
+<p>This content shows in Tracking Mode and Masking mode.</p>
+<p>The panel contains some footage related settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File Path</td>
+<td>The file path for the currently loaded and active video. Here you can also load another video, or refresh the video.</td>
+</tr>
+<tr>
+<td>Start Frame</td>
+<td>The start frame for the currently loaded and active video.</td>
+</tr>
+<tr>
+<td>Frame Offset</td>
+<td>Define a frame offset.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="color-space">Color Space</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/color-space.png" alt="Color Space" loading="lazy"></figure>
+<p>The color space for the currently loaded and active video.</p>
+<h4 id="footage-information-string">Footage Information string</h4>
+<p>Here you will find some information about the footage. Size, color mode, fps, current position ...</p>
+<h3 id="footage-tab-animation-panel">Footage Tab - Animation Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/footage-tab-animation-panel.png" alt="Footage Tab - Animation Panel" loading="lazy"><figcaption>Footage Tab - Animation Panel</figcaption></figure>
+<p>Load am action clip with animation. You need to generate it first.</p>
+<h1 id="track-tab">Track Tab</h1>
+<h3 id="preface-2">Preface</h3>
+<p>Note that the correct mode is Tracking Mode in Clip View. In Graph and Dopesheet View there is no sidebar.</p>
+<p>Note also that most panels just shows in tracking mode, and not in masking mode.</p>
+<h3 id="track-tab-track-panel">Track Tab - Track Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-track-panel.png" alt="Track Tab - Track Panel" loading="lazy"><figcaption>Track Tab - Track Panel</figcaption></figure>
+<p>Marker settings for the currently selected marker.</p>
+<h4 id="edit-box">Edit Box</h4>
+<p>Read and edit the name of the currently selected marker.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enable</td>
+<td>Enable the currently selected marker.</td>
+</tr>
+<tr>
+<td>Lock</td>
+<td>Lock the currently selected marker.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="track-scope">Track Scope</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-scope.png" alt="Track Scope" loading="lazy"></figure>
+<p>This is a preview image and fine tune window for the currently selected marker. The fade cross stays always in the center, but you can move the image with the left mouse. This automatically records the changed position, and inserts a keyframe at the current position if necessary.</p>
+<p>You can pull it vertically bigger by pulling at the handler below the image. And horizontally bigger by pulling out the properties sidebar.</p>
+<p>If an anchor is used (the position in the image which is tracking is different from the position which is used for parenting), a preview widget will display the area around the anchor position.</p>
+<h4 id="color-settings">Color Settings</h4>
+<h5 id="r-g-b">R, G, B</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/r-g-b.png" alt="R, G, B" loading="lazy"></figure>
+<p>Use red, green and blue color in the preview image.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B/W</td>
+<td>Use a greyscale preview image.</td>
+</tr>
+<tr>
+<td>Alpha</td>
+<td>Use existing alpha channel for preview image.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weight</td>
+<td>The influence of this track to the final solution. Altering the weights of problem tracking markers can correct or greatly reduce undesirable jumps. This parameter can be animated.</td>
+</tr>
+<tr>
+<td>Stab Weight</td>
+<td>Stabilization weight. The influence of this track on 2D stabilization.</td>
+</tr>
+<tr>
+<td>Average Error</td>
+<td>The average error of this marker.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="custom-color">Custom Color</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/custom-color.png" alt="Custom Color" loading="lazy"></figure>
+<p>Give the markers different colors. This also affects the list of markers in Dope sheet view.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/custom-color-2.png" alt="Custom Color" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/custom-color-3.png" alt="Custom Color" loading="lazy"></figure>
+<h5 id="color-preset">Color Preset</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/color-preset.png" alt="Color Preset" loading="lazy"></figure>
+<p>A dropdown box to choose between some predefined colors.</p>
+<h6 id="copy-color">Copy Color</h6>
+<p>Copy the color of the currently chosen preset.</p>
+<h5 id="color">Color</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/color.png" alt="Color" loading="lazy"></figure>
+<p>When you tick custom color then a color field will appear below. It displays the current custom color, and allows you to change the color by clicking at it. A color picker will appear.</p>
+<h3 id="track-tab-objects-panel">Track tab - Objects Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-objects-panel.png" alt="Track tab - Objects Panel" loading="lazy"><figcaption>Track tab - Objects Panel</figcaption></figure>
+<p>This content shows in Tracking Mode and Masking mode.</p>
+<p>A list of the tracked objects. Usually the camera. But you can track every other object too.</p>
+<h4 id="add-remove-tracking-object">Add, Remove Tracking Object</h4>
+<p>The plus and minus buttons at the right allows you to add new objects to the list, or to remove existing objects from the list.</p>
+<h4 id="search-field">Search Field</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/search-field.png" alt="Search Field" loading="lazy"></figure>
+<p>The list field contains a hidden search field. Click at the little + button down left to reveal it.</p>
+<h3 id="track-tab-plane-track-panel">Track tab - Plane Track Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-plane-track-panel.png" alt="Track tab - Plane Track Panel" loading="lazy"><figcaption>Track tab - Plane Track Panel</figcaption></figure>
+<p>This content is just active and visible when you have a Plane track in your footage.</p>
+<p>See also in the Tool shelf in the Solve tab in the Plane Track panel.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>The name of the Plane track.</td>
+</tr>
+<tr>
+<td>Auto Keyframe</td>
+<td>Use Auto Keyframe when moving plane track corners.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="image-prop">Image prop</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/image-prop.png" alt="Image prop" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image browser</td>
+<td>See and load images or movies that you want to display inside of the Plane track. Note that this image needs to exist already so that it gets displayed in the list. As a image node for example.</td>
+</tr>
+<tr>
+<td>Edit Box</td>
+<td>The name of the current active image or movie. Click at it to change the name.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="fake-user">Fake User</h5>
+<p>Wit this button you assign a fake user to this selected mask. Masks gets created with a fake user already. Means when you save the scene and reopen it, then this mask will still be there.</p>
+<p>Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behaviour. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New Image</td>
+<td>Calls a file browser to choose a image or movie.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes the current active image or movie. It is still in the Image browser though. To delete it completely you can use the Purge command in the File menu in the Cleanup submenu. See also Fake User.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="opacity">Opacity</h4>
+<p>The opacity of the image or movie.</p>
+<h3 id="track-tab-tracking-settings-panel">Track tab - Tracking Settings Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-tracking-settings-panel.png" alt="Track tab - Tracking Settings Panel" loading="lazy"><figcaption>Track tab - Tracking Settings Panel</figcaption></figure>
+<p>This content is visible when you have at least one of the markers selected.</p>
+<h4 id="motion-model">Motion Model</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/motion-model.png" alt="Motion Model" loading="lazy"></figure>
+<p>Choose the motion model for the marker.</p>
+<h4 id="match">Match</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/match.png" alt="Match" loading="lazy"></figure>
+<p>Choose the pattern match method.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prepass</td>
+<td>Use a brute-force translation only pre-track before refinement.</td>
+</tr>
+<tr>
+<td>Normalize</td>
+<td>Normalize light intensities while tracking.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tracking-options-extras">Tracking Options Extras</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/tracking-options-extras.png" alt="Tracking Options Extras" loading="lazy"></figure>
+<p>A sub menu that contains some not so often used settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Correlation</td>
+<td>Default minimum value of correlation between matched pattern and reference that is still treated as successful tracking.</td>
+</tr>
+<tr>
+<td>Margin</td>
+<td>Default distance from image boundary at which markers stops tracking.</td>
+</tr>
+<tr>
+<td>Use Mask</td>
+<td>Use a Grease Pencil data block as a mask.</td>
+</tr>
+<tr>
+<td>Frames Limit</td>
+<td>In every tracking cycle the numbers of given frames are tracked.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="speed">Speed</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/speed.png" alt="Speed" loading="lazy"></figure>
+<p>A drop down box to choose the tracking speed. This is just a preview feature. The tracking quality is not affected.</p>
+<h3 id="track-tab-camera-panel">Track tab - Camera Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-camera-panel.png" alt="Track tab - Camera Panel" loading="lazy"><figcaption>Track tab - Camera Panel</figcaption></figure>
+<p>The settings for the camera with which you have recorded the footage movie. Every camera has some specific settings. And this needs to be calculated too to match the footage to the 3D content.</p>
+<h4 id="presets">Presets</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/presets.png" alt="Presets" loading="lazy"></figure>
+<p>A drop down box to choose between different camera presets. When your camera is not listed then you need to do the settings manually.</p>
+<h5 id="add-camera-preset">Add Camera Preset</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/add-camera-preset.png" alt="Add Camera Preset" loading="lazy"></figure>
+<p>This is at the end of the list. Add a new preset, and give it a name. To remove the preset click at the minus sign besides the preset in the list</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sensor Width</td>
+<td>The width of the CCD Sensor in your used camera. This value can be found in the camera specifications.</td>
+</tr>
+<tr>
+<td>Pixel Aspect</td>
+<td>The Pixel Aspect ratio of the CCD Sensor in your used camera. This value can be found in the camera specifications. This value can also be guessed. For example, when the footage should be 1920×1080, but the images themselves are 1280×1080, then the pixel aspect is: 1920 / 1280 = 1.5.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="track-tab-camera-panel-lens-subpanel">Track tab - Camera Panel - Lens Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-camera-panel-lens-subpanel.png" alt="Track tab - Camera Panel - Lens Subpanel" loading="lazy"><figcaption>Track tab - Camera Panel - Lens Subpanel</figcaption></figure>
+<p>This panel belongs to the Camera panel above. Type in your lens values from the camera with which you have recorded your footage movie.</p>
+<h4 id="focal-length">Focal length</h4>
+<p>The focal length units with which the movie was shot. You can choose between millimeter and pixel.</p>
+<h4 id="units">Units</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/units.png" alt="Units" loading="lazy"></figure>
+<p>The units to use for the camera focal length.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Optical center</td>
+<td>The optical center. Usually in the middle of the movie. But some cameras also have an offset here. In most cases it is equal to the image center, but it can be different in some special cases. Check camera/lens specifications in such cases. To set the optical center to the center of image, there is a <strong>Enter</strong> button below the sliders.</td>
+</tr>
+<tr>
+<td>Set Center</td>
+<td>Center the optical center.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lens-distortion">Lens Distortion</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/lens-distortion.png" alt="Lens Distortion" loading="lazy"></figure>
+<p>The lens distortion of your camera. You can choose between two distortion models. Polynomial and Divisions.</p>
+<p>Basically, just tweak K1 until solving is most accurate for the known focal length (but also take grid and grease pencil into account to prevent “impossible” distortion).</p>
+<p>The brown model also provides P1 and P2 values.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/lens-distortion-2.png" alt="Lens Distortion" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/lens-distortion-3.png" alt="Lens Distortion" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/lens-distortion-4.png" alt="Lens Distortion" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/lens-distortion-5.png" alt="Lens Distortion" loading="lazy"></figure>
+<h3 id="track-tab-marker-options-panel">Track tab - Marker Options Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-marker-options-panel.png" alt="Track tab - Marker Options Panel" loading="lazy"><figcaption>Track tab - Marker Options Panel</figcaption></figure>
+<p>The Marker panel contains the settings for the selected marker(s). Here you can also enable or disable the marker.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enabled</td>
+<td>Enable the selected marker(s).</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>The position of the selected marker(s) in pixel. Zero is down left.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="offset">Offset</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/offset.png" alt="Offset" loading="lazy"></figure>
+<p>You can give the marker handler an offset. So that it gets displayed besides the marker.</p>
+<h4 id="pattern-area">Pattern Area</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/pattern-area.png" alt="Pattern Area" loading="lazy"></figure>
+<p>The handler size.</p>
+<h4 id="search-area">Search Area</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/track-tab/search-area.png" alt="Search Area" loading="lazy"></figure>
+<p>The size and position of the search area for this marker for tracking.</p>
+<p>The search area can be turned on in the Clip Display options in the header up right.</p>
+<h1 id="tracking-mode-stabilization-tab">Tracking Mode › Stabilization Tab</h1>
+<h3 id="tracking-mode-2d-stabilization-panel">Tracking Mode - 2D Stabilization Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/tracking-mode-2d-stabilization-panel.png" alt="Tracking Mode - 2D Stabilization Panel" loading="lazy"><figcaption>Tracking Mode - 2D Stabilization Panel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/tracking-mode-2d-stabilization-panel-2.png" alt="Tracking Mode - 2D Stabilization Panel" loading="lazy"><figcaption>Tracking Mode - 2D Stabilization Panel</figcaption></figure>
+<p>The purpose of 2D Stabilization is to smooth out jerky camera handling on existing real world footage. To activate the 2D stabilizer, you need to set the toggle in the panel, and additionally you need to enable <em>Show Stable</em> in the Display panel. Then you’ll need to set up some tracking points to detect the image movements. And you need to set a proper starting point, the anchor frame.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/tracking-mode-2d-stabilization-panel-3.png" alt="Tracking Mode - 2D Stabilization Panel" loading="lazy"><figcaption>Tracking Mode - 2D Stabilization Panel</figcaption></figure>
+<h4 id="anchor-frame">Anchor Frame</h4>
+<p>The first frame of the stabilization.</p>
+<h4 id="rotation-scale">Rotation / Scale</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/rotation-scale.png" alt="Rotation / Scale" loading="lazy"></figure>
+<p>Normally you just stabilize the position. Here you can stabilize rotation and scale too. Note that you can't activate scale independently here. It appears when you activate Rotation.</p>
+<h4 id="tracks-for-location">Tracks for Location</h4>
+<p>The list of markers that gets used for location stabilization.</p>
+<p>With the plus and minus button at the right you can add selected markers, or remove the markers from the list.</p>
+<h4 id="tracks-for-rotation-scale">Tracks for Rotation/Scale</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/tracks-for-rotation-scale.png" alt="Tracks for Rotation/Scale" loading="lazy"></figure>
+<p>The list of markers that gets used for rotation/scale stabilization.</p>
+<p>With the plus and minus button at the right you can add selected markers, or remove the markers from the list.</p>
+<p>This list is just visible when you have at least Rotation activated.</p>
+<h4 id="autoscale">Autoscale</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/autoscale.png" alt="Autoscale" loading="lazy"></figure>
+<p>The stabilization will lead to areas where the movie doesn't show at the canvas anymore. Autoscale scales the content so that the whole canvas is covered again.</p>
+<h5 id="max">Max</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/max.png" alt="Max" loading="lazy"></figure>
+<p>The maximum value for Autoscale. This slider appears when you activate Autoscale.</p>
+<h4 id="expected-position">Expected Position</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X / Y</td>
+<td>The position of the movie at the canvas.</td>
+</tr>
+<tr>
+<td>Expected Rotation</td>
+<td>Rotate the movie at the canvas manually.</td>
+</tr>
+<tr>
+<td>Expected Scale</td>
+<td>Scale the movie at the canvas manually. Note that this slider is not showing when you have Autoscale activated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="influence">Influence</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/influence.png" alt="Influence" loading="lazy"></figure>
+<p>The influence of stabilization algorithm. You can independently adjust location, rotation and scale. When you have rotation off, then the sliders for rotation influence and scale influence are not showing.</p>
+<h4 id="interpolate">Interpolate</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/interpolate.png" alt="Interpolate" loading="lazy"></figure>
+<p>Adjust the interpolation mode for images. For rotation and scale the images needs to be recalculated.</p>
+<h1 id="tracking-mode-view-tab">Tracking Mode › View Tab</h1>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-view-tab/tracking-mode-view-tab.png" alt="Tracking Mode - View tab" loading="lazy"><figcaption>Tracking Mode - View tab</figcaption></figure>
+<p>Just shows in Mask mode. Tracking has no 2D cursor.</p>
+<p>This panel shows the location of the 2d cursor, based at the lower left corner of the footage image. The edit boxes also allows you to set the cursor position by numeric values.</p>
+<h3 id="preface-3">Preface</h3>
+<p>Note that the correct mode is Tracking Mode in Clip View. In Graph and Dope sheet View there is no sidebar.</p>
+<p>Note also that some panels exists in both modes, tracking and masking.</p>
+<h3 id="annotations-panel">Annotations Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-view-tab/annotations-panel.png" alt="Annotations Panel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-view-tab/annotations-panel-2.png" alt="Annotations Panel" loading="lazy"></figure>
+<p>The Annotations panel is the place to manage the Annotation layers and materials.</p>
+<p>When you don't have drawn an annotation yet then the panel just contains a New button.</p>
+<h4 id="clip-track">Clip / Track</h4>
+<p>Where the Grease Pencil comes from. From the movie Clip, or from a track.</p>
+<h4 id="annotations-prop">Annotations prop</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-view-tab/annotations-prop.png" alt="Annotations prop" loading="lazy"></figure>
+<p>Add, remove and rename new annotations.</p>
+<h5 id="drop-down-box">Drop down box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-view-tab/drop-down-box.png" alt="Drop down box" loading="lazy"></figure>
+<p>A list of the available annotation layers.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Box</td>
+<td>The name of the current annotation. You can rename the annotation to your needs here.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</td>
+</tr>
+<tr>
+<td>Add Annotation</td>
+<td>Add a new annotation.</td>
+</tr>
+<tr>
+<td>Delete Annotation</td>
+<td>Delete the annotation.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="list-of-annotation-strokes">List of Annotation Strokes</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-view-tab/list-of-annotation-strokes.png" alt="List of Annotation Strokes" loading="lazy"><figcaption>List of Annotation Strokes</figcaption></figure>
+<p>A list of the Annotation layers for the current Annotation. Every layer can have an own color.</p>
+<p>At the right side you find buttons to sort them and to add and remove new Annotation layers.</p>
+<p>You can change the color by clicking at the color field. A color dialog will pop up. You can rename annotation layers by double clicking at it.</p>
+<p>The eye icon allows you to make it invisible And it has a search field.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thickness</td>
+<td>The thickness of the annotation stroke.</td>
+</tr>
+<tr>
+<td>Frame Locked/Unlocked</td>
+<td>Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. · <strong>Delete Active Frame</strong>: This feature is active when there is an animation. Delete the active frame from the active annotations layer.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-phase345/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fmovie-clip-editor%2Fsidebar%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-phase345/docs2/content/editors/movie-clip-editor/sidebar/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#introduction">Introduction</a><a class="h2" href="#right-click-menus">Right Click menus</a><a class="h3" href="#preface">Preface</a><a class="h3" href="#footage-tab-metadata-panel">Footage Tab - Metadata Panel</a><a class="h3" href="#footage-tab-proxy-time-code-panel">Footage Tab - Proxy/Time code Panel</a><a class="h3" href="#footage-tab-footage-settings-panel">Footage Tab - Footage Settings Panel</a><a class="h3" href="#footage-tab-animation-panel">Footage Tab - Animation Panel</a><a class="h3" href="#preface-2">Preface</a><a class="h3" href="#track-tab-track-panel">Track Tab - Track Panel</a><a class="h3" href="#track-tab-objects-panel">Track tab - Objects Panel</a><a class="h3" href="#track-tab-plane-track-panel">Track tab - Plane Track Panel</a><a class="h3" href="#track-tab-tracking-settings-panel">Track tab - Tracking Settings Panel</a><a class="h3" href="#track-tab-camera-panel">Track tab - Camera Panel</a><a class="h3" href="#track-tab-camera-panel-lens-subpanel">Track tab - Camera Panel - Lens Subpanel</a><a class="h3" href="#track-tab-marker-options-panel">Track tab - Marker Options Panel</a><a class="h3" href="#tracking-mode-2d-stabilization-panel">Tracking Mode - 2D Stabilization Panel</a><a class="h3" href="#preface-3">Preface</a><a class="h3" href="#annotations-panel">Annotations Panel</a></aside></div></body></html>

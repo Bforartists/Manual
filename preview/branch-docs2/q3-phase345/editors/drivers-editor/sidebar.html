@@ -1,0 +1,1206 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sidebar · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/q3-phase345 · <code>docs2/q3-phase345</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<a href="../../interface/windows.html">Windows</a>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/header.html">Header</a>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../properties/render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../properties/output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a class="is-current" style="padding-left:1.5rem" href="sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../properties/view-layer-properties-tab.html">View Layer</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../graph-editor/channel-list.html">Channel List</a>
+<a href="../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../properties/scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../properties/world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="../properties/collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="../properties/object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="../properties/modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<a style="padding-left:1.5rem" href="../properties/visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="../properties/particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<a style="padding-left:1.5rem" href="../properties/physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../properties/object-data-properties-tab.html">Object Data</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../properties/object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../properties/bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="../properties/bone-constraint-properties.html">Bone Constraints</a>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="../properties/material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../properties/texture-properties-tab.html">Texture</a>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="../properties/strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="../properties/strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../shader-editor.html">Shader Editor</a>
+<a href="../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../graph-editor.html">Graph Editor</a>
+<a href="../drivers-editor.html">Drivers Editor</a>
+<a href="../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<a href="../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/volume-object.html">Volume Object</a>
+<span>File browser</span>
+<span>Asset Browser</span>
+<a href="../spreadsheet.html">Spreadsheet</a>
+<a href="../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<a href="../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../advanced/troubleshooting.html">Troubleshooting</a>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../appendix/manual-update-history.html">Documentation History</a>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Drivers Editor › Sidebar</div><h1 class="pv-title">Sidebar</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 14 min read</span></div><article class="ui-doc-body"><p>The pages of this part are listed in the sidebar under <em>Sidebar</em>.</p>
+<h1 id="f-curve-tab">F-Curve Tab</h1>
+<h3 id="f-curve-tab-active-f-curve-panel">F-Curve Tab - Active F-Curve Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/f-curve-tab/f-curve-tab-active-f-curve-panel.png" alt="F-Curve Tab - Active F-Curve Panel" loading="lazy"><figcaption>F-Curve Tab - Active F-Curve Panel</figcaption></figure>
+<p>This panel displays the properties for the active F-Curve.</p>
+<p>Note that you need to have a channel selected to reveal the tabs.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Channel Name</td>
+<td>The name of the currently active F-Curve channel.</td>
+</tr>
+<tr>
+<td>RNA Path</td>
+<td>RNA Path to property. This is a read only information.</td>
+</tr>
+<tr>
+<td>RNA Array Index</td>
+<td>The RNA Array Index to the specific property affected by the F-Curve if applicable. This is a read only information.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="display-color">Display Color</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/f-curve-tab/display-color.png" alt="Display Color" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/f-curve-tab/display-color-2.png" alt="Display Color" loading="lazy"></figure>
+<p>With what colors to display the curves. User defined allows you to choose a custom color for the curve. A color field appears. The other methods works random.</p>
+<h4 id="handle-smoothing">Handle Smoothing</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/f-curve-tab/handle-smoothing.png" alt="Handle Smoothing" loading="lazy"></figure>
+<p>Select the method to compute automatic Bezier Handles.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Only directly adjacent key values are used when computing the handles. Vector handles points directly at the adjacent keyframes.</td>
+</tr>
+<tr>
+<td>Continuous Acceleration</td>
+<td>Also keyframes behind the next or previous keyframe gets used for calculation. Which results in a smoother curve.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="f-curve-tab-active-keyframe-panel">F-Curve Tab - Active Keyframe Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/f-curve-tab/f-curve-tab-active-keyframe-panel.png" alt="F-Curve Tab - Active Keyframe Panel" loading="lazy"><figcaption>F-Curve Tab - Active Keyframe Panel</figcaption></figure>
+<h4 id="interpolation">Interpolation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/f-curve-tab/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>Set the interpolation type for this keyframe.</p>
+<h4 id="key-frame">Key Frame</h4>
+<p>The current position of this keyframe.</p>
+<h4 id="value">Value</h4>
+<p>The Y value of this keyframe.</p>
+<h5 id="left-handle-type-right-handle-type">Left Handle Type / Right Handle Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/f-curve-tab/left-handle-type-right-handle-type.png" alt="Left Handle Type / Right Handle Type" loading="lazy"><figcaption>Left Handle Type / Right Handle Type</figcaption></figure>
+<p>Set the handle type. The handles of a keyframe can be independent. Some constellations just works with some other constellations.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free</td>
+<td>Move and adjust the handles independently.</td>
+</tr>
+<tr>
+<td>Aligned</td>
+<td>With the left handler the right handler moves too.</td>
+</tr>
+<tr>
+<td>Vector</td>
+<td>Creates a curve with straight lines.</td>
+</tr>
+<tr>
+<td>Automatic</td>
+<td>Creates a smooth curve.</td>
+</tr>
+<tr>
+<td>Auto Clamped</td>
+<td>Creates a smooth curve that only changes the direction at other curve points. It is clamped to prevent overshoots in the curve shape.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame</td>
+<td>The current frame of this handle.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>The current Y position of this handle.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="drivers-tab">Drivers Tab</h1>
+<h3 id="driven-property-panel">Driven Property Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/driven-property-panel.png" alt="Driven Property Panel" loading="lazy"></figure>
+<p>This panel displays the driven property of the object. It is read only.</p>
+<p>Note that you need to have a channel selected to show the tabs.</p>
+<h3 id="driver-panel">Driver Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/driver-panel.png" alt="Driver Panel" loading="lazy"></figure>
+<p>The actual driver with all its settings.</p>
+<h4 id="type">Type</h4>
+<h5 id="built-in-functions">Built in functions</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/built-in-functions.png" alt="Built in functions" loading="lazy"></figure>
+<p>Average, Sum, Min and Max are Built-In functions. The driven property will have the value of the average, sum, lowest or highest values of the referenced driver variables. Remember that you can add more than one input variable. So when you for example use the X position of two cubes as the input, and the method Average, then the driven object will be located at the average X value of cube 1 and cube 2.</p>
+<p>When there is just one Input variable, then the driven object will be positioned at the value of the driver object.</p>
+<h5 id="scripted-expression">Scripted Expression</h5>
+<p>Allows you to use Python expressions that can refer to the driver variables by name. An expression allows you to use standard constants and math functions.</p>
+<h4 id="expression">Expression</h4>
+<p>A text field with the current expression. Not available with all variable types.</p>
+<h5 id="use-self">Use Self</h5>
+<p>The variable Self can be used for drivers to reference their own data. Example:</p>
+<p>self.location.x applied to the Y rotation property of the same object will make the object tumble when moving.</p>
+<p>Note that dependencies for properties accessed via self may not be fully tracked.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Input Variable</td>
+<td>Adds a new driver variable.</td>
+</tr>
+<tr>
+<td>Copy Driver variable</td>
+<td>Copies the driver variable.</td>
+</tr>
+<tr>
+<td>Paste Driver variable</td>
+<td>Pastes a copied driver variable.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="driver-variable-panel">Driver variable panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/driver-variable-panel.png" alt="Driver variable panel" loading="lazy"></figure>
+<h5 id="variable-type">Variable type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/variable-type.png" alt="Variable type" loading="lazy"></figure>
+<p>The type of variable to use.</p>
+<h6 id="single-property">Single Property</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/single-property.png" alt="Single Property" loading="lazy"></figure>
+<p>Allows you to retrieve a single value of a RNA Property, specified by a data block reference ( the source object) and a path string ( the property of this source object).</p>
+<h6 id="prop">Prop</h6>
+<p><strong>Type</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/type.png" alt="Type" loading="lazy"></figure>
+<p>Define the input type of the object. You can retrieve values from nearly every object type.</p>
+<p><strong>ID</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/id.png" alt="ID" loading="lazy"></figure>
+<p>The source object. This is also a drop down field where you can pick objects from the scene.</p>
+<h6 id="path">Path</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/path.png" alt="Path" loading="lazy"></figure>
+<p>The path string to use. This defines the property where you get the value from.</p>
+<p><strong>Setting up by hand</strong></p>
+<p>Have a look at the python tool tip in the property of the source object. The bpy.data string gives you a hint of the expression that you need.</p>
+<p>For example, if i want to use the Z location of the sphere as the driver value.</p>
+<p>The python string in the tool tip of the Z location property says</p>
+<p><code>bpy.data.objects[&quot;Sphere&quot;].location[2]</code></p>
+<p>The sphere is already chosen as the source object. Remains the part behind <code>objects[&quot;Sphere&quot;]</code> in the string.</p>
+<p><code>location[2]</code></p>
+<p>To use <code>location[2]</code> in the path will already work. But you can point directly to the single axis too. The tool tip uses an array for the axis. 0 for X, 1 for Y and 2 for Z. When you want to use the axis letters, then you need a dot between location and the axis letter. And so the other working string is:</p>
+<p>location.z</p>
+<p><strong>Setting up by Copy as New Driver</strong></p>
+<p>The easier way is to right click at the value that you want to use as the driver value. Here choose Copy as new Driver. In the target property choose Paste Driver. And this creates a driver with the correct values then that contains all relevant settings.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/setting-up-by-copy-as-new-driver.png" alt="Setting up by Copy as New Driver" loading="lazy"><figcaption>Setting up by Copy as New Driver</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/setting-up-by-copy-as-new-driver-2.png" alt="Setting up by Copy as New Driver" loading="lazy"><figcaption>Setting up by Copy as New Driver</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/setting-up-by-copy-as-new-driver-3.png" alt="Setting up by Copy as New Driver" loading="lazy"><figcaption>Setting up by Copy as New Driver</figcaption></figure>
+<h6 id="value-2">Value</h6>
+<p>The result of the diver variable. Read only.</p>
+<h6 id="transform-channel">Transform Channel</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/transform-channel.png" alt="Transform Channel" loading="lazy"></figure>
+<p>Uses the transform values of the source object.</p>
+<h6 id="type-2">Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/type-2.png" alt="Type" loading="lazy"></figure>
+<p>The transform type.</p>
+<h6 id="rotation-mode">Rotation Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/rotation-mode.png" alt="Rotation Mode" loading="lazy"></figure>
+<p>Just for Rotation transformations. The rotation mode.</p>
+<h6 id="transform-space">Transform space</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/transform-space.png" alt="Transform space" loading="lazy"></figure>
+<p>In which transform space the transformation should happen.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>World Space</td>
+<td>Transforms includes effect of parenting / restpose and constraints.</td>
+</tr>
+<tr>
+<td>Transform Space</td>
+<td>Transforms don't include effect of parenting / restpose and constraints.</td>
+</tr>
+<tr>
+<td>Local Space</td>
+<td>Transforms include constraints, but not effect of parenting / restpose.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="value-3">Value</h6>
+<p>The result of the diver variable. Read only.</p>
+<h6 id="rotational-difference">Rotational Difference</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/rotational-difference.png" alt="Rotational Difference" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/rotational-difference-2.png" alt="Rotational Difference" loading="lazy"></figure>
+<p>Use the angle between two bones. The parent bone acts as the second bone here.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object 1</td>
+<td>The source armature. · <strong>Bone Name</strong>: The source bone of this armature.</td>
+</tr>
+<tr>
+<td>Object 2</td>
+<td>The target object.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>The result of the diver variable. Read only.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="distance">Distance</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/distance.png" alt="Distance" loading="lazy"></figure>
+<p>The distance between two bones or objects is used for the driver.</p>
+<h6 id="object-1">Object 1</h6>
+<p>The source armature.</p>
+<p><strong>Bone Name</strong></p>
+<p>The source bone of this armature.</p>
+<h6 id="transform-space-2">Transform space</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/transform-space.png" alt="Transform space" loading="lazy"></figure>
+<p>In which transform space the transformation should happen.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>World Space</td>
+<td>Transforms includes effect of parenting / restpose and constraints.</td>
+</tr>
+<tr>
+<td>Transform Space</td>
+<td>Transforms don't include effect of parenting / restpose and constraints.</td>
+</tr>
+<tr>
+<td>Local Space</td>
+<td>Transforms include constraints, but not effect of parenting / restpose.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="object-2">Object 2</h6>
+<p>The target object.</p>
+<h6 id="transform-space-3">Transform space</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/transform-space.png" alt="Transform space" loading="lazy"></figure>
+<p>In which transform space the transformation should happen.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>World Space</td>
+<td>Transforms includes effect of parenting / restpose and constraints.</td>
+</tr>
+<tr>
+<td>Transform Space</td>
+<td>Transforms don't include effect of parenting / restpose and constraints.</td>
+</tr>
+<tr>
+<td>Local Space</td>
+<td>Transforms include constraints, but not effect of parenting / restpose.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="value-4">Value</h6>
+<p>The result of the diver variable. Read only.</p>
+<h5 id="variable-name">Variable name</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/variable-name.png" alt="Variable name" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/drivers-tab/variable-name-2.png" alt="Variable name" loading="lazy"></figure>
+<p>The name of the variable. This name of the variable is used for calculation in the expression. This variable can be renamed. Make sure to update the name of the variable in the expression then too.</p>
+<h5 id="delete-target-variable">Delete Target Variable</h5>
+<p>Removes the variable.</p>
+<h4 id="update-dependencies">Update Dependencies</h4>
+<p>Some changes may not update automatically. Update dependencies updates all the changes done to the drivers.</p>
+<h1 id="modifiers-tab">Modifiers Tab</h1>
+<h3 id="modifiers-tab-modifiers-panel">Modifiers Tab - Modifiers Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/modifiers-tab-modifiers-panel.png" alt="Modifiers Tab - Modifiers Panel" loading="lazy"><figcaption>Modifiers Tab - Modifiers Panel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/modifiers-tab-modifiers-panel-2.png" alt="Modifiers Tab - Modifiers Panel" loading="lazy"><figcaption>Modifiers Tab - Modifiers Panel</figcaption></figure>
+<p>F-Curve modifiers are similar to Object modifiers. They allow to add adjustable non destructive effects. And they can be layered on top of each other.</p>
+<p>Different to the Object modifiers you can't reorder this modifiers. You have to create it in the order that you need it.</p>
+<h4 id="add-modifier">Add Modifier</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/add-modifier.png" alt="Add Modifier" loading="lazy"></figure>
+<p>The list of modifiers. Choose by clicking.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy F-Curve Modifiers</td>
+<td>Copy the F-Curve Modifiers of the active F-Curve.</td>
+</tr>
+<tr>
+<td>Paste F-Curve Modifiers</td>
+<td>Paste copied F-Curve modifiers to the active F-Curve.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-add-f-curve-modifier">Last Operator Add F-Curve Modifier</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/last-operator-add-f-curve-modifier.png" alt="Last Operator Add F-Curve Modifier" loading="lazy"><figcaption>Last Operator Add F-Curve Modifier</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>A drop down list with the Type of modifier to add.</td>
+</tr>
+<tr>
+<td>Only Active</td>
+<td>Only add a modifier to the currently active curve.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modifier-header">Modifier header</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/modifier-header.png" alt="Modifier header" loading="lazy"></figure>
+<p>Every modifier is a panel. And every panel has a header area with some general UI elements.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Triangle button</td>
+<td>Every modifier panel can be expanded or collapsed by clicking at this triangle button.</td>
+</tr>
+<tr>
+<td>Active</td>
+<td>This is the panel that you currently edit. When you edit a panel while it is not set to the active one, then the changes will not be applied.</td>
+</tr>
+<tr>
+<td>Modifier name</td>
+<td>The name of the modifier. Read only.</td>
+</tr>
+<tr>
+<td>Muted</td>
+<td>Enable or disable this modifier.</td>
+</tr>
+<tr>
+<td>Delete F-Curve Modifier</td>
+<td>Delete this modifier.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="generator-modifier">Generator modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/generator-modifier.png" alt="Generator modifier" loading="lazy"></figure>
+<h4 id="polynomial-mode">Polynomial Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/polynomial-mode.png" alt="Polynomial Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/polynomial-mode-2.png" alt="Polynomial Mode" loading="lazy"></figure>
+<p>Use Expanded Polynominal or Factorized Polynominal algorithm. With these mathematical formulas you can create lines, parabolas, and other more complex curves by changing the values in the poly order field.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Additive</td>
+<td>Add on top of the existing curve instead of replacing the existing curve.</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>The hightes value of X for this polynominal.</td>
+</tr>
+<tr>
+<td>Coefficient</td>
+<td>Coefficient for X.</td>
+</tr>
+<tr>
+<td>x^1</td>
+<td>Coefficient for X.</td>
+</tr>
+<tr>
+<td>Use Influence</td>
+<td>Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · <strong>Influence</strong>: The influence factor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="restrict-frame-range">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>Blend In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="built-in-function-modifier">Built- in Function modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/built-in-function-modifier.png" alt="Built- in Function modifier" loading="lazy"><figcaption>Built- in Function modifier</figcaption></figure>
+<p>Generate a curve by built in functions.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/built-in-function-modifier-2.png" alt="Built- in Function modifier" loading="lazy"><figcaption>Built- in Function modifier</figcaption></figure>
+<h4 id="curve-type">Curve Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/curve-type.png" alt="Curve Type" loading="lazy"></figure>
+<p>The available wave forms for the curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Additive</td>
+<td>Add on top of the existing curve instead of replacing the existing curve.</td>
+</tr>
+<tr>
+<td>Amplitude</td>
+<td>The amplitude of the curve wave. Adjusts the Y scaling.</td>
+</tr>
+<tr>
+<td>Phase Multiplier</td>
+<td>A phase multiplier for the curve wave. Adjusts the X scaling.</td>
+</tr>
+<tr>
+<td>Phase Offset</td>
+<td>A phase offset for the curve wave. Adjusts the Y scaling.</td>
+</tr>
+<tr>
+<td>Value Offset</td>
+<td>A constant value offset for the whole curve. Adjusts the X scaling.</td>
+</tr>
+<tr>
+<td>Use Influence</td>
+<td>Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · <strong>Influence</strong>: The influence factor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="restrict-frame-range-2">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="envelope-modifier">Envelope modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/envelope-modifier.png" alt="Envelope modifier" loading="lazy"></figure>
+<p>The Envelope modifier allows you to modify the overall shape of the curve by control points.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/envelope-modifier-2.png" alt="Envelope modifier" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/envelope-modifier-3.png" alt="Envelope modifier" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Envelope</td>
+<td><strong>Reference Value</strong>: Set the Y value to center the envelope around. · <strong>Min</strong>: The lower distance from reference value for 1:1 default influence. · <strong>Max</strong>: The higher distance from reference value for 1:1 default influence.</td>
+</tr>
+<tr>
+<td>Add Control Point</td>
+<td>Add a control point. A control point has two sub points, a lower control point and a higher control point.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="use-influence">Use Influence</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/use-influence.png" alt="Use Influence" loading="lazy"></figure>
+<p>Temper the F-Curve Modifier effect by a default influence factor.</p>
+<p>Expanding the Use Influence sets it to active. It reveals a value slider then.</p>
+<h5 id="influence">Influence</h5>
+<p>The influence factor.</p>
+<h4 id="restrict-frame-range-3">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cycles-modifier">Cycles modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/cycles-modifier.png" alt="Cycles modifier" loading="lazy"></figure>
+<p>Add a cyclic motion to a curve that has two or more control points. The option can be set before or after the curve.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/cycles-modifier-2.png" alt="Cycles modifier" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/cycles-modifier-3.png" alt="Cycles modifier" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/cycles-modifier-4.png" alt="Cycles modifier" loading="lazy"></figure>
+<h4 id="trivially-cyclic-curves">Trivially Cyclic Curves</h4>
+<p>When the Cycle Mode for both ends is set to either Repeat Motion or Repeat with Offset, and no other options of the modifier are changed from their defaults, it defines a simple infinite cycle.</p>
+<p>This special case receives some additional support from other areas of Blender:</p>
+<p>Automatic Bezier handle placement is aware of the cycle and adjusts to achieve a smooth transition.</p>
+<p>The Cycle-Aware Keying option can be enabled to take the cycle into account when inserting new keyframes.</p>
+<h4 id="before-mode">Before Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/before-mode.png" alt="Before Mode" loading="lazy"></figure>
+<p>Set the cycle mode before the first keyframe.</p>
+<h5 id="count">Count</h5>
+<p>Maximum number of cycles to allow before first keyframes. A value of 0 means infinite.</p>
+<h4 id="after-mode">After Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/after-mode.png" alt="After Mode" loading="lazy"></figure>
+<p>Set the cycle mode after the first keyframe.</p>
+<h5 id="count-2">Count</h5>
+<p>Maximum number of cycles to allow after last keyframes. A value of 0 means infinite.</p>
+<h4 id="use-influence-2">Use Influence</h4>
+<p>Temper the F-Curve Modifier effect by a default influence factor.</p>
+<p>Expanding the Use Influence sets it to active. It reveals a value slider then.</p>
+<h5 id="influence-2">Influence</h5>
+<p>The influence factor.</p>
+<h4 id="restrict-frame-range-4">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="noise-modifier">Noise modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/noise-modifier.png" alt="Noise modifier" loading="lazy"></figure>
+<p>Adds noise to the curve.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/noise-modifier-2.png" alt="Noise modifier" loading="lazy"></figure>
+<h4 id="blend-type">Blend Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/blend-type.png" alt="Blend Type" loading="lazy"></figure>
+<p>How to blend the noise with the curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>The overall size of the noise. The bigger the value the less frequent the noise.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>Adjust the Y value of the noise.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Time offset of the noise.</td>
+</tr>
+<tr>
+<td>Phase</td>
+<td>The random seed for the noise.</td>
+</tr>
+<tr>
+<td>Depth</td>
+<td>How detailed the noise function is.</td>
+</tr>
+<tr>
+<td>Legacy Noise</td>
+<td>Use the legacy way of generating noise.</td>
+</tr>
+<tr>
+<td>Lacunarity</td>
+<td>Gap between successive frequencies. A value of 0 disables the feature.</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>Amount of high frequency details.</td>
+</tr>
+<tr>
+<td>Use Influence</td>
+<td>Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · <strong>Influence</strong>: The influence factor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="restrict-frame-range-5">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="limits-modifier">Limits modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/limits-modifier.png" alt="Limits modifier" loading="lazy"></figure>
+<p>Sets limits to the curve in specified x and y range values.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/limits-modifier-2.png" alt="Limits modifier" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minimum / Maximum X</td>
+<td>Cuts the curve at these minimum and maximum frame values.</td>
+</tr>
+<tr>
+<td>Minimum / Maximum Y</td>
+<td>Clamps the curve at these minimum and maximum values.</td>
+</tr>
+<tr>
+<td>Use Influence</td>
+<td>Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · <strong>Influence</strong>: The influence factor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="restrict-frame-range-6">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stepped-interpolation-modifier">Stepped Interpolation modifier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/stepped-interpolation-modifier.png" alt="Stepped Interpolation modifier" loading="lazy"></figure>
+<p>Adds steps to the curve by rounding the values.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/stepped-interpolation-modifier-2.png" alt="Stepped Interpolation modifier" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Step Size</td>
+<td>The number of frames to hold each frame</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>A number of offset frames before frames get held.</td>
+</tr>
+<tr>
+<td>Start Frame</td>
+<td>Restrict the modifier so that it just acts before its end frame.</td>
+</tr>
+<tr>
+<td>End Frame</td>
+<td>Restrict the modifier so that it just acts after its start frame.</td>
+</tr>
+<tr>
+<td>Use Influence</td>
+<td>Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · <strong>Influence</strong>: The influence factor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="restrict-frame-range-7">Restrict Frame Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/restrict-frame-range.png" alt="Restrict Frame Range" loading="lazy"></figure>
+<p>Expanding the Restrict Frame range sets it to active. It reveals some value slider then.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / End</td>
+<td>The start and end frame of the generated curve.</td>
+</tr>
+<tr>
+<td>In / Out</td>
+<td>Fade the curve in or out for chosen frame numbers.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="view-tab">View Tab</h1>
+<h3 id="show-cursor-panel">Show Cursor panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/driver-editor-sidebar-view-tab/show-cursor-panel.png" alt="Show Cursor panel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/driver-editor-sidebar-view-tab/show-cursor-panel-2.png" alt="Show Cursor panel" loading="lazy"></figure>
+<p>The green playhead at the top is the time cursor. The horizontal green line is called the cursor. Or ground line cursor. Together they are the 2d cursor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show Cursor checkbox</td>
+<td>Hides the green ground line cursor.</td>
+</tr>
+<tr>
+<td>Cursor X</td>
+<td>The frame position of the playhead cursor.</td>
+</tr>
+<tr>
+<td>Cursor Y</td>
+<td>The Y position of the ground line cursor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cursor-to-selection">Cursor to Selection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/drivers-editor/sidebar/driver-editor-sidebar-view-tab/cursor-to-selection.png" alt="Cursor to Selection" loading="lazy"></figure>
+<p>Sets both cursors to the center of the selection. This button also works when the ground line cursor is deactivated. In this case just the playhead cursor gets set to the center of the selection.</p>
+<h4 id="cursor-value-to-selection">Cursor Value to Selection</h4>
+<p>Place the cursor value on the average value of selected keyframes.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-phase345/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fdrivers-editor%2Fsidebar%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-phase345/docs2/content/editors/drivers-editor/sidebar/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h3" href="#f-curve-tab-active-f-curve-panel">F-Curve Tab - Active F-Curve Panel</a><a class="h3" href="#f-curve-tab-active-keyframe-panel">F-Curve Tab - Active Keyframe Panel</a><a class="h3" href="#driven-property-panel">Driven Property Panel</a><a class="h3" href="#driver-panel">Driver Panel</a><a class="h3" href="#modifiers-tab-modifiers-panel">Modifiers Tab - Modifiers Panel</a><a class="h3" href="#modifier-header">Modifier header</a><a class="h3" href="#generator-modifier">Generator modifier</a><a class="h3" href="#built-in-function-modifier">Built- in Function modifier</a><a class="h3" href="#envelope-modifier">Envelope modifier</a><a class="h3" href="#cycles-modifier">Cycles modifier</a><a class="h3" href="#noise-modifier">Noise modifier</a><a class="h3" href="#limits-modifier">Limits modifier</a><a class="h3" href="#stepped-interpolation-modifier">Stepped Interpolation modifier</a><a class="h3" href="#show-cursor-panel">Show Cursor panel</a></aside></div></body></html>

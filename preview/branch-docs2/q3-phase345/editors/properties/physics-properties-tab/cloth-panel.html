@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cloth panel · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/q3-phase345 · <code>docs2/q3-phase345</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<a href="../../../interface/windows.html">Windows</a>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/header.html">Header</a>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../view-layer-properties-tab.html">View Layer</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../../graph-editor/channel-list.html">Channel List</a>
+<a href="../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="../collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="../object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="../modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<a style="padding-left:1.5rem" href="../visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="../particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<a style="padding-left:1.5rem" href="../physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../object-data-properties-tab.html">Object Data</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="../bone-constraint-properties.html">Bone Constraints</a>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="../material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../texture-properties-tab.html">Texture</a>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="../strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="../strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../../dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<a href="../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../../text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<a href="../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="collision-panel.html">Collision panel</a>
+<a class="is-current" style="padding-left:2.5rem" href="cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/volume-object.html">Volume Object</a>
+<span>File browser</span>
+<span>Asset Browser</span>
+<a href="../../spreadsheet.html">Spreadsheet</a>
+<a href="../../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="../../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<a href="../../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../../advanced/troubleshooting.html">Troubleshooting</a>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/manual-update-history.html">Documentation History</a>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../../../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Physics Properties Tab › Cloth panel</div><h1 class="pv-title">Cloth panel</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 16 min read</span></div><article class="ui-doc-body"><h2 id="cloth-simulation">Cloth Simulation</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/cloth-simulation.png" alt="Cloth Simulation" loading="lazy"></figure>
+<p>Cloth simulation tries to simulate the look and behaviour of fabric. For example a flag in the wind. Or a shirt.</p>
+<p>Cloth simulation requires a mesh object. It can be closed or open. Beware of the backside of faces then. And for closed meshes you better use soft bodies.</p>
+<p>Once you add a cloth to a mesh a modifier gets created in the modifier properties tab. Here you can add other modifiers that may interact with the cloth simulation, like an SDS modifier. And order them in the proper way. It makes a difference if the SDS modifier is added before or after the cloth modifier.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/cloth-simulation-2.png" alt="Cloth Simulation" loading="lazy"></figure>
+<p>And you can apply the cloth modifier, which freezes the simulation at the current frame. But the cloth settings are just accessible from the physics tab.</p>
+<h3 id="workflow">Workflow</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/workflow.png" alt="Workflow" loading="lazy"></figure>
+<p>Add a cube.</p>
+<p>Add a grid plane. Move it up and scale it a bit bigger. So that it is above the cube.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/workflow-2.png" alt="Workflow" loading="lazy"></figure>
+<p>Add a collision physics to the cube. It is then set as a collider for the cloth simulation.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/workflow-3.png" alt="Workflow" loading="lazy"></figure>
+<p>Add a cloth physics to the grid plane.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/workflow-4.png" alt="Workflow" loading="lazy"></figure>
+<p>Add a subdivision surface modifier to the grid plane, and set it to simple.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/workflow-5.png" alt="Workflow" loading="lazy"></figure>
+<p>Now play the simulation. Playing it creates the simulation frames. Don't jump to frames. This will skip frames for the simulation.</p>
+<p>The cloth will fall down now, collide with the cube, and deform like a fabric.</p>
+<p>Adjust the cloth settings to your needs.</p>
+<h4 id="pinning">Pinning</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/pinning.png" alt="Pinning" loading="lazy"></figure>
+<p>Enter edit mode with the grid mesh. Grab one or more vertices. Add them to a vertex group. Don't forget to press Assign ...</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/pinning-2.png" alt="Pinning" loading="lazy"></figure>
+<p>In the Shape subpanel, choose the vertex group int the Pin Group.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/pinning-3.png" alt="Pinning" loading="lazy"></figure>
+<p>Switch to object mode. Play the animation again. You will notice that the two vertices in the vertex group are now pinned. And don't move down anymore.</p>
+<p>For a character you could now weight the pinned vertices to a bone. And the pinned vertices would move with the bone then.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> When animating or posing the character you must begin from the bind pose. Move the character to its initial pose over several frames so the physics engine can simulate the clothing moving. Very fast movements and teleport jumps can break the physics simulation.</p></div>
+<h2 id="cloth-panel">Cloth Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/cloth-panel.png" alt="Cloth Panel" loading="lazy"></figure>
+<h3 id="presets">Presets</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/presets.png" alt="Presets" loading="lazy"></figure>
+<p>Cloth presets.</p>
+<p>To add your own preset type in a name and click at the plus button behind the edit box. To remove a preset click at the minus button behind the preset.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quality Steps</td>
+<td>Set the number of simulation steps per frame. Higher values result in better quality, but is slower.</td>
+</tr>
+<tr>
+<td>Speed multiplier</td>
+<td>The cloth speed is multiplied by this value.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="physical-properties-subpanel">Physical Properties subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/physical-properties-subpanel.png" alt="Physical Properties subpanel" loading="lazy"></figure>
+<p>The physical settings for the cloth.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vertex Mass</td>
+<td>The mass of the cloth material.</td>
+</tr>
+<tr>
+<td>Air Viscosity</td>
+<td>Air has some thickness which slows falling things down.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bending-model">Bending Model</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/bending-model.png" alt="Bending Model" loading="lazy"></figure>
+<p>Some settings are just available in angular bending model. Some just in linear bending model.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angular</td>
+<td>Cloth model with angular bending springs.</td>
+</tr>
+<tr>
+<td>Linear</td>
+<td>Cloth model with linear bending springs (old).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stiffness-sub-subpanel">Stiffness sub subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/stiffness-sub-subpanel.png" alt="Stiffness sub subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/stiffness-sub-subpanel-2.png" alt="Stiffness sub subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tension</td>
+<td>Angular bending. How much the material resists stretching.</td>
+</tr>
+<tr>
+<td>Compression</td>
+<td>Angular Bending. How much the material resists compression.</td>
+</tr>
+<tr>
+<td>Structural</td>
+<td>Linear bending. Overall stiffness of the cloth.</td>
+</tr>
+<tr>
+<td>Shear</td>
+<td>How much the material resists shearing.</td>
+</tr>
+<tr>
+<td>Bending</td>
+<td>Wrinkle coefficient. Higher creates more large folds.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="damping-sub-subpanel">Damping sub subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/damping-sub-subpanel.png" alt="Damping sub subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/damping-sub-subpanel-2.png" alt="Damping sub subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tension</td>
+<td>Angular bending. Amount of damping in stretching behavior.</td>
+</tr>
+<tr>
+<td>Compression</td>
+<td>Angular bending. Amount of damping in compression behavior.</td>
+</tr>
+<tr>
+<td>Structural</td>
+<td>Linear bending. Amount of damping in stretching behavior (only in linear bending model).</td>
+</tr>
+<tr>
+<td>Shear</td>
+<td>Amount of damping in shearing behavior.</td>
+</tr>
+<tr>
+<td>Bending</td>
+<td>Amount of damping in bending behavior.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="internal-springs-sub-subpanel">Internal Springs sub subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/internal-springs-sub-subpanel.png" alt="Internal Springs sub subpanel" loading="lazy"><figcaption>Internal Springs sub subpanel</figcaption></figure>
+<p>Cloth physics are simulated through Springs connecting vertices on the surface of a mesh. But these springs only interact on the surface and only apply to 2D surfaces. 3D or Internal Springs can be used to make a mesh behave similarly to a Soft Body. Internal springs can be enabled by toggling the checkbox in the Internal Springs panel header.</p>
+<p>You need to use the bending model Angular.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Max Spring Creation Length</td>
+<td>The maximum length an internal spring can have during creation. If the distance between internal points is greater than this, no internal spring will be created between these points. A length of zero means that there is no length limit.</td>
+</tr>
+<tr>
+<td>Max Creation Diversion</td>
+<td>The maximum angle that is allowed to use to connect the internal points can diverge from the vertex normal.</td>
+</tr>
+<tr>
+<td>Check Surface Normals</td>
+<td>Requires the points the internal springs connect to have opposite normal directions.</td>
+</tr>
+<tr>
+<td>Tension</td>
+<td>How much the material resists stretching.</td>
+</tr>
+<tr>
+<td>Compression</td>
+<td>How much the material resists compression.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>The Tension and Compression of internal springs can be controlled via a Vertex Group to specify which the portions of the mesh have internal springs or the spring strength.</td>
+</tr>
+<tr>
+<td>Max Tension</td>
+<td>Maximum tension stiffness value.</td>
+</tr>
+<tr>
+<td>Max Compression</td>
+<td>Maximum Compression stiffness value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pressure-sub-subpanel">Pressure sub subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/pressure-sub-subpanel.png" alt="Pressure sub subpanel" loading="lazy"></figure>
+<p>Cloth pressure allows the simulation of soft-shelled objects such as balloons or balls that are filled with some sort of fluid. Cloth pressure can be enabled by toggling the checkbox in the Pressure panel header.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Non-manifold meshes will work with cloth pressure. But pressure will escape out of the mesh holes and cause drifting or propulsion forces. One way to get around this is by using the Vertex Group to exclude the non-manifold portions of the mesh.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pressure</td>
+<td>The uniform pressure that is constantly applied to the mesh. This value can be negative to simulate implosions or any other case where an object has outside pressure pushing inwards.</td>
+</tr>
+<tr>
+<td>Custom Volume</td>
+<td>Use the Target Volume parameter as the initial volume for the cloth. This avoids having to use the Pressure to first inflate the object.</td>
+</tr>
+<tr>
+<td>Target Volume</td>
+<td>The mesh volume where the inner/outer pressure will be the same. If set to zero the volume will not contribute to the total pressure.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Scalar control over the overall pressure.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Cloth pressure can be controlled via a Vertex Group to specify which the portions of the mesh to apply pressure. Zero weight means no pressure while a weight of one means full pressure. Note, faces with a vertex that has zero weight will be excluded from the Target Volume calculation.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cache-subpanel">Cache subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/cache-subpanel.png" alt="Cache subpanel" loading="lazy"></figure>
+<p>The cloth simulation can be cached in memory or stored on a drive. This improves real-time response and avoids unnecessary recalculation of particles. But creates also big files.</p>
+<p>The cloth system uses a unified system for caching and baking (together with Soft Body and Emitter particle).</p>
+<div class="ui-doc-callout is-important"><p><strong>Important:</strong> The file needs to be saved after baking. When the file is not saved then some options are not available.
+<strong>Important:</strong> The cloth settings becomes unavailable once the particle cache is baked. You need to remove the bake when you want to change the settings.</p></div>
+<h3 id="hints">Hints</h3>
+<p>The simulation is only calculated for positive frames in between the Start and End frames of the Cache panel, whether you bake or not. So if you want a simulation that is longer than the default frame range, you have to change the End frame.</p>
+<p>When an animation is played, each physics system writes each frame to the cache. Note that for the cache to fill up, one has to start the playback before or on the frame that the simulation starts.</p>
+<p>The cache is cleared automatically on changes. But not on all changes, so it may be necessary to free it manually. For example if you change a force field.</p>
+<p>The system is protected against changes after baking. If for example the mesh changes the simulation is not calculated anew.</p>
+<p>The bake result can be cleared by clicking on the Free Bake button in the simulation cache settings.</p>
+<p>A simulation can only be edited in Particle Edit Mode when it has been baked in memory. And cannot be edited if the Disk Cache is used.</p>
+<p>If you are not allowed to write to the required sub directory caching will not happen. For example if your blend-file path is very long and your operating system has a limit on the path length that is supported.</p>
+<p>Be careful with the sequence of modifiers in the modifier stack. You may have a different number of faces in the 3D Viewport and for rendering (For example when using subdivision surface). Then the rendered result may be very different from what you see in the 3D Viewport.</p>
+<h3 id="caches-list">Caches List</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/particle-properties-tab/emitter-cache-panel/caches-list.png" alt="Caches List" loading="lazy"></figure>
+<p>The list of available caches. The caches have no name by default. Double click to add a name.</p>
+<p>You can store and manage multiple caches at once for the same physics object. The active cache is the one that gets used.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drag Handler</td>
+<td>The two vertical lines at the end is a handler with which you can expand the list.</td>
+</tr>
+<tr>
+<td>Search Field</td>
+<td>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · <strong>Invert</strong>: Exclude the search term instead of searching for it. · <strong>Sort by Name</strong>: Sort the List by name.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add New Cache</td>
+<td>Add a new cache.</td>
+</tr>
+<tr>
+<td>Delete current Cache</td>
+<td>Deletes the selected cache.</td>
+</tr>
+<tr>
+<td>Simulation start</td>
+<td>The start frame of the simulation.</td>
+</tr>
+<tr>
+<td>End</td>
+<td>The end frame of the simulation.</td>
+</tr>
+<tr>
+<td>Info string</td>
+<td>An info string. Gives different messages, dependent of the status.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="disk-cache">Disk Cache</h3>
+<p>Save the cache externally in a folder instead inside of the blend file. The cache of a baked simulation will be stored inside the blend-file when you save it. A folder named <code>blendcache_[filename]</code> will then be created alongside the blend-file. The blend-file must be saved first and then again.</p>
+<h4 id="use-library-path">Use Library Path</h4>
+<p>Share the disk cache when the physics object is linked into another blend-file.</p>
+<p>When this option is enabled, linked versions of the object will reference the same disk cache. Otherwise linked versions of the object will use independent caches.</p>
+<h4 id="compression">Compression</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/compression.png" alt="Compression" loading="lazy"></figure>
+<p>The compression level for cached files.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Do not compress the cache.</td>
+</tr>
+<tr>
+<td>Light</td>
+<td>Compression will optimize the speed of compressing/decompressing operations over file size.</td>
+</tr>
+<tr>
+<td>Heavy</td>
+<td>Compression will result in smaller cache files, but requires more CPU power to compress / decompress.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bake-delete-bake">Bake / Delete Bake</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/bake-delete-bake.png" alt="Bake / Delete Bake" loading="lazy"><figcaption>Bake / Delete Bake</figcaption></figure>
+<p>Start baking. Once you have baked the cache the button turns into a Delete bake button. And allows you to remove the bake.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/bake-delete-bake-2.png" alt="Bake / Delete Bake" loading="lazy"><figcaption>Bake / Delete Bake</figcaption></figure>
+<p>The baking progress can be seen in the footer. You need to be in Object Mode to bake.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/particle-properties-tab/emitter-cache-panel/bake-delete-bake.png" alt="Bake / Delete Bake" loading="lazy"><figcaption>Bake / Delete Bake</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Calculate To Frame</td>
+<td>Bake only up to the current frame. Limited by End frame set in the cache settings.</td>
+</tr>
+<tr>
+<td>Current Cache to Bake</td>
+<td>Store any temporarily cached simulation data as a bake. Note that playing the animation will try to simulate any visible physics simulations. Depending on the physics type, this data may be temporarily cached. Normally such temporary caches are cleared when an object or setting is modified, but converting it to a bake will “save” it.</td>
+</tr>
+<tr>
+<td>Bake All Dynamics</td>
+<td>Bake all physics systems in the scene, even those of different types. Useful for baking complex setups involving interactions between different physics types.</td>
+</tr>
+<tr>
+<td>Delete All Bakes</td>
+<td>Free bakes of all physics systems in the scene, even those of different types.</td>
+</tr>
+<tr>
+<td>Update All To Frame</td>
+<td>Bake all physics systems in the scene to the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="shape-subpanel">Shape subpanel</h2>
+<h3 id="pin-group">Pin Group</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/pin-group.png" alt="Pin Group" loading="lazy"></figure>
+<p>Vertex group to use for pinning.</p>
+<p>The shape of the cloth can be controlled by pinning cloth to a Vertex Group. There are several ways of doing this including Weight Painting areas you want to pin. The weight of each vertex in the group controls how strongly it is pinned.</p>
+<h4 id="stiffness">Stiffness</h4>
+<p>Target position stiffness.</p>
+<h3 id="sewing">Sewing</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/sewing.png" alt="Sewing" loading="lazy"></figure>
+<p>Another method of restraining cloth similar to pinning is sewing springs. Sewing springs are virtual springs that pull vertices in one part of a cloth mesh toward vertices in another part of the cloth mesh. This is different from pinning which binds vertices of the cloth mesh in place or to another object. A clasp on a cloak could be created with a sewing spring. The spring could pull two corners of a cloak about a character’s neck. This could result in a more realistic simulation than pinning the cloak to the character’s neck since the cloak would be free to slide about the character’s neck and shoulders.</p>
+<p>Sewing springs are created by adding extra edges to a cloth mesh that are not included in any faces. They should connect vertices in the mesh that should be pulled together. For example the corners of a cloak.</p>
+<h4 id="sewing-force-max">Sewing Force Max</h4>
+<p>Maximum force that can be applied by sewing springs. Zero means unbounded, but it is not recommended to leave the field at zero in most cases, as it can cause instability due to extreme forces in the initial frames where the ends of the sewing springs are far apart.</p>
+<h3 id="shrinking-factor">Shrinking Factor</h3>
+<p>Factor by which to shrink the cloth, specifying a negative value controls the amount for the cloth to grow.</p>
+<h3 id="dynamic-mesh">Dynamic Mesh</h3>
+<p>Allows animating the rest shape of cloth using shape keys or modifiers (e.g. an Armature modifier or any deformation modifier) placed above the Cloth modifier. When it is enabled, the rest shape is recalculated every frame, allowing unpinned cloth to squash and stretch following the character with the help of shape keys or modifiers, but otherwise move freely under control of the physics simulation.</p>
+<p>Normally cloth uses the state of the object in the first frame to compute the natural rest shape of the cloth, and keeps that constant throughout the simulation. This is reasonable for fully realistic scenes, but does not quite work for clothing on cartoon style characters that use a lot of squash and stretch.</p>
+<h2 id="collisions-subpanel">Collisions subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/collisions-subpanel.png" alt="Collisions subpanel" loading="lazy"></figure>
+<p>In most cases, a piece of cloth collides with other objects in the environment. To ensure proper simulation, there are several items that have to be set up and working together.</p>
+<ul>
+<li>The Cloth object must be told to participate in collisions.</li>
+<li>Optionally (but recommended) tell the cloth to collide with itself.</li>
+<li>Other objects must be visible to the Cloth object via shared layers.</li>
+<li>The other objects must be mesh objects.</li>
+<li>The other objects may move or be themselves deformed by other objects (like an armature or shape key).</li>
+<li>The other mesh objects must be told to deflect the cloth object.</li>
+<li>The blend-file must be saved in a directory so that simulation results can be saved.</li>
+<li>You then Bake the simulation. The simulator computes the shape of the cloth for a frame range.</li>
+<li>You can then edit the simulation results, or make adjustments to the cloth mesh, at specific frames.</li>
+<li>You can make adjustments to the environment or deforming objects, and then re-run the cloth simulation from the current frame forward.</li>
+</ul>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>If you encounter some problems with collision detection, there are a few ways to fix them:</p>
+<p>The fastest solution is to increase the Distance for Object/Self Collisions. This will be the fastest way to fix the clipping; however, it will be less accurate and will not look as good. Using this method tends to make it look like the cloth is resting on air, and gives it a very rounded look.</p>
+<p>A second method is to increase the Quality (in the Cloth panel). This results in smaller steps for the simulator and therefore to a higher probability that fast-moving collisions get caught. You can also increase the Collisions Quality to perform more iterations to get collisions solved.</p>
+<p>If none of the methods help, you can easily edit the cached/baked result in Edit Mode afterwards.</p>
+<p>If the Cloth is torn by the deforming mesh; increase the stiffness settings.</p>
+<h3 id="quality">Quality</h3>
+<p>A general quality setting. Higher numbers take more time but ensure less tears and penetrations through the cloth.</p>
+<h3 id="object-collisions-sub-subpanel">Object Collisions sub subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/object-collisions-sub-subpanel.png" alt="Object Collisions sub subpanel" loading="lazy"><figcaption>Object Collisions sub subpanel</figcaption></figure>
+<p>If the cloth object needs to be deflected by some other object. To deflect a cloth, the object must be enabled as an object that collides with the cloth object. To enable objects to collide with cloth objects enable collision physics for the collider object (not on the cloth object).</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> If your colliding object is not a mesh object, such as a NURBS surface, or a text object, you must convert it to a mesh object first.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distance</td>
+<td>The distance another object must get to the cloth for the simulation to repel the cloth out of the way. Smaller values might give errors but gives some speed-up while larger will give unrealistic results if too large and can be slow. It is best to find a good in between value.</td>
+</tr>
+<tr>
+<td>Impulse Clamping</td>
+<td>Prevents explosions in tight and complicated collision situations by restricting the amount of movement after a collision.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Triangles with all vertices in this group are not used during object collision.</td>
+</tr>
+<tr>
+<td>Collision Collection</td>
+<td>Only objects that are a part of this Collection can collide with the cloth. Note that these objects must also have Collision physics enabled.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="self-collisions-sub-subpanel">Self-Collisions sub subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/self-collisions-sub-subpanel.png" alt="Self-Collisions sub subpanel" loading="lazy"></figure>
+<p>Real cloth cannot penetrate itself, so you normally want the cloth to self-collide. Enable this to tell the cloth object that it should not penetrate itself. This adds to the simulation’s compute time, but provides more realistic results.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> A flag, viewed from a distance does not need this enabled, but a close-up of a cape or blouse on a character should have this enabled.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Friction</td>
+<td>A coefficient for how slippery the cloth is when it collides with itself. For example, silk has a lower coefficient of friction than cotton.</td>
+</tr>
+<tr>
+<td>Distance</td>
+<td>As cloth at this distance begins to repel away from itself. Smaller values might give errors but gives some speed-up while larger will give unrealistic results if too large and can be slow. It is best to find a good in between value.</td>
+</tr>
+<tr>
+<td>Impulse Clamping</td>
+<td>Prevents explosions in tight and complicated collision situations by restricting the amount of movement after a collision.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Only vertices that are a part of this Vertex Group can collide with each other.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="property-weights-subpanel">Property Weights subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/property-weights-subpanel.png" alt="Property Weights subpanel" loading="lazy"></figure>
+<p>This panel is used to constrain certain cloth properties to a certain vertex group. The properties that they control can be found in a combination of the Physical Properties and Shape panels.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structural Group</td>
+<td>Defines a vertex group to control over structural stiffness.</td>
+</tr>
+<tr>
+<td>Max Tension</td>
+<td>Maximum tension stiffness value.</td>
+</tr>
+<tr>
+<td>Max Compression</td>
+<td>Maximum Compression stiffness value.</td>
+</tr>
+<tr>
+<td>Shear Group</td>
+<td>Vertex group for fine control over shear stiffness.</td>
+</tr>
+<tr>
+<td>Max Shearing</td>
+<td>Maximum shear scaling value.</td>
+</tr>
+<tr>
+<td>Bending Group</td>
+<td>Vertex group for fine control over bending stiffness.</td>
+</tr>
+<tr>
+<td>Max Bending</td>
+<td>Maximum bending stiffness value.</td>
+</tr>
+<tr>
+<td>Shrinking Group</td>
+<td>Vertex group for shrinking cloth.</td>
+</tr>
+<tr>
+<td>Max Shrinking</td>
+<td>Max amount to shrink cloth by, specifying a negative value controls the max amount for the cloth to grow.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="field-weights-subpanel">Field Weights subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/field-weights-subpanel.png" alt="Field Weights subpanel" loading="lazy"></figure>
+<p>Cloth simulation is also influenced by external force effectors. This panel allows you to adjust these forces.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-phase345/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fphysics-properties-tab%2Fcloth-panel.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-phase345/docs2/content/editors/properties/physics-properties-tab/cloth-panel.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#cloth-simulation">Cloth Simulation</a><a class="h3" href="#workflow">Workflow</a><a class="h2" href="#cloth-panel">Cloth Panel</a><a class="h3" href="#presets">Presets</a><a class="h2" href="#physical-properties-subpanel">Physical Properties subpanel</a><a class="h3" href="#bending-model">Bending Model</a><a class="h3" href="#stiffness-sub-subpanel">Stiffness sub subpanel</a><a class="h3" href="#damping-sub-subpanel">Damping sub subpanel</a><a class="h3" href="#internal-springs-sub-subpanel">Internal Springs sub subpanel</a><a class="h3" href="#pressure-sub-subpanel">Pressure sub subpanel</a><a class="h2" href="#cache-subpanel">Cache subpanel</a><a class="h3" href="#hints">Hints</a><a class="h3" href="#caches-list">Caches List</a><a class="h3" href="#disk-cache">Disk Cache</a><a class="h3" href="#bake-delete-bake">Bake / Delete Bake</a><a class="h2" href="#shape-subpanel">Shape subpanel</a><a class="h3" href="#pin-group">Pin Group</a><a class="h3" href="#sewing">Sewing</a><a class="h3" href="#shrinking-factor">Shrinking Factor</a><a class="h3" href="#dynamic-mesh">Dynamic Mesh</a><a class="h2" href="#collisions-subpanel">Collisions subpanel</a><a class="h3" href="#troubleshooting">Troubleshooting</a><a class="h3" href="#quality">Quality</a><a class="h3" href="#object-collisions-sub-subpanel">Object Collisions sub subpanel</a><a class="h3" href="#self-collisions-sub-subpanel">Self-Collisions sub subpanel</a><a class="h2" href="#property-weights-subpanel">Property Weights subpanel</a><a class="h2" href="#field-weights-subpanel">Field Weights subpanel</a></aside></div></body></html>

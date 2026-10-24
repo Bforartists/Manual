@@ -1,0 +1,1190 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Object · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/q3-phase345 · <code>docs2/q3-phase345</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<a href="../../interface/windows.html">Windows</a>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<a href="../../interface/properties.html">Properties</a>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/header.html">Header</a>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="render-properties-tab.html">Render</a>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="view-layer-properties-tab.html">View Layer</a>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/channel-list.html">Channel List</a>
+<span style="padding-left:3.5rem">Geometry</span>
+<a style="padding-left:1.5rem" href="../graph-editor/channel-list.html">Channel List</a>
+<a href="../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/more.html">More</a>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:3.5rem">Curve</span>
+<a style="padding-left:1.5rem" href="../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="world-properties-tab.html">World</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<a style="padding-left:1.5rem" href="collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a class="is-current" style="padding-left:1.5rem" href="object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<a style="padding-left:1.5rem" href="modifiers.html">Modifiers</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<a style="padding-left:1.5rem" href="visual-effects-properties-tab.html">Visual Effects</a>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<a style="padding-left:1.5rem" href="particle-properties-tab.html">Particles</a>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<a style="padding-left:1.5rem" href="physics-properties-tab.html">Physics</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="object-data-properties-tab.html">Object Data</a>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:1.5rem" href="object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="bone-properties-tab.html">Bone</a>
+<span style="padding-left:3.5rem">Generate</span>
+<a style="padding-left:1.5rem" href="bone-constraint-properties.html">Bone Constraints</a>
+<span style="padding-left:3.5rem">Node Groups</span>
+<a style="padding-left:1.5rem" href="material-properties-tab.html">Material</a>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="texture-properties-tab.html">Texture</a>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<a style="padding-left:1.5rem" href="strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../shader-editor.html">Shader Editor</a>
+<a href="../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../dope-sheet.html">Dope Sheet</a>
+<span>Timeline</span>
+<a href="../graph-editor.html">Graph Editor</a>
+<a href="../drivers-editor.html">Drivers Editor</a>
+<a href="../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<a href="../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/volume-object.html">Volume Object</a>
+<span>File browser</span>
+<span>Asset Browser</span>
+<a href="../spreadsheet.html">Spreadsheet</a>
+<a href="../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../timeline/viewport.html">Viewport</a>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<a href="../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<span>Coworker</span>
+<a href="../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<a href="../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../advanced/troubleshooting.html">Troubleshooting</a>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../appendix/manual-update-history.html">Documentation History</a>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<a href="../../appendix/glossary.html">Glossary</a>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Object Properties Tab</div><h1 class="pv-title">Object</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 20 min read</span></div><article class="ui-doc-body"><h2 id="object-tab">Object Tab</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/object-tab.png" alt="Object Tab" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/object-tab-2.png" alt="Object Tab" loading="lazy"></figure>
+<p>The Object tab contains all general object related settings like Transform, Relation or Collection related things.</p>
+<h2 id="object-data-prop">Object Data Prop</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/object-data-prop.png" alt="Object Data Prop" loading="lazy"></figure>
+<p>Displays what object is currently selected.</p>
+<h3 id="object-browser">Object browser</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/object-browser.png" alt="Object browser" loading="lazy"></figure>
+<p>A list of the objects in the scene. In this list you can also choose another object. And you can rename the object.</p>
+<h3 id="file-selector-menu">File selector menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/file-selector-menu.png" alt="File selector menu" loading="lazy"></figure>
+<p>This menu has no meaning in this context. All menu items are disabled.</p>
+<h2 id="transform-panel">Transform Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/transform-panel.png" alt="Transform Panel" loading="lazy"></figure>
+<p>Transform is position, rotation and scale of the object. It is partially the same content that you see in Object mode in the Properties sidebar in the 3D view.</p>
+<p>However, when you switch to Edit mode, with a Bone for example, then you will still have the overall world transform values for the object here, while the Transform panel in the Properties sidebar now displays the edit transform values for the bone.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td>The location of the object.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>The rotation of the object.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rotation-mode">Rotation Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/rotation-mode.png" alt="Rotation Mode" loading="lazy"></figure>
+<p>The rotation mode. Euler angles are fine for most needs. But sometimes you want to use Quaternion to avoid gimbal lock. Gimbal lock is a mathematical problem where the rotation locks up in two instead of three degrees of freedom.</p>
+<h4 id="quaternion">Quaternion</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/quaternion.png" alt="Quaternion" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/quaternion-2.png" alt="Quaternion" loading="lazy"></figure>
+<p>With euler angles you will have three values available. But with a quaternion you will have four values available. And quaternions reveals a 4L button. This button shows or hides a lock behind the W value. Normally a quaternion has just three locks, one for each of the single axis. The W value is a mathematical construct from the three object axis. And you usually neither want to edit it nor to lock it therefore.</p>
+<p>Locking the W axis will lock all axis.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>The scale of the object.</td>
+</tr>
+<tr>
+<td>Lock</td>
+<td>This properties can be locked.</td>
+</tr>
+<tr>
+<td>Animate Properties</td>
+<td>This properties can be animated. Activating the Animate Property button sets a keyframe.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="delta-transform">Delta Transform</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/delta-transform.png" alt="Delta Transform" loading="lazy"></figure>
+<p>Transforms are absolute to the world coordinates. Delta Transforms are relative to the current transformation.</p>
+<p>Adjust the delta transforms.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delta Location</td>
+<td>The delta location of the object.</td>
+</tr>
+<tr>
+<td>Delta Rotation</td>
+<td>The delta rotation of the object.</td>
+</tr>
+<tr>
+<td>Delta Scale</td>
+<td>The delta scale of the object.</td>
+</tr>
+<tr>
+<td>Lock</td>
+<td>This properties can be locked.</td>
+</tr>
+<tr>
+<td>Animate Properties</td>
+<td>This properties can be animated. Activating the Animate Property button sets a keyframe.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="relations-panel">Relations Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/relations-panel.png" alt="Relations Panel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/relations-panel-2.png" alt="Relations Panel" loading="lazy"></figure>
+<p>Set up and adjust relations for the object.</p>
+<h3 id="animate-properties">Animate Properties</h3>
+<p>The properties with the Animate Property at the right can be animated. Activating the Animate Property button sets a keyframe.</p>
+<h3 id="parent">Parent</h3>
+<p>Set a parent object. One way is by the object picker at the right. Or choose the object in the list. This list appears by clicking at the edit box.</p>
+<h4 id="parent-type">Parent Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/parent-type.png" alt="Parent Type" loading="lazy"></figure>
+<p>See and set the parent type.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parent Bone</td>
+<td>When you parent an object to an armature then you can choose to which bone you want to parent this object.</td>
+</tr>
+<tr>
+<td>Camera Parent Lock</td>
+<td>When the camera is locked to the view and in fly mode, transform the parent rather than the camera.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tracking-axis">Tracking Axis</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/tracking-axis.png" alt="Tracking Axis" loading="lazy"></figure>
+<p>The axis that points in forward direction.</p>
+<h3 id="up-axis">Up Axis</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/up-axis.png" alt="Up Axis" loading="lazy"></figure>
+<p>The axis that points in the up direction.</p>
+<h3 id="pass-index">Pass Index</h3>
+<p>The index number for the &quot;Object Index&quot; render pass.</p>
+<h2 id="collections-panel">Collections Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/collections-panel.png" alt="Collections Panel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/collections-panel-2.png" alt="Collections Panel" loading="lazy"></figure>
+<p>Collections is a bunch of data, objects, cameras, lights, etc., which you can manage in some ways at once. You can for example hide complete collections, include or exclude it from rendering, instance them, and so on.</p>
+<p>An object must be at least in one collection. Or it gets deleted. But an object can be in multiple collections. This panel allows you to manage in what collection(s) the object is.</p>
+<h3 id="link-to-existing-collection">Link to existing collection</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/link-to-existing-collection.png" alt="Link to existing collection" loading="lazy"><figcaption>Link to existing collection</figcaption></figure>
+<p>A drop down box where you can choose the collection that you want to add the object to. Different from the Link to collection tool in the outliner, this tool lists all collections in the .blend file. Also collections that are not to see in the Scenes or View Layer view.</p>
+<h3 id="add-to-new-collection">Add to new Collection</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/add-to-new-collection.png" alt="Add to new Collection" loading="lazy"><figcaption>Add to new Collection</figcaption></figure>
+<p>At the end of the Add to Collection element is a + button where you can create more collections.</p>
+<p>Note that this new created collection is not part of the scene. But shows just at the Blend file level in the outliner. So when you want to create a collection that is accessible from the scene, then create the collection in the outliner instead.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/add-to-new-collection-2.png" alt="Add to new Collection" loading="lazy"><figcaption>Add to new Collection</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/add-to-new-collection-3.png" alt="Add to new Collection" loading="lazy"><figcaption>Add to new Collection</figcaption></figure>
+<p>Collections at the scene levels usually gets created with the name Collection + space + single Number.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/add-to-new-collection-4.png" alt="Add to new Collection" loading="lazy"><figcaption>Add to new Collection</figcaption></figure>
+<p>Collections at the Blend file level gets created with Collection + dot + three digit number</p>
+<h3 id="collection">Collection</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/collection.png" alt="Collection" loading="lazy"></figure>
+<p>This is the collection where the object is currently assigned at. As told, an object can be assigned to more than one collection.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collection Name</td>
+<td>Read and edit the collection name.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>This deletes the collection from the object. Note that the collection still exists.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="collections-menu">Collections Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/collections-menu.png" alt="Collections Menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete</td>
+<td>This deletes the collection from the object. Note that the collection still exists.</td>
+</tr>
+<tr>
+<td>Select Objects in Collection</td>
+<td>Selects all objects in the collection.</td>
+</tr>
+<tr>
+<td>Set Offset From Cursor</td>
+<td>Set offset used for collection instance based on cursor position. Normally the offset is based at the center of the world when instancing, at 0/0/0. When you choose Set Offset From Cursor then this offset is set form the cursor position instead of the world center.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="offset">Offset</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/offset.png" alt="Offset" loading="lazy"></figure>
+<p>Offset from the origin to use when instancing.</p>
+<h2 id="instancing-panel">Instancing Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/instancing-panel.png" alt="Instancing Panel" loading="lazy"></figure>
+<p>Here you find settings for instancing. Instancing means the object exists just one time in ram, and gets reused.</p>
+<p>Instancing requires a special setup.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/instancing-panel-2.png" alt="Instancing Panel" loading="lazy"></figure>
+<p>The duplicated geometry by this method are instances of the parent object. And so they cannot be threaten like real objects.</p>
+<p>To turn them into editable geometry go to Object menu, and choose Apply / Make Duplicates real.</p>
+<h3 id="none">None</h3>
+<p>No duplication happens.</p>
+<h3 id="instanceverts">Instanceverts</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/instanceverts.png" alt="Instanceverts" loading="lazy"></figure>
+<p><em><strong>I</strong></em>nstance<strong>Verts</strong> is the duplication of a base object at the location of the vertices of a mesh. In other words, an instance of the base object is placed on every vertex of the mesh.</p>
+<h4 id="workflow">Workflow:</h4>
+<p>Create a cube, create a sphere. For demonstration purposes, move the sphere a bit off. Parent the sphere to the cube. Cube must be the parent, sphere the child.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/workflow.png" alt="Workflow:" loading="lazy"></figure>
+<p>Select just the cube. In the Duplication Panel enable Verts.</p>
+<p>As a result you will now have eight spheres around the child sphere, since the cube has eight vertices. The center point is the sphere.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/workflow-2.png" alt="Workflow:" loading="lazy"></figure>
+<h3 id="instanceverts-tools">Instanceverts Tools</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/workflow.png" alt="Instanceverts Tools" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Animate Property</td>
+<td>The properties with the Animate property at the right can be animated. You create a keyframe by clicking at it.</td>
+</tr>
+<tr>
+<td>Align to Vertex Normal</td>
+<td>Orients the child objects along the normals of the parent vertices.</td>
+</tr>
+<tr>
+<td>Show Instancer</td>
+<td><strong>Viewport</strong>: Show the instance object in the viewport. · <strong>Render</strong>: Show the instance object in the final rendering.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dupliface">Dupliface</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/dupliface.png" alt="Dupliface" loading="lazy"></figure>
+<p><strong>DupliFaces</strong> replicates an object on each face of a parent object, using the initial child object as the center. The faces of the parent object is the pattern that gets used as the pattern to create the duplicated objects. The child object gets used as the center point, and of course to duplicate the geometry from.</p>
+<h4 id="workflow-2">Workflow:</h4>
+<p>Create a cube, create a sphere. Move the cube a bit off. Parent the sphere to the cube ( select sphere, hold down shift, select cube, press ctrl p). Cube must be the parent, sphere the child.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/workflow-3.png" alt="Workflow:" loading="lazy"></figure>
+<p>In the Duplication Panel enable Faces.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/workflow-4.png" alt="Workflow:" loading="lazy"></figure>
+<p>As a result you will now have six spheres at the child sphere, since the cube has six sides.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> <em>The location, orientation, and scale of the duplicated child(ren) matches that of the faces of the parent. So, if several <em>objects</em> are parented to the cube, they will all be duplicated once for each face on the cube. If the cube is subdivided, every child will be duplicated for each face on the cube.</em></p></div>
+<h3 id="instance-face-tools">Instance Face Tools</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/workflow-3.png" alt="Instance Face Tools" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Animate Property</td>
+<td>The properties with the Animate property at the right can be animated. You create a keyframe by clicking at it.</td>
+</tr>
+<tr>
+<td>Show Instancer</td>
+<td><strong>Viewport</strong>: Show the instance object in the viewport. · <strong>Render</strong>: Show the instance object in the final rendering.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="scale-by-face-size">Scale by Face Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/scale-by-face-size.png" alt="Scale by Face Size" loading="lazy"><figcaption>Scale by Face Size</figcaption></figure>
+<p>When you tick scale by face size then you can control the size of the child objects.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/scale-by-face-size-2.png" alt="Scale by Face Size" loading="lazy"><figcaption>Scale by Face Size</figcaption></figure>
+<p>With Scale ticked you can also influence the size of the child objects by changing the parent geometry.</p>
+<h4 id="factor">Factor</h4>
+<p>The scale factor for scale.</p>
+<h2 id="motion-paths-panel">Motion Paths Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/motion-paths-panel.png" alt="Motion Paths Panel" loading="lazy"></figure>
+<p>Motion paths is a visual helper to judge the motion of objects.</p>
+<p>Motion paths are not displayed by default. They need to be calculated. This can be done here.</p>
+<h3 id="workflow-3">Workflow:</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/workflow.jpg" alt="Workflow:" loading="lazy"></figure>
+<p>We simply need a motion animation first. For example a moving cube.</p>
+<p>Add a cube. Choose a keying set. Set a keyframe at let's say frame 0. Go to frame 20. Move the object. Set a keyframe at frame 20.</p>
+<p>Click Calculate. You will now see the motion path of this object.</p>
+<h3 id="motion-paths-tools">Motion Paths Tools:</h3>
+<h4 id="paths-type">Paths Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/paths-type.png" alt="Paths Type" loading="lazy"></figure>
+<p>There are two path types available. In Range and Around Frame.</p>
+<h5 id="around-frame">Around Frame</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/around-frame.png" alt="Around Frame" loading="lazy"></figure>
+<p>Displays just the motion path around the current frame. Not the whole path.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame Range before</td>
+<td>The frames to display before the current frame.</td>
+</tr>
+<tr>
+<td>After</td>
+<td>The frames to display after the current frame.</td>
+</tr>
+<tr>
+<td>Step</td>
+<td>Number of frames between paths shown.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="in-range">In Range</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/in-range.png" alt="In Range" loading="lazy"></figure>
+<p>Displays the full motion path.</p>
+<h6 id="calculation-range">Calculation Range</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/calculation-range.png" alt="Calculation Range" loading="lazy"></figure>
+<p>The type of path range to calculate the motion paths.</p>
+<p><strong>All Keys</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/all-keys.png" alt="All Keys" loading="lazy"></figure>
+<p>Calculate all keys. Even when they are out of the range.</p>
+<p><strong>Step</strong></p>
+<p>Number of frames between paths shown.</p>
+<p><strong>Selected Keys</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/selected-keys.png" alt="Selected Keys" loading="lazy"></figure>
+<p>Calculate just selected keys.</p>
+<p><strong>Step</strong></p>
+<p>Number of frames between paths shown.</p>
+<p><strong>Scene Frame Range</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/scene-frame-range.png" alt="Scene Frame Range" loading="lazy"></figure>
+<p>Calculate the entire scene / preview range.</p>
+<p><strong>Step</strong></p>
+<p>Number of frames between paths shown.</p>
+<p><strong>Manual Range</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/manual-range.png" alt="Manual Range" loading="lazy"></figure>
+<p>Manually determine frame range.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame Range Start</td>
+<td>The start frame.</td>
+</tr>
+<tr>
+<td>End</td>
+<td>The end frame.</td>
+</tr>
+<tr>
+<td>Step</td>
+<td>Number of frames between paths shown.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bake to active camera</td>
+<td>Motion path points will be baked into the camera space of the active camera. This means that they will only look right when looking through this specific camera then. Switching cameras using markesrs is not supported.</td>
+</tr>
+<tr>
+<td>Cached range</td>
+<td>Not editable. Internal cache information.</td>
+</tr>
+<tr>
+<td>Update Paths</td>
+<td>Update the paths after any changes at the animation. You have to update the paths too if you change settings like the paths type.</td>
+</tr>
+<tr>
+<td>Update All Paths</td>
+<td>Update all paths after any changes at the animation. You have to update the paths too if you change settings like the paths type.</td>
+</tr>
+<tr>
+<td>Delete Paths</td>
+<td>Deletes ALL motion paths caches in the scene. Hold down shift to delete just the path for the current object.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="display-subpanel">Display subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/display-subpanel.png" alt="Display subpanel" loading="lazy"></figure>
+<p>Here you find some display options for the path.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame Numbers</td>
+<td>Display the frame number above every knot of the motion path</td>
+</tr>
+<tr>
+<td>Keyframes</td>
+<td>Display the keyframes in the path as orange dots.</td>
+</tr>
+<tr>
+<td>Keyframe Numbers</td>
+<td>Display the keyframe number above every keyframe.</td>
+</tr>
+<tr>
+<td>Lines</td>
+<td>Display a line between the points.</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>The line thickness.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="custom-color">Custom Color</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/custom-color.png" alt="Custom Color" loading="lazy"></figure>
+<p>Define a custom color for the motion path. You can set a Before color for everything before the current frame. And a After color for everything after the current frame. A click at the color area opens a color picker.</p>
+<h2 id="shading-cycles">Shading - Cycles</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/shading-cycles.png" alt="Shading - Cycles" loading="lazy"></figure>
+<p>The Shading panel gives you further per object shading options with the Cycles renderer.</p>
+<p>Note that not all objects have all subpanels. Lights does for example just contain the Light Group sub panel.</p>
+<h3 id="shadow-terminator-subpanel">Shadow Terminator subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/shadow-terminator-subpanel.png" alt="Shadow Terminator subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometry Offset</td>
+<td>Offset rays from the surface to minimize shadow artifacts at low poly geometry. Only affects triangles at grazing angles to light.</td>
+</tr>
+<tr>
+<td>Shading Offset</td>
+<td>Push the shadow terminator towards the light to minimize shadow artifacts at low poly geometry.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fast-gi-approximation-subpanel">Fast GI Approximation subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/fast-gi-approximation-subpanel.png" alt="Fast GI Approximation subpanel" loading="lazy"><figcaption>Fast GI Approximation subpanel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/fast-gi-approximation-subpanel-2.png" alt="Fast GI Approximation subpanel" loading="lazy"><figcaption>Fast GI Approximation subpanel</figcaption></figure>
+<h4 id="ao-distance">AO Distance</h4>
+<p>The Ambient Occlusion distance that is used for approximate Ambient Occlusion. 0 means the world settings are used.</p>
+<p>Note that Fast GI Approximation needs to be active to make this options work.</p>
+<h3 id="caustics-subpanel">Caustics subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/caustics-subpanel.png" alt="Caustics subpanel" loading="lazy"></figure>
+<p>Caustics related settings.</p>
+<h4 id="cast-shadow-caustics">Cast Shadow Caustics</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/cast-shadow-caustics.png" alt="Cast Shadow Caustics" loading="lazy"></figure>
+<p>Generates caustics in case the material is a refractive material. Casting lights must have shadow caustics option enabled. This can be found in the object data properties in the Light panel.</p>
+<h4 id="receive-shadow-caustics">Receive Shadow Caustics</h4>
+<p>Receive caustics in case the material is a refractive material. Casting lights must have shadow caustics option enabled. This can be found in the object data properties in the Light panel.</p>
+<h2 id="light-options">Light Options</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/light-options.jpg" alt="Light Options" loading="lazy"></figure>
+<p>Allows you to assign the current object or light source to a Light Group.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Objects must be have an emission material to have an influence in the Light Group.</p></div>
+<p><em>The content in the Lists can be dragged around to change the order.</em></p>
+<p>The objects can be enabled and disabled by the checkbox at the right.</p>
+<h3 id="light-group">Light Group</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/light-group.png" alt="Light Group" loading="lazy"></figure>
+<p>Assign the light source or an object with an emission material to a Light Group.</p>
+<p>You first need to create a Light Group in the View Layer Properties &gt; Passes &gt; Lightgroups panel. Then you can choose from the existing Light Groups. Or you simply type in the name of a new light group. Then click at the add button besides the edit box.</p>
+<p>For more information, check out the Properties Editor - View Layer Properties chapter.</p>
+<h3 id="light-linking">Light Linking</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/light-linking.png" alt="Light Linking" loading="lazy"></figure>
+<p>Here you create and assign a Light Linking group to objects and collections. This assists in including or excluding objects from a lights influence. Default assignment of a Light Group will influence everything in the scene.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Consider this as an exclusive override for light group influence of an emission object or light source.</p></div>
+<h4 id="data-property">Data property</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/data-property.png" alt="Data property" loading="lazy"></figure>
+<h5 id="data-browser">Data Browser</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/data-browser.png" alt="Data Browser" loading="lazy"></figure>
+<p>Shows the available light linking collections that you can choose. This can be single objects, or whole collections.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>The current active group name. The name can be renamed.</td>
+</tr>
+<tr>
+<td>Display number</td>
+<td>How much users this data has. A click at it makes it a single user object.</td>
+</tr>
+<tr>
+<td>New Light linking collection</td>
+<td>Add a new light linking collection.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes the light linking collection as the active collection. Note that the collection will still be in the data browser.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collection List</td>
+<td>The list of objects in the light linking collection.</td>
+</tr>
+<tr>
+<td>Link Receivers to Emitter</td>
+<td>Light link selected receivers to the active emitter object.</td>
+</tr>
+<tr>
+<td>Remove from light linking collection</td>
+<td>Removes the object not only from the light linking, but also from the scene.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="select-light-linking-receivers">Select Light Linking Receivers</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/select-light-linking-receivers.png" alt="Select Light Linking Receivers" loading="lazy"><figcaption>Select Light Linking Receivers</figcaption></figure>
+<p>Selects the selected objects in the list in the scene too.</p>
+<h3 id="shadow-linking">Shadow Linking</h3>
+<p>Here you create and assign a Shadow Linking group with objects and collections. Shadow linking additionally gives control over which objects acts as a shadow blocker or shadow exception for the light sources of a Light Group.</p>
+<h4 id="data-property-2">Data property</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/data-property.png" alt="Data property" loading="lazy"></figure>
+<h5 id="data-browser-2">Data Browser</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/data-browser.png" alt="Data Browser" loading="lazy"></figure>
+<p>Shows the available light linking collections that you can choose. This can be single objects, or whole collections.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>The current active group name. The name can be renamed.</td>
+</tr>
+<tr>
+<td>Display number</td>
+<td>How much users this data has. A click at it makes it a single user object.</td>
+</tr>
+<tr>
+<td>New Light linking collection</td>
+<td>Add a new light linking collection.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes the light linking collection as the active collection. Note that the collection will still be in the data browser.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collection List</td>
+<td>The list of objects in the light linking collection.</td>
+</tr>
+<tr>
+<td>Link Receivers to Emitter</td>
+<td>Light link selected receivers to the active emitter object.</td>
+</tr>
+<tr>
+<td>Remove from light linking collection</td>
+<td>Removes the object not only from the light linking, but also from the scene.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="select-light-linking-blockers">Select Light Linking Blockers</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/select-light-linking-blockers.png" alt="Select Light Linking Blockers" loading="lazy"><figcaption>Select Light Linking Blockers</figcaption></figure>
+<p>Selects the selected objects in the list in the scene too.</p>
+<h2 id="motion-blur-panel-cycles">Motion Blur Panel - Cycles</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/motion-blur-panel-cycles.png" alt="Motion Blur Panel - Cycles" loading="lazy"><figcaption>Motion Blur Panel - Cycles</figcaption></figure>
+<p>The Motion Bur panel gives you further per object options for motion blur.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/motion-blur-panel-cycles-2.png" alt="Motion Blur Panel - Cycles" loading="lazy"><figcaption>Motion Blur Panel - Cycles</figcaption></figure>
+<p>Note that Motion Blur needs to be active to make this options work.</p>
+<p>You can activate Motion Blur in the render settings.</p>
+<h2 id="visibility-panel-workbench">Visibility Panel - Workbench</h2>
+<p>Show or hide options for the selected object.</p>
+<h3 id="animate-property">Animate property</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/animate-property.png" alt="Animate property" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/animate-property-2.png" alt="Animate property" loading="lazy"></figure>
+<p>These property can be animated. Clicking at the decorator at the right sets a keyframe.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface Picking</td>
+<td>Disable surface influence during selection, snapping and depth-picking operators.</td>
+</tr>
+<tr>
+<td>Show In</td>
+<td><strong>Viewports</strong>: Show the object in the viewport. This can also be done in the outliner. · <strong>Renders</strong>: Show the object in the rendering. This can also be done in the outliner.</td>
+</tr>
+<tr>
+<td>Grease Pencil</td>
+<td><strong>Use Lights</strong>: Grease Pencil object only. Light affects grease pencil object.</td>
+</tr>
+<tr>
+<td>Mask</td>
+<td><strong>Holdout</strong>: Render the object as a holdout or matte object. This creates a hole in the image in the shape of the object. Which can then be filled with content in the compositing process.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visibility-panel-eevee">Visibility Panel - Eevee</h2>
+<p>Show or hide options for the selected object.</p>
+<h3 id="animate-property-2">Animate property</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/animate-property.png" alt="Animate property" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/animate-property-3.png" alt="Animate property" loading="lazy"></figure>
+<p>These property can be animated. Clicking at the decorator at the right sets a keyframe.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface Picking</td>
+<td>Disable surface influence during selection, snapping and depth-picking operators.</td>
+</tr>
+<tr>
+<td>Show In</td>
+<td><strong>Viewports</strong>: Show the object in the viewport. This can also be done in the outliner. · <strong>Renders</strong>: Show the object in the rendering. This can also be done in the outliner.</td>
+</tr>
+<tr>
+<td>Grease Pencil</td>
+<td><strong>Use Lights</strong>: Grease Pencil object only. Light affects grease pencil object.</td>
+</tr>
+<tr>
+<td>Ray Visibility</td>
+<td><strong>Camera</strong>: Object visibility to camera rays. · <strong>Shadow</strong>: Object visibility to shadow rays.</td>
+</tr>
+<tr>
+<td>Light Probes</td>
+<td><strong>Volume</strong>: Globally disable in volume probes. · <strong>Sphere</strong>: Globally disable in spherical light probes. · <strong>Plane</strong>: Globally disable in planar light probes.</td>
+</tr>
+<tr>
+<td>Mask</td>
+<td><strong>Holdout</strong>: Render the object as a holdout or matte object. This creates a hole in the image in the shape of the object. Which can then be filled with content in the compositing process.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visibility-panel-cycles">Visibility Panel - Cycles</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/visibility-panel-cycles.png" alt="Visibility Panel - Cycles" loading="lazy"><figcaption>Visibility Panel - Cycles</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/visibility-panel-cycles-2.png" alt="Visibility Panel - Cycles" loading="lazy"><figcaption>Visibility Panel - Cycles</figcaption></figure>
+<p>Note that the ccntent does not show with all object types. The content shown here is with a mesh object.</p>
+<p>Show or hide options for the selected object.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Animate property</td>
+<td>These property can be animated. Clicking at the decorator at the right sets a keyframe.</td>
+</tr>
+<tr>
+<td>Surface Picking</td>
+<td>Disable surface influence during selection, snapping and depth-picking operators.</td>
+</tr>
+<tr>
+<td>Show in</td>
+<td><strong>Viewports</strong>: Show the object in viewports. · <strong>Renders</strong>: Show the object in renderers.</td>
+</tr>
+<tr>
+<td>Mask</td>
+<td><strong>Shadow Catcher</strong>: Only render shadows and reflections of this object. · <strong>Holdout</strong>: Render the object as a holdout or matte object. This creates a hole in the image in the shape of the object. Which can then be filled with content in the compositing process.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ray-visibility-subpanel">Ray Visibility Subpanel</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/ray-visibility-subpanel.png" alt="Ray Visibility Subpanel" loading="lazy"></figure>
+<p>The object visibility for different types of rays.</p>
+<h3 id="culling">Culling</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/culling.png" alt="Culling" loading="lazy"></figure>
+<h4 id="use-camera-cull">Use Camera Cull</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/use-camera-cull.png" alt="Use Camera Cull" loading="lazy"></figure>
+<p>Allow objects and its duplicates to be culled by the camera space culling.</p>
+<p>This option is just active when Simplify in the Render tab is activated, and the camera culling in the simplify panel is ticked too.</p>
+<h4 id="use-distance-cull">Use Distance Cull</h4>
+<p>Allow objects and its duplicates to be culled by the specified distance.</p>
+<p>This option is just active when Simplify in the Render tab is activated, and the camera culling in the simplify panel is ticked too.</p>
+<h2 id="sequencer-usage-panel">Sequencer usage panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/sequencer-usage-panel.png" alt="Sequencer usage panel" loading="lazy"></figure>
+<h3 id="report-object-used-by-sequencer">Report object used by sequencer</h3>
+<p>Form the active object, report all sequencer strips using this object in their strip scenes.</p>
+<h2 id="viewport-display-panel">Viewport Display Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/viewport-display-panel.png" alt="Viewport Display Panel" loading="lazy"></figure>
+<p>Here you will find some further display options for the object. Object name, Wire Frame in Object Mode, etc.</p>
+<p>Some of these settings will override general settings. For example when you set the maximum draw type (Display as) to Wire, then it will always display as wire, regardless if you set the Viewport render method to Material or Textured.</p>
+<p>The content is different for different object types. Mesh objects have more options than a grease pencil for example.</p>
+<p>Note also that some objects have some further special viewport settings in other tabs. For example, Bones have also viewport settings in the Object Data properties, and in the Bone properties.</p>
+<p>This panel here is for general viewport display settings for the objects.</p>
+<h3 id="animate-property-3">Animate property</h3>
+<p>These properties can be animated. Clicking at the decorator at the right sets a keyframe.</p>
+<h3 id="show">Show</h3>
+<h4 id="name">Name</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/name.png" alt="Name" loading="lazy"></figure>
+<p>Display the object name at the pivot point.</p>
+<h4 id="axis">Axis</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/axis.png" alt="Axis" loading="lazy"></figure>
+<p>Display the objects axis. Best done with Wireframe display mode. Solid faces may hide the axis. Or tick in Front. Then the axis gets also drawn above the mesh faces.</p>
+<h4 id="wireframe">Wireframe</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/wireframe.png" alt="Wireframe" loading="lazy"></figure>
+<p>Display parts of the wire frame in Object Mode. See All Edges.</p>
+<h4 id="all-edges">All Edges</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/all-edges.png" alt="All Edges" loading="lazy"></figure>
+<p>This is a hieronymus bosch feature from Blender developers that will most probably trap you again and again. When you tick Wireframe then SOME of the edges of the object gets displayed. You need to tick all edges to display the whole Wireframe.</p>
+<h4 id="texture-space">Texture Space</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/texture-space.png" alt="Texture Space" loading="lazy"></figure>
+<p>Display the objects texture space. This has to do with the mapping. A sphere can for example have a cubic mapping.</p>
+<h4 id="shadow">Shadow</h4>
+<p>The object should throw a shadow in the 3D view. But it seems to be dysfunctional.</p>
+<h4 id="in-front">In Front</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/in-front.png" alt="In Front" loading="lazy"></figure>
+<p>X Ray. Display this object in front of all other objects.</p>
+<h4 id="color">Color</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/color.png" alt="Color" loading="lazy"></figure>
+<p>Solid mode setting only.</p>
+<p>When you set the Color type to Object in the viewport shading settings, then the object in the viewport is displayed with this color.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/color-2.png" alt="Color" loading="lazy"></figure>
+<h4 id="display-as">Display As</h4>
+<p>Adjust the maximum display method for the object. For example when you set the maximum draw type to Wire, then it will always display as wire, regardless if you set the Viewport render method to Material or Textured.</p>
+<h4 id="bounds">Bounds</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/bounds.png" alt="Bounds" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/bounds-2.png" alt="Bounds" loading="lazy"></figure>
+<p>Display the bounding box for this object.</p>
+<h5 id="display-bounds-type">Display Bounds Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/display-bounds-type.png" alt="Display Bounds Type" loading="lazy"></figure>
+<p>What shape to choose for the bounding box. There is more than just the classical box shape available.</p>
+<h2 id="line-art-panel">Line Art Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/line-art-panel.png" alt="Line Art Panel" loading="lazy"></figure>
+<p>Line Art settings.</p>
+<h3 id="usage">Usage</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/usage.png" alt="Usage" loading="lazy"></figure>
+<p>How to use this object in line art calculation. The items should be self explaining.</p>
+<h3 id="override-crease">Override crease</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/object-properties-tab/override-crease.png" alt="Override crease" loading="lazy"></figure>
+<p>Use this objects crease settings to override scene global.</p>
+<h4 id="crease">Crease</h4>
+<p>Angles smaller than this value will be treaten as creases.</p>
+<h3 id="intersection-priority">Intersection Priority</h3>
+<p>Use the intersection of the active object to override collection settings.</p>
+<h4 id="intersection-priority-2">Intersection Priority</h4>
+<p>The intersection line will be included into the object with the higher intersection priority value</p>
+<h2 id="animation">Animation</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/scene-properties-tab/animation.png" alt="Animation" loading="lazy"></figure>
+<p>Action Slots allow a single <strong>Action</strong> to store animation data for <strong>multiple data-blocks</strong> (e.g. objects, materials, cameras). In this case this stores Scene container animation keyframes.</p>
+<p>Each slot acts like a container for animation channels tied to a specific target Action Clip.</p>
+<h3 id="action-name-selector">Action Name Selector</h3>
+<p>A unique Action Clip Contains the actual animation data: F-Curves, groups, and keyframes.</p>
+<h3 id="slot-name-selector">Slot Name Selector</h3>
+<p>A unique identifier for the slot within the Action. Used to match the slot with a data-block during evaluation or assignment. Can be manually named or auto-assigned based on the data-block name.</p>
+<h4 id="dropdown-selector-operators">Dropdown Selector Operators</h4>
+<ul>
+<li>**Dropdown Selector: **List of available slots or actions</li>
+<li>**Selector Name: **Name of the slot or action</li>
+<li>**Add Action/Slot: **Adds a new Action Clip/Slot, or select one from the drop down</li>
+<li><strong>Shield icon</strong>: Stores the Data with protection (prevents deletion when reloading the file if there are no users).</li>
+<li>**Remove: **Removes the active Action clip or Slot</li>
+<li>Duplicate:Duplicates the Active slot with keyframes.</li>
+</ul>
+<h2 id="custom-properties-panel">Custom Properties Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/view-layer-properties-tab/custom-properties-panel.png" alt="Custom Properties Panel" loading="lazy"></figure>
+<p>Define custom properties that can be used for scripting.</p>
+<p>Here you might also find custom properties from addons or scripts.</p>
+<h3 id="add">Add</h3>
+<p>Adds a new property.</p>
+<h3 id="edit">Edit</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c3c39554c5e11186a78aa2a6da6ca1bbac90058d/docs2/images/editors/properties/view-layer-properties-tab/edit.png" alt="Edit" loading="lazy"></figure>
+<p>A panel to adjust the settings for the custom property.</p>
+<h3 id="remove">Remove</h3>
+<p>Removes the property.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fq3-phase345/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fobject-properties-tab.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/q3-phase345/docs2/content/editors/properties/object-properties-tab.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#object-tab">Object Tab</a><a class="h2" href="#object-data-prop">Object Data Prop</a><a class="h3" href="#object-browser">Object browser</a><a class="h3" href="#file-selector-menu">File selector menu</a><a class="h2" href="#transform-panel">Transform Panel</a><a class="h3" href="#rotation-mode">Rotation Mode</a><a class="h3" href="#delta-transform">Delta Transform</a><a class="h2" href="#relations-panel">Relations Panel</a><a class="h3" href="#animate-properties">Animate Properties</a><a class="h3" href="#parent">Parent</a><a class="h3" href="#tracking-axis">Tracking Axis</a><a class="h3" href="#up-axis">Up Axis</a><a class="h3" href="#pass-index">Pass Index</a><a class="h2" href="#collections-panel">Collections Panel</a><a class="h3" href="#link-to-existing-collection">Link to existing collection</a><a class="h3" href="#add-to-new-collection">Add to new Collection</a><a class="h3" href="#collection">Collection</a><a class="h2" href="#instancing-panel">Instancing Panel</a><a class="h3" href="#none">None</a><a class="h3" href="#instanceverts">Instanceverts</a><a class="h3" href="#instanceverts-tools">Instanceverts Tools</a><a class="h3" href="#dupliface">Dupliface</a><a class="h3" href="#instance-face-tools">Instance Face Tools</a><a class="h2" href="#motion-paths-panel">Motion Paths Panel</a><a class="h3" href="#workflow-3">Workflow:</a><a class="h3" href="#motion-paths-tools">Motion Paths Tools:</a><a class="h2" href="#shading-cycles">Shading - Cycles</a><a class="h3" href="#shadow-terminator-subpanel">Shadow Terminator subpanel</a><a class="h3" href="#fast-gi-approximation-subpanel">Fast GI Approximation subpanel</a><a class="h3" href="#caustics-subpanel">Caustics subpanel</a><a class="h2" href="#light-options">Light Options</a><a class="h3" href="#light-group">Light Group</a><a class="h3" href="#light-linking">Light Linking</a><a class="h3" href="#shadow-linking">Shadow Linking</a><a class="h2" href="#motion-blur-panel-cycles">Motion Blur Panel - Cycles</a><a class="h2" href="#visibility-panel-workbench">Visibility Panel - Workbench</a><a class="h3" href="#animate-property">Animate property</a><a class="h2" href="#visibility-panel-eevee">Visibility Panel - Eevee</a><a class="h3" href="#animate-property-2">Animate property</a><a class="h2" href="#visibility-panel-cycles">Visibility Panel - Cycles</a><a class="h3" href="#ray-visibility-subpanel">Ray Visibility Subpanel</a><a class="h3" href="#culling">Culling</a><a class="h2" href="#sequencer-usage-panel">Sequencer usage panel</a><a class="h3" href="#report-object-used-by-sequencer">Report object used by sequencer</a><a class="h2" href="#viewport-display-panel">Viewport Display Panel</a><a class="h3" href="#animate-property-3">Animate property</a><a class="h3" href="#show">Show</a><a class="h2" href="#line-art-panel">Line Art Panel</a><a class="h3" href="#usage">Usage</a><a class="h3" href="#override-crease">Override crease</a><a class="h3" href="#intersection-priority">Intersection Priority</a><a class="h2" href="#animation">Animation</a><a class="h3" href="#action-name-selector">Action Name Selector</a><a class="h3" href="#slot-name-selector">Slot Name Selector</a><a class="h2" href="#custom-properties-panel">Custom Properties Panel</a><a class="h3" href="#add">Add</a><a class="h3" href="#edit">Edit</a><a class="h3" href="#remove">Remove</a></aside></div></body></html>
