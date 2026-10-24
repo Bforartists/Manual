@@ -1,0 +1,1090 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Transform · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/main · <code>docs2/main</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<a href="../../../../interface/overview.html">Interface Basics</a>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="input.html">Input</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/input.html">Input</a>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:3.5rem" href="output.html">Output</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/output.html">Output</a>
+<span style="padding-left:2.5rem">File menu</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="color.html">Color</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/shader.html">Shader</a>
+<span style="padding-left:2.5rem">Edit menu</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="creative.html">Creative</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/color.html">Color</a>
+<span style="padding-left:2.5rem">Render menu</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="filter.html">Filter</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/texture.html">Texture</a>
+<span style="padding-left:2.5rem">Window menu</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:2.5rem">Help menu</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<a style="padding-left:3.5rem" href="mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<span>Editors introduction</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/group.html">Group</a>
+<span style="padding-left:1.5rem">Armature</span>
+<span>3D Viewport</span>
+<a style="padding-left:3.5rem" href="tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/layout.html">Layout</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<a style="padding-left:3.5rem" href="texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/point.html">Point</a>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<a class="is-current" style="padding-left:3.5rem" href="transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<a style="padding-left:3.5rem" href="layout.html">Layout</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<span style="padding-left:2.5rem">View menu</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:2.5rem">Image menu</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<span style="padding-left:2.5rem">Select menu</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<span style="padding-left:2.5rem">Add menu</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<span style="padding-left:2.5rem">Mask menu</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/group.html">Group</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Tool Tab in Paint Mode</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Scopes Tab</span>
+<span style="padding-left:2.5rem">Mask Tab</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">UV menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Image Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span>Compositor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Geometry Nodes Editor - Header - Add Menu - Group</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Texture Node Editor</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span style="padding-left:2.5rem">Node tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Add</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span>Shader Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Swap menu</span>
+<span style="padding-left:2.5rem">Node menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Node Tab</span>
+<span style="padding-left:2.5rem">Tool Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:2.5rem">Options Tab</span>
+<span style="padding-left:2.5rem">Add Tab</span>
+<span style="padding-left:2.5rem">Relations tab</span>
+<span style="padding-left:2.5rem">Group tab</span>
+<span>Video Sequence Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Export Menu</span>
+<span style="padding-left:2.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Strip Menu</span>
+<span style="padding-left:2.5rem">Image Menu</span>
+<span style="padding-left:2.5rem">Text Menu</span>
+<span style="padding-left:2.5rem">Scene Menu</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Preview - Tool tab</span>
+<span style="padding-left:2.5rem">Preview - View tab</span>
+<span style="padding-left:2.5rem">Sequencer - Strip tab</span>
+<span style="padding-left:2.5rem">Sequencer - Tool tab</span>
+<span style="padding-left:2.5rem">Sequencer - Cache tab</span>
+<span style="padding-left:2.5rem">Sequencer - Proxy tab</span>
+<span style="padding-left:2.5rem">Sequencer - View tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Movie Clip Editor</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:2.5rem">Header Tools and Options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Clip Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Clip Submode - Track Menu</span>
+<span style="padding-left:2.5rem">Tracking Mode - Graph Submode - Graph Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Clip Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Add Menu</span>
+<span style="padding-left:2.5rem">Mask Mode - Mask Menu</span>
+<span style="padding-left:1.5rem">Tool shelf</span>
+<span style="padding-left:2.5rem">Tracking Mode</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Footage Tab</span>
+<span style="padding-left:2.5rem">Track tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - Stabilization tab</span>
+<span style="padding-left:2.5rem">Tracking Mode - View tab</span>
+<span>Dope Sheet</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:2.5rem">Action Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Timeline</span>
+<span style="padding-left:1.5rem">Timeline header</span>
+<span style="padding-left:1.5rem">Timeline channel list</span>
+<span>Graph Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Marker Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">View Tab</span>
+<span style="padding-left:1.5rem">Footer tools and options</span>
+<span>Drivers Editor</span>
+<span style="padding-left:2.5rem">Header tools and options</span>
+<span style="padding-left:2.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">View Menu</span>
+<span style="padding-left:2.5rem">Select Menu</span>
+<span style="padding-left:2.5rem">Channel Menu</span>
+<span style="padding-left:2.5rem">Key Menu</span>
+<span style="padding-left:1.5rem">Channel list</span>
+<span style="padding-left:2.5rem">F-Curve Tab</span>
+<span style="padding-left:2.5rem">Drivers Tab</span>
+<span style="padding-left:2.5rem">Modifiers Tab</span>
+<span style="padding-left:2.5rem">Driver Editor - Sidebar - View Tab</span>
+<span>Nonlinear Animation Editor</span>
+<span style="padding-left:2.5rem">NLA Editor - Header tools and options</span>
+<span style="padding-left:2.5rem">NLA Editor - Header - Quick Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - View Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Select Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Marker Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Add Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Track Menu</span>
+<span style="padding-left:2.5rem">NLA Editor - Strip Menu</span>
+<span style="padding-left:1.5rem">NLA Editor - Channel list</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Animation Data panel</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Strip tab</span>
+<span style="padding-left:2.5rem">NLA Editor - Sidebar - Modifiers Tab</span>
+<span style="padding-left:1.5rem">NLA Editor - Footer tools and options</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:1.5rem">Render Properties Tab</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:1.5rem">Output Properties Tab</span>
+<span style="padding-left:1.5rem">View Layer Properties Tab</span>
+<span style="padding-left:1.5rem">Scene Properties Tab</span>
+<span style="padding-left:1.5rem">World Properties Tab</span>
+<span style="padding-left:1.5rem">Collection Properties Tab</span>
+<span style="padding-left:1.5rem">Object Properties Tab</span>
+<span style="padding-left:1.5rem">Modifiers tab</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:1.5rem">Particle Properties Tab</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:1.5rem">Visual Effects Properties Tab</span>
+<span style="padding-left:1.5rem">Physics Properties Tab</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:1.5rem">Object Constraints Properties Tab</span>
+<span style="padding-left:1.5rem">Object Data Properties Tab</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span style="padding-left:1.5rem">Material Properties Tab</span>
+<span style="padding-left:1.5rem">Texture Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Properties Tab</span>
+<span style="padding-left:1.5rem">Bone Constraint Properties</span>
+<span style="padding-left:1.5rem">Strip Tab</span>
+<span style="padding-left:1.5rem">Strip Modifiers Tab</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Timeline viewport</span>
+<a style="padding-left:2.5rem" href="../add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../../shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Standard Keymap</span>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Compositor › Header › Add Menu › Transform</div><h1 class="pv-title">Transform</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 9 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-transform">Add menu - Transform</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/add-menu-transform.png" alt="Add menu - Transform" loading="lazy"><figcaption>Add menu - Transform</figcaption></figure>
+<p>These nodes distort the image in some fashion. They work either on the whole image, or by using a mask to vary the effect over the image.</p>
+<h3 id="rotate">Rotate</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/rotate.png" alt="Rotate" loading="lazy"></figure>
+<p>This node rotates an image.</p>
+<h4 id="inputs">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>Standard image input.</td>
+</tr>
+<tr>
+<td>Angle</td>
+<td>Rotation angle in degree. Positive values rotate clockwise and negative ones counterclockwise.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sampling-subpanel">Sampling Subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png" alt="Sampling Subpanel" loading="lazy"></figure>
+<h5 id="interpolation">Interpolation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>The interpolation mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nearest</td>
+<td>No interpolation. This method uses the nearest neighboring pixel.</td>
+</tr>
+<tr>
+<td>Bilinear</td>
+<td>Simple interpolation between adjacent pixels.</td>
+</tr>
+<tr>
+<td>Bicubic</td>
+<td>Highest quality interpolation.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="anisotropic">Anisotropic</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png" alt="Anisotropic" loading="lazy"></figure>
+<p>Anisotropic interpolation.</p>
+<h5 id="extension-x">Extension X</h5>
+<p>The extension mode applied to the X axis.</p>
+<h5 id="extension-y">Extension Y</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png" alt="Extension Y" loading="lazy"></figure>
+<p>The extension mode applied to the Y axis.</p>
+<h4 id="outputs">Outputs</h4>
+<h5 id="image">Image</h5>
+<p>Standard image output.</p>
+<h3 id="scale">Scale</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/scale.png" alt="Scale" loading="lazy"></figure>
+<p>The Scale node scales the size of an image.</p>
+<h4 id="inputs-2">Inputs</h4>
+<h5 id="image-2">Image</h5>
+<p>Standard image input.</p>
+<h5 id="type">Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/type.png" alt="Type" loading="lazy"></figure>
+<p>Coordinate Space to scale relative to.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relative</td>
+<td>Percentage values relative to the dimensions of the image input.</td>
+</tr>
+<tr>
+<td>Absolute</td>
+<td>Size of an image by using absolute pixel values.</td>
+</tr>
+<tr>
+<td>Scene Size</td>
+<td>Sizes an image to the size of the final render resolution for the scene. For example, rendering a scene at the standard 1080p resolution but setting the render percentage at 50%, will produce a 1080p image with the scene scaled down 50% and leaving the rest of the image as alpha.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="render-size">Render Size</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/render-size.png" alt="Render Size" loading="lazy"></figure>
+<p>Image dimensions set in the Render panel.</p>
+<p><strong>Stretch, Fit, Crop</strong></p>
+<p>Render Size setting. Stretch distorts the image so that it fits into the render size. Fit scales the image until the bigger axis “fits” into the render size. Crop cuts the image so that it is the same aspect ratio as the render size.</p>
+<h5 id="x-y">X, Y</h5>
+<p>Scale in the axis directions, only available if Space is set to Relative or Absolute.</p>
+<h5 id="sampling-subpanel-2">Sampling Subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png" alt="Sampling Subpanel" loading="lazy"></figure>
+<h6 id="interpolation-2">Interpolation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>The interpolation mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nearest</td>
+<td>No interpolation. This method uses the nearest neighboring pixel.</td>
+</tr>
+<tr>
+<td>Bilinear</td>
+<td>Simple interpolation between adjacent pixels.</td>
+</tr>
+<tr>
+<td>Bicubic</td>
+<td>Highest quality interpolation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anisotropic</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png" alt="Anisotropic" loading="lazy"></figure>
+<p>Anisotropic interpolation.</p>
+<h6 id="extension-x-2">Extension X</h6>
+<p>The extension mode applied to the X axis.</p>
+<h6 id="extension-y-2">Extension Y</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png" alt="Extension Y" loading="lazy"></figure>
+<p>The extension mode applied to the Y axis.</p>
+<h4 id="outputs-2">Outputs</h4>
+<h5 id="image-3">Image</h5>
+<p>Standard image output.</p>
+<h3 id="transform">Transform</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/transform.png" alt="Transform" loading="lazy"></figure>
+<p>The Transform node combines the functionality of three other nodes: Scale, translate, and rotate nodes.</p>
+<h4 id="inputs-3">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>Standard image input.</td>
+</tr>
+<tr>
+<td>X, Y</td>
+<td>Used to move the input image horizontally and vertically.</td>
+</tr>
+<tr>
+<td>Angle</td>
+<td>Used to rotate an image around its center. Positive values rotate counter-clockwise and negative ones clockwise.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Used to resize the image. The scaling is relative, meaning a value of 0.5 gives half the size and a value of 2.0 gives twice the size of the original image.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="sampling-subpanel-3">Sampling Subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png" alt="Sampling Subpanel" loading="lazy"></figure>
+<h6 id="interpolation-3">Interpolation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>The interpolation mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nearest</td>
+<td>No interpolation. This method uses the nearest neighboring pixel.</td>
+</tr>
+<tr>
+<td>Bilinear</td>
+<td>Simple interpolation between adjacent pixels.</td>
+</tr>
+<tr>
+<td>Bicubic</td>
+<td>Highest quality interpolation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anisotropic</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png" alt="Anisotropic" loading="lazy"></figure>
+<p>Anisotropic interpolation.</p>
+<h6 id="extension-x-3">Extension X</h6>
+<p>The extension mode applied to the X axis.</p>
+<h6 id="extension-y-3">Extension Y</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png" alt="Extension Y" loading="lazy"></figure>
+<p>The extension mode applied to the Y axis.</p>
+<h4 id="outputs-3">Outputs</h4>
+<h5 id="image-4">Image</h5>
+<p>Standard image output.</p>
+<h3 id="translate">Translate</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/translate.png" alt="Translate" loading="lazy"></figure>
+<p>The Translate node moves an image.</p>
+<p>Could also be used to add a 2D camera shake.</p>
+<h4 id="inputs-4">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>Standard image input.</td>
+</tr>
+<tr>
+<td>X, Y</td>
+<td>Used to move the input image horizontally and vertically.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="sampling-subpanel-4">Sampling Subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png" alt="Sampling Subpanel" loading="lazy"></figure>
+<h6 id="interpolation-4">Interpolation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>The interpolation mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nearest</td>
+<td>No interpolation. This method uses the nearest neighboring pixel.</td>
+</tr>
+<tr>
+<td>Bilinear</td>
+<td>Simple interpolation between adjacent pixels.</td>
+</tr>
+<tr>
+<td>Bicubic</td>
+<td>Highest quality interpolation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anisotropic</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png" alt="Anisotropic" loading="lazy"></figure>
+<p>Anisotropic interpolation.</p>
+<h6 id="extension-x-4">Extension X</h6>
+<p>The extension mode applied to the X axis.</p>
+<h6 id="extension-y-4">Extension Y</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png" alt="Extension Y" loading="lazy"></figure>
+<p>The extension mode applied to the Y axis.</p>
+<h4 id="outputs-4">Outputs</h4>
+<h5 id="image-5">Image</h5>
+<p>Standard image output.</p>
+<h3 id="corner-pin">Corner Pin</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/corner-pin.png" alt="Corner Pin" loading="lazy"></figure>
+<p>The Corner Pin node uses explicit corner values for a plane warp transformation. It works like the Plane Track Deform node, but without using “plane track” data from the Movie Clip Editor.</p>
+<h4 id="inputs-5">Inputs</h4>
+<h5 id="image-6">Image</h5>
+<p>Standard image input.</p>
+<h5 id="corners-upper-left-upper-right-etc">Corners ( Upper left, Upper Right, etc. )</h5>
+<p>Four vector inputs to define the plane warping. (Z component of vector inputs is ignored.)</p>
+<h5 id="sampling-subpanel-5">Sampling Subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png" alt="Sampling Subpanel" loading="lazy"></figure>
+<h6 id="interpolation-5">Interpolation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>The interpolation mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nearest</td>
+<td>No interpolation. This method uses the nearest neighboring pixel.</td>
+</tr>
+<tr>
+<td>Bilinear</td>
+<td>Simple interpolation between adjacent pixels.</td>
+</tr>
+<tr>
+<td>Bicubic</td>
+<td>Highest quality interpolation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anisotropic</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png" alt="Anisotropic" loading="lazy"></figure>
+<p>Anisotropic interpolation.</p>
+<h6 id="extension-x-5">Extension X</h6>
+<p>The extension mode applied to the X axis.</p>
+<h6 id="extension-y-5">Extension Y</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png" alt="Extension Y" loading="lazy"></figure>
+<p>The extension mode applied to the Y axis.</p>
+<h4 id="outputs-5">Outputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>Standard image output. (The image after distorting.)</td>
+</tr>
+<tr>
+<td>Plane</td>
+<td>A black-and-white alpha mask of the plane.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="crop">Crop</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/crop.png" alt="Crop" loading="lazy"></figure>
+<p>The Crop Node takes an input image and crops it to a selected region.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Image</strong>: Standard image input. · <strong>X / Y</strong>: X and Y position of the origin. · <strong>Width / Height</strong>: The size of the crop area. · <strong>Alpha Crop</strong>: Make the outer areas of the area transparent instead of cropping the image.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Image</strong>: Standard image output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="displace">Displace</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/displace.png" alt="Displace" loading="lazy"></figure>
+<p>The Displace Node displaces the pixel position based on an input vector.</p>
+<p>This node could be used to model phenomena, like hot air distortion, refraction's of uneven glass or for surreal video effects.</p>
+<h4 id="inputs-6">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>Standard image input.</td>
+</tr>
+<tr>
+<td>Displacement</td>
+<td>Input of the displacement map. If the a color output is implicitly converted in the vector input, the first channel (red) value determines displacement along X axis. The second channel (green) the displacement along Y axis. If the input is a greyscale image, where both the channel values are equal, the input image will be displaced equally in both X and Y directions.</td>
+</tr>
+<tr>
+<td>Scale X, Y</td>
+<td>Separate scaling of the vector input in X and Y direction. Acting as multipliers by increasing or decreasing the strength of the displacement along their respective axes.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="sampling-subpanel-6">Sampling Subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png" alt="Sampling Subpanel" loading="lazy"></figure>
+<h6 id="interpolation-6">Interpolation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>The interpolation mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nearest</td>
+<td>No interpolation. This method uses the nearest neighboring pixel.</td>
+</tr>
+<tr>
+<td>Bilinear</td>
+<td>Simple interpolation between adjacent pixels.</td>
+</tr>
+<tr>
+<td>Bicubic</td>
+<td>Highest quality interpolation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anisotropic</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png" alt="Anisotropic" loading="lazy"></figure>
+<p>Anisotropic interpolation.</p>
+<h6 id="extension-x-6">Extension X</h6>
+<p>The extension mode applied to the X axis.</p>
+<h6 id="extension-y-6">Extension Y</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png" alt="Extension Y" loading="lazy"></figure>
+<p>The extension mode applied to the Y axis.</p>
+<h4 id="outputs-6">Outputs</h4>
+<h5 id="image-7">Image</h5>
+<p>Standard image output.</p>
+<h3 id="flip">Flip</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/flip.png" alt="Flip" loading="lazy"></figure>
+<p>This node flips an image at defined axis.</p>
+<p>You can use this node to just flip or use it as a part of mirror setting. Mix half of the image to be mirrored with its flipped version to produce mirrored image.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Image</strong>: Standard image input.</td>
+</tr>
+<tr>
+<td>Flip X</td>
+<td>Flip the image along the X axis. · <strong>Flip Y</strong>: Flip the image along the Y axis.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Image</strong>: Standard image output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="map-uv">Map UV</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/map-uv.png" alt="Map UV" loading="lazy"></figure>
+<p>With the Map UV node objects can be “re-textured” after they have been rendered.</p>
+<p>To apply a texture to individual enumerated objects the ID Mask Node could be used.</p>
+<h4 id="inputs-7">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>The new 2D texture.</td>
+</tr>
+<tr>
+<td>UV</td>
+<td>The input for UV render pass. See Cycles render passes. Hint. To store the UV pass a multi-layer OpenEXR format could be used.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="sampling-subpanel-7">Sampling Subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/sampling-subpanel.png" alt="Sampling Subpanel" loading="lazy"></figure>
+<h6 id="interpolation-7">Interpolation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>The interpolation mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nearest</td>
+<td>No interpolation. This method uses the nearest neighboring pixel.</td>
+</tr>
+<tr>
+<td>Bilinear</td>
+<td>Simple interpolation between adjacent pixels.</td>
+</tr>
+<tr>
+<td>Bicubic</td>
+<td>Highest quality interpolation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anisotropic</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/anisotropic.png" alt="Anisotropic" loading="lazy"></figure>
+<p>Anisotropic interpolation.</p>
+<h6 id="extension-x-7">Extension X</h6>
+<p>The extension mode applied to the X axis.</p>
+<h6 id="extension-y-7">Extension Y</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/extension-y.png" alt="Extension Y" loading="lazy"></figure>
+<p>The extension mode applied to the Y axis.</p>
+<h4 id="outputs-7">Outputs</h4>
+<h5 id="image-8">Image</h5>
+<p>The resulting image is the input image texture distorted to match the UV coordinates. That image can then be overlay mixed with the original image to paint the texture on top of the original. Adjust alpha and the mix factor to control how much the new texture overlays the old.</p>
+<p>Hint. When painting the new texture, it helps to have the UV maps for the original objects in the scene, it is recommended to keep those UV texture outlines around even, when shooting is done.</p>
+<h3 id="lens-distortion">Lens Distortion</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/lens-distortion.png" alt="Lens Distortion" loading="lazy"></figure>
+<p>Use this node to simulate distortions that real camera lenses produce.</p>
+<h4 id="inputs-8">Inputs</h4>
+<h5 id="image-9">Image</h5>
+<p>Standard image input.</p>
+<h5 id="type-2">Type</h5>
+<p>The lens distortion type.</p>
+<h6 id="type-radial">Type Radial</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/type-radial.png" alt="Type Radial" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distortion</td>
+<td>This creates a bulging or pinching effect from the center of the image.</td>
+</tr>
+<tr>
+<td>Dispersion</td>
+<td>This simulates chromatic aberrations, where different wavelengths of light refract slightly differently, creating a rainbow colored fringe.</td>
+</tr>
+<tr>
+<td>Jitter</td>
+<td>Adds jitter to the distortion. Faster, but noisier.</td>
+</tr>
+<tr>
+<td>Fit</td>
+<td>Scales image so black areas are not visible. Only works for positive distortion.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="type-radial-2">Type Radial</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/type-radial.png" alt="Type Radial" loading="lazy"></figure>
+<p><strong>Dispersion</strong></p>
+<p>This simulates chromatic aberrations, where different wavelengths of light refract slightly differently, creating a rainbow colored fringe.</p>
+<h4 id="outputs-8">Outputs</h4>
+<h5 id="image-10">Image</h5>
+<p>Standard image output.</p>
+<h3 id="movie-distortion">Movie Distortion</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/movie-distortion.png" alt="Movie Distortion" loading="lazy"></figure>
+<p>In the real world, all camera lenses produce some or the other sort of lens distortion. But, whatever we render has got no distortion. So, this node helps in removing distortion from movies or adding distortion to render to make our render blend in with the movie clip.</p>
+<p>Usually, it is used while motion tracking.</p>
+<h4 id="distortion-vs-undistortion">Distortion vs Undistortion</h4>
+<p>Although, both, distortion of render and undistortion of movie clip are possible, and produce similar results, there is a difference between these two methods.</p>
+<p>There are two kinds of lens distortion possible and, in simple terms, they can be said as:</p>
+<p>When the movie clip is bulging out.</p>
+<p>When the movie clip is bulging in.</p>
+<p>For the first case, it is recommended to distort the render and leave the movie clip as it is, because, undistorting the movie clip will require extra pixel information, which is not available to Blender. Similarly, in the second case, it is recommended to undistort the movie clip and leave the render as it is, because, distorting the render will require those extra unavailable pixels. Doing the wrong method in the wrong case can create weird results around the edges, such as in the image shown.</p>
+<h4 id="calculating-distortion">Calculating Distortion</h4>
+<p>Before using this node, one has to calculate the lens distortion of the clip. This can be done by adjusting K1, K2 and K3 values in Movie Clip Editor &gt; Properties ? Lens. For more information on how to edit those values, check this out.</p>
+<h4 id="inputs-9">Inputs</h4>
+<h5 id="image-11">Image</h5>
+<p>Standard image input.</p>
+<h5 id="type-3">Type</h5>
+<h6 id="undistort">Undistort</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b2938f9e78c0b0e792e3a8c7e761731ac2fc4532/docs2/images/editors/compositor/header/add-menu-transform/undistort.png" alt="Undistort" loading="lazy"></figure>
+<p>Used to undistort the image received, and is usually used for the raw distorted movie clip.</p>
+<h6 id="distort">Distort</h6>
+<p>Used to distort the image received, and is usually used for rendered images.</p>
+<h5 id="movie-clip">Movie Clip</h5>
+<p>Used to select the movie clip whose distortion is to be used. This can be useful if more than one movie clips are present, each having a different distortion setting. For controls see Data-Block Menu.</p>
+<h4 id="outputs-9">Outputs</h4>
+<h5 id="image-12">Image</h5>
+<p>Standard image output.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fmain/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fcompositor%2Fheader%2Fadd-menu%2Ftransform.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/main/docs2/content/editors/compositor/header/add-menu/transform.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-menu-transform">Add menu - Transform</a><a class="h3" href="#rotate">Rotate</a><a class="h3" href="#scale">Scale</a><a class="h3" href="#transform">Transform</a><a class="h3" href="#translate">Translate</a><a class="h3" href="#corner-pin">Corner Pin</a><a class="h3" href="#crop">Crop</a><a class="h3" href="#displace">Displace</a><a class="h3" href="#flip">Flip</a><a class="h3" href="#map-uv">Map UV</a><a class="h3" href="#lens-distortion">Lens Distortion</a><a class="h3" href="#movie-distortion">Movie Distortion</a></aside></div></body></html>
