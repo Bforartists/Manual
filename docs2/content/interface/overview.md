@@ -1,6 +1,6 @@
 ---
 id: interface.basics
-title: "Overview"
+title: "Interface Basics"
 section: interface
 path:
   - The Interface

@@ -18,12 +18,12 @@ explore:
   title: Explore the interface.
   text: Hover any part of Bforartists to see what it is and jump to its page.
   link: interface/basics.md
-# Quick Start paths (short projects; the pages come later, they open the Quick Start for now)
+# Quick Start paths (short projects; until their pages exist, each opens the matching workspace)
 paths:
-  - { area: Modeling, title: Model your first prop, level: Beginner, minutes: 45, icon: editmode_hlt, link: getting-started/quick-start.md }
-  - { area: Sculpting, title: Sculpt a creature, level: Intermediate, minutes: 90, icon: sculptmode_hlt, link: getting-started/quick-start.md }
-  - { area: 2D Full Canvas, title: 2D animation on a canvas, level: Intermediate, minutes: 60, icon: outliner_ob_greasepencil, link: getting-started/quick-start.md }
-  - { area: Shading, title: Shade and render, level: Beginner, minutes: 40, icon: node_material, link: getting-started/quick-start.md }
-  - { area: Animation, title: Animate a bouncing ball, level: Beginner, minutes: 30, icon: render_animation, link: getting-started/quick-start.md }
-  - { area: Video Editing, title: Edit a video, level: Intermediate, minutes: 50, icon: sequence, link: getting-started/quick-start.md }
+  - { area: Modeling, title: Model your first prop, level: Beginner, minutes: 45, icon: editmode_hlt, link: workspaces/modeling.md }
+  - { area: Sculpting, title: Sculpt a creature, level: Intermediate, minutes: 90, icon: sculptmode_hlt, link: workspaces/sculpting.md }
+  - { area: 2D Full Canvas, title: 2D animation on a canvas, level: Intermediate, minutes: 60, icon: outliner_ob_greasepencil, link: workspaces/2d-full-canvas.md }
+  - { area: Shading, title: Shade and render, level: Beginner, minutes: 40, icon: node_material, link: workspaces/shading.md }
+  - { area: Animation, title: Animate a bouncing ball, level: Beginner, minutes: 30, icon: render_animation, link: workspaces/animation.md }
+  - { area: Video Editing, title: Edit a video, level: Intermediate, minutes: 50, icon: sequence, link: workspaces/video-editing.md }
 ---

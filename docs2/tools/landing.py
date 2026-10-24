@@ -126,6 +126,35 @@ def add_cards(body, page, children, kids, url_of, categories=None, section_id=No
 
 
 PLACEHOLDER_ICON = "file_text"     # pages without an icon of their own still get one in the sidebar
+REGION_ICONS = [                    # …and region pages get the icon of their region, as in the Interface group
+    (r"context menus?$|context menu\b", "menu"),
+    (r"\btool ?shelf\b|^tools$|toolbar", "tool_settings"),
+    (r"\bsidebar\b|\bside bar\b", "sidebar"),
+    (r"\btab$|\btab\b -|\btabs?\b", "new_window"),
+    (r"\bfooter\b", "statusbar"),
+    (r"\bheader\b|tools and options", "topbar"),
+    (r"\bpanels?$", "toggle_node_options"),
+    (r"\bmenu$|\bmenus$", "menu"),
+    (r"channel", "sidebar"),
+    (r"modifiers", "modifier"),
+    (r"^mesh object", "mesh_data"), (r"^curves object", "hair"), (r"^curve object", "outliner_data_curve"),
+    (r"^metaball object", "meta_data"), (r"^surface object", "surface_data"), (r"^point cloud object", "pointcloud_data"),
+    (r"^text object", "font_data"), (r"^grease pencil object", "outliner_data_greasepencil"),
+    (r"^armature object", "armature_data"), (r"^lattice object", "lattice_data"), (r"^empty", "empty_data"),
+    (r"^speaker object", "speaker"), (r"^camera object", "camera_data"), (r"^light probe object", "lightprobe_sphere"),
+    (r"^light object", "light"), (r"^force field object", "force_force"), (r"^volume object", "volume_data"),
+    (r"bone constraint", "constraint_bone"), (r"^cycles$|^eevee$|^workbench$", "scene"),
+    (r"^emitter$", "particles"), (r"^hair$", "hair"), (r"keymap|hotkeys", "key_command"),
+    (r"^add$", "add"), (r"tracking", "tracker"), (r"timeline", "time"),
+]
+
+
+def region_icon(title):
+    t = str(title or "").lower()
+    for pat, ic in REGION_ICONS:
+        if re.search(pat, t):
+            return ic
+    return ""
 
 
 def words_of(page):
@@ -145,7 +174,7 @@ def nav_tree(tree, kids, icons, section_slug, page_slug, commit=""):
 
     def node(n, top=False):
         d = {"t": str(n.page.fm.get("title") or n.id), "s": page_slug(n)}
-        ic = icon_file(n.page.fm.get("icon"), icons)
+        ic = icon_file(n.page.fm.get("icon"), icons) or icon_file(region_icon(d["t"]), icons)
         d["i"] = ic or ph
         if not ic:
             d["ph"] = 1
