@@ -9,9 +9,17 @@ version: "5.1"
 # Popular: the chips under the search box
 popular:
   - { title: Quick Start, link: getting-started/quick-start.md, icon: startpoint }
-  - { title: What's new in 5.1, link: appendix/manual-update-history.md, icon: new }
+  - { title: Workspaces, link: "#dk-look", icon: workspace }
   - { title: Keymap, link: keymap/standard-keymap.md, icon: key_command }
   - { title: Migrating from Blender, link: getting-started/migrating-from-blender.md, icon: import }
+# Hero art: the picture beside the search, and up to three stickers floating on it (Webflow asset URLs)
+art:
+  image: https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6ac3c37e3c91453abd2c5c10_Draise_Relic-39.webp
+  alt: Relic, a scene made in Bforartists
+  stickers:
+    - https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6ac3c70a751d336da1ddc430_G_Cube.webp
+    - https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6ac3c70b95eca2b7544627ad_G_Sphere.webp
+    - https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6ac3c70b291700ae4ff39b4f_G_Cone%20Rounded.webp
 # Look around: the workspaces Bforartists opens with (its tabs, in order), as focus tabs over one map, then a way to all of them
 workspace:
   title: Look around the workspaces
@@ -28,7 +36,7 @@ workspace:
 # Quick Starts: a teaser until the guides exist (they come after the next big website update)
 teaser:
   eyebrow: Quick Starts · coming soon
-  title: Learn by making one little film
+  title: Get started by making a story with Bforartists
   text: "Short, playful guides on a skill map: every guide you finish adds one piece to a small animated story, from the first prop to opening night. They arrive after the next big website update."
   when: After the next website update
   link: getting-started/quick-start.md

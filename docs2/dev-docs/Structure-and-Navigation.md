@@ -55,7 +55,8 @@ flowchart TD
 | Field | Shows |
 |---|---|
 | `eyebrow`, `headline`, `summary` | The hero |
-| `popular` | The chips under the search box |
+| `popular` | The chips under the search box (a link can also jump on the page, like `"#dk-look"` for the workspace picker) |
+| `art` | The hero picture beside the search (`image:`) and up to three floating `stickers:` (Webflow asset URLs) |
 | `workspace` | The workspace picker: `pages:` lists the tabs Bforartists opens with, in order (focus tabs over one map, like the Download page's release switch); `all:` is the **Explore all workspaces** button. With only `page:` it shows that one map |
 | `explore` | Optional card beside the search that jumps to the picker (off: the picker has its own button) |
 | `teaser` | The **Quick Starts · coming soon** card, until the guides exist |
