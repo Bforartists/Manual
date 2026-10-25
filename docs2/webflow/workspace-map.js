@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · workspace maps · @version 1.0.8
+/* Bforartists Docs 2.0 · workspace maps · @version 1.0.9
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer), next to the docs layer.
  * The sync writes plain lists from docs2/workspaces.yml; this script turns them into:
@@ -64,6 +64,10 @@
     /* one icon per area: with the big icon showing, the tag keeps only the name (and goes where there is no room for a name) */
     '.wsx-hot:not(.is-tiny) .wsx-tag img{display:none}.wsx-hot:not(.is-tiny) .wsx-tag{padding:.2rem .5rem}',
     '.wsx-hot.is-narrow:not(.is-tiny) .wsx-tag{display:none!important}',
+    /* thin areas (Timeline, Statusbar…): the tag sits just outside the strip, above it in the lower half, below it in the upper half, so it never clips */
+    '.wsx-hot.is-tiny .wsx-tag{left:50%;top:50%;max-width:none;transform:translate(-50%,-50%)}',
+    '.wsx-hot.is-flat .wsx-tag{top:calc(100% + 4px);transform:translateX(-50%)}',
+    '.wsx-hot.is-flat.is-low .wsx-tag{top:auto;bottom:calc(100% + 4px)}',
     '@media (max-width:767px){.wsx-hot:not(.is-tiny) .wsx-tag{display:none!important}}',
     '.wsx-hot.is-on .wsx-big{animation:wsxpop .18s ease-out}',
     '@keyframes wsxpop{from{transform:translate(-50%,-50%) scale(.8);opacity:0}}',
@@ -230,6 +234,7 @@
     w.areas.forEach(function (a, i) {
       var h = el('button', 'wsx-hot'); h.type = 'button';
       h.style.cssText = 'left:' + a.box[0] + '%;top:' + a.box[1] + '%;width:' + a.box[2] + '%;height:' + a.box[3] + '%;--c:' + a.c;
+      if (a.box[1] + a.box[3] / 2 > 50) h.classList.add('is-low');   /* in the lower half: a thin area's tag goes above it */
       h.setAttribute('aria-label', a.name + (a.note ? ': ' + a.note : ''));
       h.innerHTML = '<span class="wsx-tag">' + (a.i ? img(a.i) : '') + '<b>' + esc(a.name) + '</b></span>' + (a.i ? '<span class="wsx-big">' + img(a.i) + '</span>' : '');
       h.addEventListener('mouseenter', function () { self.pick(i); });
@@ -250,8 +255,9 @@
   Map.prototype.fit = function () {
     qa('.wsx-hot', this.stage).forEach(function (h) {
       var w = h.offsetWidth, ht = h.offsetHeight, tag = q('.wsx-tag b', h);
-      h.classList.toggle('is-narrow', w < Math.max(110, (tag ? tag.textContent.length : 10) * 8 + 40) || ht < 34);
+      h.classList.toggle('is-narrow', w < Math.max(110, (tag ? tag.textContent.length : 10) * 8 + 40) || (ht < 34 && ht >= 22));   /* a flat strip's tag sits outside it, so its name still fits */
       h.classList.toggle('is-tiny', w < 40 || ht < 22);
+      h.classList.toggle('is-flat', ht < 22);
     });
   };
   Map.prototype.pick = function (i) {
