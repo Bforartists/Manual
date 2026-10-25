@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.9
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.10
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -189,6 +189,7 @@
     '.dk-path-tx{padding:.75rem}',
     '.dk-path-tx b{display:block;margin:0 0 .5rem;font:700 1rem/1.2 Inter,sans-serif}',
     '.dk-path-tx small{display:flex;flex-wrap:wrap;gap:.375rem .75rem;color:var(--dk-muted);font-size:.75rem}',
+    '.ui-doc-bar-row2.dk-empty{display:none!important}.ui-doc-bar-in{align-content:center}',
     '.dk-secs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}',
     /* sinks: the same inset well the website uses under groups of cards */
     '.dk-sink{border-radius:var(--bfa-sink-r,1.25rem);padding:1.25rem}',
@@ -303,6 +304,12 @@
   }
 
   /* ---------------------------------------------------------------- 2 breadcrumb */
+  /* the bar's second row (Page Sections) takes no room when it has nothing to show, and the crumb sits centred */
+  function barRow() {
+    var r = q('.ui-doc-bar-row2'); if (!r) return;
+    var any = [].some.call(r.children, function (c) { return c.offsetWidth || c.offsetHeight; });
+    r.classList.toggle('dk-empty', !any);
+  }
   function crumbs() {
     var c = q('.ui-doc-crumb'); if (!c || c.dataset.dk) return; c.dataset.dk = '1';
     var root = q('a', c); if (root) root.setAttribute('href', HOME);
@@ -502,7 +509,7 @@
     if (!nav || !nav.sections) return;
     NAV = nav; IDX = index(nav);
     overviews(); watchSide();
-    crumbs(); statusChip(); titleTile();
+    crumbs(); statusChip(); titleTile(); barRow(); setTimeout(barRow, 400); window.addEventListener('resize', barRow);
     if (here === 'home') return home();
     var n = IDX.by[here];
     if (n && n.land) overview(n);
