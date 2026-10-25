@@ -12,14 +12,10 @@ popular:
   - { title: Workspaces, link: "#dk-look", icon: workspace }
   - { title: Keymap, link: keymap/standard-keymap.md, icon: key_command }
   - { title: Migrating from Blender, link: getting-started/migrating-from-blender.md, icon: import }
-# Hero art: the picture beside the search, and up to three stickers floating on it (Webflow asset URLs)
+# Hero art: one still picture beside the search (a Webflow asset URL)
 art:
   image: https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6ac3c37e3c91453abd2c5c10_Draise_Relic-39.webp
   alt: Relic, a scene made in Bforartists
-  stickers:
-    - https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6ac3c70a751d336da1ddc430_G_Cube.webp
-    - https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6ac3c70b95eca2b7544627ad_G_Sphere.webp
-    - https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6ac3c70b291700ae4ff39b4f_G_Cone%20Rounded.webp
 # Look around: the workspaces Bforartists opens with (its tabs, in order), as focus tabs over one map, then a way to all of them
 workspace:
   title: Look around the workspaces

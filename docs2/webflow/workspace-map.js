@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · workspace maps · @version 1.0.7
+/* Bforartists Docs 2.0 · workspace maps · @version 1.0.8
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer), next to the docs layer.
  * The sync writes plain lists from docs2/workspaces.yml; this script turns them into:
@@ -61,6 +61,10 @@
     '@supports (width:1cqh){.wsx-big{width:min(5rem,40cqw,64cqh)}}',
     '.wsx-big img{width:74%;height:74%;object-fit:contain;margin:0!important;filter:drop-shadow(0 2px 3px #0009)}',
     '.wsx-hot.is-on .wsx-big,.wsx.is-labels .wsx-hot .wsx-big{display:grid}',
+    /* one icon per area: with the big icon showing, the tag keeps only the name (and goes where there is no room for a name) */
+    '.wsx-hot:not(.is-tiny) .wsx-tag img{display:none}.wsx-hot:not(.is-tiny) .wsx-tag{padding:.2rem .5rem}',
+    '.wsx-hot.is-narrow:not(.is-tiny) .wsx-tag{display:none!important}',
+    '@media (max-width:767px){.wsx-hot:not(.is-tiny) .wsx-tag{display:none!important}}',
     '.wsx-hot.is-on .wsx-big{animation:wsxpop .18s ease-out}',
     '@keyframes wsxpop{from{transform:translate(-50%,-50%) scale(.8);opacity:0}}',
     '.wsx-hot.is-narrow .wsx-tag b{display:none}.wsx-hot.is-narrow .wsx-tag{padding:.2rem}',
