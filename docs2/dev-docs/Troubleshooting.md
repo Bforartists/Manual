@@ -42,6 +42,7 @@ The pull request comment lists each problem with its file and line. The common o
 |---|---|---|
 | Plain lists instead of cards or maps | A site script did not load. In the browser console: "Failed to find a valid digest" | The registered hash does not match the file: register the version again with the hash from the job summary ([Site scripts](Site-Scripts.md)) |
 | A new feature is missing | The template still uses the old version | Apply the new version to the template and publish staging |
+| The workspace picker is missing on the Docs home | The template runs the docs layer before the workspace map script (an update moved it to the end) | Put `bfa_workspace_map` before `bfa_docs_layer` and publish ([Site scripts](Site-Scripts.md)); docs layer 1.0.9 and later copes with either order |
 | A workspace map is in the wrong place | The screenshot changed but the boxes did not | Re-capture or run `ws_map.py detect <workspace>` ([Workspace maps](Workspace-Maps.md)) |
 
 ## The sidebar or search is out of date

@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.8
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.9
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -451,7 +451,7 @@
         '<div class="dk-card dk-help-card">' + ico(IC.comm, '') + '<div><b>Stuck? Ask the community</b><p>Artists and developers answer on Discord every day. Share a screenshot and the page you were on.</p><div class="dk-btns">' + btn('Discord', IC.comm, 'is-small', DISCORD, ' target="_blank" rel="noopener"') + btn('Report a doc issue', IC.light, 'is-small', ISSUE, ' target="_blank" rel="noopener"') + '</div></div></div>' +
         '<div class="dk-card dk-help-card is-pro">' + ico(IC.world, '') + '<div><b>Need it done? Pro support</b><p>Training, pipeline help and custom tools for studios and schools, from the team behind Bforartists at Trinumedia.</p><div class="dk-btns">' + btn('Talk to Trinumedia ↗', IC.world, 'is-small is-primary', PRO, ' target="_blank" rel="noopener"') + '</div></div></div>' +
       '</section>';
-    var maps = qa('.wsx, .ui-ws-map', body);                  /* the workspace map (built by the workspace map script) moves in */
+    var maps = qa('.wsx, .ui-ws-map, .ui-ws-explorer', body);   /* the workspace picker moves in, built or not yet built: either script may run first */
     body.innerHTML = ''; body.appendChild(h);
     var slot = q('.dk-look-map', h); if (slot) maps.forEach(function (m) { slot.appendChild(m); });
     homeSearch(q('.dk-search', h));
