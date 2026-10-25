@@ -204,13 +204,14 @@ def build(repo, cfg):
     url_of = lambda n: cfg["page_url"] + n.web_slug                  # noqa: E731
     base, icons = landing.load_icons()
     content = f"{DOCS_ROOT}/content/"
-    url_rel = lambda r: cfg["page_url"] + slug_of[content + r] if content + r in slug_of else ""  # noqa: E731
+    sec_slug = {sec.index.rel: slugify(sec.id) for sec in tree if sec.index}         # a section's index.md = its overview
+    url_rel = lambda r: cfg["page_url"] + (slug_of.get(content + r) or sec_slug.get(content + r, "")) if (content + r in slug_of or content + r in sec_slug) else ""  # noqa: E731
     img_rel = lambda r: img_url(f"{DOCS_ROOT}/{r}") if r else ""                                  # noqa: E731
     ws_editors, ws_pages, ws_order = landing.load_workspaces()
 
     def ws_title(r):
         pg = by_rel.get(content + r)
-        return (str(pg.fm.get("title") or r), str(pg.fm.get("summary") or "")) if pg else (r, "")
+        return (str(pg.fm.get("title") or r), str(pg.fm.get("summary") or ""), pg.fm.get("icon")) if pg else (r, "", None)
     sec_cfg = landing.sections_cfg()
     for sec in tree:                       # each section is a page too: /docs/<section id>, intro + cards
         idx = sec.index
@@ -261,7 +262,12 @@ def build(repo, cfg):
     home_rel = f"{DOCS_ROOT}/home.md"
     if os.path.exists(os.path.join(repo, home_rel)):          # the Docs home: /docs/home
         hp = Page(repo, home_rel)
-        body = tidy(html_build.page_html(repo, hp, by_rel, md, **urls) + landing.home_html(hp, icons, url_rel, img_rel))
+        body = html_build.page_html(repo, hp, by_rel, md, **urls) + landing.home_html(hp, icons, url_rel, img_rel)
+        hw = hp.fm.get("workspace") or {}
+        if hw.get("page") in ws_pages:                         # one workspace map, right on the Docs home
+            body += landing.workspace_map("", ws_pages[hw["page"]], ws_editors, icons, url_rel, img_rel,
+                                          name=ws_title(hw["page"])[0], go=url_rel(hw.get("all", "")))
+        body = tidy(body)
         f = {"page-id": "docs.home", "name": str(hp.fm.get("title") or "Documentation"), "section-id": "home",
              "section-title": "Documentation", "order": 0, "level": 0, "parent-page-id": "", "body": body,
              "version": str(hp.fm.get("version") or ""), "status": str(hp.fm.get("status") or "draft"),

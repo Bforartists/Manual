@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · workspace maps · @version 1.0.2
+/* Bforartists Docs 2.0 · workspace maps · @version 1.0.3
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer), next to the docs layer.
  * The sync writes plain lists from docs2/workspaces.yml; this script turns them into:
@@ -29,10 +29,9 @@
     '.wsx-src{display:none!important}',
     '.wsx a{text-decoration:none!important}',
     /* ribbon: the app\'s tabs, wrapping instead of scrolling */
-    '.wsx-rib{display:flex;flex-wrap:wrap;gap:.25rem;padding:.375rem;margin:0 0 .875rem;border-radius:.5rem;background:var(--wsx-sink);box-shadow:inset 1px 2px 4px #0006}',
-    '.wsx-rib button{flex:none;border:0;cursor:pointer;padding:.4rem .7rem;border-radius:.25rem;background:none;color:var(--wsx-text);opacity:.8;font:600 .8125rem/1.2 inherit}',
-    '.wsx-rib button:hover{opacity:1;background:#ffffff10}',
-    '.wsx-rib button[aria-selected=true]{opacity:1;background:var(--wsx-sel);color:#fff}',
+    '.wsx .wsx-rib{display:flex;flex-wrap:wrap;gap:.375rem;margin:0 0 .875rem;overflow:visible;background:none;box-shadow:none}',
+    '.wsx .wsx-rib .ui-segment-item{flex:0 0 auto;cursor:pointer;font-family:inherit;font-weight:600}',
+    '.wsx .wsx-rib .ui-seg-icon{margin:0!important}',
     '.wsx-row{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start}',
     '.wsx-main{flex:999 1 34rem;min-width:0;display:flex;flex-direction:column;gap:.75rem}',
     '.wsx-side{flex:1 1 16rem;max-width:22rem;display:flex;flex-direction:column;gap:.875rem}',
@@ -73,6 +72,7 @@
     '.wsx-pg.is-r{justify-content:flex-end;text-align:right}',
     '.wsx-pg img{width:16px;height:16px;margin:0!important;flex:none}',
     '.wsx-pg small{display:block;font:700 .6875rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--wsx-mute)}',
+    '.wsx-pg>span{min-width:0;overflow:hidden}',
     '.wsx-pg b{display:block;font-size:.9375rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}',
     '.wsx-pos{display:flex;align-items:center;gap:.5rem;color:var(--wsx-mute);font-size:.8125rem;white-space:nowrap}',
     '.wsx-key{display:inline-grid;place-items:center;min-width:1.6rem;height:1.6rem;padding:0 .35rem;border-radius:.25rem;background:#4c4c4c;border:1px solid #0009;box-shadow:inset 0 1px 0 #ffffff1f,0 2px 0 #1a1a1a;color:#f0f0f0;font:700 .75rem Inter,sans-serif}',
@@ -87,10 +87,8 @@
     '.wsx-all{padding:.875rem;border-radius:.625rem;background:var(--wsx-sink);box-shadow:inset 2px 5px 10px #0006}',
     '.wsx-all>small,.wsx-for>small{display:block;margin:0 0 .5rem;font:700 .6875rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--wsx-mute)}',
     '.wsx-chips{display:flex;flex-wrap:wrap;gap:.375rem}',
-    '.wsx-chip{display:inline-flex;align-items:center;gap:.375rem;height:1.75rem;padding:0 .625rem;border:1px solid #ffffff10;border-radius:.25rem;background:var(--wsx-panel);color:var(--wsx-text);cursor:pointer;font:600 .75rem Inter,sans-serif}',
-    '.wsx-chip img{width:14px;height:14px;margin:0!important}',
-    '.wsx-chip{box-shadow:inset 0 -2px 0 var(--c)}',
-    '.wsx-chip.is-on{background:var(--wsx-sel);color:#fff}',
+    '.wsx .wsx-chip{cursor:pointer;font-family:inherit;box-shadow:inset 0 -2px 0 var(--c)}',
+    '.wsx .wsx-chip img{margin:0!important}',
     '.wsx-for{padding:1rem 1.125rem;border-radius:.625rem;background:var(--wsx-sink);box-shadow:inset 2px 5px 10px #0006;display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center;justify-content:space-between}',
     '.wsx-for p{margin:0!important;flex:1 1 18rem;color:var(--wsx-text);font-size:.9375rem;line-height:1.55}',
     '.wsx-for p>small{display:block;margin:0 0 .25rem;font:700 .6875rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--wsx-mute)}',
@@ -104,7 +102,7 @@
     '.wsx-ov b{display:block;font-size:1rem}',
     '.wsx-ov .ui-btn{flex:none}',
     'html.wsx-lock{overflow:hidden}',
-    '@media (max-width:767px){.wsx-tag b{display:none}.wsx-tag{padding:.2rem}.wsx-edge,.wsx-ib[data-act=labels]{display:none}.wsx-tools{top:.75rem;right:.75rem}.wsx-ib{width:2rem;height:2rem}.wsx-side{max-width:none}.wsx-pager{grid-template-columns:1fr 1fr}.wsx-pos{display:none}}',
+    '@media (max-width:767px){.wsx:not(.is-fs) .wsx-ov{display:flex;flex-wrap:wrap;gap:.5rem .75rem;align-items:center;margin:.5rem .25rem .25rem;font-size:.875rem;line-height:1.45;color:var(--wsx-text)}.wsx-ov>div{flex:1 1 12rem}.wsx-tag b{display:none}.wsx-tag{padding:.2rem}.wsx-edge,.wsx-ib[data-act=labels]{display:none}.wsx-tools{top:.75rem;right:.75rem}.wsx-ib{width:2rem;height:2rem}.wsx-side{max-width:none}.wsx-pager{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.wsx-pg{padding:.5rem .625rem}.wsx-pos{display:none}}',
     '@media (hover:none){.wsx-hot{border-color:#ffffff40}}'
   ].join('\n');
 
@@ -133,7 +131,7 @@
       var k = li.dataset.k;
       if (k === 'ws' || k === 'shot') {
         var a = q('a', li);
-        cur = { name: k === 'ws' ? ((a || li).textContent || '').trim() : '', href: a ? a.getAttribute('href') : '', img: li.dataset.img || '', v: li.dataset.v || '', sum: li.dataset.sum || '', areas: [] };
+        cur = { name: k === 'ws' ? ((a || li).textContent || '').trim() : (li.dataset.n || ''), href: a ? a.getAttribute('href') : (li.dataset.href || ''), img: li.dataset.img || '', i: li.dataset.i || '', v: li.dataset.v || '', sum: li.dataset.sum || '', areas: [] };
         out.push(cur);
       } else if (k === 'area') {
         if (!cur) { cur = { name: '', href: '', img: '', v: '', sum: '', areas: [] }; out.push(cur); }
@@ -184,18 +182,18 @@
       im.src = w.img; st.appendChild(im);
     }
     w.areas.forEach(function (a, i) {
-      var h = el(a.href ? 'a' : 'button', 'wsx-hot');
-      if (a.href) h.href = a.href; else h.type = 'button';
+      var h = el('button', 'wsx-hot'); h.type = 'button';
       h.style.cssText = 'left:' + a.box[0] + '%;top:' + a.box[1] + '%;width:' + a.box[2] + '%;height:' + a.box[3] + '%;--c:' + a.c;
       h.setAttribute('aria-label', a.name + (a.note ? ': ' + a.note : ''));
       h.innerHTML = '<span class="wsx-tag">' + (a.i ? img(a.i) : '') + '<b>' + esc(a.name) + '</b></span>' + (a.i ? '<span class="wsx-big">' + img(a.i) + '</span>' : '');
       h.addEventListener('mouseenter', function () { self.pick(i); });
       h.addEventListener('focus', function () { self.pick(i); });
-      h.addEventListener('click', function (e) { if (coarse && self.on !== i) { e.preventDefault(); self.pick(i); } });
+      h.addEventListener('click', function () { self.pick(i); if (coarse && self.ov.offsetParent) self.ov.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); });
+      h.addEventListener('dblclick', function () { if (a.href && !coarse) location.href = a.href; });
       st.appendChild(h);
     });
-    this.all.innerHTML = w.areas.length ? '<small>All areas here</small><div class="wsx-chips">' + w.areas.map(function (a, i) {
-      return '<button type="button" class="wsx-chip" data-n="' + i + '" style="--c:' + a.c + '">' + (a.i ? img(a.i) : '<span class="wsx-dot"></span>') + esc(a.name) + '</button>';
+    this.all.innerHTML = w.areas.length ? '<small>What\u2019s here</small><div class="wsx-chips">' + w.areas.map(function (a, i) {
+      return '<button type="button" class="ui-chip wsx-chip" data-n="' + i + '" style="--c:' + a.c + '">' + (a.i ? img(a.i, 'ui-chip-icon') : '<span class="wsx-dot"></span>') + esc(a.name) + '</button>';
     }).join('') + '</div>' : '';
     this.all.style.display = w.areas.length ? '' : 'none';
     this.fit();
@@ -214,7 +212,7 @@
     var w = this.w, a = w && w.areas[i]; if (!a || this.on === i) return;
     this.on = i;
     qa('.wsx-hot', this.stage).forEach(function (h, k) { h.classList.toggle('is-on', k === i); });
-    qa('.wsx-chip', this.all).forEach(function (c, k) { c.classList.toggle('is-on', k === i); });
+    qa('.wsx-chip', this.all).forEach(function (c, k) { c.classList.toggle('is-active', k === i); });
     var where = this.opts.title || w.name;
     var go = a.href ? btn('Open the ' + a.name + ' chapter', IC.fwd, 'is-small', a.href) : '';
     this.info.style.setProperty('--c', a.c);
@@ -238,15 +236,20 @@
     for (var k = 0; p && k < 3; k++, p = p.previousElementSibling) { if (p.matches && p.matches('figure') || q('img', p) && /figure/i.test(p.tagName + ' ' + p.className)) { fig = p; break; } }
     var shot = fig && q('img', fig);
     if (shot) { data.img = shot.currentSrc || shot.src || data.img; fig.style.display = 'none'; }
-    var title = ((q('.ui-doc-title, h1') || {}).textContent || '').trim();
+    var title = data.name || ((q('.ui-doc-title, h1') || {}).textContent || '').trim();
     data.name = title;
     var root = el('div', 'wsx is-single'); root.tabIndex = -1;
     var row = el('div', 'wsx-row'), main = el('div', 'wsx-main'), side = el('aside', 'wsx-side');
     var m = new Map(root, { title: title });
     main.appendChild(m.card);
-    var hint = el('p', 'wsx-ver', (coarse ? 'Tap' : 'Point at') + ' an area to see what it is for here' + (data.v ? ' · screenshot from version ' + esc(data.v) : '') + '.');
+    var hint = el('p', 'wsx-ver', (coarse ? 'Tap an area to see what it is for here' : 'Point at an area to see what it is for here; double-click it to open its chapter') + (data.v ? ' · screenshot from version ' + esc(data.v) : '') + '.');
     main.appendChild(hint);
-    side.appendChild(m.info); side.appendChild(m.all);
+    if (data.href) {   /* the Docs home: one workspace, then the way to all of them */
+      var go = el('div', 'wsx-for');
+      go.innerHTML = '<p><small>Go deeper</small>Every workspace that ships with Bforartists works the same way: its editors, what each one is for, and a jump to every chapter.</p>' + btn('Explore all workspaces', IC.ws, 'is-small is-accent', data.href);
+      main.appendChild(go);
+    }
+    side.appendChild(m.all); side.appendChild(m.info);
     row.appendChild(main); row.appendChild(side); root.appendChild(row);
     block.classList.add('wsx-src'); block.parentNode.insertBefore(root, block);
     m.show(data);
@@ -257,8 +260,8 @@
   function explorer(block) {
     var all = read(q('ul', block) || block); if (!all.length) return;
     var root = el('div', 'wsx is-explorer'); root.tabIndex = -1;
-    var rib = el('div', 'wsx-rib'); rib.setAttribute('role', 'tablist'); rib.setAttribute('aria-label', 'Workspaces');
-    rib.innerHTML = all.map(function (w, i) { return '<button type="button" role="tab" aria-selected="false" data-n="' + i + '">' + esc(w.name) + '</button>'; }).join('');
+    var rib = el('div', 'ui-segment wsx-rib'); rib.setAttribute('role', 'tablist'); rib.setAttribute('aria-label', 'Workspaces');
+    rib.innerHTML = all.map(function (w, i) { return '<button type="button" role="tab" aria-selected="false" class="ui-segment-item is-tag" data-n="' + i + '">' + (w.i ? img(w.i, 'ui-seg-icon') : '') + esc(w.name) + '</button>'; }).join('');
     var row = el('div', 'wsx-row'), main = el('div', 'wsx-main'), side = el('aside', 'wsx-side');
     var m = new Map(root, {});
     m.card.insertAdjacentHTML('beforeend', '<button type="button" class="wsx-ib wsx-edge is-l" data-go="-1" title="Previous workspace" aria-label="Previous workspace">' + img(IC.back) + '</button>' +
@@ -266,7 +269,7 @@
     var pager = el('div', 'wsx-pager');
     var forb = el('div', 'wsx-for');
     main.appendChild(m.card); main.appendChild(pager); main.appendChild(forb);
-    side.appendChild(m.info); side.appendChild(m.all);
+    side.appendChild(m.all); side.appendChild(m.info);
     row.appendChild(main); row.appendChild(side);
     root.appendChild(rib); root.appendChild(row);
     block.classList.add('wsx-src'); block.parentNode.insertBefore(root, block);
@@ -274,7 +277,7 @@
     function slug(w) { return String(w.href || w.name).split('/').pop().replace(/^workspaces-/, ''); }
     function go(i, keepHash) {
       cur = (i + n) % n; var w = all[cur], pv = all[(cur - 1 + n) % n], nx = all[(cur + 1) % n];
-      qa('button', rib).forEach(function (b, k) { b.setAttribute('aria-selected', k === cur ? 'true' : 'false'); });
+      qa('button', rib).forEach(function (b, k) { b.setAttribute('aria-selected', k === cur ? 'true' : 'false'); b.classList.toggle('is-active', k === cur); });
       m.opts.title = w.name; m.show(w);
       pager.innerHTML = '<button type="button" class="wsx-pg" data-go="-1">' + img(IC.back) + '<span><small>Previous</small><b>' + esc(pv.name) + '</b></span></button>' +
         '<span class="wsx-pos"><span class="wsx-key">←</span>' + (cur + 1) + ' of ' + n + '<span class="wsx-key">→</span></span>' +

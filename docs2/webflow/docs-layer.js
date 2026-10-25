@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.3
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.4
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -205,6 +205,22 @@
     '.dk-fresh{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem}',
     '.dk-fresh b{display:block;font:700 1.15rem Inter,sans-serif;margin:0 0 .25rem}',
     '.dk-fresh p{margin:0;color:var(--dk-muted);font-size:.875rem}',
+    '.dk-look .wsx{margin:0}',
+    '.dk-home-page .dk-look img{width:auto!important;height:auto!important}',
+    '.dk-home-page .dk-look .wsx-stage>img{width:100%!important;height:100%!important}',
+    '.dk-home-page .dk-look .wsx-big img{width:62%!important;height:62%!important}',
+    '.dk-home-page .dk-look .wsx-tag img,.dk-home-page .dk-look .ui-chip-icon,.dk-home-page .dk-look .wsx-ib img,.dk-home-page .dk-look .ui-btn img{width:14px!important;height:14px!important}',
+    '.dk-home-page .dk-look .wsx-h img{width:22px!important;height:22px!important}',
+    '.dk-teaser{position:relative;display:grid;grid-template-columns:14rem minmax(0,1fr);gap:1.75rem;align-items:center;padding:1.5rem;overflow:hidden}',
+    '.dk-teaser-art{position:relative;height:9rem;border-radius:.5rem;background:radial-gradient(circle at 50% 50%,#ffffff10,transparent 70%),#0003}',
+    '.dk-teaser-art i{position:absolute;width:2.25rem;height:2.25rem;border-radius:.5rem;background:var(--c);box-shadow:0 0 0 2px #ffffffd9,0 4px 10px #0009;opacity:.9}',
+    '.dk-teaser-art i:nth-child(1){left:8%;top:58%}.dk-teaser-art i:nth-child(2){left:26%;top:22%}.dk-teaser-art i:nth-child(3){left:44%;top:60%}.dk-teaser-art i:nth-child(4){left:60%;top:16%}.dk-teaser-art i:nth-child(5){left:74%;top:56%}.dk-teaser-art i:nth-child(6){left:84%;top:12%}',
+    '.dk-teaser-art b{position:absolute;right:.5rem;bottom:.5rem;display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:#000a}',
+    '.dk-home-page .dk-teaser-art b img{width:1rem!important;height:1rem!important}',
+    '.dk-teaser-tx h2{margin:.25rem 0 .5rem!important}',
+    '.dk-teaser-tx p{margin:0 0 1rem;color:var(--dk-muted);max-width:44rem}',
+    '.dk-teaser-when{position:absolute;top:1rem;right:1rem;padding:.25rem .625rem;border-radius:.25rem;background:repeating-linear-gradient(135deg,#f2c94c 0 8px,#e0b53c 8px 16px);color:#1a1a1a;font:800 .6875rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase}',
+    '@media(max-width:767px){.dk-teaser{grid-template-columns:1fr}.dk-teaser-when{position:static;justify-self:start}}',
     '@media(max-width:991px){.dk-h-top{grid-template-columns:1fr}.dk-paths{grid-template-columns:repeat(3,minmax(0,1fr))}.dk-secs{grid-template-columns:repeat(2,minmax(0,1fr))}}',
     '@media(max-width:600px){.dk-h h1{font-size:2.25rem}.dk-paths{grid-template-columns:repeat(2,minmax(0,1fr))}.dk-secs,.dk-two{grid-template-columns:1fr}}'
   ].join('\n');
@@ -382,8 +398,12 @@
         '<form class="dk-search" role="search" action="/search"><label>' + ico(IC.zoom, '') + '<input name="query" type="search" autocomplete="off" placeholder="Search tools, menus, hotkeys…" aria-label="Search the documentation"><kbd>F3</kbd></label>' +
         '<button class="ui-btn is-accent dk-btn" type="submit"><span class="ui-btn-icon"><img class="ui-icon" alt="" src="' + CDN + IC.zoom + '"></span><span class="ui-btn-label">Discover</span></button><div class="dk-results" role="listbox"></div></form>' +
         '<div class="dk-pop"><span>Popular:</span>' + F.popular.map(function (p) { return '<a href="' + esc(p.h) + '">' + ico(p.ds.i) + esc(p.t) + '</a>'; }).join('') + '</div>' +
-      '</div>' + (ex ? '<a class="dk-card dk-explore" href="' + esc(ex.h || '#') + '"><img class="dk-shot" alt="The Bforartists interface" src="' + esc(ex.ds.img) + '"><p>' + ico('68b8f4efa40047ddcec7c6ae_view3d.svg') + '<span><b>' + esc(ex.t) + '</b> ' + esc(ex.ds.text || '') + '</span></p></a>' : '') +
+      '</div>' + (ex ? '<a class="dk-card dk-explore" href="' + esc(F.look && q('.ui-ws-map, .wsx', body) ? '#dk-look' : (ex.h || '#')) + '"><img class="dk-shot" alt="The Bforartists interface" src="' + esc(ex.ds.img) + '"><p>' + ico('68b8f4efa40047ddcec7c6ae_view3d.svg') + '<span><b>' + esc(ex.t) + '</b> ' + esc(ex.ds.text || '') + '</span></p></a>' : '') +
       '</div></section>' +
+      (F.look ? '<section class="dk-h dk-look" id="dk-look"><div class="dk-sec-head"><div><div class="dk-eyebrow">Look around · the interface</div><h2>' + esc(F.look.t) + '</h2><p>' + esc(F.look.ds.text || '') + '</p></div></div><div class="dk-look-map"></div></section>' : '') +
+      (F.teaser ? '<section class="dk-h"><div class="dk-card dk-teaser"><div class="dk-teaser-art" aria-hidden="true"><i style="--c:#8AC587"></i><i style="--c:#9AD3DE"></i><i style="--c:#7E86C0"></i><i style="--c:#f2994a"></i><i style="--c:#5cb4f0"></i><i style="--c:#DDC06A"></i><b>' + ico('68b9bb9cc5062fa217606ff2_time.svg') + '</b></div><div class="dk-teaser-tx"><div class="dk-eyebrow">' + esc(F.teaser.ds.eyebrow || 'Quick Starts') + '</div><h2>' + esc(F.teaser.t) + '</h2><p>' + esc(F.teaser.ds.text || '') + '</p><div class="dk-btns">' +
+        (F.teaser.ds.link2 ? btn(F.teaser.ds.label2 || 'Explore', '68b8cd9563b35e0ca05c7797_workspace.svg', 'is-small is-accent', esc(F.teaser.ds.link2)) : '') + (F.teaser.h ? btn('Meanwhile: the Quick Start page', IC.fwd, 'is-small', esc(F.teaser.h)) : '') +
+        '</div></div><span class="dk-teaser-when">' + esc(F.teaser.ds.when || 'Coming soon') + '</span></div></section>' : '') +
       (F.path.length ? '<section class="dk-h"><div class="dk-sec-head"><div><div class="dk-eyebrow">Quick Start · Pick a path</div><h2>Learn by making something</h2><p>Each path is a short project with a template file, clear steps, and the theory behind every step. Finish one and it is checked off here.</p></div>' +
         '<div class="dk-card dk-progress">' + ico('68b9bb9cc5062fa217606ff2_time.svg', '') + '<span><b>Your progress</b> · 0 of ' + F.path.length + ' paths · coming soon</span></div></div>' +
         '<div class="dk-paths">' + F.path.map(function (p) {
@@ -402,7 +422,9 @@
         '<div class="dk-card dk-help-card">' + ico(IC.comm, '') + '<div><b>Stuck? Ask the community</b><p>Artists and developers answer on Discord every day. Share a screenshot and the page you were on.</p><div class="dk-btns">' + btn('Discord', IC.comm, 'is-small', DISCORD, ' target="_blank" rel="noopener"') + btn('Report a doc issue', IC.light, 'is-small', ISSUE, ' target="_blank" rel="noopener"') + '</div></div></div>' +
         '<div class="dk-card dk-help-card is-pro">' + ico(IC.world, '') + '<div><b>Need it done? Pro support</b><p>Training, pipeline help and custom tools for studios and schools, from the team behind Bforartists at Trinumedia.</p><div class="dk-btns">' + btn('Talk to Trinumedia ↗', IC.world, 'is-small is-primary', PRO, ' target="_blank" rel="noopener"') + '</div></div></div>' +
       '</section>';
+    var maps = qa('.wsx, .ui-ws-map', body);                  /* the workspace map (built by the workspace map script) moves in */
     body.innerHTML = ''; body.appendChild(h);
+    var slot = q('.dk-look-map', h); if (slot) maps.forEach(function (m) { slot.appendChild(m); });
     homeSearch(q('.dk-search', h));
   }
   function homeSearch(f) {
