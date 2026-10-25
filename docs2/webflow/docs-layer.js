@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.7
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.8
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -194,13 +194,9 @@
     '.dk-sink{border-radius:var(--bfa-sink-r,1.25rem);padding:1.25rem}',
     '.dk-home-page .dk-sec.ui-card{display:grid;padding:1rem;row-gap:0}',
     /* hero art: a framed picture with the website\'s stickers floating on it */
-    '.dk-hart{position:relative;padding:1rem 1.5rem 1.5rem 0}',
+    '.dk-hart{position:relative}',
     '.dk-hart-frame{width:100%;aspect-ratio:4/3;background-size:cover;background-position:center}',
-    '.dk-home-page img.dk-hart-st{position:absolute;width:5.5rem!important;height:5.5rem!important;object-fit:contain;filter:drop-shadow(0 10px 14px #000a);animation:dkfloat 6s ease-in-out infinite;pointer-events:none}',
-    '.dk-hart-st.is-1{left:-1.75rem;bottom:.25rem}.dk-hart-st.is-2{right:0;top:-.5rem;animation-delay:-2s}.dk-hart-st.is-3{right:-.5rem;bottom:-.25rem;animation-delay:-4s}',
-    '@keyframes dkfloat{50%{transform:translateY(-.5rem) rotate(4deg)}}',
-    '@media (prefers-reduced-motion:reduce){.dk-hart-st{animation:none!important}}html.motion-reduced .dk-hart-st{animation:none!important}',
-    '@media(max-width:991px){.dk-hart{max-width:30rem;padding:0 1rem 1rem}.dk-home-page img.dk-hart-st{width:4rem!important;height:4rem!important}.dk-hart-st.is-1{left:-.5rem}}',
+    '@media(max-width:991px){.dk-hart{max-width:32rem}}',
     '.dk-teaser.dk-sink h2{background:none!important;box-shadow:none!important;border:0!important;padding:0!important;font-family:"Titillium Web",Titillium,sans-serif;font-size:1.75rem;line-height:1.15;color:var(--dk-text)}',
     '.dk-sec{display:grid;grid-template-columns:3rem minmax(0,1fr);gap:.875rem;align-items:start;padding:1rem;color:var(--dk-text);text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}',
     '.dk-sec:hover{transform:translateY(-2px)}',
@@ -215,6 +211,13 @@
     '.dk-help-card p{margin:0 0 .75rem;font-size:.875rem;color:var(--dk-muted)}',
     '.dk-help-card .dk-btns{display:flex;flex-wrap:wrap;gap:.5rem}',
     '.dk-help-card.is-pro{box-shadow:inset 0 0 0 1px #f2994a99,0 1px 2px #0006}',
+    '.dk-pulse{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.5rem 2.5rem;padding:1.5rem}',
+    '.dk-pulse-col{display:flex;flex-direction:column;gap:.625rem;min-width:0}',
+    '.dk-pulse-col+.dk-pulse-col{padding-left:2.5rem;border-left:1px solid var(--dk-hair,#ffffff14)}',
+    '.dk-pulse b{display:block;font:700 1.25rem/1.2 Inter,sans-serif;margin:0;color:var(--dk-text)}',
+    '.dk-pulse p{margin:0;color:var(--dk-muted);font-size:.875rem;line-height:1.5}',
+    '.dk-pulse .dk-btns{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.25rem}',
+    '@media(max-width:767px){.dk-pulse{grid-template-columns:minmax(0,1fr);padding:1.125rem;gap:1.25rem}.dk-pulse-col+.dk-pulse-col{padding:1.25rem 0 0;border-left:0;border-top:1px solid var(--dk-hair,#ffffff14)}}',
     '.dk-fresh{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem}',
     '.dk-fresh b{display:block;font:700 1.15rem Inter,sans-serif;margin:0 0 .25rem}',
     '.dk-fresh p{margin:0;color:var(--dk-muted);font-size:.875rem}',
@@ -418,7 +421,7 @@
         '<button class="ui-btn is-accent dk-btn" type="submit"><span class="ui-btn-icon"><img class="ui-icon" alt="" src="' + CDN + IC.zoom + '"></span><span class="ui-btn-label">Discover</span></button><div class="dk-results" role="listbox"></div></form>' +
         '<div class="dk-pop"><span>Popular:</span>' + F.popular.map(function (p) { return '<a href="' + esc(p.h) + '">' + ico(p.ds.i) + esc(p.t) + '</a>'; }).join('') + '</div>' +
       '</div>' + (F.art ? '<div class="dk-hart" aria-hidden="true"><div class="ui-art is-hero dk-hart-frame" style="background-image:url(' + esc(F.art.ds.img) + ')"></div>' +
-        (F.art.ds.st || '').split('|').filter(Boolean).slice(0, 3).map(function (u, k) { return '<img class="dk-hart-st is-' + (k + 1) + '" alt="" src="' + esc(u) + '">'; }).join('') + '</div>' : '') +
+        '</div>' : '') +
       (ex ? '<a class="dk-card dk-explore" href="' + esc(F.look && q('.ui-ws-map, .wsx', body) ? '#dk-look' : (ex.h || '#')) + '"><img class="dk-shot" alt="The Bforartists interface" src="' + esc(ex.ds.img) + '"><p>' + ico('68b8f4efa40047ddcec7c6ae_view3d.svg') + '<span><b>' + esc(ex.t) + '</b> ' + esc(ex.ds.text || '') + '</span></p></a>' : '') +
       '</div></section>' +
       (F.look ? '<section class="dk-h dk-look" id="dk-look"><div class="dk-sec-head"><div><div class="dk-eyebrow">Look around · the interface</div><h2>' + esc(F.look.t) + '</h2><p>' + esc(F.look.ds.text || '') + '</p></div></div><div class="dk-look-map"></div></section>' : '') +
@@ -436,9 +439,14 @@
           return '<a class="ui-card dk-card dk-sec" href="/docs/' + s.s + '"><div class="dk-sticker">' + ico(s.i) + '</div><div><b>' + esc(s.t) + '</b>' + (s.d ? '<p>' + esc(s.d) + '</p>' : '') + '<small>' + plural((s.c || []).length, 'chapter', 'chapters') + ' · ' + plural(s.n || 0, 'page', 'pages') + '</small>' + bar(counts(s.c)) + '</div></a>';
         }).join('') + '</div></div></section>' +
       (function () { var all = { 'draft': 0, 'needs-review': 0, 'reviewed': 0 }; secs.forEach(function (s) { var c = counts(s.c); for (var k in c) all[k] += c[k]; });
-        return '<section class="dk-h"><div class="dk-card dk-status"><div><div class="dk-eyebrow">Review progress</div><b>' + all.reviewed + ' of ' + total + ' pages reviewed</b><p>Every page shows its status at the top. Draft pages come from the old manual and have not been checked yet; reviewed pages are checked against Bforartists 5.1.</p></div>' +
-          '<div class="dk-legend"><span class="is-reviewed">Reviewed ' + all.reviewed + '</span><span class="is-review">In review ' + all['needs-review'] + '</span><span>Draft ' + all.draft + '</span></div>' + bar(all, true) + '</div></section>'; })() +
-      '<section class="dk-h"><div class="dk-card dk-fresh"><div><div class="dk-eyebrow">What changed · 5.1</div><b>Fresh from development</b><p>Pulled from the manual repository every time a docs task closes, so new tools show up here first.</p></div>' + btn('All changes', IC.file, 'is-small', 'https://github.com/Bforartists/Manual/commits/docs2/main', ' target="_blank" rel="noopener"') + '</div></section>' +
+        /* one card: how far the review is, and what changed lately */
+        return '<section class="dk-h"><div class="ui-card dk-card dk-pulse">' +
+          '<div class="dk-pulse-col"><div class="dk-eyebrow">Review progress</div><b>' + all.reviewed + ' of ' + total + ' pages reviewed</b>' + bar(all, true) +
+            '<div class="dk-legend"><span class="is-reviewed">Reviewed ' + all.reviewed + '</span><span class="is-review">In review ' + all['needs-review'] + '</span><span>Draft ' + all.draft + '</span></div>' +
+            '<p>Every page shows its status at the top. Drafts come from the old manual; reviewed pages are checked against Bforartists 5.1.</p></div>' +
+          '<div class="dk-pulse-col"><div class="dk-eyebrow">What changed · 5.1</div><b>Fresh from development</b><p>New pages and fixes land here every time a docs task closes.</p><div class="dk-btns">' +
+            btn('What\u2019s new in 5.1', IC.time, 'is-small is-accent', '/docs/appendix-manual-update-history') + btn('All changes', IC.file, 'is-small', 'https://github.com/Bforartists/Manual/commits/docs2/main', ' target="_blank" rel="noopener"') + '</div></div>' +
+          '</div></section>'; })() +
       '<section class="dk-h dk-two">' +
         '<div class="dk-card dk-help-card">' + ico(IC.comm, '') + '<div><b>Stuck? Ask the community</b><p>Artists and developers answer on Discord every day. Share a screenshot and the page you were on.</p><div class="dk-btns">' + btn('Discord', IC.comm, 'is-small', DISCORD, ' target="_blank" rel="noopener"') + btn('Report a doc issue', IC.light, 'is-small', ISSUE, ' target="_blank" rel="noopener"') + '</div></div></div>' +
         '<div class="dk-card dk-help-card is-pro">' + ico(IC.world, '') + '<div><b>Need it done? Pro support</b><p>Training, pipeline help and custom tools for studios and schools, from the team behind Bforartists at Trinumedia.</p><div class="dk-btns">' + btn('Talk to Trinumedia ↗', IC.world, 'is-small is-primary', PRO, ' target="_blank" rel="noopener"') + '</div></div></div>' +
