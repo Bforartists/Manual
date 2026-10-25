@@ -56,8 +56,8 @@ flowchart TD
 |---|---|
 | `eyebrow`, `headline`, `summary` | The hero |
 | `popular` | The chips under the search box |
-| `explore` | The card beside the search; jumps to the workspace map |
-| `workspace` | One workspace map right on the home (`page:`), and the **Explore all workspaces** button (`all:`) |
+| `workspace` | The workspace picker: `pages:` lists the tabs Bforartists opens with, in order (focus tabs over one map, like the Download page's release switch); `all:` is the **Explore all workspaces** button. With only `page:` it shows that one map |
+| `explore` | Optional card beside the search that jumps to the picker (off: the picker has its own button) |
 | `teaser` | The **Quick Starts · coming soon** card, until the guides exist |
 | `paths` | Quick Start path cards (unused while the teaser is on) |
 
