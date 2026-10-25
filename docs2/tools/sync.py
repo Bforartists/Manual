@@ -264,7 +264,11 @@ def build(repo, cfg):
         hp = Page(repo, home_rel)
         body = html_build.page_html(repo, hp, by_rel, md, **urls) + landing.home_html(hp, icons, url_rel, img_rel)
         hw = hp.fm.get("workspace") or {}
-        if hw.get("page") in ws_pages:                         # one workspace map, right on the Docs home
+        home_ws = [ws_pages[r] for r in (hw.get("pages") or []) if r in ws_pages]
+        if home_ws:                                            # the out-of-the-box workspaces, as focus tabs
+            body += landing.workspace_explorer("", home_ws, ws_editors, icons, url_rel, img_rel, ws_title,
+                                               more=url_rel(hw.get("all", "")), total=len(ws_order))
+        elif hw.get("page") in ws_pages:                       # one workspace map, right on the Docs home
             body += landing.workspace_map("", ws_pages[hw["page"]], ws_editors, icons, url_rel, img_rel,
                                           name=ws_title(hw["page"])[0], go=url_rel(hw.get("all", "")))
         body = tidy(body)

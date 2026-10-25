@@ -321,9 +321,10 @@ def workspace_map(body, entry, editors, icons, url_rel, img_url, name="", go="")
     return block + body
 
 
-def workspace_explorer(body, order, editors, icons, url_rel, img_url, title_of):
+def workspace_explorer(body, order, editors, icons, url_rel, img_url, title_of, more="", total=0):
     """The Workspaces overview: every workspace with its screenshot and areas, as one flat list
-    (a `ws` row, then its `area` rows) the docs script turns into the explorer."""
+    (a `ws` row, then its `area` rows) the docs script turns into the explorer. With `more` (the
+    Docs home) a closing `more` row links to every workspace, and the script draws focus tabs."""
     esc = htmllib.escape
     rows = []
     for w in order:
@@ -335,6 +336,8 @@ def workspace_explorer(body, order, editors, icons, url_rel, img_url, title_of):
         rows.append(f'<li data-k="ws" data-img="{esc(src)}" data-i="{esc(icon_file(icon, icons))}" data-v="{esc(str(w.get("captured", "")))}" data-sum="{esc(summ)}">'
                     f'<a href="{esc(href)}">{esc(title)}</a></li>')
         rows += _area_items(w, editors, icons, url_rel)
+    if rows and more:
+        rows.append(f'<li data-k="more" data-n="{total or len(order)}"><a href="{esc(more)}">All workspaces</a></li>')
     if not rows:
         return WS_MARK.sub("", body)
     block = f'<div class="ui-ws-explorer"><ul>{"".join(rows)}</ul></div>'

@@ -186,6 +186,14 @@ def check_workspaces(repo, rep):
                 rep.error(rel, 1, "🗺️ Workspace maps", f"`{w.get('page')}`: area `{a.get('ed')}` needs a known editor and a box of 4 numbers")
             else:
                 rep.passed["🗺️ Workspace maps"] += 1
+    known = {str(w.get("page")) for w in data.get("workspaces") or []}
+    hf = os.path.join(repo, DOCS_ROOT, "home.md")
+    if os.path.exists(hf):                 # the Docs home's focus tabs must name workspaces that have a map
+        txt = open(hf, encoding="utf-8").read().split("---")
+        hw = ((yaml.safe_load(txt[1]) if len(txt) > 2 else {}) or {}).get("workspace") or {}
+        for r in hw.get("pages") or []:
+            if r not in known:
+                rep.error(f"{DOCS_ROOT}/home.md", 1, "🗺️ Workspace maps", f"workspace tab `{r}` is not in workspaces.yml")
 
 
 def markdown(rep, changed, n_pages):
