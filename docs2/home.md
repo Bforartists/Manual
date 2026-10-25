@@ -12,18 +12,19 @@ popular:
   - { title: What's new in 5.1, link: appendix/manual-update-history.md, icon: new }
   - { title: Keymap, link: keymap/standard-keymap.md, icon: key_command }
   - { title: Migrating from Blender, link: getting-started/migrating-from-blender.md, icon: import }
-# Explore the interface: the card on the right jumps to the workspace map below
-explore:
-  image: images/workspaces/workspaces/standard-workspaces.png
-  title: Explore the interface.
-  text: Point at any part of Bforartists to see what it is and jump to its chapter.
-  link: workspaces/main.md
-# Look around: one workspace map right on this page, then a way to all of them
+# Look around: the workspaces Bforartists opens with (its tabs, in order), as focus tabs over one map, then a way to all of them
 workspace:
-  page: workspaces/main.md
-  title: Look around the Main workspace
-  text: "This is what Bforartists shows when it opens. Point at an area to see what it is for, then open its chapter."
+  title: Look around the workspaces
+  text: "These are the tabs Bforartists opens with. Pick one, point at an area to see what it is for, then open its chapter."
   all: workspaces/index.md
+  pages:
+    - workspaces/main.md
+    - workspaces/assets.md
+    - workspaces/uv-editing.md
+    - workspaces/shading.md
+    - workspaces/animation.md
+    - workspaces/nodes.md
+    - workspaces/scripting.md
 # Quick Starts: a teaser until the guides exist (they come after the next big website update)
 teaser:
   eyebrow: Quick Starts · coming soon
@@ -31,6 +32,4 @@ teaser:
   text: "Short, playful guides on a skill map: every guide you finish adds one piece to a small animated story, from the first prop to opening night. They arrive after the next big website update."
   when: After the next website update
   link: getting-started/quick-start.md
-  link2: workspaces/index.md
-  label2: Explore the workspaces
 ---

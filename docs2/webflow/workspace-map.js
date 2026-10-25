@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · workspace maps · @version 1.0.5
+/* Bforartists Docs 2.0 · workspace maps · @version 1.0.6
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer), next to the docs layer.
  * The sync writes plain lists from docs2/workspaces.yml; this script turns them into:
@@ -6,7 +6,9 @@
  *   🗺️  .ui-ws-map       a workspace page: hover an area of the screenshot to see which editor it is,
  *                         what it is for in this workspace, and jump to its chapter
  *   🧭  .ui-ws-explorer  the Workspaces overview: every workspace in one explorer, with the app's
- *                         tabs as a wrapping ribbon, previous / next, ← → keys and full screen
+ *                         tabs as a wrapping ribbon, previous / next, ← → keys and full screen.
+ *                         On the Docs home (a closing `more` row) the tabs are focus tabs like the
+ *                         Download page's release switch: the chosen one widens, the map slides in.
  *
  * List rows: <li data-k="shot|ws|area" …>. Area rows carry data-box="left,top,width,height" (% of
  * the screenshot), data-c (colour), data-i (icon file) and "<a href=chapter>Editor</a> — note".
@@ -113,6 +115,29 @@
     '@media (max-width:991px),(max-height:600px){.wsx.is-fs .wsx-ov{position:static;display:flex;flex-wrap:wrap;margin:.5rem 0 0;max-width:none;padding:.25rem;background:none;box-shadow:none;color:var(--wsx-text)}.wsx.is-fs .wsx-ov>div{flex:1 1 12rem}}',
     '@media (max-width:767px){.wsx-ib[data-act=fs]{display:none}}',
     '@media (max-width:767px){.wsx:not(.is-fs) .wsx-ov{display:flex;flex-wrap:wrap;gap:.5rem .75rem;align-items:center;margin:.5rem .25rem .25rem;font-size:.875rem;line-height:1.45;color:var(--wsx-text)}.wsx-ov>div{flex:1 1 12rem}.wsx-tag b{display:none}.wsx-tag{padding:.2rem}.wsx-edge,.wsx-ib[data-act=labels]{display:none}.wsx-tools{top:.75rem;right:.75rem}.wsx-ib{width:2rem;height:2rem}.wsx-side{max-width:none}.wsx-pager{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.wsx-pg{padding:.5rem .625rem}.wsx-pos{display:none}}',
+    /* focus tabs (the Docs home): drawn like the Download page's release switch; the chosen tab widens, the rest narrow */
+    '.wsx-ft{display:flex;gap:.5rem;margin:0 0 .75rem}',
+    '.wsx .wsx-ftab{position:relative;flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center;gap:.75rem;min-height:4.5rem;margin:0;padding:.625rem;border:0;border-radius:var(--_bfa---shape--bevel,14px);background:var(--_bfa---surface--panel,#363636);color:var(--wsx-text);font-family:var(--_bfa---type--ui,inherit);text-align:left;cursor:pointer;overflow:hidden;box-shadow:var(--bfa-low,inset .6px 1px 0 #ffffff0f,0 1px 2px #000b);transition:flex-grow .5s cubic-bezier(.2,.8,.2,1),background-color .15s}',
+    '.wsx .wsx-ftab:hover{background-color:color-mix(in srgb,var(--_bfa---surface--panel,#363636) 88%,#fff)}',
+    '.wsx .wsx-ftab.is-active{flex-grow:3.2;justify-content:flex-start;padding-right:2.75rem;background:var(--_bfa---surface--card,#404040)}',
+    '.wsx .wsx-ftab.is-active:after{content:"";position:absolute;left:.875rem;right:.875rem;bottom:0;height:2px;border-radius:2px;background:var(--_bfa---accent--blue,#5cb4f0)}',
+    '.wsx .wsx-ftab:before{display:none!important}',
+    '.wsx .wsx-ftab .ui-focus-tile{flex:none;display:grid;place-items:center;width:3.25rem;height:3.25rem;margin:0}',
+    '.wsx .wsx-ftab .ui-focus-tile img{width:1.875rem!important;height:1.875rem!important;margin:0!important;padding:0!important;object-fit:contain;max-width:none}',
+    '.wsx .wsx-ftab .ui-focus-spine-label{display:none;flex:1 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:1.0625rem;font-weight:600}',
+    '.wsx .wsx-ftab.is-active .ui-focus-spine-label{display:block;animation:wsxfade .35s ease}',
+    '@keyframes wsxfade{from{opacity:0}}',
+    '.wsx .wsx-ftab .ui-focus-num{position:absolute;top:.5rem;right:.625rem;margin:0;font-size:.6875rem}',
+    '.wsx.is-focus .wsx-row{padding:1rem;border-radius:1.25rem;background:var(--_bfa---surface--well,#262626);box-shadow:inset 0 14px 18px -8px #000000bf,inset 0 -2px 6px -2px #0006;overflow:hidden}',
+    '.wsx.is-focus .wsx-pager{display:none}',
+    '.wsx .wsx-pager .wsx-pg img{width:16px!important;height:16px!important;max-width:none}',
+    '.wsx.is-focus .wsx-for .ui-btn+.ui-btn{margin-left:.5rem}',
+    '.wsx-slide-r{animation:wsxinr .5s cubic-bezier(.2,.8,.2,1)}.wsx-slide-l{animation:wsxinl .5s cubic-bezier(.2,.8,.2,1)}',
+    '@keyframes wsxinr{from{opacity:0;transform:translateX(3rem)}}@keyframes wsxinl{from{opacity:0;transform:translateX(-3rem)}}',
+    '@media (prefers-reduced-motion:reduce){.wsx-slide-r,.wsx-slide-l,.wsx .wsx-ftab{animation:none!important;transition:none!important}}',
+    'html.motion-reduced .wsx-slide-r,html.motion-reduced .wsx-slide-l{animation:none!important}',
+    '@media (max-width:991px){.wsx .wsx-ftab:not(.is-active) .ui-focus-num{display:none}.wsx .wsx-ftab .ui-focus-tile{width:2.75rem;height:2.75rem}.wsx .wsx-ftab .ui-focus-tile img{width:1.5rem!important;height:1.5rem!important}.wsx .wsx-ftab{min-height:3.75rem;padding:.5rem}}',
+    '@media (max-width:767px){.wsx-ft{overflow-x:auto;scrollbar-width:none;margin:0 -.25rem .625rem;padding:0 .25rem 2px}.wsx-ft::-webkit-scrollbar{display:none}.wsx .wsx-ftab{flex:0 0 3.75rem;gap:.5rem}.wsx .wsx-ftab.is-active{flex:0 0 auto;max-width:13rem;padding-right:2.25rem}.wsx.is-focus .wsx-row{padding:.5rem;border-radius:1rem}.wsx.is-focus .wsx-pager{display:grid}.wsx.is-focus .wsx-for .ui-btn+.ui-btn{margin-left:0}}',
     '@media (hover:none){.wsx-hot{border-color:#ffffff40}}'
   ].join('\n');
 
@@ -143,6 +168,8 @@
         var a = q('a', li);
         cur = { name: k === 'ws' ? ((a || li).textContent || '').trim() : (li.dataset.n || ''), href: a ? a.getAttribute('href') : (li.dataset.href || ''), img: li.dataset.img || '', i: li.dataset.i || '', v: li.dataset.v || '', sum: li.dataset.sum || '', areas: [] };
         out.push(cur);
+      } else if (k === 'more') {
+        var ma = q('a', li); out.more = { href: ma ? ma.getAttribute('href') : '', n: +li.dataset.n || 0 };
       } else if (k === 'area') {
         if (!cur) { cur = { name: '', href: '', img: '', v: '', sum: '', areas: [] }; out.push(cur); }
         var x = area(li); if (x.box) cur.areas.push(x);
@@ -277,9 +304,13 @@
   /* ---------------------------------------------------------------- the Workspaces overview */
   function explorer(block) {
     var all = read(q('ul', block) || block); if (!all.length) return;
-    var root = el('div', 'wsx is-explorer'); root.tabIndex = -1;
-    var rib = el('div', 'ui-segment wsx-rib'); rib.setAttribute('role', 'tablist'); rib.setAttribute('aria-label', 'Workspaces');
-    rib.innerHTML = all.map(function (w, i) { return '<button type="button" role="tab" aria-selected="false" class="ui-segment-item is-tag" data-n="' + i + '">' + (w.i ? img(w.i, 'ui-seg-icon') : '') + esc(w.name) + '</button>'; }).join('');
+    var more = all.more, focus = !!more;   /* the Docs home: focus tabs, no address change, a way to every workspace */
+    var root = el('div', 'wsx is-explorer' + (focus ? ' is-focus' : '')); root.tabIndex = -1;
+    var rib = el('div', focus ? 'wsx-ft' : 'ui-segment wsx-rib'); rib.setAttribute('role', 'tablist'); rib.setAttribute('aria-label', 'Workspaces');
+    rib.innerHTML = all.map(function (w, i) {
+      if (focus) return '<button type="button" role="tab" aria-selected="false" class="wsx-ftab" data-n="' + i + '" title="' + esc(w.name) + '"><span class="ui-focus-tile">' + img(w.i || IC.ws, 'ui-focus-sticker') + '</span><span class="ui-focus-spine-label">' + esc(w.name) + '</span><span class="ui-focus-num">' + (i < 9 ? '0' : '') + (i + 1) + '</span></button>';
+      return '<button type="button" role="tab" aria-selected="false" class="ui-segment-item is-tag" data-n="' + i + '">' + (w.i ? img(w.i, 'ui-seg-icon') : '') + esc(w.name) + '</button>';
+    }).join('');
     var row = el('div', 'wsx-row'), main = el('div', 'wsx-main'), side = el('aside', 'wsx-side');
     var m = new Map(root, {});
     m.card.insertAdjacentHTML('beforeend', '<button type="button" class="wsx-ib wsx-edge is-l" data-go="-1" title="Previous workspace" aria-label="Previous workspace">' + img(IC.back) + '</button>' +
@@ -293,26 +324,39 @@
     block.classList.add('wsx-src'); block.parentNode.insertBefore(root, block);
     var cur = 0, n = all.length;
     function slug(w) { return String(w.href || w.name).split('/').pop().replace(/^workspaces-/, ''); }
-    function go(i, keepHash) {
+    function go(i, keepHash, dir) {
+      var was = cur;
       cur = (i + n) % n; var w = all[cur], pv = all[(cur - 1 + n) % n], nx = all[(cur + 1) % n];
       qa('button', rib).forEach(function (b, k) { b.setAttribute('aria-selected', k === cur ? 'true' : 'false'); b.classList.toggle('is-active', k === cur); });
+      if (focus && dir && was !== cur) {   /* the map slides in from the side it comes from */
+        row.classList.remove('wsx-slide-l', 'wsx-slide-r'); void row.offsetWidth; row.classList.add(dir > 0 ? 'wsx-slide-r' : 'wsx-slide-l');
+        var tb = rib.children[cur]; if (tb && rib.scrollWidth > rib.clientWidth) rib.scrollTo({ left: tb.offsetLeft - (rib.clientWidth - tb.offsetWidth) / 2, behavior: 'smooth' });
+      }
       m.opts.title = w.name; m.show(w);
       pager.innerHTML = '<button type="button" class="wsx-pg" data-go="-1">' + img(IC.back) + '<span><small>Previous</small><b>' + esc(pv.name) + '</b></span></button>' +
         '<span class="wsx-pos"><span class="wsx-key">←</span>' + (cur + 1) + ' of ' + n + '<span class="wsx-key">→</span></span>' +
         '<button type="button" class="wsx-pg is-r" data-go="1"><span><small>Next</small><b>' + esc(nx.name) + '</b></span>' + img(IC.fwd) + '</button>';
       forb.innerHTML = '<p><small>What ' + esc(w.name) + ' is for</small>' + esc(w.sum || 'A ready-made layout of editors.') + (w.v ? ' <span class="wsx-ver">Screenshot from version ' + esc(w.v) + '.</span>' : '') + '</p>' +
-        (w.href ? btn('Open the ' + w.name + ' page', IC.ws, 'is-small is-accent', w.href) : '');
+        (focus ? '<span>' + (w.href ? btn('Open the ' + w.name + ' page', IC.doc, 'is-small', w.href) : '') + (more.href ? btn('Explore all ' + (more.n ? more.n + ' ' : '') + 'workspaces', IC.ws, 'is-small is-accent', more.href) : '') + '</span>'
+          : (w.href ? btn('Open the ' + w.name + ' page', IC.ws, 'is-small is-accent', w.href) : ''));
       [pv, nx].forEach(function (x) { if (x.img) { var pre = new Image(); pre.src = x.img; } });   /* neighbours load ahead */
-      if (!keepHash && history.replaceState) history.replaceState(history.state, '', '#ws-' + slug(w));
+      if (!keepHash && !focus && history.replaceState) history.replaceState(history.state, '', '#ws-' + slug(w));
     }
     root.addEventListener('click', function (e) {
-      var t = e.target.closest('[data-go]'); if (t) { go(cur + (+t.dataset.go)); return; }
-      var b = e.target.closest('.wsx-rib button'); if (b) go(+b.dataset.n);
+      var t = e.target.closest('[data-go]'); if (t) { go(cur + (+t.dataset.go), false, +t.dataset.go); return; }
+      var b = e.target.closest('.wsx-rib button, .wsx-ftab'); if (b) go(+b.dataset.n, false, +b.dataset.n - cur);
     });
-    var h = (location.hash || '').replace(/^#ws-/, ''), start = 0;
+    /* swipe the picture sideways for the previous / next workspace */
+    var sx = null, sy = 0;
+    m.stage.addEventListener('touchstart', function (e) { var t = e.touches[0]; sx = t.clientX; sy = t.clientY; }, { passive: true });
+    m.stage.addEventListener('touchend', function (e) {
+      if (sx === null) return; var t = e.changedTouches[0], dx = t.clientX - sx, dy = t.clientY - sy; sx = null;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) { var dir = dx < 0 ? 1 : -1; go(cur + dir, false, dir); }
+    }, { passive: true });
+    var h = focus ? '' : (location.hash || '').replace(/^#ws-/, ''), start = 0;
     all.forEach(function (w, i) { if (h && slug(w) === h) start = i; });
     go(start, !h);
-    keys(root, function (dir) { go(cur + dir); }, m);
+    keys(root, function (dir) { go(cur + dir, false, dir); }, m);
   }
 
   /* ← → step through workspaces while the pointer or focus is on the explorer, or in full screen; Esc leaves full screen */

@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.5
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.6
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -152,6 +152,7 @@
     '.dk-chapters b img,.dk-chapters .dk-btn img{width:16px!important;height:16px!important;border-radius:0}',
     '.dk-h{margin:0 0 3.5rem}',
     '.dk-h-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2.5rem;align-items:center}',
+    '.dk-h-top.is-solo{grid-template-columns:minmax(0,46rem)}',
     '.dk-h h1{margin:0 0 1rem;font-family:"Titillium Web",Titillium,sans-serif;font-size:3.25rem;line-height:1.05;font-weight:700;color:var(--dk-text);background:none!important;border:0!important;box-shadow:none!important;padding:0!important;display:block!important}',
     '.dk-h h1::before{display:none!important}',
     '.dk-h .type-lead{margin:0 0 1.5rem;font-size:1.125rem;line-height:1.6}',
@@ -391,7 +392,7 @@
     var h = el('div', 'dk-home-page');
     var ex = F.explore;
     h.innerHTML =
-      '<section class="dk-h"><div class="dk-h-top"><div>' +
+      '<section class="dk-h"><div class="dk-h-top' + (ex ? '' : ' is-solo') + '"><div>' +
         '<div class="dk-eyebrow">' + esc(F.eyebrow ? F.eyebrow.t : 'The Bforartists manual') + '</div>' +
         '<h1>' + esc(F.headline ? F.headline.t : 'Documentation') + '</h1>' +
         '<p class="type-lead">' + esc(F.lead ? F.lead.t : '') + '</p>' +
