@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · workspace maps · @version 1.0.4
+/* Bforartists Docs 2.0 · workspace maps · @version 1.0.5
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer), next to the docs layer.
  * The sync writes plain lists from docs2/workspaces.yml; this script turns them into:
@@ -49,8 +49,10 @@
     '.wsx-tag img{width:14px;height:14px;margin:0!important}',
     '.wsx-hot.is-on .wsx-tag,.wsx.is-labels .wsx-hot .wsx-tag{display:inline-flex}',
     /* a big editor icon in the middle of the active area (every area with labels on) */
-    '.wsx-big{position:absolute;left:50%;top:50%;display:none;place-items:center;width:min(42%,5.5rem);max-height:72%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:22%;background:radial-gradient(circle at 35% 30%,#ffffff26,#ffffff05 60%),#2b2b2be6;box-shadow:0 0 0 2px var(--c),0 4px 14px #000a;pointer-events:none}',
-    '.wsx-big img{width:62%;height:62%;object-fit:contain;margin:0!important;filter:drop-shadow(0 2px 3px #0009)}',
+    '.wsx-hot{container-type:size}',
+    '.wsx-big{position:absolute;left:50%;top:50%;display:none;place-items:center;box-sizing:border-box;width:min(5rem,40%);height:auto;aspect-ratio:1/1;transform:translate(-50%,-50%);border-radius:16%;background:radial-gradient(circle at 35% 30%,#ffffff26,#ffffff05 60%),#2b2b2be6;box-shadow:0 0 0 2px var(--c),0 3px 10px #000a;pointer-events:none}',
+    '@supports (width:1cqh){.wsx-big{width:min(5rem,40cqw,64cqh)}}',
+    '.wsx-big img{width:74%;height:74%;object-fit:contain;margin:0!important;filter:drop-shadow(0 2px 3px #0009)}',
     '.wsx-hot.is-on .wsx-big,.wsx.is-labels .wsx-hot .wsx-big{display:grid}',
     '.wsx-hot.is-on .wsx-big{animation:wsxpop .18s ease-out}',
     '@keyframes wsxpop{from{transform:translate(-50%,-50%) scale(.8);opacity:0}}',
@@ -213,7 +215,7 @@
     qa('.wsx-hot', this.stage).forEach(function (h) {
       var w = h.offsetWidth, ht = h.offsetHeight, tag = q('.wsx-tag b', h);
       h.classList.toggle('is-narrow', w < Math.max(110, (tag ? tag.textContent.length : 10) * 8 + 40) || ht < 34);
-      h.classList.toggle('is-tiny', w < 56 || ht < 44);
+      h.classList.toggle('is-tiny', w < 40 || ht < 22);
     });
   };
   Map.prototype.pick = function (i) {
