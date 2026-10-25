@@ -49,6 +49,8 @@ sequenceDiagram
    ```
 
    `PUT …/pages/<page>/custom_code` **replaces** the whole list, so always send every script the page already had.
+
+   Keep the order: `bfa_workspace_map` before `bfa_docs_layer`. Adding or updating one script moves it to the end of the list, so check the order after each release (the docs layer copes with either order since 1.0.9, but the right order avoids a flash).
 4. **Publish staging** (Webflow → Publish → webflow.io only), check a few pages, then publish live with the next release.
 
 ## ↩️ Roll back
