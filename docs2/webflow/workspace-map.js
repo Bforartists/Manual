@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · workspace maps · @version 1.0.3
+/* Bforartists Docs 2.0 · workspace maps · @version 1.0.5
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer), next to the docs layer.
  * The sync writes plain lists from docs2/workspaces.yml; this script turns them into:
@@ -49,8 +49,10 @@
     '.wsx-tag img{width:14px;height:14px;margin:0!important}',
     '.wsx-hot.is-on .wsx-tag,.wsx.is-labels .wsx-hot .wsx-tag{display:inline-flex}',
     /* a big editor icon in the middle of the active area (every area with labels on) */
-    '.wsx-big{position:absolute;left:50%;top:50%;display:none;place-items:center;width:min(42%,5.5rem);max-height:72%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:22%;background:radial-gradient(circle at 35% 30%,#ffffff26,#ffffff05 60%),#2b2b2be6;box-shadow:0 0 0 2px var(--c),0 4px 14px #000a;pointer-events:none}',
-    '.wsx-big img{width:62%;height:62%;object-fit:contain;margin:0!important;filter:drop-shadow(0 2px 3px #0009)}',
+    '.wsx-hot{container-type:size}',
+    '.wsx-big{position:absolute;left:50%;top:50%;display:none;place-items:center;box-sizing:border-box;width:min(5rem,40%);height:auto;aspect-ratio:1/1;transform:translate(-50%,-50%);border-radius:16%;background:radial-gradient(circle at 35% 30%,#ffffff26,#ffffff05 60%),#2b2b2be6;box-shadow:0 0 0 2px var(--c),0 3px 10px #000a;pointer-events:none}',
+    '@supports (width:1cqh){.wsx-big{width:min(5rem,40cqw,64cqh)}}',
+    '.wsx-big img{width:74%;height:74%;object-fit:contain;margin:0!important;filter:drop-shadow(0 2px 3px #0009)}',
     '.wsx-hot.is-on .wsx-big,.wsx.is-labels .wsx-hot .wsx-big{display:grid}',
     '.wsx-hot.is-on .wsx-big{animation:wsxpop .18s ease-out}',
     '@keyframes wsxpop{from{transform:translate(-50%,-50%) scale(.8);opacity:0}}',
@@ -102,6 +104,14 @@
     '.wsx-ov b{display:block;font-size:1rem}',
     '.wsx-ov .ui-btn{flex:none}',
     'html.wsx-lock{overflow:hidden}',
+    /* full screen sits above the site header and always shows a Close button; on small screens the note goes under the picture */
+    '.wsx.is-fs{z-index:2147483000}',
+    '.wsx-close{display:none}',
+    '.wsx.is-fs .wsx-close{position:sticky;top:0;z-index:5;display:flex;justify-content:flex-end;margin:-.25rem 0 .5rem}',
+    '.wsx.is-fs .wsx-tools [data-act=fs]{display:none}',
+    '.wsx.is-fs .wsx-rib{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}',
+    '@media (max-width:991px),(max-height:600px){.wsx.is-fs .wsx-ov{position:static;display:flex;flex-wrap:wrap;margin:.5rem 0 0;max-width:none;padding:.25rem;background:none;box-shadow:none;color:var(--wsx-text)}.wsx.is-fs .wsx-ov>div{flex:1 1 12rem}}',
+    '@media (max-width:767px){.wsx-ib[data-act=fs]{display:none}}',
     '@media (max-width:767px){.wsx:not(.is-fs) .wsx-ov{display:flex;flex-wrap:wrap;gap:.5rem .75rem;align-items:center;margin:.5rem .25rem .25rem;font-size:.875rem;line-height:1.45;color:var(--wsx-text)}.wsx-ov>div{flex:1 1 12rem}.wsx-tag b{display:none}.wsx-tag{padding:.2rem}.wsx-edge,.wsx-ib[data-act=labels]{display:none}.wsx-tools{top:.75rem;right:.75rem}.wsx-ib{width:2rem;height:2rem}.wsx-side{max-width:none}.wsx-pager{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.wsx-pg{padding:.5rem .625rem}.wsx-pos{display:none}}',
     '@media (hover:none){.wsx-hot{border-color:#ffffff40}}'
   ].join('\n');
@@ -205,7 +215,7 @@
     qa('.wsx-hot', this.stage).forEach(function (h) {
       var w = h.offsetWidth, ht = h.offsetHeight, tag = q('.wsx-tag b', h);
       h.classList.toggle('is-narrow', w < Math.max(110, (tag ? tag.textContent.length : 10) * 8 + 40) || ht < 34);
-      h.classList.toggle('is-tiny', w < 56 || ht < 44);
+      h.classList.toggle('is-tiny', w < 40 || ht < 22);
     });
   };
   Map.prototype.pick = function (i) {
@@ -219,8 +229,16 @@
     this.info.innerHTML = '<div class="wsx-eb"><span class="wsx-dot"></span>Area' + (where ? ' in ' + esc(where) : '') + '</div><div class="wsx-h">' + (a.i ? img(a.i) : '') + esc(a.name) + '</div>' + (a.note ? '<p>' + esc(a.note) + '</p>' : '') + go;
     this.ov.innerHTML = '<div><b>' + esc(a.name) + '</b>' + esc(a.note) + '</div>' + go;
   };
-  Map.prototype.fs = function () {
-    var on = !this.root.classList.contains('is-fs');
+  Map.prototype.fs = function (fromBack) {
+    var on = !this.root.classList.contains('is-fs'), self = this;
+    if (on && window.innerWidth < 768) return;
+    if (!this.closeBar) {
+      this.closeBar = el('div', 'wsx-close', '<button type="button" class="ui-btn dk-btn is-small"><span class="ui-btn-icon"><img class="ui-icon is-color" alt="" src="' + CDN + IC.fsOut + '"></span><span class="ui-btn-label">Close full screen</span></button>');
+      this.closeBar.addEventListener('click', function () { self.fs(); });
+      this.root.insertBefore(this.closeBar, this.root.firstChild);
+    }
+    if (on) { try { history.pushState({ wsxFs: 1 }, ''); } catch (e) {} var pop = function () { window.removeEventListener('popstate', pop); if (self.root.classList.contains('is-fs')) self.fs(true); }; window.addEventListener('popstate', pop); this._pop = pop; }
+    else if (!fromBack) { if (this._pop) window.removeEventListener('popstate', this._pop); try { if (history.state && history.state.wsxFs) history.back(); } catch (e) {} }
     this.root.classList.toggle('is-fs', on); R.classList.toggle('wsx-lock', on);
     var b = q('[data-act=fs]', this.tools);
     b.innerHTML = img(on ? IC.fsOut : IC.fsIn); b.title = on ? 'Exit full screen (Esc)' : 'Full screen'; b.setAttribute('aria-label', b.title);
@@ -285,7 +303,7 @@
       forb.innerHTML = '<p><small>What ' + esc(w.name) + ' is for</small>' + esc(w.sum || 'A ready-made layout of editors.') + (w.v ? ' <span class="wsx-ver">Screenshot from version ' + esc(w.v) + '.</span>' : '') + '</p>' +
         (w.href ? btn('Open the ' + w.name + ' page', IC.ws, 'is-small is-accent', w.href) : '');
       [pv, nx].forEach(function (x) { if (x.img) { var pre = new Image(); pre.src = x.img; } });   /* neighbours load ahead */
-      if (!keepHash && history.replaceState) history.replaceState(null, '', '#ws-' + slug(w));
+      if (!keepHash && history.replaceState) history.replaceState(history.state, '', '#ws-' + slug(w));
     }
     root.addEventListener('click', function (e) {
       var t = e.target.closest('[data-go]'); if (t) { go(cur + (+t.dataset.go)); return; }

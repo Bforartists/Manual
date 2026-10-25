@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.4
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.5
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -208,7 +208,7 @@
     '.dk-look .wsx{margin:0}',
     '.dk-home-page .dk-look img{width:auto!important;height:auto!important}',
     '.dk-home-page .dk-look .wsx-stage>img{width:100%!important;height:100%!important}',
-    '.dk-home-page .dk-look .wsx-big img{width:62%!important;height:62%!important}',
+    '.dk-home-page .dk-look .wsx-big img{width:74%!important;height:74%!important}',
     '.dk-home-page .dk-look .wsx-tag img,.dk-home-page .dk-look .ui-chip-icon,.dk-home-page .dk-look .wsx-ib img,.dk-home-page .dk-look .ui-btn img{width:14px!important;height:14px!important}',
     '.dk-home-page .dk-look .wsx-h img{width:22px!important;height:22px!important}',
     '.dk-teaser{position:relative;display:grid;grid-template-columns:14rem minmax(0,1fr);gap:1.75rem;align-items:center;padding:1.5rem;overflow:hidden}',
