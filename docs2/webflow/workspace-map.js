@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · workspace maps · @version 1.0.6
+/* Bforartists Docs 2.0 · workspace maps · @version 1.0.7
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer), next to the docs layer.
  * The sync writes plain lists from docs2/workspaces.yml; this script turns them into:
@@ -34,9 +34,14 @@
     '.wsx .wsx-rib{display:flex;flex-wrap:wrap;gap:.375rem;margin:0 0 .875rem;overflow:visible;background:none;box-shadow:none}',
     '.wsx .wsx-rib .ui-segment-item{flex:0 0 auto;cursor:pointer;font-family:inherit;font-weight:600}',
     '.wsx .wsx-rib .ui-seg-icon{margin:0!important}',
-    '.wsx-row{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start}',
-    '.wsx-main{flex:999 1 34rem;min-width:0;display:flex;flex-direction:column;gap:.75rem}',
-    '.wsx-side{flex:1 1 16rem;max-width:22rem;display:flex;flex-direction:column;gap:.875rem}',
+    /* fixed columns: the picture never changes size when the side panel's text does (a size change moved the areas under the mouse and flickered) */
+    '.wsx{container-type:inline-size}',
+    '.wsx-row{display:grid;grid-template-columns:minmax(0,1fr) 19rem;gap:1.25rem;align-items:start}',
+    '.wsx-main{min-width:0;display:flex;flex-direction:column;gap:.75rem}',
+    '.wsx-side{min-width:0;display:flex;flex-direction:column;gap:.875rem}',
+    '@container (max-width:50rem){.wsx-row{grid-template-columns:minmax(0,1fr)}}',
+    '@supports not (container-type:inline-size){@media (max-width:991px){.wsx-row{grid-template-columns:minmax(0,1fr)}}}',
+    '.wsx.is-fs .wsx-row{grid-template-columns:minmax(0,1fr)}',
     '.wsx-card{position:relative;padding:.5rem;border-radius:.625rem;background:var(--wsx-card);box-shadow:inset .6px 1px 0 #ffffff0f,0 1px 2px #000b,6px 14px 18px -10px #0009}',
     /* the stage: screenshot + hotspots */
     '.wsx-stage{position:relative;overflow:hidden;border-radius:.375rem;background:var(--wsx-sink);aspect-ratio:1600/870}',
@@ -124,7 +129,7 @@
     '.wsx .wsx-ftab:before{display:none!important}',
     '.wsx .wsx-ftab .ui-focus-tile{flex:none;display:grid;place-items:center;width:3.25rem;height:3.25rem;margin:0}',
     '.wsx .wsx-ftab .ui-focus-tile img{width:1.875rem!important;height:1.875rem!important;margin:0!important;padding:0!important;object-fit:contain;max-width:none}',
-    '.wsx .wsx-ftab .ui-focus-spine-label{display:none;flex:1 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:1.0625rem;font-weight:600}',
+    '.wsx .wsx-ftab .ui-focus-spine-label{display:none;flex:1 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:1.0625rem;font-weight:600;color:var(--wsx-text)}',
     '.wsx .wsx-ftab.is-active .ui-focus-spine-label{display:block;animation:wsxfade .35s ease}',
     '@keyframes wsxfade{from{opacity:0}}',
     '.wsx .wsx-ftab .ui-focus-num{position:absolute;top:.5rem;right:.625rem;margin:0;font-size:.6875rem}',

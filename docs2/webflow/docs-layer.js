@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.6
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.7
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -24,7 +24,7 @@
     comm: '68b9b70677b5a3b5b8606647_community.svg', light: '68b9b7c5219bda8870e7cee9_light.svg',
     time: '68b9bb9cc5062fa217606ff2_time.svg', world: '68b9b4b69f8eb147bccde6cf_world.svg',
     zoom: '68b9bbd23fb07538f848b579_viewzoom.svg', caret: '68b9bbb397785a50ab1c6b64_tria_down.svg',
-    fwd: '68b9b76aa841ed4158a2f249_forward.svg'
+    fwd: '68b9b76aa841ed4158a2f249_forward.svg', print: '68b8db5dd3714b344fd700ea_output.svg'
   };
 
   /* ---------------------------------------------------------------- 1 styles */
@@ -189,7 +189,19 @@
     '.dk-path-tx{padding:.75rem}',
     '.dk-path-tx b{display:block;margin:0 0 .5rem;font:700 1rem/1.2 Inter,sans-serif}',
     '.dk-path-tx small{display:flex;flex-wrap:wrap;gap:.375rem .75rem;color:var(--dk-muted);font-size:.75rem}',
-    '.dk-secs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}',
+    '.dk-secs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}',
+    /* sinks: the same inset well the website uses under groups of cards */
+    '.dk-sink{border-radius:var(--bfa-sink-r,1.25rem);padding:1.25rem}',
+    '.dk-home-page .dk-sec.ui-card{display:grid;padding:1rem;row-gap:0}',
+    /* hero art: a framed picture with the website\'s stickers floating on it */
+    '.dk-hart{position:relative;padding:1rem 1.5rem 1.5rem 0}',
+    '.dk-hart-frame{width:100%;aspect-ratio:4/3;background-size:cover;background-position:center}',
+    '.dk-home-page img.dk-hart-st{position:absolute;width:5.5rem!important;height:5.5rem!important;object-fit:contain;filter:drop-shadow(0 10px 14px #000a);animation:dkfloat 6s ease-in-out infinite;pointer-events:none}',
+    '.dk-hart-st.is-1{left:-1.75rem;bottom:.25rem}.dk-hart-st.is-2{right:0;top:-.5rem;animation-delay:-2s}.dk-hart-st.is-3{right:-.5rem;bottom:-.25rem;animation-delay:-4s}',
+    '@keyframes dkfloat{50%{transform:translateY(-.5rem) rotate(4deg)}}',
+    '@media (prefers-reduced-motion:reduce){.dk-hart-st{animation:none!important}}html.motion-reduced .dk-hart-st{animation:none!important}',
+    '@media(max-width:991px){.dk-hart{max-width:30rem;padding:0 1rem 1rem}.dk-home-page img.dk-hart-st{width:4rem!important;height:4rem!important}.dk-hart-st.is-1{left:-.5rem}}',
+    '.dk-teaser.dk-sink h2{background:none!important;box-shadow:none!important;border:0!important;padding:0!important;font-family:"Titillium Web",Titillium,sans-serif;font-size:1.75rem;line-height:1.15;color:var(--dk-text)}',
     '.dk-sec{display:grid;grid-template-columns:3rem minmax(0,1fr);gap:.875rem;align-items:start;padding:1rem;color:var(--dk-text);text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}',
     '.dk-sec:hover{transform:translateY(-2px)}',
     '.dk-sec .dk-sticker{width:3rem;height:3rem;border-radius:.625rem}',
@@ -213,7 +225,7 @@
     '.dk-home-page .dk-look .wsx-tag img,.dk-home-page .dk-look .ui-chip-icon,.dk-home-page .dk-look .wsx-ib img,.dk-home-page .dk-look .ui-btn img{width:14px!important;height:14px!important}',
     '.dk-home-page .dk-look .wsx-h img{width:22px!important;height:22px!important}',
     '.dk-teaser{position:relative;display:grid;grid-template-columns:14rem minmax(0,1fr);gap:1.75rem;align-items:center;padding:1.5rem;overflow:hidden}',
-    '.dk-teaser-art{position:relative;height:9rem;border-radius:.5rem;background:radial-gradient(circle at 50% 50%,#ffffff10,transparent 70%),#0003}',
+    '.dk-teaser-art{position:relative;height:9rem;border-radius:var(--_bfa---shape--bevel,.75rem);background:radial-gradient(circle at 50% 40%,#ffffff12,transparent 70%),var(--_bfa---surface--card,#404040);box-shadow:0 1px 2px #0008,6px 14px 18px -10px #0009}',
     '.dk-teaser-art i{position:absolute;width:2.25rem;height:2.25rem;border-radius:.5rem;background:var(--c);box-shadow:0 0 0 2px #ffffffd9,0 4px 10px #0009;opacity:.9}',
     '.dk-teaser-art i:nth-child(1){left:8%;top:58%}.dk-teaser-art i:nth-child(2){left:26%;top:22%}.dk-teaser-art i:nth-child(3){left:44%;top:60%}.dk-teaser-art i:nth-child(4){left:60%;top:16%}.dk-teaser-art i:nth-child(5){left:74%;top:56%}.dk-teaser-art i:nth-child(6){left:84%;top:12%}',
     '.dk-teaser-art b{position:absolute;right:.5rem;bottom:.5rem;display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:#000a}',
@@ -222,7 +234,7 @@
     '.dk-teaser-tx p{margin:0 0 1rem;color:var(--dk-muted);max-width:44rem}',
     '.dk-teaser-when{position:absolute;top:1rem;right:1rem;padding:.25rem .625rem;border-radius:.25rem;background:repeating-linear-gradient(135deg,#f2c94c 0 8px,#e0b53c 8px 16px);color:#1a1a1a;font:800 .6875rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase}',
     '@media(max-width:767px){.dk-teaser{grid-template-columns:1fr}.dk-teaser-when{position:static;justify-self:start}}',
-    '@media(max-width:991px){.dk-h-top{grid-template-columns:1fr}.dk-paths{grid-template-columns:repeat(3,minmax(0,1fr))}.dk-secs{grid-template-columns:repeat(2,minmax(0,1fr))}}',
+    '@media(max-width:991px){.dk-h-top{grid-template-columns:1fr}.dk-paths{grid-template-columns:repeat(3,minmax(0,1fr))}.dk-secs{grid-template-columns:repeat(2,minmax(0,1fr))}.dk-sink{padding:.875rem}}',
     '@media(max-width:600px){.dk-h h1{font-size:2.25rem}.dk-paths{grid-template-columns:repeat(2,minmax(0,1fr))}.dk-secs,.dk-two{grid-template-columns:1fr}}'
   ].join('\n');
   var st = d.createElement('style'); st.id = 'bfa-docs-layer'; st.textContent = CSS; d.head.appendChild(st);
@@ -281,6 +293,12 @@
     return '<span class="dk-bar' + (big ? ' is-big' : '') + '" title="Reviewed ' + o.reviewed + ' · In review ' + o['needs-review'] + ' · Draft ' + o.draft + '"><i class="is-reviewed" style="width:' + w('reviewed') + '"></i><i class="is-review" style="width:' + w('needs-review') + '"></i></span>';
   }
 
+  /* ---------------------------------------------------------------- title tile: the page's own icon */
+  function titleTile() {
+    var t = q('.ui-doc-tile-icon'), cur = IDX.by[here]; if (!t || !cur || !cur.i) return;
+    t.removeAttribute('srcset'); t.src = iu(cur.i); t.classList.remove('w-dyn-bind-empty'); t.classList.add('is-color');
+  }
+
   /* ---------------------------------------------------------------- 2 breadcrumb */
   function crumbs() {
     var c = q('.ui-doc-crumb'); if (!c || c.dataset.dk) return; c.dataset.dk = '1';
@@ -324,7 +342,7 @@
       [IC.light, 'Report a doc issue', ISSUE + '?title=' + encodeURIComponent('Docs: ' + title)],
       [IC.world, 'Pro help · Trinumedia ↗', PRO, 'is-pro']]), aside.firstChild);
     aside.insertBefore(panel('Take it with you', [
-      [IC.file, 'This section (print or PDF)', print],
+      [IC.print, 'This section (print or PDF)', print],
       [IC.doc, 'Full manual, offline (soon)', 'https://github.com/Bforartists/Manual']]), aside.firstChild);
   }
 
@@ -392,17 +410,19 @@
     var h = el('div', 'dk-home-page');
     var ex = F.explore;
     h.innerHTML =
-      '<section class="dk-h"><div class="dk-h-top' + (ex ? '' : ' is-solo') + '"><div>' +
+      '<section class="dk-h"><div class="dk-h-top' + (ex || F.art ? '' : ' is-solo') + '"><div>' +
         '<div class="dk-eyebrow">' + esc(F.eyebrow ? F.eyebrow.t : 'The Bforartists manual') + '</div>' +
         '<h1>' + esc(F.headline ? F.headline.t : 'Documentation') + '</h1>' +
         '<p class="type-lead">' + esc(F.lead ? F.lead.t : '') + '</p>' +
         '<form class="dk-search" role="search" action="/search"><label>' + ico(IC.zoom, '') + '<input name="query" type="search" autocomplete="off" placeholder="Search tools, menus, hotkeys…" aria-label="Search the documentation"><kbd>F3</kbd></label>' +
         '<button class="ui-btn is-accent dk-btn" type="submit"><span class="ui-btn-icon"><img class="ui-icon" alt="" src="' + CDN + IC.zoom + '"></span><span class="ui-btn-label">Discover</span></button><div class="dk-results" role="listbox"></div></form>' +
         '<div class="dk-pop"><span>Popular:</span>' + F.popular.map(function (p) { return '<a href="' + esc(p.h) + '">' + ico(p.ds.i) + esc(p.t) + '</a>'; }).join('') + '</div>' +
-      '</div>' + (ex ? '<a class="dk-card dk-explore" href="' + esc(F.look && q('.ui-ws-map, .wsx', body) ? '#dk-look' : (ex.h || '#')) + '"><img class="dk-shot" alt="The Bforartists interface" src="' + esc(ex.ds.img) + '"><p>' + ico('68b8f4efa40047ddcec7c6ae_view3d.svg') + '<span><b>' + esc(ex.t) + '</b> ' + esc(ex.ds.text || '') + '</span></p></a>' : '') +
+      '</div>' + (F.art ? '<div class="dk-hart" aria-hidden="true"><div class="ui-art is-hero dk-hart-frame" style="background-image:url(' + esc(F.art.ds.img) + ')"></div>' +
+        (F.art.ds.st || '').split('|').filter(Boolean).slice(0, 3).map(function (u, k) { return '<img class="dk-hart-st is-' + (k + 1) + '" alt="" src="' + esc(u) + '">'; }).join('') + '</div>' : '') +
+      (ex ? '<a class="dk-card dk-explore" href="' + esc(F.look && q('.ui-ws-map, .wsx', body) ? '#dk-look' : (ex.h || '#')) + '"><img class="dk-shot" alt="The Bforartists interface" src="' + esc(ex.ds.img) + '"><p>' + ico('68b8f4efa40047ddcec7c6ae_view3d.svg') + '<span><b>' + esc(ex.t) + '</b> ' + esc(ex.ds.text || '') + '</span></p></a>' : '') +
       '</div></section>' +
       (F.look ? '<section class="dk-h dk-look" id="dk-look"><div class="dk-sec-head"><div><div class="dk-eyebrow">Look around · the interface</div><h2>' + esc(F.look.t) + '</h2><p>' + esc(F.look.ds.text || '') + '</p></div></div><div class="dk-look-map"></div></section>' : '') +
-      (F.teaser ? '<section class="dk-h"><div class="dk-card dk-teaser"><div class="dk-teaser-art" aria-hidden="true"><i style="--c:#8AC587"></i><i style="--c:#9AD3DE"></i><i style="--c:#7E86C0"></i><i style="--c:#f2994a"></i><i style="--c:#5cb4f0"></i><i style="--c:#DDC06A"></i><b>' + ico('68b9bb9cc5062fa217606ff2_time.svg') + '</b></div><div class="dk-teaser-tx"><div class="dk-eyebrow">' + esc(F.teaser.ds.eyebrow || 'Quick Starts') + '</div><h2>' + esc(F.teaser.t) + '</h2><p>' + esc(F.teaser.ds.text || '') + '</p><div class="dk-btns">' +
+      (F.teaser ? '<section class="dk-h"><div class="ui-sink dk-sink dk-teaser"><div class="dk-teaser-art" aria-hidden="true"><i style="--c:#8AC587"></i><i style="--c:#9AD3DE"></i><i style="--c:#7E86C0"></i><i style="--c:#f2994a"></i><i style="--c:#5cb4f0"></i><i style="--c:#DDC06A"></i><b>' + ico('68b9bb9cc5062fa217606ff2_time.svg') + '</b></div><div class="dk-teaser-tx"><div class="dk-eyebrow">' + esc(F.teaser.ds.eyebrow || 'Quick Starts') + '</div><h2>' + esc(F.teaser.t) + '</h2><p>' + esc(F.teaser.ds.text || '') + '</p><div class="dk-btns">' +
         (F.teaser.ds.link2 ? btn(F.teaser.ds.label2 || 'Explore', '68b8cd9563b35e0ca05c7797_workspace.svg', 'is-small is-accent', esc(F.teaser.ds.link2)) : '') + (F.teaser.h ? btn('Meanwhile: the Quick Start page', IC.fwd, 'is-small', esc(F.teaser.h)) : '') +
         '</div></div><span class="dk-teaser-when">' + esc(F.teaser.ds.when || 'Coming soon') + '</span></div></section>' : '') +
       (F.path.length ? '<section class="dk-h"><div class="dk-sec-head"><div><div class="dk-eyebrow">Quick Start · Pick a path</div><h2>Learn by making something</h2><p>Each path is a short project with a template file, clear steps, and the theory behind every step. Finish one and it is checked off here.</p></div>' +
@@ -412,9 +432,9 @@
           return '<a class="dk-card dk-path" href="' + esc(p.h || '#') + '"><div class="dk-path-art"><span>' + esc(p.ds.area || '') + '</span>' + ico(p.ds.i) + '</div><div class="dk-path-tx"><b>' + esc(p.t) + '</b><small><span>' + dots + ' ' + esc(lv) + '</span>' + (p.ds.min ? '<span>' + esc(p.ds.min) + ' min</span>' : '') + '</small></div></a>';
         }).join('') + '</div></section>' : '') +
       '<section class="dk-h"><div class="dk-sec-head"><div><div class="dk-eyebrow">Reference · The whole manual at a glance</div><h2>' + esc(['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve'][secs.length] || secs.length) + ' sections, same as the sidebar</h2><p>Same order and icons as the sidebar panels, so this page also teaches you the sidebar. ' + total + ' pages in all.</p></div></div>' +
-        '<div class="dk-secs">' + secs.map(function (s) {
-          return '<a class="dk-card dk-sec" href="/docs/' + s.s + '"><div class="dk-sticker">' + ico(s.i) + '</div><div><b>' + esc(s.t) + '</b>' + (s.d ? '<p>' + esc(s.d) + '</p>' : '') + '<small>' + plural((s.c || []).length, 'chapter', 'chapters') + ' · ' + plural(s.n || 0, 'page', 'pages') + '</small>' + bar(counts(s.c)) + '</div></a>';
-        }).join('') + '</div></section>' +
+        '<div class="ui-sink dk-sink"><div class="dk-secs">' + secs.map(function (s) {
+          return '<a class="ui-card dk-card dk-sec" href="/docs/' + s.s + '"><div class="dk-sticker">' + ico(s.i) + '</div><div><b>' + esc(s.t) + '</b>' + (s.d ? '<p>' + esc(s.d) + '</p>' : '') + '<small>' + plural((s.c || []).length, 'chapter', 'chapters') + ' · ' + plural(s.n || 0, 'page', 'pages') + '</small>' + bar(counts(s.c)) + '</div></a>';
+        }).join('') + '</div></div></section>' +
       (function () { var all = { 'draft': 0, 'needs-review': 0, 'reviewed': 0 }; secs.forEach(function (s) { var c = counts(s.c); for (var k in c) all[k] += c[k]; });
         return '<section class="dk-h"><div class="dk-card dk-status"><div><div class="dk-eyebrow">Review progress</div><b>' + all.reviewed + ' of ' + total + ' pages reviewed</b><p>Every page shows its status at the top. Draft pages come from the old manual and have not been checked yet; reviewed pages are checked against Bforartists 5.1.</p></div>' +
           '<div class="dk-legend"><span class="is-reviewed">Reviewed ' + all.reviewed + '</span><span class="is-review">In review ' + all['needs-review'] + '</span><span>Draft ' + all.draft + '</span></div>' + bar(all, true) + '</div></section>'; })() +
@@ -474,7 +494,7 @@
     if (!nav || !nav.sections) return;
     NAV = nav; IDX = index(nav);
     overviews(); watchSide();
-    crumbs(); statusChip();
+    crumbs(); statusChip(); titleTile();
     if (here === 'home') return home();
     var n = IDX.by[here];
     if (n && n.land) overview(n);

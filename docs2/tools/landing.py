@@ -225,7 +225,7 @@ def home_html(page, icons, url_of_rel, img_url):
 
     def li(kind, title, link="", **data):
         attrs = "".join(f' data-{k}="{esc(str(v))}"' for k, v in data.items() if v not in (None, ""))
-        href = url_of_rel(link) if link else ""
+        href = (link if str(link).startswith(("#", "http")) else url_of_rel(link)) if link else ""   # "#dk-look" jumps on the page
         inner = f'<a href="{esc(href)}">{esc(str(title))}</a>' if href else esc(str(title))
         return f'<li data-k="{kind}"{attrs}>{inner}</li>'
 
@@ -234,6 +234,10 @@ def home_html(page, icons, url_of_rel, img_url):
            li("lead", fm.get("summary", ""))]
     for p in fm.get("popular") or []:
         out.append(li("popular", p.get("title"), p.get("link"), i=icon_file(p.get("icon"), icons)))
+    art = fm.get("art") or {}
+    if art.get("image"):                  # hero art beside the search: one picture and up to three stickers
+        out.append(li("art", art.get("alt", ""), img=art["image"], st="|".join(str(x) for x in art.get("stickers") or []),
+                      credit=art.get("credit")))
     ex = fm.get("explore") or {}
     if ex:
         out.append(li("explore", ex.get("title", ""), ex.get("link"), img=img_url(ex.get("image", "")),
