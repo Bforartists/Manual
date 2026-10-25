@@ -1,17 +1,20 @@
-/* Bforartists · instant search popup · @version 1.0.0
+/* Bforartists · instant search popup · @version 1.1.0
  *
  * Site-wide (registered Webflow script, footer). The search button in the site navigation
- * ([data-nav-search]) and Ctrl/⌘ K open a popup that searches the manual as you type: page
- * titles, summaries and every H1–H3 heading (search.json, written by the docs sync and published
- * to GitHub Pages next to nav.json). Enter on nothing selected, or the last row, opens the full
- * site search (/search?query=…). Published as /Manual/webflow/quicksearch-<version>.js.
+ * ([data-nav-search]) and Ctrl/⌘ K open a popup that searches the whole site as you type:
+ *   - the website (site.json, written by tools/site_index.py): Features, Download, News, About …
+ *     titles, descriptions, headings, and art titles on the gallery;
+ *   - the manual (search.json, written by the docs sync): page titles, summaries and H1–H3 headings.
+ * Both lists are published to GitHub Pages under /nav/. Enter on nothing selected, or the last row,
+ * opens the full site search (/search?query=…). Published as /Manual/webflow/quicksearch-<version>.js.
+ * 1.1.0: searches the website too, not only the manual ("Search Bforartists").
  */
 (function () {
   var d = document, R = d.documentElement;
   if (R.dataset.bfaQs) return;
   R.dataset.bfaQs = '1';
-  var URL_ = 'https://bforartists.github.io/Manual/nav/search.json', CDN = 'https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/';
-  var I = { zoom: '68b9bbd23fb07538f848b579_viewzoom.svg', doc: '68b9b72e6ab175721a9bf7cb_documents.svg', sec: '68b9b786235cfe7a6063d3dc_hierarchy.svg', world: '68b9b4b69f8eb147bccde6cf_world.svg', x: '68b9b6f02b79e1972f80e83b_cancel.svg' };
+  var URL_ = 'https://bforartists.github.io/Manual/nav/search.json', SURL = 'https://bforartists.github.io/Manual/nav/site.json', CDN = 'https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/';
+  var I = { zoom: '68b9bbd23fb07538f848b579_viewzoom.svg', doc: '68b9b72e6ab175721a9bf7cb_documents.svg', sec: '68b9b786235cfe7a6063d3dc_hierarchy.svg', world: '68b9b4b69f8eb147bccde6cf_world.svg', x: '68b9b6f02b79e1972f80e83b_cancel.svg', news: '68b8d6fe76b8096ac09f74e5_file_text.svg', art: '68b8f543763e8aff56926602_image.svg' };
   var CSS = [
     '.bfa-qs{position:fixed;inset:0;z-index:9999;display:none;align-items:flex-start;justify-content:center;padding:12vh 1rem 1rem;background:#0009;backdrop-filter:blur(3px)}',
     '.bfa-qs.is-open{display:flex}',
@@ -36,12 +39,13 @@
     '.bfa-qs-foot{display:flex;gap:1rem;padding:.5rem 1rem;border-top:1px solid #ffffff14;color:#9a9a9a;font-size:.75rem}',
     'html.theme-light .bfa-qs-box{background:#fff;color:#222}html.theme-light .bfa-qs-list a small{color:#666}'
   ].join('\n');
-  var IDX = null, loading = null, box = null, inp = null, list = null, hits = [], sel = -1;
+  var IDX = null, SIDX = null, loading = null, box = null, inp = null, list = null, hits = [], sel = -1;
 
   function esc(s) { var e = d.createElement('i'); e.textContent = s == null ? '' : String(s); return e.innerHTML; }
   function load() {
     if (IDX || loading) return loading;
-    loading = fetch(URL_).then(function (r) { return r.ok ? r.json() : []; }).then(function (j) { IDX = j || []; run(); }).catch(function () { IDX = []; });
+    var get = function (u) { return fetch(u).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }); };
+    loading = Promise.all([get(URL_), get(SURL)]).then(function (j) { IDX = j[0] || []; SIDX = j[1] || []; run(); });
     return loading;
   }
   function mark(t, words) {
@@ -60,32 +64,44 @@
     if (!list) return;
     var v = inp.value.trim(), q = v.toLowerCase(), words = q.split(/\s+/).filter(Boolean);
     sel = -1;
-    if (!q) { list.innerHTML = '<div class="bfa-qs-empty">Type to search the manual: tools, menus, panels, hotkeys…</div>'; hits = []; return; }
-    if (!IDX) { list.innerHTML = '<div class="bfa-qs-empty">Loading the manual…</div>'; load(); return; }
-    var pages = [], heads = [];
+    if (!q) { list.innerHTML = '<div class="bfa-qs-empty">Type to search Bforartists: pages, news, art, tools, menus, hotkeys…</div>'; hits = []; return; }
+    if (!IDX) { list.innerHTML = '<div class="bfa-qs-empty">Loading…</div>'; load(); return; }
+    var site = [], pages = [], heads = [];
+    SIDX.forEach(function (p) {
+      var s = score(p.t, q, words), sd = p.d ? score(p.d, q, words) * 0.4 : 0;
+      if (s || sd) site.push({ p: p, s: Math.max(s, sd) + 10 });
+      (p.h || []).forEach(function (h) { var sh = score(h[0], q, words); if (sh) site.push({ p: p, h: h, s: sh * 0.8 }); });
+    });
     IDX.forEach(function (p) {
       var s = score(p.t, q, words), sd = p.d ? score(p.d, q, words) * 0.4 : 0;
       if (s || sd) pages.push({ p: p, s: Math.max(s, sd) + (p.k ? 5 : 0) });
       (p.h || []).forEach(function (h) { var sh = score(h[0], q, words); if (sh) heads.push({ p: p, h: h, s: sh }); });
     });
+    site.sort(function (a, b) { return b.s - a.s || a.p.t.length - b.p.t.length; });
     pages.sort(function (a, b) { return b.s - a.s || a.p.t.length - b.p.t.length; });
     heads.sort(function (a, b) { return b.s - a.s || a.h[0].length - b.h[0].length; });
-    var o = '';
-    if (pages.length) o += '<p>Pages</p>' + pages.slice(0, 7).map(function (x) {
+    var o = '', seenU = {};
+    site = site.filter(function (x) { var k = x.p.u + '#' + (x.h ? x.h[0] : ''); if (seenU[k]) return false; seenU[k] = 1; return true; });
+    if (site.length) o += '<p>Website</p>' + site.slice(0, 6).map(function (x) {
+      var ic = x.h && x.h[1] === 'browse' && x.p.u === '/gallery' ? I.art : x.p.k === 'news' ? I.news : I.world;
+      if (x.h) return '<a href="' + x.p.u + (x.h[1] ? '#' + x.h[1] : '') + '"><img alt="" src="' + CDN + ic + '"><b>' + mark(x.h[0], words) + '</b><small>' + esc(x.p.g) + ' › ' + esc(x.p.t) + '</small></a>';
+      return '<a href="' + x.p.u + '"><img alt="" src="' + CDN + ic + '"><b>' + mark(x.p.t, words) + '</b><small>' + esc(x.p.g) + (x.p.d ? ' · ' + esc(x.p.d) : '') + '</small></a>';
+    }).join('');
+    if (pages.length) o += '<p>Manual</p>' + pages.slice(0, 7).map(function (x) {
       return '<a href="/docs/' + x.p.s + '"><img alt="" src="' + CDN + I.doc + '"><b>' + mark(x.p.t, words) + '</b><small>' + esc(x.p.g) + (x.p.d ? ' · ' + esc(x.p.d) : '') + '</small></a>';
     }).join('');
-    if (heads.length) o += '<p>Inside pages</p>' + heads.slice(0, 9).map(function (x) {
+    if (heads.length) o += '<p>Inside the manual</p>' + heads.slice(0, 9).map(function (x) {
       return '<a href="/docs/' + x.p.s + '#' + x.h[1] + '"><img alt="" src="' + CDN + I.sec + '"><b>' + mark(x.h[0], words) + '</b><small>' + esc(x.p.g) + ' › ' + esc(x.p.t) + '</small></a>';
     }).join('');
-    if (!pages.length && !heads.length) o += '<div class="bfa-qs-empty">Nothing in the manual matches “' + esc(v) + '”.</div>';
-    o += '<p>Everywhere</p><a href="/search?query=' + encodeURIComponent(v) + '"><img alt="" src="' + CDN + I.world + '"><b>Search the whole site for “' + esc(v) + '”</b><small>Pages, news, gallery and the manual</small></a>';
+    if (!site.length && !pages.length && !heads.length) o += '<div class="bfa-qs-empty">Nothing matches “' + esc(v) + '” yet. Try the full results page below.</div>';
+    o += '<p>Everywhere</p><a href="/search?query=' + encodeURIComponent(v) + '"><img alt="" src="' + CDN + I.zoom + '"><b>All results for “' + esc(v) + '”</b><small>Full results page: pages, news, gallery and the manual</small></a>';
     list.innerHTML = o;
     hits = [].slice.call(list.querySelectorAll('a'));
   }
   function build() {
     var st = d.createElement('style'); st.id = 'bfa-qs-css'; st.textContent = CSS; d.head.appendChild(st);
     box = d.createElement('div'); box.className = 'bfa-qs'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-label', 'Search');
-    box.innerHTML = '<div class="bfa-qs-box"><label class="bfa-qs-field"><img alt="" src="' + CDN + I.zoom + '"><input type="search" autocomplete="off" placeholder="Search the manual" aria-label="Search the manual"><kbd>Esc</kbd><button type="button" class="bfa-qs-x" aria-label="Close"><img alt="" src="' + CDN + I.x + '"></button></label>' +
+    box.innerHTML = '<div class="bfa-qs-box"><label class="bfa-qs-field"><img alt="" src="' + CDN + I.zoom + '"><input type="search" autocomplete="off" placeholder="Search Bforartists" aria-label="Search Bforartists"><kbd>Esc</kbd><button type="button" class="bfa-qs-x" aria-label="Close"><img alt="" src="' + CDN + I.x + '"></button></label>' +
       '<div class="bfa-qs-list" role="listbox"></div><div class="bfa-qs-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> choose</span><span><kbd>Enter</kbd> open</span><span><kbd>Ctrl</kbd> <kbd>K</kbd> search anywhere</span></div></div>';
     d.body.appendChild(box);
     inp = box.querySelector('input'); list = box.querySelector('.bfa-qs-list');
