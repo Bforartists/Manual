@@ -12,18 +12,25 @@ popular:
   - { title: What's new in 5.1, link: appendix/manual-update-history.md, icon: new }
   - { title: Keymap, link: keymap/standard-keymap.md, icon: key_command }
   - { title: Migrating from Blender, link: getting-started/migrating-from-blender.md, icon: import }
-# Explore the interface: the big screenshot on the right
+# Explore the interface: the card on the right jumps to the workspace map below
 explore:
-  image: images/ui/interface/basics/user-interface-principles.jpg
+  image: images/workspaces/workspaces/standard-workspaces.png
   title: Explore the interface.
-  text: Hover any part of Bforartists to see what it is and jump to its page.
-  link: interface/basics.md
-# Quick Start paths (short projects; until their pages exist, each opens the matching workspace)
-paths:
-  - { area: Modeling, title: Model your first prop, level: Beginner, minutes: 45, icon: editmode_hlt, link: workspaces/modeling.md }
-  - { area: Sculpting, title: Sculpt a creature, level: Intermediate, minutes: 90, icon: sculptmode_hlt, link: workspaces/sculpting.md }
-  - { area: 2D Full Canvas, title: 2D animation on a canvas, level: Intermediate, minutes: 60, icon: outliner_ob_greasepencil, link: workspaces/2d-full-canvas.md }
-  - { area: Shading, title: Shade and render, level: Beginner, minutes: 40, icon: node_material, link: workspaces/shading.md }
-  - { area: Animation, title: Animate a bouncing ball, level: Beginner, minutes: 30, icon: render_animation, link: workspaces/animation.md }
-  - { area: Video Editing, title: Edit a video, level: Intermediate, minutes: 50, icon: sequence, link: workspaces/video-editing.md }
+  text: Point at any part of Bforartists to see what it is and jump to its chapter.
+  link: workspaces/main.md
+# Look around: one workspace map right on this page, then a way to all of them
+workspace:
+  page: workspaces/main.md
+  title: Look around the Main workspace
+  text: "This is what Bforartists shows when it opens. Point at an area to see what it is for, then open its chapter."
+  all: workspaces/index.md
+# Quick Starts: a teaser until the guides exist (they come after the next big website update)
+teaser:
+  eyebrow: Quick Starts · coming soon
+  title: Learn by making one little film
+  text: "Short, playful guides on a skill map: every guide you finish adds one piece to a small animated story, from the first prop to opening night. They arrive after the next big website update."
+  when: After the next website update
+  link: getting-started/quick-start.md
+  link2: workspaces/index.md
+  label2: Explore the workspaces
 ---

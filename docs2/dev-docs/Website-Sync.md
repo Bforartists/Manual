@@ -2,7 +2,7 @@
 
 > **Merge on GitHub, and the pages appear on the staging website. The live site is a separate, manual click.**
 
-🧪 Built in Phase 5 on the test branch `docs2/tier1-phase5`.
+🧪 Runs on every merge into `docs2/main`. When something does not update, see [Troubleshooting](Troubleshooting.md).
 
 ---
 
@@ -13,8 +13,10 @@
 | 1. 🧾 | New pages get their ID, section and breadcrumb | `fill_front_matter.py` |
 | 2. 🖼️ | New screenshots are filed | `image_bot.py` |
 | 3. ✅ | Every page is checked | `check.py` |
-| 4. 🌐 | Sections, shared sections and pages are written to Webflow's CMS | `sync.py` |
+| 4. 🌐 | Sections, shared sections and pages are written to Webflow's CMS; items with no page left are archived | `sync.py --prune` |
 | 5. 🚀 | bforartists.webflow.io is published | Webflow API, staging only |
+| 6. 🧭 | The sidebar (`nav.json`) and the search index (`search.json`) go to GitHub Pages | `sync.py --nav` |
+| 7. 🎛️ | Each site script is published as `webflow/<name>-<version>.js`, with its hash in the job summary | [Site scripts](Site-Scripts.md) |
 
 It runs on every push to the publish branch (`docs2/main`) when the checks pass, and from
 **Actions → Docs 2.0 checks and preview → Run workflow**.
@@ -43,8 +45,8 @@ Order: as in `nav.yml`; new pages follow in folder order; *Position in the sideb
 |---|---|
 | 🔑 | Items are matched on their IDs, never on names |
 | ⏭️ | Unchanged pages are skipped |
-| ✋ | A page edited by hand in Webflow after the last sync is skipped and reported. Fix it in GitHub instead |
-| 🧹 | Nothing is deleted; Webflow items with no page in the repository are listed |
+| ✋ | A page edited by hand in Webflow after the last sync is skipped and reported. Fix it in GitHub, then reset it ([how](Troubleshooting.md#a-page-does-not-update)) |
+| 🧹 | Nothing is deleted; Webflow items with no page in the repository are archived and listed |
 | 🌐 | Publishes the **webflow.io** address only. Custom domains (bforartists.co) are never published by the sync |
 | 🖼️ | Images are sent as GitHub links at the exact commit; Webflow copies them to its own CDN |
 

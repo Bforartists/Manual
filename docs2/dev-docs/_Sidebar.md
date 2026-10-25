@@ -15,6 +15,14 @@
 - [✅ Checks and previews](Checks-and-Previews.md)
 - [🌐 Website sync](Website-Sync.md)
 
+**🧰 Maintaining**
+- [🧰 Maintainer guide](Maintainer-Guide.md)
+- [🧭 Structure and navigation](Structure-and-Navigation.md)
+- [🗺️ Workspace maps](Workspace-Maps.md)
+- [🎛️ Site scripts](Site-Scripts.md)
+- [🚀 Release update](Release-Update.md)
+- [🩺 Troubleshooting](Troubleshooting.md)
+
 **📊 Status**
 - [🛣️ Roadmap](Roadmap.md)
 

@@ -238,6 +238,12 @@ def home_html(page, icons, url_of_rel, img_url):
     if ex:
         out.append(li("explore", ex.get("title", ""), ex.get("link"), img=img_url(ex.get("image", "")),
                       text=ex.get("text", "")))
+    tz = fm.get("teaser") or {}
+    if tz:
+        out.append(li("teaser", tz.get("title", ""), tz.get("link"), eyebrow=tz.get("eyebrow"), text=tz.get("text"),
+                      when=tz.get("when"), link2=url_of_rel(tz.get("link2")) if tz.get("link2") else "", label2=tz.get("label2")))
+    if fm.get("workspace"):
+        out.append(li("look", fm["workspace"].get("title", ""), fm["workspace"].get("all"), text=fm["workspace"].get("text")))
     for p in fm.get("paths") or []:
         out.append(li("path", p.get("title"), p.get("link"), area=p.get("area"), level=p.get("level"),
                       min=p.get("minutes"), i=icon_file(p.get("icon"), icons)))
@@ -298,13 +304,14 @@ def _area_items(entry, editors, icons, url_rel):
     return out
 
 
-def workspace_map(body, entry, editors, icons, url_rel, img_url):
+def workspace_map(body, entry, editors, icons, url_rel, img_url, name="", go=""):
     """A workspace page: the hover map's areas as a list right after the screenshot (the docs
     script lays them over it). Placed at <!-- workspace-map --> when the page has one."""
     if not entry or not entry.get("areas"):
         return WS_MARK.sub("", body)
     src = img_url(entry["image"]) if entry.get("image") else ""
-    shot = f'<li data-k="shot" data-img="{htmllib.escape(src)}" data-v="{htmllib.escape(str(entry.get("captured", "")))}">Screenshot</li>'
+    extra = (f' data-n="{htmllib.escape(name)}"' if name else "") + (f' data-href="{htmllib.escape(go)}"' if go else "")
+    shot = f'<li data-k="shot" data-img="{htmllib.escape(src)}" data-v="{htmllib.escape(str(entry.get("captured", "")))}"{extra}>Screenshot</li>'
     block = f'<div class="ui-ws-map"><ul>{shot}{"".join(_area_items(entry, editors, icons, url_rel))}</ul></div>'
     if WS_MARK.search(body):
         return WS_MARK.sub(lambda m: block, body, count=1)
@@ -323,9 +330,9 @@ def workspace_explorer(body, order, editors, icons, url_rel, img_url, title_of):
         href = url_rel(w["page"])
         if not href:
             continue
-        title, summ = title_of(w["page"])
+        title, summ, icon = title_of(w["page"])
         src = img_url(w["image"]) if w.get("image") else ""
-        rows.append(f'<li data-k="ws" data-img="{esc(src)}" data-v="{esc(str(w.get("captured", "")))}" data-sum="{esc(summ)}">'
+        rows.append(f'<li data-k="ws" data-img="{esc(src)}" data-i="{esc(icon_file(icon, icons))}" data-v="{esc(str(w.get("captured", "")))}" data-sum="{esc(summ)}">'
                     f'<a href="{esc(href)}">{esc(title)}</a></li>')
         rows += _area_items(w, editors, icons, url_rel)
     if not rows:

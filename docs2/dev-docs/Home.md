@@ -17,7 +17,7 @@ This wiki is for **writers, reviewers and maintainers** of the Bforartists manua
 | **Edit with** | LibreOffice | Your browser ([Pages CMS](https://app.pagescms.org)), GitHub, or any editor |
 | **Published as** | PDF and website pages copied by hand | The website, synced from GitHub; PDF printed on demand |
 | **Guide** | 📘 [Reference Manual writing guide](https://github.com/Bforartists/Manual/wiki/Reference-Manual-writing-guide) | ✏️ [Editing the docs online](Editing-the-docs-online.md) |
-| **Status** | ✅ In use | 🧪 Getting Started live on staging; the rest of the manual being converted (Tier 2) |
+| **Status** | ✅ In use | 🧪 The whole manual converted and on staging (332 pages); review and polish under way |
 
 > 💡 New here? Read [Editing the docs online](Editing-the-docs-online.md) first. It takes five minutes and you need nothing installed.
 
@@ -32,6 +32,7 @@ This wiki is for **writers, reviewers and maintainers** of the Bforartists manua
 | 🖼️ **Images and screenshots** | [Drop a screenshot in; the bot files it](Images-and-Screenshots.md) |
 | 🌿 **Branches and review** | [How a change travels from your save to the website](Branches-and-Review.md) |
 | 🛣️ **Roadmap** | [What is done, what is next](Roadmap.md) |
+| 🧰 **Maintainer guide** | [Every maintenance job, step by step](Maintainer-Guide.md) |
 
 ---
 
@@ -57,6 +58,17 @@ This wiki is for **writers, reviewers and maintainers** of the Bforartists manua
 | ✅ [Checks and previews](Checks-and-Previews.md) | What every change is checked for, and the preview link |
 | 🌐 [Website sync](Website-Sync.md) | How a merge reaches the staging website |
 
+### 🧰 Maintaining
+
+| Page | Description |
+|------|-------------|
+| 🧰 [Maintainer guide](Maintainer-Guide.md) | The whole system on one picture, "I want to…", roles and rhythm |
+| 🧭 [Structure and navigation](Structure-and-Navigation.md) | Add, move or remove pages; the Docs home; page status; search |
+| 🗺️ [Workspace maps](Workspace-Maps.md) | Edit what an area says; re-shoot the workspaces each release |
+| 🎛️ [Site scripts](Site-Scripts.md) | Change, version, register and roll back the website's docs scripts |
+| 🚀 [Release update](Release-Update.md) | The checklist for a new Bforartists version, and publishing live |
+| 🩺 [Troubleshooting](Troubleshooting.md) | A page did not update, checks failed, something looks broken |
+
 ### 📊 Status
 
 | Page | Description |
@@ -69,9 +81,10 @@ This wiki is for **writers, reviewers and maintainers** of the Bforartists manua
 
 | Metric | Value |
 |--------|-------|
-| 📄 Pages in Docs 2.0 | 29 (8 Getting Started, 21 from the first test chapters) |
-| ✅ Words kept from the `.odt` | 23 of 23 chapter groups keep every word |
-| 🖼️ Images in the library | 541, each stored once |
+| 📄 Pages in Docs 2.0 | 332, in 9 sections |
+| ✅ Words kept from the `.odt` | Every chapter converted with its words (about 764,000) |
+| 🖼️ Images in the library | About 12,400, each stored once |
+| 🗺️ Workspace maps | 18 workspaces, 106 areas |
 | 🧰 Tools to install for writers | 0 |
 
 ---
