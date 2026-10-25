@@ -1,4 +1,4 @@
-/* Bforartists · instant search popup · @version 1.1.0
+/* Bforartists · instant search popup · @version 1.1.1
  *
  * Site-wide (registered Webflow script, footer). The search button in the site navigation
  * ([data-nav-search]) and Ctrl/⌘ K open a popup that searches the whole site as you type:
@@ -23,6 +23,10 @@
     '.bfa-qs-field img{width:18px;height:18px}',
     '.bfa-qs-field input{flex:1;min-width:0;border:0;outline:0;background:none;color:inherit;font:500 1.0625rem/1.4 inherit}',
     '.bfa-qs-field kbd,.bfa-qs-foot kbd{padding:.1rem .4rem;border-radius:.25rem;background:#0004;color:#bbb;font:600 .6875rem Inter,sans-serif}',
+    '.bfa-qs-field .bfa-qs-go{flex:none;margin:0;cursor:pointer;font-family:inherit}',
+    '.bfa-qs-field .bfa-qs-go img{width:16px;height:16px}',
+    /* touch screens: no keyboard hints (Esc, arrows, Ctrl K) */
+    '@media (hover:none){.bfa-qs-field kbd,.bfa-qs-foot{display:none}}',
     '.bfa-qs-x{display:grid;place-items:center;width:1.75rem;height:1.75rem;border:0;border-radius:.25rem;background:none;cursor:pointer;opacity:.7}',
     '.bfa-qs-x:hover{opacity:1;background:#ffffff10}',
     '.bfa-qs-x img{width:14px;height:14px}',
@@ -101,7 +105,7 @@
   function build() {
     var st = d.createElement('style'); st.id = 'bfa-qs-css'; st.textContent = CSS; d.head.appendChild(st);
     box = d.createElement('div'); box.className = 'bfa-qs'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-label', 'Search');
-    box.innerHTML = '<div class="bfa-qs-box"><label class="bfa-qs-field"><img alt="" src="' + CDN + I.zoom + '"><input type="search" autocomplete="off" placeholder="Search Bforartists" aria-label="Search Bforartists"><kbd>Esc</kbd><button type="button" class="bfa-qs-x" aria-label="Close"><img alt="" src="' + CDN + I.x + '"></button></label>' +
+    box.innerHTML = '<div class="bfa-qs-box"><label class="bfa-qs-field"><img alt="" src="' + CDN + I.zoom + '"><input type="search" autocomplete="off" placeholder="Search Bforartists" aria-label="Search Bforartists"><button type="button" class="ui-btn is-accent is-small bfa-qs-go"><span class="ui-btn-icon"><img class="ui-icon" alt="" src="' + CDN + I.zoom + '"></span><span class="ui-btn-label">Discover</span></button><kbd>Esc</kbd><button type="button" class="bfa-qs-x" aria-label="Close"><img alt="" src="' + CDN + I.x + '"></button></label>' +
       '<div class="bfa-qs-list" role="listbox"></div><div class="bfa-qs-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> choose</span><span><kbd>Enter</kbd> open</span><span><kbd>Ctrl</kbd> <kbd>K</kbd> search anywhere</span></div></div>';
     d.body.appendChild(box);
     inp = box.querySelector('input'); list = box.querySelector('.bfa-qs-list');
@@ -115,6 +119,12 @@
         e.preventDefault(); var a = hits[sel > -1 ? sel : 0];
         location.href = a ? a.getAttribute('href') : '/search?query=' + encodeURIComponent(inp.value.trim());
       }
+    });
+    /* Discover: the full results page, same as the button on the Docs home */
+    box.querySelector('.bfa-qs-go').addEventListener('click', function (e) {
+      e.preventDefault(); var v = inp.value.trim();
+      if (!v) { inp.focus(); return; }
+      location.href = '/search?query=' + encodeURIComponent(v);
     });
     box.addEventListener('click', function (e) { if (e.target === box || e.target.closest('.bfa-qs-x')) close(); else if (e.target.closest('.bfa-qs-list a')) close(); });
   }
