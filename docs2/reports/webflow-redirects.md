@@ -4,7 +4,7 @@
 
 1. ✅ Links on the marketing pages, the footer, the 404 page and the Docs template point at `/docs/…` (rewired on staging).
 2. ✅ The 97 old `/documentation/…` pages are set to **Draft** in Webflow (reversible: untick Draft in Page settings).
-3. ⬜ Add the 41 redirects below in Webflow: Site settings › Publishing › 301 redirects.
+3. ⬜ Import the redirects: Site settings › Publishing › 301 redirects › **Import**, file `webflow-redirects-import.csv` (97 rows, one per old page, no header). An import **replaces** all existing redirects, so export first if there are others to keep. The 41 rules below are the same redirects, for typing by hand.
 4. ⬜ Publish the live site, then open a few old addresses (for example `/documentation/keymap/standard`) and check they land on the new page.
 5. ⬜ After a week or two, delete the old pages and their folders in the Designer (Pages panel › `documentation` folder).
 
