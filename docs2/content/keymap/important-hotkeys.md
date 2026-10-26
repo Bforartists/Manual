@@ -19,6 +19,14 @@ There are however a few important hotkeys left that makes your life easier. And 
 
 Here we list some of the most used and basic hotkeys at one sheet, so that you don't have to dig through the manual and the whole keymap chapter or the menus to find the basic functionality.
 
+## The important keys at a glance
+
+The keyboard below lights up only these keys, in the Bforartists keymap. Pick the editor and the mode, hold Shift, Ctrl or Alt to see those combinations, and click a key to read what it does. Every other key is on the [Standard Keymaps](standard-keymaps.md).
+
+```keymap-explorer
+mini
+```
+
 ## In the 3D Viewport
 
 ### All Modes

@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · interactive keymap · @version 1.1.3
+/* Bforartists Docs 2.0 · interactive keymap · @version 1.1.4
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer). The sync turns
  * <!-- keymap-explorer --> in a page into <div class="ui-keymap"><ul><li data-k="keymap" data-src=…>,
@@ -13,6 +13,7 @@
  *   🎨  the colours, then everything the picked key does, full width in columns
  *   📱  phones: the same keyboard with the key names only, and the list of keys under it
  *   ⭐  data-mini="1" (Important Hotkeys): only the everyday keys light up, Bforartists keymap only
+ *   📣  data-cta="1" (Keymap overview, homepage component): an intro on top and buttons to the keymap pages
  *   🖼️  data-k="keys" (<!-- keymap-keys keys="W=Move; Ctrl+S=Save; MMB=Pan" -->): a small keyboard
  *       picture with just those keys lit and labelled, no data needed
  * Published as /Manual/webflow/keymap-explorer-<version>.js.
@@ -22,7 +23,7 @@
   if (R.dataset.bfaKm) return;
   R.dataset.bfaKm = '1';
   var CDN = 'https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/';
-  var IC = { zoom: '68b9bbd23fb07538f848b579_viewzoom.svg' };
+  var IC = { zoom: '68b9bbd23fb07538f848b579_viewzoom.svg', fwd: '68b9b76aa841ed4158a2f249_forward.svg' };
   var ICON = {   /* Bforartists icons in the Webflow asset library (docs2/tools/icons.json) */
     view3d: '68b8f4efa40047ddcec7c6ae_view3d.svg', time: '68b9bb9cc5062fa217606ff2_time.svg', action: '68b9dc77588b589049a6b151_action.svg',
     filebrowser: '68b9b758d4f2674b8485d135_filebrowser.svg', graph: '68b9b7779ed747621eb33cd9_graph.svg', image: '68b8f543763e8aff56926602_image.svg',
@@ -218,6 +219,9 @@
     '.kmk-list span{display:inline-flex;align-items:center;gap:.375rem}',
     '@container (max-width:44rem){.kmk .kmx-k span,.kmk .kmx-k em{display:none}.kmk .kmx-k{justify-content:center;align-items:center}.kmk .kmx-r{min-height:2.5em}.kmk .kmx-kbwrap{font-size:clamp(7px,2.4cqw,12px)}.kmk .kmx-mouse .kmx-k span{display:-webkit-box}}',
     '.kmx-note{margin:.75rem 0 0!important;font-size:.75rem;color:var(--k-mute)}',
+    '.kmx-plug{margin:0 0 1rem}.kmx-plug b{display:flex;align-items:center;gap:.5rem;font-family:"Titillium Web",sans-serif;font-size:1.375rem;line-height:1.2}.kmx-plug b img{width:1.5rem;height:1.5rem}.kmx-plug p{margin:.375rem 0 0!important;color:var(--k-mute);max-width:46rem}',
+    '.kmx-cta{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}.kmx-cta .ui-btn{text-decoration:none}',
+    '@media(max-width:767px){.kmx-cta .ui-btn{flex:1 1 100%;justify-content:center}}',
     '.kmx-card .ui-btn .ui-icon{width:16px;height:16px}',
     '.kmx.is-loading .kmx-sink{opacity:.5;transition:opacity .2s}',
     /* phones: same keyboard, key names only; the list under it */
@@ -289,6 +293,14 @@
     sink.appendChild(kbwrap); sink.appendChild(mouse);
     [head, mods, sink, leg, card, listd].forEach(function (x) { root.appendChild(x); });
     var note = el('p', 'kmx-note'); root.appendChild(note);
+    if (ds.cta) {   /* the plug (Keymap overview, homepage): a short intro on top, the way on at the bottom */
+      var intro = el('div', 'kmx-plug');
+      intro.innerHTML = '<b>' + img('bforartists', 'kmx-ic') + 'The everyday keys, hands on</b><p>Bforartists is built around its menus and toolbars, so only a few hotkeys matter for daily work. These are them, lit on the keyboard. Point at a key to highlight it, click or tap it to read what it does, and hold Shift, Ctrl or Alt to see the combinations.</p>';
+      root.insertBefore(intro, head);
+      var cta = el('div', 'kmx-cta'), go = function (href, label, icon, accent) { return '<a class="ui-btn dk-btn' + (accent ? ' is-accent' : '') + '" href="' + href + '"><span class="ui-btn-icon"><img class="ui-icon" alt="" src="' + CDN + icon + '"></span><span class="ui-btn-label">' + label + '</span></a>'; };
+      cta.innerHTML = go('/docs/keymap-standard-keymaps', 'See every key', IC.fwd, true) + go('/docs/keymap-important-hotkeys', 'Important Hotkeys, explained', IC.fwd) + go('/docs/keymap-table', 'Keymap Table', IC.fwd);
+      root.appendChild(cta);
+    }
     block.classList.add('kmx-src'); block.parentNode.insertBefore(root, block);
 
     function data() { return cache[S.p] || first; }

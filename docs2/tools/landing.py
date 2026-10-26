@@ -308,7 +308,7 @@ def keymap_block(body):
 
     The older <!-- keymap-explorer … --> and <!-- keymap-keys keys="…" --> comments still work."""
     def explorer(opts):
-        extra = "".join(f' data-{k}="{htmllib.escape(v)}"' for k, v in opts.items() if k in ("editor", "mode", "mini"))
+        extra = "".join(f' data-{k}="{htmllib.escape(v)}"' for k, v in opts.items() if k in ("editor", "mode", "mini", "cta"))
         return f'<div class="ui-keymap"><ul><li data-k="keymap" data-src="{KM_URL}"{extra}>Interactive keymap</li></ul></div>'
 
     def keys(spec):

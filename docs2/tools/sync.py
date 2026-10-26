@@ -244,6 +244,7 @@ def build(repo, cfg):
         body = html_build.page_html(repo, idx, by_rel, md, **urls) if idx else ""
         if sec.id == "workspaces":
             body = landing.workspace_explorer(body, ws_order, ws_editors, icons, url_rel, img_rel, ws_title)
+        body = landing.keymap_block(body)  # a section intro can hold the keymap too (Keymap overview: the everyday keys)
         body = tidy(landing.add_cards(body, idx, kids.get(sec.id, []), kids, url_of,
                                       sec_cfg.get(sec.id, {}).get("categories"), sec.id, heading=None))
         if not body:
