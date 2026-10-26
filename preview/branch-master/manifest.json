@@ -1,7 +1,13 @@
 {
  "pages": {
-  "docs2/content/keymap/important-hotkeys.md": "keymap/important-hotkeys.html",
-  "docs2/content/keymap/index.md": "keymap.html"
+  "docs2/content/getting-started/about-documentation.md": "getting-started/about-documentation.html",
+  "docs2/content/getting-started/data-structure.md": "getting-started/data-structure.html",
+  "docs2/content/getting-started/differences.md": "getting-started/differences.html",
+  "docs2/content/getting-started/index.md": "getting-started.html",
+  "docs2/content/getting-started/installation.md": "getting-started/installation.html",
+  "docs2/content/getting-started/introduction.md": "getting-started/introduction.html",
+  "docs2/content/getting-started/migrating-from-blender.md": "getting-started/migrating-from-blender.html",
+  "docs2/content/getting-started/quick-start.md": "getting-started/quick-start.html"
  },
- "images": 0
+ "images": 8
 }
