@@ -1,0 +1,71 @@
+# Website search list (site.json) for the instant search popup.
+#
+# The popup (docs2/webflow/quicksearch.js) searches the manual (search.json, from docs2.yml) and the
+# rest of the website (site.json, from this workflow): Features, Download, News, About, art titles …
+# This reads the live sitemap of www.bforartists.com, so it needs no token and changes nothing on
+# the website. It publishes /nav/site.json on GitHub Pages, next to nav.json and search.json.
+#
+# When it runs:
+#   - by hand: Actions → "Website search list" → Run workflow (after publishing new pages or news)
+#   - after every merge to the docs publish branch (master)
+#   - every day at 06:17 UTC, once this file is on the repository's default branch
+#     (GitHub only runs schedules from the default branch)
+
+name: Website search list
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+  push:
+    branches: ["master"]
+
+concurrency:
+  group: site-index
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tools
+        run: pip install lxml
+
+      - name: 🔎 Read the website and build site.json
+        run: |
+          python docs2/tools/site_index.py --out _site/site.json
+          echo "site.json: $(python -c "import json;print(len(json.load(open('_site/site.json'))))") pages" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish site.json to GitHub Pages
+        id: publish
+        continue-on-error: true
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: _site
+          destination_dir: nav
+          keep_files: true
+          commit_message: "site index: ${{ github.sha }} [docs-bot]"
+
+      - name: Publish site.json to GitHub Pages (second try)
+        if: steps.publish.outcome == 'failure'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: _site
+          destination_dir: nav
+          keep_files: true
+          commit_message: "site index: ${{ github.sha }} [docs-bot]"

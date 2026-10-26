@@ -1,0 +1,183 @@
+# Pages CMS configuration: the online WYSIWYG editor for the Bforartists docs.
+# Writers sign in at https://app.pagescms.org with GitHub, pick this repo and branch,
+# and edit pages in a form + rich-text editor. Every save is a Git commit.
+# Tier 1 points at docs2/; on the fresh main branch the docs2/ prefix goes away.
+
+media:
+  - name: images
+    label: Image library
+    input: docs2/images
+    output: /docs2/images
+    categories: [image]
+
+content:
+  - name: docs
+    label: 📘 Documentation pages
+    type: collection
+    path: docs2/content
+    subfolders: true
+    format: yaml-frontmatter
+    # New pages are named after their title when saved (my-page.md); there is no file-name box,
+    # so nobody can type index.md by mistake. A chapter is a folder with index.md.
+    # To make one: add the page, then use its "+" (Add children entry) button and accept
+    # "Rename this file first?". Pages CMS turns my-page.md into my-page/index.md.
+    # hideDirs: nodes shows a chapter folder once (as its index.md row, expandable), and
+    # still shows plain folders such as interface/ and editors/ that have no index.md.
+    filename:
+      template: "{primary}.md"
+      field: false
+    exclude: [README.md]
+    view:
+      layout: tree
+      node:
+        filename: index.md
+        hideDirs: nodes
+      fields: [title, status, version]
+      primary: title
+      search: [title, id]
+      sort: [title]
+    # Form order: the three things a writer edits (📝 title, 💬 summary, 📄 page) come first.
+    # Everything after them is optional page settings, then 🔒 fields the tools fill in.
+    fields:
+      - name: title
+        label: 📝 Title
+        type: string
+        required: true
+      - name: summary
+        label: 💬 Summary
+        type: string
+        description: Optional. One sentence shown under the title and in search. Left empty, the first paragraph is used.
+      - name: body
+        label: 📄 Page
+        type: rich-text
+        description: The page itself. Press / on an empty line for headings, tips, tables and more; drag in screenshots.
+        options:
+          format: markdown
+          switcher: true
+          media: images
+          path: docs2/images/_inbox
+          rename: safe
+          extensions: [png, jpg, jpeg, webp, gif]
+      # ── ⚙️ Page settings (optional) ──
+      - name: status
+        label: 🚦 Status
+        type: select
+        default: draft
+        description: Page setting. draft → needs-review → reviewed.
+        options:
+          values: [draft, needs-review, reviewed]
+      - name: order
+        label: 🔢 Position in the sidebar
+        type: number
+        description: Page setting, optional. Lower numbers come first (10, 20, 30…). Left empty, new pages go after the existing ones.
+      - name: video
+        label: 🎬 Chapter video (YouTube link)
+        type: string
+        description: Page setting, optional. Shown at the top of the page.
+      - name: shared
+        label: ♻️ Shared sections on this page
+        type: reference
+        description: Page setting, optional. Sections written once in Shared snippets. Each appears where the page links to it.
+        options:
+          collection: snippets
+          multiple: true
+          search: title
+          value: "{path}"
+          label: "{title}"
+      - name: examples
+        label: 📦 Example files to download
+        type: file
+        list: true
+        description: Page setting, optional. .blend or other files shown as downloads on the page.
+      - name: icon
+        label: 🎨 Icon name
+        type: string
+        description: Page setting, optional. A Bforartists icon shown next to the page title.
+      - name: version
+        label: 🏷️ Bforartists version
+        type: string
+        default: "5.1"
+        description: Page setting. The version this page describes.
+      - name: screenshots
+        label: 📸 Screenshots taken in version
+        type: string
+        description: Page setting, optional.
+      # ── 🔒 Filled in by the tools; shown read-only so writers can see them ──
+      - name: id
+        label: 🔒 Page ID (do not change)
+        type: string
+        readonly: true
+      - name: slug
+        label: 🔒 Web address (do not change)
+        type: string
+        readonly: true
+      - name: section
+        label: 🔒 Section
+        type: string
+        readonly: true
+      - name: path
+        label: 🔒 Breadcrumb
+        type: string
+        list: true
+        readonly: true
+      - name: source
+        label: 🔒 Converted from
+        type: string
+        list: true
+        readonly: true
+
+  - name: snippets
+    label: ♻️ Shared snippets
+    type: collection
+    path: docs2/snippets
+    format: yaml-frontmatter
+    view:
+      fields: [title, status]
+      primary: title
+    fields:
+      - name: title
+        label: 📝 Title
+        type: string
+        required: true
+      - name: body
+        label: ♻️ Shared section
+        type: rich-text
+        description: Written once, shown on every page that lists it under Shared sections.
+        options:
+          format: markdown
+          switcher: true
+          media: images
+          path: docs2/images/_inbox
+          rename: safe
+          extensions: [png, jpg, jpeg, webp, gif]
+      - name: status
+        label: 🚦 Status
+        type: select
+        options:
+          values: [draft, needs-review, reviewed]
+      - name: version
+        label: 🏷️ Bforartists version
+        type: string
+      - name: screenshots
+        label: 📸 Screenshots taken in version
+        type: string
+      - name: id
+        label: 🔒 Snippet ID (do not change)
+        type: string
+        readonly: true
+      - name: source
+        label: 🔒 Converted from
+        type: string
+        list: true
+        readonly: true
+
+settings:
+  content:
+    merge: true          # keep front-matter keys the form does not list
+  commit:
+    identity: user       # commits carry the writer's name, for the credits page
+    templates:
+      create: "docs: add {path} (Pages CMS, {userName})"
+      update: "docs: update {path} (Pages CMS, {userName})"
+      delete: "docs: delete {path} (Pages CMS, {userName})"
+      rename: "docs: move {oldPath} to {newPath} (Pages CMS, {userName})"

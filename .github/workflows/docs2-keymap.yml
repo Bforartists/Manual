@@ -1,0 +1,54 @@
+# Docs 2.0 · keymap
+# Rebuilds docs2/keymap/keymap.json from the Bforartists source (scripts/presets/keyconfig), the
+# same data Bforartists loads at start-up, and opens a pull request when the keys changed, with
+# a table of what was added, changed and removed. Runs every Monday and on demand.
+name: Docs 2.0 keymap
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  keymap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: ⬇️ Bforartists source (keymap files only)
+        run: |
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/Bforartists/Bforartists _bfa
+          git -C _bfa sparse-checkout set scripts/presets/keyconfig
+          echo "BFA_COMMIT=$(git -C _bfa rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml
+
+      - name: ⌨️ Build keymap.json
+        run: |
+          cp docs2/keymap/keymap.json _old.json 2>/dev/null || echo '{"variants":{"pc":[]}}' > _old.json
+          python docs2/tools/keymap.py build _bfa
+          python docs2/tools/keymap.py check
+          python docs2/tools/keymap.py diff _old.json docs2/keymap/keymap.json > _diff.md
+          cat _diff.md >> "$GITHUB_STEP_SUMMARY"
+          rm -rf _bfa _old.json
+
+      - name: 🔀 Open a pull request when the keys changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: docs2/keymap-update
+          base: master
+          add-paths: docs2/keymap/keymap.json
+          commit-message: "Keymap: rebuilt from Bforartists ${{ env.BFA_COMMIT }}"
+          title: "⌨️ Keymap update from the Bforartists source"
+          body-path: _diff.md
+          delete-branch: true

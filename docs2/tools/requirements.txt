@@ -1,0 +1,4 @@
+lxml
+Pillow
+PyYAML
+markdown-it-py

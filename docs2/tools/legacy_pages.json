@@ -1,0 +1,393 @@
+{
+ "_about": "Static documentation pages on the current Webflow site (10 Oct 2026). map_pages.py matches them to new pages to fill legacy-path; redirects are applied at go-live.",
+ "pages": [
+  {
+   "path": "/documentation",
+   "title": "Documentation"
+  },
+  {
+   "path": "/documentation/advanced",
+   "title": "Advanced"
+  },
+  {
+   "path": "/documentation/advanced/command-line",
+   "title": "Command Line"
+  },
+  {
+   "path": "/documentation/advanced/how-to-help",
+   "title": "How to Help"
+  },
+  {
+   "path": "/documentation/advanced/reporting-a-bug",
+   "title": "Reporting a Bug"
+  },
+  {
+   "path": "/documentation/advanced/requesting-a-feature",
+   "title": "Requesting a Feature"
+  },
+  {
+   "path": "/documentation/advanced/scripting",
+   "title": "Scripting"
+  },
+  {
+   "path": "/documentation/advanced/troubleshooting",
+   "title": "Troubleshooting"
+  },
+  {
+   "path": "/documentation/advanced/working-limits",
+   "title": "Working Limits"
+  },
+  {
+   "path": "/documentation/appendix/chapters",
+   "title": "Index"
+  },
+  {
+   "path": "/documentation/appendix/documentation-history",
+   "title": "Documentation History"
+  },
+  {
+   "path": "/documentation/appendix/glossary",
+   "title": "Glossary"
+  },
+  {
+   "path": "/documentation/appendix/history",
+   "title": "Bforartists History"
+  },
+  {
+   "path": "/documentation/assets",
+   "title": "Assets"
+  },
+  {
+   "path": "/documentation/assets/geometry-nodes/grease-pencil",
+   "title": "Grease Pencil"
+  },
+  {
+   "path": "/documentation/assets/geometry-nodes/material",
+   "title": "Material"
+  },
+  {
+   "path": "/documentation/assets/geometry-nodes/mesh",
+   "title": "Mesh"
+  },
+  {
+   "path": "/documentation/assets/geometry-nodes/normals",
+   "title": "Normals"
+  },
+  {
+   "path": "/documentation/assets/geometry-nodes/primitives",
+   "title": "Primitives"
+  },
+  {
+   "path": "/documentation/assets/geometry-nodes/utilities",
+   "title": "Utilities"
+  },
+  {
+   "path": "/documentation/development/compiling-on-windows",
+   "title": "Compiling on Windows"
+  },
+  {
+   "path": "/documentation/development/doing-documentation",
+   "title": "Doing Documentation"
+  },
+  {
+   "path": "/documentation/editors",
+   "title": "Editors"
+  },
+  {
+   "path": "/documentation/editors/3d-viewport",
+   "title": "3D Viewport"
+  },
+  {
+   "path": "/documentation/editors/compositor",
+   "title": "Compositor"
+  },
+  {
+   "path": "/documentation/editors/dope-sheet",
+   "title": "Dope Sheet"
+  },
+  {
+   "path": "/documentation/editors/drivers-editor",
+   "title": "Drivers Editor"
+  },
+  {
+   "path": "/documentation/editors/file-browser",
+   "title": "File Browser"
+  },
+  {
+   "path": "/documentation/editors/geometry-node-editor",
+   "title": "Geometry Node Editor"
+  },
+  {
+   "path": "/documentation/editors/graph-editor",
+   "title": "Graph Editor"
+  },
+  {
+   "path": "/documentation/editors/image-editor",
+   "title": "Image Editor"
+  },
+  {
+   "path": "/documentation/editors/info-editor",
+   "title": "Info Editor"
+  },
+  {
+   "path": "/documentation/editors/movie-clip-editor",
+   "title": "Movie Clip Editor"
+  },
+  {
+   "path": "/documentation/editors/nonlinear-animation",
+   "title": "Nonlinear Animation"
+  },
+  {
+   "path": "/documentation/editors/outliner",
+   "title": "Outliner"
+  },
+  {
+   "path": "/documentation/editors/preferences",
+   "title": "Preferences"
+  },
+  {
+   "path": "/documentation/editors/properties-editor",
+   "title": "Properties Editor"
+  },
+  {
+   "path": "/documentation/editors/python-console",
+   "title": "Python Console"
+  },
+  {
+   "path": "/documentation/editors/shader-editor",
+   "title": "Shader Editor"
+  },
+  {
+   "path": "/documentation/editors/spreadsheet",
+   "title": "Spreadsheet"
+  },
+  {
+   "path": "/documentation/editors/status-bar",
+   "title": "Status Bar"
+  },
+  {
+   "path": "/documentation/editors/text-editor",
+   "title": "Text Editor"
+  },
+  {
+   "path": "/documentation/editors/texture-node-editor",
+   "title": "Texture Node Editor"
+  },
+  {
+   "path": "/documentation/editors/timeline",
+   "title": "Timeline"
+  },
+  {
+   "path": "/documentation/editors/tool-bar-editor",
+   "title": "Tool Bar Editor"
+  },
+  {
+   "path": "/documentation/editors/top-bar",
+   "title": "Top Bar"
+  },
+  {
+   "path": "/documentation/editors/uv-editor",
+   "title": "UV Editor"
+  },
+  {
+   "path": "/documentation/editors/video-sequencer",
+   "title": "Video Sequencer"
+  },
+  {
+   "path": "/documentation/extensions",
+   "title": "Extensions"
+  },
+  {
+   "path": "/documentation/information",
+   "title": "Information"
+  },
+  {
+   "path": "/documentation/interface",
+   "title": "Interface"
+  },
+  {
+   "path": "/documentation/interface/areas",
+   "title": "Areas"
+  },
+  {
+   "path": "/documentation/interface/asset-shelves",
+   "title": "Asset Shelves"
+  },
+  {
+   "path": "/documentation/interface/context-menus",
+   "title": "Context Menus"
+  },
+  {
+   "path": "/documentation/interface/editors",
+   "title": "Editors"
+  },
+  {
+   "path": "/documentation/interface/floating-dialogues",
+   "title": "Floating Dialogues"
+  },
+  {
+   "path": "/documentation/interface/floating-menus",
+   "title": "Floating Menus"
+  },
+  {
+   "path": "/documentation/interface/footers",
+   "title": "Footers"
+  },
+  {
+   "path": "/documentation/interface/headers",
+   "title": "Headers"
+  },
+  {
+   "path": "/documentation/interface/interface",
+   "title": "Interface Overview"
+  },
+  {
+   "path": "/documentation/interface/last-operator-panel",
+   "title": "Last Operator Panel"
+  },
+  {
+   "path": "/documentation/interface/pie-menus",
+   "title": "Pie Menus"
+  },
+  {
+   "path": "/documentation/interface/properties",
+   "title": "Properties"
+  },
+  {
+   "path": "/documentation/interface/side-bars",
+   "title": "Side Bars"
+  },
+  {
+   "path": "/documentation/interface/tabs-panels",
+   "title": "Tabs & Panels"
+  },
+  {
+   "path": "/documentation/interface/tool-shelves",
+   "title": "Tool Shelves"
+  },
+  {
+   "path": "/documentation/interface/windows",
+   "title": "Windows"
+  },
+  {
+   "path": "/documentation/keymap",
+   "title": "Keymap"
+  },
+  {
+   "path": "/documentation/keymap/important",
+   "title": "Important"
+  },
+  {
+   "path": "/documentation/keymap/standard",
+   "title": "Standard"
+  },
+  {
+   "path": "/documentation/overview",
+   "title": "Getting Started"
+  },
+  {
+   "path": "/documentation/overview/about-documentation",
+   "title": "About Documentation"
+  },
+  {
+   "path": "/documentation/overview/data-structure",
+   "title": "Data Structure"
+  },
+  {
+   "path": "/documentation/overview/differences",
+   "title": "Comparing to Blender"
+  },
+  {
+   "path": "/documentation/overview/installation",
+   "title": "Installation"
+  },
+  {
+   "path": "/documentation/overview/introduction",
+   "title": "Introduction"
+  },
+  {
+   "path": "/documentation/overview/migrating-from-blender",
+   "title": "Migrating from Blender"
+  },
+  {
+   "path": "/documentation/overview/quick-start",
+   "title": "Quick Start"
+  },
+  {
+   "path": "/documentation/workspaces",
+   "title": "Workspaces"
+  },
+  {
+   "path": "/documentation/workspaces/2d-animation",
+   "title": "2D Animation"
+  },
+  {
+   "path": "/documentation/workspaces/2d-full-canvas",
+   "title": "2D Full Canvas"
+  },
+  {
+   "path": "/documentation/workspaces/3d-sequencer",
+   "title": "3D Sequencer"
+  },
+  {
+   "path": "/documentation/workspaces/animation",
+   "title": "Animation"
+  },
+  {
+   "path": "/documentation/workspaces/color-balance",
+   "title": "Color Balance"
+  },
+  {
+   "path": "/documentation/workspaces/compositing",
+   "title": "Compositing"
+  },
+  {
+   "path": "/documentation/workspaces/main",
+   "title": "Main"
+  },
+  {
+   "path": "/documentation/workspaces/masking",
+   "title": "Masking"
+  },
+  {
+   "path": "/documentation/workspaces/modeling",
+   "title": "Modeling"
+  },
+  {
+   "path": "/documentation/workspaces/motion-tracking",
+   "title": "Motion Tracking"
+  },
+  {
+   "path": "/documentation/workspaces/nodes",
+   "title": "Nodes"
+  },
+  {
+   "path": "/documentation/workspaces/rendering",
+   "title": "Rendering"
+  },
+  {
+   "path": "/documentation/workspaces/scripting",
+   "title": "Scripting"
+  },
+  {
+   "path": "/documentation/workspaces/sculpting",
+   "title": "Sculpting"
+  },
+  {
+   "path": "/documentation/workspaces/shading",
+   "title": "Shading"
+  },
+  {
+   "path": "/documentation/workspaces/texture-paint",
+   "title": "Texture Paint"
+  },
+  {
+   "path": "/documentation/workspaces/uv-editing",
+   "title": "UV Editing"
+  },
+  {
+   "path": "/documentation/workspaces/video-editing",
+   "title": "Video Editing"
+  }
+ ]
+}

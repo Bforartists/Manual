@@ -1,0 +1,219 @@
+# Docs 2.0: image bot, checks and preview for every change to docs2/.
+#
+# Runs on pull requests that touch docs2/ and on pushes to docs2/* branches
+# (Pages CMS saves straight to the branch). It:
+#   1. 🤖 files new screenshots (image_bot.py) and commits that back to the branch
+#   2. ✅ checks front matter, links, images and editor-safe text (check.py)
+#   3. 👀 builds a preview with the website's styles (render.py) and publishes it to
+#      GitHub Pages under /preview/<pr-N or branch>/ on the gh-pages branch
+#   4. 💬 posts or updates one comment on the pull request with the results
+#   5. 🌐 on the publish branch only (after a merge): syncs the pages to Webflow and
+#      publishes the webflow.io staging site. Custom domains are never published here.
+#   6. 🧭 on the publish branch: publishes nav.json (the whole sidebar tree) and keymap.json to GitHub Pages
+#   7. 🎛️ on the publish branch: publishes the docs layer as webflow/docs-layer-<version>.js
+#      at /nav/nav.json, where the website's docs script reads it.
+#
+# One-time repository setup (maintainer):
+#   Settings → Actions → General → Workflow permissions → "Read and write permissions"
+#   Settings → Pages → Build and deployment → Deploy from a branch → gh-pages / (root)
+#   Settings → Secrets and variables → Actions → New repository secret → WEBFLOW_TOKEN
+
+name: Docs 2.0 checks and preview
+
+on:
+  pull_request:
+    paths: ["docs2/**", ".pages.yml", ".github/workflows/docs2.yml"]
+  push:
+    branches: ["master", "docs2/**"]
+    paths: ["docs2/**", ".pages.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: docs2-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    # skip the bot's own commits
+    if: ${{ !contains(github.event.head_commit.message, '[docs-bot]') }}
+    env:
+      SAME_REPO: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
+      BRANCH: ${{ github.head_ref || github.ref_name }}
+      PUBLISH_BRANCH: master
+      PREVIEW_DIR: ${{ github.event.pull_request.number && format('pr-{0}', github.event.pull_request.number) || format('branch-{0}', github.ref_name) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: docs2/tools/requirements.txt
+
+      - name: Install tools
+        run: pip install -r docs2/tools/requirements.txt
+
+      - name: 🤖 Bot (page headers and images)
+        id: bot
+        run: |
+          dry=""; [ "$SAME_REPO" = "true" ] || dry="--dry-run"
+          # master is protected (changes arrive by pull request, where the bot already ran): report only
+          if [ "$BRANCH" = "$PUBLISH_BRANCH" ] && [ "${{ github.event_name }}" != "pull_request" ]; then dry="--dry-run"; fi
+          python docs2/tools/fill_front_matter.py . $dry --report _fill.md
+          python docs2/tools/image_bot.py . $dry --report _img.md
+          cat _fill.md _img.md > _bot.md
+          if [ -n "$(git status --porcelain docs2)" ]; then
+            git config user.name "docs-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A docs2
+            git commit -m "docs: fill page headers and file new images [docs-bot]"
+            git push origin "HEAD:$BRANCH"
+            echo "committed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Find changed pages
+        id: changed
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            base="origin/${{ github.base_ref }}"
+            git fetch -q origin "${{ github.base_ref }}"
+          else
+            base="${{ github.event.before }}"
+            git cat-file -e "$base" 2>/dev/null || base="HEAD~1"
+          fi
+          files=$(git diff --name-only --diff-filter=AMR "$base"...HEAD -- 'docs2/content/*.md' 'docs2/snippets/*.md' | tr '\n' ' ')
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+          echo "Changed: ${files:-none}"
+
+      - name: ✅ Checks
+        id: check
+        continue-on-error: true
+        run: python docs2/tools/check.py . --report _check.md --changed ${{ steps.changed.outputs.files }}
+
+      - name: 👀 Build preview
+        run: |
+          only="${{ steps.changed.outputs.files }}"
+          [ -z "$only" ] && only=$(ls docs2/content/getting-started/*.md | tr '\n' ' ')
+          title="${{ github.event.pull_request.number && format('Pull request #{0}', github.event.pull_request.number) || format('Branch {0}', github.ref_name) }}"
+          # images load from GitHub at this commit (pushed, with the bot's commit) instead of being copied
+          if [ "$SAME_REPO" = "true" ]; then export PREVIEW_RAW_BASE="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/$(git rev-parse HEAD)/"; fi
+          python docs2/tools/render.py . --out _preview --branch "$BRANCH" --title "$title" \
+            --check _check.md --bot _bot.md --only $only
+
+      - name: Publish preview to GitHub Pages
+        id: publish
+        if: env.SAME_REPO == 'true'
+        continue-on-error: true
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: _preview
+          destination_dir: preview/${{ env.PREVIEW_DIR }}
+          keep_files: true
+          commit_message: "preview: ${{ env.PREVIEW_DIR }} [docs-bot]"
+
+      - name: Publish preview to GitHub Pages (second try)
+        if: env.SAME_REPO == 'true' && steps.publish.outcome == 'failure'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: _preview
+          destination_dir: preview/${{ env.PREVIEW_DIR }}
+          keep_files: true
+          commit_message: "preview: ${{ env.PREVIEW_DIR }} [docs-bot]"
+
+      - name: Keep the preview as a download too
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-preview
+          path: _preview
+          retention-days: 14
+
+      - name: Summary
+        run: |
+          owner="${GITHUB_REPOSITORY%%/*}"; repo="${GITHUB_REPOSITORY#*/}"
+          url="https://${owner,,}.github.io/${repo}/preview/${PREVIEW_DIR}/"
+          echo "PREVIEW_URL=$url" >> "$GITHUB_ENV"
+          { echo "## 👀 [Open the preview]($url)"; echo; cat _check.md; echo; cat _bot.md; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: 💬 Comment on the pull request
+        if: github.event_name == 'pull_request' && env.SAME_REPO == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const marker = '<!-- docs2-bot -->';
+            const body = [marker,
+              `## 👀 [Open the preview](${process.env.PREVIEW_URL})`,
+              'Built with the website\'s doc kit styles. Updates on every push.', '',
+              fs.readFileSync('_check.md', 'utf8'), '',
+              fs.readFileSync('_bot.md', 'utf8')].join('\n');
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const comments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number });
+            const mine = comments.find(c => c.body && c.body.includes(marker));
+            if (mine) await github.rest.issues.updateComment({ owner, repo, comment_id: mine.id, body });
+            else await github.rest.issues.createComment({ owner, repo, issue_number, body });
+
+      - name: 🌐 Sync to Webflow staging
+        if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH && steps.check.outcome == 'success'
+        env:
+          WEBFLOW_TOKEN: ${{ secrets.WEBFLOW_TOKEN }}
+        run: |
+          export DOCS_SHA=$(git rev-parse HEAD)     # includes the bot's commit, so image links match
+          status=0
+          python docs2/tools/sync.py . --apply --publish --prune --report _sync.md --nav _nav/nav.json || status=$?
+          [ -f docs2/keymap/keymap.json ] && [ -d _nav ] && cp docs2/keymap/keymap.json _nav/keymap.json   # for the interactive keymap
+          [ -f _sync.md ] && cat _sync.md >> "$GITHUB_STEP_SUMMARY"
+          exit $status
+
+      - name: 🧭 Publish the sidebar (nav.json) to GitHub Pages
+        if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH && steps.check.outcome == 'success' && hashFiles('_nav/nav.json') != ''
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: _nav
+          destination_dir: nav
+          keep_files: true
+          commit_message: "nav: ${{ github.sha }} [docs-bot]"
+
+      - name: 🎛️ Prepare the site scripts (one file per version)
+        if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH
+        run: |
+          mkdir -p _layer
+          for f in docs2/webflow/*.js; do
+            v=$(head -1 "$f" | sed -n 's/.*@version \([0-9.]*\).*/\1/p')
+            [ -n "$v" ] || continue
+            n=$(basename "$f" .js)
+            cp "$f" "_layer/$n-$v.js"
+            echo "$n $v: https://bforartists.github.io/Manual/webflow/$n-$v.js sha384-$(openssl dgst -sha384 -binary "$f" | openssl base64 -A)" >> "$GITHUB_STEP_SUMMARY"
+          done
+
+      - name: 🎛️ Publish the docs layer to GitHub Pages
+        if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH && hashFiles('_layer/*.js') != ''
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: _layer
+          destination_dir: webflow
+          keep_files: true
+          commit_message: "docs layer: ${{ github.sha }} [docs-bot]"
+
+      - name: Fail when checks found problems
+        if: steps.check.outcome == 'failure'
+        run: |
+          echo "::error::Docs checks found problems. See the pull request comment or the job summary."
+          exit 1

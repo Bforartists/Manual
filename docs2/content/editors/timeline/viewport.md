@@ -1,0 +1,110 @@
+---
+id: editors.timeline.viewport
+title: "Viewport"
+icon: time
+section: editors
+path:
+  - Editors
+  - Timeline
+  - Viewport
+version: "5.1"
+status: draft
+screenshots: "5.1"
+source:
+  - 17 Editors - Timeline.odt
+summary: "Navigation in the viewport happens by mouse or hotkeys."
+---
+## Viewport Navigation
+
+Navigation in the viewport happens by mouse or hotkeys. Some of them does not have a menu entry. And needs to be explained here.
+
+### Viewport navigation
+
+Right mouse button moves the frame marker.
+
+Clicking left at the number bar moves the frame marker.
+
+Middle mouse button pans the view.
+
+Holding Ctrl + MMB zooms the view.
+
+Scroll Wheel zooms the view.
+
+To drag a keyframe click at it and drag the mouse.
+
+## Dope Sheet Context Menu
+
+![Dope Sheet Context Menu](/docs2/images/ui/timeline/viewport/dope-sheet-context-menu.png)
+
+When you right click into the timeline viewport then you will call the Dope Sheet context menu. Despite being in the time line.
+
+| Menu entry | What it does |
+| ------------- | ------------------------------------------ |
+| Copy | Copies the currently selected keyframe(s). |
+| Paste | Pastes copied keyframe(s) |
+| Paste Flipped | Pastes copied keyframe(s), but flipped. |
+
+### Keyframe Type submenu
+
+![Keyframe Type submenu](/docs2/images/ui/timeline/viewport/keyframe-type-submenu.png)
+
+Recolor the currently selected keyframes.
+
+### Handle Type submenu
+
+![Handle Type submenu](/docs2/images/ui/timeline/viewport/handle-type-submenu.png)
+
+Set the handle type for the currently selected keyframes.
+
+![Handle Type submenu](/docs2/images/ui/timeline/viewport/handle-type-submenu-2.png)
+
+This is a feature for the Graph editor, where each curve point has its own handler with which you can influence the curve behavior. But the handler type also influences how the animation curve acts at the chosen keyframes. So it has its use in the dope sheet editor too.
+
+### Interpolation Mode submenu
+
+![Interpolation Mode submenu](/docs2/images/ui/timeline/viewport/interpolation-mode-submenu.png)
+
+The Interpolation mode defines how the curve acts from keyframe to keyframe. You can have a linear curve between two keyframes instead of a bent one for example.
+
+The easing methods here in the interpolation mode menu are for the easing shape. There is also an easing menu where you can choose a easing method.
+
+### Easing Mode submenu
+
+![Easing Mode submenu](/docs2/images/ui/timeline/viewport/easing-mode-submenu.png)
+
+The easing methods in the interpolation mode menu are for the easing shape. This menu allows you to choose an easing method.
+
+| Menu entry | What it does |
+| ---------------- | ------------------------------------------ |
+| Insert Keyframes | Insert a keyframe at the current position. |
+| Duplicate | Duplicate the selected keyframe(s). |
+| Delete Keyframes | Delete the selected keyframe(s). |
+
+### Mirror submenu
+
+![Mirror submenu](/docs2/images/ui/timeline/viewport/mirror-submenu.png)
+
+Mirrors the animation by the given method.
+
+### Snap submenu
+
+![Snap submenu](/docs2/images/ui/timeline/viewport/snap-submenu.png)
+
+Snaps the selected keyframes by the given method.
+
+## Slider snapping
+
+> Hold **Ctrl** while dragging a slider to snap it. See **[Snapping](../../interface/properties.md#snapping)** in the Interface chapter.
+
+## Quick Favorites menu
+
+![Quick Favorites menu](/docs2/images/ui/timeline/viewport/quick-favorites-menu.png)
+
+> The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
+
+The Quick Menu is empty by default. With Add to Quick favorites you can add this menu to the Quick menu.
+
+![Quick Favorites menu](/docs2/images/ui/timeline/viewport/quick-favorites-menu-2.png)
+
+In the 3D view we have a menu called Quick in the header, which shows this content then. In the Dope Sheet Editor you can just call it with its hotkey. Q. It has no regular menu entry here.
+

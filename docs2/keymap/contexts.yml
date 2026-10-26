@@ -1,0 +1,63 @@
+# Which editor and mode each keymap belongs to, for the filters of the interactive keymap.
+# keymaps: exact keymap names. patterns: regular expressions, tried in order, for names not listed.
+# editor: the editor it works in ("Everywhere" = the whole window). mode: the object mode or state.
+# kind: keys (default), tool (keys of one active tool), gizmo, modal (keys while a tool runs).
+keymaps:
+  # Everywhere
+  Window:                {editor: Everywhere, mode: Window}
+  Screen:                {editor: Everywhere, mode: Screen}
+  Screen Editing:        {editor: Everywhere, mode: Editing areas}
+  User Interface:        {editor: Everywhere, mode: Buttons and fields}
+  Region Context Menu:   {editor: Everywhere, mode: Context menus}
+  View2D:                {editor: Everywhere, mode: 2D views}
+  View2D Buttons List:   {editor: Everywhere, mode: Lists}
+  Toolbar Popup:         {editor: Everywhere, mode: Toolbar popup}
+  Asset Shelf:           {editor: Everywhere, mode: Asset Shelf}
+  # Animation editors
+  Frames:                {editor: Animation editors, mode: Frames}
+  Markers:               {editor: Animation editors, mode: Markers}
+  Animation:             {editor: Animation editors, mode: General}
+  Animation Channels:    {editor: Animation editors, mode: Channels}
+  Time Scrub:            {editor: Animation editors, mode: Time scrubbing}
+  # 3D Viewport, by mode
+  3D View:               {editor: 3D Viewport, mode: All modes}
+  3D View Generic:       {editor: 3D Viewport, mode: All modes}
+  Object Mode:           {editor: 3D Viewport, mode: Object Mode}
+  Object Non-modal:      {editor: 3D Viewport, mode: Object Mode}
+  Mesh:                  {editor: 3D Viewport, mode: Edit Mode · Mesh}
+  Curve:                 {editor: 3D Viewport, mode: Edit Mode · Curve}
+  Curves:                {editor: 3D Viewport, mode: Edit Mode · Hair Curves}
+  Armature:              {editor: 3D Viewport, mode: Edit Mode · Armature}
+  Metaball:              {editor: 3D Viewport, mode: Edit Mode · Metaball}
+  Lattice:               {editor: 3D Viewport, mode: Edit Mode · Lattice}
+  Font:                  {editor: 3D Viewport, mode: Edit Mode · Text}
+  Point Cloud:           {editor: 3D Viewport, mode: Edit Mode · Point Cloud}
+  Pose:                  {editor: 3D Viewport, mode: Pose Mode}
+  Sculpt:                {editor: 3D Viewport, mode: Sculpt Mode}
+  Sculpt Curves:         {editor: 3D Viewport, mode: Sculpt Mode · Hair Curves}
+  Vertex Paint:          {editor: 3D Viewport, mode: Vertex Paint}
+  Weight Paint:          {editor: 3D Viewport, mode: Weight Paint}
+  Weight Paint Vertex Selection: {editor: 3D Viewport, mode: Weight Paint}
+  Paint Vertex Selection (Weight, Vertex): {editor: 3D Viewport, mode: Vertex and Weight Paint}
+  Paint Face Mask (Weight, Vertex, Texture): {editor: 3D Viewport, mode: Paint modes}
+  Face Mask:             {editor: 3D Viewport, mode: Paint modes}
+  Paint Curve:           {editor: 3D Viewport, mode: Paint modes}
+  Image Paint:           {editor: 3D Viewport, mode: Texture Paint}
+  Particle:              {editor: 3D Viewport, mode: Particle Edit}
+  Grease Pencil:         {editor: 3D Viewport, mode: Grease Pencil · All modes}
+  Grease Pencil Selection: {editor: 3D Viewport, mode: Grease Pencil · All modes}
+  Grease Pencil Brush Stroke: {editor: 3D Viewport, mode: Grease Pencil · Draw}
+  Grease Pencil Draw Mode: {editor: 3D Viewport, mode: Grease Pencil · Draw}
+  Grease Pencil Fill Tool: {editor: 3D Viewport, mode: Grease Pencil · Draw}
+  Grease Pencil Edit Mode: {editor: 3D Viewport, mode: Grease Pencil · Edit}
+  Grease Pencil Sculpt Mode: {editor: 3D Viewport, mode: Grease Pencil · Sculpt}
+  Grease Pencil Vertex Paint: {editor: 3D Viewport, mode: Grease Pencil · Vertex Paint}
+  Grease Pencil Weight Paint: {editor: 3D Viewport, mode: Grease Pencil · Weight Paint}
+  # UV and masks
+  UV Editor:             {editor: Image Editor, mode: UV Editing}
+  UV Sculpt:             {editor: Image Editor, mode: UV Editing}
+  Mask Editing:          {editor: Movie Clip Editor, mode: Masks}
+patterns:
+  - {match: "Tool: ", kind: tool}
+  - {match: "^Generic Gizmo", editor: Everywhere, mode: Gizmos, kind: gizmo}
+  - {match: "Modal Map$", kind: modal}

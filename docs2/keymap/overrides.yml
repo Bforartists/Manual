@@ -1,0 +1,22 @@
+# Better labels for the interactive keymap, where the operator's own name reads badly.
+# ops: operator id → label. menus: menu / panel id → name (" menu" / " pie menu" is added).
+ops:
+  view3d.cursor3d: Place the 3D cursor
+  view3d.localview: Local view
+  view3d.localview_remove_from: Remove from local view
+  view3d.reset_3d_view: Reset the 3D view
+  view3d.smoothview: Smooth view
+  view3d.view_selected: Frame selected
+  view3d.view_all: Frame all
+  view3d.move: Pan view
+  view3d.rotate: Rotate view
+  view3d.zoom: Zoom view
+  view3d.dolly: Dolly view
+  screen.screen_full_area: Maximize area
+  ed.undo: Undo
+  ed.redo: Redo
+  wm.save_mainfile: Save
+  wm.open_mainfile: Open
+  wm.read_homefile: New file
+  render.render: Render
+menus: {}
