@@ -1,0 +1,9 @@
+{
+ "pages": {
+  "docs2/content/keymap/bforartists-keymap.md": "keymap/bforartists-keymap.html",
+  "docs2/content/keymap/important-hotkeys.md": "keymap/important-hotkeys.html",
+  "docs2/content/keymap/index.md": "keymap.html",
+  "docs2/content/keymap/keymap-table.md": "keymap/keymap-table.html"
+ },
+ "images": 1
+}
