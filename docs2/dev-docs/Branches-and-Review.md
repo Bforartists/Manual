@@ -41,12 +41,13 @@ Earlier branches (`master`, `docs2/spike1-migration`, `docs2/tier1-*`) are histo
 
 GitHub wikis have **no branches** and **no pull requests**: every edit here is live at once. So:
 
-- 📝 The wiki pages are kept in `docs2/dev-docs/` on the docs branch and reviewed there, like any page.
-- 🔄 `docs2/tools/wiki_sync.py` copies them into the wiki.
-- 🧪 Until Docs 2.0 is merged into `master`, every copied page carries a **Proposed workflow** notice.
-- ✋ Please edit `docs2/dev-docs/`, not the wiki directly; direct wiki edits are overwritten by the next copy.
+- 📝 The wiki pages are kept in `docs2/dev-docs/` on `master` and reviewed there, like any page.
+- 🤖 After every merge that touches them, the **Docs 2.0 wiki** workflow (`.github/workflows/docs2-wiki.yml`) runs `docs2/tools/wiki_sync.py` and publishes them to the wiki. Run it by hand from **Actions → Docs 2.0 wiki → Run workflow**.
+- ✋ Please edit `docs2/dev-docs/`, not the wiki directly; direct wiki edits are overwritten by the next copy. Pages that exist only in the wiki (like the Reference Manual writing guide) are left alone.
+
+To copy by hand from your own computer:
 
 ```bash
-python3 docs2/tools/wiki_sync.py docs2/dev-docs ../Manual.wiki --proposed
+python3 docs2/tools/wiki_sync.py docs2/dev-docs ../Manual.wiki
 cd ../Manual.wiki && git add -A && git commit -m "Sync wiki from docs2/dev-docs" && git push
 ```

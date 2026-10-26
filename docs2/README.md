@@ -27,7 +27,7 @@ The Bforartists manual as Markdown: one file per web page, written in plain text
 | `sources/webflow/` | The current website text the converter reads for pages that live on the website |
 | `tools/` | ⚙️ Converter, word-count check, repeat scan, sidebar generator, checks, page-header and image bots, preview, Webflow sync, wiki sync |
 | `reports/` | 📊 Machine output of the last run |
-| `dev-docs/` | 📘 The [wiki](https://github.com/Bforartists/Manual/wiki) pages, reviewed here and copied by `tools/wiki_sync.py` |
+| `dev-docs/` | 📘 The [wiki](https://github.com/Bforartists/Manual/wiki) pages, reviewed here and copied to the wiki after every merge (`tools/wiki_sync.py`, `docs2-wiki.yml` workflow) |
 | `plans/` | 🗺️ Plans and tests |
 
 ## ✍️ Plain writing
