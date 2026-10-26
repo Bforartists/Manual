@@ -4,6 +4,7 @@
     python3 docs2/tools/keymap.py build <bforartists checkout> [--out docs2/keymap]   # all three presets
     python3 docs2/tools/keymap.py diff old.json new.json            # added / changed / removed, as Markdown
     python3 docs2/tools/keymap.py check                             # every keymap has a context in contexts.yml
+    python3 docs2/tools/keymap.py table                             # writes the full table into content/keymap/keymap-table.md
 
 How the keymap is put together (the same way Bforartists does it when it starts):
 
@@ -148,7 +149,8 @@ def op_label(op, props, overrides):
         v = p.get(k)
         if isinstance(v, str) and v and (v.isupper() or k in ("type", "action", "mode")):
             return f"{label}: {human(v.lower())}"
-    return label
+    on = [k for k, v in (props or []) if v is True and not re.match(r"^(release_|wait_|confirm|use_accurate|deselect_all$|select_passthrough$)", k)]
+    return f"{label}: {human(re.sub(r'^use_', '', on[0])).lower()}" if on else label
 
 
 # ---------------------------------------------------------------- context: editor, mode, group
@@ -253,6 +255,81 @@ def build(repo, out_dir=KDIR):
     return {pid: build_one(repo, pid, os.path.join(out_dir, PRESETS[pid][1]), contexts, overrides) for pid in PRESETS}
 
 
+# ---------------------------------------------------------------- the written table (Keymap Table page)
+TABLE_PAGE = os.path.join(DOCS, "content", "keymap", "keymap-table.md")
+T_START, T_END = "<!-- keymap-table:start (written by docs2/tools/keymap.py table; edit the text above it) -->", "<!-- keymap-table:end -->"
+KEY_NAMES = {"LEFTMOUSE": "Left mouse", "MIDDLEMOUSE": "Middle mouse", "RIGHTMOUSE": "Right mouse", "WHEELUPMOUSE": "Wheel up",
+             "WHEELDOWNMOUSE": "Wheel down", "WHEELINMOUSE": "Wheel in", "WHEELOUTMOUSE": "Wheel out", "BUTTON4MOUSE": "Mouse button 4",
+             "BUTTON5MOUSE": "Mouse button 5", "TRACKPADPAN": "Trackpad pan", "TRACKPADZOOM": "Trackpad zoom", "MOUSEROTATE": "Trackpad rotate",
+             "ACCENT_GRAVE": "`", "MINUS": "-", "EQUAL": "=", "LEFT_BRACKET": "[", "RIGHT_BRACKET": "]", "SEMI_COLON": ";", "QUOTE": "'",
+             "COMMA": ",", "PERIOD": ".", "SLASH": "/", "BACK_SLASH": "\\", "RET": "Enter", "BACK_SPACE": "Backspace", "DEL": "Del", "ESC": "Esc",
+             "TAB": "Tab", "SPACE": "Space", "PAGE_UP": "PageUp", "PAGE_DOWN": "PageDown", "UP_ARROW": "Up", "DOWN_ARROW": "Down",
+             "LEFT_ARROW": "Left", "RIGHT_ARROW": "Right", "NUMPAD_ASTERIX": "Numpad *", "NUMPAD_SLASH": "Numpad /", "NUMPAD_MINUS": "Numpad -",
+             "NUMPAD_PLUS": "Numpad +", "NUMPAD_PERIOD": "Numpad .", "NUMPAD_ENTER": "Numpad Enter", "OSKEY": "OS key", "APP": "Menu key",
+             "ZERO": "0", "ONE": "1", "TWO": "2", "THREE": "3", "FOUR": "4", "FIVE": "5", "SIX": "6", "SEVEN": "7", "EIGHT": "8", "NINE": "9"}
+T_HIDE = re.compile(r"^(TIMER|TEXTINPUT|MOUSEMOVE|NDOF_|ACTIONZONE_|MEDIA_|EVT_|WINDOW_DEACTIVATE|KM_)")
+T_VAL = {"CLICK": "click", "DOUBLE_CLICK": "double-click", "CLICK_DRAG": "drag", "RELEASE": "release"}
+
+
+def key_text(i):
+    k = i["key"]
+    name = KEY_NAMES.get(k) or (("Numpad " + k[7:]) if k.startswith("NUMPAD_") else k.replace("_", " ").title() if len(k) > 1 else k)
+    mods = [m for m, c in (("Shift", "s"), ("Ctrl", "c"), ("Alt", "a"), ("Cmd", "o")) if i.get(c)]
+    if i.get("any"):
+        mods = ["Any modifier"]
+    v = T_VAL.get(i.get("v", ""))
+    txt = " + ".join(mods + [name]) if mods and mods != ["Any modifier"] else (("Any modifier + " if mods else "") + name)
+    if not mods or mods == ["Any modifier"]:
+        txt = f"`{txt}`" if len(name) <= 14 and "`" not in name else txt
+    return txt + (f" ({v})" if v else "")
+
+
+def table_md(data):
+    kms = [k for k in data["variants"]["pc"] if k["ctx"].get("kind") == "keys"]
+    editors = sorted({k["ctx"]["editor"] for k in kms}, key=lambda e: (e == "Everywhere", e != "3D Viewport", e))
+    out = []
+    for ed in editors:
+        out += [f"## {ed}", ""]
+        modes = sorted({k["ctx"]["mode"] for k in kms if k["ctx"]["editor"] == ed},
+                       key=lambda m: (m not in ("Object Mode", "All modes", "General"), ("Object Mode", "All modes", "General").index(m) if m in ("Object Mode", "All modes", "General") else 0, m))
+        for mode in modes:
+            rows, seen = [], set()
+            for k in kms:
+                if k["ctx"]["editor"] != ed or k["ctx"]["mode"] != mode:
+                    continue
+                for i in k["items"]:
+                    if i.get("off") or T_HIDE.match(i["key"]):
+                        continue
+                    label = i["l"].replace("|", "/")
+                    row = (label, key_text(i))
+                    if row in seen:
+                        continue
+                    seen.add(row)
+                    rows.append(row)
+            if not rows:
+                continue
+            rows.sort(key=lambda r: r[0].lower())
+            out += [f"### {mode}", "", "| Action | Keys |", "|---|---|"] + [f"| {a} | {b} |" for a, b in rows] + [""]
+    return "\n".join(out).rstrip() + "\n"
+
+
+def write_table(path=TABLE_PAGE):
+    data = json.load(open(os.path.join(KDIR, "keymap.json"), encoding="utf-8"))
+    page = open(path, encoding="utf-8").read()
+    block = f"{T_START}\n\n{table_md(data)}\n{T_END}"
+    if T_START in page and T_END in page:
+        new = page[:page.index(T_START)] + block + page[page.index(T_END) + len(T_END):]
+    else:
+        new = page.rstrip() + "\n\n" + block + "\n"
+    ver = data.get("version", "")
+    new = re.sub(r'^version: ".*"$', f'version: "{".".join(ver.split(".")[:2])}"', new, count=1, flags=re.M)
+    if new != page:
+        open(path, "w", encoding="utf-8").write(new)
+        print(f"keymap table: {path} updated ({new.count(chr(10) + '| ') - new.count(chr(10) + '| Action')} rows)")
+    else:
+        print("keymap table: unchanged")
+
+
 # ---------------------------------------------------------------- diff and check
 def combo(i):
     mods = "".join(m.upper() + "+" for m, k in (("Shift", "s"), ("Ctrl", "c"), ("Alt", "a"), ("Cmd", "o")) if i.get(k))
@@ -301,12 +378,14 @@ def check(out_dir=KDIR):
 
 
 def main(argv):
-    if not argv or argv[0] not in ("build", "diff", "check"):
+    if not argv or argv[0] not in ("build", "diff", "check", "table"):
         print(__doc__)
         return 1
     if argv[0] == "build":
         out = argv[argv.index("--out") + 1] if "--out" in argv else KDIR
         build(argv[1], out)
+    elif argv[0] == "table":
+        write_table()
     elif argv[0] == "diff":
         diff(argv[1], argv[2])
     else:

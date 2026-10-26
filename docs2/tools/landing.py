@@ -284,6 +284,7 @@ WS_FILE = os.path.join(os.path.dirname(HERE), "workspaces.yml")
 WS_MARK = re.compile(r"<!--\s*workspace-(map|explorer)\s*-->")
 KM_MARK = re.compile(r"<!--\s*keymap-explorer(?:\s+([^>]*?))?\s*-->")
 KM_URL = "https://bforartists.github.io/Manual/nav/keymap.json"
+KK_MARK = re.compile(r"<!--\s*keymap-keys(?:\s+([^>]*?))?\s*-->")
 
 
 def keymap_block(body):
@@ -293,7 +294,13 @@ def keymap_block(body):
         opts = dict(re.findall(r'(\w+)="([^"]*)"', m.group(1) or ""))
         extra = "".join(f' data-{k}="{htmllib.escape(v)}"' for k, v in opts.items() if k in ("editor", "mode", "mini"))
         return f'<div class="ui-keymap"><ul><li data-k="keymap" data-src="{KM_URL}"{extra}>Interactive keymap</li></ul></div>'
-    return KM_MARK.sub(rep, body)
+    body = KM_MARK.sub(rep, body)
+
+    def keys(m):   # <!-- keymap-keys keys="W=Move; Ctrl+S=Save; MMB=Pan" -->: a keyboard picture of just those keys
+        opts = dict(re.findall(r'(\w+)="([^"]*)"', m.group(1) or ""))
+        return (f'<div class="ui-keymap"><ul><li data-k="keys" data-keys="{htmllib.escape(opts.get("keys", ""))}">'
+                f'{htmllib.escape(opts.get("keys", ""))}</li></ul></div>')
+    return KK_MARK.sub(keys, body)
 
 
 def load_workspaces():

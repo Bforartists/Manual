@@ -31,7 +31,7 @@ SPECIAL = {
     "/documentation/editors/properties-editor": "editors-properties",
     "/documentation/editors/tool-bar-editor": "editors-toolbar",
     "/documentation/keymap/important": "keymap-important-hotkeys",
-    "/documentation/keymap/standard": "keymap-bforartists-keymap",
+    "/documentation/keymap/standard": "keymap-standard-keymaps",
     "/documentation/advanced/command-line": "advanced-advanced-command-line",
     "/documentation/advanced/scripting": "advanced-advanced-scripting-extending-bforartists",
     "/documentation/advanced/working-limits": "advanced-advanced-working-limits",

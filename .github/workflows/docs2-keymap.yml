@@ -38,6 +38,7 @@ jobs:
           cp docs2/keymap/keymap.json _old.json 2>/dev/null || echo '{"variants":{"pc":[]}}' > _old.json
           python docs2/tools/keymap.py build _bfa
           python docs2/tools/keymap.py check
+          python docs2/tools/keymap.py table
           python docs2/tools/keymap.py diff _old.json docs2/keymap/keymap.json > _diff.md
           cat _diff.md >> "$GITHUB_STEP_SUMMARY"
           rm -rf _bfa _old.json
@@ -47,7 +48,9 @@ jobs:
         with:
           branch: docs2/keymap-update
           base: master
-          add-paths: docs2/keymap/keymap*.json
+          add-paths: |
+            docs2/keymap/keymap*.json
+            docs2/content/keymap/keymap-table.md
           commit-message: "Keymap: rebuilt from Bforartists ${{ env.BFA_COMMIT }}"
           title: "⌨️ Keymap update from the Bforartists source"
           body-path: _diff.md
