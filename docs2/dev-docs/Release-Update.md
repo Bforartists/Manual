@@ -18,7 +18,7 @@ flowchart LR
 - [ ] 🏷️ **Version.** Update `version:` on pages you checked against the new release, and `What's new` in `appendix/manual-update-history.md`. The Docs home's "What changed" card links there.
 - [ ] 📸 **Workspace maps.** Re-shoot all workspaces with `ws_capture.py` and import them ([Workspace maps](Workspace-Maps.md#re-shoot-the-workspaces-each-release)).
 - [ ] 🖼️ **Screenshots that changed.** Drop new screenshots in Pages CMS; the image bot files them under the same names, so pages need no edit ([Images and screenshots](Images-and-Screenshots.md)).
-- [ ] ⌨️ **Keymap.** Today: edit `keymap/standard-keymap.md` by hand. Later: the keymap is exported from Bforartists automatically (see the Interactive Keymap design doc).
+- [ ] ⌨️ **Keymap.** Automatic: run **Docs 2.0 keymap** (Actions) and merge its pull request; add any new keymap to `contexts.yml` if the check asks ([Keymap](Keymap.md)).
 - [ ] 🧹 **Clean-up reports.** `python3 docs2/tools/cleanup.py --dry` lists pages that say "Blender" for the program you use; `summaries.py --dry` lists pages without a summary. Fix what they find.
 - [ ] ✅ **Checks pass** on the pull request (links, images, sidebar, workspace maps).
 - [ ] 👀 **Review status.** Reviewers set `status: reviewed` on the pages they checked.

@@ -1,0 +1,74 @@
+# ⌨️ Keymap
+
+> **The interactive keymap shows the real Bforartists keys, built from the Bforartists source. Nobody types hotkeys any more: each week a robot checks the source and opens a pull request when keys change.**
+
+---
+
+## 🧩 How it fits together
+
+```mermaid
+flowchart LR
+  SRC["🐙 Bforartists source<br/>scripts/presets/keyconfig"] --> TOOL["⌨️ keymap.py build"]
+  CTX["🗺️ contexts.yml<br/>editor · mode · kind"] --> TOOL
+  OVR["✏️ overrides.yml<br/>better labels"] --> TOOL
+  TOOL --> JSON["📦 docs2/keymap/keymap.json"]
+  JSON -->|"docs workflow"| GHP["🌐 GitHub Pages<br/>/nav/keymap.json"]
+  GHP --> JS["🎛️ keymap-explorer.js"]
+  JS --> PAGE["📄 Standard Keymap page<br/>&lt;!-- keymap-explorer --&gt;"]
+```
+
+1. **The base keymap** comes from `keymap_data/blender_default.py` in the Bforartists source. It is plain Python, so the tool runs it with the Bforartists keymap's default preferences (left-click select, Space plays, gizmos on drag).
+2. **Bforartists' own changes** are in `Bforartists.py` (and `Bforartists-macOS.py`): plain data, read without running anything. Each keymap there replaces the base keymap of the same name, exactly as Bforartists does at start-up.
+3. The result, about 2,500 keys for each of PC and macOS, goes to `docs2/keymap/keymap.json`.
+
+## 🗺️ contexts.yml: editor, mode and kind
+
+The keymap's own names do not always say where they work ("Mesh" means Edit Mode of a mesh). `docs2/keymap/contexts.yml` says it once, for every keymap:
+
+```yaml
+keymaps:
+  Mesh:   {editor: 3D Viewport, mode: Edit Mode · Mesh}
+  Window: {editor: Everywhere, mode: Window}
+patterns:
+  - {match: "Tool: ", kind: tool}      # keys of one active tool: left out of the keyboard
+```
+
+`python3 docs2/tools/keymap.py check` lists any keymap that has no entry yet (a new Bforartists release can add some). Add a line and it passes.
+
+## ✏️ overrides.yml: better labels
+
+Labels come from the operator (`mesh.select_all` + action Deselect → "Select all: Deselect"). Where that reads badly, add a line to `docs2/keymap/overrides.yml`; the next build keeps it:
+
+```yaml
+ops:
+  view3d.cursor3d: Place the 3D cursor
+menus:
+  VIEW3D_MT_pivot_pie: Pivot point
+```
+
+## 🔁 Commands
+
+| Command | Does |
+|---|---|
+| `python3 docs2/tools/keymap.py build <bforartists checkout>` | Rebuilds `keymap.json` (unchanged keys keep the file as it is) |
+| `python3 docs2/tools/keymap.py check` | Every keymap has an editor and mode |
+| `python3 docs2/tools/keymap.py diff old.json new.json` | Added, changed and removed keys, as a Markdown table |
+
+## 🤖 The weekly update
+
+The **Docs 2.0 keymap** workflow (`.github/workflows/docs2-keymap.yml`) runs every Monday and on demand (Actions → Docs 2.0 keymap → Run workflow). It fetches only the keymap files from the Bforartists source, rebuilds, and opens a pull request **"⌨️ Keymap update from the Bforartists source"** with the change table. Merge it, and the docs workflow publishes the new `keymap.json`; the page updates on the next visit.
+
+## 📄 Putting the explorer on a page
+
+Write `<!-- keymap-explorer -->` where it should appear. To open on a given editor and mode:
+
+```html
+<!-- keymap-explorer editor="Image Editor" mode="UV Editing" -->
+```
+
+## 🔜 Next steps
+
+- 🔗 **Operator index**: link each key to the chapter section that documents it (matched by name and menu path, with a short review list).
+- 🆚 **Compare with Blender**: build Blender's keymap the same way and mark every key that differs.
+- 📂 **Your own keymap**: drop an exported keymap file onto the page and see your keys (read in the browser, nothing uploaded).
+- 🖨️ **Cheat sheets**: one printable page per editor from `important-hotkeys.yml`.

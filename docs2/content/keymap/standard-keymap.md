@@ -12,6 +12,17 @@ source:
   - 41 Standard Keymap.odt
 summary: "The interaction concept for Bforartists is the graphical UI."
 ---
+
+## Interactive keymap
+
+Pick the editor and the mode, then point at a key to see what it does there. Hold Shift, Ctrl or Alt (on screen or on your own keyboard) to see those combinations, or type an action to find its key. The keys come straight from the Bforartists source, so they always match the current version.
+
+<!-- keymap-explorer -->
+
+## The full table
+
+The table below is the keymap from the old manual (5.1), kept while the interactive keymap is new.
+
 |  |  |  |  |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------- |
 | Name | Function | Surface menu location | Hotkey |

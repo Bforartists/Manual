@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.11
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.12
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -335,8 +335,8 @@
       c.insertAdjacentHTML('beforeend', '<span class="ui-btn dk-btn is-small dk-card-go"><span class="ui-btn-icon"><img class="ui-icon is-color" alt="" src="' + CDN + IC.fwd + '"></span><span class="ui-btn-label">Open</span></span>');
     });
   }
-  /* the Workspaces overview gets the full width (no right sidebar) for the explorer */
-  function wide() { if (q('.ui-doc-body .ui-ws-explorer, .ui-doc-body .wsx.is-explorer') && !q('.dk-look')) R.classList.add('dk-wide'); }
+  /* the Workspaces overview and the interactive keymap get the full width (no right sidebar) */
+  function wide() { if (q('.ui-doc-body .ui-ws-explorer, .ui-doc-body .wsx.is-explorer, .ui-doc-body .ui-keymap, .ui-doc-body .kmx') && !q('.dk-look')) R.classList.add('dk-wide'); }
   /* the sidebar fades where it is cut off, so you can tell there is more */
   function sideFade() {
     var s = q('.ui-doc-grid > .ui-doc-side'); if (!s || s.dataset.dkFade) return; s.dataset.dkFade = '1';

@@ -240,6 +240,7 @@ def build(repo, cfg):
             ws = ws_pages.get(p.rel[len(content):]) if p.rel.startswith(content) else None
             if ws:
                 body = landing.workspace_map(body, ws, ws_editors, icons, url_rel, img_rel)
+            body = landing.keymap_block(body)
             body = tidy(landing.add_cards(body, p, kids.get(n.id, []), kids, url_of))
             if p.fm.get("generate") == "index":                     # Information › Index, A to Z
                 body = tidy(body + landing.index_html(tree, url_of))
