@@ -18,11 +18,11 @@ Every save is a Git commit with your name, and changes are reviewed before they 
 | **WYSIWYG** | ✅ Text, headings, lists, tables, images | ❌ Preview tab | 🟡 Preview beside the text |
 | **Drag and drop images** | ✅ Into the page; the image bot files them | 🟡 Uploads go to GitHub, not the library | 🟡 Copy the file into `docs2/images/_inbox/` |
 | **Insert a tip, image, table** | ✅ `/` menu | ❌ Type it | ❌ Type it |
-| **Review** | Saves to the docs branch; a maintainer opens the pull request | ✅ Opens a pull request for you | ✅ Your own pull request |
+| **Review** | Saves to your own branch (`master` is protected); you open the pull request | ✅ Opens a pull request for you | ✅ Your own pull request |
 | **Open it** | [Edit the docs](https://app.pagescms.org/Bforartists/Manual/master/collection/docs) | ✏️ pencil on any file | Press `.` on the repo page |
 | **Verdict** | ⭐ **The advertised way** | Typos | Bulk and developer work |
 
-On the website, every page will have **Edit this page**, which opens that exact page in Pages CMS.
+On the website, every page has **Edit this page** at the bottom: it opens that exact file in GitHub's editor, and **Propose changes** makes the branch and pull request for you.
 
 ---
 
@@ -37,12 +37,14 @@ On the website, every page will have **Edit this page**, which opens that exact 
 ### ✍️ Writing a page
 
 1. Click **Edit the docs** above and sign in with your GitHub account.
-2. Open **📘 Documentation pages**. Pages are shown as a tree, like the sidebar.
-3. Change the form at the top (title, status, video, shared sections) and the text below.
-4. Press `/` on an empty line for the menu: headings, lists, **Image**, **Table**, **Quote**.
-5. Drag a screenshot into the page. It lands in the image library and the image bot files it.
-6. Click **Save** (top right). Pages CMS commits your change with your name.
-7. Check your change: on GitHub, the newest commit on the branch is *docs: update … (Pages CMS, your name)*. Only your lines should be green.
+2. In the branch menu at the top, **create a branch** for your change, for example `docs/fix-timeline`. `master` is protected, so saves go to your branch.
+3. Open **📘 Documentation pages**. Pages are shown as a tree, like the sidebar.
+4. Change the form at the top (title, status, video, shared sections) and the text below.
+5. Press `/` on an empty line for the menu: headings, lists, **Image**, **Table**, **Quote**.
+6. Drag a screenshot into the page. It lands in the image library and the image bot files it.
+7. Click **Save** (top right). Pages CMS commits your change with your name.
+8. Check your change: on GitHub, the newest commit on your branch is *docs: update … (Pages CMS, your name)*. Only your lines should be green.
+9. On GitHub, open a **pull request** from your branch into `master`. Checks and a 👀 preview link follow.
 
 ### 📁 New chapters and sub-chapters
 

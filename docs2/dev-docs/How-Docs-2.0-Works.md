@@ -7,7 +7,7 @@
 ## 🛣️ The road a page travels
 
 ```
-  📄 .odt chapters (master)                   ✍️ Writers
+  📄 .odt chapters (docs1/)                   ✍️ Writers
           │  converter (once per chapter)          │  Pages CMS · GitHub · own editor
           ▼                                        ▼
   ┌───────────────────────────────────────────────────────┐
@@ -52,5 +52,5 @@
 | 1 | 🧰 Writers install nothing |
 | 2 | ✍️ Pages contain no special codes ([Plain writing](Plain-writing.md)) |
 | 3 | 📝 Nothing is trimmed or reworded until the whole manual is migrated and live |
-| 4 | 🔒 `master` and the `.odt` manual stay untouched until Docs 2.0 is approved |
+| 4 | 📦 The `.odt` manual is archived in `docs1/`; Docs 2.0 on `master` is the official manual |
 | 5 | 🌐 Nothing reaches the live website without a maintainer's click |

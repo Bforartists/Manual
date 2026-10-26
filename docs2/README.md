@@ -1,6 +1,6 @@
 # 📘 Docs 2.0
 
-The Bforartists manual as Markdown: one file per web page, written in plain text that reads well on GitHub and is turned into rich components on the website. **Lives on `master`** (since October 2026), beside the old `.odt` chapters, which stay until the new website goes live.
+The Bforartists manual as Markdown: one file per web page, written in plain text that reads well on GitHub and is turned into rich components on the website. **The official manual on `master`** since October 2026. The old `.odt` chapters are archived in [`../docs1/`](../docs1).
 
 [![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/master/collection/docs)
 [![Shared snippets](https://img.shields.io/badge/Shared-snippets-6f42c1?style=for-the-badge&logo=files&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/master/collection/snippets)
@@ -52,7 +52,7 @@ Pages contain no special tags. The website build recognises plain patterns:
 Needs Pandoc 3.x and Python 3.10+ (`pip install -r docs2/tools/requirements.txt`). From the repository root:
 
 ```bash
-DOCS_ROOT=docs2 DOCS_URL_PREFIX=/docs2 python3 docs2/tools/convert.py . docs2/tools/pages.json docs2 docs2/.work
+DOCS_ROOT=docs2 DOCS_URL_PREFIX=/docs2 python3 docs2/tools/convert.py docs1 docs2/tools/pages.json docs2 docs2/.work
 python3 docs2/tools/wordcount.py docs2 docs2/.work            # fails if any source words are lost
 python3 docs2/tools/make_nav.py docs2/tools/pages.json docs2/nav.yml
 python3 docs2/tools/find_repeats.py docs2 > docs2/reports/repeats.json
