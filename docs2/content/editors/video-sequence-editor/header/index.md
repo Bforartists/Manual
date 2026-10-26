@@ -1325,7 +1325,9 @@ When connected and you move one, you will move all connected strips.
 
 Unlink the selected strips, so you can select and move them one by one again.
 
-The menu changes with your selection: it shows **Connect** when the selected strips are not connected yet, and **Disconnect** when they are. You find the same button in the tool shelf, in the **Strip** tab.
+![Disconnect Strips](/docs2/images/editors/video-sequence-editor/header/strip-menu/disconnect-strips.png)
+
+The menu changes with your selection. When the selected strips are not connected, it shows **Connect Strips**. When they are, it shows **Connect Selected** and **Disconnect Strips**. You find the same button in the tool shelf, in the **Strip** tab.
 
 ### Strip menu in Preview window
 
