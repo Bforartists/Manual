@@ -264,7 +264,7 @@
   slug: keymap
   pages:
     - { id: "keymap.important-hotkeys", title: "Important Hotkeys", file: "content/keymap/important-hotkeys.md", icon: null }
-    - { id: "keymap.bforartists-keymap", title: "Bforartists Keymap", file: "content/keymap/bforartists-keymap.md", icon: null }
+    - { id: "keymap.standard-keymaps", title: "Standard Keymaps", file: "content/keymap/standard-keymaps.md", icon: null }
     - { id: "keymap.table", title: "Keymap Table", file: "content/keymap/keymap-table.md", icon: null }
 
 - section: doc-kit

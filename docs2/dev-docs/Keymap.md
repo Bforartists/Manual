@@ -14,7 +14,7 @@ flowchart LR
   TOOL --> JSON["📦 docs2/keymap/keymap*.json<br/>Bforartists · Blender · Industry"]
   JSON -->|"docs workflow"| GHP["🌐 GitHub Pages<br/>/nav/keymap*.json"]
   GHP --> JS["🎛️ keymap-explorer.js"]
-  JS --> PAGE["📄 Bforartists Keymap page<br/>&lt;!-- keymap-explorer --&gt;"]
+  JS --> PAGE["📄 Standard Keymaps page<br/>&lt;!-- keymap-explorer --&gt;"]
 ```
 
 1. **The base keymap** comes from `keymap_data/blender_default.py` in the Bforartists source. It is plain Python, so the tool runs it with the Bforartists keymap's default preferences (left-click select, Space plays, gizmos on drag).
@@ -54,10 +54,11 @@ menus:
 | `python3 docs2/tools/keymap.py build <bforartists checkout>` | Rebuilds the three keymap files (unchanged keys keep a file as it is) |
 | `python3 docs2/tools/keymap.py check` | Every keymap has an editor and mode |
 | `python3 docs2/tools/keymap.py diff old.json new.json` | Added, changed and removed keys, as a Markdown table |
+| `python3 docs2/tools/keymap.py table` | Writes every Bforartists key into the **Keymap Table** page (between its `keymap-table` markers; the text above them is yours to edit) |
 
 ## 🤖 The weekly update
 
-The **Docs 2.0 keymap** workflow (`.github/workflows/docs2-keymap.yml`) runs every Monday and on demand (Actions → Docs 2.0 keymap → Run workflow). It fetches only the keymap files from the Bforartists source, rebuilds, and opens a pull request **"⌨️ Keymap update from the Bforartists source"** with the change table. Merge it, and the docs workflow publishes the new keymap files; the page updates on the next visit.
+The **Docs 2.0 keymap** workflow (`.github/workflows/docs2-keymap.yml`) runs every Monday and on demand (Actions → Docs 2.0 keymap → Run workflow). It fetches only the keymap files from the Bforartists source, rebuilds, and opens a pull request **"⌨️ Keymap update from the Bforartists source"** with the change table. The same run rewrites the Keymap Table page, so it never goes out of date. Merge it, and the docs workflow publishes the new keymap files; the page updates on the next visit.
 
 ## 📄 Putting the explorer on a page
 

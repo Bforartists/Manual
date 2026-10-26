@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.17
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.18
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -351,7 +351,7 @@
     });
   }
   /* the Workspaces overview and the interactive keymap get the full width (no right sidebar) */
-  function wide() { var km = qa('.ui-doc-body .ui-keymap').some(function (b) { return !q('[data-mini]', b); }); if ((km || q('.ui-doc-body .ui-ws-explorer, .ui-doc-body .wsx.is-explorer')) && !q('.dk-look')) R.classList.add('dk-wide'); }
+  function wide() { var km = !!q('.ui-doc-body .ui-keymap li[data-k=keymap]:not([data-mini])'); if ((km || q('.ui-doc-body .ui-ws-explorer, .ui-doc-body .wsx.is-explorer')) && !q('.dk-look')) R.classList.add('dk-wide'); }
   /* the sidebar fades where it is cut off, so you can tell there is more */
   function sideFade() {
     var s = q('.ui-doc-grid > .ui-doc-side'); if (!s || s.dataset.dkFade) return; s.dataset.dkFade = '1';

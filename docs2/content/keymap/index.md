@@ -6,6 +6,6 @@ path:
   - Keymap
 version: "5.1"
 status: draft
-summary: "The hotkeys of Bforartists: the important ones, the interactive keymap for every editor, and the written table."
+summary: "The hotkeys of Bforartists: the important ones, the interactive keymaps for every editor, and the full table."
 ---
-The hotkeys of Bforartists: the important ones first, then the interactive Bforartists keymap for every editor and mode (with the Blender and Industry Compatible presets beside it), and the written table of the old manual.
+The hotkeys of Bforartists: the important ones first, then the interactive Standard Keymaps (Bforartists, Blender and Industry Compatible) for every editor and mode, and the Keymap Table with every key as a list.

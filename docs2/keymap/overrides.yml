@@ -1,6 +1,10 @@
 # Better labels for the interactive keymap, where the operator's own name reads badly.
 # ops: operator id → label. menus: menu / panel id → name (" menu" / " pie menu" is added).
 ops:
+  scene.cic_create_trueisocam: "Isometric camera: true isometric"
+  scene.cic_create_gameisocam: "Isometric camera: game (2:1)"
+  scene.cic_create_gameisocam4to3: "Isometric camera: game (4:3)"
+  scene.cic_create_groundplane: "Isometric camera: ground plane"
   view3d.cursor3d: Place the 3D cursor
   view3d.localview: Local view
   view3d.localview_remove_from: Remove from local view

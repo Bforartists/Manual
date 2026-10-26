@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · interactive keymap · @version 1.1.0
+/* Bforartists Docs 2.0 · interactive keymap · @version 1.1.1
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer). The sync turns
  * <!-- keymap-explorer --> in a page into <div class="ui-keymap"><ul><li data-k="keymap" data-src=…>,
@@ -13,6 +13,8 @@
  *   🎨  the colours, then everything the picked key does, full width in columns
  *   📱  phones: the same keyboard with the key names only, and the list of keys under it
  *   ⭐  data-mini="1" (Important Hotkeys): only the everyday keys light up
+ *   🖼️  data-k="keys" (<!-- keymap-keys keys="W=Move; Ctrl+S=Save; MMB=Pan" -->): a small keyboard
+ *       picture with just those keys lit and labelled, no data needed
  * Published as /Manual/webflow/keymap-explorer-<version>.js.
  */
 (function () {
@@ -128,7 +130,9 @@
     '.kmx-fld{display:flex;flex-direction:column;gap:.25rem;position:relative}',
     '.kmx-fld>span,.kmx-cap{font:700 .6875rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--k-mute)}',
     '.kmx-segs{display:flex;flex-wrap:wrap;gap:.5rem}',
-    '.kmx-seg{display:flex;gap:3px}',
+    '.kmx-seg{display:flex;gap:3px;flex-wrap:wrap;max-width:100%}',
+    '.kmx .kmx-seg .ui-segment-item{white-space:nowrap;flex:0 0 auto}',
+    '.kmx-short{display:none}',
     '.kmx .kmx-seg .ui-segment-item{cursor:pointer;font-family:inherit}',
     '.kmx-dd{position:relative}',
     '.kmx-dd>button,.kmx-find input{display:flex;align-items:center;gap:.5rem;min-height:2.25rem;padding:.25rem .625rem;border:2px solid var(--_bfa---edge--outline,#0008);border-radius:.3rem;background:var(--k-card);color:var(--k-text);font:500 .9375rem Inter,sans-serif;text-transform:none;letter-spacing:0}',
@@ -137,7 +141,8 @@
     '.kmx-dd>button::after{content:"";flex:none;border:5px solid transparent;border-top-color:currentColor;margin-top:5px;opacity:.7}',
     '.kmx-ic{width:18px;height:18px;flex:none;object-fit:contain}',
     '.kmx-pop{position:absolute;z-index:40;left:0;top:calc(100% + 4px);min-width:100%;max-height:22rem;overflow:auto;margin:0;padding:.25rem;list-style:none;border-radius:.45rem;background:var(--k-panel);box-shadow:0 10px 28px #000b,inset 0 0 0 1px #ffffff14}',
-    '.kmx-pop[hidden]{display:none}',
+    '.kmx-pop[hidden]{display:none!important}',
+    '.kmx .kmx-pop{overflow-x:hidden!important;overflow-y:auto!important;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}',
     '.kmx-pop li{display:flex;align-items:center;gap:.5rem;margin:0;padding:.375rem .5rem;border-radius:.3rem;cursor:pointer;font:500 .875rem Inter,sans-serif;white-space:nowrap;color:var(--k-text)}',
     '.kmx-pop li::before{display:none}',
     '.kmx-pop li:hover,.kmx-pop li.is-hl{background:#ffffff14}',
@@ -195,6 +200,21 @@
     '.kmx-kc{display:inline-flex;gap:3px;flex-wrap:wrap;align-items:center}',
     '.kmx-kc kbd{display:inline-flex;align-items:center;gap:3px;min-width:1.6rem;height:1.5rem;padding:0 .35rem;border-radius:.25rem;background:#4c4c4c;border:1px solid #0009;box-shadow:inset 0 1px 0 #ffffff1f,0 2px 0 #1a1a1a;color:#f0f0f0;font:700 .7rem Inter,sans-serif;justify-content:center}',
     '.kmx-kc kbd img{width:14px;height:14px}',
+    /* keys picture (keymap-keys) */
+    '.kmk{margin:.75rem 0 1.25rem;padding:.75rem;border-radius:1rem;background:var(--_bfa---surface--well,#262626);box-shadow:inset 0 10px 14px -8px #000000bf;container-type:inline-size;color:#f0f0f0}',
+    '.kmk .kmx-kb{gap:2%}',
+    '.kmk .kmx-r{min-height:3.1em}',
+    '.kmk .kmx-kbwrap{font-size:clamp(8px,1.3cqw,14px)}',
+    '.kmk .kmx-k{cursor:default}',
+    '.kmk .kmx-k:hover{filter:none;outline:0}',
+    '.kmk .kmx-k.is-lit{background:color-mix(in srgb,#5cb4f0 34%,#3a3a3a);box-shadow:inset 0 0 0 1.5px #5cb4f0,inset 0 1px 0 #ffffff1f,0 2px 0 #1a1a1a}',
+    '.kmk .kmx-k.is-mod{background:color-mix(in srgb,#e8b84a 30%,#3a3a3a);box-shadow:inset 0 0 0 1.5px #e8b84a,0 2px 0 #1a1a1a}',
+    '.kmk .kmx-k.is-dim{opacity:.35}',
+    '.kmk .kmx-mouse{grid-template-columns:repeat(auto-fill,minmax(9rem,1fr));margin-top:.625rem}',
+    '.kmk .kmx-mouse .kmx-k{min-height:2.6rem}',
+    '.kmk-list{display:flex;flex-wrap:wrap;gap:.375rem .75rem;margin:.625rem 0 0;font:500 .8125rem Inter,sans-serif;color:#cfcfcf}',
+    '.kmk-list span{display:inline-flex;align-items:center;gap:.375rem}',
+    '@container (max-width:44rem){.kmk .kmx-k span,.kmk .kmx-k em{display:none}.kmk .kmx-k{justify-content:center;align-items:center}.kmk .kmx-r{min-height:2.5em}.kmk .kmx-kbwrap{font-size:clamp(7px,2.4cqw,12px)}.kmk .kmx-mouse .kmx-k span{display:-webkit-box}}',
     '.kmx-note{margin:.75rem 0 0!important;font-size:.75rem;color:var(--k-mute)}',
     '.kmx-card .ui-btn .ui-icon{width:16px;height:16px}',
     '.kmx.is-loading .kmx-sink{opacity:.5;transition:opacity .2s}',
@@ -205,7 +225,7 @@
     '.kmx-list button{display:flex;gap:.625rem;align-items:center;width:100%;padding:.5rem .25rem;border:0;border-bottom:1px solid #ffffff10;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}',
     '.kmx-list button i{flex:none;width:.6rem;height:.6rem;border-radius:2px;background:var(--c)}',
     '.kmx-list button span{flex:1;min-width:0;font-size:.875rem}',
-    '@container (max-width:44rem){.kmx-kb{flex-wrap:wrap;gap:.6em}.kmx-main{flex:1 1 100%}.kmx-nav,.kmx-pad{flex:1 1 0}.kmx-nav .kmx-r:first-child,.kmx-pad .kmx-r:first-child{display:none}.kmx-k span,.kmx-k em{display:none}.kmx-k{justify-content:center;align-items:center;padding:.1em}.kmx-k b{font-size:.95em;max-width:100%;overflow:hidden;text-overflow:ellipsis}.kmx-r{min-height:2.7em}.kmx-kbwrap{font-size:clamp(8px,2.5cqw,13px)}.kmx-mouse{grid-template-columns:repeat(auto-fill,minmax(8.5rem,1fr))}.kmx-mouse .kmx-k span{display:-webkit-box}.kmx-mouse .kmx-k{align-items:flex-start}.kmx-listd{display:block}.kmx-dd>button{min-width:0;width:100%}.kmx-head>.kmx-fld{flex:1 1 10rem}.kmx-combos{margin-left:0}.kmx-sink{padding:.625rem}}'
+    '@container (max-width:44rem){.kmx-kb{flex-wrap:wrap;gap:.6em}.kmx-main{flex:1 1 100%}.kmx-nav,.kmx-pad{flex:1 1 0}.kmx-nav .kmx-r:first-child,.kmx-pad .kmx-r:first-child{display:none}.kmx-k span,.kmx-k em{display:none}.kmx-k{justify-content:center;align-items:center;padding:.1em}.kmx-k b{font-size:.95em;max-width:100%;overflow:hidden;text-overflow:ellipsis}.kmx-r{min-height:2.7em}.kmx-kbwrap{font-size:clamp(8px,2.5cqw,13px)}.kmx-mouse{grid-template-columns:repeat(auto-fill,minmax(8.5rem,1fr))}.kmx-mouse .kmx-k span{display:-webkit-box}.kmx-mouse .kmx-k{align-items:flex-start}.kmx-listd{display:block}.kmx-dd>button{min-width:0;width:100%}.kmx-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.625rem}.kmx-head>.kmx-fld:first-child,.kmx-head>.kmx-find,.kmx-head>.kmx-tip{grid-column:1/-1}.kmx-long{display:none}.kmx-short{display:inline}.kmx-seg{flex:1 1 100%}.kmx .kmx-seg .ui-segment-item{flex:1 1 0;justify-content:center}.kmx-pop{max-height:16rem}.kmx-combos{margin-left:0}.kmx-sink{padding:.625rem}}'
   ].join('\n');
 
   function q(s, r) { return (r || d).querySelector(s); }
@@ -234,16 +254,21 @@
     function opts() { return qa('li', pop); }
     function open(on) {
       closeAll(on ? pop : null); pop.hidden = !on; btn.setAttribute('aria-expanded', on);
-      if (on) { hl = Math.max(0, opts().findIndex(function (o) { return o.getAttribute('aria-selected') === 'true'; })); mark(); var s = opts()[hl]; if (s) s.scrollIntoView({ block: 'nearest' }); }
+      if (on) { hl = Math.max(0, opts().findIndex(function (o) { return o.getAttribute('aria-selected') === 'true'; })); mark(); keep(); }
     }
     function mark() { opts().forEach(function (o, n) { o.classList.toggle('is-hl', n === hl); }); }
+    function keep() {   /* bring the highlighted option into view inside the list, never by scrolling the page */
+      var o = opts()[hl]; if (!o) return;
+      var top = o.offsetTop, bot = top + o.offsetHeight;
+      if (top < pop.scrollTop) pop.scrollTop = top - 4; else if (bot > pop.scrollTop + pop.clientHeight) pop.scrollTop = bot - pop.clientHeight + 4;
+    }
     btn.addEventListener('click', function () { open(pop.hidden); });
-    pop.addEventListener('click', function (e) { var o = e.target.closest('li'); if (!o) return; open(false); btn.focus(); onPick(o.dataset.val); });
+    pop.addEventListener('click', function (e) { var o = e.target.closest('li'); if (!o) return; open(false); onPick(o.dataset.val); });
     f.addEventListener('keydown', function (e) {
       var os = opts();
       if (e.key === 'Escape') { open(false); btn.focus(); return; }
-      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); if (pop.hidden) { open(true); return; } hl = (hl + (e.key === 'ArrowDown' ? 1 : -1) + os.length) % os.length; mark(); os[hl].scrollIntoView({ block: 'nearest' }); }
-      if (e.key === 'Enter' && !pop.hidden && os[hl]) { e.preventDefault(); open(false); btn.focus(); onPick(os[hl].dataset.val); }
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); if (pop.hidden) { open(true); return; } hl = (hl + (e.key === 'ArrowDown' ? 1 : -1) + os.length) % os.length; mark(); keep(); }
+      if (e.key === 'Enter' && !pop.hidden && os[hl]) { e.preventDefault(); open(false); onPick(os[hl].dataset.val); }
     });
     return f;
   }
@@ -298,7 +323,7 @@
       head.innerHTML = '';
       var segs = el('div', 'kmx-fld');
       segs.innerHTML = '<span>Keymap</span><div class="kmx-segs"><div class="kmx-seg ui-segment" role="group" aria-label="Keymap preset">' +
-        PRESETS.map(function (p) { return '<button type="button" class="ui-segment-item is-tag' + (S.p === p[0] ? ' is-active' : '') + '" data-p="' + p[0] + '" aria-pressed="' + (S.p === p[0]) + '">' + p[1] + '</button>'; }).join('') +
+        PRESETS.map(function (p) { var sh = p[0] === 'industry' ? 'Industry' : p[1]; return '<button type="button" class="ui-segment-item is-tag' + (S.p === p[0] ? ' is-active' : '') + '" data-p="' + p[0] + '" aria-pressed="' + (S.p === p[0]) + '" title="' + p[1] + '">' + (sh !== p[1] ? '<span class="kmx-long">' + p[1] + '</span><span class="kmx-short">' + sh + '</span>' : p[1]) + '</button>'; }).join('') +
         '</div><div class="kmx-seg ui-segment" role="group" aria-label="Platform">' + [['pc', 'Windows / Linux'], ['mac', 'macOS']].map(function (v) { return '<button type="button" class="ui-segment-item is-tag' + (S.v === v[0] ? ' is-active' : '') + '" data-v="' + v[0] + '" aria-pressed="' + (S.v === v[0]) + '">' + v[1] + '</button>'; }).join('') + '</div></div>';
       head.appendChild(segs);
       head.appendChild(dropdown('Editor', editors().map(function (e) { return [e, e, ED_IC[e]]; }), S.ed, function (v) { S.ed = v; S.mode = modesOf(v)[0] || ''; S.pick = null; drawHead(); draw(); }));
@@ -343,7 +368,7 @@
       drawCard(all, map); drawFind(all);
       var dd = data();
       note.innerHTML = esc(dd.name || 'Bforartists') + ' keymap ' + esc(dd.version || '') + ', built from the Bforartists source with the default preferences. Active-tool and gizmo keys are left out.' +
-        (S.mini ? ' Every key: <a href="/docs/keymap-bforartists-keymap">Bforartists Keymap</a>.' : '') + ' Spot something off? Report it with the key and the editor.';
+        (S.mini ? ' Every key: <a href="/docs/keymap-standard-keymaps">Standard Keymaps</a>.' : '') + ' Spot something off? Report it with the key and the editor.';
     }
     function drawCard(all, map) {
       var k = S.pick;
@@ -419,10 +444,59 @@
       NumpadMultiply: 'NUMPAD_ASTERIX', NumpadSubtract: 'NUMPAD_MINUS', NumpadAdd: 'NUMPAD_PLUS', NumpadEnter: 'NUMPAD_ENTER', NumpadDecimal: 'NUMPAD_PERIOD', ContextMenu: 'APP' }[c] || '';
   }
 
+  /* ---------------------------------------------------------------- keys picture */
+  var KEYWORD = { ESC: 'ESC', ESCAPE: 'ESC', TAB: 'TAB', SPACE: 'SPACE', ENTER: 'RET', RETURN: 'RET', DEL: 'DEL', DELETE: 'DEL', BACKSPACE: 'BACK_SPACE', HOME: 'HOME', END: 'END',
+    LMB: 'LEFTMOUSE', 'LEFT CLICK': 'LEFTMOUSE', 'LEFT MOUSE': 'LEFTMOUSE', MMB: 'MIDDLEMOUSE', 'MIDDLE MOUSE': 'MIDDLEMOUSE', RMB: 'RIGHTMOUSE', 'RIGHT CLICK': 'RIGHTMOUSE', 'RIGHT MOUSE': 'RIGHTMOUSE',
+    SCROLLWHEEL: 'WHEELUPMOUSE', WHEEL: 'WHEELUPMOUSE', SHIFT: 'LEFT_SHIFT', CTRL: 'LEFT_CTRL', ALT: 'LEFT_ALT', CMD: 'OSKEY',
+    '`': 'ACCENT_GRAVE', '-': 'MINUS', '=': 'EQUAL', '[': 'LEFT_BRACKET', ']': 'RIGHT_BRACKET', ';': 'SEMI_COLON', ',': 'COMMA', '.': 'PERIOD', '/': 'SLASH' };
+  var DIG = ['ZERO', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'NINE'];
+  function codeOfName(n) {
+    var u = n.trim().toUpperCase(), m;
+    if (KEYWORD[u]) return KEYWORD[u];
+    if (/^[A-Z]$/.test(u)) return u;
+    if (/^\d$/.test(u)) return DIG[+u];
+    if (/^F(\d|1[0-2])$/.test(u)) return u;
+    if ((m = /^NUMPAD\s*(\d)$/.exec(u))) return 'NUMPAD_' + m[1];
+    if ((m = /^NUMPAD\s*([*\/+.\-])$/.exec(u))) return { '*': 'NUMPAD_ASTERIX', '/': 'NUMPAD_SLASH', '+': 'NUMPAD_PLUS', '.': 'NUMPAD_PERIOD', '-': 'NUMPAD_MINUS' }[m[1]];
+    return '';
+  }
+  function keysPicture(block, spec) {
+    var lit = {}, mods = {}, items = [], pad = false, mice = false;
+    spec.split(';').forEach(function (part) {
+      var eq = part.indexOf('='); if (eq < 0) return;
+      var combo = part.slice(0, eq).trim(), label = part.slice(eq + 1).trim();
+      var toks = combo.split('+').map(function (t) { return t.trim(); }).filter(Boolean);
+      var key = toks.pop(), code = codeOfName(key || ''); if (!code) return;
+      toks.forEach(function (t) { var c = codeOfName(t); if (c) mods[c] = 1; });
+      (lit[code] = lit[code] || []).push((toks.length ? toks.join(' + ') + ' + ' : '') + label);
+      if (/^NUMPAD_/.test(code)) pad = true;
+      if (/MOUSE$/.test(code)) mice = true;
+      items.push([combo, label, code]);
+    });
+    var root = el('div', 'kmk'), row = function (r) {
+      return '<div class="kmx-r">' + r.map(function (k) {
+        if (k.gap) return '<span class="kmx-k is-gap" style="--w:' + k.gap + '"></span>';
+        var l = lit[k.c], md = mods[k.c] || (k.c === 'RIGHT_SHIFT' && mods.LEFT_SHIFT) || (k.c === 'RIGHT_CTRL' && mods.LEFT_CTRL) || (k.c === 'RIGHT_ALT' && mods.LEFT_ALT);
+        var cls = 'kmx-k' + (l ? ' is-lit' : md ? ' is-mod' : ' is-dim');
+        return '<span class="' + cls + '" style="--w:' + k.w + '" title="' + esc(k.l + (l ? ': ' + l.join(' · ') : '')) + '"><b>' + esc(k.l) + '</b>' + (l ? '<span>' + esc(l[0].replace(/^.* \+ /, '')) + '</span>' + (l.length > 1 ? '<em>+' + (l.length - 1) + '</em>' : '') : '') + '</span>';
+      }).join('') + '</div>';
+    };
+    var kb = '<div class="kmx-kb"><div class="kmx-blk kmx-main">' + MAIN.map(row).join('') + '</div>' + (pad ? '<div class="kmx-blk kmx-pad">' + PAD.map(row).join('') + '</div>' : '') + '</div>';
+    var mouseRow = mice ? '<div class="kmx-mouse">' + MOUSE.slice(0, 5).filter(function (m) { return lit[m[0]] || /^(LEFT|MIDDLE|RIGHT)/.test(m[0]); }).map(function (m) {
+      var l = lit[m[0]]; return '<span class="kmx-k ' + (l ? 'is-lit' : 'is-dim') + '"><b>' + img(MOUSE_IC[m[0]]) + esc(m[1]) + '</b>' + (l ? '<span>' + esc(l.join(' · ')) + '</span>' : '') + '</span>';
+    }).join('') + '</div>' : '';
+    root.innerHTML = '<div class="kmx-kbwrap">' + kb + '</div>' + mouseRow;
+    root.setAttribute('role', 'img');
+    root.setAttribute('aria-label', 'Keyboard: ' + items.map(function (x) { return x[0] + ' ' + x[1]; }).join(', '));
+    block.classList.add('kmx-src'); block.parentNode.insertBefore(root, block);
+  }
+
   function start() {
     var blocks = qa('.ui-keymap'); if (!blocks.length) return;
     if (!d.getElementById('bfa-km-css')) { var st = el('style'); st.id = 'bfa-km-css'; st.textContent = CSS; d.head.appendChild(st); }
     blocks.forEach(function (b) {
+      var kli = q('li[data-k=keys]', b);
+      if (kli) { try { keysPicture(b, kli.dataset.keys || ''); } catch (e) { if (window.console) console.warn('keymap keys', e); } return; }
       var li = q('li[data-k=keymap]', b); var src = li && li.dataset.src; if (!src) return;
       var base = src.replace(/[^/]*$/, '');
       fetch(src, { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (data) { try { explorer(b, data, base); } catch (e) { if (window.console) console.warn('keymap', e); } })
