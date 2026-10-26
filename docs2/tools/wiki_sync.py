@@ -40,8 +40,15 @@ def wiki_links(md, pages):
         full = os.path.normpath(os.path.join(SRC_DIR, path)).replace("\\", "/")
         kind = "tree" if not os.path.splitext(full)[1] else "blob"
         return f"[{text}]({REPO}/{kind}/{BRANCH}/{full}{'#' + frag if frag else ''})"
+    def img(m):   # ![alt](images/x.jpg) → the file on GitHub, so screenshots show in the wiki too
+        alt, target = m.group(1), m.group(2)
+        if re.match(r"^[a-z]+:|^/", target):
+            return m.group(0)
+        full = os.path.normpath(os.path.join(SRC_DIR, target)).replace("\\", "/")
+        return f"![{alt}](https://raw.githubusercontent.com/Bforartists/Manual/{BRANCH}/{full})"
+
     parts = re.split(r"(```.*?```|`[^`\n]*`)", md, flags=re.S)     # leave code alone
-    return "".join(p if i % 2 else re.sub(r"(?<!!)\[([^\]]*)\]\(([^)\s]+)\)", fix, p)
+    return "".join(p if i % 2 else re.sub(r"!\[([^\]]*)\]\(([^)\s]+)\)", img, re.sub(r"(?<!!)\[([^\]]*)\]\(([^)\s]+)\)", fix, p))
                    for i, p in enumerate(parts))
 
 
