@@ -436,11 +436,7 @@ Add or subtract effect of the brush
 
 Adjust the plane on which the brush acts towards or away from the objects surface. Sculpting with the Clay brush happens in a plane defined by the view you are in and the first vertices hit by the brush.
 
-### Warning
-
-![Warning](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/warning.jpg)
-
-Just a warning that the plane trim option is not available for this brush.
+### Plane Settings
 
 | Entry | What it does |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -480,11 +476,7 @@ Add or subtract effect of the brush
 
 Adjust the plane on which the brush acts towards or away from the objects surface. Sculpting with the Clay brush happens in a plane defined by the view you are in and the first vertices hit by the brush.
 
-### Warning
-
-![Warning](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/warning.jpg)
-
-Just a warning that the plane trim option is not available for this brush.
+### Plane Settings
 
 | Entry | What it does |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -524,11 +516,7 @@ Add or subtract effect of the brush
 
 Adjust the plane on which the brush acts towards or away from the objects surface. Sculpting with the Clay brush happens in a plane defined by the view you are in and the first vertices hit by the brush.
 
-### Warning
-
-![Warning](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/warning.jpg)
-
-Just a warning that the plane trim option is not available for this brush.
+### Plane Settings
 
 | Entry | What it does |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -592,11 +580,7 @@ Add or subtract effect of the brush
 
 Adjust the plane on which the brush acts towards or away from the objects surface. Sculpting with the Clay brush happens in a plane defined by the view you are in and the first vertices hit by the brush.
 
-### Warning
-
-![Warning](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/warning.jpg)
-
-Just a warning that the plane trim option is not available for this brush.
+### Plane Settings
 
 | Entry | What it does |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -659,11 +643,7 @@ Add or subtract effect of the brush
 
 Adjust the plane on which the brush acts towards or away from the objects surface. Sculpting with the Clay brush happens in a plane defined by the view you are in and the first vertices hit by the brush.
 
-### Warning
-
-![Warning](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/warning.jpg)
-
-Just a warning that the plane trim option is not available for this brush.
+### Plane Settings
 
 | Entry | What it does |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

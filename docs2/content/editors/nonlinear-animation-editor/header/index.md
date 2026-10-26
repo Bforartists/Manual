@@ -462,7 +462,7 @@ Turns selected strips into a meta strip. A group of strips.
 | Remove Meta Strips | Ungroups the meta strips into its original action strips. |
 | Add Tracks | Adds a new track in the Channel list. |
 | Add Tracks Above Selected | Adds a new track in the Channel list. |
-| Include Selected Objects | Objects without animation or a NLA strip will not appear in the channel list. With this command you can load selected objects into the NLA, regardless if they have animation yet or not. |
+| Selected Objects | Objects without animation or a NLA strip will not appear in the channel list. With this command you can load selected objects into the NLA, regardless if they have animation yet or not. |
 
 # Track Menu
 
@@ -609,15 +609,16 @@ Allows you to rename the current NLA strip. The operator calls a rename popup.
 
 | Entry | What it does |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Delete Strips | Deletes the selected strips. |
-| Delete Tracks | Deletes the selected track(s). **Toggle Muting** Disables the selected action clip. Be careful, there is no visual hint if the clip is muted or not. |
+| Toggle Muting | Disables the selected strips, so they no longer play. Be careful, there is no visual hint if a strip is muted or not. |
 | Apply Scale | Applies the current scale of the clips to be 1. |
 | Clear Scale | Resets the scale of the clip back to 1. |
 | Sync Action Length | Synchronize the length of the action with the keyframe length used in the strip. |
 | Make Single User | You can create linked duplicates. Make single user makes them into individual clips. |
 | Swap Strips | Swaps the selected strips. |
-| Move strips up | Moves the selected action strips upwards into the next track. |
-| Move Strips down | Moves the selected action strips downwards into the next track. |
+| Move Strips Up | Moves the selected action strips upwards into the next track. |
+| Move Strips Down | Moves the selected action strips downwards into the next track. |
+| Remove Empty Animation Data | Removes animation data that holds no strips or keyframes. |
+| Delete Strips | Deletes the selected strips. It sits at the bottom of the menu. To delete tracks, use **Track › Delete**. |
 
 #### Tweak Action (Lower Stack)
 

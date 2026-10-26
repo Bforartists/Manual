@@ -306,6 +306,10 @@ Every editor usually has also a few pie menus that can be called by hotkeys. Her
 
 Reveals the View pie menu.
 
+#### Region Toggle
+
+Press `T` to open a pie menu that shows or hides the regions of the editor, such as the tool shelf and the sidebar. It works the same in the Asset Browser.
+
 ### Select menu
 
 ![Select menu](/docs2/images/editors/file-browser/select-menu.png)

@@ -257,8 +257,7 @@ The original menu items are in the File menu of the Info editor.
 
 | Entry | What it does |
 | ---------- | --------------------------------------------------- |
-| Import FBX | Import FBX files. Default version. wm.fbx_import. |
-| Import FBX | Import FBX files. Legacy version. import_scene.fbx. |
+| Import FBX | Import FBX files. If your build has no built-in FBX importer, the button uses the legacy FBX add-on instead. |
 | Import Obj | Import Object files. |
 | Import ABC | Import Alembic files. |
 
@@ -361,9 +360,9 @@ The original menu items are in the Render menu of the Info editor.
 
 | Entry | What it does |
 | ----------------------- | ------------------------------------------------------ |
-| Mixdown Audio | Mixdown and export the scene's audio to an audio file. |
-| Show/ Hide Render view | Toggles display of Render view. |
-| Play rendered animation | Play rendered Animation sequence. |
+| Mixdown Audio | Mixdown and export the scene's audio to an audio file. The Render menu calls it Render Audio. |
+| Show/Hide Render View | Toggles display of Render view. |
+| Play Rendered Animation | Play rendered Animation sequence. |
 
 
 ## Toolbars Mesh Edit
@@ -828,15 +827,7 @@ Make linked data local to each object. This operator opens a popup to adjust fur
 
 Apply active object links to other selected objects.
 
-This button is a menu to choose the link method.
-
-#### Link to SCN
-
-![Link to SCN](/docs2/images/editors/toolbar/link-to-scn.png)
-
-##### Link to SCN
-
-Link selection to another scene. This other scene has of course to exist.
+This button is a menu to choose the link method. Its first entry, **Link Objects to Scene**, links the selection to another scene. That other scene has to exist already.
 
 #### Linked Objects
 

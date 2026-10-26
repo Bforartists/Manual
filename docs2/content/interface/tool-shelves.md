@@ -24,7 +24,7 @@ Some editors have a Tool Shelf at the left side. This tool shelf contains the to
 
 The view menu provides you with menus to close and to open the Tool shelf.
 
-It also shows the hotkey.
+Faster: press `T` over the editor. A pie menu opens where you show or hide the tool shelf, the sidebar and the other regions of that editor.
 
 ## Resize
 

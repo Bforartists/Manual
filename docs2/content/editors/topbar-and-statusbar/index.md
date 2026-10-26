@@ -135,12 +135,6 @@ These check boxes are also available in the Toolbar Settings Bforartists add-on
 
 ### Options
 
-#### Show Topbar
-
-![Show Topbar](/docs2/images/editors/topbar-and-statusbar/show-topbar.png)
-
-Toggles the visibility of the Topbar Toolbar
-
 #### BFA Defaults
 
 ![BFA Defaults](/docs2/images/editors/topbar-and-statusbar/bfa-defaults.png)
@@ -155,9 +149,9 @@ The single toolbar types. Each one of these toggle the type of toolbar groups of
   
 Clicking on the eye symbol, will show or hide that row from the toolbar.
 
-**File** - Contains some file menu related tools. Like load save. But also the render menu.
+**Files** - Contains some file menu related tools. Like load save. But also the render menu.
 
-**Meshedit** - Contains tools for Meshes in Edit Mode.
+**Mesh Edit** - Contains tools for Meshes in Edit Mode.
 
 **Primitives** - Contains the primitives from the Create tab in the Tool Shelf.
 
@@ -173,9 +167,9 @@ Clicking on the eye symbol, will show or hide that row from the toolbar.
 
 ![Types](/docs2/images/editors/topbar-and-statusbar/types-2.png)
 
-#### Options
+#### Show/Hide Settings
 
-Toggle the sub-group of operatores per type. This is a quick hand method to customize the toolbar sub-groups of operators per type of groups, so you can Hide / Show tool groups of all tool types in one go.
+Toggle the sub-group of operators per type. This is a quick hand method to customize the toolbar sub-groups of operators per type of groups, so you can Hide / Show tool groups of all tool types in one go.
 
 ![Options](/docs2/images/editors/topbar-and-statusbar/options.png)
 

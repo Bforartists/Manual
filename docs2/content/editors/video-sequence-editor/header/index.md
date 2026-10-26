@@ -226,7 +226,7 @@ Snap to strip edges or current frame.
 
 | Entry | What it does |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Use Timecode | Cache settings. Toggle to visualize cached images in the timeline. |
+| Use Timecode | Shows time as a timecode (hours, minutes, seconds and frames) instead of frame numbers. |
 | Sync Visible Range | Keep the visible timeline range synchronized across time-based editors. Synchronize the visible timeline range with other visible time based editors. To enable syncing, each editor must have 'Sync Visible Range' turned on. |
 | Display Cache | Turns on displaying the cache overlay and shows cache settings. Toggle to visualize cached images in the timeline. · **Final**: Show the final images. · **Raw**: Show the raw images. This is a Developers extra. |
 | Show Markers | Display the markers menu and the markers at the bottom in the timeline. |

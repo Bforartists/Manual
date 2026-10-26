@@ -37,6 +37,8 @@ This panel contains the dimension settings.
 
 A list of dimension presets with the most common settings.
 
+The list holds TV and HD formats (PAL, NTSC, HDV, HDTV 720p and 1080p, 4K), social media formats (Landscape 1.91:1, Portrait 4:5, Vertical 9:16) and square 1:1 formats at 1080, 2048, 3072, 4096 and 8192 pixels, for example for fulldome and planetarium work.
+
 To add a new preset type in a new preset name into the edit box at the end of the list, and click at the + sign.
 
 To remove a preset click at the - sign behind the name.

@@ -624,7 +624,7 @@ These property can be animated. Clicking at the decorator at the right sets a ke
 | Surface Picking | Disable surface influence during selection, snapping and depth-picking operators. |
 | Show In | **Viewports**: Show the object in the viewport. This can also be done in the outliner. · **Renders**: Show the object in the rendering. This can also be done in the outliner. |
 | Grease Pencil | **Use Lights**: Grease Pencil object only. Light affects grease pencil object. |
-| Ray Visibility | **Camera**: Object visibility to camera rays. · **Shadow**: Object visibility to shadow rays. |
+| Ray Visibility | **Camera**: Object visibility to camera rays. · **Shadow**: Object visibility to shadow rays. A light object shows only the Camera toggle here. |
 | Light Probes | **Volume**: Globally disable in volume probes. · **Sphere**: Globally disable in spherical light probes. · **Plane**: Globally disable in planar light probes. |
 | Mask | **Holdout**: Render the object as a holdout or matte object. This creates a hole in the image in the shape of the object. Which can then be filled with content in the compositing process. |
 

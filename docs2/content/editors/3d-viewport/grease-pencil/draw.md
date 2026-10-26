@@ -232,9 +232,7 @@ When you use this tool outside of closed geometry, then it draws a frame around 
 
 #### Shapes
 
-![Shapes](/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-draw-mode/shapes.png)
-
-Allows to draw shapes like box and lines.
+The shape tools draw boxes, circles, lines and curves. Each one is its own button at the bottom of the tool shelf: Box, Circle, Line, Polyline, Arc and Curve.
 
 ##### Box
 
@@ -256,9 +254,9 @@ Draw straight lines by click drag. The yellow points are handlers that can be dr
 
 Hotkey E allows you to extrude the line.
 
-##### Poly line
+##### Polyline
 
-![Poly line](/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-draw-mode/poly-line.png)
+![Polyline](/docs2/images/editors/3d-viewport/tool-shelf/grease-pencil-draw-mode/poly-line.png)
 
 Draw straight lines by click drag. Clicking creates a new line in the polygon. Right mouse abandons the action. Pressing enter or middle mouse button confirms and makes the stroke real.
 
