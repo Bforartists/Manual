@@ -62,13 +62,31 @@ The **Docs 2.0 keymap** workflow (`.github/workflows/docs2-keymap.yml`) runs eve
 
 ## 📄 Putting the explorer on a page
 
-Write `<!-- keymap-explorer -->` where it should appear. To open on a given editor and mode:
+Type a code block whose language is `keymap-explorer`. The online editor keeps code blocks (it drops HTML comments, so the older `<!-- keymap-explorer -->` form is only for files edited on GitHub):
 
-```html
-<!-- keymap-explorer editor="Image Editor" mode="UV Editing" -->
+````markdown
+```keymap-explorer
+editor: Image Editor
+mode: UV Editing
 ```
+````
 
-`mini="1"` lights up only the everyday keys (navigation, selection, the transform tools, modes, files, undo, render, search), as on **Important Hotkeys**. The list is `IMPORTANT` at the top of `keymap-explorer.js`.
+Add a line `mini` to light up only the everyday keys (navigation, selection, the transform tools, modes, files, undo, render, search), as on **Important Hotkeys**. The list is `IMPORTANT` at the top of `keymap-explorer.js`.
+
+## 🖼️ A keyboard picture for a few keys
+
+A `keymap-keys` block draws a small keyboard with just those keys lit and labelled, one key per line:
+
+````markdown
+```keymap-keys
+W = Move selection
+Ctrl + S = Save
+MMB = Move view
+Numpad 1 = Front view
+```
+````
+
+Keys: letters, digits, `F1`–`F12`, `Numpad 0`–`9`, `Esc`, `Tab`, `Space`, `Enter`, `Del`, `Backspace`, `Shift`, `Ctrl`, `Alt`, and the mouse (`LMB`, `MMB`, `RMB`, `Scrollwheel`). Modifiers before the key light up in yellow. The number pad and the mouse appear only when the block uses them.
 
 ## 🖱️ How readers use it
 

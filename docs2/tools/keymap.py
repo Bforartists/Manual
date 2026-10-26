@@ -319,6 +319,9 @@ def write_table(path=TABLE_PAGE):
     block = f"{T_START}\n\n{table_md(data)}\n{T_END}"
     if T_START in page and T_END in page:
         new = page[:page.index(T_START)] + block + page[page.index(T_END) + len(T_END):]
+    elif re.search(r"^## ", page, re.M):   # the markers were lost (the online editor drops comments): the list starts at the first ## heading
+        at = re.search(r"^## ", page, re.M).start()
+        new = page[:at].rstrip() + "\n\n" + block + "\n"
     else:
         new = page.rstrip() + "\n\n" + block + "\n"
     ver = data.get("version", "")

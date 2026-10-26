@@ -23,13 +23,27 @@ Here we list some of the most used and basic hotkeys at one sheet, so that you d
 
 The keyboard below shows only these keys. Pick the editor and the mode, hold Shift, Ctrl or Alt to see those combinations, and click a key to read what it does. Every other key is on the [Standard Keymaps](standard-keymaps.md).
 
-<!-- keymap-explorer mini="1" -->
+```keymap-explorer
+mini
+```
 
 ## In the 3D Viewport
 
 ### All Modes
 
-<!-- keymap-keys keys="MMB=Move view; W=Move selection; RMB=Rotate view; Alt+MMB=Rotate view; E=Rotate selection; Scrollwheel=Zoom view; Ctrl+MMB=Zoom view; R=Scale selection; E=Trackball rotation; F12=Render Image; Numpad 0=Switch to Cameraview" -->
+```keymap-keys
+MMB = Move view
+W = Move selection
+RMB = Rotate view
+Alt + MMB = Rotate view
+E = Rotate selection
+Scrollwheel = Zoom view
+Ctrl + MMB = Zoom view
+R = Scale selection
+E = Trackball rotation
+F12 = Render Image
+Numpad 0 = Switch to Cameraview
+```
 
 | Action | Keys |
 |---|---|
@@ -45,7 +59,14 @@ The keyboard below shows only these keys. Pick the editor and the mode, hold Shi
 
 ### Switch views to orthographic
 
-<!-- keymap-keys keys="Numpad 1=Ortho front; Numpad 3=Ortho right; Ctrl+Numpad 1=Ortho back; Numpad 7=Ortho top; Ctrl+Numpad 3=Ortho left; Ctrl+Numpad 7=Ortho bottom" -->
+```keymap-keys
+Numpad 1 = Ortho front
+Numpad 3 = Ortho right
+Ctrl + Numpad 1 = Ortho back
+Numpad 7 = Ortho top
+Ctrl + Numpad 3 = Ortho left
+Ctrl + Numpad 7 = Ortho bottom
+```
 
 | Action | Keys |
 |---|---|
@@ -60,7 +81,13 @@ To leave the orthographic views rotate the view.
 
 ### Select
 
-<!-- keymap-keys keys="D=Tweak; RMB=Lasso Select; B=Box Select; Shift=Add to / Remove from selection; G=Select Circle" -->
+```keymap-keys
+D = Tweak
+RMB = Lasso Select
+B = Box Select
+Shift = Add to / Remove from selection
+G = Select Circle
+```
 
 | Action | Keys |
 |---|---|
@@ -72,7 +99,15 @@ To leave the orthographic views rotate the view.
 
 ### Modes
 
-<!-- keymap-keys keys="1=Object Mode; 4=Vertex Paint; 2=Edit Mode; 5=Weight Paint; 3=Sculpt Mode; 6=Texture paint; 0=Pose Mode" -->
+```keymap-keys
+1 = Object Mode
+4 = Vertex Paint
+2 = Edit Mode
+5 = Weight Paint
+3 = Sculpt Mode
+6 = Texture paint
+0 = Pose Mode
+```
 
 | Action | Keys |
 |---|---|
@@ -86,7 +121,16 @@ To leave the orthographic views rotate the view.
 
 ### Edit Mode with a Mesh object
 
-<!-- keymap-keys keys="C=Edge Select; Alt+LMB=Select Edgeloop; X=Vertice Select; Shift+Alt+LMB=Select Edgering; V=Face Select; Ctrl+Left Click=Pick shortest Path; S=Extrude; Shift=Add to selection" -->
+```keymap-keys
+C = Edge Select
+Alt + LMB = Select Edgeloop
+X = Vertice Select
+Shift + Alt + LMB = Select Edgering
+V = Face Select
+Ctrl + Left Click = Pick shortest Path
+S = Extrude
+Shift = Add to selection
+```
 
 | Action | Keys |
 |---|---|
@@ -101,7 +145,13 @@ To leave the orthographic views rotate the view.
 
 ### Edit mode with a Bone object
 
-<!-- keymap-keys keys="S=Extrude; Alt+P=Clear Parent; Shift+S=Extrude Forked; P=Separate Bones; Ctrl+P=Make Parent" -->
+```keymap-keys
+S = Extrude
+Alt + P = Clear Parent
+Shift + S = Extrude Forked
+P = Separate Bones
+Ctrl + P = Make Parent
+```
 
 | Action | Keys |
 |---|---|
@@ -113,7 +163,11 @@ To leave the orthographic views rotate the view.
 
 ### Sculpt Mode with a Mesh object
 
-<!-- keymap-keys keys="X=Brush Size; V=Brush Angle; C=Brush Strength" -->
+```keymap-keys
+X = Brush Size
+V = Brush Angle
+C = Brush Strength
+```
 
 | Action | Keys |
 |---|---|
@@ -123,7 +177,11 @@ To leave the orthographic views rotate the view.
 
 ### Vertex Mode with a Mesh object
 
-<!-- keymap-keys keys="X=Brush Size; C=Brush Angle; V=Brush Strength" -->
+```keymap-keys
+X = Brush Size
+C = Brush Angle
+V = Brush Strength
+```
 
 | Action | Keys |
 |---|---|
@@ -133,7 +191,12 @@ To leave the orthographic views rotate the view.
 
 ### Texture Paint Mode with a Mesh object
 
-<!-- keymap-keys keys="X=Brush Size; V=Brush Angle; C=Brush Strength; Ctrl+Alt+F=Radial Control Mask Angle" -->
+```keymap-keys
+X = Brush Size
+V = Brush Angle
+C = Brush Strength
+Ctrl + Alt + F = Radial Control Mask Angle
+```
 
 | Action | Keys |
 |---|---|
@@ -144,7 +207,14 @@ To leave the orthographic views rotate the view.
 
 ### Paint modes when working with a stencil map
 
-<!-- keymap-keys keys="Alt+RMB=Move stencil Texture; Shift+Ctrl+Alt+RMB=Move secondary stencil Texture; Shift+RMB=Rotate stencil Texture; Shift+Alt+RMB=Rotate secondary stencil Texture; Ctrl+RMB=Scale stencil Texture; Ctrl+Alt+RMB=Scale secondary stencil Texture" -->
+```keymap-keys
+Alt + RMB = Move stencil Texture
+Shift + Ctrl + Alt + RMB = Move secondary stencil Texture
+Shift + RMB = Rotate stencil Texture
+Shift + Alt + RMB = Rotate secondary stencil Texture
+Ctrl + RMB = Scale stencil Texture
+Ctrl + Alt + RMB = Scale secondary stencil Texture
+```
 
 | Action | Keys |
 |---|---|
@@ -159,7 +229,12 @@ To leave the orthographic views rotate the view.
 
 ### Load Save
 
-<!-- keymap-keys keys="Ctrl+O=Open File; Shift+Ctrl+S=Save as; Ctrl+S=Save File; Ctrl+N=New File" -->
+```keymap-keys
+Ctrl + O = Open File
+Shift + Ctrl + S = Save as
+Ctrl + S = Save File
+Ctrl + N = New File
+```
 
 | Action | Keys |
 |---|---|
@@ -170,7 +245,10 @@ To leave the orthographic views rotate the view.
 
 ### Undo Redo
 
-<!-- keymap-keys keys="Ctrl+Z=Undo; Shift+Ctrl+Z=Redo" -->
+```keymap-keys
+Ctrl + Z = Undo
+Shift + Ctrl + Z = Redo
+```
 
 | Action | Keys |
 |---|---|
@@ -179,7 +257,19 @@ To leave the orthographic views rotate the view.
 
 ### F keys
 
-<!-- keymap-keys keys="F2=Rename active item; Ctrl+F2=Batch rename item; F3=Search Menu; F4=File context menu; F5=Flip Region (Sidebar and Tool shelf with the mouse over the area); Alt+F5=System Console (Windows only); F6=Redo Last ( Adjust last operation panel); F11=Show / Hide Renderview; Ctrl+F11=Play rendered animation; F12=Render Still; Ctrl+F12=Render Animation" -->
+```keymap-keys
+F2 = Rename active item
+Ctrl + F2 = Batch rename item
+F3 = Search Menu
+F4 = File context menu
+F5 = Flip Region (Sidebar and Tool shelf with the mouse over the area)
+Alt + F5 = System Console (Windows only)
+F6 = Redo Last ( Adjust last operation panel)
+F11 = Show / Hide Renderview
+Ctrl + F11 = Play rendered animation
+F12 = Render Still
+Ctrl + F12 = Render Animation
+```
 
 | Action | Keys |
 |---|---|

@@ -15,7 +15,9 @@ summary: "Every hotkey of the Bforartists, Blender and Industry Compatible keyma
 
 Pick the keymap, the editor and the mode, then point at a key to see what it does there. Hold Shift, Ctrl or Alt (on screen or on your own keyboard) to see those combinations, or type an action to find its key. The keys come straight from the Bforartists source, so they always match the current version.
 
-<!-- keymap-explorer -->
+```keymap-explorer
+editor: 3D Viewport
+```
 
 **Bforartists** is the keymap Bforartists starts with. **Blender** and **Industry Compatible** are the two other presets in Edit › Preferences › Keymap: pick one there to work with the keys you already know, and switch to it here to see them.
 
