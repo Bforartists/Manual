@@ -1,0 +1,1419 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Header · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1455 · <code>docs2/quick-fixes-1</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<a href="../../interface/tool-shelves.html">Tool Shelves</a>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<a class="is-current" style="padding-left:1.5rem" href="header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<a href="../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../properties/output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="../properties/object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<a href="../toolbar.html">Toolbar</a>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<a href="../file-browser.html">File browser</a>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Dope Sheet › Header</div><h1 class="pv-title">Header</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 24 min read</span></div><article class="ui-doc-body"><p>The pages of this part are listed in the sidebar under <em>Header</em>.</p>
+<h1 id="header-tools-and-options">Header Tools and Options</h1>
+<h3 id="introduction">Introduction</h3>
+<p>The header contains various menus and tools. This chapter here is about the tools, modes and options elements in the header.</p>
+<p>The text menus are covered in an own chapter each. They vary too much, dependent of mode and object type.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/introduction.png" alt="Introduction" loading="lazy"></figure>
+<h3 id="header-tabs">Header Tabs</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/header-tabs.png" alt="Header Tabs" loading="lazy"></figure>
+<p>The tabs at the very left allows you to switch between the four most important editor types by one click. Dope sheet Editor, Graph Editor, Driver Editor, NLA Editor.</p>
+<h3 id="dope-sheet-modes">Dope Sheet Modes</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/dope-sheet-modes.png" alt="Dope Sheet Modes" loading="lazy"></figure>
+<p>The Dope sheet has different modes. Each mode has its own purpose. In Mask mode you can for example see and edit the keyframes for mask animations, from the movie clip editor for example.</p>
+<h4 id="dope-sheet">Dope Sheet</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/dope-sheet.png" alt="Dope Sheet" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/dope-sheet-2.png" alt="Dope Sheet" loading="lazy"></figure>
+<p>Display the keyframe animation of all currently selected object in the 3d view.</p>
+<h4 id="action-editor">Action Editor</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/action-editor.png" alt="Action Editor" loading="lazy"></figure>
+<p>Display and edit the Action part of a keyframe animation of the currently active object in the 3d view. Just the data for this one object is displayed.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/action-editor-2.png" alt="Action Editor" loading="lazy"></figure>
+<p><strong>Actions</strong> are a generic containers for F-Curves. Actions can contain any number of F-Curves, and can be attached to any data block. For example, an action that modifies the ‘X location’ and ‘Y location’ properties can be shared across multiple objects, since both objects have ‘X location’ and ‘Y location’ properties available.</p>
+<p>The Action editor allows you to edit the animation in various ways. For example also turn a keyframe animation into a clip for the NLA editor.</p>
+<p>The animation data is build in a hierarchical way. From top to bottom.</p>
+<p>Actions - Record and contain animation data.</p>
+<p>Groups - Are groups of channels.</p>
+<p>Channels - Contains record properties.</p>
+<p>F-Curves - F-Curves are used to interpolate the difference between the keyframes.</p>
+<p>Keyframes - Keyframes are used to set the values of properties bound to a point in time.</p>
+<h4 id="shape-key-editor">Shape Key Editor</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/shape-key-editor.png" alt="Shape Key Editor" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/shape-key-editor-2.png" alt="Shape Key Editor" loading="lazy"></figure>
+<p>Display and and edit the keyframes for shape key animations. Shape keys is vertex animation.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/shape-key-editor-3.png" alt="Shape Key Editor" loading="lazy"></figure>
+<h4 id="grease-pencil">Grease Pencil</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/grease-pencil.png" alt="Grease Pencil" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/grease-pencil-2.png" alt="Grease Pencil" loading="lazy"></figure>
+<p>Display and and edit the keyframes for animated grease pencil strokes.</p>
+<p>This mode is for when you animate grease pencil strokes and colors at a vertex level. When you record keyframes at an object level then those keyframes gets displayed in the Dope sheet and Action mode.</p>
+<h4 id="mask">Mask</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/mask.png" alt="Mask" loading="lazy"></figure>
+<p>Display and edit the keyframes for animated mask curves. Like from the movie clip editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/grease-pencil-2.png" alt="Mask" loading="lazy"></figure>
+<h4 id="cache-file">Cache File</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/cache-file.png" alt="Cache File" loading="lazy"></figure>
+<p>NOT DOCUMENTED BY BLENDER. NOT TO FIND OUT HOW TO USE.</p>
+<p>From the Blender Manual: Cache File: Alembic Todo 2.78.</p>
+<h3 id="show-hide-elements">Show Hide elements</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/show-hide-elements.png" alt="Show Hide elements" loading="lazy"></figure>
+<p>This is a group of header operators for animation channel visibility. This is present in all dopesheet modes.</p>
+<h4 id="summary">Summary</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/summary.png" alt="Summary" loading="lazy"></figure>
+<p>Display the Summary label above the list of elements.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Only Show Selected</td>
+<td>Display only the data for the selected object in the list of elements. If off it displays all available animation data of the whole scene.</td>
+</tr>
+<tr>
+<td>Show Hidden</td>
+<td>Include channels from objects / bones that are not visible. This feature just works with Only Selected off.</td>
+</tr>
+<tr>
+<td>Only Show Errors</td>
+<td>Only display F-Curves and Drivers that have errors or are disabled.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filters-dope-sheet-mode">Filters - Dope Sheet Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/filters-dope-sheet-mode.png" alt="Filters - Dope Sheet Mode" loading="lazy"><figcaption>Filters - Dope Sheet Mode</figcaption></figure>
+<p>The show hide elements allows you to filter out the general elements. The Filters panel allows you to filter out further elements.</p>
+<p>Note that this filter methods just exists for the dope sheet mode.</p>
+<h4 id="filter-by-collection">Filter by Collection</h4>
+<p>Just display the content from the chosen collection in the list of elements.</p>
+<h4 id="filter-by-type">Filter by Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/filter-by-type.png" alt="Filter by Type" loading="lazy"></figure>
+<p>In this section you can choose what type of animation data should be displayed. The names should be self explaining.</p>
+<h4 id="options">Options</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sort Data Blocks</td>
+<td>Alphabetically sort the data in the list of elements.</td>
+</tr>
+<tr>
+<td>Multi Word Match Search</td>
+<td>Enable Multi Word matching for the search in the list of elements.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="snapping-panel-most-modes">Snapping Panel – Most modes</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/snapping-panel-most-modes.png" alt="Snapping Panel – Most modes" loading="lazy"><figcaption>Snapping Panel – Most modes</figcaption></figure>
+<p>Snapping in animation editors helps align the <strong>playhead</strong> and <strong>keyframes</strong> to meaningful time-based elements, improving precision and workflow efficiency across the <strong>Timeline</strong>, <strong>Dope Sheet</strong>, <strong>Graph Editor</strong>, <strong>NLA</strong>, and <strong>Video Sequencer</strong>.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This sub-subpanel is not available for Grease Pencil Dopesheet Mode</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Snapping On/Off</td>
+<td>Toggles the snapping on or off with a visual indicator.</td>
+</tr>
+<tr>
+<td>Frame</td>
+<td>Snaps to whole frame numbers. Ideal for frame-accurate editing instead of sub-frame timeline cursor placement.</td>
+</tr>
+<tr>
+<td>Second</td>
+<td>Snaps to time intervals measured in seconds. Useful for audio syncing or time-based pacing.</td>
+</tr>
+<tr>
+<td>Nearest Market</td>
+<td>Snaps to the closest timeline marker. Great for aligning actions to scene events or beats.</td>
+</tr>
+<tr>
+<td>Absolute Time Snap</td>
+<td>When enabled, snapping uses absolute time rather than relative pixel proximity. Ensures consistent snapping behavior regardless of zoom level or cursor position.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="proportional-editing-all-modes">Proportional Editing - All Modes</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/proportional-editing-all-modes.png" alt="Proportional Editing - All Modes" loading="lazy"><figcaption>Proportional Editing - All Modes</figcaption></figure>
+<p>Enable proportional editing.</p>
+<p>Proportional editing allows you for example to scale two keyframes and influence the not selected neighbour keyframes in a proportional way. Or the proportional editing of fcurve points.</p>
+<p>The dropdown menu to choose the proportional editing falloff method is just available when the proportional tool is active.</p>
+<h3 id="keyframe-easing-handle-type-keyframe-interpolation-keyframe-type-all-modes">Keyframe Easing, Handle Type, Keyframe Interpolation, Keyframe Type - All Modes</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/keyframe-easing-handle-type-keyframe-interpolati.png" alt="Keyframe Easing, Handle Type, Keyframe Interpolation, Keyframe Type - All Modes" loading="lazy"><figcaption>Keyframe Easing, Handle Type, Keyframe Interpolation, Keyframe Type - All Modes</figcaption></figure>
+<h4 id="easing-mode">Easing Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/easing-mode.png" alt="Easing Mode" loading="lazy"></figure>
+<p>Choose between different easing modes for the selected keyframes. Easing is a method to fade in and out curves.</p>
+<h4 id="handle-type">Handle Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/handle-type.png" alt="Handle Type" loading="lazy"></figure>
+<p>Set the handle type for the currently selected keyframes.</p>
+<p>This is a feature for the Graph editor, where each curve point has its own handler with which you can influence the curve behaviour. But the handler type also influences how the animation curve acts at the chosen keyframes. So it has its use in the dopesheet editor too.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/handle-type-2.png" alt="Handle Type" loading="lazy"></figure>
+<h4 id="set-keyframe-interpolation">Set Keyframe Interpolation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/set-keyframe-interpolation.png" alt="Set Keyframe Interpolation" loading="lazy"></figure>
+<p>The Interpolation mode defines how the curve acts from keyframe to keyframe. You can have a linear curve between two keyframes instead of a bent one for example.</p>
+<p>The easing methods here in the interpolation mode menü are for the easing shape. There is also a easing menu where you can choose a easing method.</p>
+<h4 id="keyframe-type">Keyframe Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/keyframe-type.png" alt="Keyframe Type" loading="lazy"></figure>
+<p>Recolor the currently selected keyframes. Or create the next keyframe with this chosen keyframe color.</p>
+<h3 id="tools-action-slots-action-editor-mode">Tools + Action Slots - Action Editor mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/tools-action-slots-action-editor-mode.png" alt="Tools + Action Slots - Action Editor mode" loading="lazy"><figcaption>Tools + Action Slots - Action Editor mode</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/tools-action-slots-action-editor-mode-2.png" alt="Tools + Action Slots - Action Editor mode" loading="lazy"><figcaption>Tools + Action Slots - Action Editor mode</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/tools-action-slots-action-editor-mode-3.png" alt="Tools + Action Slots - Action Editor mode" loading="lazy"><figcaption>Tools + Action Slots - Action Editor mode</figcaption></figure>
+<h4 id="action-data-browser-property">Action Data Browser property</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/action-data-browser-property.png" alt="Action Data Browser property" loading="lazy"><figcaption>Action Data Browser property</figcaption></figure>
+<p>When there is more than one animated object in the scene then you have most probably more than one action in the scene too. The Action Data Browser allows you to display, select and rename the available actions in the scene.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action Data Browser</td>
+<td>The list of available actions in the scene.</td>
+</tr>
+<tr>
+<td>Number of Fake Users</td>
+<td>Displays the current number of fake users for the active action.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Assign a fake user to this action. Fake users is a odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</td>
+</tr>
+<tr>
+<td>New Action</td>
+<td>Add a new blank action.</td>
+</tr>
+<tr>
+<td>Unlink Action</td>
+<td>Delete the current active action.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="included-data-property">Included data property</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/included-data-property.png" alt="Included data property" loading="lazy"></figure>
+<p>This slot identifies which data is included in the action clip. This is useful to animate multiple elements together. You can assign the objects in the Animation Panel or Dopesheet in Action Clip mode. Its identifier natge is used to find the right slot wehn assigning an Action.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Browser</td>
+<td>The list of available objects in the action.</td>
+</tr>
+<tr>
+<td>New Slot</td>
+<td>Add a new object to the animation slot.</td>
+</tr>
+<tr>
+<td>Unassign Slot</td>
+<td>Delete the current active object from the animation slot</td>
+</tr>
+</tbody>
+</table>
+<h4 id="push-down">Push Down</h4>
+<p>Adds the active action on to the NLA stack as a contributing strip. The same can be done by pressing the Push Down button in the NLA Editor.</p>
+<h4 id="stash">Stash</h4>
+<p>Stashes the active action on to the NLA stack. This means it is added as a non-contributing stack in the same way that it would if you were creating a new action instead.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Push down and Stash adds the action to the NLA stack. It is cleared / unassigned from the active action slot.</p>
+<p>This means that the action cannot be edited anymore fom the Action or Graph Editors, unless you enter “Tweak Mode” on the corresponding strips later.</p></div>
+<h4 id="only-show-slot-of-active-object">Only show Slot of active Object</h4>
+<p>Show or hide other action slots.</p>
+<h3 id="tools-grease-pencil-mode">Tools - Grease Pencil mode</h3>
+<h4 id="add-new-layer">Add new Layer</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/add-new-layer.png" alt="Add new Layer" loading="lazy"></figure>
+<p>Adds a new blank grease pencil layer.</p>
+<h4 id="remove-layer">Remove Layer</h4>
+<p>Removes the currently selected grease pencil layer.</p>
+<h4 id="layer-specials">Layer Specials</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/layer-specials.png" alt="Layer Specials" loading="lazy"></figure>
+<p>A menu with grease pencil functionality.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move to Top</td>
+<td>Move the layer to Top</td>
+</tr>
+<tr>
+<td>Move to Bottom</td>
+<td>Move the layer to Bottom.</td>
+</tr>
+<tr>
+<td>Duplicate layer</td>
+<td>Duplicates the currently selected grease pencil layer.</td>
+</tr>
+<tr>
+<td>Duplicate Empty layer</td>
+<td>Add an empty copy of the selected grease pencil layer.</td>
+</tr>
+<tr>
+<td>Show All</td>
+<td>Shows all hidden grease pencil layers.</td>
+</tr>
+<tr>
+<td>Hide Others</td>
+<td>Hides all grease pencil layers but the selected.</td>
+</tr>
+<tr>
+<td>Lock All</td>
+<td>Locks all grease pencil layers.</td>
+</tr>
+<tr>
+<td>Unlock All</td>
+<td>Unlocks all grease pencil layers.</td>
+</tr>
+<tr>
+<td>Merge Down</td>
+<td>Merge the current layer with the layer below.</td>
+</tr>
+<tr>
+<td>Merge Group</td>
+<td>Combine layers based on the mode into one layer.</td>
+</tr>
+<tr>
+<td>Merge All</td>
+<td>Merge all layers together</td>
+</tr>
+<tr>
+<td>Copy Layer to selected</td>
+<td>Copies the grease pencil layer to the selected object.</td>
+</tr>
+<tr>
+<td>Copy All Layers to selected</td>
+<td>Copies all grease pencil layer to the selected object.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move Grease Pencil Layer upwards</td>
+<td>Moves the grease pencil layer upwards in the hierarchy.</td>
+</tr>
+<tr>
+<td>Move Grease Pencil Layer downwards</td>
+<td>Moves the grease pencil layer downwards in the hierarchy.</td>
+</tr>
+<tr>
+<td>Isolate Layer with visibility</td>
+<td>Locks and hides the currently active grease pencil layer.</td>
+</tr>
+<tr>
+<td>Isolate Layer without visibility</td>
+<td>Locks the currently active grease pencil layer.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="options-2">Options</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/options.png" alt="Options" loading="lazy"></figure>
+<h4 id="real-time-updates">Real-time Updates</h4>
+<p>When transforming keyframes then this transformation is also immediately visible in other editors.</p>
+<h4 id="show-seconds">Show Seconds</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/show-seconds.png" alt="Show Seconds" loading="lazy"></figure>
+<p>Show the timing in the timeline area in seconds instead of frames.</p>
+<h4 id="sync-visible-range">Sync visible range</h4>
+<p>Synchronize the visible timeline range with other visible time based editors. When you zoom in or out in the one editor, then it zooms in or out in the other editor too. Each editor to sync needs to have Sync Visible Range ticked.</p>
+<h4 id="show-sliders">Show Sliders</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/show-sliders.png" alt="Show Sliders" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/show-sliders-2.png" alt="Show Sliders" loading="lazy"></figure>
+<p>Shows the value sliders for f-curve channels in the channel list.</p>
+<h4 id="show-handles-and-interpolation">Show Handles and Interpolation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/show-handles-and-interpolation.png" alt="Show Handles and Interpolation" loading="lazy"><figcaption>Show Handles and Interpolation</figcaption></figure>
+<p>With this option on the keyframes shows different shapes that depends of their handle type.</p>
+<p>With this option off all keyframes shows as diamond shape.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/show-handles-and-interpolation-2.png" alt="Show Handles and Interpolation" loading="lazy"><figcaption>Show Handles and Interpolation</figcaption></figure>
+<h4 id="show-curve-extremes">Show Curve Extremes</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/show-curve-extremes.png" alt="Show Curve Extremes" loading="lazy"></figure>
+<p>Shows the curve extremes at the keyframe icons.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AutoMerge Keyframes</td>
+<td>Automatically merge nearby keyframes.</td>
+</tr>
+<tr>
+<td>Show Markers</td>
+<td>Display the markers row at the bottom of the view.</td>
+</tr>
+<tr>
+<td>Lock Markers</td>
+<td>Make the markers uneditable.</td>
+</tr>
+<tr>
+<td>Sync Markers</td>
+<td>Sync markers with keyframe edits. When you move the keyframes, then the markers will move too.</td>
+</tr>
+<tr>
+<td>Show Cache</td>
+<td>Show the status of cached frames in the timeline. · <strong>Softbody</strong>: Show the status for softbody objects. · <strong>Particles</strong>: Show the status for Particles objects. · <strong>Cloth</strong>: Show the status for Cloth objects. · <strong>Simulation Nodes</strong>: Show the status for Simulation Nodes objects. · <strong>Smoke</strong>: Show the status for Smoke objects. · <strong>Dynamic Paint</strong>: Show the status for Dynamic Paint objects. · <strong>Rigid Body</strong>: Show the status for Rigid Body objects.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="show-overlays">Show Overlays</h3>
+<h4 id="show-overlays-2">Show Overlays</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/header-tools-and-options/show-overlays.png" alt="Show Overlays" loading="lazy"></figure>
+<p>Show the overlays.</p>
+<h4 id="overlay-options">Overlay Options</h4>
+<h5 id="dope-sheet-overlays">Dope Sheet Overlays</h5>
+<h6 id="show-scene-strip-range">Show Scene Strip Range</h6>
+<p>Show the scene strip range when synchronizing the time with the sequencer.</p>
+<h1 id="quick-menu">Quick Menu</h1>
+<h3 id="quick-menu-2">Quick Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/quick-menu/quick-menu.png" alt="Quick Menu" loading="lazy"></figure>
+<p>The quick menu, or in long Quick Favorites menu, is a menu that can be customized to your needs. Here you can add operators for quick access.</p>
+<p>It is located in the header. But it can be called by hotkey Q directly under the mouse. This hotkey works in other editors too.</p>
+<p>When the menu is empty, then you will see the message &quot;No Menu Items found&quot;. This means that you first have to add some tools to the menu. It is a user configurable menu.</p>
+<p>Note that added operators in this menu does not have icons. Just text.</p>
+<h4 id="adding-an-operator-to-the-quick-menu">Adding an operator to the Quick menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/quick-menu/adding-an-operator-to-the-quick-menu.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
+<p>Open the panel or the menu where your operator is that you want to add.</p>
+<p>Let's add the open command from the File menu. Open the File menu, right click at open, and choose Add to Quick Favorites.</p>
+<p>Do the same with Save As. We should now have two new menu items in the Quick menu, which you can use now.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/quick-menu/adding-an-operator-to-the-quick-menu-2.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
+<p>As a rule of thumb, when the right click menu has an Add to Quick Favorites, then you can add it to the quick menu.</p>
+<p>Note that you can also add operators from the tool shelf at the left. And also operators from other editor types. Some other editors have their own quick menu though. The Image Editor for example. These operators gets added in the quick menu of the image editor then. And does not show in the quick menu in the header of the 3D view.</p>
+<h4 id="adding-a-menu-to-the-quick-menu">Adding a menu to the Quick menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/quick-menu/adding-a-menu-to-the-quick-menu.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
+<p>It is also possible to add a menu to the Quick menu. For example the whole Add menu. The way is the same. Right click at it, and choose Add to Quick Favorites.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/quick-menu/adding-a-menu-to-the-quick-menu-2.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
+<h4 id="order">Order</h4>
+<p>You might notice that the add menu adds at the top of the menu, and not at the bottom as you would expect. First comes menus, then comes operators. And they get added in the order in which you add them.</p>
+<p>Besides that, operators and menus gets added in the order that you add them. They cannot be sorted afterwards. So be careful how you add them. You can of course always remove operators and menus, and re-add them at the end of the list.</p>
+<h4 id="removing-an-operator-from-the-quick-menu">Removing an operator from the Quick menu</h4>
+<blockquote>
+<p>The <strong>Quick Favorites</strong> menu (Q) holds the tools and menus you add to it yourself. See <strong><a href="https://github.com/Bforartists/Manual/blob/docs2/quick-fixes-1/docs2/content/interface/floating-menus.md#quick-favorites">Quick Favorites</a></strong> in the Interface chapter.</p>
+</blockquote>
+<h4 id="context-and-mode-dependent-content">Context and mode dependent content</h4>
+<p>The quick favorites. menu exists in nearly all editors. But it is just in the 3D view available in the header. So that you know this functionality exists. In the other editors you call it with hotkey Q.</p>
+<p>The content of the quick favorites. menu changes, dependent over which editor you are, and in what mode you are. When you add for example an operator from the image editor, then this operator just shows in the quick menu when you call the menu from the image editor. Same goes for the modes. Edit mode tools will just show in edit mode. And so on.</p>
+<h1 id="view-menu">View Menu</h1>
+<h3 id="dopesheet-editor-view-menu">Dopesheet Editor - View Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/view-menu/dopesheet-editor-view-menu.jpg" alt="Dopesheet Editor - View Menu" loading="lazy"><figcaption>Dopesheet Editor - View Menu</figcaption></figure>
+<p>The View menu contains all View related tools.</p>
+<p>The content is for all modes the same.</p>
+<h4 id="channels-list">Channels List</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/view-menu/channels-list.png" alt="Channels List" loading="lazy"></figure>
+<p>Shows or hides the Channels list at the left in the viewport.</p>
+<h4 id="sidebar">Sidebar</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/view-menu/sidebar.png" alt="Sidebar" loading="lazy"></figure>
+<p>Shows or hides the sidebar at the right in the viewport.</p>
+<h4 id="adjust-last-operation">Adjust Last Operation</h4>
+<p>Show the adjust last operation panel down left when you use a tool.</p>
+<h4 id="footer">Footer</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/view-menu/footer.png" alt="Footer" loading="lazy"></figure>
+<p>Reveals the footer.</p>
+<h4 id="set-preview-range">Set Preview Range</h4>
+<p>Rectangle select an area of the timeline that gets previewed. The playback now just happens in this marked area.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/view-menu/set-preview-range.png" alt="Set Preview Range" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/view-menu/set-preview-range-2.png" alt="Set Preview Range" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear Preview Range</td>
+<td>Clears an existing preview range.</td>
+</tr>
+<tr>
+<td>Set Preview Range to selected</td>
+<td>Sets the preview range to fit the first and last selected keyframe.</td>
+</tr>
+<tr>
+<td>Frame Scene Range</td>
+<td>With Use Preview Range off , reset the horizontal view to the current scene frame range.</td>
+</tr>
+<tr>
+<td>Frame Preview Range</td>
+<td>With Use Preview Range on , reset the horizontal view to the current preview frame range.</td>
+</tr>
+<tr>
+<td>Zoom In</td>
+<td>Zooms into the viewport.</td>
+</tr>
+<tr>
+<td>Zoom Out</td>
+<td>Zooms out of the viewport.</td>
+</tr>
+<tr>
+<td>Zoom Border</td>
+<td>Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button.</td>
+</tr>
+<tr>
+<td>Frame All</td>
+<td>Zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport.</td>
+</tr>
+<tr>
+<td>Frame Selected</td>
+<td>Centers the view at the currently selected keyframe(s).</td>
+</tr>
+<tr>
+<td>Go to current Frame</td>
+<td>Centers the view at the frame slider.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pie-menus">Pie menus</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/view-menu/pie-menus.png" alt="Pie menus" loading="lazy"></figure>
+<p>Lists the available pie menus, and gives you the ability to read the hotkeys and assign own hotkeys.</p>
+<h4 id="area">Area</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/view-menu/area.png" alt="Area" loading="lazy"></figure>
+<p>This menu contains general view functionality. And exists in most other editor types too.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal Split</td>
+<td>Splits the current view horizontally into two independent editor windows.</td>
+</tr>
+<tr>
+<td>Vertical Split</td>
+<td>Splits the current view vertically into two independent editor windows.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="duplicate-area-into-new-window">Duplicate Area into New Window</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/view-menu/duplicate-area-into-new-window.png" alt="Duplicate Area into New Window" loading="lazy"><figcaption>Duplicate Area into New Window</figcaption></figure>
+<blockquote>
+<p><strong>Duplicate Area into New Window</strong> opens this editor in a floating window. See <strong><a href="https://github.com/Bforartists/Manual/blob/docs2/quick-fixes-1/docs2/content/interface/windows.md#floating-editor-windows">Floating editor windows</a></strong> in the Interface chapter.</p>
+</blockquote>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Maximize Area</td>
+<td>Displays the editor maximized with menus. To return from the maximized view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Space</kbd></span>. Or reuse the menu item in the area menu.</td>
+</tr>
+<tr>
+<td>Toggle Full screen Area</td>
+<td>Displays the editor maximized without menus. To return from the full screen view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd></span>.</td>
+</tr>
+<tr>
+<td>Close Area</td>
+<td>Closes the area window.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="toggle-graph-editor">Toggle Graph Editor</h4>
+<p>Switch to the Graph Editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/view-menu/toggle-graph-editor.png" alt="Toggle Graph Editor" loading="lazy"></figure>
+<p>Note that this is a Blender relict. In Bforartists we already have a convenient top level UI menu entry to switch between the editors. We haven't removed this Blender entry for two reasons. It can be hotkeyed. And the entry shows that this Blender functionality exists.</p>
+<h1 id="select-menu">Select Menu</h1>
+<h3 id="dopesheet-editor-select-menu">Dopesheet Editor - Select Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/select-menu/dopesheet-editor-select-menu.png" alt="Dopesheet Editor - Select Menu" loading="lazy"><figcaption>Dopesheet Editor - Select Menu</figcaption></figure>
+<p>The Select menu contains various tools to select elements.</p>
+<p>The content is the same in all modes. With one exception. Grease Pencil mode is missing the More / Less menu items.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All</td>
+<td>Select everything.</td>
+</tr>
+<tr>
+<td>None</td>
+<td>Select nothing.</td>
+</tr>
+<tr>
+<td>Inverse</td>
+<td>Invert the current selection.</td>
+</tr>
+<tr>
+<td>Box Select</td>
+<td>Box select enters the Border Select mode. Select elements by dragging a rectangle around it. Just what's inside of the rectangle gets selected then. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse.</td>
+</tr>
+<tr>
+<td>Box Select(Axis Range)</td>
+<td>Box select enters the Border Select mode. Select elements by dragging a rectangle around it. And what's inside the horizontal range of the rectangle gets selected then. Even when the keyframes are outside of the rectangle. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse.</td>
+</tr>
+<tr>
+<td>Circle Select</td>
+<td>Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lasso-select">Lasso Select</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/select-menu/lasso-select.png" alt="Lasso Select" loading="lazy"></figure>
+<p>A sub menu with the available lasso select modes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Columns on Selected Keys</td>
+<td>Select the keyframes in the columns of the currently selected keyframe.</td>
+</tr>
+<tr>
+<td>Columns on Current Frame</td>
+<td>Select the keyframes in the columns of the current frame.</td>
+</tr>
+<tr>
+<td>Columns on Selected Markers</td>
+<td>Select the keyframes in the columns of the selected markers.</td>
+</tr>
+<tr>
+<td>Between Selected Markers</td>
+<td>Select the keyframes between the selected markers. You need to have markers in the view for this feature.</td>
+</tr>
+<tr>
+<td>Linked</td>
+<td>Select all UV vertices linked to the active UV map. The previous selection gets cleared.</td>
+</tr>
+<tr>
+<td>Before current Frame</td>
+<td>Select the keyframes before the current frame.</td>
+</tr>
+<tr>
+<td>After current Frame</td>
+<td>Select the keyframes after the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="more-less-sub-menu">More/Less Sub-menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/select-menu/more-less-sub-menu.png" alt="More/Less Sub-menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>More</td>
+<td>Grow the selection.</td>
+</tr>
+<tr>
+<td>Less</td>
+<td>Shrink the selection.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="marker-menu">Marker Menu</h1>
+<h3 id="dopesheet-editor-marker-menu">Dopesheet Editor - Marker Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/marker-menu/dopesheet-editor-marker-menu.png" alt="Dopesheet Editor - Marker Menu" loading="lazy"><figcaption>Dopesheet Editor - Marker Menu</figcaption></figure>
+<p>Markers are visual landmarks. They can mark a start of a specific animation sequence, the end of a camera movement, and so on.</p>
+<p>When you add one then a marker area appears at the bottom of the timeline.</p>
+<p>Markers can be pulled around by clicking at them and dragging them left or right. The active marker is yellow.</p>
+<p>By holding down shift you can select more than one marker.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Marker</td>
+<td>Adds a marker at the current frame position</td>
+</tr>
+<tr>
+<td>Duplicate Marker</td>
+<td>Duplicates the selected marker(s). The duplicate(s) sticks at the mouse until you click to give it the target destination.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="duplicate-marker-to-scene">Duplicate Marker to Scene</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/marker-menu/duplicate-marker-to-scene.png" alt="Duplicate Marker to Scene" loading="lazy"><figcaption>Duplicate Marker to Scene</figcaption></figure>
+<p>Duplicate markers to other scenes. A blend file can contain more than one scene. See Scene Properties in the Properties editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/marker-menu/duplicate-marker-to-scene-2.png" alt="Duplicate Marker to Scene" loading="lazy"><figcaption>Duplicate Marker to Scene</figcaption></figure>
+<h4 id="delete-marker">Delete Marker</h4>
+<p>Deletes the selected marker(s).</p>
+<h4 id="bind-camera-to-markers">Bind Camera to Markers</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/marker-menu/bind-camera-to-markers.png" alt="Bind Camera to Markers" loading="lazy"><figcaption>Bind Camera to Markers</figcaption></figure>
+<p>Bind camera to markers turns an object into a camera object. This can be any object in the scene. Not just camera objects.</p>
+<p>When the current frame position does not have a marker yet, then it creates a marker at the current frame position.</p>
+<p>By binding different objects or cameras at different marker locations you can switch cameras automatically.</p>
+<p>The marker with a bind camera attached will show a camera icon.</p>
+<h4 id="rename-marker">Rename Marker</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/marker-menu/rename-marker.png" alt="Rename Marker" loading="lazy"></figure>
+<p>A menu will open up where you can rename the active marker.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grab/Move Marker</td>
+<td>Hotkey only functionality! This menu item exists to show the hotkey to move the marker.</td>
+</tr>
+<tr>
+<td>Select submenu</td>
+<td><strong>All</strong>: Select all markers. · <strong>None</strong>: Select nothing. · <strong>Invert</strong>: Invert the selection. · <strong>Before Current Frame</strong>: Select all markers before Current Frame. · <strong>After Current Frame</strong>: Select all markers after Current Frame.</td>
+</tr>
+<tr>
+<td>Jump to Next Marker</td>
+<td>Sets the frame position to the next marker.</td>
+</tr>
+<tr>
+<td>Jump to Previous Marker</td>
+<td>Sets the frame position to the previous marker.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="channel-menu">Channel Menu</h1>
+<h3 id="dopesheet-editor-channel-menu">Dopesheet Editor - Channel Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/channel-menu/dopesheet-editor-channel-menu.png" alt="Dopesheet Editor - Channel Menu" loading="lazy"><figcaption>Dopesheet Editor - Channel Menu</figcaption></figure>
+<p>This menu contains functionality to manage the channels in the channels list at the left.</p>
+<p>The menu doesn't exist in all modes. It exists in Dope sheet, Action Editor and Grease Pencil mode. And has different content.</p>
+<h3 id="channel-menu-dope-sheet-action-editor-mode">Channel Menu - Dope sheet + Action Editor mode</h3>
+<h4 id="delete-channels">Delete Channels</h4>
+<p>Deletes the selected channels and all its keyframes.</p>
+<h4 id="group-channels">Group Channels</h4>
+<p>Creates a custom group from the selected channels.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/channel-menu/group-channels.png" alt="Group Channels" loading="lazy"></figure>
+<h4 id="ungroup-channels">Ungroup Channels</h4>
+<p>Removes the selected channels from the group, and adds them back to the original hierarchy.</p>
+<h4 id="channel-settings">Channel Settings</h4>
+<p>Adjusts the locks and check boxes in the channels list from outside of the channels list for all selected elements at once. With Toggle Mute you could, for example, disable all selected channels at once.</p>
+<p>The menu items should be self explaining.</p>
+<p>These are also accessible from the Dopesheet Channel Context Menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/channel-menu/channel-settings.png" alt="Channel Settings" loading="lazy"></figure>
+<h4 id="toggle-channel-editability">Toggle Channel Editability</h4>
+<p>Toggles the locks in the channel list from their previous state to locked and back.</p>
+<h4 id="extrapolation-mode">Extrapolation Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/channel-menu/extrapolation-mode.png" alt="Extrapolation Mode" loading="lazy"></figure>
+<p>Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constant Extrapolation</td>
+<td>The animation curve continues straight at the end.</td>
+</tr>
+<tr>
+<td>Linear Extrapolation</td>
+<td>The animation curve continues the last direction.</td>
+</tr>
+<tr>
+<td>Make Cyclic</td>
+<td>Makes the animation loopable. The interpolation curves are adjusted so that the first frame fits to the last frame.</td>
+</tr>
+<tr>
+<td>Clear Cyclic</td>
+<td>Removes the cyclic extrapolation.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expand Channels</td>
+<td>Expands all channels in the channel list.</td>
+</tr>
+<tr>
+<td>Collapse Channels</td>
+<td>Collapses all channels in the channels list.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="move">Move</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/channel-menu/move.png" alt="Move" loading="lazy"></figure>
+<p>Sort the items in the channels list.</p>
+<h4 id="revive-disabled-f-curves">Revive Disabled F-Curves</h4>
+<p>Clears the disabled tag from all f-curves to get broken F-Curves working again.</p>
+<h4 id="bake-channels">Bake Channels</h4>
+<p>Bakes the animation by adding a keyframe at every single frame.</p>
+<h5 id="adjust-last-operator-bake-channels">Adjust last operator Bake Channels</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/channel-menu/adjust-last-operator-bake-channels.png" alt="Adjust last operator Bake Channels" loading="lazy"><figcaption>Adjust last operator Bake Channels</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame Range</td>
+<td>The frame range of the animation to bake.</td>
+</tr>
+<tr>
+<td>Frame Step</td>
+<td>Create a keyframe every nth frame.</td>
+</tr>
+<tr>
+<td>Remove Outside Range</td>
+<td>Removes keyframes that are outside of the frame range.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="interpolation-type">Interpolation Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/channel-menu/interpolation-type.png" alt="Interpolation Type" loading="lazy"></figure>
+<p>Interpolation type for the animation curves.</p>
+<h6 id="bake-modifiers">Bake Modifiers</h6>
+<p>Bake modifiers into keyframes, and delete them.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame Selected Channels</td>
+<td>Resets the viewable area to show the selected channel keyframes. This will change the zoom to fit all in the selected chanel.</td>
+</tr>
+<tr>
+<td>Discontinuity (Euler Filter)</td>
+<td>Fix large jumps and flips in the selected Euler Rotacion F-Curves arising from the rotation values being clipped when baking physics. This operator only affects Euler rotation animation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="channel-menu-grease-pencil-mode">Channel Menu - Grease Pencil mode</h3>
+<h4 id="delete-channels-2">Delete Channels</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/channel-menu/delete-channels.png" alt="Delete Channels" loading="lazy"></figure>
+<p>Deletes the selected channels and all its keyframes.</p>
+<h4 id="channel-settings-2">Channel Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/channel-menu/channel-settings-2.png" alt="Channel Settings" loading="lazy"></figure>
+<p>Adjust the locks and check boxes in the channels list from outside of the channels list for all selected elements at once. With Toggle Mute you could for example disable all selected channels at once.</p>
+<p>The menu items should be self explaining.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/channel-menu/channel-settings-3.png" alt="Channel Settings" loading="lazy"></figure>
+<h4 id="move-channels">Move Channels</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/channel-menu/move-channels.png" alt="Move Channels" loading="lazy"></figure>
+<p>Sort the items in the channels list.</p>
+<h4 id="frame-selected-channels">Frame Selected Channels</h4>
+<p>Zooms in or out to fit the view to the selected channels.</p>
+<h1 id="key-menu">Key Menu</h1>
+<h3 id="dopesheet-editor-key-menu">Dopesheet Editor - Key Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/key-menu/dopesheet-editor-key-menu.png" alt="Dopesheet Editor - Key Menu" loading="lazy"><figcaption>Dopesheet Editor - Key Menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/key-menu/dopesheet-editor-key-menu-2.png" alt="Dopesheet Editor - Key Menu" loading="lazy"><figcaption>Dopesheet Editor - Key Menu</figcaption></figure>
+<p>The key menu contains functionality to manage the keyframes.</p>
+<p>The menu exist in all modes. In Grease Pencil mode it contains not so much functionality.</p>
+<p>The grease pencil object is a special object in this regards. It can have keyframes at an object level. And keyframes at a stroke level, which the grease pencil mode is meant for.</p>
+<h4 id="transform">Transform</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/key-menu/transform.png" alt="Transform" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grab/Move</td>
+<td>Moves the selected keyframe(s).</td>
+</tr>
+<tr>
+<td>Extend</td>
+<td>Moves the last keyframes of the selection.</td>
+</tr>
+<tr>
+<td>Slide</td>
+<td>Slides a selected keyframe between two other keyframes.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Scales the selected keyframes. You need to have more than one keyframe selected.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="last-operator-transform">Last Operator Transform</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/key-menu/last-operator-transform.png" alt="Last Operator Transform" loading="lazy"></figure>
+<p>The last operator is nearly equal for the transform operations above.</p>
+<h6 id="values">Values</h6>
+<p>The transform values.</p>
+<h6 id="axis">Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/key-menu/axis.png" alt="Axis" loading="lazy"></figure>
+<p>Which axis is up.</p>
+<h6 id="orientation">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/key-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation in which the transform should happen.</p>
+<h6 id="mirror-editing">Mirror Editing</h6>
+<p>Just with Grab/Move. Allow mirror edit the transform.</p>
+<h6 id="proportional-editing">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/key-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="snap">Snap</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/key-menu/snap.png" alt="Snap" loading="lazy"></figure>
+<p>Snaps the selected keyframes by the chosen method.</p>
+<h4 id="mirror">Mirror</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/key-menu/mirror.png" alt="Mirror" loading="lazy"></figure>
+<p>Flips the selected keyframes over the current frame position.</p>
+<h4 id="insert-keyframes">Insert Keyframes</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/key-menu/insert-keyframes.png" alt="Insert Keyframes" loading="lazy"></figure>
+<p>Inserts a keyframe at the current frame. The submenu sets which channels get it.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All Channels</td>
+<td>Inserts a keyframe in every channel.</td>
+</tr>
+<tr>
+<td>Only Selected Channels</td>
+<td>Inserts a keyframe in the selected channels only.</td>
+</tr>
+<tr>
+<td>In Active Group</td>
+<td>Inserts a keyframe in the channels of the active group.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="jump-copy-and-paste">Jump, Copy and Paste</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jump to Selected</td>
+<td>Sets the frame marker at the average position of the currently selected keyframes.</td>
+</tr>
+<tr>
+<td>Copy Keyframes</td>
+<td>Copy selected keyframes.</td>
+</tr>
+<tr>
+<td>Paste Keyframes / Flipped</td>
+<td>Pastes copied keyframes.</td>
+</tr>
+<tr>
+<td>Paste Flipped</td>
+<td>Pastes copied keyframes, but flipped.</td>
+</tr>
+<tr>
+<td>Duplicate</td>
+<td>Duplicate selected keyframes.</td>
+</tr>
+</tbody>
+</table>
+<p>To delete the selected keyframes, press <span class="ui-doc-keys"><kbd>Delete</kbd></span>.</p>
+<h4 id="delete-breakdown-frames">Delete Breakdown Frames</h4>
+<p>Remove breakdown frames generated by interpolating between two grease pencil frames.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Grease Pencil operator object only.</p></div>
+<h5 id="workflow">Workflow</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/key-menu/workflow.png" alt="Workflow" loading="lazy"></figure>
+<p>Grease Pencil in Draw mode. Generate two keyframes. Go to the Draw menu. Choose Interpolate Sequence.</p>
+<p>Delete Breakdown Frames now becomes active, and you can delete the interpolated keyframes if you need.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clean Keyframes</td>
+<td>Simplify FCurces by deleting keyframes that are close to each other in all channels</td>
+</tr>
+<tr>
+<td>Clean Channels</td>
+<td>Simplify FCurces by deleting keyframes that are close to each other in selected channels.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bake-keyframes">Bake Keyframes</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/key-menu/bake-keyframes.png" alt="Bake Keyframes" loading="lazy"></figure>
+<p>Adds keyframes at every unit between the selected keyframes.</p>
+<h1 id="action-menu">Action Menu</h1>
+<h3 id="dopesheet-editor-key-menu-2">Dopesheet Editor - Key Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/action-menu/dopesheet-editor-key-menu.png" alt="Dopesheet Editor - Key Menu" loading="lazy"><figcaption>Dopesheet Editor - Key Menu</figcaption></figure>
+<p>Just in Action Editor mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Merge Animation</td>
+<td>Merge the animation of the selected objects into the action of the active object. Actions are not deleted by this. But might end up with zero users.</td>
+</tr>
+<tr>
+<td>Separate Slots</td>
+<td>Move all sorts of the action on the active object into newly created, separate actions. All users of those slots will be reassigned to the new actions. The current action won't be deleted. But will be empty. And might end up with zero users.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="replace-action">Replace Action</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/action-menu/replace-action.png" alt="Replace Action" loading="lazy"></figure>
+<p>Swap all users of one action to another one. The normal action slot assignment rules apply. This ignores the NLA and Action Constraints</p>
+<h4 id="replace-action-new">Replace Action New</h4>
+<p>Swap all users of one action to a new action. This ignores the NLA and Action Constraints</p>
+<h4 id="move-slots-to-new-action">Move Slots to new Action</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/dope-sheet/header/action-menu/move-slots-to-new-action.jpg" alt="Move Slots to new Action" loading="lazy"><figcaption>Move Slots to new Action</figcaption></figure>
+<p>Move the selected slots into a newly created action.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fquick-fixes-1/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fdope-sheet%2Fheader%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/quick-fixes-1/docs2/content/editors/dope-sheet/header/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h3" href="#introduction">Introduction</a><a class="h3" href="#header-tabs">Header Tabs</a><a class="h3" href="#dope-sheet-modes">Dope Sheet Modes</a><a class="h3" href="#show-hide-elements">Show Hide elements</a><a class="h3" href="#filters-dope-sheet-mode">Filters - Dope Sheet Mode</a><a class="h3" href="#snapping-panel-most-modes">Snapping Panel – Most modes</a><a class="h3" href="#proportional-editing-all-modes">Proportional Editing - All Modes</a><a class="h3" href="#keyframe-easing-handle-type-keyframe-interpolation-keyframe-type-all-modes">Keyframe Easing, Handle Type, Keyframe Interpolation, Keyframe Type - All Modes</a><a class="h3" href="#tools-action-slots-action-editor-mode">Tools + Action Slots - Action Editor mode</a><a class="h3" href="#tools-grease-pencil-mode">Tools - Grease Pencil mode</a><a class="h3" href="#options-2">Options</a><a class="h3" href="#show-overlays">Show Overlays</a><a class="h3" href="#quick-menu-2">Quick Menu</a><a class="h3" href="#dopesheet-editor-view-menu">Dopesheet Editor - View Menu</a><a class="h3" href="#dopesheet-editor-select-menu">Dopesheet Editor - Select Menu</a><a class="h3" href="#dopesheet-editor-marker-menu">Dopesheet Editor - Marker Menu</a><a class="h3" href="#dopesheet-editor-channel-menu">Dopesheet Editor - Channel Menu</a><a class="h3" href="#channel-menu-dope-sheet-action-editor-mode">Channel Menu - Dope sheet + Action Editor mode</a><a class="h3" href="#channel-menu-grease-pencil-mode">Channel Menu - Grease Pencil mode</a><a class="h3" href="#dopesheet-editor-key-menu">Dopesheet Editor - Key Menu</a><a class="h3" href="#dopesheet-editor-key-menu-2">Dopesheet Editor - Key Menu</a></aside></div></body></html>

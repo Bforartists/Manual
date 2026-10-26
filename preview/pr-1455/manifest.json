@@ -1,0 +1,19 @@
+{
+ "pages": {
+  "docs2/content/editors/3d-viewport/grease-pencil/draw.md": "editors/3d-viewport/grease-pencil/draw.html",
+  "docs2/content/editors/3d-viewport/mesh/sculpt/sidebar.md": "editors/3d-viewport/mesh/sculpt/sidebar.html",
+  "docs2/content/editors/3d-viewport/object-mode/header.md": "editors/3d-viewport/object-mode/header.html",
+  "docs2/content/editors/dope-sheet/header/index.md": "editors/dope-sheet/header.html",
+  "docs2/content/editors/file-browser.md": "editors/file-browser.html",
+  "docs2/content/editors/geometry-node-editor/header/add-menu/utilities.md": "editors/geometry-node-editor/header/add-menu/utilities.html",
+  "docs2/content/editors/nonlinear-animation-editor/header/index.md": "editors/nonlinear-animation-editor/header.html",
+  "docs2/content/editors/properties/object-properties-tab.md": "editors/properties/object-properties-tab.html",
+  "docs2/content/editors/properties/output-properties-tab.md": "editors/properties/output-properties-tab.html",
+  "docs2/content/editors/toolbar.md": "editors/toolbar.html",
+  "docs2/content/editors/topbar-and-statusbar/index.md": "editors/topbar-and-statusbar.html",
+  "docs2/content/editors/topbar-and-statusbar/topbar-menus/index.md": "editors/topbar-and-statusbar/topbar-menus.html",
+  "docs2/content/editors/video-sequence-editor/header/index.md": "editors/video-sequence-editor/header.html",
+  "docs2/content/interface/tool-shelves.md": "interface/tool-shelves.html"
+ },
+ "images": 1592
+}
