@@ -284,3 +284,9 @@ Ctrl + F12 = Render Animation
 | Play rendered animation | Ctrl + F11 |
 | Render Still | `F12` |
 | Render Animation | Ctrl + F12 |
+
+## See them in the viewport
+
+Bforartists can show these keys right in the 3D Viewport, so you don't need this page open. In the 3D Viewport sidebar, open the **View** tab and find the **Important Hotkeys** panel, then click **Show Text**. The list appears in the top left corner of the viewport and changes with the mode you are in. The same panel sets the text colour and size.
+
+> **Tip:** No Important Hotkeys panel? It comes from the **Important Hotkeys Overlays** add-on that ships with Bforartists. Turn it on in Edit › Preferences › Add-ons.

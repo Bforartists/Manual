@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · interactive keymap · @version 1.1.1
+/* Bforartists Docs 2.0 · interactive keymap · @version 1.1.2
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer). The sync turns
  * <!-- keymap-explorer --> in a page into <div class="ui-keymap"><ul><li data-k="keymap" data-src=…>,
@@ -30,7 +30,7 @@
     nodetree: '68b9b6366471bec877610651_nodetree.svg', nla: '68b9b8e348822d01d677f130_nla.svg', outliner: '68b9b91c9f11937550db98e5_outliner.svg',
     preferences: '68b9b9402d131603f8283ec8_preferences.svg', properties: '68b9b9450739193840158e60_properties.svg', console: '68b9b70e870da2e1d34fbd77_console.svg',
     spreadsheet: '68b9bb82688b6bd2d2b97e0b_spreadsheet.svg', text: '68b9bb992ec361f6e58cd575_text.svg', sequence: '68b9bb585b21106bf2938fb9_sequence.svg',
-    window: '68b8d7589dacef091df81759_window.svg', object_datamode: '68b9b4ad3c7014ce29269cbb_object_datamode.svg', editmode_hlt: '68b9b73a62a18132461564fb_editmode_hlt.svg',
+    window: '68b8d7589dacef091df81759_window.svg', bforartists: '68b9b6e34c7998c9fca24560_blender.svg', object_datamode: '68b9b4ad3c7014ce29269cbb_object_datamode.svg', editmode_hlt: '68b9b73a62a18132461564fb_editmode_hlt.svg',
     sculptmode_hlt: '68b9bb35378431b6f223bca7_sculptmode_hlt.svg', vpaint_hlt: '68b9bbd9f63df100f2ab0b73_vpaint_hlt.svg', wpaint_hlt: '68b9bbe2688b6bd2d2b99bfa_wpaint_hlt.svg',
     tpaint_hlt: '68b9bba3f4e9a8f95b7dc4d9_tpaint_hlt.svg', pose_hlt: '68b9b93e25eed9bb42d40618_pose_hlt.svg', particlemode: '68b9b9313a78871163fde2a6_particlemode.svg',
     greasepencil: '68b9b778f5f5795369104956_greasepencil.svg', uv: '68b8f55bf9193241eb1db35b_uv.svg', marker: '68b9b7ebe5b26d66efa3b4df_marker.svg',
@@ -131,7 +131,8 @@
     '.kmx-fld>span,.kmx-cap{font:700 .6875rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--k-mute)}',
     '.kmx-segs{display:flex;flex-wrap:wrap;gap:.5rem}',
     '.kmx-seg{display:flex;gap:3px;flex-wrap:wrap;max-width:100%}',
-    '.kmx .kmx-seg .ui-segment-item{white-space:nowrap;flex:0 0 auto}',
+    '.kmx .kmx-seg .ui-segment-item{white-space:nowrap;flex:0 0 auto;font-weight:600;display:inline-flex;align-items:center;gap:.375rem}',
+    '.kmx .kmx-seg .ui-seg-icon{width:16px;height:16px;margin:0!important}',
     '.kmx-short{display:none}',
     '.kmx .kmx-seg .ui-segment-item{cursor:pointer;font-family:inherit}',
     '.kmx-dd{position:relative}',
@@ -154,11 +155,12 @@
     '.kmx-find .kmx-pop li small{grid-column:1/-1;color:var(--k-mute);font-size:.75rem}',
     '.kmx-tip{flex:1 1 100%;margin:0!important;font-size:.8125rem;color:var(--k-mute)}',
     /* hold row */
-    '.kmx-mods{display:flex;flex-wrap:wrap;gap:.375rem;align-items:center;margin:0 0 .75rem}',
+    '.kmx-mods{display:flex;flex-direction:column;gap:.5rem;margin:0 0 .75rem}',
+    '.kmx-hold{display:flex;flex-wrap:wrap;gap:.375rem;align-items:center}',
     '.kmx-mods>small{margin-right:.25rem}',
-    '.kmx-mod{min-width:4.5rem;justify-content:center;cursor:pointer;font-family:inherit}',
+    '.kmx .kmx-mod{min-width:4.75rem;justify-content:center;cursor:pointer;font-family:inherit}',
     '.kmx-mod.is-on{background:var(--k-sel)!important;color:#fff!important}',
-    '.kmx-combos{display:flex;flex-wrap:wrap;gap:.375rem;margin-left:auto}',
+    '.kmx-combos{display:flex;flex-wrap:wrap;gap:.375rem}',
     '.kmx .kmx-combos .ui-chip{cursor:pointer;font-family:inherit}',
     '.kmx-sink{padding:1rem;border-radius:1.25rem;background:var(--k-well);box-shadow:inset 0 14px 18px -8px #000000bf}',
     /* keyboard */
@@ -225,7 +227,7 @@
     '.kmx-list button{display:flex;gap:.625rem;align-items:center;width:100%;padding:.5rem .25rem;border:0;border-bottom:1px solid #ffffff10;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}',
     '.kmx-list button i{flex:none;width:.6rem;height:.6rem;border-radius:2px;background:var(--c)}',
     '.kmx-list button span{flex:1;min-width:0;font-size:.875rem}',
-    '@container (max-width:44rem){.kmx-kb{flex-wrap:wrap;gap:.6em}.kmx-main{flex:1 1 100%}.kmx-nav,.kmx-pad{flex:1 1 0}.kmx-nav .kmx-r:first-child,.kmx-pad .kmx-r:first-child{display:none}.kmx-k span,.kmx-k em{display:none}.kmx-k{justify-content:center;align-items:center;padding:.1em}.kmx-k b{font-size:.95em;max-width:100%;overflow:hidden;text-overflow:ellipsis}.kmx-r{min-height:2.7em}.kmx-kbwrap{font-size:clamp(8px,2.5cqw,13px)}.kmx-mouse{grid-template-columns:repeat(auto-fill,minmax(8.5rem,1fr))}.kmx-mouse .kmx-k span{display:-webkit-box}.kmx-mouse .kmx-k{align-items:flex-start}.kmx-listd{display:block}.kmx-dd>button{min-width:0;width:100%}.kmx-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.625rem}.kmx-head>.kmx-fld:first-child,.kmx-head>.kmx-find,.kmx-head>.kmx-tip{grid-column:1/-1}.kmx-long{display:none}.kmx-short{display:inline}.kmx-seg{flex:1 1 100%}.kmx .kmx-seg .ui-segment-item{flex:1 1 0;justify-content:center}.kmx-pop{max-height:16rem}.kmx-combos{margin-left:0}.kmx-sink{padding:.625rem}}'
+    '@container (max-width:44rem){.kmx-kb{flex-wrap:wrap;gap:.6em}.kmx-main{flex:1 1 100%}.kmx-nav,.kmx-pad{flex:1 1 0}.kmx-nav .kmx-r:first-child,.kmx-pad .kmx-r:first-child{display:none}.kmx-k span,.kmx-k em{display:none}.kmx-k{justify-content:center;align-items:center;padding:.1em}.kmx-k b{font-size:.95em;max-width:100%;overflow:hidden;text-overflow:ellipsis}.kmx-r{min-height:2.7em}.kmx-kbwrap{font-size:clamp(8px,2.5cqw,13px)}.kmx-mouse{grid-template-columns:repeat(auto-fill,minmax(8.5rem,1fr))}.kmx-mouse .kmx-k span{display:-webkit-box}.kmx-mouse .kmx-k{align-items:flex-start}.kmx-listd{display:block}.kmx-dd>button{min-width:0;width:100%}.kmx-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.625rem}.kmx-head>.kmx-fld:first-child,.kmx-head>.kmx-find,.kmx-head>.kmx-tip{grid-column:1/-1}.kmx-long{display:none}.kmx-short{display:inline}.kmx-seg{flex:1 1 100%}.kmx .kmx-seg .ui-segment-item{flex:1 1 0;justify-content:center}.kmx-pop{max-height:16rem}.kmx-sink{padding:.625rem}}'
   ].join('\n');
 
   function q(s, r) { return (r || d).querySelector(s); }
@@ -323,7 +325,7 @@
       head.innerHTML = '';
       var segs = el('div', 'kmx-fld');
       segs.innerHTML = '<span>Keymap</span><div class="kmx-segs"><div class="kmx-seg ui-segment" role="group" aria-label="Keymap preset">' +
-        PRESETS.map(function (p) { var sh = p[0] === 'industry' ? 'Industry' : p[1]; return '<button type="button" class="ui-segment-item is-tag' + (S.p === p[0] ? ' is-active' : '') + '" data-p="' + p[0] + '" aria-pressed="' + (S.p === p[0]) + '" title="' + p[1] + '">' + (sh !== p[1] ? '<span class="kmx-long">' + p[1] + '</span><span class="kmx-short">' + sh + '</span>' : p[1]) + '</button>'; }).join('') +
+        PRESETS.map(function (p) { var sh = p[0] === 'industry' ? 'Industry' : p[1]; return '<button type="button" class="ui-segment-item is-tag' + (S.p === p[0] ? ' is-active' : '') + '" data-p="' + p[0] + '" aria-pressed="' + (S.p === p[0]) + '" title="' + p[1] + '">' + (p[0] === 'bforartists' ? img('bforartists', 'ui-seg-icon kmx-ic') : '') + (sh !== p[1] ? '<span class="kmx-long">' + p[1] + '</span><span class="kmx-short">' + sh + '</span>' : p[1]) + '</button>'; }).join('') +
         '</div><div class="kmx-seg ui-segment" role="group" aria-label="Platform">' + [['pc', 'Windows / Linux'], ['mac', 'macOS']].map(function (v) { return '<button type="button" class="ui-segment-item is-tag' + (S.v === v[0] ? ' is-active' : '') + '" data-v="' + v[0] + '" aria-pressed="' + (S.v === v[0]) + '">' + v[1] + '</button>'; }).join('') + '</div></div>';
       head.appendChild(segs);
       head.appendChild(dropdown('Editor', editors().map(function (e) { return [e, e, ED_IC[e]]; }), S.ed, function (v) { S.ed = v; S.mode = modesOf(v)[0] || ''; S.pick = null; drawHead(); draw(); }));
@@ -338,7 +340,7 @@
       var c = counts(all), mac = S.v === 'mac';
       var names = function (m) { return m ? MODS.filter(function (x) { return m.indexOf(x[0]) > -1; }).map(function (x) { return mac && x[0] === 'o' ? '⌘ Cmd' : x[1]; }).join(' + ') : 'No modifier'; };
       var combos = Object.keys(c).sort(function (a, b) { return a.length - b.length || c[b] - c[a]; });
-      mods.innerHTML = '<small class="kmx-cap">Hold</small>' + MODS.filter(function (m) { return m[0] !== 'o' || mac || c.o; }).map(function (m) { return '<button type="button" class="ui-btn is-small kmx-mod' + (S.mods.indexOf(m[0]) > -1 ? ' is-on' : '') + '" data-m="' + m[0] + '" aria-pressed="' + (S.mods.indexOf(m[0]) > -1) + '">' + (mac && m[0] === 'o' ? '⌘ Cmd' : m[1]) + '</button>'; }).join('') +
+      mods.innerHTML = '<div class="kmx-hold"><small class="kmx-cap">Hold</small>' + MODS.filter(function (m) { return m[0] !== 'o' || mac || c.o; }).map(function (m) { var on = S.mods.indexOf(m[0]) > -1; return '<button type="button" class="ui-btn dk-btn is-small kmx-mod' + (on ? ' is-accent is-on' : '') + '" data-m="' + m[0] + '" aria-pressed="' + on + '"><span class="ui-btn-label">' + (mac && m[0] === 'o' ? '⌘ Cmd' : m[1]) + '</span></button>'; }).join('') + '</div>' +
         '<span class="kmx-combos" aria-label="Combinations with keys here">' + combos.map(function (m) { return '<button type="button" class="ui-chip' + (m === S.mods ? ' is-active' : '') + '" data-combo="' + m + '">' + esc(names(m)) + ' · ' + c[m] + '</button>'; }).join('') + '</span>';
     }
     function keyMap(all) {   /* key → bindings for the modifiers held now ("any" bindings count too) */

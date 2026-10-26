@@ -75,7 +75,7 @@ sections:
 
   - id: keymap
     title: Keymap
-    icon: key_command
+    icon: monkey
     legacy: /documentation/keymap
     chapters: [41, 42]
 

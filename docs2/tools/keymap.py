@@ -284,32 +284,63 @@ def key_text(i):
     return txt + (f" ({v})" if v else "")
 
 
-def table_md(data):
-    kms = [k for k in data["variants"]["pc"] if k["ctx"].get("kind") == "keys"]
-    editors = sorted({k["ctx"]["editor"] for k in kms}, key=lambda e: (e == "Everywhere", e != "3D Viewport", e))
-    out = []
-    for ed in editors:
-        out += [f"## {ed}", ""]
-        modes = sorted({k["ctx"]["mode"] for k in kms if k["ctx"]["editor"] == ed},
-                       key=lambda m: (m not in ("Object Mode", "All modes", "General"), ("Object Mode", "All modes", "General").index(m) if m in ("Object Mode", "All modes", "General") else 0, m))
-        for mode in modes:
-            rows, seen = [], set()
-            for k in kms:
-                if k["ctx"]["editor"] != ed or k["ctx"]["mode"] != mode:
-                    continue
-                for i in k["items"]:
-                    if i.get("off") or T_HIDE.match(i["key"]):
-                        continue
-                    label = i["l"].replace("|", "/")
-                    row = (label, key_text(i))
-                    if row in seen:
-                        continue
-                    seen.add(row)
-                    rows.append(row)
-            if not rows:
+T_GROUPS = [   # sub-chapters of the Keymap Table page: (title, icon, editors)
+    ("3D Viewport", "view3d", ["3D Viewport"]),
+    ("Animation", "action", ["Animation editors", "Dope Sheet", "Graph Editor", "Nonlinear Animation"]),
+    ("Images and video", "image", ["Image Editor", "Movie Clip Editor", "Video Sequencer"]),
+    ("Nodes", "nodetree", ["Node Editor"]),
+    ("Data and files", "outliner", ["Outliner", "Properties Editor", "File Browser", "Spreadsheet", "Info Editor", "Preferences"]),
+    ("Scripting", "console", ["Text Editor", "Python Console"]),
+    ("Everywhere", "window", ["Everywhere"]),
+]
+MODE_FIRST = ("Object Mode", "All modes", "General")
+
+
+def _rows(kms):
+    rows, seen = [], set()
+    for k in kms:
+        for i in k["items"]:
+            if i.get("off") or T_HIDE.match(i["key"]):
                 continue
-            rows.sort(key=lambda r: r[0].lower())
-            out += [f"### {mode}", "", "| Action | Keys |", "|---|---|"] + [f"| {a} | {b} |" for a, b in rows] + [""]
+            row = (i["l"].replace("|", "/"), key_text(i))
+            if row not in seen:
+                seen.add(row)
+                rows.append(row)
+    return sorted(rows, key=lambda r: r[0].lower())
+
+
+def _table(rows):
+    return ["| Action | Keys |", "|---|---|"] + [f"| {a} | {b} |" for a, b in rows] + [""]
+
+
+def table_md(data):
+    """Seven # sub-chapters (each a panel in the page outline), an ## heading per editor, ### per mode."""
+    kms = [k for k in data["variants"]["pc"] if k["ctx"].get("kind") == "keys"]
+    have = {k["ctx"]["editor"] for k in kms}
+    groups = [list(g) for g in T_GROUPS]
+    listed = {e for g in groups for e in g[2]}
+    rest = sorted(have - listed)
+    if rest:                                  # an editor added by a new release lands in Data and files until it gets a group
+        groups[4][2] = groups[4][2] + rest
+    out = []
+    for title, icon, editors in groups:
+        eds = [e for e in editors if e in have]
+        if not eds:
+            continue
+        out += [f"# {title} {{icon={icon}}}", ""]
+        for ed in eds:
+            mine = [k for k in kms if k["ctx"]["editor"] == ed]
+            modes = sorted({k["ctx"]["mode"] for k in mine},
+                           key=lambda m: (m not in MODE_FIRST, MODE_FIRST.index(m) if m in MODE_FIRST else 0, m))
+            if len(eds) > 1:
+                out += [f"## {ed}", ""]
+            for mode in modes:
+                rows = _rows([k for k in mine if k["ctx"]["mode"] == mode])
+                if not rows:
+                    continue
+                if len(modes) > 1 or len(eds) == 1:
+                    out += [f"{'###' if len(eds) > 1 else '##'} {mode}", ""]
+                out += _table(rows)
     return "\n".join(out).rstrip() + "\n"
 
 
@@ -319,8 +350,8 @@ def write_table(path=TABLE_PAGE):
     block = f"{T_START}\n\n{table_md(data)}\n{T_END}"
     if T_START in page and T_END in page:
         new = page[:page.index(T_START)] + block + page[page.index(T_END) + len(T_END):]
-    elif re.search(r"^## ", page, re.M):   # the markers were lost (the online editor drops comments): the list starts at the first ## heading
-        at = re.search(r"^## ", page, re.M).start()
+    elif re.search(r"^#{1,2} ", page, re.M):   # the markers were lost (the online editor drops comments): the list starts at the first heading
+        at = re.search(r"^#{1,2} ", page, re.M).start()
         new = page[:at].rstrip() + "\n\n" + block + "\n"
     else:
         new = page.rstrip() + "\n\n" + block + "\n"

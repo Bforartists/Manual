@@ -16,9 +16,9 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 
 <!-- keymap-table:start (written by docs2/tools/keymap.py table; edit the text above it) -->
 
-## 3D Viewport
+# 3D Viewport {icon=view3d}
 
-### Object Mode
+## Object Mode
 
 | Action | Keys |
 |---|---|
@@ -71,7 +71,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Weight grease pencil mode | `5` |
 | Weight paint mode | `5` |
 
-### All modes
+## All modes
 
 | Action | Keys |
 |---|---|
@@ -171,7 +171,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Zoom view | `Wheel in` |
 | Zoom view | `Wheel out` |
 
-### Edit Mode · Armature
+## Edit Mode · Armature
 
 | Action | Keys |
 |---|---|
@@ -203,7 +203,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Separate | `P` |
 | Shortest path pick | Ctrl + Left mouse (click) |
 
-### Edit Mode · Curve
+## Edit Mode · Curve
 
 | Action | Keys |
 |---|---|
@@ -235,7 +235,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Shortest path pick | Ctrl + Left mouse (click) |
 | Vertex add | Ctrl + Right mouse (click) |
 
-### Edit Mode · Hair Curves
+## Edit Mode · Hair Curves
 
 | Action | Keys |
 |---|---|
@@ -254,7 +254,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Set selection domain | Alt + 1 (release) |
 | Set selection domain | Alt + 2 (release) |
 
-### Edit Mode · Lattice
+## Edit Mode · Lattice
 
 | Action | Keys |
 |---|---|
@@ -272,7 +272,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Select more | Ctrl + Numpad + |
 | Select tool | `D` (click) |
 
-### Edit Mode · Mesh
+## Edit Mode · Mesh
 
 | Action | Keys |
 |---|---|
@@ -325,7 +325,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Subdivision set | Ctrl + 5 |
 | Uv map menu | `U` |
 
-### Edit Mode · Metaball
+## Edit Mode · Metaball
 
 | Action | Keys |
 |---|---|
@@ -347,7 +347,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Select circle tool | `G` |
 | Select tool | `D` (click) |
 
-### Edit Mode · Point Cloud
+## Edit Mode · Point Cloud
 
 | Action | Keys |
 |---|---|
@@ -369,7 +369,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Separate | `P` |
 | Translate | `Left mouse` (drag) |
 
-### Edit Mode · Text
+## Edit Mode · Text
 
 | Action | Keys |
 |---|---|
@@ -418,7 +418,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Text insert: accent | Alt + Backspace |
 | Text paste | Ctrl + V |
 
-### Grease Pencil · All modes
+## Grease Pencil · All modes
 
 | Action | Keys |
 |---|---|
@@ -439,7 +439,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Select more | Ctrl + Numpad + |
 | Select similar | Shift + G |
 
-### Grease Pencil · Draw
+## Grease Pencil · Draw
 
 | Action | Keys |
 |---|---|
@@ -466,7 +466,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Scale size | `[` |
 | Scale size | `]` |
 
-### Grease Pencil · Edit
+## Grease Pencil · Edit
 
 | Action | Keys |
 |---|---|
@@ -502,7 +502,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Set selection mode: Stroke | `C` |
 | Translate | `Left mouse` (drag) |
 
-### Grease Pencil · Sculpt
+## Grease Pencil · Sculpt
 
 | Action | Keys |
 |---|---|
@@ -517,7 +517,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Sculpt paint | `Eraser` |
 | Sculpt paint: Invert | Ctrl + Left mouse |
 
-### Grease Pencil · Vertex Paint
+## Grease Pencil · Vertex Paint
 
 | Action | Keys |
 |---|---|
@@ -531,7 +531,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Vertex brush stroke | Shift + Left mouse |
 | Vertex brush stroke: Invert | Ctrl + Left mouse |
 
-### Grease Pencil · Weight Paint
+## Grease Pencil · Weight Paint
 
 | Action | Keys |
 |---|---|
@@ -554,7 +554,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Weight sample | Shift + X |
 | Weight toggle direction | `D` |
 
-### Paint modes
+## Paint modes
 
 | Action | Keys |
 |---|---|
@@ -588,7 +588,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Translate | `W` |
 | Translate | `Left mouse` (drag) |
 
-### Particle Edit
+## Particle Edit
 
 | Action | Keys |
 |---|---|
@@ -609,7 +609,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Select linked | Shift + L |
 | Select more | Ctrl + Numpad + |
 
-### Pose Mode
+## Pose Mode
 
 | Action | Keys |
 |---|---|
@@ -639,7 +639,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Select circle tool | `G` |
 | Select tool | `D` (click) |
 
-### Sculpt Mode
+## Sculpt Mode
 
 | Action | Keys |
 |---|---|
@@ -676,7 +676,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Transfer mode | `D` (release) |
 | Voxel size edit | `S` |
 
-### Sculpt Mode · Hair Curves
+## Sculpt Mode · Hair Curves
 
 | Action | Keys |
 |---|---|
@@ -694,7 +694,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Set selection domain | Alt + 1 (release) |
 | Set selection domain | Alt + 2 (release) |
 
-### Texture Paint
+## Texture Paint
 
 | Action | Keys |
 |---|---|
@@ -719,7 +719,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Stencil control: Translation | Alt + Right mouse |
 | Stencil control: Translation | Shift + Ctrl + Alt + Right mouse |
 
-### Vertex Paint
+## Vertex Paint
 
 | Action | Keys |
 |---|---|
@@ -742,7 +742,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Vert select more | Ctrl + Numpad + |
 | Vertex paint | `Left mouse` (drag) |
 
-### Vertex and Weight Paint
+## Vertex and Weight Paint
 
 | Action | Keys |
 |---|---|
@@ -755,7 +755,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Vert select all: Invert | Ctrl + I |
 | Vert select all: Select | `A` |
 
-### Weight Paint
+## Weight Paint
 
 | Action | Keys |
 |---|---|
@@ -779,6 +779,8 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Weight paint: Invert | Ctrl + Left mouse (drag) |
 | Weight sample | Ctrl + Right mouse |
 | Weight sample group | Shift + Right mouse |
+
+# Animation {icon=action}
 
 ## Animation editors
 
@@ -863,8 +865,6 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 
 ## Dope Sheet
 
-### General
-
 | Action | Keys |
 |---|---|
 | Add | `M` |
@@ -904,64 +904,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | View frame | `Numpad .` |
 | View selected | `F` |
 
-## File Browser
-
-### General
-
-| Action | Keys |
-|---|---|
-| Blend pose asset | Alt + Left mouse (drag) |
-| Blend pose asset: flipped | Ctrl + Alt + Left mouse (drag) |
-| Context menu | `Right mouse` (click) |
-| Context menu | `Menu key` (click) |
-| Delete | `Del` |
-| Execute | `Left mouse` (double-click) |
-| Filenum | `Numpad +` |
-| Filenum | Shift + Numpad + |
-| Filenum | Ctrl + Numpad + |
-| Filenum | `Numpad -` |
-| Filenum | Shift + Numpad - |
-| Filenum | Ctrl + Numpad - |
-| Next | Alt + Right |
-| Next | `Mouse button 5` |
-| Parent | Alt + Up |
-| Previous | Alt + Left |
-| Previous | `Mouse button 4` |
-| Region toggle pie menu | `T` |
-| Rename | `F2` |
-| Select | `Left mouse` (click) |
-| Select all: Deselect | Alt + A |
-| Select all: Deselect | `A` (double-click) |
-| Select all: Invert | Ctrl + I |
-| Select all: Select | `A` |
-| Select box | `B` |
-| Select box | `Left mouse` (drag) |
-| Select box: Add | Shift + Left mouse (drag) |
-| Select box: Sub | Ctrl + Left mouse (drag) |
-| Select first last: First | `Home` |
-| Select first last: Last | Ctrl + Home |
-| Select walk: Down | `Down` |
-| Select walk: Down | Shift + Down |
-| Select walk: Down | Shift + Ctrl + Down |
-| Select walk: Left | `Left` |
-| Select walk: Left | Shift + Left |
-| Select walk: Left | Shift + Ctrl + Left |
-| Select walk: Right | `Right` |
-| Select walk: Right | Shift + Right |
-| Select walk: Right | Shift + Ctrl + Right |
-| Select walk: Up | `Up` |
-| Select walk: Up | Shift + Up |
-| Select walk: Up | Shift + Ctrl + Up |
-| Select: extend | Ctrl + Left mouse (click) |
-| Select: extend | Shift + Left mouse (click) |
-| Select: open | `Left mouse` (double-click) |
-| Sort column ui context | `Any modifier + Left mouse` |
-| Start filter | Ctrl + F |
-| View selected | `F` |
-
 ## Graph Editor
-
-### General
 
 | Action | Keys |
 |---|---|
@@ -1007,6 +950,51 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | View all | `Home` |
 | View frame | `Numpad .` |
 | View selected | `F` |
+
+## Nonlinear Animation
+
+| Action | Keys |
+|---|---|
+| Actionclip add | Shift + A |
+| Add | `M` |
+| Channel context menu | `Right mouse` (click) |
+| Channels click | `Left mouse` |
+| Channels click: extend | Shift + Left mouse |
+| Click select | `Left mouse` |
+| Click select: extend | Shift + Left mouse |
+| Context menu | `Right mouse` (click) |
+| Delete | `Del` |
+| Duplicate | Shift + D |
+| Duplicate: linked | Alt + D |
+| Fmodifier add | Shift + Ctrl + M |
+| Move down | `PageDown` |
+| Move up | `PageUp` |
+| Previewrange set | Ctrl + Alt + P |
+| Region toggle pie menu | `T` |
+| Rename | Ctrl + M |
+| Select all: Deselect | Alt + A |
+| Select all: Deselect | `A` (double-click) |
+| Select all: Invert | Ctrl + I |
+| Select all: Select | `A` |
+| Select box | `B` |
+| Select leftright: Check | Ctrl + Left mouse |
+| Select leftright: Check | Shift + Ctrl + Left mouse |
+| Time extend | `E` |
+| Time scale | `R` |
+| Tracks add | Shift + A |
+| Tracks add: above selected | Shift + Ctrl + A |
+| Tracks delete | `Del` |
+| Translation | `W` |
+| Translation | `Left mouse` (drag) |
+| Tweakmode enter: isolate action | Shift + Tab |
+| Tweakmode enter: upper stack evaluation | `Tab` |
+| Tweakmode exit | `Tab` |
+| Tweakmode exit: isolate action | Shift + Tab |
+| View all | `Home` |
+| View frame | `Numpad .` |
+| View selected | `F` |
+
+# Images and video {icon=image}
 
 ## Image Editor
 
@@ -1091,24 +1079,6 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Translate: cursor transform | Shift + Right mouse (drag) |
 | Unwrap | `U` |
 | Uvs context menu | `Right mouse` (click) |
-
-## Info Editor
-
-### General
-
-| Action | Keys |
-|---|---|
-| Context menu | `Right mouse` (click) |
-| Report copy | Ctrl + C |
-| Report delete | `Del` |
-| Report replay | `R` |
-| Select all: Deselect | Alt + A |
-| Select all: Deselect | `A` (double-click) |
-| Select all: Invert | Ctrl + I |
-| Select all: Select | `A` |
-| Select box | `B` |
-| Select pick | `Left mouse` (click) |
-| Select pick: extend | Shift + Left mouse (click) |
 
 ## Movie Clip Editor
 
@@ -1237,375 +1207,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Translate | `Left mouse` (drag) |
 | Translate: cursor transform | Shift + Right mouse (drag) |
 
-## Node Editor
-
-### General
-
-| Action | Keys |
-|---|---|
-| Add menu | Shift + A |
-| Add reroute | Shift + Right mouse (drag) |
-| Backimage fit | Alt + Home |
-| Backimage move | Alt + Middle mouse |
-| Backimage sample | Alt + Right mouse |
-| Backimage zoom | `V` |
-| Backimage zoom | Alt + V |
-| Clear viewer border | Ctrl + Alt + B |
-| Clipboard copy | Ctrl + C |
-| Clipboard paste | Ctrl + V |
-| Connect to output | Shift + Ctrl + Left mouse |
-| Connect to output | Shift + Alt + Left mouse |
-| Connect to output: run in geometry nodes | Shift + Alt + Left mouse |
-| Context menu | `Right mouse` (click) |
-| Delete | `Del` |
-| Delete copy reconnect | Ctrl + X |
-| Delete reconnect | Ctrl + Del |
-| Detach | Alt + P |
-| Duplicate move | Shift + D |
-| Duplicate move keep inputs | Shift + Ctrl + D |
-| Duplicate move linked | Alt + D |
-| Group edit | `Tab` |
-| Group enter exit | `Left mouse` (double-click) |
-| Group make | Ctrl + G |
-| Hide socket toggle | Ctrl + H |
-| Hide toggle | `H` |
-| Join | Ctrl + J |
-| Link | `Left mouse` (drag) |
-| Link make | Ctrl + F |
-| Link make: replace | Shift + F |
-| Link: detach | Ctrl + Left mouse (drag) |
-| Links cut | Ctrl + Right mouse (drag) |
-| Links cut tool | `K` |
-| Links mute | Ctrl + Alt + Right mouse |
-| Move detach links | Alt + Left mouse (drag) |
-| Move detach links release | Alt + Right mouse (drag) |
-| Parent set | Ctrl + P |
-| Preview toggle | Shift + H |
-| Region toggle pie menu | `T` |
-| Render changed | `Z` |
-| Resize | `Left mouse` (drag) |
-| Resize | `R` |
-| Rotate | `E` |
-| Select | `Left mouse` (click) |
-| Select | Ctrl + Left mouse |
-| Select | Alt + Left mouse |
-| Select | Ctrl + Alt + Left mouse |
-| Select all: Deselect | Alt + A |
-| Select all: Deselect | `A` (double-click) |
-| Select all: Invert | Ctrl + I |
-| Select all: Select | `A` |
-| Select box tool | `B` |
-| Select box: tweak | `Left mouse` (drag) |
-| Select circle tool | `G` |
-| Select lasso | Ctrl + Alt + Left mouse (drag) |
-| Select lasso | Shift + Ctrl + Alt + Left mouse (drag) |
-| Select link viewer | Shift + Ctrl + Left mouse |
-| Select tool | `D` (click) |
-| Select: extend | Shift + Left mouse |
-| Select: extend | Shift + Ctrl + Left mouse |
-| Select: extend | Shift + Alt + Left mouse |
-| Select: extend | Shift + Ctrl + Alt + Left mouse |
-| Translate attach | `W` |
-| Translate attach | `Left mouse` (drag) |
-| Translate: view2d edge pan | `W` |
-| Translate: view2d edge pan | `Left mouse` (drag) |
-| View all | `Home` |
-| View selected | `F` |
-| Viewer border | Ctrl + B |
-| Viewer shortcut get | `1` |
-| Viewer shortcut get | `2` |
-| Viewer shortcut get | `3` |
-| Viewer shortcut get | `4` |
-| Viewer shortcut get | `5` |
-| Viewer shortcut get | `6` |
-| Viewer shortcut set | Ctrl + 0 |
-| Viewer shortcut set | Ctrl + 1 |
-| Viewer shortcut set | Ctrl + 2 |
-| Viewer shortcut set | Ctrl + 3 |
-| Viewer shortcut set | Ctrl + 4 |
-| Viewer shortcut set | Ctrl + 5 |
-| Viewer shortcut set | Ctrl + 6 |
-
-## Nonlinear Animation
-
-### General
-
-| Action | Keys |
-|---|---|
-| Actionclip add | Shift + A |
-| Add | `M` |
-| Channel context menu | `Right mouse` (click) |
-| Channels click | `Left mouse` |
-| Channels click: extend | Shift + Left mouse |
-| Click select | `Left mouse` |
-| Click select: extend | Shift + Left mouse |
-| Context menu | `Right mouse` (click) |
-| Delete | `Del` |
-| Duplicate | Shift + D |
-| Duplicate: linked | Alt + D |
-| Fmodifier add | Shift + Ctrl + M |
-| Move down | `PageDown` |
-| Move up | `PageUp` |
-| Previewrange set | Ctrl + Alt + P |
-| Region toggle pie menu | `T` |
-| Rename | Ctrl + M |
-| Select all: Deselect | Alt + A |
-| Select all: Deselect | `A` (double-click) |
-| Select all: Invert | Ctrl + I |
-| Select all: Select | `A` |
-| Select box | `B` |
-| Select leftright: Check | Ctrl + Left mouse |
-| Select leftright: Check | Shift + Ctrl + Left mouse |
-| Time extend | `E` |
-| Time scale | `R` |
-| Tracks add | Shift + A |
-| Tracks add: above selected | Shift + Ctrl + A |
-| Tracks delete | `Del` |
-| Translation | `W` |
-| Translation | `Left mouse` (drag) |
-| Tweakmode enter: isolate action | Shift + Tab |
-| Tweakmode enter: upper stack evaluation | `Tab` |
-| Tweakmode exit | `Tab` |
-| Tweakmode exit: isolate action | Shift + Tab |
-| View all | `Home` |
-| View frame | `Numpad .` |
-| View selected | `F` |
-
-## Outliner
-
-### General
-
-| Action | Keys |
-|---|---|
-| Clear filter | Alt + F |
-| Collection new | `C` |
-| Collection objects select | Shift + Left mouse (double-click) |
-| Delete | `Del` |
-| Drivers add selected | Ctrl + D |
-| Drivers delete selected | Ctrl + Alt + D |
-| Duplicate | Shift + D |
-| Duplicate: linked | Alt + D |
-| Expanded toggle | Shift + A |
-| Hide | `H` |
-| Id copy | Ctrl + C |
-| Id operation: Rename | `F2` |
-| Id paste | Ctrl + V |
-| Item activate | `Left mouse` (click) |
-| Item activate: extend | Ctrl + Left mouse (click) |
-| Item activate: extend | Shift + Ctrl + Left mouse (click) |
-| Item activate: extend | Ctrl + Left mouse (double-click) |
-| Item activate: extend | Shift + Ctrl + Left mouse (double-click) |
-| Item activate: extend range | Shift + Left mouse (click) |
-| Item activate: extend range | Shift + Left mouse (double-click) |
-| Item activate: recurse | `Left mouse` (double-click) |
-| Item drag drop | `Left mouse` (drag) |
-| Item drag drop | Shift + Left mouse (drag) |
-| Item openclose | `Left mouse` (click) |
-| Item openclose | `Left mouse` (drag) |
-| Item openclose: all | Shift + Left mouse (click) |
-| Item rename | `Left mouse` (double-click) |
-| Keyframe delete | Alt + I |
-| Keyframe insert | `I` |
-| Keyingset add selected | `K` |
-| Keyingset remove selected | Alt + K |
-| Link to collection | Shift + M |
-| Move to collection | `M` |
-| Operation | `Right mouse` (click) |
-| Scroll page | `PageDown` |
-| Scroll page: up | `PageUp` |
-| Select all: Deselect | Alt + A |
-| Select all: Deselect | `A` (double-click) |
-| Select all: Invert | Ctrl + I |
-| Select all: Select | `A` |
-| Select box | `B` |
-| Select box: Add | Shift + Left mouse (drag) |
-| Select box: Sub | Ctrl + Left mouse (drag) |
-| Select box: tweak | `Left mouse` (drag) |
-| Select walk: Down | `Down` |
-| Select walk: Down | Shift + Down |
-| Select walk: Left | `Left` |
-| Select walk: Left | Shift + Left |
-| Select walk: Right | `Right` |
-| Select walk: Right | Shift + Right |
-| Select walk: Up | `Up` |
-| Select walk: Up | Shift + Up |
-| Show active | `F` |
-| Show active | `Numpad .` |
-| Show hierarchy | `Home` |
-| Show one level | `Numpad +` |
-| Show one level | `Numpad -` |
-| Start filter | Ctrl + F |
-| Unhide all | Alt + H |
-
-## Preferences
-
-### General
-
-| Action | Keys |
-|---|---|
-| Clear filter | Alt + F |
-| Start filter | Ctrl + F |
-
-## Properties Editor
-
-### General
-
-| Action | Keys |
-|---|---|
-| Clear filter | Alt + F |
-| Context menu | `Right mouse` (click) |
-| Gpencil modifier apply | Ctrl + A |
-| Gpencil modifier copy | Shift + D |
-| Gpencil modifier remove | `Del` |
-| Modifier apply | Ctrl + A |
-| Modifier copy | Shift + D |
-| Modifier remove: report | `Del` |
-| Shaderfx copy | Shift + D |
-| Shaderfx remove: report | `Del` |
-| Space context cycle | Ctrl + Wheel up |
-| Space context cycle | Ctrl + Wheel down |
-| Start filter | Ctrl + F |
-
-## Python Console
-
-### General
-
-| Action | Keys |
-|---|---|
-| Autocomplete | Ctrl + Space |
-| Clear line | Shift + Enter |
-| Clear line | Shift + Numpad Enter |
-| Context cycle int | Ctrl + Wheel up |
-| Context cycle int | Ctrl + Numpad + |
-| Context cycle int: reverse | Ctrl + Wheel down |
-| Context cycle int: reverse | Ctrl + Numpad - |
-| Context menu | `Right mouse` (click) |
-| Copy | Ctrl + C |
-| Copy as script | Shift + Ctrl + C |
-| Copy: delete | Ctrl + X |
-| Delete: Next character | `Del` |
-| Delete: Next word | Ctrl + Del |
-| Delete: Previous character | `Backspace` |
-| Delete: Previous character | Shift + Backspace |
-| Delete: Previous word | Ctrl + Backspace |
-| Execute: interactive | `Enter` |
-| Execute: interactive | `Numpad Enter` |
-| History cycle | `Down` |
-| History cycle: reverse | `Up` |
-| Indent | `Tab` |
-| Insert | Ctrl + Tab |
-| Move: Line begin | `Home` |
-| Move: Line begin | Shift + Home |
-| Move: Line end | `End` |
-| Move: Line end | Shift + End |
-| Move: Next character | `Right` |
-| Move: Next character | Shift + Right |
-| Move: Next word | Ctrl + Right |
-| Move: Next word | Shift + Ctrl + Right |
-| Move: Previous character | `Left` |
-| Move: Previous character | Shift + Left |
-| Move: Previous word | Ctrl + Left |
-| Move: Previous word | Shift + Ctrl + Left |
-| Paste | Ctrl + V |
-| Select all | Ctrl + A |
-| Select set | `Left mouse` |
-| Select word | `Left mouse` (double-click) |
-| Unindent | Shift + Tab |
-
-## Spreadsheet
-
-### General
-
-| Action | Keys |
-|---|---|
-| Fit column | `Left mouse` (double-click) |
-| Reorder columns | `Left mouse` (drag) |
-| Resize column | `Left mouse` |
-| Toggle Show region channels | `T` |
-| Toggle Show region ui | `N` |
-
-## Text Editor
-
-### General
-
-| Action | Keys |
-|---|---|
-| Autocomplete | Ctrl + Space |
-| Comment toggle | Shift + Ctrl + D |
-| Context cycle int | Ctrl + Wheel up |
-| Context cycle int | Ctrl + Numpad + |
-| Context cycle int: reverse | Ctrl + Wheel down |
-| Context cycle int: reverse | Ctrl + Numpad - |
-| Context menu | `Any modifier + Right mouse` |
-| Copy | Ctrl + C |
-| Cursor set | `Left mouse` |
-| Cut | Ctrl + X |
-| Delete: Next character | `Del` |
-| Delete: Next word | Ctrl + Del |
-| Delete: Previous character | `Backspace` |
-| Delete: Previous word | Ctrl + Backspace |
-| Duplicate line | Ctrl + D |
-| FIND AND REPLACE panel | Shift + Right mouse |
-| Find set selected | Ctrl + G |
-| Indent | `Tab` |
-| Jump | Ctrl + J |
-| Line break | `Enter` |
-| Line break | `Numpad Enter` |
-| Move lines: Down | Shift + Ctrl + Down |
-| Move lines: Up | Shift + Ctrl + Up |
-| Move select: File bottom | Shift + Ctrl + End |
-| Move select: File top | Shift + Ctrl + Home |
-| Move select: Line begin | Shift + Home |
-| Move select: Line end | Shift + End |
-| Move select: Next character | Shift + Right |
-| Move select: Next line | Shift + Down |
-| Move select: Next page | Shift + PageDown |
-| Move select: Next word | Shift + Ctrl + Right |
-| Move select: Previous character | Shift + Left |
-| Move select: Previous line | Shift + Up |
-| Move select: Previous page | Shift + PageUp |
-| Move select: Previous word | Shift + Ctrl + Left |
-| Move: File bottom | Ctrl + End |
-| Move: File top | Ctrl + Home |
-| Move: Line begin | `Home` |
-| Move: Line end | `End` |
-| Move: Next character | `Right` |
-| Move: Next line | `Down` |
-| Move: Next page | `PageDown` |
-| Move: Next word | Alt + Right |
-| Move: Next word | Ctrl + Right |
-| Move: Previous character | `Left` |
-| Move: Previous line | `Up` |
-| Move: Previous page | `PageUp` |
-| Move: Previous word | Alt + Left |
-| Move: Previous word | Ctrl + Left |
-| New | Alt + N |
-| Open | Alt + O |
-| Overwrite toggle | `Insert` |
-| Paste | Ctrl + V |
-| Reload | Alt + R |
-| Replace | Ctrl + H |
-| Run script | Alt + P |
-| Save | Alt + S |
-| Save as | Shift + Ctrl + Alt + S |
-| Scroll | `Middle mouse` |
-| Scroll | `Trackpad pan` |
-| Scroll | `Wheel up` |
-| Scroll | `Wheel down` |
-| Scroll bar | `Left mouse` |
-| Scroll bar | `Middle mouse` |
-| Select all | Ctrl + A |
-| Select line | Shift + Ctrl + A |
-| Select word | `Left mouse` (double-click) |
-| Selection set | `Left mouse` (drag) |
-| Selection set | Shift + Left mouse |
-| Start find | Ctrl + F |
-| Toggle Show region ui | Ctrl + T |
-| Unindent | Shift + Tab |
-
 ## Video Sequencer
-
-### General
 
 | Action | Keys |
 |---|---|
@@ -1754,9 +1356,391 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | View zoom ratio | `Numpad 4` |
 | View zoom ratio | `Numpad 8` |
 
-## Everywhere
+# Nodes {icon=nodetree}
 
-### 2D views
+## General
+
+| Action | Keys |
+|---|---|
+| Add menu | Shift + A |
+| Add reroute | Shift + Right mouse (drag) |
+| Backimage fit | Alt + Home |
+| Backimage move | Alt + Middle mouse |
+| Backimage sample | Alt + Right mouse |
+| Backimage zoom | `V` |
+| Backimage zoom | Alt + V |
+| Clear viewer border | Ctrl + Alt + B |
+| Clipboard copy | Ctrl + C |
+| Clipboard paste | Ctrl + V |
+| Connect to output | Shift + Ctrl + Left mouse |
+| Connect to output | Shift + Alt + Left mouse |
+| Connect to output: run in geometry nodes | Shift + Alt + Left mouse |
+| Context menu | `Right mouse` (click) |
+| Delete | `Del` |
+| Delete copy reconnect | Ctrl + X |
+| Delete reconnect | Ctrl + Del |
+| Detach | Alt + P |
+| Duplicate move | Shift + D |
+| Duplicate move keep inputs | Shift + Ctrl + D |
+| Duplicate move linked | Alt + D |
+| Group edit | `Tab` |
+| Group enter exit | `Left mouse` (double-click) |
+| Group make | Ctrl + G |
+| Hide socket toggle | Ctrl + H |
+| Hide toggle | `H` |
+| Join | Ctrl + J |
+| Link | `Left mouse` (drag) |
+| Link make | Ctrl + F |
+| Link make: replace | Shift + F |
+| Link: detach | Ctrl + Left mouse (drag) |
+| Links cut | Ctrl + Right mouse (drag) |
+| Links cut tool | `K` |
+| Links mute | Ctrl + Alt + Right mouse |
+| Move detach links | Alt + Left mouse (drag) |
+| Move detach links release | Alt + Right mouse (drag) |
+| Parent set | Ctrl + P |
+| Preview toggle | Shift + H |
+| Region toggle pie menu | `T` |
+| Render changed | `Z` |
+| Resize | `Left mouse` (drag) |
+| Resize | `R` |
+| Rotate | `E` |
+| Select | `Left mouse` (click) |
+| Select | Ctrl + Left mouse |
+| Select | Alt + Left mouse |
+| Select | Ctrl + Alt + Left mouse |
+| Select all: Deselect | Alt + A |
+| Select all: Deselect | `A` (double-click) |
+| Select all: Invert | Ctrl + I |
+| Select all: Select | `A` |
+| Select box tool | `B` |
+| Select box: tweak | `Left mouse` (drag) |
+| Select circle tool | `G` |
+| Select lasso | Ctrl + Alt + Left mouse (drag) |
+| Select lasso | Shift + Ctrl + Alt + Left mouse (drag) |
+| Select link viewer | Shift + Ctrl + Left mouse |
+| Select tool | `D` (click) |
+| Select: extend | Shift + Left mouse |
+| Select: extend | Shift + Ctrl + Left mouse |
+| Select: extend | Shift + Alt + Left mouse |
+| Select: extend | Shift + Ctrl + Alt + Left mouse |
+| Translate attach | `W` |
+| Translate attach | `Left mouse` (drag) |
+| Translate: view2d edge pan | `W` |
+| Translate: view2d edge pan | `Left mouse` (drag) |
+| View all | `Home` |
+| View selected | `F` |
+| Viewer border | Ctrl + B |
+| Viewer shortcut get | `1` |
+| Viewer shortcut get | `2` |
+| Viewer shortcut get | `3` |
+| Viewer shortcut get | `4` |
+| Viewer shortcut get | `5` |
+| Viewer shortcut get | `6` |
+| Viewer shortcut set | Ctrl + 0 |
+| Viewer shortcut set | Ctrl + 1 |
+| Viewer shortcut set | Ctrl + 2 |
+| Viewer shortcut set | Ctrl + 3 |
+| Viewer shortcut set | Ctrl + 4 |
+| Viewer shortcut set | Ctrl + 5 |
+| Viewer shortcut set | Ctrl + 6 |
+
+# Data and files {icon=outliner}
+
+## Outliner
+
+| Action | Keys |
+|---|---|
+| Clear filter | Alt + F |
+| Collection new | `C` |
+| Collection objects select | Shift + Left mouse (double-click) |
+| Delete | `Del` |
+| Drivers add selected | Ctrl + D |
+| Drivers delete selected | Ctrl + Alt + D |
+| Duplicate | Shift + D |
+| Duplicate: linked | Alt + D |
+| Expanded toggle | Shift + A |
+| Hide | `H` |
+| Id copy | Ctrl + C |
+| Id operation: Rename | `F2` |
+| Id paste | Ctrl + V |
+| Item activate | `Left mouse` (click) |
+| Item activate: extend | Ctrl + Left mouse (click) |
+| Item activate: extend | Shift + Ctrl + Left mouse (click) |
+| Item activate: extend | Ctrl + Left mouse (double-click) |
+| Item activate: extend | Shift + Ctrl + Left mouse (double-click) |
+| Item activate: extend range | Shift + Left mouse (click) |
+| Item activate: extend range | Shift + Left mouse (double-click) |
+| Item activate: recurse | `Left mouse` (double-click) |
+| Item drag drop | `Left mouse` (drag) |
+| Item drag drop | Shift + Left mouse (drag) |
+| Item openclose | `Left mouse` (click) |
+| Item openclose | `Left mouse` (drag) |
+| Item openclose: all | Shift + Left mouse (click) |
+| Item rename | `Left mouse` (double-click) |
+| Keyframe delete | Alt + I |
+| Keyframe insert | `I` |
+| Keyingset add selected | `K` |
+| Keyingset remove selected | Alt + K |
+| Link to collection | Shift + M |
+| Move to collection | `M` |
+| Operation | `Right mouse` (click) |
+| Scroll page | `PageDown` |
+| Scroll page: up | `PageUp` |
+| Select all: Deselect | Alt + A |
+| Select all: Deselect | `A` (double-click) |
+| Select all: Invert | Ctrl + I |
+| Select all: Select | `A` |
+| Select box | `B` |
+| Select box: Add | Shift + Left mouse (drag) |
+| Select box: Sub | Ctrl + Left mouse (drag) |
+| Select box: tweak | `Left mouse` (drag) |
+| Select walk: Down | `Down` |
+| Select walk: Down | Shift + Down |
+| Select walk: Left | `Left` |
+| Select walk: Left | Shift + Left |
+| Select walk: Right | `Right` |
+| Select walk: Right | Shift + Right |
+| Select walk: Up | `Up` |
+| Select walk: Up | Shift + Up |
+| Show active | `F` |
+| Show active | `Numpad .` |
+| Show hierarchy | `Home` |
+| Show one level | `Numpad +` |
+| Show one level | `Numpad -` |
+| Start filter | Ctrl + F |
+| Unhide all | Alt + H |
+
+## Properties Editor
+
+| Action | Keys |
+|---|---|
+| Clear filter | Alt + F |
+| Context menu | `Right mouse` (click) |
+| Gpencil modifier apply | Ctrl + A |
+| Gpencil modifier copy | Shift + D |
+| Gpencil modifier remove | `Del` |
+| Modifier apply | Ctrl + A |
+| Modifier copy | Shift + D |
+| Modifier remove: report | `Del` |
+| Shaderfx copy | Shift + D |
+| Shaderfx remove: report | `Del` |
+| Space context cycle | Ctrl + Wheel up |
+| Space context cycle | Ctrl + Wheel down |
+| Start filter | Ctrl + F |
+
+## File Browser
+
+| Action | Keys |
+|---|---|
+| Blend pose asset | Alt + Left mouse (drag) |
+| Blend pose asset: flipped | Ctrl + Alt + Left mouse (drag) |
+| Context menu | `Right mouse` (click) |
+| Context menu | `Menu key` (click) |
+| Delete | `Del` |
+| Execute | `Left mouse` (double-click) |
+| Filenum | `Numpad +` |
+| Filenum | Shift + Numpad + |
+| Filenum | Ctrl + Numpad + |
+| Filenum | `Numpad -` |
+| Filenum | Shift + Numpad - |
+| Filenum | Ctrl + Numpad - |
+| Next | Alt + Right |
+| Next | `Mouse button 5` |
+| Parent | Alt + Up |
+| Previous | Alt + Left |
+| Previous | `Mouse button 4` |
+| Region toggle pie menu | `T` |
+| Rename | `F2` |
+| Select | `Left mouse` (click) |
+| Select all: Deselect | Alt + A |
+| Select all: Deselect | `A` (double-click) |
+| Select all: Invert | Ctrl + I |
+| Select all: Select | `A` |
+| Select box | `B` |
+| Select box | `Left mouse` (drag) |
+| Select box: Add | Shift + Left mouse (drag) |
+| Select box: Sub | Ctrl + Left mouse (drag) |
+| Select first last: First | `Home` |
+| Select first last: Last | Ctrl + Home |
+| Select walk: Down | `Down` |
+| Select walk: Down | Shift + Down |
+| Select walk: Down | Shift + Ctrl + Down |
+| Select walk: Left | `Left` |
+| Select walk: Left | Shift + Left |
+| Select walk: Left | Shift + Ctrl + Left |
+| Select walk: Right | `Right` |
+| Select walk: Right | Shift + Right |
+| Select walk: Right | Shift + Ctrl + Right |
+| Select walk: Up | `Up` |
+| Select walk: Up | Shift + Up |
+| Select walk: Up | Shift + Ctrl + Up |
+| Select: extend | Ctrl + Left mouse (click) |
+| Select: extend | Shift + Left mouse (click) |
+| Select: open | `Left mouse` (double-click) |
+| Sort column ui context | `Any modifier + Left mouse` |
+| Start filter | Ctrl + F |
+| View selected | `F` |
+
+## Spreadsheet
+
+| Action | Keys |
+|---|---|
+| Fit column | `Left mouse` (double-click) |
+| Reorder columns | `Left mouse` (drag) |
+| Resize column | `Left mouse` |
+| Toggle Show region channels | `T` |
+| Toggle Show region ui | `N` |
+
+## Info Editor
+
+| Action | Keys |
+|---|---|
+| Context menu | `Right mouse` (click) |
+| Report copy | Ctrl + C |
+| Report delete | `Del` |
+| Report replay | `R` |
+| Select all: Deselect | Alt + A |
+| Select all: Deselect | `A` (double-click) |
+| Select all: Invert | Ctrl + I |
+| Select all: Select | `A` |
+| Select box | `B` |
+| Select pick | `Left mouse` (click) |
+| Select pick: extend | Shift + Left mouse (click) |
+
+## Preferences
+
+| Action | Keys |
+|---|---|
+| Clear filter | Alt + F |
+| Start filter | Ctrl + F |
+
+# Scripting {icon=console}
+
+## Text Editor
+
+| Action | Keys |
+|---|---|
+| Autocomplete | Ctrl + Space |
+| Comment toggle | Shift + Ctrl + D |
+| Context cycle int | Ctrl + Wheel up |
+| Context cycle int | Ctrl + Numpad + |
+| Context cycle int: reverse | Ctrl + Wheel down |
+| Context cycle int: reverse | Ctrl + Numpad - |
+| Context menu | `Any modifier + Right mouse` |
+| Copy | Ctrl + C |
+| Cursor set | `Left mouse` |
+| Cut | Ctrl + X |
+| Delete: Next character | `Del` |
+| Delete: Next word | Ctrl + Del |
+| Delete: Previous character | `Backspace` |
+| Delete: Previous word | Ctrl + Backspace |
+| Duplicate line | Ctrl + D |
+| FIND AND REPLACE panel | Shift + Right mouse |
+| Find set selected | Ctrl + G |
+| Indent | `Tab` |
+| Jump | Ctrl + J |
+| Line break | `Enter` |
+| Line break | `Numpad Enter` |
+| Move lines: Down | Shift + Ctrl + Down |
+| Move lines: Up | Shift + Ctrl + Up |
+| Move select: File bottom | Shift + Ctrl + End |
+| Move select: File top | Shift + Ctrl + Home |
+| Move select: Line begin | Shift + Home |
+| Move select: Line end | Shift + End |
+| Move select: Next character | Shift + Right |
+| Move select: Next line | Shift + Down |
+| Move select: Next page | Shift + PageDown |
+| Move select: Next word | Shift + Ctrl + Right |
+| Move select: Previous character | Shift + Left |
+| Move select: Previous line | Shift + Up |
+| Move select: Previous page | Shift + PageUp |
+| Move select: Previous word | Shift + Ctrl + Left |
+| Move: File bottom | Ctrl + End |
+| Move: File top | Ctrl + Home |
+| Move: Line begin | `Home` |
+| Move: Line end | `End` |
+| Move: Next character | `Right` |
+| Move: Next line | `Down` |
+| Move: Next page | `PageDown` |
+| Move: Next word | Alt + Right |
+| Move: Next word | Ctrl + Right |
+| Move: Previous character | `Left` |
+| Move: Previous line | `Up` |
+| Move: Previous page | `PageUp` |
+| Move: Previous word | Alt + Left |
+| Move: Previous word | Ctrl + Left |
+| New | Alt + N |
+| Open | Alt + O |
+| Overwrite toggle | `Insert` |
+| Paste | Ctrl + V |
+| Reload | Alt + R |
+| Replace | Ctrl + H |
+| Run script | Alt + P |
+| Save | Alt + S |
+| Save as | Shift + Ctrl + Alt + S |
+| Scroll | `Middle mouse` |
+| Scroll | `Trackpad pan` |
+| Scroll | `Wheel up` |
+| Scroll | `Wheel down` |
+| Scroll bar | `Left mouse` |
+| Scroll bar | `Middle mouse` |
+| Select all | Ctrl + A |
+| Select line | Shift + Ctrl + A |
+| Select word | `Left mouse` (double-click) |
+| Selection set | `Left mouse` (drag) |
+| Selection set | Shift + Left mouse |
+| Start find | Ctrl + F |
+| Toggle Show region ui | Ctrl + T |
+| Unindent | Shift + Tab |
+
+## Python Console
+
+| Action | Keys |
+|---|---|
+| Autocomplete | Ctrl + Space |
+| Clear line | Shift + Enter |
+| Clear line | Shift + Numpad Enter |
+| Context cycle int | Ctrl + Wheel up |
+| Context cycle int | Ctrl + Numpad + |
+| Context cycle int: reverse | Ctrl + Wheel down |
+| Context cycle int: reverse | Ctrl + Numpad - |
+| Context menu | `Right mouse` (click) |
+| Copy | Ctrl + C |
+| Copy as script | Shift + Ctrl + C |
+| Copy: delete | Ctrl + X |
+| Delete: Next character | `Del` |
+| Delete: Next word | Ctrl + Del |
+| Delete: Previous character | `Backspace` |
+| Delete: Previous character | Shift + Backspace |
+| Delete: Previous word | Ctrl + Backspace |
+| Execute: interactive | `Enter` |
+| Execute: interactive | `Numpad Enter` |
+| History cycle | `Down` |
+| History cycle: reverse | `Up` |
+| Indent | `Tab` |
+| Insert | Ctrl + Tab |
+| Move: Line begin | `Home` |
+| Move: Line begin | Shift + Home |
+| Move: Line end | `End` |
+| Move: Line end | Shift + End |
+| Move: Next character | `Right` |
+| Move: Next character | Shift + Right |
+| Move: Next word | Ctrl + Right |
+| Move: Next word | Shift + Ctrl + Right |
+| Move: Previous character | `Left` |
+| Move: Previous character | Shift + Left |
+| Move: Previous word | Ctrl + Left |
+| Move: Previous word | Shift + Ctrl + Left |
+| Paste | Ctrl + V |
+| Select all | Ctrl + A |
+| Select set | `Left mouse` |
+| Select word | `Left mouse` (double-click) |
+| Unindent | Shift + Tab |
+
+# Everywhere {icon=window}
+
+## 2D views
 
 | Action | Keys |
 |---|---|
@@ -1784,7 +1768,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Zoom out | `Wheel out` |
 | Zoom out | `Numpad -` |
 
-### Asset Shelf
+## Asset Shelf
 
 | Action | Keys |
 |---|---|
@@ -1793,7 +1777,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Blend pose asset | Alt + Left mouse (drag) |
 | Blend pose asset: flipped | Ctrl + Alt + Left mouse (drag) |
 
-### Buttons and fields
+## Buttons and fields
 
 | Action | Keys |
 |---|---|
@@ -1822,13 +1806,13 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | View scroll | `Trackpad pan` |
 | View start filter | Ctrl + F |
 
-### Context menus
+## Context menus
 
 | Action | Keys |
 |---|---|
 | Region context menu | `Right mouse` (click) |
 
-### Editing areas
+## Editing areas
 
 | Action | Keys |
 |---|---|
@@ -1840,7 +1824,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Area move: snap | Ctrl + Left mouse |
 | Area options | `Right mouse` |
 
-### Lists
+## Lists
 
 | Action | Keys |
 |---|---|
@@ -1859,7 +1843,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Zoom in | `Numpad +` |
 | Zoom out | `Numpad -` |
 
-### Screen
+## Screen
 
 | Action | Keys |
 |---|---|
@@ -1884,7 +1868,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Workspace cycle: Next | Ctrl + PageDown |
 | Workspace cycle: Prev | Ctrl + PageUp |
 
-### Toolbar popup
+## Toolbar popup
 
 | Action | Keys |
 |---|---|
@@ -1894,7 +1878,7 @@ Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The l
 | Select tool | `W` |
 | Transform tool | `T` |
 
-### Window
+## Window
 
 | Action | Keys |
 |---|---|
