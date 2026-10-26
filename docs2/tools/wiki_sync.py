@@ -20,7 +20,7 @@ SRC_DIR = "docs2/dev-docs"
 
 NOTICE = (
     "> 🧪 **Proposed workflow.** Docs 2.0 is being tested on the branch "
-    f"[`{BRANCH}`]({REPO}/tree/{BRANCH}/docs2). The `.odt` manual on `master` is still the official one. "
+    f"[`{BRANCH}`]({REPO}/tree/{BRANCH}/docs2). The archived `.odt` manual is in `docs1/`. "
     "GitHub wikis can't be branched, so this page shows the proposal live; "
     f"it is written and reviewed in [`{SRC_DIR}/`]({REPO}/tree/{BRANCH}/{SRC_DIR})."
 )

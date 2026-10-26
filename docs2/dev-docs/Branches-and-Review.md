@@ -15,7 +15,7 @@ master ────────────────────────�
 
 | Branch | Purpose | Merges into |
 |---|---|---|
-| `master` | The manual. The Markdown docs live in `docs2/` (the old `.odt` chapters stay beside them for now). Every merge syncs to the staging website | — |
+| `master` | The manual. The Markdown docs live in `docs2/` (the old `.odt` chapters are archived in `docs1/`). Every merge syncs to the staging website | — |
 | `docs2/<your-change>` | A change you want reviewed first | `master`, by pull request |
 | `*-patch-*` | Made by GitHub when you use **Edit this page**: always starts from the latest `master` | `master`, by pull request |
 | `docs2/keymap-update` | The weekly keymap robot's pull request | `master` |
