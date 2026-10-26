@@ -1,0 +1,2081 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Toolbar · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1439 · <code>docs2/keymap</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<a href="../getting-started/about-documentation.html">Using the Documentation</a>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<a href="../workspaces/main.html">Main</a>
+<a href="../workspaces/uv-editing.html">UV Editing</a>
+<a href="../workspaces/modeling.html">Modeling</a>
+<a href="../workspaces/nodes.html">Nodes</a>
+<a href="../workspaces/animation.html">Animation</a>
+<a href="../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../workspaces/shading.html">Shading</a>
+<a href="../workspaces/rendering.html">Rendering</a>
+<a href="../workspaces/sculpting.html">Sculpting</a>
+<a href="../workspaces/compositing.html">Compositing</a>
+<a href="../workspaces/scripting.html">Scripting</a>
+<a href="../workspaces/2d-animation.html">2D Animation</a>
+<a href="../workspaces/storyboarding.html">Storyboarding</a>
+<a href="../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../workspaces/masking.html">Masking</a>
+<a href="../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../workspaces/video-editing.html">Video Editing</a>
+<a href="../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<a href="../workspaces/assets.html">Assets</a>
+<a href="../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<a class="is-current" href="toolbar.html">Toolbar</a>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../keymap/standard-keymap.html">Standard Keymap</a>
+<span>Important Hotkeys</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Toolbar</div><h1 class="pv-title">Toolbar</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 25 min read</span></div><article class="ui-doc-body"><h2 id="introduction">Introduction</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/introduction.png" alt="Introduction" loading="lazy"></figure>
+<p>The Toolbar editor is what you normally have to avoid in UI design. It's a bunch of double menu entries. It is made by lots of tools that already exists elsewhere.</p>
+<p>But the value of this double menu here is that it is configurable. This customizable toolbar makes it possible to have the most needed tools at top UI level. This can save a ton of clicks, tabbing, scrolling, and digging in sub menus. And you can display what you need for your personal workflow. And hide away the rest.</p>
+<p>The toolbar editor uses pure Icon buttons.</p>
+<p>Parts of the toolbars are just visible when you are in the right mode. The full Primitives toolbar for example in just visible in Object mode. Parts of it are visible in Edit mode, dependent of what type of object you modify. And in the other modes the toolbars are hidden.</p>
+<p>Parts of the toolbars are just visible when the right object type in the scene exists / is selected.</p>
+<p>As told, the toolbars are double menu entries. This means the description of the tools in this chapter will be as short as possible. Closer descriptions, like how to use the tools, can be found in the other chapters where the tools comes from. The Tool Shelf in the 3D View for example.</p>
+<h3 id="limits">Limits</h3>
+<ul>
+<li>
+<p>The toolbar does not contain all possible tools. More the opposite, the selection is very limited. Lots of tools depends to be performed in the editor type where you want to do the change. They just work there. And not in other editors. This affects for example most tools in edit mode. And the toolbar is another editor. This limits the available tools in the toolbar dramatically.</p>
+</li>
+<li>
+<p>The toolbars have a fixed order. The content is not sortable. The sorting is defined by the order of the toolbar type. And inside the toolbar type by the order in the toolbars menu. You would need to have to edit the python file to change this order.</p>
+</li>
+<li>
+<p>Just the toolbar types are independent. The check boxes to display the toolbars themselves are global. Means when you set one toolbar type to Primitives, and activate all the primitives types there, then other toolbars with this toolbar type will have the same primitives types displayed.</p>
+</li>
+</ul>
+<h2 id="menus">Menus</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/menus.png" alt="Menus" loading="lazy"></figure>
+<h3 id="toolbar-manager">Toolbar Manager</h3>
+<p>The first entry of a toolbar is the Toolbar Manager.</p>
+<p>Choose what kind of Toolbar Type you want to show. You can show multiple types of toolbars at once.</p>
+<p>The toolbar types are independent from each other. You can set up every toolbar to display different content.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbar-manager.png" alt="Toolbar Manager" loading="lazy"></figure>
+<h3 id="toolbars-menus">Toolbars Menus</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-menus.png" alt="Toolbars Menus" loading="lazy"></figure>
+<p>Every toolbar type has several toolbars to display.</p>
+<p>In the toolbar menu at the front of a toolbar type you can choose what toolbars you want to display.</p>
+<p>The toolbars are not independent. This setup is global. When you for example tick the Toolbar File in this toolbar, then it will be displayed in all other toolbars too. Including in other layouts.</p>
+<p>These check boxes are also available in the Toolbar Settings Bforartists add-on</p>
+<h2 id="bforartists-settings-add-on">Bforartists Settings add-on</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/bforartists-settings-add-on.png" alt="Bforartists Settings add-on" loading="lazy"></figure>
+<p>The settings for the toolbar needs to be stored somewhere. This is done in an add-on called Bforartists Settings.</p>
+<p>This add-on contains the same check boxes than the single toolbars menus in the toolbar. But all of them at once.</p>
+<p>Changing a setting here will automatically save the user preferences.</p>
+<div class="ui-doc-callout is-warning"><p><strong>Warning:</strong> Do not deactivate this add-on. The toolbar will not work then. It depends of the settings in the add-on!</p></div>
+<h2 id="create-new-toolbar">Create new toolbar</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/create-new-toolbar.png" alt="Create new toolbar" loading="lazy"></figure>
+<p>You might want to create your own toolbar for a new layout. Let's explain the needed steps.</p>
+<p>First create a new editor type. This can be done by dragging the triangle area of an existing editor. And will create a new editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/create-new-toolbar-2.png" alt="Create new toolbar" loading="lazy"></figure>
+<p>Look at the right of this new created editor type. You will now see a small button. This is the Editor type menu. Open it by clicking at it. And choose Toolbar.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/create-new-toolbar-3.png" alt="Create new toolbar" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/create-new-toolbar-4.png" alt="Create new toolbar" loading="lazy"></figure>
+<p>Now set up your new created Toolbar editor. Choose the toolbar types you want to display here. Then choose the toolbars to display.</p>
+<p>The last step is to hide the Editor Type menu and to untick Show menus. Right click at the toolbar, and tick Collapse Menus and Hide Editortype menu.</p>
+<h2 id="save-toolbar-state">Save Toolbar state</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/save-toolbar-state.png" alt="Save Toolbar state" loading="lazy"></figure>
+<p>Because of the autosave Preferences feature changes in the menus of the single toolbars are stored automatically.</p>
+<p>When you activate for example the Curve toolbar in the Primitives, then the curve toolbar will stay activated when you close and open Bforartists.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/save-toolbar-state-2.png" alt="Save Toolbar state" loading="lazy"></figure>
+<p>But the general setup of the toolbar type is layout. And so you have to save the startup file to make this changes permanent.</p>
+<p>Be careful here. Saving the startup file saves every change at the layout. Including things like having a mesh in the scene.</p>
+<h2 id="toolbar-manager-2">Toolbar Manager</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbar-manager-2.png" alt="Toolbar Manager" loading="lazy"></figure>
+<p>Currently the Toolbar editor contains eight toolbar types.</p>
+<h3 id="toolbar-types">Toolbar Types</h3>
+<p>The single toolbar types.</p>
+<p>Note that you need to save the startup file to make changes at the toolbar types permanent. They are part of the layout. Which was the only way to allow them to act independent from each other.</p>
+<p><strong>File</strong> - Contains some file menu related tools. Like load save. But also the render menu.</p>
+<p><strong>Mesh Edit</strong> - Contains tools for Meshes in Edit Mode.</p>
+<p><strong>Primitives</strong> - Contains the primitives from the Create tab in the Tool Shelf.</p>
+<p><strong>Image</strong> - Contains some tools for editing UV</p>
+<p><strong>Tools</strong> - Contains the content of the Relations panel in Object mode.</p>
+<p><strong>Animation</strong> - Contains Animation tools</p>
+<p><strong>Edit</strong> - Contains some tools from Object and Edit Mode</p>
+<p><strong>Misc</strong> - Contains Undo, and an empty menu as a place holder.</p>
+<h3 id="options">Options</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/options.png" alt="Options" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/options-2.png" alt="Options" loading="lazy"></figure>
+<p>Manage which part of the toolbar types is visible. This is the same content than the Toolbars menus.</p>
+<p>Note that not active types will not show the toolbars menus content.</p>
+<h4 id="show-quick-toggle">Show Quick Toggle</h4>
+<p>By default you need to turn on or off the toolbar types in the toolbar type menu. With quick toggles turned on you will reveal small buttons besides the single toolbar types that allows you to expand or collapse the toolbar types from within the toolbar. Each quick toggle represents a toolbar type.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/show-quick-toggle.png" alt="Show Quick Toggle" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/show-quick-toggle-2.png" alt="Show Quick Toggle" loading="lazy"></figure>
+<h2 id="toolbars-file">Toolbars File</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-file.png" alt="Toolbars File" loading="lazy"></figure>
+<p>The Toolbars File contains some file menu related tools. Like load save. But also the render menu.</p>
+<p>These toolbars are available in all modes.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-file-2.png" alt="Toolbars File" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-file-3.png" alt="Toolbars File" loading="lazy"></figure>
+<h3 id="available-toolbars">Available Toolbars</h3>
+<p>The description of the single buttons goes from left to right.</p>
+<h4 id="load-save">Load / Save</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/load-save.png" alt="Load / Save" loading="lazy"></figure>
+<p>The original menu items are in the File menu of the Info editor.</p>
+<h5 id="file-new">File New</h5>
+<p>Creates a new scene, using the current template.</p>
+<h5 id="new-from-template">New from Template</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/new-from-template.png" alt="New from Template" loading="lazy"></figure>
+<p>Creates a new scene in one of the templates.</p>
+<h5 id="open">Open</h5>
+<p>Load a Blend file.</p>
+<h5 id="open-recent">Open Recent</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/open-recent.png" alt="Open Recent" loading="lazy"></figure>
+<p>The recent files menu.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Save Blend File</td>
+<td>Save a Blend file.</td>
+</tr>
+<tr>
+<td>Save As Blend File</td>
+<td>Save a Blend file as.</td>
+</tr>
+<tr>
+<td>Save Copy</td>
+<td>Saves a copy of the Blend file.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="recover">Recover</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/recover.png" alt="Recover" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revert</td>
+<td>Reload the saved file.</td>
+</tr>
+<tr>
+<td>Recover Last Session</td>
+<td>Open the last closed file, which is stored in the quit.blend.</td>
+</tr>
+<tr>
+<td>Recover Autosave</td>
+<td>Open an automatically saved file to recover it. Like after a crash. See Preferences , Save &amp; Load , Autosave</td>
+</tr>
+</tbody>
+</table>
+<h4 id="link-append">Link Append</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/link-append.png" alt="Link Append" loading="lazy"></figure>
+<p>The original menu items are in the File menu of the Info editor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Link from Library</td>
+<td>Link contend from a Blend file.</td>
+</tr>
+<tr>
+<td>Append from Library</td>
+<td>Append content.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="import-menu">Import Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/import-menu.png" alt="Import Menu" loading="lazy"></figure>
+<p>The Import menu is the same menu that you can find in the File menu of the Info editor. It contains all available file import types.</p>
+<p>Note that im- and exporters are partially addons that can be disabled. So some content might miss.</p>
+<h4 id="export-menu">Export Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/export-menu.png" alt="Export Menu" loading="lazy"></figure>
+<p>The Export menu is the same menu that you can find in the File menu of the Info editor.</p>
+<p>It contains all available file export types.</p>
+<p>Note that im- and exporters are partially addons that can be disabled. So some content might miss.</p>
+<h4 id="import-common">Import Common</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/import-common.png" alt="Import Common" loading="lazy"></figure>
+<p>The original menu items are in the File menu of the Info editor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Import FBX</td>
+<td>Import FBX files. Default version. wm.fbx_import.</td>
+</tr>
+<tr>
+<td>Import FBX</td>
+<td>Import FBX files. Legacy version. import_scene.fbx.</td>
+</tr>
+<tr>
+<td>Import Obj</td>
+<td>Import Object files.</td>
+</tr>
+<tr>
+<td>Import ABC</td>
+<td>Import Alembic files.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="import-common-2">Import Common 2</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/import-common-2.png" alt="Import Common 2" loading="lazy"></figure>
+<p>The original menu items are in the File menu of the Info editor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Import BVH</td>
+<td>Import Biovision Motion Capture files.</td>
+</tr>
+<tr>
+<td>Import USD</td>
+<td>Import a USD file.</td>
+</tr>
+<tr>
+<td>Import glTF2</td>
+<td>Import glTF2 files.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="import-uncommon">Import Uncommon</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/import-uncommon.png" alt="Import Uncommon" loading="lazy"></figure>
+<p>The original menu items are in the File menu of the Info editor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Import PLY</td>
+<td>Import PLY files.</td>
+</tr>
+<tr>
+<td>Import SVG</td>
+<td>Import SVG Files.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="export-common">Export Common</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/export-common.png" alt="Export Common" loading="lazy"></figure>
+<p>The original menu items are in the File menu of the Info editor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Export FBX</td>
+<td>Export as FBX file.</td>
+</tr>
+<tr>
+<td>Export Obj</td>
+<td>Export as Obj file.</td>
+</tr>
+<tr>
+<td>Export ABC</td>
+<td>Export as Alembic file.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="export-common-2">Export Common 2</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/export-common-2.png" alt="Export Common 2" loading="lazy"></figure>
+<p>The original menu items are in the File menu of the Info editor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Export BVH</td>
+<td>Export as BVH Motion Capture file.</td>
+</tr>
+<tr>
+<td>Export USD</td>
+<td>Export as USD file.</td>
+</tr>
+<tr>
+<td>Export gITF2</td>
+<td>Export as gITF2 file.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="export-uncommon">Export Uncommon</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/export-uncommon.png" alt="Export Uncommon" loading="lazy"></figure>
+<p>The original menu items are in the File menu of the Info editor.</p>
+<h5 id="export-ply">Export PLY</h5>
+<p>Export as PLY file.</p>
+<h4 id="render">Render</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/render.png" alt="Render" loading="lazy"></figure>
+<p>The original menu items are in the Render menu of the Info editor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Render Image</td>
+<td>Renders the current scene as an image by using the current offline renderer. Either Blender Internal or Cycles.</td>
+</tr>
+<tr>
+<td>Render Animation</td>
+<td>Renders the current scene as an animation. Either Blender Internal or Cycles.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="viewport-render">Viewport Render</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/viewport-render.png" alt="Viewport Render" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Viewport Render Image</td>
+<td>Renders the current scene as an image by using the Viewport and Open GL.</td>
+</tr>
+<tr>
+<td>Viewport Render Animation</td>
+<td>Renders the current scene as an animation by using the Viewport and Open GL.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="render-misc">Render Misc</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/render-misc.png" alt="Render Misc" loading="lazy"></figure>
+<p>The original menu items are in the Render menu of the Info editor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mixdown Audio</td>
+<td>Mixdown and export the scene's audio to an audio file.</td>
+</tr>
+<tr>
+<td>Show/ Hide Render view</td>
+<td>Toggles display of Render view.</td>
+</tr>
+<tr>
+<td>Play rendered animation</td>
+<td>Play rendered Animation sequence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="toolbars-mesh-edit">Toolbars Mesh Edit</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-mesh-edit.png" alt="Toolbars Mesh Edit" loading="lazy"></figure>
+<p>The Toolbars Mesh Edit contains tools for Mesh Objects in Edit Mode. The original menu items are mainly in the Mesh menu in Edit Mode. In the Vertices, Edges and Faces sub menus.</p>
+<p>This toolbars shows its content Edit mode.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-mesh-edit-2.png" alt="Toolbars Mesh Edit" loading="lazy"></figure>
+<h3 id="available-toolbars-2">Available Toolbars</h3>
+<p>The description of the single buttons goes from left to right.</p>
+<h4 id="vertices-split-connect">Vertices Split connect</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/vertices-split-connect.png" alt="Vertices Split connect" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Split</td>
+<td>Splits two connected Vertices.</td>
+</tr>
+<tr>
+<td>Vertex Connect Path</td>
+<td>Connect Vertices by their selection order, creating edges, splitting faces</td>
+</tr>
+<tr>
+<td>Vertex Connect</td>
+<td>Connect selected vertices of faces, splitting the face.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vertices-misc">Vertices Misc</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/vertices-misc.png" alt="Vertices Misc" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Convex Hull</td>
+<td>Enclose selected vertices in a convex polyhedron.</td>
+</tr>
+<tr>
+<td>Blend from Shape</td>
+<td>Blend in shape from a shape key.</td>
+</tr>
+<tr>
+<td>Shape Propagate</td>
+<td>Apply selected vertex locations to all other shape keys.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="edges-subdiv">Edges Subdiv</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/edges-subdiv.png" alt="Edges Subdiv" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subdivide</td>
+<td>Subdivides selected edges.</td>
+</tr>
+<tr>
+<td>Subdivide Edge Ring</td>
+<td>Subdivides an Edge Ring.</td>
+</tr>
+<tr>
+<td>Un-Subdivide</td>
+<td>Unsubdivides selected edges and faces.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="edges-sharp">Edges Sharp</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/edges-sharp.png" alt="Edges Sharp" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mark Sharp</td>
+<td>Mark selected edges as sharp.</td>
+</tr>
+<tr>
+<td>Unmark Sharp</td>
+<td>Unmark selected edges as sharp.</td>
+</tr>
+<tr>
+<td>Set Sharpness by Angle</td>
+<td>Set edge sharpness based on the angle between neighbouring angles.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="edges-freestyle">Edges Freestyle</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/edges-freestyle.png" alt="Edges Freestyle" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mark Freestyle Edge</td>
+<td>Mark selected edges as Freestyle feature edges.</td>
+</tr>
+<tr>
+<td>Unmark Freestyle Edge</td>
+<td>Unmark selected edges as Freestyle feature edges.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="edges-rotate">Edges Rotate</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/edges-rotate.png" alt="Edges Rotate" loading="lazy"></figure>
+<h5 id="rotate">Rotate</h5>
+<p>Rotate selected edges or adjoining faces.</p>
+<h4 id="edges-misc">Edges Misc</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/edges-misc.png" alt="Edges Misc" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edge Split</td>
+<td>Split selected edges so that each neighbor face gets its own copy.</td>
+</tr>
+<tr>
+<td>Bridge Edge loops</td>
+<td>Create faces between selected edge loops.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="faces-general">Faces general</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/faces-general.png" alt="Faces general" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fill</td>
+<td>Fill a selected edge loop with faces.</td>
+</tr>
+<tr>
+<td>Grid Fill</td>
+<td>Fill grid from two loops.</td>
+</tr>
+<tr>
+<td>Beautify Faces</td>
+<td>Rearrange some faces to minimize degeneration.</td>
+</tr>
+<tr>
+<td>Solidify</td>
+<td>Create a solid skin by extruding. Compensating for sharp angles.</td>
+</tr>
+<tr>
+<td>Intersect</td>
+<td>Cut an intersection into faces.</td>
+</tr>
+<tr>
+<td>Boolean Intersect</td>
+<td>Cut solid geometry from selected to unselected.</td>
+</tr>
+<tr>
+<td>Wire Frame</td>
+<td>Create a solid wire frame from faces.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="faces-freestyle">Faces Freestyle</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/faces-freestyle.png" alt="Faces Freestyle" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mark Freestyle Face</td>
+<td>Mark selected faces for exclusion from freestyle feature edge detection.</td>
+</tr>
+<tr>
+<td>Unmark Freestyle Face</td>
+<td>Unmark selected faces for exclusion from freestyle feature edge detection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="faces-tris">Faces Tris</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/faces-tris.png" alt="Faces Tris" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Poke Faces</td>
+<td>Split a face into a fan.</td>
+</tr>
+<tr>
+<td>Triangulate Faces</td>
+<td>Triangulates selected faces.</td>
+</tr>
+<tr>
+<td>Tris to Quads</td>
+<td>Join triangle faces into quads.</td>
+</tr>
+<tr>
+<td>Split by Edges</td>
+<td>Split faces by loose edges.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="faces-rotate-misc">Faces Rotate Misc</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/faces-rotate-misc.png" alt="Faces Rotate Misc" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rotate UV's</td>
+<td>Rotate UV coordinates inside faces.</td>
+</tr>
+<tr>
+<td>Reverse UV's</td>
+<td>Flip direction of UV coordinates inside faces.</td>
+</tr>
+<tr>
+<td>Rotate Colors</td>
+<td>Rotate Vertex Colors inside faces.</td>
+</tr>
+<tr>
+<td>Reverse Colors</td>
+<td>Flip direction of Vertex Colors inside faces.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cleanup">Cleanup</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/cleanup.png" alt="Cleanup" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete Loose</td>
+<td>Delete loose vertices, edges or faces.</td>
+</tr>
+<tr>
+<td>Decimate Geometry</td>
+<td>Simplify geometry by collapsing edges.</td>
+</tr>
+<tr>
+<td>Degenerate Dissolve</td>
+<td>Dissolve zero area faces and zero length edges.</td>
+</tr>
+<tr>
+<td>Make Planar Faces</td>
+<td>Flatten selected faces.</td>
+</tr>
+<tr>
+<td>Split Non Planar Faces</td>
+<td>Split non planar faces that exceeds the angle threshold.</td>
+</tr>
+<tr>
+<td>Split Concave Faces</td>
+<td>Make all faces convex.</td>
+</tr>
+<tr>
+<td>Fill Holes</td>
+<td>Fill in holes (boundary edge loops).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="toolbars-primitives">Toolbars Primitives</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-primitives.png" alt="Toolbars Primitives" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-primitives-2.png" alt="Toolbars Primitives" loading="lazy"></figure>
+<p>The toolbars Primitives contains the Add items from the Create tab.</p>
+<p>The full toolbar with all its content is just available in Object mode. In other modes it hides away. Single types are also visible in Edit mode. When you work at a mesh type, then the Mesh primitives toolbar is visible for example.</p>
+<h3 id="available-toolbars-3">Available Toolbars</h3>
+<p>The description of the single buttons goes from left to right.</p>
+<h4 id="mesh">Mesh</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/mesh.png" alt="Mesh" loading="lazy"></figure>
+<p>The Mesh toolbar contains the Mesh primitives.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Plane</td>
+<td>Add a Plane primitive.</td>
+</tr>
+<tr>
+<td>Add Cube</td>
+<td>Add a Cube primitive.</td>
+</tr>
+<tr>
+<td>Add Circle</td>
+<td>Add a Circle primitive.</td>
+</tr>
+<tr>
+<td>Add UV Sphere</td>
+<td>Add a UV Sphere primitive.</td>
+</tr>
+<tr>
+<td>Add Cylinder</td>
+<td>Add a Cylinder primitive.</td>
+</tr>
+<tr>
+<td>Add Cone</td>
+<td>Add a Cone primitive.</td>
+</tr>
+<tr>
+<td>Add Torus</td>
+<td>Add a Torus primitive.</td>
+</tr>
+<tr>
+<td>Add Grid</td>
+<td>Add a Grid primitive.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="curve">Curve</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/curve.png" alt="Curve" loading="lazy"></figure>
+<p>The Curve toolbar contains the Curve primitives.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Bezier</td>
+<td>Add a Bezier curve primitive.</td>
+</tr>
+<tr>
+<td>Add Circle</td>
+<td>Add a Circle curve primitive.</td>
+</tr>
+<tr>
+<td>Add Nurbs Curve</td>
+<td>Add a Nurbs Curve primitive.</td>
+</tr>
+<tr>
+<td>Add Nurbs Circle</td>
+<td>Add a Nurbs Circle curve primitive.</td>
+</tr>
+<tr>
+<td>Add Nurbs Path</td>
+<td>Add a Nurbs Path curve primitive.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="surface">Surface</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/surface.png" alt="Surface" loading="lazy"></figure>
+<p>The Surface toolbar contains the Surface primitives.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Surface Curve</td>
+<td>Add a Nurbs Surface curve primitive.</td>
+</tr>
+<tr>
+<td>Add Surface Circle</td>
+<td>Add a Nurbs Surface Circle primitive.</td>
+</tr>
+<tr>
+<td>Add Surface Patch</td>
+<td>Add a Nurbs Surface Patch primitive.</td>
+</tr>
+<tr>
+<td>Add Surface Cylinder</td>
+<td>Add a Nurbs Surface Cylinder primitive.</td>
+</tr>
+<tr>
+<td>Add Surface Sphere</td>
+<td>Add a Nurbs Surface Sphere primitive.</td>
+</tr>
+<tr>
+<td>Add Surface Torus</td>
+<td>Add a Nurbs Surface Torus primitive.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="metaball">Metaball</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/metaball.png" alt="Metaball" loading="lazy"></figure>
+<p>The metaball toolbar contains the Metaball primitives.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Metaball of type Ball</td>
+<td>Add Metaball of type Ball primitive.</td>
+</tr>
+<tr>
+<td>Add Metaball of type Capsule</td>
+<td>Add Metaball of type Capsule primitive.</td>
+</tr>
+<tr>
+<td>Add Metaball of type Plane</td>
+<td>Add Metaball of type Plane primitive.</td>
+</tr>
+<tr>
+<td>Add Metaball of type Ellipsoid</td>
+<td>Add Metaball of type Ellipsoid primitive.</td>
+</tr>
+<tr>
+<td>Add Metaball of type Cube</td>
+<td>Add Metaball of type Cube primitive.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="point-cloud">Point Cloud</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/point-cloud.png" alt="Point Cloud" loading="lazy"></figure>
+<p>The Point Cloud toolbar contains the Point Cloud primitive.</p>
+<h5 id="add-point-cloud">Add Point Cloud</h5>
+<p>Add a point cloud primitive.</p>
+<h4 id="volume">Volume</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/volume.png" alt="Volume" loading="lazy"></figure>
+<p>The Volume toolbar contains the Volume primitives.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Import OpenVDB Volume</td>
+<td>Imports a OpenVDP volume object.</td>
+</tr>
+<tr>
+<td>Add Volume</td>
+<td>Adds a volume object.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="grease-pencil">Grease Pencil</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/grease-pencil.png" alt="Grease Pencil" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blank</td>
+<td>Inserts a blank Grease Pencil Object. A blank Grease Pencil Object has just one color</td>
+</tr>
+<tr>
+<td>Stroke</td>
+<td>Inserts a Stroke Grease Pencil Object. A Stroke Grease Pencil Object has a few standard colors already.</td>
+</tr>
+<tr>
+<td>Monkey</td>
+<td>Inserts a Monkey Grease Pencil Object. This is a grease pencil object which contains the shape of a monkey already. This monkey is an example object.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="scene-line-art">Scene Line Art</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/scene-line-art.png" alt="Scene Line Art" loading="lazy"></figure>
+<p>Line Art is a modifier for the grease pencil object. Scene Line Art adds a grease pencil object with the Line Art Modifer set up for the whole scene.</p>
+<h5 id="collection-line-art">Collection Line Art</h5>
+<p>Line Art is a modifier for the grease pencil object. Scene Line Art adds a grease pencil object with the Line Art Modifer set up for a collection.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lamp</td>
+<td>The Lamp toolbar contains the different lamp types. · <strong>Add Lamp of type Point</strong>: Add Lamp of type Point. · <strong>Add Lamp of type Sun</strong>: Add Lamp of type Sun. · <strong>Add Lamp of type Spot</strong>: Add Lamp of type Spot. · <strong>Add Lamp of type Area</strong>: Add Lamp of type Area.</td>
+</tr>
+<tr>
+<td>Other</td>
+<td>The Other toolbar contains some other ground types like bones and text. · <strong>Add Text</strong>: Add a Text object. · <strong>Add Armature</strong>: Add an Armature object. · <strong>Add Lattice Deformer</strong>: Add a Lattice deformer object. · <strong>Add Lattice</strong>: Add a Lattice object. · <strong>Add Camera</strong>: Add a Camera object. · <strong>Add Speaker</strong>: Add a Speaker object.</td>
+</tr>
+<tr>
+<td>Empties</td>
+<td>The Empties toolbar contains the available empty types. · <strong>Add Empty of type Plain Axes</strong>: Add Empty of type Plain Axes. · <strong>Add Empty of type Sphere</strong>: Add Empty of type Sphere. · <strong>Add Empty of type Circle</strong>: Add Empty of type Circle. · <strong>Add Empty of type Cone</strong>: Add Empty of type Cone. · <strong>Add Empty of type Cube</strong>: Add Empty of type Cube. · <strong>Add Empty of type Single Arrow</strong>: Add Empty of type Single Arrow. · <strong>Add Empty of type Arrows</strong>: Add Empty of type Arrows. · <strong>Add Empty of type Image</strong>: Add Empty of type Image.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="image">Image</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/image.png" alt="Image" loading="lazy"></figure>
+<h5 id="images-as-planes">Images as Planes</h5>
+<p>Creates a mesh plane with an image.</p>
+<h4 id="light-probe">Light Probe</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/light-probe.png" alt="Light Probe" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sphere</td>
+<td>Adds a reflective light probe in sphere shape.</td>
+</tr>
+<tr>
+<td>Plane</td>
+<td>Adds a reflective light probe in plane shape.</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>Adds a volumetric array light probe.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="force-field">Force Field</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/force-field.png" alt="Force Field" loading="lazy"></figure>
+<p>The Force Field toolbar contains the available Force field types.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Physics Effector of Type Boid</td>
+<td>Add Physics Effector of Type Boid.</td>
+</tr>
+<tr>
+<td>Add Physics Effector of Type Charge</td>
+<td>Add Physics Effector of Type Charge.</td>
+</tr>
+<tr>
+<td>Add Physics Effector of Type Curve Guide</td>
+<td>Add Physics Effector of Type Curve Guide.</td>
+</tr>
+<tr>
+<td>Add Physics Effector of Type Drag</td>
+<td>Add Physics Effector of Type Drag.</td>
+</tr>
+<tr>
+<td>Add Physics Effector of Type Force</td>
+<td>Add Physics Effector of Type Force.</td>
+</tr>
+<tr>
+<td>Add Physics Effector of Type Harmonic</td>
+<td>Add Physics Effector of Type Harmonic.</td>
+</tr>
+<tr>
+<td>Add Physics Effector of Type Lenard-Jones</td>
+<td>Add Physics Effector of Type Lenard-Jones.</td>
+</tr>
+<tr>
+<td>Add Physics Effector of Type Magnetic</td>
+<td>Add Physics Effector of Type Magnetic.</td>
+</tr>
+<tr>
+<td>Add Physics Effector of Type Fluid Flow</td>
+<td>Add Physics Effector of Type Fluid Flow.</td>
+</tr>
+<tr>
+<td>Add Physics Effector of Type Texture</td>
+<td>Add Physics Effector of Type Texture.</td>
+</tr>
+<tr>
+<td>Add Physics Effector of Type Turbulence</td>
+<td>Add Physics Effector of Type Turbulence.</td>
+</tr>
+<tr>
+<td>Add Physics Effector of Type Vortex</td>
+<td>Add Physics Effector of Type Vortex.</td>
+</tr>
+<tr>
+<td>Add Physics Effector of Type Wind</td>
+<td>Add Physics Effector of Type Wind.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="collection">Collection</h4>
+<h5 id="add-collection-instance">Add Collection Instance</h5>
+<p>Add a collection instance.</p>
+<h2 id="toolbars-image">Toolbars Image</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-image.png" alt="Toolbars Image" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-image-2.png" alt="Toolbars Image" loading="lazy"></figure>
+<p>The toolbars Image contains some image related tools. At the moment this toolbar contains just tools to edit UV meshes. This means that you have to be in Edit mode with an UV mapped mesh to make the tools active.</p>
+<p>The original menu items are in the Image menu of the UV Image Editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-image-3.png" alt="Toolbars Image" loading="lazy"></figure>
+<p>Note that the tools does not show when you are not in edit mode. And the tools just works for the UV Editor. And of course you need a mesh object.</p>
+<h3 id="available-toolbars-4">Available Toolbars</h3>
+<p>The description of the single buttons goes from left to right.</p>
+<h4 id="uv-mirror">UV Mirror</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/uv-mirror.png" alt="UV Mirror" loading="lazy"></figure>
+<p>Mirror along X or Y axis.</p>
+<h4 id="uv-rotate">UV Rotate</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/uv-rotate.png" alt="UV Rotate" loading="lazy"></figure>
+<p>Rotate by 90 degrees clockwise or counter clockwise.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UV Align</td>
+<td>The UV Align toolbar contains tools to clean up and align the selected UV geometry. · <strong>Align Straighten</strong>: Align UV's along the line defined by the end points of the selection. · <strong>Align Straighten X</strong>: Align UV's along the line defined by the end points along the X axis. · <strong>Align Straighten Y</strong>: Align UV's along the line defined by the end points along the Y axis. · <strong>Align Auto</strong>: Automatically choose the axis on which there is most alignment already. · <strong>Align X</strong>: Align UV's at X axis. · <strong>Align Y</strong>: Align UV's at Y axis.</td>
+</tr>
+<tr>
+<td>Align Rotation</td>
+<td>Aligns the rotation of the selected geometry.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uv-unwrap">UV Unwrap</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/uv-unwrap.png" alt="UV Unwrap" loading="lazy"></figure>
+<p>The UV Common toolbar contains tools for unwrapping.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mark Seam</td>
+<td>Mark selected UV Edges as Seam.</td>
+</tr>
+<tr>
+<td>Clear Seam</td>
+<td>Remove Seam from selected UV Edges.</td>
+</tr>
+<tr>
+<td>Seams from Islands</td>
+<td>Marks the border edges of the UV patches as Seam.</td>
+</tr>
+<tr>
+<td>Unwrap Angle Based</td>
+<td>Unwraps the selected geometry with the Angle based ( ABF ) method.</td>
+</tr>
+<tr>
+<td>Unwrap Conformal</td>
+<td>Unwraps the selected geometry with the Conformal ( LSCM ) method.</td>
+</tr>
+<tr>
+<td>Unwrap Minimize Stretch</td>
+<td>Unwraps the selected geometry with the SLIM method.</td>
+</tr>
+<tr>
+<td>Cube Projection</td>
+<td>Maps the selected geometry with a cube projection.</td>
+</tr>
+<tr>
+<td>Cylinder Projection</td>
+<td>Maps the selected geometry with a cylinder projection.</td>
+</tr>
+<tr>
+<td>Sphere Projection</td>
+<td>Maps the selected geometry with a sphere projection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uv-modify-uv">UV Modify UV</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/uv-modify-uv.png" alt="UV Modify UV" loading="lazy"></figure>
+<p>The UV Modify toolbar contains tools to clean up the UV mapping.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pin</td>
+<td>Pins the selected vertices.</td>
+</tr>
+<tr>
+<td>Unpin</td>
+<td>Unpins the selected vertices.</td>
+</tr>
+<tr>
+<td>Weld</td>
+<td>Weld the selected UV vertices together.</td>
+</tr>
+<tr>
+<td>Remove Doubles UV</td>
+<td>Removes double vertices</td>
+</tr>
+<tr>
+<td>Average Island Scale</td>
+<td>Average the size of separated UV patches, based at their size in 3D space.</td>
+</tr>
+<tr>
+<td>Pack Island</td>
+<td>Packs the UV patches so that they fit best into the UV space, and as few texture space as possible is wasted.</td>
+</tr>
+<tr>
+<td>Copy mirrored UV Coordinates</td>
+<td>Copy mirrored UV Coordinates at X axis based on a mirrored mesh.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="toolbars-tools">Toolbars Tools</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-tools.png" alt="Toolbars Tools" loading="lazy"></figure>
+<p>The Toolbars Tools contains some tools in object mode. The content from the relations panel and the edit panel in the tool shelf. And one tool in Edit mode. Make Vertex Parent. Since this is also part of the relations panel.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-tools-2.png" alt="Toolbars Tools" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-tools-3.png" alt="Toolbars Tools" loading="lazy"></figure>
+<h3 id="available-toolbars-5">Available Toolbars</h3>
+<p>The description of the single buttons goes from left to right.</p>
+<h4 id="parent">Parent</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/parent.png" alt="Parent" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Make Parent</td>
+<td>Parents the selected object to the active object.</td>
+</tr>
+<tr>
+<td>Clear Parent</td>
+<td>Removes the parenting.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="object-to-data">Object to Data</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/object-to-data.png" alt="Object to Data" loading="lazy"></figure>
+<h5 id="make-single-user">Make Single User</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/make-single-user.png" alt="Make Single User" loading="lazy"></figure>
+<p>Make linked data local to each object. This operator opens a popup to adjust further settings.</p>
+<h5 id="link-data">Link Data</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/link-data.png" alt="Link Data" loading="lazy"></figure>
+<p>Apply active object links to other selected objects.</p>
+<p>This button is a menu to choose the link method.</p>
+<h4 id="link-to-scn">Link to SCN</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/link-to-scn.png" alt="Link to SCN" loading="lazy"></figure>
+<h5 id="link-to-scn-2">Link to SCN</h5>
+<p>Link selection to another scene. This other scene has of course to exist.</p>
+<h4 id="linked-objects">Linked Objects</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/linked-objects.png" alt="Linked Objects" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Make Local</td>
+<td>Make library linked data blocks local to this file.</td>
+</tr>
+<tr>
+<td>Make Library Override</td>
+<td>Add empty object to become local replacement data of a library linked object.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="join">Join</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/join.png" alt="Join" loading="lazy"></figure>
+<h5 id="join-2">Join</h5>
+<p>Join selected objects into active objects.</p>
+<h4 id="origin">Origin</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/origin.png" alt="Origin" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set Geometry to Origin</td>
+<td>Sets the geometry to origin.</td>
+</tr>
+<tr>
+<td>Set Origin to Geometry</td>
+<td>Sets the origin to geometry.</td>
+</tr>
+<tr>
+<td>Set Origin to 3D cursor</td>
+<td>Sets the origin to the 3D cursor.</td>
+</tr>
+<tr>
+<td>Set Origin to Center of Mass</td>
+<td>Sets the origin to the center of mass.</td>
+</tr>
+<tr>
+<td>Set Origin to Center of Volume</td>
+<td>Sets the origin to the center of volume.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="shading">Shading</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/shading.png" alt="Shading" loading="lazy"></figure>
+<h5 id="shade-smooth">Shade Smooth</h5>
+<p>Shades the geometry smooth.</p>
+<h5 id="shade-smooth-by-angle">Shade Smooth by Angle</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/shade-smooth-by-angle.png" alt="Shade Smooth by Angle" loading="lazy"><figcaption>Shade Smooth by Angle</figcaption></figure>
+<p>Activate auto smooth, and define the angle. Note that you need to call the adjust last operator here to set the angle. Either with the Last button. Or with the hotkey F6.</p>
+<h5 id="shade-flat">Shade Flat</h5>
+<p>Shades the geometry flat.</p>
+<h4 id="data-transfer">Data Transfer</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/data-transfer.png" alt="Data Transfer" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transfer Mesh Data</td>
+<td>Transfers mesh data.</td>
+</tr>
+<tr>
+<td>Transfer Mesh Data Layout</td>
+<td>Transfers the mesh data layout.</td>
+</tr>
+<tr>
+<td>Join UV's</td>
+<td>Transfer UV Maps.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relations</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/relations-icon.png" alt="" />The Relations toolbar contains one tool in Edit mode. Make Vertex Parent.</td>
+</tr>
+<tr>
+<td>Make Vertex Parent</td>
+<td>Parents an object to the selected vertice(s).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="toolbars-animation">Toolbars Animation</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-animation.png" alt="Toolbars Animation" loading="lazy"></figure>
+<p>The Toolbars Animation contains tools around animation. The Toolbars Range, Play, Sync and Keying set are the toolbars from the Timeline. But separated into four independent parts.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-animation-2.png" alt="Toolbars Animation" loading="lazy"></figure>
+<h3 id="available-toolbars-6">Available Toolbars</h3>
+<p>The description of the single buttons goes from left to right.</p>
+<h4 id="keyframes">Keyframes</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/keyframes.png" alt="Keyframes" loading="lazy"></figure>
+<p>The Keyframes toolbar contains some keyframe tools. The original menu items can be found in the Tool Shelf in the Animation tab in the Animation panel.</p>
+<p>The original menu items are in the Tool Shelf in the 3D View, in the Animation tab in the Animation panel.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insert Keyframe Menu</td>
+<td>When there is no keying set assigned to the currently selected object, then this button is a menu to choose a keying set. When there is already a keying set assigned, then you can record a keyframe with this button</td>
+</tr>
+<tr>
+<td>Delete Keyframe</td>
+<td>Deletes the current Keyframe</td>
+</tr>
+<tr>
+<td>Bake Action</td>
+<td>Bakes the animation to a new action</td>
+</tr>
+<tr>
+<td>Remove Animation</td>
+<td>Remove all keyframe animation for selected objects</td>
+</tr>
+<tr>
+<td>Calculate Object Paths</td>
+<td>Calculate motion paths for the selected objects.</td>
+</tr>
+<tr>
+<td>Clear Object Paths</td>
+<td>Clears motion paths for the selected objects.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="play">Play</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/play.png" alt="Play" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jump to Endpoint</td>
+<td>Jumps to beginning of animation.</td>
+</tr>
+<tr>
+<td>Jump to Keyframe</td>
+<td>Jumps to the previous keyframe Play Animation.</td>
+</tr>
+<tr>
+<td>Play Animation</td>
+<td>Plays animation reversed.</td>
+</tr>
+<tr>
+<td>Play Animation</td>
+<td>Plays animation forward.</td>
+</tr>
+<tr>
+<td>Jump to Keyframe</td>
+<td>Jumps to next keyframe.</td>
+</tr>
+<tr>
+<td>Jump to Endpoint</td>
+<td>Jumps to end of animation.</td>
+</tr>
+<tr>
+<td>Current Frame</td>
+<td>The current frame number.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="range">Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/range.png" alt="Range" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Preview Range</td>
+<td>Use an alternative start/end frame grange for animation playback and OpenGL renders instead of the Render Properties start/end frame range.</td>
+</tr>
+<tr>
+<td>Lock Frame Selection to Range</td>
+<td>Don't allow frame to be selected with mouse outside of frame range.</td>
+</tr>
+<tr>
+<td>Frame Start</td>
+<td>The frame start point.</td>
+</tr>
+<tr>
+<td>Frame End</td>
+<td>The frame end point.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="keying-set">Keying set</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/keying-set.png" alt="Keying set" loading="lazy"></figure>
+<h5 id="insert-keyframe">Insert Keyframe</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/insert-keyframe.png" alt="Insert Keyframe" loading="lazy"></figure>
+<p>Insert a keyframe.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete Keying set Keyframe</td>
+<td>Delete Keyframe.</td>
+</tr>
+<tr>
+<td>Use Keyframe Insert Auto</td>
+<td>Auto insert keyframes at manipulation.</td>
+</tr>
+<tr>
+<td>Keying set Drop down box</td>
+<td>This is a drop down box to choose the keying set method.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sync">Sync</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/sync.png" alt="Sync" loading="lazy"></figure>
+<p>Sync is a drop down box where you can adjust the syncing method.</p>
+<h4 id="keyframe-type">Keyframe Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/keyframe-type.png" alt="Keyframe Type" loading="lazy"></figure>
+<p>Keyframe Type is a drop down box to choose in what color the keyframe gets displayed in the Dope Sheet Editor.</p>
+<h2 id="toolbars-edit">Toolbars Edit</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-edit.png" alt="Toolbars Edit" loading="lazy"></figure>
+<p>The Toolbars Edit contains various toolbars around editing. Some content just shows when an object exists in the scene. Some content is visible in Object mode. Some content is visible in Edit mode.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-edit-2.png" alt="Toolbars Edit" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-edit-3.png" alt="Toolbars Edit" loading="lazy"></figure>
+<h3 id="available-toolbars-7">Available Toolbars</h3>
+<p>The description of the single buttons goes from left to right.</p>
+<h4 id="edit">Edit</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/edit.png" alt="Edit" loading="lazy"></figure>
+<p>The Edit toolbar is just visible in Edit Mode. The original menu items are in the Tool Shelf in the 3D View in the Tools tab in the Mesh Tools panel.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dissolve Vertices</td>
+<td>Dissolve Vertices.</td>
+</tr>
+<tr>
+<td>Dissolve Edges</td>
+<td>Dissolve Edges.</td>
+</tr>
+<tr>
+<td>Dissolve Faces</td>
+<td>Dissolve Faces.</td>
+</tr>
+<tr>
+<td>Remove Doubles</td>
+<td>Removes double vertices.</td>
+</tr>
+<tr>
+<td>Limited Dissolve</td>
+<td>Dissolve Edges and Vertices limited by the surrounding angle.</td>
+</tr>
+<tr>
+<td>Dissolve Selection</td>
+<td>Dissolve Geometry dependent of selection mode.</td>
+</tr>
+<tr>
+<td>Edge Collapse</td>
+<td>Collapse selected edges.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="merge">Merge</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/merge.png" alt="Merge" loading="lazy"></figure>
+<p>Merges selected geometry. This is a drop down box to choose where to merge.</p>
+<h5 id="separate">Separate</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/separate.png" alt="Separate" loading="lazy"></figure>
+<p>Separate the selection, and create a new object from it. This is a drop down box to choose the separate method.</p>
+<h5 id="weight-in-edit">Weight in Edit</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/weight-in-edit.png" alt="Weight in Edit" loading="lazy"></figure>
+<p>The Weight in Edit toolbar is just visible in Edit Mode for normal meshes, and Pose mode when you have a rigged character selected. The original menu items are in the Tool Shelf in the 3D View in the Tools tab in the Weight Tools panel. You need to have a Vertex Group applied.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normalize all</td>
+<td>Normalizes the whole mesh.</td>
+</tr>
+<tr>
+<td>Normalize</td>
+<td>Normalizes the selection</td>
+</tr>
+<tr>
+<td>Mirror</td>
+<td>Mirrors the selection.</td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>Inverts the weighting.</td>
+</tr>
+<tr>
+<td>Clean</td>
+<td>Remove Vertex Assignments that are not required.</td>
+</tr>
+<tr>
+<td>Quantize</td>
+<td>Set Weights to a fixed number of steps.</td>
+</tr>
+<tr>
+<td>Levels</td>
+<td>Add some offset and multiply with some gain the weights of the active vertex group.</td>
+</tr>
+<tr>
+<td>Smooth</td>
+<td>Smooth weights for selected vertices.</td>
+</tr>
+<tr>
+<td>Limit Total</td>
+<td>Limit deform weights.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="object-apply">Object Apply</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/object-apply.png" alt="Object Apply" loading="lazy"></figure>
+<p>The Object Apply toolbar is just visible in Object Mode. The original menu items are in the Object menu in the 3D View. The Apply menu.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apply Location</td>
+<td>Apply location.</td>
+</tr>
+<tr>
+<td>Apply Rotation</td>
+<td>Apply Rotation.</td>
+</tr>
+<tr>
+<td>Apply Scale</td>
+<td>Apply Scale.</td>
+</tr>
+<tr>
+<td>Apply All</td>
+<td>Apply Location, Rotation, Scale.</td>
+</tr>
+<tr>
+<td>Apply Rotation &amp; Scale</td>
+<td>Apply Rotation, Scale.</td>
+</tr>
+<tr>
+<td>Apply Visual Transform</td>
+<td>Apply Visual Transform.</td>
+</tr>
+<tr>
+<td>Make Instances real</td>
+<td>Make Duplicates attached to this object real.</td>
+</tr>
+<tr>
+<td>Apply Parent Inverse</td>
+<td>Apply the object’s parent inverse to its data</td>
+</tr>
+<tr>
+<td>Visual Geometry to Objects</td>
+<td>Convert geometry and instances into editable objects and collections.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="object-apply-deltas">Object Apply Deltas</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/object-apply-deltas.png" alt="Object Apply Deltas" loading="lazy"></figure>
+<p>Object Apply deltas converts normal object transforms to delta transforms. Any existing delta transform will also be included.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td>Apply location.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Apply Rotation.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Apply Scale.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>Apply Location, Rotation, Scale.</td>
+</tr>
+<tr>
+<td>Transforms to Delta Anims</td>
+<td>Convert object animation for normal transforms to delta transforms.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="object-clear">Object Clear</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/object-clear.png" alt="Object Clear" loading="lazy"></figure>
+<p>The Object Clear toolbar is just visible in Object Mode. The original menu items are in the Object menu in the 3D View. The Clear menu.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td>Resets the position of the object to zero.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Resets the object's rotation to zero.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Resets the object's scale to 1.</td>
+</tr>
+<tr>
+<td>Origin</td>
+<td>Resets the Origin Position.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="toolbars-misc">Toolbars Misc</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-misc.png" alt="Toolbars Misc" loading="lazy"></figure>
+<p>The Toolbars Misc contains some miscellaneous tools. Undo, the Scene drop down box, Last Operator, Operator Search and scene informations.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/toolbars-misc-2.png" alt="Toolbars Misc" loading="lazy"></figure>
+<h3 id="available-toolbars-8">Available Toolbars</h3>
+<p>The description of the single buttons goes from left to right.</p>
+<h3 id="viewport">Viewport</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/viewport.png" alt="Viewport" loading="lazy"></figure>
+<p>Displays the viewport panel from the object properties tab in the properties editor.</p>
+<p>This panel allows you to adjust the display of the selected object.</p>
+<p>Note that you need to have an object selected to show this dropdown panel.</p>
+<h4 id="undo-redo">Undo / Redo</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/undo-redo.png" alt="Undo / Redo" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Undo</td>
+<td>Undo the last step</td>
+</tr>
+<tr>
+<td>Redo</td>
+<td>Redo the last undone step</td>
+</tr>
+</tbody>
+</table>
+<h4 id="undo-history">Undo History</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/undo-history.png" alt="Undo History" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/undo-history-2.png" alt="Undo History" loading="lazy"></figure>
+<h5 id="undo-history-2">Undo History</h5>
+<p>A click at at the button reveals a list of the last operations where you can undo more than one step.</p>
+<h4 id="repeat">Repeat</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/repeat.png" alt="Repeat" loading="lazy"></figure>
+<h5 id="repeat-2">Repeat</h5>
+<p>Repeats the last action</p>
+<h5 id="repeat-history">Repeat History</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/repeat-history.png" alt="Repeat History" loading="lazy"></figure>
+<p>A click at at the button reveals a list of the last operations to choose from which undo step to repeat.</p>
+<h4 id="scene">Scene</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/scene.png" alt="Scene" loading="lazy"></figure>
+<p>The Scene drop down box to choose and create a new scene data block. The original drop down box is in the Properties editor in the Scene Properties tab in the Scene panel.</p>
+<h4 id="view-layer">View Layer</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/view-layer.png" alt="View Layer" loading="lazy"></figure>
+<p>Show the active view layer and switch between available view layers.</p>
+<p>The original drop down box is in the Properties editor in the View Layer Properties in the View Layer panel.</p>
+<h4 id="adjust-last-operation">Adjust last Operation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/adjust-last-operation.png" alt="Adjust last Operation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/adjust-last-operation-2.png" alt="Adjust last Operation" loading="lazy"></figure>
+<p>Adjust the latest operation. This is the same panel than the one in the 3D view down left. At least when it comes to content.</p>
+<h4 id="operatorsearch">Operatorsearch</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/operatorsearch.png" alt="Operatorsearch" loading="lazy"></figure>
+<p>This toolbar contains two search options. The search menu allows you to search for menus. The operator search menu allows you to search for single operators.</p>
+<h5 id="search-menu">Search Menu</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/search-menu.png" alt="Search Menu" loading="lazy"></figure>
+<p>The original menu item is in the header in the Edit menu. It lists the available menus, and allows searching.</p>
+<p>This button calls the menu search menu.</p>
+<h4 id="search-operator">Search Operator</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/search-operator.png" alt="Search Operator" loading="lazy"></figure>
+<p>The original menu item is in the header in the Edit menu.</p>
+<p>This button calls the Operator search menu. It lists the available operators, and allows searching.</p>
+<h4 id="info">Info</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/b7052d935ed262bcf7f4eddb461b40fba9982f58/docs2/images/editors/toolbar/info.png" alt="Info" loading="lazy"></figure>
+<p>The Info toolbar displays the scene statistics.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fkeymap/collection/docs/edit/docs2%2Fcontent%2Feditors%2Ftoolbar.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/keymap/docs2/content/editors/toolbar.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#introduction">Introduction</a><a class="h3" href="#limits">Limits</a><a class="h2" href="#menus">Menus</a><a class="h3" href="#toolbar-manager">Toolbar Manager</a><a class="h3" href="#toolbars-menus">Toolbars Menus</a><a class="h2" href="#bforartists-settings-add-on">Bforartists Settings add-on</a><a class="h2" href="#create-new-toolbar">Create new toolbar</a><a class="h2" href="#save-toolbar-state">Save Toolbar state</a><a class="h2" href="#toolbar-manager-2">Toolbar Manager</a><a class="h3" href="#toolbar-types">Toolbar Types</a><a class="h3" href="#options">Options</a><a class="h2" href="#toolbars-file">Toolbars File</a><a class="h3" href="#available-toolbars">Available Toolbars</a><a class="h2" href="#toolbars-mesh-edit">Toolbars Mesh Edit</a><a class="h3" href="#available-toolbars-2">Available Toolbars</a><a class="h2" href="#toolbars-primitives">Toolbars Primitives</a><a class="h3" href="#available-toolbars-3">Available Toolbars</a><a class="h2" href="#toolbars-image">Toolbars Image</a><a class="h3" href="#available-toolbars-4">Available Toolbars</a><a class="h2" href="#toolbars-tools">Toolbars Tools</a><a class="h3" href="#available-toolbars-5">Available Toolbars</a><a class="h2" href="#toolbars-animation">Toolbars Animation</a><a class="h3" href="#available-toolbars-6">Available Toolbars</a><a class="h2" href="#toolbars-edit">Toolbars Edit</a><a class="h3" href="#available-toolbars-7">Available Toolbars</a><a class="h2" href="#toolbars-misc">Toolbars Misc</a><a class="h3" href="#available-toolbars-8">Available Toolbars</a><a class="h3" href="#viewport">Viewport</a></aside></div></body></html>
