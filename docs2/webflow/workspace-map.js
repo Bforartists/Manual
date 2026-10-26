@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · workspace maps · @version 1.0.9
+/* Bforartists Docs 2.0 · workspace maps · @version 1.0.10
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer), next to the docs layer.
  * The sync writes plain lists from docs2/workspaces.yml; this script turns them into:
@@ -23,7 +23,8 @@
     fwd: '68b9b76aa841ed4158a2f249_forward.svg', back: '68b9b6dd5029e853d2e4ef85_back.svg',
     fsIn: '68b781e1216e0e1e52a012da_fullscreen_enter.svg', fsOut: '68b781e1275c5f760589fe66_fullscreen_exit.svg',
     ws: '68b8cd9563b35e0ca05c7797_workspace.svg', tag: '68b9b78469eaa2203439e9cb_hide_on.svg',
-    doc: '68b9b72e6ab175721a9bf7cb_documents.svg'
+    doc: '68b9b72e6ab175721a9bf7cb_documents.svg',
+    prev: '68b9b938cf80885f186db369_play_reverse.svg', next: '68b9b93626dd7c7162745f86_play.svg'
   };
   var CSS = [
     '.wsx{--wsx-card:var(--_bfa---surface--card,#404040);--wsx-panel:var(--_bfa---surface--panel,#363636);--wsx-sink:#292929;--wsx-text:var(--_bfa---text--primary,#ececec);--wsx-mute:#a8a8a8;--wsx-sel:var(--_bfa---accent--selected,#4f7fc0);margin:1.5rem 0 2rem;color:var(--wsx-text);font-family:var(--_bfa---type--text,Inter,sans-serif)}',
@@ -101,6 +102,10 @@
     '.wsx-info .wsx-h img{width:22px;height:22px;margin:0!important}',
     '.wsx-info p{margin:0!important;color:var(--wsx-mute);font-size:.9375rem;line-height:1.55}',
     '.wsx-info .ui-btn{align-self:flex-start}',
+    '.wsx .ui-btn{--edge-x:0!important;max-width:100%;height:auto;box-sizing:border-box;white-space:normal}',
+    '.wsx .ui-btn .ui-btn-label{white-space:normal;text-align:left;overflow-wrap:anywhere}',
+    '.wsx .wsx-go{align-self:stretch;min-height:2.75rem;padding-top:.5rem;padding-bottom:.5rem;font-size:.9375rem}',
+    '.wsx-tip{margin:0!important}',
     '.wsx-all{padding:.875rem;border-radius:.625rem;background:var(--wsx-sink);box-shadow:inset 2px 5px 10px #0006}',
     '.wsx-all>small,.wsx-for>small{display:block;margin:0 0 .5rem;font:700 .6875rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--wsx-mute)}',
     '.wsx-chips{display:flex;flex-wrap:wrap;gap:.375rem}',
@@ -113,9 +118,12 @@
     /* full screen: the picture gets the whole width, the info rides on top */
     '.wsx.is-fs{position:fixed;inset:0;z-index:9990;margin:0;padding:1rem;overflow:auto;background:#1e1e1e}',
     '.wsx.is-fs .wsx-side{display:none}',
-    '.wsx.is-fs .wsx-stage{max-height:calc(100vh - 12rem);aspect-ratio:auto;height:min(calc(100vh - 12rem),calc((100vw - 3rem) * .544))}',
+    '.wsx.is-fs .wsx-stage{height:auto;max-height:none;width:min(100%,calc((100vh - 13rem) * var(--arn,1.839)));margin:0 auto}',
+    '.wsx.is-fs .wsx-tip{display:none}',
+    '@media (min-width:1200px) and (min-height:601px){.wsx.is-fs .wsx-row{grid-template-columns:minmax(0,1fr) 20rem}.wsx.is-fs .wsx-side{display:flex}.wsx.is-fs .wsx-ov{display:none!important}}',
     '.wsx-ov{display:none}',
-    '.wsx.is-fs .wsx-ov{display:flex;position:absolute;left:1rem;bottom:1rem;z-index:3;max-width:min(28rem,calc(100% - 2rem));padding:.75rem 1rem;gap:.75rem;align-items:center;border-radius:.5rem;background:#1d1d1dee;color:#fff;box-shadow:0 4px 16px #000a;font-size:.875rem;line-height:1.45}',
+    '.wsx.is-fs .wsx-ov{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;margin:.625rem 0 0;padding:.25rem;font-size:.875rem;line-height:1.45;color:var(--wsx-text)}',
+    '.wsx.is-fs .wsx-ov>div{flex:1 1 12rem}',
     '.wsx-ov b{display:block;font-size:1rem}',
     '.wsx-ov .ui-btn{flex:none}',
     'html.wsx-lock{overflow:hidden}',
@@ -125,7 +133,6 @@
     '.wsx.is-fs .wsx-close{position:sticky;top:0;z-index:5;display:flex;justify-content:flex-end;margin:-.25rem 0 .5rem}',
     '.wsx.is-fs .wsx-tools [data-act=fs]{display:none}',
     '.wsx.is-fs .wsx-rib{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}',
-    '@media (max-width:991px),(max-height:600px){.wsx.is-fs .wsx-ov{position:static;display:flex;flex-wrap:wrap;margin:.5rem 0 0;max-width:none;padding:.25rem;background:none;box-shadow:none;color:var(--wsx-text)}.wsx.is-fs .wsx-ov>div{flex:1 1 12rem}}',
     '@media (max-width:767px){.wsx-ib[data-act=fs]{display:none}}',
     '@media (max-width:767px){.wsx:not(.is-fs) .wsx-ov{display:flex;flex-wrap:wrap;gap:.5rem .75rem;align-items:center;margin:.5rem .25rem .25rem;font-size:.875rem;line-height:1.45;color:var(--wsx-text)}.wsx-ov>div{flex:1 1 12rem}.wsx-tag b{display:none}.wsx-tag{padding:.2rem}.wsx-edge,.wsx-ib[data-act=labels]{display:none}.wsx-tools{top:.75rem;right:.75rem}.wsx-ib{width:2rem;height:2rem}.wsx-side{max-width:none}.wsx-pager{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.wsx-pg{padding:.5rem .625rem}.wsx-pos{display:none}}',
     /* focus tabs (the Docs home): drawn like the Download page's release switch; the chosen tab widens, the rest narrow */
@@ -164,6 +171,7 @@
     return '<a class="ui-btn dk-btn' + (mods ? ' ' + mods : '') + '" href="' + esc(href) + '"><span class="ui-btn-icon"><img class="ui-icon is-color" alt="" src="' + (iu(icon) || CDN + IC.fwd) + '"></span><span class="ui-btn-label">' + esc(label) + '</span></a>';
   }
   var coarse = window.matchMedia && matchMedia('(hover: none)').matches;
+  var HINT = coarse ? 'Tap an area to see what it is for here; double-tap it to open its chapter' : 'Point at an area to see what it is for here; double-click it to open its chapter';
 
   /* ---------------------------------------------------------------- reading the lists */
   function area(li) {
@@ -227,7 +235,7 @@
     } else {
       st.classList.add('is-loading');
       var im = new Image(); im.alt = (w.name ? w.name + ' workspace' : 'Workspace') + ' screenshot'; im.decoding = 'async';
-      im.onload = function () { st.classList.remove('is-loading'); if (im.naturalWidth) st.style.aspectRatio = im.naturalWidth + '/' + im.naturalHeight; };
+      im.onload = function () { st.classList.remove('is-loading'); if (im.naturalWidth) { st.style.aspectRatio = im.naturalWidth + '/' + im.naturalHeight; st.style.setProperty('--arn', (im.naturalWidth / im.naturalHeight).toFixed(4)); } };
       im.onerror = function () { st.classList.remove('is-loading'); };
       im.src = w.img; st.appendChild(im);
     }
@@ -239,7 +247,12 @@
       h.innerHTML = '<span class="wsx-tag">' + (a.i ? img(a.i) : '') + '<b>' + esc(a.name) + '</b></span>' + (a.i ? '<span class="wsx-big">' + img(a.i) + '</span>' : '');
       h.addEventListener('mouseenter', function () { self.pick(i); });
       h.addEventListener('focus', function () { self.pick(i); });
-      h.addEventListener('click', function () { self.pick(i); if (coarse && self.ov.offsetParent) self.ov.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); });
+      h.addEventListener('click', function () {
+        var now = Date.now();
+        if (coarse && a.href && self._tap === i && now - self._tapT < 450) { location.href = a.href; return; }   /* double tap: open the chapter */
+        self._tap = i; self._tapT = now;
+        self.pick(i); if (coarse && self.ov.offsetParent) self.ov.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      });
       h.addEventListener('dblclick', function () { if (a.href && !coarse) location.href = a.href; });
       st.appendChild(h);
     });
@@ -266,7 +279,7 @@
     qa('.wsx-hot', this.stage).forEach(function (h, k) { h.classList.toggle('is-on', k === i); });
     qa('.wsx-chip', this.all).forEach(function (c, k) { c.classList.toggle('is-active', k === i); });
     var where = this.opts.title || w.name;
-    var go = a.href ? btn('Open the ' + a.name + ' chapter', IC.fwd, 'is-small', a.href) : '';
+    var go = a.href ? btn('Open the ' + a.name + ' chapter', IC.fwd, 'is-accent wsx-go', a.href) : '';
     this.info.style.setProperty('--c', a.c);
     this.info.innerHTML = '<div class="wsx-eb"><span class="wsx-dot"></span>Area' + (where ? ' in ' + esc(where) : '') + '</div><div class="wsx-h">' + (a.i ? img(a.i) : '') + esc(a.name) + '</div>' + (a.note ? '<p>' + esc(a.note) + '</p>' : '') + go;
     this.ov.innerHTML = '<div><b>' + esc(a.name) + '</b>' + esc(a.note) + '</div>' + go;
@@ -281,6 +294,8 @@
     }
     if (on) { try { history.pushState({ wsxFs: 1 }, ''); } catch (e) {} var pop = function () { window.removeEventListener('popstate', pop); if (self.root.classList.contains('is-fs')) self.fs(true); }; window.addEventListener('popstate', pop); this._pop = pop; }
     else if (!fromBack) { if (this._pop) window.removeEventListener('popstate', this._pop); try { if (history.state && history.state.wsxFs) history.back(); } catch (e) {} }
+    if (on) { this._ph = d.createComment('wsx'); this.root.parentNode.insertBefore(this._ph, this.root); d.body.appendChild(this.root); }
+    else if (this._ph && this._ph.parentNode) { this._ph.parentNode.insertBefore(this.root, this._ph); this._ph.remove(); this._ph = null; }
     this.root.classList.toggle('is-fs', on); R.classList.toggle('wsx-lock', on);
     var b = q('[data-act=fs]', this.tools);
     b.innerHTML = img(on ? IC.fsOut : IC.fsIn); b.title = on ? 'Exit full screen (Esc)' : 'Full screen'; b.setAttribute('aria-label', b.title);
@@ -302,7 +317,7 @@
     var row = el('div', 'wsx-row'), main = el('div', 'wsx-main'), side = el('aside', 'wsx-side');
     var m = new Map(root, { title: title });
     main.appendChild(m.card);
-    var hint = el('p', 'wsx-ver', (coarse ? 'Tap an area to see what it is for here' : 'Point at an area to see what it is for here; double-click it to open its chapter') + (data.v ? ' · screenshot from version ' + esc(data.v) : '') + '.');
+    var hint = el('p', 'wsx-ver', HINT + (data.v ? ' · screenshot from version ' + esc(data.v) : '') + '.');
     main.appendChild(hint);
     if (data.href) {   /* the Docs home: one workspace, then the way to all of them */
       var go = el('div', 'wsx-for');
@@ -328,11 +343,12 @@
     }).join('');
     var row = el('div', 'wsx-row'), main = el('div', 'wsx-main'), side = el('aside', 'wsx-side');
     var m = new Map(root, {});
-    m.card.insertAdjacentHTML('beforeend', '<button type="button" class="wsx-ib wsx-edge is-l" data-go="-1" title="Previous workspace" aria-label="Previous workspace">' + img(IC.back) + '</button>' +
-      '<button type="button" class="wsx-ib wsx-edge is-r" data-go="1" title="Next workspace" aria-label="Next workspace">' + img(IC.fwd) + '</button>');
+    m.card.insertAdjacentHTML('beforeend', '<button type="button" class="wsx-ib wsx-edge is-l" data-go="-1" title="Previous workspace" aria-label="Previous workspace">' + img(IC.prev) + '</button>' +
+      '<button type="button" class="wsx-ib wsx-edge is-r" data-go="1" title="Next workspace" aria-label="Next workspace">' + img(IC.next) + '</button>');
     var pager = el('div', 'wsx-pager');
     var forb = el('div', 'wsx-for');
-    main.appendChild(m.card); main.appendChild(pager); main.appendChild(forb);
+    var tip = el('p', 'wsx-ver wsx-tip', HINT + '.');
+    main.appendChild(m.card); main.appendChild(tip); main.appendChild(pager); main.appendChild(forb);
     side.appendChild(m.all); side.appendChild(m.info);
     row.appendChild(main); row.appendChild(side);
     root.appendChild(rib); root.appendChild(row);
@@ -348,9 +364,9 @@
         var tb = rib.children[cur]; if (tb && rib.scrollWidth > rib.clientWidth) rib.scrollTo({ left: tb.offsetLeft - (rib.clientWidth - tb.offsetWidth) / 2, behavior: 'smooth' });
       }
       m.opts.title = w.name; m.show(w);
-      pager.innerHTML = '<button type="button" class="wsx-pg" data-go="-1">' + img(IC.back) + '<span><small>Previous</small><b>' + esc(pv.name) + '</b></span></button>' +
+      pager.innerHTML = '<button type="button" class="wsx-pg" data-go="-1">' + img(IC.prev) + '<span><small>Previous</small><b>' + esc(pv.name) + '</b></span></button>' +
         '<span class="wsx-pos"><span class="wsx-key">←</span>' + (cur + 1) + ' of ' + n + '<span class="wsx-key">→</span></span>' +
-        '<button type="button" class="wsx-pg is-r" data-go="1"><span><small>Next</small><b>' + esc(nx.name) + '</b></span>' + img(IC.fwd) + '</button>';
+        '<button type="button" class="wsx-pg is-r" data-go="1"><span><small>Next</small><b>' + esc(nx.name) + '</b></span>' + img(IC.next) + '</button>';
       forb.innerHTML = '<p><small>What ' + esc(w.name) + ' is for</small>' + esc(w.sum || 'A ready-made layout of editors.') + (w.v ? ' <span class="wsx-ver">Screenshot from version ' + esc(w.v) + '.</span>' : '') + '</p>' +
         (focus ? '<span>' + (w.href ? btn('Open the ' + w.name + ' page', IC.doc, 'is-small', w.href) : '') + (more.href ? btn('Explore all ' + (more.n ? more.n + ' ' : '') + 'workspaces', IC.ws, 'is-small is-accent', more.href) : '') + '</span>'
           : (w.href ? btn('Open the ' + w.name + ' page', IC.ws, 'is-small is-accent', w.href) : ''));

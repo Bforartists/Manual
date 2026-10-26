@@ -11,7 +11,7 @@
 | `docs-layer.js` | `bfa_docs_layer` | Doc Pages template, footer | Sidebar carets and Overview rows, breadcrumbs, section overview pages, the Docs home, status chips |
 | `workspace-map.js` | `bfa_workspace_map` | Doc Pages template, footer | Workspace hover maps and the Workspaces explorer |
 | `quicksearch.js` | `bfa_quicksearch` | Whole site, footer | The instant search popup (Ctrl K) |
-| `docs-loading.js` | `bfa_docs_loading` (inline) | Doc Pages template, header | Hides the sidebar until it is ready (no flicker) |
+| `docs-loading.js` | `bfa_docs_loading` (inline) | Doc Pages template, header | Hides the sidebar until it is ready (no flicker), with a spinner in the middle of the page |
 | `template-footer.html` | (pasted) | Doc Pages template, page footer code | The base docs script `bfa-docs-v6` and its CSS |
 
 Each `.js` file starts with `@version x.y.z` on its first line.

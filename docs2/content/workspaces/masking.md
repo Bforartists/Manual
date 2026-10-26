@@ -18,8 +18,6 @@ A workspace for the VFX workflow, to mask content.
 
 ![Masking workspace](/docs2/images/workspaces/workspaces/standard-workspaces-14.png)
 
-## Editors in this workspace
+## How the work flows
 
-- [Movie Clip Editor](../editors/movie-clip-editor/index.md)
-- [Dope Sheet](../editors/dope-sheet/index.md)
-- [Properties](../editors/properties/index.md)
+Masking is for cutting shapes out of moving footage. You draw and animate masks over the footage in the [Movie Clip Editor](../editors/movie-clip-editor/index.md), the [Dope Sheet](../editors/dope-sheet/index.md) shows their keyframes over time, and the [Compositor](../editors/compositor/index.md) uses the mask to separate, recolour or replace parts of the shot. The [Outliner](../editors/outliner.md) and [Properties Editor](../editors/properties/index.md) keep the scene and render settings close.

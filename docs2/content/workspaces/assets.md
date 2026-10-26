@@ -18,8 +18,6 @@ A workspace that provides you the asset browser.
 
 ![Assets workspace](/docs2/images/workspaces/workspaces/standard-workspaces-17.png)
 
-## Editors in this workspace
+## How the work flows
 
-- [Asset Browser](../editors/asset-browser/index.md)
-- [3D Viewport](../editors/3d-viewport/index.md)
-- [Properties](../editors/properties/index.md)
+Assets is your library and prop shelf. The [Asset Browser](../editors/asset-browser/index.md) shows your libraries, where you browse, tag and organise; drag an asset into the [3D Viewport](../editors/3d-viewport/index.md) to try it in the scene, or look inside a material asset in the [Shader Editor](../editors/shader-editor/index.md). Two [Outliners](../editors/outliner.md) help you make new assets: one marks objects, materials and more as assets, the other shows everything this file holds.

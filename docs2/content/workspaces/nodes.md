@@ -18,11 +18,6 @@ The workspace to work with the geometry nodes. Basic 3d view with the geometry n
 
 ![Nodes workspace](/docs2/images/workspaces/workspaces/standard-workspaces-4.png)
 
-## Editors in this workspace
+## How the work flows
 
-- [3D Viewport](../editors/3d-viewport/index.md)
-- [Geometry Node Editor](../editors/geometry-node-editor/index.md)
-- [Spreadsheet](../editors/spreadsheet.md)
-- [Timeline](../editors/timeline/index.md)
-- [Outliner](../editors/outliner.md)
-- [Properties](../editors/properties/index.md)
+Nodes is a lab for procedural geometry. You wire a recipe in the [Geometry Node Editor](../editors/geometry-node-editor/index.md) and watch the [3D Viewport](../editors/3d-viewport/index.md) rebuild the result live; when the shape surprises you, the [Spreadsheet](../editors/spreadsheet.md) shows the actual points, faces and attributes behind it. The [Properties Editor](../editors/properties/index.md) exposes the node group's inputs as friendly sliders on the modifier, and the [Timeline](../editors/timeline/index.md) scrubs frames to test setups that move.

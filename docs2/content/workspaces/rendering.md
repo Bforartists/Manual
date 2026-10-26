@@ -18,8 +18,6 @@ A workspace for the rendering.
 
 ![Rendering workspace](/docs2/images/workspaces/workspaces/standard-workspaces-8.png)
 
-## Editors in this workspace
+## How the work flows
 
-- [Image Editor](../editors/image-editor/index.md)
-- [Outliner](../editors/outliner.md)
-- [Properties](../editors/properties/index.md)
+Rendering is the darkroom. The [Properties Editor](../editors/properties/index.md) sets up the shot: render engine, samples, resolution and where the frames are saved. Render, and the finished picture develops in the [Image Editor](../editors/image-editor/index.md), where you look closely, compare render slots and save it. The [Timeline](../editors/timeline/index.md) chooses which frame, or which range of an animation, to render.

@@ -296,12 +296,7 @@ Chapter 9 is all about the UV Editor, and so on.
 Please have a look in the manual chapter 6 Editors Introduction. Here we list and describe all the different Editor types.
 
 
-|  |
-| -------------------------------------------------------------------------------------------------------------------- |
-| Conclusion |
-| The manual chapter for the editors starts with the number. Followed by the editor type. Example: 7 Editors - 3D View |
-
-
+> **Note:** In short: The manual chapter for the editors starts with the number. Followed by the editor type. Example: 7 Editors - 3D View
 #### Editor Area
 
 Each editor can have several areas. The header, a toolbar at the left, a sidebar at the right, A tools area, the viewport to display and modify the content, some navigation elements, a panel where you can adjust some operations, and maybe even a footer.
@@ -325,12 +320,7 @@ At the right of it you can find the Sidebar. Marked with blue again. It contains
 At the bottom left you can find the Adjust Last Operation panel. Marked with red. This panel appears when you do an operation, like move the mesh to another location, and allows you to adjust the values for the operation afterwards.
 
 
-|  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Conclusion |
-| The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Example: 7.1 Editors - 3D View - Header |
-
-
+> **Note:** In short: The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Example: 7.1 Editors - 3D View - Header
 #### Menus, options, tabs and panels
 
 Text menus and options are usually to find in the Header. So this are logical sub chapters for all header chapters.
@@ -338,12 +328,7 @@ Text menus and options are usually to find in the Header. So this are logical su
 Tabs and panels are usually to find in the sidebar. So this is the logical sub chapters for all sidebar chapters.
 
 
-|  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Conclusion |
-| The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Followed by the sub types in this area. Example: 7.1.5 Editors - 3D View - Header - Select Menu Example: 7.3.2 Editors - 3D View - Sidebar - Tool Tab |
-
-
+> **Note:** In short: The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Followed by the sub types in this area. Example: 7.1.5 Editors - 3D View - Header - Select Menu Example: 7.3.2 Editors - 3D View - Sidebar - Tool Tab
 #### Object Types and their modes
 
 There are several object types in Bforartists that you can work with. One of the most common object types is the mesh object.
@@ -355,12 +340,7 @@ Each mode has its own tool set. This means that some tools just shows with speci
 And this is the last and very important breadcrumb in our manual chapter titles. Object type and required mode.
 
 
-|  |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Conclusion |
-| The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Followed by the sub types in this area. Followed by object type and needed mode to show these tools. Example: 7.3.7 Editors - 3D View - Sidebar - Tool Tab - Mesh - Vertex Paint Mode |
-
-
+> **Note:** In short: The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Followed by the sub types in this area. Followed by object type and needed mode to show these tools. Example: 7.3.7 Editors - 3D View - Sidebar - Tool Tab - Mesh - Vertex Paint Mode
 ## About this Manual
 
 Bforartists is a fork of the open source software Blender. And every software needs a manual. Bforartists 1 was equal enough to use the Blender manual in big parts for that. But even when the tools are the same than in Blender, the user interface differs quite a bit.

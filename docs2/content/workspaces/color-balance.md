@@ -18,7 +18,6 @@ A video editing workspace especially made for color balance.
 
 > **Draft:** a screenshot and the exact layout of this workspace will be added here.
 
-## Editors in this workspace
+## How the work flows
 
-- [Video Sequence Editor](../editors/video-sequence-editor/index.md)
-- [Properties](../editors/properties/index.md)
+Color Balance is a grading suite for video. You pick strips in the [Video Sequence Editor](../editors/video-sequence-editor/index.md) and correct their colour with balance, curves and modifiers, while the preview and scopes show the result, so shots from different cameras end up looking like one film.

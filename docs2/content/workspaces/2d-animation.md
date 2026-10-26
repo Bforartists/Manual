@@ -18,13 +18,9 @@ A workspace to work with the grease pencil and to create 2D animation.
 
 ![2D Animation workspace](/docs2/images/workspaces/workspaces/standard-workspaces-12.png)
 
-## Editors in this workspace
+## How the work flows
 
-- [3D Viewport](../editors/3d-viewport/index.md)
-- [Dope Sheet](../editors/dope-sheet/index.md)
-- [Timeline](../editors/timeline/index.md)
-- [Outliner](../editors/outliner.md)
-- [Properties](../editors/properties/index.md)
+2D Animation is a drawing desk for hand-drawn animation. Through the camera, the [3D Viewport](../editors/3d-viewport/index.md) is a white sheet where you draw with Grease Pencil, and each drawing becomes a key in the [Dope Sheet](../editors/dope-sheet/index.md), one row per layer, so timing reads like an exposure sheet. The [Timeline](../editors/timeline/index.md) plays it back with onion skins to judge the motion. Two [Properties Editors](../editors/properties/index.md) keep the layers, their blending, opacity and masks close, and the [Outliner](../editors/outliner.md) holds your drawings and the camera.
 
 ## Starts in
 

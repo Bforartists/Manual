@@ -86,3 +86,8 @@ flowchart LR
 | 🔁 Every merge | Staging updates by itself; glance at the Actions summary | [Website sync](Website-Sync.md) |
 | 📅 Weekly | Merge open writer pull requests; check the review progress card on the Docs home | [Branches and review](Branches-and-Review.md) |
 | 🚀 Each Bforartists release | Version, screenshots, workspace maps, Blender mentions, publish live | [Release update](Release-Update.md) |
+
+
+## ✏️ Edit this page
+
+The **Edit this page** button at the foot of every page opens GitHub's editor on the current docs branch (`docs2/main`, set as `BRANCH` in `docs-layer.js`). GitHub makes your own branch and a pull request for you, so every edit starts from the latest docs and goes through the checks. Pages CMS still works for longer sessions: pick the docs branch there.

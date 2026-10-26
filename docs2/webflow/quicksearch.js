@@ -1,4 +1,4 @@
-/* Bforartists · instant search popup · @version 1.1.1
+/* Bforartists · instant search popup · @version 1.1.2
  *
  * Site-wide (registered Webflow script, footer). The search button in the site navigation
  * ([data-nav-search]) and Ctrl/⌘ K open a popup that searches the whole site as you type:
@@ -14,7 +14,7 @@
   if (R.dataset.bfaQs) return;
   R.dataset.bfaQs = '1';
   var URL_ = 'https://bforartists.github.io/Manual/nav/search.json', SURL = 'https://bforartists.github.io/Manual/nav/site.json', CDN = 'https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/';
-  var I = { zoom: '68b9bbd23fb07538f848b579_viewzoom.svg', doc: '68b9b72e6ab175721a9bf7cb_documents.svg', sec: '68b9b786235cfe7a6063d3dc_hierarchy.svg', world: '68b9b4b69f8eb147bccde6cf_world.svg', x: '68b9b6f02b79e1972f80e83b_cancel.svg', news: '68b8d6fe76b8096ac09f74e5_file_text.svg', art: '68b8f543763e8aff56926602_image.svg' };
+  var I = { zoom: '68b9bbd23fb07538f848b579_viewzoom.svg', doc: '68b9b72e6ab175721a9bf7cb_documents.svg', sec: '68b9b786235cfe7a6063d3dc_hierarchy.svg', world: '68b9b4b69f8eb147bccde6cf_world.svg', x: '68b9bbe3e15e16c19a6a1b1c_x.svg', news: '68b8d6fe76b8096ac09f74e5_file_text.svg', art: '68b8f543763e8aff56926602_image.svg' };
   var CSS = [
     '.bfa-qs{position:fixed;inset:0;z-index:9999;display:none;align-items:flex-start;justify-content:center;padding:12vh 1rem 1rem;background:#0009;backdrop-filter:blur(3px)}',
     '.bfa-qs.is-open{display:flex}',
@@ -27,7 +27,7 @@
     '.bfa-qs-field .bfa-qs-go img{width:16px;height:16px}',
     /* touch screens: no keyboard hints (Esc, arrows, Ctrl K) */
     '@media (hover:none){.bfa-qs-field kbd,.bfa-qs-foot{display:none}}',
-    '.bfa-qs-x{display:grid;place-items:center;width:1.75rem;height:1.75rem;border:0;border-radius:.25rem;background:none;cursor:pointer;opacity:.7}',
+    '.bfa-qs-x{display:grid;place-items:center;width:2rem;height:2rem;border:0;border-radius:.25rem;background:none;cursor:pointer;opacity:.85}',
     '.bfa-qs-x:hover{opacity:1;background:#ffffff10}',
     '.bfa-qs-x img{width:14px;height:14px}',
     '.bfa-qs-list{overflow:auto;padding:.375rem}',
