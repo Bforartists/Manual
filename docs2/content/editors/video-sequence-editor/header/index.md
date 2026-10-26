@@ -653,9 +653,10 @@ Select everything.
 | Entry | What it does |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | None | Select nothing. |
-| Inverse | Invert the current selection. |
-| Box Select | Draw a rectangle to box select strips. It adds to selection by default. To subtract from selection hold down Shift key. |
-| Box Select (Include Handles) | Draw a rectangle to box select the handles of the strips. A strip has a resize handle at the start and the end of the strip. It adds to selection by default. To subtract from selection hold down Shift key. |
+| Invert | Flip the selection: selected strips become unselected and the other way round. |
+| Box Select (Legacy) | Drag a rectangle to select strips. Hold Shift to remove strips from the selection. You rarely need it: dragging with the Tweak tool selects the same way. |
+| Box Select (Include Handles) | Like Box Select, but it also selects the handles at the start and end of each strip, so you can trim several strips at once. |
+| Side of Cursor | Selects every strip on the same side of the playhead as your mouse. |
 
 #### Side of Frame submenu
 
@@ -697,19 +698,17 @@ Which side to select.
 | Right | Select the strips right from the current frame that are in the same channel. |
 | Both sides | Select all strips in the channel of the currently selected strip. |
 
-#### Linked submenu
+#### Linked
 
-![Linked submenu](/docs2/images/editors/video-sequence-editor/header/select-menu/linked-submenu.png)
+Selects every strip that touches the strips you have selected.
 
-| Entry | What it does |
-| ----- | --------------------------------------------------------------------------------- |
-| All | Select all strips that are adjacent to the current selected strip. |
-| Less | Decrease the selection of strips that are adjacent to the current selected strip. |
-| More | Increase the selection of strips that are adjacent to the current selected strip. |
+#### All by Type submenu
 
-#### Selecxt Grouped submenu
+Selects every strip of one kind, for example all Sound strips or all Text strips. The kinds are Scene, Clip, Mask, Movie, Sound, Image, Color, Text, Adjustment Layer, Compositor, Effect and Visual.
 
-![Selecxt Grouped submenu](/docs2/images/editors/video-sequence-editor/header/select-menu/selecxt-grouped-submenu.png)
+#### Grouped submenu
+
+![Grouped submenu](/docs2/images/editors/video-sequence-editor/header/select-menu/selecxt-grouped-submenu.png)
 
 Select all strips that are equal to the current selected strip by the chosen method. The menu items should be self explaining.
 
@@ -724,8 +723,8 @@ Select everything.
 | Entry | What it does |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
 | None | Select nothing. |
-| Inverse | Invert the current selection. |
-| Box Select | Draw a rectangle to box select strips. It adds to selection by default. To subtract from selection hold down Shift key. |
+| Invert | Flip the selection. |
+| Box Select (Legacy) | Drag a rectangle to select strips. Hold Shift to remove strips from the selection. |
 
 #### Grouped
 
