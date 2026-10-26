@@ -44,6 +44,7 @@ permissions:
 jobs:
   docs:
     runs-on: ubuntu-latest
+    timeout-minutes: 60   # a forced full sync takes ~15-40 min; stop a run that drags on longer
     # skip the bot's own commits
     if: ${{ !contains(github.event.head_commit.message, '[docs-bot]') }}
     env:
