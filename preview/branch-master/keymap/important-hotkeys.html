@@ -359,7 +359,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4>Keymap</h4>
 <a href="../keymap.html">Keymap</a>
 <a class="is-current" href="important-hotkeys.html">Important Hotkeys</a>
-<a href="bforartists-keymap.html">Bforartists Keymap</a>
+<a href="standard-keymaps.html">Standard Keymaps</a>
 <a href="keymap-table.html">Keymap Table</a>
 <h4>Advanced</h4>
 <span>Advanced</span>
@@ -383,10 +383,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>There are however a few important hotkeys left that makes your life easier. And there are still some hotkeys that you simply need. Like the navigation with the mouse, which is also some kind of a hotkey.</p>
 <p>Here we list some of the most used and basic hotkeys at one sheet, so that you don't have to dig through the manual and the whole keymap chapter or the menus to find the basic functionality.</p>
 <h2 id="the-important-keys-at-a-glance">The important keys at a glance</h2>
-<p>The keyboard below shows only these keys. Pick the editor and the mode, hold Shift, Ctrl or Alt to see those combinations, and click a key to read what it does. Every other key is on the <a href="bforartists-keymap.html">Bforartists Keymap</a>.</p>
+<p>The keyboard below shows only these keys. Pick the editor and the mode, hold Shift, Ctrl or Alt to see those combinations, and click a key to read what it does. Every other key is on the <a href="standard-keymaps.html">Standard Keymaps</a>.</p>
 <!-- keymap-explorer mini="1" -->
 <h2 id="in-the-3d-viewport">In the 3D Viewport</h2>
 <h3 id="all-modes">All Modes</h3>
+<!-- keymap-keys keys="MMB=Move view; W=Move selection; RMB=Rotate view; Alt+MMB=Rotate view; E=Rotate selection; Scrollwheel=Zoom view; Ctrl+MMB=Zoom view; R=Scale selection; E=Trackball rotation; F12=Render Image; Numpad 0=Switch to Cameraview" -->
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -434,6 +435,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="switch-views-to-orthographic">Switch views to orthographic</h3>
+<!-- keymap-keys keys="Numpad 1=Ortho front; Numpad 3=Ortho right; Ctrl+Numpad 1=Ortho back; Numpad 7=Ortho top; Ctrl+Numpad 3=Ortho left; Ctrl+Numpad 7=Ortho bottom" -->
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -470,6 +472,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </table>
 <p>To leave the orthographic views rotate the view.</p>
 <h3 id="select">Select</h3>
+<!-- keymap-keys keys="D=Tweak; RMB=Lasso Select; B=Box Select; Shift=Add to / Remove from selection; G=Select Circle" -->
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -501,6 +504,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="modes">Modes</h3>
+<!-- keymap-keys keys="1=Object Mode; 4=Vertex Paint; 2=Edit Mode; 5=Weight Paint; 3=Sculpt Mode; 6=Texture paint; 0=Pose Mode" -->
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -540,6 +544,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="edit-mode-with-a-mesh-object">Edit Mode with a Mesh object</h3>
+<!-- keymap-keys keys="C=Edge Select; Alt+LMB=Select Edgeloop; X=Vertice Select; Shift+Alt+LMB=Select Edgering; V=Face Select; Ctrl+Left Click=Pick shortest Path; S=Extrude; Shift=Add to selection" -->
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -550,7 +555,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <tbody>
 <tr>
 <td>Edge Select</td>
-<td><code>X</code></td>
+<td><code>C</code></td>
 </tr>
 <tr>
 <td>Select Edgeloop</td>
@@ -558,7 +563,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tr>
 <tr>
 <td>Vertice Select</td>
-<td><code>C</code></td>
+<td><code>X</code></td>
 </tr>
 <tr>
 <td>Select Edgering</td>
@@ -583,6 +588,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="edit-mode-with-a-bone-object">Edit mode with a Bone object</h3>
+<!-- keymap-keys keys="S=Extrude; Alt+P=Clear Parent; Shift+S=Extrude Forked; P=Separate Bones; Ctrl+P=Make Parent" -->
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -614,6 +620,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="sculpt-mode-with-a-mesh-object">Sculpt Mode with a Mesh object</h3>
+<!-- keymap-keys keys="X=Brush Size; V=Brush Angle; C=Brush Strength" -->
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -637,6 +644,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="vertex-mode-with-a-mesh-object">Vertex Mode with a Mesh object</h3>
+<!-- keymap-keys keys="X=Brush Size; C=Brush Angle; V=Brush Strength" -->
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -660,6 +668,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="texture-paint-mode-with-a-mesh-object">Texture Paint Mode with a Mesh object</h3>
+<!-- keymap-keys keys="X=Brush Size; V=Brush Angle; C=Brush Strength; Ctrl+Alt+F=Radial Control Mask Angle" -->
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -687,6 +696,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="paint-modes-when-working-with-a-stencil-map">Paint modes when working with a stencil map</h3>
+<!-- keymap-keys keys="Alt+RMB=Move stencil Texture; Shift+Ctrl+Alt+RMB=Move secondary stencil Texture; Shift+RMB=Rotate stencil Texture; Shift+Alt+RMB=Rotate secondary stencil Texture; Ctrl+RMB=Scale stencil Texture; Ctrl+Alt+RMB=Scale secondary stencil Texture" -->
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -723,6 +733,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </table>
 <h2 id="global-keys">Global keys</h2>
 <h3 id="load-save">Load Save</h3>
+<!-- keymap-keys keys="Ctrl+O=Open File; Shift+Ctrl+S=Save as; Ctrl+S=Save File; Ctrl+N=New File" -->
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -750,6 +761,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="undo-redo">Undo Redo</h3>
+<!-- keymap-keys keys="Ctrl+Z=Undo; Shift+Ctrl+Z=Redo" -->
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -769,6 +781,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="f-keys">F keys</h3>
+<!-- keymap-keys keys="F2=Rename active item; Ctrl+F2=Batch rename item; F3=Search Menu; F4=File context menu; F5=Flip Region (Sidebar and Tool shelf with the mouse over the area); Alt+F5=System Console (Windows only); F6=Redo Last ( Adjust last operation panel); F11=Show / Hide Renderview; Ctrl+F11=Play rendered animation; F12=Render Still; Ctrl+F12=Render Animation" -->
 <table class="ui-doc-table">
 <thead>
 <tr>
