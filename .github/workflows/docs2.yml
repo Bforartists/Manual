@@ -9,7 +9,7 @@
 #   4. 💬 posts or updates one comment on the pull request with the results
 #   5. 🌐 on the publish branch only (after a merge): syncs the pages to Webflow and
 #      publishes the webflow.io staging site. Custom domains are never published here.
-#   6. 🧭 on the publish branch: publishes nav.json (the whole sidebar tree) and keymap.json to GitHub Pages
+#   6. 🧭 on the publish branch: publishes nav.json (the whole sidebar tree) and the keymap files to GitHub Pages
 #   7. 🎛️ on the publish branch: publishes the docs layer as webflow/docs-layer-<version>.js
 #      at /nav/nav.json, where the website's docs script reads it.
 #
@@ -174,7 +174,7 @@ jobs:
           export DOCS_SHA=$(git rev-parse HEAD)     # includes the bot's commit, so image links match
           status=0
           python docs2/tools/sync.py . --apply --publish --prune --report _sync.md --nav _nav/nav.json || status=$?
-          [ -f docs2/keymap/keymap.json ] && [ -d _nav ] && cp docs2/keymap/keymap.json _nav/keymap.json   # for the interactive keymap
+          [ -d _nav ] && cp docs2/keymap/keymap*.json _nav/ 2>/dev/null || true   # the interactive keymap: Bforartists, Blender, Industry Compatible
           [ -f _sync.md ] && cat _sync.md >> "$GITHUB_STEP_SUMMARY"
           exit $status
 

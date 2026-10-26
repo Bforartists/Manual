@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Bforartists keymap export: the real keymap, straight from the Bforartists source.
 
-    python3 docs2/tools/keymap.py build <bforartists checkout> [--out docs2/keymap/keymap.json]
+    python3 docs2/tools/keymap.py build <bforartists checkout> [--out docs2/keymap]   # all three presets
     python3 docs2/tools/keymap.py diff old.json new.json            # added / changed / removed, as Markdown
     python3 docs2/tools/keymap.py check                             # every keymap has a context in contexts.yml
 
@@ -14,7 +14,10 @@ How the keymap is put together (the same way Bforartists does it when it starts)
      keymaps Bforartists changes. Each one replaces the base keymap of the same name.
 
 The result, one entry per keymap with its items, goes to keymap.json for the interactive keymap on
-the website. Nothing is typed by hand except docs2/keymap/contexts.yml (which editor and mode each
+the website. The two other presets Bforartists ships are built the same way, into their own files:
+keymap-blender.json (Blender.py: blender_default.py alone) and keymap-industry.json
+(Industry_Compatible.py: industry_compatible_data.py); their Mac versions use the source's own
+Ctrl → Cmd conversion (scripts/modules/bl_keymap_utils/platform_helpers.py). Nothing is typed by hand except docs2/keymap/contexts.yml (which editor and mode each
 keymap belongs to) and docs2/keymap/overrides.yml (better labels where the operator name is poor).
 """
 import ast
@@ -58,12 +61,52 @@ def read_data_file(path):
     return ver, data
 
 
-def base_keymaps(repo):
-    path = os.path.join(repo, KC, "keymap_data", "blender_default.py")
-    spec = importlib.util.spec_from_file_location("bfa_blender_default", path)
+def load_module(path, name):
+    spec = importlib.util.spec_from_file_location(name, path)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
+    return mod
+
+
+def base_keymaps(repo):
+    mod = load_module(os.path.join(repo, KC, "keymap_data", "blender_default.py"), "bfa_blender_default")
     return mod.generate_keymaps(mod.Params(**BFA_PARAMS))
+
+
+def industry_keymaps(repo):
+    """industry_compatible_data.generate_keymaps() fills its gaps from blender_default.py through
+    bpy.utils.execfile, which only loads a file as a module: a stand-in does the same here."""
+    import types
+    if "bpy" not in sys.modules:
+        bpy = types.ModuleType("bpy")
+        bpy.utils = types.ModuleType("bpy.utils")
+        bpy.utils.execfile = lambda path, mod=None: load_module(path, "bfa_execfile_" + os.path.basename(path)[:-3])
+        sys.modules["bpy"], sys.modules["bpy.utils"] = bpy, bpy.utils
+    mod = load_module(os.path.join(repo, KC, "keymap_data", "industry_compatible_data.py"), "bfa_industry")
+    return mod.generate_keymaps(mod.Params())
+
+
+def for_macos(repo, data):
+    """Ctrl → Cmd, exactly as Blender.py and Industry_Compatible.py do on a Mac."""
+    path = os.path.join(repo, "scripts", "modules", "bl_keymap_utils", "platform_helpers.py")
+    return load_module(path, "bfa_platform_helpers").keyconfig_data_oskey_from_ctrl_for_macos(data)
+
+
+def preset_version(repo):
+    return read_data_file(os.path.join(repo, KC, "Bforartists.py"))[0]
+
+
+# The keymap presets in Preferences › Keymap: id → (name, file, how to build pc and mac)
+PRESETS = {
+    "bforartists": ("Bforartists", "keymap.json",
+                    lambda r: (merged(r, "Bforartists.py"), merged(r, "Bforartists-macOS.py"))),
+    "blender": ("Blender", "keymap-blender.json",
+                lambda r: ((preset_version(r), base_keymaps(r), []),
+                           (preset_version(r), for_macos(r, base_keymaps(r)), []))),
+    "industry": ("Industry Compatible", "keymap-industry.json",
+                 lambda r: ((preset_version(r), industry_keymaps(r), []),
+                            (preset_version(r), for_macos(r, industry_keymaps(r)), []))),
+}
 
 
 def merged(repo, preset):
@@ -172,19 +215,19 @@ def items_of(km, overrides):
     return out
 
 
-def build(repo, out_path):
-    contexts, overrides = load_yaml("contexts.yml"), load_yaml("overrides.yml")
-    result = {"source": "Bforartists " + (os.environ.get("BFA_COMMIT", "")[:12] or "source"), "variants": {}}
-    for variant, preset in (("pc", "Bforartists.py"), ("mac", "Bforartists-macOS.py")):
-        ver, kms, changed = merged(repo, preset)
+def build_one(repo, pid, out_path, contexts, overrides):
+    name, _, make = PRESETS[pid]
+    result = {"source": "Bforartists " + (os.environ.get("BFA_COMMIT", "")[:12] or "source"),
+              "keymap": pid, "name": name, "variants": {}}
+    for variant, (ver, kms, changed) in zip(("pc", "mac"), make(repo)):
         result["version"] = ".".join(map(str, ver or ()))
         rows = []
         for km in kms:
-            name, meta = km[0], km[1]
+            kname, meta = km[0], km[1]
             modal = bool(meta.get("modal"))
-            rows.append({"name": name, "space": meta.get("space_type", "EMPTY"), "region": meta.get("region_type", "WINDOW"),
-                         "modal": modal or None, "bfa": name in changed or None,
-                         "ctx": context_of(name, meta.get("space_type"), modal, contexts),
+            rows.append({"name": kname, "space": meta.get("space_type", "EMPTY"), "region": meta.get("region_type", "WINDOW"),
+                         "modal": modal or None, "bfa": kname in changed or None,
+                         "ctx": context_of(kname, meta.get("space_type"), modal, contexts),
                          "items": items_of(km, overrides)})
         rows.sort(key=lambda r: (r["ctx"]["group"], r["name"]))
         result["variants"][variant] = [{k: v for k, v in r.items() if v is not None} for r in rows]
@@ -192,16 +235,22 @@ def build(repo, out_path):
     if os.path.exists(out_path):                     # same keys as before: keep the file (no churn)
         try:
             old = json.load(open(out_path, encoding="utf-8"))
-            if old.get("version") == result["version"] and old.get("variants") == result["variants"]:
-                print(f"keymap {result['version']}: unchanged ({out_path})")
+            if old.get("version") == result["version"] and old.get("variants") == result["variants"] \
+                    and old.get("name") == result["name"]:
+                print(f"{name} keymap {result['version']}: unchanged ({out_path})")
                 return old
         except (ValueError, OSError):
             pass
     json.dump(result, open(out_path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     n = {v: sum(len(k["items"]) for k in result["variants"][v]) for v in result["variants"]}
-    print(f"keymap {result['version']}: " + ", ".join(f"{v} {len(result['variants'][v])} keymaps / {n[v]} items" for v in n)
+    print(f"{name} keymap {result['version']}: " + ", ".join(f"{v} {len(result['variants'][v])} keymaps / {n[v]} items" for v in n)
           + f" → {out_path} ({os.path.getsize(out_path) // 1024} KB)")
     return result
+
+
+def build(repo, out_dir=KDIR):
+    contexts, overrides = load_yaml("contexts.yml"), load_yaml("overrides.yml")
+    return {pid: build_one(repo, pid, os.path.join(out_dir, PRESETS[pid][1]), contexts, overrides) for pid in PRESETS}
 
 
 # ---------------------------------------------------------------- diff and check
@@ -235,8 +284,10 @@ def diff(old_path, new_path):
     print("\n".join(lines))
 
 
-def check(path=os.path.join(KDIR, "keymap.json")):
-    data, contexts = json.load(open(path)), load_yaml("contexts.yml")
+def check(out_dir=KDIR):
+    contexts = load_yaml("contexts.yml")
+    files = [json.load(open(os.path.join(out_dir, f))) for _, f, _ in PRESETS.values() if os.path.exists(os.path.join(out_dir, f))]
+    data = {"variants": {f"{d.get('keymap', 'bforartists')}-{v}": kms for d in files for v, kms in d["variants"].items()}}
     names = {km["name"] for v in data["variants"].values() for km in v}
     listed = contexts.get("keymaps") or {}
     pats = [p["match"] for p in contexts.get("patterns") or []]
@@ -254,7 +305,7 @@ def main(argv):
         print(__doc__)
         return 1
     if argv[0] == "build":
-        out = argv[argv.index("--out") + 1] if "--out" in argv else os.path.join(KDIR, "keymap.json")
+        out = argv[argv.index("--out") + 1] if "--out" in argv else KDIR
         build(argv[1], out)
     elif argv[0] == "diff":
         diff(argv[1], argv[2])

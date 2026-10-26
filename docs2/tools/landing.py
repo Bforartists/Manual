@@ -291,7 +291,7 @@ def keymap_block(body):
     interactive keymap script draws from; the keys themselves come from keymap.json."""
     def rep(m):
         opts = dict(re.findall(r'(\w+)="([^"]*)"', m.group(1) or ""))
-        extra = "".join(f' data-{k}="{htmllib.escape(v)}"' for k, v in opts.items() if k in ("editor", "mode"))
+        extra = "".join(f' data-{k}="{htmllib.escape(v)}"' for k, v in opts.items() if k in ("editor", "mode", "mini"))
         return f'<div class="ui-keymap"><ul><li data-k="keymap" data-src="{KM_URL}"{extra}>Interactive keymap</li></ul></div>'
     return KM_MARK.sub(rep, body)
 
