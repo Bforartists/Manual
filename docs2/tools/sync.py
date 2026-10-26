@@ -117,18 +117,29 @@ class Webflow:
     def update_many(self, cid, pairs, max_items=25, max_bytes=1_000_000, max_images=MAX_IMAGES_PER_CALL):
         """PATCH items in batches (fewer calls, kinder to rate limits on a full sync). Batches are also
         capped by screenshot count: Webflow copies each new image while it answers."""
+        def send(batch):
+            # Stamp the sync time as the batch goes out, not when the page was prepared: on a full
+            # sync the last batches leave minutes later, and an early stamp made the next run take
+            # those pages for hand edits in Webflow and skip them for good.
+            now = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+            for b in batch:
+                c = b["fieldData"].get("checksum")
+                if isinstance(c, str) and "|" in c:
+                    b["fieldData"]["checksum"] = c.split("|", 1)[0] + "|" + now
+            self.req("PATCH", f"/collections/{cid}/items", {"items": batch})
+
         batch, size, imgs = [], 0, 0
         for item_id, fd in pairs:
             raw = json.dumps(fd)
             n, k = len(raw), raw.count("raw.githubusercontent.com")
             if batch and (len(batch) >= max_items or size + n > max_bytes or imgs + k > max_images):
-                self.req("PATCH", f"/collections/{cid}/items", {"items": batch})
+                send(batch)
                 batch, size, imgs = [], 0, 0
             batch.append({"id": item_id, "isDraft": False, "fieldData": fd})
             size += n
             imgs += k
         if batch:
-            self.req("PATCH", f"/collections/{cid}/items", {"items": batch})
+            send(batch)
 
     def publish_staging(self, site_id):
         return self.req("POST", f"/sites/{site_id}/publish", {"publishToWebflowSubdomain": True, "customDomains": []})

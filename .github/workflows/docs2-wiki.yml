@@ -1,0 +1,58 @@
+# Docs 2.0 · wiki
+# GitHub wikis have no branches or pull requests, so the handbook is written and reviewed in
+# docs2/dev-docs/ and copied to the wiki by docs2/tools/wiki_sync.py. This runs after every merge
+# into master that touches the handbook, and on demand. Pages that exist only in the wiki (for
+# example Reference-Manual-writing-guide) are left alone; nothing is deleted.
+#
+# Credentials: the built-in token is tried first. If GitHub refuses it for the wiki, add a
+# repository secret WIKI_TOKEN (a fine-grained token with Contents: read and write on this repo).
+name: Docs 2.0 wiki
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["master"]
+    paths:
+      - "docs2/dev-docs/**"
+      - "docs2/tools/wiki_sync.py"
+      - ".github/workflows/docs2-wiki.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: docs2-wiki
+  cancel-in-progress: false
+
+jobs:
+  wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: ⬇️ Wiki
+        env:
+          TOKEN: ${{ secrets.WIKI_TOKEN || secrets.GITHUB_TOKEN }}
+        run: git clone --depth 1 "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.wiki.git" _wiki
+
+      - name: 📘 Copy the handbook
+        run: python docs2/tools/wiki_sync.py docs2/dev-docs _wiki
+
+      - name: ⬆️ Publish
+        run: |
+          cd _wiki
+          git add -A
+          if git diff --cached --quiet; then
+            echo "The wiki already matches the handbook." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git config user.name "docs-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Handbook: copy docs2/dev-docs from ${GITHUB_SHA::7} [docs-bot]"
+          git push
+          echo "📘 Wiki updated from ${GITHUB_SHA::7}:" >> "$GITHUB_STEP_SUMMARY"
+          git show --stat --format= HEAD >> "$GITHUB_STEP_SUMMARY"
