@@ -19,6 +19,7 @@
 - [🧰 Maintainer guide](Maintainer-Guide.md)
 - [🧭 Structure and navigation](Structure-and-Navigation.md)
 - [🗺️ Workspace maps](Workspace-Maps.md)
+- [⌨️ Keymap](Keymap)
 - [🎛️ Site scripts](Site-Scripts.md)
 - [🚀 Release update](Release-Update.md)
 - [🩺 Troubleshooting](Troubleshooting.md)
