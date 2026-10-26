@@ -68,7 +68,7 @@ old_path,new_path,how
 /documentation/interface/windows,/docs/interface-windows,matched
 /documentation/keymap,/docs/keymap,matched
 /documentation/keymap/important,/docs/keymap-important-hotkeys,by hand
-/documentation/keymap/standard,/docs/keymap-standard-keymap,by hand
+/documentation/keymap/standard,/docs/keymap-standard-keymaps,by hand
 /documentation/overview,/docs/getting-started,matched
 /documentation/overview/about-documentation,/docs/getting-started-about-documentation,matched
 /documentation/overview/data-structure,/docs/getting-started-data-structure,matched
