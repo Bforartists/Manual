@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.12
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.13
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -17,7 +17,7 @@
   R.dataset.dkLayer = '1';
   var CDN = 'https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/';
   var NAVURL = 'https://bforartists.github.io/Manual/nav/nav.json', NK = 'bfa-docs-nav';
-  var BRANCH = 'docs2/main', HOWTO = 'getting-started-about-documentation';   /* the docs branch writers start from; the How to use this manual page */
+  var BRANCH = 'master', HOWTO = 'getting-started-about-documentation';   /* the docs branch writers start from; the How to use this manual page */
   var HOME = '/docs/home', DISCORD = 'https://discord.gg/yKuR77v', PRO = 'https://www.trinumedia.com';
   var ISSUE = 'https://github.com/Bforartists/Manual/issues/new';
   var IC = {
@@ -504,7 +504,7 @@
             '<div class="dk-legend"><span class="is-reviewed">Reviewed ' + all.reviewed + '</span><span class="is-review">In review ' + all['needs-review'] + '</span><span>Draft ' + all.draft + '</span></div>' +
             '<p>Every page shows its status at the top. Drafts come from the old manual; reviewed pages are checked against Bforartists 5.1.</p></div>' +
           '<div class="dk-pulse-col"><div class="dk-eyebrow">What changed · 5.1</div><b>Fresh from development</b><p>New pages and fixes land here every time a docs task closes.</p><div class="dk-btns">' +
-            btn('What\u2019s new in 5.1', IC.time, 'is-small is-accent', '/docs/appendix-manual-update-history') + btn('All changes', IC.file, 'is-small', 'https://github.com/Bforartists/Manual/commits/docs2/main', ' target="_blank" rel="noopener"') + '</div></div>' +
+            btn('What\u2019s new in 5.1', IC.time, 'is-small is-accent', '/docs/appendix-manual-update-history') + btn('All changes', IC.file, 'is-small', 'https://github.com/Bforartists/Manual/commits/master', ' target="_blank" rel="noopener"') + '</div></div>' +
           '</div></section>'; })() +
       '<section class="dk-h dk-two">' +
         '<div class="dk-card dk-help-card">' + ico(IC.comm, '') + '<div><b>Stuck? Ask the community</b><p>Artists and developers answer on Discord every day. Share a screenshot and the page you were on.</p><div class="dk-btns">' + btn('Discord', IC.comm, 'is-small', DISCORD, ' target="_blank" rel="noopener"') + btn('Report a doc issue', IC.light, 'is-small', ISSUE, ' target="_blank" rel="noopener"') + '</div></div></div>' +

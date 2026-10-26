@@ -4,8 +4,8 @@
 
 This wiki is for **writers, reviewers and maintainers** of the Bforartists manual. For the manual itself, see the [Bforartists documentation](https://www.bforartists.de).
 
-[![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/docs2%2Fmain/collection/docs)
-[![Docs 2.0 branch](https://img.shields.io/badge/Docs_2.0-docs2%2Fmain-555555?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Bforartists/Manual/tree/docs2/main/docs2)
+[![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/master/collection/docs)
+[![Docs 2.0 branch](https://img.shields.io/badge/Docs_2.0-master-555555?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Bforartists/Manual/tree/master/docs2)
 
 ---
 
@@ -13,7 +13,7 @@ This wiki is for **writers, reviewers and maintainers** of the Bforartists manua
 
 | | 📄 Today: the `.odt` manual | 🧪 Proposed: Docs 2.0 |
 |---|---|---|
-| **Where** | `.odt` chapters on `master` | Markdown pages in `docs2/` on the `docs2/main` branch |
+| **Where** | `.odt` chapters on `master` | Markdown pages in `docs2/` on the `master` branch |
 | **Edit with** | LibreOffice | Your browser ([Pages CMS](https://app.pagescms.org)), GitHub, or any editor |
 | **Published as** | PDF and website pages copied by hand | The website, synced from GitHub; PDF printed on demand |
 | **Guide** | 📘 [Reference Manual writing guide](https://github.com/Bforartists/Manual/wiki/Reference-Manual-writing-guide) | ✏️ [Editing the docs online](Editing-the-docs-online.md) |

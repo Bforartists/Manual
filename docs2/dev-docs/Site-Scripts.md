@@ -27,7 +27,7 @@ sequenceDiagram
   participant P as 📦 GitHub Pages
   participant W as 🌐 Webflow
   M->>G: Edit docs2/webflow/x.js, bump @version (1.0.3 → 1.0.4)
-  M->>G: Pull request → merge into docs2/main
+  M->>G: Pull request → merge into master
   G->>A: Workflow runs
   A->>P: Publishes webflow/x-1.0.4.js (the old versions stay)
   A-->>M: Job summary: URL + sha384 hash for each script

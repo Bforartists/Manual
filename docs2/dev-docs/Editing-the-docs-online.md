@@ -4,7 +4,7 @@
 
 Every save is a Git commit with your name, and changes are reviewed before they reach the website.
 
-[![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/docs2%2Fmain/collection/docs)
+[![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/master/collection/docs)
 
 ---
 
@@ -19,7 +19,7 @@ Every save is a Git commit with your name, and changes are reviewed before they 
 | **Drag and drop images** | ✅ Into the page; the image bot files them | 🟡 Uploads go to GitHub, not the library | 🟡 Copy the file into `docs2/images/_inbox/` |
 | **Insert a tip, image, table** | ✅ `/` menu | ❌ Type it | ❌ Type it |
 | **Review** | Saves to the docs branch; a maintainer opens the pull request | ✅ Opens a pull request for you | ✅ Your own pull request |
-| **Open it** | [Edit the docs](https://app.pagescms.org/Bforartists/Manual/docs2%2Fmain/collection/docs) | ✏️ pencil on any file | Press `.` on the repo page |
+| **Open it** | [Edit the docs](https://app.pagescms.org/Bforartists/Manual/master/collection/docs) | ✏️ pencil on any file | Press `.` on the repo page |
 | **Verdict** | ⭐ **The advertised way** | Typos | Bulk and developer work |
 
 On the website, every page will have **Edit this page**, which opens that exact page in Pages CMS.

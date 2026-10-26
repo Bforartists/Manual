@@ -15,7 +15,7 @@ import re
 import sys
 
 REPO = "https://github.com/Bforartists/Manual"
-BRANCH = os.environ.get("DOCS_BRANCH", "docs2/main")
+BRANCH = os.environ.get("DOCS_BRANCH", "master")
 SRC_DIR = "docs2/dev-docs"
 
 NOTICE = (

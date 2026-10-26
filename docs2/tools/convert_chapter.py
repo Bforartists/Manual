@@ -10,7 +10,7 @@
   4. 📥 copies the new pages and their images into docs2/ (never overwrites an existing page)
   5. ✅ runs the checks
 
-Then commit on a docs2/section-<name> branch and open a pull request into docs2/main.
+Then commit on a docs2/section-<name> branch and open a pull request into master.
 """
 import csv
 import json

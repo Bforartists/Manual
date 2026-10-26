@@ -2,7 +2,7 @@
 
 > **The whole manual is converted and on staging. Now: review, polish, then go live with the new website.**
 
-Plans: [Tier 1](https://github.com/Bforartists/Manual/blob/docs2/main/docs2/plans/plan_docs2_tier1_getting_started.md) · [Tier 2](https://github.com/Bforartists/Manual/blob/docs2/main/docs2/plans/plan_docs2_tier2_full_manual.md) · [Tier 3](https://github.com/Bforartists/Manual/blob/docs2/main/docs2/plans/plan_docs2_tier3_structure_and_update.md)
+Plans: [Tier 1](https://github.com/Bforartists/Manual/blob/master/docs2/plans/plan_docs2_tier1_getting_started.md) · [Tier 2](https://github.com/Bforartists/Manual/blob/master/docs2/plans/plan_docs2_tier2_full_manual.md) · [Tier 3](https://github.com/Bforartists/Manual/blob/master/docs2/plans/plan_docs2_tier3_structure_and_update.md)
 
 ---
 
@@ -18,7 +18,7 @@ Plans: [Tier 1](https://github.com/Bforartists/Manual/blob/docs2/main/docs2/plan
 | 6 | 🧰 Maintainer handbook (this wiki) | ✅ |
 | 7 | 👀 Review pass: pages from Draft to Reviewed against Bforartists 5.3 | 🟡 under way |
 | 8 | 📸 Fresh screenshots and workspace captures in the default theme | ⏳ |
-| 9 | 🚀 Go-live with the new website: `docs2/main` becomes main, bforartists.co switches (maintainer's click) | ⏳ |
+| 9 | 🚀 Docs on `master` (Oct 2026); next: go-live with the new website, bforartists.co switches (maintainer's click) | 🔄 |
 
 ## 🧭 Later
 

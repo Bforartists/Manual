@@ -7,20 +7,20 @@
 ## 🌳 Branches
 
 ```
-master ─────────────────────────────────────────  🔒 .odt manual, untouched until go-live
-   └─ docs2/main                                  ⭐ the docs branch: publishes staging, becomes main when all is green
-        ├─ docs2/section-<name>                   📄 one branch per section being converted (Tier 2)
-        └─ docs2/<your-change>                    ✍️ any reviewed change: Pages CMS on a branch → pull request
+master ─────────────────────────────────────────  ⭐ the manual: docs2/ publishes staging on every merge
+   ├─ docs2/<your-change>                         ✍️ any reviewed change → pull request into master
+   ├─ <your-name>-patch-1                         ✏️ made for you by "Edit this page" (GitHub editor)
+   └─ docs2/keymap-update                         🤖 the weekly keymap robot
 ```
 
 | Branch | Purpose | Merges into |
 |---|---|---|
-| `master` | The manual as it is today (`.odt`) | — |
-| `docs2/main` | The Docs 2.0 branch. Every merge here syncs to the staging website | `master` (or replaces it) at go-live |
-| `docs2/section-<name>` | A section being converted from the `.odt` manual | `docs2/main`, by pull request |
-| `docs2/<your-change>` | A change you want reviewed first | `docs2/main`, by pull request |
+| `master` | The manual. The Markdown docs live in `docs2/` (the old `.odt` chapters stay beside them for now). Every merge syncs to the staging website | — |
+| `docs2/<your-change>` | A change you want reviewed first | `master`, by pull request |
+| `*-patch-*` | Made by GitHub when you use **Edit this page**: always starts from the latest `master` | `master`, by pull request |
+| `docs2/keymap-update` | The weekly keymap robot's pull request | `master` |
 
-Earlier test branches (`docs2/spike1-migration`, `docs2/tier1-getting-started`, `docs2/tier1-phase3`, `docs2/tier1-phase5`) are history; their work is all in `docs2/main`.
+Earlier branches (`master`, `docs2/spike1-migration`, `docs2/tier1-*`) are history: since October 2026 the docs live on `master`.
 
 ---
 

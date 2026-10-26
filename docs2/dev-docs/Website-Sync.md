@@ -2,7 +2,7 @@
 
 > **Merge on GitHub, and the pages appear on the staging website. The live site is a separate, manual click.**
 
-🧪 Runs on every merge into `docs2/main`. When something does not update, see [Troubleshooting](Troubleshooting.md).
+🧪 Runs on every merge into `master`. When something does not update, see [Troubleshooting](Troubleshooting.md).
 
 ---
 
@@ -18,7 +18,7 @@
 | 6. 🧭 | The sidebar (`nav.json`) and the search index (`search.json`) go to GitHub Pages | `sync.py --nav` |
 | 7. 🎛️ | Each site script is published as `webflow/<name>-<version>.js`, with its hash in the job summary | [Site scripts](Site-Scripts.md) |
 
-It runs on every push to the publish branch (`docs2/main`) when the checks pass, and from
+It runs on every push to the publish branch (`master`) when the checks pass, and from
 **Actions → Docs 2.0 checks and preview → Run workflow**.
 
 ---

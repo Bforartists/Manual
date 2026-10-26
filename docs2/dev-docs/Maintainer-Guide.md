@@ -12,7 +12,7 @@ flowchart LR
     PC["🖋️ Pages CMS<br/>(browser)"]
     GH["🐙 GitHub editor<br/>or your own editor"]
   end
-  subgraph R["🐙 Repository · docs2/main"]
+  subgraph R["🐙 Repository · master"]
     C["📘 content/ pages"]
     N["🧭 nav.yml · home.md"]
     WS["🗺️ workspaces.yml"]
@@ -34,7 +34,7 @@ flowchart LR
   N --> B
   WS --> B
   I --> B
-  B -->|"merge into docs2/main"| S
+  B -->|"merge into master"| S
   S --> ST
   S --> P
   J --> P
@@ -47,7 +47,7 @@ flowchart LR
 | | Rule |
 |---|---|
 | 🐙 | **GitHub is the truth.** Never edit a docs page in the Webflow Designer or CMS; the next sync would skip it ([Troubleshooting](Troubleshooting.md#a-page-does-not-update)). |
-| 🌿 | **Every change goes through a pull request into `docs2/main`.** The checks and the preview run on it; merging publishes staging. |
+| 🌿 | **Every change goes through a pull request into `master`.** The checks and the preview run on it; merging publishes staging. |
 | 🚦 | **Live is a separate click.** Nothing the robots do ever publishes bforartists.co. |
 
 ---
@@ -74,7 +74,7 @@ flowchart LR
 |---|---|---|
 | ✍️ **Writer** | Edit pages in Pages CMS or GitHub, open pull requests | Fixes and new text, screenshots |
 | 👀 **Reviewer** | Approve pull requests, change page status | Checks text against Bforartists, marks pages reviewed |
-| 🧰 **Maintainer** | Merge into `docs2/main`, edit tools, scripts and structure | Structure, scripts, workspace maps, releases |
+| 🧰 **Maintainer** | Merge into `master`, edit tools, scripts and structure | Structure, scripts, workspace maps, releases |
 | 🚦 **Lead maintainer** | Publish the live site, hold the Webflow and GitHub secrets | Go-live clicks, tokens, access |
 
 ---
@@ -90,4 +90,4 @@ flowchart LR
 
 ## ✏️ Edit this page
 
-The **Edit this page** button at the foot of every page opens GitHub's editor on the current docs branch (`docs2/main`, set as `BRANCH` in `docs-layer.js`). GitHub makes your own branch and a pull request for you, so every edit starts from the latest docs and goes through the checks. Pages CMS still works for longer sessions: pick the docs branch there.
+The **Edit this page** button at the foot of every page opens GitHub's editor on the current docs branch (`master`, set as `BRANCH` in `docs-layer.js`). GitHub makes your own branch and a pull request for you, so every edit starts from the latest docs and goes through the checks. Pages CMS still works for longer sessions: pick the docs branch there.

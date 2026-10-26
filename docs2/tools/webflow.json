@@ -9,7 +9,7 @@
   },
   "page_url": "/docs/",
   "repo": "Bforartists/Manual",
-  "branch": "docs2/main",
+  "branch": "master",
   "skip_sections": [
     "doc-kit"
   ],
