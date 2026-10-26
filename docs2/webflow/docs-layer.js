@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.18
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.19
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -26,7 +26,7 @@
     time: '68b9bb9cc5062fa217606ff2_time.svg', world: '68b9b4b69f8eb147bccde6cf_world.svg',
     zoom: '68b9bbd23fb07538f848b579_viewzoom.svg', caret: '68b9bbb397785a50ab1c6b64_tria_down.svg',
     fwd: '68b9b76aa841ed4158a2f249_forward.svg', print: '68b8db5dd3714b344fd700ea_output.svg',
-    xw: '68b9bbe3e15e16c19a6a1b1c_x.svg'
+    xw: '68b9bbe3e15e16c19a6a1b1c_x.svg', up: '68b9bbb65e3c506cb9346592_tria_up.svg'
   };
 
   /* ---------------------------------------------------------------- 1 styles */
@@ -205,6 +205,11 @@
     '.ui-doc-table td,.ui-doc-table th{white-space:normal;overflow-wrap:anywhere}',
     /* Q6 · Workspaces overview: no right sidebar */
     'html.dk-wide .ui-doc-body{max-width:none!important}',
+    /* Q10 · back to the top: a small triangle button bottom right, after you scroll down */
+    '.dk-top{position:fixed;right:1rem;bottom:1rem;z-index:60;width:2.75rem;height:2.75rem;padding:0!important;justify-content:center;opacity:0;transform:translateY(.5rem);pointer-events:none;transition:opacity .2s,transform .2s}',
+    '.dk-top.is-on{opacity:1;transform:none;pointer-events:auto}',
+    '.dk-top .ui-icon{width:18px;height:18px}',
+    '@media print{.dk-top{display:none!important}}',
     /* Q7 · focus mode on wide pages: the sidebar column goes too, so the content takes the whole width */
     'html.is-doc-focus.dk-wide .ui-doc-grid{grid-template-columns:minmax(0,1fr)!important}',
     'html.is-doc-focus.dk-wide .ui-doc-article{max-width:none!important;width:100%;margin:0!important}',
@@ -352,6 +357,17 @@
   }
   /* the Workspaces overview and the interactive keymap get the full width (no right sidebar) */
   function wide() { var km = !!q('.ui-doc-body .ui-keymap li[data-k=keymap]:not([data-mini])'); if ((km || q('.ui-doc-body .ui-ws-explorer, .ui-doc-body .wsx.is-explorer')) && !q('.dk-look')) R.classList.add('dk-wide'); }
+  /* back to the top */
+  function topBtn() {
+    if (q('.dk-top')) return;
+    var b = d.createElement('button');
+    b.type = 'button'; b.className = 'ui-btn dk-btn is-square dk-top'; b.title = 'Back to the top'; b.setAttribute('aria-label', 'Back to the top');
+    b.innerHTML = '<span class="ui-btn-icon"><img class="ui-icon" alt="" src="' + CDN + IC.up + '"></span>';
+    b.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    d.body.appendChild(b);
+    var f = function () { b.classList.toggle('is-on', (window.scrollY || d.documentElement.scrollTop) > 700); };
+    window.addEventListener('scroll', f, { passive: true }); f();
+  }
   /* the sidebar fades where it is cut off, so you can tell there is more */
   function sideFade() {
     var s = q('.ui-doc-grid > .ui-doc-side'); if (!s || s.dataset.dkFade) return; s.dataset.dkFade = '1';
@@ -576,7 +592,7 @@
     if (!nav || !nav.sections) return;
     NAV = nav; IDX = index(nav);
     overviews(); watchSide();
-    crumbs(); statusChip(); titleTile(); polishSoon(); wide(); sideFade(); barRow(); setTimeout(barRow, 400); window.addEventListener('resize', barRow);
+    crumbs(); statusChip(); titleTile(); polishSoon(); wide(); sideFade(); topBtn(); barRow(); setTimeout(barRow, 400); window.addEventListener('resize', barRow);
     if (here === 'home') return home();
     var n = IDX.by[here];
     if (n && n.land) overview(n);

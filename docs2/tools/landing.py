@@ -144,7 +144,7 @@ REGION_ICONS = [                    # …and region pages get the icon of their 
     (r"^speaker object", "speaker"), (r"^camera object", "camera_data"), (r"^light probe object", "lightprobe_sphere"),
     (r"^light object", "light"), (r"^force field object", "force_force"), (r"^volume object", "volume_data"),
     (r"bone constraint", "constraint_bone"), (r"^cycles$|^eevee$|^workbench$", "scene"),
-    (r"^emitter$", "particles"), (r"^hair$", "hair"), (r"keymap|hotkeys", "key_command"),
+    (r"^emitter$", "particles"), (r"^hair$", "hair"), (r"keymap|hotkeys", "monkey"),
     (r"^add$", "add"), (r"tracking", "tracker"), (r"timeline", "time"),
 ]
 
