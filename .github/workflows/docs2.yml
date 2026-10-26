@@ -66,6 +66,8 @@ jobs:
         id: bot
         run: |
           dry=""; [ "$SAME_REPO" = "true" ] || dry="--dry-run"
+          # master is protected (changes arrive by pull request, where the bot already ran): report only
+          if [ "$BRANCH" = "$PUBLISH_BRANCH" ] && [ "${{ github.event_name }}" != "pull_request" ]; then dry="--dry-run"; fi
           python docs2/tools/fill_front_matter.py . $dry --report _fill.md
           python docs2/tools/image_bot.py . $dry --report _img.md
           cat _fill.md _img.md > _bot.md
