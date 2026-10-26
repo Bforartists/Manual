@@ -27,6 +27,13 @@ MENU_ITEM = rf"{MENU_WORD}(?: (?:(?:and|of|to|the|for|&) )?{MENU_WORD}){{0,4}}" 
 MENU = re.compile(rf"({MENU_ITEM}(?:\s*[›‣]\s*{MENU_ITEM})+)")
 YOUTUBE = re.compile(r"^https?://(?:www\.)?(?:youtube\.com/(?:watch\?v=|embed/|playlist\?list=)|youtu\.be/)([\w-]+)")
 FLOAT_BELOW = 900
+# a key name on its own, as the keymap tables and hand-written pages put it in `code`: `W`, `Numpad 1`, `Right mouse`
+KEY_NAME = (r"(?:[A-Z0-9]|F(?:1[0-9]|2[0-4]|[1-9])|Numpad ?(?:\d|[-+*/.]|Enter)|"
+            r"Ctrl|Shift|Alt|Cmd|Option|Tab|Enter|Return|Esc|Space|Spacebar|Del|Delete|Backspace|Insert|Home|End|"
+            r"PageUp|PageDown|Page Up|Page Down|Up|Down|Left|Right|Menu key|Pause|LMB|MMB|RMB|Scrollwheel|Eraser|"
+            r"(?:Left|Right|Middle) (?:mouse|click)|Mouse button \d|Wheel(?: ?\w+)?|Trackpad \w+|Any modifier)")
+CODE_KEY = re.compile(rf"(?<!<pre>)<code>({KEY_NAME}(?: \+ {KEY_NAME})*)</code>"
+                      r"|(?<=<td>)<code>([\[\].,;'/\\=`-])</code>(?=</td>)")   # a lone [ or . only as a whole table cell
 
 
 def keycaps(combo):
@@ -35,6 +42,11 @@ def keycaps(combo):
     for i, p in enumerate(parts):
         out.append(f"<kbd>{p}</kbd>" if i % 2 == 0 else " + ")
     return '<span class="ui-doc-keys">' + "".join(out) + "</span>"
+
+
+def code_keycaps(keys):
+    """`W`, `Numpad -`, `Any modifier + Left mouse`: split on " + " only, so - and Numpad - stay whole."""
+    return '<span class="ui-doc-keys">' + " + ".join(f"<kbd>{k}</kbd>" for k in keys.split(" + ")) + "</span>"
 
 
 LEAD_WORDS = {"Open", "Go", "Click", "Choose", "Select", "Use", "Press", "In", "From", "See", "Via", "Under",
@@ -209,6 +221,7 @@ def enhance(html, image_width=lambda src: 0, load_snippet=lambda href: None):
     html = videos(html)
     html = tables_and_code(html)
     html = small_parts(html)
+    html = CODE_KEY.sub(lambda m: code_keycaps(m.group(1) or m.group(2)), html)    # `W` -> keycap, like Ctrl + W
     html = on_text(html, lambda t: MENU.sub(lambda m: menu_chips(m.group(1)), COMBO.sub(lambda m: keycaps(m.group(1)), t)))
     html = heading_ids(html)
     return html

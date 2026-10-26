@@ -19,14 +19,6 @@ There are however a few important hotkeys left that makes your life easier. And 
 
 Here we list some of the most used and basic hotkeys at one sheet, so that you don't have to dig through the manual and the whole keymap chapter or the menus to find the basic functionality.
 
-## The important keys at a glance
-
-The keyboard below shows only these keys. Pick the editor and the mode, hold Shift, Ctrl or Alt to see those combinations, and click a key to read what it does. Every other key is on the [Standard Keymaps](standard-keymaps.md).
-
-```keymap-explorer
-mini
-```
-
 ## In the 3D Viewport
 
 ### All Modes
@@ -101,23 +93,24 @@ G = Select Circle
 
 ```keymap-keys
 1 = Object Mode
-4 = Vertex Paint
 2 = Edit Mode
-5 = Weight Paint
+Shift + 2 = Draw / Pose Mode
 3 = Sculpt Mode
-6 = Texture paint
-0 = Pose Mode
+4 = Vertex Paint
+5 = Weight Paint
+6 = Texture Paint
 ```
 
 | Action | Keys |
 |---|---|
 | Object Mode | `1` |
-| Vertex Paint | `4` |
 | Edit Mode | `2` |
-| Weight Paint | `5` |
+| Draw Mode (Grease Pencil) | Shift + 2 |
+| Pose Mode (Armature) | Shift + 2 |
 | Sculpt Mode | `3` |
-| Texture paint | `6` |
-| Pose Mode | `0` |
+| Vertex Paint | `4` |
+| Weight Paint | `5` |
+| Texture Paint | `6` |
 
 ### Edit Mode with a Mesh object
 
