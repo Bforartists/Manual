@@ -52,6 +52,7 @@ class Webflow:
     def __init__(self, token):
         self.token = token
         self.calls = 0
+        self.timed_out = []     # items Webflow did not answer for, even one at a time (often saved anyway)
 
     def req(self, method, path, body=None, retry_timeouts=True):
         data = json.dumps(body).encode() if body is not None else None
@@ -130,11 +131,15 @@ class Webflow:
                 self.req("PATCH", f"/collections/{cid}/items", {"items": batch})
             except SyncError as e:
                 # a gateway timeout (504) on a heavy batch: Webflow often finishes smaller ones, so halve and retry
-                if len(batch) > 1 and re.search(r"failed: (5\d\d|.*timed out|.*Timeout)", str(e)):
+                timeout = re.search(r"failed: (5\d\d|.*timed out|.*Timeout)", str(e))
+                if timeout and len(batch) > 1:
                     print(f"  ↪ batch of {len(batch)} timed out; sending it in two halves", file=sys.stderr)
                     half = len(batch) // 2
                     send(batch[:half])
                     send(batch[half:])
+                elif timeout:   # one heavy page (many images to copy): note it and go on; the next run checks it again
+                    print(f"  ⚠ item {batch[0]['id']} timed out on its own; carrying on", file=sys.stderr)
+                    self.timed_out.append(batch[0]["id"])
                 else:
                     raise
 
@@ -453,6 +458,9 @@ def main(argv):
             skipped = sum(1 for r in report if r[0] == "⏭️")
             if skipped:
                 lines.append(f"| ⏭️ | {skipped} item(s) | unchanged |")
+            if wf.timed_out:
+                lines += ["", f"⚠️ {len(wf.timed_out)} item(s) timed out at Webflow even on their own (heavy pages; usually saved anyway, "
+                          "the next run checks them again): " + ", ".join(f"`{i}`" for i in wf.timed_out)]
             if changed and "--publish" in opts:
                 wf.publish_staging(cfg["site_id"])
                 lines += ["", f"🚀 Published to staging: {cfg['staging_url']}"]
