@@ -379,50 +379,50 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <a href="../../appendix/index-a-z.html">Index</a>
 <h4>Doc Kit (test)</h4>
 <a href="../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Bone Constraint Properties</div><h1 class="pv-title">Bone Constraints</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 7 min read</span></div><article class="ui-doc-body"><h2 id="bone-constraints">Bone Constraints</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/bone-constraints.png" alt="Bone Constraints" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/bone-constraints.png" alt="Bone Constraints" loading="lazy"></figure>
 <p>Constraints allows two objects to interact with each other. You can for example set the x position to the x position of another object with the Copy Location constraint. Bone constraints is a special constraints chapter just dedicated to bones. And just shows when you have an armature or a bone selected.</p>
 <p>Bones behave like objects in Pose Mode. And so they can also be constrained.</p>
 <p>The Bone Constraints tab shows in Object Mode and Pose mode.</p>
 <p>In Object mode you can edit existing constraints. But you can't add constraints in Object mode. Bone Constraints can only be added in Pose Mode.</p>
 <p>The constraints drop down menu shows the same constraints than the Object Constraints tab. You can add any of the other object constraints here. Like a Limit Rotation from the Transform category, to limit the rotation of an elbow for example.</p>
 <p>Most of the other constraints works with all object types, and are explained in the Object Constraints chapter. But there are two constraints that just works for and with bones. And can just be added from the Bone Constraints drop down menu. The IK constraint and the Spline IK constraint. Both are covered in this chapter.</p>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/bone-constraints-2.png" alt="Bone Constraints" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/bone-constraints-2.png" alt="Bone Constraints" loading="lazy"></figure>
 <h2 id="what-is-inverse-kinematics">What is Inverse Kinematics?</h2>
 <p>You can pose a skeleton in two ways. With Forward Kinematics. And with Inverse Kinematics.</p>
 <p>Forward kinematics means, you bend a bone, and the bones downwards the hierarchy follows this motion. For example you pull the elbow, and the hand with its fingers follows. You don't need a constraint for that. This is native behavior of an armature.</p>
 <p>The other technique is called inverse kinematics. Here the motion gets calculated upwards the hierarchy. For example you pull at the hand, and the arm follows. That's where you need the IK Constraint.</p>
 <h3 id="quick-setup">Quick Setup</h3>
 <p>You can add the Inverse Kinematics from the 3D View. Or directly in the Bone Constraints panel. In Pose Mode select the bone, and either choose the Add IK to Bone in the Pose menu. Or add the constraint directly in the Bone Constraint tab.</p>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/quick-setup.png" alt="Quick Setup" loading="lazy"></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/quick-setup-2.png" alt="Quick Setup" loading="lazy"></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/quick-setup.jpg" alt="Quick Setup" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/quick-setup.png" alt="Quick Setup" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/quick-setup-2.png" alt="Quick Setup" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/quick-setup.jpg" alt="Quick Setup" loading="lazy"></figure>
 <p>The Add IK to Bone menu item brings up a sub item. Without targets means that it just creates the constraint. It misses the handler to pose it then. And so you have to pull at the bone with the IK solution to pose your armature. The title of the constraint is red when the target is missing. Which usually means that the constraint is dysfunctional since it misses some vital information. But you can nevertheless use this constraint in Pose Mode as is.</p>
 <p>A common method is to use an unconnected Bone inside of the same armature to be the target or the pole target. But then you can still just pose this armature in Pose mode.</p>
 <h4 id="adding-a-bone-as-an-ik-handler">Adding a bone as an IK handler</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/adding-a-bone-as-an-ik-handler.png" alt="Adding a bone as an IK handler" loading="lazy"><figcaption>Adding a bone as an IK handler</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/adding-a-bone-as-an-ik-handler.png" alt="Adding a bone as an IK handler" loading="lazy"><figcaption>Adding a bone as an IK handler</figcaption></figure>
 <p>In Edit Mode create a loose bone in your armature. Turn off Connected and clear Parent in the Relations panel.</p>
 <p>Untick Deform. We use this bone as a handler, not as a bone.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/adding-a-bone-as-an-ik-handler-2.png" alt="Adding a bone as an IK handler" loading="lazy"><figcaption>Adding a bone as an IK handler</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/adding-a-bone-as-an-ik-handler-2.png" alt="Adding a bone as an IK handler" loading="lazy"><figcaption>Adding a bone as an IK handler</figcaption></figure>
 <p>Go to Pose mode. Select the IK bone. Hold down Shift and select the bone where you want to add the IK to.</p>
 <p>Then in the Pose menu choose Constraints, Add (With Targets), and choose the IK constraint in the upcoming menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/adding-a-bone-as-an-ik-handler-3.png" alt="Adding a bone as an IK handler" loading="lazy"><figcaption>Adding a bone as an IK handler</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/adding-a-bone-as-an-ik-handler-4.png" alt="Adding a bone as an IK handler" loading="lazy"><figcaption>Adding a bone as an IK handler</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/adding-a-bone-as-an-ik-handler-5.png" alt="Adding a bone as an IK handler" loading="lazy"><figcaption>Adding a bone as an IK handler</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/adding-a-bone-as-an-ik-handler-3.png" alt="Adding a bone as an IK handler" loading="lazy"><figcaption>Adding a bone as an IK handler</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/adding-a-bone-as-an-ik-handler-4.png" alt="Adding a bone as an IK handler" loading="lazy"><figcaption>Adding a bone as an IK handler</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/adding-a-bone-as-an-ik-handler-5.png" alt="Adding a bone as an IK handler" loading="lazy"><figcaption>Adding a bone as an IK handler</figcaption></figure>
 <p>This creates the IK constraint, and will add our prepared bone to be the target. And now you can pull at this bone in Pose Mode, and the IK solution will follow this bone.</p>
 <p>Needless to say that you might be faster to add the IK constraint manually in the Bone IK tab here. You have to adjust it anyways ...</p>
 <h4 id="adding-an-object-as-an-ik-handler">Adding an Object as an IK handler</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/adding-an-object-as-an-ik-handler.png" alt="Adding an Object as an IK handler" loading="lazy"><figcaption>Adding an Object as an IK handler</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/adding-an-object-as-an-ik-handler.png" alt="Adding an Object as an IK handler" loading="lazy"><figcaption>Adding an Object as an IK handler</figcaption></figure>
 <p>You might want to animate a character together with other objects. They are usually animated in Object Mode. And so you need a solution to pose your character in Object mode, and not in Pose mode. For that you can simply add any object in the scene to be the IK handler instead of a bone in the same armature.</p>
 <p>First go to the Pose menu again. Choose Inverse Kinematics / Add IK to Bone. Then choose To New Empty Object</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/adding-an-object-as-an-ik-handler.jpg" alt="Adding an Object as an IK handler" loading="lazy"><figcaption>Adding an Object as an IK handler</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/adding-an-object-as-an-ik-handler.jpg" alt="Adding an Object as an IK handler" loading="lazy"><figcaption>Adding an Object as an IK handler</figcaption></figure>
 <p>This adds the IK constraint, and creates an empty as the Target. This empty can then be used as a handler to pose the IK solution in Object Mode. The IK solution will follow this Target.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/adding-an-object-as-an-ik-handler-2.png" alt="Adding an Object as an IK handler" loading="lazy"><figcaption>Adding an Object as an IK handler</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/adding-an-object-as-an-ik-handler-3.png" alt="Adding an Object as an IK handler" loading="lazy"><figcaption>Adding an Object as an IK handler</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/adding-an-object-as-an-ik-handler-2.png" alt="Adding an Object as an IK handler" loading="lazy"><figcaption>Adding an Object as an IK handler</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/adding-an-object-as-an-ik-handler-3.png" alt="Adding an Object as an IK handler" loading="lazy"><figcaption>Adding an Object as an IK handler</figcaption></figure>
 <p>You can add any other object in the scene as a Target. It does not need to be an empty. Simply replace it in the IK constraint in the Target edit box.</p>
 <p>The further functionality of the IK constraint gets explained below.</p>
 <h2 id="ik-constraint">IK Constraint</h2>
 <h3 id="target">Target</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/target.png" alt="Target" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/target.png" alt="Target" loading="lazy"></figure>
 <p>Add an object as an IK handler object.</p>
 <h3 id="bone">Bone</h3>
 <p>If the target is an armature, then you can choose the bone here that you want to use as an IK handler.</p>
@@ -469,8 +469,8 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h2 id="spine-ik-constraint">Spine IK Constraint</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/spine-ik-constraint.png" alt="Spine IK Constraint" loading="lazy"></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/spine-ik-constraint-2.png" alt="Spine IK Constraint" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/spine-ik-constraint.png" alt="Spine IK Constraint" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/spine-ik-constraint-2.png" alt="Spine IK Constraint" loading="lazy"></figure>
 <p>The <em>Spline IK</em> constraint aligns a chain of bones along a curve. This constraint requires to have a curve object in the scene as the target object. So you should create one beforehand.</p>
 <table class="ui-doc-table">
 <thead>
@@ -491,7 +491,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="fitting-subpanel">Fitting subpanel</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/fitting-subpanel.png" alt="Fitting subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/fitting-subpanel.png" alt="Fitting subpanel" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -511,16 +511,16 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="chain-offset">Chain Offset</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/chain-offset.png" alt="Chain Offset" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/chain-offset.png" alt="Chain Offset" loading="lazy"></figure>
 <p>Offset the entire chain relative to the root joint. Else just the bones in reach of the chain length gets aligned.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> The calculation happens relative to the curve. When this curve is rotated in world space, then the bones still uses the unrotated state of the curve.</p></div>
 <h3 id="chain-scaling-subpanel">Chain Scaling subpanel</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/chain-scaling-subpanel.png" alt="Chain Scaling subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/chain-scaling-subpanel.png" alt="Chain Scaling subpanel" loading="lazy"></figure>
 <h4 id="use-curve-radius">Use Curve Radius</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/use-curve-radius.png" alt="Use Curve Radius" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/use-curve-radius.png" alt="Use Curve Radius" loading="lazy"></figure>
 <p>Average radius of the endpoints is used to tweak the X and Z scaling of the bones, on top of the X and Z scale mode.</p>
 <h4 id="y-scale-mode">Y scale mode</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/y-scale-mode.png" alt="Y scale mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/y-scale-mode.png" alt="Y scale mode" loading="lazy"></figure>
 <p>Choose how the bone length should fit into the curve length.</p>
 <table class="ui-doc-table">
 <thead>
@@ -545,7 +545,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="xz-scale-mode">XZ Scale Mode:</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/xz-scale-mode.png" alt="XZ Scale Mode:" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/xz-scale-mode.png" alt="XZ Scale Mode:" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -565,12 +565,12 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h5 id="inverse-scale">Inverse Scale</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/inverse-scale.png" alt="Inverse Scale" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/inverse-scale.png" alt="Inverse Scale" loading="lazy"></figure>
 <p>Scale of the Z and X axis is the inverse of the Y axis.</p>
 <h6 id="use-original-scale">Use Original Scale</h6>
 <p>Apply volume preservation over the original scaling.</p>
 <h5 id="volume-preservation">Volume Preservation</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/bone-constraint-properties/volume-preservation.png" alt="Volume Preservation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/bone-constraint-properties/volume-preservation.png" alt="Volume Preservation" loading="lazy"></figure>
 <p>Scale of the X and Z axes is the inverse of the Y scale. With enabling Volume Preservation you will reveal some further options for this method.</p>
 <table class="ui-doc-table">
 <thead>

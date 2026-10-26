@@ -379,7 +379,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <a href="../../../appendix/index-a-z.html">Index</a>
 <h4>Doc Kit (test)</h4>
 <a href="../../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Physics Properties Tab › Soft Body panel</div><h1 class="pv-title">Soft Body panel</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 13 min read</span></div><article class="ui-doc-body"><h2 id="soft-body">Soft Body</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/soft-body.png" alt="Soft Body" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/soft-body.png" alt="Soft Body" loading="lazy"></figure>
 <p>Soft body simulation is used for simulating soft deformable objects. It was designed primarily for adding secondary motion to animation, like jiggle for body parts of a moving character.</p>
 <p>It also works for simulating more general soft objects that bend, deform and react to forces like gravity and wind, or collide with other objects.</p>
 <p>The soft body simulation works by combining existing animation on the object with forces acting on it. There are exterior forces like gravity or force fields and interior forces that hold the vertices together. This way you can simulate the shapes that an object would take on in reality if it had volume, was filled with something, and was acted on by real forces.</p>
@@ -401,11 +401,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Use soft bodies only where it makes sense. If you try to cover a body mesh with a tight piece of cloth and animate solely with soft body, you will have no success. Self-collision of soft body hair may be activated, but that is a path that you have to wander alone. We will deal with Collisions in detail later.</p>
 <p>Try and use a Lattice or a Curve Guide soft body instead of the object itself. This may be magnitudes faster.</p>
 <h2 id="soft-body-panel">Soft Body panel</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/soft-body-panel.png" alt="Soft Body panel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/soft-body-panel.png" alt="Soft Body panel" loading="lazy"></figure>
 <h3 id="collision-collection">Collision Collection</h3>
 <p>Limit the soft body simulation to objects in a collection</p>
 <h2 id="object-subpanel">Object subpanel</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/object-subpanel.png" alt="Object subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/object-subpanel.png" alt="Object subpanel" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -430,10 +430,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </table>
 <h2 id="simulation-subpanel">Simulation subpanel</h2>
 <h3 id="speed">Speed</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/speed.png" alt="Speed" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/speed.png" alt="Speed" loading="lazy"></figure>
 <p>You can control the internal timing of the soft body system with this value. It sets the correlation between frame rate and tempo of the simulation. A free falling body should cover a distance of about ten meters after one second. You can adjust the scale of your scene and simulation with this correlation. If you render with 25 frames per second, you will have to set Speed to 1.3.</p>
 <h2 id="cache-subpanel">Cache subpanel</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/cache-subpanel.png" alt="Cache subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/cache-subpanel.png" alt="Cache subpanel" loading="lazy"></figure>
 <p>The soft body simulation can be cached in memory or stored on a drive. This improves real-time response and avoids unnecessary recalculation of particles. But creates also big files.</p>
 <p>The cloth system uses a unified system for caching and baking (together with cloth and Emitter particle).</p>
 <div class="ui-doc-callout is-important"><p><strong>Important:</strong> The file needs to be saved after baking. When the file is not saved then some options are not available.
@@ -448,7 +448,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>If you are not allowed to write to the required sub directory caching will not happen. For example if your blend-file path is very long and your operating system has a limit on the path length that is supported.</p>
 <p>Be careful with the sequence of modifiers in the modifier stack. You may have a different number of faces in the 3D Viewport and for rendering (For example when using subdivision surface). Then the rendered result may be very different from what you see in the 3D Viewport.</p>
 <h3 id="caches-list">Caches List</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/particle-properties-tab/emitter-cache-panel/caches-list.png" alt="Caches List" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/particle-properties-tab/emitter-cache-panel/caches-list.png" alt="Caches List" loading="lazy"></figure>
 <p>The list of available caches. The caches have no name by default. Double click to add a name.</p>
 <p>You can store and manage multiple caches at once for the same physics object. The active cache is the one that gets used.</p>
 <table class="ui-doc-table">
@@ -509,7 +509,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Share the disk cache when the physics object is linked into another blend-file.</p>
 <p>When this option is enabled, linked versions of the object will reference the same disk cache. Otherwise linked versions of the object will use independent caches.</p>
 <h4 id="compression">Compression</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/cloth-panel/compression.png" alt="Compression" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/cloth-panel/compression.png" alt="Compression" loading="lazy"></figure>
 <p>The compression level for cached files. It becomes available when Disk Cache is ticked</p>
 <table class="ui-doc-table">
 <thead>
@@ -536,7 +536,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h3 id="bake-delete-bake">Bake / Delete Bake</h3>
 <p>Start baking. Once you have baked the cache the button turns into a Delete bake button. And allows you to remove the bake.</p>
 <p>The baking progress can be seen in the footer. You need to be in Object Mode to bake.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/particle-properties-tab/emitter-cache-panel/bake-delete-bake.png" alt="Bake / Delete Bake" loading="lazy"><figcaption>Bake / Delete Bake</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/particle-properties-tab/emitter-cache-panel/bake-delete-bake.png" alt="Bake / Delete Bake" loading="lazy"><figcaption>Bake / Delete Bake</figcaption></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -568,18 +568,18 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h2 id="goal-subpanel">Goal subpanel</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/goal-subpanel.png" alt="Goal subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/goal-subpanel.png" alt="Goal subpanel" loading="lazy"></figure>
 <p>Use the motion from animations (F-curves, armatures, parents, lattices, etc.) in the simulation. The “goal” is the desired end position for vertices based on this animation.</p>
 <h3 id="vertex-group">Vertex Group</h3>
 <p>Use a vertex group to allow per-vertex goal weights (multiplied by the Default goal).</p>
 <h3 id="goal-settings-sub-subpanel">Goal Settings sub subpanel</h3>
 <h4 id="stiffness">Stiffness</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/stiffness.png" alt="Stiffness" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/stiffness.png" alt="Stiffness" loading="lazy"></figure>
 <p>The spring stiffness for Goal. A low value creates very weak springs (more flexible “attachment” to the goal), a high value creates a strong spring (a stiffer “attachment” to the goal).</p>
 <h4 id="damping">Damping</h4>
 <p>The friction coefficient for Goal. Higher values give damping of the spring effect (little jiggle), and the movement will soon come to an end.</p>
 <h3 id="goal-strength-sub-subpanel">Goal Strength sub subpanel</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/goal-strength-sub-subpanel.png" alt="Goal Strength sub subpanel" loading="lazy"><figcaption>Goal Strength sub subpanel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/goal-strength-sub-subpanel.png" alt="Goal Strength sub subpanel" loading="lazy"><figcaption>Goal Strength sub subpanel</figcaption></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -599,7 +599,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h2 id="edges-subpanel">Edges subpanel</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/edges-subpanel.png" alt="Edges subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/edges-subpanel.png" alt="Edges subpanel" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -658,10 +658,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h3 id="face">Face</h3>
 <p>Checks for any portion of the face of the soft body mesh colliding (computationally intensive!). While Face enabled is great, and solves lots of collision errors, there does not seem to be any dampening settings for it, so parts of the soft body object near a collision mesh tend to “jitter” as they bounce off and fall back, even when there is no motion of any meshes. Edge collision has dampening, so that can be controlled, but Deflection dampening value on a collision object does not seem to affect the face collision.</p>
 <h3 id="aerodynamics-sub-subpanel">Aerodynamics sub subpanel</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/aerodynamics-sub-subpanel.png" alt="Aerodynamics sub subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/aerodynamics-sub-subpanel.png" alt="Aerodynamics sub subpanel" loading="lazy"></figure>
 <p>Force from surrounding media. See exterior forces for details.</p>
 <h4 id="type">Type</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/type.png" alt="Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/type.png" alt="Type" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -685,16 +685,16 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="stiffness-subpanel">Stiffness subpanel</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/stiffness-subpanel.png" alt="Stiffness subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/stiffness-subpanel.png" alt="Stiffness subpanel" loading="lazy"></figure>
 <p>Add diagonal springs at quad faces. This stops quad faces to collapse completely on collisions.</p>
 <h4 id="shear">Shear</h4>
 <p>Stiffness of the virtual springs created for quad faces.</p>
 <h2 id="self-collision-subpanel">Self Collision subpanel</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/self-collision-subpanel.png" alt="Self Collision subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/self-collision-subpanel.png" alt="Self Collision subpanel" loading="lazy"></figure>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> Self-Collision needs Edges enabled!</p></div>
 <p>Allow self collision and avoid self intersection. Every vertex is surrounded with an elastic virtual ball. Vertices may not penetrate the balls of other vertices. If you want a good result you may have to adjust the size of these balls.</p>
 <h3 id="calculation-type">Calculation Type</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/calculation-type.png" alt="Calculation Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/calculation-type.png" alt="Calculation Type" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -742,7 +742,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h2 id="solver-subpanel">Solver subpanel</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/solver-subpanel.png" alt="Solver subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/solver-subpanel.png" alt="Solver subpanel" loading="lazy"></figure>
 <p>The settings in the Soft Body Solver panel determine the accuracy of the simulation.</p>
 <table class="ui-doc-table">
 <thead>
@@ -770,12 +770,12 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Rules the overall quality of the solution delivered. Default 0.1. The most critical setting that defines how precise the solver should check for collisions. Start with a value that is half the average edge length. If there are visible errors, jitter, or over-exaggerated responses, decrease the value. The solver keeps track of how “bad” it is doing and the Error Limit causes the solver to do some “adaptive step sizing”.</p>
 <h4 id="diagnostics-subpanel">Diagnostics subpanel</h4>
 <h4 id="print-performance-to-console">Print Performance to Console</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/print-performance-to-console.png" alt="Print Performance to Console" loading="lazy"><figcaption>Print Performance to Console</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/print-performance-to-console.png" alt="Print Performance to Console" loading="lazy"><figcaption>Print Performance to Console</figcaption></figure>
 <p>Prints on the console how the solver is doing.</p>
 <h4 id="estimate-transforms">Estimate Transforms</h4>
 <p>Estimate matrix, split to COM, ROT, SCALE.</p>
 <h4 id="helpers-subpanel">Helpers subpanel</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/helpers-subpanel.png" alt="Helpers subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/helpers-subpanel.png" alt="Helpers subpanel" loading="lazy"></figure>
 <p>These settings allow you to control how Bforartists will react (deform) the soft body once it either gets close to or actually intersects (cuts into) another collision object on the same layer.</p>
 <table class="ui-doc-table">
 <thead>
@@ -796,6 +796,6 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h2 id="field-weights-subpanel">Field Weights subpanel</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/field-weights-subpanel.png" alt="Field Weights subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/field-weights-subpanel.png" alt="Field Weights subpanel" loading="lazy"></figure>
 <p>Adjust how strong other forces influences the soft body simulation.</p>
 </article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fto-master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fphysics-properties-tab%2Fsoft-body-panel.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/to-master/docs2/content/editors/properties/physics-properties-tab/soft-body-panel.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#soft-body">Soft Body</a><a class="h3" href="#tips">Tips</a><a class="h2" href="#soft-body-panel">Soft Body panel</a><a class="h3" href="#collision-collection">Collision Collection</a><a class="h2" href="#object-subpanel">Object subpanel</a><a class="h2" href="#simulation-subpanel">Simulation subpanel</a><a class="h3" href="#speed">Speed</a><a class="h2" href="#cache-subpanel">Cache subpanel</a><a class="h3" href="#hints">Hints</a><a class="h3" href="#caches-list">Caches List</a><a class="h3" href="#disk-cache">Disk Cache</a><a class="h3" href="#bake-delete-bake">Bake / Delete Bake</a><a class="h2" href="#goal-subpanel">Goal subpanel</a><a class="h3" href="#vertex-group">Vertex Group</a><a class="h3" href="#goal-settings-sub-subpanel">Goal Settings sub subpanel</a><a class="h3" href="#goal-strength-sub-subpanel">Goal Strength sub subpanel</a><a class="h2" href="#edges-subpanel">Edges subpanel</a><a class="h3" href="#pull">Pull</a><a class="h3" href="#face">Face</a><a class="h3" href="#aerodynamics-sub-subpanel">Aerodynamics sub subpanel</a><a class="h3" href="#stiffness-subpanel">Stiffness subpanel</a><a class="h2" href="#self-collision-subpanel">Self Collision subpanel</a><a class="h3" href="#calculation-type">Calculation Type</a><a class="h3" href="#ball-size">Ball Size</a><a class="h2" href="#solver-subpanel">Solver subpanel</a><a class="h3" href="#error-limit">Error Limit</a><a class="h2" href="#field-weights-subpanel">Field Weights subpanel</a></aside></div></body></html>

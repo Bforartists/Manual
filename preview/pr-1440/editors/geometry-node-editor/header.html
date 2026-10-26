@@ -384,14 +384,14 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>This chapter here is about the tools, modes and options elements in the header of the geometry nodes editor.</p>
 <p>The text menus are covered in an individual chapter each. They vary too much, dependent of mode and object type.</p>
 <h3 id="header-tabs">Header Tabs</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/header-tabs.png" alt="Header Tabs" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/header-tabs.png" alt="Header Tabs" loading="lazy"></figure>
 <p>The tabs at the very left allows you to switch between the most important node editor types by one click. Compositor Editor, Geometry Nodes Editor and Shader Editor.</p>
 <h3 id="geometry-nodes-type">Geometry Nodes Type</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/geometry-nodes-type.png" alt="Geometry Nodes Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/geometry-nodes-type.png" alt="Geometry Nodes Type" loading="lazy"></figure>
 <p>This drop down is to change the Geometry Nodes Type, which are contextual modes that you can choose to create a node-group-defined tool that will later show in the interface as act once operators or as procedural modifiers.</p>
 <p>Any geometry node group can then be stored as assets, linked and/or appended to other files.</p>
 <p>Example: <em>You can create a node tree in the Tools mode of the Geometry Nodes editor that randomly extrudes then deletes faces, then use that as an Act Once operator on your meshes to model destructively in a linear workflow.</em></p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/geometry-nodes-type-2.png" alt="Geometry Nodes Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/geometry-nodes-type-2.png" alt="Geometry Nodes Type" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -411,7 +411,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="use">Use</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/use.png" alt="Use" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/use.png" alt="Use" loading="lazy"></figure>
 <h5 id="creating-a-tool">Creating a Tool</h5>
 <p>Switch the Geometry Nodes Type to Tool, then create a new Node Group Tool. Create your operation using Geometry Nodes.</p>
 <p>When ready, define the Mode and Data-Type, Asset status, and Catalog assigned to this Node Group Tool, then the Node Group will now become an act-once operator accessible from in the interface.</p>
@@ -419,29 +419,29 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="defining-as-an-asset">Defining as an Asset</h5>
 <p>To share a node group as a tool in other <code>*.blend</code> files, you need to store the node group as an asset for the Asset Browser. The asset catalog you assign the asset to will be used to determine where the tool will go in the designated menus.</p>
 <p>To define where the Node Group Tool is located in the interface, you need to assign the asset to a catalogue in the Asset Browser Editor. If the catalog name matches an existing menu in the interface, the tool will be appended to that specific menu. Assets that have no catalog assigned to them, or local tools, are exposed in the “Unassigned (Catalogue)” menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/defining-as-an-asset.png" alt="Defining as an Asset" loading="lazy"><figcaption>Defining as an Asset</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/defining-as-an-asset.png" alt="Defining as an Asset" loading="lazy"><figcaption>Defining as an Asset</figcaption></figure>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> To define if a node group is exposed in the Modifier add menu or into the Tool add menus, go to the sidebar to define it.</p></div>
 <h6 id="modifier">Modifier</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/modifier.png" alt="Modifier" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/modifier.png" alt="Modifier" loading="lazy"></figure>
 <p>When assigning as a Modifier, the nodegroup asset will show up in the Add menu of the Modifier Stack in the Properties Editor under the assigned asset catalogue name.</p>
 <p>Example: <em>In the image to the right, the marked nodegroup has the catalogue “Tool” assigned. You can also see the “Essentials” node groups also designated as modifier nodegroups.</em></p>
 <h6 id="tool">Tool</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/tool.png" alt="Tool" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/tool.png" alt="Tool" loading="lazy"></figure>
 <p>When assigning as a Tool, the geometry nodes tool nodegroup will show up in the 3D View Editor in the header under the assigned Asset catalogue name – otherwise it will be assigned to the Unassigned (Catalogue) header menu.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> You can have both a geometry nodes tool and modifier stack nodegroup simultaneously.</p></div>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/tool-2.png" alt="Tool" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/tool-2.png" alt="Tool" loading="lazy"></figure>
 <p><em>Example: In the</em> <em>image to the right, the marked nodegroup has the catalogue “Object” and a sub catalogue “Quick Effects” assigned. It now is located in the existing in the header.</em></p>
 <h6 id="unassigned-catalogue">Unassigned (Catalogue)</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/unassigned-catalogue.png" alt="Unassigned (Catalogue)" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/unassigned-catalogue.png" alt="Unassigned (Catalogue)" loading="lazy"></figure>
 <p>When a nodegroupd stored as a Modifier or Tool without a catalogue, it will be exposed in the submenu called “Unassigned (Catalogue)”. Both marked and unmarked nodegroups will display here if there is not catalogue assigned from the Asset Browser.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/unassigned-catalogue-2.png" alt="Unassigned (Catalogue)" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/unassigned-catalogue-2.png" alt="Unassigned (Catalogue)" loading="lazy"></figure>
 <h5 id="defining-modes-and-data-types">Defining Modes and Data-Types</h5>
 <p>Node group tools must specify which modes and object types they support to determine where the tool is exposed in the user interface.</p>
 <h6 id="types">Types</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/types.png" alt="Types" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/types.png" alt="Types" loading="lazy"></figure>
 <p>The type of object where the tool is contextually accessible.</p>
 <h6 id="modes">Modes</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/modes.png" alt="Modes" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/modes.png" alt="Modes" loading="lazy"></figure>
 <p>The mode where the tool is contextually accessible.</p>
 <h5 id="tool-specific-nodes">Tool-specific Nodes</h5>
 <p>The following nodes are only supported in the <em>Tool</em> context:</p>
@@ -457,11 +457,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </ul>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> The Self Object node returns the Active object when inside a Tool node group.</p></div>
 <h3 id="geometry-nodes-prop">Geometry Nodes Prop</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/geometry-nodes-prop.png" alt="Geometry Nodes Prop" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/geometry-nodes-prop.png" alt="Geometry Nodes Prop" loading="lazy"></figure>
 <p>Manage the nodes. If there is no geometry node tree for the current object, then you will see the New button</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/geometry-nodes-prop-2.png" alt="Geometry Nodes Prop" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/geometry-nodes-prop-2.png" alt="Geometry Nodes Prop" loading="lazy"></figure>
 <h4 id="data-browser">Data Browser</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/data-browser.png" alt="Data Browser" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/data-browser.png" alt="Data Browser" loading="lazy"></figure>
 <p>The list of available geometry node trees in the scene.</p>
 <h4 id="edit-box">Edit box</h4>
 <p>The name of the current active geometry node tree. Here you can also rename the node tree.</p>
@@ -491,7 +491,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="options">Options</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/options.png" alt="Options" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/options.png" alt="Options" loading="lazy"></figure>
 <p>At the right side you will see some options.</p>
 <table class="ui-doc-table">
 <thead>
@@ -515,26 +515,26 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="show-overlays">Show Overlays</h5>
 <p>Show or hide the overlays.</p>
 <h5 id="node-editor-overlays">Node Editor Overlays</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/node-editor-overlays.png" alt="Node Editor Overlays" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/node-editor-overlays.png" alt="Node Editor Overlays" loading="lazy"></figure>
 <p>Activates the node editor overlays. When the tool is activated, then you will also overlays settings in the editor. The drop down arrow to the right shows different overlay types.</p>
 <h6 id="wire-colors">Wire Colors</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/wire-colors.png" alt="Wire Colors" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/wire-colors.png" alt="Wire Colors" loading="lazy"></figure>
 <p>Color node links based on their connected sockets.</p>
 <p><strong>Example:</strong> The Geometry socket is green that makes a green line, and the Integer socket is dark green that makes a dark green line.</p>
 <h6 id="reroute-auto-labels">Reroute Auto Labels</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/reroute-auto-labels.png" alt="Reroute Auto Labels" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/reroute-auto-labels.png" alt="Reroute Auto Labels" loading="lazy"></figure>
 <p>Label reroute nodes based on the label of connected reroute nodes.</p>
 <p><strong>Example:</strong> The first reroute label to the right has concurring reroute labels down the line. If you toggle this off, the concurring reroute labels down the line won’t contain labels.</p>
 <h6 id="context-path">Context Path</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/context-path.png" alt="Context Path" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/context-path.png" alt="Context Path" loading="lazy"></figure>
 <p>Display breadcrumbs for the editor’s context.</p>
 <h6 id="annotations">Annotations</h6>
 <p>Shows annotations for this editor view that have been drawn by the annotation tool.</p>
 <h6 id="timings">Timings</h6>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/timings.png" alt="Timings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/timings.png" alt="Timings" loading="lazy"></figure>
 <p>Shows a timing box above each node to indicate the evaluation time of it.. This option is only available for compositing and geometry nodes.</p>
 <h5 id="named-attributes">Named Attributes</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/tools-and-options/named-attributes.png" alt="Named Attributes" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/tools-and-options/named-attributes.png" alt="Named Attributes" loading="lazy"></figure>
 <p>Adds an overlay that helps users to see where named attributes are used with node groups</p>
 <p>This helps to see where named attributes are used.</p>
 <h5 id="canvas-center">Canvas Center</h5>
@@ -543,23 +543,23 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The transparency of the red and green center line.</p>
 <h1 id="quick-menu">Quick Menu</h1>
 <h3 id="quick-menu-2">Quick Menu</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/quick-menu/quick-menu.png" alt="Quick Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/quick-menu/quick-menu.png" alt="Quick Menu" loading="lazy"></figure>
 <p>The quick menu, or in long Quick Favorites menu, is a menu that can be customized to your needs. Here you can add operators for quick access.</p>
 <p>It is located in the header. But it can be called by hotkey Q directly under the mouse. This hotkey works in other editors too.</p>
 <p>When the menu is empty, then you will see the message &quot;No Menu Items found&quot;. This means that you first have to add some tools to the menu. It is a user configurable menu.</p>
 <p>Note that added operators in this menu does not have icons. Just text.</p>
 <h4 id="adding-an-operator-to-the-quick-menu">Adding an operator to the Quick menu</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/quick-menu/adding-an-operator-to-the-quick-menu.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/quick-menu/adding-an-operator-to-the-quick-menu.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
 <p>Open the panel or the menu where your operator is that you want to add.</p>
 <p>Let's add the open command from the File menu. Open the File menu, right click at open, and choose Add to Quick Favorites.</p>
 <p>Do the same with Save As. We should now have two new menu items in the Quick menu, which you can use now.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/quick-menu/adding-an-operator-to-the-quick-menu-2.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/quick-menu/adding-an-operator-to-the-quick-menu-2.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
 <p>As a rule of thumb, when the right click menu has an Add to Quick Favorites, then you can add it to the quick menu.</p>
 <p>Note that you can also add operators from the tool shelf at the left. And also operators from other editor types. Some other editors have their own quick menu though. The Image Editor for example. These operators gets added in the quick menu of the image editor then. And does not show in the quick menu in the header of the 3D view.</p>
 <h4 id="adding-a-menu-to-the-quick-menu">Adding a menu to the Quick menu</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/quick-menu/adding-a-menu-to-the-quick-menu.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/quick-menu/adding-a-menu-to-the-quick-menu.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
 <p>It is also possible to add a menu to the Quick menu. For example the whole Add menu. The way is the same. Right click at it, and choose Add to Quick Favorites.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/quick-menu/adding-a-menu-to-the-quick-menu-2.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/quick-menu/adding-a-menu-to-the-quick-menu-2.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
 <h4 id="order">Order</h4>
 <p>You might notice that the add menu adds at the top of the menu, and not at the bottom as you would expect. First comes menus, then comes operators. And they get added in the order in which you add them.</p>
 <p>Besides that, operators and menus gets added in the order that you add them. They cannot be sorted afterwards. So be careful how you add them. You can of course always remove operators and menus, and re-add them at the end of the list.</p>
@@ -572,17 +572,17 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The content of the quick favorites. menu changes, dependent over which editor you are, and in what mode you are. When you add for example an operator from the image editor, then this operator just shows in the quick menu when you call the menu from the image editor. Same goes for the modes. Edit mode tools will just show in edit mode. And so on.</p>
 <h1 id="view-menu">View Menu</h1>
 <h3 id="view-menu-2">View Menu</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/view-menu/view-menu.png" alt="View Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/view-menu/view-menu.png" alt="View Menu" loading="lazy"></figure>
 <p>The View menu contains all View related tools.</p>
 <p>The content is the same in all sub modes.</p>
 <h4 id="toolbar">Toolbar</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/view-menu/toolbar.png" alt="Toolbar" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/view-menu/toolbar.png" alt="Toolbar" loading="lazy"></figure>
 <p>Shows or hides the toolbar at the left.</p>
 <h4 id="sidebar">Sidebar</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/view-menu/sidebar.png" alt="Sidebar" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/view-menu/sidebar.png" alt="Sidebar" loading="lazy"></figure>
 <p>Shows or hides the sidebar at the right in the Geometry Nodes editor.</p>
 <h4 id="asset-shelf">Asset Shelf</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/view-menu/asset-shelf.png" alt="Asset Shelf" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/view-menu/asset-shelf.png" alt="Asset Shelf" loading="lazy"></figure>
 <p>Shows or hides the Asset Shelf to the bottom of the Geometry Nodes Editor.</p>
 <h4 id="annotations-legacy">Annotations (Legacy)</h4>
 <p>This group of operators is useful to take notes without changing tool-shelf operators. These notes can be colored in the View tab of the Property Shelf. Each layer is a single color. You can also animate the notes with keyframes, editable in the dopesheet.</p>
@@ -660,10 +660,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="pie-menus">Pie menus</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/view-menu/pie-menus.png" alt="Pie menus" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/view-menu/pie-menus.png" alt="Pie menus" loading="lazy"></figure>
 <p>Lists the available pie menus, and gives you the ability to read the hotkeys and assign own hotkeys.</p>
 <h4 id="area">Area</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/view-menu/area.png" alt="Area" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/view-menu/area.png" alt="Area" loading="lazy"></figure>
 <p>This menu contains general view functionality. And exists in most other editor types too.</p>
 <table class="ui-doc-table">
 <thead>
@@ -684,7 +684,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h5 id="duplicate-area-into-new-window">Duplicate Area into New Window</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/view-menu/duplicate-area-into-new-window.png" alt="Duplicate Area into New Window" loading="lazy"><figcaption>Duplicate Area into New Window</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/view-menu/duplicate-area-into-new-window.png" alt="Duplicate Area into New Window" loading="lazy"><figcaption>Duplicate Area into New Window</figcaption></figure>
 <blockquote>
 <p><strong>Duplicate Area into New Window</strong> opens this editor in a floating window. See <strong><a href="../../interface/windows.html#floating-editor-windows">Floating editor windows</a></strong> in the Interface chapter.</p>
 </blockquote>
@@ -712,10 +712,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </table>
 <h1 id="select-menu">Select Menu</h1>
 <h3 id="select-menu-2">Select menu</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/select-menu/select-menu.png" alt="Select menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/select-menu/select-menu.png" alt="Select menu" loading="lazy"></figure>
 <p>Here you will find the select functionality.</p>
 <h4 id="legacy">Legacy</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/select-menu/legacy.jpg" alt="Legacy" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/select-menu/legacy.jpg" alt="Legacy" loading="lazy"></figure>
 <p>The legacy sub menu contains tools that exists in the tool shelf already. It's the old way to do things. Different to the tools in the tool shelf, these tools are usually modal. And performs once. You have to call them again in case you want to repeat the tool.</p>
 <table class="ui-doc-table">
 <thead>
@@ -736,7 +736,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="lasso-select">Lasso Select</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/select-menu/lasso-select.png" alt="Lasso Select" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/select-menu/lasso-select.png" alt="Lasso Select" loading="lazy"></figure>
 <p>A sub menu with the available lasso select modes.</p>
 <table class="ui-doc-table">
 <thead>
@@ -785,15 +785,15 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="find-node">Find Node</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/select-menu/find-node.png" alt="Find Node" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/select-menu/find-node.png" alt="Find Node" loading="lazy"></figure>
 <p>This button will open a search dialog where you can search for node types and select them in the current hierarchy.</p>
 <h1 id="swap-menu">Swap Menu</h1>
 <h3 id="swap">Swap</h3>
 <p>Replace the selected node by another node from the swap menu.</p>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/swap-menu/swap.png" alt="Swap" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/swap-menu/swap.png" alt="Swap" loading="lazy"></figure>
 <h1 id="node-menu">Node Menu</h1>
 <h3 id="node-menu-2">Node menu</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/node-menu/node-menu.png" alt="Node menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/node-menu/node-menu.png" alt="Node menu" loading="lazy"></figure>
 <p>This menu contains further node functionality.</p>
 <table class="ui-doc-table">
 <thead>
@@ -858,29 +858,29 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="join-in-named-frame">Join in Named Frame</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/node-menu/join-in-named-frame.png" alt="Join in Named Frame" loading="lazy"><figcaption>Join in Named Frame</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/node-menu/join-in-named-frame.png" alt="Join in Named Frame" loading="lazy"><figcaption>Join in Named Frame</figcaption></figure>
 <p>Create a new frame node around the selected nodes and name it immediately.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/node-menu/join-in-named-frame-2.png" alt="Join in Named Frame" loading="lazy"><figcaption>Join in Named Frame</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/node-menu/join-in-named-frame-2.png" alt="Join in Named Frame" loading="lazy"><figcaption>Join in Named Frame</figcaption></figure>
 <p>To remove the node from the frame , right click and choose Remove from Frame.</p>
 <h4 id="frame-make-parent">Frame Make Parent</h4>
 <p>Frame node functionality. Adds the selected node to a frame.</p>
 <h4 id="rename">Rename</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/node-menu/join-in-named-frame-2.png" alt="Rename" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/node-menu/join-in-named-frame-2.png" alt="Rename" loading="lazy"></figure>
 <p>Allows you to rename the selected node. A popup dialog will appear where you can change the name of the node. Press enter to make it real.</p>
 <h4 id="group">Group</h4>
 <h5 id="make-group">Make Group</h5>
 <p>Groups the selected nodes together.</p>
 <p>Select the nodes that you want to group together. Choose Make Group. You will now see a green background. This indicates that the group is created, and that you are in edit mode for the group now.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/make-group.png" alt="Make Group" loading="lazy"></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/make-group-2.png" alt="Make Group" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/make-group.png" alt="Make Group" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/make-group-2.png" alt="Make Group" loading="lazy"></figure>
 <p>To exit the group edit mode press Tab key, or choose Toggle Edit Group menu item in the sidebar in the Relations tab in the Group panel. That way you can also enter the Group Edit mode again.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/make-group-3.png" alt="Make Group" loading="lazy"></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/make-group-4.png" alt="Make Group" loading="lazy"></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/make-group-5.png" alt="Make Group" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/make-group-3.png" alt="Make Group" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/make-group-4.png" alt="Make Group" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/make-group-5.png" alt="Make Group" loading="lazy"></figure>
 <p>There is a third way to enter the group edit mode. Click at the right upper icon of the group node.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/make-group-6.png" alt="Make Group" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/make-group-6.png" alt="Make Group" loading="lazy"></figure>
 <p>A group can be further collapsed by clicking at the triangle button in the upper left corner.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/make-group-7.png" alt="Make Group" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/make-group-7.png" alt="Make Group" loading="lazy"></figure>
 <p>The group can be renamed in the sidebar in the Item tab and in the Properties tab in the Node panel.</p>
 <table class="ui-doc-table">
 <thead>
@@ -905,7 +905,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="links">Links</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/node-menu/links.png" alt="Links" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/node-menu/links.png" alt="Links" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -937,10 +937,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h5 id="mute-links">Mute Links</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/node-menu/mute-links.jpg" alt="Mute Links" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/node-menu/mute-links.jpg" alt="Mute Links" loading="lazy"></figure>
 <p>Allows you to mute links instead of disconnecting it by painting over the link connection. To unmute, use the tool again. Hotkey only tool. Please use the hotkey.</p>
 <h4 id="separate">Separate</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/node-menu/separate.png" alt="Separate" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/node-menu/separate.png" alt="Separate" loading="lazy"></figure>
 <p>Node group functionality. You need to be in edit group mode.</p>
 <table class="ui-doc-table">
 <thead>
@@ -961,26 +961,26 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="hide-toggle">Hide / Toggle</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/node-menu/hide-toggle.png" alt="Hide / Toggle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/node-menu/hide-toggle.png" alt="Hide / Toggle" loading="lazy"></figure>
 <p>Here you find hide options to make the display of nodes</p>
 <p>more compact.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/show-hide-submenu-2.png" alt="Hide / Toggle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/show-hide-submenu-2.png" alt="Hide / Toggle" loading="lazy"></figure>
 <p>Demonstration happens at an image node.</p>
 <h5 id="hide">Hide</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/collapse.png" alt="Hide" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/collapse.png" alt="Hide" loading="lazy"></figure>
 <p>Hides everything but input and output dots. To view the full node again perform the operator again. It's a toggle. Or click at the triangle left besides the node name.</p>
 <h5 id="toggle-node-mute">Toggle Node Mute</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/node-menu/toggle-node-mute.png" alt="Toggle Node Mute" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/node-menu/toggle-node-mute.png" alt="Toggle Node Mute" loading="lazy"></figure>
 <p>Deactivates the node.</p>
 <h5 id="toggle-node-preview">Toggle Node Preview</h5>
 <p>This is a compositor feature for the preview image. It does not belong here, but shares the same menu. It shows or hides the preview image.</p>
 <h5 id="toggle-hidden-node-sockets">Toggle hidden node sockets</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/toggle-hidden-node-sockets.png" alt="Toggle hidden node sockets" loading="lazy"><figcaption>Toggle hidden node sockets</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/toggle-hidden-node-sockets.png" alt="Toggle hidden node sockets" loading="lazy"><figcaption>Toggle hidden node sockets</figcaption></figure>
 <p>Toggles away the unused node sockets. In this case the vector input node socket and the alpha output node socket will be hidden.</p>
 <h5 id="toggle-node-options">Toggle Node Options</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/toggle-node-options.png" alt="Toggle Node Options" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/toggle-node-options.png" alt="Toggle Node Options" loading="lazy"></figure>
 <p>Hides away the properties.</p>
 <h5 id="collapse-and-hide-unused-sockets">Collapse and Hide Unused Sockets</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/collapse-and-hide-unused-sockets.png" alt="Collapse and Hide Unused Sockets" loading="lazy"><figcaption>Collapse and Hide Unused Sockets</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/collapse-and-hide-unused-sockets.png" alt="Collapse and Hide Unused Sockets" loading="lazy"><figcaption>Collapse and Hide Unused Sockets</figcaption></figure>
 <p>Like Hide. Hides everything but the node sockets. But it also hides the unused node sockets.</p>
 </article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fto-master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fgeometry-node-editor%2Fheader%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/to-master/docs2/content/editors/geometry-node-editor/header/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h3" href="#introduction">Introduction</a><a class="h3" href="#header-tabs">Header Tabs</a><a class="h3" href="#geometry-nodes-type">Geometry Nodes Type</a><a class="h3" href="#geometry-nodes-prop">Geometry Nodes Prop</a><a class="h3" href="#options">Options</a><a class="h3" href="#quick-menu-2">Quick Menu</a><a class="h3" href="#view-menu-2">View Menu</a><a class="h3" href="#select-menu-2">Select menu</a><a class="h3" href="#swap">Swap</a><a class="h3" href="#node-menu-2">Node menu</a></aside></div></body></html>

@@ -379,11 +379,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <a href="../../../../appendix/index-a-z.html">Index</a>
 <h4>Doc Kit (test)</h4>
 <a href="../../../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Simulation</div><h1 class="pv-title">Simulation</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 4 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-simulation">Add menu - Simulation</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/add-menu-simulation.png" alt="Add menu - Simulation" loading="lazy"><figcaption>Add menu - Simulation</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/add-menu-simulation.png" alt="Add menu - Simulation" loading="lazy"><figcaption>Add menu - Simulation</figcaption></figure>
 <p>Here you add nodes to use a simulation zone. Simulation zones allow the result of one frame to influence the next one. The most common use is physics simulation, with specific solvers for physical phenomena.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> In the example above every frame will transform the geometry by 0.2m in the X axis. With this principle you can set rules that will evaluate per frame.</p></div>
 <h3 id="simulation">Simulation</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/simulation.png" alt="Simulation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/simulation.png" alt="Simulation" loading="lazy"></figure>
 <p>When adding a simulation zone, two nodes are added, defining between them a “Simulation Zone”.</p>
 <p>The Geometry inputs that are connected to the Simulation Input node are evaluated once per frame. At the beginning of the simulation, geometry is passed to the next frame and eventually output at the end of the zone in the Simulation Output node.</p>
 <p>You can also get other nodes with their data and link them into the simulation region from the outside to re-evaluate geometry data per frame.</p>
@@ -391,21 +391,21 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h4 id="clock">Clock</h4>
 <p>The simulation is tied to the animation system found in the Animation Editor, with support for sub-steps. The simulation will only be evaluated while the animation frame changes, and each frame is cached during playback.</p>
 <h4 id="properties">Properties</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/properties.png" alt="Properties" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/properties.png" alt="Properties" loading="lazy"></figure>
 <p>In the Node Editor the inputs can be renamed, shuffled and removed in the Group tab of the Node Editor Property shelf to the right.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> When you add a new input or output, both nodes input and output nodes will update their sockets.</p></div>
 <h4 id="baking">Baking</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/baking.png" alt="Baking" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/baking.png" alt="Baking" loading="lazy"></figure>
 <p>The simulation is automatically cached during playback. The evaluated cache can be seen as a colored line in the Timeline editor.</p>
 <p>Cached frames in the Timeline show up as a coloured bar at the bottom.</p>
 <h4 id="caching-to-disk">Caching to Disk</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/caching-to-disk.png" alt="Caching to Disk" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/caching-to-disk.png" alt="Caching to Disk" loading="lazy"></figure>
 <p>To render, the simulation should be cached to disk. To do this, switch to the Properties Editor &gt; Physics Properties &gt; Simulation Nodes panel, then Bake or Calculate to Frame.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> You can also playback from the timeline to bake.</p></div>
 <h5 id="calculate-to-frame">Calculate to Frame</h5>
 <p>Calculate the simulations in Geometry Nodes modifiers from the start to current frame.</p>
 <h5 id="bake">Bake</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/bake.png" alt="Bake" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/bake.png" alt="Bake" loading="lazy"></figure>
 <p>Bake simulations in all geometry node modifiers to disk. You can define the path where these will bake per Geometry Nodes modifier. If not defined, it will default to the <code>*.blend</code> file location. To bake, you must save the file first.</p>
 <table class="ui-doc-table">
 <thead>
@@ -426,11 +426,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="simulation-bake-directory">Simulation Bake Directory</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/simulation-bake-directory.png" alt="Simulation Bake Directory" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/simulation-bake-directory.png" alt="Simulation Bake Directory" loading="lazy"></figure>
 <p>In the Geometry Nodes modifier in the Modifier stack under the Internal Dependencies sub-panel, here you can define the path and location of the cached bake data.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> The path is automatically generated the first time the modifier is baked through a timeline playback.The default path is relative to the .blend file.</p></div>
 <h4 id="simulation-zone-input">Simulation Zone Input</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/simulation-zone-input.png" alt="Simulation Zone Input" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/simulation-zone-input.png" alt="Simulation Zone Input" loading="lazy"></figure>
 <p>This node is the beginning of the Simulation Zone. Custom input and output sockets can be defined in the property shelf to the right in the Group tab.</p>
 <h5 id="inputs">Inputs</h5>
 <h6 id="geometry">Geometry</h6>
@@ -455,7 +455,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="simulation-zone-output">Simulation Zone Output</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/simulation-zone-output.png" alt="Simulation Zone Output" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/geometry-node-editor/header/add-menu-simulation/simulation-zone-output.png" alt="Simulation Zone Output" loading="lazy"></figure>
 <p>This node is the end of the Simulation Zone. Custom input and output sockets can be defined in the property shelf to the right in the Group tab.</p>
 <h5 id="properties-2">Properties</h5>
 <h6 id="skip">Skip</h6>

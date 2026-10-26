@@ -379,7 +379,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <a href="../../../appendix/index-a-z.html">Index</a>
 <h4>Doc Kit (test)</h4>
 <a href="../../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Object Data Properties Tab › Light Probe Object</div><h1 class="pv-title">Light Probe Object</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 11 min read</span></div><article class="ui-doc-body"><h2 id="light-probes-introduction">Light Probes Introduction</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/light-probes-introduction.png" alt="Light Probes Introduction" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/light-probes-introduction.png" alt="Light Probes Introduction" loading="lazy"></figure>
 <p>Light Probe objects are just useful for EEVEE and Cycles. Working with Light probes is a real time render technique. The light gets precalculated into a light probe object that are then used to indirectly light the scene.</p>
 <p>There are three different probe types: Sphere/Box, Plane and Volume. Volume and Plane is meant for specular lighting. Sphere/Box is used for diffuse lighting.</p>
 <table class="ui-doc-table">
@@ -412,9 +412,9 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> Light is filtered and only the diffuse light is recorded. If an object is not inside any Irradiance Volume, or if the indirect lighting has not been baked, the world’s diffuse lighting will be used to shade it.</p></div>
 <h2 id="probe-panel-sphere-lightprobe">Probe panel - Sphere lightprobe</h2>
 <h3 id="eevee">Eevee</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/eevee.png" alt="Eevee" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/eevee.png" alt="Eevee" loading="lazy"></figure>
 <h4 id="type">Type</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/type.png" alt="Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/type.png" alt="Type" loading="lazy"></figure>
 <p>The type of the influence volume. It can either sample a sphere or a bounding box.</p>
 <table class="ui-doc-table">
 <thead>
@@ -435,12 +435,12 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="cycles">Cycles</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/cycles.png" alt="Cycles" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/cycles.png" alt="Cycles" loading="lazy"></figure>
 <h4 id="clipping-start-end">Clipping Start/End</h4>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> Cycles only</p></div>
 <p>Define the near and far clip distances when capturing the scene.</p>
 <h4 id="visibility">Visibility</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/visibility.png" alt="Visibility" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/visibility.png" alt="Visibility" loading="lazy"></figure>
 <h5 id="visibility-collection">Visibility Collection</h5>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> Cycles only</p></div>
 <p>In some cases, it is useful to limit which objects appear in the light probe’s captured lighting. For instance, an object that is too close to a capture point might be better excluded. This is what the visibility collection does. Only objects that are in this collection will be visible when this probe will capture the scene.</p>
@@ -450,11 +450,11 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h2 id="probe-panel-plane-lightprobe">Probe panel - Plane lightprobe</h2>
 <h3 id="eevee-2">Eevee</h3>
 <h4 id="distance">Distance</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/distance.png" alt="Distance" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/distance.png" alt="Distance" loading="lazy"></figure>
 <p>A probe object only influences the lighting of nearby surfaces. This influence zone is defined by the Distance parameter and object scaling. The influence distance varies is a bit, depending on the probe type.</p>
 <p>For Reflection Planes the influence distance is the distance from the plane. Only surfaces whose normals are aligned with the Reflection Plane will receive the captured reflection.</p>
 <h3 id="cycles-2">Cycles</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/cycles-2.png" alt="Cycles" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/cycles-2.png" alt="Cycles" loading="lazy"></figure>
 <h4 id="clipping-offset">Clipping Offset</h4>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> Cycles only</p></div>
 <p>Define how far below the plane the near clip is when capturing the scene.</p>
@@ -468,7 +468,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <strong>Note:</strong> Due to a limitation, dupli-objects cannot be hidden by using this option.</p></div>
 <h2 id="probe-panel-volume-lightprobe">Probe panel - Volume lightprobe</h2>
 <h3 id="eevee-3">Eevee</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/eevee-2.png" alt="Eevee" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/eevee-2.png" alt="Eevee" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -517,7 +517,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="cycles-3">Cycles</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/cycles-3.png" alt="Cycles" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/cycles-3.png" alt="Cycles" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -545,7 +545,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="visibility-subpanel-2">Visibility subpanel</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/visibility-subpanel.png" alt="Visibility subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/visibility-subpanel.png" alt="Visibility subpanel" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -577,26 +577,26 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h2 id="sphere-lightprobe-capture-panel">Sphere Lightprobe - Capture panel</h2>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> The Capture panel is EEVEE only.</p></div>
 <h3 id="clipping-start-end-2">Clipping Start / End</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/clipping-start-end.png" alt="Clipping Start / End" loading="lazy"><figcaption>Clipping Start / End</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/clipping-start-end.png" alt="Clipping Start / End" loading="lazy"><figcaption>Clipping Start / End</figcaption></figure>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> Sphere Light Probe only.</p></div>
 <p>Define the near and far clip distances when capturing the scene.</p>
 <h3 id="clipping-offset-2">Clipping Offset</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/clipping-offset.png" alt="Clipping Offset" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/clipping-offset.png" alt="Clipping Offset" loading="lazy"></figure>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> Plane Light Probe only.</p></div>
 <p>Define how much below the plane the near clip is when capturing the scene. Increasing this can fix reflection contact problems.</p>
 <h2 id="sphere-lightprobe-custom-parallax-panel">Sphere Lightprobe - Custom Parallax panel</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/sphere-lightprobe-custom-parallax-panel.png" alt="Sphere Lightprobe - Custom Parallax panel" loading="lazy"><figcaption>Sphere Lightprobe - Custom Parallax panel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/sphere-lightprobe-custom-parallax-panel.png" alt="Sphere Lightprobe - Custom Parallax panel" loading="lazy"><figcaption>Sphere Lightprobe - Custom Parallax panel</figcaption></figure>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> Sphere Light Probe only.</p></div>
 <p>By default, the influence volume of a Sphere and Box light probe is also the parallax volume. The parallax volume is a volume where the recorded lighting is projected. It should roughly fit surrounding area the light probe should influence. In some cases it may be better to adjust the parallax volume without touching the influence parameters. In this case, enable the Custom Parallax and change the shape and distance of the parallax volume independently.</p>
 <h3 id="custom-parallax-toggle">Custom Parallax Toggle</h3>
 <p>Turn the custom parallax on/off.</p>
 <h3 id="type-2">Type</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/type.png" alt="Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/type.png" alt="Type" loading="lazy"></figure>
 <p>The type of parallax volume. One is a sphere shape, the other is a box shape.</p>
 <h3 id="radius-size">Radius / Size</h3>
 <p>The size of the parallax volume. Measured by the lowest corner of the parallax bounding box.</p>
 <h2 id="volume-lightprobe-bake-panel">Volume Lightprobe - Bake panel</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/volume-lightprobe-bake-panel.png" alt="Volume Lightprobe - Bake panel" loading="lazy"><figcaption>Volume Lightprobe - Bake panel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/volume-lightprobe-bake-panel.png" alt="Volume Lightprobe - Bake panel" loading="lazy"><figcaption>Volume Lightprobe - Bake panel</figcaption></figure>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> Volume Light Probe only.</p></div>
 <p>Light probe volume light data is static and needs to be manually baked. Once baked, the data is stored inside the object data-block and can be moved, animated and linked between blender files.</p>
 <div class="ui-doc-callout is-note"><p><strong>Note:</strong> Baking uses the render visibility of the objects in the scene.</p></div>
@@ -619,7 +619,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="resolution-subpanel">Resolution subpanel</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/resolution-subpanel.png" alt="Resolution subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/resolution-subpanel.png" alt="Resolution subpanel" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -643,7 +643,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="capture-subpanel">Capture subpanel</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/capture-subpanel.png" alt="Capture subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/capture-subpanel.png" alt="Capture subpanel" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -671,7 +671,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="clamping-subpanel">Clamping subpanel</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/clamping-subpanel.png" alt="Clamping subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/clamping-subpanel.png" alt="Clamping subpanel" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -691,7 +691,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h4 id="offset-subpanel">Offset subpanel</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/offset-subpanel.png" alt="Offset subpanel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/offset-subpanel.png" alt="Offset subpanel" loading="lazy"></figure>
 <p>In order to reduce artifacts caused by difficult capture point positioning, the bake process adjusts their location before capturing light. It moves the capture points slightly away from surrounding surfaces and tries to move them out of objects if they are not too far below the surface.</p>
 <table class="ui-doc-table">
 <thead>
@@ -713,7 +713,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </table>
 <h2 id="viewport-display-panel">Viewport Display panel</h2>
 <h3 id="sphere">Sphere</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/sphere.png" alt="Sphere" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/sphere.png" alt="Sphere" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -741,7 +741,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="plane-2">Plane</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/plane.png" alt="Plane" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/plane.png" alt="Plane" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -765,7 +765,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="volume-2">Volume</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/volume.png" alt="Volume" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/6e31ec5c26a0741eec3a5a03bc1e47c2c4253650/docs2/images/editors/properties/object-data-properties-tab/light-probe-object/volume.png" alt="Volume" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
