@@ -1,0 +1,2520 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Header · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1440 · <code>docs2/to-master</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../../getting-started.html">Getting Started</a>
+<a href="../../getting-started/introduction.html">Introduction</a>
+<a href="../../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../../getting-started/installation.html">Installation</a>
+<a href="../../getting-started/quick-start.html">Quick Start</a>
+<a href="../../getting-started/data-structure.html">Data Structure</a>
+<a href="../../getting-started/differences.html">Comparison with Blender</a>
+<a href="../../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<a href="../../interface.html">Interface</a>
+<a href="../../interface/overview.html">Interface Basics</a>
+<a href="../../interface/windows.html">Windows</a>
+<a href="../../interface/areas.html">Areas</a>
+<a href="../../interface/editors.html">Editors</a>
+<a href="../../interface/headers.html">Headers</a>
+<a href="../../interface/footers.html">Footers</a>
+<a href="../../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../../interface/side-bars.html">Side Bars</a>
+<a href="../../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../../interface/properties.html">Properties</a>
+<a href="../../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../../interface/context-menus.html">Context Menus</a>
+<a href="../../interface/floating-menus.html">Floating Menus</a>
+<a href="../../interface/pie-menus.html">Pie Menus</a>
+<a href="../../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<a href="../../workspaces.html">Workspaces</a>
+<a href="../../workspaces/workspaces.html">Managing Workspaces</a>
+<a href="../../workspaces/main.html">Main</a>
+<a href="../../workspaces/uv-editing.html">UV Editing</a>
+<a href="../../workspaces/modeling.html">Modeling</a>
+<a href="../../workspaces/nodes.html">Nodes</a>
+<a href="../../workspaces/animation.html">Animation</a>
+<a href="../../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../../workspaces/shading.html">Shading</a>
+<a href="../../workspaces/rendering.html">Rendering</a>
+<a href="../../workspaces/sculpting.html">Sculpting</a>
+<a href="../../workspaces/compositing.html">Compositing</a>
+<a href="../../workspaces/scripting.html">Scripting</a>
+<a href="../../workspaces/2d-animation.html">2D Animation</a>
+<a href="../../workspaces/storyboarding.html">Storyboarding</a>
+<a href="../../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../../workspaces/masking.html">Masking</a>
+<a href="../../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../../workspaces/video-editing.html">Video Editing</a>
+<a href="../../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<a href="../../workspaces/assets.html">Assets</a>
+<a href="../../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<a href="../../editors.html">Editors</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a class="is-current" style="padding-left:1.5rem" href="header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../properties/render-properties-tab.html">Render</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<a href="../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../properties/output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../properties/view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:1.5rem" href="../graph-editor/channel-list.html">Channel List</a>
+<a href="../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../properties/scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/metaball.html">Metaball</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:1.5rem" href="../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../properties/world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/text.html">Text</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:1.5rem" href="../properties/collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/lattice.html">Lattice</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="../properties/object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/armature.html">Armature</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:1.5rem" href="../properties/modifiers.html">Modifiers</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/layout.html">Layout</a>
+<a href="../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="../properties/visual-effects-properties-tab.html">Visual Effects</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/hair-curves.html">Hair Curves</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:1.5rem" href="../properties/particle-properties-tab.html">Particles</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/point-cloud.html">Point Cloud</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="../properties/physics-properties-tab.html">Physics</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/layout.html">Layout</a>
+<a href="../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../properties/object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../properties/object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../properties/bone-properties-tab.html">Bone</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<a style="padding-left:1.5rem" href="../properties/bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="../properties/material-properties-tab.html">Material</a>
+<a href="../texture-node-editor.html">Texture Node Editor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../properties/texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../properties/strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="../properties/strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../shader-editor.html">Shader Editor</a>
+<a href="../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../dope-sheet.html">Dope Sheet</a>
+<a href="../timeline.html">Timeline</a>
+<a href="../graph-editor.html">Graph Editor</a>
+<a href="../drivers-editor.html">Drivers Editor</a>
+<a href="../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../text-editor.html">Text Editor</a>
+<a href="../python-console.html">Python Console</a>
+<a href="../info-editor.html">Info Editor</a>
+<a href="../toolbar.html">Toolbar</a>
+<a href="../outliner.html">Outliner</a>
+<a href="../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/volume-object.html">Volume Object</a>
+<a href="../file-browser.html">File browser</a>
+<a href="../asset-browser.html">Asset Browser</a>
+<a href="../spreadsheet.html">Spreadsheet</a>
+<a href="../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../timeline/viewport.html">Viewport</a>
+<a style="padding-left:2.5rem" href="../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<a href="../../assets.html">Assets</a>
+<a href="../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../assets/default-library.html">Default Library</a>
+<a href="../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<a href="../../extensions.html">Extensions and Addons</a>
+<a href="../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../../extensions/coworker.html">Coworker</a>
+<a href="../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<a href="../../keymap.html">Keymap</a>
+<a href="../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<a href="../../advanced.html">Advanced</a>
+<a href="../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../../appendix.html">Information</a>
+<a href="../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../appendix/gpl-license.html">About the GPL License</a>
+<a href="../../appendix/community-influences.html">The Community Influences</a>
+<a href="../../appendix/glossary.html">Glossary</a>
+<a href="../../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<a href="../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Movie Clip Editor › Header</div><h1 class="pv-title">Header</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 40 min read</span></div><article class="ui-doc-body"><h2 id="movie-clip-editor-header">Movie Clip Editor - Header</h2>
+<p>The Header contains various menus, navigation elements, settings and tools for the viewport.</p>
+<p>The header is divided into two areas. Left menus. Right settings.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/movie-clip-editor-header.png" alt="Movie Clip Editor - Header" loading="lazy"><figcaption>Movie Clip Editor - Header</figcaption></figure>
+<p>The Movie Clip Editor is three editors in one. And the Clip editor in mask mode looks also different. So we need to explain the content for all three editor types plus the sub mode mask.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/movie-clip-editor-header-2.png" alt="Movie Clip Editor - Header" loading="lazy"><figcaption>Movie Clip Editor - Header</figcaption></figure>
+<h2 id="header-right-click-menus">Header right click menus</h2>
+<p>The general right click menu functionality is explained in chapter 6 Editors introduction.</p>
+<h2 id="editortype-menu">Editortype Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/editortype-menu.png" alt="Editortype Menu" loading="lazy"></figure>
+<p>Bforartists is made of several editor types. Headers can display a menu where you can switch to other editor types.</p>
+<p>This menu is hidden by default. It is meant to edit the layouts, and should not be necessary for regular work. You can reveal it in the header right click menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/editortype-menu-2.png" alt="Editortype Menu" loading="lazy"></figure>
+<h1 id="header-tools-and-options">Header Tools and Options</h1>
+<h3 id="movie-clip-editor-header-2">Movie Clip Editor - Header</h3>
+<p>The Movie Clip Editor has two modes, and is three editors in one. So we have to explain the single header tools and options at a one by one base.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/movie-clip-editor-header.png" alt="Movie Clip Editor - Header" loading="lazy"><figcaption>Movie Clip Editor - Header</figcaption></figure>
+<h3 id="tracking-mode-clip-submode">Tracking mode - Clip submode</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/tracking-mode-clip-submode.png" alt="Tracking mode - Clip submode" loading="lazy"><figcaption>Tracking mode - Clip submode</figcaption></figure>
+<h4 id="movie-clip-property">Movie Clip property</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/movie-clip-property.png" alt="Movie Clip property" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/movie-clip-property-2.png" alt="Movie Clip property" loading="lazy"></figure>
+<p>Available in Tracking in Clip mode and Mask mode.</p>
+<p>This property contains the list of loaded movie clips. When no movie clip is loaded or active, then it displays the Open Buttons. When a movie clip is loaded and active, then it displays the name of the currently active movie clip.</p>
+<p>From left to right ...</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/movie-clip-property-3.png" alt="Movie Clip property" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List of clips in the scene</td>
+<td>This is a list of the movie clips in the scene. Allows you to witch to other images. · <strong>Search form</strong>: Search for specific clips.</td>
+</tr>
+<tr>
+<td>Clip Edit Box</td>
+<td>The name of the currently selected movie clip. You can rename the movie clip here too.</td>
+</tr>
+<tr>
+<td>Number of Fake Users</td>
+<td>In case this file has a fake user assigned, then this number displays the number of fake users.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>With this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a new movie clip.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="remove">Remove</h4>
+<p>Removes the movie clip. Note that it will not be removed when it has a fake user assigned. Then the clip becomes simply inactive. You can still use it from the list again.</p>
+<h4 id="pivot-point">Pivot Point</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/pivot-point.png" alt="Pivot Point" loading="lazy"></figure>
+<p>Adjust the pivot point for transform operations. The names should be self explaining.</p>
+<h4 id="solve-error">Solve Error</h4>
+<p>Read only. The solve error for the current tracking.</p>
+<h4 id="toggle-lock-selection">Toggle Lock Selection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/toggle-lock-selection.png" alt="Toggle Lock Selection" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/toggle-lock-selection-2.png" alt="Toggle Lock Selection" loading="lazy"></figure>
+<p>With lock to selection disabled the viewport stands still and the markers moves. With lock to selection enabled the view is centered at the current selected marker, and the video moves around.</p>
+<p>Available in Tracking in Clip mode and Mask mode.</p>
+<h4 id="clip-display">Clip Display</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/clip-display.png" alt="Clip Display" loading="lazy"></figure>
+<p>Display options for the tracking footage.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R G B</td>
+<td>Display the red green and blue channels of the footage</td>
+</tr>
+<tr>
+<td>BW</td>
+<td>Display the footage in black and white.</td>
+</tr>
+<tr>
+<td>Mute Footage</td>
+<td>Hide the footage.</td>
+</tr>
+<tr>
+<td>Render Undistorted</td>
+<td>Render Preview undistorted.</td>
+</tr>
+<tr>
+<td>Show Metadata</td>
+<td>Shows the metadata of the clip if available.</td>
+</tr>
+<tr>
+<td>Show Stable</td>
+<td>Show stable footage in editor. Stabilization needs to be enabled.</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>Displays a red grid over the footage that displays the lens distortion.</td>
+</tr>
+<tr>
+<td>Aspect Ratio X Y</td>
+<td>The aspect ratio to display the footage.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tracking-mode-graph-submode">Tracking mode - Graph submode</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/tracking-mode-graph-submode.png" alt="Tracking mode - Graph submode" loading="lazy"><figcaption>Tracking mode - Graph submode</figcaption></figure>
+<p>Tools to refine and modify the markers.</p>
+<h4 id="refine-markers-backwards">Refine Markers Backwards</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/refine-markers-backwards.png" alt="Refine Markers Backwards" loading="lazy"></figure>
+<p>Refine selected markers position by running the tracker from tracks reference to current frame.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear Track Path Backwards</td>
+<td>Clear tracks before the current position.</td>
+</tr>
+<tr>
+<td>Track Markers Backwards</td>
+<td>Track selected markers backwards.</td>
+</tr>
+<tr>
+<td>Track Markers Sequence Backwards</td>
+<td>Track selected marker sequence backwards.</td>
+</tr>
+<tr>
+<td>Track Markers Sequence Forwards</td>
+<td>Track selected marker sequence forwards.</td>
+</tr>
+<tr>
+<td>Track Markers Forwards</td>
+<td>Track selected markers forwards.</td>
+</tr>
+<tr>
+<td>Clear Track Path Forwards</td>
+<td>Clear tracks after the current position.</td>
+</tr>
+<tr>
+<td>Refine Markers Forwards</td>
+<td>Refine selected markers position by running the tracker from tracks reference to current frame.</td>
+</tr>
+<tr>
+<td>Only selected</td>
+<td>Only display channels relating to the current objects and data.</td>
+</tr>
+<tr>
+<td>Display Hidden</td>
+<td>Display also channels from objects/bones that are not visible.</td>
+</tr>
+<tr>
+<td>Show Frames</td>
+<td>Show curve for per frame average error. Camera motion should be solved first.</td>
+</tr>
+<tr>
+<td>Show Track Motion</td>
+<td>Display the speed curves for the selected tracks. Red is X direction. Green is Y direction.</td>
+</tr>
+<tr>
+<td>Show Tracks Error</td>
+<td>Display the reprojection error curve for the selected tracks.</td>
+</tr>
+<tr>
+<td>Show Gizmo</td>
+<td>Display gizmos.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="gizmos">Gizmos</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/gizmos.png" alt="Gizmos" loading="lazy"></figure>
+<h5 id="viewport-gizmos">Viewport Gizmos</h5>
+<h6 id="navigate">Navigate</h6>
+<p>Show the navigate viewport gizmos.</p>
+<h3 id="tracking-mode-dope-sheet-submode">Tracking mode - Dope Sheet submode</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/tracking-mode-dope-sheet-submode.png" alt="Tracking mode - Dope Sheet submode" loading="lazy"><figcaption>Tracking mode - Dope Sheet submode</figcaption></figure>
+<p>Tools to refine and modify the markers.</p>
+<h4 id="refine-markers-backwards-2">Refine Markers Backwards</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/refine-markers-backwards.png" alt="Refine Markers Backwards" loading="lazy"></figure>
+<p>Refine selected markers position by running the tracker from tracks reference to current frame.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear Track Path Backwards</td>
+<td>Clear tracks before the current position.</td>
+</tr>
+<tr>
+<td>Track Markers Backwards</td>
+<td>Track selected markers backwards.</td>
+</tr>
+<tr>
+<td>Track Markers Sequence Backwards</td>
+<td>Track selected marker sequence backwards.</td>
+</tr>
+<tr>
+<td>Track Markers Sequence Forwards</td>
+<td>Track selected marker sequence forwards.</td>
+</tr>
+<tr>
+<td>Track Markers Forwards</td>
+<td>Track selected markers forwards.</td>
+</tr>
+<tr>
+<td>Clear Track Path Forwards</td>
+<td>Clear tracks after the current position.</td>
+</tr>
+<tr>
+<td>Refine Markers Forwards</td>
+<td>Refine selected markers position by running the tracker from tracks reference to current frame.</td>
+</tr>
+<tr>
+<td>Only selected</td>
+<td>Only display channels relating to the current objects and data.</td>
+</tr>
+<tr>
+<td>Display Hidden</td>
+<td>Display also channels from objects/bones that are not visible.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dope-sheet-sort-field">Dope Sheet Sort Field</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/dope-sheet-sort-field.png" alt="Dope Sheet Sort Field" loading="lazy"><figcaption>Dope Sheet Sort Field</figcaption></figure>
+<p>The method to sort the channels in dope sheet view.</p>
+<h5 id="invert-dope-sheet-sort">Invert Dope Sheet Sort</h5>
+<p>Invert the dope sheet sorting.</p>
+<h4 id="options-panel">Options panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/options-panel.png" alt="Options panel" loading="lazy"></figure>
+<h5 id="show-seconds">Show Seconds</h5>
+<p>Option. Display the timeline numbering in seconds instead of frames.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/show-seconds.png" alt="Show Seconds" loading="lazy"></figure>
+<h5 id="sync-visible-range">Sync Visible Range</h5>
+<p>Option. Synchronize the visible timeline range with other time based editors.</p>
+<h4 id="gizmos-2">Gizmos</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/gizmos.png" alt="Gizmos" loading="lazy"></figure>
+<h5 id="viewport-gizmos-2">Viewport Gizmos</h5>
+<h6 id="navigate-2">Navigate</h6>
+<p>Show the navigate viewport gizmos.</p>
+<h3 id="mask-mode">Mask mode</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/mask-mode.png" alt="Mask mode" loading="lazy"></figure>
+<h4 id="movie-clip-property-2">Movie Clip property</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/movie-clip-property.png" alt="Movie Clip property" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/movie-clip-property-2.png" alt="Movie Clip property" loading="lazy"></figure>
+<p>Available in Tracking in Clip mode and Mask mode.</p>
+<p>This property contains the list of loaded movie clips. When no movie clip is loaded or active, then it displays the Open Buttons. When a movie clip is loaded and active, then it displays the name of the currently active movie clip.</p>
+<p>From left to right ...</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/movie-clip-property-3.png" alt="Movie Clip property" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List of clips in the scene</td>
+<td>This is a list of the movie clips in the scene. Allows you to witch to other images. · <strong>Search form</strong>: Search for specific clips.</td>
+</tr>
+<tr>
+<td>Clip Edit Box</td>
+<td>The name of the currently selected movie clip. You can rename the movie clip here too.</td>
+</tr>
+<tr>
+<td>Number of Fake Users</td>
+<td>In case this file has a fake user assigned, then this number displays the number of fake users.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>With this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a new movie clip.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="remove-2">Remove</h4>
+<p>Removes the movie clip. Note that it will not be removed when it has a fake user assigned. Then the clip becomes simply inactive. You can still use it from the list again.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/remove.png" alt="Remove" loading="lazy"></figure>
+<h4 id="mask-property">Mask Property</h4>
+<p>These are display options for mask overlays.</p>
+<h5 id="mask-display">Mask Display</h5>
+<h6 id="spline">Spline</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/spline.png" alt="Spline" loading="lazy"></figure>
+<p>Display spline overlays.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edge Display</td>
+<td>Changes the spline overlay to outline, dash, black or white edges.</td>
+</tr>
+<tr>
+<td>Overlay</td>
+<td>Displays an overlay overlays.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="overlay-mode">Overlay Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/overlay-mode.png" alt="Overlay Mode" loading="lazy"></figure>
+<p>Show combined color channels or alpha channel. When using combined, the Blending Factor slider can be changed.</p>
+<h4 id="pivot-point-2">Pivot Point</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/pivot-point.png" alt="Pivot Point" loading="lazy"></figure>
+<p>Adjust the pivot point for transform operations. The names should be self explaining.</p>
+<h4 id="proportional-editing">Proportional Editing</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/proportional-editing.png" alt="Proportional Editing" loading="lazy"></figure>
+<p>Enables proportional editing.</p>
+<p>Proportional Editing is a way of transforming selected elements (such as vertices, or in this case the handlers for the mask spline curves) while having that transformation affect other nearby elements with a falloff. For example, moving a single vertex will move unselected vertices within a given range. And the falloff means that selected vertices that are closer to the selected vertex will move more than those farther from it.</p>
+<h5 id="settings">Settings</h5>
+<p>Choose between different falloff methods for the proportional editing. The settings are hidden when you have proportional editing off.</p>
+<h4 id="toggle-lock-selection-2">Toggle Lock Selection</h4>
+<p>Toggle Lock Selection of the current clip editor</p>
+<h4 id="clip-display-2">Clip Display</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/clip-display.png" alt="Clip Display" loading="lazy"></figure>
+<p>Display options for the tracking footage.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R G B</td>
+<td>Display the red green and blue channels of the footage</td>
+</tr>
+<tr>
+<td>BW</td>
+<td>Display the footage in black and white.</td>
+</tr>
+<tr>
+<td>Mute Footage</td>
+<td>Hide the footage.</td>
+</tr>
+<tr>
+<td>Render Undistorted</td>
+<td>Render Preview undistorted.</td>
+</tr>
+<tr>
+<td>Show Metadata</td>
+<td>Shows the metadata of the clip if available.</td>
+</tr>
+<tr>
+<td>Show Stable</td>
+<td>Show stable footage in editor. Stabilization needs to be enabled.</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>Displays a red grid over the footage that displays the lens distortion.</td>
+</tr>
+<tr>
+<td>Aspect Ratio X Y</td>
+<td>The aspect ratio to display the footage.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="gizmos-3">Gizmos</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/gizmos.png" alt="Gizmos" loading="lazy"></figure>
+<h5 id="viewport-gizmos-3">Viewport Gizmos</h5>
+<h6 id="navigate-3">Navigate</h6>
+<p>Show the navigate viewport gizmos.</p>
+<h4 id="show-overlays">Show Overlays</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/show-overlays.png" alt="Show Overlays" loading="lazy"></figure>
+<h5 id="viewport-overlays">Viewport Overlays</h5>
+<h6 id="guides">Guides</h6>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distortion Grid</td>
+<td>Show grid showing lens distortion.</td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td>Display 2d cursor.</td>
+</tr>
+<tr>
+<td>Annotations</td>
+<td>Display annotations.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="mask-display-2">Mask Display</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/mask-display.jpg" alt="Mask Display" loading="lazy"></figure>
+<h6 id="spline-2">Spline</h6>
+<p><strong>Edge Display type</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/edge-display-type.png" alt="Edge Display type" loading="lazy"></figure>
+<p>How to display the spline.</p>
+<h6 id="overlay">Overlay</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/overlay.png" alt="Overlay" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alpha Channel</td>
+<td>Show the alpha channel of the mask</td>
+</tr>
+<tr>
+<td>Combined</td>
+<td>Combine space background image with the mask · <strong>Blending Factor</strong>: The blending factor between mask and space background.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="quick-menu">Quick Menu</h1>
+<h3 id="quick-menu-2">Quick Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/quick-menu/quick-menu.png" alt="Quick Menu" loading="lazy"></figure>
+<p>The quick menu, or in long Quick Favorites menu, is a menu that can be customized to your needs. Here you can add operators for quick access.</p>
+<p>It is located in the header. But it can be called by hotkey Q directly under the mouse. This hotkey works in other editors too.</p>
+<p>When the menu is empty, then you will see the message &quot;No Menu Items found&quot;. This means that you first have to add some tools to the menu. It is a user configurable menu.</p>
+<p>Note that added operators in this menu does not have icons. Just text.</p>
+<h4 id="adding-an-operator-to-the-quick-menu">Adding an operator to the Quick menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/quick-menu/adding-an-operator-to-the-quick-menu.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
+<p>Open the panel or the menu where your operator is that you want to add.</p>
+<p>Let's add the open command from the File menu. Open the File menu, right click at open, and choose Add to Quick Favorites.</p>
+<p>Do the same with Save As. We should now have two new menu items in the Quick menu, which you can use now.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/quick-menu/adding-an-operator-to-the-quick-menu-2.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
+<p>As a rule of thumb, when the right click menu has an Add to Quick Favorites, then you can add it to the quick menu.</p>
+<p>Note that you can also add operators from the tool shelf at the left. And also operators from other editor types. Some other editors have their own quick menu though. The Image Editor for example. These operators gets added in the quick menu of the image editor then. And does not show in the quick menu in the header of the 3D view.</p>
+<h4 id="adding-a-menu-to-the-quick-menu">Adding a menu to the Quick menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/quick-menu/adding-a-menu-to-the-quick-menu.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
+<p>It is also possible to add a menu to the Quick menu. For example the whole Add menu. The way is the same. Right click at it, and choose Add to Quick Favorites.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/quick-menu/adding-a-menu-to-the-quick-menu-2.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
+<h4 id="order">Order</h4>
+<p>You might notice that the add menu adds at the top of the menu, and not at the bottom as you would expect. First comes menus, then comes operators. And they get added in the order in which you add them.</p>
+<p>Besides that, operators and menus gets added in the order that you add them. They cannot be sorted afterwards. So be careful how you add them. You can of course always remove operators and menus, and re-add them at the end of the list.</p>
+<h4 id="removing-an-operator-from-the-quick-menu">Removing an operator from the Quick menu</h4>
+<blockquote>
+<p>The <strong>Quick Favorites</strong> menu (Q) holds the tools and menus you add to it yourself. See <strong><a href="../../interface/floating-menus.html#quick-favorites">Quick Favorites</a></strong> in the Interface chapter.</p>
+</blockquote>
+<h4 id="context-and-mode-dependent-content">Context and mode dependent content</h4>
+<p>The quick favorites. menu exists in nearly all editors. But it is just in the 3D view available in the header. So that you know this functionality exists. In the other editors you call it with hotkey Q.</p>
+<p>The content of the quick favorites. menu changes, dependent over which editor you are, and in what mode you are. When you add for example an operator from the image editor, then this operator just shows in the quick menu when you call the menu from the image editor. Same goes for the modes. Edit mode tools will just show in edit mode. And so on.</p>
+<h1 id="view-menu">View Menu</h1>
+<h3 id="movie-clip-editor-modes">Movie Clip Editor Modes</h3>
+<p>The Movie Clip Editor is three editors in one. And the Clip editor in mask mode looks also different. So we need to explain the content for all three editor types plus the Mask mode.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/movie-clip-editor-header-2.png" alt="Movie Clip Editor Modes" loading="lazy"><figcaption>Movie Clip Editor Modes</figcaption></figure>
+<h3 id="view-menu-in-tracking-mode-in-clip-sub-mode">View Menu in Tracking mode in Clip sub mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/view-menu-in-tracking-mode-in-clip-sub-mode.png" alt="View Menu in Tracking mode in Clip sub mode" loading="lazy"><figcaption>View Menu in Tracking mode in Clip sub mode</figcaption></figure>
+<p>The View menu contains all View related tools.</p>
+<h4 id="toolbar">Toolbar</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/toolbar.png" alt="Toolbar" loading="lazy"></figure>
+<p>Shows or hides the toolbar at the left.</p>
+<h4 id="sidebar">Sidebar</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/sidebar.png" alt="Sidebar" loading="lazy"></figure>
+<p>Shows or hides the sidebar at the right in the viewport.</p>
+<h4 id="adjust-last-operation">Adjust Last Operation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/adjust-last-operation.png" alt="Adjust Last Operation" loading="lazy"></figure>
+<p>Shows the adjust last operation panel down left.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame Selected</td>
+<td>Zooms to the selection.</td>
+</tr>
+<tr>
+<td>View All</td>
+<td>View all zooms in or out in the viewport until all selected objects are displayed fitting in the viewport.</td>
+</tr>
+<tr>
+<td>View Fit</td>
+<td>View all zooms in or out in the viewport to fit the current selection into the viewport.</td>
+</tr>
+<tr>
+<td>Center View to Cursor</td>
+<td>Center Cursor centers the view to the 2D cursor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="annotations-legacy-submenu">Annotations (Legacy) submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/annotations-legacy-submenu.png" alt="Annotations (Legacy) submenu" loading="lazy"></figure>
+<p>This group of operators is useful to take notes without changing tool-shelf operators. These notes can be colored in the View tab of the Property Shelf. Each layer is a single color. You can also animate the notes with keyframes, editable in the dopesheet.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> These are legacy operators, meaning they are equally available in the Toolshelf as a modal operator.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draw Annotation</td>
+<td>Starts the annotation free hand draw tool in the editor.</td>
+</tr>
+<tr>
+<td>Draw Line Annotation</td>
+<td>Starts the annotation line draw tool to draw straight lines in the editor.</td>
+</tr>
+<tr>
+<td>Draw Polyline Annotation</td>
+<td>Starts the annotation Polyline draw tool in the editor which allows to draw multiple connected straight lines in the editor.</td>
+</tr>
+<tr>
+<td>Erase Annotation</td>
+<td>Starts the annotation erase tool in the editor which erases any strokes in the editor.</td>
+</tr>
+<tr>
+<td>Add Annotation Layer</td>
+<td>Starts a new annotation layer.</td>
+</tr>
+<tr>
+<td>Erase Annotation Active Keyframe</td>
+<td>Erases the active keyframe of the annotation.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame Selected</td>
+<td>Centers the view at the current frame(s).</td>
+</tr>
+<tr>
+<td>Frame All</td>
+<td>Views all content, zoomed in to fit into the viewport.</td>
+</tr>
+<tr>
+<td>View Fit</td>
+<td>View whole image with markers.</td>
+</tr>
+<tr>
+<td>Center View to Cursor</td>
+<td>Center the view so that the 2d cursor is in the middle of the view.</td>
+</tr>
+<tr>
+<td>Zoom In</td>
+<td>Zooms into the view.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="zoom-out">Zoom Out</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/zoom-out.png" alt="Zoom Out" loading="lazy"></figure>
+<p>Zooms out of the view.</p>
+<h4 id="zoom-submenu">Zoom submenu</h4>
+<p>A set of predefined zoom factors.</p>
+<h4 id="pie-menus">Pie menus</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/pie-menus.png" alt="Pie menus" loading="lazy"></figure>
+<p>Lists the available pie menus, and gives you the ability to read the hotkeys and assign own hotkeys.</p>
+<h4 id="area">Area</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/area.jpg" alt="Area" loading="lazy"></figure>
+<p>This menu contains general view functionality. And exists in most other editor types too.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal Split</td>
+<td>Splits the current view horizontally into two independent editor windows.</td>
+</tr>
+<tr>
+<td>Vertical Split</td>
+<td>Splits the current view vertically into two independent editor windows.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="duplicate-area-into-new-window">Duplicate Area into New Window</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/duplicate-area-into-new-window.png" alt="Duplicate Area into New Window" loading="lazy"><figcaption>Duplicate Area into New Window</figcaption></figure>
+<blockquote>
+<p><strong>Duplicate Area into New Window</strong> opens this editor in a floating window. See <strong><a href="../../interface/windows.html#floating-editor-windows">Floating editor windows</a></strong> in the Interface chapter.</p>
+</blockquote>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Maximize Area</td>
+<td>Displays the editor maximized with menus. To return from the maximized view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Space</kbd></span>. Or reuse the menu item in the area menu.</td>
+</tr>
+<tr>
+<td>Toggle Full screen Area</td>
+<td>Displays the editor maximized without menus. To return from the full screen view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd></span>.</td>
+</tr>
+<tr>
+<td>Close Area</td>
+<td>Close the area window.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="view-menu-in-in-tracking-mode-in-graph-sub-mode">View Menu in in Tracking mode in Graph sub mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/view-menu-in-in-tracking-mode-in-graph-sub-mode.png" alt="View Menu in in Tracking mode in Graph sub mode" loading="lazy"><figcaption>View Menu in in Tracking mode in Graph sub mode</figcaption></figure>
+<p>The View menu contains all View related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame Selected</td>
+<td>Centers the view at the current frame(s).</td>
+</tr>
+<tr>
+<td>Frame All</td>
+<td>Views all content, zoomed in to fit into the viewport.</td>
+</tr>
+<tr>
+<td>Zoom In + Zoom Out</td>
+<td>Zoom in and out in the viewport.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pie-menus-2">Pie menus</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/pie-menus-2.png" alt="Pie menus" loading="lazy"></figure>
+<p>Lists the available pie menus, and gives you the ability to read the hotkeys and assign own hotkeys.</p>
+<h4 id="area-2">Area</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/area.jpg" alt="Area" loading="lazy"></figure>
+<p>This menu contains general view functionality. And exists in most other editor types too.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal Split</td>
+<td>Splits the current view horizontally into two independent editor windows.</td>
+</tr>
+<tr>
+<td>Vertical Split</td>
+<td>Splits the current view vertically into two independent editor windows.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="duplicate-area-into-new-window-2">Duplicate Area into New Window</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/duplicate-area-into-new-window.png" alt="Duplicate Area into New Window" loading="lazy"><figcaption>Duplicate Area into New Window</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Maximize Area</td>
+<td>Displays the editor maximized with menus. To return from the maximized view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Space</kbd></span>. Or reuse the menu item in the area menu.</td>
+</tr>
+<tr>
+<td>Toggle Full screen Area</td>
+<td>Displays the editor maximized without menus. To return from the full screen view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd></span>.</td>
+</tr>
+<tr>
+<td>Close Area</td>
+<td>Close the area window.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="view-menu-in-in-tracking-mode-in-dopesheet-sub-mode">View Menu in in Tracking mode in Dopesheet sub mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/view-menu-in-in-tracking-mode-in-dopesheet-sub-m.png" alt="View Menu in in Tracking mode in Dopesheet sub mode" loading="lazy"><figcaption>View Menu in in Tracking mode in Dopesheet sub mode</figcaption></figure>
+<p>The View menu contains all View related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame All</td>
+<td>Show all content, zoomed to fit into the viewport.</td>
+</tr>
+<tr>
+<td>Zoom In + Zoom Out</td>
+<td>Zooms in and out in the viewport.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pie-menus-3">Pie menus</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/pie-menus-3.png" alt="Pie menus" loading="lazy"></figure>
+<p>Lists the available pie menus, and gives you the ability to read the hotkeys and assign own hotkeys.</p>
+<h4 id="area-3">Area</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/area.jpg" alt="Area" loading="lazy"></figure>
+<p>This menu contains general view functionality. And exists in most other editor types too.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal Split</td>
+<td>Splits the current view horizontally into two independent editor windows.</td>
+</tr>
+<tr>
+<td>Vertical Split</td>
+<td>Splits the current view vertically into two independent editor windows.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="duplicate-area-into-new-window-3">Duplicate Area into New Window</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/duplicate-area-into-new-window.png" alt="Duplicate Area into New Window" loading="lazy"><figcaption>Duplicate Area into New Window</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Maximize Area</td>
+<td>Displays the editor maximized with menus. To return from the maximized view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Space</kbd></span>. Or reuse the menu item in the area menu.</td>
+</tr>
+<tr>
+<td>Toggle Full screen Area</td>
+<td>Displays the editor maximized without menus. To return from the full screen view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd></span>.</td>
+</tr>
+<tr>
+<td>Close Area</td>
+<td>Close the area window.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="view-menu-in-mask-mode">View Menu in Mask mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/view-menu-in-mask-mode.png" alt="View Menu in Mask mode" loading="lazy"><figcaption>View Menu in Mask mode</figcaption></figure>
+<p>The View menu contains all View related tools.</p>
+<h4 id="toolbar-2">Toolbar</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/toolbar.png" alt="Toolbar" loading="lazy"></figure>
+<p>Shows or hides the toolbar at the left.</p>
+<h4 id="sidebar-2">Sidebar</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/sidebar.png" alt="Sidebar" loading="lazy"></figure>
+<p>Shows or hides the sidebar at the right in the viewport.</p>
+<h4 id="adjust-last-operation-2">Adjust Last Operation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/adjust-last-operation.png" alt="Adjust Last Operation" loading="lazy"></figure>
+<p>Shows the adjust last operation panel down left.</p>
+<h4 id="annotations-legacy-submenu-2">Annotations (Legacy) submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/annotations-legacy-submenu-2.png" alt="Annotations (Legacy) submenu" loading="lazy"></figure>
+<p>This group of operators is useful to take notes without changing tool-shelf operators. These notes can be colored in the View tab of the Property Shelf. Each layer is a single color. You can also animate the notes with keyframes, editable in the dopesheet.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> These are legacy operators, meaning they are equally available in the Toolshelf as a modal operator.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draw Annotation</td>
+<td>Starts the annotation free hand draw tool in the editor.</td>
+</tr>
+<tr>
+<td>Draw Line Annotation</td>
+<td>Starts the annotation line draw tool to draw straight lines in the editor.</td>
+</tr>
+<tr>
+<td>Draw Polyline Annotation</td>
+<td>Starts the annotation Polyline draw tool in the editor which allows to draw multiple connected straight lines in the editor.</td>
+</tr>
+<tr>
+<td>Erase Annotation</td>
+<td>Starts the annotation erase tool in the editor which erases any strokes in the editor.</td>
+</tr>
+<tr>
+<td>Add Annotation Layer</td>
+<td>Starts a new annotation layer.</td>
+</tr>
+<tr>
+<td>Erase Annotation Active Keyframe</td>
+<td>Erases the active keyframe of the annotation.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set 2D Cursor</td>
+<td>The 2D cursor is the center for mask creation and modification. Hotkey only tool! Please use the hotkey!</td>
+</tr>
+<tr>
+<td>Frame Selected</td>
+<td>Zooms to the selection.</td>
+</tr>
+<tr>
+<td>Frame All</td>
+<td>View all zooms in or out in the viewport until all selected objects are displayed fitting in the viewport.</td>
+</tr>
+<tr>
+<td>View Fit</td>
+<td>View all zooms in or out in the viewport to fit the current selection into the viewport.</td>
+</tr>
+<tr>
+<td>Center View to Cursor</td>
+<td>Center Cursor centers the view to the 2D cursor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="zoom-in">Zoom In</h4>
+<p>Zooms into the view.</p>
+<h5 id="zoom-out-2">Zoom Out</h5>
+<p>Zooms out of the view.</p>
+<h5 id="zoom">Zoom</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/zoom.png" alt="Zoom" loading="lazy"></figure>
+<p>A set of predefined zoom factors.</p>
+<h4 id="pie-menus-4">Pie menus</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/pie-menus-4.png" alt="Pie menus" loading="lazy"></figure>
+<p>Lists the available pie menus, and gives you the ability to read the hotkeys and assign own hotkeys.</p>
+<h4 id="area-4">Area</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/area.jpg" alt="Area" loading="lazy"></figure>
+<p>This menu contains general view functionality. And exists in most other editor types too.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal Split</td>
+<td>Splits the current view horizontally into two independent editor windows.</td>
+</tr>
+<tr>
+<td>Vertical Split</td>
+<td>Splits the current view vertically into two independent editor windows.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="duplicate-area-into-new-window-4">Duplicate Area into New Window</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/view-menu/duplicate-area-into-new-window.png" alt="Duplicate Area into New Window" loading="lazy"><figcaption>Duplicate Area into New Window</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Maximize Area</td>
+<td>Displays the editor maximized with menus. To return from the maximized view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Space</kbd></span>. Or reuse the menu item in the area menu.</td>
+</tr>
+<tr>
+<td>Toggle Full screen Area</td>
+<td>Displays the editor maximized without menus. To return from the full screen view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd></span>.</td>
+</tr>
+<tr>
+<td>Close Area</td>
+<td>Close the area window.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="select-menu">Select Menu</h1>
+<h3 id="movie-clip-editor-modes-2">Movie Clip Editor Modes</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/movie-clip-editor-header-2.png" alt="Movie Clip Editor Modes" loading="lazy"><figcaption>Movie Clip Editor Modes</figcaption></figure>
+<p>The Movie Clip Editor is three editors in one. And the Clip editor in mask mode looks also different. So we need to explain the content for all editor types plus the Mask mode that has a Select menu.</p>
+<p>The Dope sheet mode has no Select menu.</p>
+<h3 id="select-menu-in-tracking-mode-in-clip-sub-mode">Select Menu in Tracking mode in Clip sub mode</h3>
+<h4 id="all">All</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/select-menu/all.png" alt="All" loading="lazy"></figure>
+<p>Select everything.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Select nothing.</td>
+</tr>
+<tr>
+<td>Inverse</td>
+<td>Invert the current selection.</td>
+</tr>
+<tr>
+<td>Box Select</td>
+<td>Draw a rectangle to box select markers. It adds to selection by default. To subtract from selection hold down Shift key.</td>
+</tr>
+<tr>
+<td>Circle Select</td>
+<td>Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lasso-select">Lasso Select</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/select-menu/lasso-select.png" alt="Lasso Select" loading="lazy"></figure>
+<p>A sub menu with the available lasso select modes.</p>
+<h4 id="grouped">Grouped</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/select-menu/grouped.png" alt="Grouped" loading="lazy"></figure>
+<p>Here you can select objects that are in the same group by the chosen method. The items should be self explaining.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select Stabilization tracks</td>
+<td>Select the tracks that are used for translation stabilization.</td>
+</tr>
+<tr>
+<td>Select Stabilization Rotation tracks</td>
+<td>Select the tracks that are used for rotation stabilization.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="select-menu-in-tracking-mode-in-graph-sub-mode">Select Menu in Tracking mode in Graph sub mode</h3>
+<h4 id="all-2">All</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/select-menu/all-2.png" alt="All" loading="lazy"></figure>
+<p>Select everything.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Select nothing.</td>
+</tr>
+<tr>
+<td>Inverse</td>
+<td>Invert the current selection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="select-menu-in-mask-mode">Select Menu in Mask mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/select-menu/select-menu-in-mask-mode.png" alt="Select Menu in Mask mode" loading="lazy"><figcaption>Select Menu in Mask mode</figcaption></figure>
+<p>Note that you need to have a mask so that the content becomes active.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All</td>
+<td>Select everything.</td>
+</tr>
+<tr>
+<td>None</td>
+<td>Select nothing.</td>
+</tr>
+<tr>
+<td>Inverse</td>
+<td>Invert the current selection.</td>
+</tr>
+<tr>
+<td>Box Select</td>
+<td>Draw a rectangle to box select markers. It adds to selection by default. To subtract from selection hold down Shift key.</td>
+</tr>
+<tr>
+<td>Circle Select</td>
+<td>Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lasso-select-2">Lasso Select</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/select-menu/lasso-select.png" alt="Lasso Select" loading="lazy"></figure>
+<p>A sub menu with the available lasso select modes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linked</td>
+<td>Select all curve points that are linked to the already selected points.</td>
+</tr>
+<tr>
+<td>More/Less Submenu</td>
+<td><strong>More</strong>: Increase the selection by one point. · <strong>Less</strong>: Decrease the selection by one point.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="tracking-mode-clip-submode-clip-menu">Tracking Mode › Clip Submode › Clip Menu</h1>
+<h3 id="clip-menu">Clip Menu</h3>
+<h4 id="open-clip">Open Clip</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-clip-menu/open-clip.png" alt="Open Clip" loading="lazy"></figure>
+<p>Opens an Image Sequence or a movie clip.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set Scene Frames</td>
+<td>Set the start and end frame of the frames to match the start and end frame of the clips.</td>
+</tr>
+<tr>
+<td>Prefetch Frames</td>
+<td>Prefetch frames from disk for faster playback and/or tracking.</td>
+</tr>
+<tr>
+<td>Reload Clip</td>
+<td>Reloads the movie clip.</td>
+</tr>
+<tr>
+<td>Set as Background</td>
+<td>Set the current movie clip as the camera background in the 3d view.</td>
+</tr>
+<tr>
+<td>Setup Tracking Scene</td>
+<td>Prepare the scene fro compositing 3d objects into this footage.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="tracking-mode-clip-submode-track-menu">Tracking Mode › Clip Submode › Track Menu</h1>
+<h3 id="track-menu">Track Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/track-menu.png" alt="Track Menu" loading="lazy"></figure>
+<p>Contains tracking functionality. Note that lots of this content is currently a double entry to the content in the tool shelf. The tool shelf content will most probably vanish in the future, in favour of a tool shelf with buttons like in the 3d view.</p>
+<h4 id="transform-submenu">Transform submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/transform-submenu.png" alt="Transform submenu" loading="lazy"></figure>
+<p>Track navigation.</p>
+<h5 id="move">Move</h5>
+<p>Move the selected track(s).</p>
+<h6 id="last-operator-move">Last Operator Move</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-move.png" alt="Last Operator Move" loading="lazy"></figure>
+<h6 id="move-x-y-z">Move X, Y Z</h6>
+<p>The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.</p>
+<h6 id="orientation">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h6 id="mirror-editing">Mirror Editing</h6>
+<p>Enables mirror editing.</p>
+<h6 id="proportional-editing-2">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="rotate">Rotate</h5>
+<p>Rotate the selected tracks.</p>
+<h6 id="last-operator-rotate">Last Operator Rotate</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-rotate.png" alt="Last Operator Rotate" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Which axis to rotate.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-2">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h6 id="mirror-editing-2">Mirror Editing</h6>
+<p>Enables mirror editing.</p>
+<h6 id="proportional-editing-3">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="resize">Resize</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/resize.png" alt="Resize" loading="lazy"></figure>
+<p>Resize the selected track(s).</p>
+<h6 id="last-operator-resize">Last Operator Resize</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-resize.png" alt="Last Operator Resize" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Which axis to rotate.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-3">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h6 id="mirror-editing-3">Mirror Editing</h6>
+<p>Enables mirror editing.</p>
+<h6 id="proportional-editing-4">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="track-motion-submenu">Track Motion submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/track-motion-submenu.png" alt="Track Motion submenu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backwards</td>
+<td>Track backwards the whole range.</td>
+</tr>
+<tr>
+<td>Frame Backwards</td>
+<td>Track backwards frame wise.</td>
+</tr>
+<tr>
+<td>Forwards</td>
+<td>Track forwards the whole range.</td>
+</tr>
+<tr>
+<td>Frame Forwards</td>
+<td>Track forwards frame wise.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clear-submenu">Clear submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/clear-submenu.png" alt="Clear submenu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Before</td>
+<td>Clears track paths before the current position.</td>
+</tr>
+<tr>
+<td>After</td>
+<td>Clears track paths after the current position.</td>
+</tr>
+<tr>
+<td>Track Path</td>
+<td>Clears the currently active Track Path.</td>
+</tr>
+<tr>
+<td>Solution</td>
+<td>Clears all calculated data.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Refine submenu</td>
+<td><strong>Backwards</strong>: Refine selectet marker positions forwards. · <strong>Backwards</strong>: Refine selectet marker positions forwards.</td>
+</tr>
+<tr>
+<td>Add Marker</td>
+<td>Add a marker. The marker will appear under the mouse, and stick until you click.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="detect-features">Detect Features</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/detect-features.png" alt="Detect Features" loading="lazy"></figure>
+<p>Adds automatically markers at the current movie position, and tries to detect marcant areas in the current frame that are useful for tracking. It also sets keyframes at this position.</p>
+<p>When enough marcant areas are available then it adds up to eight markers that way.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/detect-features-2.png" alt="Detect Features" loading="lazy"></figure>
+<h5 id="last-operator-detect-features">Last Operator Detect Features</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-detect-features.png" alt="Last Operator Detect Features" loading="lazy"><figcaption>Last Operator Detect Features</figcaption></figure>
+<h6 id="placement">Placement</h6>
+<p>Placement is a drop down box where you can limit the placement of the markers.</p>
+<h6 id="whole-frame">Whole frame</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/whole-frame.png" alt="Whole frame" loading="lazy"></figure>
+<p>The markers can be at every position of the current frame image.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inside Grease Pencil</td>
+<td>The markers have to be inside the Grease Pencil.</td>
+</tr>
+<tr>
+<td>Outside Grease Pencil</td>
+<td>The markers have to be outside Grease Pencil.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Margin</td>
+<td>Gives a margin to the border of the frame image. Markers have to stay away from the border by the given amount.</td>
+</tr>
+<tr>
+<td>Threshold</td>
+<td>The threshold level to consider the current position of the marker as good enough for tracking.</td>
+</tr>
+<tr>
+<td>Distance</td>
+<td>The minimum distance between two markers.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="create-plane-track">Create Plane Track</h4>
+<p>Creates a plane track. A plane track can be used to map an image or a movie at an area in your clip. The Plane track.</p>
+<h4 id="new-image-from-plane-marker">New Image from Plane Marker</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/new-image-from-plane-marker.png" alt="New Image from Plane Marker" loading="lazy"><figcaption>New Image from Plane Marker</figcaption></figure>
+<p>Create new image from the content of the plane markerfrom the pixels of the movie clip that the plane marker “sees” at the current frame. This allows you to create and impose an un-warped texture of any flat surface in the footage.</p>
+<p>To use, create and select four tracking points then create a Plane Marker. Once you’ve selected the Plane Marker, create the new image - then edit the image in the Image Editor.</p>
+<h4 id="update-image-from-plane-marker">Update Image from Plane Marker</h4>
+<p>Update current image used by plane marker from the content of the plane marker. This updates the pixels of the active Plane Track’s image.</p>
+<p>Allows you to update the texture of any flat surface in the footage.</p>
+<h4 id="solve-camera-motion">Solve Camera Motion</h4>
+<p>Starts the calculation for the camera motion to match the track motion.</p>
+<p>There should be at least eight common tracks on the both of the selected keyframes.</p>
+<p>There should be noticeable parallax effects between these two keyframes.</p>
+<p>The average re-projection error is reported to the information space and to the clip editor header. Re-projeciton error means the average distance between reconstructed 3D position of tracks projected back to footage and original position of tracks. Re-projection error below 0.3 means accurate re-projection, (0.3 - 3.0) means quite nice solving which still can be used. Values above 3 means some tracks should be tracked more accurately, or that values for focal length or distortion coefficients were set incorrectly.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Join Tracks</td>
+<td>Joins selected tracks.</td>
+</tr>
+<tr>
+<td>Average Tracks</td>
+<td>Average selected tracks into active.</td>
+</tr>
+<tr>
+<td>Copy Tracks</td>
+<td>Copy selected tracks to clipboard.</td>
+</tr>
+<tr>
+<td>Paste Tracks</td>
+<td>Pastes selected tracks from clipboard.</td>
+</tr>
+<tr>
+<td>Copy Settings to Defaults</td>
+<td>Copies track settings from active track to default settings.</td>
+</tr>
+<tr>
+<td>Apply default settings</td>
+<td>Copy tracking settings form active tracks to selected tracks. You need to select the source track first, then hold down shift, then select the target track. Then perform copy track settings.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="animation-submenu">Animation submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/animation-submenu.png" alt="Animation submenu" loading="lazy"></figure>
+<h5 id="insert-keyframe">Insert Keyframe</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/insert-keyframe.png" alt="Insert Keyframe" loading="lazy"></figure>
+<p>Inserts a keyframe at current position in spreadsheet sub mode panel.</p>
+<h5 id="delete-keyframe">Delete Keyframe</h5>
+<p>Deletes keyframes at current position in dope sheet sub mode panel.</p>
+<h4 id="show-hide-submenu">Show/Hide submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/show-hide-submenu.png" alt="Show/Hide submenu" loading="lazy"></figure>
+<p>Show or hide tracks.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show Hidden</td>
+<td>Show all hidden tracks.</td>
+</tr>
+<tr>
+<td>Hide Selected</td>
+<td>Hide the selected tracks.</td>
+</tr>
+<tr>
+<td>Hide Unselected</td>
+<td>Hide the unselected tracks.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="last-operator-hide-tracks">Last operator Hide Tracks</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-hide-tracks.png" alt="Last operator Hide Tracks" loading="lazy"><figcaption>Last operator Hide Tracks</figcaption></figure>
+<h6 id="unselected">Unselected</h6>
+<p>Hide selected or unselected tracks.</p>
+<h4 id="clean-up-submenu">Clean up submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/clean-up-submenu.png" alt="Clean up submenu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clean Tracks</td>
+<td>Clean tracks with high error values or few frames.</td>
+</tr>
+<tr>
+<td>Filter Tracks</td>
+<td>Filter out tracks that has weird looking spikes in motion curves.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete Track</td>
+<td>Delete the selected track.</td>
+</tr>
+<tr>
+<td>Delete Marker</td>
+<td>Delete the selected marker.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reconstruction">Reconstruction</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/reconstruction.png" alt="Reconstruction" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set Origin</td>
+<td>Set active marker as origin in 3D space.</td>
+</tr>
+<tr>
+<td>Set Floor</td>
+<td>Set plane in the 3D space as a Floor plane, based at three selected markers. You need to have three markers selected. Or you will get an error message.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="set-wall">Set Wall</h5>
+<p>Set plane in the 3D space as a Wall plane, based at three selected markers.</p>
+<h6 id="last-operator-set-plane">Last Operator Set Plane</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-plane.png" alt="Last Operator Set Plane" loading="lazy"><figcaption>Last Operator Set Plane</figcaption></figure>
+<h6 id="plane">Plane</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/plane.png" alt="Plane" loading="lazy"></figure>
+<p>A drop down box to choose if you want to set the selected markers as plane or as floor.</p>
+<h5 id="set-x-axis">Set X Axis</h5>
+<p>Set X axis rotation in 3D space, based at the selected marker. You need to have one marker selected. Or you will get an error.</p>
+<h5 id="set-y-axis">Set Y Axis</h5>
+<p>Set X axis rotation in 3D space, based at the selected marker. You need to have one marker selected. Or you will get an error.</p>
+<h6 id="last-operator-set-axis">Last Operator Set Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-axis.png" alt="Last Operator Set Axis" loading="lazy"><figcaption>Last Operator Set Axis</figcaption></figure>
+<h6 id="axis">Axis</h6>
+<p>A drop down box to choose if you want to use the axis to X or to Y</p>
+<h5 id="set-scale">Set Scale</h5>
+<p>Set scale of scene by scaling camera, based at two selected markers. You need to have two markers selected. Or you will get an error.</p>
+<h6 id="last-operator-set-scale">Last Operator Set Scale</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-scale.png" alt="Last Operator Set Scale" loading="lazy"><figcaption>Last Operator Set Scale</figcaption></figure>
+<h6 id="distance">Distance</h6>
+<p>The distance between two bundles used for scene scaling.</p>
+<h5 id="apply-scale">Apply Scale</h5>
+<p>Apply scale to solution.</p>
+<h6 id="last-operator-apply-solution-scale">Last operator Apply Solution Scale</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-apply-solution-scale.png" alt="Last operator Apply Solution Scale" loading="lazy"><figcaption>Last operator Apply Solution Scale</figcaption></figure>
+<h6 id="distance-2">Distance</h6>
+<p>The distance between two bundles used for scene scaling.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3D Markers to Mesh</td>
+<td>Creates a vertex cloud using the coordinates of the reconstructed tracks.</td>
+</tr>
+<tr>
+<td>Link Empty to Track</td>
+<td>Creates an Empty which will be copying movement of active track.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="tracking-mode-graph-submode-graph-menu">Tracking Mode › Graph Submode › Graph Menu</h1>
+<h3 id="track-menu-2">Track Menu</h3>
+<h4 id="delete-curve">Delete Curve</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-graph-submode-graph-menu/delete-curve.png" alt="Delete Curve" loading="lazy"></figure>
+<p>Deletes the track that correspondent to the current curve.</p>
+<h4 id="delete-knot">Delete Knot</h4>
+<p>Deletes the selected curve points.</p>
+<h4 id="clear-track-path-remained">Clear Track Path Remained</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-graph-submode-graph-menu/clear-track-path-remained.png" alt="Clear Track Path Remained" loading="lazy"><figcaption>Clear Track Path Remained</figcaption></figure>
+<p>Clears the track path after the current position.</p>
+<h4 id="clear-track-path-up-to">Clear Track Path Up To</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/tracking-mode-graph-submode-graph-menu/clear-track-path-up-to.png" alt="Clear Track Path Up To" loading="lazy"><figcaption>Clear Track Path Up To</figcaption></figure>
+<p>Clears the track path up to the current position.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear Track Path All</td>
+<td>Clears the complete track path.</td>
+</tr>
+<tr>
+<td>Disable Markers</td>
+<td>Disables the selected curve points.</td>
+</tr>
+<tr>
+<td>Move</td>
+<td>Moves the selected curve points.</td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td>Rotates the selected curve points.</td>
+</tr>
+<tr>
+<td>Resize</td>
+<td>Scales the selected curve points.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="mask-mode-clip-menu">Mask Mode › Clip Menu</h1>
+<h3 id="clip-menu-2">Clip Menu</h3>
+<h4 id="open-clip-2">Open Clip</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-clip-menu/open-clip.png" alt="Open Clip" loading="lazy"></figure>
+<p>Opens an Image Sequence or a movie clip.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set Scene Frames</td>
+<td>Set the start and end frame of the scene to match the start frame and length of the clip.</td>
+</tr>
+<tr>
+<td>Prefetch Frames</td>
+<td>Prefetch frames from disk for faster playback and/or tracking.</td>
+</tr>
+<tr>
+<td>Reload Clip</td>
+<td>Reloads the movie clip.</td>
+</tr>
+<tr>
+<td>Set as Background</td>
+<td>Set the current movie clip as a camera background in the 3d viewport.</td>
+</tr>
+<tr>
+<td>Setup Tracking Scene</td>
+<td>Prepare Scene for compositing 3d opbjects into this footage.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="mask-mode-add-menu">Mask Mode › Add Menu</h1>
+<h3 id="add-menu">Add Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/add-menu.png" alt="Add Menu" loading="lazy"></figure>
+<p>Masking can be done by using curves. In the Add menu you will find two spline primitives. You can choose between a circle Bezier curve object and a square Bezier curve object.</p>
+<p>You select curve points by clicking with the left mouse button at them. Holding down Shift will add to the selection. Clicking in the off will deselect everything.</p>
+<h4 id="circle">Circle</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/circle.png" alt="Circle" loading="lazy"></figure>
+<p>Adds a Bezier circle that you can use for masking.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/circle-2.png" alt="Circle" loading="lazy"></figure>
+<p>This circle element can be modified by right clicking at the handlers and pulling at the handlers until the desired result is achieved. The yellow points are handlers. The whole curve can be moved around with right mouse button. See also Transform sub menu in the Mask menu.</p>
+<h5 id="last-operator-add-circle">Last Operator Add Circle</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-circle.png" alt="Last Operator Add Circle" loading="lazy"><figcaption>Last Operator Add Circle</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>The size of the circle.</td>
+</tr>
+<tr>
+<td>Location X Y</td>
+<td>The location of the circle.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="square">Square</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/square.png" alt="Square" loading="lazy"></figure>
+<p>Adds a Bezier circle that you can use for masking.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/square-2.png" alt="Square" loading="lazy"></figure>
+<p>This circle element can be modified by right clicking at the handlers and pulling at the handlers until the desired result is achieved. The yellow points are handlers. The whole curve can be moved around with right mouse button. See also Transform sub menu in the Mask menu.</p>
+<h5 id="last-operator-add-square">Last Operator Add Square</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-square.png" alt="Last Operator Add Square" loading="lazy"><figcaption>Last Operator Add Square</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>The size of the circle.</td>
+</tr>
+<tr>
+<td>Location X Y</td>
+<td>The location of the circle.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="add-vertex-and-slide">Add Vertex and Slide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/add-vertex-and-slide.png" alt="Add Vertex and Slide" loading="lazy"><figcaption>Add Vertex and Slide</figcaption></figure>
+<p>You can add more curve points by holding down ctrl and clicking left at a curve.</p>
+<p>You can create a spline from scratch with this method too. Simply hold down Ctrl, click into the viewport, and created your needed spline points. To close the created mask spline use Toggle Cyclic from the mask menu.</p>
+<h5 id="last-operator-add-vertex-and-slide">Last operator Add Vertex and Slide</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-vertex-and-slide.png" alt="Last operator Add Vertex and Slide" loading="lazy"><figcaption>Last operator Add Vertex and Slide</figcaption></figure>
+<h6 id="location-x-y">Location X Y</h6>
+<p>The location of the created spline point.</p>
+<h4 id="feather-vertex-slide">Feather Vertex Slide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/feather-vertex-slide.png" alt="Feather Vertex Slide" loading="lazy"></figure>
+<p>Add new vertex to feather and slide it. Hotkey only tool !</p>
+<h5 id="last-operator-add-feather-vertex-and-slide">Last Operator Add Feather Vertex and Slide</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-square.png" alt="Last Operator Add Feather Vertex and Slide" loading="lazy"><figcaption>Last Operator Add Feather Vertex and Slide</figcaption></figure>
+<h6 id="location-x-y-2">Location X Y</h6>
+<p>The location of the circle.</p>
+<h1 id="mask-mode-mask-menu">Mask Mode › Mask Menu</h1>
+<p>Masking <strong>preface</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/mask-mode.png" alt="Mask Mode - Mask Menu" loading="lazy"><figcaption>Mask Mode - Mask Menu</figcaption></figure>
+<p>Masks have many purposes. They can be used in a motion tracking workflow to mask out, or influence a particular object in the footage. They can be used for manual rotoscoping to pull a particular object out of the footage. Or as a rough matte for green screen keying. This is done in the Node editor in compositing mode by a mask node.</p>
+<p>Masks are independent from a particular image of movie clip. And so they can just as well be used for creating motion graphics or other effects in the compositor.</p>
+<p>Masks are defined by splines. Means you work with splines, and you have a bunch of spline tools available.</p>
+<p>S-Curves</p>
+<p>The curve type used for creating mask splines is almost a Bezier curve. But there are some differences. Smooth edges of the mask are defined by feathering. These are called S-Curves.</p>
+<p>Besides the handles, every control point also has points that define the feather between the current point and the next point on the spline. Each feather point is stored in UV space, where U means position across spline segment, and V means distance between main spline and feather points.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/mask-mode-mask-menu.png" alt="Mask Mode - Mask Menu" loading="lazy"><figcaption>Mask Mode - Mask Menu</figcaption></figure>
+<p>This allows for deforming the main spline in almost any way, and the feather will be updated automatically to reflect that change.</p>
+<p>For example if there is just rotation of the spline, feather would stay completely unchanged. If one point’s feather is moved, the other feathers will be automatically stretched uniformly along that segment and the overall shape will be almost the same as artists would want it to be.</p>
+<h3 id="mask-menu">Mask Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/mask-menu.jpg" alt="Mask Menu" loading="lazy"></figure>
+<h4 id="transform">Transform</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/transform.png" alt="Transform" loading="lazy"></figure>
+<h5 id="move-2">Move</h5>
+<p>Move the selected curve spline or points.</p>
+<h6 id="last-operator-move-2">Last Operator Move</h6>
+<h6 id="values">Values</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/values.png" alt="Values" loading="lazy"></figure>
+<p>Adjust the move amount.</p>
+<p>X, Y and Z defines the position.</p>
+<h6 id="axis-ortho">Axis Ortho</h6>
+<p>Along which axis to move.</p>
+<h6 id="orientation-4">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box where you can choose the type of orientation for the transform action.</p>
+<h6 id="mirror-editing-4">Mirror Editing</h6>
+<p>Enables mirror editing.</p>
+<h6 id="proportional-editing-5">Proportional Editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing.png" alt="Proportional Editing" loading="lazy"></figure>
+<p>Proportional Editing is a drop-down box where you can choose to use proportional editing. When you choose one of the active methods then the neighbor geometry gets influenced too in a proportional way.</p>
+<p><strong>Proportional Editing Falloff</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing-falloff.png" alt="Proportional Editing Falloff" loading="lazy"></figure>
+<p>Proportional Editing Falloff is a drop-down box where you can choose a method for the falloff for the proportional editing.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional size</td>
+<td>Proportional size is an edit box to Adjust the strength of the Proportional falloff.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>Just edit geometry that is directly connected with the current selection. 4 Bforartists 2 Reference Manual - 7.1.4 Editors - 3D View - Header - Navigation Menu</td>
+</tr>
+<tr>
+<td>Projected ( 2D)</td>
+<td>Edit geometry that is in 2d space aligned with the current selection. This one goes from the current view in depth direction.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="rotate-2">Rotate</h5>
+<p>Rotate the selected curve spline or points.</p>
+<h6 id="last-operator-rotate-2">Last Operator Rotate</h6>
+<h6 id="angle">Angle</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/angle.png" alt="Angle" loading="lazy"></figure>
+<p>Adjust the angle.</p>
+<h6 id="axis-2">Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/orientation.png" alt="Axis" loading="lazy"></figure>
+<p>Along which axis to rotate</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Orientation</td>
+<td>Orientation is a drop-down box where you can choose the type of orientation for the transform action.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enables mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="proportional-editing-6">Proportional Editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing.png" alt="Proportional Editing" loading="lazy"></figure>
+<p>Proportional Editing is a drop-down box where you can choose to use proportional editing. When you choose one of the active methods then the neighbor geometry gets influenced too in a proportional way.</p>
+<p><strong>Proportional Editing Falloff</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing-falloff.png" alt="Proportional Editing Falloff" loading="lazy"></figure>
+<p>Proportional Editing Falloff is a drop-down box where you can choose a method for the falloff for the proportional editing.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional size</td>
+<td>Proportional size is an edit box to adjust the strength of the Proportional falloff.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>Just edit geometry that is directly connected with the current selection. 4 Bforartists 2 Reference Manual - 7.1.4 Editors - 3D View - Header - Navigation Menu</td>
+</tr>
+<tr>
+<td>Projected ( 2D)</td>
+<td>Edit geometry that is in 2d space aligned with the current selection. This one goes from the current view in depth direction.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="scale">Scale</h5>
+<p>Scale the selected curve spline or points.</p>
+<h6 id="last-operator-resize-2">Last Operator Resize</h6>
+<h6 id="scale-x-y-z">Scale X Y Z</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/scale-x-y-z.png" alt="Scale X Y Z" loading="lazy"><figcaption>Scale X Y Z</figcaption></figure>
+<p>Adjust the scaling.</p>
+<h6 id="orientation-5">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box where you can choose the type of orientation for the transform action.</p>
+<h6 id="mirror-editing-5">Mirror Editing</h6>
+<p>Enables mirror editing.</p>
+<h6 id="proportional-editing-7">Proportional Editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing.png" alt="Proportional Editing" loading="lazy"></figure>
+<p>Proportional Editing is a drop-down box where you can choose to use proportional editing. When you choose one of the active methods then the neighbor geometry gets influenced too in a proportional way.</p>
+<p><strong>Proportional Editing Falloff</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing-falloff.png" alt="Proportional Editing Falloff" loading="lazy"></figure>
+<p>Proportional Editing Falloff is a drop-down box where you can choose a method for the falloff for the proportional editing.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional size</td>
+<td>Proportional size is an edit box to adjust the strength of the Proportional falloff.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>Just edit geometry that is directly connected with the current selection. 4 Bforartists 2 Reference Manual - 7.1.4 Editors - 3D View - Header - Navigation Menu</td>
+</tr>
+<tr>
+<td>Projected ( 2D)</td>
+<td>Edit geometry that is in 2d space aligned with the current selection. This one goes from the current view in depth direction.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="to-sphere">To Sphere</h5>
+<p>Shapes a selection of objects into the shape of a sphere. The calculation happens with the object origins.</p>
+<p>In Object mode this tools requires to have more than one object selected.</p>
+<h6 id="usage">Usage</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/usage.png" alt="Usage" loading="lazy"></figure>
+<p>Select the objects, activate the tool, then drag the mouse in the 3D viewport. In the header you will read the current factor then. Which tells you how close you are towards the sphere shape.</p>
+<h6 id="last-operator-to-sphere">Last Operator To Sphere</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-to-sphere.png" alt="Last Operator To Sphere" loading="lazy"><figcaption>Last Operator To Sphere</figcaption></figure>
+<h6 id="factor">Factor</h6>
+<p>The factor to transform the selection into a shape form.</p>
+<h6 id="proportional-editing-8">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="shear">Shear</h5>
+<p>Shear shears the selection.</p>
+<p>In Object mode this tools requires to have more than one object selected.</p>
+<h6 id="last-operator-shear">Last Operator Shear</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-shear.png" alt="Last Operator Shear" loading="lazy"></figure>
+<h6 id="offset">Offset</h6>
+<p>Adjust an offset.</p>
+<h6 id="shear-axis">Shear Axis</h6>
+<p>The shear tool works along a imaginary 2d plane. The shear axis controls if the items are sheared along the x or the y axes of this plane. This is the plane along which the transformation happens. You can shear along the x or the y axis of this plane.</p>
+<p>To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Axis</td>
+<td>Defines one axis of the imaginary shear axis plane.</td>
+</tr>
+<tr>
+<td>Axis Ortho</td>
+<td>Defines the other axis of the imaginary shear axis plane.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-6">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation for the shear action.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enables mirror editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="push-pull">Push/Pull</h5>
+<p>It pushes or pulls the object positions relative to the center of the selection.</p>
+<p>In Object mode this tool requires to have more than one object selected.</p>
+<h6 id="last-operator-push-pull">Last Operator Push/Pull</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-push-pull.png" alt="Last Operator Push/Pull" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distance</td>
+<td>Adjust the strength of influence of the tool.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enables mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="proportional-editing-9">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="scale-feather">Scale Feather</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/scale-feather.png" alt="Scale Feather" loading="lazy"></figure>
+<p>Scale feather weight for the selected points.</p>
+<p>The curve type that is used to create mask splines is almost a Bezier curve. But it has some differences. Smooth edges of the mask are defined by feathering. The curve needed to support feathering in a way that stuck to the curve as you edited it, for ease of editing an animation. These are called S-Curves.</p>
+<p>Besides the handles, every control point also has points that define the feather between the current point and the next point on the spline. Each feather point is stored in UV space, where U means position across spline segment, and V means distance between main spline and feather points.</p>
+<h6 id="last-operator-transform">Last Operator Transform</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-transform.png" alt="Last Operator Transform" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Values</td>
+<td>Adjust the scale amount. X, Y and Z defines the position. W defines the rotation.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Around which axis to rotate. X, Y or Z.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-7">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box where you can choose the type of orientation for the transform action.</p>
+<h6 id="mirror-editing-6">Mirror Editing</h6>
+<p>Enables mirror editing.</p>
+<h6 id="proportional-editing-10">Proportional Editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing.png" alt="Proportional Editing" loading="lazy"></figure>
+<p>Proportional Editing is a drop-down box where you can choose to use proportional editing. When you choose one of the active methods then the neighbor geometry gets influenced too in a proportional way.</p>
+<p><strong>Proportional Editing Falloff</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing-falloff.png" alt="Proportional Editing Falloff" loading="lazy"></figure>
+<p>Proportional Editing Falloff is a drop-down box where you can choose a method for the falloff for the proportional editing.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional size</td>
+<td>Proportional size is an edit box to adjust the strength of the Proportional falloff.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>Just edit geometry that is directly connected with the current selection. 4 Bforartists 2 Reference Manual - 7.1.4 Editors - 3D View - Header - Navigation Menu</td>
+</tr>
+<tr>
+<td>Projected ( 2D)</td>
+<td>Edit geometry that is in 2d space aligned with the current selection. This one goes from the current view in depth direction.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="clear-feather-weight">Clear Feather Weight</h5>
+<p>Reset the feather weight to zero.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duplicate</td>
+<td>Duplicates the selected curve and moves it.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Deletes the selected mask curve point.</td>
+</tr>
+<tr>
+<td>Copy Splines</td>
+<td>Copies the currently selected spline.</td>
+</tr>
+<tr>
+<td>Paste Splines</td>
+<td>Pastes a copied spline.</td>
+</tr>
+<tr>
+<td>Make Parent</td>
+<td>Set the mask's parenting.</td>
+</tr>
+<tr>
+<td>Clear Parent</td>
+<td>Clears the mask's parenting.</td>
+</tr>
+<tr>
+<td>Toggle Cyclic</td>
+<td>Make the spline closed or open.</td>
+</tr>
+<tr>
+<td>Switch Direction</td>
+<td>Switch the direction in which the spline points. A spline has a direction. A starting point and an endpoint. By switching the starting point becomes the end point, the end point becomes the starting point.</td>
+</tr>
+<tr>
+<td>Recalc Normals</td>
+<td>Recalculate the direction of the selected spline handlers.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-handle-type">Set Handle Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/set-handle-type.png" alt="Set Handle Type" loading="lazy"></figure>
+<p>In this sub menu you can set the handle type for the currently selected spline points.</p>
+<h4 id="animation">Animation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/animation.png" alt="Animation" loading="lazy"></figure>
+<h5 id="insert-shape-key">Insert Shape Key</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/insert-shape-key.png" alt="Insert Shape Key" loading="lazy"></figure>
+<p>Inserts a shape key keyframe.</p>
+<p>The inserted keyframes can then be found in the dope sheet editor in mask mode.</p>
+<h5 id="clear-shape-key">Clear Shape Key</h5>
+<p>Clears an existing shape key keyframe.</p>
+<h5 id="reset-feather-animation">Reset Feather Animation</h5>
+<p>Resets the feather offset across all animated frames.</p>
+<h5 id="re-key-shape-points">Re-key Shape points</h5>
+<p>Recalculate animation data on selected points for frames selected in the dope sheet.</p>
+<h4 id="show-hide">Show / Hide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/show-hide.png" alt="Show / Hide" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show Hidden</td>
+<td>Reveals all hidden curves</td>
+</tr>
+<tr>
+<td>Hide Selected</td>
+<td>Hides the selected curve.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hide-unselected">Hide Unselected</h5>
+<p>Hides the unselected curves.</p>
+<h6 id="last-operator-hide-layer">Last operator Hide Layer</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-hide-layer.png" alt="Last operator Hide Layer" loading="lazy"><figcaption>Last operator Hide Layer</figcaption></figure>
+<h6 id="unselected-2">Unselected</h6>
+<p>Hide selected or unselected curves.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fto-master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fmovie-clip-editor%2Fheader%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/to-master/docs2/content/editors/movie-clip-editor/header/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#movie-clip-editor-header">Movie Clip Editor - Header</a><a class="h2" href="#header-right-click-menus">Header right click menus</a><a class="h2" href="#editortype-menu">Editortype Menu</a><a class="h3" href="#movie-clip-editor-header-2">Movie Clip Editor - Header</a><a class="h3" href="#tracking-mode-clip-submode">Tracking mode - Clip submode</a><a class="h3" href="#tracking-mode-graph-submode">Tracking mode - Graph submode</a><a class="h3" href="#tracking-mode-dope-sheet-submode">Tracking mode - Dope Sheet submode</a><a class="h3" href="#mask-mode">Mask mode</a><a class="h3" href="#quick-menu-2">Quick Menu</a><a class="h3" href="#movie-clip-editor-modes">Movie Clip Editor Modes</a><a class="h3" href="#view-menu-in-tracking-mode-in-clip-sub-mode">View Menu in Tracking mode in Clip sub mode</a><a class="h3" href="#view-menu-in-in-tracking-mode-in-graph-sub-mode">View Menu in in Tracking mode in Graph sub mode</a><a class="h3" href="#view-menu-in-in-tracking-mode-in-dopesheet-sub-mode">View Menu in in Tracking mode in Dopesheet sub mode</a><a class="h3" href="#view-menu-in-mask-mode">View Menu in Mask mode</a><a class="h3" href="#movie-clip-editor-modes-2">Movie Clip Editor Modes</a><a class="h3" href="#select-menu-in-tracking-mode-in-clip-sub-mode">Select Menu in Tracking mode in Clip sub mode</a><a class="h3" href="#select-menu-in-tracking-mode-in-graph-sub-mode">Select Menu in Tracking mode in Graph sub mode</a><a class="h3" href="#select-menu-in-mask-mode">Select Menu in Mask mode</a><a class="h3" href="#clip-menu">Clip Menu</a><a class="h3" href="#track-menu">Track Menu</a><a class="h3" href="#track-menu-2">Track Menu</a><a class="h3" href="#clip-menu-2">Clip Menu</a><a class="h3" href="#add-menu">Add Menu</a><a class="h3" href="#mask-menu">Mask Menu</a></aside></div></body></html>

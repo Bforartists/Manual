@@ -1,0 +1,1693 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Header · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1440 · <code>docs2/to-master</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../../getting-started.html">Getting Started</a>
+<a href="../../getting-started/introduction.html">Introduction</a>
+<a href="../../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../../getting-started/installation.html">Installation</a>
+<a href="../../getting-started/quick-start.html">Quick Start</a>
+<a href="../../getting-started/data-structure.html">Data Structure</a>
+<a href="../../getting-started/differences.html">Comparison with Blender</a>
+<a href="../../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<a href="../../interface.html">Interface</a>
+<a href="../../interface/overview.html">Interface Basics</a>
+<a href="../../interface/windows.html">Windows</a>
+<a href="../../interface/areas.html">Areas</a>
+<a href="../../interface/editors.html">Editors</a>
+<a href="../../interface/headers.html">Headers</a>
+<a href="../../interface/footers.html">Footers</a>
+<a href="../../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../../interface/side-bars.html">Side Bars</a>
+<a href="../../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../../interface/properties.html">Properties</a>
+<a href="../../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../../interface/context-menus.html">Context Menus</a>
+<a href="../../interface/floating-menus.html">Floating Menus</a>
+<a href="../../interface/pie-menus.html">Pie Menus</a>
+<a href="../../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<a href="../../workspaces.html">Workspaces</a>
+<a href="../../workspaces/workspaces.html">Managing Workspaces</a>
+<a href="../../workspaces/main.html">Main</a>
+<a href="../../workspaces/uv-editing.html">UV Editing</a>
+<a href="../../workspaces/modeling.html">Modeling</a>
+<a href="../../workspaces/nodes.html">Nodes</a>
+<a href="../../workspaces/animation.html">Animation</a>
+<a href="../../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../../workspaces/shading.html">Shading</a>
+<a href="../../workspaces/rendering.html">Rendering</a>
+<a href="../../workspaces/sculpting.html">Sculpting</a>
+<a href="../../workspaces/compositing.html">Compositing</a>
+<a href="../../workspaces/scripting.html">Scripting</a>
+<a href="../../workspaces/2d-animation.html">2D Animation</a>
+<a href="../../workspaces/storyboarding.html">Storyboarding</a>
+<a href="../../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../../workspaces/masking.html">Masking</a>
+<a href="../../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../../workspaces/video-editing.html">Video Editing</a>
+<a href="../../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<a href="../../workspaces/assets.html">Assets</a>
+<a href="../../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<a href="../../editors.html">Editors</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a class="is-current" style="padding-left:1.5rem" href="header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../properties/render-properties-tab.html">Render</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<a href="../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="tool-shelf.html">Tool Shelf</a>
+<a href="../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../properties/output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../properties/view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:1.5rem" href="../graph-editor/channel-list.html">Channel List</a>
+<a href="../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../properties/scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/metaball.html">Metaball</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:1.5rem" href="../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../properties/world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/text.html">Text</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:1.5rem" href="../properties/collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/lattice.html">Lattice</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="../properties/object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/armature.html">Armature</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:1.5rem" href="../properties/modifiers.html">Modifiers</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/layout.html">Layout</a>
+<a href="../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="../properties/visual-effects-properties-tab.html">Visual Effects</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/hair-curves.html">Hair Curves</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:1.5rem" href="../properties/particle-properties-tab.html">Particles</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/point-cloud.html">Point Cloud</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="../properties/physics-properties-tab.html">Physics</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/layout.html">Layout</a>
+<a href="../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../properties/object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../properties/object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../properties/bone-properties-tab.html">Bone</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<a style="padding-left:1.5rem" href="../properties/bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="../properties/material-properties-tab.html">Material</a>
+<a href="../texture-node-editor.html">Texture Node Editor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../properties/texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../properties/strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="../properties/strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../shader-editor.html">Shader Editor</a>
+<a href="../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../dope-sheet.html">Dope Sheet</a>
+<a href="../timeline.html">Timeline</a>
+<a href="../graph-editor.html">Graph Editor</a>
+<a href="../drivers-editor.html">Drivers Editor</a>
+<a href="../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../text-editor.html">Text Editor</a>
+<a href="../python-console.html">Python Console</a>
+<a href="../info-editor.html">Info Editor</a>
+<a href="../toolbar.html">Toolbar</a>
+<a href="../outliner.html">Outliner</a>
+<a href="../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/volume-object.html">Volume Object</a>
+<a href="../file-browser.html">File browser</a>
+<a href="../asset-browser.html">Asset Browser</a>
+<a href="../spreadsheet.html">Spreadsheet</a>
+<a href="../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../timeline/viewport.html">Viewport</a>
+<a style="padding-left:2.5rem" href="../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<a href="../../assets.html">Assets</a>
+<a href="../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../assets/default-library.html">Default Library</a>
+<a href="../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<a href="../../extensions.html">Extensions and Addons</a>
+<a href="../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../../extensions/coworker.html">Coworker</a>
+<a href="../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<a href="../../keymap.html">Keymap</a>
+<a href="../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<a href="../../advanced.html">Advanced</a>
+<a href="../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../../appendix.html">Information</a>
+<a href="../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../appendix/gpl-license.html">About the GPL License</a>
+<a href="../../appendix/community-influences.html">The Community Influences</a>
+<a href="../../appendix/glossary.html">Glossary</a>
+<a href="../../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<a href="../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Image Editor › Header</div><h1 class="pv-title">Header</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 30 min read</span></div><article class="ui-doc-body"><h2 id="image-editor-header">Image Editor - Header</h2>
+<p>The Header contains various menus, navigation elements, settings and tools for the viewport. This content differs, dependent of the sub mode.</p>
+<p>The header is divided into two areas. Left mode and menus. Right settings.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-editor-header.png" alt="Image Editor - Header" loading="lazy"><figcaption>Image Editor - Header</figcaption></figure>
+<h3 id="switch-to-uv-image-editor">Switch to UV / Image editor</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/switch-to-uv-image-editor.png" alt="Switch to UV / Image editor" loading="lazy"><figcaption>Switch to UV / Image editor</figcaption></figure>
+<p>Sometimes you want to switch from the UV Editor to the Image Editor. Or vice versa. To continue at the unwrap or to paint a texture.</p>
+<p>This two editors are connected by a menu that allows exactly that. A button in each header that switches to the other editor.</p>
+<h2 id="header-right-click-menus">Header right click menus</h2>
+<p>The general right click menu functionality is explained in chapter 6 Editors introduction.</p>
+<h2 id="editortype-menu">Editortype Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/editortype-menu.png" alt="Editortype Menu" loading="lazy"></figure>
+<p>Bforartists is made of several editor types. Headers can display a menu where you can switch to other editor types.</p>
+<p>This menu is hidden by default. It is meant to edit the layouts, and should not be necessary for regular work. You can reveal it in the header right click menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/editortype-menu-2.png" alt="Editortype Menu" loading="lazy"></figure>
+<h2 id="sub-modes">Sub Modes</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/sub-modes.png" alt="Sub Modes" loading="lazy"></figure>
+<p>The Image Editor has three sub modes. View, Paint and Mask.</p>
+<h3 id="view-mode">View Mode</h3>
+<p>It is as the name says a pure view mode. You can view your content.</p>
+<h3 id="paint-mode">Paint Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/paint-mode.png" alt="Paint Mode" loading="lazy"></figure>
+<p>Paint mode allows to paint at your image material. The Paint mode is not available when you have a render result selected. You cannot paint at a render result. The render result is a special kind of image in this regards.</p>
+<h3 id="mask-mode">Mask Mode</h3>
+<p>This mode comes with masking functionality. You can mask out parts of the image.</p>
+<h1 id="header-tools-and-options">Header Tools and Options</h1>
+<h3 id="image-editor-header-tools">Image Editor - Header Tools</h3>
+<p>The header contains several tools, depends on what you do and what toolset is selected. The render result has some additional functionality.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/image-editor-header-tools.png" alt="Image Editor - Header Tools" loading="lazy"><figcaption>Image Editor - Header Tools</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/image-editor-header-tools-2.png" alt="Image Editor - Header Tools" loading="lazy"><figcaption>Image Editor - Header Tools</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/image-editor-header-tools-3.png" alt="Image Editor - Header Tools" loading="lazy"><figcaption>Image Editor - Header Tools</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/image-editor-header-tools-4.png" alt="Image Editor - Header Tools" loading="lazy"><figcaption>Image Editor - Header Tools</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/image-editor-header-tools-5.png" alt="Image Editor - Header Tools" loading="lazy"><figcaption>Image Editor - Header Tools</figcaption></figure>
+<h4 id="image-prop">Image Prop</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/image-prop.png" alt="Image Prop" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/image-prop-2.png" alt="Image Prop" loading="lazy"></figure>
+<p>This property contains the list of loaded images. When no image is loaded then it displays the New and Open Buttons. When an image exists then it displays the name of the currently selected image.</p>
+<p>From left to right ...</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/image-prop-3.png" alt="Image Prop" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List of images in the scene</td>
+<td>This is a list of the images in the scene. This list allows you to switch to other images.</td>
+</tr>
+<tr>
+<td>Image Edit Box</td>
+<td>Read the name of the currently selected image. And you can rename the image here too.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="search-form">Search form</h5>
+<p>Search for specific images.</p>
+<h6 id="new-image">New Image</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/new-image.png" alt="New Image" loading="lazy"></figure>
+<p>Create a new image.</p>
+<p>Creates a new image. You will get a dialog where you can define settings for the new image.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>The name of the new image</td>
+</tr>
+<tr>
+<td>Width</td>
+<td>The width of the new image.</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>The height of the new image.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="color">Color</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/color.png" alt="Color" loading="lazy"></figure>
+<p>Adjust the color of the new image. A click will call a color picker.</p>
+<h6 id="alpha">Alpha</h6>
+<p>Check this checkbox if the new image should have an alpha channel.</p>
+<h6 id="generated-type">Generated Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/generated-type.png" alt="Generated Type" loading="lazy"></figure>
+<p>Here you can define what kind of texture you want to create.</p>
+<p>Blank is one plain color.</p>
+<p>UV Grid is a checker texture in black and white.</p>
+<p>Color Grid is a colored checker texture.</p>
+<h6 id="32-bit-float">32 Bit Float</h6>
+<p>Check this checkbox if the image should be in 32 Bit floating point bit depth per channel. Else it is in 8 bit per channel.</p>
+<h6 id="duplicate">Duplicate</h6>
+<p>Not supported here.</p>
+<h6 id="unlink-datablock">Unlink Datablock</h6>
+<p>This deletes the selected image. Unfortunately not immediately. You need to save the scene and to reload it.</p>
+<p>And you need to make sure that it is not linked to anything else. A mesh or a fake user for example. Have a look if there is a number besides the F button. When this is the case then the image has still a user, and so still loads with loading the scene.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fake User</td>
+<td>Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.</td>
+</tr>
+<tr>
+<td>Open Image</td>
+<td>Opens the file browser to load an image.</td>
+</tr>
+<tr>
+<td>Unpack</td>
+<td>Unpack packed files to a directory.</td>
+</tr>
+<tr>
+<td>User</td>
+<td>The number of users that uses this data. Data with a user number of 0 will be removed with closing Bforartists.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="use-image-pin">Use Image Pin</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/use-image-pin.png" alt="Use Image Pin" loading="lazy"></figure>
+<p>When you select another object. for UV mapping for example, then usually the connected images for this object gets displayed. Use image pin nails the currently selected image so that it stays displayed.</p>
+<h4 id="mask-prop">Mask Prop</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/mask-prop.png" alt="Mask Prop" loading="lazy"></figure>
+<p>When you are in Mask mode then you can create a new mask, and work with this mask then.</p>
+<p>Masks have many purposes. They can be used to mask out, or influence a particular object in the footage in Motion tracking. They can be used for manual rotoscoping to pull a particular object out of the footage. They can be used as a rough matte for green-screen keying.</p>
+<p>Masks are independent from a particular image of movie clip, and so they can also be used for creating motion graphics or other effects in the compositor.</p>
+<p>Masks can be driven over the time so that they follow some object from the footage. For example a running actor. This can be achieved with shape keys or parenting the mask to tracking markers.</p>
+<h5 id="list-of-masks">List of Masks</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/list-of-masks.png" alt="List of Masks" loading="lazy"></figure>
+<p>This is a list of the masks in the scene. Here you can switch to other masks.</p>
+<h5 id="mask-edit-box">Mask Edit Box</h5>
+<p>Read the name of the currently selected mask. And you can rename the image mask too.</p>
+<h5 id="fake-user">Fake User</h5>
+<p>Wit this button you assign a fake user to this selected mask. Masks gets created with a fake user already. Means when you save the scene and reopen it, then this mask will still be there.</p>
+<p>Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search form</td>
+<td>Search for specific images.</td>
+</tr>
+<tr>
+<td>Create Mask</td>
+<td>Adds a new mask.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="unlink-datablock-2">Unlink Datablock</h5>
+<p>This deletes the selected mask. Unfortunately not immediately. You need to save the scene and to reload it.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/unlink-datablock.png" alt="Unlink Datablock" loading="lazy"></figure>
+<p>And you need to make sure that it is not linked to anything else. A mesh or a fake user for example. Have a look if there is a number besides the F button. When this is the case then the image has still a user, and so still loads with loading the scene.</p>
+<h4 id="pivot">Pivot</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/pivot.png" alt="Pivot" loading="lazy"></figure>
+<p>In Mask mode. Adjust what pivot point the mask uses for transformation.</p>
+<h4 id="proportional-editing">Proportional Editing</h4>
+<p>In Mask mode. Enable proportional editing.</p>
+<h4 id="proportional-editing-settings">Proportional Editing Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/proportional-editing-settings.png" alt="Proportional Editing Settings" loading="lazy"></figure>
+<p>Proportional Editing is a way of transforming selected elements (such as vertices) while having that transformation affect other nearby elements with a falloff. For example, moving a single vertex will move unselected vertices within a given range. And the falloff means that selected vertices that are closer to the selected vertex will move more than those farther from it.</p>
+<h5 id="proportional-size">Proportional Size</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/proportional-size.png" alt="Proportional Size" loading="lazy"></figure>
+<p>The influence of the proportional editing is defined by a radius. It is by default one standard unit.</p>
+<p>You can change the influence radius for proportional editing with the mouse wheel or the Page up Page down arrows <strong>while keeping the mouse button pressed down</strong> and do the translation.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/proportional-size-2.png" alt="Proportional Size" loading="lazy"></figure>
+<p>The exact radius value can be read in the header while transformation.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/proportional-size-3.png" alt="Proportional Size" loading="lazy"></figure>
+<p>And it can also be read and edited at the Proportional Size slider in the Proportional Editing panel.</p>
+<h4 id="show-gizmos">Show Gizmos</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/show-gizmos.png" alt="Show Gizmos" loading="lazy"></figure>
+<p>Display the viewport gizmos.</p>
+<p>Navigate</p>
+<p>Display the navigation gizmos in the Image Editor</p>
+<h4 id="overlays">Overlays</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/overlays.png" alt="Overlays" loading="lazy"></figure>
+<p>Display the overlays in the viewport.</p>
+<h5 id="overlays-settings">Overlays settings</h5>
+<h6 id="geometry">Geometry</h6>
+<h6 id="display-uv-s">Display UV’s</h6>
+<p>Display overlay of UV layer.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Faces</td>
+<td>The opacity of the faces of the UV layer.</td>
+</tr>
+<tr>
+<td>Edges</td>
+<td>The opacity of the edges of the UV layer.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="image">Image</h6>
+<h6 id="show-metadata">Show Metadata</h6>
+<p>Display existing metadata in the viewport.</p>
+<h6 id="in-mask-mode">In Mask mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/in-mask-mode.png" alt="In Mask mode" loading="lazy"></figure>
+<h6 id="spline">Spline</h6>
+<p><strong>Edge Display type</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/edge-display-type.png" alt="Edge Display type" loading="lazy"></figure>
+<p>How to display the spline.</p>
+<h6 id="overlay">Overlay</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/overlay.png" alt="Overlay" loading="lazy"></figure>
+<p><strong>Alpha Channel</strong></p>
+<p>Show the alpha channel of the mask.</p>
+<h4 id="display-channels">Display Channels</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/display-channels.png" alt="Display Channels" loading="lazy"></figure>
+<p>Adjust what channels of the image gets displayed.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color and Alpha</td>
+<td>Displays the whole image, including alpha channel.</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>Displays the whole image, but without alpha channel.</td>
+</tr>
+<tr>
+<td>Alpha</td>
+<td>Displays the alpha channel of the image.</td>
+</tr>
+<tr>
+<td>Red</td>
+<td>Displays the red channel of the image.</td>
+</tr>
+<tr>
+<td>Green</td>
+<td>Displays the green channel of the image.</td>
+</tr>
+<tr>
+<td>Blue</td>
+<td>Displays the blue channel of the image.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mask-display">Mask Display</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/mask-display.png" alt="Mask Display" loading="lazy"></figure>
+<p>In Mask mode and with a Render result. Adjust the display of the mask.</p>
+<h5 id="smooth">Smooth</h5>
+<p>Smoothens the outline of the mask curve.</p>
+<h5 id="overlay-2">Overlay</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/overlay-2.png" alt="Overlay" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/overlay-3.png" alt="Overlay" loading="lazy"></figure>
+<p>When it's a closed curve then this closed area gets displayed as filled where it covers the image. When you tick Overlay then the drop down box becomes active where you can choose the overlay method.</p>
+<h5 id="edge-display-type">Edge Display Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/edge-display-type-2.png" alt="Edge Display Type" loading="lazy"></figure>
+<p>The mask curve can be displayed in different styles.</p>
+<h4 id="slot">Slot</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/slot.png" alt="Slot" loading="lazy"></figure>
+<p>Just with a render result. Here you can render a new image into a new slot, which allows you to compare the two images then.</p>
+<p>You need to render into this slot. So you need to choose it beforehand. Slots without a render result does not show the Render and Pass drop down boxes.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/slot-2.png" alt="Slot" loading="lazy"></figure>
+<h4 id="layers">Layers</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/layers.png" alt="Layers" loading="lazy"></figure>
+<p>Here you can choose in which layer the render result is.</p>
+<p>Renders can be separated into layers. This allows you to composite them back together afterwards.</p>
+<p>For example blurring the background and foreground layers separately for depth of field, or rendering different lighting variations of the same scene.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/layers-2.png" alt="Layers" loading="lazy"></figure>
+<p>Using View Layers can also save you from having to re-render your entire image each time you change something, allowing you to instead re-render only the layer(s) that you need.</p>
+<p>You can create more View Layers in the Properties editor. In the View Layer Tab.</p>
+<h4 id="pass">Pass</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/pass.png" alt="Pass" loading="lazy"></figure>
+<p>Here you can set the pass mode. Combined or Depth.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Combined</td>
+<td>The final combination of render passes with everything included.</td>
+</tr>
+<tr>
+<td>Depth</td>
+<td>Just the Depth render pass.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="show-stereo">Show Stereo</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/show-stereo.png" alt="Show Stereo" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/show-stereo-2.png" alt="Show Stereo" loading="lazy"></figure>
+<p>Just with stereoscopy enabled. Shows either the stereoscopic image. Or a single image from one of the cameras.</p>
+<h5 id="view">View</h5>
+<p>Show the image from one of the cameras in the list.</p>
+<h3 id="options-panel">Options Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/options-panel.png" alt="Options Panel" loading="lazy"></figure>
+<h4 id="in-view-and-mask-mode">In View and Mask mode</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Update Automatically</td>
+<td>Update other editor windows simultaneously with the changes in the Image Editor.</td>
+</tr>
+<tr>
+<td>Show Metadata</td>
+<td>Draw Metadata properties of the image.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="in-paint-mode">In Paint Mode</h4>
+<h5 id="update-automatically">Update Automatically</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/update-automatically.png" alt="Update Automatically" loading="lazy"></figure>
+<p>Update other editor windows simultaneously with the changes in the Image Editor.</p>
+<h5 id="show-metadata-2">Show Metadata</h5>
+<p>Draw Metadata properties of the image.</p>
+<h5 id="display-texture-paint-uv-s">Display Texture Paint UV's</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/display-texture-paint-uv-s.png" alt="Display Texture Paint UV&#x27;s" loading="lazy"><figcaption>Display Texture Paint UV&#x27;s</figcaption></figure>
+<p>Display the UV wire from the active mesh. It needs to be in edit mode.</p>
+<h5 id="show-same-material">Show same material</h5>
+<p>This is for the case that you work at a texture for the current mesh. Just show faces of the mesh where the material with this texture is assigned to.</p>
+<h1 id="quick-menu">Quick Menu</h1>
+<h3 id="quick-menu-2">Quick Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/quick-menu/quick-menu.png" alt="Quick Menu" loading="lazy"></figure>
+<p>The quick menu, or in long Quick Favorites menu, is a menu that can be customized to your needs. Here you can add operators for quick access.</p>
+<p>It is located in the header. But it can be called by hotkey Q directly under the mouse. This hotkey works in other editors too.</p>
+<p>When the menu is empty, then you will see the message &quot;No Menu Items found&quot;. This means that you first have to add some tools to the menu. It is a user configurable menu.</p>
+<p>Note that added operators in this menu does not have icons. Just text.</p>
+<p>Note also that the Quick menu for the Image editor shares the content with the Quick menu from the UV editor.</p>
+<h4 id="adding-an-operator-to-the-quick-menu">Adding an operator to the Quick menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/quick-menu/adding-an-operator-to-the-quick-menu.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
+<p>Open the panel or the menu where your operator is that you want to add.</p>
+<p>Let's add the open command from the File menu. Open the File menu, right click at open, and choose Add to Quick Favorites.</p>
+<p>Do the same with Save As. We should now have two new menu items in the Quick menu, which you can use now.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/quick-menu/adding-an-operator-to-the-quick-menu-2.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
+<p>As a rule of thumb, when the right click menu has an Add to Quick Favorites, then you can add it to the quick menu.</p>
+<p>Note that you can also add operators from the tool shelf at the left. And also operators from other editor types. Some other editors have their own quick menu though. The Image Editor for example. These operators gets added in the quick menu of the image editor then. And does not show in the quick menu in the header of the 3D view.</p>
+<h4 id="adding-a-menu-to-the-quick-menu">Adding a menu to the Quick menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/quick-menu/adding-a-menu-to-the-quick-menu.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
+<p>It is also possible to add a menu to the Quick menu. For example the whole Add menu. The way is the same. Right click at it, and choose Add to Quick Favorites.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/quick-menu/adding-a-menu-to-the-quick-menu-2.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
+<h4 id="order">Order</h4>
+<p>You might notice that the add menu adds at the top of the menu, and not at the bottom as you would expect. First comes menus, then comes operators. And they get added in the order in which you add them.</p>
+<p>Besides that, operators and menus gets added in the order that you add them. They cannot be sorted afterwards. So be careful how you add them. You can of course always remove operators and menus, and re-add them at the end of the list.</p>
+<h4 id="removing-an-operator-from-the-quick-menu">Removing an operator from the Quick menu</h4>
+<blockquote>
+<p>The <strong>Quick Favorites</strong> menu (Q) holds the tools and menus you add to it yourself. See <strong><a href="../../interface/floating-menus.html#quick-favorites">Quick Favorites</a></strong> in the Interface chapter.</p>
+</blockquote>
+<h4 id="context-and-mode-dependent-content">Context and mode dependent content</h4>
+<p>The quick favorites. menu exists in nearly all editors. But it is just in the 3D view available in the header. So that you know this functionality exists. In the other editors you call it with hotkey Q.</p>
+<p>The content of the quick favorites. menu changes, dependent over which editor you are, and in what mode you are. When you add for example an operator from the image editor, then this operator just shows in the quick menu when you call the menu from the image editor. Same goes for the modes. Edit mode tools will just show in edit mode. And so on.</p>
+<h1 id="view-menu">View Menu</h1>
+<h3 id="image-editor-view-menu">Image Editor - View Menu</h3>
+<p>The View menu contains all View related tools.</p>
+<p>It is available in all sub modes. With a render result the view image shows a different content. And in mask mode it shows one more item. Set 2D cursor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/image-editor-view-menu.png" alt="Image Editor - View Menu" loading="lazy"><figcaption>Image Editor - View Menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/image-editor-view-menu-2.png" alt="Image Editor - View Menu" loading="lazy"><figcaption>Image Editor - View Menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/image-editor-view-menu-3.png" alt="Image Editor - View Menu" loading="lazy"><figcaption>Image Editor - View Menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/image-editor-view-menu-4.png" alt="Image Editor - View Menu" loading="lazy"><figcaption>Image Editor - View Menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/image-editor-view-menu-5.png" alt="Image Editor - View Menu" loading="lazy"><figcaption>Image Editor - View Menu</figcaption></figure>
+<h4 id="toolbar">Toolbar</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/toolbar.png" alt="Toolbar" loading="lazy"></figure>
+<p>Shows or hides the toolbar at the left.</p>
+<h4 id="sidebar">Sidebar</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/sidebar.png" alt="Sidebar" loading="lazy"></figure>
+<p>Shows or hides the sidebar at the right in the viewport.</p>
+<h4 id="tool-settings">Tool Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/tool-settings.png" alt="Tool Settings" loading="lazy"></figure>
+<p>Shows or hides the tool settings above the header in the 3D view.</p>
+<h4 id="asset-shelf">Asset Shelf</h4>
+<p>Not yet. The asset shelf is planned but not implemented yet.</p>
+<h4 id="adjust-last-operation">Adjust Last Operation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/adjust-last-operation.png" alt="Adjust Last Operation" loading="lazy"></figure>
+<p>Shows or hides the Adjust Last Operation panel down left.</p>
+<p>Note that the Adjust Last Operation menu item in the Edit menu in the main header and the Last button in the toolbar are not related and not functional with this last operator panel. It is an independent element.</p>
+<h4 id="legacy-submenu">Legacy submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/legacy-submenu.png" alt="Legacy submenu" loading="lazy"></figure>
+<p>This menu contains legay operators that are now available in the tool shelf.</p>
+<h5 id="set-2d-cursor">Set 2D Cursor</h5>
+<p>Mask mode only. Set the 2D cursor position. Hotkey only tool! Please use the hotkey!</p>
+<h4 id="annotations-legacy-submenu">Annotations (Legacy) submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/annotations-legacy-submenu.png" alt="Annotations (Legacy) submenu" loading="lazy"></figure>
+<p>This group of operators is useful to take notes without changing tool-shelf operators. These notes can be colored in the View tab of the Property Shelf. Each layer is a single color. You can also animate the notes with keyframes, editable in the dopesheet.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> These are legacy operators, meaning they are equally available in the Toolshelf as a modal operator.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draw Annotation</td>
+<td>Starts the annotation free hand draw tool in the editor.</td>
+</tr>
+<tr>
+<td>Draw Line Annotation</td>
+<td>Starts the annotation line draw tool to draw straight lines in the editor.</td>
+</tr>
+<tr>
+<td>Draw Polyline Annotation</td>
+<td>Starts the annotation Polyline draw tool in the editor which allows to draw multiple connected straight lines in the editor.</td>
+</tr>
+<tr>
+<td>Erase Annotation</td>
+<td>Starts the annotation erase tool in the editor which erases any strokes in the editor.</td>
+</tr>
+<tr>
+<td>Add Annotation Layer</td>
+<td>Starts a new annotation layer.</td>
+</tr>
+<tr>
+<td>Erase Annotation Active Keyframe</td>
+<td>Erases the active keyframe of the annotation.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom In</td>
+<td>Zooms into the viewport.</td>
+</tr>
+<tr>
+<td>Zoom Out</td>
+<td>Zooms out of the viewport.</td>
+</tr>
+<tr>
+<td>Zoom Border</td>
+<td>Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="zoom-submenu">Zoom submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/zoom-submenu.png" alt="Zoom submenu" loading="lazy"></figure>
+<p>A sub menu where you can choose between predefined zoom factors.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View Selected</td>
+<td>Mask menu. View all selected UV’s.</td>
+</tr>
+<tr>
+<td>Frame All</td>
+<td>Zooms in or out in the viewport until all objects in the scene are displayed fitting in the viewport.</td>
+</tr>
+<tr>
+<td>View Fit</td>
+<td>Zooms out or in to fit the image to the viewport.</td>
+</tr>
+<tr>
+<td>Center View to Cursor</td>
+<td>Center the view to the cursor in the middle of the view.</td>
+</tr>
+<tr>
+<td>Render Region</td>
+<td>Render result only. Allows you to draw a rectangle. And when you re-render the image, just the content in this rectangle region gets rendered. This tool does, different from the 3d view, not draw a permanent red rectangle to define the render region area. You will see what you have chosen when you render the image.</td>
+</tr>
+<tr>
+<td>Clear Render Region</td>
+<td>Render result only. Removes any existing render region rectangle.</td>
+</tr>
+<tr>
+<td>Render Slot Cycle Next</td>
+<td>Render result only. Cycle through the Render slots.</td>
+</tr>
+<tr>
+<td>Render Slot Cycle Previous</td>
+<td>Render result only. Cycle through the Render slots.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="area-submenu">Area submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/area-submenu.png" alt="Area submenu" loading="lazy"></figure>
+<p>This menu contains general view functionality. And exists in most other editor types too.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal Split</td>
+<td>Splits the current view horizontally into two independent editor windows.</td>
+</tr>
+<tr>
+<td>Vertical Split</td>
+<td>Splits the current view vertically into two independent editor windows.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="duplicate-area-into-new-window">Duplicate Area into New Window</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/duplicate-area-into-new-window.png" alt="Duplicate Area into New Window" loading="lazy"><figcaption>Duplicate Area into New Window</figcaption></figure>
+<blockquote>
+<p><strong>Duplicate Area into New Window</strong> opens this editor in a floating window. See <strong><a href="../../interface/windows.html#floating-editor-windows">Floating editor windows</a></strong> in the Interface chapter.</p>
+</blockquote>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Maximize Area</td>
+<td>Displays the editor maximized with menus. To return from the maximized view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Space</kbd></span>. Or reuse the menu item in the area menu.</td>
+</tr>
+<tr>
+<td>Toggle Full screen Area</td>
+<td>Displays the editor maximized without menus. To return from the full screen view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd></span>.</td>
+</tr>
+<tr>
+<td>Close Area</td>
+<td>Closes the area window.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pie-menus-submenu">Pie menus submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/view-menu/pie-menus-submenu.png" alt="Pie menus submenu" loading="lazy"></figure>
+<p>Lists the available pie menus, and gives you the ability to read the hotkeys and assign own hotkeys.</p>
+<h1 id="image-menu">Image Menu</h1>
+<h3 id="image-editor-image-menu">Image Editor - Image Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-menu/image-editor-image-menu.png" alt="Image Editor - Image Menu" loading="lazy"><figcaption>Image Editor - Image Menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-menu/image-editor-image-menu-2.png" alt="Image Editor - Image Menu" loading="lazy"><figcaption>Image Editor - Image Menu</figcaption></figure>
+<p>The Image menu contains the load and save functionality.</p>
+<p>It is available in all sub modes. But not all content shows in all combinations.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-menu/image-editor-image-menu-3.png" alt="Image Editor - Image Menu" loading="lazy"><figcaption>Image Editor - Image Menu</figcaption></figure>
+<h4 id="new">New</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-menu/new.png" alt="New" loading="lazy"></figure>
+<p>Creates a new image. You will get a dialogue where you can define settings for the new image.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>The name of the new image</td>
+</tr>
+<tr>
+<td>Width</td>
+<td>The width of the new image.</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>The height of the new image.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="colour">Colour</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/header-tools-and-options/color.png" alt="Colour" loading="lazy"></figure>
+<p>Adjust the colour of the new image. A click will call a colour picker.</p>
+<h5 id="alpha-2">Alpha</h5>
+<p>Check this checkbox if the new image should have an alpha channel.</p>
+<h5 id="generated-type-2">Generated Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-menu/generated-type.png" alt="Generated Type" loading="lazy"></figure>
+<p>Define what kind of texture you want to create.</p>
+<p>Blank is one plain colour.</p>
+<p>UV Grid is a checker texture in black and white.</p>
+<p>Colour Grid is a coloured checker texture.</p>
+<h5 id="32-bit-float-2">32 Bit Float</h5>
+<p>Check this checkbox if the image should be in 32 Bit floating point bit depth per channel. Else it is in 8 bit per channel.</p>
+<h4 id="open-image">Open Image</h4>
+<p>Opens the file browser to load an image.</p>
+<h4 id="open-cached-render">Open Cached Render</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-menu/open-cached-render.png" alt="Open Cached Render" loading="lazy"></figure>
+<p>To get it to work you need to have Cycles as the renderer selected. This feature does not work with Eevee or Workbench renderer.</p>
+<p>Read all the current scene's render layers from cache, as needed. For this feature to work save Buffers needs to be activated in the Performance tab in the render settings.</p>
+<p>This feature can be be used to save RAM while rendering because the render layers do not have to be saved in RAM. It can also be used to recover some information from a fail render.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy</td>
+<td>Copy the image to the clipboard.</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Paste an image from the clipboard.</td>
+</tr>
+<tr>
+<td>Replace Image</td>
+<td>Replaces the currently active image by an image that you load.</td>
+</tr>
+<tr>
+<td>Reload Image</td>
+<td>Reloads the currently selected image. Note that the images must already exist somewhere at your hard disk. When you create a new image in Bforartists, then this image isn't saved yet, and so you cannot reload it.</td>
+</tr>
+<tr>
+<td>Edit Externally</td>
+<td>Open the image in a defined external image editor like The Gimp or Photoshop. The image must be saved. And the image editor must be defined in the User Preferences.</td>
+</tr>
+<tr>
+<td>Save Image</td>
+<td>Saves the currently selected image without any further questions. Note that the images must already exist somewhere at your hard disk.</td>
+</tr>
+<tr>
+<td>Save As Image</td>
+<td>Saves the currently selected image.</td>
+</tr>
+<tr>
+<td>Save Copy</td>
+<td>Saves a copy of the currently selected image. This will save the file to a specified name, but will keep the old one open in the Image editor.</td>
+</tr>
+<tr>
+<td>Save all Images</td>
+<td>Saves all images. Note that the images must already exist somewhere at your hard disk so that they can be saved. The item is greyed out as long as the image is not saved to disk.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="invert">Invert</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-menu/invert.png" alt="Invert" loading="lazy"></figure>
+<p>Invert is a sub menu where you can invert the colors of the whole image, or just specific colors.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This only shows when in the when not viewing the Viewer or Render Result.</p></div>
+<h4 id="resize">Resize</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-menu/resize.png" alt="Resize" loading="lazy"></figure>
+<p>Allows you to change the dimensions of the image. The tool calls a resize panel.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This only shows when in the when not viewing the Viewer or Render Result.</p></div>
+<h4 id="transform">Transform</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-menu/transform.png" alt="Transform" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> These only shows when in the when not viewing the Viewer or Render Result.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flip Horizontally</td>
+<td>Flip the image horizontally around it’s central axis.</td>
+</tr>
+<tr>
+<td>Flip Vertically</td>
+<td>Flip the image vertically around it’s central axis.</td>
+</tr>
+<tr>
+<td>Rotate Clockwise 90°</td>
+<td>Rotate the image to the right by 90 degrees.</td>
+</tr>
+<tr>
+<td>Rotate Counter-Clockwise 90°</td>
+<td>Rotate the image to the left by 90 degrees.</td>
+</tr>
+<tr>
+<td>Rotate Flip 180°</td>
+<td>Rotate the image to the right by 180 degrees and flip the image upside down.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pack-image-pack-as-png">Pack Image / Pack as PNG</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-menu/pack-image-pack-as-png.png" alt="Pack Image / Pack as PNG" loading="lazy"><figcaption>Pack Image / Pack as PNG</figcaption></figure>
+<p>Packs the currently active image into the blend file. When you save the blend file the next time, then this image will be embedded. The Pack menu item turns into an Unpack menu item with packed textures.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-menu/pack-image-pack-as-png-2.png" alt="Pack Image / Pack as PNG" loading="lazy"><figcaption>Pack Image / Pack as PNG</figcaption></figure>
+<p>Packed images are marked with a pack icon. A click at this icon will unpack the texture, and try to save it to file. Usually to the last existing location before it was packed.</p>
+<div class="ui-doc-callout is-warning"><p><strong>Warning:</strong> You cannot modify packed images. Changes at the image will not be saved. You need to unpack the image when you want to modify it. And repack it after you have done the changes.</p></div>
+<h4 id="extract-palette">Extract Palette</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-menu/extract-palette.png" alt="Extract Palette" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/image-menu/extract-palette-2.png" alt="Extract Palette" loading="lazy"></figure>
+<p>Allows you to extract a color palette from a loaded image, useful for brush based tools. The result can then be found in the Color Palette panel in the Tools tab in the sidebar with the correct object and being in the right mode, for example in texture painting mode in the 3D View editor.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This only shows when your in the Image Editor, it won’t show if you in the UV Editor!</p></div>
+<h1 id="select-menu">Select Menu</h1>
+<h3 id="image-editor-select-menu">Image Editor - Select menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/select-menu/image-editor-select-menu.png" alt="Image Editor - Select menu" loading="lazy"><figcaption>Image Editor - Select menu</figcaption></figure>
+<p>This menu just appears when you are in Mask mode. And you need to create a new mask layer to set all items active. The select functionality in this menu covers the mask geometry. The splines.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All</td>
+<td>Toggles between select all and deselect all.</td>
+</tr>
+<tr>
+<td>None</td>
+<td>Select nothing.</td>
+</tr>
+<tr>
+<td>Inverse</td>
+<td>Inverts the current selection.</td>
+</tr>
+<tr>
+<td>Box Select</td>
+<td>Border select enters the Border Select mode. This is a special select mode where you can select elements by dragging a rectangle. And what's inside of the rectangle gets selected then. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse.</td>
+</tr>
+<tr>
+<td>Circle Select</td>
+<td>Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lasso-select-submenu">Lasso Select submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/select-menu/lasso-select-submenu.png" alt="Lasso Select submenu" loading="lazy"></figure>
+<p>A sub menu with the available lasso select modes.</p>
+<h4 id="linked">Linked</h4>
+<p>Select all vertices linked to the active spline(s). The previous selection gets cleared.</p>
+<h4 id="more-less-submenu">More / Less submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/select-menu/more-less-submenu.png" alt="More / Less submenu" loading="lazy"><figcaption>More / Less submenu</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>More</td>
+<td>Select more from the current active spline(s).</td>
+</tr>
+<tr>
+<td>Less</td>
+<td>Select less from the current active spline(s).</td>
+</tr>
+</tbody>
+</table>
+<h1 id="add-menu">Add Menu</h1>
+<h3 id="image-editor-add-menu">Image Editor - Add menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/add-menu/image-editor-add-menu.png" alt="Image Editor - Add menu" loading="lazy"><figcaption>Image Editor - Add menu</figcaption></figure>
+<p>This menu just appears when you are in Mask mode.</p>
+<p>In this menu you can create circle or square spline curves to use them for masking. They appear at the 2D cursor, and have four handlers.</p>
+<p>They can be moved, rotated and resized with the usual W E R keys. See also mask menu, Transform. The handlers allows to change the shape and size too.</p>
+<p>You can add multiple spline curves to a mask layer.</p>
+<h4 id="circle">Circle</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/add-menu/circle.png" alt="Circle" loading="lazy"></figure>
+<p>Adds a circle shaped spline curve.</p>
+<h5 id="last-operator-add-circle">Last Operator Add Circle</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/add-menu/last-operator-add-circle.png" alt="Last Operator Add Circle" loading="lazy"><figcaption>Last Operator Add Circle</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>The size of the circle spline curve.</td>
+</tr>
+<tr>
+<td>Location X Y</td>
+<td>The location of the circle spline curve. Calculation happens from the center of the spline. 0 / 0 is down left.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="square">Square</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/add-menu/square.png" alt="Square" loading="lazy"></figure>
+<p>Adds a square shaped spline curve.</p>
+<h5 id="last-operator-add-square">Last Operator Add Square</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/add-menu/last-operator-add-square.png" alt="Last Operator Add Square" loading="lazy"><figcaption>Last Operator Add Square</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>The size of the square spline curve.</td>
+</tr>
+<tr>
+<td>Location X Y</td>
+<td>The location of the square spline curve. Calculation happens from the center of the spline. 0 / 0 is down left.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="add-vertex-and-slide">Add Vertex and Slide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/add-menu/add-vertex-and-slide.png" alt="Add Vertex and Slide" loading="lazy"><figcaption>Add Vertex and Slide</figcaption></figure>
+<p>Allows you to draw freehand curves by holding down shift and clicking into the viewport. Hotkey only functionality!</p>
+<h5 id="last-operator-add-vertex-and-slide">Last Operator Add Vertex and Slide</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/add-menu/last-operator-add-vertex-and-slide.png" alt="Last Operator Add Vertex and Slide" loading="lazy"><figcaption>Last Operator Add Vertex and Slide</figcaption></figure>
+<h6 id="location-x-y">Location X / Y</h6>
+<p>Adjust the location of the last created curve point.</p>
+<h4 id="feather-vertex-slide">Feather vertex slide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/add-menu/feather-vertex-slide.png" alt="Feather vertex slide" loading="lazy"></figure>
+<p>Create and define a feathering outline curve.</p>
+<p>Usage: Hold down shift + control, click at a vertex, and pull outwards. This will create the feathering outline curve, displayed in green.</p>
+<h5 id="last-operator-add-feather-vertex-and-slide">Last Operator Add Feather Vertex and Slide</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/add-menu/last-operator-add-feather-vertex-and-slide.png" alt="Last Operator Add Feather Vertex and Slide" loading="lazy"><figcaption>Last Operator Add Feather Vertex and Slide</figcaption></figure>
+<h6 id="location-x-y-2">Location X / Y</h6>
+<p>Adjust the location of the last created feather curve point.</p>
+<h1 id="mask-menu">Mask Menu</h1>
+<h3 id="image-editor-mask-menu">Image Editor - Mask menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/image-editor-mask-menu.png" alt="Image Editor - Mask menu" loading="lazy"><figcaption>Image Editor - Mask menu</figcaption></figure>
+<p>This menu appears when you are in Mask mode. It contains further functionality to modify the masking spline curves.</p>
+<h4 id="transform-submenu">Transform submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/transform-submenu.png" alt="Transform submenu" loading="lazy"></figure>
+<p>This is a sub menu with some transform menu items. This menu items are hotkey tools!</p>
+<h5 id="translate">Translate</h5>
+<p>Move the selection.</p>
+<h6 id="last-operator-move">Last Operator Move</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/last-operator-move.png" alt="Last Operator Move" loading="lazy"></figure>
+<h6 id="move-x-y-z">Move X, Y Z</h6>
+<p>The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.</p>
+<h6 id="orientation">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h6 id="mirror-editing">Mirror Editing</h6>
+<p>Enables mirror editing.</p>
+<h6 id="proportional-editing-2">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="rotate">Rotate</h5>
+<p>Rotate the selection.</p>
+<h6 id="last-operator-rotate">Last Operator Rotate</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/last-operator-rotate.png" alt="Last Operator Rotate" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Which axis to rotate.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-2">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h6 id="mirror-editing-2">Mirror Editing</h6>
+<p>Enables mirror editing.</p>
+<h6 id="proportional-editing-3">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="scale">Scale</h5>
+<p>Scale the selection.</p>
+<h6 id="last-operator-resize">Last Operator Resize</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/last-operator-resize.png" alt="Last Operator Resize" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Which axis to rotate.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-3">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h6 id="mirror-editing-3">Mirror Editing</h6>
+<p>Enables mirror editing.</p>
+<h6 id="proportional-editing-4">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="to-sphere">To Sphere</h5>
+<p>Shapes a selection of objects into the shape of a sphere. The calculation happens with the object origins.</p>
+<p>In Object mode this tools requires to have more than one object selected.</p>
+<h6 id="usage">Usage</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/usage.png" alt="Usage" loading="lazy"></figure>
+<p>Select the vertices, activate the tool, then drag the mouse in the 3D viewport. In the header you will read the current factor then. Which tells you how close you are towards the sphere shape.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/usage-2.png" alt="Usage" loading="lazy"></figure>
+<h6 id="last-operator-to-sphere">Last Operator To Sphere</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/last-operator-to-sphere.png" alt="Last Operator To Sphere" loading="lazy"><figcaption>Last Operator To Sphere</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>The factor to transform the selection into a shape form.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="proportional-editing-5">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/proportional-editing-2.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="projected-2d">Projected(2D)</h6>
+<p>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</p>
+<p>´</p>
+<h5 id="shear">Shear</h5>
+<p>Shear shears the selection.</p>
+<p>In Object mode this tools requires to have more than one object selected.</p>
+<p>The shear tool works along a imaginary 2d plane. The shear axis controls if the items are sheared along the x or the y axes of this plane. This is the plane along which the transformation happens. You can shear along the x or the y axis of this plane.</p>
+<p>To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.</p>
+<h6 id="last-operator-shear">Last Operator Shear</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/last-operator-shear.png" alt="Last Operator Shear" loading="lazy"></figure>
+<h6 id="offset">Offset</h6>
+<p>Adjust an offset.</p>
+<h6 id="axis">Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/axis.png" alt="Axis" loading="lazy"></figure>
+<p>Defines one axis of the imaginary shear axis plane.</p>
+<h6 id="axis-ortho">Axis Ortho</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/axis.png" alt="Axis Ortho" loading="lazy"></figure>
+<p>Defines the other axis of the imaginary shear axis plane.</p>
+<h6 id="orientation-4">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/orientation-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation for the shear action.</p>
+<h6 id="mirror-editing-4">Mirror Editing</h6>
+<p>Enable mirror editing.</p>
+<h6 id="proportional-editing-6">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/proportional-editing-2.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="push-pull">Push/Pull</h5>
+<p>It pushes or pulls the object positions relative to the center of the selection.</p>
+<p>In Object mode this tool requires to have more than one object selected.</p>
+<h6 id="last-operator-push-pull">Last Operator Push/Pull</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/last-operator-push-pull.png" alt="Last Operator Push/Pull" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distance</td>
+<td>Adjust the distance of influence of the tool.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="proportional-editing-7">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/proportional-editing-2.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="scale-feather">Scale Feather</h5>
+<p>Scale feather weight for the selected points.</p>
+<p>The curve type that is used to create mask splines is almost a Bezier curve. But it has some differences. Smooth edges of the mask are defined by feathering. The curve needed to support feathering in a way that stuck to the curve as you edited it, for ease of editing an animation. These are called S-Curves.</p>
+<p>Besides the handles, every control point also has points that define the feather between the current point and the next point on the spline. Each feather point is stored in UV space, where U means position across spline segment, and V means distance between main spline and feather points.</p>
+<h6 id="last-operator-transform">Last Operator Transform</h6>
+<h6 id="values">Values</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/values.png" alt="Values" loading="lazy"></figure>
+<p>Adjust the scale amount.</p>
+<p>X, Y and Z defines the position. W defines the rotation.</p>
+<h6 id="axis-2">Axis</h6>
+<p>Around which axis to rotate. X, Y or Z.</p>
+<h6 id="orientation-5">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/orientation-3.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box to choose the type of orientation for the transform action.</p>
+<h6 id="mirror-editing-5">Mirror Editing</h6>
+<p>Enable mirror editing.</p>
+<h6 id="proportional-editing-8">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/proportional-editing-2.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duplicate</td>
+<td>Deletes the selected spline(s) or spline points.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Deletes the selected spline(s) or spline points.</td>
+</tr>
+<tr>
+<td>Copy Splines</td>
+<td>Copy the selected spline(s) or spline points.</td>
+</tr>
+<tr>
+<td>Paste Splines</td>
+<td>Pastes the copied spline(s) or spline points.</td>
+</tr>
+<tr>
+<td>Make Parent</td>
+<td>Parents the selected spline points. Mask splines can be parented to motion tracker markers.</td>
+</tr>
+<tr>
+<td>Clear Parent</td>
+<td>Clears the parent relationship.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="toggle-cyclic">Toggle Cyclic</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/toggle-cyclic.png" alt="Toggle Cyclic" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/toggle-cyclic-2.png" alt="Toggle Cyclic" loading="lazy"></figure>
+<p>Closes or opens the spline.</p>
+<h4 id="switch-direction">Switch Direction</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/switch-direction.jpg" alt="Switch Direction" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/switch-direction.png" alt="Switch Direction" loading="lazy"></figure>
+<p>A curve has a start point and a end point. Here you can switch them. The end point becomes the starting point and vice versa. As a consequence the handler can switch their location too. With handle type aligned single they can appear outside or inside of the circle.</p>
+<h4 id="recalculate-handles">Recalculate Handles</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/recalculate-handles.png" alt="Recalculate Handles" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/recalculate-handles-2.png" alt="Recalculate Handles" loading="lazy"></figure>
+<p>Recalculating the normals smoothens out the curve, and realigns the handlers. A square shape with handle type aligned would become round.</p>
+<h4 id="set-handle-type-submenu">Set Handle Type submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/set-handle-type-submenu.png" alt="Set Handle Type submenu" loading="lazy"><figcaption>Set Handle Type submenu</figcaption></figure>
+<p>Opens a sub menu where you can choose different handle types.</p>
+<h5 id="last-operator-set-handle-type">Last Operator Set Handle Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/last-operator-set-handle-type.png" alt="Last Operator Set Handle Type" loading="lazy"><figcaption>Last Operator Set Handle Type</figcaption></figure>
+<h6 id="type">Type</h6>
+<p>Choose the handle type again.</p>
+<h4 id="animation">Animation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/animation.png" alt="Animation" loading="lazy"></figure>
+<p>Masks can be animated.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insert Shape Key</td>
+<td>Inserts a shape key for the currently selected curve points</td>
+</tr>
+<tr>
+<td>Clear Shape Key</td>
+<td>Removes the shape keys for the currently selected curve points at the current frame.</td>
+</tr>
+<tr>
+<td>Feather Reset Animation</td>
+<td>Resets the feather weight on all selected curve points at the current frame.</td>
+</tr>
+<tr>
+<td>Re-Key Points of Selected Shapes</td>
+<td>Recalculate animation data for the currently selected curve points for frames that are selected in the dope sheet.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="show-hide-submenu">Show/Hide submenu</h4>
+<h5 id="show-hide-faces">Show/Hide Faces</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/image-editor/header/mask-menu/show-hide-faces.png" alt="Show/Hide Faces" loading="lazy"></figure>
+<p>This is a sub menu where you can show or hide the selection.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show Hidden</td>
+<td>Makes hidden splines visible again.</td>
+</tr>
+<tr>
+<td>Hide Selected</td>
+<td>Hides the selected spline(s).</td>
+</tr>
+<tr>
+<td>Hide Unselected</td>
+<td>Hides the not selected spline(s). The selected spline(s) stays visible.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fto-master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fimage-editor%2Fheader%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/to-master/docs2/content/editors/image-editor/header/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#image-editor-header">Image Editor - Header</a><a class="h3" href="#switch-to-uv-image-editor">Switch to UV / Image editor</a><a class="h2" href="#header-right-click-menus">Header right click menus</a><a class="h2" href="#editortype-menu">Editortype Menu</a><a class="h2" href="#sub-modes">Sub Modes</a><a class="h3" href="#view-mode">View Mode</a><a class="h3" href="#paint-mode">Paint Mode</a><a class="h3" href="#mask-mode">Mask Mode</a><a class="h3" href="#image-editor-header-tools">Image Editor - Header Tools</a><a class="h3" href="#options-panel">Options Panel</a><a class="h3" href="#quick-menu-2">Quick Menu</a><a class="h3" href="#image-editor-view-menu">Image Editor - View Menu</a><a class="h3" href="#image-editor-image-menu">Image Editor - Image Menu</a><a class="h3" href="#image-editor-select-menu">Image Editor - Select menu</a><a class="h3" href="#image-editor-add-menu">Image Editor - Add menu</a><a class="h3" href="#image-editor-mask-menu">Image Editor - Mask menu</a></aside></div></body></html>

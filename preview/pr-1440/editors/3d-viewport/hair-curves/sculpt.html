@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sculpt Mode · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1440 · <code>docs2/to-master</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../../../getting-started.html">Getting Started</a>
+<a href="../../../getting-started/introduction.html">Introduction</a>
+<a href="../../../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../../../getting-started/installation.html">Installation</a>
+<a href="../../../getting-started/quick-start.html">Quick Start</a>
+<a href="../../../getting-started/data-structure.html">Data Structure</a>
+<a href="../../../getting-started/differences.html">Comparison with Blender</a>
+<a href="../../../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<a href="../../../interface.html">Interface</a>
+<a href="../../../interface/overview.html">Interface Basics</a>
+<a href="../../../interface/windows.html">Windows</a>
+<a href="../../../interface/areas.html">Areas</a>
+<a href="../../../interface/editors.html">Editors</a>
+<a href="../../../interface/headers.html">Headers</a>
+<a href="../../../interface/footers.html">Footers</a>
+<a href="../../../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../../../interface/side-bars.html">Side Bars</a>
+<a href="../../../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../../../interface/properties.html">Properties</a>
+<a href="../../../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../../../interface/context-menus.html">Context Menus</a>
+<a href="../../../interface/floating-menus.html">Floating Menus</a>
+<a href="../../../interface/pie-menus.html">Pie Menus</a>
+<a href="../../../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../../../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../../../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<a href="../../../workspaces.html">Workspaces</a>
+<a href="../../../workspaces/workspaces.html">Managing Workspaces</a>
+<a href="../../../workspaces/main.html">Main</a>
+<a href="../../../workspaces/uv-editing.html">UV Editing</a>
+<a href="../../../workspaces/modeling.html">Modeling</a>
+<a href="../../../workspaces/nodes.html">Nodes</a>
+<a href="../../../workspaces/animation.html">Animation</a>
+<a href="../../../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../../../workspaces/shading.html">Shading</a>
+<a href="../../../workspaces/rendering.html">Rendering</a>
+<a href="../../../workspaces/sculpting.html">Sculpting</a>
+<a href="../../../workspaces/compositing.html">Compositing</a>
+<a href="../../../workspaces/scripting.html">Scripting</a>
+<a href="../../../workspaces/2d-animation.html">2D Animation</a>
+<a href="../../../workspaces/storyboarding.html">Storyboarding</a>
+<a href="../../../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../../../workspaces/masking.html">Masking</a>
+<a href="../../../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../../../workspaces/video-editing.html">Video Editing</a>
+<a href="../../../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<a href="../../../workspaces/assets.html">Assets</a>
+<a href="../../../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../../../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<a href="../../../editors.html">Editors</a>
+<a style="padding-left:3.5rem" href="../all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="../armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../mesh/edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../mesh/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../properties/render-properties-tab.html">Render</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../timeline/header.html">Header</a>
+<a href="../../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../all-modes/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/edit.html">Edit Mode</a>
+<a class="is-current" style="padding-left:2.5rem" href="sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../mesh/edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../properties/output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="../mesh/edit/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../properties/view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../all-modes/header/select-menu.html">Select Menu</a>
+<a style="padding-left:1.5rem" href="../curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="../mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/channel-list.html">Channel List</a>
+<a href="../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../properties/scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../mesh/texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="../metaball.html">Metaball</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../properties/world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../mesh/particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="../text.html">Text</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:1.5rem" href="../../properties/collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../lattice.html">Lattice</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="../../properties/object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../armature.html">Armature</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:1.5rem" href="../../properties/modifiers.html">Modifiers</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/layout.html">Layout</a>
+<a href="../../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="../../properties/visual-effects-properties-tab.html">Visual Effects</a>
+<a style="padding-left:1.5rem" href="../hair-curves.html">Hair Curves</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:1.5rem" href="../../properties/particle-properties-tab.html">Particles</a>
+<a style="padding-left:1.5rem" href="../point-cloud.html">Point Cloud</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="../../properties/physics-properties-tab.html">Physics</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/layout.html">Layout</a>
+<a href="../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../properties/object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../../properties/object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../../properties/bone-properties-tab.html">Bone</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<a style="padding-left:1.5rem" href="../../properties/bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="../../properties/material-properties-tab.html">Material</a>
+<a href="../../texture-node-editor.html">Texture Node Editor</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../../properties/texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../../properties/strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="../../properties/strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../../dope-sheet.html">Dope Sheet</a>
+<a href="../../timeline.html">Timeline</a>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<a href="../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../../text-editor.html">Text Editor</a>
+<a href="../../python-console.html">Python Console</a>
+<a href="../../info-editor.html">Info Editor</a>
+<a href="../../toolbar.html">Toolbar</a>
+<a href="../../outliner.html">Outliner</a>
+<a href="../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../../properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../../properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../../properties/render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/volume-object.html">Volume Object</a>
+<a href="../../file-browser.html">File browser</a>
+<a href="../../asset-browser.html">Asset Browser</a>
+<a href="../../spreadsheet.html">Spreadsheet</a>
+<a href="../../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../../timeline/viewport.html">Viewport</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<a href="../../../assets.html">Assets</a>
+<a href="../../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../../assets/default-library.html">Default Library</a>
+<a href="../../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<a href="../../../extensions.html">Extensions and Addons</a>
+<a href="../../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../../../extensions/coworker.html">Coworker</a>
+<a href="../../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../../../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<a href="../../../keymap.html">Keymap</a>
+<a href="../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<a href="../../../advanced.html">Advanced</a>
+<a href="../../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../../../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../../../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../../../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../../../appendix.html">Information</a>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../../appendix/gpl-license.html">About the GPL License</a>
+<a href="../../../appendix/community-influences.html">The Community Influences</a>
+<a href="../../../appendix/glossary.html">Glossary</a>
+<a href="../../../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<a href="../../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Hair Curves › Sculpt Mode</div><h1 class="pv-title">Sculpt Mode</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 14 min read</span></div><article class="ui-doc-body"><p><span class="ui-doc-menu">Hair Curves › Sculpt Mode</span>: every menu, tool, sidebar tab and context menu of this mode, on one page. Use the panels on the right to jump between the regions.</p>
+<h1 id="header">Header</h1>
+<h2 id="curves-menu">Curves menu</h2>
+<h3 id="sculpt-mode-curves-menu">Sculpt mode - Curves menu</h3>
+<h4 id="snap-to-deformed-surface">Snap to Deformed Surface</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/header/hair-curve-sculpt-mode-curves-menu/snap-to-deformed-surface.png" alt="Snap to Deformed Surface" loading="lazy"><figcaption>Snap to Deformed Surface</figcaption></figure>
+<p>Move curves to the nearest deformed surface so that the first point is exactly on the surface mesh. This re-attaches the curves to a deformed surface using the existing attachment information.</p>
+<p>This only works when the topology of the surface mesh has not changed.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snap to Nearest Surface</td>
+<td>Move curves to the nearest surface so that the first point is exactly on the surface mesh. This finds the closest point of the surface of the root point of every curve and moves the root there.</td>
+</tr>
+<tr>
+<td>Convert to Particle System</td>
+<td>Add a new or update an existing hair particle system on the surface object. The new Particle System is the legacy hair system. This does not remove the hair curve object, but creates/updates a new Particle System.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="tool-shelf">Tool Shelf</h1>
+<h2 id="tools">Tools</h2>
+<h3 id="tool-shelf-hair-curve-sculpt-mode">Tool Shelf - Hair Curve - Sculpt mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/tool-shelf-hair-curve-sculpt-mode.png" alt="Tool Shelf - Hair Curve - Sculpt mode" loading="lazy"><figcaption>Tool Shelf - Hair Curve - Sculpt mode</figcaption></figure>
+<p>In Sculpt mode with a hair curve object selected, you will find mainly brushes in the tool shelf. This mode is used for styling hair curves with various tools, including adding, combing and more.</p>
+<p>Hair Curve Sculpting is a process to deform hair strands by using brushes.</p>
+<h4 id="annotate-tools">Annotate tools</h4>
+<p>The annotate tools at the end of the list are explained in the chapter 7.1.1 Editors - 3D View - Tool Shelf - Object Mode. We won't cover this tools again here.</p>
+<h4 id="brush-cursor">Brush cursor</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/brush-cursor.png" alt="Brush cursor" loading="lazy"></figure>
+<p>When you activate one of the brushes then the mouse cursor turns into a brush cursor. This cursor represents the size of the current brush.</p>
+<h4 id="brush-settings">Brush settings</h4>
+<p>The different brushes settings can be found in the sidebar in the tools tab. Or in the properties editor in the Active Tool and Workspace settings tab. Or above the header area.</p>
+<p>The different brushes settings in the Active Tool and Workspace settings are explained in the chapter <strong>7.3.16 Editors - 3D Viewport - Sidebar - Tool Tab - Hair Curve - Sculpt Mode</strong>.</p>
+<p>We won't cover this chapters again, but just explain what the different brushes do in this mode.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/brush-settings.png" alt="Brush settings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/brush-settings-2.png" alt="Brush settings" loading="lazy"></figure>
+<h4 id="hotkeys">Hotkeys</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/hotkeys.png" alt="Hotkeys" loading="lazy"></figure>
+<p>Pressing <strong>X</strong> allows you to change the brush size onscreen. Drag the mouse to increase or decrease the size. Left click applies the new size, right click cancels the resizing.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/hotkeys-2.png" alt="Hotkeys" loading="lazy"></figure>
+<p>Pressing <strong>C</strong> allows you to change the strength of the brush. Drag the mouse to increase or decrease the size. Left click applies the new size, right click cancels the resizing.</p>
+<h4 id="symmetry">Symmetry</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/header/select-menu/all-3.png" alt="Symmetry" loading="lazy"></figure>
+<p>Note that the sculpting mode starts with Symmetry off. You can turn this on per the desired axis from in the tool header.</p>
+<h3 id="tool-shelf-hair-curve-sculpt-mode-brushes">Tool Shelf - Hair Curve - Sculpt mode - Brushes</h3>
+<h4 id="brush">Brush</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/brush.png" alt="Brush" loading="lazy"></figure>
+<p>Various brushes to modify the hair curves. From comb to smooth</p>
+<h5 id="comb">Comb</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/comb.png" alt="Comb" loading="lazy"></figure>
+<p>The comb brush acts like a true hair comb to pull strands at an angle. Click and hold it to pull strands with the comb.</p>
+<h5 id="grow-shrink">Grow/Shrink</h5>
+<p>This brush grows existing hair or inversely shrinks it. Useful for extending hair without reshaping it.</p>
+<h5 id="pinch">Pinch</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/pinch.png" alt="Pinch" loading="lazy"></figure>
+<p>This brush pulls hair curves together towards the center of the brush. Useful for hair clumping.</p>
+<h5 id="puff">Puff</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/puff.png" alt="Puff" loading="lazy"></figure>
+<p>This brush pushes out the hair strand from the root by pushing a force on the tips. This is useful to add volume to hair.</p>
+<h5 id="pull-tips">Pull Tips</h5>
+<p>Pulls out the tips.</p>
+<h5 id="slide">Slide</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/slide.png" alt="Slide" loading="lazy"></figure>
+<p>This is similar to the grab brush in Mesh Sculpt Mode, this pulls the root and control points of the hair curves over the surface to a new location.</p>
+<h4 id="selection-paint">Selection Paint</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/selection-paint.png" alt="Selection Paint" loading="lazy"></figure>
+<p>This brush draws a selection mask to aid in isolating strands. Isolated control points are lighter grey, and locked control points are dark grey.</p>
+<h4 id="density">Density</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/density.png" alt="Density" loading="lazy"></figure>
+<p>Adds more hair strands and increases the density.</p>
+<h4 id="add">Add</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/add.png" alt="Add" loading="lazy"></figure>
+<p>This brush adds hair strands at a set density onto the mesh. Useful for painting new hair. When you add an “Empty Hair” curve object, there will be no hair till you add strands.</p>
+<h4 id="delete">Delete</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-sculpt-mode/delete.png" alt="Delete" loading="lazy"></figure>
+<p>This brush completely removes any hair curves from the surface.</p>
+<h1 id="sidebar">Sidebar</h1>
+<h2 id="sculpt-mode">Sculpt Mode</h2>
+<h3 id="sculpt-mode-2">Sculpt Mode</h3>
+<p>In Sculpt mode you can sculpt the hair curves.</p>
+<h3 id="brush-asset-panel">Brush Asset Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/brush-asset-panel.png" alt="Brush Asset Panel" loading="lazy"></figure>
+<p>The Brush Asset Panel contains the different Brushes and some Brush settings. Choose and adjust your current active brush.</p>
+<h4 id="browse-brush">Browse Brush</h4>
+<p>The big image at the top is a dropdown box that allows you to choose a brush. Click at it, and you will see the different brushes. A click at one of the images will choose this brush then.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/browse-brush.png" alt="Browse Brush" loading="lazy"></figure>
+<p>Brushes are assets. You can load them from different libraries if you want.</p>
+<h4 id="brush-specials-menu">Brush Specials menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/brush-specials-menu.png" alt="Brush Specials menu" loading="lazy"></figure>
+<p>This menu becomes active when you create a new brush. Which can be done wiht the Plus button in the name property. This data cannot be changed for builtin system brushes.</p>
+<h5 id="edit-metadata">Edit Metadata</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode/edit-metadata.jpg" alt="Edit Metadata" loading="lazy"></figure>
+<p>Calls a popup where you can adjust further informations and settings for the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Catalog</td>
+<td>The asset catalog in which the brush is stored.</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>The brush author.</td>
+</tr>
+<tr>
+<td>Desctription</td>
+<td>Add a description</td>
+</tr>
+<tr>
+<td>OK / Cancel</td>
+<td>Accept or decline the changes.</td>
+</tr>
+<tr>
+<td>Edit Preview Image</td>
+<td>Allows you to load a custom preview image.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Save Brush Asset</td>
+<td>This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush.</td>
+</tr>
+<tr>
+<td>Revert Brush Asset</td>
+<td>Reverts the brush settings to the default values of the brush in the asset library.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="name">Name</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/name.png" alt="Name" loading="lazy"></figure>
+<p>The edit box below the Image shows the name of the current active brush.</p>
+<p><strong>The + button</strong> allows you to add a new pencil with the current settings. Note that the brushes are NOT automatically saved when you close Bforartists. You need to save the brush asset. See above.</p>
+<p><strong>The X button</strong> deletes the brush from the brushes list and from the asset library. This button is just active with a custom brush. You will be prompted by a warning so that you don't accidentally remove the brush.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/name-2.png" alt="Name" loading="lazy"></figure>
+<h3 id="brush-settings-panel">Brush Settings Panel</h3>
+<h4 id="use-unified-size">Use unified size</h4>
+<p>The size is shared across the brushes.</p>
+<h4 id="use-pressure">Use Pressure</h4>
+<p>The button behind the edit box enables tablet pressure sensitivity for strength.</p>
+<h5 id="pressure-size-curve">Pressure Size Curve</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/pressure-size-curve.png" alt="Pressure Size Curve" loading="lazy"></figure>
+<p>Behind the pressure size button there is a button to reveal the size pressure curve panel. When you activate Size Pressure for tablets, then the Size Pressure curve becomes active, and can be adjusted.</p>
+<p>The pressure size curve allows you to adjust the falloff curve for the tablet pressure. It shows when Use Pressure is activated. The curve panel shows when clicking at the button.</p>
+<h5 id="selecting-points">Selecting Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/header/header-tools-and-options/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
+<p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
+<h5 id="adding-points">Adding Points</h5>
+<blockquote>
+<p>This setting uses the <strong>curve widget</strong>: click to add points, drag to move them. See <strong><a href="../../../interface/properties.html#curve-widget">Curve Widget</a></strong> in the Interface chapter.</p>
+</blockquote>
+<h5 id="navigation-elements">Navigation elements</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in</td>
+<td>Zooms in.</td>
+</tr>
+<tr>
+<td>Zoom out</td>
+<td>Zooms out.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="clipping-options">Clipping options</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png" alt="Clipping options" loading="lazy"></figure>
+<p>Set up clipping for the stroke.</p>
+<h5 id="tools-2">Tools</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="handles">Handles</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png" alt="Handles" loading="lazy"></figure>
+<p>You can choose between Auto handle, Vector Handle and Auto Clamped.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Position X / Y</td>
+<td>The position of the selectedc curve point.</td>
+</tr>
+<tr>
+<td>Delete Points</td>
+<td>Deletes the selected curve point.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="curve-presets">Curve Presets</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png" alt="Curve Presets" loading="lazy"></figure>
+<p>A curve preset to start with.</p>
+<h3 id="brush-settings-panel-comb">Brush Settings Panel - Comb</h3>
+<h4 id="size">Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/size.png" alt="Size" loading="lazy"></figure>
+<p>The Size of the brush.</p>
+<h4 id="strength">Strength</h4>
+<p>The strength of the brush.</p>
+<h3 id="brush-settings-panel-grow-shrink">Brush Settings Panel - Grow/Shrink</h3>
+<h4 id="size-2">Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/size-2.png" alt="Size" loading="lazy"></figure>
+<p>The Size of the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strength</td>
+<td>The strength of the brush.</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>Add or subtract the effect of the brush. Add grows hair curves, Subtract shorten the hair curves.</td>
+</tr>
+<tr>
+<td>Scale Uniform</td>
+<td>Grow or shrink curves by changing their size uniformly instead of using trimming or extrapolation. This is useful for preserving control point count.</td>
+</tr>
+<tr>
+<td>Minimum Length</td>
+<td>Avoids shrinking curves shorter than this length.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-settings-panel-pinch">Brush Settings Panel - Pinch</h3>
+<h4 id="size-3">Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/size-3.png" alt="Size" loading="lazy"></figure>
+<p>The Size of the brush.</p>
+<h4 id="strength-2">Strength</h4>
+<p>The strength of the brush.</p>
+<h3 id="brush-settings-panel-puff">Brush Settings Panel - Puff</h3>
+<h4 id="size-4">Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/size-3.png" alt="Size" loading="lazy"></figure>
+<p>The Size of the brush.</p>
+<h4 id="strength-3">Strength</h4>
+<p>The strength of the brush.</p>
+<h3 id="brush-settings-panel-pull-tip">Brush Settings Panel - Pull Tip</h3>
+<h4 id="size-5">Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/size-3.png" alt="Size" loading="lazy"></figure>
+<p>The Size of the brush.</p>
+<h4 id="strength-4">Strength</h4>
+<p>The strength of the brush.</p>
+<h3 id="brush-settings-panel-slide">Brush Settings Panel - Slide</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/size-3.png" alt="Brush Settings Panel - Slide" loading="lazy"><figcaption>Brush Settings Panel - Slide</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>The Size of the brush.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>The strength of the brush.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-settings-panel-smooth">Brush Settings Panel - Smooth</h3>
+<h4 id="size-6">Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/size-3.png" alt="Size" loading="lazy"></figure>
+<p>The Size of the brush.</p>
+<h4 id="strength-5">Strength</h4>
+<p>The strength of the brush.</p>
+<h3 id="brush-settings-panel-add">Brush Settings Panel - Add</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/brush-settings-panel-add.png" alt="Brush Settings Panel - Add" loading="lazy"><figcaption>Brush Settings Panel - Add</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>The Size of the brush.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>The strength of the brush.</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>Number of curves added by the add brush.</td>
+</tr>
+<tr>
+<td>Interpolate</td>
+<td><strong>Length</strong>: Use length of the curve in close proximity. · <strong>Size</strong>: Use Size of the curve in close proximity. · <strong>Shape</strong>: Use shape of the curve in close proximity. · <strong>Point Cloud</strong>: Use the number of points from the curve in close proximity.</td>
+</tr>
+<tr>
+<td>(Curve) Length</td>
+<td>Length of the newly added curves when it is not interpolated from other curves. · <strong>(Curve) Size</strong>: Size of the newly added curves when it is not interpolated from other curves.</td>
+</tr>
+<tr>
+<td>Points (per Curve)</td>
+<td>Number of control points in a newly added curve.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-settings-panel-delete">Brush Settings Panel - Delete</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/brush-settings-panel-delete.png" alt="Brush Settings Panel - Delete" loading="lazy"><figcaption>Brush Settings Panel - Delete</figcaption></figure>
+<h4 id="size-7">Size</h4>
+<p>The Size of the brush.</p>
+<h3 id="brush-settings-panel-density">Brush Settings Panel - Density</h3>
+<h4 id="size-8">Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/size-4.png" alt="Size" loading="lazy"></figure>
+<p>The Size of the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strength</td>
+<td>The strength of the brush.</td>
+</tr>
+<tr>
+<td>Count Max</td>
+<td>How many times the density brush tries to add new curves.</td>
+</tr>
+<tr>
+<td>Interpolate</td>
+<td><strong>Length</strong>: Use length of the curve in close proximity. · <strong>Size</strong>: Use Size of the curve in close proximity. · <strong>Shape</strong>: Use shape of the curve in close proximity. · <strong>Point Cloud</strong>: Use the number of points from the curve in close proximity.</td>
+</tr>
+<tr>
+<td>(Curve) Length</td>
+<td>Length of the newly added curves when it is not interpolated from other curves. · <strong>(Curve) Size</strong>: Size of the newly added curves when it is not interpolated from other curves.</td>
+</tr>
+<tr>
+<td>Points (per Curve)</td>
+<td>Number of control points in a newly added curve.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-settings-panel-select">Brush Settings Panel - Select</h3>
+<h4 id="size-9">Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/size-5.png" alt="Size" loading="lazy"></figure>
+<p>The Size of the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strength</td>
+<td>The strength of the brush.</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>The direction of the brush.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stroke-sub-panel">Stroke Sub panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/stroke-sub-panel.png" alt="Stroke Sub panel" loading="lazy"></figure>
+<p>This subpanel shows with all brushes in the Brush settings panel.</p>
+<h4 id="use-pressure-2">Use Pressure</h4>
+<p>The button behind the edit box enables tablet pressure sensitivity for strength.</p>
+<h5 id="pressure-size-curve-2">Pressure Size Curve</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/pressure-size-curve.png" alt="Pressure Size Curve" loading="lazy"></figure>
+<p>Behind the pressure size button there is a button to reveal the size pressure curve panel. When you activate Size Pressure for tablets, then the Size Pressure curve becomes active, and can be adjusted.</p>
+<p>The pressure size curve allows you to adjust the falloff curve for the tablet pressure. It shows when Use Pressure is activated. The curve panel shows when clicking at the button.</p>
+<h5 id="selecting-points-2">Selecting Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/header/header-tools-and-options/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
+<p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
+<h5 id="adding-points-2">Adding Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/header/header-tools-and-options/adding-points.png" alt="Adding Points" loading="lazy"></figure>
+<p>You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.</p>
+<h5 id="navigation-elements-2">Navigation elements</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in</td>
+<td>Zooms in.</td>
+</tr>
+<tr>
+<td>Zoom out</td>
+<td>Zooms out.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="clipping-options-2">Clipping options</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/clipping-options.png" alt="Clipping options" loading="lazy"></figure>
+<p>Set up clipping for the stroke.</p>
+<h5 id="tools-3">Tools</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="handles-2">Handles</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/handles.png" alt="Handles" loading="lazy"></figure>
+<p>You can choose between Auto handle, Vector Handle and Auto Clamped.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Position X / Y</td>
+<td>The position of the selectedc curve point.</td>
+</tr>
+<tr>
+<td>Delete Points</td>
+<td>Deletes the selected curve point.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="curve-presets-2">Curve Presets</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/curve-presets.png" alt="Curve Presets" loading="lazy"></figure>
+<p>A curve preset to start with.</p>
+<h4 id="stroke-method">Stroke Method</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/stroke-method.png" alt="Stroke Method" loading="lazy"></figure>
+<p>Show the brush icon when painting.</p>
+<h5 id="dots">Dots</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/dots.png" alt="Dots" loading="lazy"></figure>
+<p>Apply paint on each mouse move step.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter</td>
+<td>The position of the brush while painting. Pressure sensitivity can be activated here.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in view in screen space or relative to brush size. Buttons are View and Brush Relatively..</td>
+</tr>
+<tr>
+<td>Input Samples</td>
+<td>Average multiple input samples together to smooth the brush stroke.</td>
+</tr>
+<tr>
+<td>Stabilize Stroke subpanel</td>
+<td>Brush lags behind the mouse and followers a smoother path when activated. · <strong>Size</strong>: Smooth stroke Size: minimum distance from the last point before stroke continues. · <strong>Factor</strong>: Smooth stroke factor: higher values give a smoother stroke.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="space">Space</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/space.png" alt="Space" loading="lazy"></figure>
+<p>Limit brush applications to the distance specified by spacing.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spacing</td>
+<td>Spacing between brush daubs as a percentage of a brush diameter. Pressure sensitivity activated here.</td>
+</tr>
+<tr>
+<td>Dash Ratio</td>
+<td>Ratio of samples in a cycle that the brush is enabled.</td>
+</tr>
+<tr>
+<td>Dash Length</td>
+<td>Length of a dash cycle measured in stroke samples.</td>
+</tr>
+<tr>
+<td>Jitter</td>
+<td>The position of the brush while painting. Pressure sensitivity can be activated here.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in view in screen space or relative to brush size. Buttons are View and Brush respectively.</td>
+</tr>
+<tr>
+<td>Input Samples</td>
+<td>Average multiple input samples together to smooth the brush stroke.</td>
+</tr>
+<tr>
+<td>Stabilize Stroke subpanel</td>
+<td>Brush lags behind the mouse and followers a smoother path when activated. · <strong>Size</strong>: Smooth stroke Size: minimum distance from the last point before stroke continues. · <strong>Factor</strong>: Smooth stroke factor: higher values give a smoother stroke.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="airbrush">Airbrush</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/airbrush.png" alt="Airbrush" loading="lazy"></figure>
+<p>Keep applying paint effect while hiding mouse (spray).</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rate</td>
+<td>Intervals between paints for airbrush.</td>
+</tr>
+<tr>
+<td>Jitter</td>
+<td>The position of the brush while painting. Pressure sensitivity can be activated here.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in view in screen space or relative to brush size. Buttons are View and Brush respectively.</td>
+</tr>
+<tr>
+<td>Input Samples</td>
+<td>Average multiple input samples together to smooth the brush stroke.</td>
+</tr>
+<tr>
+<td>Stabilize Stroke</td>
+<td>Brush lags behind the mouse and followers a smoother path when activated. · <strong>Size</strong>: Smooth stroke Size: minimum distance from the last point before stroke continues. · <strong>Factor</strong>: Smooth stroke factor: higher values give a smoother strok</td>
+</tr>
+</tbody>
+</table>
+<h5 id="line">Line</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/line.png" alt="Line" loading="lazy"></figure>
+<p>Drag a line with dabs separated according to spacing.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spacing</td>
+<td>Spacing between brush daubs as a percentage of a brush diameter.</td>
+</tr>
+<tr>
+<td>Dash Ratio</td>
+<td>Ratio of samples in a cycle that the brush is enabled.</td>
+</tr>
+<tr>
+<td>Dash Length</td>
+<td>Length of a dash cycle measured in stroke samples.</td>
+</tr>
+<tr>
+<td>Jitter</td>
+<td>The position of the brush while painting. Pressure sensitivity can be activated here.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in view in screen space or relative to brush size. Buttons are View and Brush respectively.</td>
+</tr>
+<tr>
+<td>Input Samples</td>
+<td>Average multiple input samples together to smooth the brush stroke.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="curve">Curve</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/curve.png" alt="Curve" loading="lazy"></figure>
+<p>Define the stroke curve with a bezier curve. Dabs are seperated according to spacing.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spacing</td>
+<td>Spacing between brush daubs as a percentage of a brush diameter.</td>
+</tr>
+<tr>
+<td>Paint Curve Data</td>
+<td>Make new or select existing paint curve data profiles.</td>
+</tr>
+<tr>
+<td>Dash Ratio</td>
+<td>Ratio of samples in a cycle that the brush is enabled.</td>
+</tr>
+<tr>
+<td>Dash Length</td>
+<td>Length of a dash cycle measured in stroke samples.</td>
+</tr>
+<tr>
+<td>Jitter</td>
+<td>The position of the brush while painting. Pressure sensitivity can be activated here.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in view in screen space or relative to brush size. Buttons are View and Brush respectively.</td>
+</tr>
+<tr>
+<td>Input Samples</td>
+<td>Average multiple input samples together to smooth the brush stroke.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="falloff-sub-panel">Falloff Sub panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/falloff-sub-panel.png" alt="Falloff Sub panel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/falloff-sub-panel-2.png" alt="Falloff Sub panel" loading="lazy"></figure>
+<p>This subpanel shows with all brushes in the Brush settings panel. This customizes the fall off of the brush, where the left is the center and right is the outer circle of the brush. Higher values is stronger falloff.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve Preset</td>
+<td>Select a falloff curve preset.</td>
+</tr>
+<tr>
+<td>Zoom In</td>
+<td>Zoom the graph in.</td>
+</tr>
+<tr>
+<td>Zoom Out</td>
+<td>Zoom the graph out.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clipping-options-3">Clipping Options</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/clipping-options.png" alt="Clipping Options" loading="lazy"></figure>
+<p>Control the minimum X and Y values and maximum X and Y values.</p>
+<h4 id="reset-view">Reset View</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/reset-view.png" alt="Reset View" loading="lazy"></figure>
+<p>Restore the default zoom value and center view.</p>
+<h4 id="reset-curve">Reset Curve</h4>
+<p>Reset to preset curve values.</p>
+<h4 id="presets">Presets</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/presets.png" alt="Presets" loading="lazy"></figure>
+<p>Quickly draw some default curve profiles.</p>
+<h3 id="cursor-sub-panel">Cursor Sub panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/cursor-sub-panel.png" alt="Cursor Sub panel" loading="lazy"></figure>
+<p>This subpanel shows with all brushes in the Brush settings panel.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show Brush</td>
+<td>Show the brush icon when painting.</td>
+</tr>
+<tr>
+<td>Cursor Color</td>
+<td>The brush icon color with adding.</td>
+</tr>
+<tr>
+<td>Falloff Opacity</td>
+<td>The brush icon falloff opacity. This is an overlay drawn by a percentage. · <strong>Override Overlay</strong>: When activated it won’t show the overlay when drawing. · <strong>Use Cursor Overlay</strong>: When activated, this will hide the overlay in the viewport completely.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="symmetry-panel">Symmetry panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/3d-viewport/sidebar/tool-tab-hair-curve-sculpt-mode/symmetry-panel.png" alt="Symmetry panel" loading="lazy"></figure>
+<p>Enable symmetry sculpting for single axis.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fto-master/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fhair-curves%2Fsculpt.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/to-master/docs2/content/editors/3d-viewport/hair-curves/sculpt.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#curves-menu">Curves menu</a><a class="h3" href="#sculpt-mode-curves-menu">Sculpt mode - Curves menu</a><a class="h2" href="#tools">Tools</a><a class="h3" href="#tool-shelf-hair-curve-sculpt-mode">Tool Shelf - Hair Curve - Sculpt mode</a><a class="h3" href="#tool-shelf-hair-curve-sculpt-mode-brushes">Tool Shelf - Hair Curve - Sculpt mode - Brushes</a><a class="h2" href="#sculpt-mode">Sculpt Mode</a><a class="h3" href="#sculpt-mode-2">Sculpt Mode</a><a class="h3" href="#brush-asset-panel">Brush Asset Panel</a><a class="h3" href="#brush-settings-panel">Brush Settings Panel</a><a class="h3" href="#brush-settings-panel-comb">Brush Settings Panel - Comb</a><a class="h3" href="#brush-settings-panel-grow-shrink">Brush Settings Panel - Grow/Shrink</a><a class="h3" href="#brush-settings-panel-pinch">Brush Settings Panel - Pinch</a><a class="h3" href="#brush-settings-panel-puff">Brush Settings Panel - Puff</a><a class="h3" href="#brush-settings-panel-pull-tip">Brush Settings Panel - Pull Tip</a><a class="h3" href="#brush-settings-panel-slide">Brush Settings Panel - Slide</a><a class="h3" href="#brush-settings-panel-smooth">Brush Settings Panel - Smooth</a><a class="h3" href="#brush-settings-panel-add">Brush Settings Panel - Add</a><a class="h3" href="#brush-settings-panel-delete">Brush Settings Panel - Delete</a><a class="h3" href="#brush-settings-panel-density">Brush Settings Panel - Density</a><a class="h3" href="#brush-settings-panel-select">Brush Settings Panel - Select</a><a class="h3" href="#stroke-sub-panel">Stroke Sub panel</a><a class="h3" href="#falloff-sub-panel">Falloff Sub panel</a><a class="h3" href="#cursor-sub-panel">Cursor Sub panel</a><a class="h3" href="#symmetry-panel">Symmetry panel</a></aside></div></body></html>

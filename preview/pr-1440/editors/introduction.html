@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Editors introduction · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1440 · <code>docs2/to-master</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../getting-started.html">Getting Started</a>
+<a href="../getting-started/introduction.html">Introduction</a>
+<a href="../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../getting-started/installation.html">Installation</a>
+<a href="../getting-started/quick-start.html">Quick Start</a>
+<a href="../getting-started/data-structure.html">Data Structure</a>
+<a href="../getting-started/differences.html">Comparison with Blender</a>
+<a href="../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<a href="../interface.html">Interface</a>
+<a href="../interface/overview.html">Interface Basics</a>
+<a href="../interface/windows.html">Windows</a>
+<a href="../interface/areas.html">Areas</a>
+<a href="../interface/editors.html">Editors</a>
+<a href="../interface/headers.html">Headers</a>
+<a href="../interface/footers.html">Footers</a>
+<a href="../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../interface/side-bars.html">Side Bars</a>
+<a href="../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../interface/properties.html">Properties</a>
+<a href="../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../interface/context-menus.html">Context Menus</a>
+<a href="../interface/floating-menus.html">Floating Menus</a>
+<a href="../interface/pie-menus.html">Pie Menus</a>
+<a href="../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<a href="../workspaces.html">Workspaces</a>
+<a href="../workspaces/workspaces.html">Managing Workspaces</a>
+<a href="../workspaces/main.html">Main</a>
+<a href="../workspaces/uv-editing.html">UV Editing</a>
+<a href="../workspaces/modeling.html">Modeling</a>
+<a href="../workspaces/nodes.html">Nodes</a>
+<a href="../workspaces/animation.html">Animation</a>
+<a href="../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../workspaces/shading.html">Shading</a>
+<a href="../workspaces/rendering.html">Rendering</a>
+<a href="../workspaces/sculpting.html">Sculpting</a>
+<a href="../workspaces/compositing.html">Compositing</a>
+<a href="../workspaces/scripting.html">Scripting</a>
+<a href="../workspaces/2d-animation.html">2D Animation</a>
+<a href="../workspaces/storyboarding.html">Storyboarding</a>
+<a href="../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../workspaces/masking.html">Masking</a>
+<a href="../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../workspaces/video-editing.html">Video Editing</a>
+<a href="../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<a href="../workspaces/assets.html">Assets</a>
+<a href="../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<a href="../editors.html">Editors</a>
+<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="3d-viewport/all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="3d-viewport/all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="3d-viewport/mesh/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="properties/render-properties-tab.html">Render</a>
+<a style="padding-left:3.5rem" href="shader-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="timeline/header.html">Header</a>
+<a href="topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/all-modes/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="3d-viewport/mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="3d-viewport/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="image-editor/tool-shelf.html">Tool Shelf</a>
+<a class="is-current" href="introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="properties/output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/edit/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="3d-viewport/mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="3d-viewport/object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="properties/view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="3d-viewport/all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<a style="padding-left:1.5rem" href="3d-viewport/curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:1.5rem" href="dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="drivers-editor/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:1.5rem" href="graph-editor/channel-list.html">Channel List</a>
+<a href="image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="properties/scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="3d-viewport/all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="3d-viewport/metaball.html">Metaball</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:1.5rem" href="dope-sheet/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:1.5rem" href="graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="properties/world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="3d-viewport/text.html">Text</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:1.5rem" href="properties/collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="shader-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="3d-viewport/lattice.html">Lattice</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="properties/object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="shader-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="3d-viewport/armature.html">Armature</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:1.5rem" href="properties/modifiers.html">Modifiers</a>
+<a style="padding-left:3.5rem" href="shader-editor/header/add-menu/layout.html">Layout</a>
+<a href="uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="3d-viewport/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="properties/visual-effects-properties-tab.html">Visual Effects</a>
+<a style="padding-left:1.5rem" href="3d-viewport/hair-curves.html">Hair Curves</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:1.5rem" href="properties/particle-properties-tab.html">Particles</a>
+<a style="padding-left:1.5rem" href="3d-viewport/point-cloud.html">Point Cloud</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="properties/physics-properties-tab.html">Physics</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/layout.html">Layout</a>
+<a href="compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="properties/object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="properties/object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="properties/bone-properties-tab.html">Bone</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<a style="padding-left:1.5rem" href="properties/bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="properties/material-properties-tab.html">Material</a>
+<a href="texture-node-editor.html">Texture Node Editor</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="properties/texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="properties/strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="properties/strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="shader-editor.html">Shader Editor</a>
+<a href="video-sequence-editor.html">Video Sequence Editor</a>
+<a href="movie-clip-editor.html">Movie Clip Editor</a>
+<a href="dope-sheet.html">Dope Sheet</a>
+<a href="timeline.html">Timeline</a>
+<a href="graph-editor.html">Graph Editor</a>
+<a href="drivers-editor.html">Drivers Editor</a>
+<a href="nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="text-editor.html">Text Editor</a>
+<a href="python-console.html">Python Console</a>
+<a href="info-editor.html">Info Editor</a>
+<a href="toolbar.html">Toolbar</a>
+<a href="outliner.html">Outliner</a>
+<a href="properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="properties/render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="properties/modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="properties/modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="properties/modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="properties/modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="properties/modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="properties/modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="properties/modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="properties/modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="properties/modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="properties/particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="properties/object-data-properties-tab/volume-object.html">Volume Object</a>
+<a href="file-browser.html">File browser</a>
+<a href="asset-browser.html">Asset Browser</a>
+<a href="spreadsheet.html">Spreadsheet</a>
+<a href="preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="timeline/viewport.html">Viewport</a>
+<a style="padding-left:2.5rem" href="compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<a href="../assets.html">Assets</a>
+<a href="../assets/essentials-library.html">Essentials Library</a>
+<a href="../assets/default-library.html">Default Library</a>
+<a href="../assets/compositor-library.html">Compositor Library</a>
+<a href="../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<a href="../extensions.html">Extensions and Addons</a>
+<a href="../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../extensions/coworker.html">Coworker</a>
+<a href="../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<a href="../keymap.html">Keymap</a>
+<a href="../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<a href="../advanced.html">Advanced</a>
+<a href="../advanced/advanced-command-line.html">Command Line</a>
+<a href="../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../appendix.html">Information</a>
+<a href="../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../appendix/manual-update-history.html">Documentation History</a>
+<a href="../appendix/gpl-license.html">About the GPL License</a>
+<a href="../appendix/community-influences.html">The Community Influences</a>
+<a href="../appendix/glossary.html">Glossary</a>
+<a href="../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<a href="../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Editors introduction</div><h1 class="pv-title">Editors introduction</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 14 min read</span></div><article class="ui-doc-body"><h2 id="introduction">Introduction</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/introduction.png" alt="Introduction" loading="lazy"></figure>
+<p>The Bforartists Interface is made of several workspaces. And every workspace layout is made of several editors.</p>
+<p>The editors brings the functionality to the layout. Every editor type has another purpose. The 3D View for example is made to modify 3D data such as meshes or curves.</p>
+<p>In this chapter we will talk about the general aspects of the editors. And give an overview over the available editor types and their purpose.</p>
+<p>The detailed description happens for every editor one by one then.</p>
+<h2 id="header-right-click-menu">Header right click menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/header-right-click-menu.png" alt="Header right click menu" loading="lazy"><figcaption>Header right click menu</figcaption></figure>
+<p>Each header has a header menu that appears when you right click at it.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Header</td>
+<td>Hides the header. To reveal it you have to click at the small triangle at the right side then.</td>
+</tr>
+<tr>
+<td>Flip to Bottom / Top</td>
+<td>Displays the header at the top or the bottom of the editor.</td>
+</tr>
+<tr>
+<td>Collapse Menus</td>
+<td>Displays the text menus as one collapsed icon.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hide-editortype-menu">Hide Editortype Menu</h3>
+<p>Hides the editortype menu where you can switch to other editor types.</p>
+<h4 id="horizontal-split">Horizontal Split</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/horizontal-split.png" alt="Horizontal Split" loading="lazy"></figure>
+<p>Splits the current view horizontally into two independent editor windows.</p>
+<h4 id="vertical-split">Vertical Split</h4>
+<p>Splits the current view vertically into two independent editor windows.</p>
+<h4 id="duplicate-area-into-new-window">Duplicate Area into New Window</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/duplicate-area-into-new-window.png" alt="Duplicate Area into New Window" loading="lazy"><figcaption>Duplicate Area into New Window</figcaption></figure>
+<blockquote>
+<p><strong>Duplicate Area into New Window</strong> opens this editor in a floating window. See <strong><a href="../interface/windows.html#floating-editor-windows">Floating editor windows</a></strong> in the Interface chapter.</p>
+</blockquote>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Maximize Area</td>
+<td>Displays the editor maximized with menus. To return from the maximized view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Space</kbd></span>. Or reuse the menu item in the area menu.</td>
+</tr>
+<tr>
+<td>Toggle Full screen Area</td>
+<td>Displays the editor maximized without menus. To return from the full screen view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd></span>.</td>
+</tr>
+<tr>
+<td>Close Area</td>
+<td>Closes the editor.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="area-options">Area Options</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/area-options.png" alt="Area Options" loading="lazy"></figure>
+<p>When you right click at a border of an editor, then you will call the Area options menu.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal Split</td>
+<td>Splits the current view horizontally into two independent editor windows.</td>
+</tr>
+<tr>
+<td>Vertical Split</td>
+<td>Splits the current view vertically into two independent editor windows.</td>
+</tr>
+<tr>
+<td>Join Areas</td>
+<td>Joins the two editors that shares the border.</td>
+</tr>
+<tr>
+<td>Swap Areas</td>
+<td>Swaps the content of the editors that shares the border.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="editor-type-menu">Editor Type menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/editor-type-menu.png" alt="Editor Type menu" loading="lazy"></figure>
+<p>The Editor Type menu gives you an overview of all available editor types. And here you can switch to another editortype.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/editor-type-menu.jpg" alt="Editor Type menu" loading="lazy"></figure>
+<p>This menu is hidden in the standard workspaces. See Header Menu, Hide Editortype menu.</p>
+<h2 id="general-right-click-menus">General Right Click menus</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/general-right-click-menus.jpg" alt="General Right Click menus" loading="lazy"><figcaption>General Right Click menus</figcaption></figure>
+<p>Not every functionality has a menu entry. Some is even a right click at an existing menu. Like clicking at an operator or a property in the UI to add it to the quick favourites menu or to add a shortcut.</p>
+<p>Note that not all right click menu functionality might be documented. This chapter here covers the general right click functionality that can be found in all editors.</p>
+<h3 id="header-menu">Header menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/header-menu.png" alt="Header menu" loading="lazy"></figure>
+<p>This menu appears when you right click in the header. Note that in the header of the 3d view you need to click between menu items or operators to reveal this menu. Or right click at a item and choose Header.</p>
+<h4 id="show-header">Show header</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/show-header.png" alt="Show header" loading="lazy"></figure>
+<p>Hides the header. Obviously you can't reveal the header this way, since now the header is hidden, and the &quot;toggle&quot; is not to reach anymore. But there is another way.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/show-header-2.png" alt="Show header" loading="lazy"></figure>
+<p>Hidden headers shows a little triangle button at the right side. You can reveal the header by clicking at it.</p>
+<h4 id="show-menus">Show Menus</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/show-menus.png" alt="Show Menus" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/show-menus-2.png" alt="Show Menus" loading="lazy"></figure>
+<p>Collapses or expands the text menus.</p>
+<p>In collapsed state the menus is reduced to one button. When you click it then you can access the whole menu.</p>
+<h4 id="flip-header-to-top-or-bottom">Flip Header to top or bottom</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/flip-header-to-top-or-bottom.png" alt="Flip Header to top or bottom" loading="lazy"><figcaption>Flip Header to top or bottom</figcaption></figure>
+<p>The header can either be displayed at the top or at the bottom.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/flip-header-to-top-or-bottom-2.png" alt="Flip Header to top or bottom" loading="lazy"><figcaption>Flip Header to top or bottom</figcaption></figure>
+<p>Right click at an empty space somewhere at the menu bar of an editor. You will see a menu now. This allows you to choose if you want to display the menu bar at the top of the editor, or at the bottom. The menu item is either called Flip to Top, or Flip to Bottom, dependent of the current status.</p>
+<h3 id="general-right-click-menu-at-toolshelf-and-sidebar-panel-headers">General right click menu at Toolshelf and Sidebar panel headers</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/general-right-click-menu-at-toolshelf-and-sideba.png" alt="General right click menu at Toolshelf and Sidebar panel headers" loading="lazy"><figcaption>General right click menu at Toolshelf and Sidebar panel headers</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pin</td>
+<td>Show the pinned panel on all tabs.</td>
+</tr>
+<tr>
+<td>Reset Panel Zoom</td>
+<td>You can zoom the panels with holding down control and move the mouse. Reset Panel Zoom resets this zoom to 100%</td>
+</tr>
+<tr>
+<td>Flip Region to Left / Right</td>
+<td>Flips the positions of sidebar and toolshelf. You can also display the tools at the right, and the sidebar at the left.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="general-right-click-menus-at-menu-operators">General right click menus at menu operators</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/general-right-click-menus-at-menu-operators.jpg" alt="General right click menus at menu operators" loading="lazy"><figcaption>General right click menus at menu operators</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/general-right-click-menus-at-menu-operators.png" alt="General right click menus at menu operators" loading="lazy"><figcaption>General right click menus at menu operators</figcaption></figure>
+<p>This menu appears for example when you right click at an operator in a text menu</p>
+<h4 id="add-to-quick-favourites">Add to Quick Favourites</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/add-to-quick-favourites.png" alt="Add to Quick Favourites" loading="lazy"><figcaption>Add to Quick Favourites</figcaption></figure>
+<p>Adds the operator to the quick favourites menu.</p>
+<h4 id="assign-shortcut">Assign Shortcut</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/assign-shortcut.png" alt="Assign Shortcut" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/assign-shortcut-2.png" alt="Assign Shortcut" loading="lazy"></figure>
+<p>Allows you to assign a shortcut or edit the existing shortcut.</p>
+<h4 id="online-python-reference">Online Python Reference</h4>
+<p>Opens the Blender Python Reference. Note that this link goes to the Blender page.</p>
+<h4 id="copy-python-command">Copy Python Command</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/copy-python-command.png" alt="Copy Python Command" loading="lazy"></figure>
+<p>Copies the python command of the operator. Which you then can paste into a text editor.</p>
+<h4 id="edit-source">Edit Source</h4>
+<p>This is mainly of use for addon developers, but also works for the UI code. It opens the python source code of the selected element in the text editor. When you have the text editor open then the source code opens directly in the text editor. If not then you have to use the dropdown box to choose the python file. Note that some elements in the UI does not have python source code, but C source code. You will get a warning then.</p>
+<h4 id="header">Header</h4>
+<p>See Header menu above.</p>
+<h2 id="right-click-menus-at-tools-and-properties">Right click menus at tools and properties</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties.png" alt="Right click menus at tools and properties" loading="lazy"><figcaption>Right click menus at tools and properties</figcaption></figure>
+<p>Every tool or UI element has usually a RMB menu where you can find various things.</p>
+<p>The content is varying, dependent of the tool where you right click at. Value edit boxes have for example a Reset to Default Value menu item. For other tools you might be able to add or change the shortcut here. They all have the last three menu items, Online Python Reference, Edit source and Edit translation.</p>
+<p>A few examples below. But we will cover important right click functionality also at the specific tool if necessary. The outliner has for example quite a few right click menus that are not documented in the outliner chapter.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-2.png" alt="Right click menus at tools and properties" loading="lazy"><figcaption>Right click menus at tools and properties</figcaption></figure>
+<p>Note that there are also right click menus that are pure double entries that exists in the regular UI. Like this Library Override example here.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-5.png" alt="Right click menus at tools and properties" /> <img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-4.png" alt="Right click menus at tools and properties" /> <img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-3.png" alt="Right click menus at tools and properties" /></td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-6.png" alt="Right click menus at tools and properties" /></td>
+<td></td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-7.png" alt="Right click menus at tools and properties" /></td>
+</tr>
+<tr>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-8.png" alt="Right click menus at tools and properties" /></td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/right-click-menus-at-tools-and-properties-9.png" alt="Right click menus at tools and properties" /></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="assign-shortcut-change-shortcut-non-keyboard-shortcut-remove-shortcut">Assign Shortcut / Change Shortcut / Non Keyboard Shortcut / Remove Shortcut</h3>
+<p>These buttons allows you to assign or to remove a new shortcut to the tool or to change an existing shortcut for the tool. Note that this may or may not work proper. For some tools you might need to change the shortcut in the User preferences. Non Keyboard shortcut is such a case.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Online Python Reference</td>
+<td>The Online Python Reference button opens the Bforartists Online Python reference page in your browser.</td>
+</tr>
+<tr>
+<td>Edit Source</td>
+<td>The Edit Source button opens the corresponding Python file for this element. Note that you need to be in the Scripting layout. The file loads in the Text editor there.</td>
+</tr>
+<tr>
+<td>Reset to Default Value</td>
+<td>Reset to Default Value is usually a RMB menu entry when you right click at an edit box. It resets the value to the default value.</td>
+</tr>
+<tr>
+<td>Reset All to Default Value</td>
+<td>Reset All to Default Value is usually a RMB menu entry when you right click at an edit box combo made of two, three or more edit boxes together. It resets the value for all the edit boxes in the combo to the default value.</td>
+</tr>
+<tr>
+<td>Reset Single to Default Value</td>
+<td>Reset Single to Default Value is usually a RMB menu entry when you right click at an edit box combo made of two, three or more edit boxes together. It resets the value for the single edit box under the mouse to the default value.</td>
+</tr>
+<tr>
+<td>Unset</td>
+<td>Unset is usually a RMB menu entry when you right click at an edit box. It is somehow similar to Reset to Default Value. But it clears the property instead of resetting it to the default value. Which can end in another value.</td>
+</tr>
+<tr>
+<td>Insert Keyframes</td>
+<td>Inserts keyframes at the current position.</td>
+</tr>
+<tr>
+<td>Insert Single Keyframes</td>
+<td>Inserts a single keyframe at the current position.</td>
+</tr>
+<tr>
+<td>Add Driver</td>
+<td>In Bforartists lots of things can be animated. Also buttons. Add Driver does exactly what it tells. It adds a driver for animation needs to the element. The driver can be edited in the drivers editor.</td>
+</tr>
+<tr>
+<td>Copy Driver</td>
+<td>Copies the driver.</td>
+</tr>
+<tr>
+<td>Copy Driver to Selected</td>
+<td>Copies the driver from the active to the selected object. You need to have more than one object selected. Select first object, hold shift, select second object.</td>
+</tr>
+<tr>
+<td>Copy all Drivers to Selected</td>
+<td>Copies all driver from the active to the selected object. You need to have more than one object selected. Select first object, hold shift, select second object.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="edit-driver">Edit Driver</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/edit-driver.png" alt="Edit Driver" loading="lazy"></figure>
+<p>Opens the driver settings where you can edit the driver. It is the same settings that are covered in the driver editor. So we won't cover it here.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open Drivers Editor</td>
+<td>Opens the Drivers editor as a floating window.</td>
+</tr>
+<tr>
+<td>Add Single Driver</td>
+<td>In Bforartists lots of things can be animated. Also buttons. Add Driver does exactly what it tells. It adds a driver for animation needs to the single element under the mouse.</td>
+</tr>
+<tr>
+<td>Add to Keying Set</td>
+<td>Add to Keying Set adds the information of the element to the current key frame.</td>
+</tr>
+<tr>
+<td>Add All to Keying Set</td>
+<td>Add All to Keying Set adds the information of the element to the current key frame.</td>
+</tr>
+<tr>
+<td>Add single to Keying Set</td>
+<td>Add to Keying Set adds the information of the element to the current key frame.</td>
+</tr>
+<tr>
+<td>Remove from Keying Set</td>
+<td>Remove from Keying Set removes the information of the element from the current key frame</td>
+</tr>
+<tr>
+<td>Copy All to Selected</td>
+<td>Copy to Selected copies the property of this element to all selected objects or bones.</td>
+</tr>
+<tr>
+<td>Copy Single to Selected</td>
+<td>Copy to Selected copies the property of this element to selected active objects or bones.</td>
+</tr>
+<tr>
+<td>Copy Data Path</td>
+<td>Copy Data Path copies the last element of the RNA data path for this property.</td>
+</tr>
+<tr>
+<td>Copy Full Data Path</td>
+<td>Copy Data Path copies the full RNA data path for this property.</td>
+</tr>
+<tr>
+<td>Copy as new Driver</td>
+<td>Create a new driver with this property as input, and copy it. It can then be pasted to the target property. Or pasted as a driver variable to extend an existing driver.</td>
+</tr>
+<tr>
+<td>Mark as Asset</td>
+<td>Marks the current property as an asset. It will be added to the active asset library then.</td>
+</tr>
+<tr>
+<td>Clear Asset</td>
+<td>Removes the asset from the asset library.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resize-tool-shelf-and-properties-content">Resize Tool Shelf and Properties content</h2>
+<p>You can resize the Tool Shelf content and the Properties Sidebar content. This means that you can zoom in or out. This trick also works in the Properties Editor.</p>
+<p>Move the mouse over the upper region of the Tool Shelf.<br />
+Hold down Ctrl key<br />
+Click with Middle Mouse button. The mouse pointer will turn into two white triangles.</p>
+<p>Now drag up or down to resize the area content</p>
+<p>OR</p>
+<p>Move the mouse over the upper region of the Tool Shelf.<br />
+Simply press Numpad + or Numpad -<br />
+To reset the area content to default scale move the mouse over the area and press Home key ( german keyboard layout Pos 1)</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/resize-tool-shelf-and-properties-content.png" alt="Resize Tool Shelf and Properties content" loading="lazy"><figcaption>Resize Tool Shelf and Properties content</figcaption></figure>
+<h2 id="hotkey-recognition">Hotkey recognition</h2>
+<p>What hotkey set works is dependent of the mouse position, over which editor the mouse is. Means when your mouse is over the 3d View, then the hotkeys from the 3D View gets recognized. This means when your mouse is not over the 3D View but the Outliner, and you press the hotkey for let's say move, then this hotkey will not be recognized.</p>
+<p>A special behavior shows the sidebars here. They are part of the editors. But to have the mouse over the toolbars at the side can already prevent a hotkey from being triggered. Your mouse needs to stay in the active part of the editor.</p>
+<h2 id="the-editor-types">The editor types</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types.png" alt="The editor types" loading="lazy"></figure>
+<p>Bforartists provides a number of different <strong>Editor</strong> types for different purposes. For example, the 3D view is made to modify the 3D data, such as meshes or curves. You can have more than one editor window open at the same time.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The 3D View is the editor where you do your 3D work. The 3D view is the editor to model meshes, etc. . It's the core editor for everything where you work at your 3D data. You will find it in every layout where you need to display your 3d data.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-2.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Image Editor is the place where you work with textures.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-3.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The UV Editor is the place where you work with UV mapping. It starts pretty similar to the Image editor. But contains the UV tools.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-4.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The editor to do post processing. It is node based.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-5.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The editor to do texture work. It is node based.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-5.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>This editor allows you to manipulate geometry. It is node based.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-6.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The shader Node editor is to create the materials for your objects. It is node based.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-7.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The video sequence editor allows you to work with video and audio clips. Here you can cut videos. This editor can be found in the video editing layout.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-8.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The movie clip editor is for tracking purposes. You will find it in the Motion Tracking layout.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-9.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Dope Sheet Editor is the place where you deal with key frames. The Dope Sheet Editor is one of five special editors for animation needs. You will find it in the animation layout.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-9.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The timeline editor provides you with a toolbar for all animation needs. Start, stop, record, set keying set, etc. The Timeline Editor is one of five special editors for animation needs. You will find it in the animation layout.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-10.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Graph Editor is the place where you work with function curves. The Graph Editor is one of five special editors for animation needs.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-11.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>See and edit drivers. The Drivers Editor is one of five special editors for animation needs.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-12.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Nonlinear Animation Editor, in short NLA Editor, is the place where you work with Clips and Actions. The Nonlinear Animation Editor is one of five special editors for animation needs.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-12.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Text Editor is the place where you write code. The scripts for addons for example. You will find it in the Scripting layout.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-12.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Python console gives you access to the Python API. You will find it in the Scripting layout.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-13.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Info Editor provides you with a list of the last performed operations. Including error messages. You will find it in the Scripting layout.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-13.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>It is as the name says a toolbar. Usually just the header area is visible. The rest of the editor has no purpose.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-14.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Outliner is the place that gives you an overview of what is in the scene and in the file.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-15.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Properties editor is the place where you can see and tweak all properties for the 3D scene. The range goes from render settings across object settings up to particle settings. It is the data heart.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-16.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<p>&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;The File Browser is the editor in which you can load and save data. Your last blend file for example.&lt;br /&gt;
+&lt;br /&gt;
+This editor is not part of the standard workspaces. It usually gets called when you load or save a data.&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;/images/editors/introduction/the-editor-types-17.png&quot; class=&quot;thumb&quot; alt=&quot;The editor types&quot; /&gt; &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The spreadsheet editor provides you with mesh informations. This information can then for example be used in the geometry nodes editor.</td>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/introduction/the-editor-types-18.png" alt="The editor types" /></td>
+</tr>
+</tbody>
+</table>
+<p>&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;The Preferences is the place where you manage all the settings of the software. Theme, Key map, etc.&lt;br /&gt;
+&lt;br /&gt;
+This editor is not present in the standard workspaces. This editor can be called from the edit menu in the top bar.&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;/images/editors/introduction/the-editor-types-19.png&quot; class=&quot;thumb&quot; alt=&quot;The editor types&quot; /&gt; &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fto-master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fintroduction.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/to-master/docs2/content/editors/introduction.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#introduction">Introduction</a><a class="h2" href="#header-right-click-menu">Header right click menu</a><a class="h3" href="#hide-editortype-menu">Hide Editortype Menu</a><a class="h2" href="#area-options">Area Options</a><a class="h2" href="#editor-type-menu">Editor Type menu</a><a class="h2" href="#general-right-click-menus">General Right Click menus</a><a class="h3" href="#header-menu">Header menu</a><a class="h3" href="#general-right-click-menu-at-toolshelf-and-sidebar-panel-headers">General right click menu at Toolshelf and Sidebar panel headers</a><a class="h3" href="#general-right-click-menus-at-menu-operators">General right click menus at menu operators</a><a class="h2" href="#right-click-menus-at-tools-and-properties">Right click menus at tools and properties</a><a class="h3" href="#assign-shortcut-change-shortcut-non-keyboard-shortcut-remove-shortcut">Assign Shortcut / Change Shortcut / Non Keyboard Shortcut / Remove Shortcut</a><a class="h3" href="#edit-driver">Edit Driver</a><a class="h2" href="#resize-tool-shelf-and-properties-content">Resize Tool Shelf and Properties content</a><a class="h2" href="#hotkey-recognition">Hotkey recognition</a><a class="h2" href="#the-editor-types">The editor types</a></aside></div></body></html>

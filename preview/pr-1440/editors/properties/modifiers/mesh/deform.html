@@ -1,0 +1,1412 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Deform modifiers (Mesh) · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1440 · <code>docs2/to-master</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../../../../getting-started.html">Getting Started</a>
+<a href="../../../../getting-started/introduction.html">Introduction</a>
+<a href="../../../../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../../../../getting-started/installation.html">Installation</a>
+<a href="../../../../getting-started/quick-start.html">Quick Start</a>
+<a href="../../../../getting-started/data-structure.html">Data Structure</a>
+<a href="../../../../getting-started/differences.html">Comparison with Blender</a>
+<a href="../../../../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<a href="../../../../interface.html">Interface</a>
+<a href="../../../../interface/overview.html">Interface Basics</a>
+<a href="../../../../interface/windows.html">Windows</a>
+<a href="../../../../interface/areas.html">Areas</a>
+<a href="../../../../interface/editors.html">Editors</a>
+<a href="../../../../interface/headers.html">Headers</a>
+<a href="../../../../interface/footers.html">Footers</a>
+<a href="../../../../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../../../../interface/side-bars.html">Side Bars</a>
+<a href="../../../../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../../../../interface/properties.html">Properties</a>
+<a href="../../../../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../../../../interface/context-menus.html">Context Menus</a>
+<a href="../../../../interface/floating-menus.html">Floating Menus</a>
+<a href="../../../../interface/pie-menus.html">Pie Menus</a>
+<a href="../../../../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../../../../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../../../../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<a href="../../../../workspaces.html">Workspaces</a>
+<a href="../../../../workspaces/workspaces.html">Managing Workspaces</a>
+<a href="../../../../workspaces/main.html">Main</a>
+<a href="../../../../workspaces/uv-editing.html">UV Editing</a>
+<a href="../../../../workspaces/modeling.html">Modeling</a>
+<a href="../../../../workspaces/nodes.html">Nodes</a>
+<a href="../../../../workspaces/animation.html">Animation</a>
+<a href="../../../../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../../../../workspaces/shading.html">Shading</a>
+<a href="../../../../workspaces/rendering.html">Rendering</a>
+<a href="../../../../workspaces/sculpting.html">Sculpting</a>
+<a href="../../../../workspaces/compositing.html">Compositing</a>
+<a href="../../../../workspaces/scripting.html">Scripting</a>
+<a href="../../../../workspaces/2d-animation.html">2D Animation</a>
+<a href="../../../../workspaces/storyboarding.html">Storyboarding</a>
+<a href="../../../../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../../../../workspaces/masking.html">Masking</a>
+<a href="../../../../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../../../../workspaces/video-editing.html">Video Editing</a>
+<a href="../../../../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<a href="../../../../workspaces/assets.html">Assets</a>
+<a href="../../../../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../../../../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<a href="../../../../editors.html">Editors</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../render-properties-tab.html">Render</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../timeline/header.html">Header</a>
+<a href="../../../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../../../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/channel-list.html">Channel List</a>
+<a href="../../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/metaball.html">Metaball</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/text.html">Text</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:1.5rem" href="../../collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/lattice.html">Lattice</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="../../object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/armature.html">Armature</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:1.5rem" href="../../modifiers.html">Modifiers</a>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/layout.html">Layout</a>
+<a href="../../../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="../../visual-effects-properties-tab.html">Visual Effects</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/hair-curves.html">Hair Curves</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:1.5rem" href="../../particle-properties-tab.html">Particles</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/point-cloud.html">Point Cloud</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="../../physics-properties-tab.html">Physics</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/layout.html">Layout</a>
+<a href="../../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../../object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../../bone-properties-tab.html">Bone</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<a style="padding-left:1.5rem" href="../../bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="../../material-properties-tab.html">Material</a>
+<a href="../../../texture-node-editor.html">Texture Node Editor</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../../texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../../strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="../../strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../../../shader-editor.html">Shader Editor</a>
+<a href="../../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../../../dope-sheet.html">Dope Sheet</a>
+<a href="../../../timeline.html">Timeline</a>
+<a href="../../../graph-editor.html">Graph Editor</a>
+<a href="../../../drivers-editor.html">Drivers Editor</a>
+<a href="../../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../../../text-editor.html">Text Editor</a>
+<a href="../../../python-console.html">Python Console</a>
+<a href="../../../info-editor.html">Info Editor</a>
+<a href="../../../toolbar.html">Toolbar</a>
+<a href="../../../outliner.html">Outliner</a>
+<a href="../../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../../render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../../render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../../render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="generate.html">Generate modifiers (Mesh)</a>
+<a class="is-current" style="padding-left:2.5rem" href="deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../../physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../../object-data-properties-tab/volume-object.html">Volume Object</a>
+<a href="../../../file-browser.html">File browser</a>
+<a href="../../../asset-browser.html">Asset Browser</a>
+<a href="../../../spreadsheet.html">Spreadsheet</a>
+<a href="../../../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../../../timeline/viewport.html">Viewport</a>
+<a style="padding-left:2.5rem" href="../../../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../../shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<a href="../../../../assets.html">Assets</a>
+<a href="../../../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../../../assets/default-library.html">Default Library</a>
+<a href="../../../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<a href="../../../../extensions.html">Extensions and Addons</a>
+<a href="../../../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../../../../extensions/coworker.html">Coworker</a>
+<a href="../../../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../../../../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<a href="../../../../keymap.html">Keymap</a>
+<a href="../../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<a href="../../../../advanced.html">Advanced</a>
+<a href="../../../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../../../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../../../../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../../../../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../../../../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../../../../appendix.html">Information</a>
+<a href="../../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../../../appendix/gpl-license.html">About the GPL License</a>
+<a href="../../../../appendix/community-influences.html">The Community Influences</a>
+<a href="../../../../appendix/glossary.html">Glossary</a>
+<a href="../../../../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<a href="../../../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties › Mesh › Modifiers tab › Deform modifiers</div><h1 class="pv-title">Deform modifiers (Mesh)</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 26 min read</span></div><article class="ui-doc-body"><h2 id="armature">Armature</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/armature.png" alt="Armature" loading="lazy"></figure>
+<p>An armature system allows to deform objects accurately by posing bones. The Armature modifier contains the armature settings at the mesh end.</p>
+<p>This modifier gets created automatically when you parent a mesh to an armature.</p>
+<h3 id="object">Object</h3>
+<p>The name of the armature object used by this modifier.</p>
+<h3 id="vertex-group">Vertex Group</h3>
+<p>A vertex group of the object, which weights will be used to determine the influence of this modifier’s results when mixing it with the results from other Armature ones.</p>
+<p>This is only of use when having at least two of these modifiers on the same object, with Multi Modifier activated.</p>
+<h4 id="invert">Invert</h4>
+<p>Inverts the influence set by the vertex group.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preserve Volume</td>
+<td>Use quaternions for preserving volume of object during deformation. Without Preserve Volume, rotations at joints tend to scale down the neighboring geometry, up to nearly zero at 180 degrees from rest position. With it, the geometry is no longer scaled down, but there is a discontinuity when reaching 180 degrees from rest position.</td>
+</tr>
+<tr>
+<td>Multi Modifier</td>
+<td>You can parent an object to more than one armature. The Multi Modifier allows you to use several armatures to deform the same object, all based on the “non-deformed” data. The results of the Armature modifiers are then mixed together, using the weights of the Vertex Group as “mixing guides”.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bind-to">Bind to</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/bind-to.png" alt="Bind to" loading="lazy"></figure>
+<h4 id="vertex-groups">Vertex Groups</h4>
+<p>Meshes and lattices only. Use Vertex groups for deforming the mesh. A bone named “forearm”, will only affect the vertices in the “forearm” vertex group. The influence of one bone on a given vertex is controlled by the weight of this vertex in the relevant group.</p>
+<p>The vertex groups are located in the Object Data Properties in the Properties editor.</p>
+<h4 id="bone-envelopes">Bone Envelopes</h4>
+<p>Use the Bone envelopes to deform vertices or control points near them, defined by each bone’s envelope radius and distance.</p>
+<p>When envelopes are disabled, Bforartists uses the set of existing vertex group names to determine which bones influences what mesh part.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/bone-envelopes.png" alt="Bone Envelopes" loading="lazy"></figure>
+<p>Bone envelopes display can be turned on in the Viewport Display panel in the Object Data properties tab in the Properties Editor. Display as ...</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/bone-envelopes-2.png" alt="Bone Envelopes" loading="lazy"></figure>
+<p>And can be adjusted in the Transform panel in the sidebar of the 3D View, in Edit mode.</p>
+<h2 id="cast">Cast</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/cast.png" alt="Cast" loading="lazy"></figure>
+<p>The Cast modifier shifts the shape of a mesh, curve, surface or lattice object, towards predefined shapes. Sphere, cylinder, cuboid.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> For performance reasons, this modifier only works with local coordinates. If the modified object looks wrong, you may need to apply its transformations, especially when casting to a cylinder.</p></div>
+<h3 id="shape">Shape</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/shape.png" alt="Shape" loading="lazy"></figure>
+<p>Choose the target shape of the projection: Sphere, Cylinder or Cuboid.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Axis</td>
+<td>The directions in which the modifier works. For a Cylinder shape the Z axis remains unaffected.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>The factor to control blending between original and cast vertex positions. The factor is a linear interpolation. 0.0 gives original coordinates, and the modifier has no effect then. 1.0 casts to the target shape. Values below 0.0 or above 1.0 exaggerate the deformation.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>A value above 0.0 defines a sphere of influence. Vertices outside it are not affected by the modifier.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Alternative size for the projected shape. If zero, it is defined by the initial shape and the control object, if any.</td>
+</tr>
+<tr>
+<td>Size from Radius</td>
+<td>Calculate Size from Radius. Can give smoother results.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Restrict the effect to the vertices in that vertex group. · <strong>Invert</strong>: Inverts the influence of the selected vertex group.</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>The name of an object to control the effect. The location of this object’s origin defines the center of the projection. And its size and rotation transform the projected vertices.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="curve">Curve</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/curve.png" alt="Curve" loading="lazy"></figure>
+<p>The Curve modifier deforms a mesh along a curve object. You need to have a curve object in the scene, and choose it as the curve object.</p>
+<p>The modifier works in global space on a dominant axis, X, Y, or Z. When you move your mesh in the dominant direction, the object will move along the curve. When you pull into the other axis directions then the object will move away from the dominant axis, and deform.</p>
+<p>When you move the object beyond the curve’s ends, the object will keep the deformation from the latest curve point.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/curve-2.png" alt="Curve" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/curve-3.png" alt="Curve" loading="lazy"></figure>
+<p>If the curve is 3D, then the rotation of the object can be controlled by the mean tilt of the curve control points. The mean tilt can be found in edit mode in the sidebar in the Transform panel. Other options in the Shape panel can also have an influence at the deforming result. Like Stretch.</p>
+<h3 id="curve-object">Curve Object</h3>
+<p>The name of the curve object that will affect the deformed object.</p>
+<h3 id="deformation-axis">Deformation Axis</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/deformation-axis.png" alt="Deformation Axis" loading="lazy"></figure>
+<p>The axis to deform along.</p>
+<h3 id="vertex-group-2">Vertex Group</h3>
+<p>Restrict the effect to the vertices in that vertex group.</p>
+<h4 id="invert-2">Invert</h4>
+<p>Inverts the influence of the selected vertex group.</p>
+<h2 id="displace">Displace</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/displace.png" alt="Displace" loading="lazy"></figure>
+<p>The Displace modifier displaces vertices in a mesh based on the greyscale values of a texture. You can use image textures or procedural textures.</p>
+<h3 id="workflow">Workflow</h3>
+<p>Create a texture. Switch to the Texture tab. Load an image texture, or change the type to any procedural image type that fits your needs. Like Clouds.</p>
+<h3 id="texture">Texture</h3>
+<p>The name of the texture from which the displacement for each vertex is derived. If this field is empty, the modifier defaults to 1.0 (white).</p>
+<h4 id="texture-prop">Texture Prop</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/texture-prop.png" alt="Texture Prop" loading="lazy"></figure>
+<h5 id="texture-browser">Texture browser</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png" alt="Texture browser" loading="lazy"></figure>
+<p>A list of the available textures</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texture Edit Box</td>
+<td>The name of the currently active texture. Allows to rename the texture too.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Keep this data even when it has no user in the scene.</td>
+</tr>
+<tr>
+<td>Add Texture</td>
+<td>Add a new texture.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes the texture. Note that the texture is still in the browser list.</td>
+</tr>
+<tr>
+<td>Change Context</td>
+<td>Jump to texture tab and show the texture.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="coordinates">Coordinates</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/coordinates.png" alt="Coordinates" loading="lazy"></figure>
+<p>The texture coordinate system to use for the displacement.</p>
+<p>The displacement can be along a particular local axis, along the vertex normal. Or the separate RGB components of the texture can be used to displace vertices in the local X, Y and Z directions simultaneously. This is called Vector Displacement.</p>
+<h3 id="direction">Direction</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/direction.png" alt="Direction" loading="lazy"></figure>
+<p>The direction along which to displace the vertices.</p>
+<h4 id="x-y-z">X, Y, Z</h4>
+<p>Displace along an axis.</p>
+<h5 id="space">Space</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/space.png" alt="Space" loading="lazy"></figure>
+<p>With a direction set to X, Y, Z, or XYZ the modifier can either displace along local or global axes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>Displace along the vertex normal.</td>
+</tr>
+<tr>
+<td>Custom Normal</td>
+<td>Displace along (averaged) custom normals, instead of vertex normals.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rgb-to-xyz">RGB to XYZ</h4>
+<p>Displace along local XYZ axes individually using the RGB components of the texture. Red values displaced along the X axis, Green along the Y, Blue along the Z axis.</p>
+<h5 id="space-2">Space</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/space-2.png" alt="Space" loading="lazy"></figure>
+<p>With a direction set to X, Y, Z, or XYZ the modifier can either displace along local or global axes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strength</td>
+<td>The strength of the displacement. A negative strength inverts the effect of the modifier. After offsetting by the Mid level value, the displacement will be multiplied by the Strength value to give the final vertex offset. vertexoffset = displacement × Strength</td>
+</tr>
+<tr>
+<td>Mid level</td>
+<td>The texture value which will be treated as no displacement by the modifier. Texture values below this threshold will result in negative displacement along the selected direction, while texture values above it will result in positive displacement. displacement=texturevalue-Midlevel Note that that color/luminosity values are typically between (0.0 to 1.0) in Blender, and not between (0 to 255).</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Use a vertex group to control the influence of the modifier. · <strong>Invert</strong>: Inverts the influence of the selected vertex group.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hook">Hook</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/hook.png" alt="Hook" loading="lazy"></figure>
+<p>The Hook modifier is used to deform a mesh, curve or lattice by another object. When you move this hook object, then it pulls vertices or control points with it.</p>
+<p>Assigning the hook object to specific vertices of the target object is done in Edit mode. The modifier shows a set of buttons then.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/hook-2.png" alt="Hook" loading="lazy"></figure>
+<p>This modifier is automatically created when you add a Hook from the Hooks menu in the Edge menu in edit mode.</p>
+<p>Some settings just exists in Edit mode.</p>
+<div class="ui-doc-callout is-warning"><p><strong>Warning:</strong> The Hook Modifier stores vertex indices from the original mesh to determine what to affect. Modifiers that generate geometry, like Subdivision Surface, should always be put after the Hook modifier in the stack. Otherwise, the generated geometry can‘ t be affected by the hook’s influence.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>The name of the object to hook vertices to.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Allows you to define the influence per vertex. · <strong>Invert</strong>: Inverts the influence of the selected vertex group.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>Adjust this hooks influence on the vertices.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reset">Reset</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/reset.png" alt="Reset" loading="lazy"></figure>
+<p>In Edit mode. Recalculate and clear the offset transform of the hook.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recenter</td>
+<td>In Edit mode. Set the hook center to the 3D cursor position.</td>
+</tr>
+<tr>
+<td>Select</td>
+<td>In Edit mode. Select the vertices affected by this hook.</td>
+</tr>
+<tr>
+<td>Assign</td>
+<td>In Edit mode. Assigns selected vertices to this hook.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="falloff">Falloff</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/falloff.png" alt="Falloff" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>This can be used to adjust the kind of influence curve that the hook has on the mesh. You can also define a custom curve to get a much higher level of control.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The size of the hooks influence.</td>
+</tr>
+<tr>
+<td>Uniform Falloff</td>
+<td>Compensate non uniform scale, and use a uniform falloff.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="laplacian-deform">Laplacian Deform</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/laplacian-deform.png" alt="Laplacian Deform" loading="lazy"></figure>
+<p>The Laplacian Deform modifier allows you to pose a mesh by using some anchor vertices and moving them around. The modifier takes care for a proper deformation of the rest of the vertices.</p>
+<p>This modifier needs a hook modifier to move the geometry.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> With a dense mesh above 100k the algorithm may fail.</p></div>
+<h3 id="workflow-2">Workflow</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/workflow.png" alt="Workflow" loading="lazy"></figure>
+<p>Switch to Edit mode. Create a single vertex group, and add the vertices that you want to use as the anchor areas.</p>
+<p>You need at least two anchor areas.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/workflow-2.png" alt="Workflow" loading="lazy"></figure>
+<p>Add a hook to each of this anchor areas. In our case one to the top of the cylinder, and one to the bottom of the cylinder.</p>
+<p>I add the hook by Hook to New Object from the Vertex menu here, which creates an empty.</p>
+<p>You should now have two hook objects in the modifier stack of the cylinder. And two empties.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/workflow-3.png" alt="Workflow" loading="lazy"></figure>
+<p>Switch back to object mode. Select the cylinder. Add a Laplacian Deform modifier. In the Anchor Weights edit box select the vertex group that we have created.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/workflow-4.png" alt="Workflow" loading="lazy"></figure>
+<p>Click at Bind to bind the vertex group to the modifier. Note! Binding happens with the current deformation. Not to the unmodified base mesh. When you have moved the hooks already to deform the mesh, then this will be the base for the calculation.</p>
+<p>Now move the hooked empties.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/workflow-5.png" alt="Workflow" loading="lazy"></figure>
+<p>Without the Laplacian deform modifier moving the hooked empties will now only pull the vertices that are hooked.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/workflow-6.png" alt="Workflow" loading="lazy"></figure>
+<p>With the Laplacian deform modifier the deformation affects all geometry, which allows you to pose the mesh. The algorithm tries to interpolate the result to give the best possible fitting deformation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repeat</td>
+<td>How many iterations to use to improve the deformation. More iterations improves detail and calculation time.</td>
+</tr>
+<tr>
+<td>Anchor Weights</td>
+<td>The group of vertices to use for the transformation. The weight of each vertex does not affect the behavior of the modifier. The method only calculates vertices with a weight greater than 0.</td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>Inverts the influence of the selected vertex group.</td>
+</tr>
+<tr>
+<td>Bind</td>
+<td>Bind the vertex group to the modifier. Note! Binding happens with the current deformation. Not to the unmodified base mesh. When you have moved the hooks to deform the mesh, then this will be the base for the calculation.</td>
+</tr>
+<tr>
+<td>Unbind</td>
+<td>Unconnect the vertex group from the modifier.</td>
+</tr>
+<tr>
+<td>Error Messages</td>
+<td><strong>Vertex group group_name is not valid</strong>: This message is displayed when a user deletes the vertex group or changes its name. · <strong>Vertices changed from X to Y</strong>: This message is displayed when a user adds or deletes vertices to/from the mesh. · <strong>Edges changed from X to Y</strong>: This message is displayed when a user adds or deletes edges to/from the mesh. · <strong>The system did not find a solution</strong>: This message is displayed if the solver could not find a solution.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lattice">Lattice</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/lattice.png" alt="Lattice" loading="lazy"></figure>
+<p>The Lattice modifier deforms the base object by the shape of a Lattice object. It can be used at meshes, curves, surfaces, text, lattices and even particles.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/lattice-2.png" alt="Lattice" loading="lazy"></figure>
+<p>A Lattice modifier with valid settings can be added by selecting the object, holding down shift, select the target lattice object, and then choose Lattice Deform in the Parent menu.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> When you want to use a lattice to deform particles, then you need to place the Lattice modifier after the Particle System modifier.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>The Lattice object that deforms the base object.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Limit the modifier’s effect to a vertex group of the base mesh. · <strong>Invert</strong>: Inverts the influence of the selected vertex group.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>A factor to control blending between original and deformed vertex positions.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mesh-deform">Mesh Deform</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/mesh-deform.png" alt="Mesh Deform" loading="lazy"></figure>
+<p>The Mesh Deform modifier allows an arbitrary mesh of any closed shape to act as a deformation cage around another mesh.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The changes are not displayed in edit mode. But Edit mode is where you deform your cage object.
+<strong>Note:</strong> This modifier can run out of memory and crash.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>The name of the mesh object to be used as the deforming cage.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Restrict the affected vertices to a vertex group. · <strong>Invert</strong>: Inverts the influence of the selected vertex group.</td>
+</tr>
+<tr>
+<td>Precision</td>
+<td>Controls the accuracy with which the deform mesh cage alters the deformed object when the points on the cage are moved. Higher values means better precision and higher calculation time. This setting is unavailable once a cage has been bound.</td>
+</tr>
+<tr>
+<td>Dynamic</td>
+<td>When activated, other mesh altering features (such as other modifiers and shape keys) are taken into account when binding. This increases the deformation quality. This setting is unavailable once a cage has been bound.</td>
+</tr>
+<tr>
+<td>Bind</td>
+<td>Bind the current vertex positions of both, the modified geometry and the deforming Object, together. An unbound Mesh Deform modifier has no effect. It must be bound so that altering the shape of the deform mesh cage is able to alter the shape of the modified object. Warning! It can take a long time for the operation to complete. And the software may not respond for a pretty while.</td>
+</tr>
+<tr>
+<td>Unbind</td>
+<td>Unbind the meshes. The deformed object will reset back to its original shape that it had before it was bound to the deform mesh cage.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="shrinkwrap">Shrinkwrap</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/shrinkwrap.png" alt="Shrinkwrap" loading="lazy"></figure>
+<p>The Shrinkwrap modifier allows an object to “shrink” to the surface of another object. It moves each vertex of the object to the closest position on the surface of the target object.</p>
+<p>It can be applied to meshes, lattices, curves, surfaces and texts.</p>
+<h3 id="wrap-method">Wrap Method</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/wrap-method.png" alt="Wrap Method" loading="lazy"></figure>
+<p>The method to determine the nearest point on the target’s surface for each vertex of the object.</p>
+<h4 id="nearest-surface-point-target-normal-project">Nearest Surface Point + Target Normal Project</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/nearest-surface-point-target-normal-project.png" alt="Nearest Surface Point + Target Normal Project" loading="lazy"><figcaption>Nearest Surface Point + Target Normal Project</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/nearest-surface-point-target-normal-project-2.png" alt="Nearest Surface Point + Target Normal Project" loading="lazy"><figcaption>Nearest Surface Point + Target Normal Project</figcaption></figure>
+<p>Nearest Surface Point selects the nearest point at the surface. Additionally, Target Normal Project tries to match the interpolated normals of the surface.</p>
+<h5 id="snap-mode">Snap Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/snap-mode.png" alt="Snap Mode" loading="lazy"></figure>
+<p>How the vertex snaps to the surface. The methods should be self explaining.</p>
+<h5 id="target">Target</h5>
+<p>The target mesh to shrink to.</p>
+<h4 id="project">Project</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/project.png" alt="Project" loading="lazy"></figure>
+<p>Projects all vertices along a chosen axis until they hit the surface of the target object.</p>
+<p>Vertices that never hits the surface are not calculated.</p>
+<h5 id="snap-mode-2">Snap Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/snap-mode.png" alt="Snap Mode" loading="lazy"></figure>
+<p>How the vertex snaps to the surface. The methods should be self explaining.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Limit</td>
+<td>A distance limit between original vertex and surface. If the distance is larger than this limit vertex would not be projected onto the surface.</td>
+</tr>
+<tr>
+<td>Subdivision Levels</td>
+<td>This applies a (temporary) Catmull-Clark subdivision to the modified object’s geometry, before computing the wrap.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Along which local axis of the modified object the projection is done. These options can be combined with each other, yielding a “median axis” of projection. If none are selected, the normal direction is used.</td>
+</tr>
+<tr>
+<td>Negative/Positive</td>
+<td>This allows you to select the allowed direction(s) of the shrink along the selected axis. If both options are enabled, both ways are evaluated and the closest hit is selected.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="face-cull">Face Cull</h5>
+<p>Allows you to prevent any projection over the “front side” or the “back side” of the target’s faces. The “side” of a face is determined by its normal.</p>
+<h6 id="invert-cull">Invert Cull</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/invert-cull.png" alt="Invert Cull" loading="lazy"></figure>
+<p>When projecting in the negative direction then invert culling.</p>
+<p>You need to have negative ticked and face cull either front or back to set this property active.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target</td>
+<td>The target mesh to shrink to.</td>
+</tr>
+<tr>
+<td>Auxiliary Target</td>
+<td>An additional object to project to.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="nearest-vertex">Nearest Vertex</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/nearest-vertex.png" alt="Nearest Vertex" loading="lazy"></figure>
+<p>Snaps to the nearest vertex instead of the nearest surface point.</p>
+<h5 id="target-2">Target</h5>
+<p>The target mesh to shrink to.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>An offset distance to keep to the target surface.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Restrict the affected vertices to a vertex group. · <strong>Invert</strong>: Inverts the influence of the selected vertex group.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="simple-deform">Simple Deform</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/simple-deform.png" alt="Simple Deform" loading="lazy"></figure>
+<p>The Simple Deform modifier allows simple deforming of an object of type Mesh, lattice, curve, surface and text.</p>
+<p>The deformation is calculated in local coordinate space.</p>
+<h3 id="deform-method">Deform Method</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Twist</td>
+<td>Twist rotates the object around an axis. Vertices in the same plane as the origin are not rotated. Above the origin the rotation is clockwise. Below the origin the rotation is negative. The amount of rotation is dependent of the distance to the origin. Closer vertices rotates not so strong.</td>
+</tr>
+<tr>
+<td>Bend</td>
+<td>Bend bends the object over an axis.</td>
+</tr>
+<tr>
+<td>Taper</td>
+<td>Taper tapers the object across its origin. The scaling factor is weighted by the distance from the origin of the object in the deform axis.</td>
+</tr>
+<tr>
+<td>Stretch</td>
+<td>Stretch scales the object along an axis. Angle (Twist &amp; Bend) / Factor (Taper &amp; Stretch) The total amount of deformation. A negative value reverses the deformation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="origin">Origin</h3>
+<p>Pick an object to use its origin as the origin for the simple deformation.</p>
+<h3 id="restrictions">Restrictions</h3>
+<h4 id="limits">Limits</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/limits.png" alt="Limits" loading="lazy"></figure>
+<p>You can set lower and upper limits for the deformation. The upper limit cannot be lower than the lower one. These limits are mapped on the Deform axis.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lock</td>
+<td>Not for Bend. Do not allow deformations along these axis.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Limit the deformation to a vertex group.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="smooth">Smooth</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/smooth.png" alt="Smooth" loading="lazy"></figure>
+<p>The Smooth modifier smoothens a mesh by flattening the angles between adjacent faces.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Axis</td>
+<td>The axis to modify.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>The smoothing amount. Higher values will increase the effect. Values outside expected range (above 1.0 or below 0.0) will distort the mesh.</td>
+</tr>
+<tr>
+<td>Repeat</td>
+<td>The number of smoothing iterations.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Limit the modifier to a vertex group. · <strong>Invert</strong>: Inverts the influence of the selected vertex group.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="smooth-corrective">Smooth Corrective</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/smooth-corrective.png" alt="Smooth Corrective" loading="lazy"></figure>
+<p>The Smooth Corrective modifier tries to reduce highly distorted areas of a mesh. Like an armature with distortions at bent knees.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>The factor to control the smoothing amount. Higher values will increase the effect. Values outside expected range (above 1.0 or below 0.0) will distort the mesh.</td>
+</tr>
+<tr>
+<td>Repeat</td>
+<td>The number of smoothing iterations, equivalent to executing the Smooth tool multiple times.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Additional scaling factor to increase the size of the mesh. This is useful because sometimes the Smooth Corrective modifier will introduce volume loss, especially when used with a rig.</td>
+</tr>
+<tr>
+<td>Smooth Type</td>
+<td>The smoothing method. · <strong>Simple</strong>: Relaxes vertices to their connected edges. · <strong>Length Weight</strong>: Weights by the distance of surrounding vertices. This option can give higher quality smoothing in some cases, by better preserving the shape of the original form.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Restrict the effect to a vertex group. · <strong>Invert</strong>: Inverts the influence of the vertex group.</td>
+</tr>
+<tr>
+<td>Only Smooth</td>
+<td>Preview the smoothing used, before correction is applied.</td>
+</tr>
+<tr>
+<td>Pin Boundaries</td>
+<td>Prevent boundary vertices from smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rest-source">Rest Source</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/rest-source.png" alt="Rest Source" loading="lazy"></figure>
+<p>Select the source for reference vertex positions that defines the undeformed state.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Original Coordinates</td>
+<td>Use the original input vertex positions. This relies on the original mesh having the same number of vertices as the input, modified mesh.</td>
+</tr>
+<tr>
+<td>Bind Coordinates</td>
+<td>Optionally you may bind the modifier to a specific state. This is required when there are constructive modifiers such as Subdivision Surface or Mirror in the stack before this modifier.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="smooth-laplacian">Smooth Laplacian</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/smooth-laplacian.png" alt="Smooth Laplacian" loading="lazy"></figure>
+<p>The Smooth Laplacian modifier tries to reduce noise on a mesh’s surface with minimal changes to its shape. It can also exaggerate the shape using a negative Factor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repeat</td>
+<td>Repeat the smoothing operation multiple times. Each repetition causes the flow curvature of the mesh to be recalculated again, and as a result it removes more noise with every new iteration using a small Factor &lt; 1.0. With a value of 0, no smoothing is done.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Enable deforming in single axis directions. The axis are in world space.</td>
+</tr>
+<tr>
+<td>Lambda Factor</td>
+<td>Controls the amount of displacement of every vertex along the flow curvature.</td>
+</tr>
+<tr>
+<td>Lambda Border</td>
+<td>Border edges must be controlled separately. Border edges are controlled by the lambda border value.</td>
+</tr>
+<tr>
+<td>Preserve Volume</td>
+<td>The smoothing process can shrink the volume. Presever Volume tries to prevent that.</td>
+</tr>
+<tr>
+<td>Normalized</td>
+<td>Normalize the results dependent on face sizes. When disabled, geometry spikes may occur.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Limit the modifier effect to a vertex group. · <strong>Invert</strong>: Inverts the influence of the vertex group.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="surface-deform">Surface Deform</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/surface-deform.png" alt="Surface Deform" loading="lazy"></figure>
+<p>The Surface Deform modifier allows an arbitrary mesh surface to control the deformation of another object.</p>
+<p>A use case is to use a cloth simulation of a low poly mesh to drive the motion of your final mesh.</p>
+<p>The target mesh:</p>
+<ul>
+<li>Must not contain edges with more than two faces.</li>
+<li>Must not contain concave faces.</li>
+<li>Must not contain overlapping vertices (doubles).</li>
+<li>Must not contain faces with co-linear edges.</li>
+</ul>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The meshes are bound in global coordinates. But later transformations on the objects are ignored. This means that one can freely transform the target or modified object after binding, without affecting the modified object. The modified mesh will only pick up changes to the target object’s mesh itself.
+<strong>Note:</strong> The more a mesh surface differs from the target mesh surface, the more likely it will show undesirable artifacts. So it is recommended to have reasonably well matching meshes to get a good bind.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Workflow</td>
+<td>Create a cloth simulation at your low poly object.   Create the high poly version.   Add the Surface Deform modifier.   Choose the object with the cloth simulation as the target.   Click at the Bind button to make the deformation real.   The object with the modifier applied will now deform, following the vertice motion of the source object.</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>The object with the cloth deform animation.</td>
+</tr>
+<tr>
+<td>Interpolation Falloff</td>
+<td>How much a vertex bound to one face of the target will be affected by the surrounding faces. This essentially controls how smooth the deformations are. This setting becomes unavailable after binding. Note! Lower values result in smoother deformations, but may also introduce artifacts.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>The overall amount of influence the modifier has on deforming the mesh.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Limit the influence to a vertex group. · <strong>Invert</strong>: Inverts the influence of the selected vertex group.</td>
+</tr>
+<tr>
+<td>Sparse Bind</td>
+<td>Requires to choose a vertex group. Only record binding data for vertices matching the vertex group at the time of bind.</td>
+</tr>
+<tr>
+<td>Bind</td>
+<td>Bind the current state of the modified mesh to the current state of the target mesh. Any later change in the target mesh will deform the source mesh then. Bind is required to make the modifier work.</td>
+</tr>
+<tr>
+<td>Unbind</td>
+<td>Unbind the source mesh from the target mesh.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="warp">Warp</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/warp.png" alt="Warp" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/warp-2.png" alt="Warp" loading="lazy"></figure>
+<p>The Warp modifier warps parts of a mesh to a new location by using two target objects. The deformation goes into the direction from the first target object to the second target object. This target objects can be of any type. Empty, Lamp, Camera, etc. For demonstration purposes two spheres are used.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object From</td>
+<td>The object to define the origin transformation of the warp.</td>
+</tr>
+<tr>
+<td>Object To</td>
+<td>The object to define the destination transformation of the warp.</td>
+</tr>
+<tr>
+<td>Preserve Volume</td>
+<td>Enables volume preservation when rotating one of the transforms.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>Sets how strong the effect is.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Limit the modifier to a vertex group. · <strong>Invert</strong>: Inverts the influence of the selected vertex group.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="falloff-2">Falloff</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/falloff-2.png" alt="Falloff" loading="lazy"></figure>
+<h4 id="falloff-type">Falloff Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/falloff-type.png" alt="Falloff Type" loading="lazy"></figure>
+<p>The falloff type. How the strength of the warp changes as it goes from the center of the transform to the Radius value.</p>
+<h4 id="radius">Radius</h4>
+<p>The distance from the transforms that can be warped by the transform handles.</p>
+<h3 id="texture-2">Texture</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png" alt="Texture" loading="lazy"></figure>
+<p>A texture allows you to control how the vertices are affected by the modifier.</p>
+<h4 id="usage">Usage</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/usage.png" alt="Usage" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/usage-2.png" alt="Usage" loading="lazy"></figure>
+<p>Add a texture.</p>
+<p>Head over to the Texture tab.</p>
+<p>In the texture tab either load an existing texture. Or create one. A procedural Noise texture for example.</p>
+<h4 id="texture-prop-2">Texture Prop</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/texture-prop.png" alt="Texture Prop" loading="lazy"></figure>
+<h5 id="texture-browser-2">Texture browser</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png" alt="Texture browser" loading="lazy"></figure>
+<p>A list of the available textures</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texture Edit Box</td>
+<td>The name of the currently active texture. Allows to rename the texture too.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Keep this data even when it has no user in the scene.</td>
+</tr>
+<tr>
+<td>Add Texture</td>
+<td>Add a new texture.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes the texture. Note that the texture is still in the browser list.</td>
+</tr>
+<tr>
+<td>Change Context</td>
+<td>Jump to texture tab and show the texture.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="coordinates-2">Coordinates</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/coordinates-2.png" alt="Coordinates" loading="lazy"></figure>
+<p>What texture coordinate system to use.</p>
+<h2 id="wave">Wave</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/wave.png" alt="Wave" loading="lazy"></figure>
+<p>The Wave modifier adds a ripple-like shape to an object’s geometry. The shape can be animated by playing the animation.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/wave-2.png" alt="Wave" loading="lazy"></figure>
+<p>This modifier works with meshes, lattices, curves, surfaces and texts.</p>
+<div class="ui-doc-callout is-important"><p><strong>Important:</strong> All the values are in local object space. They must be multiplied with the corresponding Scale values of the object to get the real dimensions.</p></div>
+<p>To obtain a nice wave effect similar to sea waves and close to a sinusoidal wave, make the distance between following ripples and the ripple width equal. That is, the Narrowness value must be equal to 2 / Width. E.g. for Width to be 1, set Narrow to 2.</p>
+<h3 id="motion">Motion</h3>
+<p>The wave effect deforms vertices/control points in the Z direction. The initial start point is the object origin. The direction is then in X or Y direction. With both activated you get a circle shape.</p>
+<h3 id="cyclic">Cyclic</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/cyclic.png" alt="Cyclic" loading="lazy"></figure>
+<p>Repeats the waves.</p>
+<p>When you want to have more circles at frame 1 already, then use a negative Offset in the Time subpanel.</p>
+<h3 id="along-normals">Along Normals</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/along-normals.png" alt="Along Normals" loading="lazy"></figure>
+<p>For meshes only. Displaces the mesh along the surface normals (instead of the object’s Z axis).</p>
+<h4 id="x-y-z-2">X/Y/Z</h4>
+<p>Restrict displacement along normals to the selected local axes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Falloff</td>
+<td>Controls how fast the waves fade out as they travel away from the starting point.</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>The height or amplitude of the ripple.</td>
+</tr>
+<tr>
+<td>Width</td>
+<td>Distance between the waves. If the pulses are too near to each other, the wave may not reach the zero Z position. In this case the whole wave gets lowered so that the minimum is zero, and the maximum is lower than the expected amplitude.</td>
+</tr>
+<tr>
+<td>Narrowness</td>
+<td>The actual width of each pulse. The higher the value the narrower the pulse. The actual width of the area for a single is given by 4 / Narrowness.</td>
+</tr>
+<tr>
+<td>Vertex Group</td>
+<td>Limit the effect of the modifier to a vertex group. · <strong>Invert</strong>: Inverts the influence of the selected vertex group.</td>
+</tr>
+<tr>
+<td>Start Position</td>
+<td><strong>Object</strong>: Use the origin of another object as the starting point. · <strong>Start Position X/Y</strong>: Coordinates of the center of the waves, in object’s local space.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="time">Time</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/time.png" alt="Time" loading="lazy"></figure>
+<p>Settings to control the animation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Time offset in frames. The frame at which the wave begins (if Speed is positive), or ends (if Speed is negative). Use a negative frame number to prime and pre-start the waves.</td>
+</tr>
+<tr>
+<td>Life</td>
+<td>Duration of animation in frames. With a value of zero the animation loops forever.</td>
+</tr>
+<tr>
+<td>Damping</td>
+<td>An additional number of frames in which the wave slowly damps from the Height value to zero after Life is reached. The dampening occurs for all the ripples and begins in the first frame after the Life is over. Ripples disappear over Damping frames.</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>The speed per frame, of the ripple.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="texture-subtab">Texture subtab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png" alt="Texture subtab" loading="lazy"></figure>
+<p>A texture allows you to control how the vertices are affected by the modifier.</p>
+<h4 id="usage-2">Usage</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/usage.png" alt="Usage" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/usage-2.png" alt="Usage" loading="lazy"></figure>
+<p>Add a texture.</p>
+<p>Head over to the Texture tab.</p>
+<p>In the texture tab either load an existing texture. Or create one. A procedural Noise texture for example.</p>
+<h4 id="texture-prop-3">Texture Prop</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/texture-prop.png" alt="Texture Prop" loading="lazy"></figure>
+<h5 id="texture-browser-3">Texture browser</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser.png" alt="Texture browser" loading="lazy"></figure>
+<p>A list of the available textures</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texture Edit Box</td>
+<td>The name of the currently active texture. Allows to rename the texture too.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Keep this data even when it has no user in the scene.</td>
+</tr>
+<tr>
+<td>Add Texture</td>
+<td>Add a new texture.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes the texture. Note that the texture is still in the browser list.</td>
+</tr>
+<tr>
+<td>Change Context</td>
+<td>Jump to texture tab and show the texture.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="coordinates-3">Coordinates</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/coordinates-2.png" alt="Coordinates" loading="lazy"></figure>
+<p>What texture coordinate system to use.</p>
+<h2 id="volume-displace">Volume Displace</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/volume-displace.png" alt="Volume Displace" loading="lazy"></figure>
+<p>The Volume Displace modifier displaces existing volume grids by a 3D texture. It uses the RGB color channels of the texture to displace the volume into the X, Y and Z direction.</p>
+<h3 id="texture-prop-4">Texture Prop</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/texture-prop-2.png" alt="Texture Prop" loading="lazy"></figure>
+<p>The texture to use for the displacement of the voxels. For a three dimensional displacement colored textures should be used. Greyscale images just displaces into one direction. Colored images into all three directions.</p>
+<h4 id="texture-browser-4">Texture Browser</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/texture-browser-2.png" alt="Texture Browser" loading="lazy"></figure>
+<p>A list of the available textures in the scene. Textures can be added in the Texture tab in the Properties Editor.</p>
+<h4 id="edit-box">Edit Box</h4>
+<p>The name of the texture. Here you can also rename the texture.</p>
+<h4 id="change-context">Change Context</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/change-context.png" alt="Change Context" loading="lazy"></figure>
+<p>Jump to the Texture tab to load a texture.</p>
+<h4 id="unlink">Unlink</h4>
+<p>Removes the currently active texture.</p>
+<h4 id="file-selector-menu">File selector menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/file-selector-menu.png" alt="File selector menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>Creates a new texture slot. It is blank. You first need to load a texture, which can be done in the Texture tab in the Properties Editor.</td>
+</tr>
+<tr>
+<td>Duplicate</td>
+<td>Not active in this context.</td>
+</tr>
+<tr>
+<td>Unlink</td>
+<td>Removes the currently active texture.</td>
+</tr>
+<tr>
+<td>Add Fake User</td>
+<td>Wit this button you assign a fake user to this selected world. Data, like worlds, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.</td>
+</tr>
+<tr>
+<td>User</td>
+<td>The number of users that uses this data. Data with a user number of 0 will be removed with closing Bforartists.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="texture-mapping">Texture Mapping</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/ui/properties/modifiers/mesh-deform/texture-mapping.png" alt="Texture Mapping" loading="lazy"></figure>
+<p>What space to use to map the texture onto the object.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strength</td>
+<td>Controls how far voxels are displaced.</td>
+</tr>
+<tr>
+<td>Sample Radius</td>
+<td>Smaller values result in better performance, but might cut off the volume outside.</td>
+</tr>
+<tr>
+<td>Mid Level X Y Z</td>
+<td>This should be modified if the texture offsets the entire volume in one direction and you want to center it again. For performance reasons, the displaced volume should stay close to its original position.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fto-master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fmodifiers%2Fmesh%2Fdeform.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/to-master/docs2/content/editors/properties/modifiers/mesh/deform.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#armature">Armature</a><a class="h3" href="#object">Object</a><a class="h3" href="#vertex-group">Vertex Group</a><a class="h3" href="#bind-to">Bind to</a><a class="h2" href="#cast">Cast</a><a class="h3" href="#shape">Shape</a><a class="h2" href="#curve">Curve</a><a class="h3" href="#curve-object">Curve Object</a><a class="h3" href="#deformation-axis">Deformation Axis</a><a class="h3" href="#vertex-group-2">Vertex Group</a><a class="h2" href="#displace">Displace</a><a class="h3" href="#workflow">Workflow</a><a class="h3" href="#texture">Texture</a><a class="h3" href="#coordinates">Coordinates</a><a class="h3" href="#direction">Direction</a><a class="h2" href="#hook">Hook</a><a class="h3" href="#reset">Reset</a><a class="h3" href="#falloff">Falloff</a><a class="h2" href="#laplacian-deform">Laplacian Deform</a><a class="h3" href="#workflow-2">Workflow</a><a class="h2" href="#lattice">Lattice</a><a class="h2" href="#mesh-deform">Mesh Deform</a><a class="h2" href="#shrinkwrap">Shrinkwrap</a><a class="h3" href="#wrap-method">Wrap Method</a><a class="h2" href="#simple-deform">Simple Deform</a><a class="h3" href="#deform-method">Deform Method</a><a class="h3" href="#origin">Origin</a><a class="h3" href="#restrictions">Restrictions</a><a class="h2" href="#smooth">Smooth</a><a class="h2" href="#smooth-corrective">Smooth Corrective</a><a class="h3" href="#rest-source">Rest Source</a><a class="h2" href="#smooth-laplacian">Smooth Laplacian</a><a class="h2" href="#surface-deform">Surface Deform</a><a class="h2" href="#warp">Warp</a><a class="h3" href="#falloff-2">Falloff</a><a class="h3" href="#texture-2">Texture</a><a class="h2" href="#wave">Wave</a><a class="h3" href="#motion">Motion</a><a class="h3" href="#cyclic">Cyclic</a><a class="h3" href="#along-normals">Along Normals</a><a class="h3" href="#time">Time</a><a class="h3" href="#texture-subtab">Texture subtab</a><a class="h2" href="#volume-displace">Volume Displace</a><a class="h3" href="#texture-prop-4">Texture Prop</a><a class="h3" href="#texture-mapping">Texture Mapping</a></aside></div></body></html>

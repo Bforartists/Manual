@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Render · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1440 · <code>docs2/to-master</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../../getting-started.html">Getting Started</a>
+<a href="../../getting-started/introduction.html">Introduction</a>
+<a href="../../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../../getting-started/installation.html">Installation</a>
+<a href="../../getting-started/quick-start.html">Quick Start</a>
+<a href="../../getting-started/data-structure.html">Data Structure</a>
+<a href="../../getting-started/differences.html">Comparison with Blender</a>
+<a href="../../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<a href="../../interface.html">Interface</a>
+<a href="../../interface/overview.html">Interface Basics</a>
+<a href="../../interface/windows.html">Windows</a>
+<a href="../../interface/areas.html">Areas</a>
+<a href="../../interface/editors.html">Editors</a>
+<a href="../../interface/headers.html">Headers</a>
+<a href="../../interface/footers.html">Footers</a>
+<a href="../../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../../interface/side-bars.html">Side Bars</a>
+<a href="../../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../../interface/properties.html">Properties</a>
+<a href="../../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../../interface/context-menus.html">Context Menus</a>
+<a href="../../interface/floating-menus.html">Floating Menus</a>
+<a href="../../interface/pie-menus.html">Pie Menus</a>
+<a href="../../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<a href="../../workspaces.html">Workspaces</a>
+<a href="../../workspaces/workspaces.html">Managing Workspaces</a>
+<a href="../../workspaces/main.html">Main</a>
+<a href="../../workspaces/uv-editing.html">UV Editing</a>
+<a href="../../workspaces/modeling.html">Modeling</a>
+<a href="../../workspaces/nodes.html">Nodes</a>
+<a href="../../workspaces/animation.html">Animation</a>
+<a href="../../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../../workspaces/shading.html">Shading</a>
+<a href="../../workspaces/rendering.html">Rendering</a>
+<a href="../../workspaces/sculpting.html">Sculpting</a>
+<a href="../../workspaces/compositing.html">Compositing</a>
+<a href="../../workspaces/scripting.html">Scripting</a>
+<a href="../../workspaces/2d-animation.html">2D Animation</a>
+<a href="../../workspaces/storyboarding.html">Storyboarding</a>
+<a href="../../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../../workspaces/masking.html">Masking</a>
+<a href="../../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../../workspaces/video-editing.html">Video Editing</a>
+<a href="../../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<a href="../../workspaces/assets.html">Assets</a>
+<a href="../../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<a href="../../editors.html">Editors</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<a class="is-current" style="padding-left:1.5rem" href="render-properties-tab.html">Render</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<a href="../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:1.5rem" href="../graph-editor/channel-list.html">Channel List</a>
+<a href="../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/metaball.html">Metaball</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:1.5rem" href="../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/text.html">Text</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:1.5rem" href="collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/lattice.html">Lattice</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/armature.html">Armature</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:1.5rem" href="modifiers.html">Modifiers</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/layout.html">Layout</a>
+<a href="../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="visual-effects-properties-tab.html">Visual Effects</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/hair-curves.html">Hair Curves</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:1.5rem" href="particle-properties-tab.html">Particles</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/point-cloud.html">Point Cloud</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="physics-properties-tab.html">Physics</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/layout.html">Layout</a>
+<a href="../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="bone-properties-tab.html">Bone</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<a style="padding-left:1.5rem" href="bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="material-properties-tab.html">Material</a>
+<a href="../texture-node-editor.html">Texture Node Editor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../shader-editor.html">Shader Editor</a>
+<a href="../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../dope-sheet.html">Dope Sheet</a>
+<a href="../timeline.html">Timeline</a>
+<a href="../graph-editor.html">Graph Editor</a>
+<a href="../drivers-editor.html">Drivers Editor</a>
+<a href="../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../text-editor.html">Text Editor</a>
+<a href="../python-console.html">Python Console</a>
+<a href="../info-editor.html">Info Editor</a>
+<a href="../toolbar.html">Toolbar</a>
+<a href="../outliner.html">Outliner</a>
+<a href="../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/volume-object.html">Volume Object</a>
+<a href="../file-browser.html">File browser</a>
+<a href="../asset-browser.html">Asset Browser</a>
+<a href="../spreadsheet.html">Spreadsheet</a>
+<a href="../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../timeline/viewport.html">Viewport</a>
+<a style="padding-left:2.5rem" href="../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<a href="../../assets.html">Assets</a>
+<a href="../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../assets/default-library.html">Default Library</a>
+<a href="../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<a href="../../extensions.html">Extensions and Addons</a>
+<a href="../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../../extensions/coworker.html">Coworker</a>
+<a href="../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<a href="../../keymap.html">Keymap</a>
+<a href="../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<a href="../../advanced.html">Advanced</a>
+<a href="../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../../appendix.html">Information</a>
+<a href="../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../appendix/gpl-license.html">About the GPL License</a>
+<a href="../../appendix/community-influences.html">The Community Influences</a>
+<a href="../../appendix/glossary.html">Glossary</a>
+<a href="../../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<a href="../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Render Properties Tab</div><h1 class="pv-title">Render</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 9 min read</span></div><article class="ui-doc-body"><h2 id="render-tab">Render Tab</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/render-tab.png" alt="Render Tab" loading="lazy"></figure>
+<p>Rendering is the process of calculating a 2D image (or video) from your 3D scene. For this you use a so called render engine.</p>
+<p>The Render tab contains the functionality and settings around the available render engines in Bforartists. and here you can choose the renderer with which you render your still or animation.</p>
+<h3 id="render-engine">Render Engine</h3>
+<p>There are three different render engines available: Workbench, EEVEE, and Cycles.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/render-engine.png" alt="Render Engine" loading="lazy"></figure>
+<p>Cycles is a so called offline renderer. It is an unbiased physically correct renderer with some biased adjustments to make it usable for animations.</p>
+<p>Cycles can render at the CPU or the GPU.</p>
+<p>EEVEE and Workbench are so called Realtime Renderers. They render on the GPU. Workbench relies at the OpenGL render features of the graphics card. EEVEE is a full independent realtime render engine.</p>
+<p>All renderers have different settings. And the choice of the renderer influences the tab and panel content of the whole Scene section.</p>
+<p>This content will be covered in the chapters for the other tabs.</p>
+<h3 id="cycles-feature-set">Cycles Feature Set</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/cycles-feature-set.png" alt="Cycles Feature Set" loading="lazy"></figure>
+<p>When you choose Cycles then you will see a new drop down box called Feature set. Cycles has two feature set settings. Supported and Experimental.</p>
+<p>Supported means you have all common Cycles settings available.</p>
+<p>Experimental means that you have access to some further experimental features of Cycles, which are somehow functional, but are still experimental features. Like Adaptive subdivision. Those features may or may not work proper. Use at own risk!</p>
+<h3 id="cycles-device">Cycles Device</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/cycles-device.png" alt="Cycles Device" loading="lazy"></figure>
+<p>When you turn on Cuda in the User Preferences then you will get a Device drop down box to choose if you want to render with the CPU or the GPU. Note that for full support of gpu rendering you need to choose the correct render device in the properties.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/cycles-device-2.png" alt="Cycles Device" loading="lazy"></figure>
+<h4 id="open-shading-language">Open Shading Language</h4>
+<p>When you render with Cycles at the CPU, then you can choose to use the Open Shading Language.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EEVEE Feature Set</td>
+<td>When you choose EEVEE, you will be able to user a raster based render engine that uses your GPU to render light and materials. This includes features like screenspace raytraced reflections and global illumination, light and reflection volumes, raytraced cast shadows, and more. This renderer is akin to modern game engine rendering techniques.</td>
+</tr>
+<tr>
+<td>Workbench Feature Set</td>
+<td>When you choose Workbench, this use the internal viewport rendering typical of mesh editing and playback. You can use matcaps and other viewport settings to render to disk from here. <strong>Note:</strong> Changing these settings will also change the sequencer preview of scene strips.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="grease-pencil-panel">Grease Pencil panel</h2>
+<h3 id="viewport-anti-aliasing">Viewport Anti-Aliasing</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/viewport-anti-aliasing.png" alt="Viewport Anti-Aliasing" loading="lazy"></figure>
+<h4 id="edge-threshold">Edge Threshold</h4>
+<p>Sensitivity for detecting edges to anti-alias.<br />
+Lowering this value detects more edges at the cost of performance.<br />
+This setting is used for the SMAA <em>(subpixel morphological anti-aliasing)</em> for Grease Pencil objects.</p>
+<h3 id="render-anti-aliasing">Render Anti-Aliasing</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edge Threshold</td>
+<td>Sensitivity for detecting edges to anti-alias.   Lowering this value detects more edges at the cost of performance.   This setting is used for the SMAA <em>(subpixel morphological anti-aliasing)</em> for Grease Pencil objects.</td>
+</tr>
+<tr>
+<td>Supersampling</td>
+<td>Number of extra samples done per pixel in final render.   This setting is used for SSAA <em>(super sampling anti-aliasing)</em> for Grease Pencil objects.   <em>(This anti-aliasing method only affects the final render.)</em></td>
+</tr>
+<tr>
+<td>Motion Blur Steps</td>
+<td>Controls the accuracy of Motion Blur. Motion Blur needs to be enabled. See Motion Blur panel. A value of 0 will also disable this feature.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="freestyle-panel">Freestyle panel</h2>
+<h3 id="what-is-freestyle">What is FreeStyle?</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/what-is-freestyle.png" alt="What is FreeStyle?" loading="lazy"></figure>
+<p>Freestyle is an edge- and line-based non-photorealistic (NPR) rendering engine that works on top of the other engines except Eeevee. It relies on mesh data and z-depth information to draw lines on selected edge types. Various line styles can be added to produce artistic or technical looks.</p>
+<p>The two operating modes - <em>Python Scripting</em> and <em>Parameter Editor</em> - allow a diversity of line styles and results. Line styles such as Japanese big brush, cartoon, blueprint, thickness-with-depth are already pre-scripted in Python. The Parameter Editor mode allows intuitive editing of features such as dotted lines and easy setup of multiple line types and edge definitions.</p>
+<p>There are more Freestyle settings in the View Layer tab where you can adjust and define various parameters. We will cover them there.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/what-is-freestyle-2.png" alt="What is FreeStyle?" loading="lazy"></figure>
+<h3 id="enable">Enable</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/enable.png" alt="Enable" loading="lazy"></figure>
+<p>In the header is a checkbox where you can enable the Freestyle renderer.</p>
+<p>Enabling the checkbox reveals the Freestyle Settings in the View Layer Properties.</p>
+<h3 id="line-thickness-mode">Line Thickness Mode</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Absolute</td>
+<td>The line thickness is given by a user-specified number of pixels. The default value is <strong>1.0</strong>.</td>
+</tr>
+<tr>
+<td>Relative</td>
+<td>The unit line thickness is scaled by the proportion of the present vertical image resolution to <strong>480</strong> pixels. For instance, the unit line thickness is <strong>1.0</strong> with the image height set to <strong>480</strong>, <strong>1.5</strong> with <strong>720</strong>, and <strong>2.0</strong> with <strong>960</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line-thickness">Line Thickness</h3>
+<p>Line Thickness is only available for <em>Absolute</em> line thickness. The base line thickness in pixels.</p>
+<h2 id="color-management-panel">Color Management panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/color-management-panel.png" alt="Color Management panel" loading="lazy"></figure>
+<p>Color management is important to create renders and assets that are physically accurate and look great on multiple display devices. It is used both to ensure all parts of the pipeline interpret colors correctly, and to make artistic changes like exposure and color grading.</p>
+<p>Bforartists color management is based on the OpenColorIO library. By using the same OpenColorIO configuration in multiple applications, the same color spaces and transforms will be available for consistent results.</p>
+<p>In the Color Management panel you will find the settings around color management. It allows an artist to make sure that an image stays the same from rendering, to saving, to post-processing. Color management also allows an artist to tweak things like exposure, gamma, or the overall color grade.</p>
+<p>The Color Management panel is the same for all render engines.</p>
+<h3 id="display">Display</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/display.png" alt="Display" loading="lazy"></figure>
+<p>The device that the image is being viewed on. Your monitor.</p>
+<p>Most computer monitors are configured for the sRGB (SDR) color space but you can also use high dynamic range monitors (HDR).</p>
+<p>Color management can also be disabled by setting the device to None.</p>
+<h3 id="view">View</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/view.png" alt="View" loading="lazy"></figure>
+<p>Choose between different ways to view the image on the same monitor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard</td>
+<td>Does no extra conversion besides the conversion for the display device.</td>
+</tr>
+<tr>
+<td>ACES 1.3</td>
+<td>Developed by the film industry, ACES is a high-fidelity color management system designed for HDR workflows, wide gamut imaging, and cinematic tone mapping.</td>
+</tr>
+<tr>
+<td>ACES 2.0</td>
+<td>Developed by the film industry, ACES is a high-fidelity color management system designed for HDR workflows, wide gamut imaging, and cinematic tone mapping.</td>
+</tr>
+<tr>
+<td>Khronos PBR Neutral</td>
+<td>A newer tone mapper designed by the Khronos Group for physically-based rendering (PBR), especially in eCommerce, CAD, and product visualization. A tone mapper designed specifically for PBR color accuracy. It aims to get sRGB colors in the output render that match as faithfully as possible the input sRGB baseColor under gray-scale lighting.</td>
+</tr>
+<tr>
+<td>AgX</td>
+<td>A perceptually-driven tone mapper developed to aims to balance realism with usability, avoiding harsh clipping or unnatural clipped saturation. AgX is a further development to Filmic. It brings an implementation of False Colors view transform, and replaces Filmic-based. It is available for all display devices.</td>
+</tr>
+<tr>
+<td>Filmic</td>
+<td>For more photo realistic results and better handling of high dynamic range. The contrast can be adjusted by changing the <em>Look</em>option for the Filmic view transform.</td>
+</tr>
+<tr>
+<td>Filmic Log</td>
+<td>Converts to Filmic log color space. This can be used for export to color grading applications, or to inspect the image by flattening out very dark and light areas.</td>
+</tr>
+<tr>
+<td>Raw</td>
+<td>Intended for inspecting the image but not for final export. Raw gives the image without any color space conversion.</td>
+</tr>
+<tr>
+<td>False Color</td>
+<td>Shows a heat map of image intensities, to visualize the dynamic range.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="look">Look</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/look.png" alt="Look" loading="lazy"></figure>
+<p>Adjust the contrast.</p>
+<h3 id="exposure">Exposure</h3>
+<p>Used to control the image brightness (in stops) applied before color space conversion. The calculation is:</p>
+<p>output_value = render_value×2(exposure)</p>
+<h3 id="gamma">Gamma</h3>
+<p>Extra gamma correction applied after color space conversion. Note that the default sRGB or Rec709 color space conversions already include a gamma correction of approximately 2.2 (except the <em>Raw</em> and <em>Log</em> views), so this would be applied in addition to that.</p>
+<h3 id="curves-subpanel">Curves subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/curves-subpanel.png" alt="Curves subpanel" loading="lazy"></figure>
+<p>Adjust RGB Curves to control image colors before color space conversion.</p>
+<h4 id="c-r-g-b">C R G B</h4>
+<p>The single color channels can be chosen here.</p>
+<h4 id="navigation-elements">Navigation elements</h4>
+<p>The navigation elements at the top are described from left to right.</p>
+<h5 id="zoom-in-and-out">Zoom in and out</h5>
+<p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
+<h5 id="clipping">Clipping</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/clipping.png" alt="Clipping" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke.</p>
+<h5 id="tools">Tools</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu that contains some cuve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Extend Horizontal</td>
+<td>Causes the curve to stay horizontal before the first point and after the last point.</td>
+</tr>
+<tr>
+<td>Extend Extrapolated</td>
+<td>Causes the curve to extrapolate before the first point and after the last point, based on the shape of the curve.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+<tr>
+<td>Vector Handle</td>
+<td>Set handle type to Vector.</td>
+</tr>
+<tr>
+<td>Auto Handle</td>
+<td>Set handle type to Auto.</td>
+</tr>
+<tr>
+<td>Auto Clamped Handle</td>
+<td>Set handle type to Auto Clamped.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X / Y</td>
+<td>The position of the currently selected curve point.</td>
+</tr>
+<tr>
+<td>Delete Points</td>
+<td>Delete the currently selected curve point.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="black-level">Black Level</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/black-level.png" alt="Black Level" loading="lazy"></figure>
+<p>The color that Black is mapped to.</p>
+<h4 id="white-level">White Level</h4>
+<p>The color that White is mapped to.</p>
+<h5 id="hotkeys-for-black-and-white-level">Hotkeys for Black and White Level</h5>
+<p>You may want to sample the black and white level colors directly in the image by clicking at an area. There are hotkeys for that.</p>
+<p><strong>Ctrl + Left Mouse</strong> click in the image sets the Black level value from that position.</p>
+<p><strong>Shift + Left Mouse</strong> click in the image sets the White Level value from that position.</p>
+<p>To see the result you need to tick the View as Render button.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/hotkeys-for-black-and-white-level.png" alt="Hotkeys for Black and White Level" loading="lazy"><figcaption>Hotkeys for Black and White Level</figcaption></figure>
+<h4 id="reset">Reset</h4>
+<p>Resets the Curve and the Black and White Level values to the default values.</p>
+<h4 id="white-balance">White Balance</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/white-balance.png" alt="White Balance" loading="lazy"></figure>
+<p>Enables manual control over the color temperature and tint of the scene or image. When checked, Bforartists applies the adjustments below to simulate camera-style white balance correction.</p>
+<h5 id="header-operators">Header Operators</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Presets</td>
+<td>These presets are based on international standards (like CIE and ISO) and are used in photography, rendering, and color science.</td>
+</tr>
+<tr>
+<td>Eyedropper</td>
+<td>Used to sample a pixel in your render or image that should appear neutral white. Once selected, the values adjusts the temperature and tint automatically to correct the overall color cast.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="temperature">Temperature</h5>
+<p>Adjusts the warmth or coolness of the image:</p>
+<ul>
+<li><strong>Lower values (e.g., 3000 K)</strong> → warmer tones (orange/yellow), simulating indoor or sunset lighting.</li>
+<li><strong>Higher values (e.g., 6500 K)</strong> → cooler tones (blue), simulating daylight or overcast conditions.</li>
+</ul>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> 6500 K is considered neutral daylight—great for balanced lighting setups.</p></div>
+<h5 id="tint">Tint</h5>
+<p>Shifts the green–magenta balance:</p>
+<ul>
+<li><strong>Positive values</strong> → more magenta</li>
+<li><strong>Negative values</strong> → more green</li>
+</ul>
+<h3 id="working-space-subpanel">Working Space subpanel</h3>
+<h4 id="file">File</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/file.png" alt="File" loading="lazy"></figure>
+<p>Change the color working space of all colors in this blend file.</p>
+<h4 id="sequencer-color-space">Sequencer Color Space</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/sequencer-color-space.png" alt="Sequencer Color Space" loading="lazy"></figure>
+<p>The color space that the sequencer operates in. By default, the sequencer operates in sRGB space, but it can also be set to work in Linear space like the Compositing nodes, or another color space. Different color spaces will give different results for color correction, cross fades, and other operations.</p>
+<h3 id="advanced-subpanel">Advanced subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/advanced-subpanel.png" alt="Advanced subpanel" loading="lazy"></figure>
+<h4 id="display-emulation">Display Emulation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/properties/render-properties-tab/display-emulation.png" alt="Display Emulation" loading="lazy"></figure>
+<p>Control how images in the chosen display are mapped to the physical display.</p>
+<h2 id="in-this-chapter">In this chapter</h2><div class="ui-doc-cards"><ul><li><a href="render-properties-tab/cycles.html">Cycles</a> — There are three different render engines available.</li><li><a href="render-properties-tab/eevee.html">EEVEE</a> — There are three different render engines available.</li><li><a href="render-properties-tab/workbench.html">Workbench</a> — There are three different render engines available.</li></ul></div></article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fto-master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Frender-properties-tab%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/to-master/docs2/content/editors/properties/render-properties-tab/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#render-tab">Render Tab</a><a class="h3" href="#render-engine">Render Engine</a><a class="h3" href="#cycles-feature-set">Cycles Feature Set</a><a class="h3" href="#cycles-device">Cycles Device</a><a class="h2" href="#grease-pencil-panel">Grease Pencil panel</a><a class="h3" href="#viewport-anti-aliasing">Viewport Anti-Aliasing</a><a class="h3" href="#render-anti-aliasing">Render Anti-Aliasing</a><a class="h2" href="#freestyle-panel">Freestyle panel</a><a class="h3" href="#what-is-freestyle">What is FreeStyle?</a><a class="h3" href="#enable">Enable</a><a class="h3" href="#line-thickness-mode">Line Thickness Mode</a><a class="h3" href="#line-thickness">Line Thickness</a><a class="h2" href="#color-management-panel">Color Management panel</a><a class="h3" href="#display">Display</a><a class="h3" href="#view">View</a><a class="h3" href="#look">Look</a><a class="h3" href="#exposure">Exposure</a><a class="h3" href="#gamma">Gamma</a><a class="h3" href="#curves-subpanel">Curves subpanel</a><a class="h3" href="#working-space-subpanel">Working Space subpanel</a><a class="h3" href="#advanced-subpanel">Advanced subpanel</a><a class="h2" href="#in-this-chapter">In this chapter</a></aside></div></body></html>

@@ -1,0 +1,2073 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shader · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1440 · <code>docs2/to-master</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../../../../getting-started.html">Getting Started</a>
+<a href="../../../../getting-started/introduction.html">Introduction</a>
+<a href="../../../../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../../../../getting-started/installation.html">Installation</a>
+<a href="../../../../getting-started/quick-start.html">Quick Start</a>
+<a href="../../../../getting-started/data-structure.html">Data Structure</a>
+<a href="../../../../getting-started/differences.html">Comparison with Blender</a>
+<a href="../../../../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<a href="../../../../interface.html">Interface</a>
+<a href="../../../../interface/overview.html">Interface Basics</a>
+<a href="../../../../interface/windows.html">Windows</a>
+<a href="../../../../interface/areas.html">Areas</a>
+<a href="../../../../interface/editors.html">Editors</a>
+<a href="../../../../interface/headers.html">Headers</a>
+<a href="../../../../interface/footers.html">Footers</a>
+<a href="../../../../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../../../../interface/side-bars.html">Side Bars</a>
+<a href="../../../../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../../../../interface/properties.html">Properties</a>
+<a href="../../../../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../../../../interface/context-menus.html">Context Menus</a>
+<a href="../../../../interface/floating-menus.html">Floating Menus</a>
+<a href="../../../../interface/pie-menus.html">Pie Menus</a>
+<a href="../../../../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../../../../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../../../../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<a href="../../../../workspaces.html">Workspaces</a>
+<a href="../../../../workspaces/workspaces.html">Managing Workspaces</a>
+<a href="../../../../workspaces/main.html">Main</a>
+<a href="../../../../workspaces/uv-editing.html">UV Editing</a>
+<a href="../../../../workspaces/modeling.html">Modeling</a>
+<a href="../../../../workspaces/nodes.html">Nodes</a>
+<a href="../../../../workspaces/animation.html">Animation</a>
+<a href="../../../../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../../../../workspaces/shading.html">Shading</a>
+<a href="../../../../workspaces/rendering.html">Rendering</a>
+<a href="../../../../workspaces/sculpting.html">Sculpting</a>
+<a href="../../../../workspaces/compositing.html">Compositing</a>
+<a href="../../../../workspaces/scripting.html">Scripting</a>
+<a href="../../../../workspaces/2d-animation.html">2D Animation</a>
+<a href="../../../../workspaces/storyboarding.html">Storyboarding</a>
+<a href="../../../../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../../../../workspaces/masking.html">Masking</a>
+<a href="../../../../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../../../../workspaces/video-editing.html">Video Editing</a>
+<a href="../../../../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<a href="../../../../workspaces/assets.html">Assets</a>
+<a href="../../../../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../../../../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<a href="../../../../editors.html">Editors</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../properties/render-properties-tab.html">Render</a>
+<a style="padding-left:3.5rem" href="input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../timeline/header.html">Header</a>
+<a href="../../../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../../../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../properties/output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../properties/view-layer-properties-tab.html">View Layer</a>
+<a class="is-current" style="padding-left:3.5rem" href="shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../../sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/channel-list.html">Channel List</a>
+<a href="../../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../../properties/scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/metaball.html">Metaball</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../../properties/world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../../../3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/text.html">Text</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:1.5rem" href="../../../properties/collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/lattice.html">Lattice</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="../../../properties/object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="group.html">Group</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/armature.html">Armature</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:1.5rem" href="../../../properties/modifiers.html">Modifiers</a>
+<a style="padding-left:3.5rem" href="layout.html">Layout</a>
+<a href="../../../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="../../../properties/visual-effects-properties-tab.html">Visual Effects</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/hair-curves.html">Hair Curves</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:1.5rem" href="../../../properties/particle-properties-tab.html">Particles</a>
+<a style="padding-left:1.5rem" href="../../../3d-viewport/point-cloud.html">Point Cloud</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="../../../properties/physics-properties-tab.html">Physics</a>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/layout.html">Layout</a>
+<a href="../../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../../properties/object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../../../properties/object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../../../properties/bone-properties-tab.html">Bone</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<a style="padding-left:1.5rem" href="../../../properties/bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="../../../properties/material-properties-tab.html">Material</a>
+<a href="../../../texture-node-editor.html">Texture Node Editor</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../../../properties/texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../../../properties/strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="../../../properties/strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../../../shader-editor.html">Shader Editor</a>
+<a href="../../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../../../dope-sheet.html">Dope Sheet</a>
+<a href="../../../timeline.html">Timeline</a>
+<a href="../../../graph-editor.html">Graph Editor</a>
+<a href="../../../drivers-editor.html">Drivers Editor</a>
+<a href="../../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../../../text-editor.html">Text Editor</a>
+<a href="../../../python-console.html">Python Console</a>
+<a href="../../../info-editor.html">Info Editor</a>
+<a href="../../../toolbar.html">Toolbar</a>
+<a href="../../../outliner.html">Outliner</a>
+<a href="../../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../../../properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../../../properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../../../properties/render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../../../properties/modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../../properties/modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../../properties/modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../../properties/modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../../properties/modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../../properties/modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../../properties/modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../../properties/modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../../properties/modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../../../properties/object-data-properties-tab/volume-object.html">Volume Object</a>
+<a href="../../../file-browser.html">File browser</a>
+<a href="../../../asset-browser.html">Asset Browser</a>
+<a href="../../../spreadsheet.html">Spreadsheet</a>
+<a href="../../../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../../../timeline/viewport.html">Viewport</a>
+<a style="padding-left:2.5rem" href="../../../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<a href="../../../../assets.html">Assets</a>
+<a href="../../../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../../../assets/default-library.html">Default Library</a>
+<a href="../../../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<a href="../../../../extensions.html">Extensions and Addons</a>
+<a href="../../../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../../../../extensions/coworker.html">Coworker</a>
+<a href="../../../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../../../../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<a href="../../../../keymap.html">Keymap</a>
+<a href="../../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<a href="../../../../advanced.html">Advanced</a>
+<a href="../../../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../../../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../../../../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../../../../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../../../../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../../../../appendix.html">Information</a>
+<a href="../../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../../../appendix/gpl-license.html">About the GPL License</a>
+<a href="../../../../appendix/community-influences.html">The Community Influences</a>
+<a href="../../../../appendix/glossary.html">Glossary</a>
+<a href="../../../../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<a href="../../../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Shader Editor › Header › Add Menu › Shader</div><h1 class="pv-title">Shader</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 32 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-shader">Add menu - Shader</h2>
+<p>The shader section contains the different shader nodes. The content is different for the sub modes Object, World and Line Style. And it is dependant of the chosen render engine.</p>
+<p>Left Eevee, right Cycles and Workbench:</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/add-menu-shader.png" alt="Add menu - Shader" loading="lazy"><figcaption>Add menu - Shader</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/add-menu-shader-2.png" alt="Add menu - Shader" loading="lazy"><figcaption>Add menu - Shader</figcaption></figure>
+<p>World / Line Art :</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/add-menu-shader-3.png" alt="Add menu - Shader" loading="lazy"><figcaption>Add menu - Shader</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/add-menu-shader-4.png" alt="Add menu - Shader" loading="lazy"><figcaption>Add menu - Shader</figcaption></figure>
+<p>We will start with the Eevee shaders, and go through the other menus then.</p>
+<h3 id="eevee">Eevee</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/eevee.png" alt="Eevee" loading="lazy"></figure>
+<h3 id="add-shader">Add Shader</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/add-shader.png" alt="Add Shader" loading="lazy"></figure>
+<p>The Add node is used to add two Shaders together.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Shaders</strong>: Standard shader inputs.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Shader</strong>: Standard shader output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mix-shader">Mix Shader</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/mix-shader.png" alt="Mix Shader" loading="lazy"></figure>
+<p>The Mix node is used to mix two shaders together. Mixing can be used for material layering, where the Factor input may, for example, be connected to a Blend Weight node.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Shader</strong>: Shaders to mix, such that incoming rays hit either with the specified probability in the Factor socket. · <strong>Factor</strong>: Blend weight to use for mixing two shaders; at zero it uses the first shader entirely and at one the second shader.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Shader</strong>: Standard shader output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="diffuse-bsdf">Diffuse BSDF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/diffuse-bsdf.png" alt="Diffuse BSDF" loading="lazy"></figure>
+<p>Shader Type Object</p>
+<p>The Diffuse BSDF node is used to add Lambertian and Oren-Nayar diffuse reflection.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Color</strong>: Color of the surface, or physically speaking, the probability that light is reflected or transmitted for each wavelength. · <strong>Roughness Cycles Only</strong>: Surface roughness; 0.0 gives standard Lambertian reflection, higher values activate the Oren-Nayar BSDF. · <strong>Normal</strong>: Normal used for shading; if nothing is connected the default shading normal is used.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>BSDF</strong>: Standard shader output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="emission">Emission</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/emission.png" alt="Emission" loading="lazy"></figure>
+<p>The Emission node emits light.</p>
+<h4 id="inputs">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the emitted light.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>Strength of the emitted light. For point and area lights, the unit is Watts. For materials, a value of 1.0 will ensure that the object in the image has the exact same color as the Color input, i.e. make it ‘shadeless’.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs">Outputs</h4>
+<h5 id="emission-2">Emission</h5>
+<p>The Emission shader output can both be plugged into the Surface Input as well as the Volume Input of the Material Output node.</p>
+<h3 id="glass-bsdf">Glass BSDF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/glass-bsdf.png" alt="Glass BSDF" loading="lazy"></figure>
+<p>A glass shader.</p>
+<h4 id="inputs-2">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the surface, or physically speaking, the probability that light is transmitted for each wavelength.</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>Influences sharpness of the refraction; perfectly sharp at 0.0 and smoother with higher values.</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>Index of refraction (IOR) defining how much the ray changes direction. At 1. 0 rays pass straight through like transparent; higher values give more refraction.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Normal used for shading.</td>
+</tr>
+<tr>
+<td>Thin film subpanel</td>
+<td>Thin film is an optical effect where light interference in a very thin surface layer creates colorful, angle-dependent reflections (like soap bubbles or oil on water). · <strong>Thickness</strong>: Thin film thickness. · <strong>IOR</strong>: Thin film refraction factor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/properties.png" alt="Properties" loading="lazy"></figure>
+<h5 id="distribution">Distribution</h5>
+<p>The light scattering disribution model on rough surface.</p>
+<h4 id="outputs-2">Outputs</h4>
+<h5 id="bsdf">BSDF</h5>
+<p>Standard shader output.</p>
+<h3 id="glossy-bsdf">Glossy BSDF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/glossy-bsdf.png" alt="Glossy BSDF" loading="lazy"></figure>
+<p>The Glossy BSDF node is used to add reflection with micro facet distribution, used for materials such as metal or mirrors.</p>
+<h4 id="inputs-3">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>Input for the surface roughness resulting in sharp to blurry reflections.</td>
+</tr>
+<tr>
+<td>Anisotropy</td>
+<td>Anisotropy level</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Rotation of the glossy map.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Normal used for shading.</td>
+</tr>
+<tr>
+<td>Tangent</td>
+<td>Tangent used for shading.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-2">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/properties-2.png" alt="Properties" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distribution</td>
+<td>Micro facet distribution to use.</td>
+</tr>
+<tr>
+<td>Sharp</td>
+<td>Results in perfectly sharp reflections like a mirror. The Roughness value is not used.</td>
+</tr>
+<tr>
+<td>Beckmann</td>
+<td>Beckmann micro facet distribution.</td>
+</tr>
+<tr>
+<td>GGX</td>
+<td>GGX micro facet distribution.</td>
+</tr>
+<tr>
+<td>Ashikhmin-Shirley</td>
+<td>Ashikhmin-Shirley micro facet distribution.</td>
+</tr>
+<tr>
+<td>Multiscatter GCX</td>
+<td>Multiscatter GGX micro facet distribution.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-3">Outputs</h4>
+<h5 id="bsdf-2">BSDF</h5>
+<p>Standard shader output.</p>
+<h3 id="holdout">Holdout</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/holdout.png" alt="Holdout" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/holdout-2.png" alt="Holdout" loading="lazy"></figure>
+<p>The Holdout shader node is used to create a “hole” in the image with zero alpha transparency, which is useful for compositing (see alpha channel).</p>
+<p>Note that the holdout shader can only create alpha when Transparent is enabled. This can be found in the render settings. Properties &gt; Render &gt; Film &gt; Transparent is enabled. If it is disabled, the holdout shader will be black.</p>
+<h4 id="outputs-4">Outputs</h4>
+<h5 id="holdout-2">Holdout</h5>
+<p>Standard shader output.</p>
+<h3 id="metallic-bsdf">Metallic BSDF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/metallic-bsdf.png" alt="Metallic BSDF" loading="lazy"></figure>
+<p>A metallic shader, which gives more realistic results than the glossy node.</p>
+<h4 id="properties-3">Properties</h4>
+<h5 id="distribution-2">Distribution</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/distribution.png" alt="Distribution" loading="lazy"></figure>
+<p>The available scatter methods. They all give a slighty differnt result.</p>
+<h5 id="fresnel-type">Fresnel Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/fresnel-type.png" alt="Fresnel Type" loading="lazy"></figure>
+<p>The fresnel type. Fresnel is a real life effect that adds a mirroring the more the angle diverts from the line of sight. At 90 degrees the mirroring is 100%.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/fresnel-type-2.png" alt="Fresnel Type" loading="lazy"></figure>
+<h6 id="input-with-f-82-tint">Input with F 82 Tint</h6>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base Color</td>
+<td>The base color of the fresnel.</td>
+</tr>
+<tr>
+<td>Edge Tint</td>
+<td>The edge tint color of the fresnel.</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>The roughness of the fresnel. 0 is 100% mirroring.</td>
+</tr>
+<tr>
+<td>Anisotropy</td>
+<td>Amount of anisotropy for reflection.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Rotates the direction of anisotropy, with going full circle with a value of one.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Input normal</td>
+</tr>
+<tr>
+<td>Tangent</td>
+<td>Input tangent.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="input-with-physical-conductor">Input with Physical Conductor</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/input-with-physical-conductor.png" alt="Input with Physical Conductor" loading="lazy"><figcaption>Input with Physical Conductor</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IOR</td>
+<td>The refractive index for all three axis. Mathematically called N</td>
+</tr>
+<tr>
+<td>Extinction</td>
+<td>Imaginary part of the refractive index. Mathematically called K</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>The roughness of the fresnel. 0 is 100% mirroring.</td>
+</tr>
+<tr>
+<td>Anisotropy</td>
+<td>Amount of anisotropy for reflection.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Rotates the direction of anisotropy, with going full circle with a value of one.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Input normal</td>
+</tr>
+<tr>
+<td>Tangent</td>
+<td>Input tangent.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="thin-film-subpanel">Thin film subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/thin-film-subpanel.png" alt="Thin film subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thickness</td>
+<td>Thickness of the film in nanometers</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>Index of Refraction of the Thin Film.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="output">Output</h4>
+<h5 id="bsdf-3">BSDF</h5>
+<p>Shader output.</p>
+<h3 id="principled-bsdf">Principled BSDF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/principled-bsdf.png" alt="Principled BSDF" loading="lazy"></figure>
+<p>The Principled BSDF that combines multiple shader layers into a single easy to use node. It is based on the Disney principled model also known as the “PBR” shader, making it compatible with other software such as Pixar’s Renderman® and Unreal Engine®. Image textures painted or baked from software like Substance Painter® may be directly linked to the corresponding parameters in this shader.</p>
+<p>This “Uber” shader includes multiple layers to create a wide variety of materials. The base layer is a user controlled mix between diffuse, metal, subsurface scattering and transmission. On top of that there is a specular layer, sheen layer and clear coat layer.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The emphasis on compatibility with other software means that it interprets certain input parameters differently from older Blender nodes.</p></div>
+<h4 id="inputs-4">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base Color</td>
+<td>Diffuse or metal surface color.</td>
+</tr>
+<tr>
+<td>Metallic</td>
+<td>Blends between a non-metallic and metallic material model. A value of 1.0 gives a fully specular reflection tinted with the base color, without diffuse reflection or transmission. At 0.0 the material consists of a diffuse or transmissive base layer, with a specular reflection layer on top.</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>Specifies micro facet roughness of the surface for diffuse and specular reflection. Hint. When converting from the older Glossy BSDF node, use the square root of the original value.</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>Index of refraction for transmission.</td>
+</tr>
+<tr>
+<td>Alpha</td>
+<td>Controls the transparency of the surface, with 1.0 fully opaque. Usually linked to the Alpha output of an Image Texture node.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Controls the normals of the base layers.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="subsurface-subtab">Subsurface Subtab</h5>
+<h6 id="mode-christensen-burley">Mode Christensen-Burley</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/mode-christensen-burley.png" alt="Mode Christensen-Burley" loading="lazy"></figure>
+<p>Christensen-Burley is an approximation to physically-based volume scattering. Gives less blurry results than Cubic and Gaussian functions.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weight</td>
+<td>Mix between diffuse and subsurface scattering. Rather than being a simple mix between Diffuse and Subsurface Scattering, it acts as a multiplier for the Subsurface Radius.</td>
+</tr>
+<tr>
+<td>Subsurface Radius</td>
+<td>Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Scale of the subsurf scattering ( multiplied with radius).</td>
+</tr>
+</tbody>
+</table>
+<h6 id="mode-random-walk">Mode Random Walk</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/mode-random-walk.png" alt="Mode Random Walk" loading="lazy"></figure>
+<p>Random Walk Provides the most accurate results for thin and curved objects. This comes at the cost of increased render time or noise for more dense media like skin, but also better geometry detail preservation. Random Walk uses true volumetric scattering inside the mesh, which means that it works best for closed meshes. Overlapping faces and holes in the mesh can cause problems.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weight</td>
+<td>Mix between diffuse and subsurface scattering. Rather than being a simple mix between Diffuse and Subsurface Scattering, it acts as a multiplier for the Subsurface Radius.</td>
+</tr>
+<tr>
+<td>Subsurface Radius</td>
+<td>Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Scale of the subsurf scattering ( multiplied with radius).</td>
+</tr>
+<tr>
+<td>Anisotropy</td>
+<td>Adds some random directional light scattering.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="mode-random-walk-skin">Mode Random Walk (Skin)</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/mode-random-walk-skin.png" alt="Mode Random Walk (Skin)" loading="lazy"><figcaption>Mode Random Walk (Skin)</figcaption></figure>
+<p>Random Walk Provides the most accurate results for thin and curved objects. This comes at the cost of increased render time or noise for more dense media like skin, but also better geometry detail preservation. Random Walk uses true volumetric scattering inside the mesh, which means that it works best for closed meshes. Overlapping faces and holes in the mesh can cause problems.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weight</td>
+<td>Mix between diffuse and subsurface scattering. Rather than being a simple mix between Diffuse and Subsurface Scattering, it acts as a multiplier for the Subsurface Radius.</td>
+</tr>
+<tr>
+<td>Subsurface Radius</td>
+<td>Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Scale of the subsurf scattering ( multiplied with radius).</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>Adds a refraction for more realistic results.</td>
+</tr>
+<tr>
+<td>Anisotropy</td>
+<td>Adds some random directional light scattering.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="specular-subtab">Specular Subtab</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/specular-subtab.png" alt="Specular Subtab" loading="lazy"></figure>
+<h6 id="specular-mode">Specular Mode</h6>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GGX</td>
+<td>A method that is faster than Multiple-scattering GGX but is less physically accurate. Selecting it enables the Transmission Roughness input.</td>
+</tr>
+<tr>
+<td>Multiple-scattering GGX</td>
+<td>Takes multiple bounce (scattering) events between micro facets into account. This gives a more energy conserving results, which would otherwise be visible as excessive darkening.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="ior-level">IOR Level</h5>
+<p>Amount of dielectric specular reflection. Specifies facing (along normal) reflectivity in the most common 0 - 8% range.</p>
+<p>Hint. To compute this value for a realistic material with a known index of refraction, you may use this special case of the Fresnel formula: specular=((ior-1)/(ior+1))2/0.08</p>
+<p>For example:</p>
+<p>water: ior = 1.33, specular = 0.25</p>
+<p>glass: ior = 1.5, specular = 0.5</p>
+<p>diamond: ior = 2.417, specular = 2.15</p>
+<p>Since materials with reflectivity above 8% do exist, the field allows values above 1.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tint</td>
+<td>Tints the facing specular reflection using the base color, while glancing reflection remains white. Normal dielectrics have colorless reflection, so this parameter is not technically physically correct and is provided for faking the appearance of materials with complex surface structure.</td>
+</tr>
+<tr>
+<td>Anisotropic</td>
+<td>Amount of anisotropy for specular reflection. Higher values give elongated highlights along the tangent direction; negative values give highlights shaped perpendicular to the tangent direction.</td>
+</tr>
+<tr>
+<td>Anisotropic Rotation</td>
+<td>Rotates the direction of anisotropy, with 1.0 going full circle. Hint. Compared to the Anisotropic BSDF node, the direction of highlight elongation is rotated by 90°. Add 0.25 to the value to correct.</td>
+</tr>
+<tr>
+<td>Tangent</td>
+<td>Controls the tangent for the Anisotropic layer.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="transmission-subpanel">Transmission Subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/transmission-subpanel.png" alt="Transmission Subpanel" loading="lazy"></figure>
+<h6 id="weigth">Weigth</h6>
+<p>Blend between transmission and other base layers.</p>
+<h5 id="coat-subpanel">Coat subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/coat-subpanel.png" alt="Coat subpanel" loading="lazy"></figure>
+<p>Extra white specular layer on top of others. This is useful for materials like car paint and the like.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weight</td>
+<td>Controls the intensity of the coat layer. Both, the reflection and the tinting. For physically based materials this value should be zero.</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>Roughness of clear coat specular.</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>The index of refraction of the coat layer. It affects the reflectivity and the falloff of coat tinting.</td>
+</tr>
+<tr>
+<td>Tint</td>
+<td>The coat color. Saturation increases at shallower angles as the light travels farther through the medium.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Controls the normals of the coat layer.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="sheen-subpanel">Sheen subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/sheen-subpanel.png" alt="Sheen subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weight</td>
+<td>Controls the intensity of the layer.</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>Controls the roughness of the layer.</td>
+</tr>
+<tr>
+<td>Tint</td>
+<td>Mix between white and using base color for sheen reflection.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="emission-subpanel">Emission subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/emission-subpanel.png" alt="Emission subpanel" loading="lazy"></figure>
+<p>Light emission from the surface, like the Emission shader.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>The emission color.</td>
+</tr>
+<tr>
+<td>Emission Strength</td>
+<td>The strength of the light emission.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="thin-film-subpanel-2">Thin Film subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/thin-film-subpanel-2.png" alt="Thin Film subpanel" loading="lazy"></figure>
+<p>A thin film coating of a material with a normal angle of incidence.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Useful for bubbles, oil floating on water and other similar effects.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thickness</td>
+<td>The thickness of the thin film.</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>The index of refraction of the thin film layer. It affects the reflectivity and the falloff of thin film.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-5">Outputs</h4>
+<h5 id="bsdf-4">BSDF</h5>
+<p>Standard shader output.</p>
+<h3 id="refraction-bsdf">Refraction BSDF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/refraction-bsdf.png" alt="Refraction BSDF" loading="lazy"></figure>
+<p>The Refraction BSDF is used to add glossy refraction with sharp or micro facet distribution, used for materials that transmit light. For best results this node should be considered as a building block and not be used on its own, but rather mixed with a glossy node using a Fresnel factor. Otherwise it will give quite dark results at the edges for glossy refraction.</p>
+<h4 id="inputs-5">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the surface, or physically speaking, the probability that light is refracted for each wavelength.</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>Influences sharpness of the refraction; perfectly sharp at 0.0 and smoother with higher values.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Normal used for shading; if nothing is connected the default shading normal is used.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-4">Properties</h4>
+<h5 id="distribution-3">Distribution</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/distribution-2.png" alt="Distribution" loading="lazy"></figure>
+<p>Micro facet distribution to use. Sharp results in perfectly sharp refraction, while Beckmann and GGX can use the Roughness input for blurry refraction.</p>
+<h4 id="outputs-6">Outputs</h4>
+<h5 id="bsdf-5">BSDF</h5>
+<p>Standard shader output.</p>
+<h3 id="specular-bsdf">Specular BSDF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/specular-bsdf.png" alt="Specular BSDF" loading="lazy"></figure>
+<p>Eevee Only</p>
+<p>The Specular BSDF combines multiple shader layers into a single easy to use node.</p>
+<p>It is similar to the Principled BSDF node but uses the specular workflow instead of the metallic. It has far fewer parameters and supports less features. Both might be merged into one node in the future.</p>
+<p>The specular workflow functions by specifying the facing (along normal) reflection color. The result may not be physically plausible because there is no energy conservation.</p>
+<h4 id="inputs-6">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base Color</td>
+<td>Diffuse surface color. For conductor materials (metals) it should be black.</td>
+</tr>
+<tr>
+<td>Specular Color</td>
+<td>Amount of specular reflection. Specifies facing (along normal) reflectivity. Conductor materials (metals) can have colored specular reflection. Hint. To compute this value for a realistic material with a known index of refraction, you may use this special case of the Fresnel formula: specular=((ior-1)/(ior+1))2 For example: water: ior = 1.33, specular = 0.25 glass: ior = 1.5, specular = 0.5 diamond: ior = 2.417, specular = 2.15</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>Specifies micro facet roughness of the surface for diffuse and specular reflection. Hint. When converting from the older Glossy BSDF node, use the square root of the original value.</td>
+</tr>
+<tr>
+<td>Emissive Color</td>
+<td>Color of the emitted light. This light is added to the BSDF result.</td>
+</tr>
+<tr>
+<td>Transparency</td>
+<td>Transparency factor. This is the inverse of the alpha channel (1 - alpha) you find in an image. Use an Invert node to convert alpha to transparency. This will only have an effect if the material uses a blend mode other than opaque.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Controls the normals of the base layers.</td>
+</tr>
+<tr>
+<td>Clear coat</td>
+<td>Extra white specular layer on top of others. This is useful for materials like car paint and the like.</td>
+</tr>
+<tr>
+<td>Clear coat Roughness</td>
+<td>Roughness of clear coat specular.</td>
+</tr>
+<tr>
+<td>Clear coat Normal</td>
+<td>Controls the normals of the Clear coat layer.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-7">Outputs</h4>
+<h5 id="bsdf-6">BSDF</h5>
+<p>Standard shader output.</p>
+<h3 id="subsurface-scattering">Subsurface Scattering</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/subsurface-scattering.png" alt="Subsurface Scattering" loading="lazy"></figure>
+<p>The Subsurface Scattering node is used to add simple subsurface multiple scattering, for materials such as skin, wax, marble, milk and others. For these materials, rather than light being reflect directly off the surface, it will penetrate the surface and bounce around internally before getting absorbed or leaving the surface at a nearby point.</p>
+<p>How far the color scatters on average can be configured per RGB color channel. For example, for skin, red colors scatter further, which gives distinctive red-colored shadows, and a soft appearance.</p>
+<h4 id="properties-5">Properties</h4>
+<h5 id="method">Method</h5>
+<p>Method for rendering subsurface scattering.</p>
+<h6 id="christensen-burley">Christensen-Burley</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/christensen-burley.png" alt="Christensen-Burley" loading="lazy"></figure>
+<h5 id="color">Color</h5>
+<p>Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.</p>
+<h6 id="scale">Scale</h6>
+<p>Global scale factor for the scattering radius.</p>
+<h6 id="radius">Radius</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/radius.png" alt="Radius" loading="lazy"></figure>
+<p>Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively.</p>
+<h6 id="normal">Normal</h6>
+<p>Normal used for shading; if nothing is connected the default shading normal is used.</p>
+<h6 id="random-walk">Random Walk</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/random-walk.png" alt="Random Walk" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Global scale factor for the scattering radius.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="ior">IOR</h5>
+<p>Refraction value.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Roughness</td>
+<td>The roughness of the subsurface scattering. It controls how light reflects off the<strong>surfacebefore</strong> and <strong>after</strong> it scatters inside.</td>
+</tr>
+<tr>
+<td>Anisotropy</td>
+<td>The anisotropy level of the subsurface scattering. Anisotropy controls the the preferred direction in which light scatters**inside **the material rather than spreading evenly in all directions.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="normal-2">Normal</h5>
+<p>Normal used for shading; if nothing is connected the default shading normal is used.</p>
+<h6 id="random-walk-skin">Random Walk (Skin)</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/random-walk-skin.png" alt="Random Walk (Skin)" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Global scale factor for the scattering radius.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>Average distance that light scatters below the surface. Higher radius gives a softer appearance, as light bleeds into shadows and through the object. The scattering distance is specified separately for the RGB channels, to render materials such as skin where red light scatters deeper. The X, Y and Z values are mapped to the R, G and B values, respectively.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IOR</td>
+<td>Refraction value. · <strong>Anisotropy</strong>: The anisotropy level of the subsurface scattering. Anisotropy controls the the preferred direction in which light scatters<strong>inside</strong>the material rather than spreading evenly in all directions.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Normal used for shading; if nothing is connected the default shading normal is used.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-8">Outputs</h4>
+<h5 id="bssrdf">BSSRDF</h5>
+<p>BSSRDF shader output.</p>
+<h3 id="translucent-bsdf">Translucent BSDF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/translucent-bsdf.png" alt="Translucent BSDF" loading="lazy"></figure>
+<p>The Translucent BSDF is used to add Lambertian diffuse transmission.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Color</strong>: Color of the surface, or physically speaking, the probability that light is transmitted for each wavelength. · <strong>Normal</strong>: Normal used for shading; if nothing is connected the default shading normal is used.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>BSDF output</strong>: Standard shader output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transparent-bsdf">Transparent BSDF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/transparent-bsdf.png" alt="Transparent BSDF" loading="lazy"></figure>
+<p>The Transparent BSDF is used to add transparency without refraction, passing straight through the surface, as if there were no geometry there. Useful with alpha maps, for example. This shader affects light paths somewhat differently than other BSDFs. Note that only pure white transparent shaders are completely transparent.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Color</strong>: Color of the surface, or physically speaking, the probability for each wavelength that light is blocked or passes straight through the surface.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>BSDF</strong>: Standard shader output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="principled-volume">Principled Volume</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/principled-volume.png" alt="Principled Volume" loading="lazy"></figure>
+<p>The Principled Volume shader combines all volume shading components into a single easy to use node. Volumes like smoke and fire can be rendered with a single shader node, which includes scattering, absorption and blackbody emission.</p>
+<h4 id="inputs-7">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Volume scattering color.</td>
+</tr>
+<tr>
+<td>Color Attribute</td>
+<td>Volume grid for coloring the volume. Use “color” for smoke simulations.</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>Density of the volume.</td>
+</tr>
+<tr>
+<td>Density Attribute</td>
+<td>Volume grid to define the density, typically “density”.</td>
+</tr>
+<tr>
+<td>Anisotropy</td>
+<td>Backward or forward scattering direction.</td>
+</tr>
+<tr>
+<td>Absorption Color</td>
+<td>Volume shadow color tint.</td>
+</tr>
+<tr>
+<td>Emission Strength</td>
+<td>Amount of light to emit.</td>
+</tr>
+<tr>
+<td>Emission Color</td>
+<td>Emission color tint.</td>
+</tr>
+<tr>
+<td>Blackbody Intensity</td>
+<td>Blackbody emission for fire. Set to 1 for physically accurate intensity.</td>
+</tr>
+<tr>
+<td>Blackbody Tint</td>
+<td>Color tint for blackbody emission.</td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td>Temperature in kelvin for blackbody emission, higher values emit more.</td>
+</tr>
+<tr>
+<td>Temperature Attribute</td>
+<td>Volume grid attribute to define the temperature.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-9">Outputs</h4>
+<h5 id="volume">Volume</h5>
+<p>Standard shader output.</p>
+<h3 id="volume-absorption">Volume Absorption</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/volume-absorption.png" alt="Volume Absorption" loading="lazy"></figure>
+<p>The Volume Absorption node allows light to be absorbed as it passes through the volume. Typical usage for this node would be water and colored glass.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Color</strong>: Color of the volume. · <strong>Density</strong>: The density of the absorption effect.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Volume</strong>: The Volume Shader.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="volume-scatter">Volume Scatter</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/volume-scatter.png" alt="Volume Scatter" loading="lazy"></figure>
+<p>The Volume Scatter node allows light to be scattered as it passes through the volume. Typical usage would be to add fog to a scene. It can also be used with the Volume Absorption node to create smoke.</p>
+<h4 id="properties-6">Properties</h4>
+<h5 id="phase">Phase</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/phase.png" alt="Phase" loading="lazy"></figure>
+<p>Phase function for the scattered light.</p>
+<p>Henyey-Greenstein: Common for biological tissues and fog.</p>
+<p>Fournier-Forand: Suitable for underwater scattering.</p>
+<p>Draine: Models interstellar dust.</p>
+<p>Rayleigh: For small particles like atmospheric haze.</p>
+<p>Mie: For large particles like clouds or mist.</p>
+<h6 id="henyey-greenstein">Henyey-Greenstein</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/henyey-greenstein.png" alt="Henyey-Greenstein" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the volume.</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>The density of the scatter effect.</td>
+</tr>
+<tr>
+<td>Anisotropy</td>
+<td>Controls the look of the scatter effect depending on the direction of the light passing through it.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="fournier-forand">Fournier-Forand</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/fournier-forand.png" alt="Fournier-Forand" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the volume.</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>The density of the scatter effect.</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>The refraction of the scatterning particles</td>
+</tr>
+<tr>
+<td>Backscatter</td>
+<td>Fraction of light that is scattered backwards.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="draine">Draine</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/draine.png" alt="Draine" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the volume.</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>The density of the scatter effect.</td>
+</tr>
+<tr>
+<td>Anisotropy</td>
+<td>Controls the look of the scatter effect depending on the direction of the light passing through it.</td>
+</tr>
+<tr>
+<td>Alpha</td>
+<td>Fraction of light that is scattered backwards.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="rayleigh">Rayleigh</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/rayleigh.png" alt="Rayleigh" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the volume.</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>The density of the scatter effect.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="mie">Mie</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/mie.png" alt="Mie" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the volume.</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>The density of the scatter effect.</td>
+</tr>
+<tr>
+<td>Diameter</td>
+<td>Diameter of the water droplets in micrometers.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="output-2">Output</h4>
+<h5 id="volume-2">Volume</h5>
+<p>The Volume Shader output must be plugged into the Volume Input of the Material or World Output node.</p>
+<h3 id="volume-coefficients">Volume Coefficients</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/volume-coefficients.png" alt="Volume Coefficients" loading="lazy"></figure>
+<p>The Volume Coefficients node models how light interacts with volumetric materials by defining three key physical processes: <strong>Absorption</strong>, <strong>Scattering</strong>, and <strong>Emission</strong>. This node provides fine-grained control over how light is absorbed, redirected, and emitted as it travels through a volume—ideal for simulating effects like smoke, fog, underwater environments, or glowing gases.</p>
+<h4 id="inputs-8">Inputs</h4>
+<h5 id="absorbtion-subpanel">Absorbtion subpanel</h5>
+<h6 id="coefficients">Coefficients</h6>
+<p>A vector input representing the probability per unit distance that light is absorbed in each color channel (R, G, B) of a vector.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Higher values result in* <em>darker, denser volumes</em>*.</p></div>
+<h5 id="scatter-subpanel">Scatter subpanel</h5>
+<p>The density of the scatter effect.</p>
+<h6 id="phase-2">Phase</h6>
+<p>Dropdown to select the scattering phase function.</p>
+<p>Henyey-Greenstein: Common for biological tissues and fog.</p>
+<p>Fournier-Forand: Suitable for underwater scattering.</p>
+<p>Draine: Models interstellar dust.</p>
+<p>Rayleigh: For small particles like atmospheric haze.</p>
+<p>Mie: For large particles like clouds or mist.</p>
+<p><strong>Henyey-Greenstein</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/henyey-greenstein-2.png" alt="Henyey-Greenstein" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coefficients</td>
+<td>A vector input defining the likelihood of light scattering per unit distance in each color channel. Controls how much light is redirected rather than absorbed.</td>
+</tr>
+<tr>
+<td>Anisotropy</td>
+<td>A float value controlling the directionality of scattering.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fournier-Forand</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/fournier-forand-2.png" alt="Fournier-Forand" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coefficients</td>
+<td>A vector input defining the likelihood of light scattering per unit distance in each color channel. Controls how much light is redirected rather than absorbed.</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>The refraction of the scatterning particles</td>
+</tr>
+<tr>
+<td>Backscatter</td>
+<td>Fraction of light that is scattered backwards.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Draine</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/draine-2.png" alt="Draine" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coefficients</td>
+<td>A vector input defining the likelihood of light scattering per unit distance in each color channel. Controls how much light is redirected rather than absorbed.</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>The density of the scatter effect.</td>
+</tr>
+<tr>
+<td>Anisotropy</td>
+<td>Controls the look of the scatter effect depending on the direction of the light passing through it.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Raileigh</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/raileigh.png" alt="Raileigh" loading="lazy"></figure>
+<p><strong>Coefficients</strong></p>
+<p>A vector input defining the likelihood of light scattering per unit distance in each color channel. Controls how much light is redirected rather than absorbed.</p>
+<p><strong>Mie</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/mie-2.png" alt="Mie" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coefficients</td>
+<td>A vector input defining the likelihood of light scattering per unit distance in each color channel. Controls how much light is redirected rather than absorbed.</td>
+</tr>
+<tr>
+<td>Diameter</td>
+<td>Diameter of the water droplets in micrometers.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="emission-subpanel-2">Emission subpanel</h5>
+<h6 id="coefficients-2">Coefficients</h6>
+<p>Controls the look of the scatter effect depending on the direction of the light passing through it. Simulates glowing volumes like fire or plasma.</p>
+<h4 id="output-3">Output</h4>
+<h5 id="volume-3">Volume</h5>
+<p>The Volume Shader output must be plugged into the Volume Input of the Material or World Output node.</p>
+<h3 id="cycles-workbench">Cycles / Workbench</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/cycles-workbench.png" alt="Cycles / Workbench" loading="lazy"></figure>
+<h3 id="hair-bsdf">Hair BSDF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/hair-bsdf.png" alt="Hair BSDF" loading="lazy"></figure>
+<p>Cycles Only</p>
+<p>The Hair BSDF node is used to add shading for Hair.</p>
+<h4 id="inputs-9">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the hair.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Controls the way the light is rotated (angular shift) for the reflection/transmission.</td>
+</tr>
+<tr>
+<td>Roughness U/V</td>
+<td>Controls the roughness in the direction light is skewed, and perpendicular to it.</td>
+</tr>
+<tr>
+<td>Tangent</td>
+<td>Input tangent.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-7">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/properties-3.png" alt="Properties" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Component</td>
+<td>There are two components that can be used to control the look of the hair. Usually you are going to want each of these and use a Mix Node.</td>
+</tr>
+<tr>
+<td>Reflection</td>
+<td>The light that bounces off the surface of the hair.</td>
+</tr>
+<tr>
+<td>Transmission</td>
+<td>The light that passes through the hair and comes out the other side.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-10">Outputs</h4>
+<h5 id="bsdf-7">BSDF</h5>
+<p>Standard shader output.</p>
+<h3 id="principled-hair-bsdf">Principled Hair BSDF</h3>
+<p>Cycles Only</p>
+<p>The Principled Hair BSDF is a physically-based, easy-to-use shader for rendering hair and fur.</p>
+<h4 id="properties-8">Properties</h4>
+<h5 id="scattering-mode">Scattering Mode</h5>
+<h6 id="chiang-model-versus-huang-model">Chiang Model versus Huang Model</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/chiang-model-versus-huang-model.png" alt="Chiang Model versus Huang Model" loading="lazy"><figcaption>Chiang Model versus Huang Model</figcaption></figure>
+<p>There are two scattering models available. Chiang and Huang. Chiang is the older model, with a less accurate result. Huang the newer model. The available options differs from model to model.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/chiang-model-versus-huang-model-2.png" alt="Chiang Model versus Huang Model" loading="lazy"><figcaption>Chiang Model versus Huang Model</figcaption></figure>
+<h5 id="color-parametrization">Color Parametrization</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/color-parametrization.png" alt="Color Parametrization" loading="lazy"></figure>
+<p>The shader provides three different ways, or parametrizations, to color the hair strands. Direct coloring, Melanin concentration and Absorption coefficient. They have some different settings and inputs.</p>
+<h4 id="inputs-10">Inputs</h4>
+<h5 id="huang-absorption-coefficient">Huang - Absorption coefficient</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/huang-absorption-coefficient.png" alt="Huang - Absorption coefficient" loading="lazy"><figcaption>Huang - Absorption coefficient</figcaption></figure>
+<p>Specifies the attenuation coefficient sa, as applied by the Beer-Lambert law. This mode is intended mainly for technical users who want to use coefficients from the literature without any sort of conversion.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Absorption Coefficient</td>
+<td>Specifies the light absorption per unit length as the light passes through the value. A higher value leads to a darker color. The absorption coefficient is a vector 3.</td>
+</tr>
+<tr>
+<td>Aspect Ratio</td>
+<td>For elliptical hair cross-section the aspect ratio is the ratio of the minor axis to the major axis. The major axis is alighed with the curve normal. Recommended values are 0.8 to 1 for asian hair, 0.654 to 0.9 for caucasian hair and 0.5 to 0.65 for african hair. Set it to 1 for a circular cross section.</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>The hair roughness. A lower value leads to a metallic look.</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>Refraction coefficient. The default value of 1.550 is the refraction coefficient of melanin.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The tilt angle of the cuticle scales. That'st the outermost part of the hair. They are always tilted towards the hair root. Human hair has a value between 2 and 4.</td>
+</tr>
+<tr>
+<td>Random Roughness</td>
+<td>Adds a random roughness to each strand.</td>
+</tr>
+<tr>
+<td>Random</td>
+<td>Add a random input value.</td>
+</tr>
+<tr>
+<td>Reflection</td>
+<td>Optional factor for modulating the first light bounce off the hair surface. The color of this component is always white. Keep it 1.0 for physical correctness.</td>
+</tr>
+<tr>
+<td>Transmission</td>
+<td>Optional factor for modulating the transmission component. The color of this component is always white. Keep it 1.0 for physical correctness.</td>
+</tr>
+<tr>
+<td>Secondary Reflection</td>
+<td>Optional factor for modulating the component which is transmitted into the hair, reflected off the backside of the hair and then transmitted out of the hair. This component is oriented approximately around the incoming direction, and picks up the color of the pigment inside the hair. Keep this 1.0 for physical correctness.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="huang-melanin-concentration">Huang - Melanin concentration</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/huang-melanin-concentration.png" alt="Huang - Melanin concentration" loading="lazy"><figcaption>Huang - Melanin concentration</figcaption></figure>
+<p>This mode defines the color as the quantity and ratio of the pigments which are commonly found in hair and fur, eumelanin (prevalent in brown-black hair) and pheomelanin (red hair). The quantity is specified in the Melanin input, and the ratio between them in Melanin Redness. Increasing concentrations darken the hair (the following are with Melanin Redness 1):</p>
+<p>White (Melanin 0), Blonde (Melanin 0.25), Reddish (Melanin 0.5), Brown (Melanin 0.75), Black (Melanin 1)</p>
+<p>Additionally, the Tint inputs allows to dye the hair with the desired color.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Melanin</td>
+<td>Absolute quantity of pigment. Range <code>[0,1]</code> equivalent to <code>[0%,100%]</code>. Hint. This is a linear mapping to the underlying exponential function: melanin_qty=-ln(max(1.0-Melanin,0.0001))</td>
+</tr>
+<tr>
+<td>Melanin Redness</td>
+<td>Ratio of pheomelanin to eumelanin. Range <code>[0,1]</code> equivalent to <code>[0%,100%]</code>. Hint. The ratio formula is: <code>eumelanin=Melanin*(1.0-MelaninRedness)</code>, <code>pheomelanin=Melanin*MelaninRedness</code>. The resulting quantities are converted (after randomization, if specified) to absorption concentration via the following formula (section 6.1 of <code>[EFHLA11]</code>, adjusted for the range <code>[0,1])</code>: <code>sa=eumelanin*???0.5060.8411.653???+pheomelanin*???0.3430.7331.924???</code></td>
+</tr>
+<tr>
+<td>Tint</td>
+<td>Color used for dyeing the hair after applying the melanin pigment. It is not subject to randomization. It can be disabled by setting the color to white. Hint. This is converted via the Color mapping above and added to the absorption coefficient of the melanin concentration.</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>Refraction coefficient. The default value of 1.550 is the refraction coefficient of melanin.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The tilt angle of the cuticle scales. That'st the outermost part of the hair. They are always tilted towards the hair root. Human hair has a value between 2 and 4.</td>
+</tr>
+<tr>
+<td>Random Color</td>
+<td>For each strand, vary the melanin concentration by RandomFactor. Range <code>[0,1]</code> equivalent to <code>[0%,100%]</code> of the initial melanin concentration. Hint. The melanin concentration is multiplied by randomFactor, where <code>randomFactor=1.0+2.0*(Random-0.5)*RandomColor</code>.</td>
+</tr>
+<tr>
+<td>Random Roughness</td>
+<td>Adds a random roughness to each strand.</td>
+</tr>
+<tr>
+<td>Reflection</td>
+<td>Optional factor for modulating the first light bounce off the hair surface. The color of this component is always white. Keep it 1.0 for physical correctness.</td>
+</tr>
+<tr>
+<td>Transmission</td>
+<td>Optional factor for modulating the transmission component. The color of this component is always white. Keep it 1.0 for physical correctness.</td>
+</tr>
+<tr>
+<td>Secondary Reflection</td>
+<td>Optional factor for modulating the component which is transmitted into the hair, reflected off the backside of the hair and then transmitted out of the hair. This component is oriented approximately around the incoming direction, and picks up the color of the pigment inside the hair. Keep this 1.0 for physical correctness.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="huang-direct-coloring">Huang - Direct Coloring</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/huang-direct-coloring.png" alt="Huang - Direct Coloring" loading="lazy"><figcaption>Huang - Direct Coloring</figcaption></figure>
+<p>Choose the desired RGB color and the shader will approximate the necessary absorption coefficient (below).</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aspect Ratio</td>
+<td>For elliptical hair cross-section the aspect ratio is the ratio of the minor axis to the major axis. The major axis is alighed with the curve normal. Recommended values are 0.8 to 1 for asian hair, 0.654 to 0.9 for caucasian hair and 0.5 to 0.65 for african hair. Set it to 1 for a circular cross section.</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>The hair roughness. A lower value leads to a metallic look.</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>Refraction coefficient. The default value of 1.550 is the refraction coefficient of melanin.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The tilt angle of the cuticle scales. That'st the outermost part of the hair. They are always tilted towards the hair root. Human hair has a value between 2 and 4.</td>
+</tr>
+<tr>
+<td>Random Roughness</td>
+<td>Adds a random roughness to each strand.</td>
+</tr>
+<tr>
+<td>Reflection</td>
+<td>Optional factor for modulating the first light bounce off the hair surface. The color of this component is always white. Keep it 1.0 for physical correctness.</td>
+</tr>
+<tr>
+<td>Transmission</td>
+<td>Optional factor for modulating the transmission component. The color of this component is always white. Keep it 1.0 for physical correctness.</td>
+</tr>
+<tr>
+<td>Secondary Reflection</td>
+<td>Optional factor for modulating the component which is transmitted into the hair, reflected off the backside of the hair and then transmitted out of the hair. This component is oriented approximately around the incoming direction, and picks up the color of the pigment inside the hair. Keep this 1.0 for physical correctness.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="chiang-absorption-coefficient">Chiang - Absorption coefficient</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/chiang-absorption-coefficient.png" alt="Chiang - Absorption coefficient" loading="lazy"><figcaption>Chiang - Absorption coefficient</figcaption></figure>
+<p>Specifies the attenuation coefficient sa, as applied by the Beer-Lambert law. This mode is intended mainly for technical users who want to use coefficients from the literature without any sort of conversion.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Absorption Coefficient</td>
+<td>Specifies the light absorption per unit length as the light passes through the value. A higher value leads to a darker color. The absorption coefficient is a vector 3.</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>The hair roughness. A lower value leads to a metallic look.</td>
+</tr>
+<tr>
+<td>Radial Roughness</td>
+<td>Specify how much the glints are smoothed in the direction of the hair tangent. Too low values will concentrate the glint; while setting it too high will spread the light across the width of the strand. Hint. Mathematically, this parameter is mapped to the logistic distribution’s scale factor s (section 4.1 of <code>[CBTB16])</code>.</td>
+</tr>
+<tr>
+<td>Coat</td>
+<td>Simulate a shiny coat by reducing the roughness to the given factor only for the first light bounce (diffuse). Range <code>[0</code>, <code>1]</code> is equivalent to a reduction of <code>[0%</code>, <code>100%]</code> of the original roughness.&quot;)</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>Refraction coefficient. The default value of 1.550 is the refraction coefficient of melanin.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The tilt angle of the cuticle scales. That'st the outermost part of the hair. They are always tilted towards the hair root. Human hair has a value between 2 and 4.</td>
+</tr>
+<tr>
+<td>Random Roughness</td>
+<td>Adds a random roughness to each strand.</td>
+</tr>
+<tr>
+<td>Random</td>
+<td>Add a random value.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="chiang-melanin-concentration">Chiang - Melanin concentration</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/chiang-melanin-concentration.png" alt="Chiang - Melanin concentration" loading="lazy"><figcaption>Chiang - Melanin concentration</figcaption></figure>
+<p>This mode defines the color as the quantity and ratio of the pigments which are commonly found in hair and fur, eumelanin (prevalent in brown-black hair) and pheomelanin (red hair). The quantity is specified in the Melanin input, and the ratio between them in Melanin Redness. Increasing concentrations darken the hair (the following are with Melanin Redness 1):</p>
+<p>White (Melanin 0), Blonde (Melanin 0.25), Reddish (Melanin 0.5), Brown (Melanin 0.75), Black (Melanin 1)</p>
+<p>Additionally, the Tint inputs allows to dye the hair with the desired color.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Melanin</td>
+<td>Absolute quantity of pigment. Range <code>[0,1]</code> equivalent to <code>[0%,100%]</code>. Hint. This is a linear mapping to the underlying exponential function: melanin_qty=-ln(max(1.0-Melanin,0.0001))</td>
+</tr>
+<tr>
+<td>Melanin Redness</td>
+<td>Ratio of pheomelanin to eumelanin. Range <code>[0,1]</code> equivalent to <code>[0%,100%]</code>. Hint. The ratio formula is: <code>eumelanin=Melanin*(1.0-MelaninRedness)</code>, <code>pheomelanin=Melanin*MelaninRedness</code>. The resulting quantities are converted (after randomization, if specified) to absorption concentration via the following formula (section 6.1 of <code>[EFHLA11]</code>, adjusted for the range <code>[0,1])</code>: <code>sa=eumelanin*???0.5060.8411.653???+pheomelanin*???0.3430.7331.924???</code></td>
+</tr>
+<tr>
+<td>Tint</td>
+<td>Color used for dyeing the hair after applying the melanin pigment. It is not subject to randomization. It can be disabled by setting the color to white. Hint. This is converted via the Color mapping above and added to the absorption coefficient of the melanin concentration.</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>The hair roughness. A lower value leads to a metallic look.</td>
+</tr>
+<tr>
+<td>Radial Roughness</td>
+<td>Specify how much the glints are smoothed in the direction of the hair tangent. Too low values will concentrate the glint; while setting it too high will spread the light across the width of the strand. Hint. Mathematically, this parameter is mapped to the logistic distribution’s scale factor s (section 4.1 of <code>[CBTB16])</code>.</td>
+</tr>
+<tr>
+<td>Coat</td>
+<td>Simulate a shiny coat by reducing the roughness to the given factor only for the first light bounce (diffuse). Range <code>[0</code>, <code>1]</code> is equivalent to a reduction of <code>[0%</code>, <code>100%]</code> of the original roughness.&quot;)</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>Refraction coefficient. The default value of 1.550 is the refraction coefficient of melanin.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The tilt angle of the cuticle scales. That'st the outermost part of the hair. They are always tilted towards the hair root. Human hair has a value between 2 and 4.</td>
+</tr>
+<tr>
+<td>Random Color</td>
+<td>For each strand, vary the melanin concentration by RandomFactor. Range <code>[0,1]</code> equivalent to <code>[0%,100%]</code> of the initial melanin concentration. Hint. The melanin concentration is multiplied by randomFactor, where <code>randomFactor=1.0+2.0*(Random-0.5)*RandomColor</code>.</td>
+</tr>
+<tr>
+<td>Random Roughness</td>
+<td>Adds a random roughness to each strand.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="chiang-direct-coloring">Chiang - Direct Coloring</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/chiang-direct-coloring.png" alt="Chiang - Direct Coloring" loading="lazy"><figcaption>Chiang - Direct Coloring</figcaption></figure>
+<p>Choose the desired RGB color and the shader will approximate the necessary absorption coefficient (below).</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>The RGB color of the strand. Only used in Direct coloring. Hint. The chosen color is converted to an absorption coefficient with the following formula (section 4.2 of <code>[CBTB16])</code>: sa=ln(Color)(5.969-0.215ßN+2.532ß2N-10.73ß3N+5.574ß4N+0.245ß5N)2 where ßN is the radial roughness of the hair after applying randomization (if specified).</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>The hair roughness. A lower value leads to a metallic look.</td>
+</tr>
+<tr>
+<td>Radial Roughness</td>
+<td>Add an extra radial roughness.</td>
+</tr>
+<tr>
+<td>Coat</td>
+<td>Simulate a shiny coat of fur, by reducing the Roughness to the given factor only for the first light bounce (diffuse). Range <code>[0,1]</code> equivalent to a reduction of <code>[0%,100%]</code> of the original Roughness.</td>
+</tr>
+<tr>
+<td>IOR</td>
+<td>Index of refraction (IOR) defining how much the ray changes direction. At 1.0 rays pass straight through like in a transparent material; higher values give more refraction. Default value is 1.55.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Tilts the glint of the hair by increasing the angle of the scales of the hair’s cuticle with respect to the hair shaft. Human hair usually has low values.</td>
+</tr>
+<tr>
+<td>Random Roughness</td>
+<td>For each strand, vary both Roughness values by RandomFactor. Range <code>[0,1]</code> equivalent to <code>[0%,100%]</code> of the initial roughness values. Hint. The applied formula is the same one as for Random Color.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-11">Outputs</h4>
+<h5 id="bsdf-8">BSDF</h5>
+<p>Standard shader output.</p>
+<h3 id="sheen-bsdf">Sheen BSDF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/sheen-bsdf.png" alt="Sheen BSDF" loading="lazy"></figure>
+<p>Cycles Only</p>
+<p>The Sheen BSDF is used to add reflection to materials such as cloth. It is meant to be used together with other shaders (such as a Diffuse Shader) and is not particularly useful on its own.</p>
+<h4 id="inputs-11">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.</td>
+</tr>
+<tr>
+<td>Sigma</td>
+<td>Variance of the normal distribution, controlling the sharpness of the peak. It can be thought of as a kind of roughness.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Normal used for shading; if nothing is connected the default shading normal is used.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-9">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/properties-4.png" alt="Properties" loading="lazy"></figure>
+<h5 id="distribution-4">Distribution</h5>
+<p>The distribution algorithm. Akishikmin is the legacy model. Microfiber the modern approach.</p>
+<h4 id="outputs-12">Outputs</h4>
+<h5 id="bsdf-9">BSDF</h5>
+<p>Standard shader output.</p>
+<h3 id="toon-bsdf">Toon BSDF</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/toon-bsdf.png" alt="Toon BSDF" loading="lazy"></figure>
+<p>Cycles Only</p>
+<p>The Toon BSDF is used to create Diffuse and Glossy materials with cartoon light effects.</p>
+<h4 id="inputs-12">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Parameter between 0.0 and 1.0 that gives an angle of reflection between 0° and 90°.</td>
+</tr>
+<tr>
+<td>Smooth</td>
+<td>This value specifies an angle over which a smooth transition from full to no reflection happens.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Normal used for shading; if nothing is connected the default shading normal is used.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-10">Properties</h4>
+<h5 id="component">Component</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/component.png" alt="Component" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diffuse</td>
+<td>Use shading based on the Diffuse BSDF.</td>
+</tr>
+<tr>
+<td>Glossy</td>
+<td>Use shading based on the Glossy BSDF for specular reflection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-13">Outputs</h4>
+<h5 id="bsdf-10">BSDF</h5>
+<p>Standard shader output.</p>
+<h3 id="world">World</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/world.png" alt="World" loading="lazy"></figure>
+<h3 id="background">Background</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/1a8cc24f07439c1863660b38f530e5d438755c37/docs2/images/editors/shader-editor/header/add-menu-shader/background.png" alt="Background" loading="lazy"></figure>
+<p>Shader Type World</p>
+<p>The Background shader node is used to add background light emission.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Color</strong>: Color of the emitted light. · <strong>Strength</strong>: Strength of the emitted light.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Background</strong>: Standard shader output.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fto-master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fshader-editor%2Fheader%2Fadd-menu%2Fshader.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/to-master/docs2/content/editors/shader-editor/header/add-menu/shader.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-menu-shader">Add menu - Shader</a><a class="h3" href="#eevee">Eevee</a><a class="h3" href="#add-shader">Add Shader</a><a class="h3" href="#mix-shader">Mix Shader</a><a class="h3" href="#diffuse-bsdf">Diffuse BSDF</a><a class="h3" href="#emission">Emission</a><a class="h3" href="#glass-bsdf">Glass BSDF</a><a class="h3" href="#glossy-bsdf">Glossy BSDF</a><a class="h3" href="#holdout">Holdout</a><a class="h3" href="#metallic-bsdf">Metallic BSDF</a><a class="h3" href="#principled-bsdf">Principled BSDF</a><a class="h3" href="#refraction-bsdf">Refraction BSDF</a><a class="h3" href="#specular-bsdf">Specular BSDF</a><a class="h3" href="#subsurface-scattering">Subsurface Scattering</a><a class="h3" href="#translucent-bsdf">Translucent BSDF</a><a class="h3" href="#transparent-bsdf">Transparent BSDF</a><a class="h3" href="#principled-volume">Principled Volume</a><a class="h3" href="#volume-absorption">Volume Absorption</a><a class="h3" href="#volume-scatter">Volume Scatter</a><a class="h3" href="#volume-coefficients">Volume Coefficients</a><a class="h3" href="#cycles-workbench">Cycles / Workbench</a><a class="h3" href="#hair-bsdf">Hair BSDF</a><a class="h3" href="#principled-hair-bsdf">Principled Hair BSDF</a><a class="h3" href="#sheen-bsdf">Sheen BSDF</a><a class="h3" href="#toon-bsdf">Toon BSDF</a><a class="h3" href="#world">World</a><a class="h3" href="#background">Background</a></aside></div></body></html>
