@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.14
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.17
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -205,6 +205,13 @@
     '.ui-doc-table td,.ui-doc-table th{white-space:normal;overflow-wrap:anywhere}',
     /* Q6 · Workspaces overview: no right sidebar */
     'html.dk-wide .ui-doc-body{max-width:none!important}',
+    /* Q7 · focus mode on wide pages: the sidebar column goes too, so the content takes the whole width */
+    'html.is-doc-focus.dk-wide .ui-doc-grid{grid-template-columns:minmax(0,1fr)!important}',
+    'html.is-doc-focus.dk-wide .ui-doc-article{max-width:none!important;width:100%;margin:0!important}',
+    /* Q7 · wide tables scroll sideways on phones instead of squeezing every column */
+    '.dk-tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 1.25rem;max-width:100%}',
+    '.dk-tscroll>.ui-doc-table{margin-bottom:0}',
+    '@media(max-width:767px){.dk-tscroll.is-wide>.ui-doc-table{min-width:36rem}.dk-tscroll.is-wide td,.dk-tscroll.is-wide th{overflow-wrap:normal;word-break:normal}.dk-tscroll.is-wide::after{content:"Swipe the table sideways";display:block;margin-top:.375rem;font-size:.75rem;color:#a8a8a8}}',
     '@media(min-width:1280px){html.dk-wide .ui-doc-outline{display:none!important}html.dk-wide .ui-doc-grid{grid-template-columns:17rem minmax(0,1fr)}}',
     '@media(min-width:1680px){html.dk-wide .ui-doc-grid{grid-template-columns:288px minmax(0,1fr)}}',
     /* Q6 · sidebar fades where it is cut off */
@@ -328,6 +335,13 @@
       a.href = 'https://github.com/Bforartists/Manual/edit/' + BRANCH + '/' + src;
       a.title = 'Edit on GitHub, starting from the latest docs: GitHub makes your own branch and a pull request for you';
     });
+    /* tables: a scroll box, so wide ones swipe sideways on phones */
+    qa('.ui-doc-body table').forEach(function (t) {
+      if (t.parentNode.classList.contains('dk-tscroll')) return;
+      var w = d.createElement('div'), row = t.rows && t.rows[0];
+      w.className = 'dk-tscroll' + (row && row.cells.length >= 3 ? ' is-wide' : '');
+      t.parentNode.insertBefore(w, t); w.appendChild(t);
+    });
     /* close buttons: the white X, not the red error icon */
     qa('.ui-doc-sheet-x img').forEach(function (i) { if (i.src.indexOf(IC.xw) < 0) i.src = CDN + IC.xw; });
     /* chapter cards: white text and a button, like the overview cards */
@@ -337,7 +351,7 @@
     });
   }
   /* the Workspaces overview and the interactive keymap get the full width (no right sidebar) */
-  function wide() { if (q('.ui-doc-body .ui-ws-explorer, .ui-doc-body .wsx.is-explorer, .ui-doc-body .ui-keymap, .ui-doc-body .kmx') && !q('.dk-look')) R.classList.add('dk-wide'); }
+  function wide() { var km = qa('.ui-doc-body .ui-keymap').some(function (b) { return !q('[data-mini]', b); }); if ((km || q('.ui-doc-body .ui-ws-explorer, .ui-doc-body .wsx.is-explorer')) && !q('.dk-look')) R.classList.add('dk-wide'); }
   /* the sidebar fades where it is cut off, so you can tell there is more */
   function sideFade() {
     var s = q('.ui-doc-grid > .ui-doc-side'); if (!s || s.dataset.dkFade) return; s.dataset.dkFade = '1';

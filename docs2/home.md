@@ -10,7 +10,7 @@ version: "5.1"
 popular:
   - { title: Quick Start, link: getting-started/quick-start.md, icon: startpoint }
   - { title: Workspaces, link: "#dk-look", icon: workspace }
-  - { title: Keymap, link: keymap/standard-keymap.md, icon: key_command }
+  - { title: Keymap, link: keymap/bforartists-keymap.md, icon: key_command }
   - { title: Migrating from Blender, link: getting-started/migrating-from-blender.md, icon: import }
 # Hero art: one still picture beside the search (a Webflow asset URL)
 art:

@@ -1,27 +1,20 @@
 ---
-id: keymap.standard-keymap
-title: Standard Keymap
+id: keymap.table
+title: Keymap Table
 section: keymap
 path:
   - Keymap
-  - Standard Keymap
+  - Keymap Table
 version: "5.1"
 status: draft
 screenshots: "5.1"
 source:
   - 41 Standard Keymap.odt
-summary: "The interaction concept for Bforartists is the graphical UI."
+summary: "The written keymap of the old manual (5.1): every hotkey with what it does and where it is in the menus."
 ---
 
-## Interactive keymap
+> **Note:** This is the keymap as the old manual (5.1) wrote it, with where each action sits in the menus. For the current keys, editor by editor, use the [Bforartists Keymap](bforartists-keymap.md).
 
-Pick the editor and the mode, then point at a key to see what it does there. Hold Shift, Ctrl or Alt (on screen or on your own keyboard) to see those combinations, or type an action to find its key. The keys come straight from the Bforartists source, so they always match the current version.
-
-<!-- keymap-explorer -->
-
-## The full table
-
-The table below is the keymap from the old manual (5.1), kept while the interactive keymap is new.
 
 |  |  |  |  |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------- |

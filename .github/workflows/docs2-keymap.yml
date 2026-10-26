@@ -1,5 +1,5 @@
 # Docs 2.0 · keymap
-# Rebuilds docs2/keymap/keymap.json from the Bforartists source (scripts/presets/keyconfig), the
+# Rebuilds docs2/keymap/keymap*.json (Bforartists, Blender, Industry Compatible) from the Bforartists source (scripts/presets/keyconfig), the
 # same data Bforartists loads at start-up, and opens a pull request when the keys changed, with
 # a table of what was added, changed and removed. Runs every Monday and on demand.
 name: Docs 2.0 keymap
@@ -24,7 +24,7 @@ jobs:
       - name: ⬇️ Bforartists source (keymap files only)
         run: |
           git clone --depth 1 --filter=blob:none --sparse https://github.com/Bforartists/Bforartists _bfa
-          git -C _bfa sparse-checkout set scripts/presets/keyconfig
+          git -C _bfa sparse-checkout set scripts/presets/keyconfig scripts/modules/bl_keymap_utils
           echo "BFA_COMMIT=$(git -C _bfa rev-parse HEAD)" >> "$GITHUB_ENV"
 
       - uses: actions/setup-python@v5
@@ -47,7 +47,7 @@ jobs:
         with:
           branch: docs2/keymap-update
           base: master
-          add-paths: docs2/keymap/keymap.json
+          add-paths: docs2/keymap/keymap*.json
           commit-message: "Keymap: rebuilt from Bforartists ${{ env.BFA_COMMIT }}"
           title: "⌨️ Keymap update from the Bforartists source"
           body-path: _diff.md
