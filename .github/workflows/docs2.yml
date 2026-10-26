@@ -27,6 +27,11 @@ on:
     branches: ["master", "docs2/**"]
     paths: ["docs2/**", ".pages.yml"]
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Overwrite pages the sync thinks were edited by hand in Webflow (✋ in the summary)"
+        type: boolean
+        default: false
 
 concurrency:
   group: docs2-${{ github.event.pull_request.number || github.ref }}
@@ -173,7 +178,8 @@ jobs:
         run: |
           export DOCS_SHA=$(git rev-parse HEAD)     # includes the bot's commit, so image links match
           status=0
-          python docs2/tools/sync.py . --apply --publish --prune --report _sync.md --nav _nav/nav.json || status=$?
+          force=""; [ "${{ inputs.force }}" = "true" ] && force="--force"
+          python docs2/tools/sync.py . --apply --publish --prune $force --report _sync.md --nav _nav/nav.json || status=$?
           [ -f docs2/keymap/keymap.json ] && [ -d _nav ] && cp docs2/keymap/keymap.json _nav/keymap.json   # for the interactive keymap
           [ -f _sync.md ] && cat _sync.md >> "$GITHUB_STEP_SUMMARY"
           exit $status

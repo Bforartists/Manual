@@ -20,7 +20,7 @@ flowchart TD
 
 | You see | Cause | Fix |
 |---|---|---|
-| ✋ "edited by hand in Webflow after the last sync; skipped" in the job summary | Someone changed the item in the Webflow CMS or Designer, so the sync leaves it alone rather than overwrite their work | Copy anything worth keeping into GitHub. Then, in the Webflow CMS, set the item's **Checksum** field to `reset|<now>`, for example `reset|2026-10-24T18:50:10+00:00` (a time **after** your edit), save, and re-run the workflow (Actions → Run workflow on `master`) |
+| ✋ "edited by hand in Webflow after the last sync; skipped" in the job summary | Someone changed the item in the Webflow CMS or Designer, so the sync leaves it alone rather than overwrite their work | Copy anything worth keeping into GitHub. Then, in the Webflow CMS, set the item's **Checksum** field to `reset|<now>`, for example `reset|2026-10-24T18:50:10+00:00` (a time **after** your edit), save, and re-run the workflow (Actions → Run workflow on `master`). Many pages at once: **Actions → Docs 2.0 checks and preview → Run workflow**, tick **force**; it rewrites every page from GitHub |
 | ⏭️ "unchanged" | Nothing in the built page changed | Check that your change was merged into `master`, not just a branch |
 | The page is updated in the CMS but not on the site | Staging was not published | Webflow → Publish → webflow.io, or re-run the workflow |
 
