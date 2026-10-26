@@ -161,6 +161,22 @@ def small_parts(html):
 
 
 ICON_MARK = re.compile(r"\s*\{icon=([\w.-]+)\}\s*$")
+_ICONS = None
+
+
+def icon_src(name):
+    """`view3d` -> the Webflow file name from icons.json (the template adds the CDN base).
+    A file name or full URL passes through; an unknown name gives ''."""
+    global _ICONS
+    if name.startswith("http") or re.match(r"^[0-9a-f]{24}_", name):
+        return name
+    if _ICONS is None:
+        import json, os
+        try:
+            _ICONS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "icons.json"), encoding="utf-8"))["icons"]
+        except (OSError, ValueError, KeyError):
+            _ICONS = {}
+    return _ICONS.get(name, "")
 
 
 def heading_ids(html):
@@ -174,8 +190,9 @@ def heading_ids(html):
         im = ICON_MARK.search(text)
         if im:
             text = text[:im.start()]
-            if level == "1":
-                icon = f' data-icon="{im.group(1)}"'
+            src = icon_src(im.group(1)) if level == "1" else ""
+            if src:
+                icon = f' data-icon="{src}"'
 
         base = re.sub(r"[^a-z0-9]+", "-", re.sub(r"<[^>]+>", "", htmllib.unescape(text)).lower()).strip("-") or "section"
         n = seen.get(base, 0)
