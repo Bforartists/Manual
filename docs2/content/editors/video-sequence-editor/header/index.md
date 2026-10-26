@@ -636,9 +636,9 @@ Calls a border select tool that allows you to set the range of the preview.
 | --------------------------- | ---------------------------------------------------------------------------------------- |
 | Set Preview Range to Strips | Sets the width of the preview range to the length of the strips. |
 | Clear Preview Range | Removes the preview range. |
-| Set Start Frame | Sets the current frame as the start frame for playback. |
-| Set End Frame | Sets the current frame as the end frame for playback. |
 | Set Frame Range to Strips | Sets the start and end frame to the start and end frames of the strips in the sequencer. |
+
+> **Tip:** To make the current frame the start or end of playback, use the two buttons next to **Start** and **End** in the timeline footer.
 
 # Select Menu
 
