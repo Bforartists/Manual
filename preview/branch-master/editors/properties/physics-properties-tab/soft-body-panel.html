@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Soft Body panel · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch master · <code>master</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../../../getting-started.html">Getting Started</a>
+<a href="../../../getting-started/introduction.html">Introduction</a>
+<a href="../../../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../../../getting-started/installation.html">Installation</a>
+<a href="../../../getting-started/quick-start.html">Quick Start</a>
+<a href="../../../getting-started/data-structure.html">Data Structure</a>
+<a href="../../../getting-started/differences.html">Comparison with Blender</a>
+<a href="../../../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<a href="../../../interface.html">Interface</a>
+<a href="../../../interface/overview.html">Interface Basics</a>
+<a href="../../../interface/windows.html">Windows</a>
+<a href="../../../interface/areas.html">Areas</a>
+<a href="../../../interface/editors.html">Editors</a>
+<a href="../../../interface/headers.html">Headers</a>
+<a href="../../../interface/footers.html">Footers</a>
+<a href="../../../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../../../interface/side-bars.html">Side Bars</a>
+<a href="../../../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../../../interface/properties.html">Properties</a>
+<a href="../../../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../../../interface/context-menus.html">Context Menus</a>
+<a href="../../../interface/floating-menus.html">Floating Menus</a>
+<a href="../../../interface/pie-menus.html">Pie Menus</a>
+<a href="../../../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../../../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../../../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<a href="../../../workspaces.html">Workspaces</a>
+<a href="../../../workspaces/workspaces.html">Managing Workspaces</a>
+<a href="../../../workspaces/main.html">Main</a>
+<a href="../../../workspaces/uv-editing.html">UV Editing</a>
+<a href="../../../workspaces/modeling.html">Modeling</a>
+<a href="../../../workspaces/nodes.html">Nodes</a>
+<a href="../../../workspaces/animation.html">Animation</a>
+<a href="../../../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../../../workspaces/shading.html">Shading</a>
+<a href="../../../workspaces/rendering.html">Rendering</a>
+<a href="../../../workspaces/sculpting.html">Sculpting</a>
+<a href="../../../workspaces/compositing.html">Compositing</a>
+<a href="../../../workspaces/scripting.html">Scripting</a>
+<a href="../../../workspaces/2d-animation.html">2D Animation</a>
+<a href="../../../workspaces/storyboarding.html">Storyboarding</a>
+<a href="../../../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../../../workspaces/masking.html">Masking</a>
+<a href="../../../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../../../workspaces/video-editing.html">Video Editing</a>
+<a href="../../../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<a href="../../../workspaces/assets.html">Assets</a>
+<a href="../../../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../../../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<a href="../../../editors.html">Editors</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../render-properties-tab.html">Render</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../timeline/header.html">Header</a>
+<a href="../../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/edit/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/channel-list.html">Channel List</a>
+<a href="../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/metaball.html">Metaball</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/text.html">Text</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:1.5rem" href="../collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/lattice.html">Lattice</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="../object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/armature.html">Armature</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:1.5rem" href="../modifiers.html">Modifiers</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/layout.html">Layout</a>
+<a href="../../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="../visual-effects-properties-tab.html">Visual Effects</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/hair-curves.html">Hair Curves</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:1.5rem" href="../particle-properties-tab.html">Particles</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/point-cloud.html">Point Cloud</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="../physics-properties-tab.html">Physics</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/layout.html">Layout</a>
+<a href="../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../bone-properties-tab.html">Bone</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<a style="padding-left:1.5rem" href="../bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="../material-properties-tab.html">Material</a>
+<a href="../../texture-node-editor.html">Texture Node Editor</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="../strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../../dope-sheet.html">Dope Sheet</a>
+<a href="../../timeline.html">Timeline</a>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<a href="../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../../text-editor.html">Text Editor</a>
+<a href="../../python-console.html">Python Console</a>
+<a href="../../info-editor.html">Info Editor</a>
+<a href="../../toolbar.html">Toolbar</a>
+<a href="../../outliner.html">Outliner</a>
+<a href="../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a class="is-current" style="padding-left:2.5rem" href="soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../object-data-properties-tab/volume-object.html">Volume Object</a>
+<a href="../../file-browser.html">File browser</a>
+<a href="../../asset-browser.html">Asset Browser</a>
+<a href="../../spreadsheet.html">Spreadsheet</a>
+<a href="../../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../../timeline/viewport.html">Viewport</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<a href="../../../assets.html">Assets</a>
+<a href="../../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../../assets/default-library.html">Default Library</a>
+<a href="../../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<a href="../../../extensions.html">Extensions and Addons</a>
+<a href="../../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../../../extensions/coworker.html">Coworker</a>
+<a href="../../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../../../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<a href="../../../keymap.html">Keymap</a>
+<a href="../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<a href="../../../advanced.html">Advanced</a>
+<a href="../../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../../../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../../../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../../../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../../../appendix.html">Information</a>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../../appendix/gpl-license.html">About the GPL License</a>
+<a href="../../../appendix/community-influences.html">The Community Influences</a>
+<a href="../../../appendix/glossary.html">Glossary</a>
+<a href="../../../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<a href="../../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Physics Properties Tab › Soft Body panel</div><h1 class="pv-title">Soft Body panel</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 13 min read</span></div><article class="ui-doc-body"><h2 id="soft-body">Soft Body</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/soft-body.png" alt="Soft Body" loading="lazy"></figure>
+<p>Soft body simulation is used for simulating soft deformable objects. It was designed primarily for adding secondary motion to animation, like jiggle for body parts of a moving character.</p>
+<p>It also works for simulating more general soft objects that bend, deform and react to forces like gravity and wind, or collide with other objects.</p>
+<p>The soft body simulation works by combining existing animation on the object with forces acting on it. There are exterior forces like gravity or force fields and interior forces that hold the vertices together. This way you can simulate the shapes that an object would take on in reality if it had volume, was filled with something, and was acted on by real forces.</p>
+<p>Soft bodies can interact with other objects through Collision. They can interact with themselves through Self-Collision.</p>
+<p>The result of the soft body simulation can be converted to a static object. You can also bake edit the simulation, means edit intermediate results and run the simulation from there.</p>
+<p>Soft bodies can be used for:</p>
+<ul>
+<li>Jiggle on moving characters.</li>
+<li>Elastic and deformable objects made of materials like rubber or gelatin.</li>
+<li>Tree branches moving in the wind, swinging ropes, and the like.</li>
+<li>Flags, wide sleeves, cushions or other simple fabric reacting to forces.</li>
+</ul>
+<p>Soft body simulation works for all objects that have vertices or control points (meshes, curves, surfaces, and lattices).</p>
+<p>Soft body simulation is a dynamic effect. It needs an animation.</p>
+<h3 id="tips">Tips</h3>
+<p>Soft bodies work especially well if the objects have an even vertex distribution. You need enough vertices for good collisions. You change the deformation (the stiffness) if you add more vertices in a certain region.</p>
+<p>The calculation of collisions may take a long time. If something is not visible, why calculate it?</p>
+<p>To speed up the collision calculation it is often useful to collide with an additional, simpler, invisible, somewhat larger object.</p>
+<p>Use soft bodies only where it makes sense. If you try to cover a body mesh with a tight piece of cloth and animate solely with soft body, you will have no success. Self-collision of soft body hair may be activated, but that is a path that you have to wander alone. We will deal with Collisions in detail later.</p>
+<p>Try and use a Lattice or a Curve Guide soft body instead of the object itself. This may be magnitudes faster.</p>
+<h2 id="soft-body-panel">Soft Body panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/soft-body-panel.png" alt="Soft Body panel" loading="lazy"></figure>
+<h3 id="collision-collection">Collision Collection</h3>
+<p>Limit the soft body simulation to objects in a collection</p>
+<h2 id="object-subpanel">Object subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/object-subpanel.png" alt="Object subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Friction</td>
+<td>The friction of the surrounding medium. Generally friction dampens a movement. The larger the friction, the more viscous is the medium. Friction always appears when a vertex moves relative to its surround medium.</td>
+</tr>
+<tr>
+<td>Mass</td>
+<td>Mass value for vertices. Larger mass slows down acceleration, except for gravity where the motion is constant regardless of mass. Larger mass means larger inertia, so also braking a soft body is more difficult.</td>
+</tr>
+<tr>
+<td>Control Point</td>
+<td>You can paint weights and use a specified vertex group for mass values.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="simulation-subpanel">Simulation subpanel</h2>
+<h3 id="speed">Speed</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/speed.png" alt="Speed" loading="lazy"></figure>
+<p>You can control the internal timing of the soft body system with this value. It sets the correlation between frame rate and tempo of the simulation. A free falling body should cover a distance of about ten meters after one second. You can adjust the scale of your scene and simulation with this correlation. If you render with 25 frames per second, you will have to set Speed to 1.3.</p>
+<h2 id="cache-subpanel">Cache subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/cache-subpanel.png" alt="Cache subpanel" loading="lazy"></figure>
+<p>The soft body simulation can be cached in memory or stored on a drive. This improves real-time response and avoids unnecessary recalculation of particles. But creates also big files.</p>
+<p>The cloth system uses a unified system for caching and baking (together with cloth and Emitter particle).</p>
+<div class="ui-doc-callout is-important"><p><strong>Important:</strong> The file needs to be saved after baking. When the file is not saved then some options are not available.
+<strong>Important:</strong> The cloth settings becomes unavailable once the particle cache is baked. You need to remove the bake when you want to change the settings.</p></div>
+<h3 id="hints">Hints</h3>
+<p>The simulation is only calculated for positive frames in between the Start and End frames of the Cache panel, whether you bake or not. So if you want a simulation that is longer than the default frame range, you have to change the End frame.</p>
+<p>When an animation is played, each physics system writes each frame to the cache. Note that for the cache to fill up, one has to start the playback before or on the frame that the simulation starts.</p>
+<p>The cache is cleared automatically on changes. But not on all changes, so it may be necessary to free it manually. For example if you change a force field.</p>
+<p>The system is protected against changes after baking. If for example the mesh changes the simulation is not calculated anew.</p>
+<p>The bake result can be cleared by clicking on the Free Bake button in the simulation cache settings.</p>
+<p>A simulation can only be edited in Particle Edit Mode when it has been baked in memory. And cannot be edited if the Disk Cache is used.</p>
+<p>If you are not allowed to write to the required sub directory caching will not happen. For example if your blend-file path is very long and your operating system has a limit on the path length that is supported.</p>
+<p>Be careful with the sequence of modifiers in the modifier stack. You may have a different number of faces in the 3D Viewport and for rendering (For example when using subdivision surface). Then the rendered result may be very different from what you see in the 3D Viewport.</p>
+<h3 id="caches-list">Caches List</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/particle-properties-tab/emitter-cache-panel/caches-list.png" alt="Caches List" loading="lazy"></figure>
+<p>The list of available caches. The caches have no name by default. Double click to add a name.</p>
+<p>You can store and manage multiple caches at once for the same physics object. The active cache is the one that gets used.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drag Handler</td>
+<td>The two vertical lines at the end is a handler with which you can expand the list.</td>
+</tr>
+<tr>
+<td>Search Field</td>
+<td>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · <strong>Invert</strong>: Exclude the search term instead of searching for it. · <strong>Sort by Name</strong>: Sort the List by name.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add New Cache</td>
+<td>Add a new cache.</td>
+</tr>
+<tr>
+<td>Delete current Cache</td>
+<td>Deletes the selected cache.</td>
+</tr>
+<tr>
+<td>Simulation start</td>
+<td>The start frame of the simulation.</td>
+</tr>
+<tr>
+<td>End</td>
+<td>The end frame of the simulation.</td>
+</tr>
+<tr>
+<td>Cache Step</td>
+<td>Number of frames between cached frames.</td>
+</tr>
+<tr>
+<td>Info string</td>
+<td>An info string. Gives different messages, dependent of the status.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="disk-cache">Disk Cache</h3>
+<p>Save the cache externally in a folder instead inside of the blend file. The cache of a baked simulation will be stored inside the blend-file when you save it. A folder named <code>blendcache_[filename]</code> will then be created alongside the blend-file. The blend-file must be saved first and then again.</p>
+<h4 id="use-library-path">Use Library Path</h4>
+<p>Share the disk cache when the physics object is linked into another blend-file.</p>
+<p>When this option is enabled, linked versions of the object will reference the same disk cache. Otherwise linked versions of the object will use independent caches.</p>
+<h4 id="compression">Compression</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/cloth-panel/compression.png" alt="Compression" loading="lazy"></figure>
+<p>The compression level for cached files. It becomes available when Disk Cache is ticked</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Do not compress the cache.</td>
+</tr>
+<tr>
+<td>Light</td>
+<td>Compression will optimize the speed of compressing/decompressing operations over file size.</td>
+</tr>
+<tr>
+<td>Heavy</td>
+<td>Compression will result in smaller cache files, but requires more CPU power to compress / decompress.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bake-delete-bake">Bake / Delete Bake</h3>
+<p>Start baking. Once you have baked the cache the button turns into a Delete bake button. And allows you to remove the bake.</p>
+<p>The baking progress can be seen in the footer. You need to be in Object Mode to bake.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/particle-properties-tab/emitter-cache-panel/bake-delete-bake.png" alt="Bake / Delete Bake" loading="lazy"><figcaption>Bake / Delete Bake</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Calculate To Frame</td>
+<td>Bake only up to the current frame. Limited by End frame set in the cache settings.</td>
+</tr>
+<tr>
+<td>Current Cache to Bake</td>
+<td>Store any temporarily cached simulation data as a bake. Note that playing the animation will try to simulate any visible physics simulations. Depending on the physics type, this data may be temporarily cached. Normally such temporary caches are cleared when an object or setting is modified, but converting it to a bake will “save”it.</td>
+</tr>
+<tr>
+<td>Bake All Dynamics</td>
+<td>Bake all physics systems in the scene, even those of different types. Useful for baking complex setups involving interactions between different physics types.</td>
+</tr>
+<tr>
+<td>Delete All Bakes</td>
+<td>Free bakes of all physics systems in the scene, even those of different types.</td>
+</tr>
+<tr>
+<td>Update All To Frame</td>
+<td>Bake all physics systems in the scene to the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="goal-subpanel">Goal subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/goal-subpanel.png" alt="Goal subpanel" loading="lazy"></figure>
+<p>Use the motion from animations (F-curves, armatures, parents, lattices, etc.) in the simulation. The “goal” is the desired end position for vertices based on this animation.</p>
+<h3 id="vertex-group">Vertex Group</h3>
+<p>Use a vertex group to allow per-vertex goal weights (multiplied by the Default goal).</p>
+<h3 id="goal-settings-sub-subpanel">Goal Settings sub subpanel</h3>
+<h4 id="stiffness">Stiffness</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/stiffness.png" alt="Stiffness" loading="lazy"></figure>
+<p>The spring stiffness for Goal. A low value creates very weak springs (more flexible “attachment” to the goal), a high value creates a strong spring (a stiffer “attachment” to the goal).</p>
+<h4 id="damping">Damping</h4>
+<p>The friction coefficient for Goal. Higher values give damping of the spring effect (little jiggle), and the movement will soon come to an end.</p>
+<h3 id="goal-strength-sub-subpanel">Goal Strength sub subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/goal-strength-sub-subpanel.png" alt="Goal Strength sub subpanel" loading="lazy"><figcaption>Goal Strength sub subpanel</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>Goal weight/strength for all vertices when no Vertex Group is assigned. If you use a vertex group the weight of a vertex defines its goal.</td>
+</tr>
+<tr>
+<td>Min / Max</td>
+<td>When you use a vertex group, you can use the Minimum and Maximum to fine-tune (clamp) the weight values. The lowest vertex weight will become Minimum, the highest value becomes Maximum.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="edges-subpanel">Edges subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/edges-subpanel.png" alt="Edges subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Edges</td>
+<td>Allow the edges in a mesh object to act like springs. See interior forces.</td>
+</tr>
+<tr>
+<td>Springs</td>
+<td>Use a specified vertex group for spring strength values.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pull">Pull</h3>
+<p>The spring stiffness for edges (how much the edges are allowed to stretch). A low value means very weak springs (a very elastic material), a high value is a strong spring (a stiffer material) that resists being pulled apart.</p>
+<p>A value of 0.5 is latex, 0.9 is like a sweater, 0.999 is a highly-starched napkin or leather. The soft body simulation tends to get unstable if you use a value of 0.999, so you should lower this value a bit if that happens.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Push</td>
+<td>How much the soft body resists being scrunched together, like a compression spring. Low values for fabric, high values for inflated objects and stiff material.</td>
+</tr>
+<tr>
+<td>Damp</td>
+<td>The friction for edge springs. High values (max of 50) dampen the Push/Pull effect and calm down the cloth.</td>
+</tr>
+<tr>
+<td>Plastic</td>
+<td>Permanent deformation of the object after a collision. The vertices take a new position without applying the modifier.</td>
+</tr>
+<tr>
+<td>Bending</td>
+<td>This option creates virtual connections between a vertex and the vertices connected to its neighbors. This includes diagonal edges. Damping also applies to these connections.</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>The edges can shrink or be blown up. This value is given in percent, 0 disables this function. 100% means no change, the body keeps 100% of its size.</td>
+</tr>
+<tr>
+<td>Collision Edge</td>
+<td>Checks for edges of the soft body mesh colliding.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="face">Face</h3>
+<p>Checks for any portion of the face of the soft body mesh colliding (computationally intensive!). While Face enabled is great, and solves lots of collision errors, there does not seem to be any dampening settings for it, so parts of the soft body object near a collision mesh tend to “jitter” as they bounce off and fall back, even when there is no motion of any meshes. Edge collision has dampening, so that can be controlled, but Deflection dampening value on a collision object does not seem to affect the face collision.</p>
+<h3 id="aerodynamics-sub-subpanel">Aerodynamics sub subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/aerodynamics-sub-subpanel.png" alt="Aerodynamics sub subpanel" loading="lazy"></figure>
+<p>Force from surrounding media. See exterior forces for details.</p>
+<h4 id="type">Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/type.png" alt="Type" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple</td>
+<td>Edges receive a drag force from the surrounding media.</td>
+</tr>
+<tr>
+<td>Lift Force</td>
+<td>Edges receive a lift force when passing through the surrounding media.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>How much aerodynamic force to use. Try a value of 30 at first.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stiffness-subpanel">Stiffness subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/stiffness-subpanel.png" alt="Stiffness subpanel" loading="lazy"></figure>
+<p>Add diagonal springs at quad faces. This stops quad faces to collapse completely on collisions.</p>
+<h4 id="shear">Shear</h4>
+<p>Stiffness of the virtual springs created for quad faces.</p>
+<h2 id="self-collision-subpanel">Self Collision subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/self-collision-subpanel.png" alt="Self Collision subpanel" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Self-Collision needs Edges enabled!</p></div>
+<p>Allow self collision and avoid self intersection. Every vertex is surrounded with an elastic virtual ball. Vertices may not penetrate the balls of other vertices. If you want a good result you may have to adjust the size of these balls.</p>
+<h3 id="calculation-type">Calculation Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/calculation-type.png" alt="Calculation Type" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manual</td>
+<td>The Ball Size directly sets the ball size.</td>
+</tr>
+<tr>
+<td>Average</td>
+<td>The average length of all edges attached to the vertex is calculated and then multiplied with the Ball Size setting. Works well with evenly distributed vertices.</td>
+</tr>
+<tr>
+<td>Minimal / Maximal</td>
+<td>The ball size is as large as the smallest/largest spring length of the vertex multiplied with the Ball Size.</td>
+</tr>
+<tr>
+<td>Average Min Max</td>
+<td>Size = ((Min + Max)/2) × Ball Size.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ball-size">Ball Size</h3>
+<p>Fraction of the length of attached edges. The edge length is computed based on the chosen algorithm. This setting is the factor that is multiplied by the spring length. It is a spherical distance (radius) within which, if another vertex of the same mesh enters, the vertex starts to deflect in order to avoid a self-collision. Set this value to the fractional distance between vertices that you want them to have their own “space”. Too high of a value will include too many vertices all the time and slow down the calculation. Too low of a level will let other vertices get too close and thus possibly intersect because there will not be enough time to slow them down.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stiffness</td>
+<td>How elastic that ball of personal space is. A high stiffness means that the vertex reacts immediately to another vertex enters their space.</td>
+</tr>
+<tr>
+<td>Dampening</td>
+<td>How the vertex reacts. A low value just slows down the vertex as it gets too close. A high value repulses it. Collisions with other objects are set in the (other) Collision panel. To collide with another object they have to share at least one common layer.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="solver-subpanel">Solver subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/solver-subpanel.png" alt="Solver subpanel" loading="lazy"></figure>
+<p>The settings in the Soft Body Solver panel determine the accuracy of the simulation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Step Size Min</td>
+<td>Minimum simulation steps per frame. Increase this value, if the soft body misses fast-moving collision objects.</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>Maximum simulation steps per frame. Normally the number of simulation steps is set dynamically (with the Error Limit) but you have probably a good reason to change it.</td>
+</tr>
+<tr>
+<td>Auto-Step</td>
+<td>Use velocities for automatic step sizes. Helps the Solver figure out how much work it needs to do based on how fast things are moving.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="error-limit">Error Limit</h3>
+<p>Rules the overall quality of the solution delivered. Default 0.1. The most critical setting that defines how precise the solver should check for collisions. Start with a value that is half the average edge length. If there are visible errors, jitter, or over-exaggerated responses, decrease the value. The solver keeps track of how “bad” it is doing and the Error Limit causes the solver to do some “adaptive step sizing”.</p>
+<h4 id="diagnostics-subpanel">Diagnostics subpanel</h4>
+<h4 id="print-performance-to-console">Print Performance to Console</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/print-performance-to-console.png" alt="Print Performance to Console" loading="lazy"><figcaption>Print Performance to Console</figcaption></figure>
+<p>Prints on the console how the solver is doing.</p>
+<h4 id="estimate-transforms">Estimate Transforms</h4>
+<p>Estimate matrix, split to COM, ROT, SCALE.</p>
+<h4 id="helpers-subpanel">Helpers subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/helpers-subpanel.png" alt="Helpers subpanel" loading="lazy"></figure>
+<p>These settings allow you to control how Bforartists will react (deform) the soft body once it either gets close to or actually intersects (cuts into) another collision object on the same layer.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Choke</td>
+<td>Calms down (reduces the exit velocity of) a vertex or edge once it penetrates a collision mesh.</td>
+</tr>
+<tr>
+<td>Fuzzy</td>
+<td>Fuzziness while on collision, high values make collision handling faster but less stable. Simulation is faster, but less accurate.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="field-weights-subpanel">Field Weights subpanel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/physics-properties-tab/soft-body-panel/field-weights-subpanel.png" alt="Field Weights subpanel" loading="lazy"></figure>
+<p>Adjust how strong other forces influences the soft body simulation.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fphysics-properties-tab%2Fsoft-body-panel.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/master/docs2/content/editors/properties/physics-properties-tab/soft-body-panel.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#soft-body">Soft Body</a><a class="h3" href="#tips">Tips</a><a class="h2" href="#soft-body-panel">Soft Body panel</a><a class="h3" href="#collision-collection">Collision Collection</a><a class="h2" href="#object-subpanel">Object subpanel</a><a class="h2" href="#simulation-subpanel">Simulation subpanel</a><a class="h3" href="#speed">Speed</a><a class="h2" href="#cache-subpanel">Cache subpanel</a><a class="h3" href="#hints">Hints</a><a class="h3" href="#caches-list">Caches List</a><a class="h3" href="#disk-cache">Disk Cache</a><a class="h3" href="#bake-delete-bake">Bake / Delete Bake</a><a class="h2" href="#goal-subpanel">Goal subpanel</a><a class="h3" href="#vertex-group">Vertex Group</a><a class="h3" href="#goal-settings-sub-subpanel">Goal Settings sub subpanel</a><a class="h3" href="#goal-strength-sub-subpanel">Goal Strength sub subpanel</a><a class="h2" href="#edges-subpanel">Edges subpanel</a><a class="h3" href="#pull">Pull</a><a class="h3" href="#face">Face</a><a class="h3" href="#aerodynamics-sub-subpanel">Aerodynamics sub subpanel</a><a class="h3" href="#stiffness-subpanel">Stiffness subpanel</a><a class="h2" href="#self-collision-subpanel">Self Collision subpanel</a><a class="h3" href="#calculation-type">Calculation Type</a><a class="h3" href="#ball-size">Ball Size</a><a class="h2" href="#solver-subpanel">Solver subpanel</a><a class="h3" href="#error-limit">Error Limit</a><a class="h2" href="#field-weights-subpanel">Field Weights subpanel</a></aside></div></body></html>

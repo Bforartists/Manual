@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sculpting · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch master · <code>master</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../getting-started.html">Getting Started</a>
+<a href="../getting-started/introduction.html">Introduction</a>
+<a href="../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../getting-started/installation.html">Installation</a>
+<a href="../getting-started/quick-start.html">Quick Start</a>
+<a href="../getting-started/data-structure.html">Data Structure</a>
+<a href="../getting-started/differences.html">Comparison with Blender</a>
+<a href="../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<a href="../interface.html">Interface</a>
+<a href="../interface/overview.html">Interface Basics</a>
+<a href="../interface/windows.html">Windows</a>
+<a href="../interface/areas.html">Areas</a>
+<a href="../interface/editors.html">Editors</a>
+<a href="../interface/headers.html">Headers</a>
+<a href="../interface/footers.html">Footers</a>
+<a href="../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../interface/side-bars.html">Side Bars</a>
+<a href="../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../interface/properties.html">Properties</a>
+<a href="../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../interface/context-menus.html">Context Menus</a>
+<a href="../interface/floating-menus.html">Floating Menus</a>
+<a href="../interface/pie-menus.html">Pie Menus</a>
+<a href="../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<a href="../workspaces.html">Workspaces</a>
+<a href="workspaces.html">Managing Workspaces</a>
+<a href="main.html">Main</a>
+<a href="uv-editing.html">UV Editing</a>
+<a href="modeling.html">Modeling</a>
+<a href="nodes.html">Nodes</a>
+<a href="animation.html">Animation</a>
+<a href="texture-paint.html">Texture Paint</a>
+<a href="shading.html">Shading</a>
+<a href="rendering.html">Rendering</a>
+<a class="is-current" href="sculpting.html">Sculpting</a>
+<a href="compositing.html">Compositing</a>
+<a href="scripting.html">Scripting</a>
+<a href="2d-animation.html">2D Animation</a>
+<a href="storyboarding.html">Storyboarding</a>
+<a href="2d-full-canvas.html">2D Full Canvas</a>
+<a href="masking.html">Masking</a>
+<a href="motion-tracking.html">Motion Tracking</a>
+<a href="video-editing.html">Video Editing</a>
+<a href="sequencer-compositing.html">Sequencer Compositing</a>
+<a href="assets.html">Assets</a>
+<a href="3d-sequencer.html">3D Sequencer</a>
+<a href="color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<a href="../editors.html">Editors</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/3d-viewport/all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../editors/compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../editors/geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/properties/render-properties-tab.html">Render</a>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../editors/shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/timeline/header.html">Header</a>
+<a href="../editors/topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/all-modes/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../editors/3d-viewport/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../editors/compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../editors/geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../editors/image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../editors/introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../editors/properties/output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../editors/shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../editors/video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../editors/3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/edit/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/3d-viewport/mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../editors/compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../editors/geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/properties/view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../editors/shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<a style="padding-left:1.5rem" href="../editors/3d-viewport/curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:1.5rem" href="../editors/dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../editors/drivers-editor/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/channel-list.html">Channel List</a>
+<a href="../editors/image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../editors/properties/scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../editors/timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="../editors/3d-viewport/metaball.html">Metaball</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:1.5rem" href="../editors/dope-sheet/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../editors/properties/world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../editors/video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="../editors/3d-viewport/text.html">Text</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:1.5rem" href="../editors/properties/collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../editors/3d-viewport/lattice.html">Lattice</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="../editors/properties/object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../editors/3d-viewport/armature.html">Armature</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:1.5rem" href="../editors/properties/modifiers.html">Modifiers</a>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/layout.html">Layout</a>
+<a href="../editors/uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../editors/3d-viewport/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="../editors/properties/visual-effects-properties-tab.html">Visual Effects</a>
+<a style="padding-left:1.5rem" href="../editors/3d-viewport/hair-curves.html">Hair Curves</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:1.5rem" href="../editors/properties/particle-properties-tab.html">Particles</a>
+<a style="padding-left:1.5rem" href="../editors/3d-viewport/point-cloud.html">Point Cloud</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="../editors/properties/physics-properties-tab.html">Physics</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/layout.html">Layout</a>
+<a href="../editors/compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../editors/properties/object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../editors/properties/object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../editors/properties/bone-properties-tab.html">Bone</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<a style="padding-left:1.5rem" href="../editors/properties/bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="../editors/properties/material-properties-tab.html">Material</a>
+<a href="../editors/texture-node-editor.html">Texture Node Editor</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../editors/geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../editors/properties/texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../editors/properties/strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="../editors/properties/strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../editors/shader-editor.html">Shader Editor</a>
+<a href="../editors/video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../editors/movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../editors/dope-sheet.html">Dope Sheet</a>
+<a href="../editors/timeline.html">Timeline</a>
+<a href="../editors/graph-editor.html">Graph Editor</a>
+<a href="../editors/drivers-editor.html">Drivers Editor</a>
+<a href="../editors/nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../editors/text-editor.html">Text Editor</a>
+<a href="../editors/python-console.html">Python Console</a>
+<a href="../editors/info-editor.html">Info Editor</a>
+<a href="../editors/toolbar.html">Toolbar</a>
+<a href="../editors/outliner.html">Outliner</a>
+<a href="../editors/properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../editors/properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../editors/properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../editors/properties/render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../editors/properties/modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../editors/properties/modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../editors/properties/modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../editors/properties/modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../editors/properties/modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../editors/properties/modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../editors/properties/modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../editors/properties/modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../editors/properties/modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../editors/properties/object-data-properties-tab/volume-object.html">Volume Object</a>
+<a href="../editors/file-browser.html">File browser</a>
+<a href="../editors/asset-browser.html">Asset Browser</a>
+<a href="../editors/spreadsheet.html">Spreadsheet</a>
+<a href="../editors/preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../editors/topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../editors/timeline/viewport.html">Viewport</a>
+<a style="padding-left:2.5rem" href="../editors/compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../editors/geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../editors/shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<a href="../assets.html">Assets</a>
+<a href="../assets/essentials-library.html">Essentials Library</a>
+<a href="../assets/default-library.html">Default Library</a>
+<a href="../assets/compositor-library.html">Compositor Library</a>
+<a href="../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<a href="../extensions.html">Extensions and Addons</a>
+<a href="../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../extensions/coworker.html">Coworker</a>
+<a href="../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<a href="../keymap.html">Keymap</a>
+<a href="../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<a href="../advanced.html">Advanced</a>
+<a href="../advanced/advanced-command-line.html">Command Line</a>
+<a href="../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../appendix.html">Information</a>
+<a href="../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../appendix/manual-update-history.html">Documentation History</a>
+<a href="../appendix/gpl-license.html">About the GPL License</a>
+<a href="../appendix/community-influences.html">The Community Influences</a>
+<a href="../appendix/glossary.html">Glossary</a>
+<a href="../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<a href="../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Workspaces › Sculpting</div><h1 class="pv-title">Sculpting</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 1 min read</span></div><article class="ui-doc-body"><p>This workspace is dedicated to sculpting. It starts in Sculpt Mode in case you have an object in the scene.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/workspaces/workspaces/standard-workspaces-9.png" alt="Sculpting workspace" loading="lazy"></figure>
+<h2 id="how-the-work-flows">How the work flows</h2>
+<p>Sculpting feels like working with digital clay. The <a href="../editors/3d-viewport.html">3D Viewport</a> opens in Sculpt Mode with the brushes in the Tool Shelf and more in the Asset Shelf, so you can push, pull and smooth the form freely. When the clay runs out of detail, the <a href="../editors/properties.html">Properties Editor</a> remeshes it or adds Multiresolution levels, and the <a href="../editors/outliner.html">Outliner</a> switches between the pieces you are sculpting.</p>
+<h2 id="starts-in">Starts in</h2>
+<p>The workspace opens the 3D Viewport in <strong>Sculpt Mode</strong> when the scene has an object for it.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/master/collection/docs/edit/docs2%2Fcontent%2Fworkspaces%2Fsculpting.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/master/docs2/content/workspaces/sculpting.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#how-the-work-flows">How the work flows</a><a class="h2" href="#starts-in">Starts in</a></aside></div></body></html>

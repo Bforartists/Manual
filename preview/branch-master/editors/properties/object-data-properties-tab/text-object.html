@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Text Object · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch master · <code>master</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../../../getting-started.html">Getting Started</a>
+<a href="../../../getting-started/introduction.html">Introduction</a>
+<a href="../../../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../../../getting-started/installation.html">Installation</a>
+<a href="../../../getting-started/quick-start.html">Quick Start</a>
+<a href="../../../getting-started/data-structure.html">Data Structure</a>
+<a href="../../../getting-started/differences.html">Comparison with Blender</a>
+<a href="../../../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<a href="../../../interface.html">Interface</a>
+<a href="../../../interface/overview.html">Interface Basics</a>
+<a href="../../../interface/windows.html">Windows</a>
+<a href="../../../interface/areas.html">Areas</a>
+<a href="../../../interface/editors.html">Editors</a>
+<a href="../../../interface/headers.html">Headers</a>
+<a href="../../../interface/footers.html">Footers</a>
+<a href="../../../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../../../interface/side-bars.html">Side Bars</a>
+<a href="../../../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../../../interface/properties.html">Properties</a>
+<a href="../../../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../../../interface/context-menus.html">Context Menus</a>
+<a href="../../../interface/floating-menus.html">Floating Menus</a>
+<a href="../../../interface/pie-menus.html">Pie Menus</a>
+<a href="../../../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../../../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../../../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<a href="../../../workspaces.html">Workspaces</a>
+<a href="../../../workspaces/workspaces.html">Managing Workspaces</a>
+<a href="../../../workspaces/main.html">Main</a>
+<a href="../../../workspaces/uv-editing.html">UV Editing</a>
+<a href="../../../workspaces/modeling.html">Modeling</a>
+<a href="../../../workspaces/nodes.html">Nodes</a>
+<a href="../../../workspaces/animation.html">Animation</a>
+<a href="../../../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../../../workspaces/shading.html">Shading</a>
+<a href="../../../workspaces/rendering.html">Rendering</a>
+<a href="../../../workspaces/sculpting.html">Sculpting</a>
+<a href="../../../workspaces/compositing.html">Compositing</a>
+<a href="../../../workspaces/scripting.html">Scripting</a>
+<a href="../../../workspaces/2d-animation.html">2D Animation</a>
+<a href="../../../workspaces/storyboarding.html">Storyboarding</a>
+<a href="../../../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../../../workspaces/masking.html">Masking</a>
+<a href="../../../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../../../workspaces/video-editing.html">Video Editing</a>
+<a href="../../../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<a href="../../../workspaces/assets.html">Assets</a>
+<a href="../../../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../../../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<a href="../../../editors.html">Editors</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../render-properties-tab.html">Render</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../timeline/header.html">Header</a>
+<a href="../../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/edit/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/channel-list.html">Channel List</a>
+<a href="../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/metaball.html">Metaball</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../../3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/text.html">Text</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:1.5rem" href="../collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/lattice.html">Lattice</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="../object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/armature.html">Armature</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:1.5rem" href="../modifiers.html">Modifiers</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/layout.html">Layout</a>
+<a href="../../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="../visual-effects-properties-tab.html">Visual Effects</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/hair-curves.html">Hair Curves</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:1.5rem" href="../particle-properties-tab.html">Particles</a>
+<a style="padding-left:1.5rem" href="../../3d-viewport/point-cloud.html">Point Cloud</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="../physics-properties-tab.html">Physics</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/layout.html">Layout</a>
+<a href="../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../bone-properties-tab.html">Bone</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<a style="padding-left:1.5rem" href="../bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="../material-properties-tab.html">Material</a>
+<a href="../../texture-node-editor.html">Texture Node Editor</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="../strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../../dope-sheet.html">Dope Sheet</a>
+<a href="../../timeline.html">Timeline</a>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<a href="../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../../text-editor.html">Text Editor</a>
+<a href="../../python-console.html">Python Console</a>
+<a href="../../info-editor.html">Info Editor</a>
+<a href="../../toolbar.html">Toolbar</a>
+<a href="../../outliner.html">Outliner</a>
+<a href="../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="point-cloud-object.html">Point Cloud Object</a>
+<a class="is-current" style="padding-left:2.5rem" href="text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="volume-object.html">Volume Object</a>
+<a href="../../file-browser.html">File browser</a>
+<a href="../../asset-browser.html">Asset Browser</a>
+<a href="../../spreadsheet.html">Spreadsheet</a>
+<a href="../../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../../timeline/viewport.html">Viewport</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<a href="../../../assets.html">Assets</a>
+<a href="../../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../../assets/default-library.html">Default Library</a>
+<a href="../../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<a href="../../../extensions.html">Extensions and Addons</a>
+<a href="../../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../../../extensions/coworker.html">Coworker</a>
+<a href="../../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../../../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<a href="../../../keymap.html">Keymap</a>
+<a href="../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<a href="../../../advanced.html">Advanced</a>
+<a href="../../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../../../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../../../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../../../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../../../appendix.html">Information</a>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../../appendix/gpl-license.html">About the GPL License</a>
+<a href="../../../appendix/community-influences.html">The Community Influences</a>
+<a href="../../../appendix/glossary.html">Glossary</a>
+<a href="../../../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<a href="../../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Object Data Properties Tab › Text Object</div><h1 class="pv-title">Text Object</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 9 min read</span></div><article class="ui-doc-body"><h2 id="shape-panel">Shape panel</h2>
+<h3 id="resolution-preview-u">Resolution Preview U</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/resolution-preview-u.png" alt="Resolution Preview U" loading="lazy"></figure>
+<p>The resolution of the text curve geometry in the viewport.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Render U</td>
+<td>The resolution of the text curve geometry when rendering. If Render U is set to zero (0), then the Preview U setting is used for both the 3D Viewport and render resolution.</td>
+</tr>
+<tr>
+<td>Fast Editing</td>
+<td>Do not fill the letters in Edit Mode, only show their outline. Object mode display is not affected</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fill-mode">Fill Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/fill-mode.png" alt="Fill Mode" loading="lazy"></figure>
+<p>How to fill the letters. Note that you need to activate Backface culling for back and front in the Viewport Shading to see an effect.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/fill-mode-2.png" alt="Fill Mode" loading="lazy"></figure>
+<h2 id="texture-space-panel">Texture Space panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/metaball-object/texture-space-panel.png" alt="Texture Space panel" loading="lazy"></figure>
+<p>UV mapping can be generated. A procedural brick texture uses generated UV space for example to define the mapping.</p>
+<p>In this panel you can adjust settings of the texture space used by generated texture mapping.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/texture-space-panel.png" alt="Texture Space panel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/mesh-object/texture-space-panel-2.png" alt="Texture Space panel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/mesh-object/texture-space-panel-4.png" alt="Texture Space panel" loading="lazy"></figure>
+<p>The display of the texture space cage can be activated in the Viewport Display in the Object properties.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texture Mesh</td>
+<td>Use another curve for texture indices. The vertex of the two objects must be perfectly aligned. Otherwise the UV map will be distorted. Note that, this is only for mesh objects.</td>
+</tr>
+<tr>
+<td>Auto Texture Space</td>
+<td>Adjusts the active object’s texture space automatically when transforming the object.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="location-size">Location, Size</h3>
+<p>Adjust the location and size of the texture space manually if Auto Texture Space is off.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/mesh-object/location-size.png" alt="Location, Size" loading="lazy"></figure>
+<p>The texture space can also be adjusted in the 3D Viewport. See Object Menu / Transform / Move and Scale Texture Space</p>
+<h3 id="match-texture-space">Match Texture Space</h3>
+<p>Match the texture space to the bounding box of the mesh part of the surface object, not the cage.</p>
+<h2 id="geometry-panel">Geometry panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/geometry-panel.png" alt="Geometry panel" loading="lazy"></figure>
+<p>A curve is a spline. And has by default no geometry. The text object differs a bit here since the face is filled. But it has no height. You can have extruded or beveled geometry to add height. This panel allows you to adjust the geometry.</p>
+<h3 id="offset">Offset</h3>
+<p>Moves the extrusion parallel to the curve normals. Needs extruded geometry first.</p>
+<h3 id="extrude">Extrude</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/extrude.png" alt="Extrude" loading="lazy"></figure>
+<p>Extrude the curve along the positive and negative local Z axes to create a surface. The extrusion direction follows the curve normals.</p>
+<h3 id="taper-object">Taper Object</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/taper-object.png" alt="Taper Object" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/taper-object-2.png" alt="Taper Object" loading="lazy"></figure>
+<p>Tapers the extruded geometry by using another curve. The taper shape is defined by the Z value of the curve points of the taper object curve. Which you need to manipulate in edit mode.</p>
+<p>You might want to rotate the taper object curve by x around 90 degrees to see the shape of the curve in the same view than at the extruded geometry.</p>
+<p>The taper object curve:</p>
+<ul>
+<li>Must be an open curve.</li>
+<li>The taper is applied independently to all curves of the extruded object.</li>
+<li>Only the first curve in a Taper Object is evaluated, even if you have several separated segments.</li>
+<li>The scaling starts at the first control point on the left and moves along the curve to the last control point on the right.</li>
+<li>Negative scaling, (e.g. negative local Y on the taper curve) is possible as well. However, rendering artifacts may appear.</li>
+<li>Might need to increase the curve resolution to see more detail of the taper.</li>
+</ul>
+<p>With closed curves, the taper curve in Taper Object acts along the whole curve (perimeter of the object), not just the length of the object, and varies the extrusion depth. In these cases, you want the relative height of the Taper Object Taper curve at both ends to be the same, so that the cyclic point (the place where the endpoint of the curve connects to the beginning) is a smooth transition.</p>
+<h3 id="map-taper">Map Taper</h3>
+<p>For curves using a Taper Object and with modifications to the Start/End Bevel Factor. The Map Taper option will then apply the taper to the beveled part of the curve, and not the whole curve.</p>
+<h3 id="bevel">Bevel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/bevel.png" alt="Bevel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/bevel-2.png" alt="Bevel" loading="lazy"></figure>
+<p>A curve can not only be extruded, but the extruded geometry can also be beveled.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Depth</td>
+<td>The size of the bevel.</td>
+</tr>
+<tr>
+<td>Resolution</td>
+<td>The subdivision of the bevel.</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>Use another curve object to define the shape of the bevel. This curve can be closed, a Bezier circle for example. Or open. Which creates an open bevel shape then. Be careful with using this at a text object. · <strong>Fill Caps</strong>: Fills the ends of a beveled curve created by another curve object. And creates a solid object. Note that this makes for a text object no sense since an n extruded Text object is already a closed object.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="font-panel">Font panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/font-panel.png" alt="Font panel" loading="lazy"></figure>
+<p>Manage the fonts that gets used for the Text object. By default the internal Bfont is used.</p>
+<p>You need to load the file for each style separately.</p>
+<h3 id="regular-bold-italic-bold-italic">Regular, Bold, Italic, Bold&amp; Italic</h3>
+<p>The fonts.</p>
+<h4 id="data-browser">Data Browser</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/data-browser.png" alt="Data Browser" loading="lazy"></figure>
+<p>A list of the available fonts in the scene.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>The name of the active font.</td>
+</tr>
+<tr>
+<td>Number of Users</td>
+<td>The number of users for this font.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Keep this font in the scene even if it has no fake user. Note that the builtin Bfont does not require a fake user to stay available.</td>
+</tr>
+<tr>
+<td>Open Font</td>
+<td><code>Load a font. · **Location of Fonts in Windows**: C:\Windows\Fonts · **Location of Fonts on Unix**: Fonts are typically located under /usr/lib/fonts, or some variant like /usr/lib/X11/fonts, but not always. They may be in other locations as well, such as /usr/share/local or /usr/local/share, and possibly related sub-trees.</code></td>
+</tr>
+<tr>
+<td>Remove font</td>
+<td>Removes the font as the active font. It is still in the list though.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="style">Style</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/style.png" alt="Style" loading="lazy"></figure>
+<p>Edit mode only. Choose what style to use to write the text.</p>
+<h3 id="transform">Transform</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/transform.png" alt="Transform" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>Controls the size of the text.</td>
+</tr>
+<tr>
+<td>Shear</td>
+<td>Shears the text.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="object-font">Object Font</h4>
+<p>Allows individual objects to be used to render fonts.</p>
+<h5 id="how-to">How to</h5>
+<p>Create the font characters. Each character can be any object type (mesh, curve, etc.). They must all have a name following the naming schema: “common prefix” followed by the “character name” (“myfont.a”, “myfont.b”, etc.).</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/how-to.png" alt="How to" loading="lazy"></figure>
+<p>For the text object, enable Instancing Vertices.</p>
+<p>In the Font tab, fill the Object Font field with the “common prefix” of your “font” objects. Now, each time a character in your text matches the suffix part of a “font” object’s name, this object is duplicated on this character.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The objects are duplicated so that their center is positioned at the lower right corner of the corresponding characters.</p></div>
+<h4 id="text-on-curve">Text on Curve</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/text-on-curve.png" alt="Text on Curve" loading="lazy"></figure>
+<p>Show the text aligned at a curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Underline Position</td>
+<td>Shift vertically the position of the underline.</td>
+</tr>
+<tr>
+<td>Underline Thickness</td>
+<td>This controls the thickness of the underline.</td>
+</tr>
+<tr>
+<td>Small Caps Scale</td>
+<td>The scaling applied to capital letters to turn them into small caps.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="paragraph-panel">Paragraph panel</h2>
+<h3 id="alignment-sub-tab">Alignment sub tab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/alignment-sub-tab.png" alt="Alignment sub tab" loading="lazy"></figure>
+<h4 id="horizontal-alignment">Horizontal Alignment</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/horizontal-alignment.png" alt="Horizontal Alignment" loading="lazy"></figure>
+<p>How to align the text horizontally.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left</td>
+<td>Aligns text to the left of the frames when using them, else uses the origin of the text object as the starting point of the text (which grows to the right).</td>
+</tr>
+<tr>
+<td>Center</td>
+<td>Centers text in the frames when using them, else uses the origin of the text object as the mid-point of the text (which grows equally to the left and right).</td>
+</tr>
+<tr>
+<td>Right</td>
+<td>Aligns text to the right of the frames when using them, else uses the origin of the text object as the ending point of the text (which grows to the left).</td>
+</tr>
+<tr>
+<td>Justify</td>
+<td>Only flushes a line when it is terminated by a word-wrap (not by a newline), and uses white-space instead of character spacing (kerning) to fill lines.</td>
+</tr>
+<tr>
+<td>Flush</td>
+<td>Always flushes the line, even when it is still being typed-in. It uses character spacing (kerning) to fill lines. Note! Both Justify and Flush only work within frames.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vertical-alignment">Vertical Alignment</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/vertical-alignment.png" alt="Vertical Alignment" loading="lazy"></figure>
+<p>How to align the text vertically.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Top Base-Line</td>
+<td>With text boxes, aligns the ‘top’ base-line of the text to the top of the frames. With no text box, aligns the actual base-line of the text to the origin of the object, and grows to the bottom. Note! That difference of reference point in the first line depending on usage of boxes or not is indeed confusing.</td>
+</tr>
+<tr>
+<td>Top</td>
+<td>With text boxes, aligns the top of the text to the top of the frames. With no text box, aligns the top of the text to the origin of the object, and grows to the bottom.</td>
+</tr>
+<tr>
+<td>Center</td>
+<td>With text boxes, centers the text in the frames. With no text box, centers the text on the origin of the object, and grows in both top and bottom directions equally.</td>
+</tr>
+<tr>
+<td>Bottom</td>
+<td>With text boxes, align the bottom of the text to the bottom of the frames. With no text box, align the bottom of the text to the origin of the object, and grows to the top.</td>
+</tr>
+<tr>
+<td>Bottom Base-Line</td>
+<td>With text boxes, aligns the base-line of the text to the bottom of the frames. With no text box, aligns the base-line of the text to the origin of the object, and grows to the top.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spacing-sub-tab">Spacing sub tab</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Character Spacing</td>
+<td>A factor by which space between each character (kerning) is scaled in width. In Edit Mode in the 3D View, you can also control individual kerning at text cursor position by pressing Alt-Left / Alt-Right to decrease/increase it.</td>
+</tr>
+<tr>
+<td>Word Spacing</td>
+<td>A factor by which white-space between words is scaled in width. · <strong>Line Spacing</strong>: A factor by which the vertical space between lines is scaled. · <strong>Offset X/Y</strong>: These settings control the X and Y offset of the text position within the object. This applies relatively to the object’s origin, either to the whole text or, when using text boxes, to each frame.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="text-boxes-panel">Text Boxes panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/text-boxes-panel.png" alt="Text Boxes panel" loading="lazy"></figure>
+<p>Text boxes (or frames) allow you to distribute the text among rectangular areas within a single text object. You can use more than one box.</p>
+<p>The text flows continuously from the lowest-numbered frame to the highest-numbered frame with text inside each frame word-wrapped. It flows between frames when a lower-numbered frame cannot fit any more text.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/text-boxes-panel-2.png" alt="Text Boxes panel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/text-boxes-panel-3.png" alt="Text Boxes panel" loading="lazy"></figure>
+<p>By increasing size X and Y the text box becomes visible in the viewport by orange lines. A size of 0 means no text box is used.</p>
+<h3 id="add-text-box">Add Text box</h3>
+<p>Inserts a new frame, just after the current one (in text flow order). The new frame will have the same size and position as the selected one.</p>
+<h3 id="overflow">Overflow</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/overflow.png" alt="Overflow" loading="lazy"></figure>
+<p>How to handle text overflowing available space in the defined boxes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overflow</td>
+<td>Just keep text running out of the last box.</td>
+</tr>
+<tr>
+<td>Scale to Fit</td>
+<td>Scale text to fit into the available space.</td>
+</tr>
+<tr>
+<td>Truncate</td>
+<td>Hide the end of the text that does not fit into the available space. Note! It will only truncate in Object Mode, in Edit Mode the whole text remains visible (and overflows as needed).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="text-box">Text box</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/object-data-properties-tab/text-object/text-boxes-panel-3.png" alt="Text box" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete X</td>
+<td>Delete the current text box frame.</td>
+</tr>
+<tr>
+<td>Size X/Y</td>
+<td>Specifies the width and height of the text box, if set to zero no word-wrap happens (it is ignored, and the whole text box system is disabled if all are set to a null size).</td>
+</tr>
+<tr>
+<td>Offset X/Y</td>
+<td>Controls the X and Y offset of the frame, i.e. its position.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="custom-properties-panel">Custom Properties Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/view-layer-properties-tab/custom-properties-panel.png" alt="Custom Properties Panel" loading="lazy"></figure>
+<p>Here you can define custom properties that can be used for scripting.</p>
+<p>Here you might also find custom properties from addons or scripts.</p>
+<h3 id="add">Add</h3>
+<p>Adds a new property.</p>
+<h3 id="edit">Edit</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/view-layer-properties-tab/edit.png" alt="Edit" loading="lazy"></figure>
+<p>Opens a panel where you can adjust the settings for the custom property.</p>
+<h3 id="remove">Remove</h3>
+<p>Removes the property.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fobject-data-properties-tab%2Ftext-object.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/master/docs2/content/editors/properties/object-data-properties-tab/text-object.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#shape-panel">Shape panel</a><a class="h3" href="#resolution-preview-u">Resolution Preview U</a><a class="h3" href="#fill-mode">Fill Mode</a><a class="h2" href="#texture-space-panel">Texture Space panel</a><a class="h3" href="#location-size">Location, Size</a><a class="h3" href="#match-texture-space">Match Texture Space</a><a class="h2" href="#geometry-panel">Geometry panel</a><a class="h3" href="#offset">Offset</a><a class="h3" href="#extrude">Extrude</a><a class="h3" href="#taper-object">Taper Object</a><a class="h3" href="#map-taper">Map Taper</a><a class="h3" href="#bevel">Bevel</a><a class="h2" href="#font-panel">Font panel</a><a class="h3" href="#regular-bold-italic-bold-italic">Regular, Bold, Italic, Bold&amp; Italic</a><a class="h3" href="#style">Style</a><a class="h3" href="#transform">Transform</a><a class="h2" href="#paragraph-panel">Paragraph panel</a><a class="h3" href="#alignment-sub-tab">Alignment sub tab</a><a class="h3" href="#spacing-sub-tab">Spacing sub tab</a><a class="h2" href="#text-boxes-panel">Text Boxes panel</a><a class="h3" href="#add-text-box">Add Text box</a><a class="h3" href="#overflow">Overflow</a><a class="h3" href="#text-box">Text box</a><a class="h2" href="#custom-properties-panel">Custom Properties Panel</a><a class="h3" href="#add">Add</a><a class="h3" href="#edit">Edit</a><a class="h3" href="#remove">Remove</a></aside></div></body></html>

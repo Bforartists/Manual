@@ -1,0 +1,1355 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weight Paint · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch master · <code>master</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../../../getting-started.html">Getting Started</a>
+<a href="../../../getting-started/introduction.html">Introduction</a>
+<a href="../../../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../../../getting-started/installation.html">Installation</a>
+<a href="../../../getting-started/quick-start.html">Quick Start</a>
+<a href="../../../getting-started/data-structure.html">Data Structure</a>
+<a href="../../../getting-started/differences.html">Comparison with Blender</a>
+<a href="../../../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<a href="../../../interface.html">Interface</a>
+<a href="../../../interface/overview.html">Interface Basics</a>
+<a href="../../../interface/windows.html">Windows</a>
+<a href="../../../interface/areas.html">Areas</a>
+<a href="../../../interface/editors.html">Editors</a>
+<a href="../../../interface/headers.html">Headers</a>
+<a href="../../../interface/footers.html">Footers</a>
+<a href="../../../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../../../interface/side-bars.html">Side Bars</a>
+<a href="../../../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../../../interface/properties.html">Properties</a>
+<a href="../../../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../../../interface/context-menus.html">Context Menus</a>
+<a href="../../../interface/floating-menus.html">Floating Menus</a>
+<a href="../../../interface/pie-menus.html">Pie Menus</a>
+<a href="../../../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../../../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../../../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<a href="../../../workspaces.html">Workspaces</a>
+<a href="../../../workspaces/workspaces.html">Managing Workspaces</a>
+<a href="../../../workspaces/main.html">Main</a>
+<a href="../../../workspaces/uv-editing.html">UV Editing</a>
+<a href="../../../workspaces/modeling.html">Modeling</a>
+<a href="../../../workspaces/nodes.html">Nodes</a>
+<a href="../../../workspaces/animation.html">Animation</a>
+<a href="../../../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../../../workspaces/shading.html">Shading</a>
+<a href="../../../workspaces/rendering.html">Rendering</a>
+<a href="../../../workspaces/sculpting.html">Sculpting</a>
+<a href="../../../workspaces/compositing.html">Compositing</a>
+<a href="../../../workspaces/scripting.html">Scripting</a>
+<a href="../../../workspaces/2d-animation.html">2D Animation</a>
+<a href="../../../workspaces/storyboarding.html">Storyboarding</a>
+<a href="../../../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../../../workspaces/masking.html">Masking</a>
+<a href="../../../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../../../workspaces/video-editing.html">Video Editing</a>
+<a href="../../../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<a href="../../../workspaces/assets.html">Assets</a>
+<a href="../../../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../../../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<a href="../../../editors.html">Editors</a>
+<a style="padding-left:3.5rem" href="../all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="../armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../properties/render-properties-tab.html">Render</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../timeline/header.html">Header</a>
+<a href="../../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../all-modes/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../properties/output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="edit/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../properties/view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../all-modes/header/select-menu.html">Select Menu</a>
+<a style="padding-left:1.5rem" href="../curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="sculpt/context-menus.html">Context Menus</a>
+<a class="is-current" style="padding-left:2.5rem" href="weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/channel-list.html">Channel List</a>
+<a href="../../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../../properties/scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="../metaball.html">Metaball</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../../properties/world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="../text.html">Text</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:1.5rem" href="../../properties/collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../lattice.html">Lattice</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="../../properties/object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../armature.html">Armature</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:1.5rem" href="../../properties/modifiers.html">Modifiers</a>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/layout.html">Layout</a>
+<a href="../../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="../../properties/visual-effects-properties-tab.html">Visual Effects</a>
+<a style="padding-left:1.5rem" href="../hair-curves.html">Hair Curves</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:1.5rem" href="../../properties/particle-properties-tab.html">Particles</a>
+<a style="padding-left:1.5rem" href="../point-cloud.html">Point Cloud</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="../../properties/physics-properties-tab.html">Physics</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/layout.html">Layout</a>
+<a href="../../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../properties/object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../../properties/object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../../properties/bone-properties-tab.html">Bone</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<a style="padding-left:1.5rem" href="../../properties/bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="../../properties/material-properties-tab.html">Material</a>
+<a href="../../texture-node-editor.html">Texture Node Editor</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../../properties/texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../../properties/strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="../../properties/strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../../dope-sheet.html">Dope Sheet</a>
+<a href="../../timeline.html">Timeline</a>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<a href="../../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../../text-editor.html">Text Editor</a>
+<a href="../../python-console.html">Python Console</a>
+<a href="../../info-editor.html">Info Editor</a>
+<a href="../../toolbar.html">Toolbar</a>
+<a href="../../outliner.html">Outliner</a>
+<a href="../../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../../properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../../properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../../properties/render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../properties/modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../../properties/particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../../properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../../properties/object-data-properties-tab/volume-object.html">Volume Object</a>
+<a href="../../file-browser.html">File browser</a>
+<a href="../../asset-browser.html">Asset Browser</a>
+<a href="../../spreadsheet.html">Spreadsheet</a>
+<a href="../../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../../timeline/viewport.html">Viewport</a>
+<a style="padding-left:2.5rem" href="../../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../../shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<a href="../../../assets.html">Assets</a>
+<a href="../../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../../assets/default-library.html">Default Library</a>
+<a href="../../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<a href="../../../extensions.html">Extensions and Addons</a>
+<a href="../../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../../../extensions/coworker.html">Coworker</a>
+<a href="../../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../../../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<a href="../../../keymap.html">Keymap</a>
+<a href="../../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<a href="../../../advanced.html">Advanced</a>
+<a href="../../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../../../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../../../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../../../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../../../appendix.html">Information</a>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../../appendix/gpl-license.html">About the GPL License</a>
+<a href="../../../appendix/community-influences.html">The Community Influences</a>
+<a href="../../../appendix/glossary.html">Glossary</a>
+<a href="../../../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<a href="../../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Mesh › Weight Paint</div><h1 class="pv-title">Weight Paint</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 27 min read</span></div><article class="ui-doc-body"><p><span class="ui-doc-menu">Mesh › Weight Paint</span>: every menu, tool, sidebar tab and context menu of this mode, on one page. Use the panels on the right to jump between the regions.</p>
+<h1 id="header">Header</h1>
+<h2 id="weights-menu">Weights menu</h2>
+<h3 id="weight-paint-mode-weights-menu">Weight Paint Mode - Weights Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/weight-paint-mode-weights-menu.png" alt="Weight Paint Mode - Weights Menu" loading="lazy"><figcaption>Weight Paint Mode - Weights Menu</figcaption></figure>
+<h4 id="assign-from-bone-envelopes">Assign from Bone Envelopes</h4>
+<p>Weights the vertices from the connected bone envelopes. And takes the distance to the bone envelope into account.</p>
+<h4 id="assign-automatic-from-bones">Assign Automatic from Bones</h4>
+<p>Weights the vertices connected with the bone. And takes the distance to the bone into account.</p>
+<h5 id="last-operator-weight-from-bones">Last Operator Weight from Bones</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-weight-from-bones.png" alt="Last Operator Weight from Bones" loading="lazy"><figcaption>Last Operator Weight from Bones</figcaption></figure>
+<p>This last operator is the same for both tools. Assign Automatic from Bones, and Assign from Bone Envelopes.</p>
+<h6 id="type">Type</h6>
+<p>Choose if you want to Assign from Bone Envelopes, or from Bones.</p>
+<h4 id="normalize-all">Normalize All</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/normalize-all.png" alt="Normalize All" loading="lazy"></figure>
+<p>Normalize all normalizes the weight of all Vertex groups so that the values for the single vertices in the sum is 1.</p>
+<h5 id="last-operator-normalize-all">Last Operator Normalize all</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subset</td>
+<td>Subset is a drop-down menu choose the Subset method.</td>
+</tr>
+<tr>
+<td>Lock Active</td>
+<td>Normalize just the other groups. Not the active group.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="normalize">Normalize</h4>
+<p>Normalize normalizes the weight of the current selected Vertex group so that the values for the single vertices in the sum is 1. Means when there is influence from other groups, then those values are kept, but the one for the current group gets lowered so that the sum is 1.</p>
+<h4 id="mirror">Mirror</h4>
+<p>Mirror Vertex Group mirrors Vertex Groups and flips weights and/or names. It only edits selected Vertices. It flips when both sides are selected. Otherwise it copies from Unselected.</p>
+<h5 id="last-operator-mirror-vertex-group">Last Operator Mirror Vertex Group</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-mirror-vertex-group.png" alt="Last Operator Mirror Vertex Group" loading="lazy"><figcaption>Last Operator Mirror Vertex Group</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Weights</td>
+<td>With Mirror Weights ticked it mirrors the weights.</td>
+</tr>
+<tr>
+<td>Flip Group Names</td>
+<td>With Flip Group Names ticked it flips the Group names</td>
+</tr>
+<tr>
+<td>All Groups</td>
+<td>Mirrors all Vertex Groups.</td>
+</tr>
+<tr>
+<td>Topology Mirror</td>
+<td>Uses topology based mirroring. This requires matching mirrored topology.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="invert">Invert</h4>
+<p>Invert inverts the weight painting for the selected vertex group.</p>
+<h5 id="last-operator-invert-vertex-group">Last Operator Invert Vertex Group</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-invert-vertex-group.png" alt="Last Operator Invert Vertex Group" loading="lazy"><figcaption>Last Operator Invert Vertex Group</figcaption></figure>
+<h6 id="subset">Subset</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/subset.png" alt="Subset" loading="lazy"></figure>
+<p>Subset is a drop-down menu choose the Subset method.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Weights</td>
+<td>Add Vertices from Groups that have zero Weighting before inverting.</td>
+</tr>
+<tr>
+<td>Remove Weights</td>
+<td>Remove Vertices from Groups that have zero weight after inverting.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clean">Clean</h4>
+<p>Removes Vertex group assignments that are not required from the active vertex group.</p>
+<h5 id="last-operator-clean-vertex-group">Last Operator Clean Vertex Group</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-clean-vertex-group.png" alt="Last Operator Clean Vertex Group" loading="lazy"><figcaption>Last Operator Clean Vertex Group</figcaption></figure>
+<h6 id="subset-2">Subset</h6>
+<p>Subset is a drop-down menu choose the Subset method.</p>
+<h6 id="limit">Limit</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/subset.png" alt="Limit" loading="lazy"></figure>
+<p>Remove weights that are below or equal to the limit value.</p>
+<h6 id="keep-single">Keep Single</h6>
+<p>Keep Vertices assigned to at least one vertex group when cleaning.</p>
+<h4 id="quantize">Quantize</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/quantize.png" alt="Quantize" loading="lazy"></figure>
+<p>Quantize quantizes the weight paint values. It starts with 4 steps. With a step of 1 you have a single vertex color, no matter how you have painted it before.</p>
+<h5 id="last-operator-quantize-vertex-weights">Last Operator Quantize Vertex Weights</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/subset.png" alt="Last Operator Quantize Vertex Weights" loading="lazy"><figcaption>Last Operator Quantize Vertex Weights</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subset</td>
+<td>Subset is a drop-down menu choose the Subset method.</td>
+</tr>
+<tr>
+<td>Steps</td>
+<td>Here you adjust in how many steps the weight paint colors should be divided.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="levels">Levels</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/levels.png" alt="Levels" loading="lazy"></figure>
+<p>Adds some offset to the Weight paint, and multiplys it with some gain.</p>
+<h5 id="last-operator-levels">Last Operator Levels</h5>
+<h6 id="subset-3">Subset</h6>
+<p>Subset is a drop-down menu choose the Subset method.</p>
+<h6 id="offset">Offset</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/subset.png" alt="Offset" loading="lazy"></figure>
+<p>Here you adjust the offset.</p>
+<h6 id="gain">Gain</h6>
+<p>Here you adjust the gain.</p>
+<h4 id="smooth">Smooth</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/smooth.png" alt="Smooth" loading="lazy"></figure>
+<p>Smooths the weight for selected vertices.</p>
+<h5 id="last-operator-smooth-vertex-weights">Last Operator Smooth Vertex Weights</h5>
+<h6 id="subset-4">Subset</h6>
+<p>Subset is a drop-down menu choose the Subset method.</p>
+<h6 id="factor">Factor</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/subset.png" alt="Factor" loading="lazy"></figure>
+<p>Here you adjust the factor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Iterations</td>
+<td>Here you adjust how many iterations you use.</td>
+</tr>
+<tr>
+<td>Expand/Contract</td>
+<td>Expand or contract the weights.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="transfer-weights">Transfer Weights</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/transfer-weights.png" alt="Transfer Weights" loading="lazy"></figure>
+<p>Transfer weights allows you to transfer weights from one object to another object in the same space. For example to copy the weight of a body shape to a covering cloth.</p>
+<h5 id="usage">Usage</h5>
+<p>Make sure the target part is at its location.</p>
+<p>In Object mode Select the source object(s). Then shift click to select the target object too. This makes the target object the active object</p>
+<p>Switch to Weight Paint mode.</p>
+<p>Click the Transfer Weight Button, and the weighting should be transferred to the target object.</p>
+<p>You can adjust the result in the Last Operator Transfer Mesh Data panel.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/usage.png" alt="Usage" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/usage-2.png" alt="Usage" loading="lazy"></figure>
+<h5 id="last-operator-transfer-mesh-data">Last Operator Transfer Mesh Data</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-transfer-mesh-data.png" alt="Last Operator Transfer Mesh Data" loading="lazy"><figcaption>Last Operator Transfer Mesh Data</figcaption></figure>
+<h6 id="freeze-operator">Freeze Operator</h6>
+<p>Prevent the operator to rerun when you tweak the settings. So that you can tweak many settings at once, then untick to run the operator again.</p>
+<h6 id="data-type">Data Type</h6>
+<p>A drop down box choose the data type to work with.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/data-type.png" alt="Data Type" loading="lazy"></figure>
+<h6 id="create-data">Create Data</h6>
+<p>Add Data layers on target object if needed.</p>
+<h6 id="vertex-mapping">Vertex Mapping</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/vertex-mapping.png" alt="Vertex Mapping" loading="lazy"></figure>
+<p>A drop down box choose the vertex mapping method.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Transform</td>
+<td>Automatically compute transformation to get the best possible match between source and target object.</td>
+</tr>
+<tr>
+<td>Object Transform</td>
+<td>Calculate the objects in Global space. Unticked means the transfer happens from and to the origin of the objects.</td>
+</tr>
+<tr>
+<td>Only Neighbor Geometry</td>
+<td>Source Objects must be closer than given distance to the target objects.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="ray-radius">Ray Radius</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/ray-radius.png" alt="Ray Radius" loading="lazy"></figure>
+<p>The ray distance for Only Neighbor Geometry.</p>
+<h6 id="source-layers-selection">Source Layers Selection</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/source-layers-selection.png" alt="Source Layers Selection" loading="lazy"></figure>
+<p>A drop down box choose the Source Layer selection method.</p>
+<h6 id="destination-layers-matching">Destination Layers Matching</h6>
+<p>A drop down box choose the Destination Layers matching.</p>
+<h6 id="mix-mode">Mix Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/mix-mode.png" alt="Mix Mode" loading="lazy"></figure>
+<p>A drop down box choose the mix mode. That's how the mapping gets transferred into the target object.</p>
+<h6 id="mix-factor">Mix Factor</h6>
+<p>The strength of the chosen mix mode.</p>
+<h4 id="limit-total">Limit Total</h4>
+<p>Limit the number of deform weights for a vertex by removing the lowest weights. For example when five vertex groups are assigned to one vertice, and you set the limit to 4, then the vertice will just be assigned to the four vertex groups with the highest weight. This is useful for game content where the game engine has a limit for how much bones can be connected to one vertice.</p>
+<h4 id="last-operator-limit-number-of-weights">Last Operator Limit Number of Weights</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-limit-number-of-weights.png" alt="Last Operator Limit Number of Weights" loading="lazy"><figcaption>Last Operator Limit Number of Weights</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subset</td>
+<td>A drop down box choose to work with the Active Group or All Groups.</td>
+</tr>
+<tr>
+<td>Limit</td>
+<td>Set the limit.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-weight">Set Weight</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/set-weight.png" alt="Set Weight" loading="lazy"></figure>
+<p>This tool is just active when you have either Face Selection Masking or Vertex Selection Masking activated.</p>
+<p>The tool fills the selection with the current active weight color that you have adjusted in the Brush panel in the Tools tab in the Tool shelf.</p>
+<h4 id="locks">Locks</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/locks.png" alt="Locks" loading="lazy"></figure>
+<p>Locks is a sub menu with which you can modify the vertex group locks in the properties editor.</p>
+<p>The names should be self explaining.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/locks-2.png" alt="Locks" loading="lazy"></figure>
+<h5 id="last-operator-change-lock">Last Operator Change Lock</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/last-operator-change-lock.png" alt="Last Operator Change Lock" loading="lazy"><figcaption>Last Operator Change Lock</figcaption></figure>
+<h6 id="action">Action</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/action.png" alt="Action" loading="lazy"></figure>
+<p>Choose the locking method again.</p>
+<h6 id="mask">Mask</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/mesh-weight-paint-mode-weights-menu/mask.png" alt="Mask" loading="lazy"></figure>
+<p>Choose what vertex groups should be affected.</p>
+<h1 id="tool-shelf">Tool Shelf</h1>
+<h2 id="tools">Tools</h2>
+<h3 id="tool-shelf-mesh-weight-paint-mode">Tool Shelf - Mesh - Weight Paint Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/tool-shelf-mesh-weight-paint-mode.png" alt="Tool Shelf - Mesh - Weight Paint Mode" loading="lazy"><figcaption>Tool Shelf - Mesh - Weight Paint Mode</figcaption></figure>
+<p>In Vertex Paint mode with a mesh object you will find mainly brushes in the tool shelf. Vertex painting allows you to paint the vertices of a mesh object with a specific color. This can then be used in various ways. As direct painting without any UV mapping. Or for some special calculations. There is a shader node that reads the vertex color values.</p>
+<h4 id="transform-and-annotate-tools">Transform and Annotate tools</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/transform-and-annotate-tools.png" alt="Transform and Annotate tools" loading="lazy"><figcaption>Transform and Annotate tools</figcaption></figure>
+<p>The transform and annotate tools at the end of the list are explained in the chapter 7.1.1 Editors - 3D View - Tool Shelf - Object Mode. We won't cover this tools again here.<br />
+The transform tools group shows when you activate Paint Mask or Vertex selection sub modes.</p>
+<h4 id="brush-cursor">Brush cursor</h4>
+<p>When you activate one of the brushes then the mouse cursor turns into a brush cursor. This cursor represents the size of the current brush. It does not align with the surface under the mouse. But always faces towards you.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/brush-cursor.png" alt="Brush cursor" loading="lazy"></figure>
+<h4 id="brushes-settings">Brushes settings</h4>
+<p>The different brushes settings can be found in the sidebar in the tools tab. Or in the properties editor in the Active Tool and Workspace settings tab. Or above the header area.</p>
+<p>The different brushes settings in the Active Tool and Workspace settings are explained in the chapter 25.1.4 Editors - Properties Editor - Tools Tab - Vertex Paint Mode</p>
+<p>We won't cover this chapters again, but just explain what the different brushes does.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/brushes-settings.png" alt="Brushes settings" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/brushes-settings-2.png" alt="Brushes settings" loading="lazy"></figure>
+<h4 id="symmetry">Symmetry</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/symmetry.png" alt="Symmetry" loading="lazy"></figure>
+<p>You can enable Symmetry painting up right in the header.</p>
+<h4 id="hotkeys">Hotkeys</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/hotkeys.png" alt="Hotkeys" loading="lazy"></figure>
+<p>Pressing F allows you to change the brush size onscreen. Drag the mouse to increase or decrease the size. Left click applies the new size, right click cancels the resizing.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/hotkeys-2.png" alt="Hotkeys" loading="lazy"></figure>
+<p>Pressing Shift F allows you to change the strength of the brush. Drag the mouse to increase or decrease the size. Left click applies the new size, right click cancels the resizing.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/hotkeys-3.png" alt="Hotkeys" loading="lazy"></figure>
+<p>Pressing Ctrl F allows you to change the weight size onscreen. Drag the mouse to increase or decrease the size. Left click applies the new size, right click cancels the resizing.</p>
+<h4 id="brush">Brush</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/brush.png" alt="Brush" loading="lazy"></figure>
+<p>Paint brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blur</td>
+<td>Smooths out the colors of adjacent vertices. In this mode the Color Value is ignored. The strength defines how much the colors are blurred.</td>
+</tr>
+<tr>
+<td>Average</td>
+<td>Smooths color by painting the average resulting color from all colors under the brush.</td>
+</tr>
+<tr>
+<td>Smear</td>
+<td>Smudges colors by grabbing the colors under the brush and “dragging” them.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="gradient">Gradient</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/gradient.png" alt="Gradient" loading="lazy"></figure>
+<p>Allows you to draw a gradient between two defined points. The gradient gets drawn with the starting color at the start point, and the color for zero weight at the end point.</p>
+<h5 id="tool-settings">Tool Settings</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/tool-settings.png" alt="Tool Settings" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weight</td>
+<td>The starting weight.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>The strength with which it mixes with the existing weighting.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Choose the gradient type. Linear or Radial.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="falloff">Falloff</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/falloff.png" alt="Falloff" loading="lazy"></figure>
+<p>Allows you to adjust the falloff by a curve.</p>
+<h6 id="curve-presets">Curve Presets</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/curve-presets.png" alt="Curve Presets" loading="lazy"></figure>
+<p>Curve presets to choose from.</p>
+<h6 id="selecting-points">Selecting Points</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/header-tools-and-options/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
+<p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
+<h6 id="adding-points">Adding Points</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/header-tools-and-options/adding-points.png" alt="Adding Points" loading="lazy"></figure>
+<p>You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.</p>
+<h6 id="navigation-elements">Navigation elements</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<p>The navigation elements at the top are described from left to right.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in and out</td>
+<td>The two buttons with the magnifying glass at it zooms in and out in the curve window.</td>
+</tr>
+<tr>
+<td>Tools</td>
+<td>Tools is a menu where you can find some curve related tools. · <strong>Reset View</strong>: Resets the curve windows zoom. · <strong>Vector Handle</strong>: Set handle type to Vector. · <strong>Auto Handle</strong>: Set handle type to Auto. · <strong>Auto Clamped Handle</strong>: Set handle type to Auto Clamped. · <strong>Reset Curve</strong>: Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="use-clipping">Use Clipping</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/header-tools-and-options/use-clipping.png" alt="Use Clipping" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke. The blue button at the top turns clipping on or off.</p>
+<h6 id="delete-points">Delete Points</h6>
+<p>Deletes the selected curve point.</p>
+<h6 id="curve-presets-2">Curve Presets</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/curve-presets-2.png" alt="Curve Presets" loading="lazy"></figure>
+<p>Predefined curve presets.</p>
+<h5 id="last-operator-weight-gradient">Last Operator Weight Gradient</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/last-operator-weight-gradient.png" alt="Last Operator Weight Gradient" loading="lazy"><figcaption>Last Operator Weight Gradient</figcaption></figure>
+<h6 id="type-2">Type</h6>
+<p>Choose the gradient type. Linear or Radial.</p>
+<h4 id="sample-tools-group">Sample tools group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/sample-tools-group.png" alt="Sample tools group" loading="lazy"></figure>
+<h5 id="sample-weight">Sample Weight</h5>
+<p>Sets the actual weight value to the color under the mouse.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/sample-weight.png" alt="Sample Weight" loading="lazy"></figure>
+<p>The mouse turns into a picker. When clicking at the mesh with that picker, the header shows the weight value of the weighting of the corresponding vertice under the mouse</p>
+<h5 id="sample-vertex-group">Sample Vertex Group</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/sample-vertex-group.png" alt="Sample Vertex Group" loading="lazy"></figure>
+<p>Opens a popup menu where you can select one of the vertex groups that are under the mouse.</p>
+<h1 id="sidebar">Sidebar</h1>
+<h2 id="weight-paint-mode">Weight Paint Mode</h2>
+<h3 id="tools-tab-in-weight-paint-mode">Tools tab in Weight Paint Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/tools-tab-in-weight-paint-mode.png" alt="Tools tab in Weight Paint Mode" loading="lazy"><figcaption>Tools tab in Weight Paint Mode</figcaption></figure>
+<p>The Tools tab in Weight Paint Mode provides you the tools to do weight painting at a mesh. Skinned characters for example.</p>
+<p>The vertices becomes a &quot;weighting&quot; assigned in this process. Means a per centage influence of the bone to a vertice. And under the hood you create vertex groups with the vertices that are assigned to the bones.</p>
+<p>The amount of influence is defined by the weight paint color. Pure red has an influence value of 1. Pure blue has an influence value of 0. And the gradients between red and blue defines the in between steps in the 0-1 range. This is needed since there can be more than one bone influence and deform a vertice. Usually at the transition areas between two bones. The green areas in this shot.</p>
+<p>The Weight Paint mode is just available for mesh objects.</p>
+<h4 id="weight-painting-at-characters">Weight painting at characters</h4>
+<p>The main purpose for Weight painting is to weight the skin for characters. So that they deform proper when you pose your armature.</p>
+<h5 id="skinning">Skinning</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/skinning.png" alt="Skinning" loading="lazy"></figure>
+<p>To do weight painting at a character you first have to assign the mesh to the armature. This process is called skinning. The mesh becomes the &quot;skin&quot; for the skeleton.</p>
+<p>Let's do a quick run through skinning. You can skin in Object Mode. But also from Pose Mode. Lock Object Modes needs to be unticked to get it to work from Pose Mode, which it is by default. In case you have it on, untick it now.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/skinning-2.png" alt="Skinning" loading="lazy"></figure>
+<p>Create an object, create an armature</p>
+<p>First we activate Display &quot;in Front&quot; for the armature. So that we can still see the armature inside of the mesh.</p>
+<p>Position the mesh at its final location.</p>
+<p>Now select the Mesh, hold down Shift key, and select the Armature. Both should be selected now.</p>
+<p>Dive into the Object menu in the header of the 3D view, and search for Parent, with automatic weights. You can also press the hotkey Ctrl P. This calls the parenting menu under the mouse position.</p>
+<p>Here we choose &quot;With Automatic Weights&quot;. Automatic weighting means that the bones grabs the nearest vertices within a given radius, and assigns them to this bone.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/skinning-3.png" alt="Skinning" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/skinning-4.png" alt="Skinning" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/skinning-5.png" alt="Skinning" loading="lazy"></figure>
+<p>When everything went well then the mesh, in our case the Cylinder, is now part of the hierarchy of the armature.</p>
+<p>And when you select the armature, and switch to Pose mode now, then you can already deform the mesh by posing the armature.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/skinning-6.png" alt="Skinning" loading="lazy"></figure>
+<h5 id="enter-and-leave-weight-painting">Enter and leave Weight painting</h5>
+<p>Weight painting should happen in Pose mode so that you can pose your mesh to see the resulting deforming.</p>
+<p>When you simply select the mesh, and enter the weight paint mode, then you can weightpaint the mesh. However, you cannot change the bone. Since the armature is not selected.</p>
+<p>So you need to select the armature too when you want to do weight painting. Select the armature, hold down shift, select the mesh, then enter weight paint mode.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/enter-and-leave-weight-painting.png" alt="Enter and leave Weight painting" loading="lazy"><figcaption>Enter and leave Weight painting</figcaption></figure>
+<p>When you do everything right then you will see a bone symbol in the header.</p>
+<h5 id="face-selection-mode">Face Selection Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/face-selection-mode.png" alt="Face Selection Mode" loading="lazy"></figure>
+<p>The face selection mode allows using selection operators to define a mask based on faces for weight painting. You can then use the weight paint brush tools and operators to assign new weight to the selection.</p>
+<h5 id="vertex-selection-mode">Vertex Selection Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/vertex-selection-mode.png" alt="Vertex Selection Mode" loading="lazy"></figure>
+<p>The vertex selection mode allows using selection operators to define a mask for based on vertex selection for weight painting. You can then use the weight paint brush tools and operators to assign new weight to the selection.</p>
+<h5 id="bone-selection-mode">Bone Selection Mode</h5>
+<p>The weighting that gets displayed in the Bone Selection mode when you enter Weight Paint mode and the armature is in Pose mode. The last active bone defines which vertex group you will weight paint. With this method to define the bone to define where you want to weight paint and assign weight accordingly. You can also switch bones while in weight painting mode on the active mesh object.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/enter-and-leave-weight-painting.png" alt="Bone Selection Mode" loading="lazy"></figure>
+<p>To switch bones while weight painting, hold down <strong>Ctrl</strong>, and <strong>left click</strong> at the bone that you want to set active. Then the weighting for this bone gets displayed.</p>
+<p>Be careful. You can select the bones in the hierarchy of the outliner. But it does not change the active bone to do the weightpainting. Even when it shows selected, the active bone for weightpainting is still unchanged. And another trap, you can change the active bone in the dropdown at the top. But this one does not change the selected bone. So best is to hold down Ctrl and left click to change the active bone.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/bone-selection-mode.png" alt="Bone Selection Mode" loading="lazy"></figure>
+<h4 id="weight-painting-a-plain-mesh">Weight painting a plain mesh</h4>
+<p>You can also do weight painting without an armature. Just at the pure mesh. In this case you just create the vertex groups for the mesh. And those vertex groups can be accessed in edit mode then for further usage. As shown in the shots below.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/weight-painting-a-plain-mesh.png" alt="Weight painting a plain mesh" loading="lazy"><figcaption>Weight painting a plain mesh</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/weight-painting-a-plain-mesh-2.png" alt="Weight painting a plain mesh" loading="lazy"><figcaption>Weight painting a plain mesh</figcaption></figure>
+<h4 id="weight-painting-in-combination-with-particles">Weight painting in combination with particles</h4>
+<p>You can also combine weight painting with particles. To influence the density of hair for example. The weightmap can be assigned in the Vertex Groups panel in the Particles tab.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/weight-painting-in-combination-with-particles.png" alt="Weight painting in combination with particles" loading="lazy"><figcaption>Weight painting in combination with particles</figcaption></figure>
+<h3 id="brush-asset-panel">Brush Asset Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/brush-asset-panel.png" alt="Brush Asset Panel" loading="lazy"></figure>
+<p>The Brush Asset Panel contains the different Brushes and some Brush settings. Choose and adjust your current active brush.</p>
+<h4 id="browse-brush">Browse Brush</h4>
+<p>The big image at the top is a dropdown box that allows you to choose a brush. Click at it, and you will see the different brushes. A click at one of the images will choose this brush then.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/browse-brush.png" alt="Browse Brush" loading="lazy"></figure>
+<p>Brushes are assets. You can load them from different libraries if you want.</p>
+<h4 id="brush-specials-menu">Brush Specials menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/brush-specials-menu.png" alt="Brush Specials menu" loading="lazy"></figure>
+<p>This menu becomes active when you create a new brush. Which can be done wiht the Plus button in the name property. This data cannot be changed for builtin system brushes.</p>
+<h5 id="edit-metadata">Edit Metadata</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode/edit-metadata.jpg" alt="Edit Metadata" loading="lazy"></figure>
+<p>Calls a popup where you can adjust further informations and settings for the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Catalog</td>
+<td>The asset catalog in which the brush is stored.</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>The brush author.</td>
+</tr>
+<tr>
+<td>Desctription</td>
+<td>Add a description</td>
+</tr>
+<tr>
+<td>OK / Cancel</td>
+<td>Accept or decline the changes.</td>
+</tr>
+<tr>
+<td>Edit Preview Image</td>
+<td>Allows you to load a custom preview image.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Save Brush Asset</td>
+<td>This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush.</td>
+</tr>
+<tr>
+<td>Revert Brush Asset</td>
+<td>Reverts the brush settings to the default values of the brush in the asset library.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="name">Name</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/name.png" alt="Name" loading="lazy"></figure>
+<p>The edit box below the Image shows the name of the current active brush.</p>
+<p><strong>The + button</strong> allows you to add a new pencil with the current settings. Note that the brushes are NOT automatically saved when you close Bforartists. You need to save the brush asset. See above.</p>
+<p><strong>The X button</strong> deletes the brush from the brushes list and from the asset library. This button is just active with a custom brush. You will be prompted by a warning so that you don't accidentally remove the brush.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/name-2.png" alt="Name" loading="lazy"></figure>
+<h3 id="brush-settings-panel">Brush Settings Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/brush-settings-panel.png" alt="Brush Settings Panel" loading="lazy"></figure>
+<p>The Brush Settings Panel contains the Brush settings. The content differs, dependent of which brush you have chosen.</p>
+<h4 id="blend">Blend</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/context-menus/mesh-object-vertex-paint-mode-brushes-context-menus/blend.png" alt="Blend" loading="lazy"></figure>
+<p>Define how the stroke will blend. You can choose between various blend modes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weight</td>
+<td>Adjust the strength of the weight painting. · <strong>Size Pressure</strong>: The first button behind the edit box enables tablet pressure sensitivity for radius.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The Radius edit box allows you to adjust the radius of the brush. The button behind the edit box enables tablet pressure sensitivity for radius. · <strong>Size Pressure</strong>: The first button behind the edit box enables tablet pressure sensitivity for radius. · <strong>Use Unified Radius</strong>: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>The Strength edit box allows you to adjust the strength of the brush. The button behind the edit box enables tablet pressure sensitivity for strength. · <strong>Size Pressure</strong>: The first button behind the edit box enables tablet pressure sensitivity for radius. · <strong>Use Unified Radius</strong>: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-settings-panel-advanced-sub-panel">Brush Settings Panel - Advanced Sub panel</h3>
+<h4 id="brush-type">Brush Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/brush-type.png" alt="Brush Type" loading="lazy"></figure>
+<p>Displays the current brush type (e.g., **Draw, **Blur, Average, Smear)</p>
+<h3 id="brush-settings-panel-stroke-sub-panel">Brush Settings Panel - Stroke Sub panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/brush-settings-panel-stroke-sub-panel.png" alt="Brush Settings Panel - Stroke Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Stroke Sub panel</figcaption></figure>
+<p>The Stroke panel contains settings to influence the behavior of the brush stroke. There are various stroke methods available. We will go through them one by one.</p>
+<h4 id="stroke-panel-with-stroke-method-space">Stroke Panel with Stroke method Space</h4>
+<p>This is the default Stroke method. The sculpt stroke gets added continuously with given settings.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stroke-panel-with-stroke-method-space.png" alt="Stroke Panel with Stroke method Space" loading="lazy"><figcaption>Stroke Panel with Stroke method Space</figcaption></figure>
+<h5 id="spacing-edit-box">Spacing Edit Box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/spacing-edit-box.png" alt="Spacing Edit Box" loading="lazy"></figure>
+<p>The drawing happens by mapping the pencil onto the mouse position. And when you move the mouse then the next mapping happens. Adjust the spacing after what mouse movement the next mapping should happen. The lower the value, the lower the distance between the single dots.</p>
+<h6 id="spacing-pressure">Spacing Pressure</h6>
+<p>The icon behind the edit box enables tablet pressure sensitivity for tablets.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dash Ratio</td>
+<td>Ratio of samples in a cycle that the brush is enabled.</td>
+</tr>
+<tr>
+<td>Dash Length</td>
+<td>Length of a dash cycle measured in stroke samples.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="jitter-edit-box">Jitter Edit Box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/jitter-edit-box.png" alt="Jitter Edit Box" loading="lazy"></figure>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>If the jitter happens in screen space in pixels, or relative to the brush size.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="input-samples-edit-box">Input Samples Edit Box</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/input-samples-edit-box.png" alt="Input Samples Edit Box" loading="lazy"><figcaption>Input Samples Edit Box</figcaption></figure>
+<p>Average multiple input samples together to smooth the brush stroke.</p>
+<h6 id="stabilize-stroke">Stabilize Stroke</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stabilize-stroke.png" alt="Stabilize Stroke" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Smooth Stroke Radius Edit Box</td>
+<td>Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Smooth Stroke Factor Edit Box</td>
+<td>Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="stroke-panel-with-stroke-method-curve">Stroke Panel with Stroke method Curve</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stroke-panel-with-stroke-method-curve.png" alt="Stroke Panel with Stroke method Curve" loading="lazy"><figcaption>Stroke Panel with Stroke method Curve</figcaption></figure>
+<p>The Stroke method curve doesn't simply influence the way how the stroke is painted. It is a special method. First you draw a curve object by holding down ctrl and clicking with left mouse button. Then you tweak the curve. You can click at the curve point, and drag out handlers to make the curve points smooth.</p>
+<p>Then you hit the Draw Curve button. And the curve gets drawn onto the surface.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stroke-panel-with-stroke-method-curve-2.png" alt="Stroke Panel with Stroke method Curve" loading="lazy"><figcaption>Stroke Panel with Stroke method Curve</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stroke-panel-with-stroke-method-curve-3.png" alt="Stroke Panel with Stroke method Curve" loading="lazy"><figcaption>Stroke Panel with Stroke method Curve</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stroke-panel-with-stroke-method-curve-4.png" alt="Stroke Panel with Stroke method Curve" loading="lazy"><figcaption>Stroke Panel with Stroke method Curve</figcaption></figure>
+<h5 id="spacing-edit-box-2">Spacing Edit Box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/spacing-edit-box.png" alt="Spacing Edit Box" loading="lazy"></figure>
+<p>The drawing happens by mapping the pencil onto the mouse position. And when you move the mouse then the next mapping happens. Adjust the spacing after what mouse movement the next mapping should happen. The lower the value, the lower the distance between the single dots.</p>
+<p>The icon behind the edit box enables tablet pressure sensitivity for tablets.</p>
+<h5 id="paint-curve-edit-box">Paint Curve edit box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/paint-curve-edit-box.png" alt="Paint Curve edit box" loading="lazy"><figcaption>Paint Curve edit box</figcaption></figure>
+<p>Here you set the active curve.</p>
+<p><strong>The first element</strong> is a drop down box where you will find your curves objects. You can have more than one.</p>
+<p><strong>The second element</strong> is the edit box that displays the active curve.</p>
+<p><strong>The number</strong> right of it, <strong>in this case 2</strong>, indicates how much number of users ( internally ) this brush uses. This means that this data block (the brush) shares currently settings with at least one other object. Most probably the parent brush where we have created it from. Click at the value to make this brush a single user. The button will vanish then.</p>
+<p><strong>F</strong> set the brush to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user.</p>
+<p><strong>The + button</strong> allows you to add a new pencil with the current settings. Note that the brushes are NOT saved when you close Bforartists. You can save them into the current blend file. Or you can save the startup file. But be careful here. This saves everything else of the current state of Bforartists too.</p>
+<p><strong>The X button</strong> deletes the brush as the active one. It does NOT delete it from the brushes list.</p>
+<h5 id="draw-curve-button">Draw Curve Button</h5>
+<p>A click at it to turns the curve into a sculpt stroke.</p>
+<h5 id="jitter-edit-box-2">Jitter Edit Box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/jitter-edit-box.png" alt="Jitter Edit Box" loading="lazy"></figure>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>If the jitter happens in screen space in pixels, or relative to the brush size.</td>
+</tr>
+<tr>
+<td>Input Samples Edit Box</td>
+<td>Average multiple input samples together to smooth the brush stroke.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="stroke-panel-with-stroke-method-line">Stroke Panel with Stroke method Line</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stroke-panel-with-stroke-method-line.png" alt="Stroke Panel with Stroke method Line" loading="lazy"><figcaption>Stroke Panel with Stroke method Line</figcaption></figure>
+<p>With Stroke method line you draw a line between a starting point and an endpoint. And when you release the mouse then the line gets sculpted.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stroke-panel-with-stroke-method-line-2.png" alt="Stroke Panel with Stroke method Line" loading="lazy"><figcaption>Stroke Panel with Stroke method Line</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stroke-panel-with-stroke-method-line-3.png" alt="Stroke Panel with Stroke method Line" loading="lazy"><figcaption>Stroke Panel with Stroke method Line</figcaption></figure>
+<h5 id="spacing-edit-box-3">Spacing Edit Box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode/stroke-panel-with-stroke-method-line-4.png" alt="Spacing Edit Box" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/spacing-edit-box.png" alt="Spacing Edit Box" loading="lazy"></figure>
+<p>The sculpt drawing happens by mapping the pencil onto the mouse position. And when you move the mouse then the next mapping happens. Adjust the spacing after what mouse movement the next mapping should happen. The lower the value, the lower the distance between the single dots.</p>
+<p>The icon behind the edit box enables tablet pressure sensitivity for tablets.</p>
+<h5 id="jitter-edit-box-3">Jitter Edit Box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/jitter-edit-box.png" alt="Jitter Edit Box" loading="lazy"></figure>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>If the jitter happens in screen space in pixels, or relative to the brush size.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="input-samples-edit-box-2">Input Samples Edit Box</h5>
+<p>Average multiple input samples together to smooth the brush stroke.</p>
+<h4 id="stroke-panel-with-stroke-method-airbrush">Stroke Panel with Stroke method Airbrush</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stroke-panel-with-stroke-method-airbrush.png" alt="Stroke Panel with Stroke method Airbrush" loading="lazy"><figcaption>Stroke Panel with Stroke method Airbrush</figcaption></figure>
+<p>The stroke acts like an airbrush pencil. The dots gets sprayed randomly.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stroke-panel-with-stroke-method-airbrush-2.png" alt="Stroke Panel with Stroke method Airbrush" loading="lazy"><figcaption>Stroke Panel with Stroke method Airbrush</figcaption></figure>
+<h5 id="rate-edit-box">Rate Edit Box</h5>
+<p>Define the rate of the drawing.</p>
+<h5 id="jitter-edit-box-4">Jitter Edit Box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/jitter-edit-box.png" alt="Jitter Edit Box" loading="lazy"></figure>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>If the jitter happens in screen space in pixels, or relative to the brush size.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="input-samples-edit-box-3">Input Samples Edit Box</h5>
+<p>Average multiple input samples together to smooth the brush stroke.</p>
+<h5 id="smooth-stroke">Smooth Stroke</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stabilize-stroke.png" alt="Smooth Stroke" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Smooth Stroke Radius Edit Box</td>
+<td>Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Smooth Stroke Factor Edit Box</td>
+<td>Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="stroke-panel-with-stroke-method-dots">Stroke Panel with Stroke method Dots</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stroke-panel-with-stroke-method-dots.png" alt="Stroke Panel with Stroke method Dots" loading="lazy"><figcaption>Stroke Panel with Stroke method Dots</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stroke-panel-with-stroke-method-dots-2.png" alt="Stroke Panel with Stroke method Dots" loading="lazy"><figcaption>Stroke Panel with Stroke method Dots</figcaption></figure>
+<p>The stroke method Dots draws dots of the pencil onto the surface. The mapping happens from the current view. Means you will get distortions when your view is not aligned with the surface of the object.</p>
+<h5 id="jitter-edit-box-5">Jitter Edit Box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/jitter-edit-box.png" alt="Jitter Edit Box" loading="lazy"></figure>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>If the jitter happens in screen space in pixels, or relative to the brush size.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="input-samples-edit-box-4">Input Samples Edit Box</h5>
+<p>Average multiple input samples together to smooth the brush stroke.</p>
+<h5 id="stabilize-stroke-2">Stabilize Stroke</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/stabilize-stroke.png" alt="Stabilize Stroke" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Smooth Stroke Radius Edit Box</td>
+<td>Is just active when Smooth Stroke is activated. Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Smooth Stroke Factor Edit Box</td>
+<td>Is just active when Smooth Stroke is activated. Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-settings-panel-falloff-sub-panel">Brush Settings Panel - Falloff Sub panel</h3>
+<p>The Falloff panel allows you to define different falloffs methods for the border of the brush.</p>
+<h4 id="presets">Presets</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-sculpt-mode/presets.png" alt="Presets" loading="lazy"></figure>
+<p>The different available falloff presets. The method custom allows you to define your own falloff. And reveals a curve panel.</p>
+<h5 id="selecting-points-2">Selecting Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/header-tools-and-options/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
+<p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
+<h5 id="adding-points-2">Adding Points</h5>
+<blockquote>
+<p>This setting uses the <strong>curve widget</strong>: click to add points, drag to move them. See <strong><a href="../../../interface/properties.html#curve-widget">Curve Widget</a></strong> in the Interface chapter.</p>
+</blockquote>
+<h5 id="navigation-elements-2">Navigation elements</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<p>The navigation elements at the top are described from left to right.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in and out</td>
+<td>The two buttons with the magnifying glass at it zooms in and out in the curve window.</td>
+</tr>
+<tr>
+<td>Tools</td>
+<td>Tools is a menu where you can find some curve related tools. · <strong>Reset View</strong>: Resets the curve windows zoom. · <strong>Vector Handle</strong>: Set handle type to Vector. · <strong>Auto Handle</strong>: Set handle type to Auto. · <strong>Auto Clamped Handle</strong>: Set handle type to Auto Clamped. · <strong>Reset Curve</strong>: Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="use-clipping-2">Use Clipping</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/header/header-tools-and-options/use-clipping.png" alt="Use Clipping" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke. The blue button at the top turns clipping on or off.</p>
+<h5 id="delete-points-2">Delete Points</h5>
+<p>Deletes the selected curve point.</p>
+<h5 id="curve-presets-3">Curve Presets</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/tool-shelf/mesh-weight-paint-mode/curve-presets-2.png" alt="Curve Presets" loading="lazy"></figure>
+<p>Predefined curve presets as a starting point.</p>
+<h5 id="front-face-falloff">Front Face Falloff</h5>
+<h6 id="angle">Angle</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-texture-paint-mode/angle-4.png" alt="Angle" loading="lazy"></figure>
+<p>Adjust the angle.</p>
+<h3 id="brush-settings-panel-cursor-sub-panel">Brush Settings Panel - Cursor Sub panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode/brush-settings-panel-cursor-sub-panel.png" alt="Brush Settings Panel - Cursor Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Cursor Sub panel</figcaption></figure>
+<p>Adjust the color and appearance of the brush cursor to custom values.</p>
+<h4 id="cursor-checkbox">Cursor Checkbox</h4>
+<p>Activate the custom settings.</p>
+<h4 id="cursor-color">Cursor Color</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode/cursor-color.png" alt="Cursor Color" loading="lazy"></figure>
+<p>Choose another color for the brush cursor. Double clicking at the color field will open a color picker.</p>
+<h4 id="falloff-opacity">Falloff Opacity</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode/falloff-opacity.png" alt="Falloff Opacity" loading="lazy"></figure>
+<p>You can turn on the cursor overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Override Overlay</td>
+<td>Hide the Cursor Overlay when painting.</td>
+</tr>
+<tr>
+<td>Use Cursor Overlay</td>
+<td>Turn on Cursor Overlay.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="texture-opacity">Texture Opacity</h4>
+<p>This is for the case when you paint with a texture brush. You can turn on the Texture overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Override Overlay</td>
+<td>Hide the Texture Overlay when painting.</td>
+</tr>
+<tr>
+<td>Use Cursor Overlay</td>
+<td>Turn on Texture Overlay.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="symmetry-panel">Symmetry Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/symmetry-panel.png" alt="Symmetry Panel" loading="lazy"></figure>
+<p>The same buttons plus the whole Symmetry Lock Panel as a drop down menu can also be found in the tool settings bar as icon buttons. This allows quicker access and better.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Vertex Groups</td>
+<td>Mirror the left/right vertex groups when painting. · <strong>Topology Mirror</strong>: Not available with Mirror Vertex Groups deactivated. Use topology based mirroring. Both sides of the mesh needs matching geometry.</td>
+</tr>
+<tr>
+<td>Mirror</td>
+<td>Mirror along given axis. With Mirror Vertex groups on you just can turn on or off the X axis.</td>
+</tr>
+<tr>
+<td>Radial</td>
+<td>Tiling. The number of times to repeat the strokes across the surface. Not available with Mirror Vertex Groups activated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="options-panel">Options Panel</h3>
+<h4 id="auto-normalize">Auto Normalize</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-weight-paint-mode/auto-normalize.png" alt="Auto Normalize" loading="lazy"></figure>
+<p>Ensure that all bone deforming vertex groups adds up to 1.0 while weight painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lock - Relative</td>
+<td>Display bone-deforming groups as if all locked defom groups were deleted, and the remaining ones were re-normalized.</td>
+</tr>
+<tr>
+<td>Multi Paint</td>
+<td>Paint across the weights of all selected bones, maintaining their relative influence.</td>
+</tr>
+<tr>
+<td>Restrict</td>
+<td>Restrict painting to vertices in the group.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="context-menus">Context Menus</h1>
+<h2 id="brushes-context-menus">Brushes context menus</h2>
+<h3 id="brushes-context-menus-2">Brushes context menus</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/3d-viewport/context-menus/mesh-object-weight-paint-mode-brushes-context-menus/brushes-context-menus.png" alt="Brushes context menus" loading="lazy"></figure>
+<p>Call this menu with right click in the 3D viewport. You need to be in Weight Paint mode with a mesh object.</p>
+<p>In Weight Paint mode you will call a context menu with the sliders from the Brush settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weight</td>
+<td>Adjust the strength of the weight painting. · <strong>Size Pressure</strong>: The first button behind the edit box enables tablet pressure sensitivity for radius.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The Radius edit box allows you to adjust the radius of the brush. · <strong>Size Pressure</strong>: The first button behind the edit box enables tablet pressure sensitivity for radius. · <strong>Use Unified Radius</strong>: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>The Strength edit box allows you to adjust the strength of the brush. · <strong>Size Pressure</strong>: The first button behind the edit box enables tablet pressure sensitivity for radius. · <strong>Use Unified Radius</strong>: The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/master/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fmesh%2Fweight-paint.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/master/docs2/content/editors/3d-viewport/mesh/weight-paint.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#weights-menu">Weights menu</a><a class="h3" href="#weight-paint-mode-weights-menu">Weight Paint Mode - Weights Menu</a><a class="h2" href="#tools">Tools</a><a class="h3" href="#tool-shelf-mesh-weight-paint-mode">Tool Shelf - Mesh - Weight Paint Mode</a><a class="h2" href="#weight-paint-mode">Weight Paint Mode</a><a class="h3" href="#tools-tab-in-weight-paint-mode">Tools tab in Weight Paint Mode</a><a class="h3" href="#brush-asset-panel">Brush Asset Panel</a><a class="h3" href="#brush-settings-panel">Brush Settings Panel</a><a class="h3" href="#brush-settings-panel-advanced-sub-panel">Brush Settings Panel - Advanced Sub panel</a><a class="h3" href="#brush-settings-panel-stroke-sub-panel">Brush Settings Panel - Stroke Sub panel</a><a class="h3" href="#brush-settings-panel-falloff-sub-panel">Brush Settings Panel - Falloff Sub panel</a><a class="h3" href="#brush-settings-panel-cursor-sub-panel">Brush Settings Panel - Cursor Sub panel</a><a class="h3" href="#symmetry-panel">Symmetry Panel</a><a class="h3" href="#options-panel">Options Panel</a><a class="h2" href="#brushes-context-menus">Brushes context menus</a><a class="h3" href="#brushes-context-menus-2">Brushes context menus</a></aside></div></body></html>

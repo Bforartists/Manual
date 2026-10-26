@@ -1,0 +1,1193 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Output · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch master · <code>master</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../../getting-started.html">Getting Started</a>
+<a href="../../getting-started/introduction.html">Introduction</a>
+<a href="../../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../../getting-started/installation.html">Installation</a>
+<a href="../../getting-started/quick-start.html">Quick Start</a>
+<a href="../../getting-started/data-structure.html">Data Structure</a>
+<a href="../../getting-started/differences.html">Comparison with Blender</a>
+<a href="../../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<a href="../../interface.html">Interface</a>
+<a href="../../interface/overview.html">Interface Basics</a>
+<a href="../../interface/windows.html">Windows</a>
+<a href="../../interface/areas.html">Areas</a>
+<a href="../../interface/editors.html">Editors</a>
+<a href="../../interface/headers.html">Headers</a>
+<a href="../../interface/footers.html">Footers</a>
+<a href="../../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../../interface/side-bars.html">Side Bars</a>
+<a href="../../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../../interface/properties.html">Properties</a>
+<a href="../../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../../interface/context-menus.html">Context Menus</a>
+<a href="../../interface/floating-menus.html">Floating Menus</a>
+<a href="../../interface/pie-menus.html">Pie Menus</a>
+<a href="../../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<a href="../../workspaces.html">Workspaces</a>
+<a href="../../workspaces/workspaces.html">Managing Workspaces</a>
+<a href="../../workspaces/main.html">Main</a>
+<a href="../../workspaces/uv-editing.html">UV Editing</a>
+<a href="../../workspaces/modeling.html">Modeling</a>
+<a href="../../workspaces/nodes.html">Nodes</a>
+<a href="../../workspaces/animation.html">Animation</a>
+<a href="../../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../../workspaces/shading.html">Shading</a>
+<a href="../../workspaces/rendering.html">Rendering</a>
+<a href="../../workspaces/sculpting.html">Sculpting</a>
+<a href="../../workspaces/compositing.html">Compositing</a>
+<a href="../../workspaces/scripting.html">Scripting</a>
+<a href="../../workspaces/2d-animation.html">2D Animation</a>
+<a href="../../workspaces/storyboarding.html">Storyboarding</a>
+<a href="../../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../../workspaces/masking.html">Masking</a>
+<a href="../../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../../workspaces/video-editing.html">Video Editing</a>
+<a href="../../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<a href="../../workspaces/assets.html">Assets</a>
+<a href="../../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<a href="../../editors.html">Editors</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="render-properties-tab.html">Render</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<a href="../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../image-editor/tool-shelf.html">Tool Shelf</a>
+<a href="../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a class="is-current" style="padding-left:1.5rem" href="output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:1.5rem" href="../graph-editor/channel-list.html">Channel List</a>
+<a href="../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/metaball.html">Metaball</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:1.5rem" href="../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/text.html">Text</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:1.5rem" href="collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/lattice.html">Lattice</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/armature.html">Armature</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:1.5rem" href="modifiers.html">Modifiers</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/layout.html">Layout</a>
+<a href="../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="visual-effects-properties-tab.html">Visual Effects</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/hair-curves.html">Hair Curves</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:1.5rem" href="particle-properties-tab.html">Particles</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/point-cloud.html">Point Cloud</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="physics-properties-tab.html">Physics</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/layout.html">Layout</a>
+<a href="../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="bone-properties-tab.html">Bone</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<a style="padding-left:1.5rem" href="bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="material-properties-tab.html">Material</a>
+<a href="../texture-node-editor.html">Texture Node Editor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../shader-editor.html">Shader Editor</a>
+<a href="../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../dope-sheet.html">Dope Sheet</a>
+<a href="../timeline.html">Timeline</a>
+<a href="../graph-editor.html">Graph Editor</a>
+<a href="../drivers-editor.html">Drivers Editor</a>
+<a href="../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../text-editor.html">Text Editor</a>
+<a href="../python-console.html">Python Console</a>
+<a href="../info-editor.html">Info Editor</a>
+<a href="../toolbar.html">Toolbar</a>
+<a href="../outliner.html">Outliner</a>
+<a href="../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="object-data-properties-tab/volume-object.html">Volume Object</a>
+<a href="../file-browser.html">File browser</a>
+<a href="../asset-browser.html">Asset Browser</a>
+<a href="../spreadsheet.html">Spreadsheet</a>
+<a href="../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../timeline/viewport.html">Viewport</a>
+<a style="padding-left:2.5rem" href="../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<a href="../../assets.html">Assets</a>
+<a href="../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../assets/default-library.html">Default Library</a>
+<a href="../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<a href="../../extensions.html">Extensions and Addons</a>
+<a href="../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../../extensions/coworker.html">Coworker</a>
+<a href="../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<a href="../../keymap.html">Keymap</a>
+<a href="../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<a href="../../advanced.html">Advanced</a>
+<a href="../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../../appendix.html">Information</a>
+<a href="../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../appendix/gpl-license.html">About the GPL License</a>
+<a href="../../appendix/community-influences.html">The Community Influences</a>
+<a href="../../appendix/glossary.html">Glossary</a>
+<a href="../../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<a href="../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Output Properties Tab</div><h1 class="pv-title">Output</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 18 min read</span></div><article class="ui-doc-body"><h2 id="output-properties-tab">Output Properties Tab</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/output-properties-tab.png" alt="Output Properties Tab" loading="lazy"></figure>
+<p>The Output properties contains all the settings to render the final image or movie. Most o fthe settings are the same for all three available render engines.</p>
+<h3 id="render-engine">Render Engine</h3>
+<p>Shows the active render engine. Specific renderer does have other settings. And you can also switch to another renderer. But note that this is more a visual guide. It misses the Cycles render settings.</p>
+<h2 id="dimensions-panel">Dimensions Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/dimensions-panel.png" alt="Dimensions Panel" loading="lazy"></figure>
+<p>This panel contains the dimension settings.</p>
+<h3 id="presets">Presets</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/presets.png" alt="Presets" loading="lazy"></figure>
+<p>A list of dimension presets with the most common settings.</p>
+<p>To add a new preset type in a new preset name into the edit box at the end of the list, and click at the + sign.</p>
+<p>To remove a preset click at the - sign behind the name.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/presets-2.png" alt="Presets" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resolution X / Y</td>
+<td>The dimensions of the image in pixels. % Render the image in per cent of the original image. You can for example render in 200% of the resolution values. Or in 50%.</td>
+</tr>
+<tr>
+<td>Aspect X / Y</td>
+<td>The image aspect ratio. For anamorphic or non square pixel output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="render-region">Render Region</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/render-region.png" alt="Render Region" loading="lazy"></figure>
+<p>Activate render region for the output image.</p>
+<p>There is a render region feature in the 3D view and in the Image editor where you can render a portion of the screen for preview purposes. Normally the output will always render the full image then, regardless of the render region. When you activate Render Region then the output will also render the render region only, and not the full image.</p>
+<h4 id="crop-to-render-region">Crop to Render Region</h4>
+<p>Crop the output image to the size of the render region.</p>
+<h3 id="frame-rate">Frame Rate</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/frame-rate.png" alt="Frame Rate" loading="lazy"></figure>
+<p>The output frame rate. When you choose custom then two more properties appears.</p>
+<h2 id="frame-range-panel">Frame Range Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/frame-range-panel.png" alt="Frame Range Panel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame Start / End</td>
+<td>The start and end frame for an animation.</td>
+</tr>
+<tr>
+<td>Frame Step</td>
+<td>Number of frames to skip forward while playing the animation. With a value of 2 every second frame gets skipped. · <strong>FPS</strong>: The custom frame per seconds value. · <strong>Base</strong>: Frame rate base. A multiplier that makes it for example possible to set up 29,97 Frames instead of 30 for NTSC.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="time-stretching">Time Stretching</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/time-stretching.png" alt="Time Stretching" loading="lazy"></figure>
+<p>Remap the length of an animation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Old</td>
+<td>The old length.</td>
+</tr>
+<tr>
+<td>New</td>
+<td>The new length.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stereoscopy-panel">Stereoscopy Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/stereoscopy-panel.png" alt="Stereoscopy Panel" loading="lazy"></figure>
+<p>Allows you to render out stereoscopic images from the active camera. For the anaglyph images you need special stereoscopy glasses to see the 3D effect. And in case of the interlace method a 3d ready monitor and shutter glasses.</p>
+<p>The anaglyph method is to create stereo images. The interlace method is mostly used in movies.</p>
+<h3 id="workflow">Workflow</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/workflow.png" alt="Workflow" loading="lazy"></figure>
+<p>Turn on Stereoscopy.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/workflow-2.png" alt="Workflow" loading="lazy"></figure>
+<p>Select the Camera in the Outliner. In the Properties Editor choose the Object Data Properties tab (which should show a camera icon at this point), and open the Stereoscopy panel.</p>
+<p>Change the Convergence Plane Distance to your needs. This can also be done in the 3D view with the handlers when you are in Camera view.</p>
+<p>Interocular distance is the distance between the left and the right camera.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/workflow-3.png" alt="Workflow" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/workflow-4.png" alt="Workflow" loading="lazy"></figure>
+<p>Outside of the camera view you will see this plane in front of the camera.</p>
+<p>Adjust the plane to your needs. The plane is the reference point. Everything behind appears behind the focus. Everything before the plane appears before the focus.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/workflow-5.png" alt="Workflow" loading="lazy"></figure>
+<p>In the sidebar in the 3D view you will find further settings.</p>
+<p>Turn on volume to see if the objects are inside of the volume.</p>
+<p>Do a preview rendering, and adjust the settings if required.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/workflow-6.png" alt="Workflow" loading="lazy"></figure>
+<p>Go back to the Output tab to the Output panel. By activating stereoscopy here is a new section called Views. Here you can find further export settings.</p>
+<h3 id="stereo-3d-multiview">Stereo 3D / Multiview</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/stereo-3d-multiview.png" alt="Stereo 3D / Multiview" loading="lazy"><figcaption>Stereo 3D / Multiview</figcaption></figure>
+<p>The stereoscopy method. Stereo 3D uses two predefined virtual cameras. The camera settings gets inherited from the main camera.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/stereo-3d-multiview-2.png" alt="Stereo 3D / Multiview" loading="lazy"><figcaption>Stereo 3D / Multiview</figcaption></figure>
+<p>Multiview allows you to set up several cameras manually. You need to create every camera by hand. And you need to follow name conventions to get this to work. In the outliner give the cameras the suffix that you want to use in the list. Here three cameras with a suffix.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/stereo-3d-multiview-3.png" alt="Stereo 3D / Multiview" loading="lazy"><figcaption>Stereo 3D / Multiview</figcaption></figure>
+<p>Now do the same in the list of cameras. Give every camera the same suffix than in the outliner. The camera name is not important. Important is the suffix. This is the identifier.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/stereo-3d-multiview-4.png" alt="Stereo 3D / Multiview" loading="lazy"><figcaption>Stereo 3D / Multiview</figcaption></figure>
+<p>And in the render window you have now the render result of your three cameras.</p>
+<p>Note that for stereoscopy just two cameras gets used for rendering the anaglyph or interlaced result. Usually the ones with suffix <code>_L</code> and <code>_R</code>. So our third camera does not influence the stereoscopic image here.</p>
+<h3 id="list-of-cameras">List of Cameras</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/list-of-cameras.png" alt="List of Cameras" loading="lazy"></figure>
+<p>The list of cameras. Note that with method Stereo 3D these cameras does not exist in the outliner. They are virtually created as child objects to the main camera that you use for rendering.</p>
+<p>In this list you can choose the cameras to change the suffix.</p>
+<p>The checkbox allows you to disable the cameras. Both options are just of interest for the multi-view setup. Normal stereoscopy setup does not require any further setup.</p>
+<h4 id="resize-handler">Resize handler</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/resize-handler.png" alt="Resize handler" loading="lazy"></figure>
+<p>The resize handler allows you to resize the list.</p>
+<h4 id="search-field">Search field</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/search-field.png" alt="Search field" loading="lazy"></figure>
+<p>The triangle button down left allows you to open a search field.</p>
+<h3 id="add-remove-rename">Add / Remove / Rename</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/add-remove-rename.png" alt="Add / Remove / Rename" loading="lazy"><figcaption>Add / Remove / Rename</figcaption></figure>
+<p>Add adds a custom camera. Remove removes a custom camera. And custom cameras can be renamed by clicking at the name.</p>
+<p>The camera names left and right can‘ t be renamed, and you can‘ t remove them from the list. Individual cameras can be renamed and removed.</p>
+<h3 id="suffix">Suffix</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/suffix.png" alt="Suffix" loading="lazy"></figure>
+<p>The camera identifier. The suffix gets appended at the end of the single images of the camera. The left camera has the suffix <code>_L</code>, and the right camera has the suffix <code>_R</code></p>
+<h3 id="output-views-subpanel">Output Views Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/output-views-subpanel.png" alt="Output Views Subpanel" loading="lazy"></figure>
+<p>This subpanel just shows with Stereoscopy enabled!</p>
+<p>Adjust the stereoscopy export settings. Note that this settings does not adjust what you view in the image editor. This settings influences what you save from the image editor then.</p>
+<h4 id="individual">Individual</h4>
+<p>Save out single images from each camera when you save the result from the image editor. So for a stereoscopic image two images for the two cameras.</p>
+<h4 id="stereo-3d">Stereo 3D</h4>
+<p>Save out the stereoscopic image as a single image when you save the result from the image editor.</p>
+<h5 id="stereo-mode">Stereo Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/stereo-mode.png" alt="Stereo Mode" loading="lazy"></figure>
+<p>How to export the stereoscopic image with save as in the image editor. There are four methods available.</p>
+<h4 id="stereo-mode-type-anaglyph">Stereo Mode Type Anaglyph</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/stereo-mode-type-anaglyph.png" alt="Stereo Mode Type Anaglyph" loading="lazy"><figcaption>Stereo Mode Type Anaglyph</figcaption></figure>
+<p>Render Views for left and right eyes as two differently filtered colors in a single image. You need anaglyph glasses to see the 3d effect.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/stereo-mode-type-anaglyph-2.png" alt="Stereo Mode Type Anaglyph" loading="lazy"><figcaption>Stereo Mode Type Anaglyph</figcaption></figure>
+<h5 id="anaglyph-type">Anaglyph Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/anaglyph-type.png" alt="Anaglyph Type" loading="lazy"></figure>
+<p>The color model to display the graphics.</p>
+<h4 id="stereo-mode-type-interlace">Stereo Mode Type Interlace</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/stereo-mode-type-interlace.png" alt="Stereo Mode Type Interlace" loading="lazy"><figcaption>Stereo Mode Type Interlace</figcaption></figure>
+<p>Render Views from left and right eyes interlaced into a single image. You need a 3D Ready monitor to see the stereo effect.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/stereo-mode-type-interlace-2.png" alt="Stereo Mode Type Interlace" loading="lazy"><figcaption>Stereo Mode Type Interlace</figcaption></figure>
+<h5 id="interlace-type">Interlace Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/interlace-type.png" alt="Interlace Type" loading="lazy"></figure>
+<p>The interlace type that you can choose.</p>
+<h5 id="swap-left-right">Swap Left/Right</h5>
+<p>Swaps left and right camera view.</p>
+<h4 id="stereo-mode-type-side-by-side">Stereo Mode Type Side by Side</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/stereo-mode-type-side-by-side.png" alt="Stereo Mode Type Side by Side" loading="lazy"><figcaption>Stereo Mode Type Side by Side</figcaption></figure>
+<p>Renders images of the two cameras side by side.</p>
+<h5 id="cross-eyed">Cross Eyed</h5>
+<p>Swaps left and right camera view.</p>
+<h5 id="squeezed-frame">Squeezed Frame</h5>
+<p>Combine both views in a squeezed image.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/squeezed-frame.png" alt="Squeezed Frame" loading="lazy"></figure>
+<h4 id="stereo-mode-type-top-bottom">Stereo Mode Type Top Bottom</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/stereo-mode-type-top-bottom.png" alt="Stereo Mode Type Top Bottom" loading="lazy"><figcaption>Stereo Mode Type Top Bottom</figcaption></figure>
+<p>Renders images of the two cameras side by side.</p>
+<h5 id="squeezed-frame-2">Squeezed Frame</h5>
+<p>Combine both views in a squeezed image.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/squeezed-frame-2.png" alt="Squeezed Frame" loading="lazy"></figure>
+<h2 id="output-panel">Output Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/output-panel.png" alt="Output Panel" loading="lazy"></figure>
+<p>The file output settings.</p>
+<h3 id="file-path">File Path</h3>
+<p>The location to save rendered frames. Here you will find rendered animation sequences. For single images you can save out the result in the image editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/file-path.png" alt="File Path" loading="lazy"></figure>
+<p>When rendering an animation, the frame number is appended at the end of the file name with four padded zeros (e.g. <em>image0001.png</em>). You can set a custom padding size by adding the appropriate number of <em>#</em> anywhere in the file name (e.g. <code>image_##_test.png</code> translates to <em>image_01_test.png</em>).</p>
+<p>This setting expands relative paths where a <em>//</em> prefix represents the directory of the current blend-file.</p>
+<h3 id="load-file">Load File</h3>
+<p>Here you can load an existing file to overwrite it. Or you can use it to load a file in a directory and rename it then to your destination file name.</p>
+<h3 id="media-type">Media Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/media-type.png" alt="Media Type" loading="lazy"></figure>
+<p>What type of media to export.</p>
+<h4 id="media-type-image">Media Type Image</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/media-type-image.png" alt="Media Type Image" loading="lazy"></figure>
+<h5 id="file-format">File Format</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/file-format.png" alt="File Format" loading="lazy"></figure>
+<p>The output image file format.</p>
+<p>Each file format has some own settings.</p>
+<h4 id="media-type-image-2">Media Type Image</h4>
+<h5 id="jpeg">JPEG</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/jpeg.png" alt="JPEG" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>The output color format. Black and white, or rgb.</td>
+</tr>
+<tr>
+<td>Quality</td>
+<td>The jpeg quality.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="open-exr">Open EXR</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/open-exr.png" alt="Open EXR" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>The output color format. Black and white, rgb, or RGBA.</td>
+</tr>
+<tr>
+<td>Color Depth</td>
+<td>Float half values or Float full values per channel.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="codec">Codec</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/codec.png" alt="Codec" loading="lazy"></figure>
+<p>What codec to use.</p>
+<h6 id="preview">Preview</h6>
+<p>When rendering animations, save Jpeg preview images into the same directory.</p>
+<h5 id="png">PNG</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/png.png" alt="PNG" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>The output color format. Black and white, rgb or rgba.</td>
+</tr>
+<tr>
+<td>Color Depth</td>
+<td>8 or 16 colors per channel.</td>
+</tr>
+<tr>
+<td>Compression</td>
+<td>The compression level.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="webp">WebP</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/webp.png" alt="WebP" loading="lazy"></figure>
+<h6 id="color">Color</h6>
+<p>The output color format. Black and white, rgb, or RGBA.</p>
+<h5 id="bmp">BMP</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/bmp.png" alt="BMP" loading="lazy"></figure>
+<h6 id="color-2">Color</h6>
+<p>The output color format. Black and white or rgb.</p>
+<h5 id="cineon">Cineon</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/cineon.png" alt="Cineon" loading="lazy"></figure>
+<h6 id="color-3">Color</h6>
+<p>The output color format. Black and white, rgb, or RGBA.</p>
+<h5 id="dpx">DPX</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/dpx.png" alt="DPX" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>The output color format. Black and white, rgb, or RGBA.</td>
+</tr>
+<tr>
+<td>Color Depth</td>
+<td>8, 10, 12 or 16 colors per channel.</td>
+</tr>
+<tr>
+<td>Log</td>
+<td>Convert to logarithmic color space.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="iris">Iris</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/iris.png" alt="Iris" loading="lazy"></figure>
+<h6 id="color-4">Color</h6>
+<p>The output color format. Black and white, rgb or rgba.</p>
+<h5 id="jpeg-2000">JPEG 2000</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/jpeg-2000.png" alt="JPEG 2000" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>The output color format. Black and white, rgb or rgba.</td>
+</tr>
+<tr>
+<td>Color Depth</td>
+<td>8, 12 or 16 colors per channel.</td>
+</tr>
+<tr>
+<td>Quality</td>
+<td>The jpeg quality.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="codec-2">Codec</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/codec-2.png" alt="Codec" loading="lazy"></figure>
+<p>Which jpeg 2000 codec to use.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cinema</td>
+<td>Use OpenJpeg Cinema preset.</td>
+</tr>
+<tr>
+<td>Cinema (48)</td>
+<td>Use OpenJpeg Cinema (48) preset.</td>
+</tr>
+<tr>
+<td>YCC</td>
+<td>Save luminance / chrominance / chrominance channels instead of rgb channels.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="radiance-hdr">Radiance HDR</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/radiance-hdr.png" alt="Radiance HDR" loading="lazy"></figure>
+<h6 id="color-5">Color</h6>
+<p>The output color format. Black and white, or rgb.</p>
+<h5 id="tiff">TIFF</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/tiff.png" alt="TIFF" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>The output color format. Black and white, rgb, or RGBA.</td>
+</tr>
+<tr>
+<td>Color Depth</td>
+<td>8 or 16 bit per channel.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="compression">Compression</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/compression.png" alt="Compression" loading="lazy"></figure>
+<p>The compression method.</p>
+<h5 id="targa">Targa</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/targa.png" alt="Targa" loading="lazy"></figure>
+<h6 id="color-6">Color</h6>
+<p>The output color format. Black and white, rgb or rgba.</p>
+<h5 id="targa-raw">Targa Raw</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/targa-raw.png" alt="Targa Raw" loading="lazy"></figure>
+<h6 id="color-7">Color</h6>
+<p>The output color format. Black and white or rgb.</p>
+<h4 id="media-type-multilayer-exr">Media Type Multilayer EXR</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/media-type-multilayer-exr.png" alt="Media Type Multilayer EXR" loading="lazy"><figcaption>Media Type Multilayer EXR</figcaption></figure>
+<h5 id="color-depth">Color Depth</h5>
+<p>Float half values or Float full values per channel.</p>
+<h5 id="codec-3">Codec</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/codec.png" alt="Codec" loading="lazy"></figure>
+<p>What codec to use.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interleave</td>
+<td>Use legacy interleaved storage of views, layers and passes.</td>
+</tr>
+<tr>
+<td>Preview</td>
+<td>When rendering animations, save Jpeg preview images into the same directory.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="media-type-video">Media Type Video</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/media-type-video.png" alt="Media Type Video" loading="lazy"></figure>
+<h5 id="color-8">Color</h5>
+<p>The output color format. Black and white, or rgb.</p>
+<h4 id="transparent">Transparent</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/transparent.png" alt="Transparent" loading="lazy"></figure>
+<p>Eevee and Workbench renderer. Render and export the result with transparent background.</p>
+<h4 id="encoding-subpanel">Encoding subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/encoding-subpanel.png" alt="Encoding subpanel" loading="lazy"></figure>
+<p>Only available with video format. These options are unavailable for other file formats.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Container</td>
+<td>Video container or file type, including MPEG-4, Matroska, etc</td>
+</tr>
+<tr>
+<td>Autosplit Output</td>
+<td>Autosplit the exported video file at 2GB boundaries. <strong>Note:</strong> <em>Useful for longer videos renders</em></td>
+</tr>
+</tbody>
+</table>
+<h5 id="video">Video</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/video.png" alt="Video" loading="lazy"></figure>
+<h6 id="presets-header">Presets (Header)</h6>
+<p>These are presets for different groups of settings.</p>
+<h6 id="video-codec">Video Codec</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/video-codec.png" alt="Video Codec" loading="lazy"></figure>
+<p>Chooses the method of compression and encoding.</p>
+<h6 id="color-depth-2">Color Depth</h6>
+<p>Select between 8 and 10 bit color depths. The Color Depth property in the Encoding block allows to select higher color depths for video output when using suitable codecs in ffmpeg.</p>
+<p>For H.264, H.265, and AV1, a 10-bit option is available. Additionally, for H.265 and AV1, a 12-bit option can be chosen.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> When 'lossless' encoding is selected, the color format switches from YUV 4:2:0 to YUV 4:4:4, supporting 10-bit or 12-bit variants.</p></div>
+<h6 id="output-quality">Output Quality</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/output-quality.png" alt="Output Quality" loading="lazy"></figure>
+<ol>
+<li><strong>Constant Bitrate (CBR)</strong>: This setting maintains a steady bitrate throughout the video, ensuring consistent quality but potentially leading to larger file sizes. Ideal for streaming and situations where bandwidth is limited.</li>
+<li><strong>Lossless</strong>: Ensures no data is lost during compression, preserving the original video quality perfectly. This results in larger file sizes but is excellent for archival or high-quality needs.</li>
+<li><strong>Perceptually Lossless</strong>: Uses advanced algorithms to compress the video in a way that is visually indistinguishable from the original, while reducing file size significantly.</li>
+</ol>
+<h6 id="compression-levels">Compression Levels:</h6>
+<ul>
+<li><strong>High</strong>: Produces high-quality video with minimal compression, resulting in larger files.</li>
+<li><strong>Medium</strong>: Balances quality and file size, suitable for most uses.</li>
+<li><strong>Low</strong>: More compression applied, reducing file size but still maintaining decent quality.</li>
+<li><strong>Very Low</strong>: High compression, significantly reducing file size but with noticeable quality loss.</li>
+<li><strong>Lowest</strong>: Maximum compression, smallest file size with the most quality reduction.</li>
+</ul>
+<h6 id="custom-quality">Custom quality</h6>
+<p><strong>CRF</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/crf.png" alt="CRF" loading="lazy"></figure>
+<p>Constant rate Factor. A smaller value results in better video quality but bigger file size. The range of allowed CRF is dependent on the codec.</p>
+<h6 id="encoding-speed">Encoding Speed</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/encoding-speed.png" alt="Encoding Speed" loading="lazy"></figure>
+<p>Presets to change between a fast encode (bigger file size) and more compression (smaller file size).</p>
+<h6 id="keyframe-interval">Keyframe Interval</h6>
+<p>The number of frames in each Group of Pictures (GOP). Set this to 0 for 'intra_only', which means each frame is independent (no inter-frame compression). A higher GOP number typically results in a smaller file size, but it requires a more powerful device to play back smoothly.</p>
+<h6 id="max-b-frames">Max B-frames</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/max-b-frames.png" alt="Max B-frames" loading="lazy"></figure>
+<p>Enables the use of B-frames (bi-directional frames), which are used in video compression to improve efficiency and quality. B-frames can reference both previous and subsequent frames to store motion data more effectively. This generally results in better video quality at a smaller file size, but it may require more processing power to encode and decode the video.</p>
+<h6 id="interval">Interval</h6>
+<p>The 'Interval (of B-frames)' setting determines the maximum number of B-frames (bi-directional frames) that can appear between non-B-frames (I-frames and P-frames) in a video. B-frames help compress video by referencing both previous and future frames, improving overall compression efficiency and quality. Adjusting this interval affects the video's file size and playback performance.</p>
+<h5 id="audio">Audio</h5>
+<p>These settings control how sound is exported when rendering.</p>
+<h6 id="audio-codec">Audio Codec</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/audio-codec.png" alt="Audio Codec" loading="lazy"></figure>
+<p>Choose the format for audio output. For a complete list, refer to video formats. You can also export with No Audio.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Audio Channels</td>
+<td>The number of audio outputs: · <strong>Mono:</strong>: One audio channel. · <strong>Stereo:</strong>: Two audio channels (left and right). · <strong>4 Channels:</strong>: Four audio channels. · <strong>5.1 Surround:</strong>: Six audio channels, including one low-frequency effect (LFE) channel. · <strong>7.1 Surround:</strong>: Eight audio channels, including one LFE channel.</td>
+</tr>
+<tr>
+<td>Sample Rate</td>
+<td>Sets how frequently the audio is sampled, affecting quality.</td>
+</tr>
+<tr>
+<td>Bitrate</td>
+<td>Controls the sound quality. Higher bit rates give better sound but result in larger files.</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>Adjusts the audio output volume.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options-subpanel">Options subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/options-subpanel.png" alt="Options subpanel" loading="lazy"></figure>
+<p>Not all options are available for all file formats.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Saving</td>
+<td><strong>File Extensions</strong>: Adds the correct file extensions per file type to the output files.</td>
+</tr>
+<tr>
+<td>Cache Result</td>
+<td>Saves the rendered image and passes to a Multilayer EXR-file in temporary location on your hard drive. This allows the compositor to read these to improve performance, especially for heavy compositing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="image-sequence">Image Sequence</h5>
+<h6 id="overwrite">Overwrite</h6>
+<p>Overwrite existing files when rendering.</p>
+<h6 id="placeholders">Placeholders</h6>
+<p>Create empty placeholder frames while rendering.</p>
+<h4 id="color-management-subpanel">Color management subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/color-management-subpanel.png" alt="Color management subpanel" loading="lazy"></figure>
+<h5 id="color-management-settings">Color management settings</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Follow scene</td>
+<td>Uses the color management from the scene.</td>
+</tr>
+<tr>
+<td>Override</td>
+<td>Uses the color management settings that is defined below instead of the color management from the scene. This settings is in most parts equal to the color management settings in the render properties. But has no settings for the Sequencer.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="display">Display</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/display.png" alt="Display" loading="lazy"></figure>
+<p>The device that the image is being viewed on. Your monitor.</p>
+<p>Most computer monitors are configured for the sRGB (SDR) color space but you can also use high dynamic range monitors (HDR).</p>
+<p>Color management can also be disabled by setting the device to None.</p>
+<h5 id="view">View</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/view.png" alt="View" loading="lazy"></figure>
+<p>Choose between different ways to view the image on the same monitor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard</td>
+<td>Does no extra conversion besides the conversion for the display device.</td>
+</tr>
+<tr>
+<td>ACES 1,3 - 2.0</td>
+<td>Developed by the film industry, ACES is a high-fidelity color management system designed for HDR workflows, wide gamut imaging, and cinematic tone mapping.</td>
+</tr>
+<tr>
+<td>Khronos PBR Nuetral</td>
+<td>A newer tone mapper designed by the Khronos Group for physically-based rendering (PBR), especially in eCommerce, CAD, and product visualization.</td>
+</tr>
+<tr>
+<td>AGX</td>
+<td>A perceptually-driven tone mapper developed to aims to balance realism with usability, avoiding harsh clipping or unnatural clipped saturation.</td>
+</tr>
+<tr>
+<td>Filmic</td>
+<td>For more photo realistic results and better handling of high dynamic range. The contrast can be adjusted by changing the <em>Look</em>option for the Filmic view transform.</td>
+</tr>
+<tr>
+<td>Filmic Log</td>
+<td>Converts to Filmic log color space. This can be used for export to color grading applications, or to inspect the image by flattening out very dark and light areas.</td>
+</tr>
+<tr>
+<td>Raw</td>
+<td>Intended for inspecting the image but not for final export. Raw gives the image without any color space conversion.</td>
+</tr>
+<tr>
+<td>False Color</td>
+<td>Shows a heat map of image intensities, to visualize the dynamic range.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="look">Look</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/look.png" alt="Look" loading="lazy"></figure>
+<p>Adjust the contrast.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exposure</td>
+<td>Used to control the image brightness (in stops) applied before color space conversion. The calculation is: output value = render value X 2 exposure</td>
+</tr>
+<tr>
+<td>Gamma</td>
+<td>Extra gamma correction applied after color space conversion. Note that the default sRGB or Rec709 color space conversions already include a gamma correction of approximately 2.2 (except the <em>Raw</em> and <em>Log</em> views), so this would be applied in addition to that.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="use-curves">Use Curves</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/use-curves.png" alt="Use Curves" loading="lazy"></figure>
+<p>Adjust RGB Curves to control image colors before color space conversion.</p>
+<h6 id="c-r-g-b">C R G B</h6>
+<p>The single color channels.</p>
+<h6 id="navigation-elements">Navigation elements</h6>
+<p>The navigation elements at the top are described from left to right.</p>
+<p><strong>Zoom in and out</strong></p>
+<p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
+<p><strong>Clipping</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/clipping.png" alt="Clipping" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke.</p>
+<p><strong>Delete Points</strong></p>
+<p>Deletes selected curve points.</p>
+<p><strong>Tools</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu that contains some cuve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Extend Horizontal</td>
+<td>Causes the curve to stay horizontal before the first point and after the last point.</td>
+</tr>
+<tr>
+<td>Extend Extrapolated</td>
+<td>Causes the curve to extrapolate before the first point and after the last point, based on the shape of the curve.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+<tr>
+<td>Vector Handle</td>
+<td>Set handle type to Vector.</td>
+</tr>
+<tr>
+<td>Auto Handle</td>
+<td>Set handle type to Auto.</td>
+</tr>
+<tr>
+<td>Auto Clamped Handle</td>
+<td>Set handle type to Auto Clamped.</td>
+</tr>
+<tr>
+<td>X / Y</td>
+<td>The x and y position of the currently selected curve point.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Delete the currently selected curve point.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="black-level">Black Level</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/render-properties-tab/black-level.png" alt="Black Level" loading="lazy"></figure>
+<p>The color that Black is mapped to.</p>
+<h6 id="white-level">White Level</h6>
+<p>The color that White is mapped to.</p>
+<p><strong>Hotkeys for Black and White Level</strong></p>
+<p>You may want to sample the black and white level colors directly in the image by clicking at an area. There are hotkeys for that.</p>
+<p><strong>Ctrl + Left Mouse</strong> click in the image sets the Black level value from that position.</p>
+<p><strong>Shift + Left Mouse</strong> click in the image sets the White Level value from that position.</p>
+<p>To see the result you need to tick the View as Render button in the render window. It can be found in the sidebar.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/hotkeys-for-black-and-white-level.png" alt="Hotkeys for Black and White Level" loading="lazy"><figcaption>Hotkeys for Black and White Level</figcaption></figure>
+<h6 id="reset">Reset</h6>
+<p>Resets the Curve and the Black and White Level values to the default values.</p>
+<h5 id="use-white-balance-subpanel">Use White Balance subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/use-white-balance-subpanel.png" alt="Use White Balance subpanel" loading="lazy"><figcaption>Use White Balance subpanel</figcaption></figure>
+<p>Enables manual control over the color temperature and tint of the scene or image. When checked, Bforartists applies the adjustments below to simulate camera-style white balance correction.</p>
+<h6 id="temperature">Temperature</h6>
+<p>Adjusts the warmth or coolness of the image:</p>
+<ul>
+<li><strong>Lower values (e.g., 3000 K)</strong> → warmer tones (orange/yellow), simulating indoor or sunset lighting.</li>
+<li><strong>Higher values (e.g., 6500 K)</strong> → cooler tones (blue), simulating daylight or overcast conditions.</li>
+</ul>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> 6500 K is considered neutral daylight—great for balanced lighting setups.</p></div>
+<h6 id="tint">Tint</h6>
+<p>Shifts the green–magenta balance:</p>
+<ul>
+<li><strong>Positive values</strong> → more magenta</li>
+<li><strong>Negative values</strong> → more green</li>
+</ul>
+<h5 id="transparent-subpanel">Transparent subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/transparent-subpanel.png" alt="Transparent subpanel" loading="lazy"></figure>
+<p>Cycles only. Enable the rendering of transparent background.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transparent Glass</td>
+<td>Render glass with transparent background.</td>
+</tr>
+<tr>
+<td>Roughness Threshold</td>
+<td>For transparent transmission. Keep surfaces with roughness above the threshold opaque.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pixel-density-subpanel">Pixel density subpanel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/pixel-density-subpanel.png" alt="Pixel density subpanel" loading="lazy"></figure>
+<h6 id="pixels">Pixels</h6>
+<p>The pixel density meta-data written to supported image formats. This value is multiplied by the PPM-base which defines the unit. Typically inches or meters.</p>
+<h6 id="unit">Unit</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/unit.png" alt="Unit" loading="lazy"></figure>
+<p>The pixel unit.</p>
+<h2 id="metadata-panel">Metadata Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/metadata-panel.png" alt="Metadata Panel" loading="lazy"></figure>
+<p>What metadata to include into the image or movie.</p>
+<h3 id="metadata-input">Metadata Input</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/metadata-input.png" alt="Metadata Input" loading="lazy"></figure>
+<p>Where to get the Metadata from.</p>
+<h3 id="include">Include</h3>
+<p>What Metadata to include.</p>
+<h3 id="note">Note</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/note.png" alt="Note" loading="lazy"></figure>
+<p>Include a custom comment.</p>
+<h3 id="burn-into-image">Burn into Image</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/burn-into-image.png" alt="Burn into Image" loading="lazy"></figure>
+<p>Render the stamp info text into the image. The information is cluttered across the rendered image. Parts of it appears up left in the rendering. Parts down left, and parts down right.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/burn-into-image-2.png" alt="Burn into Image" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/burn-into-image-3.png" alt="Burn into Image" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/burn-into-image-4.png" alt="Burn into Image" loading="lazy"></figure>
+<p>The props have decorators. This means this information can be keyframed. The font itself is the system font, and cannot be changed.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Font Size</td>
+<td>The font size.</td>
+</tr>
+<tr>
+<td>Text Color</td>
+<td>The text color.</td>
+</tr>
+<tr>
+<td>Background</td>
+<td>The background color of the text.</td>
+</tr>
+<tr>
+<td>Include Labels</td>
+<td>Display stamp labels like &quot;Camera&quot; in front of camera name, etc.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="post-processing-panel">Post Processing Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/properties/output-properties-tab/post-processing-panel.png" alt="Post Processing Panel" loading="lazy"></figure>
+<p>Enable Post Processing.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pipeline</td>
+<td><strong>Compositing</strong>: Process the pipeline through the compositing in case compositing nodes are enabled. · <strong>Sequencer</strong>: Process the pipeline (and composited result) through the video sequence pipeline in case Sequencer strips exists.</td>
+</tr>
+<tr>
+<td>Dither</td>
+<td>Amount of dithering noise added to the rendered image to break up banding. This prop has a decorator, and can be keyframe animated.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Foutput-properties-tab.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/master/docs2/content/editors/properties/output-properties-tab.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#output-properties-tab">Output Properties Tab</a><a class="h3" href="#render-engine">Render Engine</a><a class="h2" href="#dimensions-panel">Dimensions Panel</a><a class="h3" href="#presets">Presets</a><a class="h3" href="#render-region">Render Region</a><a class="h3" href="#frame-rate">Frame Rate</a><a class="h2" href="#frame-range-panel">Frame Range Panel</a><a class="h3" href="#time-stretching">Time Stretching</a><a class="h2" href="#stereoscopy-panel">Stereoscopy Panel</a><a class="h3" href="#workflow">Workflow</a><a class="h3" href="#stereo-3d-multiview">Stereo 3D / Multiview</a><a class="h3" href="#list-of-cameras">List of Cameras</a><a class="h3" href="#add-remove-rename">Add / Remove / Rename</a><a class="h3" href="#suffix">Suffix</a><a class="h3" href="#output-views-subpanel">Output Views Subpanel</a><a class="h2" href="#output-panel">Output Panel</a><a class="h3" href="#file-path">File Path</a><a class="h3" href="#load-file">Load File</a><a class="h3" href="#media-type">Media Type</a><a class="h2" href="#metadata-panel">Metadata Panel</a><a class="h3" href="#metadata-input">Metadata Input</a><a class="h3" href="#include">Include</a><a class="h3" href="#note">Note</a><a class="h3" href="#burn-into-image">Burn into Image</a><a class="h2" href="#post-processing-panel">Post Processing Panel</a></aside></div></body></html>

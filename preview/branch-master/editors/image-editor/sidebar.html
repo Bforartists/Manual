@@ -1,0 +1,2399 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sidebar · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch master · <code>master</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../../getting-started.html">Getting Started</a>
+<a href="../../getting-started/introduction.html">Introduction</a>
+<a href="../../getting-started/about-documentation.html">Using the Documentation</a>
+<a href="../../getting-started/installation.html">Installation</a>
+<a href="../../getting-started/quick-start.html">Quick Start</a>
+<a href="../../getting-started/data-structure.html">Data Structure</a>
+<a href="../../getting-started/differences.html">Comparison with Blender</a>
+<a href="../../getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<a href="../../interface.html">Interface</a>
+<a href="../../interface/overview.html">Interface Basics</a>
+<a href="../../interface/windows.html">Windows</a>
+<a href="../../interface/areas.html">Areas</a>
+<a href="../../interface/editors.html">Editors</a>
+<a href="../../interface/headers.html">Headers</a>
+<a href="../../interface/footers.html">Footers</a>
+<a href="../../interface/tool-shelves.html">Tool Shelves</a>
+<a href="../../interface/side-bars.html">Side Bars</a>
+<a href="../../interface/tabs-and-panels.html">Tabs &amp; Panels</a>
+<a href="../../interface/properties.html">Properties</a>
+<a href="../../interface/asset-shelves.html">Asset Shelves</a>
+<a href="../../interface/context-menus.html">Context Menus</a>
+<a href="../../interface/floating-menus.html">Floating Menus</a>
+<a href="../../interface/pie-menus.html">Pie Menus</a>
+<a href="../../interface/last-operator-panel.html">Last Operator Panel</a>
+<a href="../../interface/floating-dialogues.html">Floating Dialogues</a>
+<a href="../../interface/input-devices.html">Input Devices</a>
+<h4>Workspaces</h4>
+<a href="../../workspaces.html">Workspaces</a>
+<a href="../../workspaces/workspaces.html">Managing Workspaces</a>
+<a href="../../workspaces/main.html">Main</a>
+<a href="../../workspaces/uv-editing.html">UV Editing</a>
+<a href="../../workspaces/modeling.html">Modeling</a>
+<a href="../../workspaces/nodes.html">Nodes</a>
+<a href="../../workspaces/animation.html">Animation</a>
+<a href="../../workspaces/texture-paint.html">Texture Paint</a>
+<a href="../../workspaces/shading.html">Shading</a>
+<a href="../../workspaces/rendering.html">Rendering</a>
+<a href="../../workspaces/sculpting.html">Sculpting</a>
+<a href="../../workspaces/compositing.html">Compositing</a>
+<a href="../../workspaces/scripting.html">Scripting</a>
+<a href="../../workspaces/2d-animation.html">2D Animation</a>
+<a href="../../workspaces/storyboarding.html">Storyboarding</a>
+<a href="../../workspaces/2d-full-canvas.html">2D Full Canvas</a>
+<a href="../../workspaces/masking.html">Masking</a>
+<a href="../../workspaces/motion-tracking.html">Motion Tracking</a>
+<a href="../../workspaces/video-editing.html">Video Editing</a>
+<a href="../../workspaces/sequencer-compositing.html">Sequencer Compositing</a>
+<a href="../../workspaces/assets.html">Assets</a>
+<a href="../../workspaces/3d-sequencer.html">3D Sequencer</a>
+<a href="../../workspaces/color-balance.html">Color Balance</a>
+<h4>Editors</h4>
+<a href="../../editors.html">Editors</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/all-modes.html">All Modes</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../properties/render-properties-tab.html">Render</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../timeline/header.html">Header</a>
+<a href="../topbar-and-statusbar.html">Topbar and Statusbar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/hair-curves/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/sculpt.html">Sculpt Mode</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/object-mode.html">Object Mode</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../compositor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="tool-shelf.html">Tool Shelf</a>
+<a href="../introduction.html">Editors introduction</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../properties/output-properties-tab.html">Output</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/output.html">Output</a>
+<a style="padding-left:1.5rem" href="../shader-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../uv-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/tool-shelf.html">Tool Shelf</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/quick-menu.html">Quick Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/sculpt.html">Sculpt Mode</a>
+<a href="../3d-viewport.html">3D Viewport</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/mesh.html">Mesh</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a class="is-current" style="padding-left:1.5rem" href="sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../properties/view-layer-properties-tab.html">View Layer</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/shader.html">Shader</a>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/curve.html">Curve and Surface</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/mesh/sculpt/context-menus.html">Context Menus</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/creative.html">Creative</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<a style="padding-left:1.5rem" href="../graph-editor/channel-list.html">Channel List</a>
+<a href="../image-editor.html">Image Editor</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-channel-list.html">Channel List</a>
+<a style="padding-left:1.5rem" href="../properties/scene-properties-tab.html">Scene</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../timeline/channel-list.html">Channel List</a>
+<a style="padding-left:3.5rem" href="../3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/all-modes/more.html">More</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/texture-paint.html">Texture Paint</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/metaball.html">Metaball</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/filter.html">Filter</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<a style="padding-left:1.5rem" href="../graph-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/nla-editor-footer-tools-and-options.html">Footer</a>
+<a style="padding-left:1.5rem" href="../properties/world-properties-tab.html">World</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/footer-tools-and-options.html">Footer</a>
+<a style="padding-left:2.5rem" href="../3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/text.html">Text</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:1.5rem" href="../properties/collection-properties-tab.html">Collection</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/lattice.html">Lattice</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/mask.html">Mask</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/instances.html">Instances</a>
+<a style="padding-left:1.5rem" href="../properties/object-properties-tab.html">Object</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/armature.html">Armature</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/tracking.html">Tracking</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<a style="padding-left:1.5rem" href="../properties/modifiers.html">Modifiers</a>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/layout.html">Layout</a>
+<a href="../uv-editor.html">UV Editor</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/grease-pencil.html">Grease Pencil</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/point.html">Point</a>
+<a style="padding-left:1.5rem" href="../properties/visual-effects-properties-tab.html">Visual Effects</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/hair-curves.html">Hair Curves</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/transform.html">Transform</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<a style="padding-left:1.5rem" href="../properties/particle-properties-tab.html">Particles</a>
+<a style="padding-left:1.5rem" href="../3d-viewport/point-cloud.html">Point Cloud</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<a style="padding-left:1.5rem" href="../properties/physics-properties-tab.html">Physics</a>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/layout.html">Layout</a>
+<a href="../compositor.html">Compositor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../properties/object-data-properties-tab.html">Object Data</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/texture.html">Texture</a>
+<a style="padding-left:1.5rem" href="../properties/object-constraints-properties-tab.html">Object Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:1.5rem" href="../properties/bone-properties-tab.html">Bone</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/generate.html">Generate</a>
+<a style="padding-left:1.5rem" href="../properties/bone-constraint-properties.html">Bone Constraints</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<a style="padding-left:1.5rem" href="../properties/material-properties-tab.html">Material</a>
+<a href="../texture-node-editor.html">Texture Node Editor</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/normals.html">Normals</a>
+<a href="../geometry-node-editor.html">Geometry Node Editor</a>
+<a style="padding-left:1.5rem" href="../properties/texture-properties-tab.html">Texture</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/group.html">Group</a>
+<a style="padding-left:1.5rem" href="../properties/strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<a style="padding-left:1.5rem" href="../properties/strip-modifiers-tab.html">Strip Modifiers</a>
+<a href="../shader-editor.html">Shader Editor</a>
+<a href="../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../movie-clip-editor.html">Movie Clip Editor</a>
+<a href="../dope-sheet.html">Dope Sheet</a>
+<a href="../timeline.html">Timeline</a>
+<a href="../graph-editor.html">Graph Editor</a>
+<a href="../drivers-editor.html">Drivers Editor</a>
+<a href="../nonlinear-animation-editor.html">Nonlinear Animation Editor</a>
+<a href="../text-editor.html">Text Editor</a>
+<a href="../python-console.html">Python Console</a>
+<a href="../info-editor.html">Info Editor</a>
+<a href="../toolbar.html">Toolbar</a>
+<a href="../outliner.html">Outliner</a>
+<a href="../properties.html">Properties Editor</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/cycles.html">Cycles</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/eevee.html">EEVEE</a>
+<a style="padding-left:2.5rem" href="../properties/render-properties-tab/workbench.html">Workbench</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/normals.html">Normals modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/edit.html">Edit modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/generate.html">Generate modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/deform.html">Deform modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/mesh/physics.html">Physics modifiers (Mesh)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/edit.html">Edit modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/generate.html">Generate modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/deform.html">Deform modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/modifiers/grease-pencil/color.html">Color modifiers (Grease Pencil)</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter.html">Emitter</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-emission-panel.html">Emitter - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-cache-panel.html">Emitter - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-velocity-panel.html">Emitter - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-rotation-panel.html">Emitter - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-physics-panel.html">Emitter - Physics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-render-panel.html">Emitter - Render panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-viewport-display-panel.html">Emitter - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-children-panel.html">Emitter - Children panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-field-weights-panel.html">Emitter - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-hair-dynamics-panel.html">Hair - Hair Dynamics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-force-field-settings-panel.html">Emitter - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-vertex-groups-panel.html">Emitter - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-textures-panel.html">Emitter - Textures panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-animation-panel.html">Emitter - Animation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/emitter-custom-properties-panel.html">Emitter - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair.html">Hair</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-emission-panel.html">Hair - Emission Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-cache-panel.html">Hair - Cache Panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-velocity-panel.html">Hair - Velocity panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-rotation-panel.html">Hair - Rotation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-physics-panel.html">Hair - Physics panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-render-panel.html">Hair - Render panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-viewport-display-panel.html">Hair - Viewport Display panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-children-panel.html">Hair - Children panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-hair-shape-panel.html">Hair - Hair Shape panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-field-weights-panel.html">Hair - Field Weights panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-force-field-settings-panel.html">Hair - Force Field Settings panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-vertex-groups-panel.html">Hair - Vertex Groups panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-textures-panel.html">Hair - Textures panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-animation-panel.html">Hair - Animation panel</a>
+<a style="padding-left:2.5rem" href="../properties/particle-properties-tab/hair-custom-properties-panel.html">Hair - Custom Properties panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/force-field-panel.html">Force Field panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/collision-panel.html">Collision panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/cloth-panel.html">Cloth panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/dynamic-paint-panel.html">Dynamic Paint panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/soft-body-panel.html">Soft Body panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/fluid-panel.html">Fluid panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/rigid-body-panel.html">Rigid Body panel</a>
+<a style="padding-left:2.5rem" href="../properties/physics-properties-tab/rigid-body-constraint-panel.html">Rigid Body Constraint panel</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/mesh-object.html">Mesh Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/curve-object.html">Curve Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/curves-object.html">Curves Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/metaball-object.html">Metaball Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/surface-object.html">Surface Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/point-cloud-object.html">Point Cloud Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/text-object.html">Text Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/grease-pencil-object.html">Grease Pencil Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/armature-object.html">Armature Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/lattice-object.html">Lattice Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/empty-image-object.html">Empty&amp;Image Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/speaker-object.html">Speaker Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/camera-object.html">Camera Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/light-object.html">Light Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/light-probe-object.html">Light Probe Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/force-field-object.html">Force Field Object</a>
+<a style="padding-left:2.5rem" href="../properties/object-data-properties-tab/volume-object.html">Volume Object</a>
+<a href="../file-browser.html">File browser</a>
+<a href="../asset-browser.html">Asset Browser</a>
+<a href="../spreadsheet.html">Spreadsheet</a>
+<a href="../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<a style="padding-left:1.5rem" href="../timeline/viewport.html">Viewport</a>
+<a style="padding-left:2.5rem" href="../compositor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../geometry-node-editor/header/add-menu.html">Add Menu</a>
+<a style="padding-left:2.5rem" href="../shader-editor/header/add-menu.html">Add Menu</a>
+<h4>Assets</h4>
+<a href="../../assets.html">Assets</a>
+<a href="../../assets/essentials-library.html">Essentials Library</a>
+<a href="../../assets/default-library.html">Default Library</a>
+<a href="../../assets/compositor-library.html">Compositor Library</a>
+<a href="../../assets/geometry-nodes-library.html">Geometry Nodes Library</a>
+<a href="../../assets/shader-library.html">Shader Library</a>
+<h4>Extensions and Addons</h4>
+<a href="../../extensions.html">Extensions and Addons</a>
+<a href="../../extensions/core-extension-3d-sequencer.html">3D Sequencer</a>
+<a href="../../extensions/core-extension-power-user-tools.html">Power User Tools</a>
+<a href="../../extensions/core-extension-presentation-slider.html">Presentation Slides</a>
+<a href="../../extensions/coworker.html">Coworker</a>
+<a href="../../extensions/core-extension-brush-panels.html">Brush Panels</a>
+<a href="../../extensions/built-in-addons.html">Built-in Addons and Extensions</a>
+<h4>Keymap</h4>
+<a href="../../keymap.html">Keymap</a>
+<a href="../../keymap/standard-keymap.html">Standard Keymap</a>
+<a href="../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<h4>Advanced</h4>
+<a href="../../advanced.html">Advanced</a>
+<a href="../../advanced/advanced-command-line.html">Command Line</a>
+<a href="../../advanced/advanced-scripting-extending-bforartists.html">Scripting</a>
+<a href="../../advanced/advanced-working-limits.html">Working Limits</a>
+<a href="../../advanced/troubleshooting.html">Troubleshooting</a>
+<a href="../../advanced/reporting-a-bug.html">Reporting a Bug</a>
+<a href="../../advanced/requesting-a-feature.html">Requesting a Feature</a>
+<a href="../../advanced/how-to-help.html">How to Help</a>
+<h4>Information</h4>
+<a href="../../appendix.html">Information</a>
+<a href="../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../appendix/gpl-license.html">About the GPL License</a>
+<a href="../../appendix/community-influences.html">The Community Influences</a>
+<a href="../../appendix/glossary.html">Glossary</a>
+<a href="../../appendix/index-a-z.html">Index</a>
+<h4>Doc Kit (test)</h4>
+<a href="../../doc-kit.html">Doc Kit (test)</a></nav><main><div class="pv-crumb">📄 Documentation › Editors › Image Editor › Sidebar</div><h1 class="pv-title">Sidebar</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 41 min read</span></div><article class="ui-doc-body"><h2 id="introduction">Introduction</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/introduction.png" alt="Introduction" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/introduction-2.png" alt="Introduction" loading="lazy"></figure>
+<p>The Image Editor is made of several areas. At the right side you will find the sidebar. Here you will find further options and settings for the Image Editor and its tools.</p>
+<p>The tools tab in paint mode contains several panels with functionality for the brushes. The Image tab contains image related settings. And so on.</p>
+<p>The Scopes tab just appears with an image selected.</p>
+<h2 id="right-click-menus">Right Click menus</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/right-click-menus.png" alt="Right Click menus" loading="lazy"></figure>
+<p>You will open the usual right click menus when clicking with the right mouse at elements in the sidebar. Its content is in big parts self explaining.</p>
+<p>The right click menus are explained in the chapter 6 Editors Introduction.</p>
+<h1 id="tool-tab-in-paint-mode">Tool Tab in Paint Mode</h1>
+<h3 id="tool-tab">Tool Tab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/tool-tab.png" alt="Tool Tab" loading="lazy"></figure>
+<p>In View and Mask mode you don't have any further content in the Tool tab. But in Paint mode the tools tab contains several panels with functionality for the brushes. It is in big parts similar functionality to the paint tools in the 3D view.</p>
+<p>The Brush panel shows different content, dependent of which brush is chosen in the tool shelf.</p>
+<h4 id="save-image">Save Image</h4>
+<p>A short warning. A modified image does NOT save with the scene. You have to save out the image when you want to save the changes at the texture. There is no warning. So DON'T FORGET TO SAVE THE IMAGE.</p>
+<h3 id="brush-asset-panel">Brush Asset Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-asset-panel.png" alt="Brush Asset Panel" loading="lazy"></figure>
+<p>The Brush Asset Panel contains the different Brushes and some Brush settings. Choose and adjust your current active brush.</p>
+<h4 id="browse-brush">Browse Brush</h4>
+<p>The big image at the top is a dropdown box that allows you to choose a brush. Click at it, and you will see the different brushes. A click at one of the images will choose this brush then.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-brush.png" alt="Browse Brush" loading="lazy"></figure>
+<p>Brushes are assets. You can load them from different libraries if you want.</p>
+<h4 id="brush-specials-menu">Brush Specials menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-specials-menu.png" alt="Brush Specials menu" loading="lazy"></figure>
+<p>This menu becomes active when you create a new brush. Which can be done wiht the Plus button in the name property. This data cannot be changed for builtin system brushes.</p>
+<h5 id="edit-metadata">Edit Metadata</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/edit-metadata.jpg" alt="Edit Metadata" loading="lazy"></figure>
+<p>Calls a popup where you can adjust further informations and settings for the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Catalog</td>
+<td>The asset catalog in which the brush is stored.</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>The brush author.</td>
+</tr>
+<tr>
+<td>Desctription</td>
+<td>Add a description</td>
+</tr>
+<tr>
+<td>OK / Cancel</td>
+<td>Accept or decline the changes.</td>
+</tr>
+<tr>
+<td>Edit Preview Image</td>
+<td>Allows you to load a custom preview image.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Save Brush Asset</td>
+<td>This button is just active with a custom brush. It saves all changes made at the brush settings into the current custom brush.</td>
+</tr>
+<tr>
+<td>Revert Brush Asset</td>
+<td>Reverts the brush settings to the default values of the brush in the asset library.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-settings-panel">Brush settings Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel.png" alt="Brush settings Panel" loading="lazy"></figure>
+<p>The Brush Panel contains the different paint brushes, a color dialog, and some brush settings.</p>
+<h4 id="blend">Blend</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/blend.png" alt="Blend" loading="lazy"></figure>
+<p>Define how the stroke will blend. You can choose between various blend modes.</p>
+<h4 id="size">Size</h4>
+<p>The Radius edit box allows you to adjust the radius of the brush. The button behind the edit box enables tablet pressure sensitivity for radius.</p>
+<h5 id="size-pressure">Size Pressure</h5>
+<p>The first button behind the edit box enables tablet pressure sensitivity for radius.</p>
+<h4 id="pressure-size-curve">Pressure Size Curve</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/pressure-size-curve.png" alt="Pressure Size Curve" loading="lazy"></figure>
+<p>Behind the pressure size button there is a button to reveal the size pressure curve panel. When you activate Size Pressure for tablets, then the Size Pressure curve becomes active, and can be adjusted.</p>
+<p>The pressure size curve allows you to adjust the falloff curve for the tablet pressure. It shows when Use Pressure is activated. The curve panel shows when clicking at the button.</p>
+<h5 id="selecting-points">Selecting Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
+<p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
+<h5 id="adding-points">Adding Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/adding-points.png" alt="Adding Points" loading="lazy"></figure>
+<p>You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.</p>
+<h5 id="navigation-elements">Navigation elements</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in</td>
+<td>Zooms in.</td>
+</tr>
+<tr>
+<td>Zoom out</td>
+<td>Zooms out.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="clipping-options">Clipping options</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/clipping-options.png" alt="Clipping options" loading="lazy"></figure>
+<p>Set up clipping for the stroke.</p>
+<h6 id="tools">Tools</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="handles">Handles</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/handles.png" alt="Handles" loading="lazy"></figure>
+<p>You can choose between Auto handle, Vector Handle and Auto Clamped.</p>
+<h6 id="position-x-y">Position X / Y</h6>
+<p>The position of the selectedc curve point.</p>
+<h6 id="delete-points">Delete Points</h6>
+<p>Deletes the selected curve point.</p>
+<h6 id="curve-presets">Curve Presets</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/curve-presets.png" alt="Curve Presets" loading="lazy"></figure>
+<p>A curve preset to start with.</p>
+<h5 id="use-unified-radius">Use Unified Radius</h5>
+<p>The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.</p>
+<h4 id="strength">Strength</h4>
+<p>The Strength edit box allows you to adjust the strength of the brush. The button behind the edit box enables tablet pressure sensitivity for strength.</p>
+<h5 id="size-pressure-2">Size Pressure</h5>
+<p>The first button behind the edit box enables tablet pressure sensitivity for radius.</p>
+<h4 id="pressure-size-curve-2">Pressure Size Curve</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/pressure-size-curve.png" alt="Pressure Size Curve" loading="lazy"></figure>
+<p>Behind the pressure size button there is a button to reveal the size pressure curve panel. When you activate Size Pressure for tablets, then the Size Pressure curve becomes active, and can be adjusted.</p>
+<p>The pressure size curve allows you to adjust the falloff curve for the tablet pressure. It shows when Use Pressure is activated. The curve panel shows when clicking at the button.</p>
+<h5 id="selecting-points-2">Selecting Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
+<p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
+<h5 id="adding-points-2">Adding Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/adding-points.png" alt="Adding Points" loading="lazy"></figure>
+<p>You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.</p>
+<h5 id="navigation-elements-2">Navigation elements</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in</td>
+<td>Zooms in.</td>
+</tr>
+<tr>
+<td>Zoom out</td>
+<td>Zooms out.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="clipping-options-2">Clipping options</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/clipping-options.png" alt="Clipping options" loading="lazy"></figure>
+<p>Set up clipping for the stroke.</p>
+<h6 id="tools-2">Tools</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="handles-2">Handles</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/handles.png" alt="Handles" loading="lazy"></figure>
+<p>You can choose between Auto handle, Vector Handle and Auto Clamped.</p>
+<h6 id="position-x-y-2">Position X / Y</h6>
+<p>The position of the selectedc curve point.</p>
+<h6 id="delete-points-2">Delete Points</h6>
+<p>Deletes the selected curve point.</p>
+<h6 id="curve-presets-2">Curve Presets</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/curve-presets.png" alt="Curve Presets" loading="lazy"></figure>
+<p>A curve preset to start with.</p>
+<h5 id="use-unified-radius-2">Use Unified Radius</h5>
+<p>The second button behind the edit box enables global radius size. Any modification at the radius will also modify the radius value for other paint tools.</p>
+<h3 id="brush-settings-panel-color-picker-sub-panel">Brush Settings Panel - Color Picker Sub panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-color-picker-sub-panel.png" alt="Brush Settings Panel - Color Picker Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Color Picker Sub panel</figcaption></figure>
+<p>Define the color for your brush.</p>
+<p>The active color is the left one. When you click the button with the two arrows down right then you can swap the color with the secondary color. Then this secondary color becomes the primary color, and is active.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-color-picker-sub-panel-2.png" alt="Brush Settings Panel - Color Picker Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Color Picker Sub panel</figcaption></figure>
+<p>A click at one of the color fields will open a more detailed color dialog, to set up the color by using rgb, hsv and hex colors and with value sliders.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brush colors flip</td>
+<td>Flips the primary color with the secondary color.</td>
+</tr>
+<tr>
+<td>Use unified Color</td>
+<td>Choose if you want to use global colors or local color just for vertex painting.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-settings-panel-color-palette-sub-panel">Brush Settings Panel - Color Palette Sub panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-color-palette-sub-panel.png" alt="Brush Settings Panel - Color Palette Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Color Palette Sub panel</figcaption></figure>
+<p>Create a color palette for later reuse.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-color-palette-sub-panel-2.png" alt="Brush Settings Panel - Color Palette Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Color Palette Sub panel</figcaption></figure>
+<p>First create a new palette by clicking at New. Then adjust the color in the color picker. And then click at the add button to add this color to the palette.</p>
+<p>To set the color picker to a palette color simply click at this palette color.</p>
+<p>To remove a color from the palette, choose it, then click at the remove button. The active palette color that gets removed is the one with the triangle at it.</p>
+<p>The color palette cannot be saved externally. It is part of the current blend file. You can however append color palettes from other blend files.</p>
+<p>The elements are explained from left to right.</p>
+<h4 id="palette-browser">Palette browser</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/palette-browser.png" alt="Palette browser" loading="lazy"></figure>
+<p>The button at the left opens a drop down list where you can choose between your palettes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Box</td>
+<td>Read the name of the currently active palette. You can also rename the palette here. A click into the edit box makes the name editable.</td>
+</tr>
+<tr>
+<td>Number of users</td>
+<td>See how many users the palette currently has.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Fake User sets the element to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user.</td>
+</tr>
+<tr>
+<td>Add palette</td>
+<td>Add a new palette.</td>
+</tr>
+<tr>
+<td>Remove Palette</td>
+<td>Clicking at this button removes the palette. Note that you need to save, close Bforartists and reload the blend file to remove the palette completely.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-settings-panel-advanced-sub-panel">Brush Settings Panel - Advanced Sub panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-advanced-sub-panel.png" alt="Brush Settings Panel - Advanced Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Advanced Sub panel</figcaption></figure>
+<p>This sub panel contains brush specific settings.</p>
+<h4 id="brush-type-draw">Brush type Draw</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-draw.png" alt="Brush type Draw" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-draw-2.png" alt="Brush type Draw" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anti Aliasing</td>
+<td>Smooths the edges of the strokes.</td>
+</tr>
+<tr>
+<td>Accumulate</td>
+<td>Accumulate stroke daubs on top of each other.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="brush-type-soften">Brush type Soften</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-soften.png" alt="Brush type Soften" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-soften-2.png" alt="Brush type Soften" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sharpen / Soften</td>
+<td><strong>Sharp Threshold</strong>: The threshold below which no sharpening is performed. · <strong>Kernel Radius</strong>: Radius of kernel used for soften and sharpen in pixels.</td>
+</tr>
+<tr>
+<td>Blur Mode</td>
+<td>Choose the blur method. Gaussian or Box.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="brush-type-smear">Brush type Smear</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-smear.png" alt="Brush type Smear" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-smear-2.png" alt="Brush type Smear" loading="lazy"></figure>
+<h5 id="anti-aliasing">Anti Aliasing</h5>
+<p>Smooths the edges of the strokes.</p>
+<h4 id="brush-type-clone">Brush type Clone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-clone.png" alt="Brush type Clone" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-clone-2.png" alt="Brush type Clone" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anti Aliasing</td>
+<td>Smooths the edges of the strokes.</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>Choose an image to clone from. · <strong>Alpha</strong>: The alpha value for the clone image.</td>
+</tr>
+<tr>
+<td>Accumulate</td>
+<td>Accumulate stroke daubs on top of each other.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="brush-type-fill">Brush type Fill</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-fill.png" alt="Brush type Fill" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-fill-2.png" alt="Brush type Fill" loading="lazy"></figure>
+<h5 id="anti-aliasing-2">Anti Aliasing</h5>
+<p>Smooths the edges of the strokes.</p>
+<h4 id="brush-type-mask">Brush type Mask</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-mask.png" alt="Brush type Mask" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-type-mask-2.png" alt="Brush type Mask" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anti Aliasing</td>
+<td>Smooths the edges of the strokes.</td>
+</tr>
+<tr>
+<td>Mask Value</td>
+<td>The vertex weight when brush is applied.</td>
+</tr>
+<tr>
+<td>Accumulate</td>
+<td>Accumulate stroke daubs on top of each other.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="randomize-color-subtab">Randomize Color subtab</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/randomize-color-subtab.png" alt="Randomize Color subtab" loading="lazy"></figure>
+<p>Jitter the brush color.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hue</td>
+<td><strong>Hue Jitter</strong>: The amount to jitter the Hue value. · <strong>Stroke Random</strong>: Activate the Jitter. · <strong>Use Pressure</strong>: Use tablet pressure when drawing.</td>
+</tr>
+<tr>
+<td>Saturation</td>
+<td><strong>Saturation Jitter</strong>: The amount to jitter the Saturation value. · <strong>Stroke Random</strong>: Activate the Jitter. · <strong>Use Pressure</strong>: Use tablet pressure when drawing.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><strong>Value Jitter</strong>: The amount to jitter the Value value. · <strong>Stroke Random</strong>: Activate the Jitter. · <strong>Use Pressure</strong>: Use tablet pressure when drawing.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="modes-subpanel">Modes subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/modes-subpanel.png" alt="Modes subpanel" loading="lazy"></figure>
+<p>In which mode to use the brushes.</p>
+<h3 id="brush-settings-panel-texture-sub-panel">Brush Settings Panel - Texture Sub panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-texture-sub-panel.png" alt="Brush Settings Panel - Texture Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Texture Sub panel</figcaption></figure>
+<h4 id="texture-panel">Texture Panel</h4>
+<p>The Texture panel allows you to paint with textures. This allows you for example to grab a photo from some fish scales, and simply paint them onto the mesh by using this image as a pencil. Or as a blueprint where you calk through ( Stencil method ).</p>
+<h5 id="browse-texture-to-be-linked">Browse Texture to be linked</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>The image at the top of the panel is an image browser. Choose a texture that you can choose for painting then. You can also have more than one image loaded at once.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-2.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>In this shot there is already a texture added. The way to add the texture here is a bit more complicated. And not done with clicking at the New button.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-3.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>First click at the New button below the image. This will create a new texture slot. This slot is still empty, it displays black.</p>
+<p>We need to load a texture in this slot. This must be done in the Properties editor in the Textures tab.</p>
+<p>The problem is, we have most probably an object with a material and a texture already selected. And when we change this texture , then we don't get the pencil texture loaded. But we change the texture at our mesh.</p>
+<p>What we need to do is to create a material first. And in this material we load our pencil texture then. And then this texture becomes available in the image browser of the Texture panel. Note that you need to be in texture paint mode to see the texture tab in the properties editor. It does not show in object mode.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-4.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-5.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-6.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-7.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-8.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>And when we go back to the texture panel, then the texture should be loaded here. And we can work with this texture.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texture Edit box</td>
+<td>The Texture edit box is the edit box below the Image browser. When there's no image loaded then it displays the New button. When there's an image (or more) loaded, then you will see the name of the current texture. · <strong>New Texture</strong>: Creates a duplicate of the current texture. · <strong>Remove</strong>: Removes the current texture. · <strong>Show Texture in Texture tab</strong>: Reveals the current texture in the texture tab in the properties editor.</td>
+</tr>
+<tr>
+<td>Brush Mapping</td>
+<td>Our texture can be mapped in different methods. The Brush mapping is a drop down box where you can choose this different brush mapping methods. The settings vary. So we will go through them by the different brush mapping methods.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="brush-mapping-with-mapping-method-tiled">Brush Mapping with mapping method Tiled</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-tiled.png" alt="Brush Mapping with mapping method Tiled" loading="lazy"><figcaption>Brush Mapping with mapping method Tiled</figcaption></figure>
+<p>The brush mapping method Tiled tiles the brush stroke at the surface. The mapping happens from the current view. The result may be distorted when the view does not align with the surface of the object.</p>
+<h5 id="angle">Angle</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/angle.png" alt="Angle" loading="lazy"></figure>
+<p>The angle of the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>The offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="brush-mapping-with-mapping-method-view-plane">Brush Mapping with mapping method View Plane</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-view-plane.png" alt="Brush Mapping with mapping method View Plane" loading="lazy"><figcaption>Brush Mapping with mapping method View Plane</figcaption></figure>
+<p>The brush mapping method View Plane simply paints onto the surface. The mapping happens from the current view. The result may be distorted when the view does not align with the surface of the object.</p>
+<h6 id="angle-2">Angle</h6>
+<p>The angle of the brush.</p>
+<h6 id="rake">Rake</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/rake.png" alt="Rake" loading="lazy"></figure>
+<p>The angle follows the direction of the brush stroke.</p>
+<h6 id="random">Random</h6>
+<p>The brush angle gets set random.</p>
+<h6 id="random-angle">Random Angle</h6>
+<p>Brush texture random angle.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>The offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="brush-mapping-with-mapping-method-3d">Brush Mapping with mapping method 3D</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-3d.png" alt="Brush Mapping with mapping method 3D" loading="lazy"><figcaption>Brush Mapping with mapping method 3D</figcaption></figure>
+<p>The brush mapping method 3D paints the texture at the surface, by tiling it 1/1 at the object surface.</p>
+<h5 id="offset">Offset</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/offset.png" alt="Offset" loading="lazy"></figure>
+<p>The offset of the texture in the brush.</p>
+<h5 id="size-2">Size</h5>
+<p>The size of the texture in the brush.</p>
+<h5 id="brush-mapping-with-mapping-method-random">Brush Mapping with mapping method Random</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-random.png" alt="Brush Mapping with mapping method Random" loading="lazy"><figcaption>Brush Mapping with mapping method Random</figcaption></figure>
+<p>The brush mapping method Random paints onto the surface, and randomizes the texture position in the brush while that. The mapping happens from the current view. The result may be distorted when the view does not align with the surface of the object.</p>
+<h6 id="angle-3">Angle</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/angle-2.png" alt="Angle" loading="lazy"></figure>
+<p>The angle of the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rake</td>
+<td>The angle follows the direction of the brush stroke.</td>
+</tr>
+<tr>
+<td>Random</td>
+<td>The brush angle gets set random. · <strong>Random Angle</strong>: Brush texture random angle.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="brush-mapping-with-mapping-method-stencil">Brush Mapping with mapping method Stencil</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-stencil.png" alt="Brush Mapping with mapping method Stencil" loading="lazy"><figcaption>Brush Mapping with mapping method Stencil</figcaption></figure>
+<p>The former methods uses the textures for the brush. The method Stencil works different. You have your texture displayed in the workspace above the object, and you paint this texture onto your object with your pencil strokes.</p>
+<p>Note that the texture in the 3d space is just visible when you are with the mouse over the viewport.</p>
+<p>The stencil map gets by default displayed down left in the 3d view. You have to position it where you need it.</p>
+<p>Hotkeys ctrl right mouse, shift right mouse and alt right mouse.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-stencil-2.png" alt="Brush Mapping with mapping method Stencil" loading="lazy"><figcaption>Brush Mapping with mapping method Stencil</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image Aspect</td>
+<td>Adjust the stencil size to fit to the image aspect ratio.</td>
+</tr>
+<tr>
+<td>Reset Transform</td>
+<td>Resets the stencil image to be down right in the 3D view.</td>
+</tr>
+<tr>
+<td>Angle edit box</td>
+<td>Adjust the angle of the brush.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Fine tune the offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Fine tune the size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-settings-panel-texture-mask-sub-panel">Brush Settings Panel - Texture Mask Sub panel</h3>
+<h4 id="texture-mask-panel">Texture Mask Panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/texture-mask-panel.png" alt="Texture Mask Panel" loading="lazy"></figure>
+<p>The texture mask panel allows you to use a texture as a mask to define the strength of painting. It paints just where the mask texture is bright. You can also use gradients to define the paint strength.</p>
+<h5 id="browse-texture-to-be-linked-2">Browse Texture to be linked</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-9.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>The image at the top of the panel is an image browser. Choose a texture that you can choose for painting then. You can also have more than one image loaded at once.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>In this shot there is already two textures added. The way to add the texture here is a bit more complicated. And not done with clicking at the New button.</p>
+<p>First click at the New button below the image. This will create a new texture slot. This slot is still empty, it displays black.</p>
+<p>We need to load a texture in this slot. This must be done in the Properties editor in the Textures tab.</p>
+<p>The problem is, we have an object with a material and a texture already selected. And when we change this texture , then we don't get the pencil texture loaded. But we change the texture at our mesh.</p>
+<p>What we need to do is to create a material first. And in this material we load our pencil texture then. And then we can choose this texture in the image browser of the texture.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-4.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-6.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-5.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-7.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/browse-texture-to-be-linked-8.png" alt="Browse Texture to be linked" loading="lazy"><figcaption>Browse Texture to be linked</figcaption></figure>
+<p>And when we switch back to the tools tab, then the texture is loaded. And we can work with this texture.</p>
+<p>Make sure that you use another texture in the Texture panel than in the Texture Mask panel, or no texture at all. When both is the same then you will get the same result with all Mask Mapping methods since they overlap each other at the very same positions.</p>
+<h5 id="brush-mapping-with-mapping-method-view-plane-2">Brush Mapping with mapping method View Plane</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-view-plane-2.png" alt="Brush Mapping with mapping method View Plane" loading="lazy"><figcaption>Brush Mapping with mapping method View Plane</figcaption></figure>
+<p>The brush mapping method View Plane simply paints onto the surface. The mapping happens from the current view. The result may be distorted when the view does not align with the surface of the object.</p>
+<h5 id="pressure-masking">Pressure Masking</h5>
+<p>Enable pressure masking when you use a tablet.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/pressure-masking.png" alt="Pressure Masking" loading="lazy"></figure>
+<h5 id="angle-4">Angle</h5>
+<p>The angle of the brush.</p>
+<h6 id="rake-2">Rake</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/rake-2.png" alt="Rake" loading="lazy"></figure>
+<p>The angle follows the direction of the brush stroke.</p>
+<h6 id="random-2">Random</h6>
+<p>The brush angle gets set random.</p>
+<h6 id="random-angle-2">Random Angle</h6>
+<p>Brush texture random angle.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>The offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="brush-mapping-with-mapping-method-tiled-2">Brush Mapping with mapping method Tiled</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-tiled-2.png" alt="Brush Mapping with mapping method Tiled" loading="lazy"><figcaption>Brush Mapping with mapping method Tiled</figcaption></figure>
+<p>The brush mapping method Tiled tiles the brush stroke at the surface. The mapping happens from the current view. The result may be distorted when the view does not align with the surface of the object.</p>
+<h5 id="pressure-masking-2">Pressure Masking</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/pressure-masking.png" alt="Pressure Masking" loading="lazy"></figure>
+<p>Enable pressure masking when you use a tablet.</p>
+<h5 id="angle-5">Angle</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/angle-3.png" alt="Angle" loading="lazy"></figure>
+<p>The angle of the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>The offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="brush-mapping-with-mapping-method-random-2">Brush Mapping with mapping method Random</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-random-2.png" alt="Brush Mapping with mapping method Random" loading="lazy"><figcaption>Brush Mapping with mapping method Random</figcaption></figure>
+<p>The brush mapping method Random paints onto the surface, and randomizes the texture position in the brush while that.</p>
+<h5 id="pressure-masking-3">Pressure Masking</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/pressure-masking.png" alt="Pressure Masking" loading="lazy"></figure>
+<p>Enable pressure masking when you use a tablet.</p>
+<h5 id="mask-pressure-mode">Mask Pressure Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/mask-pressure-mode.png" alt="Mask Pressure Mode" loading="lazy"></figure>
+<p>A drop down box to choose the mask pressure mode for tablets.</p>
+<h5 id="angle-6">Angle</h5>
+<p>The angle of the brush.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rake</td>
+<td>The angle follows the direction of the brush stroke.</td>
+</tr>
+<tr>
+<td>Random</td>
+<td>The brush angle gets set random. · <strong>Random Angle</strong>: Brush texture random angle.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>The offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="brush-mapping-with-mapping-method-stencil-2">Brush Mapping with mapping method Stencil</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-stencil-3.png" alt="Brush Mapping with mapping method Stencil" loading="lazy"><figcaption>Brush Mapping with mapping method Stencil</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-mapping-with-mapping-method-stencil-4.png" alt="Brush Mapping with mapping method Stencil" loading="lazy"><figcaption>Brush Mapping with mapping method Stencil</figcaption></figure>
+<p>The former methods uses the textures for the brush. The method Stencil works different. You have your texture displayed in the workspace above the image, and you paint this texture onto your object with your pencil strokes.</p>
+<p>Note that the stencil texture is just visible when you are with the mouse over the viewport. It gets by default displayed down left. You have to position it where you need it. See Brush menu, Stencil Texture controls.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image Aspect</td>
+<td>Adjust the stencil size to fit to the image aspect ratio.</td>
+</tr>
+<tr>
+<td>Reset Transform</td>
+<td>Resets the stencil image to be down right in the 3D view.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pressure-masking-4">Pressure Masking</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/pressure-masking.png" alt="Pressure Masking" loading="lazy"></figure>
+<p>Enable pressure masking when you use a tablet.</p>
+<h6 id="angle-edit-box">Angle edit box</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/angle-edit-box.png" alt="Angle edit box" loading="lazy"></figure>
+<p>Adjust the angle of the brush. The button at the end allows you to set the radius by dragging the mouse. This should be done in the viewport and with the hotkey. This button is just a visible reminder.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Fine tune the offset of the texture in the brush.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Fine tune the size of the texture in the brush.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stroke-panel">Stroke Panel</h3>
+<h4 id="stroke-panel-2">Stroke Panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-panel.png" alt="Stroke Panel" loading="lazy"></figure>
+<p>The Stroke panel contains settings to influence the behavior of the brush stroke. There are various stroke methods available. We will go through them one by one.</p>
+<h5 id="stroke-method-space">Stroke method Space</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-panel.png" alt="Stroke method Space" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-space.png" alt="Stroke method Space" loading="lazy"></figure>
+<p>This is the default Stroke method. The stroke gets added continuously with given settings.</p>
+<h6 id="spacing-edit-box">Spacing Edit Box</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/spacing-edit-box.png" alt="Spacing Edit Box" loading="lazy"></figure>
+<p>The sculpt drawing happens by mapping the pencil onto the mouse position. And when you move the mouse then the next mapping happens. Adjust the spacing after what mouse movement the next mapping should happen. The lower the value, the lower the distance between the single dots.</p>
+<h6 id="spacing-pressure">Spacing Pressure</h6>
+<p>The icon behind the edit box enables tablet pressure sensitivity for tablets.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adjust Strength for Spacing</td>
+<td>Automatically adjust strength to give consistent results for different spacing.</td>
+</tr>
+<tr>
+<td>Dash Ratio</td>
+<td>Ratio of samples in a cycle that the brush is covering.</td>
+</tr>
+<tr>
+<td>Dash Length</td>
+<td>Length of a dash cycle measured in stroke samples.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="jitter-edit-box">Jitter Edit Box</h5>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spacing Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in screen space, or relative to the brush size.</td>
+</tr>
+<tr>
+<td>Input Samples Edit Box</td>
+<td>Average multiple input samples together to smooth the brush stroke.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="stabilize-stroke-subpanel">Stabilize Stroke subpanel</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="stroke-method-curve">Stroke method Curve</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-curve.png" alt="Stroke method Curve" loading="lazy"></figure>
+<p>The Stroke method curve doesn't simply influence the way how the stroke is painted. It is a special method.</p>
+<p>First you draw a curve object by holding down ctrl and clicking with right mouse button. Then you tweak the curve. You can click at the curve point, and drag out handlers to make the curve points smooth. This way you get one handler. When you click and drag then you will get two handlers at the curve point.</p>
+<p>When done you hit the Draw Curve button or click left outside of the image. And the curve gets drawn onto the surface.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-curve-2.png" alt="Stroke method Curve" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-curve-3.png" alt="Stroke method Curve" loading="lazy"></figure>
+<h6 id="spacing-edit-box-2">Spacing Edit Box</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/spacing-edit-box.png" alt="Spacing Edit Box" loading="lazy"></figure>
+<p>The drawing happens by mapping the pencil onto the mouse position. And when you move the mouse then the next mapping happens. Adjust the spacing after what mouse movement the next mapping should happen. The lower the value, the lower the distance between the single dots.</p>
+<p>The icon behind the edit box enables tablet pressure sensitivity for tablets.</p>
+<h6 id="paint-curve-edit-box">Paint Curve edit box</h6>
+<p>Here you set the active curve.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/paint-curve-edit-box.png" alt="Paint Curve edit box" loading="lazy"><figcaption>Paint Curve edit box</figcaption></figure>
+<p><strong>The first element</strong> is a drop down box where you will find your curves objects. You can have more than one.</p>
+<p><strong>The second element</strong> is the edit box that displays the active curve.</p>
+<p><strong>The number</strong> right of it, <strong>in this case 2</strong>, indicates how much number of users ( internally ) this brush uses. This means that this data block (the brush) shares currently settings with at least one other object. Most probably the parent brush where we have created it from. Click at the value to make this brush a single user. The button will vanish then.</p>
+<p><strong>F</strong> set the brush to have a fake user. Zero user data-blocks are normally not saved. But sometimes you want to force the data to be kept even when the data block has no user.</p>
+<p><strong>The + button</strong> allows you to add a new pencil with the current settings. Note that the brushes are NOT saved when you close Bforartists. You can save them into the current blend file. Or you can save the startup file. But be careful here. This saves everything else of the current state of Bforartists too.</p>
+<p><strong>The X button</strong> deletes the brush as the active one. It does NOT delete it from the brushes list.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draw Curve Button</td>
+<td>A click at it to turns the curve into curve.</td>
+</tr>
+<tr>
+<td>Jitter Edit Box</td>
+<td>Add Jitter to the brush while painting.</td>
+</tr>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in screen space, or relative to the brush size.</td>
+</tr>
+<tr>
+<td>Input Samples Edit Box</td>
+<td>Average multiple input samples together to smooth the brush stroke.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="stabilize-stroke-subpanel-2">Stabilize Stroke subpanel</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="stroke-method-line">Stroke method Line</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-line.png" alt="Stroke method Line" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-line-2.png" alt="Stroke method Line" loading="lazy"></figure>
+<p>With Stroke method line you draw a line between a starting point and an endpoint. And when you release the mouse then the line gets drawn.</p>
+<h5 id="spacing-edit-box-3">Spacing Edit Box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/spacing-edit-box.png" alt="Spacing Edit Box" loading="lazy"></figure>
+<p>The drawing happens by mapping the pencil onto the mouse position. And when you move the mouse then the next mapping happens. Adjust the spacing after what mouse movement the next mapping should happen. The lower the value, the lower the distance between the single dots.</p>
+<p>The icon behind the edit box enables tablet pressure sensitivity for tablets.</p>
+<h5 id="jitter-edit-box-2">Jitter Edit Box</h5>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in screen space, or relative to the brush size.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="input-samples-edit-box">Input Samples Edit Box</h5>
+<p>Average multiple input samples together to smooth the brush stroke.</p>
+<h6 id="stabilize-stroke-subpanel-3">Stabilize Stroke subpanel</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="stroke-method-anchored">Stroke method Anchored</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-anchored.png" alt="Stroke method Anchored" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-anchored-2.png" alt="Stroke method Anchored" loading="lazy"></figure>
+<p>Click and drag to place a dot and to scale it.</p>
+<h6 id="edge-to-edge">Edge to edge</h6>
+<p>Drag Anchor Brush from edge to edge.</p>
+<h5 id="jitter-edit-box-3">Jitter Edit Box</h5>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in screen space, or relative to the brush size.</td>
+</tr>
+<tr>
+<td>Input Sample Edit Box</td>
+<td>Average multiple input samples together to smooth the brush stroke.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="stabilize-stroke-subpanel-4">Stabilize Stroke subpanel</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="stroke-method-airbrush">Stroke method Airbrush</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-airbrush.png" alt="Stroke method Airbrush" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-airbrush-2.png" alt="Stroke method Airbrush" loading="lazy"></figure>
+<p>The stroke acts like an airbrush pencil. The dots gets placed randomly.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rate Edit Box</td>
+<td>Define the rate of the drawing.</td>
+</tr>
+<tr>
+<td>Jitter Edit Box</td>
+<td>Add Jitter to the brush while painting. · <strong>Jitter Pressure</strong>: The icon behind the edit box enables tablet pressure sensitivity for tablets. · <strong>Jitter Unit</strong>: Jitter in screen space, or relative to the brush size.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="input-samples-edit-box-2">Input Samples Edit Box</h5>
+<p>Average multiple input samples together to smooth the brush stroke.</p>
+<h6 id="stabilize-stroke-subpanel-5">Stabilize Stroke subpanel</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="stroke-method-drag-dot">Stroke method Drag Dot</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-drag-dot.png" alt="Stroke method Drag Dot" loading="lazy"><figcaption>Stroke method Drag Dot</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-drag-dot-2.png" alt="Stroke method Drag Dot" loading="lazy"><figcaption>Stroke method Drag Dot</figcaption></figure>
+<p>Paint a dot and drag it around. The actual painting happens then at releasing the mouse.</p>
+<h5 id="jitter-edit-box-4">Jitter Edit Box</h5>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in screen space, or relative to the brush size.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="input-samples-edit-box-3">Input Samples Edit Box</h5>
+<p>Average multiple input samples together to smooth the brush stroke.</p>
+<h6 id="stabilize-stroke-subpanel-6">Stabilize Stroke subpanel</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="stroke-method-dots">Stroke method Dots</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-dots.png" alt="Stroke method Dots" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stroke-method-dots-2.png" alt="Stroke method Dots" loading="lazy"></figure>
+<p>The stroke method Dots draws dots of the pencil onto the surface. The mapping happens from the current view. Means you will get distortions when your view is not aligned with the surface of the object.</p>
+<h5 id="jitter-edit-box-5">Jitter Edit Box</h5>
+<p>Add Jitter to the brush while painting.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jitter Pressure</td>
+<td>The icon behind the edit box enables tablet pressure sensitivity for tablets.</td>
+</tr>
+<tr>
+<td>Jitter Unit</td>
+<td>Jitter in screen space, or relative to the brush size.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="input-samples-edit-box-4">Input Samples Edit Box</h5>
+<p>Average multiple input samples together to smooth the brush stroke.</p>
+<h6 id="stabilize-stroke-subpanel-7">Stabilize Stroke subpanel</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/stabilize-stroke-subpanel.png" alt="Stabilize Stroke subpanel" loading="lazy"></figure>
+<p>The brush lags behind the mouse position, and produces a much smoother stroke by that.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the smoothing.</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td>Adjust the factor of the smoothing.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brush-settings-panel-falloff-sub-panel">Brush Settings Panel - Falloff Sub panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-falloff-sub-panel.png" alt="Brush Settings Panel - Falloff Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Falloff Sub panel</figcaption></figure>
+<p>The curve panel allows you to define different falloffs methods for the border of the brush.</p>
+<h4 id="selecting-points-3">Selecting Points</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/selecting-points.png" alt="Selecting Points" loading="lazy"></figure>
+<p>You can select curve points. This reveals two edit boxes for the x and y coordinate of this point.</p>
+<p>Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.</p>
+<h4 id="adding-points-3">Adding Points</h4>
+<blockquote>
+<p>This setting uses the <strong>curve widget</strong>: click to add points, drag to move them. See <strong><a href="../../interface/properties.html#curve-widget">Curve Widget</a></strong> in the Interface chapter.</p>
+</blockquote>
+<h4 id="navigation-elements-3">Navigation elements</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/navigation-elements-2.png" alt="Navigation elements" loading="lazy"></figure>
+<p>The navigation elements at the top are described from left to right.</p>
+<h5 id="zoom-in-and-out">Zoom in and out</h5>
+<p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
+<h5 id="use-clipping">Use Clipping</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/use-clipping.png" alt="Use Clipping" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke.</p>
+<h5 id="tools-3">Tools</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/tools-2.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve window</td>
+<td>Tweak and adjust the falloff curve by clicking at a curve point and dragging it around. Double click adds a new point. Holding down ctrl activates temporary snapping. Holding down shift enables slower movement, which allows more accurate setting.</td>
+</tr>
+<tr>
+<td>Vector Handle</td>
+<td>Set handle type to Vector.</td>
+</tr>
+<tr>
+<td>Auto Handle</td>
+<td>Set handle type to Auto.</td>
+</tr>
+<tr>
+<td>X / Y values</td>
+<td>The position of the currently selected curve point.</td>
+</tr>
+<tr>
+<td>Auto Clamped Handle</td>
+<td>Set handle type to Auto Clamped.</td>
+</tr>
+<tr>
+<td>Delete Points</td>
+<td>Deletes selected curve points.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="curve-presets-3">Curve Presets</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/curve-presets-2.png" alt="Curve Presets" loading="lazy"></figure>
+<p>Predefined curve presets.</p>
+<h3 id="brush-settings-panel-brush-tip-sub-panel">Brush Settings Panel - Brush Tip Sub panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-brush-tip-sub-panel.png" alt="Brush Settings Panel - Brush Tip Sub panel" loading="lazy"><figcaption>Brush Settings Panel - Brush Tip Sub panel</figcaption></figure>
+<p>Adjust the color and appearance of the brush cursor to custom values.</p>
+<h4 id="brush-tip-checkbox">Brush Tip Checkbox</h4>
+<p>Activate the custom settings.</p>
+<h4 id="cursor-color">Cursor Color</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/cursor-color.png" alt="Cursor Color" loading="lazy"></figure>
+<p>Choose another color for the brush cursor. Double clicking at the color field will open a color picker.</p>
+<h4 id="falloff-opacity">Falloff Opacity</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/falloff-opacity.png" alt="Falloff Opacity" loading="lazy"></figure>
+<p>You can turn on the cursor overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Override Overlay</td>
+<td>Hide the Cursor Overlay when painting.</td>
+</tr>
+<tr>
+<td>Use Cursor Overlay</td>
+<td>Turn on Cursor Overlay.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="texture-opacity">Texture Opacity</h4>
+<p>This is for the case when you paint with a texture brush. You can turn on the Texture overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Override Overlay</td>
+<td>Hide the Texture Overlay when painting.</td>
+</tr>
+<tr>
+<td>Use Cursor Overlay</td>
+<td>Turn on Texture Overlay.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mask-texture-opacity">Mask Texture Opacity</h4>
+<p>This is for the case when you mask paint with a texture brush. You can turn on the Texture overlay with the eye button at the end. The falloff opacity slider allows you to adjust the opacity of this cursor overlay.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Override Overlay</td>
+<td>Hide the Texture Overlay when painting.</td>
+</tr>
+<tr>
+<td>Use Cursor Overlay</td>
+<td>Turn on Texture Overlay.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tiling-panel">Tiling panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/tiling-panel.png" alt="Tiling panel" loading="lazy"></figure>
+<p>Tiling allows you to draw over the borders and continue the stroke at the other side of the image. You can tile in X and Y direction.</p>
+<h1 id="image-tab">Image Tab</h1>
+<h3 id="introduction-2">Introduction</h3>
+<p>In the Image tabs you can find further options and image settings. These settings changes, dependent of what you have selected. And in what mode you are.</p>
+<h3 id="image-panel">Image Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/image-panel.png" alt="Image Panel" loading="lazy"></figure>
+<p>Find image related settings. Size, type, and so on.</p>
+<h4 id="source">Source</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/source.png" alt="Source" loading="lazy"></figure>
+<p>Choose the image type. This type gets usually automatically set. When you create a new image, then this image is generated. When you load an image then the Source switches to Single Image.</p>
+<p>Generated images does not have a path.</p>
+<h5 id="source-type-single-image">Source Type Single Image</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/source-type-single-image.png" alt="Source Type Single Image" loading="lazy"><figcaption>Source Type Single Image</figcaption></figure>
+<h6 id="path-edit-box">Path edit box</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/path-edit-box.png" alt="Path edit box" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pack</td>
+<td>With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.</td>
+</tr>
+<tr>
+<td>Path edit box</td>
+<td>See and edit the path to your movie or image sequence files.</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a new movie or image sequence files. A file dialog will appear.</td>
+</tr>
+<tr>
+<td>Refresh</td>
+<td>Reread the movie or image sequence files.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="color-space">Color Space</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/color-space.png" alt="Color Space" loading="lazy"></figure>
+<p>The color space for the image.</p>
+<h6 id="alpha">Alpha</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/alpha.png" alt="Alpha" loading="lazy"></figure>
+<p>How to calculate the alpha channel.</p>
+<h6 id="half-float-precision">Half Float Precision</h6>
+<p>Just with image material that uses 32 bit float. Use just 16 Bit per channel instead of the full 32 bit. This lowers the memory usage while rendering.</p>
+<h6 id="view-as-render">View as Render</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/view-as-render.png" alt="View as Render" loading="lazy"></figure>
+<p>Display the image with using the color management settings. The color management can be adjusted in the properties editor in the Render tab.</p>
+<h6 id="seam-margin">Seam Margin</h6>
+<p>This option belongs to the UV Editor, and has no effect in the Image editor. Take a margin into account when fixing UV seams during painting.</p>
+<h5 id="source-type-movie-image-sequence">Source Type Movie + Image Sequence</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/source-type-movie-image-sequence.png" alt="Source Type Movie + Image Sequence" loading="lazy"><figcaption>Source Type Movie + Image Sequence</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/source-type-movie-image-sequence-2.png" alt="Source Type Movie + Image Sequence" loading="lazy"><figcaption>Source Type Movie + Image Sequence</figcaption></figure>
+<h6 id="path-edit-box-2">Path edit box</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/path-edit-box-2.png" alt="Path edit box" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pack</td>
+<td>With this button you can pack the movie or the image sequence into the blend file. It gets packed when you save the blend file the next time.</td>
+</tr>
+<tr>
+<td>Path edit box</td>
+<td>See and edit the path to your movie or image sequence files.</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a new movie or image sequence files. A file dialog will appear.</td>
+</tr>
+<tr>
+<td>Refresh</td>
+<td>Reread the movie or image sequence files.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Info string</td>
+<td>Some information about the currently loaded movie. Frames, resolution and color space.</td>
+</tr>
+<tr>
+<td>Frames</td>
+<td>The number of frames of the movie or image sequence. · <strong>Match Movie Length</strong>: Set Users Image Length to the one of this video.</td>
+</tr>
+<tr>
+<td>Start</td>
+<td>The start frame of the movie or image sequence</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Offset the number of the frame to use in the animation. -1 means off.</td>
+</tr>
+<tr>
+<td>Cyclic</td>
+<td>Cycle the images in the movie.</td>
+</tr>
+<tr>
+<td>Auto Refresh</td>
+<td>Always refresh image on frame changes.</td>
+</tr>
+<tr>
+<td>Deinterlace</td>
+<td>Deinterlace the movie file on load.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="color-space-2">Color Space</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/color-space-2.png" alt="Color Space" loading="lazy"></figure>
+<p>Choose the color space type for the movie or image sequence files.</p>
+<h6 id="alpha-2">Alpha</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/alpha-2.png" alt="Alpha" loading="lazy"></figure>
+<p>Choose the alpha channel mode. Straight or Premultiplied.</p>
+<h6 id="half-float-precision-2">Half Float Precision</h6>
+<p>Just with image material that uses 32 bit float. Use just 16 Bit per channel instead of the full 32 bit. This lowers the memory usage while rendering.</p>
+<h6 id="view-as-render-2">View as Render</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/view-as-render-2.png" alt="View as Render" loading="lazy"></figure>
+<p>Display the image with using the color management settings. The color management can be adjusted in the properties editor in the Render tab.</p>
+<h6 id="seam-margin-2">Seam Margin</h6>
+<p>This option belongs to the UV Editor, and has no effect in the Image editor. Take a margin into account when fixing UV seams during painting.</p>
+<h5 id="source-type-generated">Source Type Generated</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/source-type-generated.png" alt="Source Type Generated" loading="lazy"></figure>
+<h6 id="x-y">X / Y</h6>
+<p>The image width and height.</p>
+<h6 id="float-buffer">Float Buffer</h6>
+<p>Use a floating point buffer. 8 Bit images uses integers. 32 Bit works with floats.</p>
+<h6 id="generated-type-blank">Generated Type Blank</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/generated-type-blank.png" alt="Generated Type Blank" loading="lazy"></figure>
+<p>This type displays an image with one blank color</p>
+<h6 id="color">Color</h6>
+<p>The color of the blank image.</p>
+<h6 id="generated-type-uv-grid">Generated Type UV Grid</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/generated-type-uv-grid.png" alt="Generated Type UV Grid" loading="lazy"><figcaption>Generated Type UV Grid</figcaption></figure>
+<p>This type displays a with a black and white checker texture but colored dots.</p>
+<h6 id="generated-type-color-grid">Generated Type Color Grid</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/generated-type-color-grid.png" alt="Generated Type Color Grid" loading="lazy"><figcaption>Generated Type Color Grid</figcaption></figure>
+<p>This type displays a with a colored checker texture with numbers.</p>
+<h6 id="color-space-3">Color Space</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/color-space-3.png" alt="Color Space" loading="lazy"></figure>
+<p>Choose the color space type for the image.</p>
+<h6 id="half-float-precision-3">Half Float Precision</h6>
+<p>Just with image material that uses 32 bit float. Use just 16 Bit per channel instead of the full 32 bit. This lowers the memory usage while rendering.</p>
+<h6 id="view-as-render-3">View as Render</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/view-as-render-2.png" alt="View as Render" loading="lazy"></figure>
+<p>Display the image with using the color management settings. The color management can be adjusted in the properties editor in the Render tab.</p>
+<h6 id="seam-margin-3">Seam Margin</h6>
+<p>This option belongs to the UV Editor, and has no effect in the Image editor. Take a margin into account when fixing UV seams during painting.</p>
+<h5 id="source-type-udim">Source Type Udim</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/source-type-udim.png" alt="Source Type Udim" loading="lazy"></figure>
+<p>UDIM is an enhancement to the UV mapping and texturing workflow. And does not belong here. But in the UV Editor. It is just in the list because it shares the same menus with the UV Editor.</p>
+<h6 id="info-string">Info string</h6>
+<p>Some information about the currently loaded image. Resolution and color space.</p>
+<h6 id="color-space-4">Color Space</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/color-space-4.png" alt="Color Space" loading="lazy"></figure>
+<p>Choose the color space type for the movie or image sequence files.</p>
+<h6 id="alpha-3">Alpha</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/alpha-2.png" alt="Alpha" loading="lazy"></figure>
+<p>Choose the alpha channel mode. Straight or Premultiplied.</p>
+<h6 id="half-float-precision-4">Half Float Precision</h6>
+<p>Just with color space sRGB. Use just 16 Bit per channel instead of the full 32 bit. This lowers the memory usage while rendering.</p>
+<h6 id="view-as-render-4">View as Render</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/view-as-render.png" alt="View as Render" loading="lazy"></figure>
+<p>Display the image with using the color management settings. The color management can be adjusted in the properties editor in the Render tab.</p>
+<h6 id="seam-margin-4">Seam Margin</h6>
+<p>This option belongs to the UV Editor, and has no effect in the Image editor. Take a margin into account when fixing UV seams during painting.</p>
+<h3 id="udim-tiles-panel">UDIM Tiles Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-tiles-panel.png" alt="UDIM Tiles Panel" loading="lazy"></figure>
+<p>Manage UDIM tiles. This panel shows with source type UDIM.</p>
+<h4 id="udim-tile-list">UDIM Tile List</h4>
+<p>List all UDIM tiles associated with the main index (1000 tile). Double clicking on the tile name allows renaming.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number</td>
+<td>The starting tile index number. UDIMs must start with the 1001 tile and typically increase in incremental order.</td>
+</tr>
+<tr>
+<td>Drag Handler</td>
+<td>The two vertical lines at the end is a handler with which you can expand the list.</td>
+</tr>
+<tr>
+<td>Search Field</td>
+<td>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term. · <strong>Invert</strong>: Exclude the search term instead of searching for it. · <strong>Sort by Name</strong>: Sort the List by name.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="add-tile">Add Tile</h4>
+<p>Adds new UDIM tiles to the group.</p>
+<h5 id="add-tile-dialog">Add Tile dialog</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/add-tile-dialog.png" alt="Add Tile dialog" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number</td>
+<td>The UDIM tiles are identified by the number. It is four digits, and with increasing number.</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>How many tiles to add.</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>Leave blank to use the Number as the name in the list.</td>
+</tr>
+<tr>
+<td>Fill</td>
+<td>Fill the new tile with a generated image.</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>The fill color for generated type Blank.</td>
+</tr>
+<tr>
+<td>Width / Height</td>
+<td>The dimensions of the image.</td>
+</tr>
+<tr>
+<td>Alpha</td>
+<td>Does the image have an alpha channel.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="generated-type">Generated Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/generated-type.jpg" alt="Generated Type" loading="lazy"></figure>
+<p>The generated texture type.</p>
+<h6 id="32-bit-float">32 bit float</h6>
+<p>Generate an image with 32 bit floating point bit depth.</p>
+<h4 id="remove-tile">Remove Tile</h4>
+<p>Remove the selected UDIM tile. Note that the place in the texture will then be blank. The tiles does not resort. The next created UDIM tile will then be placed in this gap.</p>
+<h4 id="fill-tile">Fill Tile</h4>
+<p>Occupy the UDIM tile with a Generated Image. You can change the fill type and texture tile size of a UDIM tile also afterwards with this fill tool. Note that this overwrites the settings of the currently active UDIM tile.</p>
+<div class="ui-doc-callout is-warning"><p><strong>Warning:</strong> If a tile is not filled, it will not be saved with the image.</p></div>
+<h5 id="fill-tile-dialog">Fill tile dialog</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/fill-tile-dialog.png" alt="Fill tile dialog" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>The fill color for generated type Blank.</td>
+</tr>
+<tr>
+<td>Width / Height</td>
+<td>The dimensions of the image.</td>
+</tr>
+<tr>
+<td>Alpha</td>
+<td>Does the image have an alpha channel.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="generated-type-2">Generated Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/generated-type.jpg" alt="Generated Type" loading="lazy"></figure>
+<p>The generated texture type.</p>
+<h6 id="32-bit-float-2">32 bit float</h6>
+<p>Generate an image with 32 bit floating point bit depth.</p>
+<h4 id="udim-workflow">UDIM Workflow</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-workflow.png" alt="UDIM Workflow" loading="lazy"></figure>
+<p>First set up the grid shape for the UDIM tiles.</p>
+<p>This panel is in the View tab. And will vanish in the moment you add any texture. So do this setup beforehand. There is no way to show and change this grid panel afterwards.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-workflow-2.png" alt="UDIM Workflow" loading="lazy"></figure>
+<p>Unwrap your mesh.</p>
+<p>Add a generated texture, with generated type Color Grid (optional ), and Tiled ticked.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-workflow-3.png" alt="UDIM Workflow" loading="lazy"></figure>
+<p>In the viewport you will now see one square UV space again, with the colored background image. And we have our first UDIM tile in the UDIM Tile list.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-workflow-4.png" alt="UDIM Workflow" loading="lazy"></figure>
+<p>In the Tile list click at the Add button. And add another image. This time with another resolution.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-workflow-5.png" alt="UDIM Workflow" loading="lazy"></figure>
+<p>The result is that we have two tiles besides each other, with different resolution.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-workflow-6.png" alt="UDIM Workflow" loading="lazy"></figure>
+<p>Create a third one. Or as much as you need.</p>
+<p>Next move the UV parts to the texture areas where you need them.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-workflow-7.png" alt="UDIM Workflow" loading="lazy"></figure>
+<p>Now save the image. And by saving the one UDIM image all the sub images of this UDIM texture gets saved too.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-workflow-8.png" alt="UDIM Workflow" loading="lazy"></figure>
+<p>Save the blend file. Modify the textures to your needs.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-workflow-9.png" alt="UDIM Workflow" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-workflow-10.png" alt="UDIM Workflow" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-workflow-11.png" alt="UDIM Workflow" loading="lazy"></figure>
+<p>To reload the modified textures either save, close and open Bforartists and reload the scene. Or use Open Image to open the first image of the UDIM textures. The rest will load automatically.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-workflow-12.png" alt="UDIM Workflow" loading="lazy"></figure>
+<p>Next create a material. Add a texture. Choose the UDIM texture. And the material will now render with the UDIM textures applied.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/udim-workflow-13.png" alt="UDIM Workflow" loading="lazy"></figure>
+<h3 id="metadata-panel">Metadata Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/image-tab/metadata-panel.png" alt="Metadata Panel" loading="lazy"></figure>
+<p>Displays existing meta data of the image file.</p>
+<h1 id="view-tab">View Tab</h1>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/view-tab/view-tab.png" alt="View Tab" loading="lazy"></figure>
+<p>See and set the 2D cursor location.</p>
+<p>This panel is just visible in Mask mode.</p>
+<h3 id="introduction-3">Introduction</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/view-tab/introduction.png" alt="Introduction" loading="lazy"></figure>
+<p>The View tab contains some view related settings. And it contains the annotation panel.</p>
+<h3 id="display-panel">Display Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/view-tab/display-panel.png" alt="Display Panel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aspect Ratio X , Y</td>
+<td>Set the aspect ratio of the image.</td>
+</tr>
+<tr>
+<td>Repeat</td>
+<td>With this ticked the image is repeated in the UV Image canvas.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="annotations-panel">Annotations Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/view-tab/annotations-panel.png" alt="Annotations Panel" loading="lazy"></figure>
+<p>Manage the Annotation layers and materials.</p>
+<p>When you don't have drawn an annotation yet then the panel just contains a New button.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/view-tab/annotations-panel-2.png" alt="Annotations Panel" loading="lazy"></figure>
+<h4 id="annotations-prop">Annotations prop</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/view-tab/annotations-prop.png" alt="Annotations prop" loading="lazy"></figure>
+<p>Add, remove and rename new annotations.</p>
+<h5 id="drop-down-box">Drop down box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/view-tab/drop-down-box.png" alt="Drop down box" loading="lazy"></figure>
+<p>A list of the available annotation layers.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Box</td>
+<td>The name of the current annotation. You can rename the annotation to your needs here.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</td>
+</tr>
+<tr>
+<td>Add Annotation</td>
+<td>Add a new annotation.</td>
+</tr>
+<tr>
+<td>Delete Annotation</td>
+<td>Delete the annotation.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="list-of-annotation-strokes">List of Annotation Strokes</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/view-tab/list-of-annotation-strokes.png" alt="List of Annotation Strokes" loading="lazy"><figcaption>List of Annotation Strokes</figcaption></figure>
+<p>Here you see your Annotation layers for the current Annotation. Every layer can have an own color.</p>
+<p>At the right side you find buttons to sort them and to add and remove new Annotation layers.</p>
+<p>You can change the color by clicking at the color field. A color dialog will pop up. You can rename annotation layers by double clicking at it.</p>
+<p>The eye icon allows you to make it invisible And it has a search field.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opacity</td>
+<td>The annotation layer opacity.</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>The thickness of the annotation stroke.</td>
+</tr>
+<tr>
+<td>Frame Locked/Unlocked</td>
+<td>Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. · <strong>Delete active frame</strong>: Delete the active frame from the active annotation layer.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="scopes-tab">Scopes Tab</h1>
+<h3 id="scopes-tab-2">Scopes Tab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/scopes-tab/scopes-tab.png" alt="Scopes Tab" loading="lazy"></figure>
+<p>The Scopes tab contains several panels with analytic tools.</p>
+<h4 id="histogram">Histogram</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/scopes-tab/histogram.png" alt="Histogram" loading="lazy"></figure>
+<p>Histogram is a graph that displays the color distribution of the pixels in the image. The range from left to right goes from 0, which represents black, to 255, which represents white. And the height represents how much pixels in the image have this specific color.</p>
+<p>The different display modes are:</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Luma</td>
+<td>Shows the luminosity of an image.</td>
+</tr>
+<tr>
+<td>RGB</td>
+<td>Shows the RGB channels.</td>
+</tr>
+<tr>
+<td>R/G/B/A</td>
+<td>Shows the R, G, B, A channels.</td>
+</tr>
+<tr>
+<td>Show line</td>
+<td>Displays lines instead of filled shapes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="waveform">Waveform</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/scopes-tab/waveform.png" alt="Waveform" loading="lazy"></figure>
+<p>The waveform graph is another way to display the color information of the image.</p>
+<h5 id="waveform-opacity">Waveform Opacity</h5>
+<p>Adjust the opacity of the pixels in the waveform histogram.</p>
+<h5 id="waveform-mode">Waveform Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/scopes-tab/waveform-mode.png" alt="Waveform Mode" loading="lazy"></figure>
+<p>This is a drop down box menu where you can choose further options.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Luma</td>
+<td>Shows the luminosity of an image.</td>
+</tr>
+<tr>
+<td>Parade</td>
+<td>The RGB channels are shown side-by-side.</td>
+</tr>
+<tr>
+<td>YCbCr (jpeg)</td>
+<td>Displays the channels in the YCbCr standard, fitting to Jpg.</td>
+</tr>
+<tr>
+<td>YCbCr (ITU 709)</td>
+<td>Displays the channels in the YCbCr standard, fitting to ITU 709 standard.</td>
+</tr>
+<tr>
+<td>YCbCr (ITU 601)</td>
+<td>Displays the channels in the YCbCr standard, fitting to ITU 601 standard.</td>
+</tr>
+<tr>
+<td>Red Green Blue</td>
+<td>Shows the RGB channels overlaid as a “Full color” waveform.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vectorscope">Vectorscope</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/scopes-tab/vectorscope.png" alt="Vectorscope" loading="lazy"></figure>
+<p>This is a graph to display the pixel color distribution in the image in a radial way. The radial arrangement allows to display data that is behind the maximum 255 of the normal histogram. This can happen with 32 bit float images for example.</p>
+<h5 id="vectorscope-opacity">Vectorscope Opacity</h5>
+<p>Adjust the opacity of the pixels in the waveform histogram.</p>
+<h5 id="vectorscope-mode">Vectorscope Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/scopes-tab/vectorscope-mode.png" alt="Vectorscope Mode" loading="lazy"></figure>
+<p>How to display the vectoscope.</p>
+<h4 id="sample-line">Sample Line</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/scopes-tab/sample-line.png" alt="Sample Line" loading="lazy"></figure>
+<p>The Sample Line scope is a graph that allows you to get the sample data from a line.</p>
+<p>Click at the Sample Line button above the histogram to draw a line. The pixels under this line will then be used to read the sample data from.</p>
+<p>The different display modes are:</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Luma</td>
+<td>Shows the luminosity of an image.</td>
+</tr>
+<tr>
+<td>RGB</td>
+<td>Shows the RGB channels.</td>
+</tr>
+<tr>
+<td>R/G/B/A</td>
+<td>Shows the R, G, B, A channels.</td>
+</tr>
+<tr>
+<td>Show line</td>
+<td>Displays lines instead of filled shapes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="samples">Samples</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/scopes-tab/samples.png" alt="Samples" loading="lazy"></figure>
+<p>The general sample settings for the above histograms. More accurate or more fast.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full Sample</td>
+<td>Sample every pixel of the image.</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>Proportion of original image source pixel lines to sample.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="mask-tab">Mask Tab</h1>
+<h3 id="introduction-4">Introduction</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/introduction.png" alt="Introduction" loading="lazy"></figure>
+<p>The mask tab just shows in Mask mode and with an existing mask.</p>
+<p>It contains tools and settings for the mask mode. Like a layer system.</p>
+<h3 id="mask-settings-panel">Mask Settings Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/mask-settings-panel.png" alt="Mask Settings Panel" loading="lazy"></figure>
+<p>This values are of interest for the Sequencer, where you work with movies and image sequences.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start Frame</td>
+<td>Set the first Frame of the mask.</td>
+</tr>
+<tr>
+<td>End Frame</td>
+<td>Set the last Frame of the mask.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mask-layers-panel">Mask Layers Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/mask-layers-panel.png" alt="Mask Layers Panel" loading="lazy"></figure>
+<p>When you add a spline, a circle or a square or a freehand one, then a Mask Layer gets created.</p>
+<p>You can create several mask layers and work with them in the sequencer or the Node editors. They can be used to create complex shapes, and define how the splines interact with each other. Splines at the same layer can be animated together.</p>
+<p>Splines can be copied and pasted from one layer to another.</p>
+<h4 id="mask-layer-list">Mask Layer List</h4>
+<p>The list of available mask layers.</p>
+<h5 id="restrict-view">Restrict View</h5>
+<p>Don't show this mask layer in the viewport.</p>
+<h5 id="restrict-select">Restrict Select</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/restrict-select.png" alt="Restrict Select" loading="lazy"></figure>
+<p>Selection in the viewport is enabled or disabled. The spline handlers becomes invisible.</p>
+<h5 id="restrict-render">Restrict Render</h5>
+<p>Don't render this mask layer for the final image(s).</p>
+<h5 id="drag-handler">Drag Handler</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/drag-handler.png" alt="Drag Handler" loading="lazy"></figure>
+<p>The two vertical lines at the end is a handler with which you can expand the list.</p>
+<h5 id="search-field">Search Field</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/search-field.png" alt="Search Field" loading="lazy"></figure>
+<p>You can expand a search field at the bottom of the list. Type in your term and hit enter to filter for your term.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invert</td>
+<td>Exclude the search term instead of searching for it.</td>
+</tr>
+<tr>
+<td>Sort by Name</td>
+<td>Sort the List by name.</td>
+</tr>
+<tr>
+<td>Revert</td>
+<td>Revert the list. The last list item becomes the first, and vice versa.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="add-mask-layer">Add Mask Layer</h4>
+<p>Add a new mask layer to the list.</p>
+<h5 id="last-operator-add-mask-layer">Last Operator Add Mask Layer</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/last-operator-add-mask-layer.png" alt="Last Operator Add Mask Layer" loading="lazy"><figcaption>Last Operator Add Mask Layer</figcaption></figure>
+<h6 id="name">Name</h6>
+<p>Rename the new created mask layer.</p>
+<p>Note that you can also rename it in the list.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remove Mask Layer</td>
+<td>Remove the currently selected mask layer from the list.</td>
+</tr>
+<tr>
+<td>Move Layer</td>
+<td>Move the selected layer up or downwards in the list.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="opacity">Opacity</h4>
+<p>Set the opacity of the mask layer.</p>
+<h4 id="invert">Invert</h4>
+<p>Inverts the values (colors) in the mask layer.</p>
+<h4 id="blend-2">Blend</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/blend.png" alt="Blend" loading="lazy"></figure>
+<p>Adjust the layer blending.</p>
+<p>Note, Merge add and Merge subtract should be used with a Feather on overlapping masks to get a better result.</p>
+<h4 id="falloff">Falloff</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/falloff.png" alt="Falloff" loading="lazy"></figure>
+<p>Adjust the Feather falloff</p>
+<h4 id="overlap">Overlap</h4>
+<p>Fill self-intersecting areas.</p>
+<h4 id="holes">Holes</h4>
+<p>Overlapping splines from the same layer will generate holes in the mask.</p>
+<h3 id="mask-layers-panel-2">Mask Layers Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/mask-layers-panel-2.png" alt="Mask Layers Panel" loading="lazy"></figure>
+<p>When there is a spline in the current mask layer, then the Active Spline Panel shows. Adjust some settings for the currently active spline.</p>
+<h4 id="feather-offset">Feather Offset</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/feather-offset.png" alt="Feather Offset" loading="lazy"></figure>
+<p>The method to calculate the feather offset.</p>
+<h4 id="interpolation">Interpolation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>The weight interpolation method.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cyclic</td>
+<td>Make the spline closed or open.</td>
+</tr>
+<tr>
+<td>Fill</td>
+<td>Fill the spline.</td>
+</tr>
+<tr>
+<td>Self Intersection Check</td>
+<td>Prevent feather from self intersecting.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active-point-panel">Active Point Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/active-point-panel.png" alt="Active Point Panel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/af5b5e1f58a2a10b61c88fa50838974b948c0a7d/docs2/images/editors/image-editor/sidebar/mask-tab/active-point-panel-2.png" alt="Active Point Panel" loading="lazy"></figure>
+<p>When you select a point of one of the splines, then the Active Point Panel will show up.</p>
+<p>This panel is of interest for motion tracking. Control Points can be parented to motion tracks. And this allows to mask out parts of the motion tracked footage.</p>
+<p>The masking happens at the Viewer Node.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parent</td>
+<td>Choose the motion track that you want to parent the control point to.</td>
+</tr>
+<tr>
+<td>Parent Type</td>
+<td>Choose between the methods Point Track or Plane Track.</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>The parent object. Usually the camera where you track from.</td>
+</tr>
+<tr>
+<td>Track</td>
+<td>Choose the tracking point that you want to follow with the mask.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/master/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fimage-editor%2Fsidebar%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/master/docs2/content/editors/image-editor/sidebar/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#introduction">Introduction</a><a class="h2" href="#right-click-menus">Right Click menus</a><a class="h3" href="#tool-tab">Tool Tab</a><a class="h3" href="#brush-asset-panel">Brush Asset Panel</a><a class="h3" href="#brush-settings-panel">Brush settings Panel</a><a class="h3" href="#brush-settings-panel-color-picker-sub-panel">Brush Settings Panel - Color Picker Sub panel</a><a class="h3" href="#brush-settings-panel-color-palette-sub-panel">Brush Settings Panel - Color Palette Sub panel</a><a class="h3" href="#brush-settings-panel-advanced-sub-panel">Brush Settings Panel - Advanced Sub panel</a><a class="h3" href="#brush-settings-panel-texture-sub-panel">Brush Settings Panel - Texture Sub panel</a><a class="h3" href="#brush-settings-panel-texture-mask-sub-panel">Brush Settings Panel - Texture Mask Sub panel</a><a class="h3" href="#stroke-panel">Stroke Panel</a><a class="h3" href="#brush-settings-panel-falloff-sub-panel">Brush Settings Panel - Falloff Sub panel</a><a class="h3" href="#brush-settings-panel-brush-tip-sub-panel">Brush Settings Panel - Brush Tip Sub panel</a><a class="h3" href="#tiling-panel">Tiling panel</a><a class="h3" href="#introduction-2">Introduction</a><a class="h3" href="#image-panel">Image Panel</a><a class="h3" href="#udim-tiles-panel">UDIM Tiles Panel</a><a class="h3" href="#metadata-panel">Metadata Panel</a><a class="h3" href="#introduction-3">Introduction</a><a class="h3" href="#display-panel">Display Panel</a><a class="h3" href="#annotations-panel">Annotations Panel</a><a class="h3" href="#scopes-tab-2">Scopes Tab</a><a class="h3" href="#introduction-4">Introduction</a><a class="h3" href="#mask-settings-panel">Mask Settings Panel</a><a class="h3" href="#mask-layers-panel">Mask Layers Panel</a><a class="h3" href="#mask-layers-panel-2">Mask Layers Panel</a><a class="h3" href="#active-point-panel">Active Point Panel</a></aside></div></body></html>
