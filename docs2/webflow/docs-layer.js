@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.16
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.17
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -207,7 +207,7 @@
     'html.dk-wide .ui-doc-body{max-width:none!important}',
     /* Q7 · focus mode on wide pages: the sidebar column goes too, so the content takes the whole width */
     'html.is-doc-focus.dk-wide .ui-doc-grid{grid-template-columns:minmax(0,1fr)!important}',
-    'html.is-doc-focus.dk-wide .ui-doc-article{max-width:none!important}',
+    'html.is-doc-focus.dk-wide .ui-doc-article{max-width:none!important;width:100%;margin:0!important}',
     /* Q7 · wide tables scroll sideways on phones instead of squeezing every column */
     '.dk-tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 1.25rem;max-width:100%}',
     '.dk-tscroll>.ui-doc-table{margin-bottom:0}',
