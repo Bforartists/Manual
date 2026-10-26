@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · interactive keymap · @version 1.1.2
+/* Bforartists Docs 2.0 · interactive keymap · @version 1.1.3
  *
  * Runs on the Doc Pages template (registered Webflow script, page footer). The sync turns
  * <!-- keymap-explorer --> in a page into <div class="ui-keymap"><ul><li data-k="keymap" data-src=…>,
@@ -12,7 +12,7 @@
  *   ⇧   Shift, Ctrl, Alt (and Cmd) toggle on screen, or hold them on your real keyboard
  *   🎨  the colours, then everything the picked key does, full width in columns
  *   📱  phones: the same keyboard with the key names only, and the list of keys under it
- *   ⭐  data-mini="1" (Important Hotkeys): only the everyday keys light up
+ *   ⭐  data-mini="1" (Important Hotkeys): only the everyday keys light up, Bforartists keymap only
  *   🖼️  data-k="keys" (<!-- keymap-keys keys="W=Move; Ctrl+S=Save; MMB=Pan" -->): a small keyboard
  *       picture with just those keys lit and labelled, no data needed
  * Published as /Manual/webflow/keymap-explorer-<version>.js.
@@ -325,7 +325,7 @@
       head.innerHTML = '';
       var segs = el('div', 'kmx-fld');
       segs.innerHTML = '<span>Keymap</span><div class="kmx-segs"><div class="kmx-seg ui-segment" role="group" aria-label="Keymap preset">' +
-        PRESETS.map(function (p) { var sh = p[0] === 'industry' ? 'Industry' : p[1]; return '<button type="button" class="ui-segment-item is-tag' + (S.p === p[0] ? ' is-active' : '') + '" data-p="' + p[0] + '" aria-pressed="' + (S.p === p[0]) + '" title="' + p[1] + '">' + (p[0] === 'bforartists' ? img('bforartists', 'ui-seg-icon kmx-ic') : '') + (sh !== p[1] ? '<span class="kmx-long">' + p[1] + '</span><span class="kmx-short">' + sh + '</span>' : p[1]) + '</button>'; }).join('') +
+        (S.mini ? PRESETS.slice(0, 1) : PRESETS).map(function (p) { var sh = p[0] === 'industry' ? 'Industry' : p[1]; return '<button type="button" class="ui-segment-item is-tag' + (S.p === p[0] ? ' is-active' : '') + '" data-p="' + p[0] + '" aria-pressed="' + (S.p === p[0]) + '" title="' + p[1] + '">' + (p[0] === 'bforartists' ? img('bforartists', 'ui-seg-icon kmx-ic') : '') + (sh !== p[1] ? '<span class="kmx-long">' + p[1] + '</span><span class="kmx-short">' + sh + '</span>' : p[1]) + '</button>'; }).join('') +
         '</div><div class="kmx-seg ui-segment" role="group" aria-label="Platform">' + [['pc', 'Windows / Linux'], ['mac', 'macOS']].map(function (v) { return '<button type="button" class="ui-segment-item is-tag' + (S.v === v[0] ? ' is-active' : '') + '" data-v="' + v[0] + '" aria-pressed="' + (S.v === v[0]) + '">' + v[1] + '</button>'; }).join('') + '</div></div>';
       head.appendChild(segs);
       head.appendChild(dropdown('Editor', editors().map(function (e) { return [e, e, ED_IC[e]]; }), S.ed, function (v) { S.ed = v; S.mode = modesOf(v)[0] || ''; S.pick = null; drawHead(); draw(); }));
