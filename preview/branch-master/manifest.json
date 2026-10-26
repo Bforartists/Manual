@@ -1,6 +1,7 @@
 {
  "pages": {
-  "docs2/content/keymap/important-hotkeys.md": "keymap/important-hotkeys.html"
+  "docs2/content/keymap/important-hotkeys.md": "keymap/important-hotkeys.html",
+  "docs2/content/keymap/index.md": "keymap.html"
  },
  "images": 0
 }
