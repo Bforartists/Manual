@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>File browser · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/quick-fixes-1 · <code>docs2/quick-fixes-1</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<a href="../interface/tool-shelves.html">Tool Shelves</a>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:2.5rem" href="3d-viewport/object-mode/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="dope-sheet/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<a href="topbar-and-statusbar.html">Topbar and Statusbar</a>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="video-sequence-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="properties/output-properties-tab.html">Output</a>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/sculpt/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<a style="padding-left:1.5rem" href="properties/object-properties-tab.html">Object</a>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<a href="toolbar.html">Toolbar</a>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<a class="is-current" href="file-browser.html">File browser</a>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › File browser</div><h1 class="pv-title">File browser</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 9 min read</span></div><article class="ui-doc-body"><h2 id="file-browser">File Browser</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/file-browser.png" alt="File Browser" loading="lazy"></figure>
+<p>The file browser is an explorer dialog that allows you to browse for locations and files, and allows you to load and save them.</p>
+<p>The file browser has multiple uses. While its often used for save/load, it can be kept open for other uses too.</p>
+<p>In the file browser you can:</p>
+<ul>
+<li>Opening and Saving Blend files.</li>
+<li><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/file-browser-2.png" alt="File Browser" />
+Import/Export other file formats.</li>
+<li>Picking new locations for existing file-paths (images, video’s, fonts... etc).</li>
+<li>Browsing inside other <em>.blend</em> files, when using <em>Append and Link</em>.</li>
+</ul>
+<p>You can also keep the file selector open, as with any other window type. In this case the buttons to load files is removed. This is for example done in the Shader editor workspace. This allows you to drag files directly into the editor where you need it.</p>
+<h2 id="file-browser-header">File Browser Header</h2>
+<p>There are several tools in the header to find. The range goes from navigation elements across filters up to display options.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/file-browser-header.png" alt="File Browser Header" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/file-browser-header-2.png" alt="File Browser Header" loading="lazy"></figure>
+<p>There are two header areas. The header area that contains the navigation and filter elements. And the editor header like in a traditional editor. This header is hidden when you use the file browser as a file selector. But it is still available. It resides at the bottom, and can be revealed by clicking at the small triangle button down right.</p>
+<p>For this content see Footer Header chapter below.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Navigation</td>
+<td>Navigate in the folder hierarchy. · <strong>Previous Folder</strong>: Navigate to the previous folder. · <strong>Next Folder</strong>: Navigate to the next folder. · <strong>Parent File</strong>: Go upwards in the hierarchy. · <strong>Refresh</strong>: Refresh the file list.</td>
+</tr>
+<tr>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/new-folder-icon.png" alt="" /> New Folder</td>
+<td>Creates a new folder.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="file-path">File path</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/file-path.png" alt="File path" loading="lazy"></figure>
+<p>The current directory.</p>
+<h3 id="search">Search</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/search.png" alt="Search" loading="lazy"></figure>
+<p>Name Filter. Allows you to search for specific files and folders.</p>
+<h3 id="display-as">Display As</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/display-as.png" alt="Display As" loading="lazy"></figure>
+<h4 id="vertical-list">Vertical List</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/vertical-list.png" alt="Vertical List" loading="lazy"></figure>
+<p>Displays the content of the file browser as a vertical list.</p>
+<h4 id="horizontal-list">Horizontal List</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/horizontal-list.png" alt="Horizontal List" loading="lazy"></figure>
+<p>Displays the content of the file browser as a horizontal list.</p>
+<h4 id="thumbnails">Thumbnails</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/thumbnails.png" alt="Thumbnails" loading="lazy"></figure>
+<p>Displays the content of the file browser as thumbnails. This is especially of use for images or blend files with thumbnail preview.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/thumbnails-2.png" alt="Thumbnails" loading="lazy"></figure>
+<p>When you link or append from a blend file then the thumbnails also shows folders with icons for the different content of the library blend file.</p>
+<h3 id="display-options">Display Options</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/display-options.png" alt="Display Options" loading="lazy"></figure>
+<h4 id="columns">Columns</h4>
+<p>First shot is from when in columns and horizontal list view. Second is from Thumbnails View.</p>
+<h5 id="size">Size</h5>
+<p>Display the size of the files. Or the size of the thumbnails.</p>
+<h5 id="date">Date</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/date.png" alt="Date" loading="lazy"></figure>
+<p>Display the creation date of the files.</p>
+<h5 id="thumbnail-presets">Thumbnail Presets</h5>
+<p>Thumbnail Presets – Quick sizes for the thumbnails</p>
+<h4 id="recursion">Recursion</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/recursion.png" alt="Recursion" loading="lazy"></figure>
+<p>Adjust how deep the explorer should dig. Normally it just lists the content of the currently selected directory. But it is also possible to list the content of the folders three levels lower.</p>
+<p>The recursion direction is always downwards. Default is None.</p>
+<h4 id="sort-by">Sort by</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/sort-by.png" alt="Sort by" loading="lazy"></figure>
+<p>Sort the files by chosen method. The methods are self explaining.</p>
+<h4 id="reverse-sorting">Reverse Sorting</h4>
+<p>Reverts the sorting direction.</p>
+<h3 id="filter">Filter</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/filter.png" alt="Filter" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filter</td>
+<td>Enable the filtering.</td>
+</tr>
+<tr>
+<td>Folders, etc.</td>
+<td>The different file types that should be filtered. What is ticked here and what file types shows depends of what file browser you call. If you want to load a blend file. Or a FBX file from the File menu in the header. Or an image in the UV Editor for example.</td>
+</tr>
+<tr>
+<td>Show Hidden</td>
+<td>Shows hidden Dot files. This is a Unix feature. Unix systems like Linux or Mac hides files from file browsers and explorers by having a dot before the file. A good example is the .htaccess file at servers. Show hidden Dot Files makes such files visible to the file browser.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="toggle-region">Toggle Region</h3>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/toggle-region.png" alt="Toggle Region" loading="lazy"></figure>
+<p>Toggles the sidebar at the right. The sidebar contains various im- and export settings for the single file types.</p>
+<h2 id="tool-shelf">Tool Shelf</h2>
+<p>The Tool Shelf at the left provides you with some panels for quick access to files and bookmarks.</p>
+<h3 id="system-panel">System Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/system-panel.png" alt="System Panel" loading="lazy"></figure>
+<p>Lists your drives.</p>
+<h3 id="system-bookmarks">System Bookmarks</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/system-bookmarks.png" alt="System Bookmarks" loading="lazy"></figure>
+<p>Lists some system libraries.</p>
+<h3 id="bookmarks">Bookmarks</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/bookmarks.png" alt="Bookmarks" loading="lazy"></figure>
+<p>Add your own bookmarks. A direct bookmark towards the Downloads folder for example.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/bookmarks-2.png" alt="Bookmarks" loading="lazy"></figure>
+<h3 id="recent">Recent</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/recent.png" alt="Recent" loading="lazy"></figure>
+<p>A list of the recent accessed folders.</p>
+<p>Greyed out folders are not longer existing directories. There is unfortunately no way to remove them from within Bforartists. You would need to do this manually in the History text files in the settings folder.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/recent-2.png" alt="Recent" loading="lazy"></figure>
+<p>Under Windows this is the bookmarks.txt file in the Appdata folder.</p>
+<h4 id="clear-recent">Clear recent</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/clear-recent.png" alt="Clear recent" loading="lazy"></figure>
+<p>Removes the selected item from the recent panel.</p>
+<h2 id="sidebar">Sidebar</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/sidebar.png" alt="Sidebar" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/sidebar-2.png" alt="Sidebar" loading="lazy"></figure>
+<p>The sidebar is usually closed in most cases. Sometimes you need to open it. This can be done with a click at the Toggle Region button up right.</p>
+<p>In the sidebar you will for example find the special Import or Export settings for the current file format. And here you will also find further settings. loading a Blend file you will just see two entries. When you append from a file then it's a bit more settings. And for file formats like FBX you will find all the settings for the current file format.</p>
+<p>At the right you see the import dialog for FBX.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/sidebar-3.png" alt="Sidebar" loading="lazy"></figure>
+<p>As an example, and to explain the two settings for loading a blend file:</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Load UI</td>
+<td>Bforartists comes with the feature <code>*Load</code> <code>UI*</code> unticked. This means the Bforartists UI will not change when you load a scene. Here you can temporary enable to load the scene with the layout and UI arrangement in which the scene was saved.</td>
+</tr>
+<tr>
+<td>Trusted Source</td>
+<td>With Load UI you can also load script files, which can execute. This is a potential security risk when the file comes from an unknown source.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advanced-panel">Advanced panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/advanced-panel.png" alt="Advanced panel" loading="lazy"></figure>
+<p>When you append from a blend file, then you will find an Advanced panel with further filter settings in the sidebar. This filter allows you to filter the content for exact object types.</p>
+<h2 id="file-dialog">File dialog</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/file-dialog.png" alt="File dialog" loading="lazy"></figure>
+<p>The file dialog is the actual place where your files and directories gets listed.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Click navigation.</td>
+<td>Double clicking at a folder enters the folder. To go upwards in the hierarchy see Parent File button in the header.</td>
+</tr>
+<tr>
+<td>Double Click to load</td>
+<td>Double clicking at a file loads the chosen file when you are in a load dialog. The file dialog will then close.</td>
+</tr>
+<tr>
+<td>Double click to save</td>
+<td>Double clicking at a file overwrites the chosen file when you are in a save dialog. The file dialog will then close.</td>
+</tr>
+<tr>
+<td>Select and load more than one file</td>
+<td>Holding down shift allows you to select and to load more than one file.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="box-select">Box select</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/box-select.png" alt="Box select" loading="lazy"></figure>
+<p>You can drag a box around the files by simply left clicking and moving the mouse.</p>
+<h3 id="renaming">Renaming</h3>
+<p>You can rename files and folders from within this list. Holding down ctrl and clicking at a file enters the edit file name mode.</p>
+<h3 id="file-name">File Name</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/file-name.png" alt="File Name" loading="lazy"></figure>
+<p>The file that you want to load or to save.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open / Save</td>
+<td>Open or save the current file(s).</td>
+</tr>
+<tr>
+<td>Cancel</td>
+<td>Cancel the loading or save process and close the file browser.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="footer-header">Footer / Header</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/footer-header.png" alt="Footer / Header" loading="lazy"></figure>
+<p>The footer is hidden by default when you call the file browser to load and save scenes and files. But contains some more functionality. And when you integrate the file browser into a workspace then the header shows at the top. In the Shading workspace for example.</p>
+<p>You can reveal the footer by clicking at the triangle button at the right.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/footer-header-2.png" alt="Footer / Header" loading="lazy"></figure>
+<p>And then you will see the footer bar. Which will reveal two menus. View and Select.</p>
+<h3 id="view-menu">View Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/view-menu.png" alt="View Menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source List</td>
+<td>Shows or hides the tool shelf at the left side.</td>
+</tr>
+<tr>
+<td>File Path</td>
+<td>Shows the header region with the file path and the navigation and filter elements.</td>
+</tr>
+<tr>
+<td>Frame selected</td>
+<td>Centers the selected elements.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="area-menu">Area Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/area-menu.png" alt="Area Menu" loading="lazy"></figure>
+<p>Area is a menu with window related settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal Split</td>
+<td>Splits the editor horizontally into two editors.</td>
+</tr>
+<tr>
+<td>Vertical Split</td>
+<td>Splits the editor vertically into two editors.</td>
+</tr>
+<tr>
+<td>Duplicate Area into new Window</td>
+<td>Creates a floating window out of the current editor.</td>
+</tr>
+<tr>
+<td>Toggle Maximize Area</td>
+<td>Displays the editor maximized with menus. To return to split view press hotkey Ctrl Up Arrow, or reuse the menu item in the View menu.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="close-area">Close Area</h4>
+<p>Closes the area window.</p>
+<h3 id="pie-menus">Pie Menus</h3>
+<p>Every editor usually has also a few pie menus that can be called by hotkeys. Here you can manage the hotkeys. And see which pie menus even exists.</p>
+<h4 id="view">View</h4>
+<p>Reveals the View pie menu.</p>
+<h4 id="region-toggle">Region Toggle</h4>
+<p>Press <span class="ui-doc-keys"><kbd>T</kbd></span> to open a pie menu that shows or hides the regions of the editor, such as the tool shelf and the sidebar. It works the same in the Asset Browser.</p>
+<h3 id="select-menu">Select menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/select-menu.png" alt="Select menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Box Select</td>
+<td>Allows you to box select files. Note that this is an old obsolete operator. You don't need to press the hotkey anymore for box select.</td>
+</tr>
+<tr>
+<td>Inverse</td>
+<td>Inverts the selection.</td>
+</tr>
+<tr>
+<td>None</td>
+<td>Select none.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>Select all.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="files-context-menu">Files context menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/files-context-menu.png" alt="Files context menu" loading="lazy"></figure>
+<p>When you right click into the view at one of the browser items, then a files context menu opens. This menu comes from the File browser, and contains a few menu items that are not vaild for the asset browser. Like create a folder. And the importer does not have the possibility to incresase Number for example.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Back</td>
+<td>Go to previous folder.</td>
+</tr>
+<tr>
+<td>Forward</td>
+<td>Go to next folder.</td>
+</tr>
+<tr>
+<td>Go to Parent</td>
+<td>Go upwards the hierarchy by one.</td>
+</tr>
+<tr>
+<td>Refresh</td>
+<td>Refresh the file list.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="external-submenu">External submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/external-submenu.png" alt="External submenu" loading="lazy"></figure>
+<p>The menu content differs, dependant from which editor you call the file browser, and which menu item is chosen.</p>
+<h4 id="open">Open</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/open.png" alt="Open" loading="lazy"></figure>
+<p>Opens the file in Bforartists.</p>
+<h4 id="open-folder">Open Folder</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/open-folder.png" alt="Open Folder" loading="lazy"></figure>
+<p>Opens the folder that contains the file in the explorer.</p>
+<h4 id="command-prompt-here">Command Prompt Here</h4>
+<p>Opens the command prompt at the location of the file.</p>
+<h4 id="properties">Properties</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/properties.png" alt="Properties" loading="lazy"></figure>
+<p>Shows the file properties.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit</td>
+<td>Opens the file in the corresponding software that is defined as the software to open the file with. A bitmap with Windows Paint for example.</td>
+</tr>
+<tr>
+<td>Print</td>
+<td>Prints the file.</td>
+</tr>
+<tr>
+<td>Play</td>
+<td>Plays the selected file. A movie in the Windows Media Player for example.</td>
+</tr>
+<tr>
+<td>Find</td>
+<td>Search for files of this type.</td>
+</tr>
+<tr>
+<td>Show</td>
+<td>Show this file in the explorer</td>
+</tr>
+<tr>
+<td>Browse</td>
+<td>Browse this file.</td>
+</tr>
+<tr>
+<td>Preview</td>
+<td>Preview this file.</td>
+</tr>
+<tr>
+<td>Install</td>
+<td>Install this file.</td>
+</tr>
+<tr>
+<td>Runas</td>
+<td>Run this file as a specific user.</td>
+</tr>
+<tr>
+<td>Find in Folder</td>
+<td>Search for items in this folder.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Increase Number</td>
+<td>Increases the number at the selected data file in the file name edit box.</td>
+</tr>
+<tr>
+<td>Decrease Number</td>
+<td>Decreases the number at the selected data file in the file name edit box.</td>
+</tr>
+<tr>
+<td>Rename</td>
+<td>Rename the selected item.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Delete the selected item.</td>
+</tr>
+<tr>
+<td>New Folder</td>
+<td>Add a new folder.</td>
+</tr>
+<tr>
+<td>Add Bookmark</td>
+<td>Adds a bookmark in the file browser tool shelf in the Bookmark panel.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="display-mode">Display Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/display-mode.png" alt="Display Mode" loading="lazy"></figure>
+<p>Display the content as a list or as icons.</p>
+<h3 id="display-size">Display Size</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/display-size.png" alt="Display Size" loading="lazy"></figure>
+<p>Set the display size of the file browser to four predefined sizes.</p>
+<h3 id="recursion-2">Recursion</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/recursion-2.png" alt="Recursion" loading="lazy"></figure>
+<p>Recursion is a menu where you can adjust how deep the explorer should dig. Normally it just lists the content of the currently selected directory. But it is also possible to list the content of the folders three levels lower.</p>
+<p>The recursion direction is always downwards. Default is None.</p>
+<h3 id="sort">Sort</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/292ec1eb55a3f9316251ef0e52c717258912ba69/docs2/images/editors/file-browser/sort.png" alt="Sort" loading="lazy"></figure>
+<p>Sort the content by the chosen method.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fquick-fixes-1/collection/docs/edit/docs2%2Fcontent%2Feditors%2Ffile-browser.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/quick-fixes-1/docs2/content/editors/file-browser.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#file-browser">File Browser</a><a class="h2" href="#file-browser-header">File Browser Header</a><a class="h3" href="#file-path">File path</a><a class="h3" href="#search">Search</a><a class="h3" href="#display-as">Display As</a><a class="h3" href="#display-options">Display Options</a><a class="h3" href="#filter">Filter</a><a class="h3" href="#toggle-region">Toggle Region</a><a class="h2" href="#tool-shelf">Tool Shelf</a><a class="h3" href="#system-panel">System Panel</a><a class="h3" href="#system-bookmarks">System Bookmarks</a><a class="h3" href="#bookmarks">Bookmarks</a><a class="h3" href="#recent">Recent</a><a class="h2" href="#sidebar">Sidebar</a><a class="h3" href="#advanced-panel">Advanced panel</a><a class="h2" href="#file-dialog">File dialog</a><a class="h3" href="#box-select">Box select</a><a class="h3" href="#renaming">Renaming</a><a class="h3" href="#file-name">File Name</a><a class="h2" href="#footer-header">Footer / Header</a><a class="h3" href="#view-menu">View Menu</a><a class="h3" href="#pie-menus">Pie Menus</a><a class="h3" href="#select-menu">Select menu</a><a class="h2" href="#files-context-menu">Files context menu</a><a class="h3" href="#external-submenu">External submenu</a><a class="h3" href="#display-mode">Display Mode</a><a class="h3" href="#display-size">Display Size</a><a class="h3" href="#recursion-2">Recursion</a><a class="h3" href="#sort">Sort</a></aside></div></body></html>
