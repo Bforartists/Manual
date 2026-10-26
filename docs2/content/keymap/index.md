@@ -9,3 +9,10 @@ status: draft
 summary: "The hotkeys of Bforartists: the important ones, the interactive keymaps for every editor, and the full table."
 ---
 The hotkeys of Bforartists: the important ones first, then the interactive Standard Keymaps (Bforartists, Blender and Industry Compatible) for every editor and mode, and the Keymap Table with every key as a list.
+
+The pages of this part are listed in the sidebar under *Keymap*.
+
+```keymap-explorer
+mini
+cta
+```

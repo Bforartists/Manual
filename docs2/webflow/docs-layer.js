@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.20
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.21
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -94,7 +94,9 @@
     'html.dk-overview .ui-doc-body>.ui-doc-subsec{padding:0;background:none;box-shadow:none}',
     'html.dk-overview .ui-doc-body>.ui-doc-subsec>p{margin:0 0 1.25rem}',
     'html.dk-overview .ui-doc-now{display:none!important}',
-    '.dk-cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:1rem}',
+    /* two columns; the Start here card and a leftover last card take the whole row, so the grid has no empty slot */
+    '.dk-cgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}',
+    '.dk-cgrid>.dk-ccard.is-stretch{grid-column:1/-1}',
     '.dk-ccard{display:grid;grid-template-columns:4.5rem minmax(0,1fr);gap:1rem;align-items:start;padding:1rem;color:var(--dk-text);text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}',
     '.dk-ccard:hover{transform:translateY(-2px);box-shadow:0 2px 3px #0006,calc(var(--sx,0)*12px) 16px 22px -12px var(--dk-drop)}',
     '.dk-ccard .dk-sticker{width:4.5rem;height:4.5rem;border-radius:.875rem}',
@@ -480,6 +482,7 @@
       if (/^H[2-6]$/.test(x.tagName)) { box.appendChild(el('h3', 'dk-cat', esc(x.textContent))); grid = null; return; }
       qa('a[href]', x).forEach(function (a) { if (!grid) { grid = el('div', 'dk-cgrid'); box.appendChild(grid); } grid.appendChild(card(a)); });
     });
+    qa('.dk-cgrid', box).forEach(function (g) { var rest = qa(':scope>.dk-ccard:not(.is-start)', g); if (rest.length % 2) rest[rest.length - 1].classList.add('is-stretch'); });
     src.parentNode.replaceChild(box, src);
     function view(v) { box.classList.toggle('is-list', v === 'list'); qa('.dk-seg button', box).forEach(function (b) { b.classList.toggle('is-on', b.dataset.v === v); }); ls('bfa-docs-cards', v); }
     view(ls('bfa-docs-cards') === 'list' ? 'list' : 'grid');
