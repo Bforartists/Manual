@@ -1264,11 +1264,13 @@ Creates a meta strip out of the selected strips. A Meta Strip is a strip which c
 | UnMeta Strip | Separating (ungrouping) the Meta strip restores the strips to their relative positions and channels. |
 | Toggle Meta | Toggles between the meta and unmeta state. You need to have a meta strip in the sequencer timeline already. |
 
-#### Set Color Tag
+#### Color Tags
 
-![Set Color Tag](/docs2/images/editors/video-sequence-editor/header/strip-menu/set-color-tag.png)
+![Color Tags](/docs2/images/editors/video-sequence-editor/header/strip-menu/set-color-tag.png)
 
-Set the display color of the strips.
+Give strips a color so you can spot them quickly, for example all dialogue in green and all music in blue. Select the strips and click a color in the row of color buttons. The **X** button removes the color.
+
+The same row is in the right-click menu of a strip.
 
 #### Lock/Mute - Submenu
 
