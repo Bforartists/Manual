@@ -114,7 +114,7 @@ class Webflow:
     def update(self, cid, item_id, field_data):
         return self.update_many(cid, [(item_id, field_data)])
 
-    def update_many(self, cid, pairs, max_items=25, max_bytes=1_000_000, max_images=MAX_IMAGES_PER_CALL):
+    def update_many(self, cid, pairs, max_items=25, max_bytes=600_000, max_images=MAX_IMAGES_PER_CALL):
         """PATCH items in batches (fewer calls, kinder to rate limits on a full sync). Batches are also
         capped by screenshot count: Webflow copies each new image while it answers."""
         def send(batch):
@@ -126,7 +126,17 @@ class Webflow:
                 c = b["fieldData"].get("checksum")
                 if isinstance(c, str) and "|" in c:
                     b["fieldData"]["checksum"] = c.split("|", 1)[0] + "|" + now
-            self.req("PATCH", f"/collections/{cid}/items", {"items": batch})
+            try:
+                self.req("PATCH", f"/collections/{cid}/items", {"items": batch})
+            except SyncError as e:
+                # a gateway timeout (504) on a heavy batch: Webflow often finishes smaller ones, so halve and retry
+                if len(batch) > 1 and re.search(r"failed: (5\d\d|.*timed out|.*Timeout)", str(e)):
+                    print(f"  ↪ batch of {len(batch)} timed out; sending it in two halves", file=sys.stderr)
+                    half = len(batch) // 2
+                    send(batch[:half])
+                    send(batch[half:])
+                else:
+                    raise
 
         batch, size, imgs = [], 0, 0
         for item_id, fd in pairs:

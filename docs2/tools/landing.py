@@ -287,21 +287,53 @@ KM_URL = "https://bforartists.github.io/Manual/nav/keymap.json"
 KK_MARK = re.compile(r"<!--\s*keymap-keys(?:\s+([^>]*?))?\s*-->")
 
 
+FENCE = re.compile(r'<div class="ui-doc-code" data-lang="(keymap-explorer|keymap-keys)"><code>(.*?)</code></div>'
+                   r'|<pre><code class="language-(keymap-explorer|keymap-keys)">(.*?)</code></pre>', re.S)
+
+
+def _fence_lines(raw):
+    txt = htmllib.unescape(re.sub(r"<br\s*/?>", "\n", raw))
+    return [ln.strip() for ln in txt.split("\n") if ln.strip()]
+
+
 def keymap_block(body):
-    """<!-- keymap-explorer --> (optionally editor="3D Viewport" mode="Object Mode") → the list the
-    interactive keymap script draws from; the keys themselves come from keymap.json."""
-    def rep(m):
-        opts = dict(re.findall(r'(\w+)="([^"]*)"', m.group(1) or ""))
+    """The interactive keymap and the keyboard pictures, from fenced blocks a writer types (the online
+    editor keeps code blocks, but drops HTML comments):
+
+        ```keymap-explorer            ```keymap-keys
+        editor: Image Editor          W = Move selection
+        mode: UV Editing              Ctrl + S = Save
+        mini                          ```
+        ```
+
+    The older <!-- keymap-explorer … --> and <!-- keymap-keys keys="…" --> comments still work."""
+    def explorer(opts):
         extra = "".join(f' data-{k}="{htmllib.escape(v)}"' for k, v in opts.items() if k in ("editor", "mode", "mini"))
         return f'<div class="ui-keymap"><ul><li data-k="keymap" data-src="{KM_URL}"{extra}>Interactive keymap</li></ul></div>'
-    body = KM_MARK.sub(rep, body)
 
-    def keys(m):   # <!-- keymap-keys keys="W=Move; Ctrl+S=Save; MMB=Pan" -->: a keyboard picture of just those keys
-        opts = dict(re.findall(r'(\w+)="([^"]*)"', m.group(1) or ""))
-        return (f'<div class="ui-keymap"><ul><li data-k="keys" data-keys="{htmllib.escape(opts.get("keys", ""))}">'
-                f'{htmllib.escape(opts.get("keys", ""))}</li></ul></div>')
-    return KK_MARK.sub(keys, body)
+    def keys(spec):
+        return (f'<div class="ui-keymap"><ul><li data-k="keys" data-keys="{htmllib.escape(spec)}">'
+                f'{htmllib.escape(spec)}</li></ul></div>')
 
+    def fence(m):
+        kind, raw = (m.group(1), m.group(2)) if m.group(1) else (m.group(3), m.group(4))
+        lines = _fence_lines(raw)
+        if kind == "keymap-explorer":
+            opts = {}
+            for ln in lines:
+                k, _, v = ln.partition(":")
+                opts[k.strip().lower()] = v.strip() or "1"
+            return explorer(opts)
+        pairs = []
+        for ln in lines:
+            combo, _, label = ln.partition("=")
+            if label.strip():
+                pairs.append(re.sub(r"\s*\+\s*", "+", combo.strip()) + "=" + re.sub(r'[;"]', "", label.strip()))
+        return keys("; ".join(pairs))
+
+    body = FENCE.sub(fence, body)
+    body = KM_MARK.sub(lambda m: explorer(dict(re.findall(r'(\w+)="([^"]*)"', m.group(1) or ""))), body)
+    return KK_MARK.sub(lambda m: keys(dict(re.findall(r'(\w+)="([^"]*)"', m.group(1) or "")).get("keys", "")), body)
 
 def load_workspaces():
     """docs2/workspaces.yml → (editors, {page rel under content/: entry}, [entries in order])."""
