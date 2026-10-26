@@ -18,13 +18,9 @@ This layout is for general 3D work. Here you work at your 3D scene. Here happens
 
 ![Main workspace](/docs2/images/workspaces/workspaces/standard-workspaces.png)
 
-## Editors in this workspace
+## How the work flows
 
-- [3D Viewport](../editors/3d-viewport/index.md)
-- [Outliner](../editors/outliner.md)
-- [Properties](../editors/properties/index.md)
-- [Timeline](../editors/timeline/index.md)
-- [Info Editor](../editors/info-editor.md)
+Main is the studio table: everything for a first idea sits within reach. You build and arrange the scene in the [3D Viewport](../editors/3d-viewport/index.md), pulling ready-made objects and materials from the Asset Shelf along its bottom edge. The [Outliner](../editors/outliner.md) keeps the cast in order, so you can find, hide and rename anything, while the [Properties Editor](../editors/properties/index.md) tunes whatever you picked: its modifiers, material, the world and the render. When something should move, the [Timeline](../editors/timeline/index.md) sets the frame and records keys.
 
 ## Starts in
 

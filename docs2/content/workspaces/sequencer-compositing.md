@@ -16,8 +16,6 @@ A workspace that brings the compositor to video editing: build node effects for 
 
 > **Draft:** a screenshot and the exact layout of this workspace will be added here.
 
-## Editors in this workspace
+## How the work flows
 
-- [Video Sequence Editor](../editors/video-sequence-editor/index.md)
-- [Compositor](../editors/compositor/index.md)
-- [Properties](../editors/properties/index.md)
+Sequencer Compositing brings node effects to video editing. You build effects for the strips in the [Compositor](../editors/compositor/index.md) and see the result in the [Video Sequence Editor](../editors/video-sequence-editor/index.md) preview, right next to your edit, so grading and effects stay part of the cut.

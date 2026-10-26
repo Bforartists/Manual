@@ -18,12 +18,9 @@ The texture painting workspace is made to do texture painting work. It contains 
 
 ![Texture Paint workspace](/docs2/images/workspaces/workspaces/standard-workspaces-6.png)
 
-## Editors in this workspace
+## How the work flows
 
-- [Image Editor](../editors/image-editor/index.md)
-- [3D Viewport](../editors/3d-viewport/index.md)
-- [Outliner](../editors/outliner.md)
-- [Properties](../editors/properties/index.md)
+Texture Paint is a painter's corner. You paint straight onto the model in the [3D Viewport](../editors/3d-viewport/index.md), and the same strokes appear on the flat texture in the [Image Editor](../editors/image-editor/index.md), where you can paint too, for the parts that are easier to reach flat. The [Properties Editor](../editors/properties/index.md) holds your brushes and texture slots, and the [Outliner](../editors/outliner.md) picks which object gets the paint.
 
 ## Starts in
 

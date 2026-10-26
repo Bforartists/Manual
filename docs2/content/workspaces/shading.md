@@ -18,11 +18,6 @@ The workspace to do all the shader and material work. It comes with a file brows
 
 ![Shading workspace](/docs2/images/workspaces/workspaces/standard-workspaces-7.png)
 
-## Editors in this workspace
+## How the work flows
 
-- [File Browser](../editors/file-browser.md)
-- [Image Editor](../editors/image-editor/index.md)
-- [3D Viewport](../editors/3d-viewport/index.md)
-- [Shader Editor](../editors/shader-editor/index.md)
-- [Outliner](../editors/outliner.md)
-- [Properties](../editors/properties/index.md)
+Shading is where surfaces get their look. You build the material in the [Shader Editor](../editors/shader-editor/index.md) by connecting nodes, the heart of this workspace, while the [3D Viewport](../editors/3d-viewport/index.md) previews it with studio lighting so you judge the result as you go. The [File Browser](../editors/file-browser.md) finds textures on disk to drag straight into the node tree, and the [Image Editor](../editors/image-editor/index.md) lets you check them. The [Outliner](../editors/outliner.md) picks the object, and the [Properties Editor](../editors/properties/index.md) covers material and world settings without nodes.

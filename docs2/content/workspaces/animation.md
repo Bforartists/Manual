@@ -18,10 +18,6 @@ This workspace provides you with a layout that is optimized for Animation tasks.
 
 ![Animation workspace](/docs2/images/workspaces/workspaces/standard-workspaces-5.png)
 
-## Editors in this workspace
+## How the work flows
 
-- [3D Viewport](../editors/3d-viewport/index.md)
-- [Dope Sheet](../editors/dope-sheet/index.md)
-- [Timeline](../editors/timeline/index.md)
-- [Outliner](../editors/outliner.md)
-- [Properties](../editors/properties/index.md)
+Animation is set up like a small film set. One [3D Viewport](../editors/3d-viewport/index.md) is your stage, where you pose and key characters and objects; the second looks through the camera, so you always see the shot as the audience will. Every key lands in the [Dope Sheet](../editors/dope-sheet/index.md), where timing becomes visible and you slide, stretch and retime the beats, and the [Timeline](../editors/timeline/index.md) plays it back and records with auto keying. The [Outliner](../editors/outliner.md) picks who moves next, and the [Properties Editor](../editors/properties/index.md) holds bones and constraints.

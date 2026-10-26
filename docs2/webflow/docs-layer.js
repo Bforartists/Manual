@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.10
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.11
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -17,6 +17,7 @@
   R.dataset.dkLayer = '1';
   var CDN = 'https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/';
   var NAVURL = 'https://bforartists.github.io/Manual/nav/nav.json', NK = 'bfa-docs-nav';
+  var BRANCH = 'docs2/main', HOWTO = 'getting-started-about-documentation';   /* the docs branch writers start from; the How to use this manual page */
   var HOME = '/docs/home', DISCORD = 'https://discord.gg/yKuR77v', PRO = 'https://www.trinumedia.com';
   var ISSUE = 'https://github.com/Bforartists/Manual/issues/new';
   var IC = {
@@ -24,7 +25,8 @@
     comm: '68b9b70677b5a3b5b8606647_community.svg', light: '68b9b7c5219bda8870e7cee9_light.svg',
     time: '68b9bb9cc5062fa217606ff2_time.svg', world: '68b9b4b69f8eb147bccde6cf_world.svg',
     zoom: '68b9bbd23fb07538f848b579_viewzoom.svg', caret: '68b9bbb397785a50ab1c6b64_tria_down.svg',
-    fwd: '68b9b76aa841ed4158a2f249_forward.svg', print: '68b8db5dd3714b344fd700ea_output.svg'
+    fwd: '68b9b76aa841ed4158a2f249_forward.svg', print: '68b8db5dd3714b344fd700ea_output.svg',
+    xw: '68b9bbe3e15e16c19a6a1b1c_x.svg'
   };
 
   /* ---------------------------------------------------------------- 1 styles */
@@ -189,6 +191,24 @@
     '.dk-path-tx{padding:.75rem}',
     '.dk-path-tx b{display:block;margin:0 0 .5rem;font:700 1rem/1.2 Inter,sans-serif}',
     '.dk-path-tx small{display:flex;flex-wrap:wrap;gap:.375rem .75rem;color:var(--dk-muted);font-size:.75rem}',
+    /* Q6 · buttons: no sideways shadow sliver, text wraps inside its card */
+    '.dk-btn,.ui-doc-btn,.ui-doc-foot-go,.ui-doc-foot-btns a,.ui-doc-article .ui-btn{--edge-x:0!important}',
+    '.dk-btn{max-width:100%;height:auto;min-height:2rem;box-sizing:border-box;white-space:normal}',
+    '.dk-btn .ui-btn-label{white-space:normal;text-align:left;overflow-wrap:anywhere}',
+    /* Q6 · chapter cards: white text, a button to show they open */
+    '.ui-doc-body a.ui-doc-card,.ui-doc-body a.ui-doc-card b,.ui-doc-body a.ui-doc-card>span{color:var(--dk-text)!important;text-decoration:none!important}',
+    '.ui-doc-card .dk-card-go{grid-column:2;justify-self:start;margin-top:.5rem;opacity:1!important}',
+    '.ui-doc-card .dk-card-go span{opacity:1!important}',
+    '.ui-doc-card:hover .dk-card-go{background-color:var(--_bfa---surface--hover)}',
+    /* Q6 · floats stay inside each section card, tables wrap */
+    '.ui-doc-subsec{display:flow-root}',
+    '.ui-doc-table td,.ui-doc-table th{white-space:normal;overflow-wrap:anywhere}',
+    /* Q6 · Workspaces overview: no right sidebar */
+    '@media(min-width:1280px){html.dk-wide .ui-doc-outline{display:none!important}html.dk-wide .ui-doc-grid{grid-template-columns:17rem minmax(0,1fr)}}',
+    '@media(min-width:1680px){html.dk-wide .ui-doc-grid{grid-template-columns:288px minmax(0,1fr)}}',
+    /* Q6 · sidebar fades where it is cut off */
+    '.ui-doc-grid>.ui-doc-side{--ft:0px;--fb:0px;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 var(--ft),#000 calc(100% - var(--fb)),transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 var(--ft),#000 calc(100% - var(--fb)),transparent 100%)}',
+    '.ui-doc-grid>.ui-doc-side.dk-more-b{--fb:3.5rem}.ui-doc-grid>.ui-doc-side.dk-more-t{--ft:1.5rem}',
     '.ui-doc-bar-row2.dk-empty{display:none!important}.ui-doc-bar-in{align-content:center}',
     '.dk-secs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}',
     /* sinks: the same inset well the website uses under groups of cards */
@@ -297,6 +317,39 @@
     return '<span class="dk-bar' + (big ? ' is-big' : '') + '" title="Reviewed ' + o.reviewed + ' · In review ' + o['needs-review'] + ' · Draft ' + o.draft + '"><i class="is-reviewed" style="width:' + w('reviewed') + '"></i><i class="is-review" style="width:' + w('needs-review') + '"></i></span>';
   }
 
+  /* ---------------------------------------------------------------- Q6 polish */
+  function polish() {
+    /* Edit this page: GitHub's editor on the current docs branch; it makes your own branch and a pull request for you */
+    qa('[data-doc-edit]').forEach(function (a) {
+      if (a.dataset.dk) return; a.dataset.dk = '1';
+      var m = /\/edit\/([^?#]+)/.exec(a.getAttribute('href') || ''), src = m ? decodeURIComponent(m[1]) : ((q('.ui-doc-article') || {}).getAttribute ? q('.ui-doc-article').getAttribute('data-doc-source') : '');
+      if (!src) return;
+      a.href = 'https://github.com/Bforartists/Manual/edit/' + BRANCH + '/' + src;
+      a.title = 'Edit on GitHub, starting from the latest docs: GitHub makes your own branch and a pull request for you';
+    });
+    /* close buttons: the white X, not the red error icon */
+    qa('.ui-doc-sheet-x img').forEach(function (i) { if (i.src.indexOf(IC.xw) < 0) i.src = CDN + IC.xw; });
+    /* chapter cards: white text and a button, like the overview cards */
+    qa('.ui-doc-body a.ui-doc-card').forEach(function (c) {
+      if (q('.dk-card-go', c)) return;
+      c.insertAdjacentHTML('beforeend', '<span class="ui-btn dk-btn is-small dk-card-go"><span class="ui-btn-icon"><img class="ui-icon is-color" alt="" src="' + CDN + IC.fwd + '"></span><span class="ui-btn-label">Open</span></span>');
+    });
+  }
+  /* the Workspaces overview gets the full width (no right sidebar) for the explorer */
+  function wide() { if (q('.ui-doc-body .ui-ws-explorer, .ui-doc-body .wsx.is-explorer') && !q('.dk-look')) R.classList.add('dk-wide'); }
+  /* the sidebar fades where it is cut off, so you can tell there is more */
+  function sideFade() {
+    var s = q('.ui-doc-grid > .ui-doc-side'); if (!s || s.dataset.dkFade) return; s.dataset.dkFade = '1';
+    var f = function () { var more = s.scrollHeight - s.clientHeight - s.scrollTop > 4; s.classList.toggle('dk-more-b', more); s.classList.toggle('dk-more-t', s.scrollTop > 4); };
+    s.addEventListener('scroll', f, { passive: true }); window.addEventListener('resize', f);
+    if (window.ResizeObserver) new ResizeObserver(f).observe(s);
+    f(); setTimeout(f, 600);
+  }
+  function polishSoon() {
+    polish(); var n = 0, t = setInterval(function () { polish(); if (++n > 12) clearInterval(t); }, 500);
+    if (window.MutationObserver) { var mo = new MutationObserver(function () { polish(); }); mo.observe(d.body, { childList: true, subtree: true }); setTimeout(function () { mo.disconnect(); }, 8000); }
+  }
+
   /* ---------------------------------------------------------------- title tile: the page's own icon */
   function titleTile() {
     var t = q('.ui-doc-tile-icon'), cur = IDX.by[here]; if (!t || !cur || !cur.i) return;
@@ -346,13 +399,12 @@
   }
   function helpPanels(title) {
     var aside = q('.ui-doc-outline'); if (!aside || q('.dk-help', aside)) return;
-    var print = 'javascript:window.print()';
     aside.insertBefore(panel('Stuck?', [
       [IC.comm, 'Ask on Discord', DISCORD],
       [IC.light, 'Report a doc issue', ISSUE + '?title=' + encodeURIComponent('Docs: ' + title)],
       [IC.world, 'Pro help · Trinumedia ↗', PRO, 'is-pro']]), aside.firstChild);
     aside.insertBefore(panel('Take it with you', [
-      [IC.print, 'This section (print or PDF)', print],
+      [(IDX.by[HOWTO] && IDX.by[HOWTO].i) || IC.doc, 'How to use this manual', '/docs/' + HOWTO],
       [IC.doc, 'Full manual, offline (soon)', 'https://github.com/Bforartists/Manual']]), aside.firstChild);
   }
 
@@ -509,7 +561,7 @@
     if (!nav || !nav.sections) return;
     NAV = nav; IDX = index(nav);
     overviews(); watchSide();
-    crumbs(); statusChip(); titleTile(); barRow(); setTimeout(barRow, 400); window.addEventListener('resize', barRow);
+    crumbs(); statusChip(); titleTile(); polishSoon(); wide(); sideFade(); barRow(); setTimeout(barRow, 400); window.addEventListener('resize', barRow);
     if (here === 'home') return home();
     var n = IDX.by[here];
     if (n && n.land) overview(n);

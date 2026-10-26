@@ -74,12 +74,7 @@ This add-on contains the same check boxes than the single toolbars menus in the 
 Changing a setting here will automatically save the user preferences.
 
 
-|  |
-| -------------------------------------------------------------------------------------------------------- |
-| Warning! |
-| Do not deactivate this add-on. The toolbar will not work then. It depends of the settings in the add-on! |
-
-
+> **Warning:** Do not deactivate this add-on. The toolbar will not work then. It depends of the settings in the add-on!
 ## Create new toolbar
 
 ![Create new toolbar](/docs2/images/editors/toolbar/create-new-toolbar.png)

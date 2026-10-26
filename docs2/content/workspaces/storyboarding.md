@@ -16,12 +16,9 @@ A workspace for storyboards and animatics: draw your shots with Grease Pencil, t
 
 > **Draft:** a screenshot and the exact layout of this workspace will be added here.
 
-## Editors in this workspace
+## How the work flows
 
-- [3D Viewport](../editors/3d-viewport/index.md)
-- [Dope Sheet](../editors/dope-sheet/index.md)
-- [Video Sequence Editor](../editors/video-sequence-editor/index.md)
-- [Properties](../editors/properties/index.md)
+Storyboarding turns sketches into a rough cut. You draw each shot with Grease Pencil in the [3D Viewport](../editors/3d-viewport/index.md), time the drawings in the [Dope Sheet](../editors/dope-sheet/index.md), and line the shots up in the [Video Sequence Editor](../editors/video-sequence-editor/index.md), so the story plays as an animatic long before anything is modelled.
 
 ## Starts in
 

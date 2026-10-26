@@ -156,12 +156,7 @@ Ndof hotkeys are for tablet or 3d mouse.
 > **Note:** Some hotkeys are used in more than one menu. That's for example the case for hotkeys in the Node Editor section. They are true in three different editors, Shader Editor, Compositor, and Texture Node Editor. To make it even worse, some exists in just one editor, and in a special mode.
 
 
-|  |
-| ------------------------------------------------------------------------------ |
-| For Mac OS users |
-| When a hotkey is listed with “Ctrl”, this will mean the keyboard “Option” key. |
-
-
+> **Note:** For Mac OS users: When a hotkey is listed with “Ctrl”, this will mean the keyboard “Option” key.
 # General
 
 ## Window

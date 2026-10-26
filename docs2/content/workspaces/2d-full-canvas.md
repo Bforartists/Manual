@@ -18,10 +18,9 @@ A workspace to work with the grease pencil and to create 2D animation. The 3D vi
 
 ![2D Full Canvas workspace](/docs2/images/workspaces/workspaces/standard-workspaces-13.png)
 
-## Editors in this workspace
+## How the work flows
 
-- [3D Viewport](../editors/3d-viewport/index.md)
-- [Properties](../editors/properties/index.md)
+2D Full Canvas clears the desk so only the drawing is left. The [3D Viewport](../editors/3d-viewport/index.md) fills the whole window as one big Grease Pencil canvas, and a slim [Dope Sheet](../editors/dope-sheet/index.md) strip keeps the keys and playback within reach, so you can draw for a long stretch without the interface in the way.
 
 ## Starts in
 

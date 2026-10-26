@@ -18,11 +18,9 @@ A layout for modeling work, with a large 3D Viewport. It starts in Object Mode.
 
 ![Modeling workspace](/docs2/images/workspaces/workspaces/standard-workspaces-3.png)
 
-## Editors in this workspace
+## How the work flows
 
-- [3D Viewport](../editors/3d-viewport/index.md)
-- [Outliner](../editors/outliner.md)
-- [Properties](../editors/properties/index.md)
+Modeling gives the shape all the room it needs. A large [3D Viewport](../editors/3d-viewport/index.md) is the workbench where meshes, curves and other geometry are built and refined. The [Outliner](../editors/outliner.md) sorts your parts into collections as the model grows, and the [Properties Editor](../editors/properties/index.md) adds the non-destructive layers on top: modifiers like Mirror, Subdivision or Bevel, the object data and the first materials.
 
 ## Starts in
 

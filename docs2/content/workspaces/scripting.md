@@ -18,11 +18,6 @@ The scripting workspace gives you a layout where you can write Python code. It c
 
 ![Scripting workspace](/docs2/images/workspaces/workspaces/standard-workspaces-11.png)
 
-## Editors in this workspace
+## How the work flows
 
-- [3D Viewport](../editors/3d-viewport/index.md)
-- [Python Console](../editors/python-console.md)
-- [Info Editor](../editors/info-editor.md)
-- [Text Editor](../editors/text-editor.md)
-- [Outliner](../editors/outliner.md)
-- [Properties](../editors/properties/index.md)
+Scripting turns repeated work into a tool. Click through a task once and the [Info Editor](../editors/info-editor.md) writes down every action as a line of Python you can copy; try those lines in the [Python Console](../editors/python-console.md), then collect them into a script in the [Text Editor](../editors/text-editor.md) and run it. The [3D Viewport](../editors/3d-viewport/index.md) shows what your code does, the [Outliner](../editors/outliner.md) lets you browse the data, and every setting in the [Properties Editor](../editors/properties/index.md) can be read and changed from Python.
