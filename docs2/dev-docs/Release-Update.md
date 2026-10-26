@@ -31,3 +31,5 @@ Only the lead maintainer does this, once staging looks right.
 1. Open **bforartists.webflow.io/docs/home** and click through: a section overview, a workspace page, the keymap, the search (Ctrl K).
 2. Webflow → **Publish** → tick **bforartists.co** (and webflow.io) → Publish.
 3. Check the same pages on bforartists.co. If anything is wrong, fix it in GitHub and publish again; site scripts can be rolled back in minutes ([Site scripts](Site-Scripts.md#roll-back)).
+
+**The first time only (October 2026):** the old `/documentation/…` pages are drafts in Webflow. Before that first live publish, add the 41 redirects in [`docs2/reports/webflow-redirects.md`](../reports/webflow-redirects.md) (Site settings › Publishing › 301 redirects), so old links and search results land on the new pages. Delete the old pages in the Designer a week or two later.
