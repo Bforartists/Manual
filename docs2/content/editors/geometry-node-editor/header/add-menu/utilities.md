@@ -459,6 +459,8 @@ Standard float value input.
 
 What kind of data to compare.
 
+Besides numbers, vectors, colors and strings, the Compare node can check whether two **Objects** or two **Collections** are equal.
+
 ###### Operation
 
 ![Operation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation-3.png)

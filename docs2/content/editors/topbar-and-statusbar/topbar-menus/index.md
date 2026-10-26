@@ -1911,6 +1911,8 @@ This is a filter that will detect and list all the action clips of a scene. Here
 
 ![Export All Collections](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/export-all-collections-3.png)
 
+You find it at the top of **File › Export**. It stays greyed out until at least one collection has an exporter.
+
 Export all collections that have been assigned Exporter Operators in the Properties Editor Collections Tab. When an Exporter Operator is assigned to a collection, it will export with the Exporter Operator properties and assigned file paths.
 
 > **Note:** To assign Exporter Operators to a collection, use the Exporters panel in the Collections Tab in the Properties Editor.
@@ -2232,11 +2234,13 @@ Rendered images can be saved in the Image menu like any other image.
 | ---------------- | ------------------------------------------------------------------------------- |
 | Render Image | Renders the current scene as an image by using the current chosen renderer. |
 | Render Animation | Renders the current scene as an animation by using the current chosen renderer. |
+| Render Sequencer Image | Only shown when the Video Sequencer uses a different scene with strips: renders the sequencer's current frame. |
+| Render Sequencer Animation | Only shown when the Video Sequencer uses a different scene with strips: renders the whole sequencer. |
 
 
-#### Mixdown Audio
+#### Render Audio
 
-Mixdown and export the scene's audio to an audio file. You will open an export dialog when you click at Mixdown Audio. Further Audio settings can be found in the Properties editor.
+Mixdown and export the scene's audio to an audio file. You will open an export dialog when you click at Render Audio. Further Audio settings can be found in the Properties editor.
 
 ##### Options
 
@@ -2266,10 +2270,10 @@ Choose between different audio export formats.
 
 | Entry | What it does |
 | ----------------------- | --------------------------------------------------------------------------------- |
-| OpenGL Render Image | Renders an Image, using the Viewport OpenGL renderer. |
-| OpenGL Render Animation | Renders an animation, using the Viewport OpenGL renderer. |
-| Show / Hide Render | Toggles the display of the render view. |
-| Play rendered Animation | Plays back the rendered animation sequence. |
+| Render Viewport | Renders an image of the 3D Viewport as you see it, without the render engine. Fast for previews. |
+| Render Viewport Animation | Renders an animation of the 3D Viewport as you see it, without the render engine. |
+| Show/Hide Render | Toggles the display of the render view. |
+| Play Rendered Animation | Plays back the rendered animation sequence. |
 | Lock Interface | Lock the interface while rendering to free the memory for the UI to the renderer. |
 
 # Window Menu

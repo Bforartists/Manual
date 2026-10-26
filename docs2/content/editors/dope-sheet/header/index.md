@@ -822,16 +822,25 @@ Flips the selected keyframes over the current frame position.
 
 ![Insert Keyframes](/docs2/images/editors/dope-sheet/header/key-menu/insert-keyframes.png)
 
-Choose a method how to insert a new keyframe at the current frame position.
+Inserts a keyframe at the current frame. The submenu sets which channels get it.
+
+| Entry | What it does |
+| ---------------------- | ---------------------------------------------------- |
+| All Channels | Inserts a keyframe in every channel. |
+| Only Selected Channels | Inserts a keyframe in the selected channels only. |
+| In Active Group | Inserts a keyframe in the channels of the active group. |
+
+#### Jump, Copy and Paste
 
 | Entry | What it does |
 | ----------------- | ---------------------------------------------------------------------------------- |
-| Jump to Keyframes | Sets the frame marker at the average position of the currently selected keyframes. |
+| Jump to Selected | Sets the frame marker at the average position of the currently selected keyframes. |
 | Copy Keyframes | Copy selected keyframes. |
-| Paste Keyframes | Pastes copied keyframes. |
+| Paste Keyframes / Flipped | Pastes copied keyframes. |
 | Paste Flipped | Pastes copied keyframes, but flipped. |
 | Duplicate | Duplicate selected keyframes. |
-| Delete Keyframes | Deletes selected keyframes. |
+
+To delete the selected keyframes, press `Delete`.
 
 #### Delete Breakdown Frames
 

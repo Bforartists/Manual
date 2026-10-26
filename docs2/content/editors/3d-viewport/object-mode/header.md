@@ -26,7 +26,7 @@ When you create a primitive then the Adjust Last Operator Panel down left shows 
 
 ![Add Menu](/docs2/images/editors/3d-viewport/header/add-menu/add-menu-2.png)
 
-Note that the adjust last operator panel does not show when you add a primitive from the toolbar at the top. Then you have to open the adjust last operation panel from the toolbar.
+When you add a primitive from the toolbar at the top, the Adjust Last Operation panel opens in the toolbar area instead, so you can adjust the primitive right there.
 
 Note also that those settings are not longer available when you perform any operation at the object. And be it to move the primitive. Some of those settings might still be available in the Properties editor. But things like create UV not. So when you want to adjust those settings, then do it immediately after creation.
 
