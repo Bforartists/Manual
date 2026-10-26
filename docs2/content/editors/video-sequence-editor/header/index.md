@@ -1323,9 +1323,9 @@ When connected and you move one, you will move all connected strips.
 
 #### Disconnect Strips
 
-Unlink selected strips so that they can be selected individually,
+Unlink the selected strips, so you can select and move them one by one again.
 
-> **Note:** To use, select multiple strips then disconnect.
+The menu changes with your selection: it shows **Connect** when the selected strips are not connected yet, and **Disconnect** when they are. You find the same button in the tool shelf, in the **Strip** tab.
 
 ### Strip menu in Preview window
 
