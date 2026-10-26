@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.13
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.14
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -204,6 +204,7 @@
     '.ui-doc-subsec{display:flow-root}',
     '.ui-doc-table td,.ui-doc-table th{white-space:normal;overflow-wrap:anywhere}',
     /* Q6 · Workspaces overview: no right sidebar */
+    'html.dk-wide .ui-doc-body{max-width:none!important}',
     '@media(min-width:1280px){html.dk-wide .ui-doc-outline{display:none!important}html.dk-wide .ui-doc-grid{grid-template-columns:17rem minmax(0,1fr)}}',
     '@media(min-width:1680px){html.dk-wide .ui-doc-grid{grid-template-columns:288px minmax(0,1fr)}}',
     /* Q6 · sidebar fades where it is cut off */
