@@ -1,0 +1,7320 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Keymap Table · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1448 · <code>docs2/queue10-keymap</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="important-hotkeys.html">Important Hotkeys</a>
+<span>Standard Keymaps</span>
+<a class="is-current" href="keymap-table.html">Keymap Table</a>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Keymap › Keymap Table</div><h1 class="pv-title">Keymap Table</h1><div class="pv-chips"><span class="is-reviewed">● reviewed</span><span>Bforartists 5.3</span><span>🕒 43 min read</span></div><article class="ui-doc-body"><p>Every hotkey of the Bforartists keymap, editor by editor and mode by mode. The list is written from the Bforartists source each week, so it always matches the current version. To see the keys on a keyboard, or the Blender and Industry Compatible presets, use <a href="https://github.com/Bforartists/Manual/blob/docs2/queue10-keymap/docs2/content/keymap/standard-keymaps.md">Standard Keymaps</a>.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The keys are for Windows and Linux. On macOS, most Ctrl keys use Cmd instead. <strong>Active tool</strong> keys and the keys that only work while a tool runs (for example X, Y and Z to lock an axis while moving) are left out.</p></div>
+<!-- keymap-table:start (written by docs2/tools/keymap.py table; edit the text above it) -->
+<h1 id="3d-viewport" data-icon="view3d">3D Viewport</h1>
+<h2 id="object-mode">Object Mode</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add menu</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Duplicate move</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Duplicate move linked</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Edit gpencil mode</td>
+<td><code>2</code></td>
+</tr>
+<tr>
+<td>Edit mode</td>
+<td><code>2</code></td>
+</tr>
+<tr>
+<td>Hide view clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Hide view set</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Hide view set: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Isometric camera: game (2:1)</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>2</kbd></span></td>
+</tr>
+<tr>
+<td>Isometric camera: game (4:3)</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>3</kbd></span></td>
+</tr>
+<tr>
+<td>Isometric camera: ground plane</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>4</kbd></span></td>
+</tr>
+<tr>
+<td>Isometric camera: true isometric</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>1</kbd></span></td>
+</tr>
+<tr>
+<td>Join</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>J</kbd></span></td>
+</tr>
+<tr>
+<td>Keyframe delete v3d</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Keyframe insert</td>
+<td><code>I</code></td>
+</tr>
+<tr>
+<td>Keyframe insert menu: always prompt</td>
+<td><code>K</code></td>
+</tr>
+<tr>
+<td>Move tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Object context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Object mode</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>Object mode pie menu</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Tab</kbd></span></td>
+</tr>
+<tr>
+<td>Paint grease pencil mode</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>2</kbd></span></td>
+</tr>
+<tr>
+<td>Parent clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Parent set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Pose mode</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>2</kbd></span></td>
+</tr>
+<tr>
+<td>Rotate tool</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Scale tool</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Sculpt curves mode</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td>Sculpt grease pencil mode</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td>Sculpt mode</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code> (click)</td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>0</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>1</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>2</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>3</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>4</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>5</kbd></span></td>
+</tr>
+<tr>
+<td>Texture paint mode</td>
+<td><code>6</code></td>
+</tr>
+<tr>
+<td>Vertex grease pencil mode</td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td>Vertex paint mode</td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td>Weight grease pencil mode</td>
+<td><code>5</code></td>
+</tr>
+<tr>
+<td>Weight paint mode</td>
+<td><code>5</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="all-modes">All modes</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copybuffer</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Dolly view</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Middle mouse</td>
+</tr>
+<tr>
+<td>Dolly view</td>
+<td>Shift + Numpad +</td>
+</tr>
+<tr>
+<td>Dolly view</td>
+<td>Shift + Numpad -</td>
+</tr>
+<tr>
+<td>Dolly view</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + =</td>
+</tr>
+<tr>
+<td>Dolly view</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + -</td>
+</tr>
+<tr>
+<td>Frame all</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>Frame all</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Home</kbd></span></td>
+</tr>
+<tr>
+<td>Frame all</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Frame selected</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>F</kbd></span></td>
+</tr>
+<tr>
+<td>Frame selected</td>
+<td><code>F</code></td>
+</tr>
+<tr>
+<td>Local view</td>
+<td><code>Numpad /</code></td>
+</tr>
+<tr>
+<td>Navigate</td>
+<td>Shift + `</td>
+</tr>
+<tr>
+<td>Orientations pie menu</td>
+<td><code>,</code></td>
+</tr>
+<tr>
+<td>Pan view</td>
+<td>Shift + Middle mouse</td>
+</tr>
+<tr>
+<td>Pan view</td>
+<td>Shift + Trackpad pan</td>
+</tr>
+<tr>
+<td>Pan view</td>
+<td><code>Middle mouse</code></td>
+</tr>
+<tr>
+<td>Pastebuffer</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Pivot pie menu</td>
+<td><code>.</code></td>
+</tr>
+<tr>
+<td>Place the 3D cursor</td>
+<td>Alt + Right mouse</td>
+</tr>
+<tr>
+<td>Region toggle pie menu</td>
+<td><code>T</code></td>
+</tr>
+<tr>
+<td>Remove from local view</td>
+<td>Ctrl + Numpad /</td>
+</tr>
+<tr>
+<td>Reset the 3D view</td>
+<td><code>Numpad *</code></td>
+</tr>
+<tr>
+<td>Resize</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>R</kbd></span></td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>E</kbd></span></td>
+</tr>
+<tr>
+<td>Rotate view</td>
+<td><code>Right mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Rotate view</td>
+<td><code>Trackpad pan</code></td>
+</tr>
+<tr>
+<td>Rotate view</td>
+<td>Trackpad rotate</td>
+</tr>
+<tr>
+<td>Rotate view</td>
+<td>Alt + Middle mouse</td>
+</tr>
+<tr>
+<td>Select</td>
+<td><code>Left mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Q</kbd></span></td>
+</tr>
+<tr>
+<td>Select grouped: Collection</td>
+<td>Shift + Left mouse (double-click)</td>
+</tr>
+<tr>
+<td>Select grouped: Collection</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse (double-click)</td>
+</tr>
+<tr>
+<td>Select lasso: Add</td>
+<td>Ctrl + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select lasso: Sub</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select: center</td>
+<td>Ctrl + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select: center</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select: enumerate</td>
+<td>Alt + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select: toggle</td>
+<td>Shift + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select: toggle</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select: toggle</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Snap pie menu</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>E</kbd></span></td>
+</tr>
+<tr>
+<td>Toggle Show gizmo</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Tab</kbd></span></td>
+</tr>
+<tr>
+<td>Toggle Show overlays</td>
+<td><code>Tab</code></td>
+</tr>
+<tr>
+<td>Toggle xray</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>Z</kbd></span></td>
+</tr>
+<tr>
+<td>Toggle xray</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>Y</kbd></span></td>
+</tr>
+<tr>
+<td>Transform axis target</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>T</kbd></span></td>
+</tr>
+<tr>
+<td>Translate</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Translate</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>W</kbd></span></td>
+</tr>
+<tr>
+<td>Translate: cursor transform</td>
+<td>Alt + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>View axis: Back</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Numpad 1</kbd></span></td>
+</tr>
+<tr>
+<td>View axis: Back</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Numpad 1</kbd></span></td>
+</tr>
+<tr>
+<td>View axis: Bottom</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Numpad 7</kbd></span></td>
+</tr>
+<tr>
+<td>View axis: Bottom</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Numpad 7</kbd></span></td>
+</tr>
+<tr>
+<td>View axis: Bottom</td>
+<td>Alt + Middle mouse (drag)</td>
+</tr>
+<tr>
+<td>View axis: Front</td>
+<td><code>Numpad 1</code></td>
+</tr>
+<tr>
+<td>View axis: Front</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Numpad 1</kbd></span></td>
+</tr>
+<tr>
+<td>View axis: Left</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Numpad 3</kbd></span></td>
+</tr>
+<tr>
+<td>View axis: Left</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Numpad 3</kbd></span></td>
+</tr>
+<tr>
+<td>View axis: Left</td>
+<td>Alt + Middle mouse (drag)</td>
+</tr>
+<tr>
+<td>View axis: Right</td>
+<td><code>Numpad 3</code></td>
+</tr>
+<tr>
+<td>View axis: Right</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Numpad 3</kbd></span></td>
+</tr>
+<tr>
+<td>View axis: Right</td>
+<td>Alt + Middle mouse (drag)</td>
+</tr>
+<tr>
+<td>View axis: Top</td>
+<td><code>Numpad 7</code></td>
+</tr>
+<tr>
+<td>View axis: Top</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Numpad 7</kbd></span></td>
+</tr>
+<tr>
+<td>View axis: Top</td>
+<td>Alt + Middle mouse (drag)</td>
+</tr>
+<tr>
+<td>View camera</td>
+<td><code>Numpad .</code></td>
+</tr>
+<tr>
+<td>View center camera</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>View center lock</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>View center pick</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>F</kbd></span></td>
+</tr>
+<tr>
+<td>View orbit: Orbitdown</td>
+<td><code>Numpad 2</code></td>
+</tr>
+<tr>
+<td>View orbit: Orbitleft</td>
+<td><code>Numpad 4</code></td>
+</tr>
+<tr>
+<td>View orbit: Orbitright</td>
+<td><code>Numpad 6</code></td>
+</tr>
+<tr>
+<td>View orbit: Orbitright</td>
+<td><code>Numpad 9</code></td>
+</tr>
+<tr>
+<td>View orbit: Orbitup</td>
+<td><code>Numpad 8</code></td>
+</tr>
+<tr>
+<td>View pan: Pandown</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Numpad 2</kbd></span></td>
+</tr>
+<tr>
+<td>View pan: Panleft</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Numpad 4</kbd></span></td>
+</tr>
+<tr>
+<td>View pan: Panright</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Numpad 6</kbd></span></td>
+</tr>
+<tr>
+<td>View pan: Panup</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Numpad 8</kbd></span></td>
+</tr>
+<tr>
+<td>View persportho</td>
+<td><code>Numpad 5</code></td>
+</tr>
+<tr>
+<td>View pie menu</td>
+<td>`</td>
+</tr>
+<tr>
+<td>View roll: Angle</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Middle mouse</td>
+</tr>
+<tr>
+<td>View roll: Left</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Numpad 4</kbd></span></td>
+</tr>
+<tr>
+<td>View roll: Right</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Numpad 6</kbd></span></td>
+</tr>
+<tr>
+<td>Zoom border</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>B</kbd></span></td>
+</tr>
+<tr>
+<td>Zoom view</td>
+<td>Ctrl + Middle mouse</td>
+</tr>
+<tr>
+<td>Zoom view</td>
+<td><code>Trackpad zoom</code></td>
+</tr>
+<tr>
+<td>Zoom view</td>
+<td>Ctrl + Trackpad pan</td>
+</tr>
+<tr>
+<td>Zoom view</td>
+<td><code>Numpad +</code></td>
+</tr>
+<tr>
+<td>Zoom view</td>
+<td><code>Numpad -</code></td>
+</tr>
+<tr>
+<td>Zoom view</td>
+<td>Ctrl + =</td>
+</tr>
+<tr>
+<td>Zoom view</td>
+<td>Ctrl + -</td>
+</tr>
+<tr>
+<td>Zoom view</td>
+<td><code>Wheel in</code></td>
+</tr>
+<tr>
+<td>Zoom view</td>
+<td><code>Wheel out</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="edit-mode-armature">Edit Mode · Armature</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Armature context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Click extrude</td>
+<td>Ctrl + Right mouse (click)</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Dissolve</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Del</kbd></span></td>
+</tr>
+<tr>
+<td>Duplicate move</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Extrude forked</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>Extrude move</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>Hide</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Hide: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Move tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Parent clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Parent set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Reveal</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Rotate tool</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Scale tool</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Select linked</td>
+<td><code>L</code></td>
+</tr>
+<tr>
+<td>Select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code> (click)</td>
+</tr>
+<tr>
+<td>Separate</td>
+<td><code>P</code></td>
+</tr>
+<tr>
+<td>Shortest path pick</td>
+<td>Ctrl + Left mouse (click)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="edit-mode-curve">Edit Mode · Curve</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve add menu</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Curve shrinkfatten</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>Dissolve verts</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Del</kbd></span></td>
+</tr>
+<tr>
+<td>Duplicate move</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Edit curve context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Edit curve delete menu</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Extrude move</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>Hide</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Hide: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Make segment</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Move tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Reveal</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Rotate tool</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Scale tool</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Select linked pick</td>
+<td><code>L</code></td>
+</tr>
+<tr>
+<td>Select linked pick: deselect</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code> (click)</td>
+</tr>
+<tr>
+<td>Shortest path pick</td>
+<td>Ctrl + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Vertex add</td>
+<td>Ctrl + Right mouse (click)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="edit-mode-hair-curves">Edit Mode · Hair Curves</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit curves add menu</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Edit curves context menu</td>
+<td><code>Right mouse</code></td>
+</tr>
+<tr>
+<td>Move tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Rotate tool</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Scale tool</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code></td>
+</tr>
+<tr>
+<td>Set selection domain</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>1</kbd></span> (release)</td>
+</tr>
+<tr>
+<td>Set selection domain</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>2</kbd></span> (release)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="edit-mode-lattice">Edit Mode · Lattice</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit lattice context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Move tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Rotate tool</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Scale tool</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code> (click)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="edit-mode-mesh">Edit Mode · Mesh</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bevel tool</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>B</kbd></span></td>
+</tr>
+<tr>
+<td>Dissolve contextual bfa</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Dissolve mode</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Del</kbd></span></td>
+</tr>
+<tr>
+<td>Dupli extrude cursor</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right mouse (click)</td>
+</tr>
+<tr>
+<td>Dupli extrude cursor: rotate source</td>
+<td>Ctrl + Right mouse (click)</td>
+</tr>
+<tr>
+<td>Duplicate move</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Edgering select</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Edgering select: toggle</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Edit mesh context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Edit mesh delete menu</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Del</kbd></span></td>
+</tr>
+<tr>
+<td>Extrude region tool</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>Hide</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Hide: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Knife tool</td>
+<td><code>K</code></td>
+</tr>
+<tr>
+<td>Loop cut tool</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Loop select</td>
+<td>Alt + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Loop select: toggle</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Mark seam</td>
+<td><code>M</code></td>
+</tr>
+<tr>
+<td>Mark seam: clear</td>
+<td><code>N</code></td>
+</tr>
+<tr>
+<td>Mesh add menu</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Move tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Reveal</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Rotate tool</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Scale tool</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Select linked pick</td>
+<td><code>L</code></td>
+</tr>
+<tr>
+<td>Select linked pick: deselect</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Select mode: Edge</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Select mode: Face</td>
+<td><code>V</code></td>
+</tr>
+<tr>
+<td>Select mode: Vert</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code> (click)</td>
+</tr>
+<tr>
+<td>Separate</td>
+<td><code>P</code></td>
+</tr>
+<tr>
+<td>Shortest path pick</td>
+<td>Ctrl + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Shortest path pick: fill</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>0</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>1</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>2</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>3</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>4</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>5</kbd></span></td>
+</tr>
+<tr>
+<td>Uv map menu</td>
+<td><code>U</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="edit-mode-metaball">Edit Mode · Metaball</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete metaelems</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Duplicate move</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Edit metaball context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Hide metaelems</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Hide metaelems: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Metaball add menu</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Move tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Reveal metaelems</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Rotate tool</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Scale tool</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code> (click)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="edit-mode-point-cloud">Edit Mode · Point Cloud</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>W</kbd></span></td>
+</tr>
+<tr>
+<td>Curve shrinkfatten</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Duplicate move</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Mirror</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>M</kbd></span></td>
+</tr>
+<tr>
+<td>Move tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Rotate tool</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Scale tool</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code></td>
+</tr>
+<tr>
+<td>Separate</td>
+<td><code>P</code></td>
+</tr>
+<tr>
+<td>Translate</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="edit-mode-text">Edit Mode · Text</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change character</td>
+<td>Alt + Up</td>
+</tr>
+<tr>
+<td>Change character</td>
+<td>Alt + Down</td>
+</tr>
+<tr>
+<td>Change spacing</td>
+<td>Alt + Left</td>
+</tr>
+<tr>
+<td>Change spacing</td>
+<td>Alt + Right</td>
+</tr>
+<tr>
+<td>Delete: Next or selection</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Delete: Next word</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Del</kbd></span></td>
+</tr>
+<tr>
+<td>Delete: Previous or selection</td>
+<td><code>Backspace</code></td>
+</tr>
+<tr>
+<td>Delete: Previous or selection</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Backspace</kbd></span></td>
+</tr>
+<tr>
+<td>Delete: Previous word</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Backspace</kbd></span></td>
+</tr>
+<tr>
+<td>Edit font context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Line break</td>
+<td><code>Enter</code></td>
+</tr>
+<tr>
+<td>Move select: Line begin</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Home</kbd></span></td>
+</tr>
+<tr>
+<td>Move select: Line end</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>End</kbd></span></td>
+</tr>
+<tr>
+<td>Move select: Next character</td>
+<td>Shift + Right</td>
+</tr>
+<tr>
+<td>Move select: Next line</td>
+<td>Shift + Down</td>
+</tr>
+<tr>
+<td>Move select: Next page</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>PageDown</kbd></span></td>
+</tr>
+<tr>
+<td>Move select: Next word</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right</td>
+</tr>
+<tr>
+<td>Move select: Previous character</td>
+<td>Shift + Left</td>
+</tr>
+<tr>
+<td>Move select: Previous line</td>
+<td>Shift + Up</td>
+</tr>
+<tr>
+<td>Move select: Previous page</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>PageUp</kbd></span></td>
+</tr>
+<tr>
+<td>Move select: Previous word</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left</td>
+</tr>
+<tr>
+<td>Move select: Text begin</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Home</kbd></span></td>
+</tr>
+<tr>
+<td>Move select: Text end</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>End</kbd></span></td>
+</tr>
+<tr>
+<td>Move: Line begin</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>Move: Line end</td>
+<td><code>End</code></td>
+</tr>
+<tr>
+<td>Move: Next character</td>
+<td><code>Right</code></td>
+</tr>
+<tr>
+<td>Move: Next line</td>
+<td><code>Down</code></td>
+</tr>
+<tr>
+<td>Move: Next page</td>
+<td><code>PageDown</code></td>
+</tr>
+<tr>
+<td>Move: Next word</td>
+<td>Ctrl + Right</td>
+</tr>
+<tr>
+<td>Move: Previous character</td>
+<td><code>Left</code></td>
+</tr>
+<tr>
+<td>Move: Previous line</td>
+<td><code>Up</code></td>
+</tr>
+<tr>
+<td>Move: Previous page</td>
+<td><code>PageUp</code></td>
+</tr>
+<tr>
+<td>Move: Previous word</td>
+<td>Ctrl + Left</td>
+</tr>
+<tr>
+<td>Move: Text begin</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Home</kbd></span></td>
+</tr>
+<tr>
+<td>Move: Text end</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>End</kbd></span></td>
+</tr>
+<tr>
+<td>Select all</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Style toggle</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>B</kbd></span></td>
+</tr>
+<tr>
+<td>Style toggle</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Style toggle</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>U</kbd></span></td>
+</tr>
+<tr>
+<td>Style toggle</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Text copy</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Text cut</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>X</kbd></span></td>
+</tr>
+<tr>
+<td>Text insert: accent</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>Backspace</kbd></span></td>
+</tr>
+<tr>
+<td>Text paste</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="grease-pencil-all-modes">Grease Pencil · All modes</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annotate: Draw</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Annotate: Draw poly</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Annotate: Draw straight</td>
+<td>Alt + Left mouse</td>
+</tr>
+<tr>
+<td>Annotate: Eraser</td>
+<td><code>Right mouse</code></td>
+</tr>
+<tr>
+<td>Annotation active frame delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Annotation add</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select fill</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Select linked</td>
+<td><code>L</code></td>
+</tr>
+<tr>
+<td>Select linked: deselect</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Select similar</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>G</kbd></span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="grease-pencil-draw">Grease Pencil · Draw</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brush stroke</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Brush stroke</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Brush stroke</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Brush stroke</td>
+<td><code>Eraser</code></td>
+</tr>
+<tr>
+<td>Brush stroke</td>
+<td>Alt + Left mouse</td>
+</tr>
+<tr>
+<td>Call asset shelf popover</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Space</kbd></span></td>
+</tr>
+<tr>
+<td>Edit greasepencil animation menu</td>
+<td><code>I</code></td>
+</tr>
+<tr>
+<td>Fill</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Fill: invert</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>GREASE PENCIL MT layer active menu</td>
+<td><code>Y</code></td>
+</tr>
+<tr>
+<td>Greasepencil draw context panel</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Greasepencil material active menu</td>
+<td><code>U</code></td>
+</tr>
+<tr>
+<td>Interpolate</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>E</kbd></span></td>
+</tr>
+<tr>
+<td>Layer hide</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Layer hide: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Layer isolate</td>
+<td><code>Numpad *</code></td>
+</tr>
+<tr>
+<td>Layer reveal</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Sample color</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>X</kbd></span></td>
+</tr>
+<tr>
+<td>Scale size</td>
+<td><code>[</code></td>
+</tr>
+<tr>
+<td>Scale size</td>
+<td><code>]</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="grease-pencil-edit">Grease Pencil · Edit</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Delete frame: All frames</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Del</kbd></span></td>
+</tr>
+<tr>
+<td>Dissolve</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Duplicate move</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Edit greasepencil animation menu</td>
+<td><code>I</code></td>
+</tr>
+<tr>
+<td>Edit greasepencil delete menu</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Del</kbd></span></td>
+</tr>
+<tr>
+<td>Extrude move</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>Frame selected</td>
+<td><code>F</code></td>
+</tr>
+<tr>
+<td>Greasepencil edit context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Greasepencil edit context menu</td>
+<td><code>Menu key</code></td>
+</tr>
+<tr>
+<td>Layer hide</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Layer hide: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Layer isolate</td>
+<td><code>Numpad *</code></td>
+</tr>
+<tr>
+<td>Layer reveal</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Move tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Paste</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Paste: paste back</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Rotate tool</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Scale tool</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Select linked</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code></td>
+</tr>
+<tr>
+<td>Set selection mode: Point</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Set selection mode: Stroke</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Translate</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="grease-pencil-sculpt">Grease Pencil · Sculpt</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Call asset shelf popover</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Space</kbd></span></td>
+</tr>
+<tr>
+<td>Greasepencil sculpt context panel</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Scale size</td>
+<td><code>[</code></td>
+</tr>
+<tr>
+<td>Scale size</td>
+<td><code>]</code></td>
+</tr>
+<tr>
+<td>Sculpt paint</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Sculpt paint</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Sculpt paint</td>
+<td><code>Eraser</code></td>
+</tr>
+<tr>
+<td>Sculpt paint: Invert</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+</tbody>
+</table>
+<h2 id="grease-pencil-vertex-paint">Grease Pencil · Vertex Paint</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Greasepencil vertex paint context panel</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Greasepencil vertex paint context panel</td>
+<td><code>Menu key</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Scale size</td>
+<td><code>[</code></td>
+</tr>
+<tr>
+<td>Scale size</td>
+<td><code>]</code></td>
+</tr>
+<tr>
+<td>Vertex brush stroke</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Vertex brush stroke</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Vertex brush stroke: Invert</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+</tbody>
+</table>
+<h2 id="grease-pencil-weight-paint">Grease Pencil · Weight Paint</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Call asset shelf popover</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Space</kbd></span></td>
+</tr>
+<tr>
+<td>Greasepencil weight context panel</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Greasepencil weight context panel</td>
+<td><code>Menu key</code></td>
+</tr>
+<tr>
+<td>Layer hide</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Layer hide: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Layer reveal</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>V</code></td>
+</tr>
+<tr>
+<td>Scale size</td>
+<td><code>[</code></td>
+</tr>
+<tr>
+<td>Scale size</td>
+<td><code>]</code></td>
+</tr>
+<tr>
+<td>Select</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td>Alt + Left mouse</td>
+</tr>
+<tr>
+<td>Select: toggle</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Weight brush stroke</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Weight brush stroke: Invert</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Weight sample</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>X</kbd></span></td>
+</tr>
+<tr>
+<td>Weight toggle direction</td>
+<td><code>D</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="paint-modes">Paint modes</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add point slide</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td><code>Right mouse</code></td>
+</tr>
+<tr>
+<td>Delete point</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Draw</td>
+<td><code>Enter</code></td>
+</tr>
+<tr>
+<td>Draw</td>
+<td><code>Numpad Enter</code></td>
+</tr>
+<tr>
+<td>Face select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Face select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Face select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Face select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Face select hide</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Face select hide: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Face select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Face select linked</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Face select linked pick</td>
+<td><code>L</code></td>
+</tr>
+<tr>
+<td>Face select linked pick: deselect</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Face select loop</td>
+<td>Alt + Left mouse</td>
+</tr>
+<tr>
+<td>Face select loop: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Face select loop: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Face select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Face select reveal</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Resize</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Select</td>
+<td><code>Left mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td>Shift + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select: toggle</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Slide</td>
+<td><code>Right mouse</code></td>
+</tr>
+<tr>
+<td>Slide: align</td>
+<td>Shift + Right mouse</td>
+</tr>
+<tr>
+<td>Translate</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Translate</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="particle-edit">Particle Edit</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brush edit</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Brush edit</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Hide</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Hide: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Reveal</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Select linked</td>
+<td><code>L</code></td>
+</tr>
+<tr>
+<td>Select linked</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pose-mode">Pose Mode</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bone size</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>Copy</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Hide</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Hide: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Keyframe delete v3d</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Keyframe insert</td>
+<td><code>I</code></td>
+</tr>
+<tr>
+<td>Keyframe insert menu: always prompt</td>
+<td><code>K</code></td>
+</tr>
+<tr>
+<td>Loc clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>W</kbd></span></td>
+</tr>
+<tr>
+<td>Move tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Parent set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Paste</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Paste: flipped</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Pose context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Reveal</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Rot clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>E</kbd></span></td>
+</tr>
+<tr>
+<td>Rotate tool</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Scale clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>R</kbd></span></td>
+</tr>
+<tr>
+<td>Scale tool</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code> (click)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sculpt-mode">Sculpt Mode</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Box mask tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Brush stroke</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Brush stroke</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Brush stroke: Invert</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Dyntopo detail size edit</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>Face set change visibility: Hide active</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Face set change visibility: Toggle</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Hide show all: Show</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Mask flood fill: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Mask lasso gesture</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Move tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>V</code></td>
+</tr>
+<tr>
+<td>Rotate tool</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Scale tool</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Sculpt context panel</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Sculpt face sets edit pie menu</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>W</kbd></span></td>
+</tr>
+<tr>
+<td>Stencil control: Rotation</td>
+<td>Ctrl + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Rotation</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Scale</td>
+<td>Shift + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Scale</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Translation</td>
+<td><code>Right mouse</code></td>
+</tr>
+<tr>
+<td>Stencil control: Translation</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Right mouse</td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>0</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>1</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>2</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>3</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>4</kbd></span></td>
+</tr>
+<tr>
+<td>Subdivision set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>5</kbd></span></td>
+</tr>
+<tr>
+<td>Transfer mode</td>
+<td><code>D</code> (release)</td>
+</tr>
+<tr>
+<td>Voxel size edit</td>
+<td><code>S</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sculpt-mode-hair-curves">Sculpt Mode · Hair Curves</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brush stroke</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Brush stroke</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Brush stroke: Invert</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Min distance edit</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>R</kbd></span></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select grow</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Set selection domain</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>1</kbd></span> (release)</td>
+</tr>
+<tr>
+<td>Set selection domain</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>2</kbd></span> (release)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="texture-paint">Texture Paint</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brush colors flip</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>X</kbd></span></td>
+</tr>
+<tr>
+<td>Grab clone</td>
+<td><code>Right mouse</code></td>
+</tr>
+<tr>
+<td>Image paint</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Image paint</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Image paint: Invert</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Paint texture context panel</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>V</code></td>
+</tr>
+<tr>
+<td>Radial control: secondary tex</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Radial control: secondary tex</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Radial control: secondary tex</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Sample color</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code> (click)</td>
+</tr>
+<tr>
+<td>Stencil control: Rotation</td>
+<td>Ctrl + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Rotation</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Scale</td>
+<td>Shift + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Scale</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Translation</td>
+<td>Alt + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Translation</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Right mouse</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vertex-paint">Vertex Paint</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paint vertex context panel</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>V</code></td>
+</tr>
+<tr>
+<td>Sample color</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>Select</td>
+<td>Ctrl + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code> (click)</td>
+</tr>
+<tr>
+<td>Stencil control: Rotation</td>
+<td>Ctrl + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Rotation</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Scale</td>
+<td>Shift + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Scale</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Translation</td>
+<td>Alt + Right mouse</td>
+</tr>
+<tr>
+<td>Stencil control: Translation</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Right mouse</td>
+</tr>
+<tr>
+<td>Vert select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Vert select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Vertex paint</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vertex-and-weight-paint">Vertex and Weight Paint</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select box</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select lasso: Add</td>
+<td>Ctrl + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select lasso: Sub</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Vert select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Vert select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Vert select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Vert select all: Select</td>
+<td><code>A</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="weight-paint">Weight Paint</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paint weight context panel</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>V</code></td>
+</tr>
+<tr>
+<td>Select</td>
+<td>Ctrl + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select lasso: Add</td>
+<td>Ctrl + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select lasso: Sub</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Vert select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Vert select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Vert select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Vert select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Weight gradient: Linear</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Weight gradient: Radial</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Weight paint</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Weight paint</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Weight paint: Invert</td>
+<td>Ctrl + Left mouse (drag)</td>
+</tr>
+<tr>
+<td>Weight sample</td>
+<td>Ctrl + Right mouse</td>
+</tr>
+<tr>
+<td>Weight sample group</td>
+<td>Shift + Right mouse</td>
+</tr>
+</tbody>
+</table>
+<h1 id="animation" data-icon="action">Animation</h1>
+<h2 id="animation-editors">Animation editors</h2>
+<h3 id="general">General</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change frame</td>
+<td><code>Right mouse</code> (drag)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="channels">Channels</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Channel context menu</td>
+<td><code>Right mouse</code></td>
+</tr>
+<tr>
+<td>Channel context menu</td>
+<td><code>Menu key</code></td>
+</tr>
+<tr>
+<td>Channel select keys</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Channel select keys: extend</td>
+<td>Shift + Left mouse (double-click)</td>
+</tr>
+<tr>
+<td>Channels click</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Channels click: children only</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Channels click: extend</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Channels click: extend range</td>
+<td>Ctrl + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Channels collapse</td>
+<td><code>Numpad -</code></td>
+</tr>
+<tr>
+<td>Channels collapse</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Channels delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Channels expand</td>
+<td><code>Numpad +</code></td>
+</tr>
+<tr>
+<td>Channels expand</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Channels move: Bottom</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>PageDown</kbd></span></td>
+</tr>
+<tr>
+<td>Channels move: Down</td>
+<td><code>PageDown</code></td>
+</tr>
+<tr>
+<td>Channels move: Top</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>PageUp</kbd></span></td>
+</tr>
+<tr>
+<td>Channels move: Up</td>
+<td><code>PageUp</code></td>
+</tr>
+<tr>
+<td>Channels rename</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Channels select all</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Channels select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Channels select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Channels select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Channels select box</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Channels select box</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Channels view selected</td>
+<td><code>F</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="frames">Frames</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Animation cancel</td>
+<td><code>Esc</code></td>
+</tr>
+<tr>
+<td>Animation play</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Space</kbd></span></td>
+</tr>
+<tr>
+<td>Animation play: reverse</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Space</kbd></span></td>
+</tr>
+<tr>
+<td>Frame jump</td>
+<td>Shift + Left</td>
+</tr>
+<tr>
+<td>Frame jump: end</td>
+<td>Shift + Right</td>
+</tr>
+<tr>
+<td>Frame offset</td>
+<td><code>Left</code></td>
+</tr>
+<tr>
+<td>Frame offset</td>
+<td><code>Right</code></td>
+</tr>
+<tr>
+<td>Frame offset</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>Wheel</kbd></span> down</td>
+</tr>
+<tr>
+<td>Frame offset</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>Wheel</kbd></span> up</td>
+</tr>
+<tr>
+<td>Keyframe jump</td>
+<td><code>Down</code></td>
+</tr>
+<tr>
+<td>Keyframe jump: next</td>
+<td><code>Up</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="markers">Markers</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Camera bind</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>B</kbd></span></td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Duplicate</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Move</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Move</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Name marker panel</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Name marker panel</td>
+<td><code>F2</code></td>
+</tr>
+<tr>
+<td>Select</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select: camera</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse</td>
+</tr>
+</tbody>
+</table>
+<h3 id="time-scrubbing">Time scrubbing</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change frame</td>
+<td><code>Left mouse</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="dope-sheet">Dope Sheet</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add</td>
+<td><code>M</code></td>
+</tr>
+<tr>
+<td>Clickselect</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Clickselect: channel</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Clickselect: column</td>
+<td>Alt + Left mouse</td>
+</tr>
+<tr>
+<td>Clickselect: extend</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Clickselect: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Clickselect: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Duplicate move</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Keyframe insert</td>
+<td><code>I</code></td>
+</tr>
+<tr>
+<td>Paste</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Paste: flipped</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Previewrange set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Region toggle pie menu</td>
+<td><code>T</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select lasso</td>
+<td>Ctrl + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select lasso</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select leftright: Check</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Select leftright: Check</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Time extend</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Time scale</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Time slide</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>T</kbd></span></td>
+</tr>
+<tr>
+<td>Time translate</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Time translate</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>View all</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>View frame</td>
+<td><code>Numpad .</code></td>
+</tr>
+<tr>
+<td>View selected</td>
+<td><code>F</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="graph-editor">Graph Editor</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add</td>
+<td><code>M</code></td>
+</tr>
+<tr>
+<td>Click insert</td>
+<td>Ctrl + Right mouse (click)</td>
+</tr>
+<tr>
+<td>Click insert: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right mouse (click)</td>
+</tr>
+<tr>
+<td>Clickselect</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Clickselect: column</td>
+<td>Alt + Left mouse</td>
+</tr>
+<tr>
+<td>Clickselect: curves</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Clickselect: extend</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Clickselect: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Clickselect: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Cursor set</td>
+<td><code>Right mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Duplicate move</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Hide</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Hide: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Keyframe insert</td>
+<td><code>I</code></td>
+</tr>
+<tr>
+<td>Paste</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Paste: flipped</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Previewrange set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Region toggle pie menu</td>
+<td><code>T</code></td>
+</tr>
+<tr>
+<td>Resize</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Reveal</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select lasso</td>
+<td>Ctrl + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select lasso</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select leftright: Check</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Select leftright: Check</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Time extend</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>Translate</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Translate</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>View all</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>View frame</td>
+<td><code>Numpad .</code></td>
+</tr>
+<tr>
+<td>View selected</td>
+<td><code>F</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="nonlinear-animation">Nonlinear Animation</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actionclip add</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Add</td>
+<td><code>M</code></td>
+</tr>
+<tr>
+<td>Channel context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Channels click</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Channels click: extend</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Click select</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Click select: extend</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Duplicate</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Duplicate: linked</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Fmodifier add</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>M</kbd></span></td>
+</tr>
+<tr>
+<td>Move down</td>
+<td><code>PageDown</code></td>
+</tr>
+<tr>
+<td>Move up</td>
+<td><code>PageUp</code></td>
+</tr>
+<tr>
+<td>Previewrange set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Region toggle pie menu</td>
+<td><code>T</code></td>
+</tr>
+<tr>
+<td>Rename</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>M</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select leftright: Check</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Select leftright: Check</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Time extend</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Time scale</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Tracks add</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Tracks add: above selected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Tracks delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Translation</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Translation</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Tweakmode enter: isolate action</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Tab</kbd></span></td>
+</tr>
+<tr>
+<td>Tweakmode enter: upper stack evaluation</td>
+<td><code>Tab</code></td>
+</tr>
+<tr>
+<td>Tweakmode exit</td>
+<td><code>Tab</code></td>
+</tr>
+<tr>
+<td>Tweakmode exit: isolate action</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Tab</kbd></span></td>
+</tr>
+<tr>
+<td>View all</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>View frame</td>
+<td><code>Numpad .</code></td>
+</tr>
+<tr>
+<td>View selected</td>
+<td><code>F</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="images-and-video" data-icon="image">Images and video</h1>
+<h2 id="image-editor">Image Editor</h2>
+<h3 id="general-2">General</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change frame</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Clear render border</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>B</kbd></span></td>
+</tr>
+<tr>
+<td>Curves point set</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Curves point set</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Mask context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>New</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>N</kbd></span></td>
+</tr>
+<tr>
+<td>Open</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>O</kbd></span></td>
+</tr>
+<tr>
+<td>Region toggle pie menu</td>
+<td><code>T</code></td>
+</tr>
+<tr>
+<td>Reload</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>R</kbd></span></td>
+</tr>
+<tr>
+<td>Render border</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>B</kbd></span></td>
+</tr>
+<tr>
+<td>Sample</td>
+<td><code>Right mouse</code></td>
+</tr>
+<tr>
+<td>Save</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>Save as</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>Toggle Show gizmo</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Tab</kbd></span></td>
+</tr>
+<tr>
+<td>Toggle Show overlays</td>
+<td><code>Tab</code></td>
+</tr>
+<tr>
+<td>View all</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>View all: fit view</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Home</kbd></span></td>
+</tr>
+<tr>
+<td>View pan</td>
+<td><code>Middle mouse</code></td>
+</tr>
+<tr>
+<td>View pan</td>
+<td>Shift + Middle mouse</td>
+</tr>
+<tr>
+<td>View pan</td>
+<td><code>Trackpad pan</code></td>
+</tr>
+<tr>
+<td>View selected</td>
+<td><code>F</code></td>
+</tr>
+<tr>
+<td>View zoom</td>
+<td>Ctrl + Middle mouse</td>
+</tr>
+<tr>
+<td>View zoom</td>
+<td><code>Trackpad zoom</code></td>
+</tr>
+<tr>
+<td>View zoom</td>
+<td>Ctrl + Trackpad pan</td>
+</tr>
+<tr>
+<td>View zoom border</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>B</kbd></span></td>
+</tr>
+<tr>
+<td>View zoom in</td>
+<td><code>Wheel in</code></td>
+</tr>
+<tr>
+<td>View zoom in</td>
+<td><code>Numpad +</code></td>
+</tr>
+<tr>
+<td>View zoom out</td>
+<td><code>Wheel out</code></td>
+</tr>
+<tr>
+<td>View zoom out</td>
+<td><code>Numpad -</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="uv-editing">UV Editing</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear seam</td>
+<td><code>N</code></td>
+</tr>
+<tr>
+<td>Context set enum: Edge</td>
+<td><code>2</code></td>
+</tr>
+<tr>
+<td>Context set enum: Face</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td>Context set enum: Vertex</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>Cursor set</td>
+<td>Alt + Right mouse</td>
+</tr>
+<tr>
+<td>Hide</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Hide: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Mark seam</td>
+<td><code>M</code></td>
+</tr>
+<tr>
+<td>Move tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><code>F</code></td>
+</tr>
+<tr>
+<td>Radial control</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>F</kbd></span></td>
+</tr>
+<tr>
+<td>Reveal</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Rotate tool</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Scale tool</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Select</td>
+<td><code>Left mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select edge ring</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Select edge ring: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Select lasso: Add</td>
+<td>Ctrl + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select lasso: Sub</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Select linked pick: extend</td>
+<td><code>L</code></td>
+</tr>
+<tr>
+<td>Select loop</td>
+<td>Alt + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select loop: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select mode</td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td>Select mode: Edge</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Select mode: Face</td>
+<td><code>V</code></td>
+</tr>
+<tr>
+<td>Select mode: Vert</td>
+<td><code>X</code></td>
+</tr>
+<tr>
+<td>Select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code> (click)</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td>Shift + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Shortest path pick</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Shortest path pick: fill</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Toggle Use uv select island</td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td>Translate</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Translate: cursor transform</td>
+<td>Shift + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Unwrap</td>
+<td><code>U</code></td>
+</tr>
+<tr>
+<td>Uvs context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="movie-clip-editor">Movie Clip Editor</h2>
+<h3 id="general-3">General</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add marker slide</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Change frame</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Change frame</td>
+<td><code>Right mouse</code></td>
+</tr>
+<tr>
+<td>Clear track path: All</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd></span></td>
+</tr>
+<tr>
+<td>Clear track path: Remained</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>T</kbd></span></td>
+</tr>
+<tr>
+<td>Clear track path: Upto</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>T</kbd></span></td>
+</tr>
+<tr>
+<td>Copy tracks</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Cursor set</td>
+<td>Alt + Right mouse</td>
+</tr>
+<tr>
+<td>Delete marker</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Del</kbd></span></td>
+</tr>
+<tr>
+<td>Delete track</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Disable markers: Toggle</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Dopesheet select channel: extend</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Dopesheet view all</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>Frame jump</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left</td>
+</tr>
+<tr>
+<td>Frame jump</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right</td>
+</tr>
+<tr>
+<td>Frame jump</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Left</td>
+</tr>
+<tr>
+<td>Frame jump</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Right</td>
+</tr>
+<tr>
+<td>Graph center current frame</td>
+<td><code>F</code></td>
+</tr>
+<tr>
+<td>Graph delete curve</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Graph delete knot</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Del</kbd></span></td>
+</tr>
+<tr>
+<td>Graph disable markers: Toggle</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Graph select</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Graph select all markers: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Graph select all markers: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Graph select all markers: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Graph select all markers: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Graph select box</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Graph select: extend</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Graph view all</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>Hide tracks</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Hide tracks clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Hide tracks: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Keyframe delete</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Keyframe insert</td>
+<td><code>I</code></td>
+</tr>
+<tr>
+<td>Marker pie menu</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>E</kbd></span></td>
+</tr>
+<tr>
+<td>Open</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>O</kbd></span></td>
+</tr>
+<tr>
+<td>Paste tracks</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Reconstruction pie menu</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>W</kbd></span></td>
+</tr>
+<tr>
+<td>Region toggle pie menu</td>
+<td><code>T</code></td>
+</tr>
+<tr>
+<td>Resize</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Select</td>
+<td><code>Left mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select lasso</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select lasso</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Slide marker</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Slide plane marker</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Solving pie menu</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>Toggle Lock time cursor</td>
+<td><code>L</code></td>
+</tr>
+<tr>
+<td>Tracking context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Tracking pie menu</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>Translate</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Translate</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>View all</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>View all: fit view</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>View pan</td>
+<td><code>Middle mouse</code></td>
+</tr>
+<tr>
+<td>View pan</td>
+<td>Shift + Middle mouse</td>
+</tr>
+<tr>
+<td>View pan</td>
+<td><code>Trackpad pan</code></td>
+</tr>
+<tr>
+<td>View selected</td>
+<td><code>F</code></td>
+</tr>
+<tr>
+<td>View zoom</td>
+<td>Ctrl + Middle mouse</td>
+</tr>
+<tr>
+<td>View zoom</td>
+<td><code>Trackpad zoom</code></td>
+</tr>
+<tr>
+<td>View zoom</td>
+<td>Ctrl + Trackpad pan</td>
+</tr>
+<tr>
+<td>View zoom in</td>
+<td><code>Wheel in</code></td>
+</tr>
+<tr>
+<td>View zoom in</td>
+<td><code>Numpad +</code></td>
+</tr>
+<tr>
+<td>View zoom out</td>
+<td><code>Wheel out</code></td>
+</tr>
+<tr>
+<td>View zoom out</td>
+<td><code>Numpad -</code></td>
+</tr>
+<tr>
+<td>View zoom ratio</td>
+<td><code>Numpad 1</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="masks">Masks</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add feather vertex slide</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Add vertex slide</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Copy splines</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Cursor set</td>
+<td>Alt + Right mouse</td>
+</tr>
+<tr>
+<td>Cyclic toggle</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Duplicate move</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Handle type set</td>
+<td><code>V</code></td>
+</tr>
+<tr>
+<td>Hide view clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Hide view set</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Hide view set: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Mask shrinkfatten</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>New</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>N</kbd></span></td>
+</tr>
+<tr>
+<td>Normals make consistent</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>N</kbd></span></td>
+</tr>
+<tr>
+<td>Parent clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Parent set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Paste splines</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Resize</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Select</td>
+<td><code>Left mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Select</td>
+<td>Ctrl + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select circle</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select lasso</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select lasso</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Select linked</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Select linked pick</td>
+<td><code>L</code></td>
+</tr>
+<tr>
+<td>Select linked pick: deselect</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Select: toggle</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Shape key clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Shape key insert</td>
+<td><code>I</code></td>
+</tr>
+<tr>
+<td>Slide point</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Slide spline curvature</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Translate</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Translate</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Translate: cursor transform</td>
+<td>Shift + Right mouse (drag)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="video-sequencer">Video Sequencer</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add</td>
+<td><code>M</code></td>
+</tr>
+<tr>
+<td>Add menu</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Context set int</td>
+<td><code>O</code></td>
+</tr>
+<tr>
+<td>Context toggle enum</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Tab</kbd></span></td>
+</tr>
+<tr>
+<td>Copy</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Cursor set</td>
+<td>Alt + Right mouse</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Duplicate move</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Duplicate move linked</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Gap insert</td>
+<td>Shift + =</td>
+</tr>
+<tr>
+<td>Gap remove</td>
+<td><code>Backspace</code></td>
+</tr>
+<tr>
+<td>Gap remove: all</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Backspace</kbd></span></td>
+</tr>
+<tr>
+<td>Images separate</td>
+<td><code>Y</code></td>
+</tr>
+<tr>
+<td>Lock</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Meta make</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>G</kbd></span></td>
+</tr>
+<tr>
+<td>Meta separate</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd></span></td>
+</tr>
+<tr>
+<td>Meta toggle</td>
+<td><code>Tab</code></td>
+</tr>
+<tr>
+<td>Move tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Mute</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Mute: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Offset clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>O</kbd></span></td>
+</tr>
+<tr>
+<td>Paste</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Pivot pie menu</td>
+<td><code>.</code></td>
+</tr>
+<tr>
+<td>Preview context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Preview context menu</td>
+<td><code>Menu key</code> (click)</td>
+</tr>
+<tr>
+<td>Preview duplicate move</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Preview duplicate move linked</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Reassign inputs</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Region toggle pie menu</td>
+<td><code>T</code></td>
+</tr>
+<tr>
+<td>Reload</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>R</kbd></span></td>
+</tr>
+<tr>
+<td>Reload: adjust length</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd></span></td>
+</tr>
+<tr>
+<td>Rename</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>M</kbd></span></td>
+</tr>
+<tr>
+<td>Rename channel</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Rename channel</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Retiming key delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Rotate tool</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Scale tool</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Select</td>
+<td><code>Left mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>B</kbd></span></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select box: Add</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Select box: Set</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Select box: Sub</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select grouped</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>G</kbd></span></td>
+</tr>
+<tr>
+<td>Select lasso: Add</td>
+<td>Ctrl + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select lasso: Sub</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Select less</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Select linked</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Select linked pick</td>
+<td><code>L</code></td>
+</tr>
+<tr>
+<td>Select linked pick: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Select more</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code> (click)</td>
+</tr>
+<tr>
+<td>Select: center</td>
+<td>Ctrl + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Select: linked handle</td>
+<td>Alt + Left mouse</td>
+</tr>
+<tr>
+<td>Select: linked time</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Select: side of frame</td>
+<td>Ctrl + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select: toggle</td>
+<td>Shift + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select: toggle</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Seq slide</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Seq slide</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Slip</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>Snap</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>Split multicam</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>Split multicam</td>
+<td><code>2</code></td>
+</tr>
+<tr>
+<td>Split multicam</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td>Split multicam</td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td>Split multicam</td>
+<td><code>5</code></td>
+</tr>
+<tr>
+<td>Split multicam</td>
+<td><code>6</code></td>
+</tr>
+<tr>
+<td>Split multicam</td>
+<td><code>7</code></td>
+</tr>
+<tr>
+<td>Split multicam</td>
+<td><code>8</code></td>
+</tr>
+<tr>
+<td>Split multicam</td>
+<td><code>9</code></td>
+</tr>
+<tr>
+<td>Split multicam</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>Split: Hard</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>K</kbd></span></td>
+</tr>
+<tr>
+<td>Split: Soft</td>
+<td><code>K</code></td>
+</tr>
+<tr>
+<td>Strip jump</td>
+<td><code>PageDown</code></td>
+</tr>
+<tr>
+<td>Strip jump: center</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>PageDown</kbd></span></td>
+</tr>
+<tr>
+<td>Strip jump: next</td>
+<td><code>PageUp</code></td>
+</tr>
+<tr>
+<td>Strip jump: next</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>PageUp</kbd></span></td>
+</tr>
+<tr>
+<td>Strip transform clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>W</kbd></span></td>
+</tr>
+<tr>
+<td>Strip transform clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>R</kbd></span></td>
+</tr>
+<tr>
+<td>Strip transform clear</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>E</kbd></span></td>
+</tr>
+<tr>
+<td>Swap inputs</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>Swap: Left</td>
+<td>Alt + Left</td>
+</tr>
+<tr>
+<td>Swap: Right</td>
+<td>Alt + Right</td>
+</tr>
+<tr>
+<td>Text cursor move: Line begin</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>Text cursor move: Line begin</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Home</kbd></span></td>
+</tr>
+<tr>
+<td>Text cursor move: Line end</td>
+<td><code>End</code></td>
+</tr>
+<tr>
+<td>Text cursor move: Line end</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>End</kbd></span></td>
+</tr>
+<tr>
+<td>Text cursor move: Next character</td>
+<td><code>Right</code></td>
+</tr>
+<tr>
+<td>Text cursor move: Next character</td>
+<td>Shift + Right</td>
+</tr>
+<tr>
+<td>Text cursor move: Next line</td>
+<td><code>Down</code></td>
+</tr>
+<tr>
+<td>Text cursor move: Next line</td>
+<td>Shift + Down</td>
+</tr>
+<tr>
+<td>Text cursor move: Next word</td>
+<td>Ctrl + Right</td>
+</tr>
+<tr>
+<td>Text cursor move: Next word</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right</td>
+</tr>
+<tr>
+<td>Text cursor move: Previous character</td>
+<td><code>Left</code></td>
+</tr>
+<tr>
+<td>Text cursor move: Previous character</td>
+<td>Shift + Left</td>
+</tr>
+<tr>
+<td>Text cursor move: Previous line</td>
+<td><code>Up</code></td>
+</tr>
+<tr>
+<td>Text cursor move: Previous line</td>
+<td>Shift + Up</td>
+</tr>
+<tr>
+<td>Text cursor move: Previous word</td>
+<td>Ctrl + Left</td>
+</tr>
+<tr>
+<td>Text cursor move: Previous word</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left</td>
+</tr>
+<tr>
+<td>Text cursor move: Text begin</td>
+<td><code>PageUp</code></td>
+</tr>
+<tr>
+<td>Text cursor move: Text begin</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>PageUp</kbd></span></td>
+</tr>
+<tr>
+<td>Text cursor move: Text end</td>
+<td><code>PageDown</code></td>
+</tr>
+<tr>
+<td>Text cursor move: Text end</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>PageDown</kbd></span></td>
+</tr>
+<tr>
+<td>Text delete: Previous or selection</td>
+<td><code>Backspace</code></td>
+</tr>
+<tr>
+<td>Text deselect all</td>
+<td><code>Esc</code></td>
+</tr>
+<tr>
+<td>Text edit copy</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Text edit cut</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>X</kbd></span></td>
+</tr>
+<tr>
+<td>Text edit mode toggle</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Text edit paste</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Text line break</td>
+<td><code>Enter</code></td>
+</tr>
+<tr>
+<td>Text select all</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Time extend</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Toggle Show gizmo</td>
+<td>Ctrl + `</td>
+</tr>
+<tr>
+<td>Toggle Show gizmo</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Tab</kbd></span></td>
+</tr>
+<tr>
+<td>Toggle Show overlay</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>O</kbd></span></td>
+</tr>
+<tr>
+<td>Toggle Show overlays</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>Z</kbd></span></td>
+</tr>
+<tr>
+<td>Toggle Show overlays</td>
+<td><code>Tab</code></td>
+</tr>
+<tr>
+<td>Toggle Show region ui</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>T</kbd></span></td>
+</tr>
+<tr>
+<td>Translate: cursor transform</td>
+<td>Shift + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Unlock</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd></span></td>
+</tr>
+<tr>
+<td>Unmute</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Unmute: unselected</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>View all</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>View all preview</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>View frame</td>
+<td><code>Numpad .</code></td>
+</tr>
+<tr>
+<td>View ghost border</td>
+<td><code>O</code></td>
+</tr>
+<tr>
+<td>View selected</td>
+<td><code>F</code></td>
+</tr>
+<tr>
+<td>View zoom ratio</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Numpad 8</kbd></span></td>
+</tr>
+<tr>
+<td>View zoom ratio</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Numpad 4</kbd></span></td>
+</tr>
+<tr>
+<td>View zoom ratio</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Numpad 2</kbd></span></td>
+</tr>
+<tr>
+<td>View zoom ratio</td>
+<td><code>Numpad 1</code></td>
+</tr>
+<tr>
+<td>View zoom ratio</td>
+<td><code>Numpad 2</code></td>
+</tr>
+<tr>
+<td>View zoom ratio</td>
+<td><code>Numpad 4</code></td>
+</tr>
+<tr>
+<td>View zoom ratio</td>
+<td><code>Numpad 8</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="nodes" data-icon="nodetree">Nodes</h1>
+<h2 id="general-4">General</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add menu</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Add reroute</td>
+<td>Shift + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Backimage fit</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>Home</kbd></span></td>
+</tr>
+<tr>
+<td>Backimage move</td>
+<td>Alt + Middle mouse</td>
+</tr>
+<tr>
+<td>Backimage sample</td>
+<td>Alt + Right mouse</td>
+</tr>
+<tr>
+<td>Backimage zoom</td>
+<td><code>V</code></td>
+</tr>
+<tr>
+<td>Backimage zoom</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Clear viewer border</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>B</kbd></span></td>
+</tr>
+<tr>
+<td>Clipboard copy</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Clipboard paste</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Connect to output</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Connect to output</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Connect to output: run in geometry nodes</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Delete copy reconnect</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>X</kbd></span></td>
+</tr>
+<tr>
+<td>Delete reconnect</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Del</kbd></span></td>
+</tr>
+<tr>
+<td>Detach</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Duplicate move</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Duplicate move keep inputs</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Duplicate move linked</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Group edit</td>
+<td><code>Tab</code></td>
+</tr>
+<tr>
+<td>Group enter exit</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Group make</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>G</kbd></span></td>
+</tr>
+<tr>
+<td>Hide socket toggle</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Hide toggle</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Join</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>J</kbd></span></td>
+</tr>
+<tr>
+<td>Link</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Link make</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>F</kbd></span></td>
+</tr>
+<tr>
+<td>Link make: replace</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>F</kbd></span></td>
+</tr>
+<tr>
+<td>Link: detach</td>
+<td>Ctrl + Left mouse (drag)</td>
+</tr>
+<tr>
+<td>Links cut</td>
+<td>Ctrl + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Links cut tool</td>
+<td><code>K</code></td>
+</tr>
+<tr>
+<td>Links mute</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Right mouse</td>
+</tr>
+<tr>
+<td>Move detach links</td>
+<td>Alt + Left mouse (drag)</td>
+</tr>
+<tr>
+<td>Move detach links release</td>
+<td>Alt + Right mouse (drag)</td>
+</tr>
+<tr>
+<td>Parent set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Preview toggle</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Region toggle pie menu</td>
+<td><code>T</code></td>
+</tr>
+<tr>
+<td>Render changed</td>
+<td><code>Z</code></td>
+</tr>
+<tr>
+<td>Resize</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Resize</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Select</td>
+<td><code>Left mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Select</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Select</td>
+<td>Alt + Left mouse</td>
+</tr>
+<tr>
+<td>Select</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box tool</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select box: tweak</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Select circle tool</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>Select lasso</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse (drag)</td>
+</tr>
+<tr>
+<td>Select lasso</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse (drag)</td>
+</tr>
+<tr>
+<td>Select link viewer</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>D</code> (click)</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse</td>
+</tr>
+<tr>
+<td>Translate attach</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Translate attach</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Translate: view2d edge pan</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Translate: view2d edge pan</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>View all</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>View selected</td>
+<td><code>F</code></td>
+</tr>
+<tr>
+<td>Viewer border</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>B</kbd></span></td>
+</tr>
+<tr>
+<td>Viewer shortcut get</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>Viewer shortcut get</td>
+<td><code>2</code></td>
+</tr>
+<tr>
+<td>Viewer shortcut get</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td>Viewer shortcut get</td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td>Viewer shortcut get</td>
+<td><code>5</code></td>
+</tr>
+<tr>
+<td>Viewer shortcut get</td>
+<td><code>6</code></td>
+</tr>
+<tr>
+<td>Viewer shortcut set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>0</kbd></span></td>
+</tr>
+<tr>
+<td>Viewer shortcut set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>1</kbd></span></td>
+</tr>
+<tr>
+<td>Viewer shortcut set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>2</kbd></span></td>
+</tr>
+<tr>
+<td>Viewer shortcut set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>3</kbd></span></td>
+</tr>
+<tr>
+<td>Viewer shortcut set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>4</kbd></span></td>
+</tr>
+<tr>
+<td>Viewer shortcut set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>5</kbd></span></td>
+</tr>
+<tr>
+<td>Viewer shortcut set</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>6</kbd></span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="data-and-files" data-icon="outliner">Data and files</h1>
+<h2 id="outliner">Outliner</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear filter</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>F</kbd></span></td>
+</tr>
+<tr>
+<td>Collection new</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>Collection objects select</td>
+<td>Shift + Left mouse (double-click)</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Drivers add selected</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Drivers delete selected</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Duplicate</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Duplicate: linked</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Expanded toggle</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Hide</td>
+<td><code>H</code></td>
+</tr>
+<tr>
+<td>Id copy</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Id operation: Rename</td>
+<td><code>F2</code></td>
+</tr>
+<tr>
+<td>Id paste</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Item activate</td>
+<td><code>Left mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Item activate: extend</td>
+<td>Ctrl + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Item activate: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Item activate: extend</td>
+<td>Ctrl + Left mouse (double-click)</td>
+</tr>
+<tr>
+<td>Item activate: extend</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left mouse (double-click)</td>
+</tr>
+<tr>
+<td>Item activate: extend range</td>
+<td>Shift + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Item activate: extend range</td>
+<td>Shift + Left mouse (double-click)</td>
+</tr>
+<tr>
+<td>Item activate: recurse</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Item drag drop</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Item drag drop</td>
+<td>Shift + Left mouse (drag)</td>
+</tr>
+<tr>
+<td>Item openclose</td>
+<td><code>Left mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Item openclose</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Item openclose: all</td>
+<td>Shift + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Item rename</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Keyframe delete</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Keyframe insert</td>
+<td><code>I</code></td>
+</tr>
+<tr>
+<td>Keyingset add selected</td>
+<td><code>K</code></td>
+</tr>
+<tr>
+<td>Keyingset remove selected</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>K</kbd></span></td>
+</tr>
+<tr>
+<td>Link to collection</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>M</kbd></span></td>
+</tr>
+<tr>
+<td>Move to collection</td>
+<td><code>M</code></td>
+</tr>
+<tr>
+<td>Operation</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Scroll page</td>
+<td><code>PageDown</code></td>
+</tr>
+<tr>
+<td>Scroll page: up</td>
+<td><code>PageUp</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select box: Add</td>
+<td>Shift + Left mouse (drag)</td>
+</tr>
+<tr>
+<td>Select box: Sub</td>
+<td>Ctrl + Left mouse (drag)</td>
+</tr>
+<tr>
+<td>Select box: tweak</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Select walk: Down</td>
+<td><code>Down</code></td>
+</tr>
+<tr>
+<td>Select walk: Down</td>
+<td>Shift + Down</td>
+</tr>
+<tr>
+<td>Select walk: Left</td>
+<td><code>Left</code></td>
+</tr>
+<tr>
+<td>Select walk: Left</td>
+<td>Shift + Left</td>
+</tr>
+<tr>
+<td>Select walk: Right</td>
+<td><code>Right</code></td>
+</tr>
+<tr>
+<td>Select walk: Right</td>
+<td>Shift + Right</td>
+</tr>
+<tr>
+<td>Select walk: Up</td>
+<td><code>Up</code></td>
+</tr>
+<tr>
+<td>Select walk: Up</td>
+<td>Shift + Up</td>
+</tr>
+<tr>
+<td>Show active</td>
+<td><code>F</code></td>
+</tr>
+<tr>
+<td>Show active</td>
+<td><code>Numpad .</code></td>
+</tr>
+<tr>
+<td>Show hierarchy</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>Show one level</td>
+<td><code>Numpad +</code></td>
+</tr>
+<tr>
+<td>Show one level</td>
+<td><code>Numpad -</code></td>
+</tr>
+<tr>
+<td>Start filter</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>F</kbd></span></td>
+</tr>
+<tr>
+<td>Unhide all</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>H</kbd></span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="properties-editor">Properties Editor</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear filter</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>F</kbd></span></td>
+</tr>
+<tr>
+<td>Context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Gpencil modifier apply</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Gpencil modifier copy</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Gpencil modifier remove</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Modifier apply</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Modifier copy</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Modifier remove: report</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Shaderfx copy</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Shaderfx remove: report</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Space context cycle</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Wheel</kbd></span> up</td>
+</tr>
+<tr>
+<td>Space context cycle</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Wheel</kbd></span> down</td>
+</tr>
+<tr>
+<td>Start filter</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>F</kbd></span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="file-browser">File Browser</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blend pose asset</td>
+<td>Alt + Left mouse (drag)</td>
+</tr>
+<tr>
+<td>Blend pose asset: flipped</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse (drag)</td>
+</tr>
+<tr>
+<td>Context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Context menu</td>
+<td><code>Menu key</code> (click)</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Execute</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Filenum</td>
+<td><code>Numpad +</code></td>
+</tr>
+<tr>
+<td>Filenum</td>
+<td>Shift + Numpad +</td>
+</tr>
+<tr>
+<td>Filenum</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Filenum</td>
+<td><code>Numpad -</code></td>
+</tr>
+<tr>
+<td>Filenum</td>
+<td>Shift + Numpad -</td>
+</tr>
+<tr>
+<td>Filenum</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Next</td>
+<td>Alt + Right</td>
+</tr>
+<tr>
+<td>Next</td>
+<td><code>Mouse button 5</code></td>
+</tr>
+<tr>
+<td>Parent</td>
+<td>Alt + Up</td>
+</tr>
+<tr>
+<td>Previous</td>
+<td>Alt + Left</td>
+</tr>
+<tr>
+<td>Previous</td>
+<td><code>Mouse button 4</code></td>
+</tr>
+<tr>
+<td>Region toggle pie menu</td>
+<td><code>T</code></td>
+</tr>
+<tr>
+<td>Rename</td>
+<td><code>F2</code></td>
+</tr>
+<tr>
+<td>Select</td>
+<td><code>Left mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select box</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Select box: Add</td>
+<td>Shift + Left mouse (drag)</td>
+</tr>
+<tr>
+<td>Select box: Sub</td>
+<td>Ctrl + Left mouse (drag)</td>
+</tr>
+<tr>
+<td>Select first last: First</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>Select first last: Last</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Home</kbd></span></td>
+</tr>
+<tr>
+<td>Select walk: Down</td>
+<td><code>Down</code></td>
+</tr>
+<tr>
+<td>Select walk: Down</td>
+<td>Shift + Down</td>
+</tr>
+<tr>
+<td>Select walk: Down</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Down</td>
+</tr>
+<tr>
+<td>Select walk: Left</td>
+<td><code>Left</code></td>
+</tr>
+<tr>
+<td>Select walk: Left</td>
+<td>Shift + Left</td>
+</tr>
+<tr>
+<td>Select walk: Left</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left</td>
+</tr>
+<tr>
+<td>Select walk: Right</td>
+<td><code>Right</code></td>
+</tr>
+<tr>
+<td>Select walk: Right</td>
+<td>Shift + Right</td>
+</tr>
+<tr>
+<td>Select walk: Right</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right</td>
+</tr>
+<tr>
+<td>Select walk: Up</td>
+<td><code>Up</code></td>
+</tr>
+<tr>
+<td>Select walk: Up</td>
+<td>Shift + Up</td>
+</tr>
+<tr>
+<td>Select walk: Up</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Up</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td>Ctrl + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select: extend</td>
+<td>Shift + Left mouse (click)</td>
+</tr>
+<tr>
+<td>Select: open</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Sort column ui context</td>
+<td><code>Any modifier + Left mouse</code></td>
+</tr>
+<tr>
+<td>Start filter</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>F</kbd></span></td>
+</tr>
+<tr>
+<td>View selected</td>
+<td><code>F</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="spreadsheet">Spreadsheet</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fit column</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Reorder columns</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Resize column</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Toggle Show region channels</td>
+<td><code>T</code></td>
+</tr>
+<tr>
+<td>Toggle Show region ui</td>
+<td><code>N</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="info-editor">Info Editor</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Report copy</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Report delete</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Report replay</td>
+<td><code>R</code></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Deselect</td>
+<td><code>A</code> (double-click)</td>
+</tr>
+<tr>
+<td>Select all: Invert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Select all: Select</td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>Select box</td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>Select pick</td>
+<td><code>Left mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Select pick: extend</td>
+<td>Shift + Left mouse (click)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="preferences">Preferences</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear filter</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>F</kbd></span></td>
+</tr>
+<tr>
+<td>Start filter</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>F</kbd></span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="scripting" data-icon="console">Scripting</h1>
+<h2 id="text-editor">Text Editor</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autocomplete</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Space</kbd></span></td>
+</tr>
+<tr>
+<td>Comment toggle</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Context cycle int</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Wheel</kbd></span> up</td>
+</tr>
+<tr>
+<td>Context cycle int</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Context cycle int: reverse</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Wheel</kbd></span> down</td>
+</tr>
+<tr>
+<td>Context cycle int: reverse</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Context menu</td>
+<td><code>Any modifier + Right mouse</code></td>
+</tr>
+<tr>
+<td>Copy</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Cursor set</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Cut</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>X</kbd></span></td>
+</tr>
+<tr>
+<td>Delete: Next character</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Delete: Next word</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Del</kbd></span></td>
+</tr>
+<tr>
+<td>Delete: Previous character</td>
+<td><code>Backspace</code></td>
+</tr>
+<tr>
+<td>Delete: Previous word</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Backspace</kbd></span></td>
+</tr>
+<tr>
+<td>Duplicate line</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>FIND AND REPLACE panel</td>
+<td>Shift + Right mouse</td>
+</tr>
+<tr>
+<td>Find set selected</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>G</kbd></span></td>
+</tr>
+<tr>
+<td>Indent</td>
+<td><code>Tab</code></td>
+</tr>
+<tr>
+<td>Jump</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>J</kbd></span></td>
+</tr>
+<tr>
+<td>Line break</td>
+<td><code>Enter</code></td>
+</tr>
+<tr>
+<td>Line break</td>
+<td><code>Numpad Enter</code></td>
+</tr>
+<tr>
+<td>Move lines: Down</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Down</td>
+</tr>
+<tr>
+<td>Move lines: Up</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Up</td>
+</tr>
+<tr>
+<td>Move select: File bottom</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>End</kbd></span></td>
+</tr>
+<tr>
+<td>Move select: File top</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Home</kbd></span></td>
+</tr>
+<tr>
+<td>Move select: Line begin</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Home</kbd></span></td>
+</tr>
+<tr>
+<td>Move select: Line end</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>End</kbd></span></td>
+</tr>
+<tr>
+<td>Move select: Next character</td>
+<td>Shift + Right</td>
+</tr>
+<tr>
+<td>Move select: Next line</td>
+<td>Shift + Down</td>
+</tr>
+<tr>
+<td>Move select: Next page</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>PageDown</kbd></span></td>
+</tr>
+<tr>
+<td>Move select: Next word</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right</td>
+</tr>
+<tr>
+<td>Move select: Previous character</td>
+<td>Shift + Left</td>
+</tr>
+<tr>
+<td>Move select: Previous line</td>
+<td>Shift + Up</td>
+</tr>
+<tr>
+<td>Move select: Previous page</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>PageUp</kbd></span></td>
+</tr>
+<tr>
+<td>Move select: Previous word</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left</td>
+</tr>
+<tr>
+<td>Move: File bottom</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>End</kbd></span></td>
+</tr>
+<tr>
+<td>Move: File top</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Home</kbd></span></td>
+</tr>
+<tr>
+<td>Move: Line begin</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>Move: Line end</td>
+<td><code>End</code></td>
+</tr>
+<tr>
+<td>Move: Next character</td>
+<td><code>Right</code></td>
+</tr>
+<tr>
+<td>Move: Next line</td>
+<td><code>Down</code></td>
+</tr>
+<tr>
+<td>Move: Next page</td>
+<td><code>PageDown</code></td>
+</tr>
+<tr>
+<td>Move: Next word</td>
+<td>Alt + Right</td>
+</tr>
+<tr>
+<td>Move: Next word</td>
+<td>Ctrl + Right</td>
+</tr>
+<tr>
+<td>Move: Previous character</td>
+<td><code>Left</code></td>
+</tr>
+<tr>
+<td>Move: Previous line</td>
+<td><code>Up</code></td>
+</tr>
+<tr>
+<td>Move: Previous page</td>
+<td><code>PageUp</code></td>
+</tr>
+<tr>
+<td>Move: Previous word</td>
+<td>Alt + Left</td>
+</tr>
+<tr>
+<td>Move: Previous word</td>
+<td>Ctrl + Left</td>
+</tr>
+<tr>
+<td>New</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>N</kbd></span></td>
+</tr>
+<tr>
+<td>Open</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>O</kbd></span></td>
+</tr>
+<tr>
+<td>Overwrite toggle</td>
+<td><code>Insert</code></td>
+</tr>
+<tr>
+<td>Paste</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Reload</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>R</kbd></span></td>
+</tr>
+<tr>
+<td>Replace</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>H</kbd></span></td>
+</tr>
+<tr>
+<td>Run script</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>P</kbd></span></td>
+</tr>
+<tr>
+<td>Save</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>Save as</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>Scroll</td>
+<td><code>Middle mouse</code></td>
+</tr>
+<tr>
+<td>Scroll</td>
+<td><code>Trackpad pan</code></td>
+</tr>
+<tr>
+<td>Scroll</td>
+<td><code>Wheel up</code></td>
+</tr>
+<tr>
+<td>Scroll</td>
+<td><code>Wheel down</code></td>
+</tr>
+<tr>
+<td>Scroll bar</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Scroll bar</td>
+<td><code>Middle mouse</code></td>
+</tr>
+<tr>
+<td>Select all</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select line</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select word</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Selection set</td>
+<td><code>Left mouse</code> (drag)</td>
+</tr>
+<tr>
+<td>Selection set</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Start find</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>F</kbd></span></td>
+</tr>
+<tr>
+<td>Toggle Show region ui</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>T</kbd></span></td>
+</tr>
+<tr>
+<td>Unindent</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Tab</kbd></span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="python-console">Python Console</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autocomplete</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Space</kbd></span></td>
+</tr>
+<tr>
+<td>Clear line</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Enter</kbd></span></td>
+</tr>
+<tr>
+<td>Clear line</td>
+<td>Shift + Numpad Enter</td>
+</tr>
+<tr>
+<td>Context cycle int</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Wheel</kbd></span> up</td>
+</tr>
+<tr>
+<td>Context cycle int</td>
+<td>Ctrl + Numpad +</td>
+</tr>
+<tr>
+<td>Context cycle int: reverse</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Wheel</kbd></span> down</td>
+</tr>
+<tr>
+<td>Context cycle int: reverse</td>
+<td>Ctrl + Numpad -</td>
+</tr>
+<tr>
+<td>Context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Copy as script</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Copy: delete</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>X</kbd></span></td>
+</tr>
+<tr>
+<td>Delete: Next character</td>
+<td><code>Del</code></td>
+</tr>
+<tr>
+<td>Delete: Next word</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Del</kbd></span></td>
+</tr>
+<tr>
+<td>Delete: Previous character</td>
+<td><code>Backspace</code></td>
+</tr>
+<tr>
+<td>Delete: Previous character</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Backspace</kbd></span></td>
+</tr>
+<tr>
+<td>Delete: Previous word</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Backspace</kbd></span></td>
+</tr>
+<tr>
+<td>Execute: interactive</td>
+<td><code>Enter</code></td>
+</tr>
+<tr>
+<td>Execute: interactive</td>
+<td><code>Numpad Enter</code></td>
+</tr>
+<tr>
+<td>History cycle</td>
+<td><code>Down</code></td>
+</tr>
+<tr>
+<td>History cycle: reverse</td>
+<td><code>Up</code></td>
+</tr>
+<tr>
+<td>Indent</td>
+<td><code>Tab</code></td>
+</tr>
+<tr>
+<td>Insert</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Tab</kbd></span></td>
+</tr>
+<tr>
+<td>Move: Line begin</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>Move: Line begin</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Home</kbd></span></td>
+</tr>
+<tr>
+<td>Move: Line end</td>
+<td><code>End</code></td>
+</tr>
+<tr>
+<td>Move: Line end</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>End</kbd></span></td>
+</tr>
+<tr>
+<td>Move: Next character</td>
+<td><code>Right</code></td>
+</tr>
+<tr>
+<td>Move: Next character</td>
+<td>Shift + Right</td>
+</tr>
+<tr>
+<td>Move: Next word</td>
+<td>Ctrl + Right</td>
+</tr>
+<tr>
+<td>Move: Next word</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Right</td>
+</tr>
+<tr>
+<td>Move: Previous character</td>
+<td><code>Left</code></td>
+</tr>
+<tr>
+<td>Move: Previous character</td>
+<td>Shift + Left</td>
+</tr>
+<tr>
+<td>Move: Previous word</td>
+<td>Ctrl + Left</td>
+</tr>
+<tr>
+<td>Move: Previous word</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd></span> + Left</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>V</kbd></span></td>
+</tr>
+<tr>
+<td>Select all</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>A</kbd></span></td>
+</tr>
+<tr>
+<td>Select set</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Select word</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Unindent</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Tab</kbd></span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="everywhere" data-icon="window">Everywhere</h1>
+<h2 id="2d-views">2D views</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pan</td>
+<td><code>Middle mouse</code></td>
+</tr>
+<tr>
+<td>Pan</td>
+<td>Shift + Middle mouse</td>
+</tr>
+<tr>
+<td>Pan</td>
+<td><code>Trackpad pan</code></td>
+</tr>
+<tr>
+<td>Scroll down</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Wheel</kbd></span> down</td>
+</tr>
+<tr>
+<td>Scroll down</td>
+<td><code>Wheel down</code></td>
+</tr>
+<tr>
+<td>Scroll left</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Wheel</kbd></span> up</td>
+</tr>
+<tr>
+<td>Scroll left</td>
+<td><code>Wheelleftmouse</code></td>
+</tr>
+<tr>
+<td>Scroll left</td>
+<td><code>Wheel up</code></td>
+</tr>
+<tr>
+<td>Scroll right</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Wheel</kbd></span> down</td>
+</tr>
+<tr>
+<td>Scroll right</td>
+<td>Wheelrightmouse</td>
+</tr>
+<tr>
+<td>Scroll right</td>
+<td><code>Wheel down</code></td>
+</tr>
+<tr>
+<td>Scroll up</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Wheel</kbd></span> up</td>
+</tr>
+<tr>
+<td>Scroll up</td>
+<td><code>Wheel up</code></td>
+</tr>
+<tr>
+<td>Scroller activate</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Scroller activate</td>
+<td><code>Middle mouse</code></td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td>Ctrl + Trackpad pan</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td>Ctrl + Middle mouse</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td><code>Trackpad zoom</code></td>
+</tr>
+<tr>
+<td>Zoom border</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>B</kbd></span></td>
+</tr>
+<tr>
+<td>Zoom in</td>
+<td><code>Wheel in</code></td>
+</tr>
+<tr>
+<td>Zoom in</td>
+<td><code>Numpad +</code></td>
+</tr>
+<tr>
+<td>Zoom out</td>
+<td><code>Wheel out</code></td>
+</tr>
+<tr>
+<td>Zoom out</td>
+<td><code>Numpad -</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="asset-shelf">Asset Shelf</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apply pose asset</td>
+<td><code>Left mouse</code> (double-click)</td>
+</tr>
+<tr>
+<td>Apply pose asset: flipped</td>
+<td>Ctrl + Left mouse (double-click)</td>
+</tr>
+<tr>
+<td>Blend pose asset</td>
+<td>Alt + Left mouse (drag)</td>
+</tr>
+<tr>
+<td>Blend pose asset: flipped</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd></span> + Left mouse (drag)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="buttons-and-fields">Buttons and fields</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy data path button</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Copy data path button: full path</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd></span></td>
+</tr>
+<tr>
+<td>Driver button add</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Driver button remove</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd></span></td>
+</tr>
+<tr>
+<td>Eyedropper color</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Eyedropper colorramp</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Eyedropper colorramp point</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>E</kbd></span></td>
+</tr>
+<tr>
+<td>Eyedropper depth</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Eyedropper id</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Keyframe clear button</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Keyframe delete button</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>I</kbd></span></td>
+</tr>
+<tr>
+<td>Keyframe insert button</td>
+<td><code>I</code></td>
+</tr>
+<tr>
+<td>Keyingset button add</td>
+<td><code>K</code></td>
+</tr>
+<tr>
+<td>Keyingset button remove</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>K</kbd></span></td>
+</tr>
+<tr>
+<td>List start filter</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>F</kbd></span></td>
+</tr>
+<tr>
+<td>Reset default button: all</td>
+<td><code>Backspace</code></td>
+</tr>
+<tr>
+<td>View item rename</td>
+<td><code>F2</code></td>
+</tr>
+<tr>
+<td>View item select</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>View item select: extend</td>
+<td>Cmd + Left mouse</td>
+</tr>
+<tr>
+<td>View item select: extend</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>View scroll</td>
+<td><code>Wheel down</code></td>
+</tr>
+<tr>
+<td>View scroll</td>
+<td><code>Wheel up</code></td>
+</tr>
+<tr>
+<td>View scroll</td>
+<td><code>Trackpad pan</code></td>
+</tr>
+<tr>
+<td>View start filter</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>F</kbd></span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="context-menus">Context menus</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Region context menu</td>
+<td><code>Right mouse</code> (click)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="editing-areas">Editing areas</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actionzone</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Actionzone</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Actionzone</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Area move</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Area move</td>
+<td>Shift + Left mouse</td>
+</tr>
+<tr>
+<td>Area move: snap</td>
+<td>Ctrl + Left mouse</td>
+</tr>
+<tr>
+<td>Area options</td>
+<td><code>Right mouse</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="lists">Lists</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pan</td>
+<td><code>Middle mouse</code></td>
+</tr>
+<tr>
+<td>Pan</td>
+<td><code>Trackpad pan</code></td>
+</tr>
+<tr>
+<td>Reset</td>
+<td><code>Home</code></td>
+</tr>
+<tr>
+<td>Scroll down</td>
+<td><code>Wheel down</code></td>
+</tr>
+<tr>
+<td>Scroll down: page</td>
+<td><code>PageDown</code></td>
+</tr>
+<tr>
+<td>Scroll up</td>
+<td><code>Wheel up</code></td>
+</tr>
+<tr>
+<td>Scroll up: page</td>
+<td><code>PageUp</code></td>
+</tr>
+<tr>
+<td>Scroller activate</td>
+<td><code>Left mouse</code></td>
+</tr>
+<tr>
+<td>Scroller activate</td>
+<td><code>Middle mouse</code></td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td>Ctrl + Middle mouse</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td><code>Trackpad zoom</code></td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td>Ctrl + Trackpad pan</td>
+</tr>
+<tr>
+<td>Zoom in</td>
+<td><code>Numpad +</code></td>
+</tr>
+<tr>
+<td>Zoom out</td>
+<td><code>Numpad -</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="screen">Screen</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cancel</td>
+<td><code>Esc</code></td>
+</tr>
+<tr>
+<td>Catalog redo</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Z</kbd></span></td>
+</tr>
+<tr>
+<td>Catalog undo</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Z</kbd></span></td>
+</tr>
+<tr>
+<td>Execute</td>
+<td><code>Enter</code></td>
+</tr>
+<tr>
+<td>Execute</td>
+<td><code>Numpad Enter</code></td>
+</tr>
+<tr>
+<td>Maximize area</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Space</kbd></span></td>
+</tr>
+<tr>
+<td>Maximize area</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd></span></td>
+</tr>
+<tr>
+<td>Play rendered anim</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>F11</kbd></span></td>
+</tr>
+<tr>
+<td>Redo</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Z</kbd></span></td>
+</tr>
+<tr>
+<td>Redo last</td>
+<td><code>F6</code></td>
+</tr>
+<tr>
+<td>Region flip</td>
+<td><code>F5</code></td>
+</tr>
+<tr>
+<td>Region quadview</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Q</kbd></span></td>
+</tr>
+<tr>
+<td>Render</td>
+<td><code>F12</code></td>
+</tr>
+<tr>
+<td>Render</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>F12</kbd></span></td>
+</tr>
+<tr>
+<td>Space context cycle: Next</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Tab</kbd></span></td>
+</tr>
+<tr>
+<td>Undo</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Z</kbd></span></td>
+</tr>
+<tr>
+<td>View cancel</td>
+<td><code>Esc</code></td>
+</tr>
+<tr>
+<td>View show</td>
+<td><code>F11</code></td>
+</tr>
+<tr>
+<td>Workspace cycle: Next</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>PageDown</kbd></span></td>
+</tr>
+<tr>
+<td>Workspace cycle: Prev</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>PageUp</kbd></span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="toolbar-popup">Toolbar popup</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cursor tool</td>
+<td><code>Space</code></td>
+</tr>
+<tr>
+<td>Measure tool</td>
+<td><code>M</code></td>
+</tr>
+<tr>
+<td>Select lasso tool</td>
+<td><code>L</code></td>
+</tr>
+<tr>
+<td>Select tool</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>Transform tool</td>
+<td><code>T</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="window">Window</h2>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Batch rename</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>F2</kbd></span></td>
+</tr>
+<tr>
+<td>Console toggle</td>
+<td><span class="ui-doc-keys"><kbd>Alt</kbd> + <kbd>F5</kbd></span></td>
+</tr>
+<tr>
+<td>File context menu</td>
+<td><code>F4</code></td>
+</tr>
+<tr>
+<td>Name panel</td>
+<td><code>F2</code></td>
+</tr>
+<tr>
+<td>New file</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>N</kbd></span></td>
+</tr>
+<tr>
+<td>Open</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>O</kbd></span></td>
+</tr>
+<tr>
+<td>Save</td>
+<td><span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>Save as mainfile</td>
+<td><span class="ui-doc-keys"><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>S</kbd></span></td>
+</tr>
+<tr>
+<td>Search menu</td>
+<td><code>F3</code></td>
+</tr>
+<tr>
+<td>User menu</td>
+<td><code>Q</code></td>
+</tr>
+</tbody>
+</table>
+<!-- keymap-table:end -->
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fqueue10-keymap/collection/docs/edit/docs2%2Fcontent%2Fkeymap%2Fkeymap-table.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/queue10-keymap/docs2/content/keymap/keymap-table.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#object-mode">Object Mode</a><a class="h2" href="#all-modes">All modes</a><a class="h2" href="#edit-mode-armature">Edit Mode · Armature</a><a class="h2" href="#edit-mode-curve">Edit Mode · Curve</a><a class="h2" href="#edit-mode-hair-curves">Edit Mode · Hair Curves</a><a class="h2" href="#edit-mode-lattice">Edit Mode · Lattice</a><a class="h2" href="#edit-mode-mesh">Edit Mode · Mesh</a><a class="h2" href="#edit-mode-metaball">Edit Mode · Metaball</a><a class="h2" href="#edit-mode-point-cloud">Edit Mode · Point Cloud</a><a class="h2" href="#edit-mode-text">Edit Mode · Text</a><a class="h2" href="#grease-pencil-all-modes">Grease Pencil · All modes</a><a class="h2" href="#grease-pencil-draw">Grease Pencil · Draw</a><a class="h2" href="#grease-pencil-edit">Grease Pencil · Edit</a><a class="h2" href="#grease-pencil-sculpt">Grease Pencil · Sculpt</a><a class="h2" href="#grease-pencil-vertex-paint">Grease Pencil · Vertex Paint</a><a class="h2" href="#grease-pencil-weight-paint">Grease Pencil · Weight Paint</a><a class="h2" href="#paint-modes">Paint modes</a><a class="h2" href="#particle-edit">Particle Edit</a><a class="h2" href="#pose-mode">Pose Mode</a><a class="h2" href="#sculpt-mode">Sculpt Mode</a><a class="h2" href="#sculpt-mode-hair-curves">Sculpt Mode · Hair Curves</a><a class="h2" href="#texture-paint">Texture Paint</a><a class="h2" href="#vertex-paint">Vertex Paint</a><a class="h2" href="#vertex-and-weight-paint">Vertex and Weight Paint</a><a class="h2" href="#weight-paint">Weight Paint</a><a class="h2" href="#animation-editors">Animation editors</a><a class="h3" href="#general">General</a><a class="h3" href="#channels">Channels</a><a class="h3" href="#frames">Frames</a><a class="h3" href="#markers">Markers</a><a class="h3" href="#time-scrubbing">Time scrubbing</a><a class="h2" href="#dope-sheet">Dope Sheet</a><a class="h2" href="#graph-editor">Graph Editor</a><a class="h2" href="#nonlinear-animation">Nonlinear Animation</a><a class="h2" href="#image-editor">Image Editor</a><a class="h3" href="#general-2">General</a><a class="h3" href="#uv-editing">UV Editing</a><a class="h2" href="#movie-clip-editor">Movie Clip Editor</a><a class="h3" href="#general-3">General</a><a class="h3" href="#masks">Masks</a><a class="h2" href="#video-sequencer">Video Sequencer</a><a class="h2" href="#general-4">General</a><a class="h2" href="#outliner">Outliner</a><a class="h2" href="#properties-editor">Properties Editor</a><a class="h2" href="#file-browser">File Browser</a><a class="h2" href="#spreadsheet">Spreadsheet</a><a class="h2" href="#info-editor">Info Editor</a><a class="h2" href="#preferences">Preferences</a><a class="h2" href="#text-editor">Text Editor</a><a class="h2" href="#python-console">Python Console</a><a class="h2" href="#2d-views">2D views</a><a class="h2" href="#asset-shelf">Asset Shelf</a><a class="h2" href="#buttons-and-fields">Buttons and fields</a><a class="h2" href="#context-menus">Context menus</a><a class="h2" href="#editing-areas">Editing areas</a><a class="h2" href="#lists">Lists</a><a class="h2" href="#screen">Screen</a><a class="h2" href="#toolbar-popup">Toolbar popup</a><a class="h2" href="#window">Window</a></aside></div></body></html>
