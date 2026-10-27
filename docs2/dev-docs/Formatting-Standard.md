@@ -97,7 +97,7 @@ Tables are for **data that really is a grid**: keymaps, a list of hotkeys, the p
 
 Two tools exist; see the plan for when to use which:
 
-- **Concept** (what proportional editing is, how the curve widget works): one page in the Interface chapter. Editor pages keep a short callout, a capture of their own variant, and a link.
+- **Concept** (what proportional editing is, how the curve widget works): one **section on the matching Interface page** (no new pages). Editor pages keep a short callout, a capture of their own variant, and a link.
 - **Identical panel** (the Quick menu, the Marker menu): a [shared section](Shared-Sections.md). The full text shows in place.
 
 Never copy a paragraph between pages. If you need it twice, make it one of the two above.
