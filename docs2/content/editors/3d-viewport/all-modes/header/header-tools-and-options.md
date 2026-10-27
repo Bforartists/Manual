@@ -1175,17 +1175,15 @@ Turn on or off all overlays. This includes the ground grid, things like relation
 
 <!-- TODO screenshot: Overlays popover, Guides section with Grid and Floor on -->
 
-The ground grid and axis lines. **Scale** and **Subdivisions** only show while Grid or Floor is on, and only when they change something in the current view.
+The ground grid and axis lines.
 
-| Entry | What it does |
-| ------------- | ------------------------------------------------------------------------------------------------------------ |
-| Grid | Show the grid in orthographic side views (Front, Top, Right...). |
-| Floor | Show the ground grid in the perspective view. |
-| Scale | Scale the grid. |
-| Subdivisions | Split the grid into finer lines. Only shows when the scene's Unit System is set to None. |
-| Axes X / Y / Z | Show the colored axis lines, one button per axis. |
-| Camera Guides | Only in camera view. Show the dotted line inside the passepartout. |
-| HDRI Preview | Only in Material Preview shading. Show the reflective and diffuse spheres of the lighting. |
+**Grid** shows the grid in the orthographic side views, like Front, Top or Right. **Floor** shows the ground grid in the perspective view.
+
+While Grid or Floor is on, **Scale** sizes the grid, and **Subdivisions** splits it into finer lines. Both only show when they change something in the current view, and Subdivisions only when the scene's Unit System is set to None.
+
+The **X**, **Y** and **Z** buttons next to **Axes** show the colored axis lines, one button per axis.
+
+**Camera Guides** only shows in camera view. It draws the dotted line inside the passepartout. **HDRI Preview** only shows in Material Preview shading. It draws the reflective and diffuse spheres of the lighting.
 
 ## Options
 
@@ -1281,10 +1279,7 @@ Check for flipped faces, which you can't see otherwise. Blue faces point outward
 
 Show the wireframe on top of the objects. Tick it to show its settings.
 
-| Entry | What it does |
-| --------- | ----------------------------------------------------------------------------------------------- |
-| Threshold | At 1 all edges are drawn. The lower the value, the more edges disappear. |
-| Opacity | How see-through the edges are. |
+**Threshold** sets how many edges are drawn. At 1 all edges show, and the lower the value, the more edges disappear. **Opacity** sets how see-through the edges are.
 
 ### Fade Inactive Geometry
 
@@ -1322,19 +1317,13 @@ Show geometry attribute values that are connected to an enabled Geometry Nodesâ€
 
 Show your motion tracking data in the 3D View. Tick the checkbox in the header of this section to turn it on. These show before you bake the solution, not with the solved result.
 
-| Entry | What it does |
-| ------------ | ------------------------------------------- |
-| Camera Path | Show the path the tracked camera takes. |
-| Marker Names | Show the names of the markers. |
+**Camera Path** shows the path the tracked camera takes, and **Marker Names** shows the names of the markers.
 
 ### Tracks
 
 ![Track display type](/docs2/images/editors/3d-viewport/header/header-tools-and-options/track-display-type.png)
 
-| Entry | What it does |
-| ------------ | ------------------------------------------------------ |
-| Display Type | How to draw the tracks, for example as plain axes or spheres. |
-| Size | How big the tracks are drawn. |
+**Display Type** chooses how the tracks are drawn, for example as plain axes or spheres. **Size** sets how big they are drawn.
 
 # Viewport Overlays - Mesh Object - Edit Mode
 
