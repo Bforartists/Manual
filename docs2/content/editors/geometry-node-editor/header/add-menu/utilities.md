@@ -1093,6 +1093,34 @@ The Combine XYZ Node combines a vector from its individual components.
 | Input | **X Y and Z**: X, Y and Z values. |
 | Output | **Color**: Color output. |
 
+#### Get Vector Component
+
+![Get Vector Component](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/get-vector-component.png)
+
+Gets one of the X, Y or Z values of a vector, chosen by a number. Use it when the axis you need changes, for example in a loop. If the axis is always the same, Separate XYZ is simpler.
+
+##### Inputs
+
+###### Vector
+
+The vector to read from.
+
+###### Index
+
+Which component to get. The value can go from 0 to 2. The default is 0.
+
+**0** gets X.
+
+**1** gets Y.
+
+**2** gets Z.
+
+##### Outputs
+
+###### Value
+
+The chosen component as a float.
+
 #### Map Range
 
 ![Map Range](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/map-range.png)
