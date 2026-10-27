@@ -35,6 +35,24 @@ replaces:
 
 Here you find nodes to modify the volume.
 
+#### Get Grid Names
+
+![Get Grid Names](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/get-grid-names.png)
+
+Lists the names of all grids stored in a volume. Use it to see what a volume contains, for example before you pick a grid with Get Named Grid.
+
+##### Inputs
+
+###### Volume
+
+The volume to list the grid names of.
+
+##### Outputs
+
+###### Names
+
+A list of the names of all grids in the volume, sorted alphabetically. If the geometry has no volume, the list is empty.
+
 #### Get Named Grid
 
 ![Get Named Grid](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/get-named-grid.png)
