@@ -1173,30 +1173,19 @@ Turn on or off all overlays. This includes the ground grid, things like relation
 
 ## Guides
 
+<!-- TODO screenshot: Overlays popover, Guides section with Grid and Floor on -->
+
+The ground grid and axis lines. **Scale** and **Subdivisions** only show while Grid or Floor is on, and only when they change something in the current view.
+
 | Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------ |
-| Grid | Show the whole ground grid, including axes. You can also show the grid in orthographic mode of the viewport. |
-| Floor | Show the ground grid, the white part of it. |
-
-### Axes
-
-![Axes](/docs2/images/editors/3d-viewport/header/header-tools-and-options/axes.png)
-
-Show the colored axis lines in the 3d view
-
-( now works in both perspective / orthographic Views).
-
-### Scale
-
-![Scale](/docs2/images/editors/3d-viewport/header/header-tools-and-options/scale.png)
-
-Scale the ground grid. This works in perspective and orthographic view.
-
-### Subdivisions
-
-![Subdivisions](/docs2/images/editors/3d-viewport/header/header-tools-and-options/subdivisions.png)
-
-Subdivisions just shows with a Unit system of None. It allows you to subdivide the ground grid.
+| ------------- | ------------------------------------------------------------------------------------------------------------ |
+| Grid | Show the grid in orthographic side views (Front, Top, Right...). |
+| Floor | Show the ground grid in the perspective view. |
+| Scale | Scale the grid. |
+| Subdivisions | Split the grid into finer lines. Only shows when the scene's Unit System is set to None. |
+| Axes X / Y / Z | Show the colored axis lines, one button per axis. |
+| Camera Guides | Only in camera view. Show the dotted line inside the passepartout. |
+| HDRI Preview | Only in Material Preview shading. Show the reflective and diffuse spheres of the lighting. |
 
 ## Options
 
@@ -1225,16 +1214,6 @@ Displays statistical informations in the upper left corner of the 3d viewport. O
 ![3D Cursor](/docs2/images/editors/3d-viewport/header/header-tools-and-options/3d-cursor.png)
 
 Show or hide the 3D cursor. That's the white red circle in the center of the viewport.
-
-### Camera Guides
-
-![Camera Guides](/docs2/images/editors/3d-viewport/header/header-tools-and-options/camera-guides.png)
-
-![Camera Guides](/docs2/images/editors/3d-viewport/header/header-tools-and-options/camera-guides-2.png)
-
-Just in Camera mode.
-
-Display the dotted line around the inside of the passepartout.
 
 ## Objects
 
@@ -1288,30 +1267,30 @@ Show or hide the origin of all objects. Even from hidden ones. The not selected 
 
 ![Geometry](/docs2/images/editors/3d-viewport/header/header-tools-and-options/geometry.png)
 
-Geometry related settings.
-
-### Wire frame
-
-![Wire frame](/docs2/images/editors/3d-viewport/header/header-tools-and-options/wire-frame.png)
-
-Show the wire frame in object mode.
-
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------- |
-| Wireframe Threshold | With a wire frame value of 1 all edges are drawn. The lower the value, the more edges will disappear. |
-| Opacity | The opacity of the displayed edges. |
+Geometry related settings. **Face Orientation** sits at the top, above the sections you can fold open.
 
 ### Face Orientation
 
 ![Face Orientation](/docs2/images/editors/3d-viewport/header/header-tools-and-options/face-orientation.png)
 
-This mode allows to check for faces with flipped normals, which cannot be seen with the defaults. Blue is pointing outwards, red is pointing inwards.
+Check for flipped faces, which you can't see otherwise. Blue faces point outwards, red faces point inwards.
 
-### Fade inactive Geometry
+### Wireframe
+
+![Wire frame](/docs2/images/editors/3d-viewport/header/header-tools-and-options/wire-frame.png)
+
+Show the wireframe on top of the objects. Tick it to show its settings.
+
+| Entry | What it does |
+| --------- | ----------------------------------------------------------------------------------------------- |
+| Threshold | At 1 all edges are drawn. The lower the value, the more edges disappear. |
+| Opacity | How see-through the edges are. |
+
+### Fade Inactive Geometry
 
 ![Fade inactive Geometry](/docs2/images/editors/3d-viewport/header/header-tools-and-options/fade-inactive-geometry.jpg)
 
-Edit mode feature, does not show in other modes. Fades the not active geometry, the not selected scene objects, towards a plain grey. In Object mode this setting has no effect.
+Only in Edit Mode and the other object modes, not in Object Mode. Fades the objects you're not working on towards plain grey. Tick it to show the **Opacity** slider that sets how strongly they fade.
 
 ## Viewer Node
 
@@ -1341,22 +1320,21 @@ Show geometry attribute values that are connected to an enabled Geometry Nodesâ€
 
 ![Motion Tracking](/docs2/images/editors/3d-viewport/header/header-tools-and-options/motion-tracking.png)
 
-Motion tracking related settings. When you turn it on, then some further options appears. These features just shows before you bake the solution. Not with the resolved solution.
+Show your motion tracking data in the 3D View. Tick the checkbox in the header of this section to turn it on. These show before you bake the solution, not with the solved result.
 
 | Entry | What it does |
-| ------------ | ----------------------- |
-| Camera Path | Shows the camera path. |
-| Marker Names | Shows the marker names. |
+| ------------ | ------------------------------------------- |
+| Camera Path | Show the path the tracked camera takes. |
+| Marker Names | Show the names of the markers. |
 
-### Track display type
+### Tracks
 
 ![Track display type](/docs2/images/editors/3d-viewport/header/header-tools-and-options/track-display-type.png)
 
-How to display the tracks.
-
-#### Track size
-
-Adjust the display size of the tracks of reconstructed data
+| Entry | What it does |
+| ------------ | ------------------------------------------------------ |
+| Display Type | How to draw the tracks, for example as plain axes or spheres. |
+| Size | How big the tracks are drawn. |
 
 # Viewport Overlays - Mesh Object - Edit Mode
 
