@@ -1,0 +1,1759 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sidebar · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1461 · <code>docs2/vse-text-line-spacing</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a class="is-current" style="padding-left:1.5rem" href="sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="../properties/strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Video Sequence Editor › Sidebar</div><h1 class="pv-title">Sidebar</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 20 min read</span></div><article class="ui-doc-body"><h2 id="introduction">Introduction</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/introduction.png" alt="Introduction" loading="lazy"></figure>
+<p>The Video Sequence Editor is made of several areas. And it is made of two editor types. Preview and Sequence.</p>
+<p>At the right side you will find the sidebar with further options and settings for the VSE and its tools.</p>
+<h2 id="right-click-menus">Right Click menus</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/right-click-menus.png" alt="Right Click menus" loading="lazy"></figure>
+<p>You will open the usual right click menus when clicking with the right mouse at elements in the sidebar. Its content is in big parts self explaining.</p>
+<p>The right click menus are explained in the chapter 6 Editors Introduction.</p>
+<h1 id="preview-tool-tab">Preview › Tool Tab</h1>
+<h3 id="tool-tab">Tool Tab</h3>
+<p>In the tool tab you will find the tool related settings for the tools in the tool shelf. They are described in the tool shelf chapters.</p>
+<h3 id="active-tool-panel">Active Tool panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-tool-tab/active-tool-panel.png" alt="Active Tool panel" loading="lazy"></figure>
+<p>Displays the settings for the tools in the tool shelf. These settings are explained in the tool shelf chapters.</p>
+<h1 id="preview-view-tab">Preview › View Tab</h1>
+<p>Syncing options with the 3d view.</p>
+<h3 id="view-settings-tab">View Settings Tab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/view-settings-tab.png" alt="View Settings Tab" loading="lazy"></figure>
+<p>In the View Settings tab you will find the display related settings.</p>
+<p>Note that not all content is available in all submodes. The Preview submode shows other content thant he Sequencer submode.</p>
+<h3 id="view-settings-panel">View Settings Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/view-settings-panel.png" alt="View Settings Panel" loading="lazy"></figure>
+<h4 id="proxy-render-size">Proxy Render Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/proxy-render-size.png" alt="Proxy Render Size" loading="lazy"></figure>
+<p>Size to display proxies at in the preview region. Using a smaller preview size will increase speed.</p>
+<p>Proxies is a simplified data set to speed up workflow.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Proxies</td>
+<td>Use proxy images instead of the real material to speed up workflow.</td>
+</tr>
+<tr>
+<td>Channel</td>
+<td>Which channel number to show in the image preview. The value 0 is the result of all strips combined.</td>
+</tr>
+<tr>
+<td>Show Overexposed</td>
+<td>Shows overexposed (bright white) areas using a zebra pattern. The threshold can be adjust with the slider.</td>
+</tr>
+<tr>
+<td>Show Missing Media</td>
+<td>Render missing images or movies with a solit magenta color.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="location-x-y">Location X / Y</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/location-x-y.png" alt="Location X / Y" loading="lazy"><figcaption>Location X / Y</figcaption></figure>
+<p>The position of the 3d cursor.</p>
+<h3 id="frame-overlay-panel">Frame Overlay Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/frame-overlay-panel.png" alt="Frame Overlay Panel" loading="lazy"></figure>
+<p>Display an overlay on top of the sequencer with a frame offset of the content.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/frame-overlay-panel-2.png" alt="Frame Overlay Panel" loading="lazy"></figure>
+<p>When the feature is active then you will see a green dashed line in the sequencer timeline.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set Overlay Region</td>
+<td>Box select a portion of the viewport to display the overlay content.</td>
+</tr>
+<tr>
+<td>Frame offset</td>
+<td>What offset frame to use, relative to the current frame position.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="overlay-type">Overlay Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/overlay-type.png" alt="Overlay Type" loading="lazy"></figure>
+<p>The overlay draw type.</p>
+<h4 id="overlay-lock">Overlay Lock</h4>
+<p>Locks the overlay frame to the current frame. It will not go ahead when you play the video.</p>
+<h3 id="save-areas-panel">Save Areas panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/save-areas-panel.png" alt="Save Areas panel" loading="lazy"></figure>
+<p>Modern LCD or plasma monitors usually doesn't have over scan areas anymore. But especially older TV screens still may have varying amounts of over scan. And cuts quite a bit content away at the border. And so not all content is shown at all monitors. Safe areas is the area that is always visible at all hardware.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/save-areas-panel-2.png" alt="Save Areas panel" loading="lazy"></figure>
+<p>Safe areas are guides to ensure that the most important parts of the content can be seen across all screens. The lines are unfortunately a bit hard to see when you are in camera view. They mark the safe areas.</p>
+<p>Safe areas can be set from the Camera and Sequencer views.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> Each country sets a legal standard for broadcasting. These include also specific values for safe areas. Bforartists defaults for safe areas follow the EBU (European Union) standard. Make sure you are using the correct values when working for broadcast to avoid any trouble.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title Safe Margins X/Y</td>
+<td>Also known as Graphics Safe. Information (graphics or text) inside this area can be seen by the majority of viewers.</td>
+</tr>
+<tr>
+<td>Action Safe Margins X/Y</td>
+<td>An extra “margin” for the screen, which can be used to keep elements from piling up against the edges.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="center-cut-safe-areas">Center-Cut Safe Areas</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/center-cut-safe-areas.png" alt="Center-Cut Safe Areas" loading="lazy"></figure>
+<p>Center-cuts are a second set of safe areas to ensure content is seen correctly on screens with a different aspect ratio. Old TV sets receiving 16:9 or 21:9 video will cut off the sides. Position content inside the center-cut areas to make sure the most important elements of your composition can still be visible in these screens.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Center Title Safe Margins X/Y</td>
+<td>Information (graphics or text) inside this area can be seen by the majority of viewers.</td>
+</tr>
+<tr>
+<td>Center Action Safe Margins X/Y</td>
+<td>Safe area for general elements in a different aspect ratio.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scene-strip-display-panel">Scene Strip Display panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/scene-strip-display-panel.png" alt="Scene Strip Display panel" loading="lazy"><figcaption>Scene Strip Display panel</figcaption></figure>
+<p>Settings for the strip type Scene Strip.</p>
+<h4 id="shading">Shading</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/shading.png" alt="Shading" loading="lazy"></figure>
+<p>How to display the scene content in the preview window.</p>
+<h4 id="override-scene-settings">Override scene settings</h4>
+<p>Use the workbench render settings from the sequencer scene instead of the settings instead of each individual scene used in the strip.</p>
+<h3 id="annotations-panel">Annotations panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/annotations-panel.png" alt="Annotations panel" loading="lazy"></figure>
+<p>Manage the Annotation layers and materials.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/annotations-panel-2.png" alt="Annotations panel" loading="lazy"></figure>
+<p>When you don't have drawn an annotation yet then the panel just contains a New button.</p>
+<h4 id="annotations-prop">Annotations prop</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/annotations-prop.png" alt="Annotations prop" loading="lazy"></figure>
+<p>Add, remove and rename new annotations.</p>
+<h5 id="drop-down-box">Drop down box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/drop-down-box.png" alt="Drop down box" loading="lazy"></figure>
+<p>A list of the available annotation layers.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Box</td>
+<td>The name of the current annotation. You can rename the annotation to your needs here.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</td>
+</tr>
+<tr>
+<td>Add Annotation</td>
+<td>Add a new annotation.</td>
+</tr>
+<tr>
+<td>Delete Annotation</td>
+<td>Delete the annotation.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="list-of-annotation-strokes">List of Annotation Strokes</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/list-of-annotation-strokes.png" alt="List of Annotation Strokes" loading="lazy"><figcaption>List of Annotation Strokes</figcaption></figure>
+<p>Here you see your Annotation layers for the current Annotation. Every layer can have an own color.</p>
+<p>At the right side you find buttons to sort them and to add and remove new Annotation layers.</p>
+<p>You can change the color by clicking at the color field. A color dialog will pop up. You can rename annotation layers by double clicking at it.</p>
+<p>The eye icon allows you to make it invisible And it has a search field.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thickness</td>
+<td>The thickness of the annotation stroke.</td>
+</tr>
+<tr>
+<td>Frame Locked/Unlocked</td>
+<td>Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="onion-skin-subpanel">Onion Skin subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/onion-skin-subpanel.png" alt="Onion Skin subpanel" loading="lazy"></figure>
+<p>Enable Onion Skinning</p>
+<p>Onion Skinning allows to show ghosts of the keyframes before and after the current frame. In this sub panel you can adjust the color of the onion skin frames. With the numbers below the colors you can define how many frames before or after are displayed that way.</p>
+<h3 id="sync-mode">Sync Mode</h3>
+<p>The sync method.</p>
+<h4 id="built-in">Built-In</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/built-in.png" alt="Built-In" loading="lazy"></figure>
+<h5 id="advanced-settings">Advanced Settings</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keep Grease Pencil Settings</td>
+<td>Keep active Grease Pencil tool settings while navigating scene strips.</td>
+</tr>
+<tr>
+<td>Use Preview Range</td>
+<td>Update the current scene strip to match the range.</td>
+</tr>
+<tr>
+<td>Synchronize all Windows</td>
+<td>If the 3d View sync impacts all main windows.</td>
+</tr>
+<tr>
+<td>Active follows Playhead</td>
+<td>Update the active scene strip while scrubbing the playhead.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="legacy">Legacy</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/legacy.png" alt="Legacy" loading="lazy"></figure>
+<h5 id="synchronization-timeline">Synchronization Timeline</h5>
+<h6 id="scene">Scene</h6>
+<p>The scene to synchronize.</p>
+<h6 id="use-pinned-scene">Use Pinned Scene</h6>
+<p>Mak the pinned scene the active scene. The button and the “Set the Timeline” hint will vanish then.</p>
+<h5 id="advanced-settings-2">Advanced Settings</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bidirectional</td>
+<td>Changing the active scene should also update the timeline scene’s current frame in the sequencer.</td>
+</tr>
+<tr>
+<td>Keep Grease Pencil Settings</td>
+<td>Keep active Grease Pencil tool settings while navigating scene strips.</td>
+</tr>
+<tr>
+<td>Use Preview Range</td>
+<td>Update the current scene strip to match the range.</td>
+</tr>
+<tr>
+<td>Synchronize all Windows</td>
+<td>If the 3d View sync impacts all main windows.</td>
+</tr>
+<tr>
+<td>Active follows Playhead</td>
+<td>Update the active scene strip while scrubbing the playhead.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="sequencer-strip-tab">Sequencer › Strip Tab</h1>
+<h3 id="strip-tab">Strip Tab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/strip-tab.png" alt="Strip Tab" loading="lazy"></figure>
+<p>The strip tab contains all the strip type related settings. For the different strip types see the Add menu.</p>
+<p>Some panels have the same content for all strip types. Some not. Some strip types have their own panels.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Like in the 3D View, this tab is also accessible from the Properties editor Strip tab.</p></div>
+<h4 id="strip-tab-header">Strip tab header</h4>
+<p>In the strip tab header you will see an icon for the current strip type. The name of the strip. And a checkbox to set this strip active.</p>
+<p>The strip can be renamed by double clicking left into the edit box.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type Icon</td>
+<td>This indicates what kind of strip is selected</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>The name of the strip.</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>The color of the strip in the sequencer timeline.</td>
+</tr>
+<tr>
+<td>Mute</td>
+<td>Enables/Disables the strip.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="compositing-panel">Compositing Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/compositing-panel.png" alt="Compositing Panel" loading="lazy"></figure>
+<p>Available for Movie, Image, Adjustment and Meta strips.</p>
+<h4 id="blend">Blend</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/blend.png" alt="Blend" loading="lazy"></figure>
+<p>The blend method to control how the strip combines with other strips.</p>
+<h4 id="opacity">Opacity</h4>
+<p>How much the strip color affects other strips.</p>
+<h3 id="transform-panel">Transform Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/transform-panel.png" alt="Transform Panel" loading="lazy"></figure>
+<h4 id="filter">Filter</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/filter.png" alt="Filter" loading="lazy"></figure>
+<p>Filter type to use for transformations.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto</td>
+<td>Automatically choose filter based on scaling factor.</td>
+</tr>
+<tr>
+<td>Nearest</td>
+<td>Use nearest sample.</td>
+</tr>
+<tr>
+<td>Bilinear</td>
+<td>Interpolate between 2x2 Samples</td>
+</tr>
+<tr>
+<td>Cubic Mitchell</td>
+<td>Cubic Mitchell filter on 4x4 Samples.</td>
+</tr>
+<tr>
+<td>Cubic B-Spline</td>
+<td>Cubic B-Spline Filter on 4x4 Samples. Blurry, but not ringing.</td>
+</tr>
+<tr>
+<td>Box</td>
+<td>Averages source image samples that fall under destination pixel.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Position X</td>
+<td>The X offset.</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>The Y offset.</td>
+</tr>
+<tr>
+<td>Scale X</td>
+<td>The X scale.</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>The Y scale.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>The rotation around the image center.</td>
+</tr>
+<tr>
+<td>Origin</td>
+<td>Origin of image for transformation.</td>
+</tr>
+<tr>
+<td>Mirror</td>
+<td>Flip on the X and/or Y axis.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="crop-panel">Crop Panel</h3>
+<h4 id="left-right-top-bottom">Left, Right, Top, Bottom</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/left-right-top-bottom.png" alt="Left, Right, Top, Bottom" loading="lazy"><figcaption>Left, Right, Top, Bottom</figcaption></figure>
+<p>Crop the frame.</p>
+<h3 id="video-panel">Video Panel</h3>
+<h4 id="strobe">Strobe</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/strobe.png" alt="Strobe" loading="lazy"></figure>
+<p>Don't display every frame, but just every nth frame.</p>
+<h4 id="reverse-frames">Reverse Frames</h4>
+<p>Reverse the frame order.</p>
+<h3 id="color-panel">Color Panel</h3>
+<h4 id="saturation">Saturation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/saturation.png" alt="Saturation" loading="lazy"></figure>
+<p>The intensity of the input color.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multiply</td>
+<td>Multiply colors by this factor.</td>
+</tr>
+<tr>
+<td>Multiply Alpha</td>
+<td>Multiply Alpha along with color channels.</td>
+</tr>
+<tr>
+<td>Convert to Float</td>
+<td>Convert input to float data.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sound-panel">Sound Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/sound-panel.png" alt="Sound Panel" loading="lazy"></figure>
+<p>This panel shows with an audio clip selected.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volume</td>
+<td>The volume of the audio clip.</td>
+</tr>
+<tr>
+<td>Mono</td>
+<td>Set the audio clip to mono. · <strong>Pan</strong>: When mono, the pan of the audio clip.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="time-panel">Time Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/time-panel.png" alt="Time Panel" loading="lazy"></figure>
+<p>Time related settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lock</td>
+<td>Lock strip so that it cannot be transformed.</td>
+</tr>
+<tr>
+<td>Show Retiming Keys</td>
+<td>This toggles the overlay and retiming state of a Movie or Image Sequence strip. For more information, refer to chapter <strong>Editors - Video Sequence Editor - Header - Strip Menu</strong> retiming section. <strong>Note:</strong> To retime a strip, select a Movie or Image Sequence strip.</td>
+</tr>
+<tr>
+<td>Channel</td>
+<td>The channel of the strip.</td>
+</tr>
+<tr>
+<td>Start</td>
+<td>The start frame of the strip.</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>The duration of the strip.</td>
+</tr>
+<tr>
+<td>End</td>
+<td>The end frame of the strip. · <strong>Strip Offset Start</strong>: The strip offset start. This offsets the beginning of the strip in the timeline. · <strong>End</strong>: The strip offset end. This offsets the end of the strip in the timeline. · <strong>Hold Offset Start</strong>: Animation start offset (trim start) · <strong>End</strong>: Animation end offset (trim end) · <strong>Current Frame</strong>: Info box that displays the position of the frame cursor at the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scene-panel">Scene Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/scene-panel.png" alt="Scene Panel" loading="lazy"></figure>
+<p>This panel just shows with strip type scene.</p>
+<h4 id="scene-property">Scene Property</h4>
+<h5 id="scene-browser">Scene Browser</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/scene-browser.png" alt="Scene Browser" loading="lazy"></figure>
+<p>A scene browser that contains the available scenes in the file.</p>
+<h6 id="scene-edit-box">Scene edit box</h6>
+<p>The name of the scene. It can be renamed by double clicking into the edit box.</p>
+<h6 id="add">Add</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/add.png" alt="Add" loading="lazy"></figure>
+<p>Add a new scene. This button calls a menu where you can choose with what method you want to create the new scene.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>Adds a new empty scene.</td>
+</tr>
+<tr>
+<td>Copy Settings</td>
+<td>Adds a new empty scene. And copies the settings from the current scene.</td>
+</tr>
+<tr>
+<td>Linked Copy</td>
+<td>Link in the collections from the current scene. (Shadow Copy)</td>
+</tr>
+<tr>
+<td>Full Copy</td>
+<td>Make a full copy of the current scene.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="remove">Remove</h6>
+<p>Remove the scene as the active one. Note that the scene is still available in the scene browser.</p>
+<h4 id="input">Input</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/input.png" alt="Input" loading="lazy"></figure>
+<p>Type of input to use. The camera of the scene. Or a file from the sequencer in this scene.</p>
+<h5 id="input-type-camera">Input Type Camera</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/input-type-camera.png" alt="Input Type Camera" loading="lazy"></figure>
+<h6 id="volume">Volume</h6>
+<p>The audio volume.</p>
+<h6 id="camera">Camera</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/camera.png" alt="Camera" loading="lazy"></figure>
+<p>Which camera of the scene to use.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show Annotation</td>
+<td>Show grease pencil strokes in workbench previews.</td>
+</tr>
+<tr>
+<td>Transparent</td>
+<td>Use a transparent background.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="input-type-sequencer">Input type Sequencer</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/input-type-sequencer.png" alt="Input type Sequencer" loading="lazy"></figure>
+<h6 id="volume-2">Volume</h6>
+<p>The audio volume.</p>
+<h3 id="mask-panel">Mask Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/mask-panel.png" alt="Mask Panel" loading="lazy"></figure>
+<p>This panel just shows with strip type Mask.</p>
+<h4 id="mask-property">Mask Property</h4>
+<h5 id="mask-browser">Mask Browser</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/mask-browser.png" alt="Mask Browser" loading="lazy"></figure>
+<p>A mask browser that contains the available masks in the file.</p>
+<h5 id="mask-edit-box">Mask edit box</h5>
+<p>The name of the scene. It can be renamed by double clicking into the edit box.</p>
+<h6 id="fake-user">Fake User</h6>
+<p>Assign a fake user to this mask. Fake users is a odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</p>
+<h5 id="remove-2">Remove</h5>
+<p>Remove the scene as the active one. Note that the scene is still available in the scene browser.</p>
+<h3 id="effect-strip-panel">Effect Strip Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-panel.png" alt="Effect Strip Panel" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-panel-2.png" alt="Effect Strip Panel" loading="lazy"></figure>
+<p>Settings for the single effect strip types.</p>
+<p>The content differs, dependant of the chosen type.</p>
+<h4 id="effect-strip-type-color-mix">Effect strip type Color Mix</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-color-mix.png" alt="Effect strip type Color Mix" loading="lazy"><figcaption>Effect strip type Color Mix</figcaption></figure>
+<h5 id="input-1">Input 1</h5>
+<p>The first strip.</p>
+<h5 id="input-2">Input 2</h5>
+<p>The second strip.</p>
+<h6 id="swap-strips">Swap Strips</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/swap-strips.png" alt="Swap Strips" loading="lazy"></figure>
+<p>Swap the strips.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blend Mode</td>
+<td>The color blend mode to use.</td>
+</tr>
+<tr>
+<td>Blend Factor</td>
+<td>The blend factor. 1.000 means 100%.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="effect-strip-type-text">Effect strip type Text</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-text.png" alt="Effect strip type Text" loading="lazy"><figcaption>Effect strip type Text</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text</td>
+<td>The text to displayed.</td>
+</tr>
+<tr>
+<td>Wrap Width</td>
+<td>World wrap width as factor. Zero disables the wrap.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="style-sub-panel">Style sub panel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/style-sub-panel.png" alt="Style sub panel" loading="lazy"></figure>
+<h6 id="font-property">Font property</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/font-property.png" alt="Font property" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/font-property-2.png" alt="Font property" loading="lazy"></figure>
+<p>When no font is loaded then the internal font is used.</p>
+<h6 id="font-browser">Font browser</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/font-browser.png" alt="Font browser" loading="lazy"></figure>
+<p>The list of loaded fonts. This list is empty by default. It displays the fonts that you load.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open</td>
+<td>Load a font.</td>
+</tr>
+<tr>
+<td>Font Edit Box</td>
+<td>Display the current active font. You can rename the font by double clicking in the edit box.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Assign a fake user to this font. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</td>
+</tr>
+<tr>
+<td>Open Font</td>
+<td>Load a font.</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Remove the selected font as the active one. Note that the font is still in the list then.</td>
+</tr>
+<tr>
+<td>Bold</td>
+<td>Display the font bold.</td>
+</tr>
+<tr>
+<td>Italic</td>
+<td>Display the font italic.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>Size of the text.</td>
+</tr>
+<tr>
+<td>Line Spacing</td>
+<td>The space between lines when the text has more than one line. By default it is a factor of the text size: 1.0 is normal, 2.0 is double. The small button below it switches to a fixed spacing in pixels.</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>The text color.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="shadow">Shadow</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/shadow.png" alt="Shadow" loading="lazy"></figure>
+<p>Creates a shadow of the specified color under the text.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shadow color</td>
+<td>The color of the shadow. Clicking at the color field opens a color dialog.</td>
+</tr>
+<tr>
+<td>Angle</td>
+<td>The shadow angle. In which direction the shadow shall point.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Add an offset to the shadow in pixels</td>
+</tr>
+<tr>
+<td>Blur</td>
+<td>Blur the shadow by a pixel amount.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="outline">Outline</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/outline.png" alt="Outline" loading="lazy"></figure>
+<h6 id="color">Color</h6>
+<p>The outline color.</p>
+<h6 id="width">Width</h6>
+<p>The outline width.</p>
+<h6 id="box">Box</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/box.png" alt="Box" loading="lazy"></figure>
+<p>Display colored box behind text.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Box Color</td>
+<td>The color of the box.</td>
+</tr>
+<tr>
+<td>Margin</td>
+<td>The margin of the box. Based at the image width.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="layout-sub-panel">Layout sub panel</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/layout-sub-panel.png" alt="Layout sub panel" loading="lazy"></figure>
+<h6 id="location-x-y-2">Location X/Y</h6>
+<p>Positions the text on the X, Y axis.</p>
+<h6 id="alignment">Alignment</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/alignment.png" alt="Alignment" loading="lazy"></figure>
+<p>The horizontal X alignment of the text. Can be Left, Center or Right</p>
+<h6 id="anchor-x-y">Anchor X/Y</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/anchor-x-y.png" alt="Anchor X/Y" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/anchor-x-y-2.png" alt="Anchor X/Y" loading="lazy"></figure>
+<p>Horizontal (X) or vertical (Y) anchor point of the text relative to the location.</p>
+<h4 id="effect-strip-type-gaussian-blur">Effect strip type Gaussian Blur</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-color-mix.png" alt="Effect strip type Gaussian Blur" loading="lazy"><figcaption>Effect strip type Gaussian Blur</figcaption></figure>
+<h5 id="input-1-2">Input 1</h5>
+<p>The strip to blur. This strip cannot be changed. You need to apply the effect with the correct strip selected.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size X</td>
+<td>The size of the blur along X axis.</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>The size of the blur along Y axis.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="effect-strip-type-multicam">Effect strip type Multicam</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-multicam.png" alt="Effect strip type Multicam" loading="lazy"><figcaption>Effect strip type Multicam</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source Channel</td>
+<td>The channel which the Multicam Selector gets its input from.</td>
+</tr>
+<tr>
+<td>Cut to</td>
+<td>Cuts the Multicam strip at the current frame and changes the Source Channel automatically to the selected channels.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="effect-strip-type-speed-control">Effect strip type Speed Control</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-speed-control.png" alt="Effect strip type Speed Control" loading="lazy"><figcaption>Effect strip type Speed Control</figcaption></figure>
+<h5 id="input-2">Input</h5>
+<p>The video where the speed control is applied to. This is read only.</p>
+<h5 id="speed-control">Speed Control</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/speed-control.png" alt="Speed Control" loading="lazy"></figure>
+<h6 id="stretch">Stretch</h6>
+<p>Adjust input playback so that the input duration fits the strip length</p>
+<h6 id="multiply">Multiply</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/multiply.png" alt="Multiply" loading="lazy"></figure>
+<p>Multiply with the speed factor.</p>
+<h6 id="multiply-factor">Multiply factor</h6>
+<p>The speed factor.</p>
+<h6 id="frame-number">Frame Number</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/frame-number.png" alt="Frame Number" loading="lazy"></figure>
+<p>Frame Number of the Input strip.</p>
+<h6 id="frame-number-2">Frame number</h6>
+<p>The frame number.</p>
+<h6 id="length">Length</h6>
+<h5 id="interpolation">Interpolation</h5>
+<p>Do crossfade blending between current and previous frame.</p>
+<h4 id="effect-strip-type-color">Effect strip type Color</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-color.png" alt="Effect strip type Color" loading="lazy"><figcaption>Effect strip type Color</figcaption></figure>
+<h5 id="color-picker">Color Picker</h5>
+<p>Adjust the color of the color strip.</p>
+<h4 id="effect-strip-type-transform">Effect strip type Transform</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-transform.png" alt="Effect strip type Transform" loading="lazy"><figcaption>Effect strip type Transform</figcaption></figure>
+<h5 id="input-1-3">Input 1</h5>
+<p>The strip to transform. This strip cannot be changed. You need to apply the effect with the correct strip selected.</p>
+<h5 id="interpolation-2">Interpolation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>The interpolation type for the transform.</p>
+<h5 id="translation-unit">Translation Unit</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/translation-unit.png" alt="Translation Unit" loading="lazy"></figure>
+<p>The measure unit to use for the transform.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Position X</td>
+<td>Amount to move the input in the X axis.</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Amount to move the input in the Y axis.</td>
+</tr>
+<tr>
+<td>Uniform scale</td>
+<td>Scale uniformly, preserve the aspect ratio.</td>
+</tr>
+<tr>
+<td>Scale X</td>
+<td>Amount to scale the input in the X axis.</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Amount to scale the input in the Y axis.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Degrees to rotate the input.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="effect-strip-type-glow">Effect strip type Glow</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-glow.png" alt="Effect strip type Glow" loading="lazy"><figcaption>Effect strip type Glow</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input 1</td>
+<td>The strip to use. This strip cannot be changed. You need to apply the effect with the correct strip selected.</td>
+</tr>
+<tr>
+<td>Threshold</td>
+<td>Minimum intensity to trigger a glow.</td>
+</tr>
+<tr>
+<td>Clamp</td>
+<td>The brightness limit of intensity.</td>
+</tr>
+<tr>
+<td>Boost Factor</td>
+<td>Brightness multiplier.</td>
+</tr>
+<tr>
+<td>Blur Distance</td>
+<td>The radius of the glow effect.</td>
+</tr>
+<tr>
+<td>Quality</td>
+<td>The accuracy of the blur effect.</td>
+</tr>
+<tr>
+<td>Only Boost</td>
+<td>Show the glow buffer only.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="effect-strip-type-wipe">Effect strip type Wipe</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-wipe.png" alt="Effect strip type Wipe" loading="lazy"><figcaption>Effect strip type Wipe</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input 1</td>
+<td>The first strip.</td>
+</tr>
+<tr>
+<td>Input 2</td>
+<td>The second strip.</td>
+</tr>
+<tr>
+<td>Swap Inputs</td>
+<td>Swap the two strips.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="transition-type">Transition type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/transition-type.png" alt="Transition type" loading="lazy"></figure>
+<p>The wipe effect type.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direction</td>
+<td>The direction of the wipe.</td>
+</tr>
+<tr>
+<td>Blur width</td>
+<td>The width of the blur edge, relative to the image size.</td>
+</tr>
+<tr>
+<td>Angle</td>
+<td>The edge angle.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="default-fade">Default Fade</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/default-fade.png" alt="Default Fade" loading="lazy"></figure>
+<p>Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.</p>
+<h4 id="effect-strip-type-alpha-over-drop">Effect strip type Alpha over Drop</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png" alt="Effect strip type Alpha over Drop" loading="lazy"><figcaption>Effect strip type Alpha over Drop</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input 1</td>
+<td>The first strip.</td>
+</tr>
+<tr>
+<td>Input 2</td>
+<td>The second strip.</td>
+</tr>
+<tr>
+<td>Swap Inputs</td>
+<td>Swap the two strips.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="default-fade-2">Default Fade</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/default-fade.png" alt="Default Fade" loading="lazy"></figure>
+<p>Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.</p>
+<h4 id="effect-strip-type-multiply">Effect strip type Multiply</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-multiply.png" alt="Effect strip type Multiply" loading="lazy"><figcaption>Effect strip type Multiply</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input 1</td>
+<td>The first strip.</td>
+</tr>
+<tr>
+<td>Input 2</td>
+<td>The second strip.</td>
+</tr>
+<tr>
+<td>Swap Inputs</td>
+<td>Swap the two strips.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="effect-strip-type-gamma-cross">Effect strip type Gamma Cross</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png" alt="Effect strip type Gamma Cross" loading="lazy"><figcaption>Effect strip type Gamma Cross</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input 1</td>
+<td>The first strip.</td>
+</tr>
+<tr>
+<td>Input 2</td>
+<td>The second strip.</td>
+</tr>
+<tr>
+<td>Swap Inputs</td>
+<td>Swap the two strips.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="default-fade-3">Default Fade</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/default-fade.png" alt="Default Fade" loading="lazy"></figure>
+<p>Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.</p>
+<h4 id="effect-strip-type-alpha-under">Effect strip type Alpha Under</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png" alt="Effect strip type Alpha Under" loading="lazy"><figcaption>Effect strip type Alpha Under</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input 1</td>
+<td>The first strip.</td>
+</tr>
+<tr>
+<td>Input 2</td>
+<td>The second strip.</td>
+</tr>
+<tr>
+<td>Swap Inputs</td>
+<td>Swap the two strips.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="default-fade-4">Default Fade</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/default-fade.png" alt="Default Fade" loading="lazy"></figure>
+<p>Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.</p>
+<h4 id="effect-strip-type-alpha-over">Effect strip type Alpha Over</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png" alt="Effect strip type Alpha Over" loading="lazy"><figcaption>Effect strip type Alpha Over</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input 1</td>
+<td>The first strip.</td>
+</tr>
+<tr>
+<td>Input 2</td>
+<td>The second strip.</td>
+</tr>
+<tr>
+<td>Swap Inputs</td>
+<td>Swap the two strips.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="default-fade-5">Default Fade</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/default-fade.png" alt="Default Fade" loading="lazy"></figure>
+<p>Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.</p>
+<h4 id="effect-strip-type-subtract">Effect strip type Subtract</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-multiply.png" alt="Effect strip type Subtract" loading="lazy"><figcaption>Effect strip type Subtract</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input 1</td>
+<td>The first strip.</td>
+</tr>
+<tr>
+<td>Input 2</td>
+<td>The second strip.</td>
+</tr>
+<tr>
+<td>Swap Inputs</td>
+<td>Swap the two strips.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="effect-strip-type-add">Effect strip type Add</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-multiply.png" alt="Effect strip type Add" loading="lazy"><figcaption>Effect strip type Add</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input 1</td>
+<td>The first strip.</td>
+</tr>
+<tr>
+<td>Input 2</td>
+<td>The second strip.</td>
+</tr>
+<tr>
+<td>Swap Inputs</td>
+<td>Swap the two strips.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="effect-strip-type-crossfade">Effect strip type Crossfade</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png" alt="Effect strip type Crossfade" loading="lazy"><figcaption>Effect strip type Crossfade</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input 1</td>
+<td>The first strip.</td>
+</tr>
+<tr>
+<td>Input 2</td>
+<td>The second strip.</td>
+</tr>
+<tr>
+<td>Swap Inputs</td>
+<td>Swap the two strips.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="default-fade-6">Default Fade</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/default-fade.png" alt="Default Fade" loading="lazy"></figure>
+<p>Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.</p>
+<h3 id="source-panel">Source Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/source-panel.png" alt="Source Panel" loading="lazy"></figure>
+<p>The source path and settings for a loaded video clip.</p>
+<h4 id="file">File</h4>
+<p>The source file.</p>
+<h5 id="browse">Browse</h5>
+<p>Browse for another file.</p>
+<h4 id="color-space">Color Space</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/color-space.png" alt="Color Space" loading="lazy"></figure>
+<p>Which color space to use for the loaded video clip.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stream Index</td>
+<td>For files with several movie streams, use the streamn with the given index.</td>
+</tr>
+<tr>
+<td>Deinterlace</td>
+<td>Remove fields from video movies.</td>
+</tr>
+<tr>
+<td>Info Box</td>
+<td>The resolution and frames per seconds of the video.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="custom-properties-panel">Custom Properties Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/custom-properties-panel.png" alt="Custom Properties Panel" loading="lazy"></figure>
+<p>Here you can define custom properties that can be used for scripting.</p>
+<p>Here you might also find custom properties from addons or scripts.</p>
+<h4 id="add-2">Add</h4>
+<p>Adds a new property.</p>
+<h4 id="edit">Edit</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/edit.png" alt="Edit" loading="lazy"></figure>
+<p>Opens a panel where you can adjust the settings for the custom property.</p>
+<h4 id="remove-3">Remove</h4>
+<p>Removes the property.</p>
+<h1 id="sequencer-tool-tab">Sequencer › Tool Tab</h1>
+<h3 id="tool-tab-2">Tool Tab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-tool-tab/tool-tab.png" alt="Tool Tab" loading="lazy"></figure>
+<p>In the tool tab you will find the tool related settings for the tools in the tool shelf. These settings are explained for the single tools in the tool shelf chapter.</p>
+<h3 id="tool-tab-and-top-bar">Tool Tab and Top Bar</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-tool-tab/tool-tab-and-top-bar.png" alt="Tool Tab and Top Bar" loading="lazy"><figcaption>Tool Tab and Top Bar</figcaption></figure>
+<p>The content in the Tool Tab is besides one panel the same than in the Topbar.</p>
+<p>Different from the 3D view, he top bar cannot be hidden.</p>
+<h1 id="sequencer-cache-tab">Sequencer › Cache Tab</h1>
+<h3 id="cache-settings-panel">Cache Settings panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-cache-tab/cache-settings-panel.png" alt="Cache Settings panel" loading="lazy"></figure>
+<p>The Cache is used to save frames in memory for preview, so they can be later displayed much faster than rendered from scratch. Cache capacity can be set in System tab of the Preferences.</p>
+<p>In this panel you can set up types of images that will be cached for all strips.</p>
+<h4 id="display-cache">Display Cache</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-cache-tab/display-cache.png" alt="Display Cache" loading="lazy"></figure>
+<p>This displays the cache overlay in the Sequencer timeline. This draws a purple bar.</p>
+<h4 id="final">Final</h4>
+<p>Cache final image for each frame.</p>
+<h1 id="sequencer-proxy-tab">Sequencer › Proxy Tab</h1>
+<h3 id="proxy-settings-panel">Proxy Settings Panel</h3>
+<h4 id="storage">Storage</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-proxy-tab/storage.png" alt="Storage" loading="lazy"></figure>
+<p>Defines whether the proxies are for individual strips or the entire sequence.</p>
+<h5 id="per-strip">Per Strip</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-proxy-tab/per-strip.png" alt="Per Strip" loading="lazy"></figure>
+<p>Proxies are stored in the directory of the input.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Project</td>
+<td>All proxies are stored in one directory. · <strong>Proxy Directory</strong>: The location to store the proxies for the project.</td>
+</tr>
+<tr>
+<td>Set Selected Strip Proxies</td>
+<td>Set proxy size and overwrite flag for all selected strips.</td>
+</tr>
+<tr>
+<td>Rebuild Proxy and Time code Indices</td>
+<td>Generates Proxies and Time codes for all selected strips, same as doing Strip ? Rebuild Proxy and Time code indices.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="strip-proxy-time-code-panel">Strip Proxy &amp; Time code panel</h3>
+<h4 id="use-proxy-timecode">Use Proxy Timecode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-proxy-tab/use-proxy-timecode.png" alt="Use Proxy Timecode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-proxy-tab/use-proxy-timecode-2.png" alt="Use Proxy Timecode" loading="lazy"></figure>
+<p>Enable Proxy Timecode.</p>
+<h4 id="custom-proxy">Custom Proxy</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-proxy-tab/custom-proxy.png" alt="Custom Proxy" loading="lazy"></figure>
+<h5 id="proxy-custom-directory">Proxy Custom Directory</h5>
+<p>Use a custom directory to store data. Activating the tool reveals a directory picker.</p>
+<h5 id="proxy-custom-file">Proxy Custom File</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-proxy-tab/proxy-custom-file.png" alt="Proxy Custom File" loading="lazy"></figure>
+<p>Use a custom file to read proxy data from. Activating the tool reveals a directory picker.</p>
+<p>You can either show the directory or the custom file path directory picker.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resolutions</td>
+<td>Buttons to control how big the proxies are. The available options are 25%, 50%, 75%, 100 percent of original strip size.</td>
+</tr>
+<tr>
+<td>Overwrite</td>
+<td>Saves over any existing proxies in the proxy storage directory.</td>
+</tr>
+<tr>
+<td>Build Jpeg Quality</td>
+<td>Defines the quality of the JPEG images used for proxies.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="time-code-index">Time code Index</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/sequencer-proxy-tab/time-code-index.png" alt="Time code Index" loading="lazy"></figure>
+<p>When you are working with footage directly copied from a camera without pre-processing it, there might be bunch of artifacts, mostly due to seeking a given frame in sequence. This happens because such footage usually does not have correct frame rate values in their headers. This issue can still arise when the source clip has the same frame rate as the scene settings. In order for Blender to correctly calculate frames and frame rate there are two possible solutions:</p>
+<p>Preprocess your video with e.g. MEncoder to repair the file header and insert the correct keyframes.</p>
+<p>Use Proxy/Time code option in Blender.</p>
+<p>The following time codes are supported:</p>
+<p>No TC in use – do not use any time code</p>
+<p>Record Run</p>
+<p>Free Run</p>
+<p>Free Run (rec date)</p>
+<p>Record Run No Gaps</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Record Run is the time code which usually is best to use, but if the clip’s file is totally damaged, Record Run No Gaps will be the only chance of getting acceptable result.</p></div>
+<h1 id="sequencer-view-tab">Sequencer › View Tab</h1>
+<p>Syncing options with the 3d view.</p>
+<h3 id="sync-mode-2">Sync Mode</h3>
+<p>The sync method.</p>
+<h4 id="built-in-2">Built-In</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/built-in.png" alt="Built-In" loading="lazy"></figure>
+<h5 id="advanced-settings-3">Advanced Settings</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keep Grease Pencil Settings</td>
+<td>Keep active Grease Pencil tool settings while navigating scene strips.</td>
+</tr>
+<tr>
+<td>Use Preview Range</td>
+<td>Update the current scene strip to match the range.</td>
+</tr>
+<tr>
+<td>Synchronize all Windows</td>
+<td>If the 3d View sync impacts all main windows.</td>
+</tr>
+<tr>
+<td>Active follows Playhead</td>
+<td>Update the active scene strip while scrubbing the playhead.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="legacy-2">Legacy</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/612cb9d625096e68028a4ec0e3195e3517268591/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/legacy.png" alt="Legacy" loading="lazy"></figure>
+<h5 id="synchronization-timeline-2">Synchronization Timeline</h5>
+<h6 id="scene-2">Scene</h6>
+<p>The scene to synchronize.</p>
+<h6 id="use-pinned-scene-2">Use Pinned Scene</h6>
+<p>Mak the pinned scene the active scene. The button and the “Set the Timeline” hint will vanish then.</p>
+<h5 id="advanced-settings-4">Advanced Settings</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bidirectional</td>
+<td>Changing the active scene should also update the timeline scene’s current frame in the sequencer.</td>
+</tr>
+<tr>
+<td>Keep Grease Pencil Settings</td>
+<td>Keep active Grease Pencil tool settings while navigating scene strips.</td>
+</tr>
+<tr>
+<td>Use Preview Range</td>
+<td>Update the current scene strip to match the range.</td>
+</tr>
+<tr>
+<td>Synchronize all Windows</td>
+<td>If the 3d View sync impacts all main windows.</td>
+</tr>
+<tr>
+<td>Active follows Playhead</td>
+<td>Update the active scene strip while scrubbing the playhead.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fvse-text-line-spacing/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fvideo-sequence-editor%2Fsidebar%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/vse-text-line-spacing/docs2/content/editors/video-sequence-editor/sidebar/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#introduction">Introduction</a><a class="h2" href="#right-click-menus">Right Click menus</a><a class="h3" href="#tool-tab">Tool Tab</a><a class="h3" href="#active-tool-panel">Active Tool panel</a><a class="h3" href="#view-settings-tab">View Settings Tab</a><a class="h3" href="#view-settings-panel">View Settings Panel</a><a class="h3" href="#location-x-y">Location X / Y</a><a class="h3" href="#frame-overlay-panel">Frame Overlay Panel</a><a class="h3" href="#save-areas-panel">Save Areas panel</a><a class="h3" href="#scene-strip-display-panel">Scene Strip Display panel</a><a class="h3" href="#annotations-panel">Annotations panel</a><a class="h3" href="#sync-mode">Sync Mode</a><a class="h3" href="#strip-tab">Strip Tab</a><a class="h3" href="#compositing-panel">Compositing Panel</a><a class="h3" href="#transform-panel">Transform Panel</a><a class="h3" href="#crop-panel">Crop Panel</a><a class="h3" href="#video-panel">Video Panel</a><a class="h3" href="#color-panel">Color Panel</a><a class="h3" href="#sound-panel">Sound Panel</a><a class="h3" href="#time-panel">Time Panel</a><a class="h3" href="#scene-panel">Scene Panel</a><a class="h3" href="#mask-panel">Mask Panel</a><a class="h3" href="#effect-strip-panel">Effect Strip Panel</a><a class="h3" href="#source-panel">Source Panel</a><a class="h3" href="#custom-properties-panel">Custom Properties Panel</a><a class="h3" href="#tool-tab-2">Tool Tab</a><a class="h3" href="#tool-tab-and-top-bar">Tool Tab and Top Bar</a><a class="h3" href="#cache-settings-panel">Cache Settings panel</a><a class="h3" href="#proxy-settings-panel">Proxy Settings Panel</a><a class="h3" href="#strip-proxy-time-code-panel">Strip Proxy &amp; Time code panel</a><a class="h3" href="#sync-mode-2">Sync Mode</a></aside></div></body></html>
