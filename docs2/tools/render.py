@@ -146,7 +146,11 @@ class Builder:
                  f'<span>Bforartists {htmllib.escape(str(fm.get("version", "")))}</span>',
                  f"<span>🕒 {max(1, round(words / 200))} min read</span>"]
         crumbs = " › ".join(htmllib.escape(str(x)) for x in (fm.get("path") or [fm.get("title", "")]))
-        cms = f"{CMS_URL}/{quote(self.branch, safe='')}/collection/{'snippets' if page.kind == 'snippet' else 'docs'}/edit/{quote(page.rel, safe='')}"
+        # Pages CMS wants the file path relative to the collection root (.pages.yml `path:`),
+        # not the repository path, so docs2/content/ and docs2/snippets/ are cut off.
+        coll, root = ("snippets", "docs2/snippets/") if page.kind == "snippet" else ("docs", "docs2/content/")
+        in_coll = page.rel[len(root):] if page.rel.startswith(root) else page.rel
+        cms = f"{CMS_URL}/{quote(self.branch, safe='')}/collection/{coll}/edit/{quote(in_coll, safe='')}"
         main = (f'<div class="pv-crumb">📄 Documentation › {crumbs}</div>'
                 f'<h1 class="pv-title">{htmllib.escape(str(fm.get("title", "")))}</h1><div class="pv-chips">{"".join(chips)}</div>'
                 f'<article class="ui-doc-body">{body}</article>'
