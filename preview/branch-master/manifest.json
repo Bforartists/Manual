@@ -1,6 +1,7 @@
 {
  "pages": {
-  "docs2/content/editors/3d-viewport/mesh/sculpt/header.md": "editors/3d-viewport/mesh/sculpt/header.html"
+  "docs2/content/editors/3d-viewport/mesh/edit/tool-shelf.md": "editors/3d-viewport/mesh/edit/tool-shelf.html",
+  "docs2/content/editors/3d-viewport/object-mode/tool-shelf.md": "editors/3d-viewport/object-mode/tool-shelf.html"
  },
- "images": 50
+ "images": 213
 }
