@@ -293,6 +293,89 @@ Compute the divergence of the gradient of the input grid.
 | Inputs | **Grid**: The input grid. |
 | Output | **Laplacian**: The output grid. |
 
+#### Grid Solve Poisson
+
+![Grid Solve Poisson](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-solve-poisson.png)
+
+Solves the Poisson equation for a scalar grid. It computes a grid whose Laplacian is the input grid. Use the boundary settings to say what happens at the edge of the active voxels.
+
+The solver works on grids with the same voxel size in all directions. If the voxel size is not uniform, the node shows a warning.
+
+##### Inputs
+
+###### Grid
+
+The scalar grid on the right-hand side of the equation.
+
+###### Max Iterations
+
+The most steps the solver may take. The default is 100. The value can be 1 to 10000.
+
+###### Error Threshold
+
+The solver stops when the error is below this value. The default is 0.001.
+
+###### Threshold Mode
+
+How the error threshold is measured.
+
+- Relative: the error is measured relative to the largest absolute value of the input grid. This is the default.
+- Absolute: the error is measured as an absolute value in the units of the solution.
+
+###### Boundary
+
+What happens at the boundary between active and inactive voxels.
+
+- Fixed: you set the value of the solution for the voxels just outside the active ones. This is the default.
+- Gradient: you set the gradient of the solution at the boundary.
+- Mixed: you set both and blend between them with Boundary Factor.
+
+###### Boundary Value
+
+The value of the solution at the boundary. It is a field, so it can change from voxel to voxel. It is only shown for Fixed and Mixed.
+
+###### Boundary Gradient
+
+The gradient of the solution at the boundary. It is a field. It is only shown for Gradient and Mixed.
+
+###### Boundary Factor
+
+How much of the gradient is used instead of the value, from 0 to 1. At 0 the value is used, at 1 the gradient. It is a field. It is only shown for Mixed.
+
+##### Outputs
+
+###### Solution
+
+The grid that solves the equation.
+
+###### Success
+
+True if the solver reached the error threshold.
+
+###### Iterations
+
+How many steps the solver took.
+
+###### Absolute Error
+
+The absolute error of the solution at the end.
+
+###### Relative Error
+
+The relative error of the solution at the end.
+
+###### Debug Boundary Value
+
+A panel with three outputs that is closed by default. This one is the grid of boundary values the solver used. It is only shown for Fixed and Mixed.
+
+###### Debug Boundary Gradient
+
+The grid of boundary gradients the solver used. It is only shown for Gradient and Mixed.
+
+###### Debug Boundary Factor
+
+The grid of boundary factors the solver used. It is only shown for Mixed.
+
 # Write
 
 ### Add menu - Volume
