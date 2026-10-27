@@ -72,7 +72,15 @@ You can add more than one asset library from the preferences.
 
 Some libraries, like the online Essentials, live on the internet. When internet access is off in the Preferences, the Asset Browser still shows every asset you've **already downloaded**, so you can keep working offline.
 
-A banner at the top reminds you that you only see the offline assets. Click **Continue Offline** to hide it and keep working, or **Allow Online Access** to go online so the rest of the library can load.
+A banner at the top reminds you that you only see the offline assets.
+
+#### Continue Offline
+
+Hides the banner, so you can keep working with the assets you already have.
+
+#### Allow Online Access
+
+Turns internet access on, so the rest of the library can load.
 
 ### Drag & Drop of materials
 
