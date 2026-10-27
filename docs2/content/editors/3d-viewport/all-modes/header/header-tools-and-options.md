@@ -2597,6 +2597,14 @@ The content is all a double entry by purpose, to have these buttons at the top h
 
 This addon can be turned off in the Preferences.
 
+## Lock Object Modes button
+
+![Lock Object Modes button](/docs2/images/editors/3d-viewport/header/header-tools-and-options/align-view-lock-object-mode.png)
+
+The lock button at the end of the row turns **Lock Object Modes** on and off. While it's on, you can only select objects that are in the same mode as the active one. That stops you from jumping out of Edit Mode or Sculpt Mode by clicking another object by accident.
+
+The button is hidden by default. To show it, go to **Preferences › Add-ons › Align View Buttons** and turn on **Lock Object Mode** under Navigation. The same setting is also in the sidebar, under **View › Edit**.
+
 # Grease Pencil - all modes - Layer Panel
 
 ![Grease Pencil - all modes - Layer Panel](/docs2/images/editors/3d-viewport/header/header-tools-and-options/grease-pencil-all-modes-layer-panel.png)
