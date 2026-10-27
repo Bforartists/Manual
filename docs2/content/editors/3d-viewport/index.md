@@ -92,6 +92,22 @@ From left to right.
 
 A mini axis. It allows rotation of the view and snap to the nearest ortho view when it is in interactive navigation mode. See Viewport gizmos for more options. There you can turn it to a simple widget, or turn it even completely off.
 
+#### Roll ring
+
+<!-- TODO screenshot: navigation gizmo while dragging the roll ring, showing the angle wedge and the degrees readout -->
+
+A thin ring sits around the mini axis. **Drag the ring to roll the view**, tilting it sideways like turning your head.
+
+| Do this | What happens |
+| ------------------------ | ------------------------------------------------------------------------------------------------ |
+| Drag right | Rolls clockwise. |
+| Drag left | Rolls counter-clockwise. |
+| Hold Ctrl while dragging | Snaps to the roll step (15° by default, the same step as Shift Numpad 4 / 6). |
+
+While you drag, the ring shows how far you've rolled: a wedge from the top of the ring, and the angle in degrees below it (positive is clockwise). It's the same value as **Sidebar › View › View Roll**. The mouse cursor hides and wraps around the screen, so you never run out of room to drag.
+
+> **Tip:** The ring hides in axis views (Top, Front, Right...) and when view rotation is locked. **Ctrl+Alt+MMB** still rolls the view the classic way, by dialing around the view center.
+
 #### Lock camera to view
 
 Available when you are in camera view. Either navigate the passepartout around the camera, or navigate in the camera view.
