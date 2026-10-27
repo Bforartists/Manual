@@ -731,25 +731,18 @@ Type exact numbers to size and place the selected node. Handy for keeping big no
 
 What kind of messages should be propagated from this node to the parent node.
 
-#### Color Subpanel
+#### Color
 
-![Color Subpanel](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/color-subpanel.png)
+![Color row](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/color-row.png)
 
-Define a custom color for the node. A click at the color field opens a color picker.
+Give the node a color of its own, so parts of a big node tree are easy to tell apart. Everything sits in one row:
 
-##### Presets
-
-![Presets](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/presets.png)
-
-Add color presets.
-
-##### Node color specials
-
-###### Copy Color
-
-![Copy Color](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/copy-color.png)
-
-Copies the color. Which doesn't help you since you cannot paste it.
+| Entry | What it does |
+| ---------------------- | ----------------------------------------------------------------------------------------------- |
+| Color (checkbox) | Turns your custom color on or off. |
+| Color field | Click it to pick a color. |
+| Copy Color (copy icon) | Gives all selected nodes the same color as the active node. |
+| Presets (list icon) | Save colors you like and reuse them. Presets are stored globally, so they work in your other files too. |
 
 ### Properties panel
 

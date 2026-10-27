@@ -65,31 +65,18 @@ Type exact numbers to size and place the selected node. Handy for keeping big no
 | Width | How wide the node is. Same as dragging its side edge. |
 | Location | Where the node sits in the editor, as **X** (left/right) and **Y** (up/down). Nodes inside a frame still use the position in the whole editor. |
 
-#### Color sub menu
+#### Color
 
-##### Color checkbox
+![Color row](/docs2/images/editors/shader-editor/sidebar/node-tab/color-row.png)
 
-The Color checkbox turns custom color on or off.
+Give the node a color of its own, so parts of a big node tree are easy to tell apart. Everything sits in one row:
 
-##### Presets
-
-![Presets](/docs2/images/editors/shader-editor/sidebar/node-tab/presets.png)
-
-Store some color presets and reuse them. They are stored globally, and transfers to other blend files.
-
-##### Color
-
-![Color](/docs2/images/editors/shader-editor/sidebar/node-tab/color.png)
-
-Choose a custom color. A click at the color field will open a color picker.
-
-##### Node color specials
-
-![Node color specials](/docs2/images/editors/shader-editor/sidebar/node-tab/node-color-specials.png)
-
-###### Copy Color
-
-Allows you to copy the color.
+| Entry | What it does |
+| ---------------------- | ----------------------------------------------------------------------------------------------- |
+| Color (checkbox) | Turns your custom color on or off. |
+| Color field | Click it to pick a color. |
+| Copy Color (copy icon) | Gives all selected nodes the same color as the active node. |
+| Presets (list icon) | Save colors you like and reuse them. Presets are stored globally, so they work in your other files too. |
 
 ### Node Tab - Properties Panel
 
