@@ -3553,6 +3553,8 @@ In the header you will see a message that the tool waits for input.
 
 This tool has two functionalities. If the whole geometry is selected, then it creates a copy of the geometry at the mouse position, randomly rotated by a small amount. If just elements are selected, then it extrudes this element to the mouse position.
 
+> **Tip:** You also find **Extrude to Cursor or Add** at the top of the **Vertex** tab in the tool shelf, so it's one click away while you model.
+
 ### Make Edge/Face
 
 Adds a face when you have edges selected. And Edges when you have Vertices selected. It's a Bridge tool.
