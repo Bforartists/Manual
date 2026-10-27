@@ -398,24 +398,19 @@ The default mini axis widget. This widget is interactive. Clicking and dragging 
 
 ![Quality](/docs2/images/editors/preferences/quality.png)
 
-Contains the settings to adjust the display quality in the viewport.
-
-#### Viewport Anti-Aliasing
-
-The anti alias quality settings for the solid mode rendering in the 3d viewport.
-
-#### Multi sampling
-
-![Multi sampling](/docs2/images/editors/preferences/multi-sampling.png)
-
-Set the OpenGL Multi sampling in case your system supports it.
-
+How smooth and detailed the 3D Viewport looks. Higher settings look better but need a faster graphics card.
 
 | Entry | What it does |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Grease Pencil Multi sampling | The grease pencil drawing has its own OpenGL Multi sampling. Set the OpenGL Multi sampling in case your system supports it. |
-| Edit Mode Smooth Wires | Enable Edit Mode edge smoothing which reduces anti alias and makes the edge more sharp. A change requires a restart of the software. |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Viewport Anti-Aliasing | Smooths jagged edges in the 3D Viewport. More samples look smoother but are slower. |
+| Overlay Smooth Wires | Smooths the lines of overlays such as wireframes and grids. |
+| Edit Mode Smooth Wires | Smooths the edges you see in Edit Mode. Bforartists needs a restart before this change shows. |
 
+#### Shadows
+
+| Entry | What it does |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Hardware Raytracing | Draws viewport shadows with raytracing on your graphics card. It needs Vulkan and a graphics card with hardware raytracing. Without them, the option is greyed out. |
 
 ### Textures
 
