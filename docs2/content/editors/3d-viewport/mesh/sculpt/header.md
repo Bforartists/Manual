@@ -455,9 +455,10 @@ Calls a rectangle tool that cuts away mesh parts, dependent of the view.
 
 | Entry | What it does |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Lasso Trim | Calls a rectangle tool that cuts away mesh parts, dependent of the view. |
+| Lasso Trim | Draw a free lasso shape, and the mesh inside it is cut away, seen from the current view. |
 | Line Trim | Calls a line tool that cuts away mesh parts based on ab underside of a line that you can draw from the first click to a second click. The line will show a gradient, any part of the mesh on that side of the gradient will be booleaned. |
-| Line Project | Calls a rectangle tool that cuts away mesh parts, dependant of the view. |
+| Line Project | Draw a line, and the mesh on the shaded side is flattened onto that line. |
+| Polyline Trim | Click point by point to draw a shape with straight sides, then confirm. The mesh inside it is cut away, seen from the current view. |
 
 
 ### Transform submenu
