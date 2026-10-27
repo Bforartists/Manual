@@ -290,7 +290,7 @@ Just primitive objects like mesh and curve does have an edit mode. Non primitive
 
 ### Dimensions
 
-<!-- TODO screenshot: Edit Mode, a few vertices selected, sidebar Item tab > Transform panel showing Median and Dimensions -->
+![Dimensions in Edit Mode](/docs2/images/editors/3d-viewport/sidebar/item-tab/dimensions-edit-mode.png)
 
 Below the Median you now also see **Dimensions X / Y / Z**: how big your selection is along each axis. Type a new value to scale the selection to that size. It scales around your current pivot point.
 
