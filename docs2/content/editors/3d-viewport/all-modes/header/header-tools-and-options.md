@@ -1054,12 +1054,7 @@ Saves all images. Internal images needs to be saved manually first. They don't h
 
 ## Masking
 
-The **Masking** popover in the Texture Paint header holds two masks, side by side at the top level. Tick one to turn it on, and its settings open right below it.
-
-| Mask | What it does |
-| ------------ | ------------------------------------------------------------------------------ |
-| Stencil Mask | Paint only where a stencil image lets paint through. |
-| Cavity Mask | Paint more, or less, in the dents and creases of the mesh, shaped by a curve. |
+The **Masking** popover in the Texture Paint header holds two masks, side by side at the top level: **Stencil Mask** and **Cavity Mask**. Tick one to turn it on, and its settings open right below it.
 
 ## Stencil Mask
 
