@@ -1,0 +1,10 @@
+{
+ "pages": {
+  "docs2/content/editors/compositor/index.md": "editors/compositor.html",
+  "docs2/content/editors/geometry-node-editor/header/index.md": "editors/geometry-node-editor/header.html",
+  "docs2/content/editors/geometry-node-editor/index.md": "editors/geometry-node-editor.html",
+  "docs2/content/editors/shader-editor/header/index.md": "editors/shader-editor/header.html",
+  "docs2/content/editors/shader-editor/index.md": "editors/shader-editor.html"
+ },
+ "images": 195
+}
