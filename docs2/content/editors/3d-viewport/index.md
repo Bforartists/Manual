@@ -98,11 +98,7 @@ A mini axis. It allows rotation of the view and snap to the nearest ortho view w
 
 A thin ring sits around the mini axis. **Drag the ring to roll the view**, tilting it sideways like turning your head.
 
-| Do this | What happens |
-| ------------------------ | ------------------------------------------------------------------------------------------------ |
-| Drag right | Rolls clockwise. |
-| Drag left | Rolls counter-clockwise. |
-| Hold Ctrl while dragging | Snaps to the roll step (15° by default, the same step as Shift Numpad 4 / 6). |
+Drag **right** to roll clockwise, and **left** to roll counter-clockwise. Hold **Ctrl** while you drag to snap to the roll step, 15° by default, the same step as Shift Numpad 4 / 6.
 
 While you drag, the ring shows how far you've rolled: a wedge from the top of the ring, and the angle in degrees below it (positive is clockwise). It's the same value as **Sidebar › View › View Roll**. The mouse cursor hides and wraps around the screen, so you never run out of room to drag.
 
