@@ -792,6 +792,8 @@ This panel comes from the **Important Hotkeys** add-on. It shows the most import
 
 <!-- TODO screenshot: sidebar View tab > Important Hotkeys panel, Hide Text pressed -->
 
-Click **Show Text** to display the hotkeys in the viewport. While they show, the button reads **Hide Text** and looks pressed in, so you can see at a glance that the overlay is on. Click it again to hide them.
+### Show Text / Hide Text
 
-Next to it, pick the **color** of the text and set the **Text Size**.
+Shows the hotkeys in the viewport. While they show, the button reads **Hide Text** and looks pressed in, so you can see at a glance that the overlay is on. Click it again to hide them.
+
+Below the button, pick the **color** of the text and set the **Text Size**.
