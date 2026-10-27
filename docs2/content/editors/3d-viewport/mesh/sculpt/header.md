@@ -530,7 +530,13 @@ Calls a rectangle tool that adds mesh parts, dependant of the view.
 
 ### Lasso Add
 
-Calls a rectangle tool that adds mesh parts, dependant of the view.
+Draw a free lasso shape, and new mesh is added in that shape, seen from the current view.
+
+### Polyline Add
+
+Click point by point to draw a shape with straight sides, then confirm. New mesh is added in that shape, seen from the current view. Good for hard, angular pieces.
+
+> **Note:** Box Add, Lasso Add and Polyline Add sit together near the top of the Sculpt menu. Polyline Add used to be in the Legacy submenu.
 
 ### Smooth
 
