@@ -700,6 +700,8 @@ Animation panels are about the Animation Slots for scene wide animation clips.
 
 ### Node panel
 
+![Node panel](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/node-panel.png)
+
 #### Name
 
 ![Name](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/name.png)
