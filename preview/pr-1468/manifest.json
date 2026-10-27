@@ -1,0 +1,8 @@
+{
+ "pages": {
+  "docs2/content/editors/compositor/sidebar/index.md": "editors/compositor/sidebar.html",
+  "docs2/content/editors/geometry-node-editor/sidebar/index.md": "editors/geometry-node-editor/sidebar.html",
+  "docs2/content/editors/shader-editor/sidebar/index.md": "editors/shader-editor/sidebar.html"
+ },
+ "images": 300
+}
