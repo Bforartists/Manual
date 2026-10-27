@@ -527,14 +527,30 @@ The Select menu contains various tools to select elements.
 
 The content is the same in all modes. With one exception. Grease Pencil mode is missing the More / Less menu items.
 
-| Entry | What it does |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| All | Select everything. |
-| None | Select nothing. |
-| Invert | Invert the current selection. |
-| Box Select | Box select enters the Border Select mode. Select elements by dragging a rectangle around it. Just what's inside of the rectangle gets selected then. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse. |
-| Box Select(Axis Range) | Box select enters the Border Select mode. Select elements by dragging a rectangle around it. And what's inside the horizontal range of the rectangle gets selected then. Even when the keyframes are outside of the rectangle. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse. |
-| Circle Select | Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel. |
+#### All
+
+Select everything.
+
+#### None
+
+Select nothing.
+
+#### Invert
+
+Invert the current selection.
+
+#### Box Select
+
+Box select enters the Border Select mode. Select elements by dragging a rectangle around it. Just what's inside of the rectangle gets selected then. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse.
+
+#### Box Select (Axis Range)
+
+Box select enters the Border Select mode. Select elements by dragging a rectangle around it. And what's inside the horizontal range of the rectangle gets selected then. Even when the keyframes are outside of the rectangle. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse.
+
+#### Circle Select
+
+Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel.
+
 
 #### Lasso Select
 
@@ -542,15 +558,25 @@ The content is the same in all modes. With one exception. Grease Pencil mode is 
 
 A sub menu with the available lasso select modes.
 
-| Entry | What it does |
-| --------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Columns on Selected Keys | Select the keyframes in the columns of the currently selected keyframe. |
-| Columns on Current Frame | Select the keyframes in the columns of the current frame. |
-| Columns on Selected Markers | Select the keyframes in the columns of the selected markers. |
-| Between Selected Markers | Select the keyframes between the selected markers. You need to have markers in the view for this feature. |
-| Linked | Select all keyframes on the same channels as the keyframes you already selected. |
-| Before current Frame | Select the keyframes before the current frame. |
-| After current Frame | Select the keyframes after the current frame. |
+#### Columns on Selected Keys
+
+Select the keyframes in the columns of the currently selected keyframe.
+
+#### Columns on Current Frame
+
+Select the keyframes in the columns of the current frame.
+
+#### Columns on Selected Markers
+
+Select the keyframes in the columns of the selected markers.
+
+#### Between Selected Markers
+
+Select the keyframes between the selected markers. You need to have markers in the view for this feature.
+
+#### Linked
+
+Select all keyframes on the same channels as the keyframes you already selected.
 
 #### Type submenu
 
@@ -558,14 +584,27 @@ Select every keyframe of one kind at once, for example all **Breakdowns** or all
 
 > **Note:** **Linked** and **Type** used to be called Select Linked and Select by Type. They're shorter now because they already sit in the Select menu. Neither shows in Grease Pencil mode.
 
+#### Before Current Frame
+
+Select the keyframes before the current frame.
+
+#### After Current Frame
+
+Select the keyframes after the current frame.
+
+
 #### More/Less Sub-menu
 
 ![More/Less Sub-menu](/docs2/images/editors/dope-sheet/header/select-menu/more-less-sub-menu.png)
 
-| Entry | What it does |
-| ----- | --------------------- |
-| More | Grow the selection. |
-| Less | Shrink the selection. |
+##### More
+
+Grow the selection.
+
+##### Less
+
+Shrink the selection.
+
 
 # Marker Menu
 
