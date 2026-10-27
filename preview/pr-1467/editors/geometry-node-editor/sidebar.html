@@ -1,0 +1,1432 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sidebar · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1467 · <code>docs2/node-panel-location-width</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<a class="is-current" style="padding-left:1.5rem" href="sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Sidebar</div><h1 class="pv-title">Sidebar</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 17 min read</span></div><article class="ui-doc-body"><h2 id="introduction">Introduction</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/introduction.png" alt="Introduction" loading="lazy"></figure>
+<p>The Geometry Node Editor is made of several areas. At the right side you will find the sidebar. Here you will find further options and settings for the Geometry Node Editor nodes and its tools.</p>
+<h2 id="right-click-menus">Right Click menus</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/right-click-menus.png" alt="Right Click menus" loading="lazy"></figure>
+<p>You will open the usual right click menus when clicking with the right mouse at elements in the sidebar. Its content is in big parts self explaining.</p>
+<p>The right click menus are explained in the chapter 6 Editors Introduction.</p>
+<h1 id="group-tab">Group Tab</h1>
+<h3 id="group-tab-introduction">Group tab - Introduction</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/introduction.png" alt="Group tab - Introduction" loading="lazy"><figcaption>Group tab - Introduction</figcaption></figure>
+<p>The Shader sidebar Group tab at the right side contains options and settings for node groups and socket input and output properties.</p>
+<p>It is especially meant for the group nodes. Grpup Input and Group Output.</p>
+<p>In the group sockets panel you can define what sockets the Group Input and Group Output node has.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/group-tab-introduction.png" alt="Group tab - Introduction" loading="lazy"><figcaption>Group tab - Introduction</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/group-tab-introduction-2.png" alt="Group tab - Introduction" loading="lazy"><figcaption>Group tab - Introduction</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/group-tab-introduction-3.png" alt="Group tab - Introduction" loading="lazy"><figcaption>Group tab - Introduction</figcaption></figure>
+<h3 id="group-properties-panel">Group Properties Panel</h3>
+<h4 id="name">Name</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/name.png" alt="Name" loading="lazy"></figure>
+<p>Change the name of the current node group. Type in a new name and hit enter.</p>
+<h4 id="description">Description</h4>
+<p>Change the description of the current node group. Type in a new name and hit</p>
+<p>enter.</p>
+<h4 id="color-tag">Color Tag</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/color-tag.png" alt="Color Tag" loading="lazy"></figure>
+<p>Changes the header color of the current node group.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node Width</td>
+<td>The width for newly created node groups. Value can range between 40 and 700 px. · <strong>Set default group node width</strong>: Sets the width based of the parent node group in the current context.</td>
+</tr>
+<tr>
+<td>Show Manage Panel</td>
+<td>Display the manage panel when creating a modifier.</td>
+</tr>
+<tr>
+<td>Usage subpanel</td>
+<td><strong>Modifier</strong>: The node group is used as a geometry modifier. This setting is only relevant for marked nodegroups as an asset. · <strong>Tool</strong>: The node group is used as a tool. This setting is only relevant for marked nodegroups as an asset.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="group-sockets-panel">Group Sockets Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/group-sockets-panel.png" alt="Group Sockets Panel" loading="lazy"></figure>
+<p>Manage the input and output properties of the Group Input and Output nodes.</p>
+<p>More than one input and output slot can be useful when you want to modify the shader in the node group in more than one way.</p>
+<h4 id="group-socket-list">Group Socket List</h4>
+<p>List of available input and output sockets.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The list can be sorted by dragging the items around. And you can rename them.</p></div>
+<h5 id="list">List</h5>
+<p>The list of input and output sockets.</p>
+<h5 id="name-2">Name</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/name-2.png" alt="Name" loading="lazy"></figure>
+<p>Change the name of the current selected input socket by double clicking on the socket in the list. Type in a new name and hit enter.</p>
+<h5 id="new-item">New Item</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/new-item.png" alt="New Item" loading="lazy"></figure>
+<p>Adds a new input sockets to the list.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Adds a new input sockets to the list.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Adds a new output socket to the list.</td>
+</tr>
+<tr>
+<td>Panel</td>
+<td>Adds a new panel socket to the list.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="panel-toggle">Panel Toggle</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/panel-toggle.png" alt="Panel Toggle" loading="lazy"></figure>
+<p>Converts an active selected Boolean socket into a Panel Boolean.</p>
+<p>When converting a boolean to a panel boolean, the parent panel of the Boolean socket will move to the panel header.</p>
+<h6 id="panel-toggle-subpanel">Panel Toggle subpanel</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/panel-toggle-subpanel.png" alt="Panel Toggle subpanel" loading="lazy"></figure>
+<p>When adding a panel toggle to a panel then a subpanel appears.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>Input value used for unconnected sockets.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the input value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Shape</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape.png" alt="Shape" loading="lazy"></figure>
+<p>What kind of higher order types are expected to flow through this socket.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/duplicate-item-icon.png" alt="" /> Duplicate Item</td>
+<td>Duplicates the active socket.</td>
+</tr>
+<tr>
+<td><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/remove-item-icon.png" alt="" /> Remove Item</td>
+<td>Removes the selected input socket from the list. Node tree interface specials</td>
+</tr>
+</tbody>
+</table>
+<h5 id="move-item-up-down">Move Item Up/Down</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/move-item-up-down.png" alt="Move Item Up/Down" loading="lazy"></figure>
+<p>Moves the active item to the specified direction. You can move the active item up or down the list.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> You can also alternatively drag and drop the active item to re-order.</p></div>
+<h4 id="inputs">Inputs</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/inputs.png" alt="Inputs" loading="lazy"></figure>
+<p>Inputs are characterized by the colored dot to the left. These are manifested in the Group Input node.</p>
+<h4 id="outputs">Outputs</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/outputs.png" alt="Outputs" loading="lazy"></figure>
+<p>Outputs are characterized by the colored dot to the right. These are manifested in the Group Output node.</p>
+<h3 id="group-sockets-panel-2">Group Sockets Panel</h3>
+<p>The group input sockets differs in functionality from the group outputs sockets. So you will get other content when you selct a group input node compared to the group output node.</p>
+<h4 id="type">Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type.png" alt="Type" loading="lazy"></figure>
+<p>What kind of node group input or output type it is.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-2.png" alt="Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-3.png" alt="Type" loading="lazy"></figure>
+<h5 id="type-float">Type Float</h5>
+<h6 id="description-2">Description</h6>
+<p>Add a tooltip to the socket description.</p>
+<h6 id="atrribute-domain">Atrribute Domain</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain.png" alt="Atrribute Domain" loading="lazy"></figure>
+<p>The attribute domain used by the geometry nodes modifier to create an attribute output.</p>
+<h6 id="default-attribute">Default Attribute</h6>
+<p>The default attribute.</p>
+<h6 id="subtype">Subtype</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/subtype.png" alt="Subtype" loading="lazy"></figure>
+<p>Subtype of the default value.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>The default value for the socket.</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>The minimum value for the socket. <strong>Note:</strong> <em>This is only available for vector and float types.</em></td>
+</tr>
+<tr>
+<td>Max</td>
+<td>The maximum value for the socket. <em><strong>Note:</strong> This is only available for vector and float types.</em></td>
+</tr>
+<tr>
+<td>Optional label</td>
+<td>Hide the label if not needed.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="shape">Shape</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png" alt="Shape" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png" alt="Shape" loading="lazy"></figure>
+<p>The shape of the socket.</p>
+<h5 id="type-integer">Type Integer</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-integer.png" alt="Type Integer" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-integer-2.png" alt="Type Integer" loading="lazy"></figure>
+<h6 id="description-3">Description</h6>
+<p>Add a tooltip to the socket description.</p>
+<h6 id="atrribute-domain-2">Atrribute Domain</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain-2.png" alt="Atrribute Domain" loading="lazy"></figure>
+<p>The attribute domain used by the geometry nodes modifier to create an attribute output.</p>
+<h6 id="default-attribute-2">Default Attribute</h6>
+<p>The default attribute.</p>
+<h6 id="subtype-2">Subtype</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/subtype.png" alt="Subtype" loading="lazy"></figure>
+<p>Subtype of the default value.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>The default value for the socket.</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>The minimum value for the socket. <strong>Note:</strong> <em>This is only available for vector and float types.</em></td>
+</tr>
+<tr>
+<td>Max</td>
+<td>The maximum value for the socket. <em><strong>Note:</strong> This is only available for vector and float types.</em></td>
+</tr>
+</tbody>
+</table>
+<h6 id="default-input">Default Input</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/default-input.png" alt="Default Input" loading="lazy"></figure>
+<p>Input to use when the socket is unconnected.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Optional label</td>
+<td>Hide the label if not needed.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="shape-2">Shape</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png" alt="Shape" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png" alt="Shape" loading="lazy"></figure>
+<p>The shape of the socket.</p>
+<h5 id="type-boolean">Type Boolean</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-boolean.png" alt="Type Boolean" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-boolean-2.png" alt="Type Boolean" loading="lazy"></figure>
+<h6 id="description-4">Description</h6>
+<p>Add a tooltip to the socket description.</p>
+<h6 id="atrribute-domain-3">Atrribute Domain</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain-2.png" alt="Atrribute Domain" loading="lazy"></figure>
+<p>The attribute domain used by the geometry nodes modifier to create an attribute output.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default Attribute</td>
+<td>The default attribute that is used by a geometry nodes modifier.</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>The default value for the socket.</td>
+</tr>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+<tr>
+<td>Layer Selection</td>
+<td>Take grease pencil or layer group as selection field.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="shape-3">Shape</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png" alt="Shape" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png" alt="Shape" loading="lazy"></figure>
+<p>The shape of the socket.</p>
+<h5 id="type-vector">Type Vector</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-vector.png" alt="Type Vector" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-vector-2.png" alt="Type Vector" loading="lazy"></figure>
+<h6 id="description-5">Description</h6>
+<p>Add a tooltip to the socket description.</p>
+<h6 id="atrribute-domain-4">Atrribute Domain</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain-2.png" alt="Atrribute Domain" loading="lazy"></figure>
+<p>The attribute domain used by the geometry nodes modifier to create an attribute output.</p>
+<h6 id="default-attribute-3">Default Attribute</h6>
+<p>The default attribute that is used by a geometry nodes modifier.</p>
+<h6 id="subtype-3">Subtype</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/subtype-2.png" alt="Subtype" loading="lazy"></figure>
+<p>What special math operation is required. The subtype menu allows you to define the socket type sliders and read-out.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dimensions</td>
+<td>How much dimensions to calculate.</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>The default vector. It changes, dependant of what dimensions you use.</td>
+</tr>
+<tr>
+<td>Min / Max</td>
+<td>Minimum value and maximum value.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="default-input-2">Default Input</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/default-input-2.png" alt="Default Input" loading="lazy"></figure>
+<p>Input to use when the socket is unconnected.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="shape-4">Shape</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png" alt="Shape" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png" alt="Shape" loading="lazy"></figure>
+<p>The shape of the socket.</p>
+<h5 id="type-color">Type Color</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-color.png" alt="Type Color" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-color-2.png" alt="Type Color" loading="lazy"></figure>
+<h6 id="description-6">Description</h6>
+<p>Add a tooltip to the socket description.</p>
+<h6 id="atrribute-domain-5">Atrribute Domain</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain-2.png" alt="Atrribute Domain" loading="lazy"></figure>
+<p>The attribute domain used by the geometry nodes modifier to create an attribute output.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default Attribute</td>
+<td>The default attribute that is used by a geometry nodes modifier.</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>The default color for the socket.</td>
+</tr>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="shape-5">Shape</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png" alt="Shape" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png" alt="Shape" loading="lazy"></figure>
+<p>The shape of the socket.</p>
+<h5 id="type-rotation">Type Rotation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-rotation.png" alt="Type Rotation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-rotation-2.png" alt="Type Rotation" loading="lazy"></figure>
+<h6 id="description-7">Description</h6>
+<p>Add a tooltip to the socket description.</p>
+<h6 id="atrribute-domain-6">Atrribute Domain</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain-2.png" alt="Atrribute Domain" loading="lazy"></figure>
+<p>The attribute domain used by the geometry nodes modifier to create an attribute output.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default Attribute</td>
+<td>The default attribute that is used by a geometry nodes modifier.</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>The default rotation values</td>
+</tr>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="shape-6">Shape</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png" alt="Shape" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png" alt="Shape" loading="lazy"></figure>
+<p>The shape of the socket.</p>
+<h5 id="type-matrix">Type Matrix</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-matrix.png" alt="Type Matrix" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-matrix-2.png" alt="Type Matrix" loading="lazy"></figure>
+<h6 id="description-8">Description</h6>
+<p>Add a tooltip to the socket description.</p>
+<h6 id="atrribute-domain-7">Atrribute Domain</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain-2.png" alt="Atrribute Domain" loading="lazy"></figure>
+<p>The attribute domain used by the geometry nodes modifier to create an attribute output.</p>
+<h6 id="default-attribute-4">Default Attribute</h6>
+<p>The default attribute that is used by a geometry nodes modifier.</p>
+<h6 id="default-input-3">Default Input</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/default-input-3.png" alt="Default Input" loading="lazy"></figure>
+<p>Input to use when the socket is unconnected.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="shape-7">Shape</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png" alt="Shape" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png" alt="Shape" loading="lazy"></figure>
+<p>The shape of the socket.</p>
+<h5 id="type-string">Type String</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-string.png" alt="Type String" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-string-2.png" alt="Type String" loading="lazy"></figure>
+<h6 id="description-9">Description</h6>
+<p>Add a tooltip to the socket description.</p>
+<h6 id="subtype-4">Subtype</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/subtype-3.png" alt="Subtype" loading="lazy"></figure>
+<p>What special math operation is required. The subtype menu allows you to define the socket type sliders and read-out.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>The default string.</td>
+</tr>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="type-menu">Type Menu</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-menu.png" alt="Type Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-menu-2.png" alt="Type Menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>Add a tooltip to the socket description.</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>The default menu.</td>
+</tr>
+<tr>
+<td>Expanded</td>
+<td>Draw the menu socket as an expanded drop down menu.</td>
+</tr>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="shape-8">Shape</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png" alt="Shape" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-3.png" alt="Shape" loading="lazy"></figure>
+<p>The shape of the socket.</p>
+<h5 id="type-geometry">Type Geometry</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-geometry.png" alt="Type Geometry" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-geometry-2.png" alt="Type Geometry" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>Add a tooltip to the socket description.</td>
+</tr>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="type-object">Type Object</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-object.png" alt="Type Object" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-object-2.png" alt="Type Object" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>Add a tooltip to the socket description.</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>The default object.</td>
+</tr>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="type-collection">Type Collection</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-collection.png" alt="Type Collection" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-collection-2.png" alt="Type Collection" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>Add a tooltip to the socket description.</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>The default collection.</td>
+</tr>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="type-image">Type Image</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-image.png" alt="Type Image" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-image-2.png" alt="Type Image" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>Add a tooltip to the socket description.</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>The default image.</td>
+</tr>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="type-material">Type Material</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-material.png" alt="Type Material" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-material-2.png" alt="Type Material" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>Add a tooltip to the socket description.</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>The default image.</td>
+</tr>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="type-font">Type Font</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-font.png" alt="Type Font" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-font-2.png" alt="Type Font" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>Add a tooltip to the socket description.</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>The default font.</td>
+</tr>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="type-bundle">Type Bundle</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-bundle.png" alt="Type Bundle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-bundle-2.png" alt="Type Bundle" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>Add a tooltip to the socket description.</td>
+</tr>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="type-closure">Type Closure</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-closure.png" alt="Type Closure" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-closure-2.png" alt="Type Closure" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>Add a tooltip to the socket description.</td>
+</tr>
+<tr>
+<td>Optional Label</td>
+<td>Make the label optional. This may resul tin the label being skipped in some cases.</td>
+</tr>
+<tr>
+<td>Hide Value</td>
+<td>Hide the input value even when the socket is not connected.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Don’t show the value in the geometry nodes modifier interface.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="group-sockets-panel-type-panel">Group Sockets Panel - Type Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/group-sockets-panel-type-panel.png" alt="Group Sockets Panel - Type Panel" loading="lazy"><figcaption>Group Sockets Panel - Type Panel</figcaption></figure>
+<p>TODO</p>
+<h4 id="closed-by-default">Closed by default</h4>
+<p>Panel is closed by default on new nodes.</p>
+<h4 id="panel-toggle-2">Panel Toggle</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/panel-toggle-2.png" alt="Panel Toggle" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The Panel Toggle properties are only for the Panel Boolean type of panels.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>The default value for the boolean toggles.</td>
+</tr>
+<tr>
+<td>Hide in Modifier</td>
+<td>Hides the panel boolean toggle from the modifier stack.</td>
+</tr>
+<tr>
+<td>Single Value</td>
+<td>The default value for the panel boolean toggle.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="animation-panel">Animation Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/group-tab/animation-panel.png" alt="Animation Panel" loading="lazy"></figure>
+<p>Animation panels are about the Animation Slots for scene wide animation clips.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>Create a new action clip for the light, used in the Dopesheet Editor - Action Clip mode.</td>
+</tr>
+<tr>
+<td>Action Selector</td>
+<td>This selector allows users to manage actions associated with a particle system, ensuring that the correct animation data is applied. · <strong>Fake User</strong>: Assigns a &quot;fake user&quot; to the action, preventing it from being automatically deleted when it is no longer in use. · <strong>Add</strong>: Make a copy of the current action, including all animation data. · <strong>Remove</strong>: Delete the selected action, removing it from the light source.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="node-tab">Node Tab</h1>
+<h3 id="node-panel">Node panel</h3>
+<h4 id="name-3">Name</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/node-tab/name.png" alt="Name" loading="lazy"></figure>
+<p>The name of the selected node. Read only.</p>
+<p>Despite being read only, this text can be edited. But be careful, it will not change the name in the header of the node. And it does not snap back to the original name of the node when you remove the custom text.</p>
+<h4 id="label">Label</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/node-tab/label.png" alt="Label" loading="lazy"></figure>
+<p>Allows you to define a custom name for the selected node. This text does change the name in the header of the node.</p>
+<h4 id="width-and-location">Width and Location</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/node-tab/width-and-location.png" alt="Width and Location" loading="lazy"></figure>
+<p>Type exact numbers to size and place the selected node. Handy for keeping big node trees tidy and lined up.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Width</td>
+<td>How wide the node is. Same as dragging its side edge.</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Where the node sits in the editor, as <strong>X</strong> (left/right) and <strong>Y</strong> (up/down). Nodes inside a frame still use the position in the whole editor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="warning-propagation">Warning Propagation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/node-tab/warning-propagation.png" alt="Warning Propagation" loading="lazy"></figure>
+<p>What kind of messages should be propagated from this node to the parent node.</p>
+<h4 id="color-subpanel">Color Subpanel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/node-tab/color-subpanel.png" alt="Color Subpanel" loading="lazy"></figure>
+<p>Define a custom color for the node. A click at the color field opens a color picker.</p>
+<h5 id="presets">Presets</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/node-tab/presets.png" alt="Presets" loading="lazy"></figure>
+<p>Add color presets.</p>
+<h5 id="node-color-specials">Node color specials</h5>
+<h6 id="copy-color">Copy Color</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/node-tab/copy-color.png" alt="Copy Color" loading="lazy"></figure>
+<p>Copies the color. Which doesn't help you since you cannot paste it.</p>
+<h3 id="properties-panel">Properties panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/node-tab/properties-panel.png" alt="Properties panel" loading="lazy"></figure>
+<p>Lists the properties of the node in editable form. And the inputs in text form.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/node-tab/properties-panel-2.png" alt="Properties panel" loading="lazy"></figure>
+<p>Note that some nodes might not have all functionality in the node itself, but shows it in the properties panel instead. The bake node for example, shows the bake packed content just in the sidebar.</p>
+<p>To keep the information together, we describe this functionality in the corresponding node chapters.</p>
+<p>For the group input and group output options see chapter Group properties.</p>
+<h1 id="tool-tab">Tool Tab</h1>
+<h3 id="tool-tab-2">Tool Tab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/tool-tab/tool-tab.png" alt="Tool Tab" loading="lazy"></figure>
+<p>Contains the settings of the currently active tool in the tool shelf.</p>
+<p>In the node editor we don't have something special here. The tool related settings are explained in the tool shelf chapter.</p>
+<h1 id="view-tab">View Tab</h1>
+<h3 id="view-tab-annotation-panel">View Tab - Annotation Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/view-tab/view-tab-annotation-panel.png" alt="View Tab - Annotation Panel" loading="lazy"><figcaption>View Tab - Annotation Panel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/view-tab/view-tab-annotation-panel-2.png" alt="View Tab - Annotation Panel" loading="lazy"><figcaption>View Tab - Annotation Panel</figcaption></figure>
+<p>View related settings. Which is in the node editor just the Annotations panel where you can manage the Annotation layers and materials.</p>
+<p>When you don't have drawn an annotation yet then the panel just contains a New button.</p>
+<h4 id="annotations-prop">Annotations prop</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/view-tab/annotations-prop.png" alt="Annotations prop" loading="lazy"></figure>
+<p>Add, remove and rename new annotations.</p>
+<h5 id="drop-down-box">Drop down box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/view-tab/drop-down-box.png" alt="Drop down box" loading="lazy"></figure>
+<p>A list of the available annotation layers.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Box</td>
+<td>The name of the current annotation. You can rename the annotation to your needs here.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</td>
+</tr>
+<tr>
+<td>Add Annotation</td>
+<td>Add a new annotation.</td>
+</tr>
+<tr>
+<td>Delete Annotation</td>
+<td>Delete the annotation.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="list-of-annotation-strokes">List of Annotation Strokes</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/view-tab/list-of-annotation-strokes.png" alt="List of Annotation Strokes" loading="lazy"><figcaption>List of Annotation Strokes</figcaption></figure>
+<p>Here you see your Annotation layers for the current Annotation. Every layer can have an own color.</p>
+<p>At the right side you find buttons to sort them and to add and remove new Annotation layers.</p>
+<p>You can change the color by clicking at the color field. A color dialog will pop up. You can rename annotation layers by double clicking at it.</p>
+<p>The eye icon allows you to make it invisible And it has a search field.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thickness</td>
+<td>The thickness of the annotation stroke.</td>
+</tr>
+<tr>
+<td>Frame Locked/Unlocked</td>
+<td>Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="onion-skin">Onion Skin</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/view-tab/onion-skin.png" alt="Onion Skin" loading="lazy"></figure>
+<p>Enable Onion Skinning.</p>
+<p>Onion Skinning allows to show ghosts of the keyframes before and after the current frame. In this sub panel you can adjust the color of the onion skin frames.</p>
+<p>With the numbers below the colors you can define how many frames before or after are displayed that way.</p>
+<h1 id="add">Add</h1>
+<h3 id="add-tab">Add Tab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/add/add-tab.png" alt="Add Tab" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/add/add-tab-2.png" alt="Add Tab" loading="lazy"></figure>
+<p>Here you can find the same nodes than in the Add menu. Panels are more convenient to use. They stay open for example. It's your decision with what system you want to work.</p>
+<p>We won't explain the content of the panels again. The single nodes are explained in the add menu chapter.</p>
+<h4 id="usage">Usage</h4>
+<p>Click at one of the node buttons, then move the mouse into the viewport. The created node sticks at the mouse. Click again to release it.</p>
+<h3 id="add-tab-display-panel">Add tab - Display Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/add/add-tab-display-panel.png" alt="Add tab - Display Panel" loading="lazy"><figcaption>Add tab - Display Panel</figcaption></figure>
+<h4 id="icon-buttons">Icon Buttons</h4>
+<p>You can display the nodes in the panels either as text buttons or as pure icon buttons.</p>
+<h1 id="relations-tab">Relations Tab</h1>
+<h3 id="relations-tab-display-panel">Relations tab - Display Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/relations-tab/relations-tab-display-panel.png" alt="Relations tab - Display Panel" loading="lazy"><figcaption>Relations tab - Display Panel</figcaption></figure>
+<h4 id="icon-buttons-2">Icon Buttons</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/add/add-tab-display-panel.png" alt="Icon Buttons" loading="lazy"></figure>
+<p>You can display the nodes in the panels either as text buttons or as pure icon buttons.</p>
+<h3 id="relations-tab-group-panel">Relations tab - Group Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/relations-tab/relations-tab-group-panel.png" alt="Relations tab - Group Panel" loading="lazy"><figcaption>Relations tab - Group Panel</figcaption></figure>
+<h4 id="group-input">Group Input</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/relations-tab/group-input.png" alt="Group Input" loading="lazy"></figure>
+<p>Adds a group input node.</p>
+<h4 id="group-output">Group Output</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/relations-tab/group-output.png" alt="Group Output" loading="lazy"></figure>
+<p>Adds a group output node.</p>
+<h3 id="relations-tab-nodegroups-panel">Relations tab - Nodegroups Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/relations-tab/relations-tab-nodegroups-panel.png" alt="Relations tab - Nodegroups Panel" loading="lazy"><figcaption>Relations tab - Nodegroups Panel</figcaption></figure>
+<p>When you create a node group, then this node group is listed here. And can be dragged from there for reuse too.</p>
+<h3 id="relations-tab-layout-panel">Relations tab - Layout Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/sidebar/relations-tab/relations-tab-layout-panel.png" alt="Relations tab - Layout Panel" loading="lazy"><figcaption>Relations tab - Layout Panel</figcaption></figure>
+<p>These nodes helps organizing the node layout.</p>
+<h4 id="frame">Frame</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/header/add-menu-layout/frame.png" alt="Frame" loading="lazy"></figure>
+<p>The Frame node allows you to drop nodes into a frame. This frame can be dragged around as a whole.</p>
+<h5 id="adding-and-removing-nodes">Adding and Removing Nodes</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/header/add-menu-layout/adding-and-removing-nodes.jpg" alt="Adding and Removing Nodes" loading="lazy"><figcaption>Adding and Removing Nodes</figcaption></figure>
+<p>Nodes can be added by simply dropping them onto the frame. Or with the Join in New Frame menu item in the Node menu.</p>
+<p>To remove a node from the frame use Remove from Frame.</p>
+<h5 id="resizing-frame">Resizing Frame</h5>
+<p>When the Frame node is first placed in the node editor workspace you can resize it by dragging one of the edges.</p>
+<p>Once a node is placed in the Frame, the Frame shrinks around the nodes. You cannot resize it anymore with handlers. Just by dragging around the nodes inside of the frame.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/header/add-menu-layout/resizing-frame.png" alt="Resizing Frame" loading="lazy"></figure>
+<p>This behavior can be changed by disabling the <em>Shrink</em> option in the Item tab in the Properties panel. Then you can resize the frame again by dragging the edges.</p>
+<h5 id="label-and-color">Label and Color</h5>
+<p>You can change the name of a frame in the Node panel. And you can give it a custom color by checking the Color checkbox and adjusting the color then.</p>
+<h4 id="reroute">Reroute</h4>
+<p>Adds a reroute point that can be used to reroute connections. It allows just one input, but allows multiple output connections.</p>
+<p>To quickly add a Reroute node into an existing connection, hold <strong>Shift</strong> and <em><em>Right Mouse</em> <em>and drag the mouse to cut through the link.</em></em> A new reroute node will be added.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/header/add-menu-layout/reroute.png" alt="Reroute" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/header/add-menu-layout/reroute-2.png" alt="Reroute" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/header/add-menu-layout/reroute-3.png" alt="Reroute" loading="lazy"></figure>
+<p>When you exceed a specific angle amount between the reroute nodes, then the node connection becomes a sharp corner, and not longer a Bezier like soft curve.</p>
+<h5 id="move-rotate-scale">Move, Rotate, Scale</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/82c85b47e497640d88ebd98a94a5e059ca944118/docs2/images/editors/geometry-node-editor/header/add-menu-layout/move-rotate-scale.png" alt="Move, Rotate, Scale" loading="lazy"></figure>
+<p>A normal node has a handler. The reroute dot not. You can't simply move it around with the mouse by clicking at the top area. It has none. You have to use the move, rotate and scale commands. They can be found in the View menu.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fnode-panel-location-width/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fgeometry-node-editor%2Fsidebar%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/node-panel-location-width/docs2/content/editors/geometry-node-editor/sidebar/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#introduction">Introduction</a><a class="h2" href="#right-click-menus">Right Click menus</a><a class="h3" href="#group-tab-introduction">Group tab - Introduction</a><a class="h3" href="#group-properties-panel">Group Properties Panel</a><a class="h3" href="#group-sockets-panel">Group Sockets Panel</a><a class="h3" href="#group-sockets-panel-2">Group Sockets Panel</a><a class="h3" href="#group-sockets-panel-type-panel">Group Sockets Panel - Type Panel</a><a class="h3" href="#animation-panel">Animation Panel</a><a class="h3" href="#node-panel">Node panel</a><a class="h3" href="#properties-panel">Properties panel</a><a class="h3" href="#tool-tab-2">Tool Tab</a><a class="h3" href="#view-tab-annotation-panel">View Tab - Annotation Panel</a><a class="h3" href="#add-tab">Add Tab</a><a class="h3" href="#add-tab-display-panel">Add tab - Display Panel</a><a class="h3" href="#relations-tab-display-panel">Relations tab - Display Panel</a><a class="h3" href="#relations-tab-group-panel">Relations tab - Group Panel</a><a class="h3" href="#relations-tab-nodegroups-panel">Relations tab - Nodegroups Panel</a><a class="h3" href="#relations-tab-layout-panel">Relations tab - Layout Panel</a></aside></div></body></html>
