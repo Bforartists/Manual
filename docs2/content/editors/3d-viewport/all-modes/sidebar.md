@@ -788,19 +788,10 @@ Turning off Lock Rotation reveals the quick navigation buttons Switch to Camera 
 
 ![View tab - Important Hotkeys](/docs2/images/editors/3d-viewport/sidebar/view-tab/view-tab-important-hotkeys.png)
 
-This panel is an addon called Important Hotkeys, and can be turned off in the Preferences.
+This panel comes from the **Important Hotkeys** add-on. It shows the most important hotkeys right in the viewport, as a little cheat sheet while you learn. You can turn the add-on off in the Preferences.
 
-It displays the most important hotkeys in the viewport.
+<!-- TODO screenshot: sidebar View tab > Important Hotkeys panel, Hide Text pressed -->
 
+Click **Show Text** to display the hotkeys in the viewport. While they show, the button reads **Hide Text** and looks pressed in, so you can see at a glance that the overlay is on. Click it again to hide them.
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------- |
-| Show Text | Show or hide the text in the viewport. |
-| Color | Define what color the text should have. Default is white. |
-
-
-### Font Size
-
-The size of the font.
-
-![Font Size](/docs2/images/editors/3d-viewport/sidebar/view-tab/font-size.png)
+Next to it, pick the **color** of the text and set the **Text Size**.
