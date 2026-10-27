@@ -586,6 +586,7 @@ The list of loaded fonts. This list is empty by default. It displays the fonts t
 | Entry | What it does |
 | ----- | ----------------- |
 | Size | Size of the text. |
+| Line Spacing | The space between lines when the text has more than one line. By default it is a factor of the text size: 1.0 is normal, 2.0 is double. The small button below it switches to a fixed spacing in pixels. |
 | Color | The text color. |
 
 
