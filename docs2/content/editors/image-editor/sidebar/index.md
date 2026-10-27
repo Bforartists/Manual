@@ -398,12 +398,6 @@ Jitter the brush color.
 | Saturation | **Saturation Jitter**: The amount to jitter the Saturation value. · **Stroke Random**: Activate the Jitter. · **Use Pressure**: Use tablet pressure when drawing. |
 | Value | **Value Jitter**: The amount to jitter the Value value. · **Stroke Random**: Activate the Jitter. · **Use Pressure**: Use tablet pressure when drawing. |
 
-#### Modes subpanel
-
-![Modes subpanel](/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/modes-subpanel.png)
-
-In which mode to use the brushes.
-
 ### Brush Settings Panel - Texture Sub panel
 
 ![Brush Settings Panel - Texture Sub panel](/docs2/images/editors/image-editor/sidebar/tool-tab-in-paint-mode/brush-settings-panel-texture-sub-panel.png)

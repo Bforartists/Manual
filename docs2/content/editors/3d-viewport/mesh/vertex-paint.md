@@ -498,14 +498,6 @@ Adds variation to the brush color per stroke or while drawing a stroke.
 | Saturation | Randomize original saturation. Adjusts the intensity of the color. You need to be in color attribute mode. |
 | Value | Randomize original value. Modifies the brightness of the stroke. You need to be in color attribute mode. |
 
-#### Modes – Subpanel
-
-![Modes – Subpanel](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode/modes-subpanel.png)
-
-Allows to expose the brush in different modes sharing common attributes.
-
-**Example:** *You can make a brush for vertex mode and also texture paint mode.*
-
 ### Vertex Paint Mode - Texture Panel
 
 ![Vertex Paint Mode - Texture Panel](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode/vertex-paint-mode-texture-panel.png)
