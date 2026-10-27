@@ -288,12 +288,23 @@ Just primitive objects like mesh and curve does have an edit mode. Non primitive
 
 ![Item tab - Transform Panel in Edit Mode](/docs2/images/editors/3d-viewport/sidebar/item-tab/item-tab-transform-panel-in-edit-mode.png)
 
+### Dimensions
+
+<!-- TODO screenshot: Edit Mode, a few vertices selected, sidebar Item tab > Transform panel showing Median and Dimensions -->
+
+Below the Median you now also see **Dimensions X / Y / Z**: how big your selection is along each axis. Type a new value to scale the selection to that size. It scales around your current pivot point.
+
+- Works in Edit Mode for meshes, curves, surfaces, lattices, the new curves objects and Grease Pencil.
+- Needs at least two points selected. With a single point there's no size, so Dimensions is hidden.
+- Follows the **Global / Local** toggle, just like the Median.
+
 ### Mesh Objects
 
 
 | Entry | What it does |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Median | Median is the position of the selected mesh part. |
+| Dimensions | The size of the selection along X, Y and Z. Type a value to scale the selection to that size, around the pivot point. |
 | Global / Local | Define if the orientation of the selection is local to the selected object, or global to the world coordinates. |
 | Vertices Data | **Mean Bevel Weight**: Adjust the bevel weight for the selected vertices when you have a bevel modifier at the mesh. |
 | Edges Data | **Mean Bevel Weight**: Adjust the bevel weight for the selected edges when you have a bevel modifier at the mesh. · **Mean Crease**: Adjust the weight of the selected vertices when you have a subdivision surface modifier at the mesh. |
@@ -307,6 +318,7 @@ Just primitive objects like mesh and curve does have an edit mode. Non primitive
 | Entry | What it does |
 | -------------- | --------------------------------------------------------------------------------------------------------------- |
 | Median | Median is the position of the selected mesh part |
+| Dimensions | The size of the selection along X, Y and Z. Type a value to scale the selection to that size, around the pivot point. |
 | Global / Local | Define if the orientation of the selection is local to the selected object, or global to the world coordinates. |
 | Mean Weight | Adjust the weight used by softbody. Needs softbody. |
 | Mean Radius | Adjust the radius of the curve control points |
