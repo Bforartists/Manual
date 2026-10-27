@@ -934,13 +934,15 @@ When you want to measure an angle, first create a straight measure line. Then gr
 | Delete measure lines | Select them and press delete. When you have selected an angle point then first this angle point gets deleted. You need to have to select an endpoint to make the whole stroke active. |
 
 
-## Primitives Add tools group
+## Primitive Add tools
 
-![Primitives Add tools group](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/primitives-add-tools-group.png)
+![Primitive Add tools](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/primitives-add-tools-group.png)
 
 This tools appears in object and edit mode with the correct object types. The tools allows you to create primitives by dragging with the mouse. First you create a ground plane by dragging a rectangle. Then you release the mouse and drag the mouse upwards to create the third dimension of it. And a left click makes the object real then.
 
-You can choose between five primitive types. Cube, Cone, Cylinder, UV Sphere and Icosphere.
+The primitive tools now sit right in the tool shelf, each with its own button, so there's no group to open first. There are six: **Cube, Cone, Cylinder, Quad Sphere, UV Sphere and Icosphere**. The same buttons show in Object Mode, Edit Mode and Sculpt Mode.
+
+> **Note:** The old **Add Primitives** menu in the Sculpt Mode header is gone. Use these tool shelf buttons instead.
 
 ![Primitives Add tools group](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/primitives-add-tools-group-2.png)
 
@@ -1274,6 +1276,10 @@ Creates UV's for this primitive.
 | Location | Defines the location of the Cylinder. |
 | Rotation | Defines the rotation of the Cylinder. |
 
+
+### Add Quad Sphere
+
+Drag to add a sphere made of four-sided faces, like a subdivided cube rounded into a ball. It's great for sculpting and subdivision, because it has no pinched poles. The tool settings are the same as for the other primitive tools.
 
 ### Add UV Sphere
 
