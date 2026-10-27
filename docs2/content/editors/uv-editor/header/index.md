@@ -613,7 +613,15 @@ The legacy lasso select tool. You can choose between three modes. Lasso select i
 
 #### Linked
 
-Select all UV vertices linked to the active UV map. The previous selection gets cleared.
+Selects everything linked to what you already have selected, so you get whole UV islands. The previous selection gets cleared.
+
+##### Last Operator Select Linked
+
+<!-- TODO screenshot: UV Editor > Select > Linked, then the Adjust Last Operation panel in place, Delimit Seam on -->
+
+| Entry | What it does |
+| ------- | ------------ |
+| Delimit | Stop the selection at certain edges, so you only get part of an island. **Seam**: stop at UV seams. · **Sharp**: stop at edges marked sharp. · **Material**: stop where the material changes. Pick one or more, or none to select the whole island. |
 
 #### Linked Pick
 
@@ -630,6 +638,7 @@ Select all UV vertices linked to the active UV map. The previous selection gets 
 | Extend | The previous selection gets kept, the selection gets extended. |
 | Deselect | Deselect instead of select |
 | Location X / Y | The mouse position in the UV space, normalized to the 0.0 to 1.0 range of the UV space. |
+| Delimit | Stop the selection at certain edges, so you only get part of an island. **Seam**: stop at UV seams. · **Sharp**: stop at edges marked sharp. · **Material**: stop where the material changes. Pick one or more, or none to select the whole island. |
 
 #### Shortest Path
 
