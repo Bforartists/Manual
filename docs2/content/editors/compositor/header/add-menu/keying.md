@@ -300,9 +300,7 @@ Note that you need to have a motion tracking project loaded. This gives you the 
 
 ##### Movie Clip
 
-The selectable clip data-block used as input for the gradient colors.
-
-The movie needs to be loaded already. You cannot load it from here, just choose.
+The movie clip whose tracking points give the gradient colors. Pick a clip that is already loaded from the dropdown, or click **Open** to load a new one right from the node.
 
 ##### Tracking Object
 
