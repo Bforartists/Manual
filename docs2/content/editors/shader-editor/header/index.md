@@ -432,7 +432,7 @@ This menu contains further node functionality.
 | Move | Moves the selected nodes. |
 | Rotate | You can't rotate single nodes, obviously. But when you have more than one selected then you can rotate them around their center point. |
 | Resize | You can't resize single nodes, obviously. But when you have more than one selected then you can scale them around their center point. |
-| Cut | Cuts the selected node(s) and copies to clipboard, then removes it from the current material node setup, while reconnecting any nodes links that were connected. |
+| Cut | Copies the selected nodes to the clipboard and removes them, keeping the links around them connected. Paste them back with Paste. Hotkey **Ctrl+X**, like in most programs. |
 | Copy | Copies the selected node(s) to the clipboard, for reuse with the paste operator in the current or other instances of Bforartists that are open. |
 | Paste | Pastes the selected node(s) from the above mention copy operator that are in the clipboard, in the current session of Bforartists or another instance that are open. |
 | Duplicate Keep Input | This works at nodes that have a connected input. Duplicating will keep the input connections established in the duplicated node. The output connections will be removed. |
