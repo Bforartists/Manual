@@ -992,7 +992,7 @@ This is for having more than one armature part selected. Scales or rotates the s
 
 ![Pose Mode - Pose Context Menu](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/pose-mode-pose-context-menu.png)
 
-Call this menu with double right click in the 3D viewport. You need to be in Edit mode with an armature object.
+Call this menu with a right click in the 3D viewport while you are in Pose Mode with an armature.
 
 #### Insert Key frame
 
@@ -1241,27 +1241,29 @@ Armature and bones have their own collection system. This menu item opens a popu
 | Bone List | Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection. |
 
 
-#### Show Hidden
+#### Show/Hide submenu
+
+The show and hide commands are grouped in a **Show/Hide** submenu, like in the other context menus.
+
+##### Show Hidden
 
 Reveals the hidden bones.
 
-#### Hide Selected
+##### Hide Selected
 
 Hides the selected bones.
 
-##### Last Operator Hide Selected
+###### Last Operator Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-hide-selected.png)
 
-###### Unselected
+**Unselected**: hide the unselected bones instead.
 
-Hide unselected bones too.
+##### Hide Unselected
 
-#### Hide Unselected
+Hides all bones that are not selected.
 
-Makes all unselected bones hidden.
-
-##### Clear User Transforms
+#### Clear User Transforms
 
 Resets Pose of selected bones back to key frame state.
 
