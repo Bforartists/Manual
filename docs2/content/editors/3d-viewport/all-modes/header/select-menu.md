@@ -1234,17 +1234,19 @@ Selects all vertices that belong to **fill regions** of Grease Pencil strokes. U
 
 ## Linked
 
-![Linked](/docs2/images/editors/3d-viewport/header/select-menu/linked.png)
+Selects whole strokes: every point of each stroke that has at least one point selected.
 
-Select the geometry that is directly linked with the current geometry. You can for example have a mesh with several closed sub meshes. Those sub meshes. are not linked together, but are part of the object.
+## Deselect Linked
 
-### Last Operator Select Linked All
+The opposite of Linked: deselects every point of each stroke that has a point selected.
 
-![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all.png)
+### Last Operator Select Linked
 
-#### Delimit
+<!-- TODO screenshot: Grease Pencil Edit Mode, Select > Linked, then the Adjust Last Operation panel in place -->
 
-Add a limit to the selection. For example, just select up to the next seam.
+| Entry | What it does |
+| --------------- | ---------------------------------------------------------------------------------------- |
+| Deselect Linked | Off: select the linked strokes. On: deselect them instead. Linked and Deselect Linked just switch this checkbox. |
 
 ## Alternated
 
