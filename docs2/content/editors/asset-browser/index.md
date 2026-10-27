@@ -82,9 +82,15 @@ There are several tools in the header to find. Menus, and a few options.
 
 ![Header - View menu](/docs2/images/editors/asset-browser/header-view-menu.png)
 
-The View menu decides what you see. **Source List** shows the libraries and catalogs on the left, and **Asset Details** shows the sidebar with information about the selected asset. **Frame Selected** scrolls the selected asset into view.
+The View menu decides what you see. **Source List** shows the libraries and catalogs on the left, and **Asset Details** shows the sidebar with information about the selected asset.
 
-**Display Size** sets how big the thumbnails are, and **Sort** orders the assets, for example by name. Sort used to be only in the right-click menu.
+### Frame Selected
+
+Scrolls the selected asset into view, handy in a big library.
+
+### Sort
+
+Orders the assets, for example by name. This used to be only in the right-click menu.
 
 ### Display Size
 
@@ -133,11 +139,25 @@ Allows you to box select files. Note that this is an old obsolete operator. You 
 
 Everything about the asset libraries themselves.
 
-**Asset Library Paths** opens the Preferences, where you add and manage your asset library folders.
+### Asset Library Paths
 
-**Refresh Asset Library** reloads the current library, for example after you saved new assets into it from another file. **Refresh Remote Listing** fetches the latest list of assets from an online library.
+Opens the Preferences, where you add and manage your asset library folders.
 
-Assets you download from online libraries are kept in a cache folder. **Open Remote Assets Cache** opens that folder, and **Clear Remote Assets Cache** deletes the downloads to free up disk space. They download again the next time you use them.
+### Refresh Asset Library
+
+Reloads the current library. Use it after you saved new assets into the library from another file, so they show up here.
+
+### Refresh Remote Listing
+
+Fetches the latest list of assets from an online library.
+
+### Open Remote Assets Cache
+
+Assets you download from online libraries are kept in a cache folder. This opens that folder.
+
+### Clear Remote Assets Cache
+
+Deletes the downloaded online assets to free up disk space. They download again the next time you use them.
 
 ## Header - Catalog menu
 
