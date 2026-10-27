@@ -1,0 +1,830 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strip · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1508 · <code>docs2/strip-tab-structure</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<a class="is-current" style="padding-left:1.5rem" href="strip-tab.html">Strip</a>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Properties Editor › Strip Tab</div><h1 class="pv-title">Strip</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 10 min read</span></div><article class="ui-doc-body"><h2 id="strip-tab">Strip Tab</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/strip-tab.png" alt="Strip Tab" loading="lazy"></figure>
+<p>The strip tab contains all the strip type related settings. For the different strip types see the Add menu.</p>
+<p>Some panels have the same content for all strip types. Some not. Some strip types have their own panels.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Like in the 3D View, this tab is also accessible from the Sequencer sidebar.</p></div>
+<h3 id="strip-tab-header">Strip tab header</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/strip-tab-header.png" alt="Strip tab header" loading="lazy"></figure>
+<p>In the strip tab header you will see an icon for the current strip type. The name of the strip. And a checkbox to set this strip active.</p>
+<p>The strip can be renamed by double clicking left into the edit box.</p>
+<h4 id="breadcrumb">Breadcrumb</h4>
+<p>This shows what scene and what strip the active selected strip tab properties are showing.</p>
+<h4 id="pin">Pin</h4>
+<p>This pins the active selected strip so that when you select another strip, the properties won’t change and remembers the pinned strip properties.</p>
+<h4 id="type-icon">Type Icon</h4>
+<p>This indicates what kind of strip is selected</p>
+<h4 id="name">Name</h4>
+<p>The name of the strip.</p>
+<h4 id="color">Color</h4>
+<p>The color of the strip in the sequencer timeline.</p>
+<h4 id="mute">Mute</h4>
+<p>Enables/Disables the strip.</p>
+<h2 id="compositing-panel">Compositing Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/compositing-panel.png" alt="Compositing Panel" loading="lazy"></figure>
+<p>Available for Movie, Image, Adjustment and Meta strips.</p>
+<h3 id="blend">Blend</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/blend.png" alt="Blend" loading="lazy"></figure>
+<p>The blend method to control how the strip combines with other strips.</p>
+<h3 id="opacity">Opacity</h3>
+<p>How much the strip color affects other strips.</p>
+<h2 id="transform-panel">Transform Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/transform-panel.png" alt="Transform Panel" loading="lazy"></figure>
+<h3 id="filter">Filter</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/filter.png" alt="Filter" loading="lazy"></figure>
+<p>Filter type to use for transformations.</p>
+<h4 id="auto">Auto</h4>
+<p>Automatically choose filter based on scaling factor.</p>
+<h4 id="nearest">Nearest</h4>
+<p>Use nearest sample.</p>
+<h4 id="bilinear">Bilinear</h4>
+<p>Interpolate between 2x2 Samples</p>
+<h4 id="cubic-mitchell">Cubic Mitchell</h4>
+<p>Cubic Mitchell filter on 4x4 Samples.</p>
+<h4 id="cubic-b-spline">Cubic B-Spline</h4>
+<p>Cubic B-Spline Filter on 4x4 Samples. Blurry, but not ringing.</p>
+<h4 id="box">Box</h4>
+<p>Averages source image samples that fall under destination pixel.</p>
+<h4 id="position-x">Position X</h4>
+<p>The X offset.</p>
+<h4 id="y">Y</h4>
+<p>The Y offset.</p>
+<h4 id="scale-x">Scale X</h4>
+<p>The X scale.</p>
+<h4 id="y-2">Y</h4>
+<p>The Y scale.</p>
+<h4 id="rotation">Rotation</h4>
+<p>The rotation around the image center.</p>
+<h4 id="origin">Origin</h4>
+<p>Origin of image for transformation.</p>
+<h4 id="mirror">Mirror</h4>
+<p>Flip on the X and/or Y axis.</p>
+<h2 id="crop-panel">Crop Panel</h2>
+<h3 id="left-right-top-bottom">Left, Right, Top, Bottom</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/left-right-top-bottom.png" alt="Left, Right, Top, Bottom" loading="lazy"><figcaption>Left, Right, Top, Bottom</figcaption></figure>
+<p>Crop the frame.</p>
+<h2 id="video-panel">Video Panel</h2>
+<h3 id="strobe">Strobe</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/strobe.png" alt="Strobe" loading="lazy"></figure>
+<p>Don't display every frame, but just every nth frame.</p>
+<h3 id="reverse-frames">Reverse Frames</h3>
+<p>Reverse the frame order.</p>
+<h2 id="color-panel">Color Panel</h2>
+<h3 id="saturation">Saturation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/saturation.png" alt="Saturation" loading="lazy"></figure>
+<p>The intensity of the input color.</p>
+<h4 id="multiply">Multiply</h4>
+<p>Multiply colors by this factor.</p>
+<h4 id="multiply-alpha">Multiply Alpha</h4>
+<p>Multiply Alpha along with color channels.</p>
+<h4 id="convert-to-float">Convert to Float</h4>
+<p>Convert input to float data.</p>
+<h2 id="sound-panel">Sound Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/sound-panel.png" alt="Sound Panel" loading="lazy"></figure>
+<p>This panel shows with an audio clip selected.</p>
+<h3 id="volume">Volume</h3>
+<p>The volume of the audio clip.</p>
+<h3 id="mono">Mono</h3>
+<p>Set the audio clip to mono.</p>
+<p><strong>Pan</strong>: When mono, the pan of the audio clip.</p>
+<h2 id="time-panel">Time Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/time-panel.png" alt="Time Panel" loading="lazy"></figure>
+<p>Time related settings.</p>
+<h3 id="lock">Lock</h3>
+<p>Lock strip so that it cannot be transformed.</p>
+<h3 id="show-retiming-keys">Show Retiming Keys</h3>
+<p>This toggles the overlay and retiming state of a Movie or Image Sequence strip. For more information, refer to chapter <strong>Editors - Video Sequence Editor - Header - Strip Menu</strong> retiming section. <strong>Note:</strong> To retime a strip, select a Movie or Image Sequence strip.</p>
+<h3 id="channel">Channel</h3>
+<p>The channel of the strip.</p>
+<h3 id="start">Start</h3>
+<p>The start frame of the strip.</p>
+<h3 id="duration">Duration</h3>
+<p>The duration of the strip.</p>
+<h3 id="end">End</h3>
+<p>The end frame of the strip.</p>
+<p><strong>Strip Offset Start</strong>: The strip offset start. This offsets the beginning of the strip in the timeline.</p>
+<p><strong>End</strong>: The strip offset end. This offsets the end of the strip in the timeline.</p>
+<p><strong>Hold Offset Start</strong>: Animation start offset (trim start)</p>
+<p><strong>End</strong>: Animation end offset (trim end)</p>
+<p><strong>Current Frame</strong>: Info box that displays the position of the frame cursor at the current frame.</p>
+<h2 id="scene-panel">Scene Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/scene-panel.png" alt="Scene Panel" loading="lazy"></figure>
+<p>This panel just shows with strip type scene.</p>
+<h3 id="scene-property">Scene Property</h3>
+<h4 id="scene-browser">Scene Browser</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/scene-browser.png" alt="Scene Browser" loading="lazy"></figure>
+<p>A scene browser that contains the available scenes in the file.</p>
+<h5 id="scene-edit-box">Scene edit box</h5>
+<p>The name of the scene. It can be renamed by double clicking into the edit box.</p>
+<h5 id="add">Add</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/add.png" alt="Add" loading="lazy"></figure>
+<p>Add a new scene. This button calls a menu where you can choose with what method you want to create the new scene.</p>
+<h6 id="new">New</h6>
+<p>Adds a new empty scene.</p>
+<h6 id="copy-settings">Copy Settings</h6>
+<p>Adds a new empty scene. And copies the settings from the current scene.</p>
+<h6 id="linked-copy">Linked Copy</h6>
+<p>Link in the collections from the current scene. (Shadow Copy)</p>
+<h6 id="full-copy">Full Copy</h6>
+<p>Make a full copy of the current scene.</p>
+<h5 id="remove">Remove</h5>
+<p>Remove the scene as the active one. Note that the scene is still available in the scene browser.</p>
+<h3 id="input">Input</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/input.png" alt="Input" loading="lazy"></figure>
+<p>Type of input to use. The camera of the scene. Or a file from the sequencer in this scene.</p>
+<h4 id="input-type-camera">Input Type Camera</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/input-type-camera.png" alt="Input Type Camera" loading="lazy"></figure>
+<h5 id="volume-2">Volume</h5>
+<p>The audio volume.</p>
+<h5 id="camera">Camera</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/camera.png" alt="Camera" loading="lazy"></figure>
+<p>Which camera of the scene to use.</p>
+<h6 id="show-annotation">Show Annotation</h6>
+<p>Show grease pencil strokes in workbench previews.</p>
+<h6 id="transparent">Transparent</h6>
+<p>Use a transparent background.</p>
+<h4 id="input-type-sequencer">Input type Sequencer</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/input-type-sequencer.png" alt="Input type Sequencer" loading="lazy"></figure>
+<h5 id="volume-3">Volume</h5>
+<p>The audio volume.</p>
+<h2 id="mask-panel">Mask Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/mask-panel.png" alt="Mask Panel" loading="lazy"></figure>
+<p>This panel just shows with strip type Mask.</p>
+<h3 id="mask-property">Mask Property</h3>
+<h4 id="mask-browser">Mask Browser</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/mask-browser.png" alt="Mask Browser" loading="lazy"></figure>
+<p>A mask browser that contains the available masks in the file.</p>
+<h4 id="mask-edit-box">Mask edit box</h4>
+<p>The name of the scene. It can be renamed by double clicking into the edit box.</p>
+<h5 id="fake-user">Fake User</h5>
+<p>Assign a fake user to this mask. Fake users is a odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</p>
+<h4 id="remove-2">Remove</h4>
+<p>Remove the scene as the active one. Note that the scene is still available in the scene browser.</p>
+<h2 id="effect-strip-panel">Effect Strip Panel</h2>
+<p>Settings for the single effect strip types.</p>
+<p>The content differs, dependant of the chosen type.</p>
+<h3 id="effect-strip-type-color-mix">Effect strip type Color Mix</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-color-mix.png" alt="Effect strip type Color Mix" loading="lazy"><figcaption>Effect strip type Color Mix</figcaption></figure>
+<h4 id="input-1">Input 1</h4>
+<p>The first strip.</p>
+<h4 id="input-2">Input 2</h4>
+<p>The second strip.</p>
+<h5 id="swap-strips">Swap Strips</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/swap-strips.png" alt="Swap Strips" loading="lazy"></figure>
+<p>Swap the strips.</p>
+<h6 id="blend-mode">Blend Mode</h6>
+<p>The color blend mode to use.</p>
+<h6 id="blend-factor">Blend Factor</h6>
+<p>The blend factor. 1.000 means 100%.</p>
+<h3 id="effect-strip-type-text">Effect strip type Text</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-text.png" alt="Effect strip type Text" loading="lazy"><figcaption>Effect strip type Text</figcaption></figure>
+<h4 id="text">Text</h4>
+<p>The text to displayed.</p>
+<h4 id="wrap-width">Wrap Width</h4>
+<p>World wrap width as factor. Zero disables the wrap.</p>
+<h4 id="style-sub-panel">Style sub panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/style-sub-panel.png" alt="Style sub panel" loading="lazy"></figure>
+<h5 id="font-property">Font property</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/font-property.png" alt="Font property" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/font-property-2.png" alt="Font property" loading="lazy"></figure>
+<p>When no font is loaded then the internal font is used.</p>
+<h6 id="font-browser">Font browser</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/font-browser.png" alt="Font browser" loading="lazy"></figure>
+<p>The list of loaded fonts. This list is empty by default. It displays the fonts that you load.</p>
+<h6 id="open">Open</h6>
+<p>Load a font.</p>
+<h6 id="font-edit-box">Font Edit Box</h6>
+<p>Display the current active font. You can rename the font by double clicking in the edit box.</p>
+<h6 id="fake-user-2">Fake User</h6>
+<p>Assign a fake user to this font. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</p>
+<h6 id="open-font">Open Font</h6>
+<p>Load a font.</p>
+<h6 id="remove-3">Remove</h6>
+<p>Remove the selected font as the active one. Note that the font is still in the list then.</p>
+<h5 id="bold">Bold</h5>
+<p>Display the font bold.</p>
+<h5 id="italic">Italic</h5>
+<p>Display the font italic.</p>
+<h5 id="size">Size</h5>
+<p>Size of the text.</p>
+<h5 id="color-2">Color</h5>
+<p>The text color.</p>
+<h5 id="shadow">Shadow</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/shadow.png" alt="Shadow" loading="lazy"></figure>
+<p>Creates a shadow of the specified color under the text.</p>
+<h6 id="shadow-color">Shadow color</h6>
+<p>The color of the shadow. Clicking at the color field opens a color dialog.</p>
+<h6 id="angle">Angle</h6>
+<p>The shadow angle. In which direction the shadow shall point.</p>
+<h6 id="offset">Offset</h6>
+<p>Add an offset to the shadow in pixels</p>
+<h6 id="blur">Blur</h6>
+<p>Blur the shadow by a pixel amount.</p>
+<h5 id="outline">Outline</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/outline.png" alt="Outline" loading="lazy"></figure>
+<h5 id="color-3">Color</h5>
+<p>The outline color.</p>
+<h6 id="width">Width</h6>
+<p>The outline width.</p>
+<h5 id="box-2">Box</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/box.png" alt="Box" loading="lazy"></figure>
+<p>Display colored box behind text.</p>
+<h6 id="box-color">Box Color</h6>
+<p>The color of the box.</p>
+<h6 id="margin">Margin</h6>
+<p>The margin of the box. Based at the image width.</p>
+<h4 id="layout-sub-panel">Layout sub panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/layout-sub-panel.png" alt="Layout sub panel" loading="lazy"></figure>
+<h5 id="location-x-y">Location X/Y</h5>
+<p>Positions the text on the X, Y axis.</p>
+<h5 id="alignment">Alignment</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/alignment.png" alt="Alignment" loading="lazy"></figure>
+<p>The horizontal X alignment of the text. Can be Left, Center or Right</p>
+<h5 id="anchor-x-y">Anchor X/Y</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/anchor-x-y.png" alt="Anchor X/Y" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/anchor-x-y-2.png" alt="Anchor X/Y" loading="lazy"></figure>
+<p>Horizontal (X) or vertical (Y) anchor point of the text relative to the location.</p>
+<h3 id="effect-strip-type-gaussian-blur">Effect strip type Gaussian Blur</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-color-mix.png" alt="Effect strip type Gaussian Blur" loading="lazy"><figcaption>Effect strip type Gaussian Blur</figcaption></figure>
+<h4 id="input-1-2">Input 1</h4>
+<p>The strip to blur. This strip cannot be changed. You need to apply the effect with the correct strip selected.</p>
+<h5 id="size-x">Size X</h5>
+<p>The size of the blur along X axis.</p>
+<h5 id="y-3">Y</h5>
+<p>The size of the blur along Y axis.</p>
+<h3 id="effect-strip-type-multicam">Effect strip type Multicam</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-multicam.png" alt="Effect strip type Multicam" loading="lazy"><figcaption>Effect strip type Multicam</figcaption></figure>
+<h4 id="source-channel">Source Channel</h4>
+<p>The channel which the Multicam Selector gets its input from.</p>
+<h4 id="cut-to">Cut to</h4>
+<p>Cuts the Multicam strip at the current frame and changes the Source Channel automatically to the selected channels.</p>
+<h3 id="effect-strip-type-speed-control">Effect strip type Speed Control</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-speed-control.png" alt="Effect strip type Speed Control" loading="lazy"><figcaption>Effect strip type Speed Control</figcaption></figure>
+<h4 id="input-2">Input</h4>
+<p>The video where the speed control is applied to. This is read only.</p>
+<h4 id="speed-control">Speed Control</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/speed-control.png" alt="Speed Control" loading="lazy"></figure>
+<h5 id="stretch">Stretch</h5>
+<p>Adjust input playback so that the input duration fits the strip length</p>
+<h5 id="multiply-2">Multiply</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/multiply.png" alt="Multiply" loading="lazy"></figure>
+<p>Multiply with the speed factor.</p>
+<h6 id="multiply-factor">Multiply factor</h6>
+<p>The speed factor.</p>
+<h5 id="frame-number">Frame Number</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/frame-number.png" alt="Frame Number" loading="lazy"></figure>
+<p>Frame Number of the Input strip.</p>
+<h6 id="frame-number-2">Frame number</h6>
+<p>The frame number.</p>
+<h5 id="length">Length</h5>
+<h4 id="interpolation">Interpolation</h4>
+<p>Do crossfade blending between current and previous frame.</p>
+<h3 id="effect-strip-type-color">Effect strip type Color</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-color.png" alt="Effect strip type Color" loading="lazy"><figcaption>Effect strip type Color</figcaption></figure>
+<h4 id="color-picker">Color Picker</h4>
+<p>Adjust the color of the color strip.</p>
+<h3 id="effect-strip-type-transform">Effect strip type Transform</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-transform.png" alt="Effect strip type Transform" loading="lazy"><figcaption>Effect strip type Transform</figcaption></figure>
+<h4 id="input-1-3">Input 1</h4>
+<p>The strip to transform. This strip cannot be changed. You need to apply the effect with the correct strip selected.</p>
+<h4 id="interpolation-2">Interpolation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<p>The interpolation type for the transform.</p>
+<h4 id="translation-unit">Translation Unit</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/translation-unit.png" alt="Translation Unit" loading="lazy"></figure>
+<p>The measure unit to use for the transform.</p>
+<h5 id="position-x-2">Position X</h5>
+<p>Amount to move the input in the X axis.</p>
+<h5 id="y-4">Y</h5>
+<p>Amount to move the input in the Y axis.</p>
+<h5 id="uniform-scale">Uniform scale</h5>
+<p>Scale uniformly, preserve the aspect ratio.</p>
+<h5 id="scale-x-2">Scale X</h5>
+<p>Amount to scale the input in the X axis.</p>
+<h5 id="y-5">Y</h5>
+<p>Amount to scale the input in the Y axis.</p>
+<h5 id="rotation-2">Rotation</h5>
+<p>Degrees to rotate the input.</p>
+<h3 id="effect-strip-type-glow">Effect strip type Glow</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-glow.png" alt="Effect strip type Glow" loading="lazy"><figcaption>Effect strip type Glow</figcaption></figure>
+<h4 id="input-1-4">Input 1</h4>
+<p>The strip to use. This strip cannot be changed. You need to apply the effect with the correct strip selected.</p>
+<h4 id="threshold">Threshold</h4>
+<p>Minimum intensity to trigger a glow.</p>
+<h4 id="clamp">Clamp</h4>
+<p>The brightness limit of intensity.</p>
+<h4 id="boost-factor">Boost Factor</h4>
+<p>Brightness multiplier.</p>
+<h4 id="blur-distance">Blur Distance</h4>
+<p>The radius of the glow effect.</p>
+<h4 id="quality">Quality</h4>
+<p>The accuracy of the blur effect.</p>
+<h4 id="only-boost">Only Boost</h4>
+<p>Show the glow buffer only.</p>
+<h3 id="effect-strip-type-wipe">Effect strip type Wipe</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-wipe.png" alt="Effect strip type Wipe" loading="lazy"><figcaption>Effect strip type Wipe</figcaption></figure>
+<h4 id="input-1-5">Input 1</h4>
+<p>The first strip.</p>
+<h4 id="input-2-2">Input 2</h4>
+<p>The second strip.</p>
+<h4 id="swap-inputs">Swap Inputs</h4>
+<p>Swap the two strips.</p>
+<h4 id="transition-type">Transition type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/transition-type.png" alt="Transition type" loading="lazy"></figure>
+<p>The wipe effect type.</p>
+<h5 id="direction">Direction</h5>
+<p>The direction of the wipe.</p>
+<h5 id="blur-width">Blur width</h5>
+<p>The width of the blur edge, relative to the image size.</p>
+<h5 id="angle-2">Angle</h5>
+<p>The edge angle.</p>
+<h4 id="default-fade">Default Fade</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/default-fade.png" alt="Default Fade" loading="lazy"></figure>
+<p>Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.</p>
+<h3 id="effect-strip-type-alpha-over-drop">Effect strip type Alpha over Drop</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-alpha-over-drop.png" alt="Effect strip type Alpha over Drop" loading="lazy"><figcaption>Effect strip type Alpha over Drop</figcaption></figure>
+<h4 id="input-1-6">Input 1</h4>
+<p>The first strip.</p>
+<h4 id="input-2-3">Input 2</h4>
+<p>The second strip.</p>
+<h4 id="swap-inputs-2">Swap Inputs</h4>
+<p>Swap the two strips.</p>
+<h4 id="default-fade-2">Default Fade</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/default-fade.png" alt="Default Fade" loading="lazy"></figure>
+<p>Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.</p>
+<h3 id="effect-strip-type-multiply">Effect strip type Multiply</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-multiply.png" alt="Effect strip type Multiply" loading="lazy"><figcaption>Effect strip type Multiply</figcaption></figure>
+<h4 id="input-1-7">Input 1</h4>
+<p>The first strip.</p>
+<h4 id="input-2-4">Input 2</h4>
+<p>The second strip.</p>
+<h4 id="swap-inputs-3">Swap Inputs</h4>
+<p>Swap the two strips.</p>
+<h3 id="effect-strip-type-gamma-cross">Effect strip type Gamma Cross</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-alpha-over-drop.png" alt="Effect strip type Gamma Cross" loading="lazy"><figcaption>Effect strip type Gamma Cross</figcaption></figure>
+<h4 id="input-1-8">Input 1</h4>
+<p>The first strip.</p>
+<h4 id="input-2-5">Input 2</h4>
+<p>The second strip.</p>
+<h4 id="swap-inputs-4">Swap Inputs</h4>
+<p>Swap the two strips.</p>
+<h4 id="default-fade-3">Default Fade</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/default-fade.png" alt="Default Fade" loading="lazy"></figure>
+<p>Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.</p>
+<h3 id="effect-strip-type-alpha-under">Effect strip type Alpha Under</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-alpha-over-drop.png" alt="Effect strip type Alpha Under" loading="lazy"><figcaption>Effect strip type Alpha Under</figcaption></figure>
+<h4 id="input-1-9">Input 1</h4>
+<p>The first strip.</p>
+<h4 id="input-2-6">Input 2</h4>
+<p>The second strip.</p>
+<h4 id="swap-inputs-5">Swap Inputs</h4>
+<p>Swap the two strips.</p>
+<h4 id="default-fade-4">Default Fade</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/default-fade.png" alt="Default Fade" loading="lazy"></figure>
+<p>Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.</p>
+<h3 id="effect-strip-type-alpha-over">Effect strip type Alpha Over</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-alpha-over-drop.png" alt="Effect strip type Alpha Over" loading="lazy"><figcaption>Effect strip type Alpha Over</figcaption></figure>
+<h4 id="input-1-10">Input 1</h4>
+<p>The first strip.</p>
+<h4 id="input-2-7">Input 2</h4>
+<p>The second strip.</p>
+<h4 id="swap-inputs-6">Swap Inputs</h4>
+<p>Swap the two strips.</p>
+<h4 id="default-fade-5">Default Fade</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/default-fade.png" alt="Default Fade" loading="lazy"></figure>
+<p>Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.</p>
+<h3 id="effect-strip-type-subtract">Effect strip type Subtract</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-multiply.png" alt="Effect strip type Subtract" loading="lazy"><figcaption>Effect strip type Subtract</figcaption></figure>
+<h4 id="input-1-11">Input 1</h4>
+<p>The first strip.</p>
+<h4 id="input-2-8">Input 2</h4>
+<p>The second strip.</p>
+<h4 id="swap-inputs-7">Swap Inputs</h4>
+<p>Swap the two strips.</p>
+<h3 id="effect-strip-type-add">Effect strip type Add</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-multiply.png" alt="Effect strip type Add" loading="lazy"><figcaption>Effect strip type Add</figcaption></figure>
+<h4 id="input-1-12">Input 1</h4>
+<p>The first strip.</p>
+<h4 id="input-2-9">Input 2</h4>
+<p>The second strip.</p>
+<h4 id="swap-inputs-8">Swap Inputs</h4>
+<p>Swap the two strips.</p>
+<h3 id="effect-strip-type-crossfade">Effect strip type Crossfade</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/effect-strip-type-alpha-over-drop.png" alt="Effect strip type Crossfade" loading="lazy"><figcaption>Effect strip type Crossfade</figcaption></figure>
+<h4 id="input-1-13">Input 1</h4>
+<p>The first strip.</p>
+<h4 id="input-2-10">Input 2</h4>
+<p>The second strip.</p>
+<h4 id="swap-inputs-9">Swap Inputs</h4>
+<p>Swap the two strips.</p>
+<h4 id="default-fade-6">Default Fade</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/default-fade.png" alt="Default Fade" loading="lazy"></figure>
+<p>Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.</p>
+<h2 id="source-panel">Source Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/source-panel.png" alt="Source Panel" loading="lazy"></figure>
+<p>The source path and settings for a loaded video clip.</p>
+<h3 id="file">File</h3>
+<p>The source file.</p>
+<h4 id="browse">Browse</h4>
+<p>Browse for another file.</p>
+<h3 id="color-space">Color Space</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/strip-tab/color-space.png" alt="Color Space" loading="lazy"></figure>
+<p>Which color space to use for the loaded video clip.</p>
+<h4 id="stream-index">Stream Index</h4>
+<p>For files with several movie streams, use the streamn with the given index.</p>
+<h4 id="deinterlace">Deinterlace</h4>
+<p>Remove fields from video movies.</p>
+<h4 id="info-box">Info Box</h4>
+<p>The resolution and frames per seconds of the video.</p>
+<h2 id="custom-properties-panel">Custom Properties Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/view-layer-properties-tab/custom-properties-panel.png" alt="Custom Properties Panel" loading="lazy"></figure>
+<p>Here you can define custom properties that can be used for scripting.</p>
+<p>Here you might also find custom properties from addons or scripts.</p>
+<h3 id="add-2">Add</h3>
+<p>Adds a new property.</p>
+<h3 id="edit">Edit</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/567df2a9cac124e63f24ce550714b521687ba899/docs2/images/editors/properties/view-layer-properties-tab/edit.png" alt="Edit" loading="lazy"></figure>
+<p>Opens a panel where you can adjust the settings for the custom property.</p>
+<h3 id="remove-4">Remove</h3>
+<p>Removes the property.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fstrip-tab-structure/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fproperties%2Fstrip-tab.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/strip-tab-structure/docs2/content/editors/properties/strip-tab.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#strip-tab">Strip Tab</a><a class="h3" href="#strip-tab-header">Strip tab header</a><a class="h2" href="#compositing-panel">Compositing Panel</a><a class="h3" href="#blend">Blend</a><a class="h3" href="#opacity">Opacity</a><a class="h2" href="#transform-panel">Transform Panel</a><a class="h3" href="#filter">Filter</a><a class="h2" href="#crop-panel">Crop Panel</a><a class="h3" href="#left-right-top-bottom">Left, Right, Top, Bottom</a><a class="h2" href="#video-panel">Video Panel</a><a class="h3" href="#strobe">Strobe</a><a class="h3" href="#reverse-frames">Reverse Frames</a><a class="h2" href="#color-panel">Color Panel</a><a class="h3" href="#saturation">Saturation</a><a class="h2" href="#sound-panel">Sound Panel</a><a class="h3" href="#volume">Volume</a><a class="h3" href="#mono">Mono</a><a class="h2" href="#time-panel">Time Panel</a><a class="h3" href="#lock">Lock</a><a class="h3" href="#show-retiming-keys">Show Retiming Keys</a><a class="h3" href="#channel">Channel</a><a class="h3" href="#start">Start</a><a class="h3" href="#duration">Duration</a><a class="h3" href="#end">End</a><a class="h2" href="#scene-panel">Scene Panel</a><a class="h3" href="#scene-property">Scene Property</a><a class="h3" href="#input">Input</a><a class="h2" href="#mask-panel">Mask Panel</a><a class="h3" href="#mask-property">Mask Property</a><a class="h2" href="#effect-strip-panel">Effect Strip Panel</a><a class="h3" href="#effect-strip-type-color-mix">Effect strip type Color Mix</a><a class="h3" href="#effect-strip-type-text">Effect strip type Text</a><a class="h3" href="#effect-strip-type-gaussian-blur">Effect strip type Gaussian Blur</a><a class="h3" href="#effect-strip-type-multicam">Effect strip type Multicam</a><a class="h3" href="#effect-strip-type-speed-control">Effect strip type Speed Control</a><a class="h3" href="#effect-strip-type-color">Effect strip type Color</a><a class="h3" href="#effect-strip-type-transform">Effect strip type Transform</a><a class="h3" href="#effect-strip-type-glow">Effect strip type Glow</a><a class="h3" href="#effect-strip-type-wipe">Effect strip type Wipe</a><a class="h3" href="#effect-strip-type-alpha-over-drop">Effect strip type Alpha over Drop</a><a class="h3" href="#effect-strip-type-multiply">Effect strip type Multiply</a><a class="h3" href="#effect-strip-type-gamma-cross">Effect strip type Gamma Cross</a><a class="h3" href="#effect-strip-type-alpha-under">Effect strip type Alpha Under</a><a class="h3" href="#effect-strip-type-alpha-over">Effect strip type Alpha Over</a><a class="h3" href="#effect-strip-type-subtract">Effect strip type Subtract</a><a class="h3" href="#effect-strip-type-add">Effect strip type Add</a><a class="h3" href="#effect-strip-type-crossfade">Effect strip type Crossfade</a><a class="h2" href="#source-panel">Source Panel</a><a class="h3" href="#file">File</a><a class="h3" href="#color-space">Color Space</a><a class="h2" href="#custom-properties-panel">Custom Properties Panel</a><a class="h3" href="#add-2">Add</a><a class="h3" href="#edit">Edit</a><a class="h3" href="#remove-4">Remove</a></aside></div></body></html>
