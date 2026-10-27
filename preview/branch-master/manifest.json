@@ -1,6 +1,7 @@
 {
  "pages": {
-  "docs2/content/editors/properties/strip-modifiers-tab.md": "editors/properties/strip-modifiers-tab.html"
+  "docs2/content/editors/geometry-node-editor/sidebar/index.md": "editors/geometry-node-editor/sidebar.html",
+  "docs2/content/editors/shader-editor/sidebar/index.md": "editors/shader-editor/sidebar.html"
  },
- "images": 27
+ "images": 204
 }
