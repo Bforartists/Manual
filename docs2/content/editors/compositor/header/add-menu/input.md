@@ -398,6 +398,18 @@ Provides a vector 3 value.
 
 ![Add menu - Input - Scene](/docs2/images/editors/compositor/header/add-menu-input-scene/add-menu-input-scene.png)
 
+#### Is Viewport
+
+![Is Viewport](/docs2/images/editors/compositor/header/add-menu-input-scene/is-viewport.png)
+
+The Is Viewport node tells you whether the compositor is running in the 3D View viewport, rather than in the node editor or in a final render. Use it with a Switch node to keep a heavy effect out of the viewport so it stays fast, and show the full effect in the final render.
+
+##### Outputs
+
+###### Is Viewport
+
+On (true) when the node tree is evaluated by the viewport compositor, off (false) in the node editor and in a final render.
+
 #### Render Layers
 
 ![Render Layers](/docs2/images/editors/compositor/header/add-menu-input-scene/render-layers.png)
