@@ -116,28 +116,12 @@ jobs:
             --check _check.md --bot _bot.md --only $only
 
       - name: Publish preview to GitHub Pages
-        id: publish
         if: env.SAME_REPO == 'true'
         continue-on-error: true
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: _preview
-          destination_dir: preview/${{ env.PREVIEW_DIR }}
-          keep_files: true
-          commit_message: "preview: ${{ env.PREVIEW_DIR }} [docs-bot]"
-
-      - name: Publish preview to GitHub Pages (second try)
-        if: env.SAME_REPO == 'true' && steps.publish.outcome == 'failure'
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: _preview
-          destination_dir: preview/${{ env.PREVIEW_DIR }}
-          keep_files: true
-          commit_message: "preview: ${{ env.PREVIEW_DIR }} [docs-bot]"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash docs2/tools/publish_pages.sh _preview "preview/${PREVIEW_DIR}" "preview: ${PREVIEW_DIR} [docs-bot]"
 
       - name: Keep the preview as a download too
         uses: actions/upload-artifact@v4
@@ -187,14 +171,10 @@ jobs:
 
       - name: 🧭 Publish the sidebar (nav.json) to GitHub Pages
         if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH && steps.check.outcome == 'success' && hashFiles('_nav/nav.json') != ''
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: _nav
-          destination_dir: nav
-          keep_files: true
-          commit_message: "nav: ${{ github.sha }} [docs-bot]"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash docs2/tools/publish_pages.sh _nav nav "nav: ${{ github.sha }} [docs-bot]"
 
       - name: 🎛️ Prepare the site scripts (one file per version)
         if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH
@@ -210,14 +190,10 @@ jobs:
 
       - name: 🎛️ Publish the docs layer to GitHub Pages
         if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH && hashFiles('_layer/*.js') != ''
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: _layer
-          destination_dir: webflow
-          keep_files: true
-          commit_message: "docs layer: ${{ github.sha }} [docs-bot]"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash docs2/tools/publish_pages.sh _layer webflow "docs layer: ${{ github.sha }} [docs-bot]"
 
       - name: Fail when checks found problems
         if: steps.check.outcome == 'failure'
