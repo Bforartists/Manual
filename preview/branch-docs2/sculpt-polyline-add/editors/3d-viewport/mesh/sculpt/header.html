@@ -1,0 +1,1149 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Header · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/sculpt-polyline-add · <code>docs2/sculpt-polyline-add</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a class="is-current" style="padding-left:3.5rem" href="header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Mesh › Sculpt Mode › Header</div><h1 class="pv-title">Header</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 16 min read</span></div><article class="ui-doc-body"><h1 id="face-sets-menu">Face Sets menu</h1>
+<h2 id="sculpt-mode-face-sets-menu">Sculpt Mode - Face Sets Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-face-sets-menu/sculpt-mode-face-sets-menu.png" alt="Sculpt Mode - Face Sets Menu" loading="lazy"><figcaption>Sculpt Mode - Face Sets Menu</figcaption></figure>
+<p>Face Sets is a kind of a mask that shows in different colors to assist in sculpting regions and running different sculpt brush effect. The colors are random.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-face-sets-menu/sculpt-mode-face-sets-menu.jpg" alt="Sculpt Mode - Face Sets Menu" loading="lazy"><figcaption>Sculpt Mode - Face Sets Menu</figcaption></figure>
+<p>In the Face Sets menu you can create and manage Face Sets.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Face Sets from Mask</td>
+<td>Creates a face set from the current mask.</td>
+</tr>
+<tr>
+<td>Face Sets from Visible</td>
+<td>Creates a face set from the visible geometry.</td>
+</tr>
+<tr>
+<td>Face Sets from Edit Mode Selection</td>
+<td>Creates a face set from the selection that you do in edit mode.</td>
+</tr>
+<tr>
+<td>Grow Face Sets</td>
+<td>Grows the face sets.</td>
+</tr>
+<tr>
+<td>Shrink Face Sets</td>
+<td>Shrinks the face sets.</td>
+</tr>
+<tr>
+<td>Expand Face Set by Topology</td>
+<td>Expands a face set from a starting point on the topology. Click and drag on the mesh once you start the operator.</td>
+</tr>
+<tr>
+<td>Expand Active Face Set</td>
+<td>Expands a face set from the active face set under the mouse cursor. Click and drag on the face set once you start the operator.</td>
+</tr>
+<tr>
+<td>Extract Face Set</td>
+<td>Creates a new mesh object from the selected face set. The mouse turns into a color picker to pick the face set when you activate this too.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="initialize-face-sets">Initialize Face Sets</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-face-sets-menu/initialize-face-sets.png" alt="Initialize Face Sets" loading="lazy"></figure>
+<p>A menu with various methods to initialize the face sets. These methods include the following:</p>
+<ul>
+<li>By Loose Parts</li>
+<li>By Face Set Boundaries</li>
+<li>By Materials</li>
+<li>By Normals</li>
+<li>By UV Seams</li>
+<li>By Edge Creases</li>
+<li>By Edge Bevel Weight</li>
+<li>By Sharp Edges</li>
+</ul>
+<h3 id="randomize-colors">Randomize Colors</h3>
+<p>Generates a new set of random colors to render the face sets.</p>
+<h3 id="show-hide-submenu">Show/Hide submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-face-sets-menu/show-hide-submenu.png" alt="Show/Hide submenu" loading="lazy"></figure>
+<p>Note that these operators are best used by Hotkey. When you use them from the menu then you need to confirm the action by a mouse click. You will see a corresponding warning in the header.</p>
+<p>You need to click at the face set that you want to hide. Same goes for the toggle. Toggle is meant for the case that you have two or more face sets. And then it toggles between the invisible and the face set that you click at.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-face-sets-menu/show-hide-submenu-2.png" alt="Show/Hide submenu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Visibility</td>
+<td>Toggles the visibility of the active face set.</td>
+</tr>
+<tr>
+<td>Show all Geometry</td>
+<td>Reveals all hidden geometry.</td>
+</tr>
+<tr>
+<td>Hide Active Face Set</td>
+<td>Hides the active face set.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="mask-menu">Mask menu</h1>
+<h2 id="sculpt-mode-mask-menu">Sculpt Mode - Mask Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-mask-menu/sculpt-mode-mask-menu.png" alt="Sculpt Mode - Mask Menu" loading="lazy"><figcaption>Sculpt Mode - Mask Menu</figcaption></figure>
+<h3 id="legacy-sub-menu">Legacy Sub-menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-mask-menu/legacy-sub-menu.png" alt="Legacy Sub-menu" loading="lazy"></figure>
+<p>Contains legacy operators also found the in the toolshelf as modal operations.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Box mask</td>
+<td>Select a part of the mesh by box select.</td>
+</tr>
+<tr>
+<td>Lasso Mask</td>
+<td>Select a part of the mesh by lasso select.</td>
+</tr>
+<tr>
+<td>Mask by Color</td>
+<td>Select a part of the mesh by its color. Note that this does not work with a multiresolution modifier at the mesh. You will get a warning that multires is not supported.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invert Mask</td>
+<td>Inverts the mask.</td>
+</tr>
+<tr>
+<td>Fill Mask</td>
+<td>Fills the mask with a given value, or inverts its values.</td>
+</tr>
+<tr>
+<td>Clear Mask</td>
+<td>Clears the mask.</td>
+</tr>
+<tr>
+<td>Smooth Mask</td>
+<td>Smoothens the mask selection.</td>
+</tr>
+<tr>
+<td>Sharpen Mask</td>
+<td>Sharpens the mask selection.</td>
+</tr>
+<tr>
+<td>Grow Mask</td>
+<td>Grows the mask</td>
+</tr>
+<tr>
+<td>Shrink Mask</td>
+<td>Shrinks the mask.</td>
+</tr>
+<tr>
+<td>Increase Contrast</td>
+<td>Increases the contrast between masked parts and not masked parts.</td>
+</tr>
+<tr>
+<td>Decrease Contrast</td>
+<td>Decreases the contrast between masked parts and not masked parts.</td>
+</tr>
+<tr>
+<td>Expand Mask by Topology</td>
+<td>Expands the mask from the initial active vertex under the mouse. Starts with a new mask. Watch the tool tip in the footer for further instructions.</td>
+</tr>
+<tr>
+<td>Expand Mask by Curvature</td>
+<td>Expands the mask from the initial active vertex under the mouse. Keeps the previous mask. Watch the tool tip in the footer for further instructions.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mask-extract">Mask Extract</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-mask-menu/mask-extract.png" alt="Mask Extract" loading="lazy"></figure>
+<p>Creates a new object out of the masked mesh part.</p>
+<p>This operation cannot be undone!</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Threshold</td>
+<td>The sharpness of the mask border.</td>
+</tr>
+<tr>
+<td>Add Boundary Loop</td>
+<td>Add a boundary loop at the border of the new created geometry. This can help to make the geometry more stable.</td>
+</tr>
+<tr>
+<td>Smooth Iterations</td>
+<td>How many iterations to smooth the new created geometry.</td>
+</tr>
+<tr>
+<td>Project to Sculpt</td>
+<td>Project the extracted mesh into the original sculpt.</td>
+</tr>
+<tr>
+<td>Extract as Solid</td>
+<td>Extract the new created mesh as a solid mesh.</td>
+</tr>
+<tr>
+<td>OK</td>
+<td>Apply the Mask Extract tool.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mask-slice">Mask Slice</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-mask-menu/mask-slice.png" alt="Mask Slice" loading="lazy"></figure>
+<p>Slices the paint mask from the mesh.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mask Slice and fill Holes</td>
+<td>Slices the paint mask from the mesh. And fills existing holes.</td>
+</tr>
+<tr>
+<td>Mask Slice to new Object</td>
+<td>Slices the paint mask from the mesh, and creates a new object out of it.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mask-from-cavity">Mask from Cavity</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-mask-menu/mask-from-cavity.png" alt="Mask from Cavity" loading="lazy"></figure>
+<p>Creates a mask based on cavity and pointiness of the mesh.</p>
+<h3 id="mask-from-mesh-boundary">Mask from Mesh Boundary</h3>
+<p>Creates a mask along the topological boundaries of the mesh—edges where geometry ends or is disconnected.</p>
+<h4 id="adjust-last-operator-mask-from-boundary">Adjust last operator Mask from Boundary</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-mask-menu/adjust-last-operator-mask-from-boundary.png" alt="Adjust last operator Mask from Boundary" loading="lazy"><figcaption>Adjust last operator Mask from Boundary</figcaption></figure>
+<h5 id="mode">Mode:</h5>
+<p>Defines how the mask interacts with existing masks. Controls how the new mask blends with any existing mask (e.g. Mix, Add, Subtract).</p>
+<h5 id="mix-factor">Mix Factor:</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-mask-menu/mix-factor.png" alt="Mix Factor:" loading="lazy"></figure>
+<p>Controls blending strength.</p>
+<h5 id="mode-2">Mode:</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-mask-menu/mode.png" alt="Mode:" loading="lazy"></figure>
+<p>Either Face Sets mode or Boundary mode.</p>
+<h5 id="propagation-steps">Propagation Steps:</h5>
+<p>Determines how far the mask spreads from the boundary.</p>
+<h3 id="mask-from-face-sets-boundary">Mask from Face Sets Boundary</h3>
+<p>Generates a mask along the boundaries between face sets—regions defined by sculpting tools or manual assignment.</p>
+<h3 id="random-mask">Random Mask</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-mask-menu/random-mask.png" alt="Random Mask" loading="lazy"></figure>
+<p>Masks out random parts of the mesh by the chosen method.</p>
+<h1 id="sculpt-menu">Sculpt menu</h1>
+<h2 id="sculpt-mode-sculpt-menu">Sculpt Mode - Sculpt Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/sculpt-mode-sculpt-menu.png" alt="Sculpt Mode - Sculpt Menu" loading="lazy"><figcaption>Sculpt Mode - Sculpt Menu</figcaption></figure>
+<p>This group of operators contain act-once operators to assist in every day sculpting workflows.</p>
+<h3 id="legacy-submenu">Legacy submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/legacy-submenu.png" alt="Legacy submenu" loading="lazy"></figure>
+<p>The legacy menu contains operators from the old act-once tool system that already exists in the tool shelf that use the new mode based tool system.</p>
+<h4 id="move">Move</h4>
+<p>Activates the old move tool. The old move tool does not show a widget!</p>
+<p>Note that the hotkey for this tool is not displayed correctly. But can't be fixed by us. The hotkey is ctrl W</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snapping</td>
+<td>Holding down Ctrl activates temporary global snapping.</td>
+</tr>
+<tr>
+<td>Precision movement</td>
+<td>When you hold down shift, then you will have a much slower but also much preciser movement.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="header-values">Header Values</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/navigation-menu/header-values.png" alt="Header Values" loading="lazy"></figure>
+<p>When you move your object then you will see some values in the header, which defines the current position of the object.</p>
+<p>The value m stands for the default metric system. Meters. You can change the units in the Properties editor in the Scene properties in the Units panel. When you choose kilometers here then you will see a km instead m.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/navigation-menu/header-values-2.png" alt="Header Values" loading="lazy"></figure>
+<p>The value D stands for the distance of the current selected axis. This can also be two axis. Then you have two d values. The value in the brackets is then the direct distance to the starting point.</p>
+<p>These values are always relative to the starting point. You always start with zero, regardless of the real world position.</p>
+<h5 id="numerical-input">Numerical Input</h5>
+<p>When you move the object, and hold down the mouse and type in a value, like 20, then the movement will be performed by the value that you have typed in. In this case by 20 units in direction of the selected axis.</p>
+<h5 id="limit-axis">Limit Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/navigation-menu/limit-axis.png" alt="Limit Axis" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/navigation-menu/header-values.png" alt="Limit Axis" loading="lazy"></figure>
+<p>When you want to rotate a specific axis, then press X or Y or Z to limit the rotation to this axis. You usually start in global orientation. But you can change this in the Orientation settings.</p>
+<p>By holding down the mouse button and pressing the X, Y or Z key twice you can toggle this to local. But also to other orientations. This depends in what orientation you start. With normal you can toggle that way between Normal and global.</p>
+<p>This can be combined with the numerical input. Type in X, type in X again to use the local space, type in 20 to move by 20 units in local orientation. Release the mouse to confirm.</p>
+<h5 id="orientation">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/navigation-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h5 id="last-operator-move">Last Operator Move</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-move.png" alt="Last Operator Move" loading="lazy"></figure>
+<h5 id="move-x-y-z">Move X, Y Z</h5>
+<p>The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.</p>
+<h5 id="orientation-2">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/navigation-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h5 id="proportional-editing">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rotate">Rotate</h4>
+<p>Activates the old Rotate tool. This tool has no widget!</p>
+<h5 id="snapping">Snapping</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/navigation-menu/snapping.png" alt="Snapping" loading="lazy"></figure>
+<p>Holding down Ctrl activates temporary global snapping. It snaps then by 5 degrees steps.</p>
+<p>When you use the white circle to rotate, then the widget also shows a division circle around the widget. This divisions shows even finer when you do precision rotation.</p>
+<h5 id="precision-rotation">Precision rotation</h5>
+<p>When you hold down shift, then you will have a much slower but also much preciser rotation.</p>
+<h5 id="header-values-2">Header Values</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/navigation-menu/header-values-3.png" alt="Header Values" loading="lazy"></figure>
+<p>When you rotate your object then you will see some values in the header, which defines the current rotation of the object. The rotation is shown in degrees.</p>
+<h5 id="numerical-input-2">Numerical Input</h5>
+<p>When you rotate the object, and hold down the mouse and type in a value, like 20, then the rotation will be performed by the value that you have typed in. In this case by 20 degree around the selected axis.</p>
+<h5 id="limit-axis-2">Limit Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/navigation-menu/limit-axis-2.png" alt="Limit Axis" loading="lazy"></figure>
+<p>When you want to rotate a specific axis, then press X or Y or Z to limit the rotation to this axis. You usually start in global orientation. But you can change this in the Orientation settings.</p>
+<p>By holding down the mouse button and pressing the X, Y or Z key twice you can toggle this to local. But also to other orientations. This depends in what orientation you start. With normal you can toggle that way between Normal and Global.</p>
+<p>This can be combined with the numerical input. Type in X, type in X again to use the local space, type in 20 to rotate by 20 degree. Release the mouse to confirm.</p>
+<h5 id="last-operator-rotate">Last Operator Rotate</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-rotate.png" alt="Last Operator Rotate" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Which axis to rotate.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-3">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/navigation-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h5 id="mirror-editing">Mirror Editing</h5>
+<p>Enable mirror editing.</p>
+<h5 id="proportional-editing-2">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="scale">Scale</h4>
+<p>Activates the old Scale tool. This tool has no widget!</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snapping</td>
+<td>Holding down Ctrl activates temporary global snapping.</td>
+</tr>
+<tr>
+<td>Precision Scale</td>
+<td>When you hold down shift, then you will have a much slower but also much preciser scale.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="header-values-3">Header Values</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/navigation-menu/header-values-4.png" alt="Header Values" loading="lazy"></figure>
+<p>When you scale your object then you will see some values in the header, which defines the current scale of the object.</p>
+<p>These values are always relative to the starting point. You always start with 1, regardless of the real world scale.</p>
+<h5 id="numerical-input-3">Numerical Input</h5>
+<p>When you scale the object, and hold down the mouse and type in a value, like 20, then the scale will be performed by the value that you have typed in. In this case by factor 20 along the selected axis.</p>
+<h5 id="limit-axis-3">Limit Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/navigation-menu/limit-axis-2.png" alt="Limit Axis" loading="lazy"></figure>
+<p>When you want to rotate a specific axis, then press X or Y or Z to limit the scale to this axis. You usually start in global orientation. But you can change this in the Orientation settings.</p>
+<p>By holding down the mouse button and pressing the X, Y or Z key twice you can toggle this to local. But also to other orientations. This depends in what orientation you start. With normal you can toggle that way between Normal and Global.</p>
+<p>This can be combined with the numerical input. Hold down mouse, type in X, type in X again to use the local space, type in 20 to scale by 20 units. Release the mouse to confirm.</p>
+<h5 id="last-operator-resize">Last Operator Resize</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-resize.png" alt="Last Operator Resize" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Which axis to rotate.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-4">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/navigation-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The widget can have different orientations. The menu items should be self explaining.</p>
+<h5 id="mirror-editing-2">Mirror Editing</h5>
+<p>Enable mirror editing.</p>
+<h5 id="proportional-editing-3">Proportional editing</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="box-hide">Box Hide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/box-hide.png" alt="Box Hide" loading="lazy"></figure>
+<p>Calls a rectangle tool that allows you to hide away mesh parts.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Box Show</td>
+<td>Calls a rectangle tool that allows you to reveal hidden mesh parts.</td>
+</tr>
+<tr>
+<td>Lasso Hide</td>
+<td>Calls a lasso tool that allows you to hide away mesh parts.</td>
+</tr>
+<tr>
+<td>Lasso Show</td>
+<td>Calls a lasso tool that allows you to reveal hidden mesh parts.</td>
+</tr>
+<tr>
+<td>Line Hide</td>
+<td>Calls a line tool which hides the vertices at the one side away.</td>
+</tr>
+<tr>
+<td>Line Show</td>
+<td>Calls a line tool that allows you to reveal hidden mesh parts.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="polyline-hide">Polyline Hide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/polyline-hide.png" alt="Polyline Hide" loading="lazy"></figure>
+<p>Calls a poly line tool which hides the vertices at the one side away after you draw and confirm the polyline shape.</p>
+<h4 id="polyline-show">Polyline Show</h4>
+<p>Calls a poly line tool that allows you to reveal hidden mesh parts after you draw and confirm the polyline shape.</p>
+<h4 id="box-trim">Box Trim</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/box-trim.png" alt="Box Trim" loading="lazy"></figure>
+<p>Calls a rectangle tool that cuts away mesh parts, dependent of the view.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lasso Trim</td>
+<td>Calls a rectangle tool that cuts away mesh parts, dependent of the view.</td>
+</tr>
+<tr>
+<td>Line Trim</td>
+<td>Calls a line tool that cuts away mesh parts based on ab underside of a line that you can draw from the first click to a second click. The line will show a gradient, any part of the mesh on that side of the gradient will be booleaned.</td>
+</tr>
+<tr>
+<td>Line Project</td>
+<td>Calls a rectangle tool that cuts away mesh parts, dependant of the view.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transform-submenu">Transform submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/transform-submenu.png" alt="Transform submenu" loading="lazy"></figure>
+<h4 id="sphere">Sphere</h4>
+<p>Adds a mesh filter that casts the mesh to a sphere shape.</p>
+<p>Activate the tool, click at the mesh, and adjust the sphere shape in the last operator panel.</p>
+<h5 id="last-operator-filter-mesh">Last operator Filter Mesh</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-filter-mesh.png" alt="Last operator Filter Mesh" loading="lazy"><figcaption>Last operator Filter Mesh</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strength</td>
+<td>The strength of the sphere casting</td>
+</tr>
+<tr>
+<td>Repeat</td>
+<td>How often to repeat the casting.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-5">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The orientation of the tool.</p>
+<h5 id="axis">Axis</h5>
+<p>Which axis to affect.</p>
+<h3 id="fair-positions">Fair Positions</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/fair-positions.png" alt="Fair Positions" loading="lazy"></figure>
+<p>Edits the current active face set.</p>
+<p>Creates a smooth as possible geometry patch from the face set, miniming changes in vertex positions.</p>
+<h3 id="fair-tangency">Fair Tangency</h3>
+<p>Edits the current active face set.</p>
+<p>Creates a smooth as possible geometry patch from the face set, miniming changes in vertex tangents.</p>
+<h4 id="last-operator-edit-face-sets">Last Operator Edit Face Sets</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-edit-face-sets.png" alt="Last Operator Edit Face Sets" loading="lazy"><figcaption>Last Operator Edit Face Sets</figcaption></figure>
+<h5 id="mode-3">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/mode.png" alt="Mode" loading="lazy"></figure>
+<p>The face set modification mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strength</td>
+<td>How strong the operation should be applied.</td>
+</tr>
+<tr>
+<td>Modify Hidden</td>
+<td>Also modify hidden geometry.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="box-add">Box Add</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/box-add.png" alt="Box Add" loading="lazy"></figure>
+<p>Calls a rectangle tool that adds mesh parts, dependant of the view.</p>
+<h3 id="lasso-add">Lasso Add</h3>
+<p>Draw a free lasso shape, and new mesh is added in that shape, seen from the current view.</p>
+<h3 id="polyline-add">Polyline Add</h3>
+<p>Click point by point to draw a shape with straight sides, then confirm. New mesh is added in that shape, seen from the current view. Good for hard, angular pieces.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Box Add, Lasso Add and Polyline Add sit together near the top of the Sculpt menu. Polyline Add used to be in the Legacy submenu.</p></div>
+<h3 id="smooth">Smooth</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/smooth.png" alt="Smooth" loading="lazy"></figure>
+<p>An act-once operator that smoothens the object.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface Smooth</td>
+<td>An act-once operator that smoothens the surface while preserving volume.</td>
+</tr>
+<tr>
+<td>Inflate</td>
+<td>An act-once operator that inflates the surface volume.</td>
+</tr>
+<tr>
+<td>Relax Topology</td>
+<td>An act-once operator that relaxes the topology of the mesh.</td>
+</tr>
+<tr>
+<td>Relax Face Sets</td>
+<td>An act-once operator that relaxes the face sets and smooths them out.</td>
+</tr>
+<tr>
+<td>Sharpen</td>
+<td>An act-once operator that sharpens the face sets.</td>
+</tr>
+<tr>
+<td>Enhance Details</td>
+<td>An act-once operator that enhances the details of the mesh.</td>
+</tr>
+<tr>
+<td>Erase Multires Displacement</td>
+<td>An act-once operator that erases multiresolution displacement.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="randomize">Randomize</h3>
+<p>An act-once operator that randomizes the mesh topology.</p>
+<h4 id="last-operator-filter-mesh-2">Last operator Filter Mesh</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-filter-mesh.png" alt="Last operator Filter Mesh" loading="lazy"><figcaption>Last operator Filter Mesh</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strength</td>
+<td>The strength of the sphere casting</td>
+</tr>
+<tr>
+<td>Repeat</td>
+<td>How often to repeat the casting.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orientation-6">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>The orientation of the tool.</p>
+<h5 id="axis-2">Axis</h5>
+<p>Which axis to affect.</p>
+<h3 id="subdivide-submenu">Subdivide submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/subdivide-submenu.png" alt="Subdivide submenu" loading="lazy"></figure>
+<p>Subdivide is a menu where you can quickly set the subdivision level of the selection. What it does is to add a SDS modifier in the Properties Editor if required. And set the SDS level to the needed value. Crtrl 0 sets SDS to level 0. Ctrl 1 sets SDS level to 1 , and so on.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/subdivide-submenu-2.png" alt="Subdivide submenu" loading="lazy"></figure>
+<p>SDS happens at Object mode level. Even when you apply it in the Sculpt Mode! And it happens at the whole object. The sculpting though still happens at the base mesh.</p>
+<h4 id="last-operator-subdivision-set">Last Operator Subdivision Set</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-subdivision-set.png" alt="Last Operator Subdivision Set" loading="lazy"><figcaption>Last Operator Subdivision Set</figcaption></figure>
+<h5 id="level">Level</h5>
+<p>Adjust the SDS level.</p>
+<h5 id="relative">Relative</h5>
+<p>Applies the Subsurf Level as an offset relative to the current level.</p>
+<h3 id="sample-color">Sample Color</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/sample-color.png" alt="Sample Color" loading="lazy"></figure>
+<p>Samples the vertex color attribute of the active vertex.</p>
+<h3 id="set-vertex-color">Set Vertex Color</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/set-vertex-color.png" alt="Set Vertex Color" loading="lazy"></figure>
+<p>Flood fills the vertex colors with the current vertex color value. Applies a vertex color to the selected or affected geometry during sculpting. Useful for painting, shading, or marking areas directly on the mesh without switching to Vertex Paint mode.</p>
+<h4 id="last-operator-fill">Last operator Fill</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strength</td>
+<td>Controls the intensity of the color application.</td>
+</tr>
+<tr>
+<td>Fill Color</td>
+<td>Defines the color applied to vertices.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set-pivot">Set Pivot</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/set-pivot.png" alt="Set Pivot" loading="lazy"></figure>
+<p>Sets the pivot to the chosen location. The menu items should be self explaining. So we don't repeat them here.</p>
+<h4 id="last-operator-set-pivot-position">Last operator Set Pivot Position</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-set-pivot-position.png" alt="Last operator Set Pivot Position" loading="lazy"><figcaption>Last operator Set Pivot Position</figcaption></figure>
+<h5 id="mode-4">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/mode-2.png" alt="Mode" loading="lazy"></figure>
+<p>How to set the pivot to.</p>
+<h3 id="show-hide-submenu-2">Show / Hide submenu</h3>
+<h4 id="toggle-visibility">Toggle Visibility</h4>
+<p>Toggles the visibility of face sets.</p>
+<h5 id="last-operator-face-sets-visibility">Last operator Face Sets Visibility</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-face-sets-visibility.png" alt="Last operator Face Sets Visibility" loading="lazy"><figcaption>Last operator Face Sets Visibility</figcaption></figure>
+<h5 id="mode-5">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/mode-3.png" alt="Mode" loading="lazy"></figure>
+<p>The show hide modes for face sets.</p>
+<h4 id="hide-active-face-sets">Hide active Face Sets</h4>
+<p>Makes the active face sets invisible.</p>
+<h5 id="last-operator-face-sets-visibility-2">Last operator Face Sets Visibility</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-face-sets-visibility.png" alt="Last operator Face Sets Visibility" loading="lazy"><figcaption>Last operator Face Sets Visibility</figcaption></figure>
+<h5 id="mode-6">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/mode-3.png" alt="Mode" loading="lazy"></figure>
+<p>The show hide modes for face sets.</p>
+<h4 id="show-all">Show All</h4>
+<p>Makes all invisible mesh parts visible again.</p>
+<h4 id="invert-visible">Invert Visible</h4>
+<p>Toggles the visibility of the selected face sets.</p>
+<h5 id="last-operator-face-sets-visibility-3">Last operator Face Sets Visibility</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-face-sets-visibility.png" alt="Last operator Face Sets Visibility" loading="lazy"><figcaption>Last operator Face Sets Visibility</figcaption></figure>
+<h5 id="mode-7">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/mode-3.png" alt="Mode" loading="lazy"></figure>
+<p>The show hide modes for face sets.</p>
+<h4 id="hide-masked">Hide Masked</h4>
+<p>Hides the masked mesh part.</p>
+<h3 id="rebuild-bvh">Rebuild BVH</h3>
+<p>Recalculate the sculpt BVH to improve performance.</p>
+<h3 id="transfer-sculpt-mode">Transfer Sculpt Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/262ff4cbaac34094be5f69d4afddf4e586e14815/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/transfer-sculpt-mode.png" alt="Transfer Sculpt Mode" loading="lazy"></figure>
+<p>Switch to another object in Sculpt mode. The tool calls an object picker with which you can choose the object that you want to switch to.</p>
+<p>There is also a hardcoded hotkey D, which works directly. Hover with the mouse over the object, and press D</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fsculpt-polyline-add/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fmesh%2Fsculpt%2Fheader.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/sculpt-polyline-add/docs2/content/editors/3d-viewport/mesh/sculpt/header.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#sculpt-mode-face-sets-menu">Sculpt Mode - Face Sets Menu</a><a class="h3" href="#initialize-face-sets">Initialize Face Sets</a><a class="h3" href="#randomize-colors">Randomize Colors</a><a class="h3" href="#show-hide-submenu">Show/Hide submenu</a><a class="h2" href="#sculpt-mode-mask-menu">Sculpt Mode - Mask Menu</a><a class="h3" href="#legacy-sub-menu">Legacy Sub-menu</a><a class="h3" href="#mask-extract">Mask Extract</a><a class="h3" href="#mask-slice">Mask Slice</a><a class="h3" href="#mask-from-cavity">Mask from Cavity</a><a class="h3" href="#mask-from-mesh-boundary">Mask from Mesh Boundary</a><a class="h3" href="#mask-from-face-sets-boundary">Mask from Face Sets Boundary</a><a class="h3" href="#random-mask">Random Mask</a><a class="h2" href="#sculpt-mode-sculpt-menu">Sculpt Mode - Sculpt Menu</a><a class="h3" href="#legacy-submenu">Legacy submenu</a><a class="h3" href="#transform-submenu">Transform submenu</a><a class="h3" href="#fair-positions">Fair Positions</a><a class="h3" href="#fair-tangency">Fair Tangency</a><a class="h3" href="#box-add">Box Add</a><a class="h3" href="#lasso-add">Lasso Add</a><a class="h3" href="#polyline-add">Polyline Add</a><a class="h3" href="#smooth">Smooth</a><a class="h3" href="#randomize">Randomize</a><a class="h3" href="#subdivide-submenu">Subdivide submenu</a><a class="h3" href="#sample-color">Sample Color</a><a class="h3" href="#set-vertex-color">Set Vertex Color</a><a class="h3" href="#set-pivot">Set Pivot</a><a class="h3" href="#show-hide-submenu-2">Show / Hide submenu</a><a class="h3" href="#rebuild-bvh">Rebuild BVH</a><a class="h3" href="#transfer-sculpt-mode">Transfer Sculpt Mode</a></aside></div></body></html>
