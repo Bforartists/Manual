@@ -714,6 +714,17 @@ Despite being read only, this text can be edited. But be careful, it will not ch
 
 Allows you to define a custom name for the selected node. This text does change the name in the header of the node.
 
+#### Width and Location
+
+![Width and Location](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/width-and-location.png)
+
+Type exact numbers to size and place the selected node. Handy for keeping big node trees tidy and lined up.
+
+| Entry | What it does |
+| -------- | ----------------------------------------------------------------------------------------- |
+| Width | How wide the node is. Same as dragging its side edge. |
+| Location | Where the node sits in the editor, as **X** (left/right) and **Y** (up/down). Nodes inside a frame still use the position in the whole editor. |
+
 #### Warning Propagation
 
 ![Warning Propagation](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/warning-propagation.png)
