@@ -746,6 +746,20 @@ Keep the selection in synchronization with the other editors. 3D View and VSE.
 
 This mode lists the whole content of the current Blender file. It includes also things like the default brushes, which comes from the startup defaults.
 
+### Drag into the Video Sequencer
+
+![Masks listed in Blend File mode](/docs2/images/editors/outliner/blend-file-drag-to-sequencer.png)
+
+You can drag items from Blend File mode straight into the Video Sequencer timeline to add them as strips:
+
+| Drag this | You get |
+| ---------- | ------------------------------------------------------------------ |
+| Scene | A Scene strip that plays that scene, like a shot from your 3D work. |
+| Mask | A Mask strip, handy for wipes, titles or cutting out part of a shot. |
+| Movie Clip | A Movie Clip strip, for example a tracked clip from the Movie Clip Editor. |
+
+Open the category, then drag the item to the frame and channel where you want the strip. This is quicker than going through the Add menu when you already see the item in the Outliner.
+
 ### Filter
 
 ![Filter](/docs2/images/editors/outliner/filter-3.png)
