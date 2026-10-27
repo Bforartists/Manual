@@ -161,17 +161,15 @@ Opens the file browser at the Paths tab. Here you can show, edit, and add paths 
 
 ![Header - Asset menu](/docs2/images/editors/asset-browser/header-asset-menu.png)
 
-The Asset menu now holds the general asset commands, which used to be only in the right-click menu. Most of them need an asset selected first.
+The Asset menu holds the commands for the assets you select. They used to be only in the right-click menu. Select an asset first, otherwise most entries stay greyed out.
 
-| Entry | What it does |
-| ---------------------------- | --------------------------------------------------------------------------------------------------- |
-| Download | Only for online libraries. Download the selected assets so you can use them offline. |
-| Clear Asset | Turn the selected asset back into normal data. It's no longer an asset. |
-| Clear Asset (Set Fake User) | Same as Clear Asset, but keeps the data safe with a fake user, so it isn't deleted when you save. |
-| Open Blend File | Open the .blend file the asset is stored in. |
-| Open File Location | Open the folder that contains the asset's .blend file. |
+**Download** only shows for online libraries. It downloads the selected assets so you can use them offline.
 
-The two pose entries at the bottom come from the Pose Library add-on, which is on by default:
+**Clear Asset** turns an asset back into normal data, so it no longer shows in the Asset Browser. **Clear Asset (Set Fake User)** does the same but protects the data with a fake user, so it isn't thrown away when you save.
+
+**Open Blend File** opens the file an asset is stored in, and **Open File Location** opens its folder. Both work for assets from other files, not for assets in the current file.
+
+The two pose entries at the bottom come from the Pose Library add-on, which is on by default. They work in Pose Mode.
 
 ### Paste Pose as New Asset
 
