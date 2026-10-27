@@ -71,7 +71,15 @@ Type exact numbers to size and place the selected node. Handy for keeping big no
 
 Give the node a color of its own, so parts of a big node tree are easy to tell apart. Tick **Color** and click the color field to pick one.
 
-The two small buttons next to it help when you color many nodes. **Copy Color** gives all selected nodes the same color as the active node. **Presets** stores colors you like, so you can reuse them. Presets are saved globally, so they work in your other files too.
+The two small buttons next to the color field help when you color many nodes.
+
+##### Copy Color
+
+Gives all selected nodes the same color as the active node. Select the nodes, make the one with the color you want active, then click the copy button.
+
+##### Presets
+
+Stores colors you like, so you can reuse them with one click. Presets are saved globally, so they work in your other files too.
 
 ### Node Tab - Properties Panel
 
