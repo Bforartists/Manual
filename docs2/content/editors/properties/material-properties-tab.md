@@ -387,16 +387,13 @@ Remove the color from underneath this stroke by using the stroke as a mask.
 
 ![Gradient](/docs2/images/editors/properties/material-properties-tab/gradient.png)
 
-A Gradient fill now uses a **color ramp**, like the ColorRamp node, so you can blend as many colors as you like instead of just two. Old files are converted automatically and look the same.
+A Gradient fill blends colors across your stroke's fill. It uses a **color ramp**, just like the ColorRamp node, so you can blend as many colors as you like. Older files that used two colors are converted automatically and look the same.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------------------------------------------------------------- |
-| Gradient Type | **Linear**: the colors run in a straight line. · **Radial**: the colors spread out in a circle from the center. |
-| Color ramp | The colors of the gradient. Click **+** to add a color stop and **–** to remove one, then drag the stops along the bar. Pick a stop to set its color and position. |
-| Holdout | Use the fill as a mask that removes the color underneath it. |
-| Location X / Y | Moves the gradient. |
-| Rotation | Turns the gradient. Only for **Linear**. A radial gradient looks the same at any angle. |
-| Scale X / Y | Stretches the gradient. |
+Choose **Linear** for colors that run in a straight line, or **Radial** for colors that spread out in a circle from the center.
+
+On the color ramp, click **+** to add a color stop and **–** to remove one. Drag the stops along the bar, and pick a stop to set its color.
+
+**Location**, **Rotation** and **Scale** move, turn and stretch the gradient on the fill. Rotation only matters for Linear, since a radial gradient looks the same at any angle. **Holdout** turns the fill into a mask that removes the color underneath it.
 
 > **Tip:** You can also place the gradient right in the viewport with the **Gradient** tool in Grease Pencil Edit Mode.
 
