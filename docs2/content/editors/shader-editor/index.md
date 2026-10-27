@@ -84,15 +84,34 @@ The whole add menu from the header.
 
 Search for nodes, and hilight them. When you are in a node group then it lists the content of the node group.
 
-| Entry | What it does |
-| ---------- | ---------------------------------------------------------------------------------------------------------- |
-| Cut Links | Calls a cut tool with which you can cut links between nodes |
-| Mute Links | Calls a cut tool with which you mute cut links between nodes. To unmute the links use the same tool again. |
-| Exit Group | Same as Edit Group. When you are in a group then you can end editing with this operator. |
-| Cut | Copies the selected nodes and removes them, keeping the links around them connected. Paste them back with Paste. Hotkey **Ctrl+X**. |
-| Copy | Copies the selected nodes. |
-| Paste | Pastes the copied nodes. |
-| Duplicate | Duplicates the selected nodes. |
+### Cut Links
+
+Calls a cut tool with which you can cut links between nodes
+
+### Mute Links
+
+Calls a cut tool with which you mute cut links between nodes. To unmute the links use the same tool again.
+
+### Exit Group
+
+Same as Edit Group. When you are in a group then you can end editing with this operator.
+
+### Cut
+
+Copies the selected nodes and removes them, keeping the links around them connected. Paste them back with Paste. Hotkey **Ctrl+X**.
+
+### Copy
+
+Copies the selected nodes.
+
+### Paste
+
+Pastes the copied nodes.
+
+### Duplicate
+
+Duplicates the selected nodes.
+
 
 ### Rename
 
