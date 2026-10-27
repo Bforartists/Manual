@@ -414,6 +414,26 @@ Includes a **folder icon button** for browsing files.
 
 Outputs the imported PLY file as a **mesh**, including vertex positions, colors, and potential additional attributes.
 
+#### Import SPZ (.spz)
+
+![Import SPZ (.spz)](/docs2/images/editors/geometry-node-editor/header/add-menu-input-import/import-spz.png)
+
+Loads an SPZ file as a point cloud that is shown as a 3D Gaussian Splat. The file is read again only when the path changes.
+
+If your version of Bforartists was built without SPZ support, the node shows the error "Disabled, Blender was compiled without SPZ I/O".
+
+##### Inputs
+
+###### Path
+
+The path to the SPZ file. Use the folder button to browse for a file. Only files that end with .spz are offered.
+
+##### Outputs
+
+###### Points
+
+The imported point cloud. Warnings from the import are shown on the node.
+
 #### Import STL (.stl)
 
 ![Import STL (.stl)](/docs2/images/editors/geometry-node-editor/header/add-menu-input-import/import-stl-stl.png)
