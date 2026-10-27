@@ -700,6 +700,8 @@ Animation panels are about the Animation Slots for scene wide animation clips.
 
 ### Node panel
 
+![Node panel](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/node-panel.png)
+
 #### Name
 
 ![Name](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/name.png)
@@ -731,25 +733,21 @@ Type exact numbers to size and place the selected node. Handy for keeping big no
 
 What kind of messages should be propagated from this node to the parent node.
 
-#### Color Subpanel
+#### Color
 
-![Color Subpanel](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/color-subpanel.png)
+![Color row](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/color-row.png)
 
-Define a custom color for the node. A click at the color field opens a color picker.
+Give the node a color of its own, so parts of a big node tree are easy to tell apart. Tick **Color** and click the color field to pick one.
+
+The two small buttons next to the color field help when you color many nodes.
+
+##### Copy Color
+
+Gives all selected nodes the same color as the active node. Select the nodes, make the one with the color you want active, then click the copy button.
 
 ##### Presets
 
-![Presets](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/presets.png)
-
-Add color presets.
-
-##### Node color specials
-
-###### Copy Color
-
-![Copy Color](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/copy-color.png)
-
-Copies the color. Which doesn't help you since you cannot paste it.
+Stores colors you like, so you can reuse them with one click. Presets are saved globally, so they work in your other files too.
 
 ### Properties panel
 
