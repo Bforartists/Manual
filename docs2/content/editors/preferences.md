@@ -1022,7 +1022,7 @@ Select if the repository is a system directory, or a user directory. Normally th
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Visit extensions website | Opens the Blender extension page in a web browser. · **Install Available Updates**: Install all available updates. Note that this feature requires to allow online access. · **Refresh Remote**: Check if updates for extensions are available for the online extensions. Note that this feature requires to allow online access. Also note that this feature works on ALL repositories. |
 | Install from Disk | You can optionally also install addons and extensions from a disk location using the install from disk operators. · **Refresh Local**: Refresh local extensions to apply changes. Note that this feature works on ALL repositories. |
-| Enable Built-in Legacy Add-ons | Blender by default uses only online add-ons. But Bforartists comes with some add-ons that are vital to run the software. And these offline add-ons must be on so that Bforartists is fully functional. By Default these add-ons are already enabled. So no action is required. But if you by accident disable a Bforartists core add-on, this is the place to re-enable them all. |
+| Legacy Add-ons / Pre-downloaded Extensions | Install or remove the add-ons that ship with Bforartists, as classic add-ons or as extensions. See *Working offline* below. |
 
 
 ### Allow Online Access
@@ -1036,6 +1036,20 @@ Allow internet access to download extensions. Bforartists may access configured 
 An explicit dialog suggests that to access Extensions, you must allow internet access. This is so you can download and work with the online Blender extensions repository.
 
 To install extensions from the internet, internet access is required. You can adjust this later from the “System” preferences in the Network panel. Once you have allowed online access, you will access the default Blender extensions website with free addons and themes.
+
+#### Working offline: Legacy Add-ons or Pre-downloaded Extensions
+
+Bforartists ships with a big set of add-ons, so you can use them without ever going online. You get them in one of two forms, and you choose with the two buttons under **Continue Offline / Allow Online Access**.
+
+**Install Legacy Add-ons** gives you the classic built-in add-ons. They show up in the Add-ons tab, just like before.
+
+**Install Pre-downloaded Extensions** gives you the same tools as Extensions, copied from your Bforartists folder. Pick this one if you plan to go online later: they then update like any other extension.
+
+Once installed, the button turns into **Remove**, so you can undo your choice. Removing the Pre-downloaded Extensions only removes the ones that came with Bforartists. Extensions you installed yourself from the internet stay.
+
+> **Tip:** Use one or the other, not both. Install Legacy Add-ons is greyed out while the Pre-downloaded Extensions are installed. If you switch, disable a Legacy Add-on before you enable its Extension.
+
+You find the same buttons in the **Missing Built-in Add-ons** panel and in the Extension Settings menu, so you can change your mind any time.
 
 #### Continue Offline
 
@@ -1060,12 +1074,6 @@ Also that you can also install extensions from disk or drag and drop extensions 
 In case you have added an invalid online repository you might be faced with a warning. You might want to fix the invalid extension repository then.
 
 > **Note:** Bforartists doesn't host extensions. This URL was just added for demonstration purposes.
-
-
-| Entry | What it does |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Enable/Remove Built-in Legacy Add-ons | Bforartists comes with some core add-ons that are vital to run the software, but this also alternatively ships with legacy Built-In addons. These addons are opt-in and have Extension equivalents also included offline. Core add-ons must be on so that Bforartists is fully functional. Built-In Legacy addons are optionally provided for complete offline extended usability. |
-| Install Pre-downlaoded Extensions Equivalents | If you have enabled legacy addons, you also have the options to remove and alternatively install the Extensions equivalents while remaining offline. This will copy the extensions to your user settings, and if you want to continue updating them when being online, they will then be available locally with online access to their repository for future updates. This helps to you to migrate your legacy addons to Extensions. |
 
 
 ## Add-ons
