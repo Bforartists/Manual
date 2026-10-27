@@ -58,14 +58,9 @@ The label name of the node.
 
 ![Color row](/docs2/images/editors/compositor/sidebar/node-tab/color-row.png)
 
-Give the node a color of its own, so parts of a big node tree are easy to tell apart. Everything sits in one row:
+Give the node a color of its own, so parts of a big node tree are easy to tell apart. Tick **Color** and click the color field to pick one.
 
-| Entry | What it does |
-| ---------------------- | ----------------------------------------------------------------------------------------------- |
-| Color (checkbox) | Turns your custom color on or off. |
-| Color field | Click it to pick a color. |
-| Copy Color (copy icon) | Gives all selected nodes the same color as the active node. |
-| Presets (list icon) | Save colors you like and reuse them. Presets are stored globally, so they work in your other files too. |
+The two small buttons next to it help when you color many nodes. **Copy Color** gives all selected nodes the same color as the active node. **Presets** stores colors you like, so you can reuse them. Presets are saved globally, so they work in your other files too.
 
 ### NodeTab - Properties Panel
 
