@@ -700,11 +700,18 @@ Vertex Selection Mode. Select the geometry that is directly linked with the curr
 Add a limit to the selection. For example, just select up to the next seam.
 
 
-| Entry | What it does |
-| -------------------- | -------------------------------------------------------- |
-| Linked | Paint Mask mode. Select linked faces. Mouse only tool. |
-| Linked Pick Select | Paint Mask mode. Select linked faces. Mouse only tool. |
-| Linked Pick Deselect | Paint Mask mode. Deselect linked faces. Mouse only tool. |
+## Linked
+
+Paint Mask mode. Select linked faces. Mouse only tool.
+
+## Linked Pick Select
+
+Paint Mask mode. Select linked faces. Mouse only tool.
+
+## Linked Pick Deselect
+
+Paint Mask mode. Deselect linked faces. Mouse only tool.
+
 
 
 ## More/Less Sub-menu
@@ -769,14 +776,30 @@ Vertex Selection Mode. Select the geometry that is directly linked with the curr
 Add a limit to the selection. For example, just select up to the next seam.
 
 
-| Entry | What it does |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Linked | Paint Mask mode. Select linked faces. Mouse only tool. |
-| Linked Pick Select | Paint Mask mode. Select linked faces. Mouse only tool. |
-| Linked Pick Deselect | Paint Mask mode. Deselect linked faces. Mouse only tool. |
-| Select Loop | Selects a face loop. Uses the face under the mouse, so point at the mesh when you call it. |
-| Add Loop to Selection | Adds a face loop to the selection. Uses the face under the mouse. |
-| Remove Loop from Selection | Removes a face loop from the selection. Uses the face under the mouse. |
+## Linked
+
+Paint Mask mode. Select linked faces. Mouse only tool.
+
+## Linked Pick Select
+
+Paint Mask mode. Select linked faces. Mouse only tool.
+
+## Linked Pick Deselect
+
+Paint Mask mode. Deselect linked faces. Mouse only tool.
+
+## Select Loop
+
+Selects a face loop. Uses the face under the mouse, so point at the mesh when you call it.
+
+## Add Loop to Selection
+
+Adds a face loop to the selection. Uses the face under the mouse.
+
+## Remove Loop from Selection
+
+Removes a face loop from the selection. Uses the face under the mouse.
+
 
 > **Note:** The three loop entries work in the face selection mask of **Weight Paint**, **Vertex Paint** and **Texture Paint**, not only Texture Paint.
 
