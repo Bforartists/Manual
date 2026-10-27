@@ -170,21 +170,19 @@ You can also go to the 3D View - Header – Object – Assets – Open Asset Wiz
 
 ![Using the Sidebar to change asset properties](/docs2/images/editors/asset-browser/asset-browser-default-asset-library/triggering-the-wizard-3.png)
 
-You can adjust Geometry Nodes Asset Modifier settings and common properties through slider properties and check boxes directly from the 3D View in the Sidebar.
+<!-- TODO screenshot: 3D View sidebar > Item > Asset Properties with a Default Library primitive, a sub-panel open -->
 
-You can modify numerical inputs for quick parameter changes by size, distance or angle.
+You can adjust the settings of a Geometry Nodes asset, like the size, distance or angle of a primitive, right in the 3D View sidebar.
 
-Access these properties from the 3D View sidebar in the Item tab, in the Primitive Properties panel.
+Find them in the sidebar **Item** tab, in the **Asset Properties** panel.
 
-> **Note:** This panel will only enable for specific assets like Primitives or Blend mesh by Proximity
-
+> **Note:** This panel only shows for the Default Library's Geometry Nodes assets, like the Primitives or Blend Mesh by Proximity.
 
 | Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------- |
-| Open Asset Wizard | This will re-trigger the wizard for the selected asset. |
-| Modifier Name | The selected asset name. |
-| Modifier Properties | These are the asset properties also found in the Properties Editor in the Modifier stack. |
-
+| ------------------ | ----------------------------------------------------------------------------------------------------------- |
+| Open Asset Wizard | Opens the wizard again for the selected asset. |
+| Node group name | Shows which asset you're editing. |
+| Asset settings | The asset's inputs, the same ones as in the modifier stack. They're grouped in fold-open panels, just like in the modifier, with the label in front of each field. Click the dot at the right of a field to keyframe it. |
 
 ## Default Library
 
