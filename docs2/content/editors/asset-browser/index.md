@@ -163,11 +163,25 @@ Opens the file browser at the Paths tab. Here you can show, edit, and add paths 
 
 The Asset menu holds the commands for the assets you select. They used to be only in the right-click menu. Select an asset first, otherwise most entries stay greyed out.
 
-**Download** only shows for online libraries. It downloads the selected assets so you can use them offline.
+### Download
 
-**Clear Asset** turns an asset back into normal data, so it no longer shows in the Asset Browser. **Clear Asset (Set Fake User)** does the same but protects the data with a fake user, so it isn't thrown away when you save.
+Only shows for online libraries. Downloads the selected assets, so you can use them offline.
 
-**Open Blend File** opens the file an asset is stored in, and **Open File Location** opens its folder. Both work for assets from other files, not for assets in the current file.
+### Clear Asset
+
+Turns the asset back into normal data, so it no longer shows in the Asset Browser.
+
+### Clear Asset (Set Fake User)
+
+Same as Clear Asset, but protects the data with a fake user, so it isn't thrown away when you save.
+
+### Open Blend File
+
+Opens the .blend file the asset is stored in. Works for assets from other files, not for assets in the current file.
+
+### Open File Location
+
+Opens the folder that holds the asset's .blend file.
 
 The two pose entries at the bottom come from the Pose Library add-on, which is on by default. They work in Pose Mode.
 
