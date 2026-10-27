@@ -1041,9 +1041,15 @@ To install extensions from the internet, internet access is required. You can ad
 
 Bforartists ships with a big set of add-ons, so you can use them without ever going online. You get them in one of two forms, and you choose with the two buttons under **Continue Offline / Allow Online Access**.
 
-**Install Legacy Add-ons** gives you the classic built-in add-ons. They show up in the Add-ons tab, just like before.
+##### Install Legacy Add-ons
 
-**Install Pre-downloaded Extensions** gives you the same tools as Extensions, copied from your Bforartists folder. Pick this one if you plan to go online later: they then update like any other extension.
+Gives you the classic built-in add-ons. They show up in the Add-ons tab, just like before.
+
+##### Install Pre-downloaded Extensions
+
+Gives you the same tools as Extensions, copied from your Bforartists folder. Pick this one if you plan to go online later: they then update like any other extension.
+
+##### Remove Legacy Add-ons / Remove Pre-downloaded Extensions
 
 Once installed, the button turns into **Remove**, so you can undo your choice. Removing the Pre-downloaded Extensions only removes the ones that came with Bforartists. Extensions you installed yourself from the internet stay.
 
