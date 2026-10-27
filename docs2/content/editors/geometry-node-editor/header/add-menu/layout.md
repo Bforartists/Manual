@@ -25,6 +25,22 @@ replaces:
 
 These nodes helps organizing the node layout.
 
+### Comment
+
+![Comment](/docs2/images/editors/geometry-node-editor/header/add-menu-layout/comment.png)
+
+Adds a note to the node tree. Use it to explain what a part of your nodes does. The text can use Markdown formatting. The new node shows the heading Comment.
+
+The Comment node is shared by all node editors. You find it in the Layout menu of each node editor. It has no sockets and does not change the result of the tree.
+
+To change the text, select the node and click the pencil button in its top right corner, or edit Text in the Node tab of the sidebar.
+
+#### Properties
+
+##### Text
+
+The text shown in the node.
+
 ### Frame
 
 ![Frame](/docs2/images/editors/geometry-node-editor/header/add-menu-layout/frame.png)
