@@ -27,11 +27,11 @@ In Edit mode with a mesh object you will find some polygon tools in the tool she
 
 The tweak, select and transform tools and the annotation and measure tool is already described in the chapter Object Mode. So we won't cover it here again. And start directly with the polygon tools.
 
-### Primitives Add Tools Group
+### Primitive Add tools
 
-![Primitives Add Tools Group](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/primitives-add-tools-group.png)
+![Primitive Add tools](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/primitives-add-tools-group.png)
 
-This chapter is already explained in the Editors - 3D View - Tool Shelf - Object Mode chapter. Please have a look in this chapter.
+The six primitive buttons (Cube, Cone, Cylinder, Quad Sphere, UV Sphere, Icosphere) work just like in Object Mode, so see the Tool Shelf - Object Mode chapter.
 
 The only difference is that the created primitive will be part of the mesh that you are in edit mode with. And not an independent object.
 
