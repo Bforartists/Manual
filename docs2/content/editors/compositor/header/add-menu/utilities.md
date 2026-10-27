@@ -117,14 +117,35 @@ Allows to combine two images horizontally or vertically
 
 ### Switch
 
-![Switch](/docs2/images/editors/compositor/header/add-menu-utilities/switch.png)
+Switch between two values with a checkbox. Use it to choose which image or value goes on, for example to show a heavy effect only when a checkbox is on. Only the chosen value is used.
 
-The Switch node is akin to a boolean, where you can use a toggle to choose what is shown with on or off.
+This is the shared Switch node that also exists in the Shader Editor and the Geometry Node Editor. It replaces the older compositor Switch node, which had only Off and On image inputs and now shows a notice pointing here.
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Properties | **Switch**: The toggle that turns the switch on or off resulting in the final output being whatever is in the on or off input. |
-| Inputs | **Off**: The image that is shown when the toggle is off. · **On**: The image that is shown when the toggle is on. · **Image**: Standard RGB image output. |
+#### Inputs
+
+##### Switch
+
+The checkbox. Off passes the False value through, on passes the True value through. In the Compositor this is a single value, not an image.
+
+##### False
+
+The value or image used when Switch is off.
+
+##### True
+
+The value or image used when Switch is on.
+
+#### Properties
+
+##### Input Type
+
+The type of the two values and of the output. In the Compositor you can choose Float, Integer, Boolean, Vector, Color, Rotation, Matrix, String, Menu, Object, Font or Bundle. A new node starts as Color, which switches between images.
+
+#### Outputs
+
+##### Output
+
+The True or False value, depending on Switch.
 
 ### Index Switch
 
