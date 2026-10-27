@@ -964,12 +964,6 @@ Add a copy of the active vertex group as a new group. The new group will be name
 
 Moves the selected vertex group up or down in the list.
 
-## Loop Select
-
-<!-- TODO screenshot: Weight Paint header, right end, Loop Select button -->
-
-The **Loop Select** button at the end of the Weight Paint header selects a whole loop on the mesh. Click the button, then click an edge on your mesh. It's handy together with the selection masks, when you want to paint weights on just one ring of the mesh.
-
 # Mesh Object - Texture Paint mode
 
 ## Texture Slots
