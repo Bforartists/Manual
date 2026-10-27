@@ -193,15 +193,27 @@ The timeline scene that you use for the video.
 
 #### Overlap Mode
 
-![Overlap Mode](/docs2/images/editors/video-sequence-editor/header/tools-and-options/overlap-mode.png)
+![Overlap Mode](/docs2/images/editors/video-sequence-editor/header/tools-and-options/overlap-mode-ripple.png)
 
-How to resolve overlap after transformation.
+How to resolve overlap after transformation. The three buttons next to each other pick the mode.
 
-| Entry | What it does |
-| --------- | ---------------------------------------------------------------- |
-| Expand | Move strips until there is no overlap anymore. |
-| Overwrite | Trim or split strips to resolve overlap. |
-| Shuffle | Move transformed strip to nearest free space to resolve overlap. |
+##### Ripple
+
+Move strips until there is no overlap anymore. Strips after the moved strip are pushed along, so nothing is cut and no gaps open up. This replaces the former "Expand" mode.
+
+##### Overwrite
+
+Trim or split strips to resolve overlap.
+
+##### Shuffle
+
+Move the transformed strip to the nearest free space to resolve overlap.
+
+##### Ripple Options
+
+The drop-down next to the Ripple button holds the ripple behaviour, for example whether all channels or only the selected ones are moved, and whether markers move along.
+
+> 📸 **Screenshot needed (manual):** the Ripple options popover next to the Overlap Mode buttons. It cannot be captured automatically.
 
 #### Snap
 
@@ -1080,6 +1092,16 @@ Moves the selected strip(s).
 | Swap Strip Left | Swap the active strip with the strip to the left. |
 | Swap Strip Right | Swap the active strip with the strip to the right. |
 
+##### Ripple Trim Start
+
+![Ripple Trim Start](/docs2/images/editors/video-sequence-editor/header/strip-menu/ripple-in-strip-menu.png)
+
+Trims the start of the selected strip(s) to the current frame and moves the following strips to close the gap.
+
+##### Ripple Trim End
+
+Trims the end of the selected strip(s) to the current frame and moves the following strips to close the gap.
+
 ##### Remove Gaps
 
 ![Remove Gaps](/docs2/images/editors/video-sequence-editor/header/strip-menu/remove-gaps.png)
@@ -1171,6 +1193,7 @@ Resets the movie strip to original playback speed.
 | Duplicate Strips | Duplicates the selected strip(s). |
 | Duplicate Linked | This creates a **linked duplicate** of the selected strip(s), meaning the new strip shares the same underlying data as the original. |
 | Delete | Deletes the selected strip(s). |
+| Ripple Delete | Deletes the selected strip(s) and moves the following strips to close the gap. |
 
 #### Delete Strip & Data
 
