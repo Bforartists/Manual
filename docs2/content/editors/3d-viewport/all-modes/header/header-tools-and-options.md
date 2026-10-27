@@ -1052,9 +1052,18 @@ Saves all images. Internal images needs to be saved manually first. They don't h
 
 ![Save all Images](/docs2/images/editors/3d-viewport/header/header-tools-and-options/save-all-images.jpg)
 
+## Masking
+
+The **Masking** popover in the Texture Paint header holds two masks, side by side at the top level. Tick one to turn it on, and its settings open right below it.
+
+| Mask | What it does |
+| ------------ | ------------------------------------------------------------------------------ |
+| Stencil Mask | Paint only where a stencil image lets paint through. |
+| Cavity Mask | Paint more, or less, in the dents and creases of the mesh, shaped by a curve. |
+
 ## Stencil Mask
 
-Stencil mask allows mask painting with a stencil map. It is a sub menu tab. In expanded state it shows the falloff curve, which can be edited.
+Stencil Mask limits your painting with a stencil image: paint only goes through where the image allows it. Tick it to show its settings.
 
 ### Activate Stencil map
 
@@ -1100,17 +1109,16 @@ The stencil color in the viewport.
 
 Inverts the stencil color.
 
-### Cavity Mask
+## Cavity Mask
 
 ![Cavity Mask](/docs2/images/editors/3d-viewport/header/header-tools-and-options/cavity-mask.png)
 
-Cavity mask allows mask painting according to mesh geometry cavity. It is a sub menu tab. In expanded state it shows the falloff curve, which can be edited.
+Cavity Mask paints according to the shape of the mesh: more or less paint goes into dents and creases. Tick it to show its falloff curve, which you can edit.
 
 | Entry | What it does |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Activate Cavity mask | Activates the Cavity mask. |
 | Navigation elements | The navigation elements at the top are described from left to right. |
-| Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
 | Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
 | Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Reset Curve**: Resets the curve to the initial shape. |
 
