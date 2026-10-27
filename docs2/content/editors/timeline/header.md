@@ -81,15 +81,25 @@ The preview range is displayed in orange color. The original playback range that
 
 All the keyframing buttons now sit together in one group, from left to right. The snapping buttons come right after them.
 
-**Insert Keyframe** and **Delete Keyframe** add or remove a keyframe on the current frame, for whatever you have selected. In the NLA editor, Insert Keyframe keys the active strip's action, so it does the right thing there too.
+### Insert Keyframe
+
+Adds a keyframe on the current frame, for whatever you have selected. In the NLA editor it keys the active strip's action, so it does the right thing there too.
+
+### Delete Keyframe
+
+Removes the keyframe on the current frame from whatever you have selected.
+
+### Auto Keying
 
 The round button turns **Auto Keying** on. With it on, every change you make in the 3D View sets a keyframe on the current frame, or updates the one that's there. It works for transforms of objects and bones, not for things like colors in the Properties Editor.
 
+### Keying Set
+
 The **Keying Set** field picks which channels get keyed, for example only Location, or Location and Rotation.
 
-The last button, with the diamond, opens the **Keyframing** settings. Its icon shows the current keyframe type.
-
 ### Keyframing settings
+
+The last button, with the diamond, opens the **Keyframing** settings. Its icon shows the current keyframe type.
 
 <!-- TODO screenshot: Timeline header, the Keyframing popover (diamond button) open, with Auto Keying on -->
 
