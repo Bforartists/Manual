@@ -452,14 +452,6 @@ Adds variation to the brush color per stroke or while drawing a stroke.
 | Saturation | Adjusts the intensity of the color. |
 | Value | Modifies the brightness of the stroke. |
 
-#### Modes – Subpanel
-
-![Modes – Subpanel](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-vertex-paint-mode/modes-subpanel.png)
-
-Allows to expose the brush in different modes sharing common attributes.
-
-**Example:** *You can make a brush for vertex mode and also texture paint mode.*
-
 #### Sharpen / Soften (Soften Brush)
 
 ![Sharpen / Soften (Soften Brush)](/docs2/images/editors/3d-viewport/sidebar/tool-tab-mesh-texture-paint-mode/sharpen-soften-soften-brush.png)
