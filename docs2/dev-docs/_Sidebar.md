@@ -5,6 +5,7 @@
 - [✏️ Editing the docs online](Editing-the-docs-online.md)
 - [✍️ Plain writing](Plain-writing.md)
 - [🖼️ Images and screenshots](Images-and-Screenshots.md)
+- [📐 Formatting standard](Formatting-Standard.md)
 - [♻️ Shared sections](Shared-Sections.md)
 - [📘 Reference Manual writing guide](https://github.com/Bforartists/Manual/wiki/Reference-Manual-writing-guide)
 
