@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Introduction · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/pose-legacy-labels · <code>docs2/pose-legacy-labels</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../getting-started.html">Getting Started</a>
+<a class="is-current" href="introduction.html">Introduction</a>
+<a href="about-documentation.html">Using the Documentation</a>
+<a href="installation.html">Installation</a>
+<a href="quick-start.html">Quick Start</a>
+<a href="data-structure.html">Data Structure</a>
+<a href="differences.html">Comparison with Blender</a>
+<a href="migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Getting Started › Introduction</div><h1 class="pv-title">Introduction</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 4 min read</span></div><article class="ui-doc-body"><p>This is the official <strong>reference manual</strong> for Bforartists 5. This explains the tools, operators, panels, and concepts you’ll encounter in the software. Each chapter and section is designed to help you understand how features work and how to use them effectively in detail.</p>
+<p>What this documentation is not: this is not a general art tutorial. You won’t find step‑by‑step lessons on how to create a finished artwork here. Instead, you’ll find the technical knowledge you need to make the tools work to later make art efficiently with full control.</p>
+<p>For creative fundamentals, the Blender community offers countless tutorials and a rich ecosystem courses that translate seamlessly into Bforartists workflows.</p>
+<figure><img src="https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6a4460b1ce8bfb8b51a2aae0_Logo_03_wide-white_1024px-nonumber.png" alt="Official Logo" loading="lazy"></figure>
+<h2 id="too-impatient-try-the-quick-start-tutorials">Too impatient? Try the Quick Start Tutorials!</h2>
+<p>These tutorials will have a step by step pathway to get started based on some artistic workflows and artwork to help you kinetically get going quickly.</p>
+<p class="ui-doc-go"><a href="quick-start.html">Begin a Quick Start →</a></p>
+<h3 id="bforartists-is-a-free-and-open-source-3d-creation-suite-built-on-top-of-blender">Bforartists is a free and open‑source 3D creation suite built on top of Blender.</h3>
+<figure><img src="https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6a44625ec0e0fb08a9b1caab_Blender%26Bforaritsts.png" alt="Blender with Bforartists" loading="lazy"></figure>
+<p>Its mission is to provide an <strong>accessible user experience with mouse/stylus first</strong>, <strong>visual</strong> and <strong>artist‑friendly interface,</strong> with <strong>out-of-the-box convenience assets and functionality</strong> while keeping the full power of Blender’s production pipeline. Whether you’re modeling, sculpting, animating, or compositing, Bforartists offers a streamlined workflow with a focus on day to day usability.</p>
+<p>Bforartists stands for <strong>&quot;Be for Artists&quot;</strong>, a reminder to develop for the artist.</p>
+<h3 id="the-project-exists-to-make-3d-creation-approachable-to-visually-focused-artists">The project exists to make 3D creation approachable to visually focused artists.</h3>
+<p>Blender is powerful, but its interface can be overwhelming. Bforartists simplifies menus, improves readability, exposes common operators to a top levels, adds out-of the box assets and convenience tools, and reduces clutter - so artists can focus on creativity instead of fighting the UI. It’s designed for professionals and hobbyists alike who want the freedom of open‑source software with a friendlier learning curve while maintaining full ultimate control for artistry.</p>
+<p>If you’re new, start with the the <strong>Getting Started</strong> section, then move onto each <strong>Interface</strong> element and <strong>Workspaces.</strong> Each Workspace can help you get started for their particular usecases.</p>
+<p>These cover navigation, panels, and the basics of working in Bforartists. Once you’re comfortable, explore each <strong>Editor</strong>, which dive into each shelf, panel and its tools with detail of properties per editor.</p>
+<p>Use the search to the top right if you are looking for something specific.</p>
+<p>This manual will guide you through every operator and panel, editor, shelf and interface element. Expect concise explanations, screenshots, videos, gifs and references to help you understand what each tool does. You’ll learn how to activate features, adjust settings, and integrate them into your workflow.</p>
+<p>Get the latest version of Bforartists and get directly involved here:</p>
+<p>📥<strong>Downloads for free</strong><br />
+<a href="https://www.bforartists.de/download">https://www.bforartists.co/download</a></p>
+<p>📝 <strong>Release Notes</strong><br />
+<a href="https://www.bforartists.co/release-notes/">https://www.bforartists.co/release-notes/</a></p>
+<p>🧰 <strong>Source Code</strong><br />
+<em>Official Bug and Feature Requests Tracker</em><br />
+<a href="https://github.com/Bforartists/Bforartists">https://github.com/Bforartists/Bforartists</a></p>
+<p>🪟<strong>Windows App Store</strong><br />
+<a href="https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&amp;gl=CO&amp;ocid=pdpshare">https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&amp;gl=CO&amp;ocid=pdpshare</a></p>
+<p><strong>Flatpak App Store</strong><br />
+<a href="https://flathub.org/en/apps/de.bforartists.Bforartists">https://flathub.org/en/apps/de.bforartists.Bforartists</a></p>
+<p>🧡 <strong>Blender Launcher</strong><br />
+<a href="https://github.com/Victor-IX/Blender-Launcher-V2/releases">https://github.com/Victor-IX/Blender-Launcher-V2/releases</a></p>
+<p><strong>📄Manual Tracker</strong><br />
+<a href="https://github.com/Bforartists/Manual">https://github.com/Bforartists/Manual</a></p>
+<p>📁<strong>Files</strong><br />
+<a href="https://github.com/Bforartists/files">https://github.com/Bforartists/files</a></p>
+<p>Join the community, share your work, and stay updated:</p>
+<p><strong>💜  Discord</strong><br />
+<a href="https://discord.gg/yKuR77v">https://discord.gg/yKuR77v</a></p>
+<p><strong>💙 Facebook</strong><br />
+<a href="https://www.facebook.com/bforartists/">https://www.facebook.com/bforartists/</a></p>
+<p><strong>🖤 X</strong><br />
+<a href="https://twitter.com/bforartists">https://twitter.com/bforartists</a></p>
+<p><strong>🖤 Threads</strong><br />
+<a href="https://www.threads.net/@bforartists_official">https://www.threads.net/@bforartists_official</a></p>
+<p><strong>❤️ Youtube</strong><br />
+<a href="https://www.youtube.com/@bforartists">https://www.youtube.com/@bforartists</a></p>
+<p><strong>🧡 Reddit</strong><br />
+<a href="https://www.reddit.com/r/Bforartists/">https://www.reddit.com/r/Bforartists/</a></p>
+<p><strong>💙 Bluesky</strong><br />
+<a href="https://bsky.app/profile/bforartists.bsky.social">https://bsky.app/profile/bforartists.bsky.social</a></p>
+<h2 id="from-the-odt-manual-1-introduction">From the .odt manual (1 Introduction)</h2>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The earlier text of this page from the .odt manual, kept word for word. It is merged with the text above in the Refine phase, after the full migration.</p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c2bb23c270400f2d77f279cf09543d7da1a82925/docs2/images/getting-started/introduction/introduction.png" alt="Introduction" loading="lazy"></figure>
+<h3 id="the-bforartists-5-reference-manual">The Bforartists 5 Reference Manual</h3>
+<h4 id="version-5-1-1">Version 5.1.1</h4>
+<h3 id="introduction">Introduction</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/c2bb23c270400f2d77f279cf09543d7da1a82925/docs2/images/getting-started/introduction/introduction-2.png" alt="Introduction" loading="lazy"></figure>
+<p>Welcome to the reference manual for Bforartists 5, the free and open source 3D creation suite.</p>
+<p>First let's explain what the manual is and what it is not: this is a reference manual. This means every chapter lists and explains the available tools, operators, the interface and general concepts.</p>
+<p>What his is not: this is not a general CG tutorial. This manual will not explain workflows on how to create artwork. If you’d like to learn the creative fundamentals, there are numerous courses and tutorials for Blender from the community which will translate to Bforartists workflows seamlessly. This manual does however cover the needed workflow to get a tool working or explains how the tool is meant to work.</p>
+<p>Chapters 1 to 5 covers general interface fundamental concepts. Chapters 6 to 30 explain the single editors and their tools. And every chapter afterwards is additional information.</p>
+<p>This reference manual is for Bforartists 5 version 5.1.1 published on 23.04.2026</p>
+<p>📥 Download Free</p>
+<p><a href="https://www.bforartists.de/download">https://www.bforartists.de/download</a></p>
+<p>📝 Release Notes</p>
+<p><a href="https://www.bforartists.de/release-notes/">https://www.bforartists.de/release-notes/</a></p>
+<p>🧰 Source Code</p>
+<p>Official Bug and Feature Request Tracker</p>
+<p><a href="https://github.com/Bforartists/Bforartists">https://github.com/Bforartists/Bforartists</a></p>
+<p><strong>🪟Windows App Store</strong></p>
+<p><a href="https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&amp;gl=CO&amp;ocid=pdpshare">https://apps.microsoft.com/detail/9P3PLMNRD4SC?hl=en-us&amp;gl=CO&amp;ocid=pdpshare</a></p>
+<p>🧡 Blender Launcher</p>
+<p><a href="https://github.com/Victor-IX/Blender-Launcher-V2/releases">https://github.com/Victor-IX/Blender-Launcher-V2/releases</a></p>
+<h4 id="other-links">🔗Other Links</h4>
+<p><strong>Forum</strong><br />
+<a href="https://www.bforartists.de/forum">https://www.bforartists.de/forum</a></p>
+<p><strong>FAQ</strong><br />
+<a href="https://www.bforartists.de/wiki/FAQ">https://www.bforartists.de/wiki/FAQ</a></p>
+<p><strong>Wiki</strong><br />
+<a href="https://www.bforartists.de/wiki/bforartists-wiki">https://www.bforartists.de/wiki/bforartists-wiki</a></p>
+<p><strong>Manual Tracker</strong><br />
+<a href="https://github.com/Bforartists/Manual">https://github.com/Bforartists/Manual</a></p>
+<p><strong>Files</strong><br />
+<a href="https://github.com/Bforartists/files">https://github.com/Bforartists/files</a></p>
+<h4 id="socials">🫂 Socials</h4>
+<p>💜 Discord</p>
+<p><a href="https://discord.gg/yKuR77v">https://discord.gg/yKuR77v</a></p>
+<p>💙 Facebook</p>
+<p><a href="https://www.facebook.com/bforartists/">https://www.facebook.com/bforartists/</a></p>
+<p>🖤 X</p>
+<p><a href="https://twitter.com/bforartists">https://twitter.com/bforartists</a></p>
+<p>🖤 Threads</p>
+<p><a href="https://www.threads.net/@bforartists_official">https://www.threads.net/@bforartists_official</a></p>
+<p>💖 Youtube</p>
+<p><a href="https://www.youtube.com/@bforartists">https://www.youtube.com/@bforartists</a></p>
+<p>🧡 Reddit</p>
+<p><a href="https://www.reddit.com/r/Bforartists/">https://www.reddit.com/r/Bforartists/</a></p>
+<p>💙 Bluesky</p>
+<p><a href="https://bsky.app/profile/bforartists.bsky.social">https://bsky.app/profile/bforartists.bsky.social</a></p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/Bforartists/Manual/docs2%2Fpose-legacy-labels/collection/docs/edit/docs2%2Fcontent%2Fgetting-started%2Fintroduction.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/pose-legacy-labels/docs2/content/getting-started/introduction.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#too-impatient-try-the-quick-start-tutorials">Too impatient? Try the Quick Start Tutorials!</a><a class="h3" href="#bforartists-is-a-free-and-open-source-3d-creation-suite-built-on-top-of-blender">Bforartists is a free and open‑source 3D creation suite built on top of Blender.</a><a class="h3" href="#the-project-exists-to-make-3d-creation-approachable-to-visually-focused-artists">The project exists to make 3D creation approachable to visually focused artists.</a><a class="h2" href="#from-the-odt-manual-1-introduction">From the .odt manual (1 Introduction)</a><a class="h3" href="#the-bforartists-5-reference-manual">The Bforartists 5 Reference Manual</a><a class="h3" href="#introduction">Introduction</a></aside></div></body></html>
