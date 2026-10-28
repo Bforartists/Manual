@@ -1248,7 +1248,16 @@ The method to invert destination stroke to match start and end with source strok
 
 #### Gradient
 
-Draw a line to set the fill material gradient for the selected stroke.
+![Gradient tool, dragging a line across the strokes](/docs2/images/editors/3d-viewport/grease-pencil/gradient-tool-drag.png)
+
+The Gradient tool sets **where the fill gradient runs** on the selected strokes. You draw the gradient straight in the viewport instead of typing numbers.
+
+1. Give the stroke a material whose **Fill** uses the **Gradient** style (Material Properties › Surface › Fill › Style).
+2. In Edit Mode, select the strokes you want to change.
+3. Pick the **Gradient** tool in the tool shelf.
+4. Click and drag across the strokes. Where you press is the start of the gradient, and where you release is the end.
+
+> **Note:** If nothing happens, check the material: the tool only changes fills that use the Gradient style. A plain Solid fill has no gradient to move.
 
 # Context Menus
 
