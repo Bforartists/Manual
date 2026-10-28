@@ -1,4 +1,4 @@
-/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.21
+/* Bforartists Docs 2.0 · docs layer (Queue 3) · @version 1.0.22
  *
  * Runs on the Doc Pages template next to the inline docs script (bfa-docs-v6, page footer code).
  * Published to GitHub Pages as /Manual/webflow/docs-layer-<version>.js (one file per version, so the
@@ -17,6 +17,7 @@
   R.dataset.dkLayer = '1';
   var CDN = 'https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/';
   var NAVURL = 'https://bforartists.github.io/Manual/nav/nav.json', NK = 'bfa-docs-nav';
+  var EDIT_GATE = '';   /* the edit gateway Worker, e.g. 'https://bforartists-docs-edit.<account>.workers.dev/edit'. Empty = Edit this page opens GitHub's editor (see docs2/worker/edit-gateway/README.md) */
   var BRANCH = 'master', HOWTO = 'getting-started-about-documentation';   /* the docs branch writers start from; the How to use this manual page */
   var HOME = '/docs/home', DISCORD = 'https://discord.gg/yKuR77v', PRO = 'https://www.trinumedia.com';
   var ISSUE = 'https://github.com/Bforartists/Manual/issues/new';
@@ -342,6 +343,13 @@
       if (a.dataset.dk) return; a.dataset.dk = '1';
       var m = /\/edit\/([^?#]+)/.exec(a.getAttribute('href') || ''), src = m ? decodeURIComponent(m[1]) : ((q('.ui-doc-article') || {}).getAttribute ? q('.ui-doc-article').getAttribute('data-doc-source') : '');
       if (!src) return;
+      if (EDIT_GATE) {
+        /* Pages CMS on a fresh branch: the gateway makes the branch, the first save opens the pull request */
+        var snip = /^docs2\/snippets\//.test(src), inner = src.replace(/^docs2\/(content|snippets)\//, '');
+        a.href = EDIT_GATE + '?kind=' + (snip ? 'snippets' : 'docs') + '&path=' + encodeURIComponent(inner);
+        a.title = 'Opens the page in Pages CMS on your own branch (sign in with GitHub)';
+        return;
+      }
       a.href = 'https://github.com/Bforartists/Manual/edit/' + BRANCH + '/' + src;
       a.title = 'Edit on GitHub, starting from the latest docs: GitHub makes your own branch and a pull request for you';
     });

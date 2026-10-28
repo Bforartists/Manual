@@ -1,0 +1,6 @@
+name = "bforartists-docs-edit"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# After deploying, add the secret (a fine-grained GitHub token, see README.md):
+#   npx wrangler secret put GITHUB_TOKEN_EDIT
