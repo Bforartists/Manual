@@ -25,13 +25,13 @@ replaces:
 ---
 # Read
 
-### Add menu - Grease Pencil - Read
+## Add menu - Grease Pencil - Read
 
 ![Add menu - Grease Pencil - Read](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/add-menu-grease-pencil-read.png)
 
 Grease pencil nodes.
 
-#### Named Layer Selection
+### Named Layer Selection
 
 ![Named Layer Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-read/named-layer-selection.png)
 
@@ -45,19 +45,19 @@ Outputs a selection of a grease pencil layer by its name.
 
 # Write
 
-### Add menu - Grease Pencil - Write
+## Add menu - Grease Pencil - Write
 
 ![Add menu - Grease Pencil - Write](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/add-menu-grease-pencil-write.png)
 
 Grease pencil nodes.
 
-#### Set Grease Pencil Color
+### Set Grease Pencil Color
 
 ![Set Grease Pencil Color](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/set-grease-pencil-color.png)
 
 Sets the color and opacity of a grease pencil geometry.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -68,9 +68,9 @@ Sets the color and opacity of a grease pencil geometry.
 | Opacity | The opacity. |
 
 
-##### Properties
+#### Properties
 
-###### Mode
+##### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/mode.png)
 
@@ -81,27 +81,27 @@ Sets the color and opacity of a grease pencil geometry.
 | Stroke | Change the stroke color. |
 
 
-##### Outputs
+#### Outputs
 
-###### Color
+##### Color
 
 The grease pencil output with changed colors.
 
-#### Set Grease Pencil Depth
+### Set Grease Pencil Depth
 
 ![Set Grease Pencil Depth](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/set-grease-pencil-depth.png)
 
 Set the grease pencil depth order to use. By 2d layers, or by the position in 3d space.
 
-##### Inputs
+#### Inputs
 
-###### Grease Pencil
+##### Grease Pencil
 
 The grease pencil geometry.
 
-##### Properties
+#### Properties
 
-###### Depth Order
+##### Depth Order
 
 ![Depth Order](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/depth-order.png)
 
@@ -112,13 +112,13 @@ The grease pencil geometry.
 | 3D Location | Set the grease pencil depth by the postion in 3d space. |
 
 
-##### Outputs
+#### Outputs
 
-###### Grease Pencil
+##### Grease Pencil
 
 The grease pencil geometry.
 
-#### Set Grease Pencil Softness
+### Set Grease Pencil Softness
 
 ![Set Grease Pencil Softness](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-write/set-grease-pencil-softness.png)
 
@@ -132,13 +132,13 @@ Adjust the falloff towards the stoke border.
 
 # Operations
 
-### Add menu - Grease Pencil - Operations
+## Add menu - Grease Pencil - Operations
 
 ![Add menu - Grease Pencil - Operations](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/add-menu-grease-pencil-operations.png)
 
 Grease Pencil nodes.
 
-#### Grease Pencil to Curves
+### Grease Pencil to Curves
 
 ![Grease Pencil to Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/grease-pencil-to-curves.png)
 
@@ -151,13 +151,13 @@ Converts a grease pencil geometry to a curve geometry
 | Outputs | **Curves**: Curves output. |
 
 
-#### Merge Layers
+### Merge Layers
 
 ![Merge Layers](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/merge-layers.png)
 
 Merge all grease pencil layers into one layer
 
-##### Grease Pencil
+#### Grease Pencil
 
 ![Grease Pencil](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/grease-pencil.png)
 
@@ -170,11 +170,11 @@ The grease pencil geometry.
 | Group ID | In By Group ID mode. Input a group ID value. |
 
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-grease-pencil-operations/properties.png)
 
-###### Mode
+##### Mode
 
 
 | Entry | What it does |
@@ -183,8 +183,8 @@ The grease pencil geometry.
 | By Group ID | Combine all layers by a provided Group ID. |
 
 
-##### Outputs
+#### Outputs
 
-###### Grease Pencil
+##### Grease Pencil
 
 Grease Pencil geometry output.

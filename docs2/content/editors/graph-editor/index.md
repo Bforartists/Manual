@@ -140,7 +140,7 @@ This group of operators addes modifiers to the the selected curve channel. This 
 
 Reveals all hidden curves.
 
-#### Last Operator Reveal Curves
+#### Adjust Last Operation - Reveal Curves
 
 ![Last Operator Reveal Curves](/docs2/images/editors/graph-editor/last-operator-reveal-curves.png)
 
@@ -156,7 +156,7 @@ Hides the selected curves.
 
 Hides the unselected curves.
 
-#### Last Operator Hide Curves
+#### Adjust Last Operation - Hide Curves
 
 ![Last Operator Hide Curves](/docs2/images/editors/graph-editor/last-operator-hide-curves.png)
 
@@ -194,7 +194,7 @@ When you right click into the viewport then you will call the F-Curve context me
 
 Pastes copied keyframe(s), but flipped.
 
-#### Last operator Paste Keyframes / Flipped
+#### Adjust Last Operation - Paste Keyframes / Flipped
 
 ![Last operator Paste Keyframes / Flipped](/docs2/images/editors/graph-editor/last-operator-paste-keyframes-flipped.png)
 
@@ -230,7 +230,7 @@ Set the handle type for the currently selected keyframes.
 
 This is a feature for the Graph editor, where each curve point has its own handler with which you can influence the curve behavior. But the handler type also influences how the animation curve acts at the chosen keyframes. So it has its use in the dope sheet editor too.
 
-#### Last Operator Set Keyframe Handle Type
+#### Adjust Last Operation - Set Keyframe Handle Type
 
 ##### Type
 
@@ -246,7 +246,7 @@ The Interpolation mode defines how the curve acts from keyframe to keyframe. You
 
 The easing methods here in the interpolation mode menu are for the easing shape. There is also an easing menu where you can choose a easing method.
 
-#### Last Operator Set Keyframe Interpolation
+#### Adjust Last Operation - Set Keyframe Interpolation
 
 ##### Type
 
@@ -260,7 +260,7 @@ Set the interpolation mode.
 
 The easing methods in the interpolation mode menu are for the easing shape. This menu allows you to choose an easing method.
 
-#### Last Operator Set Keyframe Easing Type
+#### Adjust Last Operation - Set Keyframe Easing Type
 
 ##### Type
 
@@ -276,7 +276,7 @@ Insert a keyframe at the current position.
 
 Duplicate the selected keyframe(s).
 
-#### Last Operator Duplicate
+#### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/graph-editor/last-operator-duplicate.png)
 
@@ -319,7 +319,7 @@ Delete the selected keyframe(s).
 
 Mirrors the animation by the given method.
 
-#### Last Operator Mirror Keys
+#### Adjust Last Operation - Mirror Keys
 
 ![Last Operator Mirror Keys](/docs2/images/editors/graph-editor/last-operator-mirror-keys.png)
 
@@ -333,7 +333,7 @@ Flips the selected keyframes over the current frame position by the chosen metho
 
 Snaps the selected keyframes by the given method.
 
-#### Last Operator Snap Keys
+#### Adjust Last Operation - Snap Keys
 
 ![Last Operator Snap Keys](/docs2/images/editors/graph-editor/last-operator-snap-keys.png)
 

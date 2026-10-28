@@ -65,7 +65,7 @@ Select the objects, activate the tool, then drag the mouse in the 3D viewport. I
 
 ![Usage](/docs2/images/editors/3d-viewport/header/point-cloud-edit-mode-point-cloud-menu/usage-2.png)
 
-##### Last Operator To Sphere
+##### Adjust Last Operation - To Sphere
 
 ###### Factor
 
@@ -96,7 +96,7 @@ Shear shears the selection.
 
 In Object mode this tools requires to have more than one object selected.
 
-##### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 
 | Entry | What it does |
@@ -142,7 +142,7 @@ It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-##### Last Operator Push/Pull
+##### Adjust Last Operation - Push/Pull
 
 ###### Distance
 
@@ -175,7 +175,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Warps a mesh selection between two defined points. This also works with curves.
 
-##### Last operator Warp
+##### Adjust Last Operation - Warp
 
 
 | Entry | What it does |
@@ -204,7 +204,7 @@ A positive value pushes the vertices outwards. A negative value pushes the verti
 
 The curve needs to have geometry !
 
-##### Last Operator Transform
+##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png)
 
@@ -245,7 +245,7 @@ Mirror by hotkeys. You activate the tool, type in x for x global for example, or
 
 Mirrors the selection around the chosen axis.
 
-##### Last Operator Mirror
+##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/x-global-y-global-etc.png)
 
@@ -269,7 +269,7 @@ Constraint Axis gives you again the possibility to define the mirror axis. You c
 
 Choose several methods to snap one element to another. The menu items should be self explaining.
 
-##### Last operator Snap Selection to Cursor
+##### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-snap.png)
 
@@ -302,7 +302,7 @@ The copy sticks to the mouse until you release it. A Right click while moving wi
 
 When you drag the duplicate around you will see the position values in the header.
 
-##### Last Operator Duplicate
+##### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-duplicate.png)
 
@@ -338,7 +338,7 @@ With set Spline Type, you can set the type of the curve.
 
 ![Set Spline Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/set-spline-type-4.png)
 
-##### Last Operator Set Spline Type
+##### Adjust Last Operation - Set Spline Type
 
 ![Last Operator Set Spline Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-spline-type.png)
 
@@ -353,7 +353,7 @@ With set Spline Type, you can set the type of the curve.
 
 Set values of the attibute for selected elements. The selected geometry will be set to the chosen vector 3 value.
 
-##### Last Operator Set Attribute
+##### Adjust Last Operation - Set Attribute
 
 ![Last Operator Set Attribute](/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/last-operator-set-attribute.png)
 
@@ -367,7 +367,7 @@ The vector 3 values.
 
 Toggle Cyclic closes or opens the curve.
 
-##### Last Operator Toggle Cyclic
+##### Adjust Last Operation - Toggle Cyclic
 
 ###### Direction
 
@@ -397,7 +397,7 @@ The added objects in edit mode becomes part of the current object geometry.
 
 Subdivides the selected curve geometry, and adds more control points.
 
-##### Last Operator Subdivide
+##### Adjust Last Operation - Subdivide
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-subdivide.png)
 
@@ -528,7 +528,7 @@ The plane for the projected strokes.
 | As Nurbs | Draw the curve as nurbs. |
 
 
-##### Last Operator Draw Curve
+##### Adjust Last Operation - Draw Curve
 
 ![Last Operator Draw Curve](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-draw-curve.png)
 
@@ -588,7 +588,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Transform
+##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform.png)
 
@@ -641,7 +641,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Transform
+##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform-2.png)
 
@@ -672,7 +672,7 @@ Call this menu with double right click in the 3D viewport. You need to be in Edi
 
 Subdivides the selected curve geometry, and adds more control points.
 
-##### Last Operator Subdivide
+##### Adjust Last Operation - Subdivide
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-subdivide.png)
 
@@ -684,7 +684,7 @@ Number of subdivision cuts.
 
 Extrudes the selected curve point(s).
 
-##### Last operator Extrude Curve and Move
+##### Adjust Last Operation - Extrude Curve and Move
 
 ![Last operator Extrude Curve and Move](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-extrude-curve-and-move.png)
 
@@ -734,7 +734,7 @@ Activate the tool. In the header you will now see further instructions. Which is
 | X Y Z Local | Mirrors along the object axis. |
 
 
-##### Last Operator Mirror
+##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror.png)
 
@@ -771,7 +771,7 @@ Snaps the currently selected object(s) to the cursor location.
 
 Snaps the currently selected object(s) to the cursor location, but keeps the offset of the selected objects to each other. Means the center of the current selection goes to cursor position. Not every individual object.
 
-###### Last operator Snap Selection to Cursor
+###### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-snap-selection-to-cursor.png)
 
@@ -808,7 +808,7 @@ Poly is a straight line between the control points. Bezier has curve handlers. A
 
 ![Set Spline Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/set-spline-type-4.png)
 
-##### Last Operator Set Spline Type
+##### Adjust Last Operation - Set Spline Type
 
 ![Last Operator Set Spline Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-spline-type.png)
 
@@ -843,7 +843,7 @@ Set Handle type to Free.
 
 Toggle Free/Aligned.
 
-###### Last Operator Set Handle Type
+###### Adjust Last Operation - Set Handle Type
 
 ![Last Operator Set Handle Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-handle-type.png)
 
@@ -857,7 +857,7 @@ Type is a drop-down box where you can set the handle type. You have the choice b
 
 Toggle Cyclic closes or opens the curve.
 
-##### Last Operator Toggle Cyclic
+##### Adjust Last Operation - Toggle Cyclic
 
 ###### Direction
 

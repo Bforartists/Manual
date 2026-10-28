@@ -39,7 +39,7 @@ Subdivide divides the selected edges. It subdivides the involved faces too, and 
 
 A more unknown functionality is that it can also randomize the result with the Fractal slider in the Last operator panel.
 
-#### Last Operator Subdivide
+#### Adjust Last Operation - Subdivide
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-subdivide.png)
 
@@ -75,7 +75,7 @@ Adjust the corner type.
 
 Extrudes out the selected edges by moving the mouse.
 
-#### Last Operator Extrude Only Edges and Move
+#### Adjust Last Operation - Extrude Only Edges and Move
 
 ![Last Operator Extrude Only Edges and Move](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-extrude-only-edges-and-move.png)
 
@@ -120,7 +120,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Adds a bevel at the selected edges.
 
-#### Last Operator Bevel
+#### Adjust Last Operation - Bevel
 
 ![Last Operator Bevel](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-bevel.png)
 
@@ -332,7 +332,7 @@ First select the edges or Vertices that you want to bridge. Then click the New E
 
 The Bridge edge loops tool bridges selected edges, and adds a polygon between them. You need to have at least two edges selected.
 
-#### Last Operator Bridge Edge loops
+#### Adjust Last Operation - Bridge Edge loops
 
 ![Last Operator Bridge Edge loops](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-bridge-edge-loops.png)
 
@@ -355,7 +355,7 @@ The Bridge edge loops tool bridges selected edges, and adds a polygon between th
 
 Fill closes holes in the selected mesh geometry, and triangulates the faces.
 
-#### Last Operator Fill
+#### Adjust Last Operation - Fill
 
 ##### Beauty
 
@@ -373,7 +373,7 @@ When you click once, then this edge gets created. When you click and hold, then 
 
 Loop cut and Slide ignores selections. It will try to divide the face under the mouse, and continue the loop until it is closed, or until it cannot continue.
 
-#### Last Operator Loop Cut and Slide
+#### Adjust Last Operation - Loop Cut and Slide
 
 ![Last Operator Loop Cut and Slide](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-loop-cut-and-slide.png)
 
@@ -412,7 +412,7 @@ Adjust the Falloff type for smoothness.
 
 Adds left and right an edge from the selected edge and slides it outwards.
 
-#### Last Operator Offset Edge Slide
+#### Adjust Last Operation - Offset Edge Slide
 
 ![Last Operator Offset Edge Slide](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-offset-edge-slide.png)
 
@@ -475,7 +475,7 @@ Alt MMB - rotate the view.
 
 Rotate Edge rotates the selected edge clockwise.
 
-#### Last Operator Rotate Selected Edge
+#### Adjust Last Operation - Rotate Selected Edge
 
 ##### Counter Clockwise
 
@@ -489,7 +489,7 @@ Rotate selected edges counter clockwise.
 
 Splits selected edges so that each neighbor face gets its own copy. You have two methods here.
 
-#### Last Operator Edge Split
+#### Adjust Last Operation - Edge Split
 
 ![Last Operator Edge Split](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-edge-split.png)
 
@@ -509,7 +509,7 @@ You will see a value in the header that indicates the current strength when you 
 
 A negative crease value will subtract from the current active crease value in case it exists already from a former crease operation. A Crease value of -1 removes the crease from this edge.
 
-#### Last Operator Edge Crease
+#### Adjust Last Operation - Edge Crease
 
 ![Last Operator Edge Crease](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-edge-crease.png)
 
@@ -533,7 +533,7 @@ You will see a value in the header that indicates the current strength when you 
 
 A negative Edge Bevel Weight value will subtract from the current active crease value in case it exists already from a former crease operation. An Edge Bevel Weight value of -1 removes the weight from this edge.
 
-#### Last Operator Edge Bevel Weight
+#### Adjust Last Operation - Edge Bevel Weight
 
 ##### Factor
 
@@ -549,7 +549,7 @@ Mark Sharp is a tool that you need for the Edge Split modifier. Marked edges are
 
 ![Mark Sharp](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/mark-sharp-2.png)
 
-#### Last Operator Mark Sharp
+#### Adjust Last Operation - Mark Sharp
 
 ![Last Operator Mark Sharp](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-mark-sharp.png)
 
@@ -561,7 +561,7 @@ Calculate by the selected vertices instead of edges to mark the edges.
 
 Clears formerly as sharp marked selected edges.
 
-#### Last Operator Mark Sharp
+#### Adjust Last Operation - Mark Sharp
 
 ![Last Operator Mark Sharp](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-mark-sharp-2.png)
 
@@ -573,7 +573,7 @@ Calculate by the selected vertices instead of edges to mark the edges.
 
 Sets the sharpness of edges by their angle to the neighbour face.
 
-#### Last Operator Set sharpness by Angle
+#### Adjust Last Operation - Set sharpness by Angle
 
 ![Last Operator Set sharpness by Angle](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-set-sharpness-by-angle.png)
 
@@ -596,7 +596,7 @@ Sets the sharpness of edges by their angle to the neighbour face.
 
 Decimates the geometry by trying to make one quad out of four quads. But can also end in Tris where this is not possible.
 
-#### Last Operator Un-Subdivide
+#### Adjust Last Operation - Un-Subdivide
 
 ##### Iterations
 
@@ -628,7 +628,7 @@ Dissolve Edges dissolves the selected edges.
 
 Note that pressing Del in Vertice select mode calls Dissolve Vertices already. It's the same operator. But you don't get the Last operator that way.
 
-#### Last Operator Dissolve Edges
+#### Adjust Last Operation - Dissolve Edges
 
 ![Last Operator Dissolve Edges](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-dissolve-edges.png)
 
@@ -658,7 +658,7 @@ Makes all geometry in the scene visible again.
 
 Hides the selected geometry.
 
-##### Last Operator Hide Selected
+##### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-edge-context-menu/last-operator-hide-selected.png)
 
@@ -694,7 +694,7 @@ Subdivide divides the selected edges. It subdivides the involved faces too, and 
 
 A more unknown functionality is that it can also randomize the result with the Fractal slider in the Last operator panel.
 
-#### Last Operator Subdivide
+#### Adjust Last Operation - Subdivide
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-subdivide.png)
 
@@ -730,7 +730,7 @@ Adjust the corner type.
 
 Extrudes out the selected faces into the face direction by moving the mouse. When it's more than one face, then the middle will be used.
 
-#### Last Operator Extrude Region and Move
+#### Adjust Last Operation - Extrude Region and Move
 
 ![Last Operator Extrude Region and Move](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-extrude-region-and-move.png)
 
@@ -779,7 +779,7 @@ Extrudes the selection along local normals.
 
 This tool works like a shrink fatten extrude. And so you will see a corresponding set of values in the header.
 
-#### Last Operator Extrude Region and Shrink/Fatten
+#### Adjust Last Operation - Extrude Region and Shrink/Fatten
 
 ![Last Operator Extrude Region and Shrink/Fatten](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-extrude-region-and-shrink-fatten.png)
 
@@ -821,7 +821,7 @@ The method works the same in all Mesh select modes. Vertice, Edge and Face Mode.
 
 This tool works like a shrink fatten extrude. And so you will see a corresponding set of values in the header.
 
-#### Last Operator Extrude Individual Faces and Move
+#### Adjust Last Operation - Extrude Individual Faces and Move
 
 ![Last Operator Extrude Individual Faces and Move](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-extrude-individual-faces-and-move.png)
 
@@ -855,7 +855,7 @@ Inset insets edges into the selected faces. Think of it as an extrude inwards th
 
 Activate the tool, drag the mouse. But carefully. The control is not the best. You better adjust the amount in the last operator.
 
-#### Last Operator Inset Faces
+#### Adjust Last Operation - Inset Faces
 
 ![Last Operator Inset Faces](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-inset-faces.png)
 
@@ -887,7 +887,7 @@ This tool is basically the Bridge Edge Loops tool, just that it operates in Face
 
 Note that this tool just shows when you are in Face Select Mode.
 
-#### Last Operator Bridge Edge loops
+#### Adjust Last Operation - Bridge Edge loops
 
 ##### Connect Loops
 
@@ -920,7 +920,7 @@ The merge factor determines at which distance between the selected edges the mer
 
 Splits the selected faces to create a triangulated geometry.
 
-#### Last Operator Poke Faces
+#### Adjust Last Operation - Poke Faces
 
 ##### Poke Offset
 
@@ -957,7 +957,7 @@ The UV menu is just available for Mesh objects
 | Unwrap Conformal | Unwrap Conformal unwraps the selected geometry with the method LSCM, which is the short for Least Square Conformal Mapping. LSCM can give a bit better results than ABF with geometric shapes. |
 
 
-#### Last Operator Unwrap
+#### Adjust Last Operation - Unwrap
 
 ##### Method
 
@@ -1073,7 +1073,7 @@ How to rotate islands.
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
 
-#### Last Operator Smart UV Project
+#### Adjust Last Operation - Smart UV Project
 
 ![Last Operator Smart UV Project](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-smart-uv-project.png)
 
@@ -1111,7 +1111,7 @@ Follow Active quads maps UV coordinates starting from an active face, and maps a
 
 Edge Length Mode is a drop-down box where you can choose the Length method.
 
-##### Last Operator Follow Active Quads
+##### Adjust Last Operation - Follow Active Quads
 
 ![Last Operator Follow Active Quads](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-follow-active-quads.png)
 
@@ -1121,7 +1121,7 @@ The Last Operator contains the same settings than the Settings dialogue.
 
 Cube Projection maps the mesh from six sides, means cubic.
 
-##### Last Operator Cube Projection
+##### Adjust Last Operation - Cube Projection
 
 ![Last Operator Cube Projection](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-cube-projection.png)
 
@@ -1138,7 +1138,7 @@ Cube Projection maps the mesh from six sides, means cubic.
 
 Cylinder Projection tries to map the geometry cylindric.
 
-##### Last Operator Cylinder Projection
+##### Adjust Last Operation - Cylinder Projection
 
 ![Last Operator Cylinder Projection](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-cylinder-projection.png)
 
@@ -1174,7 +1174,7 @@ How to handle the faces at the poles.
 
 Sphere Projection tries to map the geometry spherical.
 
-##### Last Operator Sphere Projection
+##### Adjust Last Operation - Sphere Projection
 
 ![Last Operator Sphere Projection](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-sphere-projection.png)
 
@@ -1209,7 +1209,7 @@ How to handle the faces at the poles.
 
 Project from View projects the UV from the current 3D view.
 
-##### Last Operator Project from View
+##### Adjust Last Operation - Project from View
 
 ![Last Operator Project from View](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-project-from-view.png)
 
@@ -1252,7 +1252,7 @@ Mark seam marks the currently selected edge(s) as a seam. Seam edges will be dis
 
 Triangulate Faces triangulates the faces of the selected geometry.
 
-#### Last Operator Triangulate Faces
+#### Adjust Last Operation - Triangulate Faces
 
 ##### Quad Method
 
@@ -1296,7 +1296,7 @@ Choose how N-Gons should be triangulated.
 
 Tris to quads tries to convert triangulated geometry back to a quad geometry by removing the edges inside of the quads.
 
-#### Last Operator Tris to Quads
+#### Adjust Last Operation - Tris to Quads
 
 ##### Max Face Angle
 
@@ -1339,7 +1339,7 @@ Sets the shading for the object to flat. Flat means that every face of the objec
 
 Decimates the geometry by trying to make one quad out of four quads. But can also end in Tris where this is not possible.
 
-#### Last Operator Un-Subdivide
+#### Adjust Last Operation - Un-Subdivide
 
 ##### Iterations
 
@@ -1369,7 +1369,7 @@ Separate separates the selected geometry, and creates a new object. The geometry
 
 Dissolves the selected faces, which unions the involved faces to one.
 
-#### Last Operator Dissolve Vertices
+#### Adjust Last Operation - Dissolve Vertices
 
 ![Last Operator Dissolve Vertices](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-dissolve-vertices.png)
 
@@ -1395,7 +1395,7 @@ Makes all geometry in the scene visible again.
 
 Hides the selected geometry.
 
-##### Last Operator Hide Selected
+##### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-hide-selected.png)
 
@@ -1431,7 +1431,7 @@ Subdivide divides the selected edges. It subdivides the involved faces too, and 
 
 A more unknown functionality is that it can also randomize the result with the Fractal slider in the Last operator panel.
 
-#### Last Operator Subdivide
+#### Adjust Last Operation - Subdivide
 
 ![Last Operator Subdivide](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-subdivide.png)
 
@@ -1467,7 +1467,7 @@ Adjust the corner type.
 
 Extrudes out the selected vertices by moving the mouse.
 
-#### Last Operator Extrude Only Vertices and Move
+#### Adjust Last Operation - Extrude Only Vertices and Move
 
 ![Last Operator Extrude Only Vertices and Move](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-extrude-only-vertices-and-move.png)
 
@@ -1506,7 +1506,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Adds a bevel at the selected vertices.
 
-#### Last Operator Bevel
+#### Adjust Last Operation - Bevel
 
 ![Last Operator Bevel](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-bevel.png)
 
@@ -1730,7 +1730,7 @@ It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-#### Last Operator Push/Pull
+#### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-push-pull.png)
 
@@ -1762,7 +1762,7 @@ Shrink/Fatten scales the selected geometry along its normals. Transform orientat
 
 A positive value pushes the vertices outwards. A negative value pushes the vertices inwards.
 
-#### Last Operator Shrink/Fatten
+#### Adjust Last Operation - Shrink/Fatten
 
 ![Last Operator Shrink/Fatten](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-shrink-fatten.png)
 
@@ -1795,7 +1795,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Shear shears the selection.
 
-#### Last Operator Shear
+#### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-shear.png)
 
@@ -1828,7 +1828,7 @@ Defines the other axis of the imaginary shear axis plane.
 
 This tool allows randomizes the positions of the selected vertices.
 
-#### Last Operator Randomize
+#### Adjust Last Operation - Randomize
 
 ![Last Operator Randomize](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
 
@@ -1845,7 +1845,7 @@ This tool allows randomizes the positions of the selected vertices.
 
 Laplacian Smooth Vertex smooths out the angles between the selected vertices. It is a tool to reduce noise at the mesh. It works a bit different than the normal Smooth Vertex tool. And gives a different result. The Laplacian method allows you to preserve the volume, and to adjust border smoothing.
 
-#### Last Operator Laplacian Smooth Vertices
+#### Adjust Last Operation - Laplacian Smooth Vertices
 
 ![Last Operator Laplacian Smooth Vertices](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-laplacian-smooth-vertices.png)
 
@@ -1865,7 +1865,7 @@ Laplacian Smooth Vertex smooths out the angles between the selected vertices. It
 
 Choose several methods to snap one element to another. The menu items should be self explaining.
 
-### Last Operator Snap
+### Adjust Last Operation - Snap
 
 ![Last Operator Snap](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-snap.png)
 
@@ -1882,7 +1882,7 @@ Some snap operations shows a last operation panel, some not.
 
 Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored.
 
-#### Last Operator Mirror
+#### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-mirror.png)
 
@@ -1910,7 +1910,7 @@ You will see a value in the header that indicates the current strength when you 
 
 A negative crease value will subtract from the current active crease value in case it exists already from a former crease operation. A Crease value of -1 removes the crease from this edge.
 
-#### Last Operator Vertex Crease
+#### Adjust Last Operation - Vertex Crease
 
 ![Last Operator Vertex Crease](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-vertex-crease.png)
 
@@ -1928,7 +1928,7 @@ Merges the geometry.
 
 Merges the geometry with the given methods.
 
-#### Last Operator Merge
+#### Adjust Last Operation - Merge
 
 ![Last Operator Merge](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-merge.png)
 
@@ -1943,7 +1943,7 @@ Merges the geometry with the given methods.
 
 Merge the vertices by their distance to each other. This tool is meant to remove double vertices at the same location.
 
-#### Last Operator Merge by Distance
+#### Adjust Last Operation - Merge by Distance
 
 ![Last Operator Merge by Distance](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-merge-by-distance.png)
 
@@ -1979,7 +1979,7 @@ Dissolve Vertices dissolves the selected Vertices.
 
 Note that pressing Del in Vertice select mode calls Dissolve Vertices already. It's the same operator. But you don't get the Last operator that way.
 
-#### Last Operator Dissolve Vertices
+#### Adjust Last Operation - Dissolve Vertices
 
 ![Last Operator Dissolve Vertices](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-dissolve-vertices.png)
 
@@ -2009,7 +2009,7 @@ The Show/Hide menu is available for all object types and in all modes. It is usu
 
 Hides the not selected elements. The selected elements stays visible.
 
-#### Last Operator Reveal Hidden / Hide Selected
+#### Adjust Last Operation - Reveal Hidden / Hide Selected
 
 ![Last Operator Reveal Hidden / Hide Selected](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-reveal-hidden-hide-selected.png)
 

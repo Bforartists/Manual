@@ -309,25 +309,25 @@ Numerical value output.
 
 # Math
 
-### Add menu - Utilities - Math
+## Add menu - Utilities - Math
 
 ![Add menu - Utilities - Math](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/add-menu-utilities-math.png)
 
 Utility nodes are mainly for mathematical operations.
 
-#### Bit Math
+### Bit Math
 
 ![Bit Math](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/bit-math.png)
 
 Performs a bit math operation between its inputs.
 
-##### Inputs
+#### Inputs
 
 The inputs depends of the chosen method.
 
-##### Properties
+#### Properties
 
-###### Operation
+##### Operation
 
 ![Operation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation.png)
 
@@ -340,27 +340,27 @@ The inputs depends of the chosen method.
 | Shift | Shifts the bit values of A by the specified Shift amount. Positive values shift left, negative values shift right. |
 | Rotate | Rotates the bit values of A by the specified Shift amount. Positive values rotates left, negative values rotates right. |
 
-##### Output
+#### Output
 
-###### Boolean
+##### Boolean
 
 Standard Boolean output.
 
-#### Boolean Math
+### Boolean Math
 
 ![Boolean Math](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/boolean-math.png)
 
 The Boolean Math node performs a basic logical operation between its inputs.
 
-##### Inputs
+#### Inputs
 
-###### Boolean
+##### Boolean
 
 Two standard Boolean inputs.
 
-##### Properties
+#### Properties
 
-###### Operation
+##### Operation
 
 ![Operation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation-2.png)
 
@@ -376,45 +376,45 @@ Two standard Boolean inputs.
 | Imply (IMPLY) | True unless the first input is true and the second is false. |
 | Subtract (NIMPLY) | True when the first input is true and the second is false. |
 
-##### Output
+#### Output
 
-###### Boolean
+##### Boolean
 
 Standard Boolean output.
 
-#### Integer Math
+### Integer Math
 
 ![Integer Math](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/integer-math.png)
 
 The Boolean Math node provides mathematical operations with integers.
 
-##### Inputs
+#### Inputs
 
-###### Value
+##### Value
 
 Two standard value inputs.
 
-##### Properties
+#### Properties
 
-###### Functions
+##### Functions
 
 ![Functions](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/functions.png)
 
 The available mathematical functions to manipulate the input integers.
 
-##### Output
+#### Output
 
-###### Value
+##### Value
 
 The value output.
 
-#### Clamp
+### Clamp
 
 ![Clamp](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/clamp.png)
 
 Clamps a value between a minimum and a maximum.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | ----- | ------------------------------ |
@@ -422,9 +422,9 @@ Clamps a value between a minimum and a maximum.
 | Min | The minimum value. |
 | Max | The maximum value. |
 
-##### Properties
+#### Properties
 
-###### Clamp Type
+##### Clamp Type
 
 ![Clamp Type](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/clamp-type.png)
 
@@ -433,27 +433,27 @@ Clamps a value between a minimum and a maximum.
 | Min Max | Clamp values using Min and Max values. |
 | Range | Clamp values between Min and Max range. |
 
-##### Outputs
+#### Outputs
 
-###### Result
+##### Result
 
 The input value after clamping.
 
-#### Compare
+### Compare
 
 ![Compare](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/compare.png)
 
 The Compare node takes two inputs and does a math comparison between them.
 
-##### Inputs
+#### Inputs
 
-###### A, B
+##### A, B
 
 Standard float value input.
 
-##### Properties
+#### Properties
 
-###### Input Type
+##### Input Type
 
 ![Input Type](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/input-type.png)
 
@@ -461,7 +461,7 @@ What kind of data to compare.
 
 Besides numbers, vectors, colors and strings, the Compare node can check whether two **Objects** or two **Collections** are equal.
 
-###### Operation
+##### Operation
 
 ![Operation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation-3.png)
 
@@ -474,30 +474,30 @@ Besides numbers, vectors, colors and strings, the Compare node can check whether
 | A is equal B | True if A and B are the same. |
 | A is not equal B | True if A and B are different. |
 
-##### Output
+#### Output
 
-###### Result
+##### Result
 
 Standard Boolean output.
 
-#### Float Curve
+### Float Curve
 
 ![Float Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/float-curve.png)
 
 The Float Curve node maps an input float to a curve and outputs a float value. This curve can then be used for profiles for example.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | --------- | ------------------------------------------------- |
 | Factor | How strong the input influences the output value. |
 | Attribute | The input value. |
 
-##### Properties
+#### Properties
 
-###### Curve Field
+##### Curve Field
 
-###### Channel buttons
+##### Channel buttons
 
 ![Channel buttons](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/channel-buttons.png)
 
@@ -505,7 +505,7 @@ Clicking on one of the channels displays the curve for each.
 
 C (Combined RGB), R (Red), G (Green), B (Blue).
 
-###### Navigation elements
+##### Navigation elements
 
 ![Navigation elements](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/navigation-elements.png)
 
@@ -534,7 +534,7 @@ Tools is a menu where you can find some curve related tools.
 | Extend extrapolated | Extends the curve before the first curve point and behind the last curve point extrapolated. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-###### Curve edit field
+##### Curve edit field
 
 Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis).
 
@@ -564,39 +564,39 @@ When you have a point selected then you will reveal further settings at the bott
 | Auto Handle | Set handle type to Auto. |
 | Auto Clamped Handle | Set handle type to Auto Clamped. |
 
-##### Output
+#### Output
 
-###### Value
+##### Value
 
 The output value.
 
-#### Float to Integer
+### Float to Integer
 
 ![Float to Integer](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/float-to-integer.png)
 
 Converts a floating point value into an integer value.
 
-##### Inputs
+#### Inputs
 
-###### Float
+##### Float
 
 The input float value.
 
-##### Properties
+#### Properties
 
-###### Rounding Mode
+##### Rounding Mode
 
 ![Rounding Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/rounding-mode.png)
 
 How the float value should be converted.
 
-##### Outputs
+#### Outputs
 
-###### Integer
+##### Integer
 
 The output integer value.
 
-#### Hash Value
+### Hash Value
 
 ![Hash Value](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/hash-value.png)
 
@@ -604,34 +604,34 @@ The hash value converts a value input into a hashed value.
 
 Note that Hashes cannot be relied upon to be used as unique identifiers because they are not guaranteed to be unique. It can be used to generate somewhat stable randomness especially in cases where White Noise does not offer enough flexibility.
 
-##### Input
+#### Input
 
 | Entry | What it does |
 | ----- | ------------------------------ |
 | Value | The input value. |
 | Seed | A seed to randomize the value. |
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/properties.png)
 
-###### Data Type
+##### Data Type
 
 What data type to create.
 
-##### Output
+#### Output
 
-###### Hash
+##### Hash
 
 The hash value output.
 
-#### Map Range
+### Map Range
 
 ![Map Range](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/map-range.png)
 
 This node converts (maps) an input value range into a destination range. By default, values outside the specified input range will be proportionally mapped as well. This node is similar to Map Value node but provides a more intuitive way to specify the desired output range.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | -------- | ------------------------------- |
@@ -641,37 +641,37 @@ This node converts (maps) an input value range into a destination range. By defa
 | To Min | Startof the destination range. |
 | To Max | End of the destination range. |
 
-##### Properties
+#### Properties
 
-###### Data Type
+##### Data Type
 
 ![Data Type](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/data-type.png)
 
 The data type to calculate.
 
-###### Interpolation Type
+##### Interpolation Type
 
 ![Interpolation Type](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/interpolation-type.png)
 
 how to interpolate the values between min and max.
 
-###### Clamp
+##### Clamp
 
 Clamps values to Min/Max of the destination range.
 
-##### Outputs
+#### Outputs
 
-###### Value
+##### Value
 
 Standard value output.
 
-#### Math
+### Math
 
 ![Math](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/math.png)
 
 The Math Node performs math operations.
 
-##### Inputs
+#### Inputs
 
 The inputs of the node are dynamic. Some inputs are only available with certain operations. For example, the Addend input is only available in the Multiply Add operator.
 
@@ -690,9 +690,9 @@ The inputs of the node are dynamic. Some inputs are only available with certain 
 | Degrees | Input Degrees. |
 | Radians | Input Radians. |
 
-##### Properties
+#### Properties
 
-###### Operation
+##### Operation
 
 ![Operation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/operation-4.png)
 
@@ -704,7 +704,7 @@ The mathematical operator to be applied to the input values:
 | Power | The Base raised to the power of Exponent. · **Logarithm**: The log of the value with a Base as its base. · **Square Root**: The square root of the value. · **Inverse Square Root**: One divided by the square root of the value. · **Absolute**: The input value is read with without regard to its sign. This turns negative values into positive values. · **Exponent**: Raises Euler’s number to the power of the value. |
 | Comparison | **Minimum**: Outputs the smallest of the input values. · **Maximum**: Outputs the largest of two input values. · **Less Than**: Outputs 1.0 if the first value is smaller than the second value. Otherwise the output is 0.0. · **Greater Than**: Outputs 1.0 if the first value is larger than the second value. Otherwise the output is 0.0. · **Sign**: Extracts the sign of the input value. All positive numbers will output 1.0. All negative numbers will output -1.0. And 0.0 will output 0.0. · **Compare**: Outputs 1.0 if the difference between the two input values is less than or equal to Epsilon. · **Smooth Minimum**: Smooth Minimum. · **Smooth Maximum**: Smooth Maximum. |
 
-###### Rounding
+##### Rounding
 
 | Entry | What it does |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -718,7 +718,7 @@ The mathematical operator to be applied to the input values:
 | Snap | Round the input value to down to the nearest integer multiple of Increment. |
 | Ping-pong | The output value is moved between 0.0 and the Scale based on the input value. |
 
-###### Trigonometric
+##### Trigonometric
 
 | Entry | What it does |
 | ------------------ | ----------------------------------------------------------------------------------------------- |
@@ -733,7 +733,7 @@ The mathematical operator to be applied to the input values:
 | Hyperbolic Cosine | The Hyperbolic Cosine of the input value. |
 | Hyperbolic Tangent | The Hyperbolic Tangent of the input value. |
 
-###### Conversion
+##### Conversion
 
 | Entry | What it does |
 | ---------- | ------------------------------------------------------- |
@@ -741,23 +741,23 @@ The mathematical operator to be applied to the input values:
 | To Degrees | Converts the input from radians to degrees. |
 | Clamp | Limits the output to the range (0.0 to 1.0). See Clamp. |
 
-##### Outputs
+#### Outputs
 
-###### Value
+##### Value
 
 Numerical value output.
 
-#### Mix
+### Mix
 
 ![Mix](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/mix.png)
 
 Allows to mix values and vectors in various ways. The node has three different modes. Float, Vector and Color. This node covers the Float mode
 
-##### Input
+#### Input
 
 ![Input](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/input.png)
 
-###### Float
+##### Float
 
 | Entry | What it does |
 | ------ | -------------------- |
@@ -765,29 +765,29 @@ Allows to mix values and vectors in various ways. The node has three different m
 | A | Float value A input. |
 | B | Float value B input. |
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-math/properties-2.png)
 
-###### Data Type
+##### Data Type
 
 The data type to calculate.
 
-##### Output
+#### Output
 
-###### Result
+##### Result
 
 The output value or vector.
 
 # Text
 
-### Add menu - Utilities - Text
+## Add menu - Utilities - Text
 
 ![Add menu - Utilities - Text](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/add-menu-utilities-text.png)
 
 Text object related nodes.
 
-#### Format String
+### Format String
 
 ![Format String](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/format-string.png)
 
@@ -801,7 +801,7 @@ The syntax can be found here: [https://docs.python.org/3/library/string.html#for
 | Properties | **String**: The python syntax to modify the string. |
 | Output | **String**: The output string. |
 
-#### Join Strings
+### Join Strings
 
 ![Join Strings](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/join-strings.png)
 
@@ -812,34 +812,34 @@ Allows you to join several string into a text string.
 | Inputs | **Delimiter**: Add a delimiter character. · **Strings**: The strings that you want to join into one text string. |
 | Output | **String**: The output string. |
 
-#### Match Strings
+### Match Strings
 
 ![Match Strings](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/match-strings.png)
 
 Allows you to compare strings to match conditions
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | ------ | ----------------- |
 | String | The input string. |
 | Key | An input key. |
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/properties.png)
 
-###### Operation
+##### Operation
 
 What string condition to match.
 
-##### Output
+#### Output
 
-###### Result
+##### Result
 
 The output strings that matches the condition.
 
-#### Replace Strings
+### Replace Strings
 
 ![Replace Strings](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/replace-strings.png)
 
@@ -850,7 +850,7 @@ Find and replace strings inside of the input string.
 | Inputs | **String**: The input string. · **Find**: The string part that you want to replace. · **Replace**: The string part that you use to replace the selected string part. |
 | Output | **String**: The strings that you want to join into one text string. |
 
-#### Slice String
+### Slice String
 
 ![Slice String](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/slice-string.png)
 
@@ -861,7 +861,7 @@ Allows you to extract a string from a substring at given position with given len
 | Inputs | **String**: The source string. · **Position**: The start position of the sub string. · **Length**: The length of the substring. |
 | Outputs | **String**: The output substring. |
 
-#### Find in String
+### Find in String
 
 ![Find in String](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/find-in-string.png)
 
@@ -872,7 +872,7 @@ Returns an integer of the total count of matching strings or the first integer p
 | Inputs | **String**: The string that you want to search in. · **Search**: The string that would be matched in the string search. |
 | Outputs | **First Found**: Returns the integer position of the first character of the found string. · **Count**: Returns an integer position of the first character of the found string. |
 
-#### String length
+### String length
 
 ![String length](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/string-length.png)
 
@@ -883,13 +883,13 @@ Gives back the number of characters in this string.
 | Inputs | **String**: The string that you want to calculate. |
 | Outputs | **Length**: How many characters the string has. |
 
-#### String to Curves
+### String to Curves
 
 ![String to Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/string-to-curves.png)
 
 Converts the letters of a text into curve objects.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | ----------------- | ------------------------------------ |
@@ -900,13 +900,13 @@ Converts the letters of a text into curve objects.
 | Line Spacing | The line spacing of the string. |
 | Max Width | The maximum width of the string. |
 
-##### Properties
+#### Properties
 
-###### Font property
+##### Font property
 
 ![Font property](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/font-property.png)
 
-###### Font browser
+##### Font browser
 
 ![Font browser](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/font-browser.png)
 
@@ -920,7 +920,7 @@ A list of the loaded fonts.
 | Open Font | Load a system font. |
 | Remove | Removes the active font. The default font is special in this regards. You cannot delete it. |
 
-###### Overflow
+##### Overflow
 
 ![Overflow](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/overflow.png)
 
@@ -928,23 +928,23 @@ The overflow method for the text.
 
 ![Overflow](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/overflow-2.png)
 
-###### Align X
+##### Align X
 
 How to align the text horizontally
 
-###### Align Y
+##### Align Y
 
 ![Align Y](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/align-y.png)
 
 How to align the text vertically.
 
-###### Pivot Point
+##### Pivot Point
 
 ![Pivot Point](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/pivot-point.png)
 
 What point of the string to use as the pivot point.
 
-##### Output
+#### Output
 
 | Entry | What it does |
 | --------------- | -------------------------------------------------------- |
@@ -952,19 +952,19 @@ What point of the string to use as the pivot point.
 | Line | Outputs the line number of the character. |
 | Pivot Point | Outputs the selected pivot point position per character. |
 
-#### String to Value
+### String to Value
 
 ![String to Value](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/string-to-value.png)
 
 Converts a **string input** (e.g. *"3.14"* or *"42"*) into a **numeric value** that can be used in fields, modifiers, or procedural logic. It also outputs the **length** of the string for additional control or validation.
 
-##### Inputs
+#### Inputs
 
-###### String
+##### String
 
 The input string.
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/properties-2.png)
 
@@ -973,20 +973,20 @@ The input string.
 | Data Type | Specifies the target data type for conversion |
 | Outputs | **Value**: The output value. · **Length**: The number of characters in the input string as an Integer. |
 
-#### Value to String
+### Value to String
 
 ![Value to String](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/value-to-string.png)
 
 Converts a value to a string.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | -------- | -------------------------------- |
 | Value | The input value. |
 | Decimals | How many decimals the value has. |
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/properties-2.png)
 
@@ -995,13 +995,13 @@ Converts a value to a string.
 | Data Type | Specifies the target data type for conversion |
 | Outputs | **String**: The output string. |
 
-#### Special Character
+### Special Character
 
 ![Special Character](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/special-character.png)
 
 Adds special characters to the text string.
 
-##### Outputs
+#### Outputs
 
 | Entry | What it does |
 | ---------- | ------------------------------------- |
@@ -1010,13 +1010,13 @@ Adds special characters to the text string.
 
 # Vector
 
-### Add menu - Vector
+## Add menu - Vector
 
 ![Add menu - Vector](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/add-menu-vector.png)
 
 Vector nodes are for calculating vector operations.
 
-#### Combine XYZ
+### Combine XYZ
 
 ![Combine XYZ](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/combine-xyz.png)
 
@@ -1027,13 +1027,13 @@ The Combine XYZ Node combines a vector from its individual components.
 | Input | **X Y and Z**: X, Y and Z values. |
 | Output | **Color**: Color output. |
 
-#### Map Range
+### Map Range
 
 ![Map Range](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/map-range.png)
 
 Remap a value from a range to a target range.
 
-##### Input
+#### Input
 
 | Entry | What it does |
 | -------- | -------------------------------- |
@@ -1042,39 +1042,39 @@ Remap a value from a range to a target range.
 | To Min | Vector 3 to the minimum input. |
 | To Min | Vector 3 to the maximum input. |
 
-##### Properties
+#### Properties
 
-###### Data Type
+##### Data Type
 
 ![Data Type](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/data-type.png)
 
 What data to calculate.
 
-###### Interpolation Type
+##### Interpolation Type
 
 ![Interpolation Type](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/interpolation-type.png)
 
 The interpolation method for the operation.
 
-###### Clamp
+##### Clamp
 
 Clamp the result to the target range of To Min - To Max.
 
-##### Outputs
+#### Outputs
 
-###### Vector
+##### Vector
 
 The output vector.
 
-#### Mix Vector
+### Mix Vector
 
 ![Mix Vector](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/mix-vector.png)
 
 Allows to mix values and vectors in various ways. The node has three different modes. Float, Vector and Color. This here is the node in Vector mode.
 
-##### Input
+#### Input
 
-###### Factor
+##### Factor
 
 ![Factor](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/factor.png)
 
@@ -1082,37 +1082,37 @@ Allows to mix values and vectors in various ways. The node has three different m
 
 The mix factor. With mode Uniform it is a single value. With mode Non Uniform it is a vector.
 
-###### A
+##### A
 
 ![A](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/a.png)
 
 Vector A input.
 
-###### B
+##### B
 
 Vector B input.
 
-##### Properties
+#### Properties
 
-###### Data Type
+##### Data Type
 
 ![Data Type](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/data-type-2.png)
 
 Which mode to use. We cover here the Vector mode.
 
-###### Factor Mode
+##### Factor Mode
 
 ![Factor Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/factor-mode.png)
 
 Use a single value or a vector for the factor.
 
-##### Output
+#### Output
 
-###### Result
+##### Result
 
 The output value or vector.
 
-#### Separate XYZ
+### Separate XYZ
 
 ![Separate XYZ](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/separate-xyz.png)
 
@@ -1123,7 +1123,7 @@ The Separate XYZ Node splits a vector into its individual components.
 | Input | **Vector**: The Input vector. |
 | Output | **X, Y and Z**: The output vectors for X, Y and Z. |
 
-#### Radial Tiling
+### Radial Tiling
 
 ![Radial Tiling](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/radial-tiling.png)
 
@@ -1135,34 +1135,34 @@ The Separate XYZ Node splits a vector into its individual components.
 | Properties | **Normalize**: Stretch the textures to fit into each angular segment. |
 | Output | **Segment Coordinates**: The segment coordinates for texture mapping. · **Segment ID**: Unique ID for every segment. · **Segment Width**: The width of every segment. · **Segment Rotation**: The rotation of every segment. |
 
-#### Vector Curves
+### Vector Curves
 
 ![Vector Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/vector-curves.png)
 
 The Vector Curves node maps an input vector components to a curve.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | ------ | ---------------------- |
 | Factor | Standard vector input. |
 | Vector | Standard vector input. |
 
-##### Properties
+#### Properties
 
-###### Channel
+##### Channel
 
-###### X Y Z
+##### X Y Z
 
 ![X Y Z](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/x-y-z.png)
 
 X, Y, Z Channel buttons. Clicking on one of the channels displays the curve for each.
 
-###### Curve edit field
+##### Curve edit field
 
 Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis).
 
-###### Selecting Points
+##### Selecting Points
 
 ![Selecting Points](/docs2/images/editors/geometry-node-editor/header/add-menu-color/selecting-points.png)
 
@@ -1172,11 +1172,11 @@ Selected points can be moved around. Left click at them, hold the mouse button d
 
 ![Selecting Points](/docs2/images/editors/geometry-node-editor/header/add-menu-color/adding-points.png)
 
-###### Adding Points
+##### Adding Points
 
 > This setting uses the **curve widget**: click to add points, drag to move them. See **[Curve Widget](../../../../interface/properties.md#curve-widget)** in the Interface chapter.
 
-###### Navigation elements
+##### Navigation elements
 
 ![Navigation elements](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/navigation-elements.png)
 
@@ -1186,13 +1186,13 @@ The navigation elements at the top are described from left to right.
 
 The two buttons with the magnifying glass at it zooms in and out in the curve window.
 
-###### Clipping
+##### Clipping
 
 ![Clipping](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/clipping.png)
 
 Clipping options. Set up clipping for the stroke.
 
-###### Tools
+##### Tools
 
 ![Tools](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/tools.png)
 
@@ -1221,19 +1221,19 @@ Set handle type to Vector.
 | X Y values | The x and y values of the selected curve point. |
 | Delete Points | Deletes selected curve points. |
 
-##### Outputs
+#### Outputs
 
-###### Vector
+##### Vector
 
 Standard vector output.
 
-#### Vector Math
+### Vector Math
 
 ![Vector Math](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/vector-math.png)
 
 The Vector Math node performs the selected math operation on the input vectors.
 
-##### Inputs
+#### Inputs
 
 The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Scale input is only available in the Scale operator.
 
@@ -1243,15 +1243,15 @@ The inputs of the node are dynamic. Some inputs are only available in certain op
 | Vector | Input vector B. |
 | Scale | Input Scale. |
 
-##### Properties
+#### Properties
 
-###### Operation
+##### Operation
 
 ![Operation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/operation.png)
 
 The vector math operator to be applied on the input vectors.
 
-##### Outputs
+#### Outputs
 
 The output of the node is dynamic. It is either a vector or a scalar depending on the operator. For instance, the Length operator have a scalar output while the Add operator have a vector output.
 
@@ -1260,13 +1260,13 @@ The output of the node is dynamic. It is either a vector or a scalar depending o
 | Vector | Output vector. |
 | Value | Output value. |
 
-#### Vector Rotate
+### Vector Rotate
 
 ![Vector Rotate](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/vector-rotate.png)
 
 The Vector Rotate node allows rotations by a vector.
 
-##### Inputs
+#### Inputs
 
 The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Angle input is just available with the Axis Angle type.
 
@@ -1277,37 +1277,37 @@ The inputs of the node are dynamic. Some inputs are only available in certain op
 | Axis | Input Axis. |
 | Angle | Input Angle |
 
-##### Properties
+#### Properties
 
-###### Type
+##### Type
 
 ![Type](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/type.png)
 
 The rotation type.
 
-##### Outputs
+#### Outputs
 
-###### Vector
+##### Vector
 
 The Output vector.
 
 # Bundle
 
-### Add menu - Bundle
+## Add menu - Bundle
 
 ![Add menu - Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/add-menu-bundle.png)
 
 **Bundles** are like packed containers—they let you group multiple values (like vectors, floats, booleans) into a single wire. Think of them as a way to **package data** together and pass it around cleanly.
 
-#### Combine Bundle
+### Combine Bundle
 
 ![Combine Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/combine-bundle.png)
 
 This node takes multiple inputs and wraps them into a single bundle.
 
-##### Inputs
+#### Inputs
 
-###### Sockets
+##### Sockets
 
 ![Sockets](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/sockets.png)
 
@@ -1315,13 +1315,13 @@ This is a dynamic socket that will populate with whatever you want to plug into 
 
 These could represent attributes, geometry sets, vales, vectors, or grouped attributes depending on context.
 
-##### Outputs
+#### Outputs
 
-###### Bundle Socket
+##### Bundle Socket
 
 Standard bundle socket with a unified bundle containing all input elements. Use this to pass the packaged sockets to a Separate Bundle node for later user down the node tree lines.
 
-#### Separate Bundle
+### Separate Bundle
 
 ![Separate Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/separate-bundle.png)
 
@@ -1334,7 +1334,7 @@ This node unpacks a bundle back into its individual components.
 | Inputs | The inputs of the node are dynamic. Some inputs are only available in certain operations. For instance, the Scale input is only available in the Scale operator. · **Bundle**: Standard bundle socket with a unified bundle containing all input elements from a Combine Bundle node. |
 | Outputs | **Sockets**: This is a dynamic series of socket that will populate with whatever is available from the incoming bundle line. Ouptuts one or more bundle-compatible data streams. These could represent attributes, geometry sets, vales, vectors, or grouped attributes depending on context. |
 
-#### Join Bundle
+### Join Bundle
 
 ![Join Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/join-bundle.png)
 
@@ -1351,7 +1351,7 @@ This enables modular data structuring, reuse, and override logic in procedural w
 
 # Closure
 
-### Add menu - Closure
+## Add menu - Closure
 
 ![Add menu - Closure](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/add-menu-closure.png)
 
@@ -1359,13 +1359,13 @@ Vector nodes are for calculating vector operations.
 
 **Closures** allow you to pass custom logic into node groups—like injecting a mini-function or behavior block. They’re ideal for creating reusable, pluggable systems where the user can define part of the logic externally.
 
-#### Closure Zone
+### Closure Zone
 
 ![Closure Zone](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/closure-zone.png)
 
 The closure function to be executed.
 
-##### Purpose
+#### Purpose
 
 Defines logic that will be injected into a node group or node tree. Think of it as a sandbox where the user builds a mini-node tree that gets executed when the closure is evaluated during the execution of another node tree.
 
@@ -1378,7 +1378,7 @@ Use Cases:
 - Field-based attribute manipulation with user-defined formulas.
 - Behavior overrides for geometry processing pipelines.
 
-##### Behavior
+#### Behavior
 
 ![Behavior](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/behavior.png)
 
@@ -1400,13 +1400,13 @@ How It Works (Conceptually)
 
 When the node group containing an Evaluate Closure node runs, it pulls in the logic from the Closure Zone and executes it in place. The zone is not executed immediately—it’s stored as a callable block.
 
-##### Requirements
+#### Requirements
 
 Input and output names in the Closure Zone must match those expected by the Evaluate Closure node.
 
 Can include any Geometry Nodes logic, including fields, math, distribution patterns, etc.
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/properties.png)
 
@@ -1421,7 +1421,7 @@ You can access these properties in the sidebar to the right in the Node tab.
 | Output Items | Whatever parameters the Closure logic returns—could be geometry, fields, instances, values, etc |
 | Common Properties | **Add / Remove / Reorder Controls**: **+ (Add)**: Creates a new input socket. **– (Remove)**: Deletes the selected input. **↑ / ↓ (Reorder)**: Adjusts the order of inputs for visual clarity and UX consistency. · **Name**: Identifier for the input. Must match the name used in Evaluate Closure. · **Socket Type**: Data type of the input (e.g., Float, Vector, Boolean, Geometry, Field). · **Structure Type**: Defines how the input is treated: *Auto, Dynamic, Field, Grid, List*, or *Single*. |
 
-#### Evaluate Closure
+### Evaluate Closure
 
 ![Evaluate Closure](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/evaluate-closure.png)
 
@@ -1434,7 +1434,7 @@ It **passes in** the provided parameters and **returns** the result of the closu
 | Closure Input | A Closure socket input created by a Closure zone. This contains the logic to be executed from that Closure zone. |
 | Interface Inputs / Outputs | Named inputs/outputs from the Closure properties that match the Closure Zone’s expected parameters for the enclosed logic to be evaluated. |
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-closure/properties-2.png)
 
@@ -1452,28 +1452,28 @@ You can access these properties in the sidebar to the right in the Node tab.
 
 # Field
 
-### Add menu - Utilities - Field
+## Add menu - Utilities - Field
 
 ![Add menu - Utilities - Field](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/add-menu-utilities-field.png)
 
 Field nodes.
 
-#### Accumulate Field
+### Accumulate Field
 
 ![Accumulate Field](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/accumulate-field.png)
 
 Creates a running total of a given Vector, Float, or Int field.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | ----------- | --------------------------------------------------------------------------------------------------------------- |
 | Value | The field to be accumulated. |
 | Group Index | The values of this input are used to aggregate the input into separate 'bins', creating multiple accumulations. |
 
-##### Properties
+#### Properties
 
-###### Data Type
+##### Data Type
 
 ![Data Type](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/data-type.png)
 
@@ -1485,14 +1485,14 @@ Domain
 
 From which domain to use the data.
 
-##### Outputs
+#### Outputs
 
 | Entry | What it does |
 | -------------------- | ------------------------------------------------------------------------------------------------------------ |
 | Leading and Trailing | Returns the running totals starting at either the first value of each accumulations or 0 if there is no data |
 | Total | Returns the total accumulation at all positions of the field. |
 
-#### Evaluate at Index
+### Evaluate at Index
 
 ![Evaluate at Index](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/evaluate-at-index.png)
 
@@ -1501,161 +1501,161 @@ It is similar to the Transfer Attribute node in Index mode. The main difference
 is that this node does not require a geometry input, because the context  
 is used.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | ----- | ------------ |
 | Index | Input Index. |
 | Value | Input Value. |
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties.png)
 
-###### Data Type
+##### Data Type
 
 What data type to calculate.
 
-###### Domain
+##### Domain
 
 ![Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain.png)
 
 What geometry to calculate.
 
-##### Output
+#### Output
 
-###### Value
+##### Value
 
 The output value.
 
-#### Evaluate on Domain
+### Evaluate on Domain
 
 ![Evaluate on Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/evaluate-on-domain.png)
 
 This node evaluates an existing field on a separate domain in a larger field context - an alternative to the Capture Attribute node. This nodes gets the field type of an existing field from the input socket and interpolates the field type as an array in the output socket.
 
-##### Inputs
+#### Inputs
 
-###### Value
+##### Value
 
 The input value to get the field.
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties.png)
 
-###### Data Type
+##### Data Type
 
 Select the Data Type - which can be float, integer, vector, color and boolean.
 
-###### Domain
+##### Domain
 
 ![Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain-2.png)
 
 The domain the Field evaluates. This gets and filters the field type. The domain can be point, edge, face, face corner, spline or instance.
 
-##### Outputs
+#### Outputs
 
-###### Value
+##### Value
 
 The output value.
 
-#### Field Average
+### Field Average
 
 ![Field Average](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/field-average.png)
 
 Calculate the mean and median of a given field.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | -------- | ------------------------------------ |
 | Value | The input value to get the field. |
 | Group ID | The input Group ID to get the field. |
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties-2.png)
 
-###### Data Type
+##### Data Type
 
 Select the Data Type - which can be float, integer, vector, color and boolean.
 
-###### Domain
+##### Domain
 
 ![Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain-3.png)
 
 The domain the Field evaluates. This gets and filters the field type. The domain can be point, edge, face, face corner, spline or instance.
 
-##### Outputs
+#### Outputs
 
 | Entry | What it does |
 | ------ | ------------------------ |
 | Mean | The Mean output value. |
 | Median | The Median output value. |
 
-#### Field Min & Max
+### Field Min & Max
 
 ![Field Min & Max](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/field-min-and-max.png)
 
 Calculate the minimum and maximum of a given field.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | -------- | ------------------------------------ |
 | Value | The input value to get the field. |
 | Group ID | The input Group ID to get the field. |
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties-2.png)
 
-###### Data Type
+##### Data Type
 
 Select the Data Type - which can be float, integer, vector, color and boolean.
 
-###### Domain
+##### Domain
 
 ![Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain-3.png)
 
 The domain the Field evaluates. This gets and filters the field type. The domain can be point, edge, face, face corner, spline or instance.
 
-##### Outputs
+#### Outputs
 
 | Entry | What it does |
 | ----- | --------------------- |
 | Min | The Min output value. |
 | Max | The Max output value. |
 
-#### Field Variance
+### Field Variance
 
 ![Field Variance](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/field-variance.png)
 
 Calculate the standard derivation and variance of a given field.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | -------- | ------------------------------------ |
 | Value | The input value to get the field. |
 | Group ID | The input Group ID to get the field. |
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/properties-2.png)
 
-###### Data Type
+##### Data Type
 
 Select the Data Type - which can be float, integer, vector, color and boolean.
 
-###### Domain
+##### Domain
 
 ![Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/domain-3.png)
 
 The domain the Field evaluates. This gets and filters the field type. The domain can be point, edge, face, face corner, spline or instance.
 
-##### Outputs
+#### Outputs
 
 | Entry | What it does |
 | ------------------- | --------------------- |
@@ -1664,33 +1664,33 @@ The domain the Field evaluates. This gets and filters the field type. The domain
 
 # Matrix
 
-### Add menu - Utilities - Matrix
+## Add menu - Utilities - Matrix
 
 ![Add menu - Utilities - Matrix](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/add-menu-utilities-matrix.png)
 
 Matrix nodes.
 
-#### Combine Matrix
+### Combine Matrix
 
 ![Combine Matrix](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/combine-matrix.png)
 
 Combines values into a matrix. A matrix is something like a transform cage. A vector 4 in 4 dimensions.
 
-##### Inputs
+#### Inputs
 
 ![Inputs](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/inputs.png)
 
-###### Column 1 , 2, 3, 4
+##### Column 1 , 2, 3, 4
 
 Allows you to combine values into the matrix. A matrix is made of four vector 4 in 4 dimensions. So 16 values.
 
-##### Output
+#### Output
 
-###### Matrix
+##### Matrix
 
 The output matrix.
 
-#### Combine Transform
+### Combine Transform
 
 ![Combine Transform](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/combine-transform.png)
 
@@ -1701,7 +1701,7 @@ Combines transforms.
 | Inputs | **Translation**: The translation input vector. · **Rotation**: The rotation input vector. · **Scale**: The scale input vector. |
 | Output | **Transform**: The output transform. |
 
-#### Matrix Determinant
+### Matrix Determinant
 
 ![Matrix Determinant](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/matrix-determinant.png)
 
@@ -1712,7 +1712,7 @@ The Matrix Determinant Node is used for calculating the determinant of a given m
 | Inputs | **Matgrix**: Accepts a matrix input. |
 | Output | **Determinant**: Returns a single numerical value representing the determinant of the input matrix. If the determinant is zero, the matrix is non-invertible. |
 
-#### Invert Matrix
+### Invert Matrix
 
 ![Invert Matrix](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/invert-matrix.png)
 
@@ -1723,7 +1723,7 @@ Inverts the matrix values.
 | Inputs | **Matrix**: The input matrix. |
 | Output | **Matrix**: The output matrix. · **Invertible**: The inverted values. |
 
-#### Multiply Matrix
+### Multiply Matrix
 
 ![Multiply Matrix](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/multiply-matrix.png)
 
@@ -1734,7 +1734,7 @@ Multiplies the values of two matrices.
 | Inputs | **Matrix, Matrix**: The input matrices |
 | Output | **Matrix**: The output matrix. |
 
-#### Project Point
+### Project Point
 
 ![Project Point](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/project-point.png)
 
@@ -1745,27 +1745,27 @@ Projects a transform point by a vector.
 | Inputs | **Vector**: The input vector · **Transform**: The input transform point |
 | Output | **Vector**: The output vector. |
 
-#### Separate Matrix
+### Separate Matrix
 
 ![Separate Matrix](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/separate-matrix.png)
 
 Extract single values from a matrix. A matrix is something like a transform cage. A vector 4 in 4 dimensions.
 
-##### Inputs
+#### Inputs
 
-###### Matrix
+##### Matrix
 
 The input matrix.
 
-##### Output
+#### Output
 
 ![Output](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/output.png)
 
-###### Column 1 , 2, 3, 4
+##### Column 1 , 2, 3, 4
 
 Extract the values from a row in a column. A matrix is made of four vector 4 in 4 dimensions. So 16 values.
 
-#### Separate Transform
+### Separate Transform
 
 ![Separate Transform](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/separate-transform.png)
 
@@ -1776,7 +1776,7 @@ Extracts the translation, rotation or scale values from a transform.
 | Inputs | **Transform**: The input transform. |
 | Output | **Translation**: The translation output vector. · **Rotation**: The rotation output vector. · **Scale**: The scale output vector. |
 
-#### Transform Direction
+### Transform Direction
 
 ![Transform Direction](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/transform-direction.png)
 
@@ -1787,7 +1787,7 @@ Set the direction of a transform.
 | Inputs | **Direction**: The input vector 3. · **Transform**: The input transform. |
 | Output | **Direction**: The output direction. |
 
-#### Transform Point
+### Transform Point
 
 ![Transform Point](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/transform-point.png)
 
@@ -1798,7 +1798,7 @@ Transform a transform point.
 | Inputs | **Vector**: The input vector 3. · **Transform**: The input transform. |
 | Output | **Direction**: The output vector. |
 
-#### Transpose Matrix
+### Transpose Matrix
 
 ![Transpose Matrix](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-matrix/transpose-matrix.png)
 
@@ -1811,19 +1811,19 @@ Retreive the transpose matrix from a matrix.
 
 # Rotation
 
-### Add menu - Utilities - Rotation
+## Add menu - Utilities - Rotation
 
 ![Add menu - Utilities - Rotation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/add-menu-utilities-rotation.png)
 
 Utility nodes are mainly for mathematical operations.
 
-#### Align Rotation to Vector
+### Align Rotation to Vector
 
 ![Align Rotation to Vector](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/align-rotation-to-vector.png)
 
 Aligns a rotation to a vector.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | -------- | -------------------------------------------------- |
@@ -1831,25 +1831,25 @@ Aligns a rotation to a vector.
 | Factor | The factor to align the euler value to the vector. |
 | Vector | The vector to align to. |
 
-##### Properties
+#### Properties
 
-###### Align Axis
+##### Align Axis
 
 To which axis to align the vector.
 
-###### Pivot
+##### Pivot
 
 ![Pivot](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/pivot.png)
 
 The pivot axis.
 
-##### Output
+#### Output
 
-###### Rotation
+##### Rotation
 
 The output rotation euler angle.
 
-#### Axes to rotation
+### Axes to rotation
 
 ![Axes to rotation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/axes-to-rotation.png)
 
@@ -1861,7 +1861,7 @@ Creates a rotation from a primary and a secondary axis. The axis should be ideal
 | Properties | **Primary axis**: Which axis to rotate around. · **Secondary Axis**: Which axis to align to. |
 | Output | **Rotation**: The output rotation euler angle. |
 
-#### Axis Angle to Rotation
+### Axis Angle to Rotation
 
 ![Axis Angle to Rotation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/axis-angle-to-rotation.png)
 
@@ -1872,7 +1872,7 @@ Converts an axis angle to a rotation.
 | Inputs | **Axis**: The input axis. · **Angle**: The input angle. |
 | Output | **Rotation**: The output rotation value. |
 
-#### Euler to Rotation
+### Euler to Rotation
 
 ![Euler to Rotation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/euler-to-rotation.png)
 
@@ -1883,7 +1883,7 @@ Converts an euler angle to a rotation.
 | Inputs | **Euler**: The input euler angle vector. |
 | Output | **Rotation**: The output rotation value. |
 
-#### Invert Rotation
+### Invert Rotation
 
 ![Invert Rotation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/invert-rotation.png)
 
@@ -1894,62 +1894,62 @@ Inverts a rotation
 | Inputs | **Rotation**: The input rotation vector. |
 | Output | **Rotation**: The output rotation value. |
 
-#### Mix Rotation
+### Mix Rotation
 
 ![Mix Rotation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/mix-rotation.png)
 
 Rotates an euler rotation by another euler rotation.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | ------ | ---------------------------------------- |
 | Factor | amount of mixing between a and b inputs. |
 | A, B | The input. |
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/properties.png)
 
-###### Data Type
+##### Data Type
 
 What data to calculate.
 
-##### Outputs
+#### Outputs
 
-###### Rotation
+##### Rotation
 
 The euler angle output.
 
-#### Rotate Rotation
+### Rotate Rotation
 
 ![Rotate Rotation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotate-rotation.png)
 
 Rotates an euler rotation by another euler rotation.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | --------- | ----------------------------------------- |
 | Rotation | Use the rotation of an existing geometry. |
 | Rotate By | The input rotation. |
 
-##### Properties
+#### Properties
 
-###### Rotate Space
+##### Rotate Space
 
 | Entry | What it does |
 | ------ | -------------------------------- |
 | Global | Rotate by the global orientation |
 | Local | Rotate by the local orientation |
 
-##### Outputs
+#### Outputs
 
-###### Rotation
+##### Rotation
 
 The euler angle output.
 
-#### Rotate Vector
+### Rotate Vector
 
 ![Rotate Vector](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotate-vector.png)
 
@@ -1960,7 +1960,7 @@ Rotates a vector.
 | Inputs | **Vector**: The input vector. · **Rotation**: The input rotation. |
 | Output | **Rotation**: The output rotation value. |
 
-#### Rotation to Axis Angle
+### Rotation to Axis Angle
 
 ![Rotation to Axis Angle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotation-to-axis-angle.png)
 
@@ -1971,7 +1971,7 @@ Converts a rotation vector to axis angle.
 | Inputs | **Rotation**: The input vector. |
 | Output | **Axis**: The axis output. · **Angle**: The angle output. |
 
-#### Rotation Euler
+### Rotation Euler
 
 ![Rotation Euler](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotation-euler.png)
 
@@ -1982,7 +1982,7 @@ Converts a rotation vector to an euler angle.
 | Inputs | **Rotation**: The input vector. |
 | Output | **Euler**: The euler angle. |
 
-#### Rotation to Quaternion
+### Rotation to Quaternion
 
 ![Rotation to Quaternion](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/rotation-to-quaternion.png)
 
@@ -1993,7 +1993,7 @@ Converts a quaternion to a rotation vector.
 | Inputs | **Rotation**: The input vector. |
 | Output | **W, X, Y, Z**: The single output values of the quaternion. |
 
-#### Quaternion to Rotation
+### Quaternion to Rotation
 
 ![Quaternion to Rotation](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/quaternion-to-rotation.png)
 
@@ -2006,19 +2006,19 @@ Converts a rotation vector to a quaternion.
 
 # Deprecated
 
-### Add menu - Deprecated
+## Add menu - Deprecated
 
 ![Add menu - Deprecated](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-deprecated/add-menu-deprecated.png)
 
 These deprecated nodes are kept for compatibility reasons.
 
-#### Align Euler to Vector (Deprecated)
+### Align Euler to Vector (Deprecated)
 
 ![Align Euler to Vector (Deprecated)](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-deprecated/align-euler-to-vector-deprecated.png)
 
 Aligns a euler value to a vector.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | -------- | -------------------------------------------------- |
@@ -2026,46 +2026,46 @@ Aligns a euler value to a vector.
 | Factor | The factor to align the euler value to the vector. |
 | Vector | The vector to align to. |
 
-##### Properties
+#### Properties
 
-###### Align Axis
+##### Align Axis
 
 To which axis to align the vector.
 
-###### Pivot
+##### Pivot
 
 ![Pivot](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-rotation/pivot.png)
 
 The pivot axis.
 
-##### Output
+#### Output
 
-###### Rotation
+##### Rotation
 
 The output rotation euler angle.
 
-#### Rotate Euler (Deprecated)
+### Rotate Euler (Deprecated)
 
 ![Rotate Euler (Deprecated)](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-deprecated/rotate-euler-deprecated.png)
 
 Rotates an euler rotation. This node will be removed in the near future. Alternatively use the Rotate Rotation node.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | --------- | ----------------------------------------- |
 | Rotation | Use the rotation of an existing geometry. |
 | Rotate By | The input rotation. |
 
-##### Properties
+#### Properties
 
 | Entry | What it does |
 | ------------ | --------------------------------------------------------------------------------------------------------------- |
 | Rotate Type | **Axis Angle**: Rotate around an axis by an angle. · **Euler**: Rotate around the x, y and z axis. |
 | Rotate Space | **Object**: Rotate points in the local space of the object. · **Point**: Rotate every point in its local space. |
 
-##### Outputs
+#### Outputs
 
-###### Rotation
+##### Rotation
 
 The euler angle output.

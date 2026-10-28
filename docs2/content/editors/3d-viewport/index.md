@@ -294,7 +294,7 @@ Mesh Object in Edit mode.
 
 Pick the shortest path by selecting the first element, holding down ctrl, then selecting the last element.
 
-#### Last Operator Pick shortest path
+#### Adjust Last Operation - Pick shortest path
 
 ![Last Operator Pick shortest path](/docs2/images/editors/3d-viewport/last-operator-pick-shortest-path.png)
 

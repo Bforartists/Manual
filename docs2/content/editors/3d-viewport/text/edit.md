@@ -50,7 +50,7 @@ Cuts the selection.
 
 Sets the selected text to be uppercase letters.
 
-##### Last Operator Set Case
+##### Adjust Last Operation - Set Case
 
 ![Last Operator Set Case](/docs2/images/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu/last-operator-set-case.png)
 
@@ -116,7 +116,7 @@ Kerning is the distance between letters. Increase, decrease and reset the kernin
 | Reset Kerning | Resets the distance between the letters to the default values from the font. |
 
 
-##### Last Operator Change Spacing
+##### Adjust Last Operation - Change Spacing
 
 ![Last Operator Change Spacing](/docs2/images/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu/last-operator-change-spacing.png)
 
@@ -183,7 +183,7 @@ Call this menu with double right click in the 3D viewport. You need to be in Edi
 
 Sets the selected text to be uppercase letters.
 
-###### Last Operator Set Case
+###### Adjust Last Operation - Set Case
 
 ![Last Operator Set Case](/docs2/images/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu/last-operator-set-case.png)
 
@@ -224,7 +224,7 @@ Kerning is the distance between letters. Increase, decrease and reset the kernin
 | Reset Kerning | Resets the distance between the letters to the default values from the font. |
 
 
-###### Last Operator Change Spacing
+###### Adjust Last Operation - Change Spacing
 
 ![Last Operator Change Spacing](/docs2/images/editors/3d-viewport/context-menus/text-edit-mode-text-context-menu/last-operator-change-spacing.png)
 

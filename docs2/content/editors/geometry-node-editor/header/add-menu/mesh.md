@@ -33,19 +33,19 @@ replaces:
 ---
 # Read
 
-### Add menu - Mesh - Read
+## Add menu - Mesh - Read
 
 ![Add menu - Mesh - Read](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/add-menu-mesh-read.png)
 
 Nodes to modify the mesh geometry.
 
-#### Edge Angle
+### Edge Angle
 
 ![Edge Angle](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/edge-angle.png)
 
 Calculates the angle in radians between two faces that meet at an edge. Without two faces on the edge, the angle will be 0.
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -54,25 +54,25 @@ Calculates the angle in radians between two faces that meet at an edge. Without 
 | Signed Angle | The signed angle between the two faces, where Convex angles are positive and Concave angles are negative. This calculation is slower than the unsigned angle. |
 
 
-#### Edge Neighbours
+### Edge Neighbours
 
 ![Edge Neighbours](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/edge-neighbours.png)
 
 Outputs the number of faces connected to each edge.
 
-##### Outputs
+#### Outputs
 
-###### Face Count
+##### Face Count
 
 The number of faces.
 
-#### Edge Vertices
+### Edge Vertices
 
 ![Edge Vertices](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/edge-vertices.png)
 
 Outputs the index and position of the two vertices that defines an edge. Index outputs an integer. Position a vector.
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -83,7 +83,7 @@ Outputs the index and position of the two vertices that defines an edge. Index o
 | Position 2 | The position of the second vertice. |
 
 
-#### Edges to Face Group
+### Edges to Face Group
 
 ![Edges to Face Group](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/edges-to-face-group.png)
 
@@ -96,19 +96,19 @@ Group Faces into regions, surrounded by the selected boundary edges.
 | Outputs | **Face Group ID**: The output face group. |
 
 
-#### Face Area
+### Face Area
 
 ![Face Area](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/face-area.png)
 
 Gives each face area a unique id. Which can be used in a capture attribute for example, to create instances of other geometry to this now unique face areas.
 
-##### Outputs
+#### Outputs
 
-###### Area
+##### Area
 
 The face area output.
 
-#### Face Group Boundaries
+### Face Group Boundaries
 
 ![Face Group Boundaries](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/face-group-boundaries.png)
 
@@ -122,13 +122,13 @@ Find edges on the boundaries between face sets
 | Outputs | **Boundary Edges**: The edges that lies on the boundaries between the different face sets · **Face Count**: The face count for the face neighbors. |
 
 
-#### Face Neighbours
+### Face Neighbours
 
 ![Face Neighbours](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/face-neighbours.png)
 
 Outputs the number of vertices or faces connected to each face.
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -137,7 +137,7 @@ Outputs the number of vertices or faces connected to each face.
 | Face Count | The face count for the face neighbors. |
 
 
-#### Is Face Planar
+### Is Face Planar
 
 ![Is Face Planar](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/is-face-planar.png)
 
@@ -150,37 +150,37 @@ Returns true if all of the points of the evaluated face are on the same plane.
 | Outputs | **Planar**: True if the face is planar. |
 
 
-#### Is Face Smooth
+### Is Face Smooth
 
 ![Is Face Smooth](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/is-face-smooth.png)
 
 Retreives if the face is shaded smooth.
 
-##### Outputs
+#### Outputs
 
-###### Smooth
+##### Smooth
 
 Smooth output.
 
-#### Is Edge Smooth
+### Is Edge Smooth
 
 ![Is Edge Smooth](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/is-edge-smooth.png)
 
 Retreives if the edge is shaded smooth.
 
-##### Outputs
+#### Outputs
 
-###### Smooth
+##### Smooth
 
 Smooth output.
 
-#### Mesh Island
+### Mesh Island
 
 ![Mesh Island](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/mesh-island.png)
 
 Outputs a separate index for each mesh island. The indices are based on the order of the lowest-numbered vertex in each island.
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -189,7 +189,7 @@ Outputs a separate index for each mesh island. The indices are based on the orde
 | Island Count | The count output. |
 
 
-#### Shortest Edge Path
+### Shortest Edge Path
 
 ![Shortest Edge Path](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/shortest-edge-path.png)
 
@@ -202,13 +202,13 @@ Calculates the shortest path from multiple start points.
 | Outputs | **Next Vertex Index**: The vertices index of the shortest path. · **Total Cost**: The calculation amount. |
 
 
-#### Vertex Neighbors
+### Vertex Neighbors
 
 ![Vertex Neighbors](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-read/vertex-neighbors.png)
 
 Outputs the number of vertices or faces connected to each vertex.
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -218,19 +218,19 @@ Outputs the number of vertices or faces connected to each vertex.
 
 # Sample
 
-### Add menu - Mesh - Sample
+## Add menu - Mesh - Sample
 
 ![Add menu - Mesh - Sample](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-sample/add-menu-mesh-sample.png)
 
 Nodes to modify the mesh geometry.
 
-#### Sample Nearest Surface
+### Sample Nearest Surface
 
 ![Sample Nearest Surface](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-sample/sample-nearest-surface.png)
 
 Calculate the interpolated value of a mesh attribute on the closest point of its surface.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -242,15 +242,15 @@ Calculate the interpolated value of a mesh attribute on the closest point of its
 | Sample Group ID | Determines in which group the closest nearest surface is detected. |
 
 
-###### Properties
+##### Properties
 
-###### Data Type
+##### Data Type
 
 ![Data Type](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-sample/data-type.png)
 
 Which data to calculate.
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -259,13 +259,13 @@ Which data to calculate.
 | Is Valid | Wether the sampling was successful. It is false when the sampled group is empty. |
 
 
-#### Sample UV Surface
+### Sample UV Surface
 
 ![Sample UV Surface](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-sample/sample-uv-surface.png)
 
 Calculate the interpolated value of a mesh attribute at a UV coordinate.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -276,15 +276,15 @@ Calculate the interpolated value of a mesh attribute at a UV coordinate.
 | Sample UV | The sample position to calculate. |
 
 
-###### Properties
+##### Properties
 
-###### Data Type
+##### Data Type
 
 ![Data Type](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-sample/data-type.png)
 
 Which data to calculate.
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -294,31 +294,31 @@ Which data to calculate.
 
 # Write
 
-### Add menu - Mesh - Write
+## Add menu - Mesh - Write
 
 ![Add menu - Mesh - Write](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/add-menu-mesh-write.png)
 
 These are nodes for working with Mesh data.
 
-#### Set Mesh Normal
+### Set Mesh Normal
 
 ![Set Mesh Normal](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/set-mesh-normal.png)
 
 The **Set Mesh Normal** node is used to modify custom normals on a mesh, providing control over shading smoothness and surface appearance. This is useful for adjustingnormalsmoothness, sharp edges, and tangent-based effects
 
-##### Input
+#### Input
 
-###### Mesh
+##### Mesh
 
 Input mesh.
 
-##### Properties
+#### Properties
 
-###### Mode
+##### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/mode.png)
 
-###### Sharpness
+##### Sharpness
 
 ![Sharpness](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/sharpness.png)
 
@@ -334,7 +334,7 @@ Store the sharpness of each face or edge. Similar to the "Shade Smooth" and "Sha
 | Face Sharpness | Sets the normal sharpness to the face domain to “flat”. |
 
 
-###### Free
+##### Free
 
 ![Free](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/free.png)
 
@@ -352,7 +352,7 @@ Attribute domain to store the free custom normals.
 
 > **Note:** Default object normals are stored to Facecorner, this will “pass-through” the normal data. Face normals will make “flat” sharp edges.
 
-###### Tangent Space
+##### Tangent Space
 
 ![Tangent Space](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/tangent-space.png)
 
@@ -360,25 +360,25 @@ Adjusts normals relative to the surface tangentto store the source meshes normal
 
 > **Note:** This method is slower, but can be better when subsequent operations change the mesh without handling normals specifically.
 
-###### Custom Normal
+##### Custom Normal
 
 *Vector Field based on the normal.*
 
-##### Outputs
+#### Outputs
 
-###### Geometry
+##### Geometry
 
 Geometry output.
 
 Got it! Here's the documentation for the **Set Mesh Normal** node:
 
-#### Set Shade Smooth
+### Set Shade Smooth
 
 ![Set Shade Smooth](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-write/set-shade-smooth.png)
 
 Retrieves if the geometry is shaded smooth.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -388,9 +388,9 @@ Retrieves if the geometry is shaded smooth.
 | Shade Smooth | Set the shading to smooth. |
 
 
-##### Properties
+#### Properties
 
-###### Domain
+##### Domain
 
 
 | Entry | What it does |
@@ -399,21 +399,21 @@ Retrieves if the geometry is shaded smooth.
 | Face | Set Face to smooth |
 
 
-##### Outputs
+#### Outputs
 
-###### Geometry
+##### Geometry
 
 Geometry output.
 
 # Operations
 
-### Add menu - Mesh - Operations
+## Add menu - Mesh - Operations
 
 ![Add menu - Mesh - Operations](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/add-menu-mesh-operations.png)
 
 Nodes to modify the mesh geometry.
 
-#### Dual Mesh
+### Dual Mesh
 
 ![Dual Mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/dual-mesh.png)
 
@@ -426,7 +426,7 @@ The Dual Mesh node calculates the dual of the input mesh. This means that faces 
 | Outputs | **Dual Mesh**: The output mesh. |
 
 
-#### Edge Paths to Curves
+### Edge Paths to Curves
 
 ![Edge Paths to Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/edge-paths-to-curves.png)
 
@@ -439,7 +439,7 @@ Converts Edge Paths to Curves.
 | Outputs | **Curves**: The output curve. |
 
 
-#### Edge Path to Selection
+### Edge Path to Selection
 
 ![Edge Path to Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/edge-path-to-selection.png)
 
@@ -452,13 +452,13 @@ Calculates an edge path, and converts it to a selectoin
 | Outputs | **Selection**: The selection |
 
 
-#### Extrude Mesh
+### Extrude Mesh
 
 ![Extrude Mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/extrude-mesh.png)
 
 Extrudes out geometry at the selection by a given amount.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -470,15 +470,15 @@ Extrudes out geometry at the selection by a given amount.
 | Individual | Just Faces mode. Extrude out individual faces. |
 
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/properties.png)
 
-###### Mode
+##### Mode
 
 What kind of elements to extrude out. Vertices, Edges or Faces.
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -488,7 +488,7 @@ What kind of elements to extrude out. Vertices, Edges or Faces.
 | Side | The side elements of the extrusion. |
 
 
-#### Flip Faces
+### Flip Faces
 
 ![Flip Faces](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/flip-faces.png)
 
@@ -504,13 +504,13 @@ derived data, changing them is only a side effect." However, what the node does 
 | Outputs | **Dual Mesh**: The output mesh. |
 
 
-#### Mesh Boolean
+### Mesh Boolean
 
 ![Mesh Boolean](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-boolean.png)
 
 The Boolean Node allows you to cut, subtract, and join the geometry of two inputs. This node offers the same operations as the Boolean modifier.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -521,9 +521,9 @@ The Boolean Node allows you to cut, subtract, and join the geometry of two input
 | Hole Tolerant | Allow holes. |
 
 
-##### Properties
+#### Properties
 
-###### Operation
+##### Operation
 
 ![Operation](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/operation.png)
 
@@ -537,7 +537,7 @@ The boolean operation.
 | Difference | Geometry 2 is subtracted from geometry 1 (everything outside of geometry 2 is kept). |
 
 
-###### Solver
+##### Solver
 
 ![Solver](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/solver.png)
 
@@ -549,7 +549,7 @@ The boolean operation.
 | Manifold | Fastest solver with best result, but only works on manifold meshes. |
 
 
-##### Output
+#### Output
 
 
 | Entry | What it does |
@@ -558,7 +558,7 @@ The boolean operation.
 | Intersecting Edges | Outputs the intersecting edges. |
 
 
-#### Mesh to Curve
+### Mesh to Curve
 
 ![Mesh to Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-curve.png)
 
@@ -572,7 +572,7 @@ Converts a mesh geometry to a curve geometry.
 | Outputs | **Curve**: Standard curve output. |
 
 
-#### Mesh to Density Grid
+### Mesh to Density Grid
 
 ![Mesh to Density Grid](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-density-grid.png)
 
@@ -585,13 +585,13 @@ Converts a mesh geometry to a curve geometry.
 | Outputs | **Density Grid.**: Density Grid output. |
 
 
-#### Mesh to Points
+### Mesh to Points
 
 ![Mesh to Points](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-points.png)
 
 Converts a mesh geometry to a point geometry.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -602,21 +602,21 @@ Converts a mesh geometry to a point geometry.
 | Radius | The radius of the points |
 
 
-##### Properties
+#### Properties
 
-###### Mode
+##### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mode.png)
 
 What geometry to convert to points.
 
-##### Outputs
+#### Outputs
 
-###### Curve
+##### Curve
 
 Standard curve output.
 
-#### Mesh to SDF Grid
+### Mesh to SDF Grid
 
 ![Mesh to SDF Grid](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-sdf-grid.png)
 
@@ -629,13 +629,13 @@ Converts a mesh geometry to a curve geometry.
 | Outputs | **Density Grid.**: Density Grid output. |
 
 
-#### Mesh to Volume
+### Mesh to Volume
 
 ![Mesh to Volume](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/mesh-to-volume.png)
 
 Converts a mesh geometry to a Volume.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -644,7 +644,7 @@ Converts a mesh geometry to a Volume.
 | Density | The density of the volume |
 
 
-###### Resolution Mode
+##### Resolution Mode
 
 ![Resolution Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/resolution-mode.png)
 
@@ -657,19 +657,19 @@ How to calculate the volume. Based of the size or based at the amount.
 | Interior Bandwidth | Where to start the calculation inside of the volume. |
 
 
-##### Outputs
+#### Outputs
 
-###### Volume
+##### Volume
 
 The volume output.
 
-#### Scale Elements
+### Scale Elements
 
 ![Scale Elements](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/scale-elements.png)
 
 Allows to scale the selected elements.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -680,7 +680,7 @@ Allows to scale the selected elements.
 | Center | The center of the scaling. |
 
 
-###### Scale Mode
+##### Scale Mode
 
 ![Scale Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/scale-mode.png)
 
@@ -688,27 +688,27 @@ Uniform scales uniformly in all three world coordinates.
 
 Single Axis scales separately in the single axis.
 
-###### Axis
+##### Axis
 
 ![Axis](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/axis.png)
 
 Scale Mode Single axis only. Scale the selection separately along its single axis.
 
-##### Properties
+#### Properties
 
-###### Domain
+##### Domain
 
 ![Domain](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/domain.png)
 
 What kind of elements to scale.
 
-##### Outputs
+#### Outputs
 
-###### Geometry
+##### Geometry
 
 The output geometry.
 
-#### Split Edges
+### Split Edges
 
 ![Split Edges](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/split-edges.png)
 
@@ -723,7 +723,7 @@ Note that splitting edges breaks the mesh topology.
 | Outputs | **Mesh**: Standard Mesh output. |
 
 
-#### Subdivide Mesh
+### Subdivide Mesh
 
 ![Subdivide Mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/subdivide-mesh.png)
 
@@ -736,13 +736,13 @@ Subdivides the geometry by a simple division.
 | Outputs | **Geometry**: Standard geometry output. |
 
 
-#### Subdivision Surface
+### Subdivision Surface
 
 ![Subdivision Surface](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/subdivision-surface.png)
 
 The Subdivision Surface node subdivides the geometry using Catmull-Clark deformation.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -754,31 +754,31 @@ The Subdivision Surface node subdivides the geometry using Catmull-Clark deforma
 | Limit Surface | Place the vertices at the surface as if it would be infinite subdivided. This results in the smoothest possible shape. |
 
 
-###### UV Smooth
+##### UV Smooth
 
 ![UV Smooth](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/uv-smooth.png)
 
 The methbod to deal with smoothing the UV.
 
-###### Boundary Smooth
+##### Boundary Smooth
 
 ![Boundary Smooth](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/boundary-smooth.png)
 
 Controls if open boundaries and corners are smooth.
 
-##### Outputs
+#### Outputs
 
-###### Geometry
+##### Geometry
 
 Standard geometry output.
 
-#### Triangulate
+### Triangulate
 
 ![Triangulate](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/triangulate.png)
 
 The Triangulate node triangulates all faces in a mesh.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -787,9 +787,9 @@ The Triangulate node triangulates all faces in a mesh.
 | Minimum Vertices | Minimum number of vertices a face must have to be triangulated. For example, setting this value to 5, will prevent triangulation of Quads and only triangulate N-gons. |
 
 
-##### Properties
+#### Properties
 
-###### Quad Method
+##### Quad Method
 
 ![Quad Method](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/quad-method.png)
 
@@ -805,7 +805,7 @@ A quad is a polygon with four edges.
 | Longest Diagonal | Split the quads based on the longest diagonal distance between their vertices. |
 
 
-###### Polygon Method
+##### Polygon Method
 
 ![Polygon Method](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-operations/polygon-method.png)
 
@@ -818,27 +818,27 @@ Meant are N-Gons. Faces with more than four edges. Tris, Quads and N-Gons are al
 | Clip | Split the polygons using an ear-clipping algorithm (gives similar results to the tessellation used for the viewport rendering). |
 
 
-##### Outputs
+#### Outputs
 
-###### Geometry
+##### Geometry
 
 Standard geometry output.
 
 # Primitives
 
-### Add menu - Mesh - Primitives
+## Add menu - Mesh - Primitives
 
 ![Add menu - Mesh - Primitives](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/add-menu-mesh-primitives.png)
 
 Nodes to modify the mesh geometry.
 
-#### Cone
+### Cone
 
 ![Cone](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/cone.png)
 
 Cone creates a Cone mesh.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -851,11 +851,11 @@ Cone creates a Cone mesh.
 | Depth | The initial height. |
 
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/properties.png)
 
-###### Fill Type
+##### Fill Type
 
 Defines how the Circle mesh is filled.
 
@@ -867,7 +867,7 @@ Defines how the Circle mesh is filled.
 | Triangles | The circle face is triangulated. |
 
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -879,7 +879,7 @@ Defines how the Circle mesh is filled.
 | UV Map | UV map output. |
 
 
-#### Cube
+### Cube
 
 ![Cube](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/cube.png)
 
@@ -892,13 +892,13 @@ Cube creates a Cubeoid mesh.
 | Output | **Mesh**: Mesh output. · **UV Map**: UV map output. |
 
 
-#### Cylinder
+### Cylinder
 
 ![Cylinder](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/cylinder.png)
 
 Cylinder creates a Cylinder mesh.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -910,11 +910,11 @@ Cylinder creates a Cylinder mesh.
 | Depth | The initial height. |
 
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/properties.png)
 
-###### Fill Type
+##### Fill Type
 
 Defines how the Circle mesh is filled.
 
@@ -926,7 +926,7 @@ Defines how the Circle mesh is filled.
 | Triangles | The circle face is triangulated. |
 
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -938,7 +938,7 @@ Defines how the Circle mesh is filled.
 | UV Map | UV map output. |
 
 
-#### Grid
+### Grid
 
 ![Grid](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/grid.png)
 
@@ -951,7 +951,7 @@ Grid creates a grid mesh.
 | Outputs | **Mesh**: Mesh output. · **UV Map**: UV map output. |
 
 
-#### Ico Sphere
+### Ico Sphere
 
 ![Ico Sphere](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/ico-sphere.png)
 
@@ -964,13 +964,13 @@ Ico Sphere creates a ico Sphere mesh.
 | Outputs | **Mesh**: Mesh output. · **UV Map**: UV map output. |
 
 
-#### Mesh Circle
+### Mesh Circle
 
 ![Mesh Circle](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/mesh-circle.png)
 
 Circle creates a Circle mesh.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -979,11 +979,11 @@ Circle creates a Circle mesh.
 | Radius | The initial radius. |
 
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/properties.png)
 
-###### Fill Type
+##### Fill Type
 
 Defines how the Circle mesh is filled.
 
@@ -995,19 +995,19 @@ Defines how the Circle mesh is filled.
 | Triangles | The circle face is triangulated. |
 
 
-##### Outputs
+#### Outputs
 
-###### Mesh
+##### Mesh
 
 Mesh output.
 
-#### Mesh Line
+### Mesh Line
 
 ![Mesh Line](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/mesh-line.png)
 
 Line creates a line mesh.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -1017,17 +1017,17 @@ Line creates a line mesh.
 | Offset | The initial offset. |
 
 
-##### Properties
+#### Properties
 
-###### Mode
+##### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/mode.png)
 
-###### Offset
+##### Offset
 
 Specify the offset from one vertice to the next.
 
-###### End Points
+##### End Points
 
 Specify the line start and endpoints.
 
@@ -1043,13 +1043,13 @@ Specify the number of total vertices.
 
 Specify the distance between the vertices.
 
-##### Outputs
+#### Outputs
 
-###### Mesh
+##### Mesh
 
 Mesh output.
 
-#### UV Sphere
+### UV Sphere
 
 ![UV Sphere](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-primitives/uv-sphere.png)
 
@@ -1063,13 +1063,13 @@ UV Sphere creates a uv sphere mesh.
 
 # Topology
 
-### Add menu - Mesh - Topology
+## Add menu - Mesh - Topology
 
 ![Add menu - Mesh - Topology](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/add-menu-mesh-topology.png)
 
 Mesh topology related nodes.
 
-#### Corners of Edge
+### Corners of Edge
 
 ![Corners of Edge](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/corners-of-edge.png)
 
@@ -1082,7 +1082,7 @@ Retreive the corners that makes up a edge.
 | Outputs | **Corner Index**: The output corner. · **Total**: The number of corners in the face. |
 
 
-#### Corners of Face
+### Corners of Face
 
 ![Corners of Face](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/corners-of-face.png)
 
@@ -1095,7 +1095,7 @@ Retreive the corners that makes up a face.
 | Outputs | **Corner Index**: The output corner. · **Total**: The number of corners in the face. |
 
 
-#### Corners of Vertex
+### Corners of Vertex
 
 ![Corners of Vertex](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/corners-of-vertex.png)
 
@@ -1108,7 +1108,7 @@ Retreive face corners connected to vertices.
 | Outputs | **Corner Index**: The output corner. · **Total**: The number of corners connected to each vertice. |
 
 
-#### Edges of Corner
+### Edges of Corner
 
 ![Edges of Corner](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/edges-of-corner.png)
 
@@ -1121,7 +1121,7 @@ Retreive the edges of both sides of a corner.
 | Outputs | **Next Edge Index**: The edge behind the corner. · **Previous Edge Index**: The edge before the corner. |
 
 
-#### Edges of Vertex
+### Edges of Vertex
 
 ![Edges of Vertex](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/edges-of-vertex.png)
 
@@ -1134,7 +1134,7 @@ Retreive the edges connected to each vertex.
 | Outputs | **Edge Index**: The output edge. · **Total**: The number of edges connected to each vertice. |
 
 
-#### Face of Corner
+### Face of Corner
 
 ![Face of Corner](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/face-of-corner.png)
 
@@ -1147,7 +1147,7 @@ Retreive the faces connected to each corner.
 | Outputs | **Face Index**: The output faces. · **Index in Face**: The index of the corner, starting from the first corner in the face. |
 
 
-#### Offset Corner in Face
+### Offset Corner in Face
 
 ![Offset Corner in Face](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/offset-corner-in-face.png)
 
@@ -1160,7 +1160,7 @@ Retreive corners within the same face as another
 | Outputs | **Corner Index**: The index of the offset corner. |
 
 
-#### Vertex of corner
+### Vertex of corner
 
 ![Vertex of corner](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-topology/vertex-of-corner.png)
 
@@ -1174,19 +1174,19 @@ Retreive the vertex each corner is attached to.
 
 # UV
 
-### Add menu - UV
+## Add menu - UV
 
 ![Add menu - UV](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/add-menu-uv.png)
 
 Here you find nodes to modify the UV mapping.
 
-#### Pack UV Islands
+### Pack UV Islands
 
 ![Pack UV Islands](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/pack-uv-islands.png)
 
 Pack the UV islands to get the most out of the UV mapping.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -1197,7 +1197,7 @@ Pack the UV islands to get the most out of the UV mapping.
 | Rotate | Rotate island for best fit. |
 
 
-###### Method
+##### Method
 
 ![Method](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/method.png)
 
@@ -1210,43 +1210,43 @@ Method used for packing UV Islands.
 | Top Right | Top right corner of packing bounds. |
 
 
-##### Outputs
+#### Outputs
 
-###### UV
+##### UV
 
 The output UV geometry.
 
-#### UV Tangent
+### UV Tangent
 
 ![UV Tangent](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/uv-tangent.png)
 
 Generate tangent directions based on a UV map.
 
-##### Inputs
+#### Inputs
 
-###### Method
+##### Method
 
 ![Method](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/method-2.png)
 
 Exact or fast calculation.
 
-###### UV
+##### UV
 
 x and y values of the UV space.
 
-##### Outputs
+#### Outputs
 
-###### Tangent
+##### Tangent
 
 The output UV geometry.
 
-#### UV Unwrap
+### UV Unwrap
 
 ![UV Unwrap](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/uv-unwrap.png)
 
 Unwrap the mesh to give it an UV mapping.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -1257,14 +1257,14 @@ Unwrap the mesh to give it an UV mapping.
 | Fill Holes | Virtually fill holes before unwrapping the mesh. This preserves symmetry and can avoids overlaps. |
 
 
-###### Method
+##### Method
 
 ![Method](/docs2/images/editors/geometry-node-editor/header/add-menu-mesh-uv/method-3.png)
 
 The unwrap method.
 
-##### Outputs
+#### Outputs
 
-###### UV
+##### UV
 
 The output UV geometry.
