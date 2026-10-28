@@ -94,7 +94,7 @@ A mini axis. It allows rotation of the view and snap to the nearest ortho view w
 
 #### Roll ring
 
-<!-- TODO screenshot: navigation gizmo while dragging the roll ring, showing the angle wedge and the degrees readout -->
+![Roll ring while dragging, with the wedge and the degrees](/docs2/images/editors/3d-viewport/navigation-gizmo/roll-ring.png)
 
 A thin ring sits around the mini axis. **Drag the ring to roll the view**, tilting it sideways like turning your head.
 
