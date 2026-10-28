@@ -37,19 +37,19 @@ The right click menus are explained in the chapter 6 Editors Introduction.
 
 # Footage Tab
 
-### Preface
+## Preface
 
 Note that the correct mode is Tracking Mode in Clip View. In Graph and Dopesheet View there is no sidebar.
 
 Note also that some panels exists in both modes, tracking and masking. They have sometimes different content though.
 
-### Footage Tab - Metadata Panel
+## Footage Tab - Metadata Panel
 
 ![Footage Tab - Metadata Panel](/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/footage-tab-metadata-panel.png)
 
 Displays the metadata of the footage if available. The panel stays empty if there is none.
 
-### Footage Tab - Proxy/Time code Panel
+## Footage Tab - Proxy/Time code Panel
 
 ![Footage Tab - Proxy/Time code Panel](/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/footage-tab-proxy-time-code-panel.png)
 
@@ -68,7 +68,7 @@ Make sure to disable the Proxy images before doing the final render!
 | Quality | Defines the quality of the JPEG images used for proxies. |
 
 
-#### Proxy Custom Directory
+### Proxy Custom Directory
 
 ![Proxy Custom Directory](/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/proxy-custom-directory.png)
 
@@ -81,7 +81,7 @@ By default, all generated proxy images are storing to the *&lt;path of original 
 | Delete Proxy | Deletes the proxy images and the time code. |
 
 
-#### Time code Index
+### Time code Index
 
 ![Time code Index](/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/time-code-index.png)
 
@@ -89,13 +89,13 @@ When you are working with footage directly copied from a camera without pre-proc
 
 > **Note:** Record Run is recommended for most needs. Buf when the clip’s file is totally damaged, *Record Run No Gaps* will be the only chance of getting acceptable result.
 
-#### Proxy Size
+### Proxy Size
 
 ![Proxy Size](/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/proxy-size.png)
 
 This setting defines which proxy image resolution is used for display in the viewport. If there is no generated proxies, render size is set to “No proxy, full render”.
 
-### Footage Tab - Footage Settings Panel
+## Footage Tab - Footage Settings Panel
 
 ![Footage Tab - Footage Settings Panel](/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/footage-tab-footage-settings-panel.png)
 
@@ -111,17 +111,17 @@ The panel contains some footage related settings.
 | Frame Offset | Define a frame offset. |
 
 
-#### Color Space
+### Color Space
 
 ![Color Space](/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/color-space.png)
 
 The color space for the currently loaded and active video.
 
-#### Footage Information string
+### Footage Information string
 
 Here you will find some information about the footage. Size, color mode, fps, current position ...
 
-### Footage Tab - Animation Panel
+## Footage Tab - Animation Panel
 
 ![Footage Tab - Animation Panel](/docs2/images/editors/movie-clip-editor/sidebar/footage-tab/footage-tab-animation-panel.png)
 
@@ -129,19 +129,19 @@ Load am action clip with animation. You need to generate it first.
 
 # Track Tab
 
-### Preface
+## Preface
 
 Note that the correct mode is Tracking Mode in Clip View. In Graph and Dopesheet View there is no sidebar.
 
 Note also that most panels just shows in tracking mode, and not in masking mode.
 
-### Track Tab - Track Panel
+## Track Tab - Track Panel
 
 ![Track Tab - Track Panel](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-track-panel.png)
 
 Marker settings for the currently selected marker.
 
-#### Edit Box
+### Edit Box
 
 Read and edit the name of the currently selected marker.
 
@@ -152,7 +152,7 @@ Read and edit the name of the currently selected marker.
 | Lock | Lock the currently selected marker. |
 
 
-#### Track Scope
+### Track Scope
 
 ![Track Scope](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-scope.png)
 
@@ -162,9 +162,9 @@ You can pull it vertically bigger by pulling at the handler below the image. And
 
 If an anchor is used (the position in the image which is tracking is different from the position which is used for parenting), a preview widget will display the area around the anchor position.
 
-#### Color Settings
+### Color Settings
 
-##### R, G, B
+#### R, G, B
 
 ![R, G, B](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/r-g-b.png)
 
@@ -184,7 +184,7 @@ Use red, green and blue color in the preview image.
 | Average Error | The average error of this marker. |
 
 
-#### Custom Color
+### Custom Color
 
 ![Custom Color](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/custom-color.png)
 
@@ -194,23 +194,23 @@ Give the markers different colors. This also affects the list of markers in Dope
 
 ![Custom Color](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/custom-color-3.png)
 
-##### Color Preset
+#### Color Preset
 
 ![Color Preset](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/color-preset.png)
 
 A dropdown box to choose between some predefined colors.
 
-###### Copy Color
+##### Copy Color
 
 Copy the color of the currently chosen preset.
 
-##### Color
+#### Color
 
 ![Color](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/color.png)
 
 When you tick custom color then a color field will appear below. It displays the current custom color, and allows you to change the color by clicking at it. A color picker will appear.
 
-### Track tab - Objects Panel
+## Track tab - Objects Panel
 
 ![Track tab - Objects Panel](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-objects-panel.png)
 
@@ -218,17 +218,17 @@ This content shows in Tracking Mode and Masking mode.
 
 A list of the tracked objects. Usually the camera. But you can track every other object too.
 
-#### Add, Remove Tracking Object
+### Add, Remove Tracking Object
 
 The plus and minus buttons at the right allows you to add new objects to the list, or to remove existing objects from the list.
 
-#### Search Field
+### Search Field
 
 ![Search Field](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/search-field.png)
 
 The list field contains a hidden search field. Click at the little + button down left to reveal it.
 
-### Track tab - Plane Track Panel
+## Track tab - Plane Track Panel
 
 ![Track tab - Plane Track Panel](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-plane-track-panel.png)
 
@@ -243,7 +243,7 @@ See also in the Tool shelf in the Solve tab in the Plane Track panel.
 | Auto Keyframe | Use Auto Keyframe when moving plane track corners. |
 
 
-#### Image prop
+### Image prop
 
 ![Image prop](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/image-prop.png)
 
@@ -254,7 +254,7 @@ See also in the Tool shelf in the Solve tab in the Plane Track panel.
 | Edit Box | The name of the current active image or movie. Click at it to change the name. |
 
 
-##### Fake User
+#### Fake User
 
 Wit this button you assign a fake user to this selected mask. Masks gets created with a fake user already. Means when you save the scene and reopen it, then this mask will still be there.
 
@@ -267,23 +267,23 @@ Data, like images, that is not longer linked to anything else gets removed when 
 | Remove | Removes the current active image or movie. It is still in the Image browser though. To delete it completely you can use the Purge command in the File menu in the Cleanup submenu. See also Fake User. |
 
 
-#### Opacity
+### Opacity
 
 The opacity of the image or movie.
 
-### Track tab - Tracking Settings Panel
+## Track tab - Tracking Settings Panel
 
 ![Track tab - Tracking Settings Panel](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-tracking-settings-panel.png)
 
 This content is visible when you have at least one of the markers selected.
 
-#### Motion Model
+### Motion Model
 
 ![Motion Model](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/motion-model.png)
 
 Choose the motion model for the marker.
 
-#### Match
+### Match
 
 ![Match](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/match.png)
 
@@ -296,7 +296,7 @@ Choose the pattern match method.
 | Normalize | Normalize light intensities while tracking. |
 
 
-#### Tracking Options Extras
+### Tracking Options Extras
 
 ![Tracking Options Extras](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/tracking-options-extras.png)
 
@@ -311,25 +311,25 @@ A sub menu that contains some not so often used settings.
 | Frames Limit | In every tracking cycle the numbers of given frames are tracked. |
 
 
-##### Speed
+#### Speed
 
 ![Speed](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/speed.png)
 
 A drop down box to choose the tracking speed. This is just a preview feature. The tracking quality is not affected.
 
-### Track tab - Camera Panel
+## Track tab - Camera Panel
 
 ![Track tab - Camera Panel](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-camera-panel.png)
 
 The settings for the camera with which you have recorded the footage movie. Every camera has some specific settings. And this needs to be calculated too to match the footage to the 3D content.
 
-#### Presets
+### Presets
 
 ![Presets](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/presets.png)
 
 A drop down box to choose between different camera presets. When your camera is not listed then you need to do the settings manually.
 
-##### Add Camera Preset
+#### Add Camera Preset
 
 ![Add Camera Preset](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/add-camera-preset.png)
 
@@ -342,17 +342,17 @@ This is at the end of the list. Add a new preset, and give it a name. To remove 
 | Pixel Aspect | The Pixel Aspect ratio of the CCD Sensor in your used camera. This value can be found in the camera specifications. This value can also be guessed. For example, when the footage should be 1920×1080, but the images themselves are 1280×1080, then the pixel aspect is: 1920 / 1280 = 1.5. |
 
 
-### Track tab - Camera Panel - Lens Subpanel
+## Track tab - Camera Panel - Lens Subpanel
 
 ![Track tab - Camera Panel - Lens Subpanel](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-camera-panel-lens-subpanel.png)
 
 This panel belongs to the Camera panel above. Type in your lens values from the camera with which you have recorded your footage movie.
 
-#### Focal length
+### Focal length
 
 The focal length units with which the movie was shot. You can choose between millimeter and pixel.
 
-#### Units
+### Units
 
 ![Units](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/units.png)
 
@@ -365,7 +365,7 @@ The units to use for the camera focal length.
 | Set Center | Center the optical center. |
 
 
-#### Lens Distortion
+### Lens Distortion
 
 ![Lens Distortion](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/lens-distortion.png)
 
@@ -383,7 +383,7 @@ The brown model also provides P1 and P2 values.
 
 ![Lens Distortion](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/lens-distortion-5.png)
 
-### Track tab - Marker Options Panel
+## Track tab - Marker Options Panel
 
 ![Track tab - Marker Options Panel](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/track-tab-marker-options-panel.png)
 
@@ -396,19 +396,19 @@ The Marker panel contains the settings for the selected marker(s). Here you can 
 | Position | The position of the selected marker(s) in pixel. Zero is down left. |
 
 
-#### Offset
+### Offset
 
 ![Offset](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/offset.png)
 
 You can give the marker handler an offset. So that it gets displayed besides the marker.
 
-#### Pattern Area
+### Pattern Area
 
 ![Pattern Area](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/pattern-area.png)
 
 The handler size.
 
-#### Search Area
+### Search Area
 
 ![Search Area](/docs2/images/editors/movie-clip-editor/sidebar/track-tab/search-area.png)
 
@@ -418,7 +418,7 @@ The search area can be turned on in the Clip Display options in the header up ri
 
 # Tracking Mode › Stabilization Tab
 
-### Tracking Mode - 2D Stabilization Panel
+## Tracking Mode - 2D Stabilization Panel
 
 ![Tracking Mode - 2D Stabilization Panel](/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/tracking-mode-2d-stabilization-panel.png)
 
@@ -428,23 +428,23 @@ The purpose of 2D Stabilization is to smooth out jerky camera handling on existi
 
 ![Tracking Mode - 2D Stabilization Panel](/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/tracking-mode-2d-stabilization-panel-3.png)
 
-#### Anchor Frame
+### Anchor Frame
 
 The first frame of the stabilization.
 
-#### Rotation / Scale
+### Rotation / Scale
 
 ![Rotation / Scale](/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/rotation-scale.png)
 
 Normally you just stabilize the position. Here you can stabilize rotation and scale too. Note that you can't activate scale independently here. It appears when you activate Rotation.
 
-#### Tracks for Location
+### Tracks for Location
 
 The list of markers that gets used for location stabilization.
 
 With the plus and minus button at the right you can add selected markers, or remove the markers from the list.
 
-#### Tracks for Rotation/Scale
+### Tracks for Rotation/Scale
 
 ![Tracks for Rotation/Scale](/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/tracks-for-rotation-scale.png)
 
@@ -454,19 +454,19 @@ With the plus and minus button at the right you can add selected markers, or rem
 
 This list is just visible when you have at least Rotation activated.
 
-#### Autoscale
+### Autoscale
 
 ![Autoscale](/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/autoscale.png)
 
 The stabilization will lead to areas where the movie doesn't show at the canvas anymore. Autoscale scales the content so that the whole canvas is covered again.
 
-##### Max
+#### Max
 
 ![Max](/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/max.png)
 
 The maximum value for Autoscale. This slider appears when you activate Autoscale.
 
-#### Expected Position
+### Expected Position
 
 
 | Entry | What it does |
@@ -476,13 +476,13 @@ The maximum value for Autoscale. This slider appears when you activate Autoscale
 | Expected Scale | Scale the movie at the canvas manually. Note that this slider is not showing when you have Autoscale activated. |
 
 
-##### Influence
+#### Influence
 
 ![Influence](/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/influence.png)
 
 The influence of stabilization algorithm. You can independently adjust location, rotation and scale. When you have rotation off, then the sliders for rotation influence and scale influence are not showing.
 
-#### Interpolate
+### Interpolate
 
 ![Interpolate](/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-stabilization-tab/interpolate.png)
 
@@ -496,13 +496,13 @@ Just shows in Mask mode. Tracking has no 2D cursor.
 
 This panel shows the location of the 2d cursor, based at the lower left corner of the footage image. The edit boxes also allows you to set the cursor position by numeric values.
 
-### Preface
+## Preface
 
 Note that the correct mode is Tracking Mode in Clip View. In Graph and Dope sheet View there is no sidebar.
 
 Note also that some panels exists in both modes, tracking and masking.
 
-### Annotations Panel
+## Annotations Panel
 
 ![Annotations Panel](/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-view-tab/annotations-panel.png)
 
@@ -512,17 +512,17 @@ The Annotations panel is the place to manage the Annotation layers and materials
 
 When you don't have drawn an annotation yet then the panel just contains a New button.
 
-#### Clip / Track
+### Clip / Track
 
 Where the Grease Pencil comes from. From the movie Clip, or from a track.
 
-#### Annotations prop
+### Annotations prop
 
 ![Annotations prop](/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-view-tab/annotations-prop.png)
 
 Add, remove and rename new annotations.
 
-##### Drop down box
+#### Drop down box
 
 ![Drop down box](/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-view-tab/drop-down-box.png)
 
@@ -537,7 +537,7 @@ A list of the available annotation layers.
 | Delete Annotation | Delete the annotation. |
 
 
-#### List of Annotation Strokes
+### List of Annotation Strokes
 
 ![List of Annotation Strokes](/docs2/images/editors/movie-clip-editor/sidebar/tracking-mode-view-tab/list-of-annotation-strokes.png)
 

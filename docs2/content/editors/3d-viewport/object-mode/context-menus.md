@@ -40,7 +40,7 @@ Copies the selected object(s).
 
 Pastes copied object(s).
 
-#### Last Operator Paste Selection from Buffer
+#### Adjust Last Operation - Paste Selection from Buffer
 
 ##### Select
 
@@ -64,7 +64,7 @@ You are automatically in grab mode, and so you can easily move the object out of
 
 When you drag the duplicate around you will see the position values in the header.
 
-#### Last Operator Duplicate
+#### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-duplicate.png)
 
@@ -125,7 +125,7 @@ Activate the tool. In the header you will now see further instructions. Which is
 | X Y Z Local | Mirrors along the object axis. |
 
 
-#### Last Operator Mirror
+#### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror.png)
 
@@ -162,7 +162,7 @@ Snaps the currently selected object(s) to the cursor location.
 
 Snaps the currently selected object(s) to the cursor location, but keeps the offset of the selected objects to each other. Means the center of the current selection goes to cursor position. Not every individual object.
 
-##### Last operator Snap Selection to Cursor
+##### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-snap-selection-to-cursor.png)
 
@@ -314,7 +314,7 @@ Create a mesh or curve object, create an object, hold down shift and select the 
 | Object (Attach Curves to Surface) | Parent a Hair Curve to the surface of a new object. |
 
 
-#### Last Operator Make Parent
+#### Adjust Last Operation - Make Parent
 
 ![Last Operator Make Parent](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-make-parent.png)
 
@@ -338,7 +338,7 @@ Clear Parent clears the parent relation completely, including involved modifiers
 | Clear Parent Inverse | Clear Parent Inverse resets the transform corrections applied to the parenting relationship. It does not remove the parenting itself. |
 
 
-##### Last Operator Clear Parent
+##### Adjust Last Operation - Clear Parent
 
 ![Last Operator Clear Parent](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-clear-parent.png)
 
@@ -356,7 +356,7 @@ By clicking at this menu item a popup will appear choose the new collection. All
 
 This operator can also be found in the Header Object menu.
 
-#### Last Operator Move to Collection
+#### Adjust Last Operation - Move to Collection
 
 ![Last Operator Move to Collection](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-move-to-collection.png)
 
@@ -409,7 +409,7 @@ Makes all geometry in the scene visible again.
 
 Hides the selected geometry.
 
-##### Last Operator Hide Selected
+##### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-hide-selected.png)
 
@@ -431,7 +431,7 @@ Sets the shading for the object to smooth. Smooth means that the sharp edges are
 
 ![Shade Smooth](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/shade-smooth.png)
 
-#### Last Operator Shade Smooth
+#### Adjust Last Operation - Shade Smooth
 
 ![Last Operator Shade Smooth](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-shade-smooth.png)
 
@@ -443,7 +443,7 @@ Don't remove as sharp marked edges.
 
 Sets the shading for the object to smooth with Autosmooth activated. Autosmooth means that sharp edges above an angle threshold will have sharp faceted faces, meanwhile angles under the threshold will be smooth.
 
-#### Last Operator Shade Smooth by angle
+#### Adjust Last Operation - Shade Smooth by angle
 
 ![Last Operator Shade Smooth by angle](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-shade-smooth-by-angle.png)
 
@@ -463,7 +463,7 @@ Sets the shading for the object to flat. Flat means that every face of the objec
 
 ![Shade Flat](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/shade-flat.png)
 
-#### Last Operator Shade Smooth
+#### Adjust Last Operation - Shade Smooth
 
 ![Last Operator Shade Smooth](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-shade-smooth-2.png)
 
@@ -485,7 +485,7 @@ Don't remove as sharp marked edges.
 | Point Cloud | Converts a selected object to a point cloud object. |
 
 
-#### Last Operator Convert to Mesh, Curve, Curves & Point Cloud
+#### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
 ##### Target
 
@@ -500,7 +500,7 @@ Target is a drop-down box that allows you to choose the convert method again.
 | Merge UV's | Merge UV coordinates that shares a vertex. |
 
 
-#### Last Operator Convert Grease Pencil
+#### Adjust Last Operation - Convert Grease Pencil
 
 ##### Type
 
@@ -532,7 +532,7 @@ Type is a drop-down box that allows you to choose the convert method again.
 | Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
 
 
-#### Last Operator Set Origin
+#### Adjust Last Operation - Set Origin
 
 ![Last Operator Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-set-origin.png)
 
@@ -595,7 +595,7 @@ Sets the shading for the object to flat. Flat means that every face of the objec
 | Point Cloud | Converts a selected object to a point cloud object. |
 
 
-#### Last Operator Convert to Mesh, Curve, Curves & Point Cloud
+#### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
 ##### Target
 
@@ -610,7 +610,7 @@ Target is a drop-down box that allows you to choose the convert method again.
 | Merge UV's | Merge UV coordinates that shares a vertex. |
 
 
-#### Last Operator Convert Grease Pencil
+#### Adjust Last Operation - Convert Grease Pencil
 
 ##### Type
 
@@ -642,7 +642,7 @@ Type is a drop-down box that allows you to choose the convert method again.
 | Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
 
 
-#### Last Operator Set Origin
+#### Adjust Last Operation - Set Origin
 
 ![Last Operator Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-set-origin.png)
 
@@ -685,7 +685,7 @@ Sets the shading for the object to flat. Flat means that every face of the objec
 | Point Cloud | Converts a selected object to a point cloud object. |
 
 
-#### Last Operator Convert to Mesh, Curve, Curves & Point Cloud
+#### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
 ##### Target
 
@@ -700,7 +700,7 @@ Target is a drop-down box that allows you to choose the convert method again.
 | Merge UV's | Merge UV coordinates that shares a vertex. |
 
 
-#### Last Operator Convert Grease Pencil
+#### Adjust Last Operation - Convert Grease Pencil
 
 ##### Type
 
@@ -732,7 +732,7 @@ Type is a drop-down box that allows you to choose the convert method again.
 | Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
 
 
-#### Last Operator Set Origin
+#### Adjust Last Operation - Set Origin
 
 ![Last Operator Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-set-origin.png)
 
@@ -763,7 +763,7 @@ The last operator is the same for all set origin methods.
 | Point Cloud | Converts a selected object to a point cloud object. |
 
 
-#### Last Operator Convert to Mesh, Curve, Curves & Point Cloud
+#### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
 ##### Target
 
@@ -778,7 +778,7 @@ Target is a drop-down box that allows you to choose the convert method again.
 | Merge UV's | Merge UV coordinates that shares a vertex. |
 
 
-#### Last Operator Convert Grease Pencil
+#### Adjust Last Operation - Convert Grease Pencil
 
 ##### Type
 
@@ -810,7 +810,7 @@ Type is a drop-down box that allows you to choose the convert method again.
 | Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
 
 
-#### Last Operator Set Origin
+#### Adjust Last Operation - Set Origin
 
 ![Last Operator Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-set-origin.png)
 
@@ -863,7 +863,7 @@ Width size is just of interest when you have an extruded surface at the curve. I
 | Point Cloud | Converts a selected object to a point cloud object. |
 
 
-#### Last Operator Convert to Mesh, Curve, Curves & Point Cloud
+#### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
 ##### Target
 
@@ -878,7 +878,7 @@ Target is a drop-down box that allows you to choose the convert method again.
 | Merge UV's | Merge UV coordinates that shares a vertex. |
 
 
-#### Last Operator Convert Grease Pencil
+#### Adjust Last Operation - Convert Grease Pencil
 
 ##### Type
 
@@ -910,7 +910,7 @@ Type is a drop-down box that allows you to choose the convert method again.
 | Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
 
 
-#### Last Operator Set Origin
+#### Adjust Last Operation - Set Origin
 
 ![Last Operator Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-set-origin.png)
 
@@ -947,7 +947,7 @@ Just default settings.
 | Point Cloud | Converts a selected object to a point cloud object. |
 
 
-#### Last Operator Convert to Mesh, Curve, Curves & Point Cloud
+#### Adjust Last Operation - Convert to Mesh, Curve, Curves & Point Cloud
 
 ##### Target
 
@@ -962,7 +962,7 @@ Target is a drop-down box that allows you to choose the convert method again.
 | Merge UV's | Merge UV coordinates that shares a vertex. |
 
 
-#### Last Operator Convert Grease Pencil
+#### Adjust Last Operation - Convert Grease Pencil
 
 ##### Type
 
@@ -994,7 +994,7 @@ Type is a drop-down box that allows you to choose the convert method again.
 | Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
 
 
-#### Last Operator Set Origin
+#### Adjust Last Operation - Set Origin
 
 ![Last Operator Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-set-origin.png)
 
@@ -1025,7 +1025,7 @@ The last operator is the same for all set origin methods.
 | Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
 
 
-#### Last Operator Set Origin
+#### Adjust Last Operation - Set Origin
 
 ![Last Operator Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-set-origin.png)
 
@@ -1056,7 +1056,7 @@ The last operator is the same for all set origin methods.
 | Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
 
 
-#### Last Operator Set Origin
+#### Adjust Last Operation - Set Origin
 
 ![Last Operator Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-set-origin.png)
 
@@ -1273,7 +1273,7 @@ Note, this value does not show elsewhere. And there is no way to reset it to the
 | Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
 
 
-#### Last Operator Set Origin
+#### Adjust Last Operation - Set Origin
 
 ![Last Operator Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-set-origin.png)
 

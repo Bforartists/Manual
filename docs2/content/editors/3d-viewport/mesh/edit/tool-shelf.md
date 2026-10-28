@@ -113,7 +113,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Extrude Region and Move
+##### Adjust Last Operation - Extrude Region and Move
 
 ![Last Operator Extrude Region and Move](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extrude-region-and-move.png)
 
@@ -181,7 +181,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Extrude Manifold
+##### Adjust Last Operation - Extrude Manifold
 
 ![Last Operator Extrude Manifold](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extrude-manifold.png)
 
@@ -253,7 +253,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Extrude Region and Shrink/Fatten
+##### Adjust Last Operation - Extrude Region and Shrink/Fatten
 
 ![Last Operator Extrude Region and Shrink/Fatten](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extrude-region-and-shrink-fatten.png)
 
@@ -313,7 +313,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Extrude Individual Faces and Move
+##### Adjust Last Operation - Extrude Individual Faces and Move
 
 ![Last Operator Extrude Individual Faces and Move](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extrude-individual-faces-and-move.png)
 
@@ -390,7 +390,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-#### Last Operator Inset Faces
+#### Adjust Last Operation - Inset Faces
 
 ![Last Operator Inset Faces](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-face-context-menu/last-operator-inset-faces.png)
 
@@ -619,7 +619,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-#### Last Operator Bevel
+#### Adjust Last Operation - Bevel
 
 ![Last Operator Bevel](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-bevel.png)
 
@@ -840,7 +840,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Loop Cut and Slide
+##### Adjust Last Operation - Loop Cut and Slide
 
 ![Last Operator Loop Cut and Slide](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-loop-cut-and-slide.png)
 
@@ -886,7 +886,7 @@ Usage: select the edges that you want to slide. Click to confirm.
 
 You can adjust the sliding amount in the Last Operator Offset Edge Slide.
 
-##### Last Operator Offset Edge Slide
+##### Adjust Last Operation - Offset Edge Slide
 
 ![Last Operator Offset Edge Slide](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-offset-edge-slide.png)
 
@@ -1019,7 +1019,7 @@ Fills the cut.
 | Clear Outer | Removes the outer part of the face to cut. · **Axis threshold**: Axis threshold. |
 
 
-##### Last Operator Bisect
+##### Adjust Last Operation - Bisect
 
 ![Last Operator Bisect](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-bisect.png)
 
@@ -1077,7 +1077,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-#### Last Operator
+#### Adjust Last Operation - Poly Build
 
 We have two last operators here, dependent of which method we use. Dragging out edges will reveal the Extrude At Cursor Move panel. Holding down Ctrl will reveal the Face at Cursor Move panel.
 
@@ -1187,7 +1187,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Spin
+##### Adjust Last Operation - Spin
 
 ##### Steps
 
@@ -1239,7 +1239,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Smooth Vertices
+##### Adjust Last Operation - Smooth Vertices
 
 ![Last Operator Smooth Vertices](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-vertex-menu/last-operator-smooth-vertices.png)
 
@@ -1284,7 +1284,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Smooth Vertices
+##### Adjust Last Operation - Smooth Vertices
 
 ![Last Operator Smooth Vertices](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-smooth-vertices.png)
 
@@ -1342,7 +1342,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Edge Slide
+##### Adjust Last Operation - Edge Slide
 
 ![Last Operator Edge Slide](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-edge-slide.png)
 
@@ -1394,7 +1394,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Vertex Slide
+##### Adjust Last Operation - Vertex Slide
 
 ![Last Operator Vertex Slide](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-vertex-slide.png)
 
@@ -1444,7 +1444,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Shrink/Fatten
+##### Adjust Last Operation - Shrink/Fatten
 
 ![Last Operator Shrink/Fatten](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-shrink-fatten.png)
 
@@ -1502,7 +1502,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Push/Pull
+##### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-push-pull.png)
 
@@ -1561,7 +1561,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-shear.png)
 
@@ -1612,7 +1612,7 @@ In Object mode this tools requires to have more than one object selected.
 
 Select the vertices, activate the tool, then drag the mouse in the 3D viewport. In the header you will read the current factor then. Which tells you how close you are towards the sphere shape.
 
-#### Last Operator To Sphere
+#### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-to-sphere.png)
 
@@ -1674,7 +1674,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Rip
+##### Adjust Last Operation - Rip
 
 ![Last Operator Rip](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-rip.png)
 
@@ -1737,7 +1737,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-##### Last Operator Extend Vertices
+##### Adjust Last Operation - Extend Vertices
 
 ![Last Operator Extend Vertices](/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/last-operator-extend-vertices.png)
 

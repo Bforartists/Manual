@@ -63,6 +63,47 @@ Find the minimum and maximum values of a single channel. Then map the values to 
 | Inputs | **Value**: Standard value input. |
 | Outputs | **Value**: Standard value output. |
 
+### Random Value
+
+![Random Value](/docs2/images/editors/compositor/header/add-menu-utilities/random-value.png)
+
+The Random Value node gives a random value for each ID. Use it to vary an effect between images or between values. The same ID and seed always give the same result. Every input can be an image or a single value, and images are processed pixel by pixel.
+
+#### Inputs
+
+##### Min
+
+The lowest value that can be returned (default 0). It appears for Float, Integer and Vector.
+
+##### Max
+
+The highest value that can be returned (default 1.0 for Float, 1.0 on each axis for Vector, 100 for Integer). It appears for Float, Integer and Vector.
+
+##### Probability
+
+The chance that the result is true, from 0.0 to 1.0 (default 0.5). It replaces Min and Max for Boolean.
+
+##### ID
+
+Gives each value its own random number (default 0). In the Compositor it is a plain value input. Connect an image here, for example one with IDs, to get a different random value per pixel.
+
+##### Seed
+
+Changes the whole set of random values at once (default 0).
+
+#### Properties
+
+##### Data Type
+
+The type of the random value: Float, Integer, Boolean or Vector.
+
+#### Outputs
+
+##### Value
+
+The random value, in the chosen data type.
+
+
 ### Split
 
 ![Split](/docs2/images/editors/compositor/header/add-menu-utilities/split.png)
@@ -221,11 +262,89 @@ The converted float value, based on the selected mode and input type.
 
 # Math
 
-### Add menu - Utilities - Math
+## Add menu - Utilities - Math
 
 ![Add menu - Utilities - Math](/docs2/images/editors/compositor/header/add-menu-utilities-math/add-menu-utilities-math.png)
 
-#### Clamp
+### Bit Math
+
+![Bit Math](/docs2/images/editors/compositor/header/add-menu-utilities-math/bit-math.png)
+
+The Bit Math node works on the individual bits of whole numbers (32-bit integers). It is useful for packing flags into a single number or for building masks from ID values. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.
+
+#### Inputs
+
+##### A
+
+The integer to work on (default 0).
+
+##### B
+
+The second integer (default 0). It is not shown for Not, Shift and Rotate.
+
+##### Shift
+
+How many bits to shift or rotate A by, from -31 to 31 (default 0). It only appears for Shift and Rotate.
+
+#### Properties
+
+##### Operation
+
+Chooses the bit operation.
+
+- **And**: A bit is set when it is set in both A and B.
+- **Or**: A bit is set when it is set in A or in B.
+- **Exclusive Or**: A bit is set when it is set in only one of A and B.
+- **Not**: Flips every bit of A. In decimal this is the same as -A - 1.
+- **Shift**: Moves the bits of A by the Shift amount. Positive values shift left, negative values shift right.
+- **Rotate**: Like Shift, but the bits that fall off one end come back in at the other end. Positive values rotate left, negative values rotate right.
+
+#### Outputs
+
+##### Value
+
+The resulting integer.
+
+
+### Boolean Math
+
+![Boolean Math](/docs2/images/editors/compositor/header/add-menu-utilities-math/boolean-math.png)
+
+The Boolean Math node combines true and false values with a logical operation. Use it to combine masks or conditions, for example to switch an effect on only when two conditions are both true. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.
+
+#### Inputs
+
+##### First Boolean
+
+The first true or false value (default false).
+
+##### Second Boolean
+
+The second true or false value (default false). It is not shown for Not.
+
+#### Properties
+
+##### Operation
+
+Chooses the logical operation.
+
+- **And**: True when both inputs are true.
+- **Or**: True when at least one input is true.
+- **Not**: The opposite of the input.
+- **Not And**: True when at least one input is false.
+- **Nor**: True when both inputs are false.
+- **Equal**: True when both inputs are the same.
+- **Not Equal**: True when the inputs are different.
+- **Imply**: True unless the first input is true and the second is false.
+- **Subtract**: True when the first input is true and the second is false.
+
+#### Outputs
+
+##### Boolean
+
+The result of the operation.
+
+### Clamp
 
 ![Clamp](/docs2/images/editors/compositor/header/add-menu-utilities-math/clamp.png)
 
@@ -237,7 +356,70 @@ The **Clamp** node restricts a value to lie within a specified range. It’s com
 | Properties | **Clamp Type**: A dropdown that determines how the clamping is applied: Min / Max or Range. · **Min / Max**: The minimum and maximum allowed value. Any input lower or higher than this will be lowered or raised to this value. |
 | Outputs | **Value**: Standard value output. |
 
-#### Float Curve
+### Compare
+
+![Compare](/docs2/images/editors/compositor/header/add-menu-utilities-math/compare.png)
+
+The Compare node compares two values and outputs true or false. Use it to turn a value into a mask, for example everything brighter than a limit. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.
+
+#### Inputs
+
+##### A
+
+The first value. Its type follows the Input Type property.
+
+##### B
+
+The second value. Its type follows the Input Type property.
+
+##### C
+
+The value that the dot product of A and B is compared against (default 0.9). It only appears for Vector inputs in Dot Product mode.
+
+##### Angle
+
+The angle that the angle between A and B is compared against (default 5 degrees). It only appears for Vector inputs in Direction mode.
+
+##### Epsilon
+
+How close two values must be to count as equal (default 0.001). It only appears for Equal and Not Equal with Float, Vector and Color inputs.
+
+#### Properties
+
+##### Input Type
+
+The type of the values to compare. In the Compositor you can choose Float, Integer, Vector, Color, String, Object or Font.
+
+##### Mode
+
+Only for Vector inputs. It decides what part of the vectors is compared.
+
+- **Element-Wise**: Compares each of the three elements. The result is true only when the comparison holds for all of them.
+- **Length**: Compares the lengths of the vectors.
+- **Average**: Compares the average of the elements of each vector.
+- **Dot Product**: Compares the dot product of A and B with C.
+- **Direction**: Compares the angle between A and B with Angle.
+
+##### Operation
+
+Chooses the comparison. The choices depend on the Input Type.
+
+- **Less Than**: True when A is smaller than B. For Float, Integer and Vector.
+- **Less Than or Equal**: True when A is smaller than B or equal to it. For Float, Integer and Vector.
+- **Greater Than**: True when A is greater than B. For Float, Integer and Vector.
+- **Greater Than or Equal**: True when A is greater than B or equal to it. For Float, Integer and Vector.
+- **Equal**: True when both inputs are equal. Float, Vector and Color values only need to be approximately equal, within Epsilon. Available for every type.
+- **Not Equal**: True when the inputs are not equal. Available for every type.
+- **Brighter**: True when A is brighter than B. For Color only.
+- **Darker**: True when A is darker than B. For Color only.
+
+#### Outputs
+
+##### Result
+
+True or false.
+
+### Float Curve
 
 ![Float Curve](/docs2/images/editors/compositor/header/add-menu-utilities-math/float-curve.png)
 
@@ -248,17 +430,17 @@ The Float Curves node maps an input value to a curve.
 | Inputs | **Factor**: Input factor. |
 | Value | Standard float value input. |
 
-##### Properties
+#### Properties
 
-###### Curve edit field
+##### Curve edit field
 
 Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis).
 
-###### Selecting Points
+##### Selecting Points
 
 > This setting uses the **curve widget**: click to add points, drag to move them. See **[Curve Widget](../../../../interface/properties.md#curve-widget)** in the Interface chapter.
 
-###### Adding Points
+##### Adding Points
 
 ![Adding Points](/docs2/images/editors/compositor/header/add-menu-utilities-math/adding-points.png)
 
@@ -269,19 +451,19 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
 | Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Extend horizontal**: Extends the curve before the first curve point and behind the last curve point horizontally. · **Extend extrapolated**: Extends the curve before the first curve point and behind the last curve point extrapolated. · **Reset Curve**: Resets the curve to the initial shape. |
 
-###### Clipping Options
+##### Clipping Options
 
-###### Use Clipping
+##### Use Clipping
 
 ![Use Clipping](/docs2/images/editors/compositor/header/add-menu-utilities-math/use-clipping.png)
 
 Clipping options. Set up clipping for the stroke.
 
-###### Delete Points
+##### Delete Points
 
 Deletes selected curve points.
 
-###### Vector Handle
+##### Vector Handle
 
 ![Vector Handle](/docs2/images/editors/compositor/header/add-menu-utilities-math/vector-handle.png)
 
@@ -294,13 +476,124 @@ Set handle type to Vector.
 | X / Y value | The position of the selected curve point. |
 | Delete | Deletes the selected curve point. |
 
-##### Outputs
+#### Outputs
 
-###### Value
+##### Value
 
 Standard float value output.
 
-#### Map Range
+### Float to Integer
+
+![Float to Integer](/docs2/images/editors/compositor/header/add-menu-utilities-math/float-to-integer.png)
+
+The Float to Integer node turns a number with decimals into a whole number. You choose how it rounds. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.
+
+#### Inputs
+
+##### Float
+
+The number to convert (default 0.0).
+
+#### Properties
+
+##### Rounding Mode
+
+How the decimals are removed.
+
+- **Round**: Rounds up or down to the nearest integer.
+- **Floor**: Rounds down to the next smaller integer.
+- **Ceiling**: Rounds up to the next larger integer.
+- **Truncate**: Rounds to the closest integer in the direction of zero. That is floor for positive values and ceiling for negative values.
+
+#### Outputs
+
+##### Integer
+
+The whole number.
+
+
+### Hash Value
+
+![Hash Value](/docs2/images/editors/compositor/header/add-menu-utilities-math/hash-value.png)
+
+The Hash Value node turns any value into a random-looking whole number. The same value and seed always give the same number, so it is handy for giving each ID, pixel value or name its own stable random number. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.
+
+#### Inputs
+
+##### Value
+
+The value to hash. Its type follows the Data Type property.
+
+##### Seed
+
+Changes the result without changing the value (default 0).
+
+#### Properties
+
+##### Data Type
+
+The type of the Value input. You can choose Float, Integer, Vector, Color, Rotation, Matrix or String. The default is Integer.
+
+#### Outputs
+
+##### Hash
+
+The random-looking integer.
+
+
+### Integer Math
+
+![Integer Math](/docs2/images/editors/compositor/header/add-menu-utilities-math/integer-math.png)
+
+The Integer Math node performs math operations on whole numbers. The result is always a whole number. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.
+
+#### Inputs
+
+##### First Value
+
+The first number. It is called Base for Power.
+
+##### Second Value
+
+The second number (default 0). It is called Multiplier for Multiply Add and Exponent for Power. It is not shown for Absolute, Negate and Sign. For Multiply, Divide, Multiply Add, the Divide variants and both Modulo operations, a node added from the menu starts with 1.
+
+##### Third Value
+
+The third number, called Addend. It only appears for Multiply Add.
+
+#### Properties
+
+##### Operation
+
+Chooses the operation.
+
+- **Add**: A + B.
+- **Subtract**: A - B.
+- **Multiply**: A * B.
+- **Divide**: A / B.
+- **Multiply Add**: A * B + C.
+- **Absolute**: The non-negative value of A.
+- **Negate**: -A.
+- **Power**: A to the power of B.
+- **Minimum**: The smaller of A and B.
+- **Maximum**: The larger of A and B.
+- **Sign**: The sign of A: -1, 0 or 1.
+- **Divide Round**: Divides and rounds the result toward zero.
+- **Divide Floor**: Divides and rounds down to the largest integer that is smaller than or equal to the result.
+- **Divide Ceiling**: Divides and rounds up to the smallest integer that is greater than or equal to the result.
+- **Floored Modulo**: A modulo that repeats the same way for negative and positive numbers.
+- **Modulo**: The remainder of A / B.
+- **Greatest Common Divisor**: The largest positive integer that divides both A and B. For example GCD(8, 12) = 4.
+- **Least Common Multiple**: The smallest positive integer that both A and B divide. For example LCM(6, 10) = 30.
+
+#### Outputs
+
+##### Value
+
+The resulting integer.
+
+
+### Map Range
 
 ![Map Range](/docs2/images/editors/compositor/header/add-menu-utilities-math/map-range.png)
 
@@ -311,62 +604,62 @@ This node allows to convert (map) an input value range into a destination range.
 | Usage | One important use case is to easily map the original range of the Z-depth channel to a more usable range (i.e: 0.0 - 1.0) for use as a matte for colorization or filtering operations. |
 | Inputs | This chapter deals with the input type Float. The same node exists in the Vector menu too. With preselected type Vector. · **Value**: Standard value input. · **From Min/Max**: Start/End of the input value range. · **To Min/Max**: Start/End of the destination range. · **Steps**: The amount of steps. **Note:** *Only shows when using the Stepped Linear interpolation type.* |
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/compositor/header/add-menu-utilities-math/properties.png)
 
-###### Data Type
+##### Data Type
 
 Selects between float or vector values to map the range.
 
-###### Interpolation Type
+##### Interpolation Type
 
 ![Interpolation Type](/docs2/images/editors/compositor/header/add-menu-utilities-math/interpolation-type.png)
 
 Selects between a linear, stepped linear, smooth step or smoother step interpolation types.
 
-###### Clamp
+##### Clamp
 
 Clamps values to Min/Max of the destination range.
 
-##### Outputs
+#### Outputs
 
-###### Value
+##### Value
 
 Standard value output.
 
-#### Math
+### Math
 
 ![Math](/docs2/images/editors/compositor/header/add-menu-utilities-math/math.png)
 
 The Math Node performs math operations.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Value | First numerical value. The trigonometric functions accept values in radians. |
 | Value | Second numerical value. This value is not used in functions that accept only one parameter like the trigonometric functions, Round and Absolute. |
 
-##### Properties
+#### Properties
 
-###### Operation
+##### Operation
 
 Here you can choose what mathematical operation to perform.
 
 ![Operation](/docs2/images/editors/compositor/header/add-menu-utilities-math/operation.png)
 
-###### Clamp
+##### Clamp
 
 Limits the output to the range (0 to 1). See clamp.
 
-##### Outputs
+#### Outputs
 
-###### Value
+##### Value
 
 Numerical value output.
 
-#### Mix
+### Mix
 
 ![Mix](/docs2/images/editors/compositor/header/add-menu-utilities-math/mix.png)
 
@@ -380,13 +673,13 @@ The Mix Node mixes float values by working on the individual and corresponding p
 
 # Vector
 
-### Add menu - Utilities - Vector
+## Add menu - Utilities - Vector
 
 ![Add menu - Utilities - Vector](/docs2/images/editors/compositor/header/add-menu-utilities-vector/add-menu-utilities-vector.png)
 
 Here you find mainly nodes for vector data manipulation.
 
-#### Combine XYZ
+### Combine XYZ
 
 ![Combine XYZ](/docs2/images/editors/compositor/header/add-menu-utilities-vector/combine-xyz.png)
 
@@ -397,7 +690,7 @@ Same as with Combine RGB node. It combines color values. But instead combining r
 | Input | **X Y and Z**: X, Y and Z values. |
 | Output | **Color**: Color output. |
 
-#### Map Range
+### Map Range
 
 ![Map Range](/docs2/images/editors/compositor/header/add-menu-utilities-vector/map-range.png)
 
@@ -408,37 +701,37 @@ This node allows to convert (map) an input value range into a destination range.
 | Usage | One important use case is to easily map the original range of the Z-depth channel to a more usable range (i.e: 0.0 - 1.0) for use as a matte for colorization or filtering operations. |
 | Inputs | This chapter deals with the input type Float. The same node exists in the Math menu too. With preselected type Float. · **Vector**: Standard vector input. · **From Min/Max**: Vector 3 of the Start/End of the input value range. · **To Min/Max**: Vector 3 of the Start/End of the destination range. · **Steps**: The amount of steps. **Note:** *Only shows when using the Stepped Linear interpolation type.* |
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/compositor/header/add-menu-utilities-math/properties.png)
 
-###### Data Type
+##### Data Type
 
 Selects between float or vector values to map the range.
 
-###### Interpolation Type
+##### Interpolation Type
 
 ![Interpolation Type](/docs2/images/editors/compositor/header/add-menu-utilities-math/interpolation-type.png)
 
 Selects between a linear, stepped linear, smooth step or smoother step interpolation types.
 
-###### Clamp
+##### Clamp
 
 Clamps values to Min/Max of the destination range.
 
-##### Outputs
+#### Outputs
 
-###### vector
+##### vector
 
 Standard value output.
 
-#### Mix Vector
+### Mix Vector
 
 ![Mix Vector](/docs2/images/editors/compositor/header/add-menu-utilities-vector/mix-vector.png)
 
 The **Mix Vector** node blends two vector inputs using a specified factor. It’s useful for compositing tasks that involve **motion vectors, directional effects, or spatial blending**, offering precise control over how two sets of vector data are combined
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | ------- | ---------------------------------------------------------------------- |
@@ -446,30 +739,30 @@ The **Mix Vector** node blends two vector inputs using a specified factor. It’
 | Value A | The back value. |
 | Value B | The top value. |
 
-###### Properties
+##### Properties
 
-###### Data Type
+##### Data Type
 
 Set to **Vector**, indicating the node mixes vector values.
 
-###### Factor Mode
+##### Factor Mode
 
 The method of mixing.
 
 - **Uniform**: A single float controls the mix across all vector components.
 - **Non-Uniform**: A vector input controls the mix per component (X, Y, Z).
 
-###### Clamp Factor
+##### Clamp Factor
 
 Limit the highest color value to not exceed 1.
 
-##### Outputs
+#### Outputs
 
-###### Result
+##### Result
 
 Vector output.
 
-#### Separate XYZ
+### Separate XYZ
 
 ![Separate XYZ](/docs2/images/editors/compositor/header/add-menu-utilities-vector/separate-xyz.png)
 
@@ -480,7 +773,7 @@ Same as with Separate RGB node. It separates color values. But instead separatin
 | Input | **Vector**: The Input vector. |
 | Output | **X, Y and Z**: The output vectors for X, Y and Z |
 
-#### Radial Tiling
+### Radial Tiling
 
 ![Radial Tiling](/docs2/images/editors/compositor/header/add-menu-utilities-vector/radial-tiling.png)
 
@@ -491,35 +784,35 @@ Transform coordinate system for radial tiling.
 | Input | **Vector**: Vector 2 input · **Sides**: Number of angular segments for tiling. A non integer value results in an irrgeluar segment. · **Roundness**: Roundness of the segment coordindates system. |
 | Properties | **Normalize**: Normalize the X coordinate of the segment coordinates output to a `[` 0 / 1 `]` interval and offset the Y coordinate into a `[0`, `infinity]` interval. This stretches the textures to fit into each angular segment. Else they are cropped. |
 
-#### Vector Curves
+### Vector Curves
 
 ![Vector Curves](/docs2/images/editors/compositor/header/add-menu-utilities-vector/vector-curves.png)
 
 The Vector Curves node maps an input vector components to a curve.
 
-##### Inputs
+#### Inputs
 
 In the shader context the node also has an additional Factor property.
 
-###### Vector
+##### Vector
 
 Standard vector 3 input.
 
-##### Properties
+#### Properties
 
-###### Channel
+##### Channel
 
-###### Channel buttons
+##### Channel buttons
 
 ![Channel buttons](/docs2/images/editors/compositor/header/add-menu-utilities-vector/channel-buttons.png)
 
 X, Y, Z. Clicking on one of the channels displays the curve for each.
 
-###### Curve edit field
+##### Curve edit field
 
 Create and tweak a Bezier curve that varies the input levels (X axis) to produce an output level (Y axis).
 
-###### Selecting Points
+##### Selecting Points
 
 ![Selecting Points](/docs2/images/editors/compositor/header/add-menu-utilities-math/selecting-points.png)
 
@@ -527,7 +820,7 @@ You can select curve points. This reveals two edit boxes for the x and y coordin
 
 Selected points can be moved around. Left click at them, hold the mouse button down and move them to a new location.
 
-###### Adding Points
+##### Adding Points
 
 ![Adding Points](/docs2/images/editors/compositor/header/add-menu-utilities-math/adding-points.png)
 
@@ -537,13 +830,13 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 
 The two buttons with the magnifying glass at it zooms in and out in the curve window.
 
-###### Clipping options
+##### Clipping options
 
 ![Clipping options](/docs2/images/editors/compositor/header/add-menu-utilities-math/use-clipping.png)
 
 Clipping options. Set up clipping for the stroke.
 
-###### Tools
+##### Tools
 
 ![Tools](/docs2/images/editors/compositor/header/add-menu-utilities-vector/tools.png)
 
@@ -556,7 +849,7 @@ Tools is a menu where you can find some curve related tools.
 | Extend extrapolated | Extends the curve before the first curve point and behind the last curve point extrapolated. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-###### Vector Handle
+##### Vector Handle
 
 ![Vector Handle](/docs2/images/editors/compositor/header/add-menu-utilities-vector/vector-handle.png)
 
@@ -569,46 +862,46 @@ Set handle type to Vector.
 | X / Y position | The x y coordinate of the selected curve point. The range goes from -1 to +1 |
 | Delete Points | Deletes selected curve points. |
 
-##### Outputs
+#### Outputs
 
-###### Vector
+##### Vector
 
 Standard vector 3 output.
 
-#### Vector Math
+### Vector Math
 
 ![Vector Math](/docs2/images/editors/compositor/header/add-menu-utilities-vector/vector-math.png)
 
 The Vector Math Node performs math operations.
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Vector | First numerical value. The trigonometric functions accept values in radians. |
 | Vector | Second numerical value. This value is not used in functions that accept only one parameter like the trigonometric functions, Round and Absolute. |
 
-##### Properties
+#### Properties
 
 ![Properties](/docs2/images/editors/compositor/header/add-menu-utilities-vector/properties.png)
 
-###### Operation
+##### Operation
 
 Here you can choose what mathematical operation to perform.
 
-##### Outputs
+#### Outputs
 
-###### Value
+##### Value
 
 Numerical value output.
 
-#### Vector Rotate
+### Vector Rotate
 
 ![Vector Rotate](/docs2/images/editors/compositor/header/add-menu-utilities-vector/vector-rotate.png)
 
 The **Vector Rotate** node rotates a vector around a specified axis and center point. It’s useful for compositing tasks involving **directional transformations**, such as rotating motion vectors, normals, or custom vector fields
 
-##### Inputs
+#### Inputs
 
 | Entry | What it does |
 | ------ | ------------------------------------------------------- |
@@ -617,9 +910,9 @@ The **Vector Rotate** node rotates a vector around a specified axis and center p
 | Axis | The axis of rotation, defined as am XYZ based 3D vector |
 | Angle | The amount of rotation in **degrees**. |
 
-##### Properties
+#### Properties
 
-###### Type
+##### Type
 
 ![Type](/docs2/images/editors/compositor/header/add-menu-utilities-vector/type.png)
 
@@ -629,12 +922,12 @@ Determines the rotation method.
 - **X/**Y/Z** Axis: **Rotates the vector around the X/Y/Z-axis.
 - **Euler: **Applies rotation using Euler angles in XYZ order.
 
-###### Invert
+##### Invert
 
 When enabled, reverses the direction of the rotation.
 
-##### Outputs
+#### Outputs
 
-###### Vector
+##### Vector
 
 The rotated vector result.

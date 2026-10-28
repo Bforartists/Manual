@@ -144,6 +144,8 @@ Shift = Add to selection
 | Extrude | `S` |
 | Add to selection | Hold `Shift` |
 
+> **Tip:** Press **S** again to cycle through the other extrude tools in the tool shelf group, like Extrude Along Normals and Extrude Individual. There are several ways to extrude, and S gets you to each of them without reaching for the mouse.
+
 ### Edit mode with a Bone object
 
 ```keymap-keys

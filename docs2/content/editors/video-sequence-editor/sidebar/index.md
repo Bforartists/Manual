@@ -40,11 +40,11 @@ The right click menus are explained in the chapter 6 Editors Introduction.
 
 # Preview › Tool Tab
 
-### Tool Tab
+## Tool Tab
 
 In the tool tab you will find the tool related settings for the tools in the tool shelf. They are described in the tool shelf chapters.
 
-### Active Tool panel
+## Active Tool panel
 
 ![Active Tool panel](/docs2/images/editors/video-sequence-editor/sidebar/preview-tool-tab/active-tool-panel.png)
 
@@ -54,7 +54,7 @@ Displays the settings for the tools in the tool shelf. These settings are explai
 
 Syncing options with the 3d view.
 
-### View Settings Tab
+## View Settings Tab
 
 ![View Settings Tab](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/view-settings-tab.png)
 
@@ -62,11 +62,11 @@ In the View Settings tab you will find the display related settings.
 
 Note that not all content is available in all submodes. The Preview submode shows other content thant he Sequencer submode.
 
-### View Settings Panel
+## View Settings Panel
 
 ![View Settings Panel](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/view-settings-panel.png)
 
-#### Proxy Render Size
+### Proxy Render Size
 
 ![Proxy Render Size](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/proxy-render-size.png)
 
@@ -83,13 +83,13 @@ Proxies is a simplified data set to speed up workflow.
 | Show Missing Media | Render missing images or movies with a solit magenta color. |
 
 
-### Location X / Y
+## Location X / Y
 
 ![Location X / Y](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/location-x-y.png)
 
 The position of the 3d cursor.
 
-### Frame Overlay Panel
+## Frame Overlay Panel
 
 ![Frame Overlay Panel](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/frame-overlay-panel.png)
 
@@ -106,17 +106,17 @@ When the feature is active then you will see a green dashed line in the sequence
 | Frame offset | What offset frame to use, relative to the current frame position. |
 
 
-#### Overlay Type
+### Overlay Type
 
 ![Overlay Type](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/overlay-type.png)
 
 The overlay draw type.
 
-#### Overlay Lock
+### Overlay Lock
 
 Locks the overlay frame to the current frame. It will not go ahead when you play the video.
 
-### Save Areas panel
+## Save Areas panel
 
 ![Save Areas panel](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/save-areas-panel.png)
 
@@ -137,7 +137,7 @@ Safe areas can be set from the Camera and Sequencer views.
 | Action Safe Margins X/Y | An extra “margin” for the screen, which can be used to keep elements from piling up against the edges. |
 
 
-#### Center-Cut Safe Areas
+### Center-Cut Safe Areas
 
 ![Center-Cut Safe Areas](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/center-cut-safe-areas.png)
 
@@ -150,23 +150,23 @@ Center-cuts are a second set of safe areas to ensure content is seen correctly o
 | Center Action Safe Margins X/Y | Safe area for general elements in a different aspect ratio. |
 
 
-### Scene Strip Display panel
+## Scene Strip Display panel
 
 ![Scene Strip Display panel](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/scene-strip-display-panel.png)
 
 Settings for the strip type Scene Strip.
 
-#### Shading
+### Shading
 
 ![Shading](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/shading.png)
 
 How to display the scene content in the preview window.
 
-#### Override scene settings
+### Override scene settings
 
 Use the workbench render settings from the sequencer scene instead of the settings instead of each individual scene used in the strip.
 
-### Annotations panel
+## Annotations panel
 
 ![Annotations panel](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/annotations-panel.png)
 
@@ -176,13 +176,13 @@ Manage the Annotation layers and materials.
 
 When you don't have drawn an annotation yet then the panel just contains a New button.
 
-#### Annotations prop
+### Annotations prop
 
 ![Annotations prop](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/annotations-prop.png)
 
 Add, remove and rename new annotations.
 
-##### Drop down box
+#### Drop down box
 
 ![Drop down box](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/drop-down-box.png)
 
@@ -197,7 +197,7 @@ A list of the available annotation layers.
 | Delete Annotation | Delete the annotation. |
 
 
-#### List of Annotation Strokes
+### List of Annotation Strokes
 
 ![List of Annotation Strokes](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/list-of-annotation-strokes.png)
 
@@ -216,7 +216,7 @@ The eye icon allows you to make it invisible And it has a search field.
 | Frame Locked/Unlocked | Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. |
 
 
-#### Onion Skin subpanel
+### Onion Skin subpanel
 
 ![Onion Skin subpanel](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/onion-skin-subpanel.png)
 
@@ -224,15 +224,15 @@ Enable Onion Skinning
 
 Onion Skinning allows to show ghosts of the keyframes before and after the current frame. In this sub panel you can adjust the color of the onion skin frames. With the numbers below the colors you can define how many frames before or after are displayed that way.
 
-### Sync Mode
+## Sync Mode
 
 The sync method.
 
-#### Built-In
+### Built-In
 
 ![Built-In](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/built-in.png)
 
-##### Advanced Settings
+#### Advanced Settings
 
 
 | Entry | What it does |
@@ -243,21 +243,21 @@ The sync method.
 | Active follows Playhead | Update the active scene strip while scrubbing the playhead. |
 
 
-#### Legacy
+### Legacy
 
 ![Legacy](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/legacy.png)
 
-##### Synchronization Timeline
+#### Synchronization Timeline
 
-###### Scene
+##### Scene
 
 The scene to synchronize.
 
-###### Use Pinned Scene
+##### Use Pinned Scene
 
 Mak the pinned scene the active scene. The button and the “Set the Timeline” hint will vanish then.
 
-##### Advanced Settings
+#### Advanced Settings
 
 
 | Entry | What it does |
@@ -270,7 +270,7 @@ Mak the pinned scene the active scene. The button and the “Set the Timeline”
 
 # Sequencer › Strip Tab
 
-### Strip Tab
+## Strip Tab
 
 ![Strip Tab](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/strip-tab.png)
 
@@ -280,7 +280,7 @@ Some panels have the same content for all strip types. Some not. Some strip type
 
 > **Note:** Like in the 3D View, this tab is also accessible from the Properties editor Strip tab.
 
-#### Strip tab header
+### Strip tab header
 
 In the strip tab header you will see an icon for the current strip type. The name of the strip. And a checkbox to set this strip active.
 
@@ -295,27 +295,27 @@ The strip can be renamed by double clicking left into the edit box.
 | Mute | Enables/Disables the strip. |
 
 
-### Compositing Panel
+## Compositing Panel
 
 ![Compositing Panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/compositing-panel.png)
 
 Available for Movie, Image, Adjustment and Meta strips.
 
-#### Blend
+### Blend
 
 ![Blend](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/blend.png)
 
 The blend method to control how the strip combines with other strips.
 
-#### Opacity
+### Opacity
 
 How much the strip color affects other strips.
 
-### Transform Panel
+## Transform Panel
 
 ![Transform Panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/transform-panel.png)
 
-#### Filter
+### Filter
 
 ![Filter](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/filter.png)
 
@@ -343,29 +343,29 @@ Filter type to use for transformations.
 | Mirror | Flip on the X and/or Y axis. |
 
 
-### Crop Panel
+## Crop Panel
 
-#### Left, Right, Top, Bottom
+### Left, Right, Top, Bottom
 
 ![Left, Right, Top, Bottom](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/left-right-top-bottom.png)
 
 Crop the frame.
 
-### Video Panel
+## Video Panel
 
-#### Strobe
+### Strobe
 
 ![Strobe](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/strobe.png)
 
 Don't display every frame, but just every nth frame.
 
-#### Reverse Frames
+### Reverse Frames
 
 Reverse the frame order.
 
-### Color Panel
+## Color Panel
 
-#### Saturation
+### Saturation
 
 ![Saturation](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/saturation.png)
 
@@ -379,7 +379,7 @@ The intensity of the input color.
 | Convert to Float | Convert input to float data. |
 
 
-### Sound Panel
+## Sound Panel
 
 ![Sound Panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/sound-panel.png)
 
@@ -392,7 +392,7 @@ This panel shows with an audio clip selected.
 | Mono | Set the audio clip to mono. · **Pan**: When mono, the pan of the audio clip. |
 
 
-### Time Panel
+## Time Panel
 
 ![Time Panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/time-panel.png)
 
@@ -409,25 +409,25 @@ Time related settings.
 | End | The end frame of the strip. · **Strip Offset Start**: The strip offset start. This offsets the beginning of the strip in the timeline. · **End**: The strip offset end. This offsets the end of the strip in the timeline. · **Hold Offset Start**: Animation start offset (trim start) · **End**: Animation end offset (trim end) · **Current Frame**: Info box that displays the position of the frame cursor at the current frame. |
 
 
-### Scene Panel
+## Scene Panel
 
 ![Scene Panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/scene-panel.png)
 
 This panel just shows with strip type scene.
 
-#### Scene Property
+### Scene Property
 
-##### Scene Browser
+#### Scene Browser
 
 ![Scene Browser](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/scene-browser.png)
 
 A scene browser that contains the available scenes in the file.
 
-###### Scene edit box
+##### Scene edit box
 
 The name of the scene. It can be renamed by double clicking into the edit box.
 
-###### Add
+##### Add
 
 ![Add](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/add.png)
 
@@ -442,25 +442,25 @@ Add a new scene. This button calls a menu where you can choose with what method 
 | Full Copy | Make a full copy of the current scene. |
 
 
-###### Remove
+##### Remove
 
 Remove the scene as the active one. Note that the scene is still available in the scene browser.
 
-#### Input
+### Input
 
 ![Input](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/input.png)
 
 Type of input to use. The camera of the scene. Or a file from the sequencer in this scene.
 
-##### Input Type Camera
+#### Input Type Camera
 
 ![Input Type Camera](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/input-type-camera.png)
 
-###### Volume
+##### Volume
 
 The audio volume.
 
-###### Camera
+##### Camera
 
 ![Camera](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/camera.png)
 
@@ -473,41 +473,41 @@ Which camera of the scene to use.
 | Transparent | Use a transparent background. |
 
 
-##### Input type Sequencer
+#### Input type Sequencer
 
 ![Input type Sequencer](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/input-type-sequencer.png)
 
-###### Volume
+##### Volume
 
 The audio volume.
 
-### Mask Panel
+## Mask Panel
 
 ![Mask Panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/mask-panel.png)
 
 This panel just shows with strip type Mask.
 
-#### Mask Property
+### Mask Property
 
-##### Mask Browser
+#### Mask Browser
 
 ![Mask Browser](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/mask-browser.png)
 
 A mask browser that contains the available masks in the file.
 
-##### Mask edit box
+#### Mask edit box
 
 The name of the scene. It can be renamed by double clicking into the edit box.
 
-###### Fake User
+##### Fake User
 
 Assign a fake user to this mask. Fake users is a odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.
 
-##### Remove
+#### Remove
 
 Remove the scene as the active one. Note that the scene is still available in the scene browser.
 
-### Effect Strip Panel
+## Effect Strip Panel
 
 ![Effect Strip Panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-panel.png)
 
@@ -517,19 +517,19 @@ Settings for the single effect strip types.
 
 The content differs, dependant of the chosen type.
 
-#### Effect strip type Color Mix
+### Effect strip type Color Mix
 
 ![Effect strip type Color Mix](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-color-mix.png)
 
-##### Input 1
+#### Input 1
 
 The first strip.
 
-##### Input 2
+#### Input 2
 
 The second strip.
 
-###### Swap Strips
+##### Swap Strips
 
 ![Swap Strips](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/swap-strips.png)
 
@@ -542,7 +542,7 @@ Swap the strips.
 | Blend Factor | The blend factor. 1.000 means 100%. |
 
 
-#### Effect strip type Text
+### Effect strip type Text
 
 ![Effect strip type Text](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-text.png)
 
@@ -553,11 +553,11 @@ Swap the strips.
 | Wrap Width | World wrap width as factor. Zero disables the wrap. |
 
 
-##### Style sub panel
+#### Style sub panel
 
 ![Style sub panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/style-sub-panel.png)
 
-###### Font property
+##### Font property
 
 ![Font property](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/font-property.png)
 
@@ -565,7 +565,7 @@ Swap the strips.
 
 When no font is loaded then the internal font is used.
 
-###### Font browser
+##### Font browser
 
 ![Font browser](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/font-browser.png)
 
@@ -589,7 +589,7 @@ The list of loaded fonts. This list is empty by default. It displays the fonts t
 | Color | The text color. |
 
 
-###### Shadow
+##### Shadow
 
 ![Shadow](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/shadow.png)
 
@@ -604,19 +604,19 @@ Creates a shadow of the specified color under the text.
 | Blur | Blur the shadow by a pixel amount. |
 
 
-###### Outline
+##### Outline
 
 ![Outline](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/outline.png)
 
-###### Color
+##### Color
 
 The outline color.
 
-###### Width
+##### Width
 
 The outline width.
 
-###### Box
+##### Box
 
 ![Box](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/box.png)
 
@@ -629,21 +629,21 @@ Display colored box behind text.
 | Margin | The margin of the box. Based at the image width. |
 
 
-##### Layout sub panel
+#### Layout sub panel
 
 ![Layout sub panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/layout-sub-panel.png)
 
-###### Location X/Y
+##### Location X/Y
 
 Positions the text on the X, Y axis.
 
-###### Alignment
+##### Alignment
 
 ![Alignment](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/alignment.png)
 
 The horizontal X alignment of the text. Can be Left, Center or Right
 
-###### Anchor X/Y
+##### Anchor X/Y
 
 ![Anchor X/Y](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/anchor-x-y.png)
 
@@ -651,11 +651,11 @@ The horizontal X alignment of the text. Can be Left, Center or Right
 
 Horizontal (X) or vertical (Y) anchor point of the text relative to the location.
 
-#### Effect strip type Gaussian Blur
+### Effect strip type Gaussian Blur
 
 ![Effect strip type Gaussian Blur](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-color-mix.png)
 
-##### Input 1
+#### Input 1
 
 The strip to blur. This strip cannot be changed. You need to apply the effect with the correct strip selected.
 
@@ -666,7 +666,7 @@ The strip to blur. This strip cannot be changed. You need to apply the effect wi
 | Y | The size of the blur along Y axis. |
 
 
-#### Effect strip type Multicam
+### Effect strip type Multicam
 
 ![Effect strip type Multicam](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-multicam.png)
 
@@ -677,71 +677,71 @@ The strip to blur. This strip cannot be changed. You need to apply the effect wi
 | Cut to | Cuts the Multicam strip at the current frame and changes the Source Channel automatically to the selected channels. |
 
 
-#### Effect strip type Speed Control
+### Effect strip type Speed Control
 
 ![Effect strip type Speed Control](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-speed-control.png)
 
-##### Input
+#### Input
 
 The video where the speed control is applied to. This is read only.
 
-##### Speed Control
+#### Speed Control
 
 ![Speed Control](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/speed-control.png)
 
-###### Stretch
+##### Stretch
 
 Adjust input playback so that the input duration fits the strip length
 
-###### Multiply
+##### Multiply
 
 ![Multiply](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/multiply.png)
 
 Multiply with the speed factor.
 
-###### Multiply factor
+##### Multiply factor
 
 The speed factor.
 
-###### Frame Number
+##### Frame Number
 
 ![Frame Number](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/frame-number.png)
 
 Frame Number of the Input strip.
 
-###### Frame number
+##### Frame number
 
 The frame number.
 
-###### Length
+##### Length
 
-##### Interpolation
+#### Interpolation
 
 Do crossfade blending between current and previous frame.
 
-#### Effect strip type Color
+### Effect strip type Color
 
 ![Effect strip type Color](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-color.png)
 
-##### Color Picker
+#### Color Picker
 
 Adjust the color of the color strip.
 
-#### Effect strip type Transform
+### Effect strip type Transform
 
 ![Effect strip type Transform](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-transform.png)
 
-##### Input 1
+#### Input 1
 
 The strip to transform. This strip cannot be changed. You need to apply the effect with the correct strip selected.
 
-##### Interpolation
+#### Interpolation
 
 ![Interpolation](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/interpolation.png)
 
 The interpolation type for the transform.
 
-##### Translation Unit
+#### Translation Unit
 
 ![Translation Unit](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/translation-unit.png)
 
@@ -758,7 +758,7 @@ The measure unit to use for the transform.
 | Rotation | Degrees to rotate the input. |
 
 
-#### Effect strip type Glow
+### Effect strip type Glow
 
 ![Effect strip type Glow](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-glow.png)
 
@@ -774,7 +774,7 @@ The measure unit to use for the transform.
 | Only Boost | Show the glow buffer only. |
 
 
-#### Effect strip type Wipe
+### Effect strip type Wipe
 
 ![Effect strip type Wipe](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-wipe.png)
 
@@ -786,7 +786,7 @@ The measure unit to use for the transform.
 | Swap Inputs | Swap the two strips. |
 
 
-##### Transition type
+#### Transition type
 
 ![Transition type](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/transition-type.png)
 
@@ -800,13 +800,13 @@ The wipe effect type.
 | Angle | The edge angle. |
 
 
-##### Default Fade
+#### Default Fade
 
 ![Default Fade](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/default-fade.png)
 
 Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.
 
-#### Effect strip type Alpha over Drop
+### Effect strip type Alpha over Drop
 
 ![Effect strip type Alpha over Drop](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png)
 
@@ -818,13 +818,13 @@ Use the builtin default effect time, which is as long as the fade clip. Or adjus
 | Swap Inputs | Swap the two strips. |
 
 
-##### Default Fade
+#### Default Fade
 
 ![Default Fade](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/default-fade.png)
 
 Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.
 
-#### Effect strip type Multiply
+### Effect strip type Multiply
 
 ![Effect strip type Multiply](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-multiply.png)
 
@@ -836,7 +836,7 @@ Use the builtin default effect time, which is as long as the fade clip. Or adjus
 | Swap Inputs | Swap the two strips. |
 
 
-#### Effect strip type Gamma Cross
+### Effect strip type Gamma Cross
 
 ![Effect strip type Gamma Cross](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png)
 
@@ -848,13 +848,13 @@ Use the builtin default effect time, which is as long as the fade clip. Or adjus
 | Swap Inputs | Swap the two strips. |
 
 
-##### Default Fade
+#### Default Fade
 
 ![Default Fade](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/default-fade.png)
 
 Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.
 
-#### Effect strip type Alpha Under
+### Effect strip type Alpha Under
 
 ![Effect strip type Alpha Under](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png)
 
@@ -866,13 +866,13 @@ Use the builtin default effect time, which is as long as the fade clip. Or adjus
 | Swap Inputs | Swap the two strips. |
 
 
-##### Default Fade
+#### Default Fade
 
 ![Default Fade](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/default-fade.png)
 
 Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.
 
-#### Effect strip type Alpha Over
+### Effect strip type Alpha Over
 
 ![Effect strip type Alpha Over](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png)
 
@@ -884,13 +884,13 @@ Use the builtin default effect time, which is as long as the fade clip. Or adjus
 | Swap Inputs | Swap the two strips. |
 
 
-##### Default Fade
+#### Default Fade
 
 ![Default Fade](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/default-fade.png)
 
 Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.
 
-#### Effect strip type Subtract
+### Effect strip type Subtract
 
 ![Effect strip type Subtract](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-multiply.png)
 
@@ -902,7 +902,7 @@ Use the builtin default effect time, which is as long as the fade clip. Or adjus
 | Swap Inputs | Swap the two strips. |
 
 
-#### Effect strip type Add
+### Effect strip type Add
 
 ![Effect strip type Add](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-multiply.png)
 
@@ -914,7 +914,7 @@ Use the builtin default effect time, which is as long as the fade clip. Or adjus
 | Swap Inputs | Swap the two strips. |
 
 
-#### Effect strip type Crossfade
+### Effect strip type Crossfade
 
 ![Effect strip type Crossfade](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/effect-strip-type-alpha-over-drop.png)
 
@@ -926,27 +926,27 @@ Use the builtin default effect time, which is as long as the fade clip. Or adjus
 | Swap Inputs | Swap the two strips. |
 
 
-##### Default Fade
+#### Default Fade
 
 ![Default Fade](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/default-fade.png)
 
 Use the builtin default effect time, which is as long as the fade clip. Or adjust the effect time.
 
-### Source Panel
+## Source Panel
 
 ![Source Panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/source-panel.png)
 
 The source path and settings for a loaded video clip.
 
-#### File
+### File
 
 The source file.
 
-##### Browse
+#### Browse
 
 Browse for another file.
 
-#### Color Space
+### Color Space
 
 ![Color Space](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/color-space.png)
 
@@ -960,7 +960,7 @@ Which color space to use for the loaded video clip.
 | Info Box | The resolution and frames per seconds of the video. |
 
 
-### Custom Properties Panel
+## Custom Properties Panel
 
 ![Custom Properties Panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/custom-properties-panel.png)
 
@@ -968,29 +968,29 @@ Here you can define custom properties that can be used for scripting.
 
 Here you might also find custom properties from addons or scripts.
 
-#### Add
+### Add
 
 Adds a new property.
 
-#### Edit
+### Edit
 
 ![Edit](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-strip-tab/edit.png)
 
 Opens a panel where you can adjust the settings for the custom property.
 
-#### Remove
+### Remove
 
 Removes the property.
 
 # Sequencer › Tool Tab
 
-### Tool Tab
+## Tool Tab
 
 ![Tool Tab](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-tool-tab/tool-tab.png)
 
 In the tool tab you will find the tool related settings for the tools in the tool shelf. These settings are explained for the single tools in the tool shelf chapter.
 
-### Tool Tab and Top Bar
+## Tool Tab and Top Bar
 
 ![Tool Tab and Top Bar](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-tool-tab/tool-tab-and-top-bar.png)
 
@@ -1000,7 +1000,7 @@ Different from the 3D view, he top bar cannot be hidden.
 
 # Sequencer › Cache Tab
 
-### Cache Settings panel
+## Cache Settings panel
 
 ![Cache Settings panel](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-cache-tab/cache-settings-panel.png)
 
@@ -1008,27 +1008,27 @@ The Cache is used to save frames in memory for preview, so they can be later dis
 
 In this panel you can set up types of images that will be cached for all strips.
 
-#### Display Cache
+### Display Cache
 
 ![Display Cache](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-cache-tab/display-cache.png)
 
 This displays the cache overlay in the Sequencer timeline. This draws a purple bar.
 
-#### Final
+### Final
 
 Cache final image for each frame.
 
 # Sequencer › Proxy Tab
 
-### Proxy Settings Panel
+## Proxy Settings Panel
 
-#### Storage
+### Storage
 
 ![Storage](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-proxy-tab/storage.png)
 
 Defines whether the proxies are for individual strips or the entire sequence.
 
-##### Per Strip
+#### Per Strip
 
 ![Per Strip](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-proxy-tab/per-strip.png)
 
@@ -1042,9 +1042,9 @@ Proxies are stored in the directory of the input.
 | Rebuild Proxy and Time code Indices | Generates Proxies and Time codes for all selected strips, same as doing Strip ? Rebuild Proxy and Time code indices. |
 
 
-### Strip Proxy & Time code panel
+## Strip Proxy & Time code panel
 
-#### Use Proxy Timecode
+### Use Proxy Timecode
 
 ![Use Proxy Timecode](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-proxy-tab/use-proxy-timecode.png)
 
@@ -1052,15 +1052,15 @@ Proxies are stored in the directory of the input.
 
 Enable Proxy Timecode.
 
-#### Custom Proxy
+### Custom Proxy
 
 ![Custom Proxy](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-proxy-tab/custom-proxy.png)
 
-##### Proxy Custom Directory
+#### Proxy Custom Directory
 
 Use a custom directory to store data. Activating the tool reveals a directory picker.
 
-##### Proxy Custom File
+#### Proxy Custom File
 
 ![Proxy Custom File](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-proxy-tab/proxy-custom-file.png)
 
@@ -1076,7 +1076,7 @@ You can either show the directory or the custom file path directory picker.
 | Build Jpeg Quality | Defines the quality of the JPEG images used for proxies. |
 
 
-#### Time code Index
+### Time code Index
 
 ![Time code Index](/docs2/images/editors/video-sequence-editor/sidebar/sequencer-proxy-tab/time-code-index.png)
 
@@ -1104,15 +1104,15 @@ Record Run No Gaps
 
 Syncing options with the 3d view.
 
-### Sync Mode
+## Sync Mode
 
 The sync method.
 
-#### Built-In
+### Built-In
 
 ![Built-In](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/built-in.png)
 
-##### Advanced Settings
+#### Advanced Settings
 
 
 | Entry | What it does |
@@ -1123,21 +1123,21 @@ The sync method.
 | Active follows Playhead | Update the active scene strip while scrubbing the playhead. |
 
 
-#### Legacy
+### Legacy
 
 ![Legacy](/docs2/images/editors/video-sequence-editor/sidebar/preview-view-tab/legacy.png)
 
-##### Synchronization Timeline
+#### Synchronization Timeline
 
-###### Scene
+##### Scene
 
 The scene to synchronize.
 
-###### Use Pinned Scene
+##### Use Pinned Scene
 
 Mak the pinned scene the active scene. The button and the “Set the Timeline” hint will vanish then.
 
-##### Advanced Settings
+#### Advanced Settings
 
 
 | Entry | What it does |
