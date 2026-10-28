@@ -23,14 +23,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Deploy first, then store the GitHub token as a Worker secret.
+      # (Uploading a secret before the Worker exists fails on the very first run.)
       - name: Deploy the Worker
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "3.114.0"
           workingDirectory: docs2/worker/edit-gateway
           command: deploy
-          secrets: |
-            GITHUB_TOKEN_EDIT
+          postCommands: |
+            echo "$EDIT_TOKEN" | npx wrangler secret put GITHUB_TOKEN_EDIT
         env:
-          GITHUB_TOKEN_EDIT: ${{ secrets.EDIT_GATEWAY_GITHUB_TOKEN }}
+          EDIT_TOKEN: ${{ secrets.EDIT_GATEWAY_GITHUB_TOKEN }}
