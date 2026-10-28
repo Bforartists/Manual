@@ -1349,6 +1349,86 @@ This enables modular data structuring, reuse, and override logic in procedural w
 | Inputs | **Bundle**: **Bundle 1, Bundle 2, …** Accepts multiple bundles created via the **Combine Bundle** node.   Each bundle may contain different types of data (e.g. Float, Vector, String, Color) |
 | Outputs | **Bundle Socket**: Standard bundle socket with a unified bundle containing all input elements. Use this to pass the packaged sockets to a Separate Bundle node for later user down the node tree lines. |
 
+#### Get Nested Bundle Paths
+
+![Get Nested Bundle Paths](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/get-nested-bundle-paths.png)
+
+Lists where things are stored inside a bundle that has other bundles in it. Each path is a string, with the names of the nested bundles and the item joined by `/`. Use it to find items without knowing their names in advance.
+
+A nested bundle that has a Type item is handled as one item. The node does not look inside it.
+
+##### Inputs
+
+###### Bundle
+
+The bundle to search.
+
+###### Mode
+
+Chooses which paths are listed.
+
+**All** lists the path of every item.
+
+**Bundle Type** lists the paths of nested bundles whose Type matches the Bundle Type input.
+
+**Data Type** lists the paths of items that have the chosen Data Type.
+
+###### Pattern Mode
+
+Only used in Bundle Type mode. Chooses how the Bundle Type input is compared with the Type of each nested bundle.
+
+**Exact** matches only the same text.
+
+**Wildcard** allows one `*` in the text, which stands for any characters. If you use more than one `*`, the node shows an error.
+
+###### Bundle Type
+
+Only used in Bundle Type mode. The type to look for. If it is empty, no paths are listed.
+
+###### Data Type
+
+Only used in Data Type mode. Items with this data type are listed.
+
+##### Outputs
+
+###### Paths
+
+A list of strings, one path per item found, sorted alphabetically. If no bundle is connected, the list is empty.
+
+#### Get Geometry Bundle
+
+![Get Geometry Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/get-geometry-bundle.png)
+
+Gets the bundle that is stored on a geometry. Use it to read data that was attached to a geometry with Set Geometry Bundle.
+
+##### Inputs
+
+###### Geometry
+
+The geometry to get the bundle from.
+
+###### Remove
+
+Off by default. When on, the bundle is taken off the geometry that comes out of the node. This can avoid unneeded copies of data.
+
+##### Outputs
+
+###### Geometry
+
+The input geometry. It no longer holds the bundle when Remove is on.
+
+###### Bundle
+
+The bundle that was stored on the geometry.
+
+#### Typed Bundle
+
+![Typed Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/typed-bundle.png)
+
+Adds a Combine Bundle node that already has a String item named Type. The Type tells other nodes what kind of bundle this is, for example when you look for bundles with Get Nested Bundle Paths.
+
+Click the Type field of the new node and pick a type from the list, or type your own name. When you pick a known type, the node adds the items that type needs.
+
 # Closure
 
 ## Add menu - Closure
