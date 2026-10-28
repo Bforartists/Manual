@@ -1074,3 +1074,33 @@ Retreive a point index within a curve.
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | Inputs | **Curve Index**: The curve to retreive the data from · **Weights**: Values to sort the curve points. · **Sort Index**: The point to output. |
 | Outputs | **Point Index**: The output point. · **Total**: The number of points in the curve. |
+
+# Curve
+
+### Add menu - Curve
+
+#### Construct Curves
+
+![Construct Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-curve/construct-curves.png)
+
+Builds curves from raw point data. You give it one list with the positions of all points, and one list that tells where each curve starts. All curves it creates are Poly curves.
+
+##### Inputs
+
+###### Positions
+
+A list with the positions of the points of all curves, one curve after the other.
+
+###### Curve Offsets
+
+A list that says which point each curve starts at. It is one entry longer than the number of curves. It holds the index of the first point of each curve, followed by the total number of points.
+
+For example, two curves with 3 and 2 points use the offsets 0, 3, 5.
+
+The first offset must be 0, the last offset must be the number of points, and every curve needs at least one point. If the lists do not fit, the node shows an error and outputs no curves.
+
+##### Outputs
+
+###### Curves
+
+The new curves. If a list is missing or invalid, the output is empty.
