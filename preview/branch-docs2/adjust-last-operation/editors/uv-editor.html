@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UV Editor · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/adjust-last-operation · <code>docs2/adjust-last-operation</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<a href="../getting-started/about-documentation.html">Using the Documentation</a>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<a style="padding-left:2.5rem" href="3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/text/edit.html">Edit Mode</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:2.5rem" href="3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<a style="padding-left:2.5rem" href="3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="image-editor/tool-shelf.html">Tool Shelf</a>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="uv-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a href="3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="image-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a href="image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:2.5rem" href="3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a class="is-current" href="uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<a href="video-sequence-editor.html">Video Sequence Editor</a>
+<a href="movie-clip-editor.html">Movie Clip Editor</a>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<a href="graph-editor.html">Graph Editor</a>
+<a href="drivers-editor.html">Drivers Editor</a>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<a href="outliner.html">Outliner</a>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › UV Editor</div><h1 class="pv-title">UV Editor</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 9 min read</span></div><article class="ui-doc-body"><h2 id="uv-editor">UV Editor</h2>
+<p>The UV Image Editor is the place where you can display and edit the UV mapping, which doesn't necessarily require to have an image to be loaded.</p>
+<p>The functionality of the UV Editor is connected to the 3D view. You need to have a mesh object selected, and you need to be in Edit mode to show the UV wire.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/uv-editor.png" alt="UV Editor" loading="lazy"></figure>
+<p>The UV editor is divided into several areas has several tool areas.</p>
+<p>Green - Tool Settings Area</p>
+<p>Grey - Viewport</p>
+<p>Orange - Header</p>
+<p>Blue - Tool Shelf</p>
+<p>Pink - Sidebar</p>
+<p>The Tool Settings area contains the same functionality than the Tools tab in the Sidebar. So we won't cover it.</p>
+<h2 id="navigating-in-the-uv-image-editor-viewport">Navigating in the UV Image Editor viewport</h2>
+<h3 id="hotkeys">Hotkeys</h3>
+<p>Pan the view - MMB</p>
+<p>Zoom - Mouse Wheel, <span class="ui-doc-keys"><kbd>LMB</kbd> + <kbd>Ctrl</kbd></span>, Numpad + / -</p>
+<h3 id="navigation-elements">Navigation Elements</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/navigation-elements.png" alt="Navigation Elements" loading="lazy"></figure>
+<p>There are also two navigation elements for panning and zoom in the upper right corner. Click at them, hold the mouse button down, and move.</p>
+<h3 id="2d-cursor">2D Cursor</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/2d-cursor.png" alt="2D Cursor" loading="lazy"></figure>
+<p>The 2D Cursor is the center point for tool operations. It can be set to mouse position with Alt + Right Mouse click. Or with the Cursor tool in the</p>
+<h2 id="uv-context-menu">UV context menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/uv-context-menu.png" alt="UV context menu" loading="lazy"></figure>
+<p>When you double right click into the viewport, then you will open a menu. The UV Context menu. Its content is to 100% double content to already existing menus. And it is despite the name not contextual.</p>
+<h3 id="unwrap">Unwrap</h3>
+<p>Unwraps the selected geometry with the method Angle based. ABF stands for Angle Based Flattening. But can then in the adjust last operator set to the other two methods too. Conformal ( LSCM) and Minium Stretch.</p>
+<h4 id="adjust-last-operation">Adjust Last Operation</h4>
+<h5 id="method">Method</h5>
+<p>Method is a drop down box where you can choose the unwrap method.</p>
+<h6 id="method-angle-based-conformal">Method Angle based + Conformal</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/method-angle-based-conformal.png" alt="Method Angle based + Conformal" loading="lazy"><figcaption>Method Angle based + Conformal</figcaption></figure>
+<p>Unwrap ABF and Unwrap LSCM shares the same Last Operator.</p>
+<p><strong>Method</strong></p>
+<p>Method is a drop down box where you can choose between Unwrap method Angle Based and Conformal.</p>
+<p><strong>Fill Holes</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/fill-holes.png" alt="Fill Holes" loading="lazy"></figure>
+<p>Fill holes in the mesh before unwrapping.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Subdivision Surface</td>
+<td>Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.</td>
+</tr>
+<tr>
+<td>Correct Aspect</td>
+<td>Take the Image Aspect Ratio into account.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Margin Method</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/margin-method.png" alt="Margin Method" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scaled</td>
+<td>Use the scale of existing UV to multiply margin.</td>
+</tr>
+<tr>
+<td>Add</td>
+<td>Just add the margin and ignore any existing UV.</td>
+</tr>
+<tr>
+<td>Fraction</td>
+<td>Specify a precise fraction of specific UV.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Margin</strong></p>
+<p>The distance between the single UV patches.</p>
+<h6 id="method-minimum-stretch">Method Minimum Stretch</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/method-minimum-stretch.png" alt="Method Minimum Stretch" loading="lazy"></figure>
+<h6 id="iterations">Iterations</h6>
+<p>Number of iterations.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No Flip</td>
+<td>Prevent flipping UV's</td>
+</tr>
+<tr>
+<td>Importance Weight</td>
+<td>Take per vertex importance weights into account.</td>
+</tr>
+<tr>
+<td>Use Subdivision Surface</td>
+<td>Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.</td>
+</tr>
+<tr>
+<td>Correct Aspect</td>
+<td>Take the Image Aspect Ratio into account.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Margin Method</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/margin-method.png" alt="Margin Method" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scaled</td>
+<td>Use the scale of existing UV to multiply margin.</td>
+</tr>
+<tr>
+<td>Add</td>
+<td>Just add the margin and ignore any existing UV.</td>
+</tr>
+<tr>
+<td>Fraction</td>
+<td>Specify a precise fraction of specific UV.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Margin</strong></p>
+<p>The distance between the single UV patches.</p>
+<h3 id="follow-active-quads">Follow Active Quads</h3>
+<p>Follow Active quads maps UV coordinates starting from an active face, and maps all adjacent faces in quad shape then. This way you can for example unwrap a pipe or a road. You first need to have a face selected. Then select everything. And then click at Follow Active Quads.</p>
+<h4 id="adjust-last-operation-2">Adjust Last Operation</h4>
+<p>The Last Operator contains the same settings than the Settings dialogue.</p>
+<h5 id="edge-length-mode">Edge Length Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/edge-length-mode.png" alt="Edge Length Mode" loading="lazy"></figure>
+<p>Edge Length Mode is a drop-down box where you can choose the Length method.</p>
+<h3 id="pin">Pin</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/pin.png" alt="Pin" loading="lazy"></figure>
+<p>Pins the selected vertices . This vertices are now nailed for the unwrap algorithms Angle based and Conformal. Their positions will not change when you repeat the unwrapping. And the algorithms will try to fit the rest of the geometry to this pinned vertices.</p>
+<p>Pinned vertices are marked red.</p>
+<p>A use case is for example when you have a distorted result for symmetric geometry like a face with the Conformal method. Then you can try to align two center vertices, pin them, and repeat the conformal method. It may be more symmetrical afterwards.</p>
+<h4 id="adjust-last-operation-3">Adjust Last Operation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/last-operator-pin.png" alt="Last Operator Pin" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear</td>
+<td>Clear the pinning instead of setting it for the selection.</td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>Invert the pinning instead of setting it for the selection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unpin">Unpin</h3>
+<p>Unpins pinned geometry.</p>
+<h3 id="snap">Snap</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/snap.png" alt="Snap" loading="lazy"></figure>
+<p>Snap is a sub menu with some snapping tools. The menu items should be pretty self explaining. Selected to Pixels snaps the selected geometry to the pixels of the image, and so on.</p>
+<h4 id="adjust-last-operation-4">Adjust Last Operation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/last-operator-snap-selection-and-snap-cursor.png" alt="Last Operator Snap Selection and Snap Cursor" loading="lazy"><figcaption>Last Operator Snap Selection and Snap Cursor</figcaption></figure>
+<h5 id="target">Target</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/target.png" alt="Target" loading="lazy"></figure>
+<p>Set the snap target method again.</p>
+<h3 id="mirror-x">Mirror X</h3>
+<p>Mirrors the selection along the X axis. The mirror point is the pivot of the selection.</p>
+<h3 id="mirror-y">Mirror Y</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/mirror-y.png" alt="Mirror Y" loading="lazy"></figure>
+<p>Mirrors the selection along the Y axis. The mirror point is the pivot of the selection.</p>
+<h4 id="adjust-last-operation-5">Adjust Last Operation</h4>
+<p>The Last Operator Mirror panel gives you tools to adjust the mirror action.</p>
+<h5 id="orientation">Orientation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box where you can choose the type of orientation for the mirroring action.</p>
+<h5 id="constraint-axis">Constraint Axis</h5>
+<p>Constraint Axis gives you the possibility to define the mirror axis. You can choose more than one axis here.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Straighten</td>
+<td>Straightens the selected geometry in both directions, X and Y axis.</td>
+</tr>
+<tr>
+<td>Straighten X</td>
+<td>Straightens the selected geometry along the X axis.</td>
+</tr>
+<tr>
+<td>Straighten Y</td>
+<td>Straightens the selected geometry along the Y axis.</td>
+</tr>
+<tr>
+<td>Align Auto</td>
+<td>Aligns the selection. The align axis gets chosen from the selection itself. When it's higher than tall, then it aligns along the Y axis. When it's taller than high, then it aligns along the X axis. The align point is the pivot of the selection.</td>
+</tr>
+<tr>
+<td>Align Vertically</td>
+<td>Aligns the selection along the X axis. The align point is the pivot of the selection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="align-horizontally">Align Horizontally</h3>
+<p>Aligns the selection along the Y axis. The align point is the pivot of the selection.</p>
+<h4 id="adjust-last-operation-6">Adjust Last Operation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/last-operator-align.png" alt="Last operator Align" loading="lazy"></figure>
+<p>The Last operator Align unions all the single straighten and align actions in one operator.</p>
+<h5 id="axis">Axis</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/axis.png" alt="Axis" loading="lazy"></figure>
+<p>Lists the straighten and align methods again.</p>
+<h3 id="merge">Merge</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/merge.png" alt="Merge" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>At Center</td>
+<td>Merges the selected vertices at the center.</td>
+</tr>
+<tr>
+<td>At Cursor</td>
+<td>Merges the selected vertices at the 2d cursor</td>
+</tr>
+</tbody>
+</table>
+<h4 id="by-distance">By Distance</h4>
+<p>Merge vertices that are below a specified distance to each other.</p>
+<h5 id="adjust-last-operation-7">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/last-operator-merge-uvs-by-distance.png" alt="Last operator Merge UVs by Distance" loading="lazy"><figcaption>Last operator Merge UVs by Distance</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Merge Distance</td>
+<td>Maximum distance for welding vertices.</td>
+</tr>
+<tr>
+<td>Unselected</td>
+<td>Merge selected vertices to other unselected vertices.</td>
+</tr>
+<tr>
+<td>Shared Vertex</td>
+<td>Weld uv’s based on shared vertices.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stitch">Stitch</h3>
+<p>Stitch tries to union UV patches along the selected edges or vertices.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/stitch.png" alt="Stitch" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/stitch-2.png" alt="Stitch" loading="lazy"></figure>
+<h4 id="adjust-last-operation-8">Adjust Last Operation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/last-operator-stitch.png" alt="Last Operator Stitch" loading="lazy"></figure>
+<p>This last operator appears in the 3D view.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Limit</td>
+<td>Just snap when the elements are below a given distance. · <strong>Snap Island</strong>: Snap the whole UV patch, or just the selected edge(s)/vertices</td>
+</tr>
+<tr>
+<td>Limit</td>
+<td>The limit distance for Use Limit.</td>
+</tr>
+<tr>
+<td>Static Island</td>
+<td>Adjust which island stays in place when stitching.</td>
+</tr>
+<tr>
+<td>Active Object</td>
+<td>Index of the active object.</td>
+</tr>
+<tr>
+<td>Snap at Midpoint</td>
+<td>Snap at the center point of the two elements instead the first to the last.</td>
+</tr>
+<tr>
+<td>Clear Seams</td>
+<td>Unmarks seams when stitching.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="operation-mode">Operation Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/operation-mode.png" alt="Operation Mode" loading="lazy"></figure>
+<p>The operation mode. Calculate with Edges or Vertices.</p>
+<h3 id="split">Split</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/split.png" alt="Split" loading="lazy"></figure>
+<h4 id="selection">Selection</h4>
+<p>Split the selected geometry from the not selected geometry.</p>
+<h2 id="quick-favorites-menu">Quick Favorites menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/quick-favorites-menu.png" alt="Quick Favorites menu" loading="lazy"></figure>
+<blockquote>
+<p>The <strong>Quick Favorites</strong> menu (Q) holds the tools and menus you add to it yourself. See <strong><a href="https://github.com/Bforartists/Manual/blob/docs2/adjust-last-operation/docs2/content/interface/floating-menus.md#quick-favorites">Quick Favorites</a></strong> in the Interface chapter.</p>
+</blockquote>
+<p>The Quick Favorites Menu is empty by default. With Add to Quick favorites you can add this menu to the Quick menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/quick-favorites-menu-2.png" alt="Quick Favorites menu" loading="lazy"></figure>
+<p>In the 3D view we have a menu called Quick in the header, which shows this content then. In the Image Editor you can just call it with its hotkey. Q. It has no regular menu entry here.</p>
+<h2 id="slider-snapping">Slider snapping</h2>
+<blockquote>
+<p>Hold <strong>Ctrl</strong> while dragging a slider to snap it. See <strong><a href="https://github.com/Bforartists/Manual/blob/docs2/adjust-last-operation/docs2/content/interface/properties.md#snapping">Snapping</a></strong> in the Interface chapter.</p>
+</blockquote>
+<h2 id="hotkey-only-functionality">Hotkey only functionality</h2>
+<div class="ui-doc-callout is-important"><p><strong>Important:</strong> These hotkeys works with the default Bforartists key map. And they do not list the Ndof hotkeys. Ndof is a 3d connexion mouse device that is also used for tablets.</p></div>
+<p>Most of the tools can be found in the graphical UI. But there are still some tools that are hotkey only. Some have a UI brother with equal functionality. For example, Pick shortest path is the hotkey sister of Select shortest path. Some are hotkey only since they cannot be integrated in the graphical UI. Like calling the File menu under the mouse. Or mouse position dependent functionality like selecting an edge loop.</p>
+<p>The navigation hotkeys and the context menus are excluded here since they are already covered.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Loop Select - Alt Left Mouse</td>
+<td>Select an edge loop.</td>
+</tr>
+<tr>
+<td>Loop Select - Shift Alt Left Mouse</td>
+<td>Select an edge loop. Adds to selection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="edge-ring-select-ctrl-alt-left-mouse">Edge Ring Select - Ctrl Alt Left Mouse</h3>
+<p>Select an edge ring.</p>
+<h3 id="edge-ring-select-shift-ctrl-alt-left-mouse">Edge Ring Select - Shift Ctrl Alt Left Mouse</h3>
+<p>Select an edge ring. Adds to selection.</p>
+<h3 id="unwrap-u">Unwrap - U</h3>
+<p>Unwraps the selected geometry. This operator starts with the method Angle based.</p>
+<h4 id="adjust-last-operation-9">Adjust Last Operation</h4>
+<h5 id="method-2">Method</h5>
+<p>Method is a drop down box where you can choose the unwrap method.</p>
+<h6 id="method-angle-based-conformal-2">Method Angle based + Conformal</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/method-angle-based-conformal.png" alt="Method Angle based + Conformal" loading="lazy"><figcaption>Method Angle based + Conformal</figcaption></figure>
+<p>Unwrap ABF and Unwrap LSCM shares the same Last Operator.</p>
+<p><strong>Method</strong></p>
+<p>Method is a drop down box where you can choose between Unwrap method Angle Based and Conformal.</p>
+<p><strong>Fill Holes</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/fill-holes.png" alt="Fill Holes" loading="lazy"></figure>
+<p>Fill holes in the mesh before unwrapping.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Subdivision Surface</td>
+<td>Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.</td>
+</tr>
+<tr>
+<td>Correct Aspect</td>
+<td>Take the Image Aspect Ratio into account.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Margin Method</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/margin-method.png" alt="Margin Method" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scaled</td>
+<td>Use the scale of existing UV to multiply margin.</td>
+</tr>
+<tr>
+<td>Add</td>
+<td>Just add the margin and ignore any existing UV.</td>
+</tr>
+<tr>
+<td>Fraction</td>
+<td>Specify a precise fraction of specific UV.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Margin</strong></p>
+<p>The distance between the single UV patches.</p>
+<h6 id="method-minimum-stretch-2">Method Minimum Stretch</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/method-minimum-stretch.png" alt="Method Minimum Stretch" loading="lazy"></figure>
+<h6 id="iterations-2">Iterations</h6>
+<p>Number of iterations.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No Flip</td>
+<td>Prevent flipping UV's</td>
+</tr>
+<tr>
+<td>Importance Weight</td>
+<td>Take per vertex importance weights into account.</td>
+</tr>
+<tr>
+<td>Use Subdivision Surface</td>
+<td>Unwraps an existing Subdivision Modifier. You need to add a Subdivision Modifier first.</td>
+</tr>
+<tr>
+<td>Correct Aspect</td>
+<td>Take the Image Aspect Ratio into account.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Margin Method</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/margin-method.png" alt="Margin Method" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scaled</td>
+<td>Use the scale of existing UV to multiply margin.</td>
+</tr>
+<tr>
+<td>Add</td>
+<td>Just add the margin and ignore any existing UV.</td>
+</tr>
+<tr>
+<td>Fraction</td>
+<td>Specify a precise fraction of specific UV.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Margin</strong></p>
+<p>The distance between the single UV patches.</p>
+<h3 id="pick-shortest-path">Pick shortest path</h3>
+<p>Click at the first edge or vertice, <strong>hold down ctrl,click</strong> at the last edge or vertice.</p>
+<h4 id="adjust-last-operation-10">Adjust Last Operation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/uv-editor/last-operator-pick-shortest-path.png" alt="Last operator Pick shortest path" loading="lazy"><figcaption>Last operator Pick shortest path</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Face stepping</td>
+<td>Traverse connected faces. Including diagonals and edge rings.</td>
+</tr>
+<tr>
+<td>Topology Distance</td>
+<td>Find the minimum number of steps. And ignore the spatial distance.</td>
+</tr>
+<tr>
+<td>Fill Region</td>
+<td>Select all paths between the source / destination elements.</td>
+</tr>
+<tr>
+<td>Deselected</td>
+<td>Don't select the whole path, but just every nth element of it.</td>
+</tr>
+<tr>
+<td>Selected</td>
+<td>This is connected to nth element. Number of elements to skip at once.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>This is connected to nth element. Start with an offset.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="in-this-chapter">In this chapter</h2><div class="ui-doc-cards"><ul><li><a href="uv-editor/header.html">Header</a> — The Header contains various menus, navigation elements, settings and tools for the viewport.</li><li><a href="uv-editor/tool-shelf.html">Tool Shelf</a> — Tools with a triangle down right are a group of tools.</li><li><a href="https://github.com/Bforartists/Manual/blob/docs2/adjust-last-operation/docs2/content/editors/uv-editor/sidebar/index.md">Sidebar</a> — The Image Editor is made of several areas.</li></ul></div></article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fadjust-last-operation/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fuv-editor%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/adjust-last-operation/docs2/content/editors/uv-editor/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#uv-editor">UV Editor</a><a class="h2" href="#navigating-in-the-uv-image-editor-viewport">Navigating in the UV Image Editor viewport</a><a class="h3" href="#hotkeys">Hotkeys</a><a class="h3" href="#navigation-elements">Navigation Elements</a><a class="h3" href="#2d-cursor">2D Cursor</a><a class="h2" href="#uv-context-menu">UV context menu</a><a class="h3" href="#unwrap">Unwrap</a><a class="h3" href="#follow-active-quads">Follow Active Quads</a><a class="h3" href="#pin">Pin</a><a class="h3" href="#unpin">Unpin</a><a class="h3" href="#snap">Snap</a><a class="h3" href="#mirror-x">Mirror X</a><a class="h3" href="#mirror-y">Mirror Y</a><a class="h3" href="#align-horizontally">Align Horizontally</a><a class="h3" href="#merge">Merge</a><a class="h3" href="#stitch">Stitch</a><a class="h3" href="#split">Split</a><a class="h2" href="#quick-favorites-menu">Quick Favorites menu</a><a class="h2" href="#slider-snapping">Slider snapping</a><a class="h2" href="#hotkey-only-functionality">Hotkey only functionality</a><a class="h3" href="#edge-ring-select-ctrl-alt-left-mouse">Edge Ring Select - Ctrl Alt Left Mouse</a><a class="h3" href="#edge-ring-select-shift-ctrl-alt-left-mouse">Edge Ring Select - Shift Ctrl Alt Left Mouse</a><a class="h3" href="#unwrap-u">Unwrap - U</a><a class="h3" href="#pick-shortest-path">Pick shortest path</a><a class="h2" href="#in-this-chapter">In this chapter</a></aside></div></body></html>
