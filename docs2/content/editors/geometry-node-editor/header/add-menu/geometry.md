@@ -416,6 +416,33 @@ The input node for this data is the Position Node.
 
 Here you find nodes to modify the material.
 
+### Geometry Materials
+
+![Geometry Materials](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-material/geometry-materials.png)
+
+Gets the list of materials that a geometry uses. Use it to see which materials a mesh, point cloud, curve or Grease Pencil object has in its material slots. Choose which part of the geometry to read with Component Type.
+
+#### Inputs
+
+##### Geometry
+
+The geometry to read the materials from.
+
+##### Component Type
+
+Which part of the geometry to read the materials from. The list has one entry for each material slot of that part.
+
+- Mesh: the materials of the mesh. This is the default.
+- Point Cloud: the materials of the point cloud.
+- Curve: the materials of the curves.
+- Grease Pencil: the materials of the Grease Pencil object.
+
+#### Outputs
+
+##### Materials
+
+The list of materials, in slot order. If the geometry has no part of the chosen type, or that part has no material slots, nothing is output.
+
 ### Replace Material.
 
 ![Replace Material.](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-material/replace-material.png)
