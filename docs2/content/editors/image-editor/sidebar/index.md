@@ -1665,7 +1665,7 @@ You can expand a search field at the bottom of the list. Type in your term and h
 
 Add a new mask layer to the list.
 
-#### Last Operator Add Mask Layer
+#### Adjust Last Operation - Add Mask Layer
 
 ![Last Operator Add Mask Layer](/docs2/images/editors/image-editor/sidebar/mask-tab/last-operator-add-mask-layer.png)
 

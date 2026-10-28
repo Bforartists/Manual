@@ -518,7 +518,7 @@ Shows or hides the sidebar at the right in the viewport.
 
 Show or hide the tool settings at the top.
 
-### Adjust Last Operation
+### Adjust Last Operation - View Menu in Sequencer window
 
 ![Adjust Last Operation](/docs2/images/editors/video-sequence-editor/header/view-menu/adjust-last-operation.png)
 
@@ -680,7 +680,7 @@ Select everything.
 | Left Neighbours | Select the left handles of the selected strips. Plus the handle from the neighbour strips that touches the left handle of the strip. |
 | Right Neighbours | Select the right handles of the selected strips. Plus the handle from the neighbour strips that touches the right handle of the strip. |
 
-#### Last operator Select Handles
+#### Adjust Last Operation - Select Handles
 
 ![Last operator Select Handles](/docs2/images/editors/video-sequence-editor/header/select-menu/last-operator-select-handles.png)
 
@@ -1244,7 +1244,7 @@ Set the render size and aspect from the active image strip. Attention, there is 
 
 Strip type Image. Create a strip for every image in the image sequence strip.
 
-#### Last Operator Separate Images
+#### Adjust Last Operation - Separate Images
 
 ![Last Operator Separate Images](/docs2/images/editors/video-sequence-editor/header/strip-menu/last-operator-separate-images.png)
 

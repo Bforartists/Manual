@@ -358,7 +358,7 @@ The list of modifiers. Choose by clicking.
 | Paste F-Curve Modifiers | Paste copied F-Curve modifiers to the active F-Curve. |
 
 
-### Last Operator Add F-Curve Modifier
+### Adjust Last Operation - Add F-Curve Modifier
 
 ![Last Operator Add F-Curve Modifier](/docs2/images/editors/drivers-editor/sidebar/modifiers-tab/last-operator-add-f-curve-modifier.png)
 

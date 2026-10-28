@@ -202,7 +202,7 @@ Shows or hides the Channels list at the left in the viewport.
 
 Shows or hides the sidebar at the right in the viewport.
 
-### Adjust Last Operation
+### Adjust Last Operation - NLA Editor - View Menu
 
 Shows the adjust last operator panel down left.
 
@@ -285,7 +285,7 @@ It adds to selection by default. To subtract from selection hold down Shift key.
 
 The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse.
 
-#### Last Operator Box Select
+#### Adjust Last Operation - Box Select
 
 ![Last Operator Box Select](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-select-menu/last-operator-box-select.png)
 
@@ -310,7 +310,7 @@ The selection mode to use.
 
 Select the keyframes after the current frame.
 
-#### Last Operator Select Left/Right
+#### Adjust Last Operation - Select Left/Right
 
 ![Last Operator Select Left/Right](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-select-menu/last-operator-select-left-right.png)
 
@@ -346,7 +346,7 @@ Adds a marker at the current frame position
 
 Duplicates the selected marker(s). The duplicate(s) sticks at the mouse until you click to give it the target destination.
 
-#### Last Operator Duplicate Time Marker
+#### Adjust Last Operation - Duplicate Time Marker
 
 ![Last Operator Duplicate Time Marker](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-marker-menu/last-operator-duplicate-time-marker.png)
 
@@ -362,7 +362,7 @@ Duplicate markers to other scenes. A blend file can contain more than one scene.
 
 ![Duplicate Marker to Scene](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-marker-menu/duplicate-marker-to-scene-2.png)
 
-#### Last Operator Make Links to Scene
+#### Adjust Last Operation - Make Links to Scene
 
 ![Last Operator Make Links to Scene](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-marker-menu/last-operator-make-links-to-scene.png)
 
@@ -394,7 +394,7 @@ A menu will open up where you can rename the active marker.
 
 Note that for the hotkey to work you need to hover over the Marker region. In the NLA viewport F2 will call the rename menu to rename the clip instead.
 
-#### Last Operator Rename Marker
+#### Adjust Last Operation - Rename Marker
 
 ![Last Operator Rename Marker](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-marker-menu/last-operator-rename-marker.png)
 
@@ -494,7 +494,7 @@ This menu contains functionality to manage the keyframes.
 
 Moves the selected keyframe(s).
 
-##### Last Operator Move
+##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-strip-menu/last-operator-move.png)
 
@@ -522,7 +522,7 @@ Proportional editing is not available for this mode.
 
 Moves the last keyframes of the selection.
 
-##### Last Operator Transform
+##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-strip-menu/last-operator-transform.png)
 
@@ -551,7 +551,7 @@ Proportional editing is not available for this mode.
 
 Scales the selected keyframes. You need to have more than one keyframe selected.
 
-##### Last Operator Resize
+##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/nonlinear-animation-editor/header/nla-editor-strip-menu/last-operator-transform.png)
 

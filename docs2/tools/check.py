@@ -177,7 +177,7 @@ def check_style(pages, rep):
         for k, (idx, n, lv, text) in enumerate(heads):
             if not last_op.match(text):
                 continue
-            if text.strip().lower() != "adjust last operation":
+            if not text.strip().lower().startswith("adjust last operation"):
                 wrong_name.append(n)
             end = heads[k + 1][0] if k + 1 < len(heads) else len(lines)
             body = [l for _, l in lines[idx + 1:end]]

@@ -399,7 +399,7 @@ This view is scene specific only. It does save and load with the current scene. 
 
 You can create more than one user orientation.
 
-#### Last Operator Create Orientation
+#### Adjust Last Operation - Create Orientation
 
 ![Last Operator Create Orientation](/docs2/images/editors/3d-viewport/header/header-tools-and-options/last-operator-create-orientation.png)
 
@@ -556,7 +556,7 @@ The exact radius value can be read in the header while transformation.
 
 And it can also be read and edited at the Proportional Size slider in the Proportional Editing panel.
 
-### Last Operator Proportional Editing
+### Adjust Last Operation - Proportional Editing
 
 ![Last Operator Proportional Editing](/docs2/images/editors/3d-viewport/header/header-tools-and-options/last-operator-proportional-editing.png)
 
@@ -1157,7 +1157,7 @@ Set Handle type to Free.
 
 Toggle Free/Aligned.
 
-#### Last Operator Set Handle Type
+#### Adjust Last Operation - Set Handle Type
 
 ![Last Operator Set Handle Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-handle-type.png)
 

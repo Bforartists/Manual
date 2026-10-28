@@ -250,7 +250,7 @@ This can be combined with the numerical input. Type in X, type in X again to use
 
 The widget can have different orientations. The menu items should be self explaining.
 
-##### Last Operator Move
+##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-move.png)
 
@@ -315,7 +315,7 @@ By holding down the mouse button and pressing the X, Y or Z key twice you can to
 
 This can be combined with the numerical input. Type in X, type in X again to use the local space, type in 20 to rotate by 20 degree. Release the mouse to confirm.
 
-##### Last Operator Rotate
+##### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-rotate.png)
 
@@ -384,7 +384,7 @@ By holding down the mouse button and pressing the X, Y or Z key twice you can to
 
 This can be combined with the numerical input. Hold down mouse, type in X, type in X again to use the local space, type in 20 to scale by 20 units. Release the mouse to confirm.
 
-##### Last Operator Resize
+##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-resize.png)
 
@@ -471,7 +471,7 @@ Adds a mesh filter that casts the mesh to a sphere shape.
 
 Activate the tool, click at the mesh, and adjust the sphere shape in the last operator panel.
 
-##### Last operator Filter Mesh
+##### Adjust Last Operation - Filter Mesh
 
 ![Last operator Filter Mesh](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-filter-mesh.png)
 
@@ -506,7 +506,7 @@ Edits the current active face set.
 
 Creates a smooth as possible geometry patch from the face set, miniming changes in vertex tangents.
 
-#### Last Operator Edit Face Sets
+#### Adjust Last Operation - Edit Face Sets
 
 ![Last Operator Edit Face Sets](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-edit-face-sets.png)
 
@@ -561,7 +561,7 @@ An act-once operator that smoothens the object.
 
 An act-once operator that randomizes the mesh topology.
 
-#### Last operator Filter Mesh
+#### Adjust Last Operation - Filter Mesh
 
 ![Last operator Filter Mesh](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-filter-mesh.png)
 
@@ -592,7 +592,7 @@ Subdivide is a menu where you can quickly set the subdivision level of the selec
 
 SDS happens at Object mode level. Even when you apply it in the Sculpt Mode! And it happens at the whole object. The sculpting though still happens at the base mesh.
 
-#### Last Operator Subdivision Set
+#### Adjust Last Operation - Subdivision Set
 
 ![Last Operator Subdivision Set](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-subdivision-set.png)
 
@@ -616,7 +616,7 @@ Samples the vertex color attribute of the active vertex.
 
 Flood fills the vertex colors with the current vertex color value. Applies a vertex color to the selected or affected geometry during sculpting. Useful for painting, shading, or marking areas directly on the mesh without switching to Vertex Paint mode.
 
-#### Last operator Fill
+#### Adjust Last Operation - Fill
 
 
 | Entry | What it does |
@@ -631,7 +631,7 @@ Flood fills the vertex colors with the current vertex color value. Applies a ver
 
 Sets the pivot to the chosen location. The menu items should be self explaining. So we don't repeat them here.
 
-#### Last operator Set Pivot Position
+#### Adjust Last Operation - Set Pivot Position
 
 ![Last operator Set Pivot Position](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-set-pivot-position.png)
 
@@ -647,7 +647,7 @@ How to set the pivot to.
 
 Toggles the visibility of face sets.
 
-##### Last operator Face Sets Visibility
+##### Adjust Last Operation - Face Sets Visibility
 
 ![Last operator Face Sets Visibility](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-face-sets-visibility.png)
 
@@ -661,7 +661,7 @@ The show hide modes for face sets.
 
 Makes the active face sets invisible.
 
-##### Last operator Face Sets Visibility
+##### Adjust Last Operation - Face Sets Visibility
 
 ![Last operator Face Sets Visibility](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-face-sets-visibility.png)
 
@@ -679,7 +679,7 @@ Makes all invisible mesh parts visible again.
 
 Toggles the visibility of the selected face sets.
 
-##### Last operator Face Sets Visibility
+##### Adjust Last Operation - Face Sets Visibility
 
 ![Last operator Face Sets Visibility](/docs2/images/editors/3d-viewport/header/mesh-sculpt-mode-sculpt-menu/last-operator-face-sets-visibility.png)
 

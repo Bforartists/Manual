@@ -518,7 +518,7 @@ Shows or hides the tool settings above the header in the 3D view.
 
 Not yet. The asset shelf is planned but not implemented yet.
 
-### Adjust Last Operation
+### Adjust Last Operation - Image Editor - View Menu
 
 ![Adjust Last Operation](/docs2/images/editors/image-editor/header/view-menu/adjust-last-operation.png)
 
@@ -790,7 +790,7 @@ You can add multiple spline curves to a mask layer.
 
 Adds a circle shaped spline curve.
 
-#### Last Operator Add Circle
+#### Adjust Last Operation - Add Circle
 
 ![Last Operator Add Circle](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-circle.png)
 
@@ -805,7 +805,7 @@ Adds a circle shaped spline curve.
 
 Adds a square shaped spline curve.
 
-#### Last Operator Add Square
+#### Adjust Last Operation - Add Square
 
 ![Last Operator Add Square](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-square.png)
 
@@ -820,7 +820,7 @@ Adds a square shaped spline curve.
 
 Allows you to draw freehand curves by holding down shift and clicking into the viewport. Hotkey only functionality!
 
-#### Last Operator Add Vertex and Slide
+#### Adjust Last Operation - Add Vertex and Slide
 
 ![Last Operator Add Vertex and Slide](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-vertex-and-slide.png)
 
@@ -836,7 +836,7 @@ Create and define a feathering outline curve.
 
 Usage: Hold down shift + control, click at a vertex, and pull outwards. This will create the feathering outline curve, displayed in green.
 
-#### Last Operator Add Feather Vertex and Slide
+#### Adjust Last Operation - Add Feather Vertex and Slide
 
 ![Last Operator Add Feather Vertex and Slide](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-feather-vertex-and-slide.png)
 
@@ -862,7 +862,7 @@ This is a sub menu with some transform menu items. This menu items are hotkey to
 
 Move the selection.
 
-##### Last Operator Move
+##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/image-editor/header/mask-menu/last-operator-move.png)
 
@@ -897,7 +897,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Rotate the selection.
 
-##### Last Operator Rotate
+##### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/image-editor/header/mask-menu/last-operator-rotate.png)
 
@@ -933,7 +933,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Scale the selection.
 
-##### Last Operator Resize
+##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/image-editor/header/mask-menu/last-operator-resize.png)
 
@@ -979,7 +979,7 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 ![Usage](/docs2/images/editors/image-editor/header/mask-menu/usage-2.png)
 
-##### Last Operator To Sphere
+##### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/image-editor/header/mask-menu/last-operator-to-sphere.png)
 
@@ -1016,7 +1016,7 @@ The shear tool works along a imaginary 2d plane. The shear axis controls if the 
 
 To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.
 
-##### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/image-editor/header/mask-menu/last-operator-shear.png)
 
@@ -1065,7 +1065,7 @@ It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-##### Last Operator Push/Pull
+##### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/image-editor/header/mask-menu/last-operator-push-pull.png)
 
@@ -1095,7 +1095,7 @@ The curve type that is used to create mask splines is almost a Bezier curve. But
 
 Besides the handles, every control point also has points that define the feather between the current point and the next point on the spline. Each feather point is stored in UV space, where U means position across spline segment, and V means distance between main spline and feather points.
 
-##### Last Operator Transform
+##### Adjust Last Operation - Transform
 
 ##### Values
 
@@ -1171,7 +1171,7 @@ Recalculating the normals smoothens out the curve, and realigns the handlers. A 
 
 Opens a sub menu where you can choose different handle types.
 
-#### Last Operator Set Handle Type
+#### Adjust Last Operation - Set Handle Type
 
 ![Last Operator Set Handle Type](/docs2/images/editors/image-editor/last-operator-set-handle-type.png)
 

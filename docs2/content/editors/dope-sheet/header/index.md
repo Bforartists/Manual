@@ -449,7 +449,7 @@ Shows or hides the Channels list at the left in the viewport.
 
 Shows or hides the sidebar at the right in the viewport.
 
-### Adjust Last Operation
+### Adjust Last Operation - Dopesheet Editor - View Menu
 
 Show the adjust last operation panel down left when you use a tool.
 
@@ -812,7 +812,7 @@ The grease pencil object is a special object in this regards. It can have keyfra
 | Slide | Slides a selected keyframe between two other keyframes. |
 | Scale | Scales the selected keyframes. You need to have more than one keyframe selected. |
 
-#### Last Operator Transform
+#### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/dope-sheet/header/key-menu/last-operator-transform.png)
 

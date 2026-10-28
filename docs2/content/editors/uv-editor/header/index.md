@@ -486,7 +486,7 @@ Shows or hides the tool settings above the header in the 3D view.
 
 Shows or hides the asset shelf at the bottom of the editor.
 
-### Adjust Last Operation
+### Adjust Last Operation - Image Editor - View Menu
 
 ![Adjust Last Operation](/docs2/images/editors/uv-editor/header/view-menu/adjust-last-operation.png)
 
@@ -621,7 +621,7 @@ Select all UV vertices linked to the active UV map. The previous selection gets 
 
 Select all UV vertices linked to the active UV map. The previous selection gets cleared.
 
-#### Last Operator Select Linked Pick
+#### Adjust Last Operation - Select Linked Pick
 
 ![Last Operator Select Linked Pick](/docs2/images/editors/uv-editor/header/select-menu/last-operator-select-linked-pick.png)
 
@@ -637,7 +637,7 @@ Select all UV vertices linked to the active UV map. The previous selection gets 
 
 Selects a continuous path of UV elements (vertices, edges, or faces) between two points using the shortest route. Useful for isolating edge loops, seams, or structured selections across UV islands.
 
-#### Last Operator Shortest Path
+#### Adjust Last Operation - Shortest Path
 
 ![Last Operator Shortest Path](/docs2/images/editors/uv-editor/header/select-menu/last-operator-shortest-path.png)
 
@@ -655,7 +655,7 @@ Selects a continuous path of UV elements (vertices, edges, or faces) between two
 
 Like the Shortest Path operator, this will select the shortest path under the mouse location between two selected elements.
 
-#### Last Operator Shortest Path
+#### Adjust Last Operation - Shortest Path
 
 | Entry | What it does |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -672,7 +672,7 @@ Useful for isolating texture regions, organizing UV layouts, or applying operati
 
 > **Note:** You need more than one UDIM tile to use this conveniently. To define UDIM tiles, add a new image with UDM tiles activated then use the Sidebar Image tab with the UDIM Tiles panel to add new tiles.
 
-#### Last Operator Select Tile
+#### Adjust Last Operation - Select Tile
 
 ![Last Operator Select Tile](/docs2/images/editors/uv-editor/header/select-menu/last-operator-select-tile.png)
 
@@ -701,7 +701,7 @@ Two numeric fields representing the UDIM tile coordinates:
 
 Select all UV faces that overlaps each other.
 
-#### Last Operator Select Overlap
+#### Adjust Last Operation - Select Overlap
 
 ##### Extend
 
@@ -753,7 +753,7 @@ Select UV edges that has the same area in the UV Space.
 
 With UV Select Mode Islands. Selects all UV Islands with the same amount of faces.
 
-#### Last Operator Select Similar
+#### Adjust Last Operation - Select Similar
 
 ![Last Operator Select Similar](/docs2/images/editors/uv-editor/header/select-menu/last-operator-select-similar.png)
 
@@ -769,7 +769,7 @@ Select the shortest path between two selected elements.
 
 Note that shortest path is a hotkey tool. Select the first element, hold down ctrl, select the second element.
 
-#### Last Operator Pick Shortest Path
+#### Adjust Last Operation - Pick Shortest Path
 
 ![Last Operator Pick Shortest Path](/docs2/images/editors/uv-editor/header/select-menu/last-operator-pick-shortest-path.png)
 
@@ -956,7 +956,7 @@ Rotates the selection by 90 degree clockwise.
 
 Rotates the selection by 90 degree counter clockwise.
 
-##### Last Operator Rotate
+##### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-rotate.png)
 
@@ -980,7 +980,7 @@ Choose the orientation for the shear action.
 
 Shear shears the selection.
 
-##### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-shear.png)
 
@@ -1009,7 +1009,7 @@ Slide a vertex along the parent edge of the mesh UV.
 
 > **Note:** This is exclusively a vertex selection mode operator.
 
-##### Last Operator Vertex Slide
+##### Adjust Last Operation - Vertex Slide
 
 ![Last Operator Vertex Slide](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-vertex-slide.png)
 
@@ -1029,7 +1029,7 @@ Slide an edge along the adjacent edges of the mesh UV.
 
 > **Note:** This is exclusively an edge selection mode operator.
 
-##### Last Operator Edge Slide
+##### Adjust Last Operation - Edge Slide
 
 ![Last Operator Edge Slide](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-edge-slide.png)
 
@@ -1043,7 +1043,7 @@ Slide an edge along the adjacent edges of the mesh UV.
 
 #### Randomize
 
-##### Last Operator Randomize
+##### Adjust Last Operation - Randomize
 
 ![Last Operator Randomize](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-randomize.png)
 
@@ -1070,7 +1070,7 @@ Copies and pastes the selected UV geometry on the X axis based on a mirrored mes
 
 Use UV Select Sync must be off. The tool does not work with Use UV Select Sync on. And it is not fully reliable as our example shows.
 
-##### Last Operator Copy Mirrored UV Coords
+##### Adjust Last Operation - Copy Mirrored UV Coords
 
 ![Last Operator Copy Mirrored UV Coords](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-copy-mirrored-uv-coords.png)
 
@@ -1092,7 +1092,7 @@ Mirrors the selection in X axis. The mirror point is the pivot of the selection.
 
 Mirrors the selection in Y axis. The mirror point is the pivot of the selection.
 
-##### Last Operator Mirror X Y Z Global
+##### Adjust Last Operation - Mirror X Y Z Global
 
 ![Last Operator Mirror X Y Z Global](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-mirror-x-y-z-global.png)
 
@@ -1114,7 +1114,7 @@ Constraint Axis gives you the possibility to define the mirror axis. You can cho
 
 Snap is a sub menu with some snapping tools. The menu items should be pretty self explaining. Selected to Pixels snaps the selected geometry to the pixels of the image, and so on.
 
-#### Last Operator Snap Selection and Snap Cursor
+#### Adjust Last Operation - Snap Selection and Snap Cursor
 
 ![Last Operator Snap Selection and Snap Cursor](/docs2/images/editors/uv-editor/last-operator-snap-selection-and-snap-cursor.png)
 
@@ -1142,7 +1142,7 @@ Unpins pinned geometry.
 
 This operator inverts the pins to all selected pins, and unpins the set pins. This will only work if you have geometry selected.
 
-#### Last operator Pin
+#### Adjust Last Operation - Pin
 
 ![Last operator Pin](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-pin.png)
 
@@ -1163,7 +1163,7 @@ This last operator appears in the 3D view to the bottom left of the editor. Pin,
 | Conformal | Unwraps the selected geometry with the method LSCM, which is the short for Least Square Conformal Mapping. LSCM can give a bit better results than ABF with geometric shapes. |
 | Minimum Stretch | Unwraps the selected geometry with the method SLIM, which is a “state-of-the-art” iterative UV unwrapping algorithm. |
 
-#### Last Operator Unwrap
+#### Adjust Last Operation - Unwrap
 
 ##### Method
 
@@ -1267,7 +1267,7 @@ How to rotate islands.
 | Area Weight | Weight Projection Vector by faces with larger areas. |
 | Correct Aspect | Take the Image Aspect Ratio into account. |
 
-##### Last Operator Smart UV Project
+##### Adjust Last Operation - Smart UV Project
 
 ![Last Operator Smart UV Project](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-smart-uv-project.png)
 
@@ -1303,7 +1303,7 @@ Follow Active quads maps UV coordinates starting from an active face, and maps a
 
 Edge Length Mode is a drop-down box where you can choose the Length method.
 
-##### Last Operator Follow Active Quads
+##### Adjust Last Operation - Follow Active Quads
 
 ![Last Operator Follow Active Quads](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-follow-active-quads.png)
 
@@ -1313,7 +1313,7 @@ The Last Operator contains the same settings than the Settings dialogue.
 
 Cube Projection maps the mesh from six sides, means cubic.
 
-##### Last Operator Cube Projection
+##### Adjust Last Operation - Cube Projection
 
 ![Last Operator Cube Projection](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-cube-projection.png)
 
@@ -1328,7 +1328,7 @@ Cube Projection maps the mesh from six sides, means cubic.
 
 Cylinder Projection tries to map the geometry cylindric.
 
-##### Last Operator Cylinder Projection
+##### Adjust Last Operation - Cylinder Projection
 
 ![Last Operator Cylinder Projection](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-cylinder-projection.png)
 
@@ -1347,7 +1347,7 @@ Cylinder Projection tries to map the geometry cylindric.
 
 Sphere Projection tries to map the geometry spherical.
 
-##### Last Operator Sphere Projection
+##### Adjust Last Operation - Sphere Projection
 
 ![Last Operator Sphere Projection](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-sphere-projection.png)
 
@@ -1389,7 +1389,7 @@ Merges the selected vertices at the center point.
 
 Merges the selected vertices not only at the cursor. The last operator provides you with four methods.
 
-##### Last Operator Snap Selection
+##### Adjust Last Operation - Snap Selection
 
 ![Last Operator Snap Selection](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-snap-selection.png)
 
@@ -1411,7 +1411,7 @@ Pixels
 
 Merge UV vertices when they are below a merge distance.
 
-##### Last Operator Merge UV's by Distance
+##### Adjust Last Operation - Merge UV's by Distance
 
 ![Last Operator Merge UV's by Distance](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-merge-uv-s-by-distance.png)
 
@@ -1557,7 +1557,7 @@ The header shows a help text while the algorithm works. The Blend factor is the 
 
 ![Minimize Stretch](/docs2/images/editors/uv-editor/header/uv-menu/minimize-stretch-5.png)
 
-#### Last Operator Minimize Stretch
+#### Adjust Last Operation - Minimize Stretch
 
 | Entry | What it does |
 | ---------- | ----------------------------------------------------------------------------------------------------- |
@@ -1573,7 +1573,7 @@ Stitch tries to union UV patches along the selected edges or vertices.
 
 ![Stitch](/docs2/images/editors/uv-editor/stitch-2.png)
 
-#### Last Operator Stitch
+#### Adjust Last Operation - Stitch
 
 ![Last Operator Stitch](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-stitch.png)
 
@@ -1606,7 +1606,7 @@ Mark seam marks the currently selected edge(s) as a seam. Seam edges will be dis
 
 You need to unwrap the mesh again when you want to apply changes by the new marked seams.
 
-#### Last Operator Mark Seam
+#### Adjust Last Operation - Mark Seam
 
 ![Last Operator Mark Seam](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-mark-seam.png)
 
@@ -1632,7 +1632,7 @@ Provides a unified interface for aligning, distributing, and organizing UV islan
 
 Aligns selected UV islands along a chosen axis.
 
-#### Last Operator Arrange/Align Islands
+#### Adjust Last Operation - Arrange/Align Islands
 
 ![Last Operator Arrange/Align Islands](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-arrange-align-islands.png)
 
@@ -1716,7 +1716,7 @@ Align the selected geometry. Affected are the vertices.
 
 Aligns the selection along the Y axis. The align point is the pivot of the selection.
 
-##### Last operator Align
+##### Adjust Last Operation - Align
 
 ![Last operator Align](/docs2/images/editors/uv-editor/last-operator-align.png)
 
@@ -1732,7 +1732,7 @@ Lists the straighten and align methods again.
 
 Aligns the selected geometry horizontally or vertically. It aligns to the closest angle.
 
-##### Last operator Align Rotation
+##### Adjust Last Operation - Align Rotation
 
 ![Last operator Align Rotation](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-align-rotation.png)
 
@@ -1781,7 +1781,7 @@ Show or hide faces. This happens in both, the 3D View and the UV editor.
 | Hide Selected | Hides the selected geometry. |
 | Hide Unselected | Hides the not selected geometry. The selected geometry stays visible. |
 
-#### Last Operator Reveal Hidden / Hide Selected
+#### Adjust Last Operation - Reveal Hidden / Hide Selected
 
 ![Last Operator Reveal Hidden / Hide Selected](/docs2/images/editors/uv-editor/header/uv-menu/last-operator-reveal-hidden-hide-selected.png)
 

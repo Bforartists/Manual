@@ -91,7 +91,7 @@ When enough marcant areas are available then it adds up to eight markers that wa
 
 ![Detect Features](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/detect-features-2.png)
 
-#### Last Operator Detect Features
+#### Adjust Last Operation - Detect Features
 
 ![Last Operator Detect Features](/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-detect-features.png)
 
@@ -129,7 +129,7 @@ The markers can be at every position of the current frame image.
 
 Disables the currently selected marker(s)
 
-#### Last operator Disable Markers
+#### Adjust Last Operation - Disable Markers
 
 ![Last operator Disable Markers](/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-disable-markers.png)
 
@@ -216,7 +216,7 @@ The two play buttons in the center tracks the whole range. The two outer buttons
 
 The left button clears the track before the chosen position. The right button clears the track after the chosen position.
 
-#### Last Operator Clear Track Path
+#### Adjust Last Operation - Clear Track Path
 
 ![Last Operator Clear Track Path](/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-clear-track-path.png)
 
@@ -258,7 +258,7 @@ Joins selected tracks.
 
 Averages selected tracks into active.
 
-##### Last Operator Average Tracks
+##### Adjust Last Operation - Average Tracks
 
 ![Last Operator Average Tracks](/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-average-tracks.png)
 
@@ -333,7 +333,7 @@ This panel contains tools to clean up tracks.
 
 Cleans tracks with high error values or few frames. The tracks or segments in question can either be selected, or directly removed. Dependent of the settings.
 
-#### Last Operator Clean Tracks
+#### Adjust Last Operation - Clean Tracks
 
 ![Last Operator Clean Tracks](/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-clean-tracks.png)
 
@@ -354,7 +354,7 @@ The action that should happen when you click at Clean Tracks. Default is select.
 
 Removes tracks with too high spikes in their motion curve.
 
-#### Last Operator Filter Tracks
+#### Adjust Last Operation - Filter Tracks
 
 ![Last Operator Filter Tracks](/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-filter-tracks.png)
 
@@ -388,7 +388,7 @@ Set plane in the 3D space as a Floor plane, based at three selected markers. You
 
 Set plane in the 3D space as a Wall plane, based at three selected markers.
 
-#### Last Operator Set Plane
+#### Adjust Last Operation - Set Plane
 
 ![Last Operator Set Plane](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-plane.png)
 
@@ -404,7 +404,7 @@ A drop down box to choose if you want to set the selected markers as plane or as
 
 Set active marker as origin in 3D space.
 
-#### Last Operator Set Origin
+#### Adjust Last Operation - Set Origin
 
 ##### Use Median
 
@@ -418,7 +418,7 @@ Set X axis rotation in 3D space, based at the selected marker. You need to have 
 
 Set X axis rotation in 3D space, based at the selected marker. You need to have one marker selected. Or you will get an error.
 
-#### Last Operator Set Axis
+#### Adjust Last Operation - Set Axis
 
 ![Last Operator Set Axis](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-axis.png)
 
@@ -430,7 +430,7 @@ A drop down box to choose if you want to use the axis to X or to Y
 
 Set scale of scene by scaling camera, based at two selected markers. You need to have two markers selected. Or you will get an error.
 
-#### Last Operator Set Scale
+#### Adjust Last Operation - Set Scale
 
 ![Last Operator Set Scale](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-scale.png)
 
@@ -442,7 +442,7 @@ The distance between two bundles used for scene scaling.
 
 Apply scale to solution.
 
-#### Last operator Apply Solution Scale
+#### Adjust Last Operation - Apply Solution Scale
 
 ![Last operator Apply Solution Scale](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-apply-solution-scale.png)
 

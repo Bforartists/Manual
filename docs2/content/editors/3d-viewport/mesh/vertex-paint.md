@@ -64,7 +64,7 @@ You need to convert this result to a texture to use it in your texturing, as a m
 
 The tessellation of the mesh should not be too high for this operation. Since it calculates the angles of the mesh edges.
 
-##### Last Operator Dirty Vertex Colors
+##### Adjust Last Operation - Dirty Vertex Colors
 
 ![Last Operator Dirty Vertex Colors](/docs2/images/editors/3d-viewport/header/mesh-vertex-paint-mode-paint-menu/last-operator-dirty-vertex-colors.png)
 
@@ -91,7 +91,7 @@ Inverts the vertex colors.
 
 This tool allows you to level the values of the vertex painting. You adjust the settings in the last operator.
 
-##### Last Operator Vertex Paint Levels
+##### Adjust Last Operation - Vertex Paint Levels
 
 ![Last Operator Vertex Paint Levels](/docs2/images/editors/3d-viewport/header/mesh-vertex-paint-mode-paint-menu/last-operator-vertex-paint-levels.png)
 
@@ -106,7 +106,7 @@ This tool allows you to level the values of the vertex painting. You adjust the 
 
 This tool allows you to adjust the hue, saturation and value values of the vertex painting. You adjust the settings in the last operator.
 
-##### Last Operator Vertex Paint Hue Saturation Value
+##### Adjust Last Operation - Vertex Paint Hue Saturation Value
 
 | Entry | What it does |
 | ---------- | ------------------------------------------- |
@@ -118,7 +118,7 @@ This tool allows you to adjust the hue, saturation and value values of the verte
 
 This tool allows you to adjust the brightness and the contrast of the vertex painting. You adjust the settings in the last operator.
 
-##### Last Operator Vertex Paint Brightness/Contrast
+##### Adjust Last Operation - Vertex Paint Brightness/Contrast
 
 ![Last Operator Vertex Paint Brightness/Contrast](/docs2/images/editors/3d-viewport/header/mesh-vertex-paint-mode-paint-menu/last-operator-vertex-paint-brightness-contrast.png)
 

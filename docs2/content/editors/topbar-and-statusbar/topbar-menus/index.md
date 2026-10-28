@@ -2054,7 +2054,7 @@ Repeat last repeats the last operation. For example, when you have moved an obje
 
 Repeat History calls a menu with the last actions where yon can choose an action to be repeated.
 
-## Adjust Last Operation
+## Adjust Last Operation - Edit Menu
 
 ![Adjust Last Operation](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/adjust-last-operation.png)
 

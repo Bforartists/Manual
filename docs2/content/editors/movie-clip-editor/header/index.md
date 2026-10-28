@@ -441,7 +441,7 @@ Shows or hides the toolbar at the left.
 
 Shows or hides the sidebar at the right in the viewport.
 
-### Adjust Last Operation
+### Adjust Last Operation - View Menu in Tracking mode in Clip sub mode
 
 ![Adjust Last Operation](/docs2/images/editors/movie-clip-editor/header/view-menu/adjust-last-operation.png)
 
@@ -613,7 +613,7 @@ Shows or hides the toolbar at the left.
 
 Shows or hides the sidebar at the right in the viewport.
 
-### Adjust Last Operation
+### Adjust Last Operation - View Menu in Mask mode
 
 ![Adjust Last Operation](/docs2/images/editors/movie-clip-editor/header/view-menu/adjust-last-operation.png)
 
@@ -801,7 +801,7 @@ Track navigation.
 
 Move the selected track(s).
 
-##### Last Operator Move
+##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-move.png)
 
@@ -836,7 +836,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Rotate the selected tracks.
 
-##### Last Operator Rotate
+##### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-rotate.png)
 
@@ -874,7 +874,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Resize the selected track(s).
 
-##### Last Operator Resize
+##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-resize.png)
 
@@ -943,7 +943,7 @@ When enough marcant areas are available then it adds up to eight markers that wa
 
 ![Detect Features](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/detect-features-2.png)
 
-#### Last Operator Detect Features
+#### Adjust Last Operation - Detect Features
 
 ![Last Operator Detect Features](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-detect-features.png)
 
@@ -1031,7 +1031,7 @@ Show or hide tracks.
 | Hide Selected | Hide the selected tracks. |
 | Hide Unselected | Hide the unselected tracks. |
 
-#### Last operator Hide Tracks
+#### Adjust Last Operation - Hide Tracks
 
 ![Last operator Hide Tracks](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-hide-tracks.png)
 
@@ -1066,7 +1066,7 @@ Hide selected or unselected tracks.
 
 Set plane in the 3D space as a Wall plane, based at three selected markers.
 
-##### Last Operator Set Plane
+##### Adjust Last Operation - Set Plane
 
 ![Last Operator Set Plane](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-plane.png)
 
@@ -1084,7 +1084,7 @@ Set X axis rotation in 3D space, based at the selected marker. You need to have 
 
 Set X axis rotation in 3D space, based at the selected marker. You need to have one marker selected. Or you will get an error.
 
-##### Last Operator Set Axis
+##### Adjust Last Operation - Set Axis
 
 ![Last Operator Set Axis](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-axis.png)
 
@@ -1096,7 +1096,7 @@ A drop down box to choose if you want to use the axis to X or to Y
 
 Set scale of scene by scaling camera, based at two selected markers. You need to have two markers selected. Or you will get an error.
 
-##### Last Operator Set Scale
+##### Adjust Last Operation - Set Scale
 
 ![Last Operator Set Scale](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-scale.png)
 
@@ -1108,7 +1108,7 @@ The distance between two bundles used for scene scaling.
 
 Apply scale to solution.
 
-##### Last operator Apply Solution Scale
+##### Adjust Last Operation - Apply Solution Scale
 
 ![Last operator Apply Solution Scale](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-apply-solution-scale.png)
 
@@ -1193,7 +1193,7 @@ Adds a Bezier circle that you can use for masking.
 
 This circle element can be modified by right clicking at the handlers and pulling at the handlers until the desired result is achieved. The yellow points are handlers. The whole curve can be moved around with right mouse button. See also Transform sub menu in the Mask menu.
 
-#### Last Operator Add Circle
+#### Adjust Last Operation - Add Circle
 
 ![Last Operator Add Circle](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-circle.png)
 
@@ -1212,7 +1212,7 @@ Adds a Bezier circle that you can use for masking.
 
 This circle element can be modified by right clicking at the handlers and pulling at the handlers until the desired result is achieved. The yellow points are handlers. The whole curve can be moved around with right mouse button. See also Transform sub menu in the Mask menu.
 
-#### Last Operator Add Square
+#### Adjust Last Operation - Add Square
 
 ![Last Operator Add Square](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-square.png)
 
@@ -1229,7 +1229,7 @@ You can add more curve points by holding down ctrl and clicking left at a curve.
 
 You can create a spline from scratch with this method too. Simply hold down Ctrl, click into the viewport, and created your needed spline points. To close the created mask spline use Toggle Cyclic from the mask menu.
 
-#### Last operator Add Vertex and Slide
+#### Adjust Last Operation - Add Vertex and Slide
 
 ![Last operator Add Vertex and Slide](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-vertex-and-slide.png)
 
@@ -1243,7 +1243,7 @@ The location of the created spline point.
 
 Add new vertex to feather and slide it. Hotkey only tool !
 
-#### Last Operator Add Feather Vertex and Slide
+#### Adjust Last Operation - Add Feather Vertex and Slide
 
 ![Last Operator Add Feather Vertex and Slide](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-square.png)
 
@@ -1287,7 +1287,7 @@ For example if there is just rotation of the spline, feather would stay complete
 
 Move the selected curve spline or points.
 
-##### Last Operator Move
+##### Adjust Last Operation - Move
 
 ##### Values
 
@@ -1333,7 +1333,7 @@ Proportional Editing Falloff is a drop-down box where you can choose a method fo
 
 Rotate the selected curve spline or points.
 
-##### Last Operator Rotate
+##### Adjust Last Operation - Rotate
 
 ##### Angle
 
@@ -1374,7 +1374,7 @@ Proportional Editing Falloff is a drop-down box where you can choose a method fo
 
 Scale the selected curve spline or points.
 
-##### Last Operator Resize
+##### Adjust Last Operation - Resize
 
 ##### Scale X Y Z
 
@@ -1422,7 +1422,7 @@ In Object mode this tools requires to have more than one object selected.
 
 Select the objects, activate the tool, then drag the mouse in the 3D viewport. In the header you will read the current factor then. Which tells you how close you are towards the sphere shape.
 
-##### Last Operator To Sphere
+##### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-to-sphere.png)
 
@@ -1449,7 +1449,7 @@ Shear shears the selection.
 
 In Object mode this tools requires to have more than one object selected.
 
-##### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-shear.png)
 
@@ -1485,7 +1485,7 @@ It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-##### Last Operator Push/Pull
+##### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-push-pull.png)
 
@@ -1517,7 +1517,7 @@ The curve type that is used to create mask splines is almost a Bezier curve. But
 
 Besides the handles, every control point also has points that define the feather between the current point and the next point on the spline. Each feather point is stored in UV space, where U means position across spline segment, and V means distance between main spline and feather points.
 
-##### Last Operator Transform
+##### Adjust Last Operation - Transform
 
 ![Last Operator Transform](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-transform.png)
 
@@ -1613,7 +1613,7 @@ Recalculate animation data on selected points for frames selected in the dope sh
 
 Hides the unselected curves.
 
-##### Last operator Hide Layer
+##### Adjust Last Operation - Hide Layer
 
 ![Last operator Hide Layer](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-hide-layer.png)
 
