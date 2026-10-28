@@ -337,7 +337,9 @@ Limit the push effect to specific channels.
 
 Limit the push effect to specific axis.
 
-#### Push Pose from Breakdown
+> **Note:** Entries marked **(Legacy)** are the classic menu commands for Push, Relax and Breakdowner. The tool shelf offers the same as tools, now with matching icons. The **(Legacy)** label tells the two apart.
+
+#### Push Pose from Breakdown (Legacy)
 
 Exaggerates the current pose. Pushes the current pose further away from the previous pose.
 
@@ -365,7 +367,7 @@ Limit the push effect to specific channels.
 
 Limit the push effect to specific axis.
 
-#### Relax Pose to Breakdown
+#### Relax Pose to Breakdown (Legacy)
 
 Relaxes the current pose.
 
@@ -393,7 +395,7 @@ Limit the relax effect to specific channels.
 
 Limit the relax effect to specific axis.
 
-###### Pose Breakdowner
+#### Pose Breakdowner (Legacy)
 
 Creates a suitable breakdowner pose on the current frame.
 
@@ -1035,7 +1037,9 @@ Pastes a previous copied pose, but flipped along X axis.
 
 Calls a dialog where you can rename the active bone.
 
-#### “Push Pose from Breakdown
+> **Note:** Entries marked **(Legacy)** are the classic menu commands for Push, Relax and Breakdowner. The tool shelf offers the same as tools, now with matching icons. The **(Legacy)** label tells the two apart.
+
+#### Push Pose from Breakdown (Legacy)
 
 Exaggerates the current pose. Pushes the current pose further away from the previous pose.
 
@@ -1063,7 +1067,7 @@ Limit the push effect to specific channels.
 
 Limit the push effect to specific axis.
 
-#### Relax Pose to Breakdown
+#### Relax Pose to Breakdown (Legacy)
 
 Relaxes the current pose.
 
@@ -1091,7 +1095,7 @@ Limit the relax effect to specific channels.
 
 Limit the relax effect to specific axis.
 
-###### Pose Breakdowner
+#### Pose Breakdowner (Legacy)
 
 Creates a suitable breakdowner pose on the current frame.
 
