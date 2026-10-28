@@ -1093,6 +1093,34 @@ The Combine XYZ Node combines a vector from its individual components.
 | Input | **X Y and Z**: X, Y and Z values. |
 | Output | **Color**: Color output. |
 
+#### Get Vector Component
+
+![Get Vector Component](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/get-vector-component.png)
+
+Gets one of the X, Y or Z values of a vector, chosen by a number. Use it when the axis you need changes, for example in a loop. If the axis is always the same, Separate XYZ is simpler.
+
+##### Inputs
+
+###### Vector
+
+The vector to read from.
+
+###### Index
+
+Which component to get. The value can go from 0 to 2. The default is 0.
+
+**0** gets X.
+
+**1** gets Y.
+
+**2** gets Z.
+
+##### Outputs
+
+###### Value
+
+The chosen component as a float.
+
 #### Map Range
 
 ![Map Range](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-vector/map-range.png)
@@ -1805,6 +1833,40 @@ The domain the Field evaluates. This gets and filters the field type. The domain
 | ------------------- | --------------------- |
 | Standard derivation | The Min output value. |
 | Variance | The Max output value. |
+
+# List
+
+### Add menu - Utilities - List
+
+![Add menu - Utilities - List](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-list/add-menu-list.png)
+
+List nodes create and work with lists. A list is an ordered row of values of the same type.
+
+#### Combine List
+
+![Combine List](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-list/combine-list.png)
+
+Combines any number of values into one list. The first value becomes the first element of the list, and so on.
+
+##### Inputs
+
+###### Items
+
+The node starts with one item socket, named 0. Connect a link to the empty socket at the bottom to add the next item. You can also add and remove items with the Add Item and remove buttons in the Items panel of the sidebar Node tab.
+
+The type of the item sockets is set by the Data Type property.
+
+##### Properties
+
+###### Data Type
+
+The type of the values in the list. The default is Float. The menu offers the data types that the Geometry Nodes editor supports, for example Integer, Boolean, Vector, Color, Rotation, Matrix, String, Geometry, Object, Material and Bundle.
+
+##### Outputs
+
+###### List
+
+A list with one element per item.
 
 # Matrix
 
