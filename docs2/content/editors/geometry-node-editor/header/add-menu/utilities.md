@@ -1423,6 +1423,8 @@ The bundle that was stored on the geometry.
 
 #### Typed Bundle
 
+![Typed Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/typed-bundle.png)
+
 Adds a Combine Bundle node that already has a String item named Type. The Type tells other nodes what kind of bundle this is, for example when you look for bundles with Get Nested Bundle Paths.
 
 Click the Type field of the new node and pick a type from the list, or type your own name. When you pick a known type, the node adds the items that type needs.
