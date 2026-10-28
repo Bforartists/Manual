@@ -63,6 +63,47 @@ Find the minimum and maximum values of a single channel. Then map the values to 
 | Inputs | **Value**: Standard value input. |
 | Outputs | **Value**: Standard value output. |
 
+### Random Value
+
+![Random Value](/docs2/images/editors/compositor/header/add-menu-utilities/random-value.png)
+
+The Random Value node gives a random value for each ID. Use it to vary an effect between images or between values. The same ID and seed always give the same result. Every input can be an image or a single value, and images are processed pixel by pixel.
+
+#### Inputs
+
+##### Min
+
+The lowest value that can be returned (default 0). It appears for Float, Integer and Vector.
+
+##### Max
+
+The highest value that can be returned (default 1.0 for Float, 1.0 on each axis for Vector, 100 for Integer). It appears for Float, Integer and Vector.
+
+##### Probability
+
+The chance that the result is true, from 0.0 to 1.0 (default 0.5). It replaces Min and Max for Boolean.
+
+##### ID
+
+Gives each value its own random number (default 0). In the Compositor it is a plain value input. Connect an image here, for example one with IDs, to get a different random value per pixel.
+
+##### Seed
+
+Changes the whole set of random values at once (default 0).
+
+#### Properties
+
+##### Data Type
+
+The type of the random value: Float, Integer, Boolean or Vector.
+
+#### Outputs
+
+##### Value
+
+The random value, in the chosen data type.
+
+
 ### Split
 
 ![Split](/docs2/images/editors/compositor/header/add-menu-utilities/split.png)
@@ -225,6 +266,84 @@ The converted float value, based on the selected mode and input type.
 
 ![Add menu - Utilities - Math](/docs2/images/editors/compositor/header/add-menu-utilities-math/add-menu-utilities-math.png)
 
+### Bit Math
+
+![Bit Math](/docs2/images/editors/compositor/header/add-menu-utilities-math/bit-math.png)
+
+The Bit Math node works on the individual bits of whole numbers (32-bit integers). It is useful for packing flags into a single number or for building masks from ID values. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.
+
+#### Inputs
+
+##### A
+
+The integer to work on (default 0).
+
+##### B
+
+The second integer (default 0). It is not shown for Not, Shift and Rotate.
+
+##### Shift
+
+How many bits to shift or rotate A by, from -31 to 31 (default 0). It only appears for Shift and Rotate.
+
+#### Properties
+
+##### Operation
+
+Chooses the bit operation.
+
+- **And**: A bit is set when it is set in both A and B.
+- **Or**: A bit is set when it is set in A or in B.
+- **Exclusive Or**: A bit is set when it is set in only one of A and B.
+- **Not**: Flips every bit of A. In decimal this is the same as -A - 1.
+- **Shift**: Moves the bits of A by the Shift amount. Positive values shift left, negative values shift right.
+- **Rotate**: Like Shift, but the bits that fall off one end come back in at the other end. Positive values rotate left, negative values rotate right.
+
+#### Outputs
+
+##### Value
+
+The resulting integer.
+
+
+### Boolean Math
+
+![Boolean Math](/docs2/images/editors/compositor/header/add-menu-utilities-math/boolean-math.png)
+
+The Boolean Math node combines true and false values with a logical operation. Use it to combine masks or conditions, for example to switch an effect on only when two conditions are both true. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.
+
+#### Inputs
+
+##### First Boolean
+
+The first true or false value (default false).
+
+##### Second Boolean
+
+The second true or false value (default false). It is not shown for Not.
+
+#### Properties
+
+##### Operation
+
+Chooses the logical operation.
+
+- **And**: True when both inputs are true.
+- **Or**: True when at least one input is true.
+- **Not**: The opposite of the input.
+- **Not And**: True when at least one input is false.
+- **Nor**: True when both inputs are false.
+- **Equal**: True when both inputs are the same.
+- **Not Equal**: True when the inputs are different.
+- **Imply**: True unless the first input is true and the second is false.
+- **Subtract**: True when the first input is true and the second is false.
+
+#### Outputs
+
+##### Boolean
+
+The result of the operation.
+
 ### Clamp
 
 ![Clamp](/docs2/images/editors/compositor/header/add-menu-utilities-math/clamp.png)
@@ -236,6 +355,69 @@ The **Clamp** node restricts a value to lie within a specified range. It’s com
 | Inputs | **Value**: Standard Value input. (Value refers to each vector in the set.) |
 | Properties | **Clamp Type**: A dropdown that determines how the clamping is applied: Min / Max or Range. · **Min / Max**: The minimum and maximum allowed value. Any input lower or higher than this will be lowered or raised to this value. |
 | Outputs | **Value**: Standard value output. |
+
+### Compare
+
+![Compare](/docs2/images/editors/compositor/header/add-menu-utilities-math/compare.png)
+
+The Compare node compares two values and outputs true or false. Use it to turn a value into a mask, for example everything brighter than a limit. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.
+
+#### Inputs
+
+##### A
+
+The first value. Its type follows the Input Type property.
+
+##### B
+
+The second value. Its type follows the Input Type property.
+
+##### C
+
+The value that the dot product of A and B is compared against (default 0.9). It only appears for Vector inputs in Dot Product mode.
+
+##### Angle
+
+The angle that the angle between A and B is compared against (default 5 degrees). It only appears for Vector inputs in Direction mode.
+
+##### Epsilon
+
+How close two values must be to count as equal (default 0.001). It only appears for Equal and Not Equal with Float, Vector and Color inputs.
+
+#### Properties
+
+##### Input Type
+
+The type of the values to compare. In the Compositor you can choose Float, Integer, Vector, Color, String, Object or Font.
+
+##### Mode
+
+Only for Vector inputs. It decides what part of the vectors is compared.
+
+- **Element-Wise**: Compares each of the three elements. The result is true only when the comparison holds for all of them.
+- **Length**: Compares the lengths of the vectors.
+- **Average**: Compares the average of the elements of each vector.
+- **Dot Product**: Compares the dot product of A and B with C.
+- **Direction**: Compares the angle between A and B with Angle.
+
+##### Operation
+
+Chooses the comparison. The choices depend on the Input Type.
+
+- **Less Than**: True when A is smaller than B. For Float, Integer and Vector.
+- **Less Than or Equal**: True when A is smaller than B or equal to it. For Float, Integer and Vector.
+- **Greater Than**: True when A is greater than B. For Float, Integer and Vector.
+- **Greater Than or Equal**: True when A is greater than B or equal to it. For Float, Integer and Vector.
+- **Equal**: True when both inputs are equal. Float, Vector and Color values only need to be approximately equal, within Epsilon. Available for every type.
+- **Not Equal**: True when the inputs are not equal. Available for every type.
+- **Brighter**: True when A is brighter than B. For Color only.
+- **Darker**: True when A is darker than B. For Color only.
+
+#### Outputs
+
+##### Result
+
+True or false.
 
 ### Float Curve
 
@@ -299,6 +481,117 @@ Set handle type to Vector.
 ##### Value
 
 Standard float value output.
+
+### Float to Integer
+
+![Float to Integer](/docs2/images/editors/compositor/header/add-menu-utilities-math/float-to-integer.png)
+
+The Float to Integer node turns a number with decimals into a whole number. You choose how it rounds. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.
+
+#### Inputs
+
+##### Float
+
+The number to convert (default 0.0).
+
+#### Properties
+
+##### Rounding Mode
+
+How the decimals are removed.
+
+- **Round**: Rounds up or down to the nearest integer.
+- **Floor**: Rounds down to the next smaller integer.
+- **Ceiling**: Rounds up to the next larger integer.
+- **Truncate**: Rounds to the closest integer in the direction of zero. That is floor for positive values and ceiling for negative values.
+
+#### Outputs
+
+##### Integer
+
+The whole number.
+
+
+### Hash Value
+
+![Hash Value](/docs2/images/editors/compositor/header/add-menu-utilities-math/hash-value.png)
+
+The Hash Value node turns any value into a random-looking whole number. The same value and seed always give the same number, so it is handy for giving each ID, pixel value or name its own stable random number. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.
+
+#### Inputs
+
+##### Value
+
+The value to hash. Its type follows the Data Type property.
+
+##### Seed
+
+Changes the result without changing the value (default 0).
+
+#### Properties
+
+##### Data Type
+
+The type of the Value input. You can choose Float, Integer, Vector, Color, Rotation, Matrix or String. The default is Integer.
+
+#### Outputs
+
+##### Hash
+
+The random-looking integer.
+
+
+### Integer Math
+
+![Integer Math](/docs2/images/editors/compositor/header/add-menu-utilities-math/integer-math.png)
+
+The Integer Math node performs math operations on whole numbers. The result is always a whole number. Every input can be an image or a single value. Images are processed pixel by pixel, so you can use this node on a whole image at once.
+
+#### Inputs
+
+##### First Value
+
+The first number. It is called Base for Power.
+
+##### Second Value
+
+The second number (default 0). It is called Multiplier for Multiply Add and Exponent for Power. It is not shown for Absolute, Negate and Sign. For Multiply, Divide, Multiply Add, the Divide variants and both Modulo operations, a node added from the menu starts with 1.
+
+##### Third Value
+
+The third number, called Addend. It only appears for Multiply Add.
+
+#### Properties
+
+##### Operation
+
+Chooses the operation.
+
+- **Add**: A + B.
+- **Subtract**: A - B.
+- **Multiply**: A * B.
+- **Divide**: A / B.
+- **Multiply Add**: A * B + C.
+- **Absolute**: The non-negative value of A.
+- **Negate**: -A.
+- **Power**: A to the power of B.
+- **Minimum**: The smaller of A and B.
+- **Maximum**: The larger of A and B.
+- **Sign**: The sign of A: -1, 0 or 1.
+- **Divide Round**: Divides and rounds the result toward zero.
+- **Divide Floor**: Divides and rounds down to the largest integer that is smaller than or equal to the result.
+- **Divide Ceiling**: Divides and rounds up to the smallest integer that is greater than or equal to the result.
+- **Floored Modulo**: A modulo that repeats the same way for negative and positive numbers.
+- **Modulo**: The remainder of A / B.
+- **Greatest Common Divisor**: The largest positive integer that divides both A and B. For example GCD(8, 12) = 4.
+- **Least Common Multiple**: The smallest positive integer that both A and B divide. For example LCM(6, 10) = 30.
+
+#### Outputs
+
+##### Value
+
+The resulting integer.
+
 
 ### Map Range
 
