@@ -37,7 +37,7 @@ The right click menus are explained in the chapter 6 Editors Introduction.
 
 # Group Tab
 
-### Group tab - Introduction
+## Group tab - Introduction
 
 ![Group tab - Introduction](/docs2/images/editors/geometry-node-editor/sidebar/introduction.png)
 
@@ -53,21 +53,21 @@ In the group sockets panel you can define what sockets the Group Input and Group
 
 ![Group tab - Introduction](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/group-tab-introduction-3.png)
 
-### Group Properties Panel
+## Group Properties Panel
 
-#### Name
+### Name
 
 ![Name](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/name.png)
 
 Change the name of the current node group. Type in a new name and hit enter.
 
-#### Description
+### Description
 
 Change the description of the current node group. Type in a new name and hit
 
 enter.
 
-#### Color Tag
+### Color Tag
 
 ![Color Tag](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/color-tag.png)
 
@@ -81,7 +81,7 @@ Changes the header color of the current node group.
 | Usage subpanel | **Modifier**: The node group is used as a geometry modifier. This setting is only relevant for marked nodegroups as an asset. · **Tool**: The node group is used as a tool. This setting is only relevant for marked nodegroups as an asset. |
 
 
-### Group Sockets Panel
+## Group Sockets Panel
 
 ![Group Sockets Panel](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/group-sockets-panel.png)
 
@@ -89,23 +89,23 @@ Manage the input and output properties of the Group Input and Output nodes.
 
 More than one input and output slot can be useful when you want to modify the shader in the node group in more than one way.
 
-#### Group Socket List
+### Group Socket List
 
 List of available input and output sockets.
 
 > **Note:** The list can be sorted by dragging the items around. And you can rename them.
 
-##### List
+#### List
 
 The list of input and output sockets.
 
-##### Name
+#### Name
 
 ![Name](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/name-2.png)
 
 Change the name of the current selected input socket by double clicking on the socket in the list. Type in a new name and hit enter.
 
-##### New Item
+#### New Item
 
 ![New Item](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/new-item.png)
 
@@ -119,7 +119,7 @@ Adds a new input sockets to the list.
 | Panel | Adds a new panel socket to the list. |
 
 
-###### Panel Toggle
+##### Panel Toggle
 
 ![Panel Toggle](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/panel-toggle.png)
 
@@ -127,7 +127,7 @@ Converts an active selected Boolean socket into a Panel Boolean.
 
 When converting a boolean to a panel boolean, the parent panel of the Boolean socket will move to the panel header.
 
-###### Panel Toggle subpanel
+##### Panel Toggle subpanel
 
 ![Panel Toggle subpanel](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/panel-toggle-subpanel.png)
 
@@ -153,7 +153,7 @@ What kind of higher order types are expected to flow through this socket.
 | ![](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/remove-item-icon.png) Remove Item | Removes the selected input socket from the list. Node tree interface specials |
 
 
-##### Move Item Up/Down
+#### Move Item Up/Down
 
 ![Move Item Up/Down](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/move-item-up-down.png)
 
@@ -161,23 +161,23 @@ Moves the active item to the specified direction. You can move the active item u
 
 > **Note:** You can also alternatively drag and drop the active item to re-order.
 
-#### Inputs
+### Inputs
 
 ![Inputs](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/inputs.png)
 
 Inputs are characterized by the colored dot to the left. These are manifested in the Group Input node.
 
-#### Outputs
+### Outputs
 
 ![Outputs](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/outputs.png)
 
 Outputs are characterized by the colored dot to the right. These are manifested in the Group Output node.
 
-### Group Sockets Panel
+## Group Sockets Panel
 
 The group input sockets differs in functionality from the group outputs sockets. So you will get other content when you selct a group input node compared to the group output node.
 
-#### Type
+### Type
 
 ![Type](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type.png)
 
@@ -187,23 +187,23 @@ What kind of node group input or output type it is.
 
 ![Type](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-3.png)
 
-##### Type Float
+#### Type Float
 
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Atrribute Domain
+##### Atrribute Domain
 
 ![Atrribute Domain](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain.png)
 
 The attribute domain used by the geometry nodes modifier to create an attribute output.
 
-###### Default Attribute
+##### Default Attribute
 
 The default attribute.
 
-###### Subtype
+##### Subtype
 
 ![Subtype](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/subtype.png)
 
@@ -220,7 +220,7 @@ Subtype of the default value.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-###### Shape
+##### Shape
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png)
 
@@ -228,27 +228,27 @@ Subtype of the default value.
 
 The shape of the socket.
 
-##### Type Integer
+#### Type Integer
 
 ![Type Integer](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-integer.png)
 
 ![Type Integer](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-integer-2.png)
 
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Atrribute Domain
+##### Atrribute Domain
 
 ![Atrribute Domain](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain-2.png)
 
 The attribute domain used by the geometry nodes modifier to create an attribute output.
 
-###### Default Attribute
+##### Default Attribute
 
 The default attribute.
 
-###### Subtype
+##### Subtype
 
 ![Subtype](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/subtype.png)
 
@@ -262,7 +262,7 @@ Subtype of the default value.
 | Max | The maximum value for the socket. ***Note:** This is only available for vector and float types.* |
 
 
-###### Default Input
+##### Default Input
 
 ![Default Input](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/default-input.png)
 
@@ -276,7 +276,7 @@ Input to use when the socket is unconnected.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-###### Shape
+##### Shape
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png)
 
@@ -284,17 +284,17 @@ Input to use when the socket is unconnected.
 
 The shape of the socket.
 
-##### Type Boolean
+#### Type Boolean
 
 ![Type Boolean](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-boolean.png)
 
 ![Type Boolean](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-boolean-2.png)
 
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Atrribute Domain
+##### Atrribute Domain
 
 ![Atrribute Domain](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain-2.png)
 
@@ -311,7 +311,7 @@ The attribute domain used by the geometry nodes modifier to create an attribute 
 | Layer Selection | Take grease pencil or layer group as selection field. |
 
 
-###### Shape
+##### Shape
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png)
 
@@ -319,27 +319,27 @@ The attribute domain used by the geometry nodes modifier to create an attribute 
 
 The shape of the socket.
 
-##### Type Vector
+#### Type Vector
 
 ![Type Vector](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-vector.png)
 
 ![Type Vector](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-vector-2.png)
 
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Atrribute Domain
+##### Atrribute Domain
 
 ![Atrribute Domain](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain-2.png)
 
 The attribute domain used by the geometry nodes modifier to create an attribute output.
 
-###### Default Attribute
+##### Default Attribute
 
 The default attribute that is used by a geometry nodes modifier.
 
-###### Subtype
+##### Subtype
 
 ![Subtype](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/subtype-2.png)
 
@@ -353,7 +353,7 @@ What special math operation is required. The subtype menu allows you to define t
 | Min / Max | Minimum value and maximum value. |
 
 
-###### Default Input
+##### Default Input
 
 ![Default Input](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/default-input-2.png)
 
@@ -367,7 +367,7 @@ Input to use when the socket is unconnected.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-###### Shape
+##### Shape
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png)
 
@@ -375,17 +375,17 @@ Input to use when the socket is unconnected.
 
 The shape of the socket.
 
-##### Type Color
+#### Type Color
 
 ![Type Color](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-color.png)
 
 ![Type Color](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-color-2.png)
 
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Atrribute Domain
+##### Atrribute Domain
 
 ![Atrribute Domain](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain-2.png)
 
@@ -401,7 +401,7 @@ The attribute domain used by the geometry nodes modifier to create an attribute 
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-###### Shape
+##### Shape
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png)
 
@@ -409,17 +409,17 @@ The attribute domain used by the geometry nodes modifier to create an attribute 
 
 The shape of the socket.
 
-##### Type Rotation
+#### Type Rotation
 
 ![Type Rotation](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-rotation.png)
 
 ![Type Rotation](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-rotation-2.png)
 
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Atrribute Domain
+##### Atrribute Domain
 
 ![Atrribute Domain](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain-2.png)
 
@@ -435,7 +435,7 @@ The attribute domain used by the geometry nodes modifier to create an attribute 
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-###### Shape
+##### Shape
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png)
 
@@ -443,27 +443,27 @@ The attribute domain used by the geometry nodes modifier to create an attribute 
 
 The shape of the socket.
 
-##### Type Matrix
+#### Type Matrix
 
 ![Type Matrix](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-matrix.png)
 
 ![Type Matrix](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-matrix-2.png)
 
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Atrribute Domain
+##### Atrribute Domain
 
 ![Atrribute Domain](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/atrribute-domain-2.png)
 
 The attribute domain used by the geometry nodes modifier to create an attribute output.
 
-###### Default Attribute
+##### Default Attribute
 
 The default attribute that is used by a geometry nodes modifier.
 
-###### Default Input
+##### Default Input
 
 ![Default Input](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/default-input-3.png)
 
@@ -477,7 +477,7 @@ Input to use when the socket is unconnected.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-###### Shape
+##### Shape
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png)
 
@@ -485,17 +485,17 @@ Input to use when the socket is unconnected.
 
 The shape of the socket.
 
-##### Type String
+#### Type String
 
 ![Type String](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-string.png)
 
 ![Type String](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-string-2.png)
 
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Subtype
+##### Subtype
 
 ![Subtype](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/subtype-3.png)
 
@@ -510,7 +510,7 @@ What special math operation is required. The subtype menu allows you to define t
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Menu
+#### Type Menu
 
 ![Type Menu](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-menu.png)
 
@@ -527,7 +527,7 @@ What special math operation is required. The subtype menu allows you to define t
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-###### Shape
+##### Shape
 
 ![Shape](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/shape-2.png)
 
@@ -535,7 +535,7 @@ What special math operation is required. The subtype menu allows you to define t
 
 The shape of the socket.
 
-##### Type Geometry
+#### Type Geometry
 
 ![Type Geometry](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-geometry.png)
 
@@ -550,7 +550,7 @@ The shape of the socket.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Object
+#### Type Object
 
 ![Type Object](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-object.png)
 
@@ -566,7 +566,7 @@ The shape of the socket.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Collection
+#### Type Collection
 
 ![Type Collection](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-collection.png)
 
@@ -582,7 +582,7 @@ The shape of the socket.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Image
+#### Type Image
 
 ![Type Image](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-image.png)
 
@@ -598,7 +598,7 @@ The shape of the socket.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Material
+#### Type Material
 
 ![Type Material](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-material.png)
 
@@ -614,7 +614,7 @@ The shape of the socket.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Font
+#### Type Font
 
 ![Type Font](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-font.png)
 
@@ -630,7 +630,7 @@ The shape of the socket.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Bundle
+#### Type Bundle
 
 ![Type Bundle](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-bundle.png)
 
@@ -645,7 +645,7 @@ The shape of the socket.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Closure
+#### Type Closure
 
 ![Type Closure](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/type-closure.png)
 
@@ -660,17 +660,17 @@ The shape of the socket.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-### Group Sockets Panel - Type Panel
+## Group Sockets Panel - Type Panel
 
 ![Group Sockets Panel - Type Panel](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/group-sockets-panel-type-panel.png)
 
 TODO
 
-#### Closed by default
+### Closed by default
 
 Panel is closed by default on new nodes.
 
-#### Panel Toggle
+### Panel Toggle
 
 ![Panel Toggle](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/panel-toggle-2.png)
 
@@ -684,7 +684,7 @@ Panel is closed by default on new nodes.
 | Single Value | The default value for the panel boolean toggle. |
 
 
-### Animation Panel
+## Animation Panel
 
 ![Animation Panel](/docs2/images/editors/geometry-node-editor/sidebar/group-tab/animation-panel.png)
 
@@ -698,11 +698,11 @@ Animation panels are about the Animation Slots for scene wide animation clips.
 
 # Node Tab
 
-### Node panel
+## Node panel
 
 ![Node panel](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/node-panel.png)
 
-#### Name
+### Name
 
 ![Name](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/name.png)
 
@@ -710,13 +710,13 @@ The name of the selected node. Read only.
 
 Despite being read only, this text can be edited. But be careful, it will not change the name in the header of the node. And it does not snap back to the original name of the node when you remove the custom text.
 
-#### Label
+### Label
 
 ![Label](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/label.png)
 
 Allows you to define a custom name for the selected node. This text does change the name in the header of the node.
 
-#### Width and Location
+### Width and Location
 
 ![Width and Location](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/width-and-location.png)
 
@@ -727,13 +727,13 @@ Type exact numbers to size and place the selected node. Handy for keeping big no
 | Width | How wide the node is. Same as dragging its side edge. |
 | Location | Where the node sits in the editor, as **X** (left/right) and **Y** (up/down). Nodes inside a frame still use the position in the whole editor. |
 
-#### Warning Propagation
+### Warning Propagation
 
 ![Warning Propagation](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/warning-propagation.png)
 
 What kind of messages should be propagated from this node to the parent node.
 
-#### Color
+### Color
 
 ![Color row](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/color-row.png)
 
@@ -741,15 +741,15 @@ Give the node a color of its own, so parts of a big node tree are easy to tell a
 
 The two small buttons next to the color field help when you color many nodes.
 
-##### Copy Color
+#### Copy Color
 
 Gives all selected nodes the same color as the active node. Select the nodes, make the one with the color you want active, then click the copy button.
 
-##### Presets
+#### Presets
 
 Stores colors you like, so you can reuse them with one click. Presets are saved globally, so they work in your other files too.
 
-### Properties panel
+## Properties panel
 
 ![Properties panel](/docs2/images/editors/geometry-node-editor/sidebar/node-tab/properties-panel.png)
 
@@ -765,7 +765,7 @@ For the group input and group output options see chapter Group properties.
 
 # Tool Tab
 
-### Tool Tab
+## Tool Tab
 
 ![Tool Tab](/docs2/images/editors/geometry-node-editor/sidebar/tool-tab/tool-tab.png)
 
@@ -775,7 +775,7 @@ In the node editor we don't have something special here. The tool related settin
 
 # View Tab
 
-### View Tab - Annotation Panel
+## View Tab - Annotation Panel
 
 ![View Tab - Annotation Panel](/docs2/images/editors/geometry-node-editor/sidebar/view-tab/view-tab-annotation-panel.png)
 
@@ -785,13 +785,13 @@ View related settings. Which is in the node editor just the Annotations panel wh
 
 When you don't have drawn an annotation yet then the panel just contains a New button.
 
-#### Annotations prop
+### Annotations prop
 
 ![Annotations prop](/docs2/images/editors/geometry-node-editor/sidebar/view-tab/annotations-prop.png)
 
 Add, remove and rename new annotations.
 
-##### Drop down box
+#### Drop down box
 
 ![Drop down box](/docs2/images/editors/geometry-node-editor/sidebar/view-tab/drop-down-box.png)
 
@@ -806,7 +806,7 @@ A list of the available annotation layers.
 | Delete Annotation | Delete the annotation. |
 
 
-#### List of Annotation Strokes
+### List of Annotation Strokes
 
 ![List of Annotation Strokes](/docs2/images/editors/geometry-node-editor/sidebar/view-tab/list-of-annotation-strokes.png)
 
@@ -825,7 +825,7 @@ The eye icon allows you to make it invisible And it has a search field.
 | Frame Locked/Unlocked | Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. |
 
 
-#### Onion Skin
+### Onion Skin
 
 ![Onion Skin](/docs2/images/editors/geometry-node-editor/sidebar/view-tab/onion-skin.png)
 
@@ -837,7 +837,7 @@ With the numbers below the colors you can define how many frames before or after
 
 # Add
 
-### Add Tab
+## Add Tab
 
 ![Add Tab](/docs2/images/editors/geometry-node-editor/sidebar/add/add-tab.png)
 
@@ -847,65 +847,65 @@ Here you can find the same nodes than in the Add menu. Panels are more convenien
 
 We won't explain the content of the panels again. The single nodes are explained in the add menu chapter.
 
-#### Usage
+### Usage
 
 Click at one of the node buttons, then move the mouse into the viewport. The created node sticks at the mouse. Click again to release it.
 
-### Add tab - Display Panel
+## Add tab - Display Panel
 
 ![Add tab - Display Panel](/docs2/images/editors/geometry-node-editor/sidebar/add/add-tab-display-panel.png)
 
-#### Icon Buttons
+### Icon Buttons
 
 You can display the nodes in the panels either as text buttons or as pure icon buttons.
 
 # Relations Tab
 
-### Relations tab - Display Panel
+## Relations tab - Display Panel
 
 ![Relations tab - Display Panel](/docs2/images/editors/geometry-node-editor/sidebar/relations-tab/relations-tab-display-panel.png)
 
-#### Icon Buttons
+### Icon Buttons
 
 ![Icon Buttons](/docs2/images/editors/geometry-node-editor/sidebar/add/add-tab-display-panel.png)
 
 You can display the nodes in the panels either as text buttons or as pure icon buttons.
 
-### Relations tab - Group Panel
+## Relations tab - Group Panel
 
 ![Relations tab - Group Panel](/docs2/images/editors/geometry-node-editor/sidebar/relations-tab/relations-tab-group-panel.png)
 
-#### Group Input
+### Group Input
 
 ![Group Input](/docs2/images/editors/geometry-node-editor/sidebar/relations-tab/group-input.png)
 
 Adds a group input node.
 
-#### Group Output
+### Group Output
 
 ![Group Output](/docs2/images/editors/geometry-node-editor/sidebar/relations-tab/group-output.png)
 
 Adds a group output node.
 
-### Relations tab - Nodegroups Panel
+## Relations tab - Nodegroups Panel
 
 ![Relations tab - Nodegroups Panel](/docs2/images/editors/geometry-node-editor/sidebar/relations-tab/relations-tab-nodegroups-panel.png)
 
 When you create a node group, then this node group is listed here. And can be dragged from there for reuse too.
 
-### Relations tab - Layout Panel
+## Relations tab - Layout Panel
 
 ![Relations tab - Layout Panel](/docs2/images/editors/geometry-node-editor/sidebar/relations-tab/relations-tab-layout-panel.png)
 
 These nodes helps organizing the node layout.
 
-#### Frame
+### Frame
 
 ![Frame](/docs2/images/editors/geometry-node-editor/header/add-menu-layout/frame.png)
 
 The Frame node allows you to drop nodes into a frame. This frame can be dragged around as a whole.
 
-##### Adding and Removing Nodes
+#### Adding and Removing Nodes
 
 ![Adding and Removing Nodes](/docs2/images/editors/geometry-node-editor/header/add-menu-layout/adding-and-removing-nodes.jpg)
 
@@ -913,7 +913,7 @@ Nodes can be added by simply dropping them onto the frame. Or with the Join in N
 
 To remove a node from the frame use Remove from Frame.
 
-##### Resizing Frame
+#### Resizing Frame
 
 When the Frame node is first placed in the node editor workspace you can resize it by dragging one of the edges.
 
@@ -923,11 +923,11 @@ Once a node is placed in the Frame, the Frame shrinks around the nodes. You cann
 
 This behavior can be changed by disabling the *Shrink* option in the Item tab in the Properties panel. Then you can resize the frame again by dragging the edges.
 
-##### Label and Color
+#### Label and Color
 
 You can change the name of a frame in the Node panel. And you can give it a custom color by checking the Color checkbox and adjusting the color then.
 
-#### Reroute
+### Reroute
 
 Adds a reroute point that can be used to reroute connections. It allows just one input, but allows multiple output connections.
 
@@ -941,7 +941,7 @@ To quickly add a Reroute node into an existing connection, hold **Shift** and **
 
 When you exceed a specific angle amount between the reroute nodes, then the node connection becomes a sharp corner, and not longer a Bezier like soft curve.
 
-##### Move, Rotate, Scale
+#### Move, Rotate, Scale
 
 ![Move, Rotate, Scale](/docs2/images/editors/geometry-node-editor/header/add-menu-layout/move-rotate-scale.png)
 

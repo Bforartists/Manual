@@ -38,23 +38,23 @@ The right click menus are explained in the chapter 6 Editors Introduction.
 
 # Node Tab
 
-### Node Tab - Node Panel
+## Node Tab - Node Panel
 
 ![Node Tab - Node Panel](/docs2/images/editors/shader-editor/sidebar/node-tab/node-tab-node-panel.png)
 
 In this panel you can give nodes and node groups a name and a label, and change its color.
 
-#### Name
+### Name
 
 The type of the node.
 
-#### Label
+### Label
 
 ![Label](/docs2/images/editors/shader-editor/sidebar/node-tab/label.png)
 
 The label name of the node.
 
-#### Width and Location
+### Width and Location
 
 ![Width and Location](/docs2/images/editors/shader-editor/sidebar/node-tab/width-and-location.png)
 
@@ -65,7 +65,7 @@ Type exact numbers to size and place the selected node. Handy for keeping big no
 | Width | How wide the node is. Same as dragging its side edge. |
 | Location | Where the node sits in the editor, as **X** (left/right) and **Y** (up/down). Nodes inside a frame still use the position in the whole editor. |
 
-#### Color
+### Color
 
 ![Color row](/docs2/images/editors/shader-editor/sidebar/node-tab/color-row.png)
 
@@ -73,15 +73,15 @@ Give the node a color of its own, so parts of a big node tree are easy to tell a
 
 The two small buttons next to the color field help when you color many nodes.
 
-##### Copy Color
+#### Copy Color
 
 Gives all selected nodes the same color as the active node. Select the nodes, make the one with the color you want active, then click the copy button.
 
-##### Presets
+#### Presets
 
 Stores colors you like, so you can reuse them with one click. Presets are saved globally, so they work in your other files too.
 
-### Node Tab - Properties Panel
+## Node Tab - Properties Panel
 
 ![Node Tab - Properties Panel](/docs2/images/editors/shader-editor/sidebar/node-tab/node-tab-properties-panel.png)
 
@@ -91,13 +91,13 @@ This panel shows usually the same properties than the properties at the node. Th
 
 But there are exceptions like the Image node. Here the Properties panel shows much more options than at the node. It shows all the possible image settings. We will explain the extra options here.
 
-### Node Tab - Properties Panel with Image node
+## Node Tab - Properties Panel with Image node
 
 ![Node Tab - Properties Panel with Image node](/docs2/images/editors/shader-editor/sidebar/node-tab/node-tab-properties-panel-with-image-node.png)
 
 Contains image related settings. Size, type, and so on.
 
-#### Image Property
+### Image Property
 
 Load an image and / or switch to other images.
 
@@ -118,7 +118,7 @@ From left to right ...
 | Remove | Delete the image. |
 
 
-#### Source
+### Source
 
 ![Source](/docs2/images/editors/shader-editor/sidebar/node-tab/source.png)
 
@@ -126,13 +126,13 @@ Choose the image type. This type gets usually automatically set. When you create
 
 Generated images does not have a path.
 
-##### Source Type Single Image
+#### Source Type Single Image
 
 ![Source Type Single Image](/docs2/images/editors/shader-editor/sidebar/node-tab/source-type-single-image.png)
 
 #
 
-###### Path edit box
+##### Path edit box
 
 ![Path edit box](/docs2/images/editors/shader-editor/sidebar/node-tab/path-edit-box.png)
 
@@ -145,39 +145,39 @@ Generated images does not have a path.
 | Refresh | Reread the movie or image sequence files. |
 
 
-###### Color Space
+##### Color Space
 
 ![Color Space](/docs2/images/editors/shader-editor/sidebar/node-tab/color-space.png)
 
 The color space for the image.
 
-###### Alpha
+##### Alpha
 
 ![Alpha](/docs2/images/editors/shader-editor/sidebar/node-tab/alpha.png)
 
 How to calculate the alpha channel.
 
-###### Half Float Precision
+##### Half Float Precision
 
 Just with image material that uses 32 bit float. Use just 16 Bit per channel instead of the full 32 bit. This lowers the memory usage while rendering.
 
-###### View as Render
+##### View as Render
 
 ![View as Render](/docs2/images/editors/shader-editor/sidebar/node-tab/view-as-render.png)
 
 Display the image with using the color management settings. The color management can be adjusted in the properties editor in the Render tab.
 
-###### Seam Margin
+##### Seam Margin
 
 This option belongs to the UV Editor, and has no effect in the Image editor. Take a margin into account when fixing UV seams during painting.
 
-##### Source Type Movie + Image Sequence
+#### Source Type Movie + Image Sequence
 
 ![Source Type Movie + Image Sequence](/docs2/images/editors/shader-editor/sidebar/node-tab/source-type-movie-image-sequence.png)
 
 ![Source Type Movie + Image Sequence](/docs2/images/editors/shader-editor/sidebar/node-tab/source-type-movie-image-sequence-2.png)
 
-###### Path edit box
+##### Path edit box
 
 ![Path edit box](/docs2/images/editors/shader-editor/sidebar/node-tab/path-edit-box-2.png)
 
@@ -201,125 +201,125 @@ This option belongs to the UV Editor, and has no effect in the Image editor. Tak
 | Deinterlace | Deinterlace the movie file on load. |
 
 
-###### Color Space
+##### Color Space
 
 ![Color Space](/docs2/images/editors/shader-editor/sidebar/node-tab/color-space-2.png)
 
 Choose the color space type for the movie or image sequence files.
 
-###### Alpha
+##### Alpha
 
 ![Alpha](/docs2/images/editors/shader-editor/sidebar/node-tab/alpha-2.png)
 
 Choose the alpha channel mode. Straight or Premultiplied.
 
-###### Half Float Precision
+##### Half Float Precision
 
 Just with image material that uses 32 bit float. Use just 16 Bit per channel instead of the full 32 bit. This lowers the memory usage while rendering.
 
-###### View as Render
+##### View as Render
 
 ![View as Render](/docs2/images/editors/shader-editor/sidebar/node-tab/view-as-render-2.png)
 
 Display the image with using the color management settings. The color management can be adjusted in the properties editor in the Render tab.
 
-###### Seam Margin
+##### Seam Margin
 
 This option belongs to the UV Editor, and has no effect in the Image editor. Take a margin into account when fixing UV seams during painting.
 
-##### Source Type Generated
+#### Source Type Generated
 
 ![Source Type Generated](/docs2/images/editors/shader-editor/sidebar/node-tab/source-type-generated.png)
 
-###### X / Y
+##### X / Y
 
 The image width and height.
 
-###### Float Buffer
+##### Float Buffer
 
 Use a floating point buffer. 8 Bit images uses integers. 32 Bit works with floats.
 
-###### Generated Type Blank
+##### Generated Type Blank
 
 ![Generated Type Blank](/docs2/images/editors/shader-editor/sidebar/node-tab/generated-type-blank.png)
 
 This type displays an image with one blank color
 
-###### Color
+##### Color
 
 The color of the blank image.
 
-###### Generated Type UV Grid
+##### Generated Type UV Grid
 
 ![Generated Type UV Grid](/docs2/images/editors/shader-editor/sidebar/node-tab/generated-type-uv-grid.png)
 
 This type displays a with a black and white checker texture but colored dots.
 
-###### Generated Type Color Grid
+##### Generated Type Color Grid
 
 ![Generated Type Color Grid](/docs2/images/editors/shader-editor/sidebar/node-tab/generated-type-color-grid.png)
 
 This type displays a with a colored checker texture with numbers.
 
-###### Color Space
+##### Color Space
 
 ![Color Space](/docs2/images/editors/shader-editor/sidebar/node-tab/color-space-3.png)
 
 Choose the color space type for the image.
 
-###### Half Float Precision
+##### Half Float Precision
 
 Just with image material that uses 32 bit float. Use just 16 Bit per channel instead of the full 32 bit. This lowers the memory usage while rendering.
 
-###### View as Render
+##### View as Render
 
 ![View as Render](/docs2/images/editors/shader-editor/sidebar/node-tab/view-as-render-2.png)
 
 Display the image with using the color management settings. The color management can be adjusted in the properties editor in the Render tab.
 
-###### Seam Margin
+##### Seam Margin
 
 This option belongs to the UV Editor, and has no effect in the Image editor. Take a margin into account when fixing UV seams during painting.
 
-##### Source Type Udim
+#### Source Type Udim
 
 ![Source Type Udim](/docs2/images/editors/shader-editor/sidebar/node-tab/source-type-udim.png)
 
 UDIM is an enhancement to the UV mapping and texturing workflow. And does not belong here. But in the UV Editor. It is just in the list because it shares the same menus with the UV Editor.
 
-###### Info string
+##### Info string
 
 Some information about the currently loaded image. Resolution and color space.
 
-###### Color Space
+##### Color Space
 
 ![Color Space](/docs2/images/editors/shader-editor/sidebar/node-tab/color-space-4.png)
 
 Choose the color space type for the movie or image sequence files.
 
-###### Alpha
+##### Alpha
 
 ![Alpha](/docs2/images/editors/shader-editor/sidebar/node-tab/alpha-2.png)
 
 Choose the alpha channel mode. Straight or Premultiplied.
 
-###### Half Float Precision
+##### Half Float Precision
 
 Just with color space sRGB. Use just 16 Bit per channel instead of the full 32 bit. This lowers the memory usage while rendering.
 
-###### View as Render
+##### View as Render
 
 ![View as Render](/docs2/images/editors/shader-editor/sidebar/node-tab/view-as-render.png)
 
 Display the image with using the color management settings. The color management can be adjusted in the properties editor in the Render tab.
 
-###### Seam Margin
+##### Seam Margin
 
 This option belongs to the UV Editor, and has no effect in the Image editor. Take a margin into account when fixing UV seams during painting.
 
 # Tool Tab
 
-### Tool Tab
+## Tool Tab
 
 ![Tool Tab](/docs2/images/editors/shader-editor/sidebar/tool-tab/tool-tab.png)
 
@@ -329,7 +329,7 @@ In the node editor we don't have something special here. The tool related settin
 
 # View Tab
 
-### View Tab - Annotation Panel
+## View Tab - Annotation Panel
 
 ![View Tab - Annotation Panel](/docs2/images/editors/shader-editor/sidebar/view-tab/view-tab-annotation-panel.png)
 
@@ -339,13 +339,13 @@ Contains view related settings. Which is in the node editor just the Annotations
 
 When you don't have drawn an annotation yet then the panel just contains a New button.
 
-#### Annotations prop
+### Annotations prop
 
 ![Annotations prop](/docs2/images/editors/shader-editor/sidebar/view-tab/annotations-prop.png)
 
 Add, remove and rename new annotations.
 
-##### Drop down box
+#### Drop down box
 
 ![Drop down box](/docs2/images/editors/shader-editor/sidebar/view-tab/drop-down-box.png)
 
@@ -360,7 +360,7 @@ A list of the available annotation layers.
 | Delete Annotation | Delete the annotation. |
 
 
-#### List of Annotation Strokes
+### List of Annotation Strokes
 
 ![List of Annotation Strokes](/docs2/images/editors/shader-editor/sidebar/view-tab/list-of-annotation-strokes.png)
 
@@ -379,7 +379,7 @@ The eye icon allows you to make it invisible And it has a search field.
 | Frame Locked/Unlocked | Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited. |
 
 
-#### Onion Skin
+### Onion Skin
 
 ![Onion Skin](/docs2/images/editors/shader-editor/sidebar/view-tab/onion-skin.png)
 
@@ -393,7 +393,7 @@ With the numbers below the colors you can define how many frames before or after
 
 # Options Tab
 
-### Options Tab - Settings panel
+## Options Tab - Settings panel
 
 ![Options Tab - Settings panel](/docs2/images/editors/shader-editor/sidebar/options-tab/options-tab-settings-panel.png)
 
@@ -403,13 +403,13 @@ The options tab moves around, dependent of what render engine you have chosen. W
 
 The Settings panel appears with a mesh object selected.
 
-#### Settings panel with Eevee
+### Settings panel with Eevee
 
 ![Settings panel with Eevee](/docs2/images/editors/shader-editor/sidebar/options-tab/settings-panel-with-eevee.png)
 
-##### Surface subpanel
+#### Surface subpanel
 
-###### Backface Culling
+##### Backface Culling
 
 
 | Entry | What it does |
@@ -418,21 +418,21 @@ The Settings panel appears with a mesh object selected.
 | Shadow | Use backface culling when casting shadows. |
 
 
-###### Displacement
+##### Displacement
 
-###### Method
+##### Method
 
 ![Method](/docs2/images/editors/shader-editor/sidebar/options-tab/method.png)
 
 Method to use for the displacement.
 
-###### Transparency
+##### Transparency
 
-###### Transparent Shadows
+##### Transparent Shadows
 
 Use transparent shadows for this material if it contains a transparent bsdf node.
 
-###### Method
+##### Method
 
 ![Method](/docs2/images/editors/shader-editor/sidebar/options-tab/method-2.png)
 
@@ -445,45 +445,45 @@ The rendering method. Forward rendering or Deferred rendering.
 | From Shadow | Use the shadow maps from shadow casting lights to refine the thickness defined by the material node tree. |
 
 
-###### Render
+##### Render
 
-###### Thickness
+##### Thickness
 
 ![Thickness](/docs2/images/editors/shader-editor/sidebar/options-tab/thickness.png)
 
 Approximation used to model the light interactions inside the object.
 
-###### Light Probe Volume Backfaces
+##### Light Probe Volume Backfaces
 
 Consider material single sided for light probe volume capture.
 
-##### Volume Subpanel
+#### Volume Subpanel
 
 ![Volume Subpanel](/docs2/images/editors/shader-editor/sidebar/options-tab/volume-subpanel.png)
 
-###### Intersection
+##### Intersection
 
 ![Intersection](/docs2/images/editors/shader-editor/sidebar/options-tab/intersection.png)
 
 Which inner part of the mesh will produce the volumetric effect.
 
-#### Settings panel with Cycles
+### Settings panel with Cycles
 
 ![Settings panel with Cycles](/docs2/images/editors/shader-editor/sidebar/options-tab/settings-panel-with-cycles.png)
 
-##### Pass Index
+#### Pass Index
 
 Index number for the material render index pass
 
-##### Surface sub panel
+#### Surface sub panel
 
-###### Displacement
+##### Displacement
 
 ![Displacement](/docs2/images/editors/shader-editor/sidebar/options-tab/displacement.png)
 
 Adjust the displacement method. Bump mapping is an old image based shader technique to fake displacement. Displacement deforms the geometry.
 
-###### Emission Sampling
+##### Emission Sampling
 
 ![Emission Sampling](/docs2/images/editors/shader-editor/sidebar/options-tab/emission-sampling.png)
 
@@ -496,39 +496,39 @@ Sampling strategy for emissive surfaces.
 | Bump Map Correction | Apply corrections to solve shadow terminator artifacts caused by bump mapping. |
 
 
-###### Volume Sub panel
+##### Volume Sub panel
 
-###### Sampling
+##### Sampling
 
 ![Sampling](/docs2/images/editors/shader-editor/sidebar/options-tab/sampling.png)
 
 The volume sampling method.
 
-###### Interpolation
+##### Interpolation
 
 ![Interpolation](/docs2/images/editors/shader-editor/sidebar/options-tab/interpolation.png)
 
 The volume interpolation method. Linear or cubic.
 
-### Options Tab - Light panel
+## Options Tab - Light panel
 
 ![Options Tab - Light panel](/docs2/images/editors/shader-editor/sidebar/options-tab/options-tab-light-panel.png)
 
 The Light panel appears with a light object selected.
 
-#### With Eevee + Cycles
+### With Eevee + Cycles
 
-##### Type
+#### Type
 
 ![Type](/docs2/images/editors/shader-editor/sidebar/options-tab/type.png)
 
 The light type. The light settings changes, dependent of what light type you have chosen.
 
-###### Animate Property
+##### Animate Property
 
 This property can be animated.
 
-##### Point light
+#### Point light
 
 ![Point light](/docs2/images/editors/shader-editor/sidebar/options-tab/point-light.png)
 
@@ -544,7 +544,7 @@ This property can be animated.
 | Radius | The size of the point light. |
 
 
-##### Sun light
+#### Sun light
 
 ![Sun light](/docs2/images/editors/shader-editor/sidebar/options-tab/sun-light.png)
 
@@ -559,7 +559,7 @@ This property can be animated.
 | Angle | The angular diameter for the sun as seen from the earth. |
 
 
-##### Spot light
+#### Spot light
 
 ![Spot light](/docs2/images/editors/shader-editor/sidebar/options-tab/spot-light.png)
 
@@ -575,7 +575,7 @@ This property can be animated.
 | Radius | The size of the point light. |
 
 
-##### Area light
+#### Area light
 
 ![Area light](/docs2/images/editors/shader-editor/sidebar/options-tab/area-light.png)
 
@@ -589,27 +589,27 @@ This property can be animated.
 | Normalize | Normalize light intensity by light area. |
 
 
-###### Shape
+##### Shape
 
 ![Shape](/docs2/images/editors/shader-editor/sidebar/options-tab/shape.png)
 
 The shape of the light emitting area of the light.
 
-###### Size X / Y
+##### Size X / Y
 
 The size of the light emitting area of the light.
 
-#### With Workbench
+### With Workbench
 
 ![With Workbench](/docs2/images/editors/shader-editor/sidebar/options-tab/with-workbench.png)
 
-##### Type
+#### Type
 
 ![Type](/docs2/images/editors/shader-editor/sidebar/options-tab/type.png)
 
 The light type. The light settings changes, dependent of what light type you have chosen.
 
-### Options Tab - Viewport Display panel
+## Options Tab - Viewport Display panel
 
 ![Options Tab - Viewport Display panel](/docs2/images/editors/shader-editor/sidebar/options-tab/options-tab-viewport-display-panel.png)
 
@@ -626,7 +626,7 @@ The content is the same for all three render engines.
 
 # Add Tab
 
-### Add Tab
+## Add Tab
 
 ![Add Tab](/docs2/images/editors/shader-editor/sidebar/add-tab/add-tab.png)
 
@@ -636,19 +636,19 @@ Here you can find the same nodes than in the Add menu. Panels are more convenien
 
 We won't explain the content of the panels again. The single nodes are explained in the add menu chapter.
 
-#### Usage
+### Usage
 
 Click at one of the node buttons, then move the mouse into the viewport. The created node sticks at the mouse. Click again to release it.
 
-### Add tab - Display Panel
+## Add tab - Display Panel
 
 ![Add tab - Display Panel](/docs2/images/editors/shader-editor/sidebar/add-tab/add-tab-display-panel.png)
 
-#### Icon Buttons
+### Icon Buttons
 
 You can display the nodes in the panels either as text buttons or as pure icon buttons.
 
-#### Common
+### Common
 
 ![Common](/docs2/images/editors/shader-editor/sidebar/add-tab/common.png)
 
@@ -656,15 +656,15 @@ This checkbox allows you to display just the most common nodes for quicker searc
 
 # Relations Tab
 
-### Relations tab - Display Panel
+## Relations tab - Display Panel
 
-#### Icon Buttons
+### Icon Buttons
 
 ![Icon Buttons](/docs2/images/editors/shader-editor/sidebar/relations-tab/icon-buttons.png)
 
 You can display the nodes in the panels either as text buttons or as pure icon buttons.
 
-### Relations tab - Group Panel
+## Relations tab - Group Panel
 
 ![Relations tab - Group Panel](/docs2/images/editors/shader-editor/sidebar/relations-tab/relations-tab-group-panel.png)
 
@@ -676,7 +676,7 @@ If you include a source node in your group, you will end up having the source no
 
 If you include an output node in the group, there will not be an output socket available from the group!
 
-#### Make Group
+### Make Group
 
 Groups the selected nodes together.
 
@@ -702,11 +702,11 @@ A group can be further collapsed by clicking at the triangle button in the upper
 
 The group can be renamed in the sidebar in the Item tab and in the Properties tab in the Node panel.
 
-#### Group Insert
+### Group Insert
 
 Inserts the selected node into the selected group.
 
-##### Usage
+#### Usage
 
 Select the node.
 
@@ -714,7 +714,7 @@ Hold down shift, and select the group.
 
 Click the Group Insert button. The node will now be part of the group, and you will land in group edit mode. Press tab to exit the group edit mode.
 
-#### Group Input
+### Group Input
 
 ![Group Input](/docs2/images/editors/shader-editor/sidebar/relations-tab/group-input.png)
 
@@ -722,7 +722,7 @@ Adds a group input node.
 
 > **Note:** When at a top level, this node is unavailable. These are only available when inside a node group.
 
-#### Group Output
+### Group Output
 
 ![Group Output](/docs2/images/editors/shader-editor/sidebar/relations-tab/group-output.png)
 
@@ -737,25 +737,25 @@ Adds a group output node.
 | Ungroup | Ungroups an existing group. You need to be outside of the group edit mode. |
 
 
-### Relations tab - Node Group Panel
+## Relations tab - Node Group Panel
 
 ![Relations tab - Node Group Panel](/docs2/images/editors/shader-editor/sidebar/relations-tab/relations-tab-node-group-panel.png)
 
 When you create a node group, then this node group is listed here. And can be dragged from there for reuse too.
 
-### Relations tab - Layout Panel
+## Relations tab - Layout Panel
 
 ![Relations tab - Layout Panel](/docs2/images/editors/shader-editor/sidebar/relations-tab/relations-tab-layout-panel.png)
 
 These nodes helps organizing the node layout.
 
-#### Frame
+### Frame
 
 ![Frame](/docs2/images/editors/shader-editor/header/add-menu-layout/frame.png)
 
 The Frame node allows you to drop nodes into a frame. This frame can be dragged around as a whole.
 
-##### Adding and Removing Nodes
+#### Adding and Removing Nodes
 
 ![Adding and Removing Nodes](/docs2/images/editors/shader-editor/header/add-menu-layout/adding-and-removing-nodes.jpg)
 
@@ -763,7 +763,7 @@ Nodes can be added by simply dropping them onto the frame. Or with the Join in N
 
 To remove a node from the frame use Remove from Frame.
 
-##### Resizing Frame
+#### Resizing Frame
 
 When the Frame node is first placed in the node editor workspace you can resize it by dragging one of the edges.
 
@@ -773,11 +773,11 @@ Once a node is placed in the Frame, the Frame shrinks around the nodes. You cann
 
 This behavior can be changed by disabling the *Shrink* option in the Item tab in the Properties panel. Then you can resize the frame again by dragging the edges.
 
-##### Label and Color
+#### Label and Color
 
 You can change the name of a frame in the Node panel. And you can give it a custom color by checking the Color checkbox and adjusting the color then.
 
-#### Reroute
+### Reroute
 
 Adds a reroute point that can be used to reroute connections. It allows just one input, but allows multiple output connections.
 
@@ -791,7 +791,7 @@ To quickly add a Reroute node into an existing connection, hold **Shift** and **
 
 When you exceed a specific angle amount between the reroute nodes, then the node connection becomes a sharp corner, and not longer a Bezier like soft curve.
 
-##### Move, Rotate, Scale
+#### Move, Rotate, Scale
 
 ![Move, Rotate, Scale](/docs2/images/editors/shader-editor/header/add-menu-layout/move-rotate-scale.png)
 
@@ -799,35 +799,35 @@ A normal node has a handler. The reroute dot not. You can't simply move it aroun
 
 # Group Tab
 
-### Group tab - Introduction
+## Group tab - Introduction
 
 ![Group tab - Introduction](/docs2/images/editors/shader-editor/sidebar/group-tab/group-tab-introduction.png)
 
 The Geometry Node sidebar Group tab at the right side contains options and settings for node groups nodes and socket input and output properties.
 
-### Group Properties Panel
+## Group Properties Panel
 
-#### Name
+### Name
 
 ![Name](/docs2/images/editors/shader-editor/sidebar/group-tab/name.png)
 
 Change the name of the current node group. Type in a new name and hit enter.
 
-#### Description
+### Description
 
 Change the description of the current node group. Type in a new name and hit enter.
 
-#### Color Tag
+### Color Tag
 
 ![Color Tag](/docs2/images/editors/shader-editor/sidebar/group-tab/color-tag.png)
 
 Changes the header color of the current node group.
 
-#### Node Width
+### Node Width
 
 The default width of the node.
 
-### Group Sockets Panel
+## Group Sockets Panel
 
 ![Group Sockets Panel](/docs2/images/editors/shader-editor/sidebar/group-tab/group-sockets-panel.png)
 
@@ -835,23 +835,23 @@ Manage the input and output properties of the Group Input and Output nodes.
 
 More than one input and output slot can be useful when you want to modify the geometry in the node group in more than one way.
 
-#### Group Socket List
+### Group Socket List
 
 List of available input and output sockets.
 
 > **Note:** The list can be sorted by dragging the items around.
 
-##### List
+#### List
 
 The list of input and output sockets.
 
-##### Name
+#### Name
 
 ![Name](/docs2/images/editors/shader-editor/sidebar/group-tab/name-2.png)
 
 Change the name of the current selected input socket by double clicking on the socket in the list. Type in a new name and hit enter.
 
-##### New Item
+#### New Item
 
 ![New Item](/docs2/images/editors/shader-editor/sidebar/group-tab/new-item.png)
 
@@ -871,7 +871,7 @@ Adds a new input sockets to the list.
 | ![](/docs2/images/editors/shader-editor/sidebar/group-tab/remove-item-icon.png) Remove Item | Removes the selected input socket from the list. |
 
 
-##### Move Item Up/Down
+#### Move Item Up/Down
 
 ![Move Item Up/Down](/docs2/images/editors/shader-editor/sidebar/group-tab/move-item-up-down.png)
 
@@ -879,21 +879,21 @@ Moves the active item to the specified direction. You can move the active item u
 
 > **Note:** You can also alternatively drag and drop the active item to re-order.
 
-#### Type
+### Type
 
 ![Type](/docs2/images/editors/shader-editor/sidebar/group-tab/type.png)
 
 What kind of node group input or output type it is. To know more about the properties of the socket types, refer to the next section.
 
-##### Type Float
+#### Type Float
 
 ![Type Float](/docs2/images/editors/shader-editor/sidebar/group-tab/type-float.png)
 
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Subtype
+##### Subtype
 
 ![Subtype](/docs2/images/editors/shader-editor/sidebar/group-tab/subtype.png)
 
@@ -910,15 +910,15 @@ Subtype of the default value.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Integer
+#### Type Integer
 
 ![Type Integer](/docs2/images/editors/shader-editor/sidebar/group-tab/type-integer.png)
 
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Subtype
+##### Subtype
 
 ![Subtype](/docs2/images/editors/shader-editor/sidebar/group-tab/subtype-2.png)
 
@@ -935,7 +935,7 @@ Subtype of the default value.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Boolean
+#### Type Boolean
 
 ![Type Boolean](/docs2/images/editors/shader-editor/sidebar/group-tab/type-boolean.png)
 
@@ -949,15 +949,15 @@ Subtype of the default value.
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Vector
+#### Type Vector
 
 ![Type Vector](/docs2/images/editors/shader-editor/sidebar/group-tab/type-vector.png)
 
-###### Description
+##### Description
 
 Add a tooltip to the socket description.
 
-###### Subtype
+##### Subtype
 
 ![Subtype](/docs2/images/editors/shader-editor/sidebar/group-tab/subtype-3.png)
 
@@ -974,7 +974,7 @@ What special math operation is required. The subtype menu allows you to define t
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Color
+#### Type Color
 
 ![Type Color](/docs2/images/editors/shader-editor/sidebar/group-tab/type-color.png)
 
@@ -988,7 +988,7 @@ What special math operation is required. The subtype menu allows you to define t
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Menu
+#### Type Menu
 
 ![Type Menu](/docs2/images/editors/shader-editor/sidebar/group-tab/type-menu.png)
 
@@ -1003,7 +1003,7 @@ What special math operation is required. The subtype menu allows you to define t
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Shader
+#### Type Shader
 
 ![Type Shader](/docs2/images/editors/shader-editor/sidebar/group-tab/type-shader.png)
 
@@ -1016,7 +1016,7 @@ What special math operation is required. The subtype menu allows you to define t
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Bundle
+#### Type Bundle
 
 ![Type Bundle](/docs2/images/editors/shader-editor/sidebar/group-tab/type-bundle.png)
 
@@ -1029,7 +1029,7 @@ What special math operation is required. The subtype menu allows you to define t
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-##### Type Closure
+#### Type Closure
 
 ![Type Closure](/docs2/images/editors/shader-editor/sidebar/group-tab/type-closure.png)
 
@@ -1042,7 +1042,7 @@ What special math operation is required. The subtype menu allows you to define t
 | Hide in Modifier | Don’t show the value in the geometry nodes modifier interface. |
 
 
-### Animation Panel
+## Animation Panel
 
 ![Animation Panel](/docs2/images/editors/shader-editor/sidebar/group-tab/animation-panel.png)
 
