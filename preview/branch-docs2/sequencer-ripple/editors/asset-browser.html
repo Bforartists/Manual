@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Asset Browser · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/sequencer-ripple · <code>docs2/sequencer-ripple</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<a href="../getting-started/about-documentation.html">Using the Documentation</a>
+<span>Installation</span>
+<a href="../getting-started/quick-start.html">Quick Start</a>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<a style="padding-left:2.5rem" href="3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:2.5rem" href="3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<a style="padding-left:2.5rem" href="3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="image-editor/tool-shelf.html">Tool Shelf</a>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="uv-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<a style="padding-left:2.5rem" href="3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a href="3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="compositor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<a href="image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<span style="padding-left:2.5rem">More</span>
+<a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/filter.html">Filter</a>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:2.5rem" href="3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<span style="padding-left:1.5rem">Collection</span>
+<a style="padding-left:3.5rem" href="shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/point.html">Point</a>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="compositor.html">Compositor</a>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="geometry-node-editor.html">Geometry Node Editor</a>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<a style="padding-left:3.5rem" href="geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<a href="shader-editor.html">Shader Editor</a>
+<a href="video-sequence-editor.html">Video Sequence Editor</a>
+<a href="movie-clip-editor.html">Movie Clip Editor</a>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<a href="graph-editor.html">Graph Editor</a>
+<a href="drivers-editor.html">Drivers Editor</a>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<a href="toolbar.html">Toolbar</a>
+<a href="outliner.html">Outliner</a>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<a class="is-current" href="asset-browser.html">Asset Browser</a>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<a href="../assets/default-library.html">Default Library</a>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../keymap/important-hotkeys.html">Important Hotkeys</a>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../appendix/manual-update-history.html">Documentation History</a>
+<a href="../appendix/gpl-license.html">About the GPL License</a>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Asset Browser</div><h1 class="pv-title">Asset Browser</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 16 min read</span></div><article class="ui-doc-body"><h2 id="asset-browser">Asset Browser</h2>
+<p>The Asset browser is an explorer dialog that allows you to store assets, and reuse them at a later point.</p>
+<p>Assets can be everything. Objects, scenes, grease pencil strokes and so on.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/asset-browser.png" alt="Asset Browser" loading="lazy"></figure>
+<p>The asset browser interface is divided into several areas.</p>
+<ol>
+<li>Green: Header</li>
+<li>Blue: Categories</li>
+<li>Yellow: Sidebar</li>
+<li>Purple: Content area</li>
+</ol>
+<h2 id="how-to">How to</h2>
+<h3 id="asset-handling">Asset handling</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/asset-handling.png" alt="Asset handling" loading="lazy"></figure>
+<p>To insert or remove an asset you can use the right click on an object in the outliner and mark as asset. Alternatively, you can use the header object menu in the 3d View Editor to Mark Asset and Clear Asset.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/asset-handling-2.png" alt="Asset handling" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/asset-handling-3.png" alt="Asset handling" loading="lazy"></figure>
+<p>When you want to save a Material, World Shader, or Nodegroup, then you can also right click at the Data menu selector in the data dropdown property. This will also reveal a menu where you can Mark as Asset or Clear Asset.</p>
+<p>When an Armature is in Pose Mode, Poses can be inserted using the Header menu entries.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Dragging items into the browser is currently not supported. The other direction works though. You can drag assets from the browser into the 3d view.</p></div>
+<h3 id="asset-library">Asset Library</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/asset-library.jpg" alt="Asset Library" loading="lazy"></figure>
+<p>There are two ways to deal with assets. You can either store them in the current blend file for later use. This is the “Current file” method.</p>
+<p>Or you can switch to “User Library” or other Default Libraries included with Bforartists, and/or create an external library from a fixed path.</p>
+<p>If you’d like to view all, select the “All” category.</p>
+<p>To setup your external library, go to Preferences &gt; File Paths &gt; Asset Libraries to add this path to your asset libraries then. You can also do the same from header menu Catalog &gt; Asset Library Paths.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/asset-library.png" alt="Asset Library" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/asset-library-2.png" alt="Asset Library" loading="lazy"></figure>
+<p>You can add more than one asset library from the preferences.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/asset-library-3.png" alt="Asset Library" loading="lazy"></figure>
+<h3 id="online-libraries-while-offline">Online libraries while offline</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/offline-banner.png" alt="Offline banner" loading="lazy"></figure>
+<p>Some libraries, like the online Essentials, live on the internet. When internet access is off in the Preferences, the Asset Browser still shows every asset you've <strong>already downloaded</strong>, so you can keep working offline.</p>
+<p>A banner at the top reminds you that you only see the offline assets.</p>
+<h4 id="continue-offline">Continue Offline</h4>
+<p>Hides the banner, so you can keep working with the assets you already have.</p>
+<h4 id="allow-online-access">Allow Online Access</h4>
+<p>Turns internet access on, so the rest of the library can load.</p>
+<h3 id="drag-drop-of-materials">Drag &amp; Drop of materials</h3>
+<p>Materials can be dragged directly at the material slots in the Properties Editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/drag-and-drop-of-materials.png" alt="Drag &amp; Drop of materials" loading="lazy"><figcaption>Drag &amp; Drop of materials</figcaption></figure>
+<h2 id="header">Header</h2>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/header.png" alt="Header" loading="lazy"></figure>
+<p>There are several tools in the header to find. Menus, and a few options.</p>
+<h2 id="header-view-menu">Header - View menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/header-view-menu.png" alt="Header - View menu" loading="lazy"><figcaption>Header - View menu</figcaption></figure>
+<p>The View menu decides what you see. <strong>Source List</strong> shows the libraries and catalogs on the left, and <strong>Asset Details</strong> shows the sidebar with information about the selected asset.</p>
+<h3 id="frame-selected">Frame Selected</h3>
+<p>Scrolls the selected asset into view, handy in a big library.</p>
+<h3 id="sort">Sort</h3>
+<p>Orders the assets, for example by name. This used to be only in the right-click menu.</p>
+<h3 id="display-size">Display Size</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/display-size.png" alt="Display Size" loading="lazy"></figure>
+<p>The display size for the assets.</p>
+<h3 id="area-menu">Area Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/area-menu.png" alt="Area Menu" loading="lazy"></figure>
+<p>Area is a menu with window related settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal Split</td>
+<td>Splits the editor horizontally into two editors.</td>
+</tr>
+<tr>
+<td>Vertical Split</td>
+<td>Splits the editor vertically into two editors.</td>
+</tr>
+<tr>
+<td>Duplicate Area into new Window</td>
+<td>Creates a floating window out of the current editor.</td>
+</tr>
+<tr>
+<td>Toggle Maximize Area</td>
+<td>Displays the editor maximized with menus. To return to split view press hotkey Ctrl Up Arrow, or reuse the menu item in the View menu.</td>
+</tr>
+<tr>
+<td>Toggle Fullscreen Area</td>
+<td>Displays the editor maximized without menus. To return from the full screen view press hotkey Alt F10, or use the little button that appears up right when you move the mouse in this corner.</td>
+</tr>
+<tr>
+<td>Close Area</td>
+<td>Closes the editor.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="header-select-menu">Header - Select menu</h2>
+<p>Select functionality.</p>
+<h3 id="box-select">Box Select</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/box-select.png" alt="Box Select" loading="lazy"></figure>
+<p>Allows you to box select files. Note that this is an old obsolete operator. You don't need to press the hotkey anymore for box select.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inverse</td>
+<td>Inverts the selection.</td>
+</tr>
+<tr>
+<td>None</td>
+<td>Select none.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>Select all.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="header-library-menu">Header - Library menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/header-library-menu.png" alt="Header - Library menu" loading="lazy"><figcaption>Header - Library menu</figcaption></figure>
+<p>Everything about the asset libraries themselves.</p>
+<h3 id="asset-library-paths">Asset Library Paths</h3>
+<p>Opens the Preferences, where you add and manage your asset library folders.</p>
+<h3 id="refresh-asset-library">Refresh Asset Library</h3>
+<p>Reloads the current library. Use it after you saved new assets into the library from another file, so they show up here.</p>
+<h3 id="refresh-remote-listing">Refresh Remote Listing</h3>
+<p>Fetches the latest list of assets from an online library.</p>
+<h3 id="open-remote-assets-cache">Open Remote Assets Cache</h3>
+<p>Assets you download from online libraries are kept in a cache folder. This opens that folder.</p>
+<h3 id="clear-remote-assets-cache">Clear Remote Assets Cache</h3>
+<p>Deletes the downloaded online assets to free up disk space. They download again the next time you use them.</p>
+<h2 id="header-catalog-menu">Header - Catalog menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/header-catalog-menu.png" alt="Header - Catalog menu" loading="lazy"><figcaption>Header - Catalog menu</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Undo</td>
+<td>Undo of the last edit operation.</td>
+</tr>
+<tr>
+<td>Redo</td>
+<td>Redo of the last edit operation.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Save Asset Catalogs</td>
+<td>Save all changed asset catalogs.</td>
+</tr>
+<tr>
+<td>New Asset Catalog</td>
+<td>Add a new asset catalog.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="header-asset-menu">Header - Asset menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/header-asset-menu.png" alt="Header - Asset menu" loading="lazy"><figcaption>Header - Asset menu</figcaption></figure>
+<p>The Asset menu holds the commands for the assets you select. They used to be only in the right-click menu. Select an asset first, otherwise most entries stay greyed out.</p>
+<h3 id="download">Download</h3>
+<p>Only shows for online libraries. Downloads the selected assets, so you can use them offline.</p>
+<h3 id="clear-asset">Clear Asset</h3>
+<p>Turns the asset back into normal data, so it no longer shows in the Asset Browser.</p>
+<h3 id="clear-asset-set-fake-user">Clear Asset (Set Fake User)</h3>
+<p>Same as Clear Asset, but protects the data with a fake user, so it isn't thrown away when you save.</p>
+<h3 id="open-blend-file">Open Blend File</h3>
+<p>Opens the .blend file the asset is stored in. Works for assets from other files, not for assets in the current file.</p>
+<h3 id="open-file-location">Open File Location</h3>
+<p>Opens the folder that holds the asset's .blend file.</p>
+<p>The two pose entries at the bottom come from the Pose Library add-on, which is on by default. They work in Pose Mode.</p>
+<h3 id="paste-pose-as-new-asset">Paste Pose as New Asset</h3>
+<p>Pastes a previously copied pose as a new pose asset.</p>
+<h3 id="create-pose-asset">Create Pose Asset</h3>
+<p>Creates a pose asset from the selected armature.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> When you create a Pose Asset, it will capture what you see in the viewport from the active camera or view.</p></div>
+<h4 id="use">Use</h4>
+<p>To create a Pose Asset, follow these step:</p>
+<ol>
+<li>In the 3D View, select your Armature object and go into Pose Mode</li>
+<li>Select the bones you want to store as a pose</li>
+<li>In the Asset Browser Header Asset menu, use the operator Create Pose Asset</li>
+<li>This will create a Pose Asset in the Unassigned (Catalogue) category in the Current File.</li>
+<li>Click on the new Pose Asset in the Asset Shelf or Asset Browser to apply. Press and drag to apply with a slider strength.</li>
+<li>You can alternatively right click on the Pose Asset for alternative methods of applying the pose.</li>
+</ol>
+<h2 id="header-tools-and-options">Header - Tools and Options</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/header-tools-and-options.png" alt="Header - Tools and Options" loading="lazy"><figcaption>Header - Tools and Options</figcaption></figure>
+<h3 id="drop-collections-as-instances-append-link">Drop Collections as Instances (Append/Link)</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/drop-collections-as-instances-append-link.png" alt="Drop Collections as Instances (Append/Link)" loading="lazy"><figcaption>Drop Collections as Instances (Append/Link)</figcaption></figure>
+<p>Drop the asset as instances of another object. When you are in Append mode, you can toggle if you want to append the collection as an instance. When in Link mode, you can toggle if you want to append the collection as an instance.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Only usable with Collection assets</p></div>
+<h3 id="drop-instance-collections-at-origin">Drop Instance Collections at Origin</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/drop-instance-collections-at-origin.png" alt="Drop Instance Collections at Origin" loading="lazy"><figcaption>Drop Instance Collections at Origin</figcaption></figure>
+<p>Drop the asset at mouse position or at the world origin in the 3d view.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Only usable with Collection assets</p></div>
+<h3 id="toggle-drop-collections-as-instances-follow-preferences">Toggle Drop Collections as Instances (Follow Preferences)</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/drop-instance-collections-at-origin.png" alt="Toggle Drop Collections as Instances (Follow Preferences)" loading="lazy"><figcaption>Toggle Drop Collections as Instances (Follow Preferences)</figcaption></figure>
+<p>Drop the asset as instances of another object. This toggles both append and link mode at the same time.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Only usable with Collection assets</p></div>
+<h3 id="import-method">Import Method</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/import-method.png" alt="Import Method" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/import-method-2.png" alt="Import Method" loading="lazy"></figure>
+<p>Allows you to define how to import the assets.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Follow Preferences</td>
+<td>Use the import method as defined in the preferences.</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>Link the asset at import.</td>
+</tr>
+<tr>
+<td>Append</td>
+<td>append the asset at import.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="append-reuse-data">Append (Reuse Data)</h4>
+<p>Append the asset at import. But avoid multiple copies of the asset.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/append-reuse-data.png" alt="Append (Reuse Data)" loading="lazy"></figure>
+<p>Recommending using Pack instead.<br />
+You can go in the Preferences, in Developers Tools tab and enable No Packing to show Append (Reuse) back.</p>
+<h4 id="pack">Pack</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/pack.png" alt="Pack" loading="lazy"></figure>
+<p>Import the asset as packed. Make it is unchanged modified, linked with the original data.</p>
+<h4 id="link-override">Link (Override)</h4>
+<p>Import the assets as linked library overrided data. This will only override the active hierarchy. The active hierarchy is defined by the last selected object of a collection or the armature.</p>
+<p>To override all selected contents, use the Outliner Editor by right clicking on the asset and Overriding Selected and Content.</p>
+<h3 id="display-mode">Display Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/display-mode.png" alt="Display Mode" loading="lazy"></figure>
+<p>Allows you to switch between list view and thumbnail preview view.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal List</td>
+<td>Displays the content of the file browser as a horizontal list.</td>
+</tr>
+<tr>
+<td>Thumbnails</td>
+<td>Displays the content of the file browser as thumbnails. This is especially of use for images or blend files with thumbnail preview.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sort-by-name">Sort by Name</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/sort-by-name.png" alt="Sort by Name" loading="lazy"></figure>
+<p>Sort assets by alphabetical order, ignoring catalog order.</p>
+<h4 id="sort-by-asset-catalog">Sort by Asset Catalog</h4>
+<p>Sort the assets list so that assets in the catalog are kept together in groups, then within a single catalog, the assets are ordered by name. The catalogs are in order of the flattened catalog hierarchy, from top to bottom.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This is useful for large amount of assets to “group” catalogs of assets together.</p></div>
+<h4 id="display-mode-options">Display mode options</h4>
+<h5 id="vertical-horizontal-list">Vertical / Horizontal List</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/vertical-horizontal-list.png" alt="Vertical / Horizontal List" loading="lazy"><figcaption>Vertical / Horizontal List</figcaption></figure>
+<p>Shows the assets in a vertical list or in a column based horizontal list.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>Toggles the column with size information.</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>Toggles the column with date information.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="thumbnails">Thumbnails</h5>
+<h6 id="tiny-small-medium-large-buttons">Tiny / Small / Medium / Large Buttons</h6>
+<p>Preset display size of the thumbnails for the assets.</p>
+<h6 id="size">Size</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/size.png" alt="Size" loading="lazy"></figure>
+<p>The display size of the thumbnails for the assets. The range for these thumbnails goes from tiny with 32 pixels up to large with 256 pixels.</p>
+<h3 id="search">Search</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/search.png" alt="Search" loading="lazy"></figure>
+<p>Name Filter. Allows you to search for specific files and folders.</p>
+<h3 id="filter">Filter</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/filter.png" alt="Filter" loading="lazy"></figure>
+<p>Allows you to filter the assets library in various ways. The menu items should be self explaining.</p>
+<h3 id="toggle-region">Toggle Region</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/toggle-region.png" alt="Toggle Region" loading="lazy"></figure>
+<p>Toggles the sidebar at the right. The sidebar contains various im- and export settings for the single file types.</p>
+<h3 id="drop-collection-as-instances">Drop collection as Instances</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/drop-collection-as-instances.png" alt="Drop collection as Instances" loading="lazy"><figcaption>Drop collection as Instances</figcaption></figure>
+<p>When it's on, you link collections as instances. When off, it links to scene. Default is off.</p>
+<h3 id="drop-collection-at-world-origin">Drop collection at World Origin</h3>
+<p>When it's on, you link or append collections or collection as instances to world origin (center). When off, it links or appends to the mouse cursor. Default is off.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> When you link a collection to scene, not as an instance, and the world to origin is off, any concurring instances of the linked collection will have an offset. This is used to prevent any collection instance offsets to opt-in to linking in collections to scene at world origin, to later override or use as instance.</p></div>
+<h3 id="import-method-2">Import Method</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/drop-collection-as-instances.png" alt="Import Method" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Follow Preferences</td>
+<td>Use the import method set in the Preferences for this asset library, don't override it.</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>Import the assets as linked data</td>
+</tr>
+<tr>
+<td>Append</td>
+<td>Import the assets as copied data, with no link to the original asset data</td>
+</tr>
+<tr>
+<td>Append (Reuse Data)</td>
+<td>Import the assets as copied data-block while avoiding multiple copies of nested, typically heavy data. For example the textures of a material asset, or the mesh of an object asset, don't have to be copied every time this asset is imported. The instances of the asset share the data instead.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tool-shelf">Tool shelf</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/tool-shelf.png" alt="Tool shelf" loading="lazy"></figure>
+<p>The toolshelf shows the different catalogs that you can use to store your assets.</p>
+<p>These catalogs are currently disfunctional. You can just add or remove the categories. But not insert assets to it.</p>
+<h3 id="asset-library-chooser">Asset Library chooser</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/asset-library-chooser.png" alt="Asset Library chooser" loading="lazy"></figure>
+<p>Here you can choose what asset library to use.</p>
+<h4 id="current-file">Current File</h4>
+<p>Uses the current Blend file as the asset library. All assets are stored into the current blend file. And this means that when you remove objects from the scene, then the assets in the assets library will also vanish.</p>
+<h4 id="user-library">User Library</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/user-library.png" alt="User Library" loading="lazy"></figure>
+<p>Uses the blend file in the path that is defined in the user preferences as the asset library.</p>
+<p>Working with more than one blend file is currently not supported.</p>
+<h5 id="refresh">Refresh</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/refresh.png" alt="Refresh" loading="lazy"></figure>
+<p>With a user library you will get a refresh button besides the asset library chooser. Refreshes the content.</p>
+<h3 id="asset-catalogs">Asset Catalogs</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/asset-catalogs.png" alt="Asset Catalogs" loading="lazy"></figure>
+<p>Asset catalogs allows you to organize your assets.</p>
+<p>Note that asset catalogs does not work with the external asset libraries. Just with the asset library in the current file.</p>
+<p>First save your file. The method does not work at a blend file that is not saved yet.</p>
+<p>Then create your catalog, and name them.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/asset-catalogs-2.png" alt="Asset Catalogs" loading="lazy"></figure>
+<p>Then select one of your assets. And drag it onto the catalog that you want to add it to.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/asset-catalogs-3.png" alt="Asset Catalogs" loading="lazy"></figure>
+<p>Finally, save the asset.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Save Asset Catalogs</td>
+<td>Saves the current asset catalog to file and make the changes permanent.</td>
+</tr>
+<tr>
+<td>New Asset Catalog</td>
+<td>Creates a new asset catalog. Asset catalogs can be nested too.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unassigned">Unassigned</h3>
+<p>The assets that are currently not in a catalog.</p>
+<h3 id="asset-catalog-right-click-menus">Asset catalog right click menus</h3>
+<p>Note that the Edit Source button is a developer feature.</p>
+<h4 id="right-clicking-at-the-all-item">Right clicking at the All item</h4>
+<h5 id="mark-as-asset">Mark as asset</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/mark-as-asset.png" alt="Mark as asset" loading="lazy"></figure>
+<p>Marks the object as an asset. Dysfunctional in this context.</p>
+<h5 id="clear-asset-2">Clear Asset</h5>
+<p>Removes all assets.</p>
+<h4 id="right-clicking-at-one-of-the-catalog-items">Right clicking at one of the catalog items</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/right-clicking-at-one-of-the-catalog-items.png" alt="Right clicking at one of the catalog items" loading="lazy"><figcaption>Right clicking at one of the catalog items</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/right-clicking-at-one-of-the-catalog-items-2.png" alt="Right clicking at one of the catalog items" loading="lazy"><figcaption>Right clicking at one of the catalog items</figcaption></figure>
+<p>Content depends if you have an asset selected or not.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New Catalog</td>
+<td>Creates a new nested catalog inside of the current catalog.</td>
+</tr>
+<tr>
+<td>Delete catalog</td>
+<td>Deletes the catalog and all of its childs.</td>
+</tr>
+<tr>
+<td>Rename</td>
+<td>Rename the current catalog.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="mark-as-asset-2">Mark as asset</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/mark-as-asset.png" alt="Mark as asset" loading="lazy"></figure>
+<p>Marks the object as an asset. Dysfunctional in this context.</p>
+<h5 id="clear-asset-3">Clear Asset</h5>
+<p>Removes all assets.</p>
+<h2 id="sidebar">Sidebar</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/sidebar.png" alt="Sidebar" loading="lazy"></figure>
+<p>At the right side you will find the Sidebar. It is usually hidden. But can be revealed by a click at the litte triangle button, or with a click at the Toggle Region button in the header at the right.</p>
+<h3 id="name">Name</h3>
+<p>The name of the asset. Here you can also rename the asset. Note that the name of the asset in the view does not refresh immediately at the moment. You can force a refresh of it in the Preview panel by clicking at the Generate Preview button</p>
+<h3 id="info-panel">Info Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/info-panel.png" alt="Info Panel" loading="lazy"></figure>
+<p>Some additional infos about the asset.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source</td>
+<td>A source that can't be edited for the Blender developers.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Add a description for the asset.</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>Add the name of the author of the asset.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="preview-panel">Preview Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/preview-panel.png" alt="Preview Panel" loading="lazy"></figure>
+<p>A preview of the asset. By default the same image that you see in the view when you create the asset.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Load Custom Preview</td>
+<td>Opens a file browser where you can choose a custom icon for this asset.</td>
+</tr>
+<tr>
+<td>Generate Preview</td>
+<td>Generates a preview icon from the content. Note that this will reset the custom icon.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="preview-menu">Preview Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/preview-menu.png" alt="Preview Menu" loading="lazy"></figure>
+<h4 id="render-active-object">Render Active Object</h4>
+<p>Creates a preview for the currently active object.</p>
+<h4 id="remove-preview">Remove Preview</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/remove-preview.png" alt="Remove Preview" loading="lazy"></figure>
+<p>Removes the current preview for the selected asset.</p>
+<h4 id="capture-screenshot-preview">Capture Screenshot Preview</h4>
+<p>Allows the user to create a new preview by selecting any region,<br />
+the user interface fades with a crosshair cursor, simply click and drag.</p>
+<h3 id="tags-panel">Tags Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/tags-panel.png" alt="Tags Panel" loading="lazy"></figure>
+<p>Enter custom tags for this asset. This tags allows you to sort your assets by tag.</p>
+<h4 id="tags-list">Tags List</h4>
+<p>The list of the current tags.</p>
+<h5 id="drag-handler">Drag handler</h5>
+<p>Allows you to resize the list.</p>
+<h5 id="search-2">Search</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/search-2.png" alt="Search" loading="lazy"></figure>
+<p>Search the list. This search can be expanded by clicking at the little triangle button down left.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Asset Tag</td>
+<td>Adds a tag to the tag list. This tag can be renamed in the list.</td>
+</tr>
+<tr>
+<td>Remove Asset Tag</td>
+<td>Removes the selected tag from the tag list.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="asset-shelf-buttons-row">Asset Shelf Buttons Row</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/asset-shelf-buttons-row.png" alt="Asset Shelf Buttons Row" loading="lazy"><figcaption>Asset Shelf Buttons Row</figcaption></figure>
+<p>When you select a Node Group asset, you have an additional set of tags you can assign. These tags will define if the Node Group asset will show in the toolshelf in the Compositor, Geometry Nodes and Shader editor toolshelves, or in the 3D View.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This row of quick tag buttons only show when you have a Node Group asset selected in the Asset Browser.</p></div>
+<h5 id="compositor-tag">Compositor Tag</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/compositor-tag.png" alt="Compositor Tag" loading="lazy"></figure>
+<p>Assigns the “Compositor” tag to show the Node Group in the Compositor Asset Shelf in the footer of the Compositor editor.</p>
+<h5 id="geometry-nodes-tag">Geometry Nodes Tag</h5>
+<p>Assigns the “Geometry Nodes” tag to show the Node Group in the Geometry Nodes Asset Shelf in the footer of the Geometry Nodes editor.</p>
+<h5 id="3d-view-tag">3D View Tag</h5>
+<p>Assigns the “Geometry Nodes” tag and the “3D View” tag to show the Node Group in the Geometry Nodes Asset Shelf in the footer of the Geometry Nodes editor and the 3D View Asset Shelf at the footer of the 3D View editor.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Only Geometry Nodes can also be shown in the 3D View. You must assign the Node Group a Geometry Nodes tag before assigning a 3D View tag.</p></div>
+<h5 id="shader-tag">Shader Tag</h5>
+<p>Assigns the “Shader” tag to show the Node Group in the Shader Asset Shelf in the footer of the Shader editor.</p>
+<h2 id="assets-context-menu">Assets context menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/assets-context-menu.png" alt="Assets context menu" loading="lazy"></figure>
+<p>When you right click into the view then an Asset context menu opens.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Refresh Asset Library</td>
+<td>Refresh the file list.</td>
+</tr>
+<tr>
+<td>Clear Asset</td>
+<td>Removes the asset from the asset library.</td>
+</tr>
+<tr>
+<td>Clear Asset ( Set Fake User)</td>
+<td>Removes the asset from the asset library. But sets it to fake user, so that it remains in the scene.</td>
+</tr>
+<tr>
+<td>Open Blend File</td>
+<td>Opens the path for the blend file that contains the active asset. Just active with User Library.</td>
+</tr>
+<tr>
+<td>Display Size</td>
+<td>Set the display size of the file browser to four predefined sizes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pose-assets-context-menu">Pose Assets context menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/pose-assets-context-menu.png" alt="Pose Assets context menu" loading="lazy"><figcaption>Pose Assets context menu</figcaption></figure>
+<p>When you right click on a pose asset in the Asset Browser or 3D View Asset shelf, you get extra options to help apply the pose. To use them, make sure you have a compatible armature selected, are in Pose Mode and have the bones you’d like to pose selected.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Pose action assets are single keyframe action clips marked as assets preview either from the NLA or the Dopesheet editors. Animation keyframe sequences cannot be marked as assets.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apply Pose</td>
+<td>Apply the given pose action to the active rig. When you select this, this will apply the pose to selected bones.</td>
+</tr>
+<tr>
+<td>Apply Pose Flipped</td>
+<td>Apply the given pose action to the active rig with a flipped axis. When you select this, this will apply the flipped pose to selected bones. Flipping happens usually from bones labeled .L and .R</td>
+</tr>
+</tbody>
+</table>
+<h3 id="blend-pose">Blend Pose</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/asset-browser/blend-pose.png" alt="Blend Pose" loading="lazy"></figure>
+<p>Blend the given pose action to the active rig. This is useful to interpolate from the original pose to the new pose. When using, you will see a slider in the asset browser header giving you a degree of blend.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blend Pose Flipped</td>
+<td>Blends the selected bones with the flipped Pose asset.</td>
+</tr>
+<tr>
+<td>Select Pose Bones</td>
+<td>Select those bones used in this pose action. This will select all the necessary bones you need to apply the pose effectively. If you have no bones selected, the pose will not apply. Poses only apply to bones that are selected.</td>
+</tr>
+<tr>
+<td>Deselect Pose Bones</td>
+<td>Deselect those bones used in this pose action. This will ultimately clear the selection based on the pose action bones defined in the marked action clip.</td>
+</tr>
+<tr>
+<td>Assign Action</td>
+<td>Set the pose action as the active action on the active object. This will ultimately load the pose action animation clip to the Action Editor of the Dopesheet, allowing you to edit the pose. This only works in the source file with the marked poses.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fsequencer-ripple/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fasset-browser%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/sequencer-ripple/docs2/content/editors/asset-browser/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#asset-browser">Asset Browser</a><a class="h2" href="#how-to">How to</a><a class="h3" href="#asset-handling">Asset handling</a><a class="h3" href="#asset-library">Asset Library</a><a class="h3" href="#online-libraries-while-offline">Online libraries while offline</a><a class="h3" href="#drag-drop-of-materials">Drag &amp; Drop of materials</a><a class="h2" href="#header">Header</a><a class="h2" href="#header-view-menu">Header - View menu</a><a class="h3" href="#frame-selected">Frame Selected</a><a class="h3" href="#sort">Sort</a><a class="h3" href="#display-size">Display Size</a><a class="h3" href="#area-menu">Area Menu</a><a class="h2" href="#header-select-menu">Header - Select menu</a><a class="h3" href="#box-select">Box Select</a><a class="h2" href="#header-library-menu">Header - Library menu</a><a class="h3" href="#asset-library-paths">Asset Library Paths</a><a class="h3" href="#refresh-asset-library">Refresh Asset Library</a><a class="h3" href="#refresh-remote-listing">Refresh Remote Listing</a><a class="h3" href="#open-remote-assets-cache">Open Remote Assets Cache</a><a class="h3" href="#clear-remote-assets-cache">Clear Remote Assets Cache</a><a class="h2" href="#header-catalog-menu">Header - Catalog menu</a><a class="h2" href="#header-asset-menu">Header - Asset menu</a><a class="h3" href="#download">Download</a><a class="h3" href="#clear-asset">Clear Asset</a><a class="h3" href="#clear-asset-set-fake-user">Clear Asset (Set Fake User)</a><a class="h3" href="#open-blend-file">Open Blend File</a><a class="h3" href="#open-file-location">Open File Location</a><a class="h3" href="#paste-pose-as-new-asset">Paste Pose as New Asset</a><a class="h3" href="#create-pose-asset">Create Pose Asset</a><a class="h2" href="#header-tools-and-options">Header - Tools and Options</a><a class="h3" href="#drop-collections-as-instances-append-link">Drop Collections as Instances (Append/Link)</a><a class="h3" href="#drop-instance-collections-at-origin">Drop Instance Collections at Origin</a><a class="h3" href="#toggle-drop-collections-as-instances-follow-preferences">Toggle Drop Collections as Instances (Follow Preferences)</a><a class="h3" href="#import-method">Import Method</a><a class="h3" href="#display-mode">Display Mode</a><a class="h3" href="#search">Search</a><a class="h3" href="#filter">Filter</a><a class="h3" href="#toggle-region">Toggle Region</a><a class="h3" href="#drop-collection-as-instances">Drop collection as Instances</a><a class="h3" href="#drop-collection-at-world-origin">Drop collection at World Origin</a><a class="h3" href="#import-method-2">Import Method</a><a class="h2" href="#tool-shelf">Tool shelf</a><a class="h3" href="#asset-library-chooser">Asset Library chooser</a><a class="h3" href="#asset-catalogs">Asset Catalogs</a><a class="h3" href="#unassigned">Unassigned</a><a class="h3" href="#asset-catalog-right-click-menus">Asset catalog right click menus</a><a class="h2" href="#sidebar">Sidebar</a><a class="h3" href="#name">Name</a><a class="h3" href="#info-panel">Info Panel</a><a class="h3" href="#preview-panel">Preview Panel</a><a class="h3" href="#preview-menu">Preview Menu</a><a class="h3" href="#tags-panel">Tags Panel</a><a class="h2" href="#assets-context-menu">Assets context menu</a><a class="h2" href="#pose-assets-context-menu">Pose Assets context menu</a><a class="h3" href="#blend-pose">Blend Pose</a></aside></div></body></html>

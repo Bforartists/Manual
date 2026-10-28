@@ -1,0 +1,1643 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pose Mode · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/sequencer-ripple · <code>docs2/sequencer-ripple</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<a href="../../../getting-started/about-documentation.html">Using the Documentation</a>
+<span>Installation</span>
+<a href="../../../getting-started/quick-start.html">Quick Start</a>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<a style="padding-left:2.5rem" href="edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a class="is-current" style="padding-left:2.5rem" href="pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/edit.html">Edit Mode</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="../mesh/edit/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<a style="padding-left:2.5rem" href="../object-mode/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<a style="padding-left:2.5rem" href="../all-modes/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<a style="padding-left:2.5rem" href="../grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../mesh/edit/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../object-mode/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<a href="../../image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="../all-modes/header/view-menu.html">View Menu</a>
+<span style="padding-left:2.5rem">More</span>
+<a style="padding-left:2.5rem" href="../grease-pencil/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/filter.html">Filter</a>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:2.5rem" href="../mesh/particle-edit.html">Particle Edit</a>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<span style="padding-left:1.5rem">Collection</span>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/point.html">Point</a>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../compositor.html">Compositor</a>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<a href="../../toolbar.html">Toolbar</a>
+<a href="../../outliner.html">Outliner</a>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<a href="../../asset-browser.html">Asset Browser</a>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<a href="../../../assets/default-library.html">Default Library</a>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../../appendix/gpl-license.html">About the GPL License</a>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Armature › Pose Mode</div><h1 class="pv-title">Pose Mode</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 27 min read</span></div><article class="ui-doc-body"><p><span class="ui-doc-menu">Armature › Pose Mode</span>: every menu, tool, sidebar tab and context menu of this mode, on one page. Use the panels on the right to jump between the regions.</p>
+<h1 id="header">Header</h1>
+<h2 id="pose-menu">Pose menu</h2>
+<h3 id="pose-mode-pose-menu">Pose Mode - Pose Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/pose-mode-pose-menu.png" alt="Pose Mode - Pose Menu" loading="lazy"><figcaption>Pose Mode - Pose Menu</figcaption></figure>
+<p>The Pose menu contains the tools to work with Armature objects in Pose mode. This means here you find all the tools that you need to pose and animate your armature.</p>
+<h3 id="transform-submenu">Transform - Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/transform-submenu.png" alt="Transform - Submenu" loading="lazy"></figure>
+<h4 id="to-sphere">To Sphere</h4>
+<p>Shapes a selection of bones into the shape of a sphere. The calculation happens with the object origins.</p>
+<h5 id="usage">Usage</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/usage.png" alt="Usage" loading="lazy"></figure>
+<p>Select the bones, activate the tool, then drag the mouse in the 3D viewport. In the header you will read the current factor then. Which tells you how close you are towards the sphere shape.</p>
+<h5 id="adjust-last-operation-to-sphere">Adjust Last Operation - To Sphere</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png" alt="Last Operator To Sphere" loading="lazy"><figcaption>Last Operator To Sphere</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>The factor to transform the selection into a shape form.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="proportional-editing">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="shear">Shear</h4>
+<p>Shear shears the selection.</p>
+<p>In Object mode this tools requires to have more than one object selected.</p>
+<p>The shear tool works along a imaginary 2d plane. The shear axis controls if the items are sheared along the x or the y axes of this plane. This is the plane along which the transformation happens. You can shear along the x or the y axis of this plane.</p>
+<p>To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.</p>
+<h5 id="adjust-last-operation-shear">Adjust Last Operation - Shear</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png" alt="Last Operator Shear" loading="lazy"></figure>
+<h6 id="offset">Offset</h6>
+<p>Adjust an offset.</p>
+<h6 id="axis">Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/object-menu/axis.png" alt="Axis" loading="lazy"></figure>
+<p>Defines one axis of the imaginary shear axis plane.</p>
+<h6 id="axis-ortho">Axis Ortho</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/object-menu/axis.png" alt="Axis Ortho" loading="lazy"></figure>
+<p>Defines the other axis of the imaginary shear axis plane.</p>
+<h6 id="orientation">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation for the shear action.</p>
+<h6 id="mirror-editing">Mirror Editing</h6>
+<p>Enable mirror editing.</p>
+<h6 id="proportional-editing-2">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bend">Bend</h4>
+<p>Bends the selection.</p>
+<h4 id="push-pull">Push/Pull</h4>
+<p>It pushes or pulls the object positions relative to the center of the selection.</p>
+<p>In Object mode this tool requires to have more than one object selected.</p>
+<h5 id="adjust-last-operation-push-pull">Adjust Last Operation - Push/Pull</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png" alt="Last Operator Push/Pull" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distance</td>
+<td>Adjust the distance of influence of the tool.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="proportional-editing-3">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/object-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="clear-transform-submenu">Clear Transform - Submenu</h3>
+<h4 id="clear-transform">Clear Transform</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/clear-transform.png" alt="Clear Transform" loading="lazy"></figure>
+<p>Clear transform is a menu with some Clear functionality. You need to have the bones selected where you want to perform the operation. Unselected bones will not be calculated.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All</td>
+<td>Resets location, rotation and scale back to the Rest pose.</td>
+</tr>
+<tr>
+<td>Clear User Transforms</td>
+<td>Resets Pose of selected bones back to keyframe state.</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Resets location back to the Rest pose.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Resets rotation back to the Rest pose.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Resets scale back to the Rest pose.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="reset-unkeyed">Reset Unkeyed</h5>
+<p>Resets the pose for the selected bones back to the state of the latest keyframe.</p>
+<h6 id="adjust-last-operation-clear-user-transforms">Adjust Last Operation - Clear User Transforms</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-clear-user-transforms.png" alt="Last Operator Clear User Transforms" loading="lazy"><figcaption>Last Operator Clear User Transforms</figcaption></figure>
+<h6 id="only-selected">Only Selected</h6>
+<p>Clear User transform for selected armature part, or for the whole armature.</p>
+<h3 id="apply-submenu">Apply - Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/apply-submenu.png" alt="Apply - Submenu" loading="lazy"></figure>
+<p>Apply is a menu with some Apply functionality.</p>
+<h4 id="apply-pose-as-rest-pose">Apply Pose as Rest Pose</h4>
+<p>You need a rest pose where you can reset the pose back to. With this tool you can set the current pose to be the new Rest pose.</p>
+<h4 id="apply-selected-as-rest-pose">Apply Selected as Rest Pose</h4>
+<p>You need a rest pose where you can reset the pose back to. With this tool you can set the current pose of the selected bones to be the new Rest pose.</p>
+<h5 id="adjust-last-operation-apply-pose-as-rest-pose">Adjust Last Operation - Apply Pose as Rest Pose</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-apply-pose-as-rest-pose.png" alt="Last Operator Apply Pose as Rest Pose" loading="lazy"><figcaption>Last Operator Apply Pose as Rest Pose</figcaption></figure>
+<h6 id="selected-only">Selected only</h6>
+<p>Just apply the pose to the selected part.</p>
+<h4 id="apply-visual-transform-to-pose">Apply Visual Transform to Pose</h4>
+<p>Apply final constrained position of posed bones to their transform.</p>
+<h4 id="assign-custom-property-values-as-default">Assign Custom Property Values as Default</h4>
+<p>Assigns the current values of custom properties as their defaults. This allows to use them as part of the rest pose state in NLA track mixing.</p>
+<h5 id="adjust-last-operation-assign-custom-property-values-as-default">Adjust Last Operation - Assign Custom Property Values as Default</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-assign-custom-property-values-as-d.png" alt="Last Operator Assign Custom Property Values as Default" loading="lazy"><figcaption>Last Operator Assign Custom Property Values as Default</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Process data properties</td>
+<td>Include the process data properties.</td>
+</tr>
+<tr>
+<td>Process bone properties</td>
+<td>Include the process bone properties.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="snap-submenu">Snap - Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/snap-vertices.png" alt="Snap - Submenu" loading="lazy"></figure>
+<p>Choose several methods to snap one element to another. The menu items should be self explaining.</p>
+<h4 id="adjust-last-operation-snap-selection-to-cursor">Adjust Last Operation - Snap Selection to Cursor</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-snap-selection-to-cursor.png" alt="Last Operator Snap Selection to Cursor" loading="lazy"><figcaption>Last Operator Snap Selection to Cursor</figcaption></figure>
+<p>Some snap operations shows a last operation panel, some not.</p>
+<h5 id="offset-2">Offset</h5>
+<p>If the selection should snap as a whole, or if each individual element of the selection should snap.</p>
+<h3 id="animation-submenu">Animation - Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/animation-submenu.png" alt="Animation - Submenu" loading="lazy"></figure>
+<p>Animation is a sub menu around animation functionality. You need to have an object in the scene.</p>
+<h4 id="insert-keyframe">Insert Keyframe</h4>
+<p>Inserts a keyframe with the default keying set. The settings of the default keying set can be found in the properties.</p>
+<h4 id="insert-keyframewith-keying-set">Insert Keyframewith Keying Set</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/insert-keyframewith-keying-set.png" alt="Insert Keyframewith Keying Set" loading="lazy"><figcaption>Insert Keyframewith Keying Set</figcaption></figure>
+<p>Opens a menu where you can insert a keyframe with a defined keying set.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete Keyframes</td>
+<td>Deletes keyframes at the current frame.</td>
+</tr>
+<tr>
+<td>Clear Keyframes</td>
+<td>Deletes all keyframes.</td>
+</tr>
+<tr>
+<td>Change Keying Set</td>
+<td>Opens a menu where you can change the keying set. It is basically the same than the insert keyframe menu.</td>
+</tr>
+<tr>
+<td>Bake Action</td>
+<td>Bake all selected objects location/scale/rotation animation to an action.</td>
+</tr>
+<tr>
+<td>Bake Object Transform to Grease Pencil</td>
+<td>Only works on Mesh objects.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="in-between-submenu">In-Between - Submenu</h3>
+<h4 id="in-between">In Between</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/in-between.png" alt="In Between" loading="lazy"></figure>
+<p>In Between are tools to influence the look of the pose between the keyframes.</p>
+<p>For example, record a keyframe at frame 1, then record a keyframe at frame 20. Then go to frame 10, and activate one of the tools. Now you can play around with the settings. And when you are satisfied with the result then you can record a keyframe at this position.</p>
+<h4 id="header-values">Header values</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/header-values.png" alt="Header values" loading="lazy"></figure>
+<p>When you activate one of the tools, then you will see a percentage slider in the header. This slider is not interactive. It just displays the percentage of the exaggeration.</p>
+<h4 id="footer-hotkey-display">Footer hotkey display</h4>
+<p>In the footer you will some hotkeys for further options. This hotkeys are hard coded, and cannot be changed in the input manager.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/footer-hotkey-display.png" alt="Footer hotkey display" loading="lazy"></figure>
+<p>The hotkeys W, E and R stands for the usual transform modes move, rotate or scale. Hotkey B stands for Bendy Bones. And C is for a custom property.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/footer-hotkey-display-2.png" alt="Footer hotkey display" loading="lazy"></figure>
+<p>Overshoot allows you to go over the 0 -100 per cent range. The header values shows a bigger range then.</p>
+<p>The rest of the hotkeys should be self explaining.</p>
+<h4 id="blend-pose-with-rest-pose">Blend Pose with Rest Pose</h4>
+<p>Blends the current pose iwth the rest pose.</p>
+<h5 id="adjust-last-operation-blend-pose-with-rest-pose">Adjust Last Operation - Blend Pose with Rest Pose</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-blend-pose-with-rest-pose.png" alt="Last Operator Blend Pose with Rest Pose" loading="lazy"><figcaption>Last Operator Blend Pose with Rest Pose</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>The percentage of exaggeration.</td>
+</tr>
+<tr>
+<td>Previous Keyframe</td>
+<td>The keyframe position before the current frame.</td>
+</tr>
+<tr>
+<td>Next Keyframe</td>
+<td>The keyframe position after the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="channels">Channels</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/channels.png" alt="Channels" loading="lazy"></figure>
+<p>Limit the push effect to specific channels.</p>
+<h6 id="axis-lock">Axis Lock</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/axis-lock.png" alt="Axis Lock" loading="lazy"></figure>
+<p>Limit the push effect to specific axis.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Entries marked <strong>(Legacy)</strong> are the classic menu commands for Push, Relax and Breakdowner. The tool shelf offers the same as tools, now with matching icons. The <strong>(Legacy)</strong> label tells the two apart.</p></div>
+<h4 id="push-pose-from-breakdown-legacy">Push Pose from Breakdown (Legacy)</h4>
+<p>Exaggerates the current pose. Pushes the current pose further away from the previous pose.</p>
+<h5 id="adjust-last-operation-push-pose">Adjust Last Operation - Push Pose</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-push-pose.png" alt="Last Operator Push Pose" loading="lazy"><figcaption>Last Operator Push Pose</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Percentage</td>
+<td>The percentage of exaggeration.</td>
+</tr>
+<tr>
+<td>Previous Keyframe</td>
+<td>The keyframe position before the current frame.</td>
+</tr>
+<tr>
+<td>Next Keyframe</td>
+<td>The keyframe position after the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="channels-2">Channels</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/channels.png" alt="Channels" loading="lazy"></figure>
+<p>Limit the push effect to specific channels.</p>
+<h6 id="axis-lock-2">Axis Lock</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/axis-lock.png" alt="Axis Lock" loading="lazy"></figure>
+<p>Limit the push effect to specific axis.</p>
+<h4 id="relax-pose-to-breakdown-legacy">Relax Pose to Breakdown (Legacy)</h4>
+<p>Relaxes the current pose.</p>
+<h5 id="adjust-last-operation-relax-pose-to-breakdown">Adjust Last Operation - Relax Pose to Breakdown</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-relax-pose-to-breakdown.png" alt="Last Operator Relax Pose to Breakdown" loading="lazy"><figcaption>Last Operator Relax Pose to Breakdown</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Percentage</td>
+<td>The percentage of relaxing.</td>
+</tr>
+<tr>
+<td>Previous Keyframe</td>
+<td>The keyframe position before the current frame.</td>
+</tr>
+<tr>
+<td>Next Keyframe</td>
+<td>The keyframe position after the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="channels-3">Channels</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/channels.png" alt="Channels" loading="lazy"></figure>
+<p>Limit the relax effect to specific channels.</p>
+<h6 id="axis-lock-3">Axis Lock</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/axis-lock.png" alt="Axis Lock" loading="lazy"></figure>
+<p>Limit the relax effect to specific axis.</p>
+<h4 id="pose-breakdowner-legacy">Pose Breakdowner (Legacy)</h4>
+<p>Creates a suitable breakdowner pose on the current frame.</p>
+<h6 id="adjust-last-operation-pose-breakdowner">Adjust Last Operation - Pose Breakdowner</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-pose-breakdowner.png" alt="Last Operator Pose Breakdowner" loading="lazy"><figcaption>Last Operator Pose Breakdowner</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Percentage</td>
+<td>The percentage of exaggeration.</td>
+</tr>
+<tr>
+<td>Previous Keyframe</td>
+<td>The keyframe position before the current frame.</td>
+</tr>
+<tr>
+<td>Next Keyframe</td>
+<td>The keyframe position after the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="channels-4">Channels</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/channels.png" alt="Channels" loading="lazy"></figure>
+<p>Limit the breakdowner pose to specific channels.</p>
+<h6 id="axis-lock-4">Axis Lock</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/axis-lock.png" alt="Axis Lock" loading="lazy"></figure>
+<p>Limit the breakdowner pose to specific axis.</p>
+<h4 id="blend-to-neighbour">Blend to Neighbour</h4>
+<p>Blends the current pose with the neighbouring poses.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/pose-breakdowner.png" alt="Blend to Neighbour" loading="lazy"></figure>
+<p>When you perform the tool then you will see a per cent slider in the header where you can read the percentual influence of the blending. Move the mouse to position the blend pose where you need it.</p>
+<h5 id="adjust-last-operation-blend-to-neighbour">Adjust Last Operation - Blend to Neighbour</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-blend-to-neighbour.png" alt="Last Operator Blend to Neighbour" loading="lazy"><figcaption>Last Operator Blend to Neighbour</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>The blend factor.</td>
+</tr>
+<tr>
+<td>Previous Keyframe</td>
+<td>The keyframe to calculate from before the current position.</td>
+</tr>
+<tr>
+<td>Next Keyframe</td>
+<td>The keyframe to calculate from after the current position.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="channels-5">Channels</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/channels-2.png" alt="Channels" loading="lazy"></figure>
+<h6 id="axis-lock-5">Axis Lock</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/axis-lock-2.png" alt="Axis Lock" loading="lazy"></figure>
+<p>Lock the transformation along an axis.</p>
+<h3 id="propagate-submenu">Propagate - Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/propagate-submenu.png" alt="Propagate - Submenu" loading="lazy"></figure>
+<p>The Propagate tool automates the process of copying and pasting between keyframes. It copies the pose of the selected bones on the current frame over to the keyframes by the chosen Termination mode in the Last Operator Propagate Pose.</p>
+<p>The different Propagate methods can be adjusted in the Last operator too. Here you will find even more methods. The menu just lists the common ones.</p>
+<p>The methods are quite self explaining, but are explained in the last operator section.</p>
+<p>Usage example with Termination mode &quot;On Selected Keyframes&quot;.</p>
+<ol>
+<li>Create a little armature.</li>
+<li>Set a keyframe at frame 0.</li>
+<li>Set a keyframe at frame 20.</li>
+<li>Pose frame 20.</li>
+<li>Set a keyframe at frame 40. It will most probably be identical with Frame 20.</li>
+<li>Now select those Keyframes at position 40 in the Dope Sheet Editor.</li>
+<li>Set position to Frame 0.</li>
+<li>Press Propagate, and in the Last operator Propagate Pose choose On Selected Keyframes.<br />
+The selected keyframes at frame 40 will now turn into the corresponding keyframes from position 0.</li>
+</ol>
+<h4 id="adjust-last-operation-propagate-pose">Adjust Last Operation - Propagate Pose</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-propagate-pose.png" alt="Last Operator Propagate Pose" loading="lazy"><figcaption>Last Operator Propagate Pose</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Terminate Mode</td>
+<td>A drop down box where you can choose between different termination modes for Propagate. · <strong>To Next Keyframe</strong>: Copies the pose to the first keyframe after the current frame. · <strong>To Last Keyframe</strong>: Replaces the last keyframe. · <strong>Before Frame</strong>: Copies to all keyframes between current frame and the <strong>End frame</strong> option. · <strong>Before Last Keyframe</strong>: To all keyframes from current frame until no more are found. · <strong>On Selected Keyframes</strong>: Applies the pose of the selected bones to all selected keyframes. · <strong>On Selected Markers</strong>: Copies to all keyframes on frames with Scene Markers after the current frame.</td>
+</tr>
+<tr>
+<td>End Frame</td>
+<td>Defines the end frame for the Propagate.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="single-operators">Single Operators</h3>
+<h4 id="copy-pose">Copy Pose</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/copy-pose.png" alt="Copy Pose" loading="lazy"></figure>
+<p>Copies the current pose. You copy what you have selected.</p>
+<h4 id="paste-pose">Paste Pose</h4>
+<p>Pastes a previous copied pose.</p>
+<h4 id="paste-pose-flipped">Paste Pose Flipped</h4>
+<p>Pastes a previous copied pose, but flipped along X axis.</p>
+<h5 id="adjust-last-operation-paste-pose">Adjust Last Operation - Paste Pose</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-paste-pose.png" alt="Last Operator Paste Pose" loading="lazy"><figcaption>Last Operator Paste Pose</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flipped on X Axis</td>
+<td>Paste the pose flipped along X Axis.</td>
+</tr>
+<tr>
+<td>On Selected Only</td>
+<td>Paste just on the selected bones. Not on the unselected.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="motion-paths-submenu">Motion Paths - Submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/motion-paths-submenu.png" alt="Motion Paths - Submenu" loading="lazy"><figcaption>Motion Paths - Submenu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/calculate-motion-paths.png" alt="Motion Paths - Submenu" loading="lazy"><figcaption>Motion Paths - Submenu</figcaption></figure>
+<p>Objects can be animated. Let's say you send them from a to b to c. The object will move to b, then to c. Some kind of a path. This path is not visible by default.</p>
+<p>With motion paths you can calculate this path, and make it visible.</p>
+<h5 id="calculate">Calculate</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/calculate.png" alt="Calculate" loading="lazy"></figure>
+<p>Calculates the motion path of the selected bones. It opens a panel to define the start and end frame of the calculation.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/calculate-motion-paths-2.png" alt="Calculate" loading="lazy"></figure>
+<p>Calculate Motion path calls a setup dialog.</p>
+<h5 id="display-type">Display Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/display-type.png" alt="Display Type" loading="lazy"></figure>
+<p>How to display the motion path.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Around Frame</td>
+<td>Display paths of poses within a fixed number of frames around the current frame.</td>
+</tr>
+<tr>
+<td>In Range</td>
+<td>Display paths of poses within specified frames.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="computation-range">Computation Range</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/computation-range.png" alt="Computation Range" loading="lazy"></figure>
+<p>How much frames to compute.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All Keys</td>
+<td>From the first keyframe to the last.</td>
+</tr>
+<tr>
+<td>Selected Keys</td>
+<td>From the first selected keyframe to the last.</td>
+</tr>
+<tr>
+<td>Scene Frame Range</td>
+<td>The entire scene / preview range.</td>
+</tr>
+<tr>
+<td>Manual Range</td>
+<td>Manually determined frame range.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="bake-location">Bake Location</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/bake-location.png" alt="Bake Location" loading="lazy"></figure>
+<p>To bake from where.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Heads</td>
+<td>Calculate bone paths from heads.</td>
+</tr>
+<tr>
+<td>Tails</td>
+<td>Calculate bone paths from tails.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="adjust-last-operation-calculate-bone-paths">Adjust Last Operation - Calculate Bone Paths</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-calculate-bone-paths.png" alt="Last Operator Calculate Bone Paths" loading="lazy"><figcaption>Last Operator Calculate Bone Paths</figcaption></figure>
+<p>Same than the dialog.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear</td>
+<td>Clear remove the motion path from the object.</td>
+</tr>
+<tr>
+<td>Update Armature Motion Paths</td>
+<td>Updates the motion paths of the armature.</td>
+</tr>
+<tr>
+<td>Update All Motion Paths</td>
+<td>Updates the motion paths of all objects.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="move-to-bone-collection">Move to Bone Collection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/move-to-bone-collection.png" alt="Move to Bone Collection" loading="lazy"><figcaption>Move to Bone Collection</figcaption></figure>
+<p>Armature and bones have their own collection system. This menu item opens a popup where you can put the selected bones into a New Collection or an existing Bone Collection.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/about-bone-collections.png" alt="Move to Bone Collection" loading="lazy"><figcaption>Move to Bone Collection</figcaption></figure>
+<p>Bone Collections is a menu to handle bone collection functionality from within a menu in the 3D View editor. The bone collections themselves can be found in the Properties editor then in the Armature tab.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New Bone Collection</td>
+<td>Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection.</td>
+</tr>
+<tr>
+<td>Bone List</td>
+<td>Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bone-collections-sub-menu">Bone Collections – Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/bone-collections-sub-menu.png" alt="Bone Collections – Sub Menu" loading="lazy"><figcaption>Bone Collections – Sub Menu</figcaption></figure>
+<p>Armature and bones has its own collection system.</p>
+<h5 id="add">Add</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/add.png" alt="Add" loading="lazy"></figure>
+<p>Add or remove the bone from the listed bone collections. The green + icon and red – icon show if you can remove or add a bone to the listed collection. A bone can be in multiple collections at the same time.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection.</td>
+</tr>
+<tr>
+<td>Bone List</td>
+<td>Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="show-all">Show All</h5>
+<p>Show all bone collections.</p>
+<h5 id="assign-to-new">Assign to New</h5>
+<p>Add selected bones to a new collection with a new name.</p>
+<h6 id="adjust-last-operation-add-selected-bones-to-collection">Adjust Last Operation - add Selected Bones to Collection</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/last-operator-add-selected-bones-to-collection.png" alt="Last Operator add Selected Bones to Collection" loading="lazy"><figcaption>Last Operator add Selected Bones to Collection</figcaption></figure>
+<h6 id="bone-collection">Bone Collection</h6>
+<p>Change name of the new collection.</p>
+<h4 id="parent-submenu">Parent - Submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/parent-submenu.png" alt="Parent - Submenu" loading="lazy"></figure>
+<p>Parenting the skin or other armatures happens in Object mode. You can also parent in Pose Mode. It just does not make much sense since you need to enter Object mode for one of the objects anyways. The only somehow relevant settings in the parenting menu here is clear parent. But even this is better done in Object Mode.</p>
+<p>The parenting menu is already explained in the Object menu in Object mode. So we won't repeat the whole description here.</p>
+<h4 id="inverse-kinematics-sub-menu">Inverse Kinematics - Sub Menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/inverse-kinematics-sub-menu.png" alt="Inverse Kinematics - Sub Menu" loading="lazy"><figcaption>Inverse Kinematics - Sub Menu</figcaption></figure>
+<p>Inverse Kinematics is a menu with two isolated items from the whole bone constraints menu. The Inverse Kinematics. You could also add an Inverse Kinematics bone constraint by the Constraints / Add (With Targets) menu item from above. It is in the list. But this menu allows quick access without big search.</p>
+<h5 id="add-ik-to-bone">Add IK to Bone</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/add-ik-to-bone.png" alt="Add IK to Bone" loading="lazy"><figcaption>Add IK to Bone</figcaption></figure>
+<p>Add IK to bone adds an IK bone constraint to the selected bone. When you add an IK constraints with just the bone selected, then it adds an empty as a handler too, and fills it in as a target.</p>
+<p>Add IK calls a popup. When you have just one bone selected then you can choose between adding an empty as the target or to create the bone constraint without target.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/add-ik-to-bone-2.png" alt="Add IK to Bone" loading="lazy"><figcaption>Add IK to Bone</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/add-ik-to-bone-3.png" alt="Add IK to Bone" loading="lazy"><figcaption>Add IK to Bone</figcaption></figure>
+<p>When you have more than one bone selected then you can just add the constraint to the active bone.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/add-ik-to-bone-4.png" alt="Add IK to Bone" loading="lazy"><figcaption>Add IK to Bone</figcaption></figure>
+<p>You can define an own target object too. The armature needs to be in pose mode. Let's create a cube or another primitive. Select it. Now hold down Shift, and click at the bone where you want to add the constraint too. Then choose Add (with Targets), and choose your constraint method. The cube will now be chosen as the target object.</p>
+<h6 id="adjust-last-operation-add-ik-to-bone">Adjust Last Operation - Add IK to Bone</h6>
+<h6 id="with-targets">With Targets</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/with-targets.png" alt="With Targets" loading="lazy"></figure>
+<p>Define if you want to add the IK constraints with or without a target.</p>
+<h5 id="remove-ik">Remove IK</h5>
+<p>Removes all IK bone constraint(s) at the selected bone(s).</p>
+<h4 id="constraints-submenu">Constraints - Submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/constraints-submenu.png" alt="Constraints - Submenu" loading="lazy"></figure>
+<p>Constraints is a menu that contains some tools around constraints.</p>
+<h5 id="add-with-targets">Add (With Targets)</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/add-with-targets.png" alt="Add (With Targets)" loading="lazy"></figure>
+<p>Add (With Targets) calls the Constraints menu where you can choose the constraint that you want to add. When you add an IK constraints with just the bone selected, then it adds an empty as a handler too, and fills it in as a target. Which is similar to what you can do with the Add IK to Bone from the IK menu.</p>
+<p>But you can add more than just the IK constraint. It is the same menu that you can open by clicking at the Add Bone Constraint drop down menu in the Properties editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/add-with-targets-2.png" alt="Add (With Targets)" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/add-with-targets-3.png" alt="Add (With Targets)" loading="lazy"></figure>
+<p>You can define an own target object too. The armature needs to be in pose mode. Let's create a cube or another primitive. Select it. Now hold down Shift, and click at the bone where you want to add the constraint too. Then choose Add (with Targets), and choose your constraint method. The cube will now be chosen as the target object.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy Constraints to selected Bones</td>
+<td>Copies the constraints with all its settings to the selected bone. Usage: Select the bone where you want to copy the constraints to. Hold down shift, then select the bone that contains the constraints. Then perform the tool. The constraints will be copied.</td>
+</tr>
+<tr>
+<td>Clear Pose Constraints</td>
+<td>Removes all bone constraints modifiers from the bone.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="names-submenu">Names - Submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/names-submenu.png" alt="Names - Submenu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/names-sub-menu-2.png" alt="Names - Submenu" loading="lazy"></figure>
+<p>Bforartists has some internal name conventions for a symmetrical armature. Bones are for example named mybone.L or mybone.R, dependant at which side of the mirror axis they are. The Names items allows you to rename the bone names to this name convention.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autoname Left/Right</td>
+<td>Renames the bones from left to right.</td>
+</tr>
+<tr>
+<td>Autoname Front/Back</td>
+<td>Renames the bones from front to back.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="autoname-top-bottom">Autoname Top/Bottom</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/autoname-top-bottom.png" alt="Autoname Top/Bottom" loading="lazy"></figure>
+<p>Renames the bones from top to bottom.</p>
+<h6 id="adjust-last-operation-autoname-by-axis">Adjust Last Operation - Autoname by Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-autoname-by-axis.png" alt="Last operator Autoname by Axis" loading="lazy"><figcaption>Last operator Autoname by Axis</figcaption></figure>
+<h6 id="axis-2">Axis</h6>
+<p>Choose the autoname axis again. Left/Right is X axis, Front/Back is Y axis, and Top/Bottom is Z axis.</p>
+<h5 id="flip-names">Flip Names</h5>
+<p>When you mirror a half of an armature you end in names like Bone.001.R.001. But what we need is Bone.001.L for a symmetrical armature. Flip names flips the names to follow the left right name conventions.</p>
+<h6 id="adjust-last-operation-flip-names">Adjust Last Operation - Flip Names</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-flip-names.png" alt="Last operator Flip Names" loading="lazy"><figcaption>Last operator Flip Names</figcaption></figure>
+<h6 id="strip-numbers">Strip Numbers</h6>
+<p>Tries to remove the numbers in the names if possible.</p>
+<h4 id="flip-quats">Flip Quats</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/flip-quats.png" alt="Flip Quats" loading="lazy"></figure>
+<p>This feature flips the quaternion rotation values of the currently selected bone(s). Positive values becomes negative, and negative values becomes positive.</p>
+<h4 id="show-hide-submenu">Show/Hide - Submenu</h4>
+<p>Show or hide the selected geometry</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show Hidden</td>
+<td>Makes all hidden geometry visible again.</td>
+</tr>
+<tr>
+<td>Hide Selected</td>
+<td>Hides the selected geometry.</td>
+</tr>
+<tr>
+<td>Hide Unselected</td>
+<td>Hides the not selected geometry. The selected geometry stays visible.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="adjust-last-operation-hide-selected">Adjust Last Operation - Hide Selected</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-hide-selected.png" alt="Last Operator Hide Selected" loading="lazy"><figcaption>Last Operator Hide Selected</figcaption></figure>
+<p>Each of the menu items uses the same Last Operator. With different strings for the booleans.</p>
+<h6 id="unselected">Unselected</h6>
+<p>Hide the unselected geometry instead the seleced.</p>
+<h4 id="bone-settings-submenu">Bone Settings - Submenu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/bone-settings-submenu.png" alt="Bone Settings - Submenu" loading="lazy"><figcaption>Bone Settings - Submenu</figcaption></figure>
+<p>Bone Settings is a menu with menu items to toggle special check boxes in the Properties editor. But here you can do it for a selection too, and not just one object.</p>
+<h5 id="adjust-last-operation-collection-boolean-set">Adjust Last Operation - Collection Boolean Set</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-collection-boolean-set.png" alt="Last Operator Collection Boolean Set" loading="lazy"><figcaption>Last Operator Collection Boolean Set</figcaption></figure>
+<p>Each of the menu items uses the same Last Operator. With different strings for the booleans.</p>
+<h4 id="create-pose-asset">Create Pose Asset</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/create-pose-asset.png" alt="Create Pose Asset" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/create-pose-asset-2.png" alt="Create Pose Asset" loading="lazy"></figure>
+<p>Creates a pose asset from the current armature. It calls a dialog where you can define the pose name, the library in which you want to store the pose asset, and a catalog name. The saved pose asset can be found in the library browser at the bottom then.</p>
+<h1 id="tool-shelf">Tool Shelf</h1>
+<h2 id="tools">Tools</h2>
+<h3 id="tool-shelf-armature-pose-mode">Tool Shelf - Armature - Pose Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/tool-shelf-armature-pose-mode.png" alt="Tool Shelf - Armature - Pose Mode" loading="lazy"><figcaption>Tool Shelf - Armature - Pose Mode</figcaption></figure>
+<p>The Pose mode provides some pose tools.</p>
+<h4 id="tweak-select-3d-cursor-transform-annotate-and-measure">Tweak, Select, 3D Cursor, Transform, Annotate and Measure</h4>
+<p>The tweak, select, 3d cursor and transform tools and the annotation and measure tool is already described in the chapter Object Mode. So we won't cover it here again.</p>
+<h4 id="breakdowner-push-relax-tools-group">Breakdowner Push Relax tools group</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/breakdowner-push-relax-tools-group.png" alt="Breakdowner Push Relax tools group" loading="lazy"><figcaption>Breakdowner Push Relax tools group</figcaption></figure>
+<h5 id="breakdowner">Breakdowner</h5>
+<p>Creates a suitable breakdowner pose on the current frame. Requires to have a keyframe before and after the current position.</p>
+<h4 id="header-values-2">Header values</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/header-values.png" alt="Header values" loading="lazy"></figure>
+<p>When you activate one of the tools, then you will see a percentage slider in the header. This slider is not interactive. It just displays the percentage of the exaggeration.</p>
+<h4 id="footer-hotkey-display-2">Footer hotkey display</h4>
+<p>In the footer you will some hotkeys for further options. This hotkeys are hard coded, and cannot be changed in the input manager.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/footer-hotkey-display.png" alt="Footer hotkey display" loading="lazy"></figure>
+<p>The hotkeys W, E and R stands for the usual transform modes move, rotate or scale. Hotkey B stands for Bendy Bones. And C is for a custom property.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/footer-hotkey-display-2.png" alt="Footer hotkey display" loading="lazy"></figure>
+<p>Overshoot allows you to go over the 0 -100 per cent range. The header values shows a bigger range then.</p>
+<p>The rest of the hotkeys should be self explaining.</p>
+<h5 id="breakdowner-2">Breakdowner</h5>
+<p>Create a suitable breakdowner pose on the current frame.</p>
+<h6 id="header-values-3">Header Values</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/header-values.png" alt="Header Values" loading="lazy"></figure>
+<p>When you move the mouse then you will see some values in the header, which shows the current factor. This value is relative to the starting value, which always starts with 0.</p>
+<p>It also shows some more available transform hotkeys. The hotkeys W E and R allows you just to move, rotate or scale. Hotkey B stands for Bendy Bones. And C is for a custom property. This hotkeys are hard coded, and cannot be changed in the input manager.</p>
+<h6 id="adjust-last-operation-pose-breakdowner-2">Adjust Last Operation - Pose Breakdowner</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/last-operator-pose-breakdowner.png" alt="Last Operator Pose Breakdowner" loading="lazy"><figcaption>Last Operator Pose Breakdowner</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Percentage</td>
+<td>The percentage of exaggeration. Interestingly the value in the Last operator differs from the value in the header.</td>
+</tr>
+<tr>
+<td>Previous Keyframe</td>
+<td>The keyframe position before the current frame.</td>
+</tr>
+<tr>
+<td>Next Keyframe</td>
+<td>The keyframe position after the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="channels-6">Channels</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/channels.png" alt="Channels" loading="lazy"></figure>
+<p>Which channels to affect.</p>
+<h6 id="axis-lock-6">Axis Lock</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/axis-lock.png" alt="Axis Lock" loading="lazy"></figure>
+<p>Lock the action to specific axis.</p>
+<h5 id="push">Push</h5>
+<p>Push exaggerates the current pose.</p>
+<h6 id="header-values-4">Header Values</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/header-values-2.png" alt="Header Values" loading="lazy"></figure>
+<p>When you move the mouse then you will see some values in the header, which shows the current factor. This value is relative to the starting value, which always starts with 0.</p>
+<p>It also shows some more available transform hotkeys. The hotkeys W E and R allows you just to move, rotate or scale. Hotkey B stands for Bendy Bones. And C is for a custom property. This hotkeys are hard coded, and cannot be changed in the input manager.</p>
+<h6 id="adjust-last-operation-push-pose-from-breakdown">Adjust Last Operation - Push Pose from Breakdown.</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/last-operator-push-pose-from-breakdown.png" alt="Last Operator Push Pose from Breakdown." loading="lazy"><figcaption>Last Operator Push Pose from Breakdown.</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Previous Keyframe</td>
+<td>The keyframe position before the current frame.</td>
+</tr>
+<tr>
+<td>Next Keyframe</td>
+<td>The keyframe position after the current frame.</td>
+</tr>
+<tr>
+<td>Percentage</td>
+<td>The percentage of exaggeration. Interestingly the value in the Last operator differs from the value in the header.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="channels-7">Channels</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/channels.png" alt="Channels" loading="lazy"></figure>
+<p>Which channels to affect.</p>
+<h6 id="axis-lock-7">Axis Lock</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/axis-lock.png" alt="Axis Lock" loading="lazy"></figure>
+<p>Lock the action to specific axis.</p>
+<h5 id="relax">Relax</h5>
+<p>Relax relaxes the current pose.</p>
+<h6 id="header-values-5">Header Values</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/header-values-2.png" alt="Header Values" loading="lazy"></figure>
+<p>When you move the mouse then you will see some values in the header, which shows the current factor. This value is relative to the starting value, which always starts with 0. It also shows some more available transform hotkeys.</p>
+<p>It also shows some more available transform hotkeys. The hotkeys W E and R allows you just to move, rotate or scale. Hotkey B stands for Bendy Bones. And C is for a custom property. This hotkeys are hard coded, and cannot be changed in the input manager.</p>
+<h6 id="adjust-last-operation-relax-pose-to-breakdown-2">Adjust Last Operation - Relax Pose to Breakdown</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/last-operator-relax-pose-to-breakdown.png" alt="Last Operator Relax Pose to Breakdown" loading="lazy"><figcaption>Last Operator Relax Pose to Breakdown</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Previous Keyframe</td>
+<td>The keyframe position before the current frame.</td>
+</tr>
+<tr>
+<td>Next Keyframe</td>
+<td>The keyframe position after the current frame.</td>
+</tr>
+<tr>
+<td>Percentage</td>
+<td>The percentage of exaggeration. Interestingly the value in the Last operator differs from the value in the header.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="channels-8">Channels</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/channels.png" alt="Channels" loading="lazy"></figure>
+<p>Here you can again choose if you just want to limit a specific channel.</p>
+<h6 id="axis-lock-8">Axis Lock</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/axis-lock.png" alt="Axis Lock" loading="lazy"></figure>
+<p>Allows you to lock a specific axis.</p>
+<h1 id="sidebar">Sidebar</h1>
+<h2 id="pose-mode">Pose Mode</h2>
+<h3 id="tools-tab-in-pose-mode">Tools Tab in Pose Mode</h3>
+<p>There are two object types that has a pose mode. The armature, and the grease pencil object. We will cover the armature here. The grease pencil object has its own chapter as a whole.</p>
+<p>The number of available tools in the tools panel is rather small. There is just one panel.</p>
+<h3 id="pose-mode-armature">Pose Mode - Armature</h3>
+<h4 id="pose-options-panel">Pose Options Panel</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/sidebar/tool-tab-pose-mode/pose-options-panel.png" alt="Pose Options Panel" loading="lazy"></figure>
+<h5 id="auto-ik">Auto IK</h5>
+<p>Add temporary IK constraints while grabbing bones in Pose mode.</p>
+<h5 id="x-axis-mirror">X Axis Mirror</h5>
+<p>X Axis Mirror in pose mode synchronizes the right side of a symmetrical armature with the left side of a symmetrical armature.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/sidebar/tool-tab-pose-mode/x-axis-mirror.png" alt="X Axis Mirror" loading="lazy"></figure>
+<p>The same checkbox can also be found in the tool settings bar as an icon button. This allows quicker access and better visual control which mirror axis is currently active.</p>
+<h6 id="relative-mirror">Relative Mirror</h6>
+<p>This is a setting for X Axis Mirror, and just shows when X Axis Mirror is ticked. Here you can define if the mirroring happens relative to the armature or to the world.</p>
+<h4 id="affect-only-locations">Affect Only Locations</h4>
+<p>This is for having more than one armature part selected. Scales or rotates the selection instead of scaling or rotating the single armature parts. The single bones keeps their scale and their rotation.</p>
+<h1 id="context-menus">Context Menus</h1>
+<h2 id="pose-context-menu">Pose context menu</h2>
+<h3 id="pose-mode-pose-context-menu">Pose Mode - Pose Context Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/pose-mode-pose-context-menu.png" alt="Pose Mode - Pose Context Menu" loading="lazy"><figcaption>Pose Mode - Pose Context Menu</figcaption></figure>
+<p>Call this menu with a right click in the 3D viewport while you are in Pose Mode with an armature.</p>
+<h4 id="insert-key-frame">Insert Key frame</h4>
+<p>Inserts a keyframe and uses the default keying set defined in the preferences.</p>
+<h4 id="insert-key-frame-with-keying-set">Insert Key frame with Keying Set</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/insert-key-frame-with-keying-set.png" alt="Insert Key frame with Keying Set" loading="lazy"><figcaption>Insert Key frame with Keying Set</figcaption></figure>
+<p>Opens a menu where you can insert a key frame with a defined keying set.</p>
+<h4 id="copy-pose-2">Copy Pose</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/copy-pose.png" alt="Copy Pose" loading="lazy"></figure>
+<p>Copies the current pose. You copy what you have selected.</p>
+<h4 id="paste-pose-2">Paste Pose</h4>
+<p>Pastes a previous copied pose.</p>
+<h4 id="paste-x-flipped-pose">Paste X Flipped Pose</h4>
+<p>Pastes a previous copied pose, but flipped along X axis.</p>
+<h5 id="adjust-last-operation-paste-pose-2">Adjust Last Operation - Paste Pose</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-paste-pose.png" alt="Last Operator Paste Pose" loading="lazy"><figcaption>Last Operator Paste Pose</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flipped on X Axis</td>
+<td>Paste the pose flipped along X Axis.</td>
+</tr>
+<tr>
+<td>On Selected Only</td>
+<td>Paste just on the selected bones. Not on the unselected.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rename-active-bone">Rename active Bone</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/rename-active-bone.png" alt="Rename active Bone" loading="lazy"></figure>
+<p>Calls a dialog where you can rename the active bone.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> Entries marked <strong>(Legacy)</strong> are the classic menu commands for Push, Relax and Breakdowner. The tool shelf offers the same as tools, now with matching icons. The <strong>(Legacy)</strong> label tells the two apart.</p></div>
+<h4 id="push-pose-from-breakdown-legacy-2">Push Pose from Breakdown (Legacy)</h4>
+<p>Exaggerates the current pose. Pushes the current pose further away from the previous pose.</p>
+<h5 id="adjust-last-operation-push-pose-2">Adjust Last Operation - Push Pose</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-push-pose.png" alt="Last Operator Push Pose" loading="lazy"><figcaption>Last Operator Push Pose</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Percentage</td>
+<td>The percentage of exaggeration.</td>
+</tr>
+<tr>
+<td>Previous Key frame</td>
+<td>The key frame position before the current frame.</td>
+</tr>
+<tr>
+<td>Next Key frame</td>
+<td>The key frame position after the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="channels-9">Channels</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/channels.png" alt="Channels" loading="lazy"></figure>
+<p>Limit the push effect to specific channels.</p>
+<h6 id="axis-lock-9">Axis Lock</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/axis-lock.png" alt="Axis Lock" loading="lazy"></figure>
+<p>Limit the push effect to specific axis.</p>
+<h4 id="relax-pose-to-breakdown-legacy-2">Relax Pose to Breakdown (Legacy)</h4>
+<p>Relaxes the current pose.</p>
+<h5 id="adjust-last-operation-relax-pose-to-breakdown-3">Adjust Last Operation - Relax Pose to Breakdown</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-relax-pose-to-breakdown.png" alt="Last Operator Relax Pose to Breakdown" loading="lazy"><figcaption>Last Operator Relax Pose to Breakdown</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Percentage</td>
+<td>The percentage of relaxing.</td>
+</tr>
+<tr>
+<td>Previous Key frame</td>
+<td>The key frame position before the current frame.</td>
+</tr>
+<tr>
+<td>Next Key frame</td>
+<td>The key frame position after the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="channels-10">Channels</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/channels.png" alt="Channels" loading="lazy"></figure>
+<p>Limit the relax effect to specific channels.</p>
+<h6 id="axis-lock-10">Axis Lock</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/axis-lock.png" alt="Axis Lock" loading="lazy"></figure>
+<p>Limit the relax effect to specific axis.</p>
+<h4 id="pose-breakdowner-legacy-2">Pose Breakdowner (Legacy)</h4>
+<p>Creates a suitable breakdowner pose on the current frame.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/pose-breakdowner.png" alt="Pose Breakdowner" loading="lazy"></figure>
+<p>When you perform the tool then you will see a per cent slider in the header where you can read the percentual influence of the blending. Move the mouse to position the blend pose where you need it.</p>
+<h6 id="adjust-last-operation-pose-breakdowner-3">Adjust Last Operation - Pose Breakdowner</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-pose-breakdowner.png" alt="Last Operator Pose Breakdowner" loading="lazy"><figcaption>Last Operator Pose Breakdowner</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Percentage</td>
+<td>The percentage of exaggeration.</td>
+</tr>
+<tr>
+<td>Previous Key frame</td>
+<td>The key frame position before the current frame.</td>
+</tr>
+<tr>
+<td>Next Key frame</td>
+<td>The key frame position after the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="channels-11">Channels</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/channels.png" alt="Channels" loading="lazy"></figure>
+<p>Limit the breakdowner pose to specific channels.</p>
+<h6 id="axis-lock-11">Axis Lock</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/axis-lock.png" alt="Axis Lock" loading="lazy"></figure>
+<p>Limit the breakdowner pose to specific axis.</p>
+<h4 id="blend-to-neighbour-2">Blend to Neighbour</h4>
+<p>Blends the current pose with the neighbouring poses.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/pose-breakdowner.png" alt="Blend to Neighbour" loading="lazy"></figure>
+<p>When you perform the tool then you will see a per cent slider in the header where you can read the percentual influence of the blending. Move the mouse to position the blend pose where you need it.</p>
+<h5 id="adjust-last-operation-blend-to-neighbour-2">Adjust Last Operation - Blend to Neighbour</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-blend-to-neighbour.png" alt="Last Operator Blend to Neighbour" loading="lazy"><figcaption>Last Operator Blend to Neighbour</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>The blend factor.</td>
+</tr>
+<tr>
+<td>Previous Keyframe</td>
+<td>The keyframe to calculate from before the current position.</td>
+</tr>
+<tr>
+<td>Next Keyframe</td>
+<td>The keyframe to calculate from after the current position.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="channels-12">Channels</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/channels-2.png" alt="Channels" loading="lazy"></figure>
+<h6 id="axis-lock-12">Axis Lock</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/axis-lock-2.png" alt="Axis Lock" loading="lazy"></figure>
+<p>Lock the transformation along an axis.</p>
+<h4 id="calculate-motion-paths">Calculate Motion Paths</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/calculate-motion-paths.png" alt="Calculate Motion Paths" loading="lazy"></figure>
+<p>Objects can be animated. Let's say you send them from a to b to c. The object will move to b, then to c. Some kind of a path. This path is not visible by default.</p>
+<p>With motion paths you can calculate this path, and make it visible.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/calculate-motion-paths-2.png" alt="Calculate Motion Paths" loading="lazy"></figure>
+<p>Calculate Motion path calls a setup dialog.</p>
+<h5 id="display-type-2">Display Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/display-type.png" alt="Display Type" loading="lazy"></figure>
+<p>How to display the motion path.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Around Frame</td>
+<td>Display paths of poses within a fixed number of frames around the current frame.</td>
+</tr>
+<tr>
+<td>In Range</td>
+<td>Display paths of poses within specified frames.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="computation-range-2">Computation Range</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/computation-range.png" alt="Computation Range" loading="lazy"></figure>
+<p>How much frames to compute.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All Keys</td>
+<td>From the first keyframe to the last.</td>
+</tr>
+<tr>
+<td>Selected Keys</td>
+<td>From the first selected keyframe to the last.</td>
+</tr>
+<tr>
+<td>Scene Frame Range</td>
+<td>The entire scene / preview range.</td>
+</tr>
+<tr>
+<td>Manual Range</td>
+<td>Manually determined frame range.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="bake-location-2">Bake Location</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/bake-location.png" alt="Bake Location" loading="lazy"></figure>
+<p>To bake from where.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Heads</td>
+<td>Calculate bone paths from heads.</td>
+</tr>
+<tr>
+<td>Tails</td>
+<td>Calculate bone paths from tails.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="adjust-last-operation-calculate-bone-paths-2">Adjust Last Operation - Calculate Bone Paths</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-calculate-bone-paths.png" alt="Last Operator Calculate Bone Paths" loading="lazy"><figcaption>Last Operator Calculate Bone Paths</figcaption></figure>
+<p>Same than the dialog.</p>
+<h4 id="clear-motion-paths">Clear Motion Paths</h4>
+<p>Clear remove the motion path from the object.</p>
+<h5 id="adjust-last-operation-clear-bone-paths">Adjust Last Operation - Clear Bone Paths</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-clear-bone-paths.png" alt="Last Operator Clear Bone Paths" loading="lazy"><figcaption>Last Operator Clear Bone Paths</figcaption></figure>
+<h6 id="only-selected-2">Only Selected</h6>
+<p>Only clear motion patsh of selected bones.</p>
+<h4 id="update-armature-motion-paths">Update Armature Motion Paths</h4>
+<p>Updates the motion paths for the armature object.</p>
+<h4 id="move-to-bone-collection-2">Move to Bone Collection</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/move-to-bone-collection.png" alt="Move to Bone Collection" loading="lazy"><figcaption>Move to Bone Collection</figcaption></figure>
+<p>Armature and bones have their own collection system. This menu item opens a popup where you can put the selected bones into a New Collection or an existing Bone Collection.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New Bone Collection</td>
+<td>Assigns the selected bones to a new Bone Collection. This will prompt to name the new collection.</td>
+</tr>
+<tr>
+<td>Bone List</td>
+<td>Assigns or unassigns the selected bones to or from the collection. The green + icon and red – icon show if you can remove or add a bone to the listed collection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="show-hide-submenu-2">Show/Hide submenu</h4>
+<p>The show and hide commands are grouped in a <strong>Show/Hide</strong> submenu, like in the other context menus.</p>
+<h5 id="show-hidden">Show Hidden</h5>
+<p>Reveals the hidden bones.</p>
+<h5 id="hide-selected">Hide Selected</h5>
+<p>Hides the selected bones.</p>
+<h6 id="adjust-last-operation-hide-selected-2">Adjust Last Operation - Hide Selected</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-hide-selected.png" alt="Last Operator Hide Selected" loading="lazy"><figcaption>Last Operator Hide Selected</figcaption></figure>
+<p><strong>Unselected</strong>: hide the unselected bones instead.</p>
+<h5 id="hide-unselected">Hide Unselected</h5>
+<p>Hides all bones that are not selected.</p>
+<h4 id="clear-user-transforms">Clear User Transforms</h4>
+<p>Resets Pose of selected bones back to key frame state.</p>
+<h5 id="adjust-last-operation-clear-user-transforms-2">Adjust Last Operation - Clear User Transforms</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/2ef2633193e8b64bf784b8f5aff6126d1da862fd/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-clear-user-transforms.png" alt="Last Operator Clear User Transforms" loading="lazy"><figcaption>Last Operator Clear User Transforms</figcaption></figure>
+<h6 id="only-selected-3">Only Selected</h6>
+<p>Only clear motion patsh of selected bones.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fsequencer-ripple/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Farmature%2Fpose.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/sequencer-ripple/docs2/content/editors/3d-viewport/armature/pose.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#pose-menu">Pose menu</a><a class="h3" href="#pose-mode-pose-menu">Pose Mode - Pose Menu</a><a class="h3" href="#transform-submenu">Transform - Submenu</a><a class="h3" href="#clear-transform-submenu">Clear Transform - Submenu</a><a class="h3" href="#apply-submenu">Apply - Submenu</a><a class="h3" href="#snap-submenu">Snap - Submenu</a><a class="h3" href="#animation-submenu">Animation - Submenu</a><a class="h3" href="#in-between-submenu">In-Between - Submenu</a><a class="h3" href="#propagate-submenu">Propagate - Submenu</a><a class="h3" href="#single-operators">Single Operators</a><a class="h2" href="#tools">Tools</a><a class="h3" href="#tool-shelf-armature-pose-mode">Tool Shelf - Armature - Pose Mode</a><a class="h2" href="#pose-mode">Pose Mode</a><a class="h3" href="#tools-tab-in-pose-mode">Tools Tab in Pose Mode</a><a class="h3" href="#pose-mode-armature">Pose Mode - Armature</a><a class="h2" href="#pose-context-menu">Pose context menu</a><a class="h3" href="#pose-mode-pose-context-menu">Pose Mode - Pose Context Menu</a></aside></div></body></html>
