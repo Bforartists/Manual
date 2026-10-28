@@ -6,14 +6,20 @@ One click from **Edit this page** to Pages CMS on a fresh branch. Pages CMS show
 Edit this page → Worker → branch docs2/edit/<page>-<date> → Pages CMS → first save → auto pull request
 ```
 
-## 🚀 One-time setup (maintainer)
+## 🚀 One-time setup (maintainer): no command line needed
 
-1. **Token.** GitHub → Settings → Developer settings → Fine-grained tokens → new token.
+1. **GitHub token.** GitHub → Settings → Developer settings → Fine-grained tokens → new token.
    Repository access: **only `Bforartists/Manual`**. Permission: **Contents: read and write**. Nothing else.
-2. **Deploy.** In this folder: `npx wrangler deploy`, then `npx wrangler secret put GITHUB_TOKEN_EDIT` and paste the token.
-3. **Try it.** Open `https://<worker-url>/edit?kind=docs&path=getting-started/index.md`. You should land in Pages CMS on a new `docs2/edit/...` branch.
-4. **Switch the website on.** Put the Worker URL into `EDIT_GATE` at the top of `docs2/webflow/docs-layer.js` (it is empty now, so the button still opens GitHub's editor).
-5. **Optional, recommended.** In Cloudflare → Security → WAF → Rate limiting: limit `/edit` to about 20 requests per minute per IP, because anyone can open the link and every new page-day makes one branch.
+2. **Three repository secrets.** Repo → Settings → Secrets and variables → Actions → New repository secret:
+   - `EDIT_GATEWAY_GITHUB_TOKEN`: the token from step 1.
+   - `CLOUDFLARE_API_TOKEN`: Cloudflare → My Profile → API Tokens → Create → template **Edit Cloudflare Workers**.
+   - `CLOUDFLARE_ACCOUNT_ID`: Cloudflare dashboard → Workers & Pages → the Account ID on the right.
+3. **Deploy.** Merge this folder, or open Actions → **Docs 2.0 deploy edit gateway** → Run workflow. The job log shows the Worker URL (`https://bforartists-docs-edit.<account>.workers.dev`).
+4. **Try it.** Open `<worker-url>/edit?kind=docs&path=getting-started/index.md`. You should land in Pages CMS on a new `docs2/edit/...` branch.
+5. **Switch the website on.** Put `<worker-url>/edit` into `EDIT_GATE` at the top of `docs2/webflow/docs-layer.js` (it is empty now, so the button still opens GitHub's editor), then release the docs layer as usual.
+6. **Optional, recommended.** Cloudflare → Security → WAF → Rate limiting: limit `/edit` to about 20 requests per minute per IP, because anyone can open the link and every new page-day makes one branch.
+
+Doing it by hand instead: in this folder run `npx wrangler deploy`, then `npx wrangler secret put GITHUB_TOKEN_EDIT`.
 
 ## 🧹 Housekeeping
 
