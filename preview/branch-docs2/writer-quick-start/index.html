@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Docs preview · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/writer-quick-start · <code>docs2/writer-quick-start</code> · not the live website</span>
+<span class="pv-sp"></span><a href="index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="getting-started.html">Getting Started</a>
+<a href="getting-started/introduction.html">Introduction</a>
+<a href="getting-started/about-documentation.html">Using the Documentation</a>
+<a href="getting-started/installation.html">Installation</a>
+<a href="getting-started/quick-start.html">Quick Start</a>
+<a href="getting-started/data-structure.html">Data Structure</a>
+<a href="getting-started/differences.html">Comparison with Blender</a>
+<a href="getting-started/migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><h1 class="pv-title">Docs preview</h1><p>Branch docs2/writer-quick-start · branch <code>docs2/writer-quick-start</code></p><div class="pv-report ui-doc-body"><h3>✅ All checks passed</h3>
+<p>335 pages and shared sections checked.</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>♻️ Shared sections</td>
+<td>✅ 2 ok</td>
+</tr>
+<tr>
+<td>🆔 Unique IDs</td>
+<td>✅ 335 ok</td>
+</tr>
+<tr>
+<td>🏷️ Alt text</td>
+<td>✅ 12341 ok</td>
+</tr>
+<tr>
+<td>📄 Front matter</td>
+<td>✅ 335 ok</td>
+</tr>
+<tr>
+<td>🔗 Links</td>
+<td>✅ 162 ok</td>
+</tr>
+<tr>
+<td>🖋️ Editor-safe</td>
+<td>✅ 335 ok</td>
+</tr>
+<tr>
+<td>🖼️ Images</td>
+<td>✅ 12341 ok</td>
+</tr>
+<tr>
+<td>🗺️ Workspace maps</td>
+<td>✅ 106 ok</td>
+</tr>
+<tr>
+<td>🧭 Sidebar</td>
+<td>✅ 221 ok</td>
+</tr>
+</tbody>
+</table>
+</div><div class="pv-report ui-doc-body"><h3>🧾 Page headers</h3>
+<p>Every page already has its ID, address and section.</p>
+<h3>🤖 Image bot</h3>
+<p>No new images.</p>
+</div><h2>📝 Changed pages (8)</h2><div class="pv-cards"><a href="getting-started.html"><b>Getting Started</b><small>docs2/content/getting-started/index.md</small></a><a href="getting-started/introduction.html"><b>Introduction</b><small>docs2/content/getting-started/introduction.md</small></a><a href="getting-started/about-documentation.html"><b>Using the Documentation</b><small>docs2/content/getting-started/about-documentation.md</small></a><a href="getting-started/installation.html"><b>Installation</b><small>docs2/content/getting-started/installation.md</small></a><a href="getting-started/quick-start.html"><b>Quick Start</b><small>docs2/content/getting-started/quick-start.md</small></a><a href="getting-started/data-structure.html"><b>Data Structure</b><small>docs2/content/getting-started/data-structure.md</small></a><a href="getting-started/differences.html"><b>Comparison with Blender</b><small>docs2/content/getting-started/differences.md</small></a><a href="getting-started/migrating-from-blender.html"><b>Migrating from Blender</b><small>docs2/content/getting-started/migrating-from-blender.md</small></a></div></main><aside class="pv-outline"></aside></div></body></html>
