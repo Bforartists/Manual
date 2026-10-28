@@ -17,7 +17,7 @@ Edit this page → Worker → branch docs2/edit/<page>-<date> → Pages CMS → 
 3. **Deploy.** Merge this folder, or open Actions → **Docs 2.0 deploy edit gateway** → Run workflow. The job log shows the Worker URL (`https://bforartists-docs-edit.<account>.workers.dev`).
 4. **Try it.** Open `<worker-url>/edit?kind=docs&path=getting-started/index.md`. You should land in Pages CMS on a new `docs2/edit/...` branch.
 5. **Switch the website on.** Put `<worker-url>/edit` into `EDIT_GATE` at the top of `docs2/webflow/docs-layer.js` (it is empty now, so the button still opens GitHub's editor), then release the docs layer as usual.
-6. **Optional, recommended.** Cloudflare → Security → WAF → Rate limiting: limit `/edit` to about 20 requests per minute per IP, because anyone can open the link and every new page-day makes one branch.
+6. **Built-in protection (nothing to set up).** The Worker refuses clicks whose Referer is not the docs site, and allows 20 clicks per minute per visitor. Branch names are per page and day, so spam is bounded, and empty branches are cleaned up after 3 days.
 
 Doing it by hand instead: in this folder run `npx wrangler deploy`, then `npx wrangler secret put GITHUB_TOKEN_EDIT`.
 
