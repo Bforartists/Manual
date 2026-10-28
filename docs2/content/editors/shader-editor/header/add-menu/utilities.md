@@ -173,6 +173,8 @@ The output index.
 
 ### Switch
 
+![Switch](/docs2/images/editors/shader-editor/header/add-menu-utilities/switch.png)
+
 Switch between two values with a checkbox. Only the chosen value is computed.
 
 #### Inputs
