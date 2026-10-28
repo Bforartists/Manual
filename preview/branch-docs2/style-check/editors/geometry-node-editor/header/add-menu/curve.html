@@ -1,0 +1,1702 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Curve · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/style-check · <code>docs2/style-check</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../../shader-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../../compositor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../../sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="geometry.html">Geometry</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/filter.html">Filter</a>
+<span style="padding-left:1.5rem">Footer</span>
+<a class="is-current" style="padding-left:3.5rem" href="curve.html">Curve</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<a style="padding-left:3.5rem" href="grease-pencil.html">Grease Pencil</a>
+<span style="padding-left:1.5rem">Collection</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<a style="padding-left:3.5rem" href="mesh.html">Mesh</a>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<a style="padding-left:3.5rem" href="volume.html">Volume</a>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../../../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<a style="padding-left:3.5rem" href="node-groups.html">Node Groups</a>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="../../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Curve</div><h1 class="pv-title">Curve</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 19 min read</span></div><article class="ui-doc-body"><h1 id="read">Read</h1>
+<h2 id="add-curve-read">Add - Curve - Read</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/add-curve-read.png" alt="Add - Curve - Read" loading="lazy"><figcaption>Add - Curve - Read</figcaption></figure>
+<p>Here you find curve related nodes.</p>
+<h3 id="curve-handle-positions">Curve Handle Positions</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/curve-handle-positions.png" alt="Curve Handle Positions" loading="lazy"></figure>
+<p>Get the position of the left or right handle of a curve point.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Relative</strong>: Output the handle positions relative to the corresponding control point instead of the local space of the geometry.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Left</strong>: The left handle of the curve point. · <strong>Right</strong>: The right handle of the curve point.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cuve-length">Cuve Length</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/cuve-length.png" alt="Cuve Length" loading="lazy"></figure>
+<p>Retreives the length of all splines added together.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Curve</strong>: The input curve.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Length</strong>: The length of the curve.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="curve-tangent">Curve Tangent</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/curve-tangent.png" alt="Curve Tangent" loading="lazy"></figure>
+<p>Retreive the tangent direction of a curve. The output values are normalized vectors.</p>
+<p>Note that for NURBS and Bézier spline curves the value retrieved from this node is the value at every control point, which may not correspond to the visible evaluated points. For NURBS splines the difference may be even more pronounced and the result may not be as expected. A Resample Curve Node node can be used to create a poly spline, where there is a control point for every evaluated point.</p>
+<h4 id="outputs">Outputs</h4>
+<h5 id="factor">Factor</h5>
+<p>The vector of the tangent.</p>
+<h3 id="curve-tilt">Curve Tilt</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/curve-tilt.png" alt="Curve Tilt" loading="lazy"></figure>
+<p>Outputs the angle used to turn the curve normal around the direction of the curve tangent in its evaluated points.</p>
+<p>The output is per control point. For NURBS and Bézier splines, the values will be interpolated to the final evaluated points.</p>
+<h4 id="outputs-2">Outputs</h4>
+<h5 id="tilt">Tilt</h5>
+<p>The tilt angle for the normal in radians.</p>
+<h3 id="endpoint-selection">Endpoint Selection</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/endpoint-selection.png" alt="Endpoint Selection" loading="lazy"></figure>
+<p>The Endpoint Selection node allows for the Selection of an aribitrary<br />
+number of endpoints from each spline in a curve. The start and end<br />
+inputs are evaluated on the spline domain. The result is outputted<br />
+as a boolean field on the point domain.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Start Size</strong>: The start point of the spline. · <strong>End Size</strong>: The end point of the spline.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Selection</strong>: Selection output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="handle-type-selection">Handle Type Selection</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/handle-type-selection.png" alt="Handle Type Selection" loading="lazy"></figure>
+<p>Creates a selection based on the handle types of the control points.</p>
+<h4 id="properties">Properties</h4>
+<h5 id="left-right">Left / Right</h5>
+<p>Wether to check for the type of handles.</p>
+<h5 id="handle-type">Handle Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/handle-type.png" alt="Handle Type" loading="lazy"></figure>
+<p>What handle type to compare.</p>
+<h4 id="output">Output</h4>
+<h5 id="selection">Selection</h5>
+<p>The selection.</p>
+<h3 id="is-spline-cyclic">Is Spline Cyclic</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/is-spline-cyclic.png" alt="Is Spline Cyclic" loading="lazy"></figure>
+<p>Retreive if the curve is set to cyclic.</p>
+<h4 id="outputs-3">Outputs</h4>
+<h5 id="cyclic">Cyclic</h5>
+<p>If the spline is cyclic or not.</p>
+<h3 id="spline-length">Spline Length</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/spline-length.png" alt="Spline Length" loading="lazy"></figure>
+<p>Retreive the total length of each spline in a curve.</p>
+<h4 id="outputs-4">Outputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Length</td>
+<td>The length of each spline in the curve.</td>
+</tr>
+<tr>
+<td>Point Count</td>
+<td>Integer Field input of the number of control points on each spline in the spline domain. Or in the point domain, it is the number of points on the spline that contains the given control point.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spline-parameter">Spline Parameter</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/spline-parameter.png" alt="Spline Parameter" loading="lazy"></figure>
+<p>The Curve Parameter node outputs how far along each spline a control point is, with a value between zero and one. The output is different from dividing the index by the total number of control points, because the control points might not be equally spaced along the curve.</p>
+<p>The first value is zero, so the output corresponds to the length at the control point rather than including the length of the following segment.</p>
+<p>When used on the spline domain, the node outputs the portion of the total length of the curve (including all splines) has been traversed at the start of each spline. The order of the curve’s splines is visible in the Spreadsheet Editor.</p>
+<p>Note that for NURBS and Bézier spline curves the value retrieved from this node is the value at every control point, which may not correspond to the visible evaluated points. For NURBS splines the difference may be even more pronounced and the result may not be as expected. A Resample Curve Node node can be used to create a poly spline, where there is a control point for every evaluated point.</p>
+<h4 id="outputs-5">Outputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>The factor of the curve.</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>The length of the curve.</td>
+</tr>
+<tr>
+<td>Index</td>
+<td>The index of the curve.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spline-resolution">Spline Resolution</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/spline-resolution.png" alt="Spline Resolution" loading="lazy"></figure>
+<p>Retreive the curve resolution. Means the number of spline points.</p>
+<h4 id="outputs-6">Outputs</h4>
+<h5 id="resolution">Resolution</h5>
+<p>The spline resolution.</p>
+<h1 id="sample">Sample</h1>
+<h2 id="add-curve-sample">Add - Curve - Sample</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-sample/add-curve-sample.png" alt="Add - Curve - Sample" loading="lazy"><figcaption>Add - Curve - Sample</figcaption></figure>
+<p>Here you find curve related nodes.</p>
+<h3 id="sample-curve">Sample Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-sample/sample-curve.png" alt="Sample Curve" loading="lazy"></figure>
+<p>Calculates a point on a curve at a certain distance from the start of the curve, specified by the length or factor inputs. It also outputs data retrieved from that position on the curve.</p>
+<p>The sampled values are linearly interpolated from the values at the evaluated curve points at each side of the sampled point.</p>
+<p>In case that the curve contains multiple splines, the sample position is found based on the total accumulated length, including the lengths of all previous splines. The order of the splines is the same order as displayed in the Spreadsheet Editor.</p>
+<h4 id="input">Input</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve</td>
+<td>The input geometry.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>Input Value.</td>
+</tr>
+<tr>
+<td>Mode Factor</td>
+<td><strong>Factor</strong>: The resample amount with method Factor. · <strong>Curve Index</strong>: The curve index.</td>
+</tr>
+<tr>
+<td>Mode Factor</td>
+<td><strong>Factor</strong>: The resample amount with method Factor.</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>The resample amount with method Length.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-2">Properties</h4>
+<h5 id="data-type">Data Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-sample/data-type.png" alt="Data Type" loading="lazy"></figure>
+<p>What data to calculate.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sample Curve Mode</td>
+<td>How to calculate the curve. By a factor, or by its length.</td>
+</tr>
+<tr>
+<td>All Curves</td>
+<td>Sample lengths based on the length of all curves.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="output-2">Output</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value</td>
+<td>Output Value.</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>The position at the sample along the spline.</td>
+</tr>
+<tr>
+<td>Tangent</td>
+<td>The normalized curve tangent at the sample.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>The normalized curve normal at the sample.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="write">Write</h1>
+<h2 id="add-curve-write">Add - Curve - Write</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/add-curve-write.png" alt="Add - Curve - Write" loading="lazy"><figcaption>Add - Curve - Write</figcaption></figure>
+<p>Here you find curve related nodes.</p>
+<h3 id="set-curve-normal">Set Curve Normal</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-curve-normal.png" alt="Set Curve Normal" loading="lazy"></figure>
+<p>Set the evaluation mode for curve normals.</p>
+<h4 id="input-2">Input</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve</td>
+<td>The input curve.</td>
+</tr>
+<tr>
+<td>Selection</td>
+<td>A selection of the input curve.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="mode">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/mode.png" alt="Mode" loading="lazy"></figure>
+<p>The evaluation mode for the curve normals.</p>
+<h4 id="outputs-7">Outputs</h4>
+<h5 id="curve">Curve</h5>
+<p>The curve output.</p>
+<h3 id="set-curve-radius">Set Curve Radius</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-curve-radius.png" alt="Set Curve Radius" loading="lazy"></figure>
+<p>Set the curve radius.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input curve. · <strong>Selection</strong>: A selection of the input curve. · <strong>Radius</strong>: The radius to set.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Geometry</strong>: Standard geometry output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set-curve-tilt">Set Curve Tilt</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-curve-tilt.png" alt="Set Curve Tilt" loading="lazy"></figure>
+<p>Controls the tilt angle at each curve control point.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input curve. · <strong>Selection</strong>: Whether or not to change the value on each control point. True values mean the value will be changed, false values mean the value will remain the same. · <strong>Tilt</strong>: The tilt rotation.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Curve</strong>: Standard geometry output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set-handle-positions">Set Handle Positions</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-handle-positions.png" alt="Set Handle Positions" loading="lazy"></figure>
+<p>Set the handle positions of bezier curves</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input curve. · <strong>Selection</strong>: A selection of the input curve. · <strong>Position</strong>: The position of the handle. · <strong>Offset</strong>: A vector 3 offset for the handles.</td>
+</tr>
+<tr>
+<td>Properties</td>
+<td><strong>Mode</strong>: Left or right handles.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Geometry</strong>: Standard geometry output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set-handle-type">Set Handle Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-handle-type.png" alt="Set Handle Type" loading="lazy"></figure>
+<p>Sets a handle type for the curve points of a bezier curve. Handle types determines how the interpolation before and after the curve point happens.</p>
+<h4 id="input-3">Input</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve</td>
+<td>The input curve.</td>
+</tr>
+<tr>
+<td>Selection</td>
+<td>A selection of the input curve.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-3">Properties</h4>
+<h5 id="mode-2">Mode</h5>
+<p>Left or right handles.</p>
+<h5 id="handle-type-2">Handle Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/handle-type.png" alt="Handle Type" loading="lazy"></figure>
+<p>The different available handle types.</p>
+<h5 id="free">Free</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/free.png" alt="Free" loading="lazy"></figure>
+<p>The handles can be adjusted individually.</p>
+<h5 id="auto">Auto</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/auto.png" alt="Auto" loading="lazy"></figure>
+<p>The left and the right handle will always point to each other. The length of the handles will start in equal size.</p>
+<h5 id="vector">Vector</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/vector.png" alt="Vector" loading="lazy"></figure>
+<p>The handles can be adjusted individually.</p>
+<h5 id="aligned">Aligned</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/aligned.png" alt="Aligned" loading="lazy"></figure>
+<p>The left and the right handle will always point to each other.</p>
+<h4 id="output-3">Output</h4>
+<h5 id="curve-2">Curve</h5>
+<p>Standard geometry output.</p>
+<h3 id="set-spline-cyclic">Set Spline cyclic</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-spline-cyclic.png" alt="Set Spline cyclic" loading="lazy"></figure>
+<p>Sets the spline cyclic. Means looping.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input curve. · <strong>Selection</strong>: A selection of the input curve. · <strong>Cyclic</strong>: Cyclic or not</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Geometry</strong>: Standard geometry output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set-spline-resolution">Set Spline Resolution</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-spline-resolution.png" alt="Set Spline Resolution" loading="lazy"></figure>
+<p>Sets the resolution of the spline. Means how many evaluated points should be generated on the curve for each control point.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><strong>Geometry</strong>: The input curve. · <strong>Selection</strong>: A selection of the input curve. · <strong>Resolution</strong>: The resolution of the spline.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Geometry</strong>: Standard geometry output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set-spline-type">Set Spline Type</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-spline-type.png" alt="Set Spline Type" loading="lazy"></figure>
+<p>Change the curve spline type.</p>
+<h4 id="input-4">Input</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve</td>
+<td>The input curve.</td>
+</tr>
+<tr>
+<td>Selection</td>
+<td>A selection of the input curve.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-4">Properties</h4>
+<h5 id="spline-type">Spline Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/spline-type.png" alt="Spline Type" loading="lazy"></figure>
+<p>The spline type to set the curve to.</p>
+<p>Note that when converting from a NURBS spline to a Bézier spline, at least six points are needed. When the number of points is not a multiple of three a full conversion is not possible and the spline has to be truncated.</p>
+<h4 id="output-4">Output</h4>
+<h5 id="curve-3">Curve</h5>
+<p>Standard geometry output.</p>
+<h1 id="operations">Operations</h1>
+<h2 id="add-curve">Add - Curve</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/add-curve.png" alt="Add - Curve" loading="lazy"></figure>
+<p>Here you find curve related nodes.</p>
+<h3 id="cuve-to-mesh">Cuve to Mesh</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/cuve-to-mesh.png" alt="Cuve to Mesh" loading="lazy"></figure>
+<p>Converts a curve object to a mesh object. Optionally, a profile curve can be provided to give the curve a custom shape.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Curve</strong>: The input curve. · <strong>Profile Curve</strong>: If a profile curve is provided, it will be extruded along all splines. Otherwise the generated mesh will just be a chain of edges. · <strong>Scale</strong>: Scale of the profile at each point. · <strong>Fill Caps</strong>: For cyclic profile curve. Fill the ends of the generated mesh for each spline combination with an N-gon. The resulting mesh is Manifold, the two new faces for each spline are simply connected to existing edges.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Mesh</strong>: Standard mesh output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cuve-to-points">Cuve to Points</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/cuve-to-points.png" alt="Cuve to Points" loading="lazy"></figure>
+<p>Converts a curve object to a Point cloud.</p>
+<h4 id="inputs">Inputs</h4>
+<h5 id="curve-4">Curve</h5>
+<p>The input curve.</p>
+<h4 id="properties-5">Properties</h4>
+<h5 id="mode-3">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/mode.png" alt="Mode" loading="lazy"></figure>
+<p>How to generate points from the input curve.</p>
+<h5 id="evaluated">Evaluated</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/evaluated.png" alt="Evaluated" loading="lazy"></figure>
+<p>Create points from the evaluation points of the curve. This is based on the resolution attribute for nurbs and bezier splines.</p>
+<h5 id="count">Count</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/count.png" alt="Count" loading="lazy"></figure>
+<p>Sample each spline by evenly distributing the specified number of points along the spline.</p>
+<p><strong>Count Input</strong></p>
+<p>The number of points to distribute along the spline.</p>
+<h5 id="length">Length</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/length.png" alt="Length" loading="lazy"></figure>
+<p>Sample each spline by splitting the spline into segments by the specified length.</p>
+<p><strong>Length Input</strong></p>
+<p>The length of the single segments.</p>
+<h4 id="outputs-8">Outputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Point</td>
+<td>Generated point cloud.</td>
+</tr>
+<tr>
+<td>Tangent</td>
+<td>The normalized curve tangent at the sampled position, or the direct evaluated normal in Evaluated mode.</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>The normal value from the evaluated curve at each result point. This is the same value from the Normal Node at those positions.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cuves-to-grease-pencil">Cuves to Grease Pencil</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/cuves-to-grease-pencil.png" alt="Cuves to Grease Pencil" loading="lazy"><figcaption>Cuves to Grease Pencil</figcaption></figure>
+<p>Converts a curve object to a mesh object. Optionally, a profile curve can be provided to give the curve a custom shape.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Curves</strong>: The input curves. · <strong>Selection</strong>: A selection of the curve · <strong>Instances as Layers</strong>: Create separate layers for each instance.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Grease Pencil</strong>: Standard output. The Euler rotation build from the Tangent and Normal outputs.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deform-curves-on-surface">Deform Curves on Surface</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/deform-curves-on-surface.png" alt="Deform Curves on Surface" loading="lazy"><figcaption>Deform Curves on Surface</figcaption></figure>
+<p>Curves that are attached to a surface can follow the surface at modification.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Curves</strong>: The input curve.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Curves</strong>: The output curve.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fill-curve">Fill Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/fill-curve.png" alt="Fill Curve" loading="lazy"></figure>
+<p>Fills the curve with mesh geometry. The mesh is only generated flat with a local Z of 0.</p>
+<h4 id="inputs-2">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve</td>
+<td>The input curve.</td>
+</tr>
+<tr>
+<td>Group Input</td>
+<td>An index used to rgoup curves together. Filling is done separately for each group.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="mode-4">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/mode-2.png" alt="Mode" loading="lazy"></figure>
+<h5 id="triangles-or-n-gons">Triangles or N-gons</h5>
+<p>Fill the curve with either triangles, or use N-Gon geometry.</p>
+<h4 id="outputs-9">Outputs</h4>
+<h5 id="mesh">Mesh</h5>
+<p>The output as mesh.</p>
+<h3 id="fillet-curve">Fillet Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/fillet-curve.png" alt="Fillet Curve" loading="lazy"></figure>
+<p>The Fillet Curve rounds corners on curve control points, similar to the effect of the Bevel Modifier on a 2D mesh.</p>
+<p>A key difference is that the rounded portions created by the Fillet Curve node are always portions of a circle.</p>
+<h4 id="input-5">Input</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve</td>
+<td>The input curve.</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>Polymode. Define the number of vertices that are created.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The radius of the arc</td>
+</tr>
+<tr>
+<td>Limit Radius</td>
+<td>Prevent overlapping when the defined radius exceeds the maximum possible radius for a given point.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="mode-5">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/mode-3.png" alt="Mode" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bezier</td>
+<td>Creates a circular arc at vertices by changing handle lengths (applicable only for Bezier splines).</td>
+</tr>
+<tr>
+<td>Poly</td>
+<td>Creates a circular arc by creating vertices (as many as defined by the Count fields input) along the arc (applicable for all spline types).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-10">Outputs</h4>
+<h5 id="curve-5">Curve</h5>
+<p>Standard geometry input with a curve component.</p>
+<h3 id="interpolate-curves">Interpolate Curves</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/interpolate-curves.png" alt="Interpolate Curves" loading="lazy"></figure>
+<p>Generates new curve parts by interpolating between existing curves.</p>
+<h4 id="input-6">Input</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Guide Curves</td>
+<td>The base curves to interpolate from.</td>
+</tr>
+<tr>
+<td>Guide Up</td>
+<td>An optional up vector that is typically a surface normal. Providing this up vector can improve the quality of the interpolation. This up direction can be retrieved with a combination of the Sample UV Surface Node using the same geometry that the points were distributed on, and the Normal Node.</td>
+</tr>
+<tr>
+<td>Guide Group ID</td>
+<td>Splits guides into separate groups. New curves interpolate existing curves from a single group.</td>
+</tr>
+<tr>
+<td>Points</td>
+<td>The positions of the first root control points of the newly generated interpolated curves.</td>
+</tr>
+<tr>
+<td>Points Up</td>
+<td>Optional up vector that is typically a surface normal.</td>
+</tr>
+<tr>
+<td>Point Group ID</td>
+<td>The curve group to interpolate in.</td>
+</tr>
+<tr>
+<td>Max Neighbor</td>
+<td>Maximum amount of close guide curves that are taken into account for interpolation.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-11">Outputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curves</td>
+<td>The new curve.</td>
+</tr>
+<tr>
+<td>Closest Index</td>
+<td>Index of the closest guide curve for each generated curve. Note that internally this node mixes the data from multiple guide curves, with the maximum number of sources depending on the Max Neighbor input. This output is only the index of the curve with the largest weight.</td>
+</tr>
+<tr>
+<td>Closest Weight</td>
+<td>Weight of the closest guide curve for each generated curve.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resample-curve">Resample curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/resample-curve.png" alt="Resample curve" loading="lazy"></figure>
+<p>Creates a poly spline for each input spline. In the Count and Length modes, the control points of the new poly splines will have uniform spacing.</p>
+<h4 id="input-7">Input</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve</td>
+<td>The input geometry.</td>
+</tr>
+<tr>
+<td>Selection</td>
+<td>A selection of the input geometry</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>The approximate length between the control points of the new splines.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="mode-6">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/mode-4.png" alt="Mode" loading="lazy"></figure>
+<p>The resample mode.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Evaluated</td>
+<td>Use the resolution attribute for spline and bezier curves.</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>Use the count of the curve points.</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Use the length of the curve.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="count-2">Count</h5>
+<p>The number of control points on the new splines.</p>
+<h4 id="output-5">Output</h4>
+<h5 id="curve-6">Curve</h5>
+<p>Standard geometry output.</p>
+<h3 id="reverse-curve">Reverse Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/reverse-curve.png" alt="Reverse Curve" loading="lazy"></figure>
+<p>Reverses the direction of the spline. The start point becomes the end point and vice versa. The shape of the spline is not modified.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Curve</strong>: The input curve. · <strong>Selection</strong>: An optional selection attribute to determine which part of the spline should be reversed.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Curve</strong>: Standard geometry output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="subdivide-curve">Subdivide Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/subdivide-curve.png" alt="Subdivide Curve" loading="lazy"></figure>
+<p>Subdivides the curve. The shape is not changed.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Geometry</strong>: The input curve. · <strong>Cuts</strong>: The number of cuts per segment.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Geometry</strong>: Standard geometry output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trim-curve">Trim Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/trim-curve.png" alt="Trim Curve" loading="lazy"></figure>
+<p>The Curve Trim node shortens each spline in the curve by removing sections at the start and end of each spline.</p>
+<p>Bézier splines will still output as Bézier splines. The first and last control point and its handles will be moved as necessary to preserve the shape. But NURBS splines will be transformed into poly splines in order to be trimmed.</p>
+<p>Cyclic splines are currently not supported.</p>
+<p>Note that if the Start input is larger than the End, then the resulting spline will have a single point, located at the sample location of the Start value.</p>
+<h4 id="inputs-3">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve</td>
+<td>The input curve.</td>
+</tr>
+<tr>
+<td>Selection</td>
+<td>A selection of the curve.</td>
+</tr>
+<tr>
+<td>Start</td>
+<td>The start point of the spline, as a factor.</td>
+</tr>
+<tr>
+<td>End</td>
+<td>The end point of the spline, as a factor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-6">Properties</h4>
+<h5 id="mode-7">Mode</h5>
+<p>How to find endpoint positions for the trimmed spline.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factor</td>
+<td>The endpoint positions of each spline’s length is determined by a factor. The input values should be between 0 or 1.</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>The endpoint positions of each spline is determined by a length from the start of each spline. The input values should be between 0 and the length of the splines.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-12">Outputs</h4>
+<h5 id="curve-7">Curve</h5>
+<p>Standard geometry output.</p>
+<h1 id="primitives">Primitives</h1>
+<h2 id="add-menu-curve-primitives">Add menu - Curve Primitives</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/add-menu-curve-primitives.png" alt="Add menu - Curve Primitives" loading="lazy"><figcaption>Add menu - Curve Primitives</figcaption></figure>
+<p>Add curve primitives in different shapes.</p>
+<h3 id="arc">Arc</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/arc.png" alt="Arc" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/arc-2.png" alt="Arc" loading="lazy"></figure>
+<p>Adds a bezier curve segment in the shape of an arc</p>
+<h4 id="inputs-4">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resolution</td>
+<td>The number of edges on the curve.</td>
+</tr>
+<tr>
+<td>in Radius mode</td>
+<td><strong>Radius</strong>: Just Radius mode. The radius of the arc. · <strong>Start Angle</strong>: Just Radius mode. The start angle of the arc. · <strong>Sweep Angle</strong>: Just Radius mode. The sweep angle of the arc.</td>
+</tr>
+<tr>
+<td>In Points Mode</td>
+<td><strong>Start</strong>: The start point vector of the ark. · <strong>Middle</strong>: The middle point vector of the ark. · <strong>End</strong>: The end point vector of the ark. · <strong>Offset Angle</strong>: The offset angle of the ark.</td>
+</tr>
+<tr>
+<td>Connect Center</td>
+<td>Connect the start and endpoins to the center.</td>
+</tr>
+<tr>
+<td>Invert Arc</td>
+<td>Inverts the arc.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-7">Properties</h4>
+<h5 id="mode-8">Mode</h5>
+<p>Point or Radius mode.</p>
+<p>Radius mode (default): Generates a fixed radius arc on XY plane with controls for Angle, Sweep and Invert.</p>
+<p>Points mode: Generates a three point curve arc from Start to End via Middle with an Angle Offset and option to invert the arc. There are also outputs for arc center, radius and normal direction relative to the Z-axis.</p>
+<h4 id="outputs-13">Outputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve</td>
+<td>Curve output.</td>
+</tr>
+<tr>
+<td>In Points Mode</td>
+<td><strong>Center</strong>: The center vector of the arc. · <strong>Normal</strong>: The normal of the arc. · <strong>Radius</strong>: The radius of the arc.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bezier-segment">Bezier Segment</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/bezier-segment.png" alt="Bezier Segment" loading="lazy"></figure>
+<p>Adds a bezier curve segment.</p>
+<h4 id="inputs-5">Inputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resolution</td>
+<td>The number of edges on the curve.</td>
+</tr>
+<tr>
+<td>Start, End</td>
+<td>Positions of the start and end control point of the curve.</td>
+</tr>
+<tr>
+<td>Start Handle, End Handle</td>
+<td>Positions of the handles used to define the shape of the curve.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-8">Properties</h4>
+<h5 id="mode-9">Mode</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Position</td>
+<td>The handle inputs are the absolute positions of the handles in 3D space.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The handle positions are relative to the control point on the curve. The handle inputs give the offset from the control points.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-14">Outputs</h4>
+<h5 id="curve-8">Curve</h5>
+<p>Bezier spline generated from the inputs.</p>
+<h3 id="curve-circle">Curve Circle</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/curve-circle.png" alt="Curve Circle" loading="lazy"></figure>
+<p>Adds a curve in circle shape.</p>
+<h4 id="inputs-6">Inputs</h4>
+<h5 id="resolution-2">Resolution</h5>
+<p>Number of edges on the circle.</p>
+<h5 id="radius">Radius</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/radius.png" alt="Radius" loading="lazy"></figure>
+<p>The radius of the circle.</p>
+<h5 id="point-1-point-2-point-3">Point 1, Point 2, Point 3</h5>
+<p>Appears when you change the method to Points. Defines three points on the circle. The order of the points determines the direction (clockwise or counterclockwise) of the circle.</p>
+<p>Note that because of the finite resolution, the three points do not necessarily lie on the generated curve.</p>
+<h4 id="properties-9">Properties</h4>
+<h5 id="mode-10">Mode</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Points</td>
+<td>The position and radius of the circle is defined by three points. The center of the circle is also given as an output. If the three points lie on one line, no geometry is generated.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The circle is defined by the radius.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-15">Outputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve</td>
+<td>Poly spline generated from the inputs.</td>
+</tr>
+<tr>
+<td>Center</td>
+<td>Appears when you change the method to Points. The center of the circle defined by the three points.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="curve-line">Curve Line</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/curve-line.png" alt="Curve Line" loading="lazy"></figure>
+<p>Adds a curve in the shape of a straight line.</p>
+<h4 id="properties-10">Properties</h4>
+<h5 id="points">Points</h5>
+<p>Calculates the curve by a start and end point.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start</td>
+<td>The start point of the curve.</td>
+</tr>
+<tr>
+<td>End</td>
+<td>The end point of the curve.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="direction">Direction</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/direction.png" alt="Direction" loading="lazy"></figure>
+<p>Calculates the curve by a start point, a direction vector and the length of the curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start</td>
+<td>The start point of the curve.</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>The direction vector.</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>The length of the curve.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-16">Outputs</h4>
+<h5 id="curve-9">Curve</h5>
+<p>The created curve.</p>
+<h3 id="spiral">Spiral</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/spiral.png" alt="Spiral" loading="lazy"></figure>
+<p>Adds a curve in spiral shape. By default the spiral twists clockwise.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Resolution</strong>: Number of edges for each full rotation. · <strong>Rotations</strong>: Number of times the spiral makes a full rotation. · <strong>Start Radius, End Radius</strong>: Radius of the start point and end point of the spiral. The radius of the spiral changes linearly between the two values over the whole spiral. · <strong>Height</strong>: Height of the spiral. · <strong>Reverse</strong>: Boolean value that changes the direction from clockwise to counterclockwise when turned on.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Curve</strong>: Poly spline generated from the inputs.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quadratic-bezier">Quadratic Bezier</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/quadratic-bezier.png" alt="Quadratic Bezier" loading="lazy"></figure>
+<p>Adds a curve from the given control points. The generated shape is a parabola.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Resolution</strong>: The number of edges on the curve. · <strong>Start, Middle, End</strong>: Positions of the three control points. The generated curve passes through the two end points, and is tangent to the lines between the middle point and the two end points.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Curve</strong>: Poly spline generated from the inputs.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quadrilateral">Quadrilateral</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/quadrilateral.png" alt="Quadrilateral" loading="lazy"></figure>
+<p>Adds a curve in different geometric shapes.</p>
+<p>Note that the names does not necessarily fit to the generated geometry.</p>
+<h4 id="input-8">Input</h4>
+<p>The input nodes may vary. See Properties.</p>
+<h4 id="properties-11">Properties</h4>
+<h5 id="mode-11">Mode</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/mode.png" alt="Mode" loading="lazy"></figure>
+<h5 id="rectangle">Rectangle</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/rectangle.png" alt="Rectangle" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/rectangle-2.png" alt="Rectangle" loading="lazy"></figure>
+<p>creates a straight line in y direction.</p>
+<p><strong>Width</strong></p>
+<p>The length of the straight line.</p>
+<h5 id="parallelogram">Parallelogram</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/parallelogram.png" alt="Parallelogram" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/parallelogram-2.png" alt="Parallelogram" loading="lazy"></figure>
+<p>Creates a straight line that is adjustable in x and y direction.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Height</td>
+<td>The height of the line.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The width of the line.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="trapezoid">Trapezoid</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/trapezoid.png" alt="Trapezoid" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/trapezoid-2.png" alt="Trapezoid" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Height</td>
+<td>The height of the trapez.</td>
+</tr>
+<tr>
+<td>Bottom Width</td>
+<td>The width of the bottom line of the trapez.</td>
+</tr>
+<tr>
+<td>Top Width</td>
+<td>The width of the top line of the trapez.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The offset of the top line of the trapez.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="kite">Kite</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/kite.png" alt="Kite" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/rectangle.png" alt="Kite" loading="lazy"></figure>
+<p>creates a straight line in y direction. The curve end points are separately adjustable</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bottom Height</td>
+<td>The length of the bottom part of the line.</td>
+</tr>
+<tr>
+<td>Top Height</td>
+<td>The length of the top part of the line.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="points-2">Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/points.png" alt="Points" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/points-2.png" alt="Points" loading="lazy"></figure>
+<p>Creates a rectangle. Each point of the rectangle is independantly adjustable in x, y and z position.</p>
+<h3 id="star">Star</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/star.png" alt="Star" loading="lazy"></figure>
+<p>Adds a curve in star shape.</p>
+<p>This is done by connecting alternating points of two circles. The points on the inner circle are offset by a rotation so that they lie in between the points on the outer circle. This offset can be changed with the twist input.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Points</strong>: Number of points on each of the circles. · <strong>Inner Radius, Outer Radius</strong>: Radii of the two circles. The inner radius can be bigger than the outer radius. · <strong>Twist</strong>: Angle offset of the inner circle. The twist value rotates the points on the circle corresponding with the inner radius counterclockwise by the given angle.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Curve</strong>: Poly spline generated from the inputs.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="topology">Topology</h1>
+<h2 id="add-menu-curve-topology">Add menu - Curve Topology</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-topology/add-menu-curve-topology.png" alt="Add menu - Curve Topology" loading="lazy"><figcaption>Add menu - Curve Topology</figcaption></figure>
+<p>Curve topology related nodes.</p>
+<h3 id="curve-of-point">Curve of Point</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-topology/curve-of-point.png" alt="Curve of Point" loading="lazy"></figure>
+<p>Retrieve the curve of which the control point is part of.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Point Index</strong>: The point index of the curve. · <strong>Offset</strong>: Offset of the point index.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Curve Index</strong>: The curve of which the control point is part of. · <strong>Index in Curve</strong>: How far along the curve the control point is.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="offset-points-in-curve">Offset Points in Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-topology/offset-points-in-curve.png" alt="Offset Points in Curve" loading="lazy"><figcaption>Offset Points in Curve</figcaption></figure>
+<p>Offset a control point index in the curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Point Index</strong>: The point index of the curve. · <strong>Offset</strong>: Offset of the point index.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Is Valid Offset</strong>: Outputs true if the evaluated controlpoint plus the offset is a valid index. · <strong>Point Index</strong>: The index of the control point plus the offset.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="points-of-curve">Points of Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/geometry-node-editor/header/add-menu-curve-topology/points-of-curve.png" alt="Points of Curve" loading="lazy"></figure>
+<p>Retreive a point index within a curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Curve Index</strong>: The curve to retreive the data from · <strong>Weights</strong>: Values to sort the curve points. · <strong>Sort Index</strong>: The point to output.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Point Index</strong>: The output point. · <strong>Total</strong>: The number of points in the curve.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fstyle-check/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fgeometry-node-editor%2Fheader%2Fadd-menu%2Fcurve.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/style-check/docs2/content/editors/geometry-node-editor/header/add-menu/curve.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-curve-read">Add - Curve - Read</a><a class="h3" href="#curve-handle-positions">Curve Handle Positions</a><a class="h3" href="#cuve-length">Cuve Length</a><a class="h3" href="#curve-tangent">Curve Tangent</a><a class="h3" href="#curve-tilt">Curve Tilt</a><a class="h3" href="#endpoint-selection">Endpoint Selection</a><a class="h3" href="#handle-type-selection">Handle Type Selection</a><a class="h3" href="#is-spline-cyclic">Is Spline Cyclic</a><a class="h3" href="#spline-length">Spline Length</a><a class="h3" href="#spline-parameter">Spline Parameter</a><a class="h3" href="#spline-resolution">Spline Resolution</a><a class="h2" href="#add-curve-sample">Add - Curve - Sample</a><a class="h3" href="#sample-curve">Sample Curve</a><a class="h2" href="#add-curve-write">Add - Curve - Write</a><a class="h3" href="#set-curve-normal">Set Curve Normal</a><a class="h3" href="#set-curve-radius">Set Curve Radius</a><a class="h3" href="#set-curve-tilt">Set Curve Tilt</a><a class="h3" href="#set-handle-positions">Set Handle Positions</a><a class="h3" href="#set-handle-type">Set Handle Type</a><a class="h3" href="#set-spline-cyclic">Set Spline cyclic</a><a class="h3" href="#set-spline-resolution">Set Spline Resolution</a><a class="h3" href="#set-spline-type">Set Spline Type</a><a class="h2" href="#add-curve">Add - Curve</a><a class="h3" href="#cuve-to-mesh">Cuve to Mesh</a><a class="h3" href="#cuve-to-points">Cuve to Points</a><a class="h3" href="#cuves-to-grease-pencil">Cuves to Grease Pencil</a><a class="h3" href="#deform-curves-on-surface">Deform Curves on Surface</a><a class="h3" href="#fill-curve">Fill Curve</a><a class="h3" href="#fillet-curve">Fillet Curve</a><a class="h3" href="#interpolate-curves">Interpolate Curves</a><a class="h3" href="#resample-curve">Resample curve</a><a class="h3" href="#reverse-curve">Reverse Curve</a><a class="h3" href="#subdivide-curve">Subdivide Curve</a><a class="h3" href="#trim-curve">Trim Curve</a><a class="h2" href="#add-menu-curve-primitives">Add menu - Curve Primitives</a><a class="h3" href="#arc">Arc</a><a class="h3" href="#bezier-segment">Bezier Segment</a><a class="h3" href="#curve-circle">Curve Circle</a><a class="h3" href="#curve-line">Curve Line</a><a class="h3" href="#spiral">Spiral</a><a class="h3" href="#quadratic-bezier">Quadratic Bezier</a><a class="h3" href="#quadrilateral">Quadrilateral</a><a class="h3" href="#star">Star</a><a class="h2" href="#add-menu-curve-topology">Add menu - Curve Topology</a><a class="h3" href="#curve-of-point">Curve of Point</a><a class="h3" href="#offset-points-in-curve">Offset Points in Curve</a><a class="h3" href="#points-of-curve">Points of Curve</a></aside></div></body></html>

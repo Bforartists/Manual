@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tool Shelf · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/style-check · <code>docs2/style-check</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<a class="is-current" style="padding-left:1.5rem" href="tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/filter.html">Filter</a>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<span style="padding-left:1.5rem">Collection</span>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Movie Clip Editor › Tool shelf</div><h1 class="pv-title">Tool Shelf</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 12 min read</span></div><article class="ui-doc-body"><h2 id="tool-shelf">Tool Shelf</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tool-shelf.png" alt="Tool Shelf" loading="lazy"></figure>
+<p>The Tool Shelf exists for the Tracking Mode in Clip submode. And for Mask mode.</p>
+<p>In Tracking Mode it contains the tools to do the tracking. And in Mask Mode some mask tool functionality.</p>
+<p>The submodes Graph and Dopesheet does not have a tool shelf. Here you can find a list of the tracks instead.</p>
+<p>The content is differing, dependant of the mode you are in. Tracking mode has other tools than the Masking mode.</p>
+<h3 id="track-tab-and-solve-tab-in-tracking-mode">Track Tab and Solve Tab in Tracking Mode</h3>
+<p>The track tab contains the tools around the movie side of things. Markers, tracking etc.</p>
+<p>The solve tab contains the tools around the scene side of things. Scene setup, camera motion, etc.</p>
+<h3 id="annotation-tab">Annotation tab</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/annotation-tab.png" alt="Annotation tab" loading="lazy"></figure>
+<p>The Annotation tab contains the usual Annotation tools to draw and erase strokes. The tools should be self explaining</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draw</td>
+<td><strong>Draw</strong>: Draw freehand strokes. · <strong>Erase</strong>: Erase strokes. · <strong>Line</strong>: Draw a line by clicking at a starting point and then at the end point. · <strong>Poly</strong>: Draw a polygon by clicking at the places where a corner should be.</td>
+</tr>
+<tr>
+<td>Stroke Placement</td>
+<td><strong>View</strong>: Place the strokes relative to the view. · <strong>Cursor</strong>: Place the strokes relative to the cursor.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="tracking-mode">Tracking Mode</h1>
+<h2 id="track-tab-clip-panel">Track tab - Clip Panel</h2>
+<p>The Clip panel contains movie related tools.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/track-tab-clip-panel.png" alt="Track tab - Clip Panel" loading="lazy"><figcaption>Track tab - Clip Panel</figcaption></figure>
+<h3 id="set-scene-frames">Set Scene Frames</h3>
+<p>Sets the length, means start and end frame of the tracking to match the start and end frame of the active movie.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/set-scene-frames.png" alt="Set Scene Frames" loading="lazy"></figure>
+<p>You can see the length of the active movie in the Properties sidebar in the Footage tab in the Footage Settings panel. And the tracking length and position can be seen and set in the time line.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/set-scene-frames-2.png" alt="Set Scene Frames" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/set-scene-frames-3.png" alt="Set Scene Frames" loading="lazy"></figure>
+<p>The default range for tracking is from 1 to 250. But our movie is 295 frames long. Pressing the Set Scene Frames button makes the range going from 1 to 295 here.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prefetch</td>
+<td>Prefetch Frames from disk for faster playback / tracking.</td>
+</tr>
+<tr>
+<td>Reload</td>
+<td>Reload Clip.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="track-tab-marker-panel">Track tab - Marker Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/track-tab-marker-panel.png" alt="Track tab - Marker Panel" loading="lazy"><figcaption>Track tab - Marker Panel</figcaption></figure>
+<p>The marker panel contains marker related tools.</p>
+<h3 id="detect-features">Detect Features</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/detect-features.png" alt="Detect Features" loading="lazy"></figure>
+<p>Adds automatically markers at the current movie position, and tries to detect marcant areas in the current frame that are useful for tracking. It also sets keyframes at this position.</p>
+<p>When enough marcant areas are available then it adds up to eight markers that way.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/detect-features-2.png" alt="Detect Features" loading="lazy"></figure>
+<h4 id="last-operator-detect-features">Last Operator Detect Features</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-detect-features.png" alt="Last Operator Detect Features" loading="lazy"><figcaption>Last Operator Detect Features</figcaption></figure>
+<h5 id="placement">Placement</h5>
+<p>Placement is a drop down box where you can limit the placement of the markers.</p>
+<h5 id="whole-frame">Whole frame</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/whole-frame.png" alt="Whole frame" loading="lazy"></figure>
+<p>The markers can be at every position of the current frame image.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inside Grease Pencil</td>
+<td>The markers have to be inside the Grease Pencil.</td>
+</tr>
+<tr>
+<td>Outside Grease Pencil</td>
+<td>The markers have to be outside Grease Pencil.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Margin</td>
+<td>Gives a margin to the border of the frame image. Markers have to stay away from the border by the given amount.</td>
+</tr>
+<tr>
+<td>Threshold</td>
+<td>The threshold level to consider the current position of the marker as good enough for tracking.</td>
+</tr>
+<tr>
+<td>Distance</td>
+<td>The minimum distance between two markers.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Marker</td>
+<td>Adds a marker by hand. First click the tool, then click at the location where you want to place it. You can reposition this marker afterwards by simply clicking at it and move it to a new position.</td>
+</tr>
+<tr>
+<td>Enable Markers</td>
+<td>Enables the currently selected marker(s).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="disable-markers">Disable Markers</h3>
+<p>Disables the currently selected marker(s)</p>
+<h4 id="last-operator-disable-markers">Last operator Disable Markers</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-disable-markers.png" alt="Last operator Disable Markers" loading="lazy"><figcaption>Last operator Disable Markers</figcaption></figure>
+<h5 id="action">Action</h5>
+<p>Edit box to choose if you want to enable or disable the selected marker(s).</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete Marker</td>
+<td>Deletes the currently selected marker(s) data. The track stays available. And the marker is still there too. But cleared.</td>
+</tr>
+<tr>
+<td>Delete Track</td>
+<td>Deletes marker, marker data and track data.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="track-tab-tracking-settings-panel">Track tab - Tracking Settings Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/track-tab-tracking-settings-panel.png" alt="Track tab - Tracking Settings Panel" loading="lazy"><figcaption>Track tab - Tracking Settings Panel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/track-tab-tracking-settings-panel-2.png" alt="Track tab - Tracking Settings Panel" loading="lazy"><figcaption>Track tab - Tracking Settings Panel</figcaption></figure>
+<p>In the Tracking Settings Panel you will find some settings for Tracking.</p>
+<h3 id="tracking-presets">Tracking Presets</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/tracking-presets.png" alt="Tracking Presets" loading="lazy"></figure>
+<p>In the header is a drop down box to choose between some predefined tracking presets.</p>
+<ul>
+<li>Button adds a new preset with the current settings. First give the preset a name in the edit box.</li>
+</ul>
+<ul>
+<li>Button removes the current tracking preset.</li>
+</ul>
+<h3 id="pattern-size">Pattern Size</h3>
+<p>Size of pattern area for newly created tracks.</p>
+<h3 id="search-size">Search Size</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/search-size.png" alt="Search Size" loading="lazy"></figure>
+<p>Size of search area for newly created tracks.</p>
+<h3 id="motion-model">Motion Model</h3>
+<p>Choose between different motion models for tracking.</p>
+<h3 id="match">Match</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/match.png" alt="Match" loading="lazy"></figure>
+<p>The pattern match method.</p>
+<p>Keyframe matches the tracking from the keyframe.</p>
+<p>Previous frame matches the tracking from the previous frame. Regardless if there is a keyframe recorded or not.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prepass</td>
+<td>Use a Brute Force translation - only initialization when tracking.</td>
+</tr>
+<tr>
+<td>Normalize</td>
+<td>Normalize light intensities when tracking.</td>
+</tr>
+<tr>
+<td>R G B</td>
+<td>By default all three colors gets used for calculation. But you can enable or disable specific color range.</td>
+</tr>
+<tr>
+<td>Copy from Active Track</td>
+<td>Copy tracking settings from active track to default settings</td>
+</tr>
+<tr>
+<td>Tracking Settings Extra</td>
+<td>Extra settings is a sub menu that contains some not so often used settings. · <strong>Weight</strong>: Influence of newly created track on a final solution. · <strong>Correlation</strong>: Default minimum value of correlation between matched pattern and reference that is still treated as successful tracking. · <strong>Frames Limit</strong>: In every tracking cycle the numbers of given frames are tracked. · <strong>Margin</strong>: Default distance from image boundary at which markers stops tracking. · <strong>Use Mask</strong>: Use a Grease Pencil data block as a mask.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="track-tab-track-tools-panel">Track tab - Track Tools Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/track-tab-track-tools-panel.png" alt="Track tab - Track Tools Panel" loading="lazy"><figcaption>Track tab - Track Tools Panel</figcaption></figure>
+<p>The tracking tools.</p>
+<h3 id="track">Track</h3>
+<p>Track selected markers in chosen direction. Usually you want to play them forward. But you can also track backwards. And by one step.</p>
+<p>The two play buttons in the center tracks the whole range. The two outer buttons tracks just frame wise.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> To select good points for tracking, use points in the middle of the footage timeline and track backwards and forwards from there. This will provide a greater chance of the marker and point staying in the camera shot.</p></div>
+<h3 id="clear">Clear</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/clear.png" alt="Clear" loading="lazy"></figure>
+<p>The left button clears the track before the chosen position. The right button clears the track after the chosen position.</p>
+<h4 id="last-operator-clear-track-path">Last Operator Clear Track Path</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-clear-track-path.png" alt="Last Operator Clear Track Path" loading="lazy"><figcaption>Last Operator Clear Track Path</figcaption></figure>
+<h5 id="action-2">Action</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/action.png" alt="Action" loading="lazy"></figure>
+<p>Choose the direction.</p>
+<p>Clear up to clears the track before the chosen position.</p>
+<p>Clear remained clears the track after the chosen position.</p>
+<p>Clear all clears the whole track.</p>
+<h5 id="clear-active">Clear active</h5>
+<p>When ticked, just the active track gets cleared.</p>
+<h3 id="refine">Refine</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/refine.png" alt="Refine" loading="lazy"></figure>
+<p>Refine selected marker position in given direction from the current position.</p>
+<p>Last operator Refine Markers</p>
+<h4 id="backwards">Backwards</h4>
+<p>Refine in backwards directory.</p>
+<h3 id="merge">Merge</h3>
+<h4 id="join-track">Join Track</h4>
+<p>Joins selected tracks.</p>
+<h4 id="average-tracks">Average Tracks</h4>
+<p>Averages selected tracks into active.</p>
+<h5 id="last-operator-average-tracks">Last Operator Average Tracks</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-average-tracks.png" alt="Last Operator Average Tracks" loading="lazy"><figcaption>Last Operator Average Tracks</figcaption></figure>
+<h5 id="keep-original">Keep Original</h5>
+<p>Keep the original track.</p>
+<h2 id="solve-tab-plane-track-panel">Solve tab - Plane Track Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/solve-tab-plane-track-panel.png" alt="Solve tab - Plane Track Panel" loading="lazy"><figcaption>Solve tab - Plane Track Panel</figcaption></figure>
+<p>Create a plane track. A plane track can be used to map an image or a movie at an area in your clip. The Plane track.</p>
+<p>A plane track can be used to replace things like billboards and screens on the footage with another image or video. It can also be used for masking.</p>
+<p>It is also possible to have some tracks appear and disappear during the time. This required to have two neighbor frames have at least 4 common tracks.</p>
+<p>You need to select at least four markers. And the four markers should preferably be at the corners of the area in which you want to map the image or movie.</p>
+<p>With the left mouse button and clicking at one of the corners of the cage you can move the plane track plane around in the view.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/solve-tab-plane-track-panel-2.png" alt="Solve tab - Plane Track Panel" loading="lazy"><figcaption>Solve tab - Plane Track Panel</figcaption></figure>
+<p>With the right mouse button and clicking at one of the corners of the cage you can move the single corners, and fit the plane into the area of the movie.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/solve-tab-plane-track-panel-3.png" alt="Solve tab - Plane Track Panel" loading="lazy"><figcaption>Solve tab - Plane Track Panel</figcaption></figure>
+<p>In the sidebar, open the Track tab and the Plane Track panel. Here you can now load an image or movie that gets displayed in this rectangle now, create a new image, or browse for already existing images in the project.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/solve-tab-plane-track-panel-4.png" alt="Solve tab - Plane Track Panel" loading="lazy"><figcaption>Solve tab - Plane Track Panel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/solve-tab-plane-track-panel-5.png" alt="Solve tab - Plane Track Panel" loading="lazy"><figcaption>Solve tab - Plane Track Panel</figcaption></figure>
+<h2 id="solve-tab-solve-panel">Solve tab - Solve Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/solve-tab-solve-panel.png" alt="Solve tab - Solve Panel" loading="lazy"><figcaption>Solve tab - Solve Panel</figcaption></figure>
+<p>The Solve Panel contains functionality around solving the camera motion.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tripod</td>
+<td>Tripod tracking is a special method to track a stable camera position, and uses special solver. Tripod Motion can be used for footage where the camera does not move and only rotates. Here you can enable Tripod camera tracking. Keyframe A and B are greyed out then. Note that Tripod behaves different from regular solver. More tracks doesn't imply to have more accuracy. 5-10 solver is recommended.</td>
+</tr>
+<tr>
+<td>Keyframe</td>
+<td>Automatically select Keyframes when solving camera / object motion</td>
+</tr>
+<tr>
+<td>Keyframe A</td>
+<td>The first keyframe for camera tracking.</td>
+</tr>
+<tr>
+<td>Keyframe B</td>
+<td>The last keyframe for camera tracking.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="refine-2">Refine</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/refine-2.png" alt="Refine" loading="lazy"></figure>
+<p>Choose between different refine methods. The method tangential distortion activates when you acticate the Brown model for the lens distortion in the sidebar in the track tab in the camera panel in the lens subpanel</p>
+<h3 id="solve-camera-motion">Solve Camera Motion</h3>
+<p>Starts the calculation for the camera motion to match the track motion.</p>
+<p>There should be at least eight common tracks on the both of the selected keyframes.</p>
+<p>There should be noticeable parallax effects between these two keyframes.</p>
+<p>The average re-projection error is reported to the information space and to the clip editor header. Re-projeciton error means the average distance between reconstructed 3D position of tracks projected back to footage and original position of tracks. Re-projection error below 0.3 means accurate re-projection, (0.3 - 3.0) means quite nice solving which still can be used. Values above 3 means some tracks should be tracked more accurately, or that values for focal length or distortion coefficients were set incorrectly.</p>
+<h2 id="solve-tab-cleanup-panel">Solve tab - Cleanup Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/solve-tab-cleanup-panel.png" alt="Solve tab - Cleanup Panel" loading="lazy"><figcaption>Solve tab - Cleanup Panel</figcaption></figure>
+<p>This panel contains tools to clean up tracks.</p>
+<h3 id="clean-tracks">Clean Tracks</h3>
+<p>Cleans tracks with high error values or few frames. The tracks or segments in question can either be selected, or directly removed. Dependent of the settings.</p>
+<h4 id="last-operator-clean-tracks">Last Operator Clean Tracks</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-clean-tracks.png" alt="Last Operator Clean Tracks" loading="lazy"><figcaption>Last Operator Clean Tracks</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frames</td>
+<td>Adjust the number of &quot;few&quot; frames for clean track. 0 means the feature gets ignored.</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>Adjust the error value for Clean Tracks. See also Last Operator Clean Tracks.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="select">Select</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/select.png" alt="Select" loading="lazy"></figure>
+<p>The action that should happen when you click at Clean Tracks. Default is select.</p>
+<h3 id="filter-tracks">Filter Tracks</h3>
+<p>Removes tracks with too high spikes in their motion curve.</p>
+<h4 id="last-operator-filter-tracks">Last Operator Filter Tracks</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/last-operator-filter-tracks.png" alt="Last Operator Filter Tracks" loading="lazy"><figcaption>Last Operator Filter Tracks</figcaption></figure>
+<h5 id="track-threshold">Track Threshold</h5>
+<p>Filter threshold to select problematic tracks.</p>
+<h2 id="solve-tab-geometry-panel">Solve tab - Geometry Panel</h2>
+<h3 id="3d-markers-to-mesh">3D Markers to Mesh</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/3d-markers-to-mesh.png" alt="3D Markers to Mesh" loading="lazy"><figcaption>3D Markers to Mesh</figcaption></figure>
+<p>Creates a vertex cloud using the coordinates of the reconstructed tracks.</p>
+<h3 id="link-empty-to-track">Link Empty to Track</h3>
+<p>Creates an Empty which will be copying movement of active track.</p>
+<h2 id="solve-tab-orientation-panel">Solve tab - Orientation Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/solve-tab-orientation-panel.png" alt="Solve tab - Orientation Panel" loading="lazy"><figcaption>Solve tab - Orientation Panel</figcaption></figure>
+<p>Here you will find some orientation functionality to match the geometry in the 3D view to the movie.</p>
+<h3 id="floor">Floor</h3>
+<p>Set plane in the 3D space as a Floor plane, based at three selected markers. You need to have three markers selected. Or you will get an error message.</p>
+<h3 id="wall">Wall</h3>
+<p>Set plane in the 3D space as a Wall plane, based at three selected markers.</p>
+<h4 id="last-operator-set-plane">Last Operator Set Plane</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-plane.png" alt="Last Operator Set Plane" loading="lazy"><figcaption>Last Operator Set Plane</figcaption></figure>
+<h5 id="plane">Plane</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/plane.png" alt="Plane" loading="lazy"></figure>
+<p>A drop down box to choose if you want to set the selected markers as plane or as floor.</p>
+<h3 id="set-origin">Set Origin</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/set-origin.png" alt="Set Origin" loading="lazy"></figure>
+<p>Set active marker as origin in 3D space.</p>
+<h4 id="last-operator-set-origin">Last Operator Set Origin</h4>
+<h5 id="use-median">Use Median</h5>
+<p>Set Origin to Median Point of selected bundles.</p>
+<h3 id="set-x-axis">Set X Axis</h3>
+<p>Set X axis rotation in 3D space, based at the selected marker. You need to have one marker selected. Or you will get an error.</p>
+<h3 id="set-y-axis">Set Y Axis</h3>
+<p>Set X axis rotation in 3D space, based at the selected marker. You need to have one marker selected. Or you will get an error.</p>
+<h4 id="last-operator-set-axis">Last Operator Set Axis</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-axis.png" alt="Last Operator Set Axis" loading="lazy"><figcaption>Last Operator Set Axis</figcaption></figure>
+<h5 id="axis">Axis</h5>
+<p>A drop down box to choose if you want to use the axis to X or to Y</p>
+<h3 id="set-scale">Set Scale</h3>
+<p>Set scale of scene by scaling camera, based at two selected markers. You need to have two markers selected. Or you will get an error.</p>
+<h4 id="last-operator-set-scale">Last Operator Set Scale</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-scale.png" alt="Last Operator Set Scale" loading="lazy"><figcaption>Last Operator Set Scale</figcaption></figure>
+<h5 id="distance">Distance</h5>
+<p>The distance between two bundles used for scene scaling.</p>
+<h3 id="apply-scale">Apply Scale</h3>
+<p>Apply scale to solution.</p>
+<h4 id="last-operator-apply-solution-scale">Last operator Apply Solution Scale</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-apply-solution-scale.png" alt="Last operator Apply Solution Scale" loading="lazy"><figcaption>Last operator Apply Solution Scale</figcaption></figure>
+<h5 id="distance-2">Distance</h5>
+<p>The distance between two bundles used for scene scaling.</p>
+<h3 id="distance-3">Distance</h3>
+<p>The distance between two bundles used for scene scaling. This setting is a pre value, and gets used for Set Scale as well as for Apply Scale when you perform those tools.</p>
+<h2 id="solve-tab-scene-setup-panel">Solve tab - Scene Setup Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/solve-tab-scene-setup-panel.png" alt="Solve tab - Scene Setup Panel" loading="lazy"><figcaption>Solve tab - Scene Setup Panel</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set as Background</td>
+<td>Sets the current movie as background in the 3D view. You need to be in camera view to see the movie in the background.</td>
+</tr>
+<tr>
+<td>Setup Tracking Scene</td>
+<td>Prepare Scene for composing 3D objects into this footage. This feature will create a ground plane, which is used for shadow catching in the rendering.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="annotation-tab-2">Annotation tab</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/annotation-tab.png" alt="Annotation tab" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/db0049ffac76ebfa23b60a6fac9748ee2ff88cae/docs2/images/editors/movie-clip-editor/tool-shelf/tracking-mode/annotation-tab-2.png" alt="Annotation tab" loading="lazy"></figure>
+<p>The annotation tool is available in multiple editors. With this tool you can write notes at the screen. The annotate tools is the little brother of the grease pencil object in the 3D view.</p>
+<p>Further settings for annotations can be found in the sidebar. Here you can also remove an annotation when you don't longer need it. And here you can also adjust the size of the stroke.</p>
+<h3 id="draw">Draw:</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draw</td>
+<td>Draw free-hand strokes in the main window.</td>
+</tr>
+<tr>
+<td>Erase</td>
+<td>Activate the eraser brush.</td>
+</tr>
+<tr>
+<td>Line</td>
+<td>Click and drag to create a line.</td>
+</tr>
+<tr>
+<td>Poly</td>
+<td>Click multiple times to create multiple connected lines. The current polygon is finished when Esc or RMB is pressed. When you hold down the right mouse button then you can activate and use the eraser tool to remove parts of the polygon again.</td>
+</tr>
+<tr>
+<td>Stroke Placement</td>
+<td>If the stroke should stick to the View or the Image.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fstyle-check/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fmovie-clip-editor%2Ftool-shelf%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/style-check/docs2/content/editors/movie-clip-editor/tool-shelf/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#tool-shelf">Tool Shelf</a><a class="h3" href="#track-tab-and-solve-tab-in-tracking-mode">Track Tab and Solve Tab in Tracking Mode</a><a class="h3" href="#annotation-tab">Annotation tab</a><a class="h2" href="#track-tab-clip-panel">Track tab - Clip Panel</a><a class="h3" href="#set-scene-frames">Set Scene Frames</a><a class="h2" href="#track-tab-marker-panel">Track tab - Marker Panel</a><a class="h3" href="#detect-features">Detect Features</a><a class="h3" href="#disable-markers">Disable Markers</a><a class="h2" href="#track-tab-tracking-settings-panel">Track tab - Tracking Settings Panel</a><a class="h3" href="#tracking-presets">Tracking Presets</a><a class="h3" href="#pattern-size">Pattern Size</a><a class="h3" href="#search-size">Search Size</a><a class="h3" href="#motion-model">Motion Model</a><a class="h3" href="#match">Match</a><a class="h2" href="#track-tab-track-tools-panel">Track tab - Track Tools Panel</a><a class="h3" href="#track">Track</a><a class="h3" href="#clear">Clear</a><a class="h3" href="#refine">Refine</a><a class="h3" href="#merge">Merge</a><a class="h2" href="#solve-tab-plane-track-panel">Solve tab - Plane Track Panel</a><a class="h2" href="#solve-tab-solve-panel">Solve tab - Solve Panel</a><a class="h3" href="#refine-2">Refine</a><a class="h3" href="#solve-camera-motion">Solve Camera Motion</a><a class="h2" href="#solve-tab-cleanup-panel">Solve tab - Cleanup Panel</a><a class="h3" href="#clean-tracks">Clean Tracks</a><a class="h3" href="#filter-tracks">Filter Tracks</a><a class="h2" href="#solve-tab-geometry-panel">Solve tab - Geometry Panel</a><a class="h3" href="#3d-markers-to-mesh">3D Markers to Mesh</a><a class="h3" href="#link-empty-to-track">Link Empty to Track</a><a class="h2" href="#solve-tab-orientation-panel">Solve tab - Orientation Panel</a><a class="h3" href="#floor">Floor</a><a class="h3" href="#wall">Wall</a><a class="h3" href="#set-origin">Set Origin</a><a class="h3" href="#set-x-axis">Set X Axis</a><a class="h3" href="#set-y-axis">Set Y Axis</a><a class="h3" href="#set-scale">Set Scale</a><a class="h3" href="#apply-scale">Apply Scale</a><a class="h3" href="#distance-3">Distance</a><a class="h2" href="#solve-tab-scene-setup-panel">Solve tab - Scene Setup Panel</a><a class="h2" href="#annotation-tab-2">Annotation tab</a><a class="h3" href="#draw">Draw:</a></aside></div></body></html>
