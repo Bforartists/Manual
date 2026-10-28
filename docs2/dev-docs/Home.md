@@ -4,7 +4,7 @@
 
 This wiki is for **writers, reviewers and maintainers** of the Bforartists manual. For the manual itself, see the [Bforartists documentation](https://www.bforartists.com/docs/home).
 
-[![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/master/collection/docs)
+[![Edit the docs in Pages CMS](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](https://app.pagescms.org/bforartists/manual/master/collection/docs)
 [![Docs 2.0 branch](https://img.shields.io/badge/Docs_2.0-master-555555?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Bforartists/Manual/tree/master/docs2)
 
 ---

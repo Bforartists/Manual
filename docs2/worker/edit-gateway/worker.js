@@ -13,7 +13,7 @@
 const REPO = "Bforartists/Manual";
 const BASE = "master";
 const ROOTS = { docs: "docs2/content", snippets: "docs2/snippets" };
-const CMS = "https://app.pagescms.org/" + REPO;
+const CMS = "https://app.pagescms.org/" + REPO.toLowerCase(); // Pages CMS writes owner/repo in lowercase
 
 const page = (title, body, status = 200) =>
   new Response(
