@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Documentation History · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/gp-select-linked · <code>docs2/gp-select-linked</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<a href="../getting-started/about-documentation.html">Using the Documentation</a>
+<span>Installation</span>
+<a href="../getting-started/quick-start.html">Quick Start</a>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../editors/compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../editors/geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../editors/shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../editors/video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/edit.html">Edit Mode</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/edit/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/object-mode/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../editors/image-editor/tool-shelf.html">Tool Shelf</a>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/all-modes/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a href="../editors/3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../editors/compositor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../editors/drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../editors/geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../editors/shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../editors/video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/mesh/edit/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/object-mode/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<a href="../editors/image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="../editors/3d-viewport/all-modes/header/view-menu.html">View Menu</a>
+<span style="padding-left:2.5rem">More</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/filter.html">Filter</a>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:2.5rem" href="../editors/3d-viewport/mesh/particle-edit.html">Particle Edit</a>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<span style="padding-left:1.5rem">Collection</span>
+<a style="padding-left:3.5rem" href="../editors/shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../editors/uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/point.html">Point</a>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../editors/compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../editors/compositor.html">Compositor</a>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../editors/geometry-node-editor.html">Geometry Node Editor</a>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="../editors/properties/strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../editors/geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<a href="../editors/shader-editor.html">Shader Editor</a>
+<a href="../editors/video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../editors/movie-clip-editor.html">Movie Clip Editor</a>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<a href="../editors/graph-editor.html">Graph Editor</a>
+<a href="../editors/drivers-editor.html">Drivers Editor</a>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<a href="../editors/toolbar.html">Toolbar</a>
+<a href="../editors/outliner.html">Outliner</a>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<a href="../editors/file-browser.html">File browser</a>
+<a href="../editors/asset-browser.html">Asset Browser</a>
+<span>Spreadsheet</span>
+<a href="../editors/preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../editors/topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../keymap/important-hotkeys.html">Important Hotkeys</a>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="bforartists-history.html">Bforartists History</a>
+<a class="is-current" href="manual-update-history.html">Documentation History</a>
+<a href="gpl-license.html">About the GPL License</a>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Appendix › Manual Update History</div><h1 class="pv-title">Documentation History</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.1</span><span>🕒 14 min read</span></div><article class="ui-doc-body"><h2 id="documentation-version-2">Documentation - Version 2</h2>
+<h3 id="preface">Preface</h3>
+<p>This version of the Documentation 2.0 was released in October of 2026, fully refactored and rebuilt using Webflow and a number of automation systems with Github Pages CMS, a WYSIWYG markdown editor.</p>
+<p>21.10.2026 – Updated the manual to Bforartists 5 version 5.2.x</p>
+<h3 id="new-features">New Features</h3>
+<p>This allowed responsive layouts, download to PDF, and interactive navigation, room for Quick Start documentation, and through the power of agentic coding, much of the content and formatting could start to be refactored to be cleaner, use components, and allow for more consistent documentation. It also includes the ability to have page status, and rolling version related updates - and easier community collaboration.</p>
+<p>The goal of refactor lightens the burden on maintainers to not worry about consistent formatting, navigation, table of contents or file compilation. You also don't need to optionally use third-party software - and also allowed multi-file versioning with conflict resolution built in.</p>
+<p>This also allowed to compile hotkeys with an interactive layout that compiled automatically every week.</p>
+<p>This does require a lot of back-end architecture and moving parts through Github actions, Cloudflare applications, and more - but the goal is to make this as maintainer friendly and artist friendly possible.</p>
+<h2 id="documentation-version-1">Documentation - Version 1</h2>
+<p>23.04.2026 – Updated the manual to Bforartists 5 version 5.1.1</p>
+<p>24.03.2026 – Updated the manual to Bforartists 5 version 5.1.0</p>
+<p>28.12.2025 – Updated the manual to Bforartists 5 version 5.0.1</p>
+<p>27.11.2025 – Updated the manual to Bforartists 5 version 5.0.0</p>
+<p>15.08.2025 – Updated the manual to Bforartists 4 version 4.5.1</p>
+<p>21.07.2025 – Updated the manual to Bforartists 4 version 4.5.0</p>
+<p>08.05.2025 – Updated the manual to Bforartists 4 version 4.4.3</p>
+<p>03.04.2025 – Updated the manual to Bforartists 4 version 4.4.0</p>
+<p>15.02.2025 – Updated the manual to Bforartists 4 version 4.3.3</p>
+<p>26.01.2025 – Updated the manual to Bforartists 4 version 4.3.2</p>
+<p>12.12.2024 – Updated the manual to Bforartists 4 version 4.3.1</p>
+<p>27.08.2024 – Updated the manual to Bforartists 4 version 4.2.1</p>
+<p>23.08.2024 – Updated the manual to Bforartists 4 version 4.2.0</p>
+<p>23.04.2024 – Updated the manual to Bforartists 4 version 4.1.1</p>
+<p>01.04.2024 – Updated the manual to Bforartists 4 version 4.1.0</p>
+<p>11.12.2023 – Updated the manual to Bforartists 4 version 4.0.2</p>
+<p>18.11.2023 – Updated the manual to Bforartists 4 version 4.0.1</p>
+<p>29.08.2023 - Updated the manual to Bforartists 3 version 3.6.2</p>
+<p>05.08.2023 - Updated the manual to Bforartists 3 version 3.6.1</p>
+<p>05.07.2023 - Updated the manual to Bforartists 3 version 3.6.0</p>
+<p>08.05.2023 - Updated the manual to Bforartists 3 version 3.5.1</p>
+<p>03.04.2023 - Updated the manual to Bforartists 3 version 3.5.0</p>
+<p>11.01.2023 - Updated the manual to Bforartists 3 version 3.4.1</p>
+<p>08.12.2022 - Updated the manual to Bforartists 3 version 3.4.0</p>
+<p>12.10.2022 - Updated the manual to Bforartists 3 version 3.3.1</p>
+<p>18.09.2022 - Updated the manual to Bforartists 3 version 3.3.0</p>
+<p>08.08.2022 - Updated the manual to Bforartists 3 version 3.2.2</p>
+<p>08.07.2022 - Updated the manual to Bforartists 3 version 3.2.1</p>
+<p>09.06.2022 - Updated the manual to Bforartists 3 version 3.2.0</p>
+<p>09.04.2022 - Updated the manual to Bforartists 3 version 3.1.3</p>
+<p>04.04.2022 - Updated the manual to Bforartists 3 version 3.1.2</p>
+<p>10.03.2022 - Updated the manual to Bforartists 3 version 3.1.0</p>
+<p>02.02.2022 - Updated the manual to Bforartists 3 version 3.0.1</p>
+<p>30.11.2021 - Updated the manual to Bforartists 3 version 3.0.0</p>
+<p>18.07.2021 - Updated the manual to Bforartists 2 version 2.9.3</p>
+<p>01.07.2021 - Updated the manual to Bforartists 2 version 2.9.2</p>
+<p>25.06.2021 - Updated the manual to Bforartists 2 version 2.9.1</p>
+<p>10.06.2021 - Updated the manual to Bforartists 2 version 2.9.0</p>
+<p>27.02.2021 - Updated the manual to Bforartists 2 version 2.8.0</p>
+<p>26.01.2021 - Updated the manual to Bforartists 2 version 2.7.0</p>
+<p>27.11.2020 - Updated the manual to Bforartists 2 version 2.6.0</p>
+<p>24.09.2020 - Updated the manual to Bforartists 2 version 2.5.1</p>
+<p>01.09.2020 - Updated the manual to Bforartists 2 version 2.5.0</p>
+<p>31.08.2020 - Cleanup and spell checking.</p>
+<p>28.08.2020 - Improved chapter 7.3.6 Editors - 3D View - Sidebar - Tool Tab - Mesh - Sculpt Mode</p>
+<p>27.08.2020 - Updated the manual to Bforartists 2 version 2.5.0</p>
+<p>24.08.2020 - Added chapters 13 around video editing</p>
+<p>17.08.2020 - Added chapter 25.10.6 + 25.10.7 + 25.10.8</p>
+<p>13.08.2020 - Added chapter 25.10.4 + 25.10.5</p>
+<p>11.08.2020 - Added chapter 25.10.3</p>
+<p>10.08.2020 - Added chapter 25.10.2</p>
+<p>08.08.2020 - Added chapter 25.10 and 25.10.1</p>
+<p>07.08.2020 - Added chapters around 25.9, Particles tab</p>
+<p>04.08.2020 - Updated manual to Bforartists 2.4.0</p>
+<p>30.07.2020 - Added chapter 25.14 Editors - Properties Editor - Texture Tab.pdf</p>
+<p>29.07.2020 - Added chapter 25.13 Editors - Properties Editor - Materials Tab.pdf</p>
+<p>28.07.2020 - UV Editor , added chapters 25.12 around the object data tab</p>
+<p>22.07.2020 - UV Editor , added documentation for UDIM</p>
+<p>18.07.2020 - Small additions and corrections. Added chapter 25.12 and 7.3.15</p>
+<p>14.07.2020 - Updated the manual to the latest changes of Bforartists 2.3.0</p>
+<p>12.07.2020 - Added chapter 25.8.4 and 25.8.5</p>
+<p>09.07.2020 – Added chapter 25.8.3</p>
+<p>06.07.2020 – Added chapter 25.8.1 and 25.8.2</p>
+<p>03.07.2020 - Added chapter 25.8 Editors - Properties Editor - Modifiers Tab.odt, Update chapter 7.2.2</p>
+<p>01.07.2020 - Added chapter 25.11 Editors - Properties Editor - Object Constraints Tab</p>
+<p>30.06.2020 - Updated chapter 25.7</p>
+<p>29.06.2020 - Updated chapters 12, 20 and 25.4, added chapter 25.5</p>
+<p>28.06.2020 - Updated the manual to the changes of Bforartists, splitted chapter 5 into sub chapters, added chapter 25.6 Editors - Properties Editor - World Tab</p>
+<p>25.06.2020 - Added chapter 25.3 Editors - Properties Editor - Output Tab</p>
+<p>21.06.2020 - Added chapters 19 around NLA editor</p>
+<p>17.06.2020 - Added chapters 7.0.x around the 3D view context menus</p>
+<p>12.06.2020 - Updated chapter 36 Standard Keymap</p>
+<p>10.06.2020 - Updated chapter 33 Glossary</p>
+<p>09.06.2020 - Reordered some chapters, added some missing information</p>
+<p>09.06.2020 - Removed lots of &quot;Here you can&quot; phrases</p>
+<p>07.06.2020 - Added chapters 18 around Drivers Editor</p>
+<p>29.05.2020 - Manual update for upcoming Bforartists 2.1.0 version</p>
+<p>28.05.2020 - Manual update for upcoming Bforartists 2.1.0 version</p>
+<p>01.06.2020 - Added chapters 17 around Graph Editor</p>
+<p>28.05.2020 - Manual update for upcoming Bforartists 2.1.0 version</p>
+<p>25.05.2020 - Added chapters 16 around the Timeline</p>
+<p>23.05.2020 - Updated chapters to new sculpting feature Draw Face Sets</p>
+<p>22.05.2020 - Updated chapter 2 Keymap</p>
+<p>20.05.2020 - Manual update for upcoming Bforartists 2.1.0 version, changed order of chapters in chapter 8 and 9.</p>
+<p>16.05.2020 - Added chapters 15 around the dope sheet editor</p>
+<p>09.05.2020 - Added chapters 14 around the movie clip editor.</p>
+<p>28.04.2020 - Added chapter 37 - How to use the Manual</p>
+<p>18.04.2020 - Updated the manual for Bforartists 2 gold</p>
+<p>16.04.2020 - Updated the manual for Bforartists 2 Release Candidate</p>
+<p>02.04.2020 - Added chapters 11 around the compositor editor</p>
+<p>20.03.2020 - Added chapters 10 around the shader editor.</p>
+<p>17.03.2020 - Updated the manual to Bforartists 2 Beta 0.9.1</p>
+<p>21.02.2020 - Small changes at chapter 2, 7.1.5, 7.1.14, 7.3.11 and 22, rework at chapters 7.3.6 to 7.3.15</p>
+<p>20.02.2020 - Updated chapter 8.3.1 and 7.3.11</p>
+<p>19.02.2020 - Updated the manual to the latest changes for the Bforartists 2 Alpha 0.9.0 release</p>
+<p>13.02.2020 - updated chapters 7.3.6 Editors - 3D View - Sidebar - Tool Tab - Sculpt Mode, 7.3.7 Editors - 3D View - Sidebar - Tool Tab - Vertex Paint Mode, 7.3.8 Editors - 3D View - Sidebar - Tool Tab - Weight Paint Mode, 7.3.9 Editors - 3D View - Sidebar - Tool Tab - Texture Paint Mode and 8.3.1 Editors - Image Editor - Sidebar - Tools Tab in Paint Mode</p>
+<p>04.02.2020 - added chapter 10 Editors - Shader Editor.pdf</p>
+<p>01.02.2020 - moved the chapters properties - tools tab to 3d view - tools tab</p>
+<p>23.01.2020 - added chapter 9.3 Editors - UV Editor - Sidebar.pdf, 9.3.1 Editors - UV Editor - Sidebar - Image Tab.pdf, 9.3.2 Editors - UV Editor - Sidebar - Tools Tab.pdf and 9.3.3 Editors - UV Editor - Sidebar - View Tab.pdf</p>
+<p>01.01.2020 - reorganized chapter 7.1 and 7.2</p>
+<p>29.12.2019 - updated chapter 1 Installing Bforartists.pdf</p>
+<p>29.12.2019 - added chapter 9.1.5 Editors - UV Editor - Header - Header Tools.pdf</p>
+<p>20.12.2019 - added chapter 9.1.4 Editors - UV Editor - Header - UV menu.pdf</p>
+<p>18.12.2019 - added chapter 9.1.3 Editors - UV Editor - Header - Image Menu.pdf</p>
+<p>17.12.2019 - added chapter 9.1.2 Editors - UV Editor - Header - Select Menu.pdf</p>
+<p>16.12.2019 - added chapter 9 Editors - UV Editor.pdf, 9.1 Editors - UV Editor - Header.pdf, 9.1.1 Editors - UV Editor - Header - View Menu.pdf</p>
+<p>12.12.2019 - added chapter 8.3.3 Editors - Image Editor - Sidebar - View Tab.pdf, 8.3.4 Editors - Image Editor - Sidebar - Scopes Tab.pdf and 8.3.5 Editors - Image Editor - Sidebar - Mask Tab.pdf</p>
+<p>09.12.2019 - added chapter 8.3.2 Editors - Image Editor - Sidebar - Image Tab.pdf</p>
+<p>28.11.2019 - added chapter 8.1.7 Editors - Image Editor - Tool Shelf.pdf</p>
+<p>20.11.2019 - added chapter 8.1.3 Editors - Image Editor - Header - Select menu, 8.1.4 Editors - Image Editor - Header - Add menu, 8.1.5 Editors - Image Editor - Header - Mask menu, 8.1.6 Editors - Image Editor - Header - Header Tools.pdf</p>
+<p>18.11.2019 - added chapter 8.1.2 Editors - Image Editor - Header - Image menu.pdf</p>
+<p>17.11.2019 - small changes at chapter 7.2, 7.23 and 8, added 8.1 Editors - Image Editor - Header.pdf and 8.1.1 Editors - Image Editor - Header - View menu.pdf</p>
+<p>16.11.2019 - added chapter 8 Editors - Image Editor.pdf, Update chapter 6 Editors introduction.pdf</p>
+<p>15.11.2019 - added chapter 7.3.1 Editors - 3D View - Sidebar - Mini Lightlib.pdf</p>
+<p>14.11.2019 - added chapter 7.3 Editors - 3D View - Sidebar.pdf</p>
+<p>11.11.2019 - added brush menu to chapters 7.2, renamed chapters</p>
+<p>10.11.2019 - Added chapter 7.1.15 Editors - 3D View - Tool Shelf - Grease Pencil - Weight Paint Mode and 7.1.16 Editors - 3D View - Tool Shelf - Armature - Edit Mode.pdf and 7.1.17 Editors - 3D View - Tool Shelf - Armature - Pose Mode.pdf and 7.1.18 Editors - 3D View - Tool Shelf - Lattice - Edit Mode.pdf</p>
+<p>09.11.2019 - Added chapter 7.1.14 Editors - 3D View - Tool Shelf - Grease Pencil - Draw Mode</p>
+<p>08.11.2019 - Added chapter 7.1.13 Editors - 3D View - Tool Shelf - Grase Pencil - Sculpt Mode.pdf</p>
+<p>06.11.2019 - Added chapter 7.1.11 Editors - 3D View - Tool Shelf - Text - Edit Mode.pdf, 7.1.12 Editors - 3D View - Tool Shelf - Grase Pencil - Edit Mode.pdf</p>
+<p>05.11.2019 - Added chapter 7.1.9 Editors - 3D View - Tool Shelf - Surface - Edit Mode, 7.1.10 Editors - 3D View - Tool Shelf - Metaball - Edit Mode</p>
+<p>04.11.2019 - Added chapter 7.1.7 Editors - 3D View - Tool Shelf - Mesh - Particle Edit Mode.pdf and 7.1.8 Editors - 3D View - Tool Shelf - Curve - Edit Mode.pdf, small fixes</p>
+<p>31.10.2019 - Added chapter 7.1.6 Editors - 3D View - Tool Shelf - Mesh - Textute Paint Mode.pdf</p>
+<p>30.10.2019 - Added chapter 7.1.5 Editors - 3D View - Tool Shelf - Mesh - Weight Paint Mode.pdf</p>
+<p>29.10.2019 - Added chapter 7.1.4 Editors - 3D View - Tool Shelf - Mesh - Vertex Paint Mode.pdf</p>
+<p>28.10.2019 - Added chapter 7.1.3 Editors - 3D View - Tool Shelf - Mesh - Sculpt Mode.pdf</p>
+<p>27.10.2019 - Updated chapter 25.1.3 Editors - Properties Editor - Tools Tab - Sculpt Mode.odt</p>
+<p>26.10.2019 - Added chapter 7.1.2 Editors - 3D View - Tool Shelf - Mesh - Edit Mode.pdf</p>
+<p>22.10.2019 - Added chapter 7.1.1 Editors - 3D View - Tool Shelf - Object Mode.pdf</p>
+<p>18.10.2019 - Added chapter 7.1 Editors - 3D View - Tool Shelf.pdf</p>
+<p>16.10.2019 - Reordered the header menu chapters in the 3d view.</p>
+<p>15.10.2019 - Added chapter 7.2.8.15 Editors - 3D View - Header - Grease Pencil - Draw mode - Draw menu.pdf and 7.2.8.15 Editors - 3D View - Header - Grease Pencil - Weight Paint Mode - Weights Menu.pdf</p>
+<p>13.10.2019 - Added chapter 7.2.14 Editors - 3D View - Header - Armature - Pose mode - Pose menu.pdf</p>
+<p>09.10.2019 - Added chapter 7.2.12 Editors - 3D View - Header - Particle - Particle mode - Particle menu.pdf</p>
+<p>08.10.2019 - Added chapter 7.2.11 Editors - 3D View - Header - Mesh - Weight Paint mode - Weight menu.pdf</p>
+<p>07.10.2019 - Added chapter 7.2.9 Editors - 3D View - Header - Mesh - Sculpt mode - Sculpt menu.pdf and 7.2.9.1 Editors - 3D View - Header - Mesh - Sculpt mode - Mask menu.pdf and 7.2.10 Editors - 3D View - Header - Mesh - Vertex Paint mode - Paint menu.pdf</p>
+<p>06.10.2019 - Added chapter 7.2.8.17 Editors - 3D View - Header - Armature - Edit mode - Armature menu.pdf, 7.2.8.18 Editors - 3D View - Header - Lattice - Edit mode - Lattice menu.pdf</p>
+<p>05.10.2019 - Update the manual to the changes of Bforartists 0.7.0 #141</p>
+<p>30.09.2019 - Added chapter 7.2.8.15 Editors - 3D View - Header - Grease Pencil - Edit mode - Stroke menu.pdf, added chapter 7.2.8.16 Editors - 3D View - Header - Grease Pencil - Edit mode - Points menu.pdf</p>
+<p>27.09.2019 - Added chapter 7.2.8.14 Editors - 3D View - Header - Grease Pencil - Edit mode - Grease Pencil menu.pdf</p>
+<p>23.09.2019 - Added chapter 7.2.8.13 Editors - 3D View - Header - Text - Edit mode - Font menu.pdf</p>
+<p>22.09.2019 - Added chapter 7.2.8.12 Editors - 3D View - Header - Text - Edit mode - Edit menu.pdf</p>
+<p>21.09.2019 - Fixes at chapter 7.2.8.8 and 7.2.8.9, added chapter 7.2.8.10 Editors - 3D View - Header - Surface - Edit mode - Surface menu, added 7.2.8.11 Editors - 3D View - Header - Metaball - Edit mode - Metaball menu.pdf</p>
+<p>20.09.2019 - Added chapter 7.2.8.8 Editors - 3D View - Header - Edit mode - Control points menu.pdf, 7.2.8.9 Editors - 3D View - Header - Curve - Edit mode - Segments menu.pdf, renamed chapter 7.2.8.2 up to 7.2.8.8</p>
+<p>19.09.2019 - Added chapter 7.2.8.7 Editors - 3D View - Header - Edit mode - Curve menu.pdf</p>
+<p>18.09.2019 - Added chapter 7.2.8.6 Editors - 3D View - Header - Edit mode - UV menu.pdf</p>
+<p>17.09.2019 - Added chapter 7.2.8.5 Editors - 3D View - Header - Edit mode - Faces menu.pdf</p>
+<p>16.09.2019 - Added chapter 7.2.8.4 Editors - 3D View - Header - Edit mode - Edge Menu.pdf</p>
+<p>15.09.2019 - Added chapter 7.2.8.3 Editors - 3D View - Header - Edit Mode - Vertex Menu.pdf</p>
+<p>13.09.2019 - Added chapter 7.2.8.2 Editors - 3D View - Header - Edit mode - Mesh menu.pdf</p>
+<p>05.09.2019 - Updated chapter 7.2.8.1 Editors - 3D View - Header - Edit mode - Add menu. Small fixes at 7.2.7 Editors - 3D View - Header - Object menu and 35 Bforartists History</p>
+<p>03.09.2019 - Updated chapter 24 Editors - Outliner</p>
+<p>02.09.2019 - Added chapter 7.2.7 Editors - 3D View - Header - Object menu</p>
+<p>23.08.2019 - Added chapter 7.2.6 Editors - 3D View - Header - Add Menu</p>
+<p>23.08.2019 - Added chapter 7.2.5 Editors - 3D View - Header - Select Menu</p>
+<p>18.08.2019 - Added chapter 7.2.4 Editors - 3D View - Header - Navigation Menu</p>
+<p>17.08.2019 - Added chapter 7.2.3 Editors - 3D View - Header - View Menu</p>
+<p>16.08.2019 - Added chapter 7.2.2 Editors - 3D View - Header - Quick Menu</p>
+<p>15.08.2019 - Added chapter 7.2.1 Editors - 3D View - Header tools and Options</p>
+<p>25.07.2019 - Update chapter 7.2 Editors - 3D View - Header to BFA 2#63</p>
+<p>22.07.2019 - Update chapter 7 Editors - 3D View to BFA 2 #61</p>
+<p>19.07.2019 - Update chapter 25.2 Editors - Properties Editor - Render Tab to BFA 2 #98</p>
+<p>12.07.2019 - Rework chapter 25.1 to 25.1.8 #137</p>
+<p>07.07.2019 - Added chapter 25.16 Editors - Properties Editor - Bone Constraints</p>
+<p>05.07.2019 - Updated chapter 27 Editors - Preferences</p>
+<p>02.07.2019 - Updated chapter 2 - Standard Keymap</p>
+<p>22.05.2019 - Added chapter 27 Editors - Preferences</p>
+<p>16.05.2019 - Updated the chapters 2, 23, 24, 25 to fit to Bforartists 0.4.0 release</p>
+<p>28.04.2019 - Updated the existing chapters with images to the latest development changes.</p>
+<p>26.04.2019 - Added chapters 25.1 up to 25.1.8, the tools tab chapters</p>
+<p>11.04.2019 - updated chapter 3,4,6 and 25 with new screenshots.</p>
+<p>09.04.2019 - Small changes at chapter 4 and 5</p>
+<p>08.04.2019 - Added chapter 6 Editors introduction.pdf</p>
+<p>07.04.2019 - Added chapter 20 Editors - Text Editor.pdf</p>
+<p>04.04.2019 - Added chapter 30 Advanced - Scripting &amp; Extending Bforartists.pdf + 29 Advanced - Command Line.odt</p>
+<p>02.04.2019 - Added chapter 31 Advanced - Working Limits</p>
+<p>02.04.2019 - Added chapter 32 - Troubleshooting.pdf</p>
+<p>01.04.2019 - Added chapter 25 Editors - Properties Editor.pdf</p>
+<p>01.04.2019 - Updated chapter 3 and 4</p>
+<p>31.03.2019 - Added chapter 3 Interface, and 4 Workspaces</p>
+<p>28.03.2019 - Added chapter 26 Editors - File browser</p>
+<p>27.03.2019 - Added chapter 28 Data System and updated chapter 5</p>
+<p>26.03.2019 - Added chapter 21 Editors - Python Console</p>
+<p>25.03.2019 - Renamed all chapters again.</p>
+<p>24.03.2019 - renamed chapter Topbar into Topbar and Footer. And extended this chapter.</p>
+<p>21.03.2019 - Added chapter 35 Editors - Outliner</p>
+<p>16.03.2019 - Added chapter 7 Topbar</p>
+<p>06.03.2019 - Added chapter 17 + 36</p>
+<p>04.03.2019 - Added chapter 95 + 96 + 1</p>
+<p>04.03.2019 - changed the internal chapter numbering.</p>
+<p>03.03.2019 - Updated chapter 20 Bforartists History.</p>
+<p>08.02.2019 - Updated chapter 20 Bforartists History.</p>
+<p>01-09-2018 - Initial commits. This changes marks the foundation for the Bforartists 2 manual.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fgp-select-linked/collection/docs/edit/docs2%2Fcontent%2Fappendix%2Fmanual-update-history.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/gp-select-linked/docs2/content/appendix/manual-update-history.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#documentation-version-2">Documentation - Version 2</a><a class="h3" href="#preface">Preface</a><a class="h3" href="#new-features">New Features</a><a class="h2" href="#documentation-version-1">Documentation - Version 1</a></aside></div></body></html>

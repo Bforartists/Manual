@@ -1,0 +1,1351 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sidebar · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/gp-select-linked · <code>docs2/gp-select-linked</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<a href="../../../getting-started/about-documentation.html">Using the Documentation</a>
+<span>Installation</span>
+<a href="../../../getting-started/quick-start.html">Quick Start</a>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="header/header-tools-and-options.html">Header tools and Options</a>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<a style="padding-left:2.5rem" href="../armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/draw.html">Draw Mode</a>
+<a style="padding-left:2.5rem" href="../hair-curves/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../text/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../timeline/header.html">Header</a>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:2.5rem" href="../armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/edit.html">Edit Mode</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="../mesh/edit/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<a style="padding-left:2.5rem" href="../object-mode/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<a class="is-current" style="padding-left:2.5rem" href="sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../compositor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/attribute.html">Attribute</a>
+<a style="padding-left:1.5rem" href="../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<a style="padding-left:2.5rem" href="../grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../mesh/edit/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../object-mode/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<a href="../../image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="header/view-menu.html">View Menu</a>
+<span style="padding-left:2.5rem">More</span>
+<a style="padding-left:2.5rem" href="../grease-pencil/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/filter.html">Filter</a>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:2.5rem" href="../mesh/particle-edit.html">Particle Edit</a>
+<span style="padding-left:1.5rem">Text</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/keying.html">Keying</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<span style="padding-left:1.5rem">Collection</span>
+<a style="padding-left:3.5rem" href="../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/point.html">Point</a>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../../compositor/header/add-menu/utilities.html">Utilities</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/simulation.html">Simulation</a>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../compositor.html">Compositor</a>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<a href="../../geometry-node-editor.html">Geometry Node Editor</a>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<a style="padding-left:1.5rem" href="../../properties/strip-tab.html">Strip</a>
+<a style="padding-left:3.5rem" href="../../geometry-node-editor/header/add-menu/layout.html">Layout</a>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<a href="../../shader-editor.html">Shader Editor</a>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<a href="../../toolbar.html">Toolbar</a>
+<a href="../../outliner.html">Outliner</a>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<a href="../../file-browser.html">File browser</a>
+<a href="../../asset-browser.html">Asset Browser</a>
+<span>Spreadsheet</span>
+<a href="../../preferences.html">Preferences</a>
+<a style="padding-left:1.5rem" href="../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<a href="../../../keymap/important-hotkeys.html">Important Hotkeys</a>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a href="../../../appendix/bforartists-history.html">Bforartists History</a>
+<a href="../../../appendix/manual-update-history.html">Documentation History</a>
+<a href="../../../appendix/gpl-license.html">About the GPL License</a>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › All Modes › Sidebar</div><h1 class="pv-title">Sidebar</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 25 min read</span></div><article class="ui-doc-body"><h2 id="introduction">Introduction</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/introduction.png" alt="Introduction" loading="lazy"></figure>
+<p>The 3D View is made of several areas. At the right side you will find the sidebar.</p>
+<p>In the sidebar you will find tool settings and view related settings. And it is also the home of addons. The Create tab is already created by an add-on. The Mini Lightlib add-on., which is covered in chapter 7.3.13</p>
+<p>The content differs, dependent of the chosen object and the current mode.</p>
+<p>The Tools tab is also a special chapter. It contains the settings for the tools from the tool shelf.</p>
+<h1 id="animation-tab">Animation Tab</h1>
+<h2 id="animation-tab-global-transform-panel">Animation tab - Global Transform Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/animation-tab/animation-tab-global-transform-panel.png" alt="Animation tab - Global Transform Panel" loading="lazy"><figcaption>Animation tab - Global Transform Panel</figcaption></figure>
+<p>Tools that can be useful for animation. Paste a mirrored armature part for example.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy</td>
+<td>Copies the matrix of the current active object or bone to the clipboard. It uses world space matrices.</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Pastes the copied matrix to the current active object or bone from the clipboard. It uses world space matrices.</td>
+</tr>
+<tr>
+<td>Mirrored</td>
+<td>Pastes the copied matrix to the current active object or bone from the clipboard. But mirrored along the global X axis. It uses world space matrices.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="paste-to-selected-keys">Paste to selected keys</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/animation-tab/paste-to-selected-keys.png" alt="Paste to selected keys" loading="lazy"><figcaption>Paste to selected keys</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/animation-tab/paste-to-selected-keys-2.png" alt="Paste to selected keys" loading="lazy"><figcaption>Paste to selected keys</figcaption></figure>
+<p>Requires Auto Keying to be on.</p>
+<p>Pastes the matrix from the clipboard to thecurrent active object or bone. It uses world space matrices.</p>
+<h3 id="paste-and-bake">Paste and Bake</h3>
+<p>Requires Auto Keying to be on.</p>
+<p>Pastes the matrix from the clipboard to thecurrent active object or bone. And bakes it ton an action. It uses world space matrices.</p>
+<h3 id="mirror-subpanel">Mirror Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/animation-tab/mirror-subpanel.png" alt="Mirror Subpanel" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>The object to mirror over. Leave empty and name a bone to always mirror over that bone of the active armature.</td>
+</tr>
+<tr>
+<td>Bone</td>
+<td>Bone to use for the mirroring.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relative-subpanel">Relative Subpanel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/animation-tab/relative-subpanel.png" alt="Relative Subpanel" loading="lazy"></figure>
+<p>The upper global transform copy and paste actions works global. These buttons works relative to a chosen object.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>The object to paste relative to its matrix.</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Copies the matrix of the current active object or bone to the clipboard. It uses the relative matrix from the defined object.</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Pastes the copied matrix to the current active object or bone from the clipboard. It uses the relative matrix from the defined object.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fix-to-camera-subpanel">Fix to Camera subpanel</h3>
+<h4 id="fix-location-rotation-scale">Fix Location / Rotation / Scale</h4>
+<p>Include location /rotation /scale keys when fixing to the scene camera.</p>
+<h4 id="fix-to-scene-camera">Fix to Scene Camera</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/animation-tab/fix-to-scene-camera.png" alt="Fix to Scene Camera" loading="lazy"><figcaption>Fix to Scene Camera</figcaption></figure>
+<p>The actual fixing. Generate new keys to fix the selected object / bone to the camera on unkeyed frames.</p>
+<h5 id="adjust-last-operator-fix-to-scene-camera">Adjust last operator Fix to Scene Camera</h5>
+<h5 id="location-rotation-scale">Location / Rotation / Scale</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/animation-tab/location-rotation-scale.png" alt="Location / Rotation / Scale" loading="lazy"><figcaption>Location / Rotation / Scale</figcaption></figure>
+<p>Include location /rotation /scale keys when fixing to the scene camera.</p>
+<h4 id="delete-generated-keys">Delete generated keys</h4>
+<p>Delete the keys that were generated by the Fix to Scene Camera tool.</p>
+<h1 id="item-tab">Item tab</h1>
+<h2 id="item-tab-transform-panel">Item tab - Transform Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/item-tab-transform-panel.png" alt="Item tab - Transform Panel" loading="lazy"><figcaption>Item tab - Transform Panel</figcaption></figure>
+<p>When you add an object to the scene then the Item tab with the Transform panel becomes visible. The content changes, dependent of the object type. And it changes with the mode.</p>
+<p>In general you will most of the time see the same content though. Location, Rotation, Scale and Dimension.</p>
+<h3 id="animate-property">Animate Property</h3>
+<p>The properties with a dot button behind can be animated.</p>
+<p>Note that you can, different from Blender, animate multiple objects at once this way.</p>
+<h3 id="keyframe-and-driver-coloring">Keyframe and Driver coloring</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/keyframe-and-driver-coloring.png" alt="Keyframe and Driver coloring" loading="lazy"><figcaption>Keyframe and Driver coloring</figcaption></figure>
+<p>When a keyframe exists at the current position, then the corresponding edit box turns yellow. When a driver exists at the current position, then the corresponding edit box turns purple.</p>
+<p>Note that you can have either a driver or a keyframe. Both is not possible.</p>
+<h3 id="location">Location</h3>
+<p>The current location of the object in its X, X and Z axis. The lock button behind the edit boxes allows you to lock the values.</p>
+<h3 id="rotation">Rotation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/rotation.png" alt="Rotation" loading="lazy"></figure>
+<p>The current rotation of the object in its X, X and Z axis in world coordinates. The lock button behind the edit boxes allows you to lock the values.</p>
+<h4 id="rotation-mode">Rotation Mode</h4>
+<p>Adjust what method gets used for the rotation. Euler rotation can run into a so called Gimbal lock, which can be avoided with quaternion rotation mode. But for most cases the default XYZ Euler method should work.</p>
+<h5 id="quaternion">Quaternion</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/quaternion.png" alt="Quaternion" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/quaternion-2.png" alt="Quaternion" loading="lazy"></figure>
+<p>With euler angles you will have three values available. But with a quaternion you will have four values available. And quaternions reveals a 4L button. This button shows or hides a lock behind the W value. Normally a quaternion has just three locks, one for each of the single axis. The W value is a mathematical construct from the three object axis. And you usually neither want to edit it nor to lock it therefore.</p>
+<p>Locking the W axis will lock all axis.</p>
+<h3 id="scale">Scale</h3>
+<p>The current scale of the object in its X, X and Z axis in world coordinates. The lock button behind the edit boxes allows you to lock the values.</p>
+<p>Scale is not dimensions. Your object can have a scale of 1 in world coordinates. But a dimension of 4.5. Note that for some operations it is required to have a scale of 1 to get some operations to work. This can be achieved with applying scale in the Object menu.</p>
+<h3 id="dimensions">Dimensions</h3>
+<p>The current dimension of the object in its X, X and Z axis in world coordinates. The lock button behind the edit boxes allows you to lock the values.</p>
+<p>The Dimensions edit boxes are just available for primitives objects. Objects like Empties or a Camera doesn't have a dimension, but a scale factor.</p>
+<h3 id="right-click-menu">Right Click menu</h3>
+<p>Location, Rotation and Scale edit boxes and the locks have a right click menu with further functionality.</p>
+<p>When there is already a keyframe available then the right click menu looks a bit different. Same counts for adding a driver first.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/right-click-menu.png" alt="Right Click menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/right-click-menu-2.png" alt="Right Click menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/right-click-menu-3.png" alt="Right Click menu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insert Keyframe</td>
+<td>Inserts a keyframe at the current position. The keyframe type depends of where you right click. Insert Keyframe adds a keyframe for all axis.</td>
+</tr>
+<tr>
+<td>Insert Single Keyframe</td>
+<td>Inserts a keyframe at the current position. The keyframe type depends of where you right click. Insert Single Keyframe adds a keyframe for just the current axis.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="add-driver">Add Driver</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/add-driver.png" alt="Add Driver" loading="lazy"></figure>
+<p>In Bforartists lots of things can be animated. Also buttons. Add Driver does exactly what it tells. It adds a driver for animation needs to the element. Drivers allows to control animation by properties like expressions, scripts or movements of other objects. Drivers are explained in the chapter 18 Editors - Drivers.</p>
+<p>When you click the button the Driven Property panel will appear where you can change the properties for this driver. You don't need to confirm the driver creation. It is just further settings.</p>
+<h5 id="driver-settings">Driver Settings</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>The Driver type. There are two categories of drivers. Built-in and Custom · <strong>Built-in functions (Average, Sum, Min and Max)</strong>: The driven property will have the value of the average, sum, lowest or highest (respectively) of the values of the referenced Driver Variables. If there is only one driver variable, these functions will yield the same result. · <strong>Custom (Scripted Expression)</strong>: An arbitrary Python expression that can refer to the Driver Variables by name.</td>
+</tr>
+<tr>
+<td>Driver Value</td>
+<td>The current result of the driver setup.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="expression">Expression</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expression edit box</td>
+<td>Add a custom expression. An Expression to use for scripted expression. The expression has access to a set of standard constants and math functions provided in the Driver Name space. For an example of adding a custom function to the name space. When the expression is invalid then you get an error message. This error message appears also with the default values. Just ignore.</td>
+</tr>
+<tr>
+<td>Use Self</td>
+<td>The variable self can be used for drivers to reference their own data. This is useful for objects and bones to avoid having creating a Driver Variable pointing to itself. Example: self.location.x applied to the Y rotation property of the same object will make the object tumble when moving. Note that dependencies for properties accessed via self may not be fully tracked.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="driver-variables">Driver Variables</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/driver-variables.png" alt="Driver Variables" loading="lazy"></figure>
+<p>Driver Variables are references to properties, transformation channels, or the result of a comparison between transformations of two objects. It is displayed by a panel with all necessary settings, which gets filled in automatically when you create the driver.</p>
+<h5 id="add-input-variable">Add Input variable</h5>
+<p>Add manually a new driver variable.</p>
+<p>Picker should allow you to pick a target object. But this is dysfunctional here since the panel closes immediately when you move the mouse out of it. Please use the picker in the Driver Editor.</p>
+<p>Copy and Paste buttons allows you to copy and paste Driver variable panels.</p>
+<h5 id="driver-variable-panel">Driver Variable panel</h5>
+<p><strong>Variable type</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/variable-type.png" alt="Variable type" loading="lazy"></figure>
+<p>The content of the Driver variable panel changes, dependent of the variable type that you choose here. We came from the transform panel, so our default type here is transform channel. That's what we will explain here.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>Our object type.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>The type of the driver.</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>The transform space in which the transform should happen.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>The resulting value of the driver.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Update Dependencies</td>
+<td>Update all dependencies.</td>
+</tr>
+<tr>
+<td>Show in Drivers Editor</td>
+<td>Opens the Drivers editor in a floating window. The drivers editor is explained in the chapter 18 Editors - Drivers.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="open-drivers-editor">Open Drivers Editor</h5>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/open-drivers-editor.png" alt="Open Drivers Editor" loading="lazy"></figure>
+<p>Opens the Drivers editor in a floating window. The drivers editor is explained in the chapter 18 Editors - Drivers.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add All to Keying Set</td>
+<td>Add All to Keying Set adds the information of the element to the current keyframe.</td>
+</tr>
+<tr>
+<td>Add single to Keying Set</td>
+<td>Add to Keying Set adds the information of the element to the current keyframe.</td>
+</tr>
+<tr>
+<td>Remove from Keying Set</td>
+<td>Remove from Keying Set removes the information of the element from the current keyframe. · <strong>Reset All to Default Value</strong>: Resets the X Y and Z values to the default value. · <strong>Reset Single to Default Value</strong>: Resets the value for the single edit box under the mouse to the default value.</td>
+</tr>
+<tr>
+<td>Copy All to Selected</td>
+<td>Allows to copy the current rotation of all axis to another object. Workflow. Select target object, hold down shift, select source object, and use Copy All to Selected.</td>
+</tr>
+<tr>
+<td>Copy Single to Selected</td>
+<td>Allows to copy the current rotation of the single selected axis to another object. Workflow. Select target object, hold down shift, select source object, and use Copy All to Selected.</td>
+</tr>
+<tr>
+<td>Copy Data Path</td>
+<td>Copy Data Path copies the RNA data path for this property.</td>
+</tr>
+<tr>
+<td>Copy Full Data Path</td>
+<td>Copy Data Path copies the RNA data path for this property.</td>
+</tr>
+<tr>
+<td>Copy as new Driver</td>
+<td>Copies the current value as a new driver.</td>
+</tr>
+<tr>
+<td>Assign Shortcut</td>
+<td>This is just for the locks. Here you could assign a shortcut.</td>
+</tr>
+<tr>
+<td>Online Python Reference</td>
+<td>Developer feature. Open the Blender Python Reference.</td>
+</tr>
+<tr>
+<td>Edit Source</td>
+<td>Developer feature. When you have a text editor open in the current layout then you can call the UI script that contains this menu item.</td>
+</tr>
+<tr>
+<td>Replace Keyframes</td>
+<td>Replaces the keyframes in all axis at the current position.</td>
+</tr>
+<tr>
+<td>Replace single Keyframe</td>
+<td>Replaces the keyframe in the currently selected axis at the current position.</td>
+</tr>
+<tr>
+<td>Delete Keyframes</td>
+<td>Deletes the keyframes in all axis at the current position.</td>
+</tr>
+<tr>
+<td>Delete Single Keyframe</td>
+<td>Deletes the keyframe in the currently selected axis at the current position.</td>
+</tr>
+<tr>
+<td>Clear Keyframes</td>
+<td>Deletes all keyframes for all axis.</td>
+</tr>
+<tr>
+<td>Clear single Keyframe</td>
+<td>Deletes all keyframes for the currently selected axis.</td>
+</tr>
+<tr>
+<td>Delete Drivers</td>
+<td>Deletes the drivers for all axis.</td>
+</tr>
+<tr>
+<td>Delete Single Driver</td>
+<td>Deletes the drivers for just the current axis.</td>
+</tr>
+<tr>
+<td>Copy Driver</td>
+<td>Copies the driver.</td>
+</tr>
+<tr>
+<td>Edit Driver</td>
+<td>Opens the Driven Property panel where you can change the settings for this driver.</td>
+</tr>
+<tr>
+<td>Reset Panel Zoom</td>
+<td>Resets the panel to 100% zoom factor.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="item-tab-transform-panel-in-edit-mode">Item tab - Transform Panel in Edit Mode</h2>
+<p>Just primitive objects like mesh and curve does have an edit mode. Non primitive objects like a camera or an empty doesn't have an edit mode. With two exceptions. Text and Force Field type Curve Guide. Both are curve types.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/item-tab-transform-panel-in-edit-mode.png" alt="Item tab - Transform Panel in Edit Mode" loading="lazy"><figcaption>Item tab - Transform Panel in Edit Mode</figcaption></figure>
+<h3 id="dimensions-2">Dimensions</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/dimensions-edit-mode.png" alt="Dimensions in Edit Mode" loading="lazy"><figcaption>Dimensions in Edit Mode</figcaption></figure>
+<p>Below the Median you now also see <strong>Dimensions X / Y / Z</strong>: how big your selection is along each axis. Type a new value to scale the selection to that size. It scales around your current pivot point.</p>
+<ul>
+<li>Works in Edit Mode for meshes, curves, surfaces, lattices, the new curves objects and Grease Pencil.</li>
+<li>Needs at least two points selected. With a single point there's no size, so Dimensions is hidden.</li>
+<li>Follows the <strong>Global / Local</strong> toggle, just like the Median.</li>
+</ul>
+<h3 id="mesh-objects">Mesh Objects</h3>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Median</td>
+<td>Median is the position of the selected mesh part.</td>
+</tr>
+<tr>
+<td>Dimensions</td>
+<td>The size of the selection along X, Y and Z. Type a value to scale the selection to that size, around the pivot point.</td>
+</tr>
+<tr>
+<td>Global / Local</td>
+<td>Define if the orientation of the selection is local to the selected object, or global to the world coordinates.</td>
+</tr>
+<tr>
+<td>Vertices Data</td>
+<td><strong>Mean Bevel Weight</strong>: Adjust the bevel weight for the selected vertices when you have a bevel modifier at the mesh.</td>
+</tr>
+<tr>
+<td>Edges Data</td>
+<td><strong>Mean Bevel Weight</strong>: Adjust the bevel weight for the selected edges when you have a bevel modifier at the mesh. · <strong>Mean Crease</strong>: Adjust the weight of the selected vertices when you have a subdivision surface modifier at the mesh.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="curve-objects-surface-objects">Curve Objects / Surface Objects</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/curve-objects-surface-objects.png" alt="Curve Objects / Surface Objects" loading="lazy"><figcaption>Curve Objects / Surface Objects</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Median</td>
+<td>Median is the position of the selected mesh part</td>
+</tr>
+<tr>
+<td>Dimensions</td>
+<td>The size of the selection along X, Y and Z. Type a value to scale the selection to that size, around the pivot point.</td>
+</tr>
+<tr>
+<td>Global / Local</td>
+<td>Define if the orientation of the selection is local to the selected object, or global to the world coordinates.</td>
+</tr>
+<tr>
+<td>Mean Weight</td>
+<td>Adjust the weight used by softbody. Needs softbody.</td>
+</tr>
+<tr>
+<td>Mean Radius</td>
+<td>Adjust the radius of the curve control points</td>
+</tr>
+<tr>
+<td>Mean Tilt</td>
+<td>Adjust the tilt of the curve control points.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="metaball-objects">Metaball Objects</h4>
+<h5 id="median">Median</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/median.png" alt="Median" loading="lazy"></figure>
+<p>Median is the position of the selected mesh part</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global / Local</td>
+<td>Define if the orientation of the selection is local to the selected object, or global to the world coordinates.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>Adjust the radius of the selected meta element.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="stiffness">Stiffness</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/stiffness.png" alt="Stiffness" loading="lazy"></figure>
+<p>Adjust the stiffness of the selected meta element.</p>
+<h5 id="type">Type</h5>
+<p>Type is a drop down box. Adjust the meta element type.</p>
+<h3 id="text-objects">Text Objects</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/text-objects.jpg" alt="Text Objects" loading="lazy"></figure>
+<p>Text objects do have an edit mode, but they don't show content in the Transform panel.</p>
+<h3 id="armature-objects-edit-mode">Armature objects Edit Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/armature-objects-edit-mode.png" alt="Armature objects Edit Mode" loading="lazy"><figcaption>Armature objects Edit Mode</figcaption></figure>
+<p>Bones do have a head and a tail. You cannot position the whole bone by numeric values, but the head and tail joints.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Head</td>
+<td>Adjust the world position of the head joint in x, y and z coordinates. · <strong>Radius</strong>: This is just useful when you use Envelopes type bones. Adjust the Envelope radius of the head joint.</td>
+</tr>
+<tr>
+<td>Tail</td>
+<td>Adjust the world position of the tail joint in x, y and z coordinates. · <strong>Radius</strong>: This is just useful when you use Envelopes type bones. Adjust the Envelope radius of the tail joint.</td>
+</tr>
+<tr>
+<td>Roll</td>
+<td>Adjust the bone roll. · <strong>Length</strong>: Adjust the length of the bone. · <strong>Envelope</strong>: This is just useful when you use Envelopes type bones. Adjust the overall Envelope size. · <strong>Lock</strong>: Lock the transform of the bones in edit mode. The bones cannot be moved, rotated or scaled.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lattice-objects">Lattice Objects</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/lattice-objects.png" alt="Lattice Objects" loading="lazy"></figure>
+<p>You need to have some vertices of the Lattice object selected to see the content.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vertex</td>
+<td>See and set the vertex positions of the lattice objects.</td>
+</tr>
+<tr>
+<td>Global / Local</td>
+<td>Define if the orientation of the selection is local to the selected object, or global to the world coordinates.</td>
+</tr>
+<tr>
+<td>Mean Weight</td>
+<td>Lattice object is a deform cage. Adjust the mean weight of the selected vertice(s).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="item-tab-transform-panel-in-pose-mode">Item tab - Transform Panel in Pose Mode</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/item-tab-transform-panel-in-pose-mode.png" alt="Item tab - Transform Panel in Pose Mode" loading="lazy"><figcaption>Item tab - Transform Panel in Pose Mode</figcaption></figure>
+<h3 id="armature-objects-in-pose-mode">Armature Objects in Pose Mode</h3>
+<p>The content in Pose mode is the same than in Object mode. We have Location, Rotation and Scale Edit Boxes. And the corresponding lock and animate buttons.</p>
+<p>With one small difference. The rotation mode starts with Quaternions by default. And not with Euler Angles.</p>
+<h2 id="item-tab-mesh-object-vertex-weights-panel">Item tab - Mesh Object - Vertex Weights Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/item-tab-mesh-object-vertex-weights-panel.png" alt="Item tab - Mesh Object - Vertex Weights Panel" loading="lazy"><figcaption>Item tab - Mesh Object - Vertex Weights Panel</figcaption></figure>
+<p>The Vertex Weights panel shows in Edit and Weight Paint mode, when you have vertices selected, and the selected vertice(s) has a weight assigned.</p>
+<p>It allows you to modify the weight of this selected vertice(s).</p>
+<p>In Weight paint mode you need to be in vertex selection mode and have a vertice selected. It will not show with face select mode. To select a vertice in weight paint mode hold down ctrl and click.</p>
+<p>In Edit Mode you can select more than one vertices. In Weight Paint Mode just one vertice at a time.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filter Vertex Groups</td>
+<td>The first row is a setting. You can filter by all, only vertex groups that are assinged to deform bones. Or vertex groups that are assigned to non deform bones.</td>
+</tr>
+<tr>
+<td>Group</td>
+<td>Set as active Vertex Group. · <strong>Weight</strong>: The weight of the selected vertice(s). The range goes from 0 to 1. · <strong>Paste Weight to Selected</strong>: Copy this group's weight to other selected vertices. · <strong>Delete Weight</strong>: Deletes the weight for this selected vertice(s).</td>
+</tr>
+<tr>
+<td>Normalize</td>
+<td>Normalizes the weight of the selected vertice(s).</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Copy active vertex to other selected vertices.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="item-tab-curve-object-active-spline-panel">Item tab - Curve Object - Active Spline Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/item-tab-curve-object-active-spline-panel.png" alt="Item tab - Curve Object - Active Spline Panel" loading="lazy"><figcaption>Item tab - Curve Object - Active Spline Panel</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cyclic</td>
+<td>Make this curve or surface a closed loop in the U direction.</td>
+</tr>
+<tr>
+<td>Resolution U</td>
+<td>Subdivisions per segments.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interpolation-tilt">Interpolation Tilt</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/interpolation-tilt.png" alt="Interpolation Tilt" loading="lazy"></figure>
+<p>The tilt interpolation type.</p>
+<h3 id="radius">Radius</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/interpolation-tilt.png" alt="Radius" loading="lazy"></figure>
+<p>The radius interpolation type.</p>
+<h3 id="smooth">Smooth</h3>
+<p>Smooth the normals of the surface or a beveled curve.</p>
+<h2 id="item-tab-surface-object-active-spline-panel">Item tab - Surface Object - Active Spline Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/item-tab-surface-object-active-spline-panel.png" alt="Item tab - Surface Object - Active Spline Panel" loading="lazy"><figcaption>Item tab - Surface Object - Active Spline Panel</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cyclic U / V</td>
+<td>Make this curve or surface a closed loop in the U or V direction.</td>
+</tr>
+<tr>
+<td>Bezier U / V</td>
+<td>Make this curve or surface act like a Bezier curve in the U or V direction.</td>
+</tr>
+<tr>
+<td>Endpoint U / V</td>
+<td>Make this nurbs or surface meet the endpoints in the U or V direction.</td>
+</tr>
+<tr>
+<td>Order U / V</td>
+<td>Nurbs Order in the U or V direction.</td>
+</tr>
+<tr>
+<td>Resolution U / V</td>
+<td>The subdivision per segment.</td>
+</tr>
+<tr>
+<td>Smooth</td>
+<td>Smooth the normals of the surface or a beveled curve.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="item-tab-grease-pencil-object-active-spline-panel">Item tab - Grease Pencil Object - Active Spline Panel</h2>
+<h3 id="cyclic">Cyclic</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/item-tab/cyclic.png" alt="Cyclic" loading="lazy"></figure>
+<p>Make this curve or surface a closed loop in the U direction.</p>
+<h1 id="view-tab">View Tab</h1>
+<h2 id="view-tab-2">View tab</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/view-tab.png" alt="View tab" loading="lazy"></figure>
+<p>The View tab contains viewport related settings.</p>
+<p>The content is in all modes and for all object types the same.</p>
+<h2 id="view-tab-view-panel">View tab - View Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/view-tab-view-panel.png" alt="View tab - View Panel" loading="lazy"><figcaption>View tab - View Panel</figcaption></figure>
+<p>The View panel contains some camera settings for the world camera and the render camera.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Focal Length</td>
+<td>Set up the focal length for the world camera. You need to be in perspectivic view. In Orthographic view the lens values doesn't have an effect.</td>
+</tr>
+<tr>
+<td>Clip Near / Clip Far</td>
+<td>Set up the clipping values for the world camera. Geometry behind the end value and before the start value will not be drawn.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="use-local-camera">Use Local Camera</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/use-local-camera.png" alt="Use Local Camera" loading="lazy"></figure>
+<p>Normally when you render an image it gets rendered from the currently active camera. Define a custom camera that is always used for rendering. Regardless which camera is the active one.</p>
+<h3 id="passepartout">Passepartout</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/passepartout.png" alt="Passepartout" loading="lazy"></figure>
+<p>Toggles and shows all camera passepartout overlays.</p>
+<h3 id="use-render-region">Use Render Region</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/use-render-region.png" alt="Use Render Region" loading="lazy"></figure>
+<p>When you have defined a render region rectangle, then you can toggle it on and off with this switch. See View menu in the 3d view header, the render region menu item.</p>
+<h3 id="camera-lock">Camera Lock</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/camera-lock.png" alt="Camera Lock" loading="lazy"></figure>
+<p>Camera Lock is a sub tab with camera related settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lock to Object</td>
+<td>Locks the view of the world camera to an object. Choose an object for it.</td>
+</tr>
+<tr>
+<td>Lock to 3D Cursor</td>
+<td>Locks the view of the world camera to the 3D cursor. You can either lock to an object or to the 3d cursor. When you choose an object then the checkbox for the 3d cursor vanishes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lock-camera-to-view">Lock Camera to view</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/lock-camera-to-view.png" alt="Lock Camera to view" loading="lazy"><figcaption>Lock Camera to view</figcaption></figure>
+<p>This menu item allows you to navigate in camera view like you would be in world view. When it is unticked then you can navigate the passepartout, you can zoom and move it. And when you rotate the view, then you will leave the camera mode.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/lock-camera-to-view-2.png" alt="Lock Camera to view" loading="lazy"><figcaption>Lock Camera to view</figcaption></figure>
+<p>Note that this functionality also exists in the header when you are in camera view. This double menu entry exists by design.</p>
+<h4 id="lock-view-rotation">Lock View Rotation</h4>
+<p>Locks the camera rotation, you cannot rotate the camera anymore. A use case is the 2D Animation workspace, where you can easily accidentally rotate the orthographic view out of position.</p>
+<h2 id="view-tab-edit-panel">View tab - Edit Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/view-tab-edit-panel.png" alt="View tab - Edit Panel" loading="lazy"><figcaption>View tab - Edit Panel</figcaption></figure>
+<h3 id="lock-object-modes">Lock Object Modes</h3>
+<p>Restrict selection to content that is in the same mode than the current element.</p>
+<h2 id="view-tab-3d-cursor-panel">View Tab - 3D Cursor Panel</h2>
+<h3 id="location-2">Location</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/location.png" alt="Location" loading="lazy"></figure>
+<p>The position of the 3D cursor in world coordinates.</p>
+<h3 id="rotation-2">Rotation</h3>
+<p>The rotation of the 3D cursor in world coordinates.</p>
+<h4 id="right-click-menu-2">Right Click menu</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/right-click-menu.png" alt="Right Click menu" loading="lazy"></figure>
+<p>When you right click at the edit boxes then a menu with further functionality appears.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset All to Default Value</td>
+<td>Resets the X Y and Z values to the default value.</td>
+</tr>
+<tr>
+<td>Reset Single to Default Value</td>
+<td>Resets the value for the single edit box under the mouse to the default value.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy All to Selected</td>
+<td>Allows to copy the current rotation of all axis to another object. Workflow. Select target object, hold down shift, select source object, and use Copy All to Selected.</td>
+</tr>
+<tr>
+<td>Copy Single to Selected</td>
+<td>Allows to copy the current rotation of the single selected axis to another object. Workflow. Select target object, hold down shift, select source object, and use Copy All to Selected.</td>
+</tr>
+<tr>
+<td>Copy Data Path</td>
+<td>Copy Data Path copies the RNA data path for this property.</td>
+</tr>
+<tr>
+<td>Copy as new Driver</td>
+<td>Copies the current value as a new driver.</td>
+</tr>
+<tr>
+<td>Online Python Reference</td>
+<td>Developer feature. Open the Blender Python Reference.</td>
+</tr>
+<tr>
+<td>Edit Source</td>
+<td>Developer feature. When you have a text editor open in the current layout then you can call the UI script that contains this menu item.</td>
+</tr>
+<tr>
+<td>Reset Panel Zoom</td>
+<td>Resets the zoom level of the sidebar. You can zoom it with holding Ctrl and dragging MMB.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="view-tab-collections-panel">View tab - Collections Panel</h2>
+<h3 id="local-collections">Local Collections</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/local-collections.png" alt="Local Collections" loading="lazy"></figure>
+<p>Allows the list of visible collections to be controlled per viewport rather than globally.</p>
+<h3 id="list-of-collections">List of Collections</h3>
+<p>The Collections panel shows a list of collections. They can be hidden in the viewport by clicking on the eye icon.</p>
+<p>If a collection contains objects, there is a circle to the left of the collection name. If a collection is empty, there is no circle to the left of the collection name.</p>
+<p>By clicking directly on the collection names, it “isolates” the collection by hiding all other collections, and showing the direct parents and all the children of the selected collection.</p>
+<h2 id="view-tab-annotations-panel">View tab - Annotations Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/view-tab-annotations-panel.png" alt="View tab - Annotations Panel" loading="lazy"><figcaption>View tab - Annotations Panel</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/view-tab-annotations-panel-2.png" alt="View tab - Annotations Panel" loading="lazy"><figcaption>View tab - Annotations Panel</figcaption></figure>
+<p>Manage the Annotation layers and materials.</p>
+<p>When you don't have drawn an annotation yet then the panel just contains a New button.</p>
+<h3 id="annotations-prop">Annotations prop</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/tool-shelf/object-mode/annotations-list.png" alt="Annotations prop" loading="lazy"></figure>
+<p>Add, remove and rename new annotations.</p>
+<h4 id="drop-down-box">Drop down box</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/drop-down-box.png" alt="Drop down box" loading="lazy"></figure>
+<p>A list of the available annotation layers.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edit Box</td>
+<td>The name of the current annotation. You can rename the annotation to your needs here.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Assign a fake user to this annotation. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-of-annotation-strokes">List of Annotation Strokes</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/list-of-annotation-strokes.png" alt="List of Annotation Strokes" loading="lazy"><figcaption>List of Annotation Strokes</figcaption></figure>
+<p>Here you see your Annotation layers for the current Annotation. Every layer can have an own color.</p>
+<p>At the right side you find buttons to sort them and to add and remove new Annotation layers.</p>
+<p>You can change the color by clicking at the color field. A color dialog will pop up. You can rename annotation layers by double clicking at it.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In Front</td>
+<td>Toggle if the stroke is displayed in front of geometry or behind.</td>
+</tr>
+<tr>
+<td>Eye icon</td>
+<td>The eye icon allows you to make it invisible And it has a search field.</td>
+</tr>
+<tr>
+<td>Add Annotation</td>
+<td>Add a new annotation.</td>
+</tr>
+<tr>
+<td>Delete Annotation</td>
+<td>Delete the annotation.</td>
+</tr>
+<tr>
+<td>Move up / Down</td>
+<td>Move the selected annotation up or down in the list</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opacity</td>
+<td>The opacity of the stroke.</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>The thickness of the annotation stroke.</td>
+</tr>
+<tr>
+<td>Frame Locked/Unlocked</td>
+<td>Lock frame displayed by current layer. This toggles whether the active layer is the only one that can be edited.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="onion-skin">Onion Skin</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/onion-skin.png" alt="Onion Skin" loading="lazy"></figure>
+<p>Enable Onion Skinning.</p>
+<p>Onion Skinning allows to show ghosts of the keyframes before and after the current frame. In this sub panel you can adjust the color of the onion skin frames.</p>
+<p>With the numbers below the colors you can define how many frames before or after are displayed that way.</p>
+<h2 id="view-tab-stereoscopy-panel">View tab - Stereoscopy Panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/view-tab-stereoscopy-panel.png" alt="View tab - Stereoscopy Panel" loading="lazy"><figcaption>View tab - Stereoscopy Panel</figcaption></figure>
+<p>This panel shows when you have Stereoscopy enabled in the Output Properties of the Properties editor. Some content depends of the Stereoscopy settings.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/view-tab-stereoscopy-panel-2.png" alt="View tab - Stereoscopy Panel" loading="lazy"><figcaption>View tab - Stereoscopy Panel</figcaption></figure>
+<h3 id="left-right-3d">Left / Right / 3D</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/left-right-3d.png" alt="Left / Right / 3D" loading="lazy"><figcaption>Left / Right / 3D</figcaption></figure>
+<p>With Stereoscopy setting Stereo 3D.</p>
+<p>Show the image in the 3d view from the left or right camera, or from both.</p>
+<h3 id="views-3d">Views / 3D</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/views-3d.png" alt="Views / 3D" loading="lazy"></figure>
+<p>With Stereoscopy setting Multi-View.</p>
+<p>Show the image in the 3d view from the single cameras, or from both.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cameras</td>
+<td>With Stereoscopy setting Stereo 3D. Show the left and right cameras.</td>
+</tr>
+<tr>
+<td>Plane</td>
+<td>Show the convergence plane. · <strong>Alpha</strong>: The transparency of the convergence plane.</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>Show the stereoscopy volume. · <strong>Alpha</strong>: The transparency of the stereoscopy volume.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set-stereo-3d">Set Stereo 3D</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/set-stereo-3d.png" alt="Set Stereo 3D" loading="lazy"></figure>
+<p>Calls a panel where you can adjust the stereoscopy display in the 3D view to preview the result.</p>
+<p>This settings does not affect the output, just how the result gets displayed in the viewport!</p>
+<h4 id="display-mode">Display Mode</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/display-mode.png" alt="Display Mode" loading="lazy"></figure>
+<p>How to display the stereoscopic image when viewing through the camera. This is the preview mode. You need a special monitor for some of the methods. There are five methods available.</p>
+<h4 id="display-mode-type-anaglyph">Display Mode Type Anaglyph</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/set-stereo-3d.png" alt="Display Mode Type Anaglyph" loading="lazy"><figcaption>Display Mode Type Anaglyph</figcaption></figure>
+<p>Render Views for left and right eyes as two differently filtered colors in a single image. You need anaglyph glasses to see the 3d effect.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/display-mode-type-anaglyph.png" alt="Display Mode Type Anaglyph" loading="lazy"><figcaption>Display Mode Type Anaglyph</figcaption></figure>
+<h5 id="anaglyph-type">Anaglyph Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/anaglyph-type.png" alt="Anaglyph Type" loading="lazy"></figure>
+<p>The color model to display the graphics.</p>
+<h4 id="display-mode-type-interlace">Display Mode Type Interlace</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/display-mode-type-interlace.png" alt="Display Mode Type Interlace" loading="lazy"><figcaption>Display Mode Type Interlace</figcaption></figure>
+<p>Render Views from left and right eyes interlaced into a single image. You need a 3D Ready monitor to see the stereo effect.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/display-mode-type-interlace-2.png" alt="Display Mode Type Interlace" loading="lazy"><figcaption>Display Mode Type Interlace</figcaption></figure>
+<h5 id="interlace-type">Interlace Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/interlace-type.png" alt="Interlace Type" loading="lazy"></figure>
+<p>The interlace type that you can choose.</p>
+<h5 id="swap-left-right">Swap Left/Right</h5>
+<p>Swaps left and right camera view.</p>
+<h4 id="display-mode-type-time-sequential">Display Mode Type Time Sequential</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/display-mode-type-time-sequential.png" alt="Display Mode Type Time Sequential" loading="lazy"><figcaption>Display Mode Type Time Sequential</figcaption></figure>
+<p>Render alternate eyes. Also known as page flip. Needs a graphics card that supports quad buffer.</p>
+<h4 id="display-mode-type-side-by-side">Display Mode Type Side by Side</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/display-mode-type-side-by-side.png" alt="Display Mode Type Side by Side" loading="lazy"><figcaption>Display Mode Type Side by Side</figcaption></figure>
+<p>Displays images of the two cameras side by side. You need to go into Window Full screen to see the effect.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/display-mode-type-side-by-side-2.png" alt="Display Mode Type Side by Side" loading="lazy"><figcaption>Display Mode Type Side by Side</figcaption></figure>
+<p>Don't use the full screen. feature in the View menu of the 3D view, but the Window toggle full screen. in the Window menu!</p>
+<div class="ui-doc-callout is-warning"><p><strong>Warning:</strong> the menus becomes nearly unreadable then. The whole UI gets distorted by splitting the main window of Bforartists into two views. You might want to assign a shortcut here before trying.</p></div>
+<h5 id="cross-eyed">Cross Eyed</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/cross-eyed.png" alt="Cross Eyed" loading="lazy"></figure>
+<p>Swaps left and right camera view.</p>
+<h4 id="display-mode-type-top-bottom">Display Mode Type Top Bottom</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/display-mode-type-side-by-side.png" alt="Display Mode Type Top Bottom" loading="lazy"><figcaption>Display Mode Type Top Bottom</figcaption></figure>
+<p>Displays images of the two cameras top and bottom. You need to go into Window Full screen to see the effect.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/display-mode-type-side-by-side-2.png" alt="Display Mode Type Top Bottom" loading="lazy"><figcaption>Display Mode Type Top Bottom</figcaption></figure>
+<p>Don't use the full screen. feature in the View menu of the 3D view, but the Window toggle full screen. in the Window menu!</p>
+<div class="ui-doc-callout is-warning"><p><strong>Warning:</strong> the menus becomes nearly unreadable then. The whole UI gets distorted by splitting the main window of Bforartists into two views. You might want to assign a shortcut here before trying.</p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/display-mode-type-top-bottom.png" alt="Display Mode Type Top Bottom" loading="lazy"><figcaption>Display Mode Type Top Bottom</figcaption></figure>
+<h2 id="view-tab-quad-view-panel">View tab - Quad View panel</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/view-tab-quad-view-panel.png" alt="View tab - Quad View panel" loading="lazy"><figcaption>View tab - Quad View panel</figcaption></figure>
+<p>This panel just shows when you are in quad view. Toggle Quad View can be found in the View menu.</p>
+<h3 id="lock-rotation">Lock rotation</h3>
+<p>Quad view has four windows. Three of them can be locked to the orthographic views.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/lock-rotation.png" alt="Lock rotation" loading="lazy"></figure>
+<p>Turning off Lock Rotation reveals the quick navigation buttons Switch to Camera View and Switch between Perspectivic and Orthographic display.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sync Zoom Pan</td>
+<td>In the three orthographic views you can either zoom and pan individually. Or you zoom and pan them in sync.</td>
+</tr>
+<tr>
+<td>Clip Contents</td>
+<td>Clip objects based on what is visible in the other orthographic side views. The perspectivic view is not affected.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="view-tab-important-hotkeys">View tab - Important Hotkeys</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/view-tab-important-hotkeys.png" alt="View tab - Important Hotkeys" loading="lazy"><figcaption>View tab - Important Hotkeys</figcaption></figure>
+<p>This panel is an addon called Important Hotkeys, and can be turned off in the Preferences.</p>
+<p>It displays the most important hotkeys in the viewport.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show Text</td>
+<td>Show or hide the text in the viewport.</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>Define what color the text should have. Default is white.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="font-size">Font Size</h3>
+<p>The size of the font.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f4214d26bdee54af6051998ea01aa8e52eb0c070/docs2/images/editors/3d-viewport/sidebar/view-tab/font-size.png" alt="Font Size" loading="lazy"></figure>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fgp-select-linked/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fall-modes%2Fsidebar.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/gp-select-linked/docs2/content/editors/3d-viewport/all-modes/sidebar.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#introduction">Introduction</a><a class="h2" href="#animation-tab-global-transform-panel">Animation tab - Global Transform Panel</a><a class="h3" href="#paste-to-selected-keys">Paste to selected keys</a><a class="h3" href="#paste-and-bake">Paste and Bake</a><a class="h3" href="#mirror-subpanel">Mirror Subpanel</a><a class="h3" href="#relative-subpanel">Relative Subpanel</a><a class="h3" href="#fix-to-camera-subpanel">Fix to Camera subpanel</a><a class="h2" href="#item-tab-transform-panel">Item tab - Transform Panel</a><a class="h3" href="#animate-property">Animate Property</a><a class="h3" href="#keyframe-and-driver-coloring">Keyframe and Driver coloring</a><a class="h3" href="#location">Location</a><a class="h3" href="#rotation">Rotation</a><a class="h3" href="#scale">Scale</a><a class="h3" href="#dimensions">Dimensions</a><a class="h3" href="#right-click-menu">Right Click menu</a><a class="h2" href="#item-tab-transform-panel-in-edit-mode">Item tab - Transform Panel in Edit Mode</a><a class="h3" href="#dimensions-2">Dimensions</a><a class="h3" href="#mesh-objects">Mesh Objects</a><a class="h3" href="#curve-objects-surface-objects">Curve Objects / Surface Objects</a><a class="h3" href="#text-objects">Text Objects</a><a class="h3" href="#armature-objects-edit-mode">Armature objects Edit Mode</a><a class="h3" href="#lattice-objects">Lattice Objects</a><a class="h2" href="#item-tab-transform-panel-in-pose-mode">Item tab - Transform Panel in Pose Mode</a><a class="h3" href="#armature-objects-in-pose-mode">Armature Objects in Pose Mode</a><a class="h2" href="#item-tab-mesh-object-vertex-weights-panel">Item tab - Mesh Object - Vertex Weights Panel</a><a class="h2" href="#item-tab-curve-object-active-spline-panel">Item tab - Curve Object - Active Spline Panel</a><a class="h3" href="#interpolation-tilt">Interpolation Tilt</a><a class="h3" href="#radius">Radius</a><a class="h3" href="#smooth">Smooth</a><a class="h2" href="#item-tab-surface-object-active-spline-panel">Item tab - Surface Object - Active Spline Panel</a><a class="h2" href="#item-tab-grease-pencil-object-active-spline-panel">Item tab - Grease Pencil Object - Active Spline Panel</a><a class="h3" href="#cyclic">Cyclic</a><a class="h2" href="#view-tab-2">View tab</a><a class="h2" href="#view-tab-view-panel">View tab - View Panel</a><a class="h3" href="#use-local-camera">Use Local Camera</a><a class="h3" href="#passepartout">Passepartout</a><a class="h3" href="#use-render-region">Use Render Region</a><a class="h3" href="#camera-lock">Camera Lock</a><a class="h2" href="#view-tab-edit-panel">View tab - Edit Panel</a><a class="h3" href="#lock-object-modes">Lock Object Modes</a><a class="h2" href="#view-tab-3d-cursor-panel">View Tab - 3D Cursor Panel</a><a class="h3" href="#location-2">Location</a><a class="h3" href="#rotation-2">Rotation</a><a class="h2" href="#view-tab-collections-panel">View tab - Collections Panel</a><a class="h3" href="#local-collections">Local Collections</a><a class="h3" href="#list-of-collections">List of Collections</a><a class="h2" href="#view-tab-annotations-panel">View tab - Annotations Panel</a><a class="h3" href="#annotations-prop">Annotations prop</a><a class="h3" href="#list-of-annotation-strokes">List of Annotation Strokes</a><a class="h3" href="#onion-skin">Onion Skin</a><a class="h2" href="#view-tab-stereoscopy-panel">View tab - Stereoscopy Panel</a><a class="h3" href="#left-right-3d">Left / Right / 3D</a><a class="h3" href="#views-3d">Views / 3D</a><a class="h3" href="#set-stereo-3d">Set Stereo 3D</a><a class="h2" href="#view-tab-quad-view-panel">View tab - Quad View panel</a><a class="h3" href="#lock-rotation">Lock rotation</a><a class="h2" href="#view-tab-important-hotkeys">View tab - Important Hotkeys</a><a class="h3" href="#font-size">Font Size</a></aside></div></body></html>
