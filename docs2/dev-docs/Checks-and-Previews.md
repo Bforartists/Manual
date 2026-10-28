@@ -30,6 +30,7 @@ The workflow is `.github/workflows/docs2.yml`. It lives on the docs branches onl
 | 🧭 Sidebar | ❌ yes | `nav.yml` lists a page that does not exist |
 | 🏷️ Alt text | 🟡 warning | Empty on a screenshot, or still the file name (small icons may be empty) |
 | 🖋️ Editor-safe text | 🟡 warning | A backslash or `<br>` the editor would drop |
+| 🎨 Style | 🟡 warning | Heading level skips, bold lines used as headings, "Entry / What it does" tables, and Adjust Last Operation sections without the UI name, a sentence or a capture (see the Formatting Standard) |
 | 🤖 Waiting images | 🟡 warning | An image still in the library root or `_inbox/` |
 
 ---
