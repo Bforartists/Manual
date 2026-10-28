@@ -168,9 +168,7 @@ You can also go to the 3D View - Header – Object – Assets – Open Asset Wiz
 
 #### Using the Sidebar to change asset properties
 
-![Using the Sidebar to change asset properties](/docs2/images/editors/asset-browser/asset-browser-default-asset-library/triggering-the-wizard-3.png)
-
-<!-- TODO screenshot: 3D View sidebar > Item > Asset Properties with a Default Library primitive, a sub-panel open -->
+![Using the Sidebar to change asset properties](/docs2/images/editors/asset-browser/asset-browser-default-asset-library/asset-properties-panel.png)
 
 You can adjust the settings of a Geometry Nodes asset, like the size, distance or angle of a primitive, right in the 3D View sidebar.
 
