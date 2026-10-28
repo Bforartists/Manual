@@ -5,14 +5,14 @@ section: appendix
 path:
   - Information
   - About the GPL License
-version: "5.1"
-status: draft
+version: 5.2.3
+status: needs-review
 icon: file_text
 summary: "Bforartists is free software under the GNU GPL: free to use for
   anything, forever."
 order: 30
 ---
-Bforartists is free and open-source software, released under the **GNU General Public License (GPL)**, version 3 or later, like **Blender**, which this is based on.
+Bforartists is free and open-source software, released under the **GNU General Public License (GPL)**, version 3 or later, like **Blender**, which what this is based on. This means this is for everyone, by everyone, of everyone. 
 
 ![Powered by GNU logo](/docs2/images/_inbox/gnu.png)
 
@@ -51,4 +51,4 @@ Python add-ons that use the Bforartists API are generally considered to be cover
 
 ## Read the license
 
-The full text is on the GNU website ([https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)) and in the license files that come with Bforartists.
+The full text is on the GNU website [Link]([https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)) and in the license files that come with Bforartists. 
