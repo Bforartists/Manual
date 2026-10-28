@@ -617,7 +617,7 @@ Selects everything linked to what you already have selected, so you get whole UV
 
 ##### Last Operator Select Linked
 
-<!-- TODO screenshot: UV Editor > Select > Linked, then the Adjust Last Operation panel in place, Delimit Seam on -->
+![Select Linked, Adjust Last Operation](/docs2/images/editors/uv-editor/header/select-menu/last-operator-select-linked.png)
 
 | Entry | What it does |
 | ------- | ------------ |
