@@ -197,19 +197,19 @@ The timeline scene that you use for the video.
 
 How to resolve overlap after transformation. The three buttons next to each other pick the mode.
 
-##### Ripple
+#### Ripple
 
 Move strips until there is no overlap anymore. Strips after the moved strip are pushed along, so nothing is cut and no gaps open up. This replaces the former "Expand" mode.
 
-##### Overwrite
+#### Overwrite
 
 Trim or split strips to resolve overlap.
 
-##### Shuffle
+#### Shuffle
 
 Move the transformed strip to the nearest free space to resolve overlap.
 
-##### Ripple Options
+#### Ripple Options
 
 ![Ripple options](/docs2/images/editors/video-sequence-editor/header/tools-and-options/ripple-options.png)
 
@@ -219,156 +219,6 @@ The drop-down next to the Overlap Mode buttons holds the **Ripple** settings:
 - **Markers** moves the markers along with the strips.
 - **Insert** splits the strips at the leftmost edited handle and pushes the rest aside. When it is off, strips only move as far as needed to resolve the overlap.
 - **Clear Ranges** deletes the strip contents inside the removed ranges on the rippled channels, so the later strips close the whole gap. When it is off, the later strips only move as far as they can.
-
-#### Snapping
-
-![Snapping](/docs2/images/editors/video-sequence-editor/header/tools-and-options/snapping.png)
-
-Snap strips during transform.
-
-##### Preview Snapping
-
-###### Snap to
-
-| Entry | What it does |
-| ------------ | ---------------------------------------------------------- |
-| Borders | Snap to preview borders. |
-| Center | Snap to preview center. |
-| Other Strips | Snap to borders and origins of deselected, visible strips. |
-
-#### Display Mode
-
-![Display Mode](/docs2/images/editors/video-sequence-editor/header/tools-and-options/display-mode.png)
-
-How to display the preview video.
-
-##### Image Preview
-
-![Image Preview](/docs2/images/editors/video-sequence-editor/header/tools-and-options/image-preview.png)
-
-Displays the image material.
-
-##### Luma Waveform
-
-![Luma Waveform](/docs2/images/editors/video-sequence-editor/header/tools-and-options/luma-waveform.png)
-
-Displays the luma waveform of the image.
-
-##### RGB Parade
-
-![RGB Parade](/docs2/images/editors/video-sequence-editor/header/tools-and-options/rgb-parade.png)
-
-Displays the rgb channels
-
-##### Chroma Vectorscope
-
-![Chroma Vectorscope](/docs2/images/editors/video-sequence-editor/header/tools-and-options/chroma-vectorscope.png)
-
-Displays the chroma vectorscope of the image.
-
-##### Histogram
-
-![Histogram](/docs2/images/editors/video-sequence-editor/header/tools-and-options/histogram.png)
-
-Displays a histogram of the image.
-
-![Histogram](/docs2/images/editors/video-sequence-editor/header/tools-and-options/histogram-2.png)
-
-#### Display Channels
-
-What channels of the video to display.
-
-| Entry | What it does |
-| --------------- | --------------------------------------------- |
-| Color and Alpha | Display the color channels and alpha channel. |
-| Color | Display just the color channels. |
-
-#### Show Gizmo
-
-![Show Gizmo](/docs2/images/editors/video-sequence-editor/header/tools-and-options/show-gizmo.png)
-
-Show or hide the viewport gizmos.
-
-##### Viewport Gizmos
-
-What kind of gizmos to show.
-
-| Entry | What it does |
-| ------------ | ------------------------------- |
-| Active Tools | Toggles the navigation gizmos. |
-| Active Tools | Toggles the active tool gizmos. |
-
-#### Options
-
-![Options](/docs2/images/editors/video-sequence-editor/header/tools-and-options/options.png)
-
-| Entry | What it does |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Show Metadata | Show metadata of first visible strip in the viewport. |
-| Zoom to Fit | Automatically zoom preview image to fully fit into the preview window. **Note:** *Zooming in or out turns off the feature automatically.* |
-
-#### Show Overlay
-
-![Show Overlay](/docs2/images/editors/video-sequence-editor/header/tools-and-options/show-overlay.png)
-
-Turn on or off all overlays.
-
-##### Preview Overlays
-
-| Entry | What it does |
-| ------------- | ----------------------------------- |
-| Image Outline | Outline the selected image element. |
-| Frame Overlay | Show the frame overlays. |
-| Metadata | Show the Metadata overlay. |
-
-###### 2D Cursor
-
-![2D Cursor](/docs2/images/editors/video-sequence-editor/header/tools-and-options/2d-cursor.png)
-
-Show the 2d cursor.
-
-| Entry | What it does |
-| ----------- | ---------------------------- |
-| Safe Areas | Show the safe area overlays. |
-| Annotations | Show the annotations. |
-
-#### Sync
-
-This will toggle the 3D Sequencer synchronization with scene strips and scene switching. Refer to the 3D Sequencer addon chapter for more information.
-
-### Header Tools and Options - Sequencer View
-
-![Header Tools and Options - Sequencer View](/docs2/images/editors/video-sequence-editor/header/tools-and-options/header-tools-and-options-sequencer-view.png)
-
-#### Scene
-
-![Scene](/docs2/images/editors/video-sequence-editor/header/tools-and-options/scene.png)
-
-The timeline scene that you use for the video.
-
-#### Overlap Mode
-
-![Overlap Mode](/docs2/images/editors/video-sequence-editor/header/tools-and-options/overlap-mode-ripple.png)
-
-How to resolve overlap after transformation. The three buttons next to each other pick the mode.
-
-##### Ripple
-
-Move strips until there is no overlap anymore. Strips after the moved strip are pushed along, so nothing is cut and no gaps open up. This replaces the former "Expand" mode.
-
-##### Overwrite
-
-Trim or split strips to resolve overlap.
-
-##### Shuffle
-
-Move the transformed strip to the nearest free space to resolve overlap.
-
-##### Ripple Options
-
-The drop-down next to the Ripple button holds the ripple behaviour, for example whether all channels or only the selected ones are moved, and whether markers move along.
-
-> 📸 **Screenshot needed (manual):** the Ripple options popover next to the Overlap Mode buttons. It cannot be captured automatically.
 
 ### Snap
 
@@ -1246,6 +1096,16 @@ Moves the selected strip(s).
 | Clear Strip Offset | Clear strip offset from the start and end frames. |
 | Swap Strip Left | Swap the active strip with the strip to the left. |
 | Swap Strip Right | Swap the active strip with the strip to the right. |
+
+#### Ripple Trim Start
+
+![Ripple Trim Start](/docs2/images/editors/video-sequence-editor/header/strip-menu/ripple-in-strip-menu.png)
+
+Trims the start of the selected strip(s) to the current frame and moves the following strips to close the gap.
+
+#### Ripple Trim End
+
+Trims the end of the selected strip(s) to the current frame and moves the following strips to close the gap.
 
 #### Remove Gaps
 
