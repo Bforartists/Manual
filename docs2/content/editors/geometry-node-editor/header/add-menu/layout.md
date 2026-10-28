@@ -1,27 +1,27 @@
 ---
 id: editors.geometry-node-editor.header.add-menu.layout
-title: "Layout"
+title: Layout
 section: editors
 path:
-  - "Editors"
-  - "Geometry Node Editor"
-  - "Header"
-  - "Add Menu"
-  - "Layout"
+  - Editors
+  - Geometry Node Editor
+  - Header
+  - Add Menu
+  - Layout
 version: "5.1"
 status: draft
 icon: node
-summary: "Layout nodes."
+summary: Layout nodes.
 order: 190
-cta: "Nodes"
+cta: Nodes
 source:
-  - "12.1.77 Editors - Geometry Nodes Editor - Header - Add Menu - Layout.odt"
+  - 12.1.77 Editors - Geometry Nodes Editor - Header - Add Menu - Layout.odt
 replaces:
   - editors.geometry-node-editor.header.add-menu-layout
 ---
 ## Add menu - Layout
 
-![Add menu - Layout](/docs2/images/editors/geometry-node-editor/header/add-menu-layout/add-menu-layout.png)
+![image.png](/docs2/images/_inbox/image-1.png)
 
 These nodes helps organizing the node layout.
 
@@ -43,7 +43,7 @@ The text in a Comment node is shown as formatted text. On the left the node show
 
 Here is the text of the example, so you can copy it into your own Comment node and change it:
 
-````markdown
+```markdown
 # Heading 1
 ## Heading 2
 ### Heading 3
@@ -70,26 +70,28 @@ You can also use `inline code` and [links](https://www.blender.org).
 def hello():
   print("Hello World!")
 ```
-````
+```
 
 The quick version of the same thing:
 
+
 | You type | You get |
-| --- | --- |
+| ---------------------------------------------- | -------------------------------------------------- |
 | `# Heading 1`, `## Heading 2`, `### Heading 3` | Headings, from large to small |
 | `---` on its own line | A horizontal line |
 | `**bold**` | **bold** |
 | `*italic*` | *italic* |
-| `` `code` `` | `code` in a box |
+| ``code`` | `code` in a box |
 | `[text](https://…)` | A link |
 | `> quote` | An indented quote |
 | `- item` | A bullet list; indent two spaces for a nested item |
 | `1. item` | A numbered list |
 | Three backticks around lines | A code block |
 
+
 Leave a blank line between paragraphs and between different kinds of block, such as a paragraph and a list.
 
-The same formatting is available to scripts and add-ons: Blender has a `label_markdown` widget for formatted text in a layout, and a `label_multiline` widget for long text that wraps. See the [Blender release notes](https://developer.blender.org/docs/release_notes/5.3/user_interface/).
+> Note: The same formatting is available to scripts and add-ons: Blender has a `label_markdown` widget for formatted text in a layout, and a `label_multiline` widget for long text that wraps. 
 
 #### Properties
 
