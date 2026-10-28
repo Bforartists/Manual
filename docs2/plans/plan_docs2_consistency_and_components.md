@@ -148,38 +148,49 @@ The Phase 3 back-link script added "See … in the Interface chapter" lines to 1
 
 Each chunk is small enough to review in one sitting. Every chunk gets a tracker issue first, then a PR.
 
-### Phase A, the base (this week)
-| # | Chunk | Why first |
-|---|---|---|
-| A1 | 📐 Formatting standard (this PR) | The rule everyone follows |
-| A2 | 🧪 Style check in `check.py` (warnings, no failures): level skips, bold-as-heading, tables outside allowed cases, Last Operator without sentence or picture | Progress becomes a number |
-| A3 | 🪜 Fix the 37 level skips | Mechanical, quick win |
-
-### Phase B, Adjust Last Operation
-| # | Chunk |
+### 🧱 Foundation: rules and checks (this week)
+| Task | Why first |
 |---|---|
-| B1 | 🏷️ Rename all "Last Operator X" to "Adjust Last Operation" (script, 840 headings, anchors checked) |
-| B2 | 📐 Common properties on the Last Operator page: Proportional Editing, Orientation, Mirror Editing, Snap |
-| B3 | ✂️ Transform operators: replace the repeated blocks with only their own properties plus a link (3D Viewport Object, Mesh Edit, Curve, Armature, Lattice, GP, Hair) |
-| B4 | 📝 Add the missing sentence and capture, area by area (UV Editor, Image, Sequencer …) |
+| 📐 **Formatting standard** | The rule everyone follows |
+| 🧪 **Style check** (#1509): warnings only, never fails: level skips, bold-as-heading, tables outside allowed cases, Adjust Last Operation without sentence or picture | Progress becomes a number |
+| 🪜 **Heading level skips** (#1510): fix the 37 pages | Mechanical, quick win |
 
-### Phase C, tables to headings
+### 🔁 Adjust Last Operation
+| Task | What it does |
+|---|---|
+| 🏷️ **Rename the headings** (#1511) | "Last Operator X" becomes "Adjust Last Operation - X" (script, 840 headings, anchors checked) |
+| 📐 **Common properties page** (#1512) | Proportional Editing, Orientation, Mirror Editing and Snap explained once on the Last Operator panel page |
+| ✂️ **Slim transform operators** (#1513) | Replace the repeated blocks with only the operator's own properties plus a link (3D Viewport Object, Mesh Edit, Curve, Armature, Lattice, GP, Hair) |
+| 📝 **Fill the gaps** (#1514) | Add the missing sentence and capture, area by area (UV Editor, Image, Sequencer …) |
+
+### 🧭 Tables to headings
 Same rule as the Strip tab (#1507). About 10 pages per PR, biggest first.
-C1 3D Viewport headers · C2 Node add menus · C3 Properties tabs and modifiers · C4 other editors headers · C5 Topbar, Toolbar, Preferences · C6 bold lines to headings.
+- 🖥️ **3D Viewport headers** (#1515)
+- 🔌 **Node add menus** (#1516)
+- 🗂️ **Properties tabs and modifiers** (#1517)
+- 🧰 **Other editor headers** (#1518)
+- 🎛️ **Topbar, Toolbar, Preferences** (#1519)
+- 🔠 **Bold lines to headings** (#1520)
 
-### Phase D, components
-D1 Quick Favorites, curve widget, snapping (finish the unfinished back-links) · D2 Drag, Navigation elements, Header values · D3 Brush settings · D4 Annotations · D5 Node editor common · D6 Animation editor common · D7 Cache, Image settings, Editor header snippets, Asset properties.
+### 🧩 Shared components
+- ⭐ **Back-links cleanup** (#1521): Quick Favorites, curve widget, snapping (finish the unfinished back-links)
+- 🖱️ **Interaction basics** (#1522): Drag, Navigation elements, Header values
+- 🖌️ **Brush settings** (#1523)
+- ✏️ **Annotations** (#1524)
+- 🔌 **Node editor common features** (#1525)
+- 🎞️ **Animation editor common features** (#1526)
+- 📦 **Shared sections** (#1527): Cache panel, Image settings, Editor header basics, Asset properties
 
 ### 🗓️ Suggested week
 | Day | Work |
 |---|---|
-| Tue | A1 review, A2, A3 |
-| Wed | B1, B2 |
-| Thu | B3 (two PRs) |
-| Fri | C1, D1 |
-| Next week | B4, C2 to C6, D2 to D7 |
+| Tue | Review the formatting standard, style check, heading level skips |
+| Wed | Rename the headings, common properties page |
+| Thu | Slim transform operators (two PRs) |
+| Fri | 3D Viewport headers, back-links cleanup |
+| Next week | Fill the gaps, the rest of Tables to headings, the rest of Shared components |
 
-One rule for sequencing: **Phase B2 before B3 before anything touching the same pages**, so nobody fixes a table that is about to be deleted.
+One rule for sequencing: **the common properties page comes before slimming the transform operators, which comes before anything touching the same pages**, so nobody fixes a table that is about to be deleted.
 
 ---
 
