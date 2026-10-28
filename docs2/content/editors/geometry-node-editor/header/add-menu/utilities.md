@@ -1834,6 +1834,40 @@ The domain the Field evaluates. This gets and filters the field type. The domain
 | Standard derivation | The Min output value. |
 | Variance | The Max output value. |
 
+# List
+
+### Add menu - Utilities - List
+
+![Add menu - Utilities - List](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-list/add-menu-list.png)
+
+List nodes create and work with lists. A list is an ordered row of values of the same type.
+
+#### Combine List
+
+![Combine List](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-list/combine-list.png)
+
+Combines any number of values into one list. The first value becomes the first element of the list, and so on.
+
+##### Inputs
+
+###### Items
+
+The node starts with one item socket, named 0. Connect a link to the empty socket at the bottom to add the next item. You can also add and remove items with the Add Item and remove buttons in the Items panel of the sidebar Node tab.
+
+The type of the item sockets is set by the Data Type property.
+
+##### Properties
+
+###### Data Type
+
+The type of the values in the list. The default is Float. The menu offers the data types that the Geometry Nodes editor supports, for example Integer, Boolean, Vector, Color, Rotation, Matrix, String, Geometry, Object, Material and Bundle.
+
+##### Outputs
+
+###### List
+
+A list with one element per item.
+
 # Matrix
 
 ### Add menu - Utilities - Matrix
