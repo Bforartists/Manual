@@ -1,27 +1,36 @@
 ---
 id: appendix.bforartists-history
-title: "Bforartists History"
+title: Bforartists History
 section: appendix
 path:
   - Appendix
   - Bforartists History
-version: "5.1"
-status: draft
-screenshots: "5.1"
+version: 5.2.3
+status: needs-review
+screenshots: 5.2.3
 source:
   - 39 Bforartists History.odt
 icon: blender
 order: 10
-summary: "The Bforartists 4 release marks a milestone in the history of Bforartists, where for the first time, the project was presented at the Blender Conference 2023."
+summary: The Bforartists 4 release marks a milestone in the history of
+  Bforartists, where for the first time, the project was presented at the
+  Blender Conference 2023.
 ---
 ## Bforartists 5 History
 
+### Preface:
 
-| Entry | What it does |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Preface: | The Bforartists 5 release marks another milestone in the history of Bforartists. This also expands a period of development continuation ith more assets focused on the Compositor, Geometry Nodes and wizard based assets for the asset shelves – and marks an Iconography refactor for light themes and consistency – all with effort to stay relevant within a shifting landscape of Blenders development and change of direction with new leadership. |
-| History: | 23.04.2026 – Bforartists 5.1.1 released. 24.03.2026 – Bforartists 5.1.0 released 28.12.2025 – Bforartists 5.0.1 released. 26.11.2025 – Bforartists 5.0.0 released. |
+The Bforartists 5 release marks another milestone in the history of Bforartists. This also expands a period of development continuation ith more assets focused on the Compositor, Geometry Nodes and wizard based assets for the asset shelves – and marks an Iconography refactor for light themes and consistency – all with effort to stay relevant within a shifting landscape of Blenders development and change of direction with new leadership.
 
+### History
+
+23.04.2026 – Bforartists 5.1.1 released
+
+ 24.03.2026 – Bforartists 5.1.0 released 
+
+28.12.2025 – Bforartists 5.0.1 released
+
+26.11.2025 – Bforartists 5.0.0 released
 
 ## Bforartists 4 History
 
