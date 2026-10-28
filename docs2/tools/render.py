@@ -23,7 +23,7 @@ import html_build  # noqa: E402
 import landing  # noqa: E402
 
 REPO_URL = os.environ.get("DOCS_REPO_URL", "https://github.com/Bforartists/Manual")
-CMS_URL = os.environ.get("DOCS_CMS_URL", "https://app.pagescms.org/Bforartists/Manual")
+CMS_URL = os.environ.get("DOCS_CMS_URL", "https://app.pagescms.org/bforartists/manual")
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 PREVIEW_CSS = """
