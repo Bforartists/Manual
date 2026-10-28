@@ -14,6 +14,8 @@ order: 30
 ---
 Bforartists is free and open-source software, released under the **GNU General Public License (GPL)**, version 3 or later, like **Blender**, which what this is based on. This means this is for everyone, by everyone, of everyone. 
 
+![Powered by GNU logo sticker](/docs2/images/_inbox/gnu.png)
+
 ## About Free Software and the GPL
 
 When one hears about “free software”, the first thing that comes to mind might be “no cost”. While this is typically true, the term “free software” as used by the Free Software Foundation (originators of the GNU Project and creators of the GNU General Public License) is intended to mean “free as in freedom” rather than the “no cost” sense (which is usually referred to as “free as in free beer” or *gratis*). Free software in this sense is software which you are free to use, copy, modify, redistribute, with no limit. Contrast this with the licensing of most commercial software packages, where you are allowed to load the software on a single computer, are allowed to make no copies, and never see the source code. Free software allows incredible freedom to the end user. Since the source code is universally available, there are also many more chances for bugs to be caught and fixed.
