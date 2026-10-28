@@ -69,6 +69,12 @@ You only type the title. The bot fills in the page ID, section and breadcrumb af
 
 More: [Plain writing](Plain-writing.md).
 
+### 🤖 Your pull request opens by itself
+
+Save your edits to a branch named `docs2/edit/<your-topic>` (in Pages CMS, use the branch menu to create it). The first save opens the pull request into `master` automatically, and the preview and checks follow in a comment. Every further save on that branch updates the same pull request.
+
+One-time setting for the maintainer: **Settings → Actions → General → Workflow permissions → tick "Allow GitHub Actions to create and approve pull requests"**.
+
 ### ⚠️ Good to know
 
 | | What happens | What to do |
