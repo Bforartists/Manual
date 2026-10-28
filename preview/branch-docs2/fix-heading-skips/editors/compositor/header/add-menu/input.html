@@ -1,0 +1,1074 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Input · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/fix-heading-skips · <code>docs2/fix-heading-skips</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a class="is-current" style="padding-left:3.5rem" href="input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../../../shader-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="color.html">Color</a>
+<a style="padding-left:1.5rem" href="../../sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../../../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../../../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../../../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../../video-sequence-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="filter.html">Filter</a>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<span style="padding-left:1.5rem">Collection</span>
+<a style="padding-left:3.5rem" href="../../../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<a style="padding-left:3.5rem" href="../../../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="../../../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Compositor › Header › Add Menu › Input</div><h1 class="pv-title">Input</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 12 min read</span></div><article class="ui-doc-body"><h2 id="add-menu-input">Add menu - Input</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/add-menu-input.png" alt="Add menu - Input" loading="lazy"><figcaption>Add menu - Input</figcaption></figure>
+<p>The Input menu contains Input node types.</p>
+<p>The content is the same for all three sub modes. Note that you need to tick Use Nodes to activate the menu items when you are in Line Style sub mode.</p>
+<h3 id="blank-image">Blank Image</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/blank-image.png" alt="Blank Image" loading="lazy"></figure>
+<p>The Blank Image node generates a solid image of a chosen size and color. It is used as a base layer, background plate, or placeholder in compositing workflows, allowing to create flat color fields or masks without importing external images.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Color</strong>: Defines the fill color of the image. Chosen through a swatch or color picker, supporting any RGB value. Determines the visual appearance of the generated blank image. · <strong>Size</strong>: Specifies the resolution of the image in pixels. Allows matching render dimensions or creating custom aspect ratios.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Produces a standard image that can be connected to other compositor nodes. This can be layered with Mix or Alpha Over, processed with filters, or used as a mask source.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bokeh-image">Bokeh Image</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/bokeh-image.png" alt="Bokeh Image" loading="lazy"></figure>
+<p>The Bokeh Image node generates a special input image for use with the Bokeh Blur filter node.</p>
+<p>The Bokeh Image node is designed to create a reference image which simulates optical parameters such as aperture shape and lens distortions which have important impacts on bokeh in real cameras.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td>The first three settings simulate the aperture of the camera. · <strong>Flaps</strong>: Sets an integer number of blades for the cameras iris diaphragm. · <strong>Angle</strong>: Gives these blades an angular offset relative to the image plane. · <strong>Rounding</strong>: Sets the curvature of the blades with (0 to 1) from straight to bringing them to a perfect circle. · <strong>Catadioptric</strong>: Provides a type of distortion found in mirror lenses and some telescopes. This can be useful to produce a visual complex bokeh. · <strong>Color Shift</strong>: Introduces chromatic aberration into the blur such as would be caused by a tilt-shift lens.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Image</strong>: The generated bokeh image.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="image">Image</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/image.png" alt="Image" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/image-2.png" alt="Image" loading="lazy"></figure>
+<p>Image input. For further image settings see also the Properties Panel in the Node Tab in the Sidebar. It contains the same settings than the image types in the image and uv editor.</p>
+<h4 id="properties">Properties</h4>
+<h5 id="image-property">Image Property</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/image-property.png" alt="Image Property" loading="lazy"></figure>
+<p>This property contains the list of loaded images. When no image is loaded then it displays the New and Open Buttons. When an image exists then it displays the name of the currently selected image.</p>
+<p>From left to right ...</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/image-property-2.png" alt="Image Property" loading="lazy"></figure>
+<h6 id="list-of-images-in-the-scene">List of images in the scene</h6>
+<p>This is a list of the images in the scene. This list allows you to switch to other images.</p>
+<h5 id="search-form">Search form</h5>
+<p>Search for specific images.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image Edit Box</td>
+<td>Read the name of the currently selected image. And you can rename the image here too.</td>
+</tr>
+<tr>
+<td>Number of Fake Users</td>
+<td>In case this file has a fake user assigned, then this number displays the number of fake users.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="open">Open</h6>
+<p>Open a new image.</p>
+<p><strong>New</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/new.png" alt="New" loading="lazy"></figure>
+<p>Create a new image.</p>
+<p>Creates a new image. You will get a dialog where you can define settings for the new image.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>The name of the new image</td>
+</tr>
+<tr>
+<td>Width</td>
+<td>The width of the new image.</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>The height of the new image.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Color</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/color.png" alt="Color" loading="lazy"></figure>
+<p>Adjust the color of the new image. A click will call a color picker.</p>
+<p><strong>Alpha</strong></p>
+<p>Check this checkbox if the new image should have an alpha channel.</p>
+<p><strong>Generated Type</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/generated-type.png" alt="Generated Type" loading="lazy"></figure>
+<p>Here you can define what kind of texture you want to create.</p>
+<p>Blank is one plain color.</p>
+<p>UV Grid is a checker texture in black and white.</p>
+<p>Color Grid is a colored checker texture.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32 Bit Float</td>
+<td>Check this checkbox if the image should be in 32 Bit floating point bit depth per channel. Else it is in 8 bit per channel.</td>
+</tr>
+<tr>
+<td>Tiled</td>
+<td>Create a tiled image.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="source">Source</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/source.png" alt="Source" loading="lazy"></figure>
+<p>What kind of source image to use.</p>
+<h6 id="single-image">Single Image</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/single-image.png" alt="Single Image" loading="lazy"></figure>
+<p><strong>Color Space</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/color-space.png" alt="Color Space" loading="lazy"></figure>
+<p>The color space for the image.</p>
+<p><strong>Alpha</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/alpha.png" alt="Alpha" loading="lazy"></figure>
+<p>The alpha channel mode.</p>
+<h6 id="image-sequence-movie">Image Sequence + Movie</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/image-sequence-movie.png" alt="Image Sequence + Movie" loading="lazy"><figcaption>Image Sequence + Movie</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frames</td>
+<td>Number of images to use</td>
+</tr>
+<tr>
+<td>Start Frame</td>
+<td>The start frame</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Offset the nubmer of the frame to use in the animation.</td>
+</tr>
+<tr>
+<td>Cyclic</td>
+<td>Cycle the images in the image sequence / Movie.</td>
+</tr>
+<tr>
+<td>Auto-Refresh</td>
+<td>Always refresh images on frame changes.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Color Space</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/color-space.png" alt="Color Space" loading="lazy"></figure>
+<p>The color space for the image.</p>
+<p><strong>Alpha</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/alpha.png" alt="Alpha" loading="lazy"></figure>
+<p>The alpha channel mode.</p>
+<h6 id="generated">Generated</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/generated.png" alt="Generated" loading="lazy"></figure>
+<p><strong>Color Space</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/color-space.png" alt="Color Space" loading="lazy"></figure>
+<p>The color space for the image.</p>
+<h6 id="udim-tiles">UDIM Tiles</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/single-image.png" alt="UDIM Tiles" loading="lazy"></figure>
+<p><strong>Color Space</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/color-space.png" alt="Color Space" loading="lazy"></figure>
+<p>The color space for the image.</p>
+<p><strong>Alpha</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/alpha.png" alt="Alpha" loading="lazy"></figure>
+<p>The alpha channel mode.</p>
+<h3 id="image-info">Image Info</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/image-info.png" alt="Image Info" loading="lazy"></figure>
+<p>Returns informations about an image.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Image</strong>: The input image.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Dimensions</strong>: The dimensions output value. · <strong>Resolutions</strong>: The resolutions output value. · <strong>Location</strong>: The locations output value. · <strong>Rotation</strong>: The rotation output value. · <strong>Scale</strong>: The scale output value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="image-coordinates">Image Coordinates</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/image-coordinates.png" alt="Image Coordinates" loading="lazy"></figure>
+<p>Returns the coordinates of the pixles of an image</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td><strong>Image</strong>: The input image.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Uniform</strong>: Zero centered coordinates normalizes along the larger dimension for uniform scaling. · <strong>Normalized</strong>: Normalized coordinates with half pixels offset. · <strong>Pixel</strong>: Integer pixel coordinates.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mask">Mask</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/mask.png" alt="Mask" loading="lazy"></figure>
+<p>The Mask node can be used to select a Mask data. This node can be used with other nodes, for example to Invert, Multiply or Mix, or used as a factor input.</p>
+<p>Masks can be created in the Image and Movie Clip editors, by changing the mode to Mask in the header. So you first need to create one in one of those editors.</p>
+<h4 id="properties-2">Properties</h4>
+<h5 id="masks">Masks</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/masks.png" alt="Masks" loading="lazy"></figure>
+<p>The available mask data. If the label is left blank, the mask name will be set.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size X / Y</td>
+<td>The resolution of the mask</td>
+</tr>
+<tr>
+<td>Feather</td>
+<td>Use or ignore feather points defined for splines see Mask Feathers for more details.</td>
+</tr>
+<tr>
+<td>Motion Blur</td>
+<td>For animated masks, creating a motion blurred mask from the surrounding frames, with a given number of samples (higher gives better quality), and a camera shutter time in seconds. · <strong>Samples</strong>: The number of motion blur samples. · <strong>Shutter</strong>: Expose for motion blur as a factor of Frames per Seconds.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs">Outputs</h4>
+<h5 id="mask-2">Mask</h5>
+<p>The black-and-white output of the mask.</p>
+<p>hier weiter</p>
+<h3 id="movie-clip">Movie Clip</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/movie-clip.png" alt="Movie Clip" loading="lazy"></figure>
+<p>This node is a special node that uses some of the values taken from footage cameras and trackings and links them to the output. It is possible to load image sequences, but only Image and Alpha values will be available, because the other outputs will not have any values associated with them. When a tracked clip is chosen, Bforartists will fulfill the outputs using internal values taken from the tracking. So the controls for start and end frames will be defined at the Movie Clip editor.</p>
+<h4 id="properties-3">Properties</h4>
+<h5 id="movie-clip-2">Movie Clip</h5>
+<p>Select the movie clip.</p>
+<p>Once loaded you will see a preview image of the movie. Scrolling through the timeline will display the corresponding frame in this preview image.</p>
+<h6 id="file-browser">File browser</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/file-browser.png" alt="File browser" loading="lazy"></figure>
+<p>Choose an already loaded video.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Read and edit the name of the video.</td>
+</tr>
+<tr>
+<td>Fake User</td>
+<td>Assign a fake user to this video. Fake users is an odd concept to keep data in the scene even if it has no user somewhere. The fake user is then a dummy user so that the object is not deleted when saving the scene.</td>
+</tr>
+<tr>
+<td>Load File</td>
+<td>Load a new video.</td>
+</tr>
+<tr>
+<td>Delete File</td>
+<td>Delete this video.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outputs</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>Outputs the entire image at the specified color space.</td>
+</tr>
+<tr>
+<td>Alpha</td>
+<td>The alpha value taken from the movie or image.</td>
+</tr>
+<tr>
+<td>Offset X</td>
+<td>The X offset value from the footage camera or tracking.</td>
+</tr>
+<tr>
+<td>Offset Y</td>
+<td>The Y offset value from the footage camera or tracking.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>The scale of the image taken from the footage camera or tracking.</td>
+</tr>
+<tr>
+<td>Angle</td>
+<td>The lens angle taken from the footage camera or tracking.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="string-to-image">String to Image</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/string-to-image.png" alt="String to Image" loading="lazy"></figure>
+<p>Converts a text string into an image buffer directly inside the compositor. Useful for overlaying text, generating procedural titles, or integrating dynamic labels into compositing workflows without external text objects.</p>
+<h4 id="properties-4">Properties</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>Input field for the text content. Accepts plain text or dynamic string inputs. Can be used for captions, labels, or procedural text overlays.</td>
+</tr>
+<tr>
+<td>Font</td>
+<td>Dropdown or file selector for choosing the font datablock. Supports internal packed fonts and external font files. Ensures consistent typography across compositing setups.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Defines the pixel size of the rendered text. Larger values = bigger text. Scales proportionally with resolution.</td>
+</tr>
+<tr>
+<td>Alignment</td>
+<td>Horizontal: <strong>Left, Center, Right</strong>. Vertical: <strong>Top, Middle, Bottom</strong>. Controls text placement within the image buffer.</td>
+</tr>
+<tr>
+<td>Wrap</td>
+<td>Checkbox to enable word wrapping. When enabled, text flows into multiple lines based on width. Useful for paragraphs or captions.</td>
+</tr>
+<tr>
+<td>Width</td>
+<td>Defines the maximum width (in pixels) for text wrapping. Only active when <strong>Wrap</strong> is enabled. Controls line breaks and text block layout.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="output">Output</h4>
+<p>Produces an <strong>Image output</strong> containing the rendered text as a float black and white image at the dimensions of the text.</p>
+<p>This then can be connected to compositing nodes (e.g., Mix, Alpha Over) for integration into final renders. Supports color grading, masking, and blending like any other image input.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input/output.png" alt="Output" loading="lazy"></figure>
+<h1 id="constant">Constant</h1>
+<h2 id="add-menu-input-constant">Add menu - Input - Constant</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-constant/add-menu-input-constant.png" alt="Add menu - Input - Constant" loading="lazy"><figcaption>Add menu - Input - Constant</figcaption></figure>
+<h3 id="boolean">Boolean</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-constant/boolean.png" alt="Boolean" loading="lazy"></figure>
+<p>Provide a true / false value.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Properties</td>
+<td><strong>Boolean</strong>: The boolean toggle.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Boolean</strong>: The state of the toggle.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="color">Color</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-constant/color.png" alt="Color" loading="lazy"></figure>
+<p>Set a color.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Properties</td>
+<td>The RGB node uses the color picker widget.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Color / RGBA</strong>: A single RGBA color value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="integer">Integer</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-constant/integer.png" alt="Integer" loading="lazy"></figure>
+<p>Provides an integer value.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Properties</td>
+<td><strong>Integer</strong>: The value.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Integer</strong>: The output value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="normal">Normal</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-constant/normal.png" alt="Normal" loading="lazy"></figure>
+<p>Input normalized normal values to the other nodes in the tree.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Properties</td>
+<td><strong>Input Value</strong>: Here you can adjust the directory of the light to see how the normals behaves.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Normal</strong>: The output value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="value">Value</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-constant/value.png" alt="Value" loading="lazy"></figure>
+<p>Provides a float value.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Properties</td>
+<td><strong>Value</strong>: The float value.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Value</strong>: The output value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vector">Vector</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-constant/vector.png" alt="Vector" loading="lazy"></figure>
+<p>Provides a vector 3 value.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Properties</td>
+<td><strong>Vector</strong>: The single values of the vector 3.</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td><strong>Vector</strong>: The output vector.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="scene">Scene</h1>
+<h2 id="add-menu-input-scene">Add menu - Input - Scene</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-scene/add-menu-input-scene.png" alt="Add menu - Input - Scene" loading="lazy"><figcaption>Add menu - Input - Scene</figcaption></figure>
+<h3 id="render-layers">Render Layers</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-scene/render-layers.png" alt="Render Layers" loading="lazy"></figure>
+<p>Inputs the available render layers.</p>
+<p>This node is the starting place for getting a picture of your scene into the compositing node map.</p>
+<p>The input happens through the properties.</p>
+<h4 id="properties-5">Properties</h4>
+<h5 id="scene-2">Scene</h5>
+<p>Usually you don't need to select anything here when you work with just one Scene file. But in Bforartists you can work with more than one scene in a blend file. The scene information taken is the raw footage (pre-compositing and pre-sequencing).</p>
+<p>Hint. To use composited footage from another scene, it has to be rendered into a multi-layer frame set (e.g. OpenEXR) as an intermediate file store and then imported with Image input node again.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View layer</td>
+<td>A list of available View Layers.</td>
+</tr>
+<tr>
+<td>Render</td>
+<td>The render button allows you to re-render the active scene with one click.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-2">Outputs</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>The rendered image.</td>
+</tr>
+<tr>
+<td>Alpha</td>
+<td>The Alpha channel.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="render-passes-sockets">Render passes sockets</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-scene/render-passes-sockets.png" alt="Render passes sockets" loading="lazy"></figure>
+<p>Depending on the Render passes that are enabled, other sockets are available. See Cycles and Eevee render passes. The Workbench renderer does not have extra render passes sockets. It just provides Image and Alpha output.</p>
+<h5 id="depth">Depth</h5>
+<p>By default the Z depth pass is enabled.</p>
+<h4 id="scene-time">Scene time</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-scene/scene-time.png" alt="Scene time" loading="lazy"></figure>
+<p>Outputs the current scene time in seconds or in frames.<br />
+The Frame output is a float value to make subframe rendering for motion<br />
+blur possible.</p>
+<h5 id="outputs-3">Outputs</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seconds</td>
+<td>Output in seconds.</td>
+</tr>
+<tr>
+<td>Frame</td>
+<td>Output in Frames.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="time-curve">Time Curve</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-scene/time-curve.png" alt="Time Curve" loading="lazy"></figure>
+<p>The Time node generates a factor value that changes according to the curve as time progresses through the Timeline. The range goes from 0.0 to 1.0. The default is a linear line from 0.0 to 1.0. But the curve can be adjusted.</p>
+<h4 id="properties-6">Properties</h4>
+<h5 id="navigation-elements">Navigation elements</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-scene/navigation-elements.png" alt="Navigation elements" loading="lazy"></figure>
+<p>The navigation elements for the curve. They are described from left to right.</p>
+<h5 id="zoom-in-and-out">Zoom in and out</h5>
+<p>The two buttons with the magnifying glass at it zooms in and out in the curve window.</p>
+<h5 id="clipping">Clipping</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-scene/clipping.png" alt="Clipping" loading="lazy"></figure>
+<p>Clipping options. Set up clipping for the stroke.</p>
+<h5 id="tools">Tools</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-scene/tools.png" alt="Tools" loading="lazy"></figure>
+<p>Tools is a menu where you can find some curve related tools.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset View</td>
+<td>Resets the curve windows zoom.</td>
+</tr>
+<tr>
+<td>Extend Horizontal</td>
+<td>Extends the curve horizontally before the first point and behind the last point.</td>
+</tr>
+<tr>
+<td>Extend Extrapolated</td>
+<td>Extends the curve extrapolated before the first point and behind the last point.</td>
+</tr>
+<tr>
+<td>Reset Curve</td>
+<td>Resets the curve to the initial shape.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="curve-window">Curve window</h5>
+<p>Tweak and adjust the falloff curve by clicking at a curve point and dragging it around.</p>
+<p>Double click adds a new point.</p>
+<p>Holding down ctrl activates temporary snapping.</p>
+<p>Holding down shift enables slower movement, which allows more accurate setting.</p>
+<h5 id="selecting-points">Selecting Points</h5>
+<blockquote>
+<p>This setting uses the <strong>curve widget</strong>: click to add points, drag to move them. See <strong><a href="https://github.com/Bforartists/Manual/blob/docs2/fix-heading-skips/docs2/content/interface/properties.md#curve-widget">Curve Widget</a></strong> in the Interface chapter.</p>
+</blockquote>
+<h5 id="adding-points">Adding Points</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/compositor/header/add-menu-input-scene/adding-points.png" alt="Adding Points" loading="lazy"></figure>
+<p>You can add new curve points by simply left clicking at the curve. Move the mouse to position them where you need it.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vector Handle</td>
+<td>Set handle type to Vector.</td>
+</tr>
+<tr>
+<td>Auto Handle</td>
+<td>Set handle type to Auto.</td>
+</tr>
+<tr>
+<td>Auto Clamped Handle</td>
+<td>Set handle type to Auto Clamped.</td>
+</tr>
+<tr>
+<td>X and Y value edit box</td>
+<td>The X and Y value for the currently selected curve point.</td>
+</tr>
+<tr>
+<td>Delete Points</td>
+<td>Deletes selected curve points.</td>
+</tr>
+<tr>
+<td>Start Frame/ End Frame</td>
+<td>Start frame and End frame of the range of time specifying the values the output should last. This range becomes the X axis of the graph. The time input could be reversed by specifying a start frame greater than the end frame.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-4">Outputs</h4>
+<h5 id="factor">Factor</h5>
+<p>A speed of time factor (from 0.00 to 1.00) relative to the frame rate defined in the Render Dimensions Panel. The factor changes according to the defined curve.</p>
+<p>Hint. By using curves it is possible that the Time node may output a number larger than one or less than zero. To be safe, you should use the Min/Max clamping function of the Map Value node to limit output.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Ffix-heading-skips/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fcompositor%2Fheader%2Fadd-menu%2Finput.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/fix-heading-skips/docs2/content/editors/compositor/header/add-menu/input.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#add-menu-input">Add menu - Input</a><a class="h3" href="#blank-image">Blank Image</a><a class="h3" href="#bokeh-image">Bokeh Image</a><a class="h3" href="#image">Image</a><a class="h3" href="#image-info">Image Info</a><a class="h3" href="#image-coordinates">Image Coordinates</a><a class="h3" href="#mask">Mask</a><a class="h3" href="#movie-clip">Movie Clip</a><a class="h3" href="#string-to-image">String to Image</a><a class="h2" href="#add-menu-input-constant">Add menu - Input - Constant</a><a class="h3" href="#boolean">Boolean</a><a class="h3" href="#color">Color</a><a class="h3" href="#integer">Integer</a><a class="h3" href="#normal">Normal</a><a class="h3" href="#value">Value</a><a class="h3" href="#vector">Vector</a><a class="h2" href="#add-menu-input-scene">Add menu - Input - Scene</a><a class="h3" href="#render-layers">Render Layers</a><a class="h3" href="#time-curve">Time Curve</a></aside></div></body></html>

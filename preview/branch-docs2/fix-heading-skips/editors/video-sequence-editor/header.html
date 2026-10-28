@@ -1,0 +1,2340 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Header · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Branch docs2/fix-heading-skips · <code>docs2/fix-heading-skips</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<a href="../../interface/floating-menus.html">Floating Menus</a>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../compositor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../drivers-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/input.html">Input</a>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<a style="padding-left:1.5rem" href="../shader-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../uv-editor/header.html">Header</a>
+<a class="is-current" style="padding-left:1.5rem" href="header.html">Header</a>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/color.html">Color</a>
+<a style="padding-left:1.5rem" href="../compositor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<a style="padding-left:1.5rem" href="../geometry-node-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../image-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../movie-clip-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<a style="padding-left:1.5rem" href="../shader-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../uv-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="sidebar.html">Sidebar</a>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/geometry.html">Geometry</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/filter.html">Filter</a>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/curve.html">Curve</a>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/grease-pencil.html">Grease Pencil</a>
+<span style="padding-left:1.5rem">Collection</span>
+<a style="padding-left:3.5rem" href="../shader-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/mesh.html">Mesh</a>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/volume.html">Volume</a>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<a style="padding-left:3.5rem" href="../compositor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/utilities.html">Utilities</a>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<a style="padding-left:3.5rem" href="../geometry-node-editor/header/add-menu/node-groups.html">Node Groups</a>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<a style="padding-left:1.5rem" href="../topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Video Sequence Editor › Header</div><h1 class="pv-title">Header</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 38 min read</span></div><article class="ui-doc-body"><h2 id="video-sequence-editor-header">Video Sequence Editor - Header</h2>
+<p>The Header contains some menus and settings.</p>
+<p>The header is divided into two areas.</p>
+<p>Left Type of sequencer view with additional menus.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/video-sequence-editor-header.png" alt="Video Sequence Editor - Header" loading="lazy"><figcaption>Video Sequence Editor - Header</figcaption></figure>
+<p>Right contains tools and options, including the timeline, editing, snapping, overlay and settings.</p>
+<h2 id="header-right-click-menus">Header right click menus</h2>
+<p>The general right click menu functionality is explained in chapter 6 Editors introduction.</p>
+<h2 id="editortype-menu">Editortype Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/editortype-menu.png" alt="Editortype Menu" loading="lazy"></figure>
+<p>Bforartists is made of several editor types. Headers can display a menu where you can switch to other editor types.</p>
+<p>This menu is hidden by default. It is meant to edit the layouts, and should not be necessary for regular work. You can reveal it in the header right click menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/editortype-menu-2.png" alt="Editortype Menu" loading="lazy"></figure>
+<h1 id="tools-and-options">Tools and Options</h1>
+<h2 id="header-tools-and-options-preview-view">Header tools and options - Preview view</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/header-tools-and-options-preview-view.png" alt="Header tools and options - Preview view" loading="lazy"><figcaption>Header tools and options - Preview view</figcaption></figure>
+<h3 id="pivot-point">Pivot Point</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/pivot-point.png" alt="Pivot Point" loading="lazy"></figure>
+<p>The Pivot Point is the center of your object or your selection. The names should be self explaining.</p>
+<h3 id="snapping">Snapping</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/snapping.png" alt="Snapping" loading="lazy"></figure>
+<p>Snap strips during transform.</p>
+<h4 id="preview-snapping">Preview Snapping</h4>
+<h5 id="snap-to">Snap to</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Borders</td>
+<td>Snap to preview borders.</td>
+</tr>
+<tr>
+<td>Center</td>
+<td>Snap to preview center.</td>
+</tr>
+<tr>
+<td>Other Strips</td>
+<td>Snap to borders and origins of deselected, visible strips.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="display-mode">Display Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/display-mode.png" alt="Display Mode" loading="lazy"></figure>
+<p>How to display the preview video.</p>
+<h4 id="image-preview">Image Preview</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/image-preview.png" alt="Image Preview" loading="lazy"></figure>
+<p>Displays the image material.</p>
+<h4 id="luma-waveform">Luma Waveform</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/luma-waveform.png" alt="Luma Waveform" loading="lazy"></figure>
+<p>Displays the luma waveform of the image.</p>
+<h4 id="rgb-parade">RGB Parade</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/rgb-parade.png" alt="RGB Parade" loading="lazy"></figure>
+<p>Displays the rgb channels</p>
+<h4 id="chroma-vectorscope">Chroma Vectorscope</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/chroma-vectorscope.png" alt="Chroma Vectorscope" loading="lazy"></figure>
+<p>Displays the chroma vectorscope of the image.</p>
+<h4 id="histogram">Histogram</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/histogram.png" alt="Histogram" loading="lazy"></figure>
+<p>Displays a histogram of the image.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/histogram-2.png" alt="Histogram" loading="lazy"></figure>
+<h3 id="display-channels">Display Channels</h3>
+<p>What channels of the video to display.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color and Alpha</td>
+<td>Display the color channels and alpha channel.</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>Display just the color channels.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="show-gizmo">Show Gizmo</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/show-gizmo.png" alt="Show Gizmo" loading="lazy"></figure>
+<p>Show or hide the viewport gizmos.</p>
+<h4 id="viewport-gizmos">Viewport Gizmos</h4>
+<p>What kind of gizmos to show.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active Tools</td>
+<td>Toggles the navigation gizmos.</td>
+</tr>
+<tr>
+<td>Active Tools</td>
+<td>Toggles the active tool gizmos.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="options">Options</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/options.png" alt="Options" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show Metadata</td>
+<td>Show metadata of first visible strip in the viewport.</td>
+</tr>
+<tr>
+<td>Zoom to Fit</td>
+<td>Automatically zoom preview image to fully fit into the preview window. <strong>Note:</strong> <em>Zooming in or out turns off the feature automatically.</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="show-overlay">Show Overlay</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/show-overlay.png" alt="Show Overlay" loading="lazy"></figure>
+<p>Turn on or off all overlays.</p>
+<h4 id="preview-overlays">Preview Overlays</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image Outline</td>
+<td>Outline the selected image element.</td>
+</tr>
+<tr>
+<td>Frame Overlay</td>
+<td>Show the frame overlays.</td>
+</tr>
+<tr>
+<td>Metadata</td>
+<td>Show the Metadata overlay.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="2d-cursor">2D Cursor</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/2d-cursor.png" alt="2D Cursor" loading="lazy"></figure>
+<p>Show the 2d cursor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Safe Areas</td>
+<td>Show the safe area overlays.</td>
+</tr>
+<tr>
+<td>Annotations</td>
+<td>Show the annotations.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sync">Sync</h3>
+<p>This will toggle the 3D Sequencer synchronization with scene strips and scene switching. Refer to the 3D Sequencer addon chapter for more information.</p>
+<h2 id="header-tools-and-options-sequencer-view">Header Tools and Options - Sequencer View</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/header-tools-and-options-sequencer-view.png" alt="Header Tools and Options - Sequencer View" loading="lazy"><figcaption>Header Tools and Options - Sequencer View</figcaption></figure>
+<h3 id="scene">Scene</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/scene.png" alt="Scene" loading="lazy"></figure>
+<p>The timeline scene that you use for the video.</p>
+<h3 id="overlap-mode">Overlap Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/overlap-mode.png" alt="Overlap Mode" loading="lazy"></figure>
+<p>How to resolve overlap after transformation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expand</td>
+<td>Move strips until there is no overlap anymore.</td>
+</tr>
+<tr>
+<td>Overwrite</td>
+<td>Trim or split strips to resolve overlap.</td>
+</tr>
+<tr>
+<td>Shuffle</td>
+<td>Move transformed strip to nearest free space to resolve overlap.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="snap">Snap</h3>
+<p>Snap to strip edges or current frame.</p>
+<h4 id="snapping-settings">Snapping Settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/snapping-settings.png" alt="Snapping Settings" loading="lazy"></figure>
+<h5 id="sequencer-snapping">Sequencer Snapping</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snap to</td>
+<td><strong>Frame Range</strong>: Snap to the current frame range · <strong>Current Frame</strong>: Snap to the current frame · <strong>Hold Offset</strong>: Snap to strip Hold offsets. · <strong>Markers</strong>: Snap to Markers.</td>
+</tr>
+<tr>
+<td>Retiming Keys</td>
+<td>Toggles the visibility of retiming keyframes when retiming strips.</td>
+</tr>
+<tr>
+<td>Ignore</td>
+<td><strong>Muted Strips</strong>: Ignores muted strips. · <strong>Sound Strips</strong>: Ignores sound strips.</td>
+</tr>
+<tr>
+<td>Current Frame</td>
+<td><strong>Snap to Strips</strong>: Sets the current frame to the start or end point of the selected clip.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="options-2">Options</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/options-2.png" alt="Options" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Timecode</td>
+<td>Shows time as a timecode (hours, minutes, seconds and frames) instead of frame numbers.</td>
+</tr>
+<tr>
+<td>Sync Visible Range</td>
+<td>Keep the visible timeline range synchronized across time-based editors. Synchronize the visible timeline range with other visible time based editors. To enable syncing, each editor must have 'Sync Visible Range' turned on.</td>
+</tr>
+<tr>
+<td>Display Cache</td>
+<td>Turns on displaying the cache overlay and shows cache settings. Toggle to visualize cached images in the timeline. · <strong>Final</strong>: Show the final images. · <strong>Raw</strong>: Show the raw images. This is a Developers extra.</td>
+</tr>
+<tr>
+<td>Show Markers</td>
+<td>Display the markers menu and the markers at the bottom in the timeline.</td>
+</tr>
+<tr>
+<td>Lock Markers</td>
+<td>Prevent marker editing.</td>
+</tr>
+<tr>
+<td>Sync Markers</td>
+<td>Transform markers with the strips.</td>
+</tr>
+<tr>
+<td>Limit View to Content</td>
+<td>Limit timeline height to maximum used channel slots.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="show-overlays">Show Overlays</h3>
+<p>Turn on or off all overlays.</p>
+<h4 id="sequencer-overlays">Sequencer Overlays</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/sequencer-overlays.png" alt="Sequencer Overlays" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid</td>
+<td>Show the grid in the sequencer timeline.</td>
+</tr>
+<tr>
+<td>Cache</td>
+<td>Visualize cached images on the timelines.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="strips">Strips</h4>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Show the name of the clip.</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Show the source of the clip.</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>Display the duration of the clip.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="animation-curves">Animation Curves</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/animation-curves.png" alt="Animation Curves" loading="lazy"></figure>
+<p>Display the strip opacity/volume curves.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thumbnails</td>
+<td>Draw thumbnails as strip overlay. This works for movie and image strips. To draw thumbnails, this overlay has to be enabled and strips must be tall enough.</td>
+</tr>
+<tr>
+<td>Color Tags</td>
+<td>Display the strip color tags in the sequencer.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>What offset frame to use, relative to the current frame position.</td>
+</tr>
+<tr>
+<td>Retiming</td>
+<td>Display the retiming keys on top of the strips.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="waveforms">Waveforms</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/waveforms.png" alt="Waveforms" loading="lazy"></figure>
+<p>How waveforms are displayed.</p>
+<h5 id="on">On</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/on.png" alt="On" loading="lazy"></figure>
+<p>Shows waveforms</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strip</td>
+<td>Shows strip settings per strip in the Sound panel Display Waveform settings.</td>
+</tr>
+<tr>
+<td>Off</td>
+<td>Hides all waveforms.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="waveform-style">Waveform Style</h5>
+<p>What waveform style to use.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full</td>
+<td>Shows a bidirectional wave form.</td>
+</tr>
+<tr>
+<td>Half</td>
+<td>Shows a one-sided wave form.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sync-2">Sync</h3>
+<p>This will toggle the 3D Sequencer synchronization with scene strips and scene switching. Refer to the 3D Sequencer addon chapter for more information.</p>
+<h2 id="header-tools-and-options-sequencer-preview-view">Header Tools and Options - Sequencer &amp; Preview view</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/header-tools-and-options-sequencer-and-preview-v.png" alt="Header Tools and Options - Sequencer &amp; Preview view" loading="lazy"><figcaption>Header Tools and Options - Sequencer &amp; Preview view</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/tools-and-options/header-tools-and-options-sequencer-and-preview-v-2.png" alt="Header Tools and Options - Sequencer &amp; Preview view" loading="lazy"><figcaption>Header Tools and Options - Sequencer &amp; Preview view</figcaption></figure>
+<p>The tools in the Sequencer &amp; Preview view mode are most likely a combination of single modes. Both showing at the same time.</p>
+<p>There is one exception in the options panel. Preview as backdrop is not shown in this mode.</p>
+<h1 id="quick-menu">Quick Menu</h1>
+<h2 id="quick-menu-2">Quick Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/quick-menu/quick-menu.png" alt="Quick Menu" loading="lazy"></figure>
+<p>The quick menu, or in long Quick Favorites menu, is a menu that can be customized to your needs. Here you can add operators for quick access.</p>
+<p>It is located in the header. But it can be called by hotkey Q directly under the mouse. This hotkey works in other editors too.</p>
+<p>When the menu is empty, then you will see the message &quot;No Menu Items found&quot;. This means that you first have to add some tools to the menu. It is a user configurable menu.</p>
+<p>Note that added operators in this menu does not have icons. Just text.</p>
+<h3 id="adding-an-operator-to-the-quick-menu">Adding an operator to the Quick menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/quick-menu/adding-an-operator-to-the-quick-menu.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
+<p>Open the panel or the menu where your operator is that you want to add.</p>
+<p>Let's add the open command from the File menu. Open the File menu, right click at open, and choose Add to Quick Favorites.</p>
+<p>Do the same with Save As. We should now have two new menu items in the Quick menu, which you can use now.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/quick-menu/adding-an-operator-to-the-quick-menu-2.png" alt="Adding an operator to the Quick menu" loading="lazy"><figcaption>Adding an operator to the Quick menu</figcaption></figure>
+<p>As a rule of thumb, when the right click menu has an Add to Quick Favorites, then you can add it to the quick menu.</p>
+<p>Note that you can also add operators from the tool shelf at the left. And also operators from other editor types. Some other editors have their own quick menu though. The Image Editor for example. These operators gets added in the quick menu of the image editor then. And does not show in the quick menu in the header of the 3D view.</p>
+<h3 id="adding-a-menu-to-the-quick-menu">Adding a menu to the Quick menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/quick-menu/adding-a-menu-to-the-quick-menu.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
+<p>It is also possible to add a menu to the Quick menu. For example the whole Add menu. The way is the same. Right click at it, and choose Add to Quick Favorites.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/quick-menu/adding-a-menu-to-the-quick-menu-2.png" alt="Adding a menu to the Quick menu" loading="lazy"><figcaption>Adding a menu to the Quick menu</figcaption></figure>
+<h3 id="order">Order</h3>
+<p>You might notice that the add menu adds at the top of the menu, and not at the bottom as you would expect. First comes menus, then comes operators. And they get added in the order in which you add them.</p>
+<p>Besides that, operators and menus gets added in the order that you add them. They cannot be sorted afterwards. So be careful how you add them. You can of course always remove operators and menus, and re-add them at the end of the list.</p>
+<h3 id="removing-an-operator-from-the-quick-menu">Removing an operator from the Quick menu</h3>
+<blockquote>
+<p>The <strong>Quick Favorites</strong> menu (Q) holds the tools and menus you add to it yourself. See <strong><a href="../../interface/floating-menus.html#quick-favorites">Quick Favorites</a></strong> in the Interface chapter.</p>
+</blockquote>
+<h3 id="context-and-mode-dependent-content">Context and mode dependent content</h3>
+<p>The quick favorites. menu exists in nearly all editors. But it is just in the 3D view available in the header. So that you know this functionality exists. In the other editors you call it with hotkey Q.</p>
+<p>The content of the quick favorites. menu changes, dependent over which editor you are, and in what mode you are. When you add for example an operator from the image editor, then this operator just shows in the quick menu when you call the menu from the image editor. Same goes for the modes. Edit mode tools will just show in edit mode. And so on.</p>
+<h1 id="view-menu">View Menu</h1>
+<h2 id="type-of-sequencer-view">Type of Sequencer View</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/type-of-sequencer-view.png" alt="Type of Sequencer View" loading="lazy"><figcaption>Type of Sequencer View</figcaption></figure>
+<p>The Video Sequence Editor is two editors in one. The Preview sequencer view is a preview window. Here plays the video. The Sequencer sequencer view is the view that contains the video and audio strips.</p>
+<p>The view menu for Sequencer/Preview contains the same menu items than in the other two views. So we won't explicitely list it here again.</p>
+<h2 id="view-menu-in-preview-window">View Menu in Preview window</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/view-menu-in-preview-window.png" alt="View Menu in Preview window" loading="lazy"><figcaption>View Menu in Preview window</figcaption></figure>
+<p>The View menu contains all View related tools.</p>
+<h3 id="toolbar">Toolbar</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/toolbar.png" alt="Toolbar" loading="lazy"></figure>
+<p>Shows or hides the toolbar at the left.</p>
+<h3 id="sidebar">Sidebar</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/sidebar.png" alt="Sidebar" loading="lazy"></figure>
+<p>Shows or hides the sidebar at the right in the viewport.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tool Settings</td>
+<td>Show or hide the tool settings at the top.</td>
+</tr>
+<tr>
+<td>Tool shelf tabs</td>
+<td>Show or hide the tool shelf tabs in the tool shelf.</td>
+</tr>
+<tr>
+<td>Playback Controls</td>
+<td>Reveals the footer with the playback controls.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="annotations-legacy-submenu">Annotations (Legacy) submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/annotations-legacy-submenu.png" alt="Annotations (Legacy) submenu" loading="lazy"></figure>
+<p>This group of operators is useful to take notes without changing tool-shelf operators. These notes can be colored in the View tab of the Property Shelf. Each layer is a single color. You can also animate the notes with keyframes, editable in the dopesheet.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> These are legacy operators, meaning they are equally available in the Toolshelf as a modal operator.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draw Annotation</td>
+<td>Starts the annotation free hand draw tool in the editor.</td>
+</tr>
+<tr>
+<td>Draw Line Annotation</td>
+<td>Starts the annotation line draw tool to draw straight lines in the editor.</td>
+</tr>
+<tr>
+<td>Draw Polyline Annotation</td>
+<td>Starts the annotation Polyline draw tool in the editor which allows to draw multiple connected straight lines in the editor.</td>
+</tr>
+<tr>
+<td>Erase Annotation</td>
+<td>Starts the annotation erase tool in the editor which erases any strokes in the editor.</td>
+</tr>
+<tr>
+<td>Add Annotation Layer</td>
+<td>Starts a new annotation layer.</td>
+</tr>
+<tr>
+<td>Erase Annotation Active Keyframe</td>
+<td>Erases the active keyframe of the annotation.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom In</td>
+<td>Zooms in.</td>
+</tr>
+<tr>
+<td>Zoom Out</td>
+<td>Zooms out.</td>
+</tr>
+<tr>
+<td>Zoom Border</td>
+<td>Draw a rectangle around the target area to zoom in or out. Left mouse button zoooms in. Middle mouse button zooms out.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="zoom">Zoom</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/zoom.png" alt="Zoom" loading="lazy"></figure>
+<p>A set of predefined zoom factors.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fit Preview in Window</td>
+<td>Zooms in or out until the video displays fitting in the viewport.</td>
+</tr>
+<tr>
+<td>Frame Selected</td>
+<td>Centers the selection and zooms to fit.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="proxy">Proxy</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/proxy.png" alt="Proxy" loading="lazy"></figure>
+<p>Proxy works just with movie or image strips. What it does is to create a smaller set of preview images. This speeds up the calculation while you are at editing the video. The final result uses the final images again then.</p>
+<h4 id="setup">Setup</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/setup.png" alt="Setup" loading="lazy"></figure>
+<p>Calls a panel where you can choose the resolution of the proxy images. Clicking OK starts the creation process.</p>
+<h4 id="rebuild">Rebuild</h4>
+<p>Recreates the proxy images</p>
+<h4 id="scene-render-size">Scene Render Size</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/scene-render-size.png" alt="Scene Render Size" loading="lazy"></figure>
+<p>What render size the display should choose.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Refresh All</td>
+<td>Refresh the sequence editor.</td>
+</tr>
+<tr>
+<td>Sequence render Image</td>
+<td>Renders an image of the current frame.</td>
+</tr>
+<tr>
+<td>Sequence render Animation</td>
+<td>Renders the animation in the preview range.</td>
+</tr>
+<tr>
+<td>Toggle Sequencer/Preview</td>
+<td>Toggles the type of sequencer view between Sequencer or Preview.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pie-menu">Pie Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/pie-menu.png" alt="Pie Menu" loading="lazy"></figure>
+<p>The available pie menus for the sequencer in View mode.</p>
+<h3 id="area">Area</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/area.png" alt="Area" loading="lazy"></figure>
+<p>This menu contains general view functionality. And exists in most other editor types too.</p>
+<h4 id="toggle-quad-view">Toggle Quad view</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/toggle-quad-view.png" alt="Toggle Quad view" loading="lazy"></figure>
+<p>Displays the 3D View divided into four split screen parts. Note that the orthographic views cannot be switched in this mode. They remain orthographic, you cannot rotate them.</p>
+<p>To return to single view reuse the menu item in the View menu.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal Split</td>
+<td>Splits the current view horizontally into two independent editor windows.</td>
+</tr>
+<tr>
+<td>Vertical Split</td>
+<td>Splits the current view vertically into two independent editor windows.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="duplicate-area-into-new-window">Duplicate Area into New Window</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/duplicate-area-into-new-window.png" alt="Duplicate Area into New Window" loading="lazy"><figcaption>Duplicate Area into New Window</figcaption></figure>
+<blockquote>
+<p><strong>Duplicate Area into New Window</strong> opens this editor in a floating window. See <strong><a href="https://github.com/Bforartists/Manual/blob/docs2/fix-heading-skips/docs2/content/interface/windows.md#floating-editor-windows">Floating editor windows</a></strong> in the Interface chapter.</p>
+</blockquote>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Maximize Area</td>
+<td>Displays the editor maximized with menus. To return from the maximized view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Space</kbd></span> bar. Or reuse the menu item in the area menu.</td>
+</tr>
+<tr>
+<td>Toggle Full screen Area</td>
+<td>Displays the editor maximized without menus. To return from the full screen view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd></span> bar.</td>
+</tr>
+<tr>
+<td>Close Area</td>
+<td>Closes the area window.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="view-menu-in-sequencer-window">View Menu in Sequencer window</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/view-menu-in-sequencer-window.png" alt="View Menu in Sequencer window" loading="lazy"><figcaption>View Menu in Sequencer window</figcaption></figure>
+<p>The View menu contains all View related tools.</p>
+<h3 id="toolbar-2">Toolbar</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/toolbar-2.png" alt="Toolbar" loading="lazy"></figure>
+<p>Shows or hides the toolbar at the left.</p>
+<h3 id="sidebar-2">Sidebar</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/sidebar.png" alt="Sidebar" loading="lazy"></figure>
+<p>Shows or hides the sidebar at the right in the viewport.</p>
+<h3 id="tool-settings">Tool Settings</h3>
+<p>Show or hide the tool settings at the top.</p>
+<h3 id="adjust-last-operation">Adjust Last Operation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/adjust-last-operation.png" alt="Adjust Last Operation" loading="lazy"></figure>
+<p>Displays the Adjust last operation panel down left.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Channels</td>
+<td>Display the channels in front of the timeline</td>
+</tr>
+<tr>
+<td>Tool Shelf Tabs</td>
+<td>Show or hide the tool shelf tabs in the tool shelf.</td>
+</tr>
+<tr>
+<td>Footer</td>
+<td>Shows the footer.</td>
+</tr>
+<tr>
+<td>Zoom In</td>
+<td>Zooms in.</td>
+</tr>
+<tr>
+<td>Zoom Out</td>
+<td>Zooms out.</td>
+</tr>
+<tr>
+<td>Zoom Border</td>
+<td>Zooms to the selection.</td>
+</tr>
+<tr>
+<td>Frame all</td>
+<td>Zooms in or out to display all elements fitting into the view.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="frame-scene-range-frame-preview-range">Frame Scene Range / Frame Preview Range</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/frame-scene-range-frame-preview-range.png" alt="Frame Scene Range / Frame Preview Range" loading="lazy"><figcaption>Frame Scene Range / Frame Preview Range</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/frame-scene-range-frame-preview-range-2.png" alt="Frame Scene Range / Frame Preview Range" loading="lazy"><figcaption>Frame Scene Range / Frame Preview Range</figcaption></figure>
+<p>This menu item changes the name and the icon, dependant of if the Use Preview range is activated. Which can be done besides the play elements in the Timeline editor or in the footer.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/frame-scene-range-frame-preview-range-3.png" alt="Frame Scene Range / Frame Preview Range" loading="lazy"><figcaption>Frame Scene Range / Frame Preview Range</figcaption></figure>
+<p>Resize the horizontal view to the current scene or preview frame range.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Go to current frame</td>
+<td>Centers the view at the current frame.</td>
+</tr>
+<tr>
+<td>Frame selected</td>
+<td>Zooms in or out to display the currently selected element fitting into the view.</td>
+</tr>
+<tr>
+<td>Refresh all</td>
+<td>Refreshes the sequence editor.</td>
+</tr>
+<tr>
+<td>Sequence render Image</td>
+<td>Renders an image of the current frame.</td>
+</tr>
+<tr>
+<td>Sequence render Animation</td>
+<td>Renders the animation in the preview range.</td>
+</tr>
+<tr>
+<td>Toggle Sequencer/Preview</td>
+<td>Toggles the type of sequencer view between Sequencer or Preview.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pie-menu-2">Pie Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/pie-menu.png" alt="Pie Menu" loading="lazy"></figure>
+<p>The available pie menus for the sequencer in Sequencer mode.</p>
+<h3 id="area-2">Area</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/area.png" alt="Area" loading="lazy"></figure>
+<p>This menu contains general view functionality. And exists in most other editor types too.</p>
+<h4 id="toggle-quad-view-2">Toggle Quad view</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/toggle-quad-view.png" alt="Toggle Quad view" loading="lazy"></figure>
+<p>Displays the 3D View divided into four split screen parts. Note that the orthographic views cannot be switched in this mode. They remain orthographic, you cannot rotate them.</p>
+<p>To return to single view reuse the menu item in the View menu.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal Split</td>
+<td>Splits the current view horizontally into two independent editor windows.</td>
+</tr>
+<tr>
+<td>Vertical Split</td>
+<td>Splits the current view vertically into two independent editor windows.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="duplicate-area-into-new-window-2">Duplicate Area into New Window</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/view-menu/duplicate-area-into-new-window.png" alt="Duplicate Area into New Window" loading="lazy"><figcaption>Duplicate Area into New Window</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Maximize Area</td>
+<td>Displays the editor maximized with menus. To return from the maximized view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Space</kbd></span> bar. Or reuse the menu item in the area menu.</td>
+</tr>
+<tr>
+<td>Toggle Full screen Area</td>
+<td>Displays the editor maximized without menus. To return from the full screen view press hotkey <span class="ui-doc-keys"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd></span> bar.</td>
+</tr>
+<tr>
+<td>Close Area</td>
+<td>Closes the area window.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="export-menu">Export Menu</h1>
+<h2 id="export-menu-2">Export menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/export-menu/export-menu.png" alt="Export menu" loading="lazy"></figure>
+<p>This menu exists in both view types. It currently has just one entry.</p>
+<h3 id="export-subtitles">Export Subtitles</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/export-menu/export-subtitles.png" alt="Export Subtitles" loading="lazy"></figure>
+<p>Exports the subtitles of a video in stl format. You need to have a subtitle text strip in the video.</p>
+<h1 id="navigation-menu">Navigation Menu</h1>
+<h2 id="navigation-menu-2">Navigation menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/navigation-menu/navigation-menu.png" alt="Navigation menu" loading="lazy"></figure>
+<p>This menu exists in Sequencer view type.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Play Animation</td>
+<td>Plays the movie.</td>
+</tr>
+<tr>
+<td>Jump to Previous Strip</td>
+<td>Jumps to the start of the previous strip.</td>
+</tr>
+<tr>
+<td>Jump to Next Strip</td>
+<td>Jumps to the start of the next strip.</td>
+</tr>
+<tr>
+<td>Jump to Previous Strip(Center)</td>
+<td>Jumps to the center of the previous strip.</td>
+</tr>
+<tr>
+<td>Jump to Next Strip(Center)</td>
+<td>Jumps to the center of the next strip.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="range">Range</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/navigation-menu/range.png" alt="Range" loading="lazy"></figure>
+<p>Play range related functionality. Most of it can also be adjusted in the play elements in the timeline editor.</p>
+<h4 id="set-preview-range">Set Preview Range</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/navigation-menu/set-preview-range.png" alt="Set Preview Range" loading="lazy"></figure>
+<p>Calls a border select tool that allows you to set the range of the preview.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set Preview Range to Strips</td>
+<td>Sets the width of the preview range to the length of the strips.</td>
+</tr>
+<tr>
+<td>Clear Preview Range</td>
+<td>Removes the preview range.</td>
+</tr>
+<tr>
+<td>Set Frame Range to Strips</td>
+<td>Sets the start and end frame to the start and end frames of the strips in the sequencer.</td>
+</tr>
+</tbody>
+</table>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> To make the current frame the start or end of playback, use the two buttons next to <strong>Start</strong> and <strong>End</strong> in the timeline footer.</p></div>
+<h1 id="select-menu">Select Menu</h1>
+<h2 id="select-menu-in-sequencer-window">Select menu in Sequencer window</h2>
+<h3 id="all">All</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/select-menu/all.png" alt="All" loading="lazy"></figure>
+<p>Select everything.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Select nothing.</td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>Flip the selection: selected strips become unselected and the other way round.</td>
+</tr>
+<tr>
+<td>Box Select (Legacy)</td>
+<td>Drag a rectangle to select strips. Hold Shift to remove strips from the selection. You rarely need it: dragging with the Tweak tool selects the same way.</td>
+</tr>
+<tr>
+<td>Box Select (Include Handles)</td>
+<td>Like Box Select, but it also selects the handles at the start and end of each strip, so you can trim several strips at once.</td>
+</tr>
+<tr>
+<td>Side of Cursor</td>
+<td>Selects every strip on the same side of the playhead as your mouse.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="side-of-frame-submenu">Side of Frame submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/select-menu/side-of-frame-submenu.png" alt="Side of Frame submenu" loading="lazy"><figcaption>Side of Frame submenu</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left</td>
+<td>Select the strips left from the current frame.</td>
+</tr>
+<tr>
+<td>Right</td>
+<td>Select the strips right from the current frame.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="handle-submenu">Handle submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/select-menu/handle-submenu.png" alt="Handle submenu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Both</td>
+<td>Select all handles of the selected strips.</td>
+</tr>
+<tr>
+<td>Left</td>
+<td>Select the left handles of the selected strips.</td>
+</tr>
+<tr>
+<td>Right</td>
+<td>Select the right handles of the selected strips.</td>
+</tr>
+<tr>
+<td>Both Neighbours</td>
+<td>Select all handles of the selected strips. Plus the handles from the neighbour strips that touches this strip.</td>
+</tr>
+<tr>
+<td>Left Neighbours</td>
+<td>Select the left handles of the selected strips. Plus the handle from the neighbour strips that touches the left handle of the strip.</td>
+</tr>
+<tr>
+<td>Right Neighbours</td>
+<td>Select the right handles of the selected strips. Plus the handle from the neighbour strips that touches the right handle of the strip.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="last-operator-select-handles">Last operator Select Handles</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/select-menu/last-operator-select-handles.png" alt="Last operator Select Handles" loading="lazy"><figcaption>Last operator Select Handles</figcaption></figure>
+<h5 id="side">Side</h5>
+<p>Which side to select.</p>
+<h3 id="channel-submenu">Channel submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/select-menu/channel-submenu.png" alt="Channel submenu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left</td>
+<td>Select the strips left from the current frame that are in the same channel.</td>
+</tr>
+<tr>
+<td>Right</td>
+<td>Select the strips right from the current frame that are in the same channel.</td>
+</tr>
+<tr>
+<td>Both sides</td>
+<td>Select all strips in the channel of the currently selected strip.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="linked">Linked</h3>
+<p>Selects every strip that touches the strips you have selected.</p>
+<h3 id="all-by-type-submenu">All by Type submenu</h3>
+<p>Selects every strip of one kind, for example all Sound strips or all Text strips. The kinds are Scene, Clip, Mask, Movie, Sound, Image, Color, Text, Adjustment Layer, Compositor, Effect and Visual.</p>
+<h3 id="grouped-submenu">Grouped submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/select-menu/selecxt-grouped-submenu.png" alt="Grouped submenu" loading="lazy"></figure>
+<p>Select all strips that are equal to the current selected strip by the chosen method. The menu items should be self explaining.</p>
+<h2 id="select-menu-in-preview-window">Select menu in Preview window</h2>
+<h3 id="all-2">All</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/select-menu/all-2.png" alt="All" loading="lazy"></figure>
+<p>Select everything.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Select nothing.</td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>Flip the selection.</td>
+</tr>
+<tr>
+<td>Box Select (Legacy)</td>
+<td>Drag a rectangle to select strips. Hold Shift to remove strips from the selection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grouped">Grouped</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/select-menu/selecxt-grouped-submenu.png" alt="Grouped" loading="lazy"></figure>
+<p>Select all strips that are equal to the current selected strip by the chosen method. The menu items should be self explaining.</p>
+<h3 id="text-select">Text Select</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/select-menu/text-select.png" alt="Text Select" loading="lazy"></figure>
+<p>These operators are used to select characters, words, lines and blocks of text.</p>
+<p>You can also select all and deselect all.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> These are only shown when a text strip is selected. And they are greyed out first.</p></div>
+<p>You need to edit the text at least once in the sidebar.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/select-menu/text-select-2.png" alt="Text Select" loading="lazy"></figure>
+<p>AND you need to go in edit mode by a double click then.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/select-menu/text-select-3.png" alt="Text Select" loading="lazy"></figure>
+<h1 id="marker-menu">Marker Menu</h1>
+<h2 id="dopesheet-editor-marker-menu">Dopesheet Editor - Marker Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/marker-menu/dopesheet-editor-marker-menu.png" alt="Dopesheet Editor - Marker Menu" loading="lazy"><figcaption>Dopesheet Editor - Marker Menu</figcaption></figure>
+<p>Markers are visual landmarks. They can mark a start of a specific animation sequence, the end of a camera movement, and so on.</p>
+<p>When you add one then a marker area appears at the bottom of the timeline.</p>
+<p>Markers can be pulled around by clicking at them and dragging them left or right. The active marker is yellow.</p>
+<p>By holding down shift you can select more than one marker.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Marker</td>
+<td>Adds a marker at the current frame position.</td>
+</tr>
+<tr>
+<td>Duplicate Marker</td>
+<td>Duplicates the selected marker(s). The duplicate(s) sticks at the mouse until you click to give it the target destination.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="duplicate-marker-to-scene">Duplicate Marker to Scene</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/marker-menu/duplicate-marker-to-scene.png" alt="Duplicate Marker to Scene" loading="lazy"><figcaption>Duplicate Marker to Scene</figcaption></figure>
+<p>Duplicate markers to other scenes. A blend file can contain more than one scene. See Scene Properties in the Properties editor.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/marker-menu/duplicate-marker-to-scene-2.png" alt="Duplicate Marker to Scene" loading="lazy"><figcaption>Duplicate Marker to Scene</figcaption></figure>
+<h3 id="delete-marker">Delete Marker</h3>
+<p>Deletes the selected marker(s).</p>
+<h3 id="bind-camera-to-markers">Bind Camera to Markers</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/marker-menu/bind-camera-to-markers.png" alt="Bind Camera to Markers" loading="lazy"><figcaption>Bind Camera to Markers</figcaption></figure>
+<p>This feature is of interest when you work with scene strips. Bind camera to markers turns an object into a camera object. This can be any object in the scene. Not just camera objects.</p>
+<p>When the current frame position does not have a marker yet, then it creates a marker at the current frame position.</p>
+<p>By binding different objects or cameras at different marker locations you can switch cameras automatically.</p>
+<p>The marker with a bind camera attached will show a camera icon.</p>
+<h3 id="rename-marker">Rename Marker</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/marker-menu/rename-marker.png" alt="Rename Marker" loading="lazy"></figure>
+<p>A menu will open up where you can rename the active marker.</p>
+<h3 id="move-marker">Move Marker</h3>
+<p>Hotkey only functionality! This menu item exists to show the hotkey to move the marker.</p>
+<h3 id="select-submenu">Select submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/marker-menu/select-submenu.png" alt="Select submenu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All</td>
+<td>Select all markers.</td>
+</tr>
+<tr>
+<td>None</td>
+<td>Deselect all markers.</td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>Invert selection.</td>
+</tr>
+<tr>
+<td>Before Current Frame</td>
+<td>Select markers before current frame</td>
+</tr>
+<tr>
+<td>After Current Frame</td>
+<td>Select markers after current frame.</td>
+</tr>
+<tr>
+<td>Jump to Next Marker</td>
+<td>Sets the frame position to the next marker.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="jump-to-previous-marker">Jump to Previous Marker</h3>
+<p>Sets the frame position to the previous marker.</p>
+<h1 id="add-menu">Add Menu</h1>
+<h2 id="add-menu-2">Add menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/add-menu/add-menu.png" alt="Add menu" loading="lazy"></figure>
+<p>The sequencer does not only display video and audio strips. There are several strip types available. You can in the Add menu load image sequences, single images, masks, and even whole scenes.</p>
+<p>Different strip types have different colors. You can customize them further in the sidebar in the strip tab.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/add-menu/add-menu-2.png" alt="Add menu" loading="lazy"></figure>
+<p>Note that some strip types can also be loaded by drag n drop. When you load the strips by the file selector then you will see some import options there. These import settings are mentioned here.</p>
+<h3 id="search">Search</h3>
+<p>A way to search the menu by typing. Press spacebar to also start searching.</p>
+<h3 id="scene-submenu">Scene submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/add-menu/scene-submenu.png" alt="Scene submenu" loading="lazy"></figure>
+<p>Scene strips are a way to insert the render output of another scene into your sequence. Instead of rendering out a video, then inserting the video file, you can insert the scene directly.</p>
+<p>The strip length will be determined based on the animation settings in that scene.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/add-menu/scene-submenu-2.png" alt="Scene submenu" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> You can't use the same scene than the one where you have the Video Sequence Editor open. You need to have a second scene with the content. Scenes can be managed in the Scene tab in the Properties Editor.</p></div>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/add-menu/scene-submenu-3.png" alt="Scene submenu" loading="lazy"></figure>
+<p>Scenes must exist in the current file. Available scenes appears in the Scene menu.</p>
+<p>You can also create a strip directly from this Add Scene Strips operator using the New Scene entry.</p>
+<h3 id="clip-submenu">Clip submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/add-menu/clip-submenu.png" alt="Clip submenu" loading="lazy"></figure>
+<p>Clips comes from the Movie Clip Editor. The Movie Clip Editor is part of the motion tracking workspace, and primarily used for motion tracking.</p>
+<p>Clips must exist in the current file. Available clips appears in the Clip menu.</p>
+<h3 id="mask-submenu">Mask submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/add-menu/mask-submenu.png" alt="Mask submenu" loading="lazy"></figure>
+<p>The Mask strip generates a mask image from the selected mask data-block generated in the Movie Clip Editor. This works similar to the Mask Node but without the options available for finer control. The mask image is always generated at the render resolution, scaling along with different proxy levels.</p>
+<p>Masks must exist in the current file. Available masks appears in the Mask menu.</p>
+<h3 id="movie">Movie</h3>
+<p>Import a video.</p>
+<h4 id="import-settings">Import settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/add-menu/import-settings.png" alt="Import settings" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relative Path</td>
+<td>Use a relative path to the blend file.</td>
+</tr>
+<tr>
+<td>Start Frame</td>
+<td>Start frame of the strip.</td>
+</tr>
+<tr>
+<td>Channel</td>
+<td>In which channel to insert.</td>
+</tr>
+<tr>
+<td>Replace Selection</td>
+<td>Replace selected strips at import.</td>
+</tr>
+<tr>
+<td>Sound</td>
+<td>Import sound. A video is usually made of an image part and an audio part.</td>
+</tr>
+<tr>
+<td>Use Movie Frame rate</td>
+<td>Use the frame rate of the video to keep video and audio in sync.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sound">Sound</h3>
+<p>Import an audio file.</p>
+<h4 id="import-settings-2">Import settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/add-menu/import-settings-2.png" alt="Import settings" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relative Path</td>
+<td>Use a relative path to the blend file.</td>
+</tr>
+<tr>
+<td>Start Frame</td>
+<td>Start frame of the strip.</td>
+</tr>
+<tr>
+<td>Channel</td>
+<td>In which channel to insert.</td>
+</tr>
+<tr>
+<td>Replace Selection</td>
+<td>Replace selected strips at import.</td>
+</tr>
+<tr>
+<td>Cache</td>
+<td>Cache the sound in memory.</td>
+</tr>
+<tr>
+<td>Mono</td>
+<td>Import the audio file as mono.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="image-sequence">Image/Sequence</h3>
+<p>Adds a single image or a sequence of images.</p>
+<p>When you add a single image then a strip with the length of one second gets created.</p>
+<p>When you want to import an image sequence you have to select all the images of the sequence.</p>
+<h4 id="import-settings-3">Import settings</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/add-menu/import-settings-3.png" alt="Import settings" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relative Path</td>
+<td>Use a relative path to the blend file.</td>
+</tr>
+<tr>
+<td>Start Frame</td>
+<td>Start frame of the strip.</td>
+</tr>
+<tr>
+<td>End Frame</td>
+<td>End frame of the strip.</td>
+</tr>
+<tr>
+<td>Replace Selection</td>
+<td>Replace selected strips at import.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="use-placeholders">Use Placeholders</h5>
+<p>Use placeholder images in an image sequence with missing images.</p>
+<p>Image sequences can use placeholder files. This works by enabling Use placeholders checkbox when adding an image strip. The option detects the frame range of opened images using Blender’s frame naming scheme (filename + frame number +.. .extension) and makes an image sequence with all files in between even if they are missing. This allows you to render an image sequence with a few frames missing and still the image strip will have the correct range to account for the missing frames displayed as black. When the missing frames are rendered or placed in the same folder, you can refresh the Sequencer and get the missing frames in the strip. The option is also available when using the Change Data/File operator and allows you to add more images to the range.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Adds a strip with a plain color. Color is one of many effect strips.</td>
+</tr>
+<tr>
+<td>Text Strip</td>
+<td>A Text strip allows you to display text in the Sequence.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="adjustment-layer">Adjustment Layer</h3>
+<p>The Adjustment Layer strip works like a regular input file strip except for the fact, that it considers all strips below it as its input.</p>
+<p>Real-world use cases, you want to add some last finishing color correction on top of parts of your final sequence, timeline without messing with meta strips around. Just add an adjustment layer on top and activate the color balance.</p>
+<p>Or you can stack a primary color correction and several secondary color corrections on top of each other (probably using the new mask input for area selection).</p>
+<h3 id="effect-strip-submenu">Effect Strip submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/add-menu/effect-strip-submenu.png" alt="Effect Strip submenu" loading="lazy"></figure>
+<p>Effect strips that adds effects to the image part of the strips.</p>
+<p>The color related strips that are greyed out here requires to have two strips selected. The one controls the other strip then.</p>
+<p>The last operator panel is mostly similar for all types.</p>
+<h4 id="multicam-selector">Multicam Selector</h4>
+<p>The Multicam Selector strip is used for multi-camera editing. Multi-camera editing is when a scene is recorded using multiple cameras from different angles and then edited together afterwards. This process can be rather easy in the VSE if you properly setup every to improve your workflow.</p>
+<h4 id="workflow">Workflow</h4>
+<p>Add your video strips.</p>
+<p>Sync all your cameras by either using Audio Wave forms or by the movement of objects.</p>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> To make syncing strips easier you can group cameras, their audio, and their effects together using Meta Strips.</p></div>
+<p>Add a viewer region for every input channel and to improve the performance use proxies.</p>
+<p>Add a Multicam Selector strip above all the channel tracks.</p>
+<p>After completing these steps you should get something similar to the image below:</p>
+<p>Select the Multicam strip.</p>
+<p>When you select the Multicam strip, the keys 1 to 9 are mapped to the cut buttons. So, select the Multicam strip and start playback and press the keys for the correct input while watching the individual cameras.</p>
+<p>You will now have a small Multicam Selector strip for every cut.</p>
+<h4 id="transform">Transform</h4>
+<p>Moves, rotates or scales the images within a strip.</p>
+<h4 id="speed-control">Speed Control</h4>
+<p>Speed Control time-warps the strip, making it play faster or slower than it normally would. A Global Speed less than 1.0 makes the strip play slower; greater than 1.0 makes it play faster.</p>
+<p>Playing faster means that some frames are skipped, and the strip will run out of frames before the end frame. When the strip runs out of frames to display, it will just keep repeating the last one; action will appear to freeze. To avoid this, position the next strip under the original at a point where you want the motion to continue.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Glow</td>
+<td>This effect makes parts of an image glow brighter. To “animate” the glow effect, mix it with the base image using the Gamma Cross effect, crossing from the base image to the glowing one.</td>
+</tr>
+<tr>
+<td>Gaussian Blur</td>
+<td>Blurs the input strip in a defined direction.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="add">Add</h4>
+<p>The Add Effect adds the colors of two strips together. Use this effect with a base image strip, and a modifier strip. The modifier strip can be either a solid color or a black-and-white mask, or another image.</p>
+<p>You can use this effect to increase the brightness of an image, or if you use a BW mask, selectively increase the brightness of certain areas of the image. The Mix node, in Add mode, does exactly the same thing as the Add SFX strip here, and is controlled the same way by feeding the Factor input.</p>
+<h4 id="subtract-effect">Subtract Effect</h4>
+<p>This effect takes away one strip’s color from the second.</p>
+<p>Make a negative of an image using this effect, or switch the order of the strips and just darken the strip. Subtracting a hue of blue from a white image will make it yellow, since red and green make yellow.</p>
+<h4 id="multiply">Multiply</h4>
+<p>The Multiply effect multiplies two colors. Bforartists uses values between (0.0 to 1.0) for the colors. This operation does not have to be normalized, the multiplication of two terms between (0.0 to 1.0) always gives a result between (0.0 to 1.0).</p>
+<p>With the “traditional” representation of three bytes, like RGB(124, 255, 56), the multiplications give far too high results, like RGB(7316, 46410, 1848), that have to be normalized (brought back) by dividing them by 256 to fit in the range of (0 to 255)…</p>
+<p>Multiply can be used with a Mask. Or with Uniform Colors.</p>
+<p>Multiplying a color with a “normal” image allows you to soften some hues of this one (and so – symmetrically – to enhance the others).</p>
+<p>For example, if you have a brown pixel RGB(0.50, 0.29, 0.05), and you multiply it with a cyan filter (uniform color RGB(0.0, 1.0, 1.0)), you will get a color RGB(0.0, 0.29, 0.5). Visually, the result is to zero the reds and bring up (by “symmetry” – the real values remain unchanged!) the blues and greens. Physically, it is the same effect as shining a cyan light onto a chocolate bar. Emotionally, vegetation becomes more lush, water becomes more Caribbean and inviting, skies become friendlier.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This effect reduces the global luminosity of the picture (the result will always be smaller than the smallest operand). If one of the images is all white, the result is the other picture; if one of the images is all black, the result is all black!</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Over Drop</td>
+<td>Alpha channel effect. With Over Drop the first strip selected is the foreground. But as with Alpha Over, the Opacity controls the transparency of this foreground. Warning! By clicking the Premultiply Alpha button in the Sidebar of the foreground strip, the alpha values of the two strips are not multiplied or added together.</td>
+</tr>
+<tr>
+<td>Alpha Over</td>
+<td>Alpha channel effect. With Alpha Over the first strip selected is the background, and the second one goes over the first one selected. The Opacity controls the transparency of the foreground.</td>
+</tr>
+<tr>
+<td>Alpha Under</td>
+<td>Alpha channel effect. With Alpha Under the first strip selected is the foreground, and the second one, the background. The Opacity controls the transparency of the background.</td>
+</tr>
+<tr>
+<td>Color Mix</td>
+<td>The Color Mix effect strip mixes two strips by working on the individual and corresponding pixels of the two input strips. This effect can do the exact same operation as the Add, Subtract, or Multiply effect strips but also other color blending modes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transition-submenu">Transition submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/add-menu/transition-submenu.png" alt="Transition submenu" loading="lazy"></figure>
+<p>Adds transitions between two selected strips.</p>
+<p>These strips are effect strips. And will have similar adjust last operation panels therefore.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sound Crossfade</td>
+<td>Adds a cross fade between two selected audio strips.</td>
+</tr>
+<tr>
+<td>Cross</td>
+<td>The Cross transition adds a cross fade transition. Strips can be overlapping or have a gap between them, But when strips contain a gap the last and first frame of each strip is extend which can cause a pause if any of the strips are a sequence.</td>
+</tr>
+<tr>
+<td>Gamma Cross</td>
+<td>Similar to the Cross transition. It adds a cross fade transition. But uses color correction while transitioning between the two strips. This results in a smoother transition.</td>
+</tr>
+<tr>
+<td>Wipe</td>
+<td>Adds a transition from one strip to the next strip. The duration of the wipe is the intersection of the two source strips and cannot be adjusted. To adjust the start and end of the wipe you must adjust the temporal bounds of the source strips in a way that alters their intersection.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fade-submenu">Fade submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/add-menu/fade-submenu.png" alt="Fade submenu" loading="lazy"></figure>
+<p>Adds a fade effect to the selected strip(s). The menu items should be self explaining.</p>
+<h3 id="clear-fade">Clear Fade</h3>
+<p>Removes all fade effects from the selected strips.</p>
+<h1 id="strip-menu">Strip Menu</h1>
+<h2 id="strip-menu-in-sequencer-window">Strip menu in Sequencer window</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/strip-menu-in-sequencer-window.png" alt="Strip menu in Sequencer window" loading="lazy"><figcaption>Strip menu in Sequencer window</figcaption></figure>
+<p>The strip menu contains strip related functionality. The content differs, dependent of the selected strip.</p>
+<h3 id="transform-submenu">Transform - Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/transform-submenu.png" alt="Transform - Submenu" loading="lazy"></figure>
+<p>This sub-menu contains transform operators that you can use on strips.</p>
+<h4 id="move">Move</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/move.png" alt="Move" loading="lazy"></figure>
+<p>Moves the selected strip(s).</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move/Extend from Current Frame</td>
+<td>Extends the selected strips relative to the frame indicator and the mouse position. All selected strip handles to the mouse side of the current frame indicator will transform together.</td>
+</tr>
+<tr>
+<td>Slip Strip Contents</td>
+<td>Change the position of the contents of a strip without moving the strip itself.</td>
+</tr>
+<tr>
+<td>Snap Strips to the Current Frame</td>
+<td>Snaps the selected strips to the current frame.</td>
+</tr>
+<tr>
+<td>Clear Strip Offset</td>
+<td>Clear strip offset from the start and end frames.</td>
+</tr>
+<tr>
+<td>Swap Strip Left</td>
+<td>Swap the active strip with the strip to the left.</td>
+</tr>
+<tr>
+<td>Swap Strip Right</td>
+<td>Swap the active strip with the strip to the right.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="remove-gaps">Remove Gaps</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/remove-gaps.png" alt="Remove Gaps" loading="lazy"></figure>
+<p>Removes gaps at the frame indicator position in the current channel. Strips after the indicator will move to the left to close the gap.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remove Gaps (All)</td>
+<td>Remove all gaps between all clips at the right side.</td>
+</tr>
+<tr>
+<td>Insert Gaps</td>
+<td>Inserts a gap at the frame indicator position. Strips after the indicator will move to the right by the amount of gap frames.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retiming-submenu">Retiming - Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/retiming-submenu.png" alt="Retiming - Submenu" loading="lazy"></figure>
+<p>This submenu contains retiming operators to help change the speed of movie strips. This menu is context sensitive. If you select a retiming keyframe, you will see a new set of operators.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/retiming-submenu-2.png" alt="Retiming - Submenu" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> These operators only work on movie strips, and you must have one selected to see the operators.</p></div>
+<h4 id="enable-disable-retiming">Enable/Disable Retiming</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/enable-disable-retiming.png" alt="Enable/Disable Retiming" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/enable-disable-retiming-2.png" alt="Enable/Disable Retiming" loading="lazy"></figure>
+<p>Enables and Disables the retiming keys of a strip. When you enable retiming, you will be able to set keyframes to retime at difference speeds, to set freeze frames, and or set gradient time changes between keyframes.</p>
+<h4 id="set-speed">Set Speed</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/set-speed.png" alt="Set Speed" loading="lazy"></figure>
+<p>Sets the speed of a retimed segment. If there is no segment, it will create a new segment. To edit the segment, Enable Retiming.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/set-speed-2.png" alt="Set Speed" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The speed is a percentage of total, where 100% is original speed, 110% of the movie playback is 10% faster, and at 90% the movie playback is 10% slower.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed</td>
+<td>The new speed value.</td>
+</tr>
+<tr>
+<td>Preserve Current Retiming</td>
+<td>With preserve current retiming the strip changes length instead of changing next segment speed.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="add-retiming-key">Add Retiming Key</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/add-retiming-key.png" alt="Add Retiming Key" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/add-retiming-key-2.png" alt="Add Retiming Key" loading="lazy"></figure>
+<p>Adds a retiming key. Here you can change strip speeds in various locations within the strip to squash and stretch time dynamically. To edit a retiming key, click on it in the bottom row of the movie strip and drag left or right. A percentage overlay will show the amount of time change is happening between the keyframes.</p>
+<h4 id="delete-retiming-key">Delete Retiming Key</h4>
+<p>Removes the selected retiming keys.</p>
+<h4 id="add-freezeframe">Add Freezeframe</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/add-freezeframe.png" alt="Add Freezeframe" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/add-freezeframe-2.png" alt="Add Freezeframe" loading="lazy"></figure>
+<p>Adds a freeze frame by creating two retiming keyframes with 0% time change between them. You can then later adjust the length of the freezeframe by adjusting either of the retiming keyframes.</p>
+<h4 id="add-speed-transition-and-slide">Add Speed Transition And Slide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/add-speed-transition-and-slide.png" alt="Add Speed Transition And Slide" loading="lazy"><figcaption>Add Speed Transition And Slide</figcaption></figure>
+<p>Add a smooth time transition between two retimed segments.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/add-speed-transition-and-slide-2.png" alt="Add Speed Transition And Slide" loading="lazy"><figcaption>Add Speed Transition And Slide</figcaption></figure>
+<p>To do this, create 3 retiming keyframes, select the middle one, then use the operator. This will create two new keyframes with a begging percentage and an ending percentage. The distance between these two retiming keyframes will be the duration of the transition.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This operator only shows when you have a retiming keyframe selected.</p></div>
+<h4 id="reset-timing">Reset Timing</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/reset-timing.png" alt="Reset Timing" loading="lazy"></figure>
+<p>Resets the movie strip to original playback speed.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Split</td>
+<td>Split the selected strip into two parts at the current frame.</td>
+</tr>
+<tr>
+<td>Hold Split</td>
+<td>Like Split, it splits a strip in two strips. But you will not be able to drag the endpoints to show the frames past the split of each resulting strip. You can adjust the Hold Offset number fields in the Strip Info panel.</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Copies the selected strip(s).</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Pastes copied strip(s).</td>
+</tr>
+<tr>
+<td>Duplicate Strips</td>
+<td>Duplicates the selected strip(s).</td>
+</tr>
+<tr>
+<td>Duplicate Linked</td>
+<td>This creates a <strong>linked duplicate</strong> of the selected strip(s), meaning the new strip shares the same underlying data as the original.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Deletes the selected strip(s).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="delete-strip-data">Delete Strip &amp; Data</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/delete-strip-and-data.png" alt="Delete Strip &amp; Data" loading="lazy"><figcaption>Delete Strip &amp; Data</figcaption></figure>
+<p>Deletes the selected scene strip types and associated scene data.</p>
+<p>This will then convert the associated scene to an orphan data block which will be permanently removed upon save and re-load of the <code>*.blend</code> file.</p>
+<h3 id="modifiers-submenu">Modifiers – Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/modifiers-submenu.png" alt="Modifiers – Submenu" loading="lazy"></figure>
+<p>All strip types. Adds a strip modifier. Strip modifiers are explained in the sidebar chapters.</p>
+<p>Sound strips has different content in the modifier menu.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/modifiers-submenu-2.png" alt="Modifiers – Submenu" loading="lazy"></figure>
+<h3 id="copy-modifiers-to-selection">Copy modifiers to selection</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/copy-modifiers-to-selection.png" alt="Copy modifiers to selection" loading="lazy"><figcaption>Copy modifiers to selection</figcaption></figure>
+<p>Copies the modifiers from the source strip to the target strip by given method. It opens a popup where you can choose the method.</p>
+<p>First select the source strip. Hold down shift, select the second strip. Perform the tool.</p>
+<h3 id="effect-strip">Effect Strip</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/effect-strip.png" alt="Effect Strip" loading="lazy"></figure>
+<p>Strip type Effects.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reassign Inputs</td>
+<td>Reassigns the input of the strips. Unfortunately not to find out how this works.</td>
+</tr>
+<tr>
+<td>Swap Inputs</td>
+<td>Swaps the inputs of the selected strips. Unfortunately not to find out how this works.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="change-effect-types">Change Effect Types</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/change-effect-types.png" alt="Change Effect Types" loading="lazy"></figure>
+<p>Changes a selected existing effect strip effect type. Only shows when an effect strip is selected.</p>
+<p>These operators show and hide depending on the strip selection context.</p>
+<p>If a strip cannot be changed, it will advise you to selected a changeable strip, which are Scene, Effect and Data strips.</p>
+<h3 id="movie-strip-submenu">Movie Strip - Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/movie-strip-submenu.png" alt="Movie Strip - Submenu" loading="lazy"><figcaption>Movie Strip - Submenu</figcaption></figure>
+<p>Strip type Movie.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set Render Size</td>
+<td>Set the render size and aspect from the active strip. Attention, there is no feedback if the operation was successful. It simply sets it.</td>
+</tr>
+<tr>
+<td>Deinterlace Movies</td>
+<td>Deinterlaces the selected movie strips.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="set-render-size">Set Render Size</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/set-render-size.png" alt="Set Render Size" loading="lazy"></figure>
+<p>Strip type Image.</p>
+<p>Set the render size and aspect from the active image strip. Attention, there is no feedback if the operation was successful. It simply sets it.</p>
+<h4 id="interlace-movies">Interlace Movies</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/set-render-size.png" alt="Interlace Movies" loading="lazy"></figure>
+<p>Strip type Image. Create a strip for every image in the image sequence strip.</p>
+<h4 id="last-operator-separate-images">Last Operator Separate Images</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/last-operator-separate-images.png" alt="Last Operator Separate Images" loading="lazy"><figcaption>Last Operator Separate Images</figcaption></figure>
+<p>The length of each frame of the new created strips.</p>
+<h3 id="make-meta-strip">Make Meta Strip</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/make-meta-strip.png" alt="Make Meta Strip" loading="lazy"></figure>
+<p>Creates a meta strip out of the selected strips. A Meta Strip is a strip which contain multiple strips treated as if it was one strip. It allows you to reduce the vertical space used in the Sequencer. You can edit it the same way as any other strips.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The default blend mode for a Meta strip is Replace. There are many cases where this alters the results of the animation so be sure to check the results and adjust the blend mode if necessary.</p></div>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UnMeta Strip</td>
+<td>Separating (ungrouping) the Meta strip restores the strips to their relative positions and channels.</td>
+</tr>
+<tr>
+<td>Toggle Meta</td>
+<td>Toggles between the meta and unmeta state. You need to have a meta strip in the sequencer timeline already.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="color-tags">Color Tags</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/set-color-tag.png" alt="Color Tags" loading="lazy"></figure>
+<p>Give strips a color so you can spot them quickly, for example all dialogue in green and all music in blue. Select the strips and click a color in the row of color buttons. The <strong>X</strong> button removes the color.</p>
+<p>The same row is in the right-click menu of a strip.</p>
+<h3 id="lock-mute-submenu">Lock/Mute - Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/lock-mute-submenu.png" alt="Lock/Mute - Submenu" loading="lazy"></figure>
+<h4 id="lock-strips">Lock Strips</h4>
+<p>Locks the strip from editing. They can't be moved or edited anymore.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/lock-strips.png" alt="Lock Strips" loading="lazy"></figure>
+<p>Locked strips appears hatched.</p>
+<h4 id="unlock-strips">Unlock Strips</h4>
+<p>Unlock locked strips.</p>
+<h4 id="mute-strips">Mute Strips</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/mute-strips.png" alt="Mute Strips" loading="lazy"></figure>
+<p>Mutes the selected strips. They do not play anymore, and they appear greyed out.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unmute Strips</td>
+<td>Unmutes selected muted strip.</td>
+</tr>
+<tr>
+<td>Mute unselected strips</td>
+<td>Mute the unselected strips.</td>
+</tr>
+<tr>
+<td>Unmute deselected Strips</td>
+<td>Unmute all deselected strips.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inputs-submenu">Inputs - Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/inputs-submenu.png" alt="Inputs - Submenu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reload Strips</td>
+<td>Reloads the strips in the sequencer.</td>
+</tr>
+<tr>
+<td>Reload Strips and Adjust Length</td>
+<td>Reloads the strips in the sequencer.</td>
+</tr>
+<tr>
+<td>Change Paths/Files</td>
+<td>Undocumented Operator. Opens a file selector.</td>
+</tr>
+<tr>
+<td>Swap Data</td>
+<td>Swaps the data between two selected strips. The strips must be compatible.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="connect-strips">Connect Strips</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/connect-strips.png" alt="Connect Strips" loading="lazy"></figure>
+<p>Link selected strips together for simplified group selection. When strips are connected, they will show a connected link icon to the top left of the strips.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/connect-strips-2.png" alt="Connect Strips" loading="lazy"></figure>
+<p>When connected and you move one, you will move all connected strips.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> To use, select multiple strips then connect.</p></div>
+<h3 id="disconnect-strips">Disconnect Strips</h3>
+<p>Unlink the selected strips, so you can select and move them one by one again.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/disconnect-strips.png" alt="Disconnect Strips" loading="lazy"></figure>
+<p>The menu changes with your selection. When the selected strips are not connected, it shows <strong>Connect Strips</strong>. When they are, it shows <strong>Connect Selected</strong> and <strong>Disconnect Strips</strong>. You find the same button in the tool shelf, in the <strong>Strip</strong> tab.</p>
+<h2 id="strip-menu-in-preview-window">Strip menu in Preview window</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/strip-menu-in-preview-window.png" alt="Strip menu in Preview window" loading="lazy"><figcaption>Strip menu in Preview window</figcaption></figure>
+<p>The strip menu contains strip related functionality.</p>
+<h3 id="transform-submenu-2">Transform - Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/transform-submenu-2.png" alt="Transform - Submenu" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move</td>
+<td>Move the selected item.</td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td>Rotate the selected item.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Scale the selected item.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="duplicate">Duplicate</h3>
+<p>Duplicates the selected item.</p>
+<h3 id="animation">Animation</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/animation.png" alt="Animation" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insert Keyframe</td>
+<td>Insert keyframes on the current frame. It inserts the keyframes in the active keying set. In case there is no keying set defined, it uses the default keying set defined in the User Preferences.</td>
+</tr>
+<tr>
+<td>Insert Keyframe with Keying Set</td>
+<td>Insert Keyframe for specified keying set.</td>
+</tr>
+<tr>
+<td>Change Keying Set</td>
+<td>Set a new active keying set.</td>
+</tr>
+<tr>
+<td>Delete Keyframes</td>
+<td>Removes keyframes from the selected strip the current frame.</td>
+</tr>
+<tr>
+<td>Clear Keyframes</td>
+<td>Removes all keyframes for the selected strip across the entire timeline.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="show-hide-sub-menu">Show / Hide sub menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/show-hide-sub-menu.png" alt="Show / Hide sub menu" loading="lazy"><figcaption>Show / Hide sub menu</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show hidden strips</td>
+<td>Reveals hidden strips.</td>
+</tr>
+<tr>
+<td>Hide selected</td>
+<td>Hides selected strips.</td>
+</tr>
+<tr>
+<td>Hide Unselected</td>
+<td>Hides unselected strips.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="delete">Delete</h3>
+<p>Deletes the selected strips.</p>
+<h3 id="lock-mute-submenu-2">Lock/Mute - Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/strip-menu/lock-mute-submenu.png" alt="Lock/Mute - Submenu" loading="lazy"></figure>
+<h4 id="lock-strips-2">Lock Strips</h4>
+<p>Locks the strip from editing. They can't be moved or edited anymore.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/lock-strips.png" alt="Lock Strips" loading="lazy"></figure>
+<p>Locked strips appears hatched.</p>
+<h4 id="unlock-strips-2">Unlock Strips</h4>
+<p>Unlock locked strips.</p>
+<h4 id="mute-strips-2">Mute Strips</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/mute-strips.png" alt="Mute Strips" loading="lazy"></figure>
+<p>Mutes the selected strips. They do not play anymore, and they appear greyed out.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unmute Strips</td>
+<td>Unmutes selected muted strip.</td>
+</tr>
+<tr>
+<td>Mute unselected strips</td>
+<td>Mute the unselected strips.</td>
+</tr>
+<tr>
+<td>Unmute deselected Strips</td>
+<td>Unmute all deselected strips.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="image-menu">Image Menu</h1>
+<h2 id="image-menu-2">Image menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/image-menu/image-menu.png" alt="Image menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/image-menu/image-menu-2.png" alt="Image menu" loading="lazy"></figure>
+<p>The Image menu contains strip related functionality. The images of the strips can be transformed in the preview window.</p>
+<p>The transform sub menu is just displayed in the preview view.</p>
+<h3 id="transform-2">Transform</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/image-menu/transform.png" alt="Transform" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move</td>
+<td>Move the image.</td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td>Rotate the image.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Scale the image.</td>
+</tr>
+<tr>
+<td>Move Origin</td>
+<td>Move the origin of the image to another location.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="clear">Clear</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/image-menu/clear.png" alt="Clear" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Position</td>
+<td>Resets the position of the image.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Resets the scale of the image.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Resets the rotation of the image.</td>
+</tr>
+<tr>
+<td>All Transforms</td>
+<td>Resets all transformations of the image.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale to Fit</td>
+<td>Scales the image to fit in the preview window in at least one direction.</td>
+</tr>
+<tr>
+<td>Scale to Fill</td>
+<td>Scales the image so that the whole preview window is covered.</td>
+</tr>
+<tr>
+<td>Stretch to Fill</td>
+<td>Stretches the image so that the whole preview window is covered.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="text-menu">Text Menu</h1>
+<h2 id="text-menu-2">Text menu</h2>
+<p>The Text menu contains text strip related functionality.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/text-menu/text-menu.png" alt="Text menu" loading="lazy"></figure>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> This is only in the Preview mode of the Sequencer editor.</p></div>
+<h3 id="edit-text">Edit Text</h3>
+<p>Toggles the text editing mode, so you can edit the text directly in the preview.</p>
+<h3 id="cut-text">Cut Text</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/text-menu/cut-text.png" alt="Cut Text" loading="lazy"></figure>
+<p>Cuts the selection.</p>
+<h3 id="copy-text">Copy Text</h3>
+<p>Copies the selection.</p>
+<h3 id="paste-text">Paste Text</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/text-menu/paste-text.png" alt="Paste Text" loading="lazy"></figure>
+<p>Pastes a copied selection.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move Cursor</td>
+<td>Set the cursor at specific positions in the text. <strong>Note:</strong> <em>These operators are typically done through arrow keys, page up/down and home/end keys.</em></td>
+</tr>
+<tr>
+<td>Delete Character</td>
+<td>Deletes the selected text.</td>
+</tr>
+<tr>
+<td>Insert Line Break</td>
+<td>Inserts a new line.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="scene-menu">Scene Menu</h1>
+<h2 id="text-menu-3">Text menu</h2>
+<p>Of interest when you deal with more than one scene. Activate the Sync button.</p>
+<h3 id="adjust-timing">Adjust Timing</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/d415f6db6ea5dae386c995adce9e821fe548f347/docs2/images/editors/video-sequence-editor/header/scene-menu/adjust-timing.png" alt="Adjust Timing" loading="lazy"></figure>
+<p>Adjust the timing of the active scene interactively.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle Active Scene Strip</td>
+<td>Updates the active scene to active scene strip. If synchronization timeline in Sequencer is not set, this toggles the current scene to active scene strip in the sequencer.</td>
+</tr>
+<tr>
+<td>Play Master Scene</td>
+<td>Starts or stops the playback of synchronization timeline.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Ffix-heading-skips/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fvideo-sequence-editor%2Fheader%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/fix-heading-skips/docs2/content/editors/video-sequence-editor/header/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#video-sequence-editor-header">Video Sequence Editor - Header</a><a class="h2" href="#header-right-click-menus">Header right click menus</a><a class="h2" href="#editortype-menu">Editortype Menu</a><a class="h2" href="#header-tools-and-options-preview-view">Header tools and options - Preview view</a><a class="h3" href="#pivot-point">Pivot Point</a><a class="h3" href="#snapping">Snapping</a><a class="h3" href="#display-mode">Display Mode</a><a class="h3" href="#display-channels">Display Channels</a><a class="h3" href="#show-gizmo">Show Gizmo</a><a class="h3" href="#options">Options</a><a class="h3" href="#show-overlay">Show Overlay</a><a class="h3" href="#sync">Sync</a><a class="h2" href="#header-tools-and-options-sequencer-view">Header Tools and Options - Sequencer View</a><a class="h3" href="#scene">Scene</a><a class="h3" href="#overlap-mode">Overlap Mode</a><a class="h3" href="#snap">Snap</a><a class="h3" href="#options-2">Options</a><a class="h3" href="#show-overlays">Show Overlays</a><a class="h3" href="#sync-2">Sync</a><a class="h2" href="#header-tools-and-options-sequencer-preview-view">Header Tools and Options - Sequencer &amp; Preview view</a><a class="h2" href="#quick-menu-2">Quick Menu</a><a class="h3" href="#adding-an-operator-to-the-quick-menu">Adding an operator to the Quick menu</a><a class="h3" href="#adding-a-menu-to-the-quick-menu">Adding a menu to the Quick menu</a><a class="h3" href="#order">Order</a><a class="h3" href="#removing-an-operator-from-the-quick-menu">Removing an operator from the Quick menu</a><a class="h3" href="#context-and-mode-dependent-content">Context and mode dependent content</a><a class="h2" href="#type-of-sequencer-view">Type of Sequencer View</a><a class="h2" href="#view-menu-in-preview-window">View Menu in Preview window</a><a class="h3" href="#toolbar">Toolbar</a><a class="h3" href="#sidebar">Sidebar</a><a class="h3" href="#annotations-legacy-submenu">Annotations (Legacy) submenu</a><a class="h3" href="#zoom">Zoom</a><a class="h3" href="#proxy">Proxy</a><a class="h3" href="#pie-menu">Pie Menu</a><a class="h3" href="#area">Area</a><a class="h2" href="#view-menu-in-sequencer-window">View Menu in Sequencer window</a><a class="h3" href="#toolbar-2">Toolbar</a><a class="h3" href="#sidebar-2">Sidebar</a><a class="h3" href="#tool-settings">Tool Settings</a><a class="h3" href="#adjust-last-operation">Adjust Last Operation</a><a class="h3" href="#frame-scene-range-frame-preview-range">Frame Scene Range / Frame Preview Range</a><a class="h3" href="#pie-menu-2">Pie Menu</a><a class="h3" href="#area-2">Area</a><a class="h2" href="#export-menu-2">Export menu</a><a class="h3" href="#export-subtitles">Export Subtitles</a><a class="h2" href="#navigation-menu-2">Navigation menu</a><a class="h3" href="#range">Range</a><a class="h2" href="#select-menu-in-sequencer-window">Select menu in Sequencer window</a><a class="h3" href="#all">All</a><a class="h3" href="#side-of-frame-submenu">Side of Frame submenu</a><a class="h3" href="#handle-submenu">Handle submenu</a><a class="h3" href="#channel-submenu">Channel submenu</a><a class="h3" href="#linked">Linked</a><a class="h3" href="#all-by-type-submenu">All by Type submenu</a><a class="h3" href="#grouped-submenu">Grouped submenu</a><a class="h2" href="#select-menu-in-preview-window">Select menu in Preview window</a><a class="h3" href="#all-2">All</a><a class="h3" href="#grouped">Grouped</a><a class="h3" href="#text-select">Text Select</a><a class="h2" href="#dopesheet-editor-marker-menu">Dopesheet Editor - Marker Menu</a><a class="h3" href="#duplicate-marker-to-scene">Duplicate Marker to Scene</a><a class="h3" href="#delete-marker">Delete Marker</a><a class="h3" href="#bind-camera-to-markers">Bind Camera to Markers</a><a class="h3" href="#rename-marker">Rename Marker</a><a class="h3" href="#move-marker">Move Marker</a><a class="h3" href="#select-submenu">Select submenu</a><a class="h3" href="#jump-to-previous-marker">Jump to Previous Marker</a><a class="h2" href="#add-menu-2">Add menu</a><a class="h3" href="#search">Search</a><a class="h3" href="#scene-submenu">Scene submenu</a><a class="h3" href="#clip-submenu">Clip submenu</a><a class="h3" href="#mask-submenu">Mask submenu</a><a class="h3" href="#movie">Movie</a><a class="h3" href="#sound">Sound</a><a class="h3" href="#image-sequence">Image/Sequence</a><a class="h3" href="#adjustment-layer">Adjustment Layer</a><a class="h3" href="#effect-strip-submenu">Effect Strip submenu</a><a class="h3" href="#transition-submenu">Transition submenu</a><a class="h3" href="#fade-submenu">Fade submenu</a><a class="h3" href="#clear-fade">Clear Fade</a><a class="h2" href="#strip-menu-in-sequencer-window">Strip menu in Sequencer window</a><a class="h3" href="#transform-submenu">Transform - Submenu</a><a class="h3" href="#retiming-submenu">Retiming - Submenu</a><a class="h3" href="#delete-strip-data">Delete Strip &amp; Data</a><a class="h3" href="#modifiers-submenu">Modifiers – Submenu</a><a class="h3" href="#copy-modifiers-to-selection">Copy modifiers to selection</a><a class="h3" href="#effect-strip">Effect Strip</a><a class="h3" href="#change-effect-types">Change Effect Types</a><a class="h3" href="#movie-strip-submenu">Movie Strip - Submenu</a><a class="h3" href="#set-render-size">Set Render Size</a><a class="h3" href="#make-meta-strip">Make Meta Strip</a><a class="h3" href="#color-tags">Color Tags</a><a class="h3" href="#lock-mute-submenu">Lock/Mute - Submenu</a><a class="h3" href="#inputs-submenu">Inputs - Submenu</a><a class="h3" href="#connect-strips">Connect Strips</a><a class="h3" href="#disconnect-strips">Disconnect Strips</a><a class="h2" href="#strip-menu-in-preview-window">Strip menu in Preview window</a><a class="h3" href="#transform-submenu-2">Transform - Submenu</a><a class="h3" href="#duplicate">Duplicate</a><a class="h3" href="#animation">Animation</a><a class="h3" href="#show-hide-sub-menu">Show / Hide sub menu</a><a class="h3" href="#delete">Delete</a><a class="h3" href="#lock-mute-submenu-2">Lock/Mute - Submenu</a><a class="h2" href="#image-menu-2">Image menu</a><a class="h3" href="#transform-2">Transform</a><a class="h3" href="#clear">Clear</a><a class="h2" href="#text-menu-2">Text menu</a><a class="h3" href="#edit-text">Edit Text</a><a class="h3" href="#cut-text">Cut Text</a><a class="h3" href="#copy-text">Copy Text</a><a class="h3" href="#paste-text">Paste Text</a><a class="h2" href="#text-menu-3">Text menu</a><a class="h3" href="#adjust-timing">Adjust Timing</a></aside></div></body></html>
