@@ -55,25 +55,25 @@ This menu is hidden by default. It is meant to edit the layouts, and should not 
 
 # Tools and Options
 
-### Header tools and options - Preview view
+## Header tools and options - Preview view
 
 ![Header tools and options - Preview view](/docs2/images/editors/video-sequence-editor/header/tools-and-options/header-tools-and-options-preview-view.png)
 
-#### Pivot Point
+### Pivot Point
 
 ![Pivot Point](/docs2/images/editors/video-sequence-editor/header/tools-and-options/pivot-point.png)
 
 The Pivot Point is the center of your object or your selection. The names should be self explaining.
 
-#### Snapping
+### Snapping
 
 ![Snapping](/docs2/images/editors/video-sequence-editor/header/tools-and-options/snapping.png)
 
 Snap strips during transform.
 
-##### Preview Snapping
+#### Preview Snapping
 
-###### Snap to
+##### Snap to
 
 | Entry | What it does |
 | ------------ | ---------------------------------------------------------- |
@@ -81,37 +81,37 @@ Snap strips during transform.
 | Center | Snap to preview center. |
 | Other Strips | Snap to borders and origins of deselected, visible strips. |
 
-#### Display Mode
+### Display Mode
 
 ![Display Mode](/docs2/images/editors/video-sequence-editor/header/tools-and-options/display-mode.png)
 
 How to display the preview video.
 
-##### Image Preview
+#### Image Preview
 
 ![Image Preview](/docs2/images/editors/video-sequence-editor/header/tools-and-options/image-preview.png)
 
 Displays the image material.
 
-##### Luma Waveform
+#### Luma Waveform
 
 ![Luma Waveform](/docs2/images/editors/video-sequence-editor/header/tools-and-options/luma-waveform.png)
 
 Displays the luma waveform of the image.
 
-##### RGB Parade
+#### RGB Parade
 
 ![RGB Parade](/docs2/images/editors/video-sequence-editor/header/tools-and-options/rgb-parade.png)
 
 Displays the rgb channels
 
-##### Chroma Vectorscope
+#### Chroma Vectorscope
 
 ![Chroma Vectorscope](/docs2/images/editors/video-sequence-editor/header/tools-and-options/chroma-vectorscope.png)
 
 Displays the chroma vectorscope of the image.
 
-##### Histogram
+#### Histogram
 
 ![Histogram](/docs2/images/editors/video-sequence-editor/header/tools-and-options/histogram.png)
 
@@ -119,7 +119,7 @@ Displays a histogram of the image.
 
 ![Histogram](/docs2/images/editors/video-sequence-editor/header/tools-and-options/histogram-2.png)
 
-#### Display Channels
+### Display Channels
 
 What channels of the video to display.
 
@@ -128,13 +128,13 @@ What channels of the video to display.
 | Color and Alpha | Display the color channels and alpha channel. |
 | Color | Display just the color channels. |
 
-#### Show Gizmo
+### Show Gizmo
 
 ![Show Gizmo](/docs2/images/editors/video-sequence-editor/header/tools-and-options/show-gizmo.png)
 
 Show or hide the viewport gizmos.
 
-##### Viewport Gizmos
+#### Viewport Gizmos
 
 What kind of gizmos to show.
 
@@ -143,7 +143,7 @@ What kind of gizmos to show.
 | Active Tools | Toggles the navigation gizmos. |
 | Active Tools | Toggles the active tool gizmos. |
 
-#### Options
+### Options
 
 ![Options](/docs2/images/editors/video-sequence-editor/header/tools-and-options/options.png)
 
@@ -152,13 +152,13 @@ What kind of gizmos to show.
 | Show Metadata | Show metadata of first visible strip in the viewport. |
 | Zoom to Fit | Automatically zoom preview image to fully fit into the preview window. **Note:** *Zooming in or out turns off the feature automatically.* |
 
-#### Show Overlay
+### Show Overlay
 
 ![Show Overlay](/docs2/images/editors/video-sequence-editor/header/tools-and-options/show-overlay.png)
 
 Turn on or off all overlays.
 
-##### Preview Overlays
+#### Preview Overlays
 
 | Entry | What it does |
 | ------------- | ----------------------------------- |
@@ -166,7 +166,7 @@ Turn on or off all overlays.
 | Frame Overlay | Show the frame overlays. |
 | Metadata | Show the Metadata overlay. |
 
-###### 2D Cursor
+##### 2D Cursor
 
 ![2D Cursor](/docs2/images/editors/video-sequence-editor/header/tools-and-options/2d-cursor.png)
 
@@ -177,21 +177,21 @@ Show the 2d cursor.
 | Safe Areas | Show the safe area overlays. |
 | Annotations | Show the annotations. |
 
-#### Sync
+### Sync
 
 This will toggle the 3D Sequencer synchronization with scene strips and scene switching. Refer to the 3D Sequencer addon chapter for more information.
 
-### Header Tools and Options - Sequencer View
+## Header Tools and Options - Sequencer View
 
 ![Header Tools and Options - Sequencer View](/docs2/images/editors/video-sequence-editor/header/tools-and-options/header-tools-and-options-sequencer-view.png)
 
-#### Scene
+### Scene
 
 ![Scene](/docs2/images/editors/video-sequence-editor/header/tools-and-options/scene.png)
 
 The timeline scene that you use for the video.
 
-#### Overlap Mode
+### Overlap Mode
 
 ![Overlap Mode](/docs2/images/editors/video-sequence-editor/header/tools-and-options/overlap-mode.png)
 
@@ -203,15 +203,15 @@ How to resolve overlap after transformation.
 | Overwrite | Trim or split strips to resolve overlap. |
 | Shuffle | Move transformed strip to nearest free space to resolve overlap. |
 
-#### Snap
+### Snap
 
 Snap to strip edges or current frame.
 
-##### Snapping Settings
+#### Snapping Settings
 
 ![Snapping Settings](/docs2/images/editors/video-sequence-editor/header/tools-and-options/snapping-settings.png)
 
-###### Sequencer Snapping
+##### Sequencer Snapping
 
 | Entry | What it does |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -220,7 +220,7 @@ Snap to strip edges or current frame.
 | Ignore | **Muted Strips**: Ignores muted strips. · **Sound Strips**: Ignores sound strips. |
 | Current Frame | **Snap to Strips**: Sets the current frame to the start or end point of the selected clip. |
 
-#### Options
+### Options
 
 ![Options](/docs2/images/editors/video-sequence-editor/header/tools-and-options/options-2.png)
 
@@ -234,11 +234,11 @@ Snap to strip edges or current frame.
 | Sync Markers | Transform markers with the strips. |
 | Limit View to Content | Limit timeline height to maximum used channel slots. |
 
-#### Show Overlays
+### Show Overlays
 
 Turn on or off all overlays.
 
-##### Sequencer Overlays
+#### Sequencer Overlays
 
 ![Sequencer Overlays](/docs2/images/editors/video-sequence-editor/header/tools-and-options/sequencer-overlays.png)
 
@@ -247,7 +247,7 @@ Turn on or off all overlays.
 | Grid | Show the grid in the sequencer timeline. |
 | Cache | Visualize cached images on the timelines. |
 
-##### Strips
+#### Strips
 
 | Entry | What it does |
 | -------- | --------------------------------- |
@@ -255,7 +255,7 @@ Turn on or off all overlays.
 | Source | Show the source of the clip. |
 | Duration | Display the duration of the clip. |
 
-###### Animation Curves
+##### Animation Curves
 
 ![Animation Curves](/docs2/images/editors/video-sequence-editor/header/tools-and-options/animation-curves.png)
 
@@ -268,13 +268,13 @@ Display the strip opacity/volume curves.
 | Offset | What offset frame to use, relative to the current frame position. |
 | Retiming | Display the retiming keys on top of the strips. |
 
-###### Waveforms
+##### Waveforms
 
 ![Waveforms](/docs2/images/editors/video-sequence-editor/header/tools-and-options/waveforms.png)
 
 How waveforms are displayed.
 
-###### On
+##### On
 
 ![On](/docs2/images/editors/video-sequence-editor/header/tools-and-options/on.png)
 
@@ -285,7 +285,7 @@ Shows waveforms
 | Strip | Shows strip settings per strip in the Sound panel Display Waveform settings. |
 | Off | Hides all waveforms. |
 
-###### Waveform Style
+##### Waveform Style
 
 What waveform style to use.
 
@@ -294,11 +294,11 @@ What waveform style to use.
 | Full | Shows a bidirectional wave form. |
 | Half | Shows a one-sided wave form. |
 
-#### Sync
+### Sync
 
 This will toggle the 3D Sequencer synchronization with scene strips and scene switching. Refer to the 3D Sequencer addon chapter for more information.
 
-### Header Tools and Options - Sequencer & Preview view
+## Header Tools and Options - Sequencer & Preview view
 
 ![Header Tools and Options - Sequencer & Preview view](/docs2/images/editors/video-sequence-editor/header/tools-and-options/header-tools-and-options-sequencer-and-preview-v.png)
 
@@ -310,7 +310,7 @@ There is one exception in the options panel. Preview as backdrop is not shown in
 
 # Quick Menu
 
-### Quick Menu
+## Quick Menu
 
 ![Quick Menu](/docs2/images/editors/video-sequence-editor/header/quick-menu/quick-menu.png)
 
@@ -322,7 +322,7 @@ When the menu is empty, then you will see the message "No Menu Items found". Thi
 
 Note that added operators in this menu does not have icons. Just text.
 
-#### Adding an operator to the Quick menu
+### Adding an operator to the Quick menu
 
 ![Adding an operator to the Quick menu](/docs2/images/editors/video-sequence-editor/header/quick-menu/adding-an-operator-to-the-quick-menu.png)
 
@@ -338,7 +338,7 @@ As a rule of thumb, when the right click menu has an Add to Quick Favorites, the
 
 Note that you can also add operators from the tool shelf at the left. And also operators from other editor types. Some other editors have their own quick menu though. The Image Editor for example. These operators gets added in the quick menu of the image editor then. And does not show in the quick menu in the header of the 3D view.
 
-#### Adding a menu to the Quick menu
+### Adding a menu to the Quick menu
 
 ![Adding a menu to the Quick menu](/docs2/images/editors/video-sequence-editor/header/quick-menu/adding-a-menu-to-the-quick-menu.png)
 
@@ -346,17 +346,17 @@ It is also possible to add a menu to the Quick menu. For example the whole Add m
 
 ![Adding a menu to the Quick menu](/docs2/images/editors/video-sequence-editor/header/quick-menu/adding-a-menu-to-the-quick-menu-2.png)
 
-#### Order
+### Order
 
 You might notice that the add menu adds at the top of the menu, and not at the bottom as you would expect. First comes menus, then comes operators. And they get added in the order in which you add them.
 
 Besides that, operators and menus gets added in the order that you add them. They cannot be sorted afterwards. So be careful how you add them. You can of course always remove operators and menus, and re-add them at the end of the list.
 
-#### Removing an operator from the Quick menu
+### Removing an operator from the Quick menu
 
 > The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
-#### Context and mode dependent content
+### Context and mode dependent content
 
 The quick favorites. menu exists in nearly all editors. But it is just in the 3D view available in the header. So that you know this functionality exists. In the other editors you call it with hotkey Q.
 
@@ -364,7 +364,7 @@ The content of the quick favorites. menu changes, dependent over which editor yo
 
 # View Menu
 
-### Type of Sequencer View
+## Type of Sequencer View
 
 ![Type of Sequencer View](/docs2/images/editors/video-sequence-editor/type-of-sequencer-view.png)
 
@@ -372,19 +372,19 @@ The Video Sequence Editor is two editors in one. The Preview sequencer view is a
 
 The view menu for Sequencer/Preview contains the same menu items than in the other two views. So we won't explicitely list it here again.
 
-### View Menu in Preview window
+## View Menu in Preview window
 
 ![View Menu in Preview window](/docs2/images/editors/video-sequence-editor/header/view-menu/view-menu-in-preview-window.png)
 
 The View menu contains all View related tools.
 
-#### Toolbar
+### Toolbar
 
 ![Toolbar](/docs2/images/editors/video-sequence-editor/header/view-menu/toolbar.png)
 
 Shows or hides the toolbar at the left.
 
-#### Sidebar
+### Sidebar
 
 ![Sidebar](/docs2/images/editors/video-sequence-editor/header/view-menu/sidebar.png)
 
@@ -396,7 +396,7 @@ Shows or hides the sidebar at the right in the viewport.
 | Tool shelf tabs | Show or hide the tool shelf tabs in the tool shelf. |
 | Playback Controls | Reveals the footer with the playback controls. |
 
-#### Annotations (Legacy) submenu
+### Annotations (Legacy) submenu
 
 ![Annotations (Legacy) submenu](/docs2/images/editors/video-sequence-editor/header/view-menu/annotations-legacy-submenu.png)
 
@@ -419,7 +419,7 @@ This group of operators is useful to take notes without changing tool-shelf oper
 | Zoom Out | Zooms out. |
 | Zoom Border | Draw a rectangle around the target area to zoom in or out. Left mouse button zoooms in. Middle mouse button zooms out. |
 
-#### Zoom
+### Zoom
 
 ![Zoom](/docs2/images/editors/video-sequence-editor/header/view-menu/zoom.png)
 
@@ -430,23 +430,23 @@ A set of predefined zoom factors.
 | Fit Preview in Window | Zooms in or out until the video displays fitting in the viewport. |
 | Frame Selected | Centers the selection and zooms to fit. |
 
-#### Proxy
+### Proxy
 
 ![Proxy](/docs2/images/editors/video-sequence-editor/header/view-menu/proxy.png)
 
 Proxy works just with movie or image strips. What it does is to create a smaller set of preview images. This speeds up the calculation while you are at editing the video. The final result uses the final images again then.
 
-##### Setup
+#### Setup
 
 ![Setup](/docs2/images/editors/video-sequence-editor/header/view-menu/setup.png)
 
 Calls a panel where you can choose the resolution of the proxy images. Clicking OK starts the creation process.
 
-##### Rebuild
+#### Rebuild
 
 Recreates the proxy images
 
-##### Scene Render Size
+#### Scene Render Size
 
 ![Scene Render Size](/docs2/images/editors/video-sequence-editor/header/view-menu/scene-render-size.png)
 
@@ -459,19 +459,19 @@ What render size the display should choose.
 | Sequence render Animation | Renders the animation in the preview range. |
 | Toggle Sequencer/Preview | Toggles the type of sequencer view between Sequencer or Preview. |
 
-#### Pie Menu
+### Pie Menu
 
 ![Pie Menu](/docs2/images/editors/video-sequence-editor/header/view-menu/pie-menu.png)
 
 The available pie menus for the sequencer in View mode.
 
-#### Area
+### Area
 
 ![Area](/docs2/images/editors/video-sequence-editor/header/view-menu/area.png)
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-##### Toggle Quad view
+#### Toggle Quad view
 
 ![Toggle Quad view](/docs2/images/editors/video-sequence-editor/header/view-menu/toggle-quad-view.png)
 
@@ -484,7 +484,7 @@ To return to single view reuse the menu item in the View menu.
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-##### Duplicate Area into New Window
+#### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/video-sequence-editor/header/view-menu/duplicate-area-into-new-window.png)
 
@@ -496,29 +496,29 @@ To return to single view reuse the menu item in the View menu.
 | Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space bar. |
 | Close Area | Closes the area window. |
 
-### View Menu in Sequencer window
+## View Menu in Sequencer window
 
 ![View Menu in Sequencer window](/docs2/images/editors/video-sequence-editor/header/view-menu/view-menu-in-sequencer-window.png)
 
 The View menu contains all View related tools.
 
-#### Toolbar
+### Toolbar
 
 ![Toolbar](/docs2/images/editors/video-sequence-editor/header/view-menu/toolbar-2.png)
 
 Shows or hides the toolbar at the left.
 
-#### Sidebar
+### Sidebar
 
 ![Sidebar](/docs2/images/editors/video-sequence-editor/header/view-menu/sidebar.png)
 
 Shows or hides the sidebar at the right in the viewport.
 
-#### Tool Settings
+### Tool Settings
 
 Show or hide the tool settings at the top.
 
-#### Adjust Last Operation
+### Adjust Last Operation
 
 ![Adjust Last Operation](/docs2/images/editors/video-sequence-editor/header/view-menu/adjust-last-operation.png)
 
@@ -534,7 +534,7 @@ Displays the Adjust last operation panel down left.
 | Zoom Border | Zooms to the selection. |
 | Frame all | Zooms in or out to display all elements fitting into the view. |
 
-#### Frame Scene Range / Frame Preview Range
+### Frame Scene Range / Frame Preview Range
 
 ![Frame Scene Range / Frame Preview Range](/docs2/images/editors/video-sequence-editor/header/view-menu/frame-scene-range-frame-preview-range.png)
 
@@ -555,19 +555,19 @@ Resize the horizontal view to the current scene or preview frame range.
 | Sequence render Animation | Renders the animation in the preview range. |
 | Toggle Sequencer/Preview | Toggles the type of sequencer view between Sequencer or Preview. |
 
-#### Pie Menu
+### Pie Menu
 
 ![Pie Menu](/docs2/images/editors/video-sequence-editor/header/view-menu/pie-menu.png)
 
 The available pie menus for the sequencer in Sequencer mode.
 
-#### Area
+### Area
 
 ![Area](/docs2/images/editors/video-sequence-editor/header/view-menu/area.png)
 
 This menu contains general view functionality. And exists in most other editor types too.
 
-##### Toggle Quad view
+#### Toggle Quad view
 
 ![Toggle Quad view](/docs2/images/editors/video-sequence-editor/header/view-menu/toggle-quad-view.png)
 
@@ -580,7 +580,7 @@ To return to single view reuse the menu item in the View menu.
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-##### Duplicate Area into New Window
+#### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/video-sequence-editor/header/view-menu/duplicate-area-into-new-window.png)
 
@@ -592,13 +592,13 @@ To return to single view reuse the menu item in the View menu.
 
 # Export Menu
 
-### Export menu
+## Export menu
 
 ![Export menu](/docs2/images/editors/video-sequence-editor/header/export-menu/export-menu.png)
 
 This menu exists in both view types. It currently has just one entry.
 
-#### Export Subtitles
+### Export Subtitles
 
 ![Export Subtitles](/docs2/images/editors/video-sequence-editor/header/export-menu/export-subtitles.png)
 
@@ -606,7 +606,7 @@ Exports the subtitles of a video in stl format. You need to have a subtitle text
 
 # Navigation Menu
 
-### Navigation menu
+## Navigation menu
 
 ![Navigation menu](/docs2/images/editors/video-sequence-editor/header/navigation-menu/navigation-menu.png)
 
@@ -620,13 +620,13 @@ This menu exists in Sequencer view type.
 | Jump to Previous Strip(Center) | Jumps to the center of the previous strip. |
 | Jump to Next Strip(Center) | Jumps to the center of the next strip. |
 
-#### Range
+### Range
 
 ![Range](/docs2/images/editors/video-sequence-editor/header/navigation-menu/range.png)
 
 Play range related functionality. Most of it can also be adjusted in the play elements in the timeline editor.
 
-##### Set Preview Range
+#### Set Preview Range
 
 ![Set Preview Range](/docs2/images/editors/video-sequence-editor/header/navigation-menu/set-preview-range.png)
 
@@ -642,9 +642,9 @@ Calls a border select tool that allows you to set the range of the preview.
 
 # Select Menu
 
-### Select menu in Sequencer window
+## Select menu in Sequencer window
 
-#### All
+### All
 
 ![All](/docs2/images/editors/video-sequence-editor/header/select-menu/all.png)
 
@@ -658,7 +658,7 @@ Select everything.
 | Box Select (Include Handles) | Like Box Select, but it also selects the handles at the start and end of each strip, so you can trim several strips at once. |
 | Side of Cursor | Selects every strip on the same side of the playhead as your mouse. |
 
-#### Side of Frame submenu
+### Side of Frame submenu
 
 ![Side of Frame submenu](/docs2/images/editors/video-sequence-editor/header/select-menu/side-of-frame-submenu.png)
 
@@ -667,7 +667,7 @@ Select everything.
 | Left | Select the strips left from the current frame. |
 | Right | Select the strips right from the current frame. |
 
-#### Handle submenu
+### Handle submenu
 
 ![Handle submenu](/docs2/images/editors/video-sequence-editor/header/select-menu/handle-submenu.png)
 
@@ -680,15 +680,15 @@ Select everything.
 | Left Neighbours | Select the left handles of the selected strips. Plus the handle from the neighbour strips that touches the left handle of the strip. |
 | Right Neighbours | Select the right handles of the selected strips. Plus the handle from the neighbour strips that touches the right handle of the strip. |
 
-##### Last operator Select Handles
+#### Last operator Select Handles
 
 ![Last operator Select Handles](/docs2/images/editors/video-sequence-editor/header/select-menu/last-operator-select-handles.png)
 
-###### Side
+##### Side
 
 Which side to select.
 
-#### Channel submenu
+### Channel submenu
 
 ![Channel submenu](/docs2/images/editors/video-sequence-editor/header/select-menu/channel-submenu.png)
 
@@ -698,23 +698,23 @@ Which side to select.
 | Right | Select the strips right from the current frame that are in the same channel. |
 | Both sides | Select all strips in the channel of the currently selected strip. |
 
-#### Linked
+### Linked
 
 Selects every strip that touches the strips you have selected.
 
-#### All by Type submenu
+### All by Type submenu
 
 Selects every strip of one kind, for example all Sound strips or all Text strips. The kinds are Scene, Clip, Mask, Movie, Sound, Image, Color, Text, Adjustment Layer, Compositor, Effect and Visual.
 
-#### Grouped submenu
+### Grouped submenu
 
 ![Grouped submenu](/docs2/images/editors/video-sequence-editor/header/select-menu/selecxt-grouped-submenu.png)
 
 Select all strips that are equal to the current selected strip by the chosen method. The menu items should be self explaining.
 
-### Select menu in Preview window
+## Select menu in Preview window
 
-#### All
+### All
 
 ![All](/docs2/images/editors/video-sequence-editor/header/select-menu/all-2.png)
 
@@ -726,13 +726,13 @@ Select everything.
 | Invert | Flip the selection. |
 | Box Select (Legacy) | Drag a rectangle to select strips. Hold Shift to remove strips from the selection. |
 
-#### Grouped
+### Grouped
 
 ![Grouped](/docs2/images/editors/video-sequence-editor/header/select-menu/selecxt-grouped-submenu.png)
 
 Select all strips that are equal to the current selected strip by the chosen method. The menu items should be self explaining.
 
-#### Text Select
+### Text Select
 
 ![Text Select](/docs2/images/editors/video-sequence-editor/header/select-menu/text-select.png)
 
@@ -752,7 +752,7 @@ AND you need to go in edit mode by a double click then.
 
 # Marker Menu
 
-### Dopesheet Editor - Marker Menu
+## Dopesheet Editor - Marker Menu
 
 ![Dopesheet Editor - Marker Menu](/docs2/images/editors/video-sequence-editor/header/marker-menu/dopesheet-editor-marker-menu.png)
 
@@ -769,7 +769,7 @@ By holding down shift you can select more than one marker.
 | Add Marker | Adds a marker at the current frame position. |
 | Duplicate Marker | Duplicates the selected marker(s). The duplicate(s) sticks at the mouse until you click to give it the target destination. |
 
-#### Duplicate Marker to Scene
+### Duplicate Marker to Scene
 
 ![Duplicate Marker to Scene](/docs2/images/editors/video-sequence-editor/header/marker-menu/duplicate-marker-to-scene.png)
 
@@ -777,11 +777,11 @@ Duplicate markers to other scenes. A blend file can contain more than one scene.
 
 ![Duplicate Marker to Scene](/docs2/images/editors/video-sequence-editor/header/marker-menu/duplicate-marker-to-scene-2.png)
 
-#### Delete Marker
+### Delete Marker
 
 Deletes the selected marker(s).
 
-#### Bind Camera to Markers
+### Bind Camera to Markers
 
 ![Bind Camera to Markers](/docs2/images/editors/video-sequence-editor/header/marker-menu/bind-camera-to-markers.png)
 
@@ -793,17 +793,17 @@ By binding different objects or cameras at different marker locations you can sw
 
 The marker with a bind camera attached will show a camera icon.
 
-#### Rename Marker
+### Rename Marker
 
 ![Rename Marker](/docs2/images/editors/video-sequence-editor/header/marker-menu/rename-marker.png)
 
 A menu will open up where you can rename the active marker.
 
-#### Move Marker
+### Move Marker
 
 Hotkey only functionality! This menu item exists to show the hotkey to move the marker.
 
-#### Select submenu
+### Select submenu
 
 ![Select submenu](/docs2/images/editors/video-sequence-editor/header/marker-menu/select-submenu.png)
 
@@ -816,13 +816,13 @@ Hotkey only functionality! This menu item exists to show the hotkey to move the 
 | After Current Frame | Select markers after current frame. |
 | Jump to Next Marker | Sets the frame position to the next marker. |
 
-#### Jump to Previous Marker
+### Jump to Previous Marker
 
 Sets the frame position to the previous marker.
 
 # Add Menu
 
-### Add menu
+## Add menu
 
 ![Add menu](/docs2/images/editors/video-sequence-editor/header/add-menu/add-menu.png)
 
@@ -834,11 +834,11 @@ Different strip types have different colors. You can customize them further in t
 
 Note that some strip types can also be loaded by drag n drop. When you load the strips by the file selector then you will see some import options there. These import settings are mentioned here.
 
-#### Search
+### Search
 
 A way to search the menu by typing. Press spacebar to also start searching.
 
-#### Scene submenu
+### Scene submenu
 
 ![Scene submenu](/docs2/images/editors/video-sequence-editor/header/add-menu/scene-submenu.png)
 
@@ -856,7 +856,7 @@ Scenes must exist in the current file. Available scenes appears in the Scene men
 
 You can also create a strip directly from this Add Scene Strips operator using the New Scene entry.
 
-#### Clip submenu
+### Clip submenu
 
 ![Clip submenu](/docs2/images/editors/video-sequence-editor/header/add-menu/clip-submenu.png)
 
@@ -864,7 +864,7 @@ Clips comes from the Movie Clip Editor. The Movie Clip Editor is part of the mot
 
 Clips must exist in the current file. Available clips appears in the Clip menu.
 
-#### Mask submenu
+### Mask submenu
 
 ![Mask submenu](/docs2/images/editors/video-sequence-editor/header/add-menu/mask-submenu.png)
 
@@ -872,11 +872,11 @@ The Mask strip generates a mask image from the selected mask data-block generate
 
 Masks must exist in the current file. Available masks appears in the Mask menu.
 
-#### Movie
+### Movie
 
 Import a video.
 
-##### Import settings
+#### Import settings
 
 ![Import settings](/docs2/images/editors/video-sequence-editor/header/add-menu/import-settings.png)
 
@@ -889,11 +889,11 @@ Import a video.
 | Sound | Import sound. A video is usually made of an image part and an audio part. |
 | Use Movie Frame rate | Use the frame rate of the video to keep video and audio in sync. |
 
-#### Sound
+### Sound
 
 Import an audio file.
 
-##### Import settings
+#### Import settings
 
 ![Import settings](/docs2/images/editors/video-sequence-editor/header/add-menu/import-settings-2.png)
 
@@ -906,7 +906,7 @@ Import an audio file.
 | Cache | Cache the sound in memory. |
 | Mono | Import the audio file as mono. |
 
-#### Image/Sequence
+### Image/Sequence
 
 Adds a single image or a sequence of images.
 
@@ -914,7 +914,7 @@ When you add a single image then a strip with the length of one second gets crea
 
 When you want to import an image sequence you have to select all the images of the sequence.
 
-##### Import settings
+#### Import settings
 
 ![Import settings](/docs2/images/editors/video-sequence-editor/header/add-menu/import-settings-3.png)
 
@@ -925,7 +925,7 @@ When you want to import an image sequence you have to select all the images of t
 | End Frame | End frame of the strip. |
 | Replace Selection | Replace selected strips at import. |
 
-###### Use Placeholders
+##### Use Placeholders
 
 Use placeholder images in an image sequence with missing images.
 
@@ -936,7 +936,7 @@ Image sequences can use placeholder files. This works by enabling Use placeholde
 | Color | Adds a strip with a plain color. Color is one of many effect strips. |
 | Text Strip | A Text strip allows you to display text in the Sequence. |
 
-#### Adjustment Layer
+### Adjustment Layer
 
 The Adjustment Layer strip works like a regular input file strip except for the fact, that it considers all strips below it as its input.
 
@@ -944,7 +944,7 @@ Real-world use cases, you want to add some last finishing color correction on to
 
 Or you can stack a primary color correction and several secondary color corrections on top of each other (probably using the new mask input for area selection).
 
-#### Effect Strip submenu
+### Effect Strip submenu
 
 ![Effect Strip submenu](/docs2/images/editors/video-sequence-editor/header/add-menu/effect-strip-submenu.png)
 
@@ -954,11 +954,11 @@ The color related strips that are greyed out here requires to have two strips se
 
 The last operator panel is mostly similar for all types.
 
-##### Multicam Selector
+#### Multicam Selector
 
 The Multicam Selector strip is used for multi-camera editing. Multi-camera editing is when a scene is recorded using multiple cameras from different angles and then edited together afterwards. This process can be rather easy in the VSE if you properly setup every to improve your workflow.
 
-##### Workflow
+#### Workflow
 
 Add your video strips.
 
@@ -978,11 +978,11 @@ When you select the Multicam strip, the keys 1 to 9 are mapped to the cut button
 
 You will now have a small Multicam Selector strip for every cut.
 
-##### Transform
+#### Transform
 
 Moves, rotates or scales the images within a strip.
 
-##### Speed Control
+#### Speed Control
 
 Speed Control time-warps the strip, making it play faster or slower than it normally would. A Global Speed less than 1.0 makes the strip play slower; greater than 1.0 makes it play faster.
 
@@ -993,19 +993,19 @@ Playing faster means that some frames are skipped, and the strip will run out of
 | Glow | This effect makes parts of an image glow brighter. To “animate” the glow effect, mix it with the base image using the Gamma Cross effect, crossing from the base image to the glowing one. |
 | Gaussian Blur | Blurs the input strip in a defined direction. |
 
-##### Add
+#### Add
 
 The Add Effect adds the colors of two strips together. Use this effect with a base image strip, and a modifier strip. The modifier strip can be either a solid color or a black-and-white mask, or another image.
 
 You can use this effect to increase the brightness of an image, or if you use a BW mask, selectively increase the brightness of certain areas of the image. The Mix node, in Add mode, does exactly the same thing as the Add SFX strip here, and is controlled the same way by feeding the Factor input.
 
-##### Subtract Effect
+#### Subtract Effect
 
 This effect takes away one strip’s color from the second.
 
 Make a negative of an image using this effect, or switch the order of the strips and just darken the strip. Subtracting a hue of blue from a white image will make it yellow, since red and green make yellow.
 
-##### Multiply
+#### Multiply
 
 The Multiply effect multiplies two colors. Bforartists uses values between (0.0 to 1.0) for the colors. This operation does not have to be normalized, the multiplication of two terms between (0.0 to 1.0) always gives a result between (0.0 to 1.0).
 
@@ -1026,7 +1026,7 @@ For example, if you have a brown pixel RGB(0.50, 0.29, 0.05), and you multiply i
 | Alpha Under | Alpha channel effect. With Alpha Under the first strip selected is the foreground, and the second one, the background. The Opacity controls the transparency of the background. |
 | Color Mix | The Color Mix effect strip mixes two strips by working on the individual and corresponding pixels of the two input strips. This effect can do the exact same operation as the Add, Subtract, or Multiply effect strips but also other color blending modes. |
 
-#### Transition submenu
+### Transition submenu
 
 ![Transition submenu](/docs2/images/editors/video-sequence-editor/header/add-menu/transition-submenu.png)
 
@@ -1041,31 +1041,31 @@ These strips are effect strips. And will have similar adjust last operation pane
 | Gamma Cross | Similar to the Cross transition. It adds a cross fade transition. But uses color correction while transitioning between the two strips. This results in a smoother transition. |
 | Wipe | Adds a transition from one strip to the next strip. The duration of the wipe is the intersection of the two source strips and cannot be adjusted. To adjust the start and end of the wipe you must adjust the temporal bounds of the source strips in a way that alters their intersection. |
 
-#### Fade submenu
+### Fade submenu
 
 ![Fade submenu](/docs2/images/editors/video-sequence-editor/header/add-menu/fade-submenu.png)
 
 Adds a fade effect to the selected strip(s). The menu items should be self explaining.
 
-#### Clear Fade
+### Clear Fade
 
 Removes all fade effects from the selected strips.
 
 # Strip Menu
 
-### Strip menu in Sequencer window
+## Strip menu in Sequencer window
 
 ![Strip menu in Sequencer window](/docs2/images/editors/video-sequence-editor/header/strip-menu/strip-menu-in-sequencer-window.png)
 
 The strip menu contains strip related functionality. The content differs, dependent of the selected strip.
 
-#### Transform - Submenu
+### Transform - Submenu
 
 ![Transform - Submenu](/docs2/images/editors/video-sequence-editor/header/strip-menu/transform-submenu.png)
 
 This sub-menu contains transform operators that you can use on strips.
 
-##### Move
+#### Move
 
 ![Move](/docs2/images/editors/video-sequence-editor/header/strip-menu/move.png)
 
@@ -1080,7 +1080,7 @@ Moves the selected strip(s).
 | Swap Strip Left | Swap the active strip with the strip to the left. |
 | Swap Strip Right | Swap the active strip with the strip to the right. |
 
-##### Remove Gaps
+#### Remove Gaps
 
 ![Remove Gaps](/docs2/images/editors/video-sequence-editor/header/strip-menu/remove-gaps.png)
 
@@ -1091,7 +1091,7 @@ Removes gaps at the frame indicator position in the current channel. Strips afte
 | Remove Gaps (All) | Remove all gaps between all clips at the right side. |
 | Insert Gaps | Inserts a gap at the frame indicator position. Strips after the indicator will move to the right by the amount of gap frames. |
 
-#### Retiming - Submenu
+### Retiming - Submenu
 
 ![Retiming - Submenu](/docs2/images/editors/video-sequence-editor/header/strip-menu/retiming-submenu.png)
 
@@ -1101,7 +1101,7 @@ This submenu contains retiming operators to help change the speed of movie strip
 
 > **Note:** These operators only work on movie strips, and you must have one selected to see the operators.
 
-##### Enable/Disable Retiming
+#### Enable/Disable Retiming
 
 ![Enable/Disable Retiming](/docs2/images/editors/video-sequence-editor/header/strip-menu/enable-disable-retiming.png)
 
@@ -1109,7 +1109,7 @@ This submenu contains retiming operators to help change the speed of movie strip
 
 Enables and Disables the retiming keys of a strip. When you enable retiming, you will be able to set keyframes to retime at difference speeds, to set freeze frames, and or set gradient time changes between keyframes.
 
-##### Set Speed
+#### Set Speed
 
 ![Set Speed](/docs2/images/editors/video-sequence-editor/header/strip-menu/set-speed.png)
 
@@ -1124,7 +1124,7 @@ Sets the speed of a retimed segment. If there is no segment, it will create a ne
 | Speed | The new speed value. |
 | Preserve Current Retiming | With preserve current retiming the strip changes length instead of changing next segment speed. |
 
-##### Add Retiming Key
+#### Add Retiming Key
 
 ![Add Retiming Key](/docs2/images/editors/video-sequence-editor/header/strip-menu/add-retiming-key.png)
 
@@ -1132,11 +1132,11 @@ Sets the speed of a retimed segment. If there is no segment, it will create a ne
 
 Adds a retiming key. Here you can change strip speeds in various locations within the strip to squash and stretch time dynamically. To edit a retiming key, click on it in the bottom row of the movie strip and drag left or right. A percentage overlay will show the amount of time change is happening between the keyframes.
 
-##### Delete Retiming Key
+#### Delete Retiming Key
 
 Removes the selected retiming keys.
 
-##### Add Freezeframe
+#### Add Freezeframe
 
 ![Add Freezeframe](/docs2/images/editors/video-sequence-editor/header/strip-menu/add-freezeframe.png)
 
@@ -1144,7 +1144,7 @@ Removes the selected retiming keys.
 
 Adds a freeze frame by creating two retiming keyframes with 0% time change between them. You can then later adjust the length of the freezeframe by adjusting either of the retiming keyframes.
 
-##### Add Speed Transition And Slide
+#### Add Speed Transition And Slide
 
 ![Add Speed Transition And Slide](/docs2/images/editors/video-sequence-editor/header/strip-menu/add-speed-transition-and-slide.png)
 
@@ -1156,7 +1156,7 @@ To do this, create 3 retiming keyframes, select the middle one, then use the ope
 
 > **Note:** This operator only shows when you have a retiming keyframe selected.
 
-##### Reset Timing
+#### Reset Timing
 
 ![Reset Timing](/docs2/images/editors/video-sequence-editor/header/strip-menu/reset-timing.png)
 
@@ -1172,7 +1172,7 @@ Resets the movie strip to original playback speed.
 | Duplicate Linked | This creates a **linked duplicate** of the selected strip(s), meaning the new strip shares the same underlying data as the original. |
 | Delete | Deletes the selected strip(s). |
 
-#### Delete Strip & Data
+### Delete Strip & Data
 
 ![Delete Strip & Data](/docs2/images/editors/video-sequence-editor/header/strip-menu/delete-strip-and-data.png)
 
@@ -1180,7 +1180,7 @@ Deletes the selected scene strip types and associated scene data.
 
 This will then convert the associated scene to an orphan data block which will be permanently removed upon save and re-load of the `*.blend` file.
 
-#### Modifiers – Submenu
+### Modifiers – Submenu
 
 ![Modifiers – Submenu](/docs2/images/editors/video-sequence-editor/header/strip-menu/modifiers-submenu.png)
 
@@ -1190,7 +1190,7 @@ Sound strips has different content in the modifier menu.
 
 ![Modifiers – Submenu](/docs2/images/editors/video-sequence-editor/header/strip-menu/modifiers-submenu-2.png)
 
-#### Copy modifiers to selection
+### Copy modifiers to selection
 
 ![Copy modifiers to selection](/docs2/images/editors/video-sequence-editor/header/strip-menu/copy-modifiers-to-selection.png)
 
@@ -1198,7 +1198,7 @@ Copies the modifiers from the source strip to the target strip by given method. 
 
 First select the source strip. Hold down shift, select the second strip. Perform the tool.
 
-#### Effect Strip
+### Effect Strip
 
 ![Effect Strip](/docs2/images/editors/video-sequence-editor/header/strip-menu/effect-strip.png)
 
@@ -1209,7 +1209,7 @@ Strip type Effects.
 | Reassign Inputs | Reassigns the input of the strips. Unfortunately not to find out how this works. |
 | Swap Inputs | Swaps the inputs of the selected strips. Unfortunately not to find out how this works. |
 
-#### Change Effect Types
+### Change Effect Types
 
 ![Change Effect Types](/docs2/images/editors/video-sequence-editor/header/strip-menu/change-effect-types.png)
 
@@ -1219,7 +1219,7 @@ These operators show and hide depending on the strip selection context.
 
 If a strip cannot be changed, it will advise you to selected a changeable strip, which are Scene, Effect and Data strips.
 
-#### Movie Strip - Submenu
+### Movie Strip - Submenu
 
 ![Movie Strip - Submenu](/docs2/images/editors/video-sequence-editor/header/strip-menu/movie-strip-submenu.png)
 
@@ -1230,7 +1230,7 @@ Strip type Movie.
 | Set Render Size | Set the render size and aspect from the active strip. Attention, there is no feedback if the operation was successful. It simply sets it. |
 | Deinterlace Movies | Deinterlaces the selected movie strips. |
 
-#### Set Render Size
+### Set Render Size
 
 ![Set Render Size](/docs2/images/editors/video-sequence-editor/header/strip-menu/set-render-size.png)
 
@@ -1238,19 +1238,19 @@ Strip type Image.
 
 Set the render size and aspect from the active image strip. Attention, there is no feedback if the operation was successful. It simply sets it.
 
-##### Interlace Movies
+#### Interlace Movies
 
 ![Interlace Movies](/docs2/images/editors/video-sequence-editor/header/strip-menu/set-render-size.png)
 
 Strip type Image. Create a strip for every image in the image sequence strip.
 
-##### Last Operator Separate Images
+#### Last Operator Separate Images
 
 ![Last Operator Separate Images](/docs2/images/editors/video-sequence-editor/header/strip-menu/last-operator-separate-images.png)
 
 The length of each frame of the new created strips.
 
-#### Make Meta Strip
+### Make Meta Strip
 
 ![Make Meta Strip](/docs2/images/editors/video-sequence-editor/make-meta-strip.png)
 
@@ -1263,7 +1263,7 @@ Creates a meta strip out of the selected strips. A Meta Strip is a strip which c
 | UnMeta Strip | Separating (ungrouping) the Meta strip restores the strips to their relative positions and channels. |
 | Toggle Meta | Toggles between the meta and unmeta state. You need to have a meta strip in the sequencer timeline already. |
 
-#### Color Tags
+### Color Tags
 
 ![Color Tags](/docs2/images/editors/video-sequence-editor/header/strip-menu/set-color-tag.png)
 
@@ -1271,11 +1271,11 @@ Give strips a color so you can spot them quickly, for example all dialogue in gr
 
 The same row is in the right-click menu of a strip.
 
-#### Lock/Mute - Submenu
+### Lock/Mute - Submenu
 
 ![Lock/Mute - Submenu](/docs2/images/editors/video-sequence-editor/header/strip-menu/lock-mute-submenu.png)
 
-##### Lock Strips
+#### Lock Strips
 
 Locks the strip from editing. They can't be moved or edited anymore.
 
@@ -1283,11 +1283,11 @@ Locks the strip from editing. They can't be moved or edited anymore.
 
 Locked strips appears hatched.
 
-##### Unlock Strips
+#### Unlock Strips
 
 Unlock locked strips.
 
-##### Mute Strips
+#### Mute Strips
 
 ![Mute Strips](/docs2/images/editors/video-sequence-editor/mute-strips.png)
 
@@ -1299,7 +1299,7 @@ Mutes the selected strips. They do not play anymore, and they appear greyed out.
 | Mute unselected strips | Mute the unselected strips. |
 | Unmute deselected Strips | Unmute all deselected strips. |
 
-#### Inputs - Submenu
+### Inputs - Submenu
 
 ![Inputs - Submenu](/docs2/images/editors/video-sequence-editor/header/strip-menu/inputs-submenu.png)
 
@@ -1310,7 +1310,7 @@ Mutes the selected strips. They do not play anymore, and they appear greyed out.
 | Change Paths/Files | Undocumented Operator. Opens a file selector. |
 | Swap Data | Swaps the data between two selected strips. The strips must be compatible. |
 
-#### Connect Strips
+### Connect Strips
 
 ![Connect Strips](/docs2/images/editors/video-sequence-editor/header/strip-menu/connect-strips.png)
 
@@ -1322,7 +1322,7 @@ When connected and you move one, you will move all connected strips.
 
 > **Note:** To use, select multiple strips then connect.
 
-#### Disconnect Strips
+### Disconnect Strips
 
 Unlink the selected strips, so you can select and move them one by one again.
 
@@ -1330,13 +1330,13 @@ Unlink the selected strips, so you can select and move them one by one again.
 
 The menu changes with your selection. When the selected strips are not connected, it shows **Connect Strips**. When they are, it shows **Connect Selected** and **Disconnect Strips**. You find the same button in the tool shelf, in the **Strip** tab.
 
-### Strip menu in Preview window
+## Strip menu in Preview window
 
 ![Strip menu in Preview window](/docs2/images/editors/video-sequence-editor/header/strip-menu/strip-menu-in-preview-window.png)
 
 The strip menu contains strip related functionality.
 
-#### Transform - Submenu
+### Transform - Submenu
 
 ![Transform - Submenu](/docs2/images/editors/video-sequence-editor/header/strip-menu/transform-submenu-2.png)
 
@@ -1346,11 +1346,11 @@ The strip menu contains strip related functionality.
 | Rotate | Rotate the selected item. |
 | Scale | Scale the selected item. |
 
-#### Duplicate
+### Duplicate
 
 Duplicates the selected item.
 
-#### Animation
+### Animation
 
 ![Animation](/docs2/images/editors/video-sequence-editor/header/strip-menu/animation.png)
 
@@ -1362,7 +1362,7 @@ Duplicates the selected item.
 | Delete Keyframes | Removes keyframes from the selected strip the current frame. |
 | Clear Keyframes | Removes all keyframes for the selected strip across the entire timeline. |
 
-#### Show / Hide sub menu
+### Show / Hide sub menu
 
 ![Show / Hide sub menu](/docs2/images/editors/video-sequence-editor/header/strip-menu/show-hide-sub-menu.png)
 
@@ -1372,15 +1372,15 @@ Duplicates the selected item.
 | Hide selected | Hides selected strips. |
 | Hide Unselected | Hides unselected strips. |
 
-#### Delete
+### Delete
 
 Deletes the selected strips.
 
-#### Lock/Mute - Submenu
+### Lock/Mute - Submenu
 
 ![Lock/Mute - Submenu](/docs2/images/editors/video-sequence-editor/header/strip-menu/lock-mute-submenu.png)
 
-##### Lock Strips
+#### Lock Strips
 
 Locks the strip from editing. They can't be moved or edited anymore.
 
@@ -1388,11 +1388,11 @@ Locks the strip from editing. They can't be moved or edited anymore.
 
 Locked strips appears hatched.
 
-##### Unlock Strips
+#### Unlock Strips
 
 Unlock locked strips.
 
-##### Mute Strips
+#### Mute Strips
 
 ![Mute Strips](/docs2/images/editors/video-sequence-editor/mute-strips.png)
 
@@ -1406,7 +1406,7 @@ Mutes the selected strips. They do not play anymore, and they appear greyed out.
 
 # Image Menu
 
-### Image menu
+## Image menu
 
 ![Image menu](/docs2/images/editors/video-sequence-editor/header/image-menu/image-menu.png)
 
@@ -1416,7 +1416,7 @@ The Image menu contains strip related functionality. The images of the strips ca
 
 The transform sub menu is just displayed in the preview view.
 
-#### Transform
+### Transform
 
 ![Transform](/docs2/images/editors/video-sequence-editor/header/image-menu/transform.png)
 
@@ -1427,7 +1427,7 @@ The transform sub menu is just displayed in the preview view.
 | Scale | Scale the image. |
 | Move Origin | Move the origin of the image to another location. |
 
-#### Clear
+### Clear
 
 ![Clear](/docs2/images/editors/video-sequence-editor/header/image-menu/clear.png)
 
@@ -1446,7 +1446,7 @@ The transform sub menu is just displayed in the preview view.
 
 # Text Menu
 
-### Text menu
+## Text menu
 
 The Text menu contains text strip related functionality.
 
@@ -1454,21 +1454,21 @@ The Text menu contains text strip related functionality.
 
 > **Note:** This is only in the Preview mode of the Sequencer editor.
 
-#### Edit Text
+### Edit Text
 
 Toggles the text editing mode, so you can edit the text directly in the preview.
 
-#### Cut Text
+### Cut Text
 
 ![Cut Text](/docs2/images/editors/video-sequence-editor/header/text-menu/cut-text.png)
 
 Cuts the selection.
 
-#### Copy Text
+### Copy Text
 
 Copies the selection.
 
-#### Paste Text
+### Paste Text
 
 ![Paste Text](/docs2/images/editors/video-sequence-editor/header/text-menu/paste-text.png)
 
@@ -1482,11 +1482,11 @@ Pastes a copied selection.
 
 # Scene Menu
 
-### Text menu
+## Text menu
 
 Of interest when you deal with more than one scene. Activate the Sync button.
 
-#### Adjust Timing
+### Adjust Timing
 
 ![Adjust Timing](/docs2/images/editors/video-sequence-editor/header/scene-menu/adjust-timing.png)
 

@@ -30,9 +30,9 @@ This panel allows you to edit existing actions or add more actions. This way you
 
 With selecting an action channel, with a not pushed down action, it shows the current action. When you select a track channel then it shows a New button where you can add more action channels.
 
-### Animation data property
+## Animation data property
 
-#### Data Browser
+### Data Browser
 
 ![Data Browser](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel/data-browser.png)
 
@@ -47,6 +47,89 @@ The list of available actions in the scene.
 | Add | Adds a new blank Action. |
 | Remove Action | Removes the action from the current channel. |
 
+
+## Extrapolation
+
+![Extrapolation](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel/extrapolation.png)
+
+Action to take for gaps past the strip extents.
+
+
+| Entry | What it does |
+| ------------ | --------------------------------------------------------------------------------- |
+| Hold | Affects both sides of the strip. This should only be set on the very first strip. |
+| Hold Forward | Affects the region after the clip, only. This can be set on any strip. |
+| Nothing | Affects only the region of the strip itself. This can be set on any strip. |
+
+
+## Blending
+
+![Blending](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel/blending.png)
+
+Affects how the property values directly produced by the strip are combined with the result of evaluating the stack below. The bottom-most strip is blended on top of the default values of the properties.
+
+### Replace
+
+The top strip is linearly blended in with the accumulated result according to influence, completely overwriting it if influence is set to 100%.
+
+### Combine
+
+Depending on the type of each property, one of the following methods is automatically chosen:
+
+Axis/Angle Rotation
+
+`result=previous+value*influence`
+
+This results in averaging the axis and adding the amount of rotation.
+
+Quaternion Rotation
+
+Quaternion math is applied to all four channels of the property at once:
+
+result=previous×valueinfluence
+
+Proportional (Scale)
+
+`result=previous*(value/default)influence`
+
+Others
+
+`result=previous+(value-default)*influence`
+
+This allows layering actions that can also be used as a standalone. Properties keyframed at their default values remain at default.
+
+### Add, Subtract, Multiply
+
+The result of the strip is multiplied, subtracted, or added to the accumulated results, and then blended in according to influence.
+
+`result=mix(previous,previous(+-*)value,influence`)
+
+## Influence
+
+Amount the active Action contributes to the result of the NLA stack.
+
+# Strip Tab
+
+## Strip Tab
+
+![Strip Tab](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/strip-tab.png)
+
+The settings for the currently selected action strip. You need to have a action strip selected to show this tab.
+
+
+| Entry | What it does |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Name | The name of the currently selected action strip. To rename the strip click into the edit field, change the name and press enter. |
+| Mute | Disable the action strip. |
+
+
+## Active Strip panel
+
+![Active Strip panel](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/active-strip-panel.png)
+
+### Frame Start + End
+
+The start and end position of the strip.
 
 ### Extrapolation
 
@@ -104,89 +187,6 @@ The result of the strip is multiplied, subtracted, or added to the accumulated r
 
 `result=mix(previous,previous(+-*)value,influence`)
 
-### Influence
-
-Amount the active Action contributes to the result of the NLA stack.
-
-# Strip Tab
-
-### Strip Tab
-
-![Strip Tab](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/strip-tab.png)
-
-The settings for the currently selected action strip. You need to have a action strip selected to show this tab.
-
-
-| Entry | What it does |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Name | The name of the currently selected action strip. To rename the strip click into the edit field, change the name and press enter. |
-| Mute | Disable the action strip. |
-
-
-### Active Strip panel
-
-![Active Strip panel](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/active-strip-panel.png)
-
-#### Frame Start + End
-
-The start and end position of the strip.
-
-#### Extrapolation
-
-![Extrapolation](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel/extrapolation.png)
-
-Action to take for gaps past the strip extents.
-
-
-| Entry | What it does |
-| ------------ | --------------------------------------------------------------------------------- |
-| Hold | Affects both sides of the strip. This should only be set on the very first strip. |
-| Hold Forward | Affects the region after the clip, only. This can be set on any strip. |
-| Nothing | Affects only the region of the strip itself. This can be set on any strip. |
-
-
-#### Blending
-
-![Blending](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-animation-data-panel/blending.png)
-
-Affects how the property values directly produced by the strip are combined with the result of evaluating the stack below. The bottom-most strip is blended on top of the default values of the properties.
-
-##### Replace
-
-The top strip is linearly blended in with the accumulated result according to influence, completely overwriting it if influence is set to 100%.
-
-##### Combine
-
-Depending on the type of each property, one of the following methods is automatically chosen:
-
-Axis/Angle Rotation
-
-`result=previous+value*influence`
-
-This results in averaging the axis and adding the amount of rotation.
-
-Quaternion Rotation
-
-Quaternion math is applied to all four channels of the property at once:
-
-result=previous×valueinfluence
-
-Proportional (Scale)
-
-`result=previous*(value/default)influence`
-
-Others
-
-`result=previous+(value-default)*influence`
-
-This allows layering actions that can also be used as a standalone. Properties keyframed at their default values remain at default.
-
-##### Add, Subtract, Multiply
-
-The result of the strip is multiplied, subtracted, or added to the accumulated results, and then blended in according to influence.
-
-`result=mix(previous,previous(+-*)value,influence`)
-
 
 | Entry | What it does |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -195,7 +195,7 @@ The result of the strip is multiplied, subtracted, or added to the accumulated r
 | Playback | **Reversed**: The action strip is played in reversed order. This just works when timing is determined automatic. · **Cyclic Strip Time**: Cycle the action strip. |
 
 
-#### Animated Influence subpanel
+### Animated Influence subpanel
 
 ![Animated Influence subpanel](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/animated-influence-subpanel.png)
 
@@ -208,7 +208,7 @@ Control the influence settings by an F-Curve instead of automatically determined
 | Animate Property | Set or remove a keyframe at current position. |
 
 
-#### Animated Strip Time subpanel
+### Animated Strip Time subpanel
 
 ![Animated Strip Time subpanel](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/animated-strip-time-subpanel.png)
 
@@ -221,7 +221,7 @@ Control the Strip time settings by an F-Curve instead of automatically determine
 | Animate Property | Set or remove a keyframe at current position. |
 
 
-### Action Clip panel
+## Action Clip panel
 
 ![Action Clip panel](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/action-clip-panel.png)
 
@@ -239,7 +239,7 @@ This represents the ‘object data’ of the strip. Much like the transform valu
 | Repeat | Repeats the strip by the chosen value. With a value of 1 the strip plays once. |
 
 
-### Action panel
+## Action panel
 
 ![Action panel](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-strip-tab/action-panel.png)
 
@@ -251,7 +251,7 @@ This represents the ‘object data’ of the strip. Much like the transform valu
 
 # Modifiers Tab
 
-### Modifiers Tab - Modifiers Panel
+## Modifiers Tab - Modifiers Panel
 
 ![Modifiers Tab - Modifiers Panel](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/modifiers-tab-modifiers-panel.png)
 
@@ -261,7 +261,7 @@ F-Curve modifiers are similar to Object modifiers. They allow to add adjustable 
 
 Different to the Object modifiers you can't reorder this modifiers. You have to create it in the order that you need it.
 
-#### Add Modifier
+### Add Modifier
 
 ![Add Modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/add-modifier.png)
 
@@ -274,7 +274,7 @@ The list of modifiers. Choose by clicking.
 | Paste F-Curve Modifiers | Paste copied F-Curve modifiers to the active F-Curve. |
 
 
-#### Last Operator Add F-Curve Modifier
+### Last Operator Add F-Curve Modifier
 
 ![Last Operator Add F-Curve Modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/last-operator-add-f-curve-modifier.png)
 
@@ -285,7 +285,7 @@ The list of modifiers. Choose by clicking.
 | Only Active | Only add a modifier to the currently active curve. |
 
 
-### Modifier header
+## Modifier header
 
 ![Modifier header](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/modifier-header.png)
 
@@ -301,11 +301,11 @@ Every modifier is a panel. And every panel has a header area with some general U
 | Delete F-Curve Modifier | Delete this modifier. |
 
 
-### Generator modifier
+## Generator modifier
 
 ![Generator modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/generator-modifier.png)
 
-#### Polynomial Mode
+### Polynomial Mode
 
 ![Polynomial Mode](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/polynomial-mode.png)
 
@@ -323,7 +323,7 @@ Use Expanded Polynominal or Factorized Polynominal algorithm. With these mathema
 | Use Influence | Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor. |
 
 
-#### Restrict Frame Range
+### Restrict Frame Range
 
 ![Restrict Frame Range](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png)
 
@@ -336,7 +336,7 @@ Expanding the Restrict Frame range sets it to active. It reveals some value slid
 | Blend In / Out | Fade the curve in or out for chosen frame numbers. |
 
 
-### Built- in Function modifier
+## Built- in Function modifier
 
 ![Built- in Function modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/built-in-function-modifier.png)
 
@@ -344,7 +344,7 @@ Generate a curve by built in functions.
 
 ![Built- in Function modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/built-in-function-modifier-2.png)
 
-#### Curve Type
+### Curve Type
 
 ![Curve Type](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/curve-type.png)
 
@@ -361,7 +361,7 @@ The available wave forms for the curve.
 | Use Influence | Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor. |
 
 
-#### Restrict Frame Range
+### Restrict Frame Range
 
 ![Restrict Frame Range](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png)
 
@@ -374,7 +374,7 @@ Expanding the Restrict Frame range sets it to active. It reveals some value slid
 | In / Out | Fade the curve in or out for chosen frame numbers. |
 
 
-### Envelope modifier
+## Envelope modifier
 
 ![Envelope modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/envelope-modifier.png)
 
@@ -391,7 +391,7 @@ The Envelope modifier allows you to modify the overall shape of the curve by con
 | Add Control Point | Add a control point. A control point has two sub points, a lower control point and a higher control point. |
 
 
-#### Use Influence
+### Use Influence
 
 ![Use Influence](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/use-influence.png)
 
@@ -399,11 +399,11 @@ Temper the F-Curve Modifier effect by a default influence factor.
 
 Expanding the Use Influence sets it to active. It reveals a value slider then.
 
-##### Influence
+#### Influence
 
 The influence factor.
 
-#### Restrict Frame Range
+### Restrict Frame Range
 
 ![Restrict Frame Range](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png)
 
@@ -416,7 +416,7 @@ Expanding the Restrict Frame range sets it to active. It reveals some value slid
 | In / Out | Fade the curve in or out for chosen frame numbers. |
 
 
-### Cycles modifier
+## Cycles modifier
 
 ![Cycles modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/cycles-modifier.png)
 
@@ -428,7 +428,7 @@ Add a cyclic motion to a curve that has two or more control points. The option c
 
 ![Cycles modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/cycles-modifier-4.png)
 
-#### Trivially Cyclic Curves
+### Trivially Cyclic Curves
 
 When the Cycle Mode for both ends is set to either Repeat Motion or Repeat with Offset, and no other options of the modifier are changed from their defaults, it defines a simple infinite cycle.
 
@@ -438,37 +438,37 @@ Automatic Bezier handle placement is aware of the cycle and adjusts to achieve a
 
 The Cycle-Aware Keying option can be enabled to take the cycle into account when inserting new keyframes.
 
-#### Before Mode
+### Before Mode
 
 ![Before Mode](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/before-mode.png)
 
 Set the cycle mode before the first keyframe.
 
-##### Count
+#### Count
 
 Maximum number of cycles to allow before first keyframes. A value of 0 means infinite.
 
-#### After Mode
+### After Mode
 
 ![After Mode](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/after-mode.png)
 
 Set the cycle mode after the first keyframe.
 
-##### Count
+#### Count
 
 Maximum number of cycles to allow after last keyframes. A value of 0 means infinite.
 
-#### Use Influence
+### Use Influence
 
 Temper the F-Curve Modifier effect by a default influence factor.
 
 Expanding the Use Influence sets it to active. It reveals a value slider then.
 
-##### Influence
+#### Influence
 
 The influence factor.
 
-#### Restrict Frame Range
+### Restrict Frame Range
 
 ![Restrict Frame Range](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png)
 
@@ -481,7 +481,7 @@ Expanding the Restrict Frame range sets it to active. It reveals some value slid
 | In / Out | Fade the curve in or out for chosen frame numbers. |
 
 
-### Noise modifier
+## Noise modifier
 
 ![Noise modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/noise-modifier.png)
 
@@ -489,7 +489,7 @@ Adds noise to the curve.
 
 ![Noise modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/noise-modifier-2.png)
 
-#### Blend Type
+### Blend Type
 
 ![Blend Type](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/blend-type.png)
 
@@ -509,7 +509,7 @@ How to blend the noise with the curve.
 | Use Influence | Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor. |
 
 
-#### Restrict Frame Range
+### Restrict Frame Range
 
 ![Restrict Frame Range](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png)
 
@@ -522,7 +522,7 @@ Expanding the Restrict Frame range sets it to active. It reveals some value slid
 | In / Out | Fade the curve in or out for chosen frame numbers. |
 
 
-### Limits modifier
+## Limits modifier
 
 ![Limits modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/limits-modifier.png)
 
@@ -538,7 +538,7 @@ Sets limits to the curve in specified x and y range values.
 | Use Influence | Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor. |
 
 
-#### Restrict Frame Range
+### Restrict Frame Range
 
 ![Restrict Frame Range](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png)
 
@@ -551,7 +551,7 @@ Expanding the Restrict Frame range sets it to active. It reveals some value slid
 | In / Out | Fade the curve in or out for chosen frame numbers. |
 
 
-### Stepped Interpolation modifier
+## Stepped Interpolation modifier
 
 ![Stepped Interpolation modifier](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/stepped-interpolation-modifier.png)
 
@@ -569,7 +569,7 @@ Adds steps to the curve by rounding the values.
 | Use Influence | Temper the F-Curve Modifier effect by a default influence factor. Expanding the Use Influence sets it to active. It reveals a value slider then. · **Influence**: The influence factor. |
 
 
-#### Restrict Frame Range
+### Restrict Frame Range
 
 ![Restrict Frame Range](/docs2/images/editors/nonlinear-animation-editor/sidebar/nla-editor-sidebar-modifiers-tab/restrict-frame-range.png)
 

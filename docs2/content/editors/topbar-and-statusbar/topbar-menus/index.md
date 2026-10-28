@@ -29,11 +29,11 @@ File Menu
 
 The File menu contains file related functionality.
 
-### New
+## New
 
 Creates a new scene, using the current active template.
 
-### New from Template
+## New from Template
 
 ![New from Template](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/new-from-template.jpg)
 
@@ -41,69 +41,69 @@ Choose to create a new file with predefined Application Templates.
 
 Application templates is a collection of workspaces for a predefined purpose.
 
-#### Standard Application Templates
+### Standard Application Templates
 
-##### General
+#### General
 
 ![General](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/general.png)
 
 The general application template comes with the workspaces to create 3D content.
 
-##### 2D Animation
+#### 2D Animation
 
 ![2D Animation](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/2d-animation.png)
 
 The 2D Animation application template comes with the workspaces to create 2D animation.
 
-##### All
+#### All
 
 ![All](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/all.png)
 
 The All application template contains all default workspaces.
 
-##### Sculpting
+#### Sculpting
 
 ![Sculpting](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/sculpting.png)
 
 The Sculpting application template comes with the workspaces for sculpting needs.
 
-##### VFX
+#### VFX
 
 ![VFX](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/vfx.png)
 
 The VFX application template comes with the workspaces for motion tracking.
 
-##### Video Editing
+#### Video Editing
 
 ![Video Editing](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/video-editing.png)
 
 The Video Editing application template comes with the workspaces for video editing.
 
-### Open
+## Open
 
 Open a blend file.
 
-#### Clear Recent Files List
+### Clear Recent Files List
 
 Clears the recent files list.
 
-### Open Recent
+## Open Recent
 
 ![Open Recent](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/open-recent.png)
 
 Open last recent blend files.
 
-#### More
+### More
 
 ![More](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/more.png)
 
 Open a search field where you can search for specific files.
 
-#### Clear Recent Files List
+### Clear Recent Files List
 
 This clears the recent files list. When you clear, you will be prompted with which items you would like to remove.
 
-##### Remove
+#### Remove
 
 ![Remove](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/remove.png)
 
@@ -114,29 +114,29 @@ This clears the recent files list. When you clear, you will be prompted with whi
 | Items Not Found | Removes only the missing files from the list. If a file exists in the list, it won’t clear it. |
 
 
-#### Recent Context Menu - Open File Location
+### Recent Context Menu - Open File Location
 
 ![Recent Context Menu - Open File Location](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/recent-context-menu-open-file-location.png)
 
 Opens the recent blend file file location in the operating system’s file explorer.
 
-### Revert
+## Revert
 
 Reload the last saved file.
 
-### Recover last Session
+## Recover last Session
 
 Open the last closed blend file. (quit.blend)
 
-### Recover Autosave
+## Recover Autosave
 
 Open the last autosaved blend file.
 
-### Save
+## Save
 
 Save blend file.
 
-### Incremental Save
+## Incremental Save
 
 ![Incremental Save](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/incremental-save.png)
 
@@ -146,27 +146,27 @@ Saves an already saved blend file with incremental file name. myfile.blend gets 
 
 You need to have the blend file saved once to set this save method active.
 
-### Save As
+## Save As
 
 Save blend file as.
 
-### Save Copy
+## Save Copy
 
 Saves a copy of the current file.
 
-### Link
+## Link
 
 Link allows you to link content from another blend file. The content remains in the other blend file. The linked blend file will be required to work with the linked content.
 
 When you click at Link then a file browser will open. Down left you will see some further options.
 
-#### Advanced Filter
+### Advanced Filter
 
 ![Advanced Filter](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/advanced-filter.png)
 
 This filter allows you to filter the content of the blend file for specific object types.
 
-#### Import Settings
+### Import Settings
 
 ![Import Settings](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/import-settings.png)
 
@@ -181,7 +181,7 @@ At the right you can reveal the import settings.
 | Instance Collections | This option links the collection to an object, adding it to the active scene. |
 
 
-#### Please Note:
+### Please Note:
 
 When you select an Object type, it will be placed in your scene at the cursor. Many other data types - cameras, curves, and materials for example - must be linked to an object before they become visible.
 
@@ -189,13 +189,13 @@ You cannot move a linked object. Its position is defined in its source file. If 
 
 Appending data you already have linked, will add objects / groups to the scene, but will keep them linked (and un-editable).
 
-#### Known Limitations
+### Known Limitations
 
 In general dependencies shouldn’t go in both directions. Attempting to link or append data which links back to the current file will likely result in missing links.
 
 When linking objects **directly** into a *.blend* file, the *Rigid Body* settings won’t be linked in since they’re associated with their scenes world. As an alternative you could link in the entire scene and set it as a Background Set Scene.
 
-### Append
+## Append
 
 Append allows you to append content from another blend file. The content will be copied over, and become part of the current blend file.
 
@@ -203,13 +203,13 @@ When you click at Link then a file browser will open. Down left you will see som
 
 The difference to Link is that with Append the object becomes part of the current blend file. And it is editable.
 
-#### Advanced Filter
+### Advanced Filter
 
 ![Advanced Filter](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/advanced-filter.png)
 
 This filter allows you to filter the content of the blend file for specific object types.
 
-#### Import Settings
+### Import Settings
 
 ![Import Settings](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/import-settings-2.png)
 
@@ -225,7 +225,7 @@ At the right you can reveal the import settings.
 | Localize All | Localize all appended data, including indirectly linked from other libraries. |
 
 
-### Data Previews
+## Data Previews
 
 ![Data Previews](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/data-previews.png)
 
@@ -268,7 +268,7 @@ This process takes a while. Now let's try to append from the same file again. Yo
 | Batch Clear Previews | Removes all existing previews in the target blend file. |
 
 
-### Import
+## Import
 
 ![Import](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/import.png)
 
@@ -276,7 +276,7 @@ Import is a sub menu with the available 3D import file formats. You will be prom
 
 Note that im- and exporters are partially addons that can be disabled. So some content might miss.
 
-#### Operator Presets
+### Operator Presets
 
 ![Operator Presets](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/operator-presets.png)
 
@@ -284,7 +284,7 @@ Note that im- and exporters are partially addons that can be disabled. So some c
 
 The operator presets exists on nearly all importers and exporters. Exceptions are for example the `*.stl` importer. They allow you to reset the importer settings to the defaults. And allow you to store your own presets. The presets are just valid for the importer or exporter with which you have saved the presets.
 
-##### Operator Presets dropdown
+#### Operator Presets dropdown
 
 
 | Entry | What it does |
@@ -293,17 +293,17 @@ The operator presets exists on nearly all importers and exporters. Exceptions ar
 | List of available presets | The list of available presets. The string `*Missing` `Paths*` indicates that no custom preset exists yet. |
 
 
-##### Add Operator Preset
+#### Add Operator Preset
 
 ![Add Operator Preset](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/add-operator-preset.jpg)
 
 Adds a new operator preset. A popup dialog will appear where you can give the new preset a name.
 
-##### Remove Operator Preset
+#### Remove Operator Preset
 
 Removes the active preset. Note that you cannot display the current active preset. So choose it from the list, and then click at the remove operator.
 
-#### Import Drag and Drop
+### Import Drag and Drop
 
 ![Import Drag and Drop](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/import-drag-and-drop.png)
 
@@ -311,7 +311,7 @@ You can optionally drag and drop multiple files into the 3D Viewport to directly
 
 > **Note:** You can only drag in a group of multiple files if they are the same file format. If you have multiple selected, it will prompt you if you should import one or the other file type.
 
-#### Alembic
+### Alembic
 
 ![Alembic](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/alembic.png)
 
@@ -324,13 +324,13 @@ The alembic file format is for static geometry. It does not support armatures, h
 | Options | **Relative Path**: Select the file relative to the blend file. · **Set Frame Range**: Sets the Frame range start and end point in Bforartists to match the one in the alembic file. · **Is Sequence**: Import sequenced files that are split in cache parts. · **Validate Meshes**: Check for invalid mesh data in the file. Note that this operation may take some time. · **Always add Cache Reader**: Add cache modifiers and constraints to imported objects even when they are not animated. This allows updating the alembic archive when reloading. |
 
 
-#### USD
+### USD
 
 ![USD](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/usd.png)
 
 Imports a Universal Scene Description (USD) file. It reads `*.usd`, `*.usdc` and `*.usda` files.
 
-##### General
+#### General
 
 
 | Entry | What it does |
@@ -342,7 +342,7 @@ Imports a Universal Scene Description (USD) file. It reads `*.usd`, `*.usdc` and
 | Custom Properties | Behaviour when importing USD attributes as custom properties. · **All Custom**: Import all USD custom attributes as custom properties. Namespaces will be retained in the property names. · **User**: Import all USD user defined attributes as custom properties. Namespaces will be retained in the property names. · **User**: Import not custom attributes as custom properties. |
 
 
-##### Object Types
+#### Object Types
 
 ![Object Types](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/object-types.png)
 
@@ -360,7 +360,7 @@ Imports a Universal Scene Description (USD) file. It reads `*.usd`, `*.usdc` and
 | Display Purpose | **Proxy**: Include primitives with purpose proxy. · **Render**: Include primitives with purpose render. · **Guide**: Include primitives with purpose guide. |
 
 
-##### Material Purpose
+#### Material Purpose
 
 ![Material Purpose](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/material-purpose.png)
 
@@ -372,7 +372,7 @@ Imports a Universal Scene Description (USD) file. It reads `*.usd`, `*.usdc` and
 | Full | Attempt to import full materials. |
 
 
-##### Geometry
+#### Geometry
 
 ![Geometry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/geometry.png)
 
@@ -387,7 +387,7 @@ Imports a Universal Scene Description (USD) file. It reads `*.usd`, `*.usdc` and
 | Merge parent XForm | Allow USD primitives to merge with t heir XForm parent if they are the only child in the hierarchy. |
 
 
-##### Rigging
+#### Rigging
 
 ![Rigging](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/rigging.png)
 
@@ -398,7 +398,7 @@ Imports a Universal Scene Description (USD) file. It reads `*.usd`, `*.usdc` and
 | Animation | Import all animation keyframes. |
 
 
-##### Materials
+#### Materials
 
 ![Materials](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/materials.png)
 
@@ -410,7 +410,7 @@ Imports a Universal Scene Description (USD) file. It reads `*.usd`, `*.usdc` and
 | Set Material Blend | If the Import USD Preview is enabled , the material blend method will atomatically be set based on the shader's opacit and poacity threshold inputs. |
 
 
-###### Material Name Collision
+##### Material Name Collision
 
 ![Material Name Collision](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/material-name-collision.png)
 
@@ -423,15 +423,15 @@ How to import the material name when it conflicts with an existing material in t
 | Reference Existing | If the material with the same name exists, replace the USD material with existing material. |
 
 
-###### Set Material Blend
+##### Set Material Blend
 
 If the Import USD Preview option is enabled, the material blend method will automatically be set based on the opacity and opacityThreshold shader inputs, allowing for visualization of transparent objects.
 
-##### Textures
+#### Textures
 
 ![Textures](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/textures.png)
 
-###### Import Textures
+##### Import Textures
 
 ![Import Textures](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/import-textures.png)
 
@@ -444,7 +444,7 @@ How to import textures.
 | Packed | Import Texture as packed data. |
 
 
-###### Copy
+##### Copy
 
 Copy files to texture directory.
 
@@ -458,15 +458,15 @@ The textures directory.
 
 What to do if a texture name already exists.
 
-##### Particles and Instancing
+#### Particles and Instancing
 
 ![Particles and Instancing](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/particles-and-instancing.png)
 
-###### Scene Instancing
+##### Scene Instancing
 
 Import USD scene graph instances as collection instances.
 
-#### SVG as Grease Pencil
+### SVG as Grease Pencil
 
 ![SVG as Grease Pencil](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/svg-as-grease-pencil.png)
 
@@ -479,13 +479,13 @@ Imports a svg file as a grease pencil object.
 | Scale | The scale of the svg import. |
 
 
-#### FBX
+### FBX
 
 ![FBX](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/fbx.png)
 
 FBX is a proprietary file format from Autodesk. FBX is a general file format that is able to store and load animation.
 
-##### General
+#### General
 
 ![General](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/general-2.png)
 
@@ -497,7 +497,7 @@ FBX is a proprietary file format from Autodesk. FBX is a general file format tha
 | Enums as Strings | Store enumeration values as strings. |
 
 
-##### Geometry
+#### Geometry
 
 ![Geometry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/geometry-2.png)
 
@@ -508,7 +508,7 @@ FBX is a proprietary file format from Autodesk. FBX is a general file format tha
 | Subdivision Data | Import Subdivision. |
 
 
-###### Vertex Colors
+##### Vertex Colors
 
 ![Vertex Colors](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/vertex-colors.jpg)
 
@@ -521,59 +521,59 @@ Import vertex colors if they exist. These are Color attributes.
 | Linear | 32bit float colors |
 
 
-###### Validate Meshes
+##### Validate Meshes
 
 Ensure the data is valid.
 
-##### Animation
+#### Animation
 
 ![Animation](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/animation.png)
 
 Import Animation.
 
-###### Animation Offset
+##### Animation Offset
 
 Adjust an offset in frames for the imported animation.
 
-##### Armature
+#### Armature
 
 ![Armature](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/armature.png)
 
-###### Ignore Leaf Bones
+##### Ignore Leaf Bones
 
 Ignore the last bone at the end of the chain.
 
-#### Wavefront(OBJ)
+### Wavefront(OBJ)
 
 ![Wavefront(OBJ)](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/wavefront-obj.png)
 
 Imports a wavefront obj file.
 
-##### General
+#### General
 
 ![General](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/general-3.png)
 
-###### Scale
+##### Scale
 
 Scale factor for the obj import.
 
-###### Clamp Bounding Box
+##### Clamp Bounding Box
 
 ![Clamp Bounding Box](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/clamp-bounding-box.png)
 
 Clamp bounds under this value. A value of zero disables this feature.
 
-###### Forward Axis
+##### Forward Axis
 
 The Forward orientation at import.
 
-###### Up Axis
+##### Up Axis
 
 ![Up Axis](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/up-axis.png)
 
 The Up orientation at import.
 
-##### Options
+#### Options
 
 ![Options](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/options.png)
 
@@ -588,23 +588,23 @@ The Up orientation at import.
 | Path Separator | Import option to create collection hierarchy by splitting names with a separator. Names found in the OBJ file are split by that, and a Collection hierarchy is made, so you can have e.g. "o House/Roof/Tile" in the OBJ file. |
 
 
-##### Materials
+#### Materials
 
 ![Materials](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/materials-2.png)
 
-###### Name Collision
+##### Name Collision
 
 ![Name Collision](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/name-collision.png)
 
 How to import the material name when it conflicts with an existing material in the scene.
 
-#### Stanford (PLY)
+### Stanford (PLY)
 
 ![Stanford (PLY)](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/stanford-ply.png)
 
 The Stanford Triangle Format was designed to store three-dimensional data from 3D scanners. It is a static file format for mesh data, and cannot carry animation data.
 
-##### General
+#### General
 
 ![General](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/general-4.png)
 
@@ -617,15 +617,15 @@ The Stanford Triangle Format was designed to store three-dimensional data from 3
 | Up Axis | The up axis for the imported geometry. |
 
 
-##### Options
+#### Options
 
 ![Options](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/options-2.png)
 
-###### Merge Vertices
+##### Merge Vertices
 
 Merges vertices by distance.
 
-###### Vertex Colors
+##### Vertex Colors
 
 ![Vertex Colors](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/vertex-colors.jpg)
 
@@ -638,13 +638,13 @@ Import vertex colors if they exist. These are Color attributes.
 | Linear | 32bit float colors |
 
 
-#### STL
+### STL
 
 ![STL](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/stl.png)
 
 STL (Standard Triangulation/Tessellation Language ) is a standard format for many cad software. It is a format for static geometry, it cannot handle animation. The format is popular for 3d printing purposes.
 
-##### General
+#### General
 
 
 | Entry | What it does |
@@ -653,19 +653,19 @@ STL (Standard Triangulation/Tessellation Language ) is a standard format for man
 | Scene Unit | Apply the scene unit at the geometry at import. |
 
 
-###### Forward
+##### Forward
 
 ![Forward](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/clamp-bounding-box.png)
 
 The Forward orientation at import.
 
-###### Up
+##### Up
 
 ![Up](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/up-axis.png)
 
 The Up orientation at import.
 
-##### Options
+#### Options
 
 
 | Entry | What it does |
@@ -674,7 +674,7 @@ The Up orientation at import.
 | Validate Meshes | Check at import for invalid data. |
 
 
-#### Motion Capture (BVH)
+### Motion Capture (BVH)
 
 ![Motion Capture (BVH)](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/motion-capture-bvh.png)
 
@@ -688,19 +688,19 @@ The Biovision Hierarchy (BVH) character animation file format is a file format t
 | Animation | **Start Frame**: The start frame for the animation. · **Scale FPS**: Scale the frame rate of the BVH file to the current scenes. With off every frame of the BVH is one frame in Bforartists. · **Loop**: Loop the animation playback. · **Update Scene FPS**: Sets the scene frame rate to that of the BVH file. Note that this nullifies the Scale FPS feature since the scale will be 1:1. · **Update Scene Duration**: Extend the scene duration to be the one of the BVH file duration. |
 
 
-#### Scalable Vector Graphics (SVG)
+### Scalable Vector Graphics (SVG)
 
 Scalable Vector Graphics is usually a 2D file format to describe vector graphics. But Vector graphics are also curves. Which can be used in a 3 dimensional space.
 
 SVG has no import properties.
 
-#### FBX
+### FBX
 
 ![FBX](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/fbx-2.png)
 
 FBX is a proprietary file format from Autodesk. FBX is a general file format that is able to store and load animation.
 
-##### Include
+#### Include
 
 ![Include](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/include.png)
 
@@ -716,7 +716,7 @@ What data to import.
 | Image Search | Search the sub directions for associated images. |
 
 
-###### Vertex Colors
+##### Vertex Colors
 
 ![Vertex Colors](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/vertex-colors.jpg)
 
@@ -729,7 +729,7 @@ Import vertex colors if they exist. These are Color attributes.
 | Linear | 32bit float colors |
 
 
-##### Transform
+#### Transform
 
 ![Transform](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/transform.png)
 
@@ -742,31 +742,31 @@ Import vertex colors if they exist. These are Color attributes.
 | Use Pre/ Post Rotation | Use Pre or Post Rotation from FBX transform. This feature may not work in all cases. |
 
 
-##### Manual Orientation
+#### Manual Orientation
 
 Enables custom orientation instead of using the orientation from the fbx file.
 
-###### Forward
+##### Forward
 
 ![Forward](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/clamp-bounding-box.png)
 
 The Forward orientation at import.
 
-###### Up
+##### Up
 
 ![Up](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/up-axis.png)
 
 The Up orientation at import.
 
-##### Animation
+#### Animation
 
 ![Animation](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/animation-2.png)
 
-###### Animation Offset
+##### Animation Offset
 
 Adjust an offset in frames for the imported animation.
 
-##### Armature
+#### Armature
 
 ![Armature](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/armature-2.png)
 
@@ -778,7 +778,7 @@ Adjust an offset in frames for the imported animation.
 | Automatic Bone Orientation | Try to align the mayor bone axis with the bone children. |
 
 
-###### Primary and secondary Bone Axis
+##### Primary and secondary Bone Axis
 
 ![Primary and secondary Bone Axis](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/primary-and-secondary-bone-axis.png)
 
@@ -786,13 +786,13 @@ Adjust an offset in frames for the imported animation.
 
 Manually adjust the bone orientation per axis. Note that this features are greyed out when Automatic Bone Orientation is ticked.
 
-#### glTF 2.0 (glb, gltf )
+### glTF 2.0 (glb, gltf )
 
 ![glTF 2.0 (glb, gltf )](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/gltf-2-0-glb-gltf.png)
 
 The GL Transmission Format from the Khronos Group is a file format for 3D scenes and models, and is based at the JSON standard.
 
-##### Shading
+#### Shading
 
 ![Shading](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/shading.png)
 
@@ -806,7 +806,7 @@ Define the shading of the imported geometry.
 | Smooth shading | Shades the whole mesh smooth. |
 
 
-##### Lighting Mode
+#### Lighting Mode
 
 ![Lighting Mode](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/lighting-mode.png)
 
@@ -818,7 +818,7 @@ Define the shading of the imported geometry.
 | Raw (Deprecated) | Blender lighting strength without conversion. |
 
 
-##### Mesh
+#### Mesh
 
 ![Mesh](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/mesh.png)
 
@@ -829,7 +829,7 @@ Define the shading of the imported geometry.
 | Merge Material slot when possible | As title says. Merge Material slot when possible. |
 
 
-##### Texture
+#### Texture
 
 ![Texture](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/texture.png)
 
@@ -841,11 +841,11 @@ Define the shading of the imported geometry.
 | Import Unused Materials & Images | As the title says. Import Unused Materials and Images. |
 
 
-##### Bones & Skin
+#### Bones & Skin
 
 ![Bones & Skin](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/bones-and-skin.png)
 
-###### Bone Direction
+##### Bone Direction
 
 ![Bone Direction](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/bone-direction.png)
 
@@ -861,7 +861,7 @@ Heuristic method for placing bones.
 | Bone Shape Scale | Scale factor for bone shapes. |
 
 
-##### Pipeline
+#### Pipeline
 
 ![Pipeline](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/pipeline.png)
 
@@ -873,7 +873,7 @@ Heuristic method for placing bones.
 | Import Scene Extras | Import Scene Extras as custom properties. Existing custom properties will be overwritten. |
 
 
-### Export
+## Export
 
 ![Export](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/export.png)
 
@@ -881,7 +881,7 @@ Export is a sub menu with the available export formats.
 
 Note that im- and exporters are partially addons that can be disabled. So some content might miss.
 
-#### Operator Presets
+### Operator Presets
 
 ![Operator Presets](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/operator-presets.png)
 
@@ -889,7 +889,7 @@ Note that im- and exporters are partially addons that can be disabled. So some c
 
 The operator presets exists on nearly all im- and exporters. Exceptions are for example the stl importer. They allow you to reset the importer settings to the defaults. And allow you to store your own presets. The presets are just valid for the im- or exporter with which you have saved the presets.
 
-##### Operator Presets dropdown
+#### Operator Presets dropdown
 
 
 | Entry | What it does |
@@ -898,17 +898,17 @@ The operator presets exists on nearly all im- and exporters. Exceptions are for 
 | List of available presets | The list of available presets. The string `*Missing` `Paths*` indicates that no custom preset exists yet. |
 
 
-##### Add Operator Preset
+#### Add Operator Preset
 
 ![Add Operator Preset](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/add-operator-preset.jpg)
 
 Adds a new operator preset. A popup dialog will appear where you can give the new preset a name.
 
-##### Remove Operator Preset
+#### Remove Operator Preset
 
 Removes the active preset. Note that you cannot display the current active preset. So choose it from the list, and then click at the remove operator.
 
-#### Alembic
+### Alembic
 
 ![Alembic](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/alembic-2.png)
 
@@ -916,7 +916,7 @@ The alembic file format is for static geometry. It does not support armatures, h
 
 The alembic export options are divided into four sections.
 
-##### General
+#### General
 
 ![General](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/general-5.png)
 
@@ -929,7 +929,7 @@ The alembic export options are divided into four sections.
 | Visible Only | Export visible geometry only. |
 
 
-##### Scene
+#### Scene
 
 ![Scene](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/scene.png)
 
@@ -947,7 +947,7 @@ The alembic export options are divided into four sections.
 | Flatten Hierarchy | Remove parent / children relationship. |
 
 
-###### Settings
+##### Settings
 
 ![Settings](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/settings.png)
 
@@ -960,7 +960,7 @@ Determines visibility of objects, modifier settings, and other areas where there
 | Viewport | User visibility settings for object visibility, modifier settings, etc |
 
 
-##### Geometry
+#### Geometry
 
 ![Geometry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/geometry-3.png)
 
@@ -977,23 +977,23 @@ Determines visibility of objects, modifier settings, and other areas where there
 | Subdivisions | **Apply**: Export subdivision surfaces as meshes. Means apply subdivision modifier before export. · **Use Schema**: Export meshes using Alembic's subdivision schema. |
 
 
-###### Triangulate
+##### Triangulate
 
 Triangulate meshes before export.
 
-###### Method Quad
+##### Method Quad
 
 ![Method Quad](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/method-quad.png)
 
 The quad method that gets used to triangulate the meshes. You need to activate Triangulate.
 
-###### Polygons
+##### Polygons
 
 ![Polygons](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/polygons.png)
 
 The polygon method that gets used to triangulate the meshes. You need to activate Triangulate.
 
-##### Particle Systems
+#### Particle Systems
 
 ![Particle Systems](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/particle-systems.png)
 
@@ -1006,13 +1006,13 @@ Alembic does not support hair or particles. However, here you can find some opti
 | Export Particles | Export non-hair particles. |
 
 
-#### Universal Scene Description ( USD )
+### Universal Scene Description ( USD )
 
 ![Universal Scene Description ( USD )](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/universal-scene-description-usd.png)
 
 USD is a system for authoring, composing and reading hierarchically organized scene description. It is developed by Pixar.
 
-##### General
+#### General
 
 ![General](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/general-6.png)
 
@@ -1024,7 +1024,7 @@ USD is a system for authoring, composing and reading hierarchically organized sc
 | Blender Data | **Custom Properties**: Export custom properties if available. · **Namespace**: Add the given name as a prefix to exported custom property names. · **Blender Names**: Author USD custom attributes containing the original Blender object and object data names. Uses the Bforartists standard of naming conventions and nomeclature. · **Allow Unicode**: Preserve UF-8 characters. |
 
 
-###### File References
+##### File References
 
 
 | Entry | What it does |
@@ -1033,25 +1033,25 @@ USD is a system for authoring, composing and reading hierarchically organized sc
 | Convert Orientation | Convert orientation axis to different conventions to match other applications. |
 
 
-###### Units
+##### Units
 
 ![Units](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/units.png)
 
 Set the USD units.
 
-###### Xform Ops
+##### Xform Ops
 
 ![Xform Ops](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/xform-ops.png)
 
 The type of transform operarators to write.
 
-###### User Settings for
+##### User Settings for
 
 ![User Settings for](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/user-settings-for.png)
 
 Use Render settings for object visibility, modifier settings, etc
 
-##### Object Types
+#### Object Types
 
 ![Object Types](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/object-types-2.png)
 
@@ -1068,7 +1068,7 @@ Use Render settings for object visibility, modifier settings, etc
 | Hair | Export hair/fur curves. |
 
 
-##### Geometry
+#### Geometry
 
 ![Geometry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/geometry-4.png)
 
@@ -1082,13 +1082,13 @@ Use Render settings for object visibility, modifier settings, etc
 | Triangulated Mesh | Export the geometry triangulated. |
 
 
-###### Subdivision
+##### Subdivision
 
 ![Subdivision](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/subdivision.png)
 
 How Subdivision will be mapped to USD.
 
-##### Rigging
+#### Rigging
 
 ![Rigging](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/rigging-2.png)
 
@@ -1100,7 +1100,7 @@ How Subdivision will be mapped to USD.
 | Only Deform Bones | Only export deform bones and their parents. |
 
 
-##### Materials
+#### Materials
 
 ![Materials](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/materials-3.png)
 
@@ -1111,47 +1111,47 @@ How Subdivision will be mapped to USD.
 | MaterialX Network | Generate a MaterailX network representation of the material. |
 
 
-###### Export Textures
+##### Export Textures
 
 ![Export Textures](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/export-textures.png)
 
 To which path to export referenced textures.
 
-###### Overwrite Textures
+##### Overwrite Textures
 
 Overwrite existing textures.
 
-###### USDZ Texture Downsample
+##### USDZ Texture Downsample
 
 ![USDZ Texture Downsample](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/usdz-texture-downsample.png)
 
 Choose a maximum size for all exported textures.
 
-##### Experimental
+#### Experimental
 
 ![Experimental](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/experimental.png)
 
-###### Instancing
+##### Instancing
 
 Istanced objects are exported as references in USD. Else they are exported as real objects.
 
-#### Grease Pencil as SVG
+### Grease Pencil as SVG
 
 ![Grease Pencil as SVG](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/grease-pencil-as-svg.png)
 
 Exports the grease pencil object as a svg file.
 
-##### Scene Options
+#### Scene Options
 
-###### Object
+##### Object
 
 ![Object](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/object.png)
 
 What kind of objects to export from the scene.
 
-##### Export Options
+#### Export Options
 
-##### Frame
+#### Frame
 
 ![Frame](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/frame.png)
 
@@ -1166,23 +1166,23 @@ Which frame to include to export.
 | Clip Camera | Clip drawings to camera size when exporting. |
 
 
-#### Grease Pencil as PDF
+### Grease Pencil as PDF
 
 ![Grease Pencil as PDF](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/grease-pencil-as-pdf.png)
 
 Exports the grease pencil object as a pdf file.
 
-##### Scene Options
+#### Scene Options
 
-###### Object
+##### Object
 
 ![Object](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/object.png)
 
 What kind of objects to export from the scene.
 
-##### Export Options
+#### Export Options
 
-##### Frame
+#### Frame
 
 ![Frame](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/frame-2.png)
 
@@ -1196,13 +1196,13 @@ Which frames to include in the export. The active frame or the selected frames. 
 | Uniform Width | Export strokes with Uniform Width. |
 
 
-#### Wavefront(OBJ)
+### Wavefront(OBJ)
 
 ![Wavefront(OBJ)](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/wavefront-obj-2.png)
 
 Wavefront Obj is a file format for static geometry. And while you can still create a sequence of meshes for animation with it (some software stores shape keys that way for example), you cannot store animation in the file. It is also unique since it is usually made of two files. A OBJ part that contains the mesh data. And a MTL part that contains the material including the connected textures.
 
-##### General
+#### General
 
 
 | Entry | What it does |
@@ -1211,19 +1211,19 @@ Wavefront Obj is a file format for static geometry. And while you can still crea
 | Scale | The export scale factor. |
 
 
-###### Forward Axis
+##### Forward Axis
 
 ![Forward Axis](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/forward-axis.png)
 
 Which axis points foward.
 
-###### Up Axis
+##### Up Axis
 
 ![Up Axis](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/up-axis-2.png)
 
 Which axis points upwards.
 
-##### Geometry
+#### Geometry
 
 ![Geometry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/geometry-5.png)
 
@@ -1242,13 +1242,13 @@ Note that the OBJ file format cannot carry the Blender material settings. The Ob
 | Apply Modifiers | Apply modifiers before exporting the geometry. |
 
 
-###### Properties
+##### Properties
 
 ![Properties](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/properties.png)
 
 Where to grab the object properties from. They can differ between viewport settings and render settings.
 
-##### Grouping
+#### Grouping
 
 ![Grouping](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/grouping.png)
 
@@ -1266,25 +1266,25 @@ Note that the OBJ file format cannot carry the Blender material settings. The Ob
 | Smooth Groups Bitflags | Only available when Smooth Groups is enabled. Generate bitflag values for the imported groups. |
 
 
-##### Materials
+#### Materials
 
 ![Materials](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/materials-4.png)
 
-###### Export Materials Checkbox
+##### Export Materials Checkbox
 
 Export MTL Library. You need a Principled Node with a texture node connected.
 
-###### PBR Extensions
+##### PBR Extensions
 
 ![PBR Extensions](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/pbr-extensions.png)
 
 Export MTL Library using PBR extensions. Roughness, Metallic, Sheen, Clearcoat, Anisotropic and Transmission.
 
-###### Path Mode
+##### Path Mode
 
 The method to use reference paths.
 
-##### Animation
+#### Animation
 
 ![Animation](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/animation-3.png)
 
@@ -1295,13 +1295,13 @@ The method to use reference paths.
 | Frame Start / End | The frame start and frame end of the animation. |
 
 
-#### Stanford (PLY)
+### Stanford (PLY)
 
 ![Stanford (PLY)](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/stanford-ply-2.png)
 
 The Stanford Triangle Format was designed to store three-dimensional data from 3D scanners. It is a static file format for mesh data, and cannot carry animation data.
 
-##### General
+#### General
 
 ![General](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/general-7.png)
 
@@ -1315,7 +1315,7 @@ The Stanford Triangle Format was designed to store three-dimensional data from 3
 | Up Axis | The up orientation of the geometry. |
 
 
-##### Geometry
+#### Geometry
 
 ![Geometry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/geometry-6.png)
 
@@ -1327,7 +1327,7 @@ The Stanford Triangle Format was designed to store three-dimensional data from 3
 | Vertex Attributes | Export vertex attributes. |
 
 
-###### Vertex Colors
+##### Vertex Colors
 
 ![Vertex Colors](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/vertex-colors.jpg)
 
@@ -1340,21 +1340,21 @@ Vertex Color settings if available. These are Color attributes.
 | Apply Modifiers | Apply modifiers before exporting. |
 
 
-#### STL
+### STL
 
 ![STL](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/stl-2.png)
 
 STL (**S**tandard **T**riangulation/Tessellation **L**anguage ) is a standard format for many cad software. It is a format for static geometry, it cannot handle animation. The format is popular for 3d printing purposes.
 
-##### General
+#### General
 
-###### Format
+##### Format
 
-###### ASCII
+##### ASCII
 
 You can either export the file as binary format or as ASCII format.
 
-###### Batch
+##### Batch
 
 ![Batch](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/batch.png)
 
@@ -1368,27 +1368,27 @@ Export all geometry to one file or create a file for every object.
 | Scene Unit | Apply the scene unit at the geometry at export. |
 
 
-###### Forward
+##### Forward
 
 ![Forward](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/forward.png)
 
 The Forward orientation at export.
 
-###### Up
+##### Up
 
 ![Up](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/up.png)
 
 The Up orientation at export.
 
-##### Geometry
+#### Geometry
 
 ![Geometry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/geometry-7.png)
 
-###### Apply Modifiers
+##### Apply Modifiers
 
 Apply all modifiers before export.
 
-#### Motion Capture BVH
+### Motion Capture BVH
 
 ![Motion Capture BVH](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/motion-capture-bvh-2.png)
 
@@ -1396,23 +1396,23 @@ The Biovision Hierarchy (BVH) character animation file format is a file format t
 
 > **Note:** To export BVH you need to have an armature with animation selected.
 
-##### Transform
+#### Transform
 
-###### Scale
+##### Scale
 
 The scale factor for the export.
 
-###### Rotation
+##### Rotation
 
 ![Rotation](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/rotation.png)
 
 The rotation order that is defined in the BVH file.
 
-###### Root Translation Only
+##### Root Translation Only
 
 Only write out translation values for the root bone.
 
-##### Animation
+#### Animation
 
 
 | Entry | What it does |
@@ -1421,7 +1421,7 @@ Only write out translation values for the root bone.
 | End Frame | The end frame of the animation. |
 
 
-#### FBX
+### FBX
 
 ![FBX](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/fbx-3.png)
 
@@ -1429,31 +1429,31 @@ FBX is a proprietary file format from Autodesk. FBX is a general file format tha
 
 The FBX exporter is divided into several panels since it would be too much to display all settings at once.
 
-##### Path Mode
+#### Path Mode
 
 ![Path Mode](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/path-mode.png)
 
 Method used to reference paths. Methods are Auto, Absolute, Relative, Match, Strip Path and Copy.
 
-###### Embed Textures
+##### Embed Textures
 
 Embed textures in the FBX Binary. Enabled only with the method **Copy.**
 
-##### Batch Mode
+#### Batch Mode
 
 ![Batch Mode](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/batch-mode.png)
 
 Gives the opportunity to batch export independent parts. Like one file for each scene. Or one file for each collection. Methods are Scene, Collection, Scene Collections and Active Scene Collections.
 
-###### Batch Own Dir
+##### Batch Own Dir
 
 Setup the export directory for batch export.
 
-##### Include
+#### Include
 
 ![Include](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/include-2.png)
 
-###### Limit to
+##### Limit to
 
 
 | Entry | What it does |
@@ -1464,31 +1464,31 @@ Setup the export directory for batch export.
 | Object Types | What object types in the scene to export. Holding shift key adds to the current selection. |
 
 
-###### Custom Properties
+##### Custom Properties
 
 ![Custom Properties](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/custom-properties.png)
 
 Export custom properties if available.
 
-##### Transform
+#### Transform
 
-###### Scale
+##### Scale
 
 The scale factor for export.
 
-###### Apply Scaling
+##### Apply Scaling
 
 ![Apply Scaling](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/apply-scaling.png)
 
 How to apply custom and unit scaling in the generated FBX file.
 
-###### Forward
+##### Forward
 
 ![Forward](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/forward-2.png)
 
 The forward orientation.
 
-###### Up
+##### Up
 
 ![Up](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/up-2.png)
 
@@ -1502,11 +1502,11 @@ The up orientation.
 | !Experimental! Apply Transform | Bake space transform into object data. |
 
 
-##### Geometry
+#### Geometry
 
 ![Geometry](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/geometry-8.png)
 
-###### Smoothing
+##### Smoothing
 
 ![Smoothing](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/smoothing.png)
 
@@ -1522,33 +1522,33 @@ Define what smoothing information gets exported.
 | Tangent Space | Add binormal and tangent vectors together with the tangent space information. This feature just works with tris or quads. |
 
 
-###### Vertex Color
+##### Vertex Color
 
 ![Vertex Color](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/vertex-colors.jpg)
 
 Export vertex color attribute if available. You can export as sRGB 8bit and Linear 32 bit float color bit depths.
 
-###### Prioritize Active Color
+##### Prioritize Active Color
 
 Make sure active color will be exported first. Could be important since some other software can discard other color attributes other than the first one.
 
-##### Armature
+#### Armature
 
 ![Armature](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/armature-3.png)
 
-###### Primary Bone Axis
+##### Primary Bone Axis
 
 ![Primary Bone Axis](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/primary-bone-axis.png)
 
 The primary bone axis orientation.
 
-###### Secondary Bone Axis
+##### Secondary Bone Axis
 
 ![Secondary Bone Axis](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/secondary-bone-axis.png)
 
 The secondary bone axis orientation.
 
-###### Armature FBX Node Type
+##### Armature FBX Node Type
 
 ![Armature FBX Node Type](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/armature-fbx-node-type.png)
 
@@ -1561,7 +1561,7 @@ FBX type of node used to represent a Blender Bone.
 | Add Leaf Bones | Add a final bone at the end of every bone chain. |
 
 
-##### Animation
+#### Animation
 
 ![Animation](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/animation-4.png)
 
@@ -1578,7 +1578,7 @@ Export baked keyframe animation.
 | Simplify | Simplify the animation. 0.0 to disable. 1.0 does not simplify at all. Higher values simplifies the animation then. |
 
 
-#### glTF 2.0 (glb, gltf )
+### glTF 2.0 (glb, gltf )
 
 ![glTF 2.0 (glb, gltf )](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/gltf-2-0-glb-gltf-2.png)
 
@@ -1594,7 +1594,7 @@ The GL Transmission Format from the Khronos Group is a file format for 3D scenes
 | Remember Export Settings | Store glTF settings in the .blend file. You need to save the project then. |
 
 
-##### Include
+#### Include
 
 ![Include](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/include-3.png)
 
@@ -1605,21 +1605,21 @@ The GL Transmission Format from the Khronos Group is a file format for 3D scenes
 | Data | **Custom Properties**: Include custom properties in the export. · **Cameras**: Include cameras in the export. · **Punctual Lights**: Include punctual lights in the export. |
 
 
-##### Transform
+#### Transform
 
 ![Transform](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/transform-2.png)
 
-###### Y+ Up
+##### Y+ Up
 
 Export all objects with the Y up orientation.
 
-##### Data
+#### Data
 
 ![Data](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/data.png)
 
 What data to export. The menu items should be self explaining.
 
-###### Scene Graph sub panel
+##### Scene Graph sub panel
 
 ![Scene Graph sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/scene-graph-sub-panel.png)
 
@@ -1632,7 +1632,7 @@ What data to export. The menu items should be self explaining.
 | Full Collection Hierarchy | — |
 
 
-###### Mesh sub panel
+##### Mesh sub panel
 
 ![Mesh sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/mesh-sub-panel.png)
 
@@ -1648,11 +1648,11 @@ What data to export. The menu items should be self explaining.
 | Loose Points | Export loose points. |
 
 
-###### Vertex Colors
+##### Vertex Colors
 
 These are Color attributes.
 
-###### Use Vertex Color
+##### Use Vertex Color
 
 ![Use Vertex Color](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/use-vertex-color.png)
 
@@ -1665,17 +1665,17 @@ How to export the vertex colors. You can export them from the Material, Active v
 | Export active vertex color when no materials | When there is no material on an object, export the active vertex color (color attribute) |
 
 
-###### Material sub panel
+##### Material sub panel
 
 ![Material sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/material-sub-panel.png)
 
-###### Materials
+##### Materials
 
 ![Materials](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/materials-5.png)
 
 How to deal with materials at export. Export them, export with placeholders, or don't export.
 
-###### Images
+##### Images
 
 ![Images](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/images.png)
 
@@ -1696,7 +1696,7 @@ How to deal with images at export.
 | WebP Fallback | For all WebP textures, create a PNG fallback texture. |
 
 
-###### Shape Keys sub panel
+##### Shape Keys sub panel
 
 ![Shape Keys sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/shape-keys-sub-panel.png)
 
@@ -1711,7 +1711,7 @@ Export Shape Keys. Also called Morph Targets.
 | Optimize Shape Keys sub panel | **Use Sparse Accessor if better**: Try use Sparse Accessor if it saves file size space on disk. · **Omitting Sparse Accessor if data is empty**: Omits Sparse Accessor if data is empty. |
 
 
-###### Armature sub panel
+##### Armature sub panel
 
 ![Armature sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/armature-sub-panel.png)
 
@@ -1724,7 +1724,7 @@ Export Shape Keys. Also called Morph Targets.
 | Flatten Bone Hierarchy | Flattens bone hierarchy. Useful in cases of non-decomposable transformation matrices. |
 
 
-###### Skinning sub panel
+##### Skinning sub panel
 
 ![Skinning sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/skinning-sub-panel.png)
 
@@ -1735,17 +1735,17 @@ Export Shape Keys. Also called Morph Targets.
 | Include All one Influences | Allow export of all joint vertex influences. Models may appear incorrectly in many viewers. Allow vertex influences greater 4. |
 
 
-###### Lighting sub panel
+##### Lighting sub panel
 
 ![Lighting sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/lighting-sub-panel.png)
 
-###### Lighting Mode
+##### Lighting Mode
 
 ![Lighting Mode](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/lighting-mode-2.png)
 
 Optional backwards compatibility for non-standard render engines. Applies to lights. Standard is the Physically- based glTF lighting unitcs (cd, lx, nt) and Raw is the standard Blender lighting units, now deprecated.
 
-###### Compression sub panel
+##### Compression sub panel
 
 ![Compression sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/compression-sub-panel.png)
 
@@ -1753,33 +1753,33 @@ Compress the mesh data using the Draco algorithm.
 
 The settings should be self explaining.
 
-##### Animation
+#### Animation
 
 ![Animation](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/animation-5.png)
 
 Export active actions and NLA tracks from the animation data.
 
-###### Animation Mode
+##### Animation Mode
 
 ![Animation Mode](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/animation-mode.png)
 
 Export actions, active merged actions, NLA tracks or the Scene animation data.
 
-###### Bake & Merge sub panel
+##### Bake & Merge sub panel
 
 ![Bake & Merge sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/bake-and-merge-sub-panel.png)
 
-###### Bake All Objects Animations
+##### Bake All Objects Animations
 
 Force exporting animation on every object. Can be useful when using constraints or drivers. Also useful when exporting only selection.
 
-###### Merge Animations
+##### Merge Animations
 
 ![Merge Animations](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/merge-animations.png)
 
 How to merge animations. Not at all, by actions or by NLA track name.
 
-###### Rest & Ranges sub panel
+##### Rest & Ranges sub panel
 
 ![Rest & Ranges sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/rest-and-ranges-sub-panel.png)
 
@@ -1793,13 +1793,13 @@ General timeline rules for the animation export.
 | Set all glTG Animation starting at 0 | Set all glTF animation starting at 0.0s. Can be useful for looping animations. |
 
 
-###### Negative Frames
+##### Negative Frames
 
 ![Negative Frames](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/negative-frames.png)
 
 Negative frames are slid or cropped to frame 0.
 
-###### Armature sub panel
+##### Armature sub panel
 
 ![Armature sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/armature-sub-panel-2.png)
 
@@ -1812,7 +1812,7 @@ Armature animation export settings.
 | Reset pose bones between actions | Reset pose bones between each exported action. This is needed when some bones are not keyed on some animations. |
 
 
-###### Shape Keys Animation sub panel
+##### Shape Keys Animation sub panel
 
 ![Shape Keys Animation sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/shape-keys-animation-sub-panel.png)
 
@@ -1825,7 +1825,7 @@ Shape Key animation export settings.
 | Reset Shape Keys Between Actions | Reset shape keys between each exported action. This is needed when some shape key channels are not keyed on some animations. |
 
 
-###### Sampling Animations
+##### Sampling Animations
 
 ![Sampling Animations](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/sampling-animations.png)
 
@@ -1836,7 +1836,7 @@ Shape Key animation export settings.
 | Sampling Rate | How often to evaluate animated values in frames. |
 
 
-###### Sampling Interpolation Fallback
+##### Sampling Interpolation Fallback
 
 ![Sampling Interpolation Fallback](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/sampling-interpolation-fallback.png)
 
@@ -1849,7 +1849,7 @@ The fallback method for Sampling Interpolation.
 | Step | No interpolation between keyframes. |
 
 
-###### Animation Pointer !experimental! sub panel
+##### Animation Pointer !experimental! sub panel
 
 ![Animation Pointer !experimental! sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/animation-pointer-experimental-sub-panel.png)
 
@@ -1862,7 +1862,7 @@ Export material, Light & Camera animation as Animation Pointer.
 | Convert TRS/weights to Animation Pointer | Export translations, rotations and scale and weights as Animation Pointers. Uses the KHR_animation_pointer extension. |
 
 
-###### Optimize Animations sub panel
+##### Optimize Animations sub panel
 
 ![Optimize Animations sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/optimize-animations-sub-panel.png)
 
@@ -1877,17 +1877,17 @@ These options help to optimize the file size.
 | Disable viewport for other objects | When exporting animations, disable viewport for other objects, for performance. |
 
 
-###### Extra Animations sub panel
+##### Extra Animations sub panel
 
 ![Extra Animations sub panel](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/extra-animations-sub-panel.png)
 
 The are considered somewhat experimental and require third-party extensions.
 
-###### Prepare extra animations
+##### Prepare extra animations
 
 Export additional animations. This feature is not standard and needs and external extension to be included in the glTF file.
 
-###### Action Filter
+##### Action Filter
 
 ![Action Filter](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/action-filter.png)
 
@@ -1903,7 +1903,7 @@ This is a filter that will detect and list all the action clips of a scene. Here
 | Action Filter Refresh | Refreshes the action clip list. |
 
 
-### Export All Collections
+## Export All Collections
 
 ![Export All Collections](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/export-all-collections.png)
 
@@ -1917,7 +1917,7 @@ Export all collections that have been assigned Exporter Operators in the Propert
 
 > **Note:** To assign Exporter Operators to a collection, use the Exporters panel in the Collections Tab in the Properties Editor.
 
-### External Data
+## External Data
 
 ![External Data](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/external-data.png)
 
@@ -1933,11 +1933,11 @@ Packed data displays a packed icon in the drop down box. This example is from th
 
 Library Blend files cannot be packed. Use append instead of link to have the data of another blend file in the blend file.
 
-#### Automatically Pack into .blend
+### Automatically Pack into .blend
 
 Automatically pack all files into the blend file. Don't forget to save the blend file. Note that this greys out the two menu items Pack all into Blend and Unpack packed Files.
 
-#### Pack Resources
+### Pack Resources
 
 Packs all external data into the blend file. Note that the paths must fit, and the external data must be available. A common pitfall here is that the textures uses absolute paths, and are moved to another location meanwhile. See Make all Paths Relative or Find missing Files. Or that you have a not longer existing file linked that shouldn't be in the blend file at all. See Outliner, Orphan Data.
 
@@ -1952,25 +1952,25 @@ You will get a warning when something is missing.
 | Unpack linked libraries | Unpack all linked library files from the current .blend file to their original locations. |
 
 
-#### Unpack Resources
+### Unpack Resources
 
 ![Unpack Resources](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/unpack-resources.png)
 
 Unpack packed files exports all packed data. You will get an options menu choose between several different unpack methods.
 
-##### Use Files in current Directory (create when necessary)
+#### Use Files in current Directory (create when necessary)
 
 Extracts all files to the current directory of the blend file. If the files in the current directory exists, reuse it. Else extract the ones from the blend file.
 
 > **Note:** The title is misleading, it does NOT write the files to the current directory. But into a sub folder, textures for example, in the current directory. Which gets created if necessary. And this option is not to change.
 
-##### Write files to current directory (overwrite existing files)
+#### Write files to current directory (overwrite existing files)
 
 Extracts all files to the current directory of the blend file, and writes it to the current directory. Existing content will be overwritten.
 
 > **Note:** The title is misleading, it does NOT write the files to the current directory. But into a sub folder, textures for example, in the current directory. Which gets created if necessary. And this option is not to change.
 
-##### Use files in original location (create when necessary)
+#### Use files in original location (create when necessary)
 
 Extracts all files into their original directories where they were before packing them into the blend file. If the files in the original directory exists, reuse it. Else extract the ones from the blend file. This feature uses absolute paths.
 
@@ -1989,7 +1989,7 @@ Extracts all files into their original directories where they were before packin
 | Find Missing Files | Browse for the new location of moved files. |
 
 
-### Clean Up
+## Clean Up
 
 ![Clean Up](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/clean-up.png)
 
@@ -2010,13 +2010,13 @@ It is similar functionality to the Clean Up feature in the outliner. But more gr
 | Recursive Unused Local Data | Recursively removes unused local data. Means the child objects gets removed too. |
 
 
-#### Manage Unused Data
+### Manage Unused Data
 
 ![Manage Unused Data](/docs2/images/editors/topbar-and-statusbar/topbar-menus/file-menu/manage-unused-data.png)
 
 This opens a pop-out floating Outliner Editor in the Unused Data mode, so you can view and manage the unused data.
 
-### Quit
+## Quit
 
 Quit Bforartists.
 
@@ -2026,17 +2026,17 @@ Edit Menu
 
 ![Edit menu](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/edit-menu.png)
 
-### Undo
+## Undo
 
 Reverts the last step.
 
 Note. Bforartists uses two separated histories for the Object Mode and the Edit Mode. Means when you leave the Edit mode then you will loose the undo steps in the edit mode.
 
-### Redo
+## Redo
 
 Rolls back your last Undo action.
 
-### Undo History
+## Undo History
 
 ![Undo History](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/undo-history.png)
 
@@ -2044,17 +2044,17 @@ The Undo History is a list of the last operations. Here you can roll back to a s
 
 Note that this Undo History is a session history, and does not save to the Blend file.
 
-### Repeat Last
+## Repeat Last
 
 Repeat last repeats the last operation. For example, when you have moved an object by 5 in X, then it moves the object by 5 in X with every repeat last step.
 
-### Repeat History
+## Repeat History
 
 ![Repeat History](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/repeat-history.png)
 
 Repeat History calls a menu with the last actions where yon can choose an action to be repeated.
 
-### Adjust Last Operation
+## Adjust Last Operation
 
 ![Adjust Last Operation](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/adjust-last-operation.png)
 
@@ -2064,13 +2064,13 @@ For example, when you create a primitive, then you may want to adjust the size, 
 
 Note that when you perform another operation, like moving the cube after creation, then the last operation content for creation is gone. It will now display the last operation content for the transform operation.
 
-### Menu search
+## Menu search
 
 ![Menu search](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/menu-search.png)
 
 Lists the available menus.
 
-### Operator Search
+## Operator Search
 
 ![Operator Search](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/operator-search.png)
 
@@ -2082,43 +2082,43 @@ You can navigate with the mouse or with arrow up and down buttons. Performing an
 
 Note that this search just lists the old traditional operators from before Blender 2.80. Not the ones in the Tool Shelf, which is a completely independent tool system.
 
-### Rename active Item
+## Rename active Item
 
 ![Rename active Item](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/rename-active-item.png)
 
 Allows you to rename the currently active item. A rename dialog will pop up where you can type in a new name for the current item. You can have more than one item selected. Just the active item gets renamed.
 
-### Batch Rename
+## Batch Rename
 
 ![Batch Rename](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/batch-rename.png)
 
 Allows you to rename more than one item or parts of the name at once. It will open a rename dialog with various settings.
 
-#### Add / Remove Operator
+### Add / Remove Operator
 
 ![Add / Remove Operator](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/add-remove-operator.png)
 
 This allows you to add more than one operator and method. And here you can remove the operators too.
 
-#### Data Source
+### Data Source
 
 ![Data Source](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/data-source.png)
 
 Rename just the selected objects, or all objects.
 
-#### Data Type
+### Data Type
 
 Choose the data type that you want to process.
 
 > **Note:** Some of the data types require to be selected and processed from within the Outliner Editor, since elsewhere you can only select one at a time.
 
-#### Type
+### Type
 
 ![Type](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/type.png)
 
 Choose the operation method. The content of the panel will change with the different types.
 
-##### Find / Replace
+#### Find / Replace
 
 ![Find / Replace](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/find-replace.png)
 
@@ -2139,11 +2139,11 @@ Find and replace names in the chosen objects.
 | Change Case | **Convert to**: Change the string to upper case, lower case or title case. |
 
 
-#### OK
+### OK
 
 Accept the settings and apply the batch rename operation.
 
-### Install Application Templates
+## Install Application Templates
 
 ![Install Application Templates](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/install-application-templates.png)
 
@@ -2153,7 +2153,7 @@ Application templates is a predefined set of workspaces with its own setup. It c
 
 Bforartists comes with six internal application templates already. Have a look at the "new" menu item in the file menu. Clicking at one of the menu items creates in fact a new scene by using one of the existing application templates.
 
-#### How to create an application template
+### How to create an application template
 
 ![How to create an application template](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/how-to-create-an-application-template.png)
 
@@ -2197,21 +2197,21 @@ Once installed you will find the new application template in the New menu.
 
 To remove an application template you need to remove its data in the config folder. There is no functionality to uninstall it.
 
-### Save Startup File
+## Save Startup File
 
 Saves a startup.blend with the current configuration.
 
 A startup.blend stores layout informations. Editor layouts, default values, if a panel is open or closed, etc. .
 
-### Load Factory Settings
+## Load Factory Settings
 
 Resets Bforartists into a fresh installed state. All customer modifications, like activated addons, changes at the layout, etc. will be ignored.
 
-### Open Preferences Folder
+## Open Preferences Folder
 
 Opens the folder in which the Bforartists settings and addons are stored.
 
-### Preferences
+## Preferences
 
 ![Preferences](/docs2/images/editors/topbar-and-statusbar/topbar-menus/edit-menu/preferences.png)
 
@@ -2219,7 +2219,7 @@ Opens the Preferences window. Adjust various settings.
 
 # Render Menu
 
-### Render Menu
+## Render Menu
 
 ![Render Menu](/docs2/images/editors/topbar-and-statusbar/topbar-menus/render-menu/render-menu.png)
 
@@ -2238,11 +2238,11 @@ Rendered images can be saved in the Image menu like any other image.
 | Render Sequencer Animation | Only shown when the Video Sequencer uses a different scene with strips: renders the whole sequencer. |
 
 
-#### Render Audio
+### Render Audio
 
 Mixdown and export the scene's audio to an audio file. You will open an export dialog when you click at Render Audio. Further Audio settings can be found in the Properties editor.
 
-##### Options
+#### Options
 
 ![Options](/docs2/images/editors/topbar-and-statusbar/topbar-menus/render-menu/options.png)
 
@@ -2255,7 +2255,7 @@ The options can be found down left in the Save dialog.
 | Accuracy | Sample accuracy, important for animation data (the lower the value, the more accurate). |
 
 
-###### Containers
+##### Containers
 
 ![Containers](/docs2/images/editors/topbar-and-statusbar/topbar-menus/render-menu/containers.png)
 
@@ -2284,49 +2284,49 @@ Window Menu
 
 Window related functionality.
 
-### Show Status Bar
+## Show Status Bar
 
 Display the footer.
 
-### New Window
+## New Window
 
 Creates a new instance of Bforartists. But without Top Bar.
 
-### New Main Window
+## New Main Window
 
 Creates a new instance of Bforartists with its own workspace and scene settings and with the Top Bar.
 
-### Close Window
+## Close Window
 
 Close the current window, If this is the last open window, the application will quit.
 
-### Toggle Window Full screen
+## Toggle Window Full screen
 
 Makes Bforartists full screen.
 
-### Next Workspace
+## Next Workspace
 
 Cycle to next workspace.
 
-### Previous Workspace
+## Previous Workspace
 
 Cycle to previous workspace.
 
-### Save Screenshot
+## Save Screenshot
 
 Saves a screenshot from the whole application.
 
-### Save Screenshot (Area)
+## Save Screenshot (Area)
 
 Saves a screenshot from the area under the mouse.
 
-### Toggle System Console
+## Toggle System Console
 
 Toggles the System console. This is a Windows feature. Under Linux and Mac you can use the bash.
 
 # Help Menu
 
-### Help Menu
+## Help Menu
 
 ![Help Menu](/docs2/images/editors/topbar-and-statusbar/topbar-menus/help-menu/help-menu.png)
 
@@ -2344,7 +2344,7 @@ The Help menu contains some external links to useful resources. In this menu you
 | Save System Info | Save your system informations to a text file. |
 
 
-#### Splash Screen
+### Splash Screen
 
 ![Splash Screen](/docs2/images/editors/topbar-and-statusbar/topbar-menus/help-menu/splash-screen.png)
 
@@ -2356,7 +2356,7 @@ It also includes quick links to get started, information about Bforartists, and 
 
 In the footer you will find the Bforartists version and Blender relevant version.
 
-#### About
+### About
 
 ![About](/docs2/images/editors/topbar-and-statusbar/topbar-menus/help-menu/about.png)
 

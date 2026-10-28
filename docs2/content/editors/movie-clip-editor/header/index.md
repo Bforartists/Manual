@@ -53,17 +53,17 @@ This menu is hidden by default. It is meant to edit the layouts, and should not 
 
 # Header Tools and Options
 
-### Movie Clip Editor - Header
+## Movie Clip Editor - Header
 
 The Movie Clip Editor has two modes, and is three editors in one. So we have to explain the single header tools and options at a one by one base.
 
 ![Movie Clip Editor - Header](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/movie-clip-editor-header.png)
 
-### Tracking mode - Clip submode
+## Tracking mode - Clip submode
 
 ![Tracking mode - Clip submode](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/tracking-mode-clip-submode.png)
 
-#### Movie Clip property
+### Movie Clip property
 
 ![Movie Clip property](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/movie-clip-property.png)
 
@@ -85,21 +85,21 @@ From left to right ...
 | Fake User | With this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
 | Open | Open a new movie clip. |
 
-#### Remove
+### Remove
 
 Removes the movie clip. Note that it will not be removed when it has a fake user assigned. Then the clip becomes simply inactive. You can still use it from the list again.
 
-#### Pivot Point
+### Pivot Point
 
 ![Pivot Point](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/pivot-point.png)
 
 Adjust the pivot point for transform operations. The names should be self explaining.
 
-#### Solve Error
+### Solve Error
 
 Read only. The solve error for the current tracking.
 
-#### Toggle Lock Selection
+### Toggle Lock Selection
 
 ![Toggle Lock Selection](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/toggle-lock-selection.png)
 
@@ -109,7 +109,7 @@ With lock to selection disabled the viewport stands still and the markers moves.
 
 Available in Tracking in Clip mode and Mask mode.
 
-#### Clip Display
+### Clip Display
 
 ![Clip Display](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/clip-display.png)
 
@@ -126,13 +126,13 @@ Display options for the tracking footage.
 | Grid | Displays a red grid over the footage that displays the lens distortion. |
 | Aspect Ratio X Y | The aspect ratio to display the footage. |
 
-### Tracking mode - Graph submode
+## Tracking mode - Graph submode
 
 ![Tracking mode - Graph submode](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/tracking-mode-graph-submode.png)
 
 Tools to refine and modify the markers.
 
-#### Refine Markers Backwards
+### Refine Markers Backwards
 
 ![Refine Markers Backwards](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/refine-markers-backwards.png)
 
@@ -154,23 +154,23 @@ Refine selected markers position by running the tracker from tracks reference to
 | Show Tracks Error | Display the reprojection error curve for the selected tracks. |
 | Show Gizmo | Display gizmos. |
 
-#### Gizmos
+### Gizmos
 
 ![Gizmos](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/gizmos.png)
 
-##### Viewport Gizmos
+#### Viewport Gizmos
 
-###### Navigate
+##### Navigate
 
 Show the navigate viewport gizmos.
 
-### Tracking mode - Dope Sheet submode
+## Tracking mode - Dope Sheet submode
 
 ![Tracking mode - Dope Sheet submode](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/tracking-mode-dope-sheet-submode.png)
 
 Tools to refine and modify the markers.
 
-#### Refine Markers Backwards
+### Refine Markers Backwards
 
 ![Refine Markers Backwards](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/refine-markers-backwards.png)
 
@@ -188,45 +188,45 @@ Refine selected markers position by running the tracker from tracks reference to
 | Only selected | Only display channels relating to the current objects and data. |
 | Display Hidden | Display also channels from objects/bones that are not visible. |
 
-#### Dope Sheet Sort Field
+### Dope Sheet Sort Field
 
 ![Dope Sheet Sort Field](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/dope-sheet-sort-field.png)
 
 The method to sort the channels in dope sheet view.
 
-##### Invert Dope Sheet Sort
+#### Invert Dope Sheet Sort
 
 Invert the dope sheet sorting.
 
-#### Options panel
+### Options panel
 
 ![Options panel](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/options-panel.png)
 
-##### Show Seconds
+#### Show Seconds
 
 Option. Display the timeline numbering in seconds instead of frames.
 
 ![Show Seconds](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/show-seconds.png)
 
-##### Sync Visible Range
+#### Sync Visible Range
 
 Option. Synchronize the visible timeline range with other time based editors.
 
-#### Gizmos
+### Gizmos
 
 ![Gizmos](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/gizmos.png)
 
-##### Viewport Gizmos
+#### Viewport Gizmos
 
-###### Navigate
+##### Navigate
 
 Show the navigate viewport gizmos.
 
-### Mask mode
+## Mask mode
 
 ![Mask mode](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/mask-mode.png)
 
-#### Movie Clip property
+### Movie Clip property
 
 ![Movie Clip property](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/movie-clip-property.png)
 
@@ -248,19 +248,19 @@ From left to right ...
 | Fake User | With this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
 | Open | Open a new movie clip. |
 
-#### Remove
+### Remove
 
 Removes the movie clip. Note that it will not be removed when it has a fake user assigned. Then the clip becomes simply inactive. You can still use it from the list again.
 
 ![Remove](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/remove.png)
 
-#### Mask Property
+### Mask Property
 
 These are display options for mask overlays.
 
-##### Mask Display
+#### Mask Display
 
-###### Spline
+##### Spline
 
 ![Spline](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/spline.png)
 
@@ -271,19 +271,19 @@ Display spline overlays.
 | Edge Display | Changes the spline overlay to outline, dash, black or white edges. |
 | Overlay | Displays an overlay overlays. |
 
-###### Overlay Mode
+##### Overlay Mode
 
 ![Overlay Mode](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/overlay-mode.png)
 
 Show combined color channels or alpha channel. When using combined, the Blending Factor slider can be changed.
 
-#### Pivot Point
+### Pivot Point
 
 ![Pivot Point](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/pivot-point.png)
 
 Adjust the pivot point for transform operations. The names should be self explaining.
 
-#### Proportional Editing
+### Proportional Editing
 
 ![Proportional Editing](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/proportional-editing.png)
 
@@ -291,15 +291,15 @@ Enables proportional editing.
 
 Proportional Editing is a way of transforming selected elements (such as vertices, or in this case the handlers for the mask spline curves) while having that transformation affect other nearby elements with a falloff. For example, moving a single vertex will move unselected vertices within a given range. And the falloff means that selected vertices that are closer to the selected vertex will move more than those farther from it.
 
-##### Settings
+#### Settings
 
 Choose between different falloff methods for the proportional editing. The settings are hidden when you have proportional editing off.
 
-#### Toggle Lock Selection
+### Toggle Lock Selection
 
 Toggle Lock Selection of the current clip editor
 
-#### Clip Display
+### Clip Display
 
 ![Clip Display](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/clip-display.png)
 
@@ -316,23 +316,23 @@ Display options for the tracking footage.
 | Grid | Displays a red grid over the footage that displays the lens distortion. |
 | Aspect Ratio X Y | The aspect ratio to display the footage. |
 
-#### Gizmos
+### Gizmos
 
 ![Gizmos](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/gizmos.png)
 
-##### Viewport Gizmos
+#### Viewport Gizmos
 
-###### Navigate
+##### Navigate
 
 Show the navigate viewport gizmos.
 
-#### Show Overlays
+### Show Overlays
 
 ![Show Overlays](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/show-overlays.png)
 
-##### Viewport Overlays
+#### Viewport Overlays
 
-###### Guides
+##### Guides
 
 | Entry | What it does |
 | --------------- | ---------------------------------- |
@@ -340,11 +340,11 @@ Show the navigate viewport gizmos.
 | Cursor | Display 2d cursor. |
 | Annotations | Display annotations. |
 
-###### Mask Display
+##### Mask Display
 
 ![Mask Display](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/mask-display.jpg)
 
-###### Spline
+##### Spline
 
 **Edge Display type**
 
@@ -352,7 +352,7 @@ Show the navigate viewport gizmos.
 
 How to display the spline.
 
-###### Overlay
+##### Overlay
 
 ![Overlay](/docs2/images/editors/movie-clip-editor/header/header-tools-and-options/overlay.png)
 
@@ -363,7 +363,7 @@ How to display the spline.
 
 # Quick Menu
 
-### Quick Menu
+## Quick Menu
 
 ![Quick Menu](/docs2/images/editors/movie-clip-editor/header/quick-menu/quick-menu.png)
 
@@ -375,7 +375,7 @@ When the menu is empty, then you will see the message "No Menu Items found". Thi
 
 Note that added operators in this menu does not have icons. Just text.
 
-#### Adding an operator to the Quick menu
+### Adding an operator to the Quick menu
 
 ![Adding an operator to the Quick menu](/docs2/images/editors/movie-clip-editor/header/quick-menu/adding-an-operator-to-the-quick-menu.png)
 
@@ -391,7 +391,7 @@ As a rule of thumb, when the right click menu has an Add to Quick Favorites, the
 
 Note that you can also add operators from the tool shelf at the left. And also operators from other editor types. Some other editors have their own quick menu though. The Image Editor for example. These operators gets added in the quick menu of the image editor then. And does not show in the quick menu in the header of the 3D view.
 
-#### Adding a menu to the Quick menu
+### Adding a menu to the Quick menu
 
 ![Adding a menu to the Quick menu](/docs2/images/editors/movie-clip-editor/header/quick-menu/adding-a-menu-to-the-quick-menu.png)
 
@@ -399,17 +399,17 @@ It is also possible to add a menu to the Quick menu. For example the whole Add m
 
 ![Adding a menu to the Quick menu](/docs2/images/editors/movie-clip-editor/header/quick-menu/adding-a-menu-to-the-quick-menu-2.png)
 
-#### Order
+### Order
 
 You might notice that the add menu adds at the top of the menu, and not at the bottom as you would expect. First comes menus, then comes operators. And they get added in the order in which you add them.
 
 Besides that, operators and menus gets added in the order that you add them. They cannot be sorted afterwards. So be careful how you add them. You can of course always remove operators and menus, and re-add them at the end of the list.
 
-#### Removing an operator from the Quick menu
+### Removing an operator from the Quick menu
 
 > The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
-#### Context and mode dependent content
+### Context and mode dependent content
 
 The quick favorites. menu exists in nearly all editors. But it is just in the 3D view available in the header. So that you know this functionality exists. In the other editors you call it with hotkey Q.
 
@@ -417,31 +417,31 @@ The content of the quick favorites. menu changes, dependent over which editor yo
 
 # View Menu
 
-### Movie Clip Editor Modes
+## Movie Clip Editor Modes
 
 The Movie Clip Editor is three editors in one. And the Clip editor in mask mode looks also different. So we need to explain the content for all three editor types plus the Mask mode.
 
 ![Movie Clip Editor Modes](/docs2/images/editors/movie-clip-editor/header/movie-clip-editor-header-2.png)
 
-### View Menu in Tracking mode in Clip sub mode
+## View Menu in Tracking mode in Clip sub mode
 
 ![View Menu in Tracking mode in Clip sub mode](/docs2/images/editors/movie-clip-editor/header/view-menu/view-menu-in-tracking-mode-in-clip-sub-mode.png)
 
 The View menu contains all View related tools.
 
-#### Toolbar
+### Toolbar
 
 ![Toolbar](/docs2/images/editors/movie-clip-editor/header/view-menu/toolbar.png)
 
 Shows or hides the toolbar at the left.
 
-#### Sidebar
+### Sidebar
 
 ![Sidebar](/docs2/images/editors/movie-clip-editor/header/view-menu/sidebar.png)
 
 Shows or hides the sidebar at the right in the viewport.
 
-#### Adjust Last Operation
+### Adjust Last Operation
 
 ![Adjust Last Operation](/docs2/images/editors/movie-clip-editor/header/view-menu/adjust-last-operation.png)
 
@@ -454,7 +454,7 @@ Shows the adjust last operation panel down left.
 | View Fit | View all zooms in or out in the viewport to fit the current selection into the viewport. |
 | Center View to Cursor | Center Cursor centers the view to the 2D cursor. |
 
-#### Annotations (Legacy) submenu
+### Annotations (Legacy) submenu
 
 ![Annotations (Legacy) submenu](/docs2/images/editors/movie-clip-editor/header/view-menu/annotations-legacy-submenu.png)
 
@@ -479,23 +479,23 @@ This group of operators is useful to take notes without changing tool-shelf oper
 | Center View to Cursor | Center the view so that the 2d cursor is in the middle of the view. |
 | Zoom In | Zooms into the view. |
 
-#### Zoom Out
+### Zoom Out
 
 ![Zoom Out](/docs2/images/editors/movie-clip-editor/header/view-menu/zoom-out.png)
 
 Zooms out of the view.
 
-#### Zoom submenu
+### Zoom submenu
 
 A set of predefined zoom factors.
 
-#### Pie menus
+### Pie menus
 
 ![Pie menus](/docs2/images/editors/movie-clip-editor/header/view-menu/pie-menus.png)
 
 Lists the available pie menus, and gives you the ability to read the hotkeys and assign own hotkeys.
 
-#### Area
+### Area
 
 ![Area](/docs2/images/editors/movie-clip-editor/header/view-menu/area.jpg)
 
@@ -506,7 +506,7 @@ This menu contains general view functionality. And exists in most other editor t
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-##### Duplicate Area into New Window
+#### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/movie-clip-editor/header/view-menu/duplicate-area-into-new-window.png)
 
@@ -518,7 +518,7 @@ This menu contains general view functionality. And exists in most other editor t
 | Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
 | Close Area | Close the area window. |
 
-### View Menu in in Tracking mode in Graph sub mode
+## View Menu in in Tracking mode in Graph sub mode
 
 ![View Menu in in Tracking mode in Graph sub mode](/docs2/images/editors/movie-clip-editor/header/view-menu/view-menu-in-in-tracking-mode-in-graph-sub-mode.png)
 
@@ -530,13 +530,13 @@ The View menu contains all View related tools.
 | Frame All | Views all content, zoomed in to fit into the viewport. |
 | Zoom In + Zoom Out | Zoom in and out in the viewport. |
 
-#### Pie menus
+### Pie menus
 
 ![Pie menus](/docs2/images/editors/movie-clip-editor/header/view-menu/pie-menus-2.png)
 
 Lists the available pie menus, and gives you the ability to read the hotkeys and assign own hotkeys.
 
-#### Area
+### Area
 
 ![Area](/docs2/images/editors/movie-clip-editor/header/view-menu/area.jpg)
 
@@ -547,7 +547,7 @@ This menu contains general view functionality. And exists in most other editor t
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-##### Duplicate Area into New Window
+#### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/movie-clip-editor/header/view-menu/duplicate-area-into-new-window.png)
 
@@ -557,7 +557,7 @@ This menu contains general view functionality. And exists in most other editor t
 | Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
 | Close Area | Close the area window. |
 
-### View Menu in in Tracking mode in Dopesheet sub mode
+## View Menu in in Tracking mode in Dopesheet sub mode
 
 ![View Menu in in Tracking mode in Dopesheet sub mode](/docs2/images/editors/movie-clip-editor/header/view-menu/view-menu-in-in-tracking-mode-in-dopesheet-sub-m.png)
 
@@ -568,13 +568,13 @@ The View menu contains all View related tools.
 | Frame All | Show all content, zoomed to fit into the viewport. |
 | Zoom In + Zoom Out | Zooms in and out in the viewport. |
 
-#### Pie menus
+### Pie menus
 
 ![Pie menus](/docs2/images/editors/movie-clip-editor/header/view-menu/pie-menus-3.png)
 
 Lists the available pie menus, and gives you the ability to read the hotkeys and assign own hotkeys.
 
-#### Area
+### Area
 
 ![Area](/docs2/images/editors/movie-clip-editor/header/view-menu/area.jpg)
 
@@ -585,7 +585,7 @@ This menu contains general view functionality. And exists in most other editor t
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-##### Duplicate Area into New Window
+#### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/movie-clip-editor/header/view-menu/duplicate-area-into-new-window.png)
 
@@ -595,31 +595,31 @@ This menu contains general view functionality. And exists in most other editor t
 | Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
 | Close Area | Close the area window. |
 
-### View Menu in Mask mode
+## View Menu in Mask mode
 
 ![View Menu in Mask mode](/docs2/images/editors/movie-clip-editor/header/view-menu/view-menu-in-mask-mode.png)
 
 The View menu contains all View related tools.
 
-#### Toolbar
+### Toolbar
 
 ![Toolbar](/docs2/images/editors/movie-clip-editor/header/view-menu/toolbar.png)
 
 Shows or hides the toolbar at the left.
 
-#### Sidebar
+### Sidebar
 
 ![Sidebar](/docs2/images/editors/movie-clip-editor/header/view-menu/sidebar.png)
 
 Shows or hides the sidebar at the right in the viewport.
 
-#### Adjust Last Operation
+### Adjust Last Operation
 
 ![Adjust Last Operation](/docs2/images/editors/movie-clip-editor/header/view-menu/adjust-last-operation.png)
 
 Shows the adjust last operation panel down left.
 
-#### Annotations (Legacy) submenu
+### Annotations (Legacy) submenu
 
 ![Annotations (Legacy) submenu](/docs2/images/editors/movie-clip-editor/header/view-menu/annotations-legacy-submenu-2.png)
 
@@ -644,27 +644,27 @@ This group of operators is useful to take notes without changing tool-shelf oper
 | View Fit | View all zooms in or out in the viewport to fit the current selection into the viewport. |
 | Center View to Cursor | Center Cursor centers the view to the 2D cursor. |
 
-#### Zoom In
+### Zoom In
 
 Zooms into the view.
 
-##### Zoom Out
+#### Zoom Out
 
 Zooms out of the view.
 
-##### Zoom
+#### Zoom
 
 ![Zoom](/docs2/images/editors/movie-clip-editor/header/view-menu/zoom.png)
 
 A set of predefined zoom factors.
 
-#### Pie menus
+### Pie menus
 
 ![Pie menus](/docs2/images/editors/movie-clip-editor/header/view-menu/pie-menus-4.png)
 
 Lists the available pie menus, and gives you the ability to read the hotkeys and assign own hotkeys.
 
-#### Area
+### Area
 
 ![Area](/docs2/images/editors/movie-clip-editor/header/view-menu/area.jpg)
 
@@ -675,7 +675,7 @@ This menu contains general view functionality. And exists in most other editor t
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-##### Duplicate Area into New Window
+#### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/movie-clip-editor/header/view-menu/duplicate-area-into-new-window.png)
 
@@ -687,7 +687,7 @@ This menu contains general view functionality. And exists in most other editor t
 
 # Select Menu
 
-### Movie Clip Editor Modes
+## Movie Clip Editor Modes
 
 ![Movie Clip Editor Modes](/docs2/images/editors/movie-clip-editor/header/movie-clip-editor-header-2.png)
 
@@ -695,9 +695,9 @@ The Movie Clip Editor is three editors in one. And the Clip editor in mask mode 
 
 The Dope sheet mode has no Select menu.
 
-### Select Menu in Tracking mode in Clip sub mode
+## Select Menu in Tracking mode in Clip sub mode
 
-#### All
+### All
 
 ![All](/docs2/images/editors/movie-clip-editor/header/select-menu/all.png)
 
@@ -710,13 +710,13 @@ Select everything.
 | Box Select | Draw a rectangle to box select markers. It adds to selection by default. To subtract from selection hold down Shift key. |
 | Circle Select | Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel. |
 
-#### Lasso Select
+### Lasso Select
 
 ![Lasso Select](/docs2/images/editors/movie-clip-editor/header/select-menu/lasso-select.png)
 
 A sub menu with the available lasso select modes.
 
-#### Grouped
+### Grouped
 
 ![Grouped](/docs2/images/editors/movie-clip-editor/header/select-menu/grouped.png)
 
@@ -727,9 +727,9 @@ Here you can select objects that are in the same group by the chosen method. The
 | Select Stabilization tracks | Select the tracks that are used for translation stabilization. |
 | Select Stabilization Rotation tracks | Select the tracks that are used for rotation stabilization. |
 
-### Select Menu in Tracking mode in Graph sub mode
+## Select Menu in Tracking mode in Graph sub mode
 
-#### All
+### All
 
 ![All](/docs2/images/editors/movie-clip-editor/header/select-menu/all-2.png)
 
@@ -740,7 +740,7 @@ Select everything.
 | None | Select nothing. |
 | Inverse | Invert the current selection. |
 
-### Select Menu in Mask mode
+## Select Menu in Mask mode
 
 ![Select Menu in Mask mode](/docs2/images/editors/movie-clip-editor/header/select-menu/select-menu-in-mask-mode.png)
 
@@ -754,7 +754,7 @@ Note that you need to have a mask so that the content becomes active.
 | Box Select | Draw a rectangle to box select markers. It adds to selection by default. To subtract from selection hold down Shift key. |
 | Circle Select | Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel. |
 
-#### Lasso Select
+### Lasso Select
 
 ![Lasso Select](/docs2/images/editors/movie-clip-editor/header/select-menu/lasso-select.png)
 
@@ -767,9 +767,9 @@ A sub menu with the available lasso select modes.
 
 # Tracking Mode › Clip Submode › Clip Menu
 
-### Clip Menu
+## Clip Menu
 
-#### Open Clip
+### Open Clip
 
 ![Open Clip](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-clip-menu/open-clip.png)
 
@@ -785,41 +785,41 @@ Opens an Image Sequence or a movie clip.
 
 # Tracking Mode › Clip Submode › Track Menu
 
-### Track Menu
+## Track Menu
 
 ![Track Menu](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/track-menu.png)
 
 Contains tracking functionality. Note that lots of this content is currently a double entry to the content in the tool shelf. The tool shelf content will most probably vanish in the future, in favour of a tool shelf with buttons like in the 3d view.
 
-#### Transform submenu
+### Transform submenu
 
 ![Transform submenu](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/transform-submenu.png)
 
 Track navigation.
 
-##### Move
+#### Move
 
 Move the selected track(s).
 
-###### Last Operator Move
+##### Last Operator Move
 
 ![Last Operator Move](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-move.png)
 
-###### Move X, Y Z
+##### Move X, Y Z
 
 The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.
 
-###### Orientation
+##### Orientation
 
 ![Orientation](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/orientation.png)
 
 The widget can have different orientations. The menu items should be self explaining.
 
-###### Mirror Editing
+##### Mirror Editing
 
 Enables mirror editing.
 
-###### Proportional editing
+##### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/proportional-editing.png)
 
@@ -832,11 +832,11 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
 
-##### Rotate
+#### Rotate
 
 Rotate the selected tracks.
 
-###### Last Operator Rotate
+##### Last Operator Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-rotate.png)
 
@@ -845,17 +845,17 @@ Rotate the selected tracks.
 | Angle | The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel. |
 | Axis | Which axis to rotate. |
 
-###### Orientation
+##### Orientation
 
 ![Orientation](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/orientation.png)
 
 The widget can have different orientations. The menu items should be self explaining.
 
-###### Mirror Editing
+##### Mirror Editing
 
 Enables mirror editing.
 
-###### Proportional editing
+##### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/proportional-editing.png)
 
@@ -868,13 +868,13 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
 
-##### Resize
+#### Resize
 
 ![Resize](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/resize.png)
 
 Resize the selected track(s).
 
-###### Last Operator Resize
+##### Last Operator Resize
 
 ![Last Operator Resize](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-resize.png)
 
@@ -883,17 +883,17 @@ Resize the selected track(s).
 | Angle | The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel. |
 | Axis | Which axis to rotate. |
 
-###### Orientation
+##### Orientation
 
 ![Orientation](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/orientation.png)
 
 The widget can have different orientations. The menu items should be self explaining.
 
-###### Mirror Editing
+##### Mirror Editing
 
 Enables mirror editing.
 
-###### Proportional editing
+##### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/proportional-editing.png)
 
@@ -906,7 +906,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
 
-#### Track Motion submenu
+### Track Motion submenu
 
 ![Track Motion submenu](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/track-motion-submenu.png)
 
@@ -917,7 +917,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Forwards | Track forwards the whole range. |
 | Frame Forwards | Track forwards frame wise. |
 
-#### Clear submenu
+### Clear submenu
 
 ![Clear submenu](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/clear-submenu.png)
 
@@ -933,7 +933,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Refine submenu | **Backwards**: Refine selectet marker positions forwards. · **Backwards**: Refine selectet marker positions forwards. |
 | Add Marker | Add a marker. The marker will appear under the mouse, and stick until you click. |
 
-#### Detect Features
+### Detect Features
 
 ![Detect Features](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/detect-features.png)
 
@@ -943,15 +943,15 @@ When enough marcant areas are available then it adds up to eight markers that wa
 
 ![Detect Features](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/detect-features-2.png)
 
-##### Last Operator Detect Features
+#### Last Operator Detect Features
 
 ![Last Operator Detect Features](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-detect-features.png)
 
-###### Placement
+##### Placement
 
 Placement is a drop down box where you can limit the placement of the markers.
 
-###### Whole frame
+##### Whole frame
 
 ![Whole frame](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/whole-frame.png)
 
@@ -968,11 +968,11 @@ The markers can be at every position of the current frame image.
 | Threshold | The threshold level to consider the current position of the marker as good enough for tracking. |
 | Distance | The minimum distance between two markers. |
 
-#### Create Plane Track
+### Create Plane Track
 
 Creates a plane track. A plane track can be used to map an image or a movie at an area in your clip. The Plane track.
 
-#### New Image from Plane Marker
+### New Image from Plane Marker
 
 ![New Image from Plane Marker](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/new-image-from-plane-marker.png)
 
@@ -980,13 +980,13 @@ Create new image from the content of the plane markerfrom the pixels of the movi
 
 To use, create and select four tracking points then create a Plane Marker. Once you’ve selected the Plane Marker, create the new image - then edit the image in the Image Editor.
 
-#### Update Image from Plane Marker
+### Update Image from Plane Marker
 
 Update current image used by plane marker from the content of the plane marker. This updates the pixels of the active Plane Track’s image.
 
 Allows you to update the texture of any flat surface in the footage.
 
-#### Solve Camera Motion
+### Solve Camera Motion
 
 Starts the calculation for the camera motion to match the track motion.
 
@@ -1005,21 +1005,21 @@ The average re-projection error is reported to the information space and to the 
 | Copy Settings to Defaults | Copies track settings from active track to default settings. |
 | Apply default settings | Copy tracking settings form active tracks to selected tracks. You need to select the source track first, then hold down shift, then select the target track. Then perform copy track settings. |
 
-#### Animation submenu
+### Animation submenu
 
 ![Animation submenu](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/animation-submenu.png)
 
-##### Insert Keyframe
+#### Insert Keyframe
 
 ![Insert Keyframe](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/insert-keyframe.png)
 
 Inserts a keyframe at current position in spreadsheet sub mode panel.
 
-##### Delete Keyframe
+#### Delete Keyframe
 
 Deletes keyframes at current position in dope sheet sub mode panel.
 
-#### Show/Hide submenu
+### Show/Hide submenu
 
 ![Show/Hide submenu](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/show-hide-submenu.png)
 
@@ -1031,15 +1031,15 @@ Show or hide tracks.
 | Hide Selected | Hide the selected tracks. |
 | Hide Unselected | Hide the unselected tracks. |
 
-##### Last operator Hide Tracks
+#### Last operator Hide Tracks
 
 ![Last operator Hide Tracks](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-hide-tracks.png)
 
-###### Unselected
+##### Unselected
 
 Hide selected or unselected tracks.
 
-#### Clean up submenu
+### Clean up submenu
 
 ![Clean up submenu](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/clean-up-submenu.png)
 
@@ -1053,7 +1053,7 @@ Hide selected or unselected tracks.
 | Delete Track | Delete the selected track. |
 | Delete Marker | Delete the selected marker. |
 
-#### Reconstruction
+### Reconstruction
 
 ![Reconstruction](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/reconstruction.png)
 
@@ -1062,57 +1062,57 @@ Hide selected or unselected tracks.
 | Set Origin | Set active marker as origin in 3D space. |
 | Set Floor | Set plane in the 3D space as a Floor plane, based at three selected markers. You need to have three markers selected. Or you will get an error message. |
 
-##### Set Wall
+#### Set Wall
 
 Set plane in the 3D space as a Wall plane, based at three selected markers.
 
-###### Last Operator Set Plane
+##### Last Operator Set Plane
 
 ![Last Operator Set Plane](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-plane.png)
 
-###### Plane
+##### Plane
 
 ![Plane](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/plane.png)
 
 A drop down box to choose if you want to set the selected markers as plane or as floor.
 
-##### Set X Axis
+#### Set X Axis
 
 Set X axis rotation in 3D space, based at the selected marker. You need to have one marker selected. Or you will get an error.
 
-##### Set Y Axis
+#### Set Y Axis
 
 Set X axis rotation in 3D space, based at the selected marker. You need to have one marker selected. Or you will get an error.
 
-###### Last Operator Set Axis
+##### Last Operator Set Axis
 
 ![Last Operator Set Axis](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-axis.png)
 
-###### Axis
+##### Axis
 
 A drop down box to choose if you want to use the axis to X or to Y
 
-##### Set Scale
+#### Set Scale
 
 Set scale of scene by scaling camera, based at two selected markers. You need to have two markers selected. Or you will get an error.
 
-###### Last Operator Set Scale
+##### Last Operator Set Scale
 
 ![Last Operator Set Scale](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-set-scale.png)
 
-###### Distance
+##### Distance
 
 The distance between two bundles used for scene scaling.
 
-##### Apply Scale
+#### Apply Scale
 
 Apply scale to solution.
 
-###### Last operator Apply Solution Scale
+##### Last operator Apply Solution Scale
 
 ![Last operator Apply Solution Scale](/docs2/images/editors/movie-clip-editor/header/tracking-mode-clip-submode-track-menu/last-operator-apply-solution-scale.png)
 
-###### Distance
+##### Distance
 
 The distance between two bundles used for scene scaling.
 
@@ -1123,25 +1123,25 @@ The distance between two bundles used for scene scaling.
 
 # Tracking Mode › Graph Submode › Graph Menu
 
-### Track Menu
+## Track Menu
 
-#### Delete Curve
+### Delete Curve
 
 ![Delete Curve](/docs2/images/editors/movie-clip-editor/header/tracking-mode-graph-submode-graph-menu/delete-curve.png)
 
 Deletes the track that correspondent to the current curve.
 
-#### Delete Knot
+### Delete Knot
 
 Deletes the selected curve points.
 
-#### Clear Track Path Remained
+### Clear Track Path Remained
 
 ![Clear Track Path Remained](/docs2/images/editors/movie-clip-editor/header/tracking-mode-graph-submode-graph-menu/clear-track-path-remained.png)
 
 Clears the track path after the current position.
 
-#### Clear Track Path Up To
+### Clear Track Path Up To
 
 ![Clear Track Path Up To](/docs2/images/editors/movie-clip-editor/header/tracking-mode-graph-submode-graph-menu/clear-track-path-up-to.png)
 
@@ -1157,9 +1157,9 @@ Clears the track path up to the current position.
 
 # Mask Mode › Clip Menu
 
-### Clip Menu
+## Clip Menu
 
-#### Open Clip
+### Open Clip
 
 ![Open Clip](/docs2/images/editors/movie-clip-editor/header/mask-mode-clip-menu/open-clip.png)
 
@@ -1175,7 +1175,7 @@ Opens an Image Sequence or a movie clip.
 
 # Mask Mode › Add Menu
 
-### Add Menu
+## Add Menu
 
 ![Add Menu](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/add-menu.png)
 
@@ -1183,7 +1183,7 @@ Masking can be done by using curves. In the Add menu you will find two spline pr
 
 You select curve points by clicking with the left mouse button at them. Holding down Shift will add to the selection. Clicking in the off will deselect everything.
 
-#### Circle
+### Circle
 
 ![Circle](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/circle.png)
 
@@ -1193,7 +1193,7 @@ Adds a Bezier circle that you can use for masking.
 
 This circle element can be modified by right clicking at the handlers and pulling at the handlers until the desired result is achieved. The yellow points are handlers. The whole curve can be moved around with right mouse button. See also Transform sub menu in the Mask menu.
 
-##### Last Operator Add Circle
+#### Last Operator Add Circle
 
 ![Last Operator Add Circle](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-circle.png)
 
@@ -1202,7 +1202,7 @@ This circle element can be modified by right clicking at the handlers and pullin
 | Size | The size of the circle. |
 | Location X Y | The location of the circle. |
 
-#### Square
+### Square
 
 ![Square](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/square.png)
 
@@ -1212,7 +1212,7 @@ Adds a Bezier circle that you can use for masking.
 
 This circle element can be modified by right clicking at the handlers and pulling at the handlers until the desired result is achieved. The yellow points are handlers. The whole curve can be moved around with right mouse button. See also Transform sub menu in the Mask menu.
 
-##### Last Operator Add Square
+#### Last Operator Add Square
 
 ![Last Operator Add Square](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-square.png)
 
@@ -1221,7 +1221,7 @@ This circle element can be modified by right clicking at the handlers and pullin
 | Size | The size of the circle. |
 | Location X Y | The location of the circle. |
 
-#### Add Vertex and Slide
+### Add Vertex and Slide
 
 ![Add Vertex and Slide](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/add-vertex-and-slide.png)
 
@@ -1229,25 +1229,25 @@ You can add more curve points by holding down ctrl and clicking left at a curve.
 
 You can create a spline from scratch with this method too. Simply hold down Ctrl, click into the viewport, and created your needed spline points. To close the created mask spline use Toggle Cyclic from the mask menu.
 
-##### Last operator Add Vertex and Slide
+#### Last operator Add Vertex and Slide
 
 ![Last operator Add Vertex and Slide](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-vertex-and-slide.png)
 
-###### Location X Y
+##### Location X Y
 
 The location of the created spline point.
 
-#### Feather Vertex Slide
+### Feather Vertex Slide
 
 ![Feather Vertex Slide](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/feather-vertex-slide.png)
 
 Add new vertex to feather and slide it. Hotkey only tool !
 
-##### Last Operator Add Feather Vertex and Slide
+#### Last Operator Add Feather Vertex and Slide
 
 ![Last Operator Add Feather Vertex and Slide](/docs2/images/editors/movie-clip-editor/header/mask-mode-add-menu/last-operator-add-square.png)
 
-###### Location X Y
+##### Location X Y
 
 The location of the circle.
 
@@ -1275,21 +1275,21 @@ This allows for deforming the main spline in almost any way, and the feather wil
 
 For example if there is just rotation of the spline, feather would stay completely unchanged. If one point’s feather is moved, the other feathers will be automatically stretched uniformly along that segment and the overall shape will be almost the same as artists would want it to be.
 
-### Mask Menu
+## Mask Menu
 
 ![Mask Menu](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/mask-menu.jpg)
 
-#### Transform
+### Transform
 
 ![Transform](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/transform.png)
 
-##### Move
+#### Move
 
 Move the selected curve spline or points.
 
-###### Last Operator Move
+##### Last Operator Move
 
-###### Values
+##### Values
 
 ![Values](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/values.png)
 
@@ -1297,21 +1297,21 @@ Adjust the move amount.
 
 X, Y and Z defines the position.
 
-###### Axis Ortho
+##### Axis Ortho
 
 Along which axis to move.
 
-###### Orientation
+##### Orientation
 
 ![Orientation](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/orientation.png)
 
 Orientation is a drop-down box where you can choose the type of orientation for the transform action.
 
-###### Mirror Editing
+##### Mirror Editing
 
 Enables mirror editing.
 
-###### Proportional Editing
+##### Proportional Editing
 
 ![Proportional Editing](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing.png)
 
@@ -1329,19 +1329,19 @@ Proportional Editing Falloff is a drop-down box where you can choose a method fo
 | Connected | Just edit geometry that is directly connected with the current selection. 4 Bforartists 2 Reference Manual - 7.1.4 Editors - 3D View - Header - Navigation Menu |
 | Projected ( 2D) | Edit geometry that is in 2d space aligned with the current selection. This one goes from the current view in depth direction. |
 
-##### Rotate
+#### Rotate
 
 Rotate the selected curve spline or points.
 
-###### Last Operator Rotate
+##### Last Operator Rotate
 
-###### Angle
+##### Angle
 
 ![Angle](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/angle.png)
 
 Adjust the angle.
 
-###### Axis
+##### Axis
 
 ![Axis](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/orientation.png)
 
@@ -1352,7 +1352,7 @@ Along which axis to rotate
 | Orientation | Orientation is a drop-down box where you can choose the type of orientation for the transform action. |
 | Mirror Editing | Enables mirror editing. |
 
-###### Proportional Editing
+##### Proportional Editing
 
 ![Proportional Editing](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing.png)
 
@@ -1370,29 +1370,29 @@ Proportional Editing Falloff is a drop-down box where you can choose a method fo
 | Connected | Just edit geometry that is directly connected with the current selection. 4 Bforartists 2 Reference Manual - 7.1.4 Editors - 3D View - Header - Navigation Menu |
 | Projected ( 2D) | Edit geometry that is in 2d space aligned with the current selection. This one goes from the current view in depth direction. |
 
-##### Scale
+#### Scale
 
 Scale the selected curve spline or points.
 
-###### Last Operator Resize
+##### Last Operator Resize
 
-###### Scale X Y Z
+##### Scale X Y Z
 
 ![Scale X Y Z](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/scale-x-y-z.png)
 
 Adjust the scaling.
 
-###### Orientation
+##### Orientation
 
 ![Orientation](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/orientation.png)
 
 Orientation is a drop-down box where you can choose the type of orientation for the transform action.
 
-###### Mirror Editing
+##### Mirror Editing
 
 Enables mirror editing.
 
-###### Proportional Editing
+##### Proportional Editing
 
 ![Proportional Editing](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing.png)
 
@@ -1410,27 +1410,27 @@ Proportional Editing Falloff is a drop-down box where you can choose a method fo
 | Connected | Just edit geometry that is directly connected with the current selection. 4 Bforartists 2 Reference Manual - 7.1.4 Editors - 3D View - Header - Navigation Menu |
 | Projected ( 2D) | Edit geometry that is in 2d space aligned with the current selection. This one goes from the current view in depth direction. |
 
-##### To Sphere
+#### To Sphere
 
 Shapes a selection of objects into the shape of a sphere. The calculation happens with the object origins.
 
 In Object mode this tools requires to have more than one object selected.
 
-###### Usage
+##### Usage
 
 ![Usage](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/usage.png)
 
 Select the objects, activate the tool, then drag the mouse in the 3D viewport. In the header you will read the current factor then. Which tells you how close you are towards the sphere shape.
 
-###### Last Operator To Sphere
+##### Last Operator To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-to-sphere.png)
 
-###### Factor
+##### Factor
 
 The factor to transform the selection into a shape form.
 
-###### Proportional editing
+##### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing.png)
 
@@ -1443,21 +1443,21 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
 
-##### Shear
+#### Shear
 
 Shear shears the selection.
 
 In Object mode this tools requires to have more than one object selected.
 
-###### Last Operator Shear
+##### Last Operator Shear
 
 ![Last Operator Shear](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-shear.png)
 
-###### Offset
+##### Offset
 
 Adjust an offset.
 
-###### Shear Axis
+##### Shear Axis
 
 The shear tool works along a imaginary 2d plane. The shear axis controls if the items are sheared along the x or the y axes of this plane. This is the plane along which the transformation happens. You can shear along the x or the y axis of this plane.
 
@@ -1468,7 +1468,7 @@ To make things even more complicated, the orientation of this imaginary plane is
 | Axis | Defines one axis of the imaginary shear axis plane. |
 | Axis Ortho | Defines the other axis of the imaginary shear axis plane. |
 
-###### Orientation
+##### Orientation
 
 ![Orientation](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/orientation.png)
 
@@ -1479,13 +1479,13 @@ Choose the orientation for the shear action.
 | Mirror Editing | Enables mirror editing. |
 | Proportional editing | Enables proportional editing. Activating proportional editing reveals further settings. · **Proportional Falloff**: Adjust the falloff methods. · **Proportional Size**: See and adjust the falloff radius. · **Connected**: The proportional falloff gets calculated for connected parts only. · **Projected(2D)**: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
 
-##### Push/Pull
+#### Push/Pull
 
 It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-###### Last Operator Push/Pull
+##### Last Operator Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-push-pull.png)
 
@@ -1494,7 +1494,7 @@ In Object mode this tool requires to have more than one object selected.
 | Distance | Adjust the strength of influence of the tool. |
 | Mirror Editing | Enables mirror editing. |
 
-###### Proportional editing
+##### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing.png)
 
@@ -1507,7 +1507,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
 
-##### Scale Feather
+#### Scale Feather
 
 ![Scale Feather](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/scale-feather.png)
 
@@ -1517,7 +1517,7 @@ The curve type that is used to create mask splines is almost a Bezier curve. But
 
 Besides the handles, every control point also has points that define the feather between the current point and the next point on the spline. Each feather point is stored in UV space, where U means position across spline segment, and V means distance between main spline and feather points.
 
-###### Last Operator Transform
+##### Last Operator Transform
 
 ![Last Operator Transform](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-transform.png)
 
@@ -1526,17 +1526,17 @@ Besides the handles, every control point also has points that define the feather
 | Values | Adjust the scale amount. X, Y and Z defines the position. W defines the rotation. |
 | Axis | Around which axis to rotate. X, Y or Z. |
 
-###### Orientation
+##### Orientation
 
 ![Orientation](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/orientation.png)
 
 Orientation is a drop-down box where you can choose the type of orientation for the transform action.
 
-###### Mirror Editing
+##### Mirror Editing
 
 Enables mirror editing.
 
-###### Proportional Editing
+##### Proportional Editing
 
 ![Proportional Editing](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/proportional-editing.png)
 
@@ -1554,7 +1554,7 @@ Proportional Editing Falloff is a drop-down box where you can choose a method fo
 | Connected | Just edit geometry that is directly connected with the current selection. 4 Bforartists 2 Reference Manual - 7.1.4 Editors - 3D View - Header - Navigation Menu |
 | Projected ( 2D) | Edit geometry that is in 2d space aligned with the current selection. This one goes from the current view in depth direction. |
 
-##### Clear Feather Weight
+#### Clear Feather Weight
 
 Reset the feather weight to zero.
 
@@ -1570,17 +1570,17 @@ Reset the feather weight to zero.
 | Switch Direction | Switch the direction in which the spline points. A spline has a direction. A starting point and an endpoint. By switching the starting point becomes the end point, the end point becomes the starting point. |
 | Recalc Normals | Recalculate the direction of the selected spline handlers. |
 
-#### Set Handle Type
+### Set Handle Type
 
 ![Set Handle Type](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/set-handle-type.png)
 
 In this sub menu you can set the handle type for the currently selected spline points.
 
-#### Animation
+### Animation
 
 ![Animation](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/animation.png)
 
-##### Insert Shape Key
+#### Insert Shape Key
 
 ![Insert Shape Key](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/insert-shape-key.png)
 
@@ -1588,19 +1588,19 @@ Inserts a shape key keyframe.
 
 The inserted keyframes can then be found in the dope sheet editor in mask mode.
 
-##### Clear Shape Key
+#### Clear Shape Key
 
 Clears an existing shape key keyframe.
 
-##### Reset Feather Animation
+#### Reset Feather Animation
 
 Resets the feather offset across all animated frames.
 
-##### Re-key Shape points
+#### Re-key Shape points
 
 Recalculate animation data on selected points for frames selected in the dope sheet.
 
-#### Show / Hide
+### Show / Hide
 
 ![Show / Hide](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/show-hide.png)
 
@@ -1609,14 +1609,14 @@ Recalculate animation data on selected points for frames selected in the dope sh
 | Show Hidden | Reveals all hidden curves |
 | Hide Selected | Hides the selected curve. |
 
-##### Hide Unselected
+#### Hide Unselected
 
 Hides the unselected curves.
 
-###### Last operator Hide Layer
+##### Last operator Hide Layer
 
 ![Last operator Hide Layer](/docs2/images/editors/movie-clip-editor/header/mask-mode-mask-menu/last-operator-hide-layer.png)
 
-###### Unselected
+##### Unselected
 
 Hide selected or unselected curves.
