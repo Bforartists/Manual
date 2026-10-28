@@ -29,7 +29,7 @@ These rules come from the maintainer's reviews and from an audit of all 333 page
 Each one has the same three parts, in this order:
 
 1. 🏷️ **Heading**: the name exactly as the UI shows it.
-2. 📝 **A short tooltip-style explanation**: what it is, why you would use it, how it works. Plain words.
+2. 📝 **A short tooltip-style explanation**: what it is, why you would use it, how it works. Plain words. Give a tool or operator whose purpose is not obvious from its name one more sentence on what it is good for.
 3. 🖼️ **A capture**: the menu, panel or result, taken in place.
 
 Cluster a few closely related operators under one heading with one shared capture when that reads better.
@@ -63,7 +63,7 @@ Nodes already follow the pattern everyone should use. Keep it:
 
 ```
 #### Node name
-(capture + explanation)
+(capture + context paragraph)
 
 ##### Inputs
 ###### Each input
@@ -74,6 +74,18 @@ Nodes already follow the pattern everyone should use. Keep it:
 ```
 
 - The order is always **Inputs, Properties, Outputs**. A section is left out when the node has none.
+
+### 💡 The context paragraph
+
+Right under the capture, every node gets a short paragraph, two to four sentences, so a reader knows at a glance what the node is for. Cover three things:
+
+1. 🎯 **What it does**: the result, in plain words.
+2. 🧰 **What it is good for**: a typical use an artist would recognise.
+3. ⚙️ **How it does it**: the idea in one sentence, no code, no jargon.
+
+Example, for Reverse String: *"Flips the order of the characters in a text, so "Moon" becomes "nooM". Handy for mirrored labels or for testing text effects. It reads the string from the first character to the last and writes it back in the opposite order."*
+
+Keep the rest of the page as it is. The Inputs, Properties and Outputs stay short, one tooltip-style line each. The same idea applies to operators and tools: one extra sentence on **why you would reach for it** is welcome when it is not obvious from the name.
 - Each input, property and output is its own heading with a short explanation. No tables.
 
 ---
@@ -107,6 +119,7 @@ Never copy a paragraph between pages. If you need it twice, make it one of the t
 ## ✅ Quick checklist for a PR
 
 - [ ] Every operator has its own sub-heading, explanation and capture
+- [ ] Every node has a context paragraph: what it does, what it is good for, how it works
 - [ ] No skipped heading levels, no bold lines used as headings
 - [ ] Tables only for Adjust Last Operation properties or real data grids
 - [ ] Overview pictures updated if an entry changed
