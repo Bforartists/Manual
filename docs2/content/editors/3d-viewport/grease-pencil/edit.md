@@ -1248,7 +1248,7 @@ The method to invert destination stroke to match start and end with source strok
 
 #### Gradient
 
-<!-- TODO screenshot: Grease Pencil Edit Mode, Gradient tool active, dragging a line across a stroke with a Gradient fill -->
+![Gradient tool, dragging a line across the strokes](/docs2/images/editors/3d-viewport/grease-pencil/gradient-tool-drag.png)
 
 The Gradient tool sets **where the fill gradient runs** on the selected strokes. You draw the gradient straight in the viewport instead of typing numbers.
 
