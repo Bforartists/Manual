@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bforartists History · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1563 · <code>docs2/edit/appendix-bforartists-history-20261028</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<a class="is-current" href="bforartists-history.html">Bforartists History</a>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Appendix › Bforartists History</div><h1 class="pv-title">Bforartists History</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.2.3</span><span>🕒 19 min read</span></div><article class="ui-doc-body"><h2 id="bforartists-5-history">Bforartists 5 History</h2>
+<h3 id="preface">Preface:</h3>
+<p>The Bforartists 5 release marks another milestone in the history of Bforartists. This also expands a period of development continuation ith more assets focused on the Compositor, Geometry Nodes and wizard based assets for the asset shelves – and marks an Iconography refactor for light themes and consistency – all with effort to stay relevant within a shifting landscape of Blenders development and change of direction with new leadership.</p>
+<p>This also marks a milestone where the File Server 2.0, Website 2.0 and Documentation 2.0 was developed an launched.</p>
+<h3 id="history">History</h3>
+<p>28.10.2026 – Bforartists 5.2.3 released</p>
+<p>28.07.2026 – Bforartists 5.2.0 released</p>
+<p>23.04.2026 – Bforartists 5.1.1 released</p>
+<p>24.03.2026 – Bforartists 5.1.0 released</p>
+<p>28.12.2025 – Bforartists 5.0.1 released</p>
+<p>26.11.2025 – Bforartists 5.0.0 released</p>
+<h2 id="bforartists-4-history">Bforartists 4 History</h2>
+<h3 id="preface-2">Preface:</h3>
+<p>The Bforartists 4 release marks a milestone in the history of Bforartists, where for the first time, the project was presented at the Blender Conference 2023. This also marks the dawn of a development stage of creating asset presets and polish for various artists in a shifting landscape meanwhile keeping up with Blender development.</p>
+<h3 id="history-2">History:</h3>
+<p>25.08.2025 – Bforartists 4.5.2 released.</p>
+<p>08.08.2025 – Bforartists 4.5.1 released.</p>
+<p>22.07.2025 – Bforartists 4.5.0 released.</p>
+<p>08.05.2025 – Bforartists 4.4.3 released.</p>
+<p>03.04.2025 – Bforartists 4.4.0 released.</p>
+<p>15.02.2025 – Bforartists 4.3.3 released.</p>
+<p>24.01.2025 – Bforartists 4.3.2 released.</p>
+<p>12.12.2024 – Bforartists 4.3.1 released.</p>
+<p>28.11.2024 – Bforartists 4.3.0 released.</p>
+<p>02.09.2024 – Bforartists 4.2.2 released.</p>
+<p>27.08.2024 – Bforartists 4.2.1 released.</p>
+<p>30.07.2024 – Bforartists 4.2.0 released.</p>
+<p>23.03.2024 – Bforartists 4.1.1 released.</p>
+<p>01.04.2024 – Bforartists 4.1.0 released.</p>
+<p>11.12.2023 – Bforartists 4.0.2 released.</p>
+<p>18.11.2023 – Bforartists 4.0.1 released.</p>
+<h2 id="bforartists-3-history">Bforartists 3 History</h2>
+<h3 id="preface-3">Preface:</h3>
+<p>The Bforartists 3 release marks another milestone in the history of Bforartists. There is nothing really special in feature terms. It's the permanent continued development and improvement as we do since years. Bit by bit. And improvement by improvement. A left aligned prop here, a new panel to improve usability there, and so on.</p>
+<p>But with Blender 3 there is also a Bforartists version 3, with all the features from Blender 3.</p>
+<p>Until Bforartists 3 we followed our own versioning. In the future we will try to stick as close as possible to the Blender versioning numbers. To make clear what Blender version is compatible with what Bforartists version, and vice versa. It can still happen though that this goes out of sync. In case we need to do a showstopper release for example. But the plan is to stick close.</p>
+<p>With Bforartists 3 we also have reached a point where the manageable big development goals by us are all fulfilled. This means there won't be this massive changes to the UI anymore like in the past. It can still happen, but it is not the rule anymore. Bforartists was always in a productive state. But it now has finally reached a stable status in terms of feature completeness. So the main work in future versions is now to keep Bforartists up to date, and adjust it to the changes that comes in from Blender.</p>
+<h3 id="history-3">History:</h3>
+<p>28.08.2023 – Bforartists 3.6.2 released.</p>
+<p>07.08.2023 – Bforartists 3.6.1 released.</p>
+<p>05.07.2023 – Bforartists 3.6.0 released.</p>
+<p>08.05.2023 – Bforartists 3.5.1 released.</p>
+<p>03.04.2023 – Bforartists 3.5.0 released.</p>
+<p>10.01.2023 – Bforartists 3.4.1 released.</p>
+<p>07.12.2022 – Bforartists 3.4.0 released.</p>
+<p>12.10.2022 – Bforartists 3.3.1 released.</p>
+<p>07.09.2022 – Bforartists 3.3.0 released.</p>
+<p>08.08.2022 – Bforartists 3.2.2 released.</p>
+<p>08.07.2022 – Bforartists 3.2.1 released.</p>
+<p>09.06. 2022 - Bforartists 3.2.0 released.</p>
+<p>09.04. 2022 - Bforartists 3.1.3 released. A hotfix release.</p>
+<p>04.04. 2022 - Bforartists 3.1.2 released.</p>
+<p>10.03. 2022 - Bforartists 3.1.0 released.</p>
+<p>02.02. 2022 - Bforartists 3.0.1 released.</p>
+<p>03.12.2021 - Bforartists 3.0.0 released.</p>
+<h2 id="bforartists-2-history">Bforartists 2 History</h2>
+<h3 id="preface-4">Preface:</h3>
+<p>It was for a while not clear if and how we continue with the Bforartists 2 development. The Blender developers did quite a few things right with 2.80. Icon buttons in the tool shelf, streamlined UI and so on. In best case Blender 2.80 would have made a Bforartists 2 obsolete.</p>
+<p>But they did from our point of view also quite a few things wrong again. The hard to read monochrome icons and still a hard to read standard theme, the new tool shelf, which is one gigantic hacky solution that doubles the tool set, still a big mess full of double menu entries, and so on. But alone the toolbar from Bforartists 1 justified the further development already. It is so useful. And so the decision was made to continue with development.</p>
+<p>There was no exact date when the development started again. There was quite a few things still to do for Bforartists 1, which was at the same time preparation work for Bforartists 2 already. Manual for example. And the merge of Blender 2.80 code into the Bforartists master was also a longer process across several days. The official starting point was the release of the Bforartists 2 Manifest, which defines the will and the further development goals.</p>
+<ul>
+<li>Reiner</li>
+</ul>
+<h3 id="history-4">History:</h3>
+<p>18.07.2021 - Bforartists 2.9.3 released.</p>
+<p>01.07.2021 - Bforartists 2.9.2 released. A showstopper bug made a new version necessary.</p>
+<p>25.06.2021 - Bforartists 2.9.1 released. This release ends the development cycle for Bforartists 2 in general.</p>
+<p>11.06.2021 - Bforartists 2.9.0 released.</p>
+<p>27.02.2021 - Bforartists 2.8.0 released.</p>
+<p>26.01.2021 - Bforartists 2.7.0 released.</p>
+<p>26.11.2020 - Bforartists 2.6.0 released.</p>
+<p>24.09.2020 - Bforartists 2.5.1 released.</p>
+<p>01.09.2020 - Bforartists 2.5.0 released.</p>
+<p>03.07.2020 - Bforartists 2.4.0 released.</p>
+<p>10.06.2020 - Bforartists 2.3.0 released.</p>
+<p>26.05.2020 - Bforartists 2.2.0 released.</p>
+<p>04.06.2020 - Bforartists 2.1.0 released.</p>
+<p>18.04.2019 - Bforartists 2 Gold released. This release is the first productive version of Bforartists 2.</p>
+<p>12.04.2019 - Bforartists 2 Release candidate released.</p>
+<p>16.03.2020 - Bforartists 2 Beta 0.9.1 released. The first beta.</p>
+<p>14.02.2020 - Bforartists 2 Alpha 0.9.0 released.</p>
+<p>21.11.2019 - Bforartists 2 Alpha 0.8.0 released.</p>
+<p>03.10.2019 - Bforartists 2 Alpha 0.7.0 released.</p>
+<p>31.07.2019 - Bforartists 2 Alpha 0.6.0 released.</p>
+<p>03.06.2019 - Bforartists 2 Alpha 0.5.0 released.</p>
+<p>06.05.2019 - Bforartists 2 Alpha 0.4.0 released.</p>
+<p>01.04.2019 - Bforartists 2 Alpha 0.3.0 released.</p>
+<p>03.03.2019 - Bforartists 2 Alpha 0.2.0 released.<br />
+04.02.2019 - Bforartists 2 Alpha 0.1.0 released.</p>
+<p>01.12.2018 - Merging Blender 2.80 into Bforartists Master.</p>
+<p>27.10.2018 - Bforartists 2 Manifest released.</p>
+<h2 id="bforartists-1-history">Bforartists 1 History</h2>
+<h3 id="preface-5">Preface:</h3>
+<p>Welcome to Bforartists, the free and open source 3D modeling, rendering and animation suite.</p>
+<p>Bforartists is a fork of the popular open source 3d software Blender. And, similar to Blender, of course also open source and under the GPL license. The primary goal of the Bforartists fork is to deliver a better graphical UI and a better usability. This means a complete switch in the usage philosophy. Away from the hotkey and speed centered usage. Away from crazy decisions like RMB select. Towards a user friendly and intuitive graphical UI that can be used with a mouse and one hand when necessary. And that is much closer to the common UI standards of many other software.</p>
+<p>The idea to solve the UI dilemma of Blender and to fork it was long around since years. It was no easy decision to really start it. Blender is a code monster. And so the answer to the question shall i really start a fork was always no. But at one point it was simply enough how the user interface got threaten by the Blender developers. The answer if Blender should be forked turned from <code>*no*</code> to <code>*possible</code> with some big <code>caveats*</code>. And then the decision was made to fork Blender.</p>
+<p>The Bforartists project itself started officially at July the 2nd 2015. That's when the first real steps were done.</p>
+<h3 id="history-5">History:</h3>
+<p>2.6.2015 - Decision day. The first pages for the UI proposal were written. The work at the homepage started. Which was the official start of the whole project.</p>
+<p>2.7.2015 - The domain bforartists was registered.</p>
+<p>13.8.2015 - The Bforartists page was finished and went live.</p>
+<p>22.8.2015 - GitHub account was created and went live.</p>
+<p>21.9.2015 - The first Bforartists version 0.1 was released. It was based at Blender 2.75. And contained not this much more than the changed branding.</p>
+<p>14.10.2015 - Version 0.2 brought the changes for Blender 2.76. And that was the moment when Bforartists started to walk alone.</p>
+<p>19.12.2015 - Version 0.2.1 introduced a new key map and a new navigation scheme. And already quite a few changes at the UI layout. Blender has a ton of missing UI entries and a ton of double and even triple menu entries. It also brought in the Blender 2.76 a and b patches to Bforartists</p>
+<p>27.01.2016 - Bforartists 0.2.2 was mainly around a plugin to display the most needed hotkeys up left.</p>
+<p>18.03.2016 - Bforartists 0.3.0 introduced the first incarnation of icon buttons in the tool shelf.</p>
+<p>26.03.2016 - Bforartists 0.3.1 came with some small fixes that were overlooked for version 0.3.0. The splash screen was changed because of ongoing trolling.</p>
+<p>02.08.2016 - Bforartists 0.4.0 was a small refinement release that was the final stroke below the try to implement Qt and new editor types. Which did simply not work.</p>
+<p>04.09.2016 - Bforartists 0.4.1 brought mainly changes to the tool tips. Nearly every tool tip contains the tool name now too.</p>
+<p>16.09.2016 - 0.4.2 is another small release mainly around catching some more tool tips. and small quirks. New is the Materials Library FX add-on, which is also naively included into Blender 2.78 now.</p>
+<p>24.09.2016 - 0.5.0 is a milestone release. It marks the end of the first big development cycle. The tracker is empty for the first time since development start.</p>
+<p>02.11.2016 - 0.6.0 brings fixes to the addons, first sub tabs in the panels, and the Mini lightlib add-on.</p>
+<p>01.12.2016 - 0.7.0 was mainly cleanup work in the Properties editor.</p>
+<p>08.01.2017 - Version 0.8.0 brings the new Toolbar editor.</p>
+<p>27.02.2017 - Version 0.9.0 is the merge of the actual Blender version 2.78 C into Bforartists.</p>
+<p>13.03.2017 - Version 0.9.1 is a bug fix release that fixes some show stoppers from version 0.9.0.</p>
+<p>10.4.2017 - Version 0.9.2 is around cleaning up the menus and connecting some loose ends. And it introduces a Mac build.</p>
+<p>13.9.2017 - Version 0.9.3 is the merge of Blender 2.79 into Bforartists. Plus a few smaller adjustments and fixes.</p>
+<p>14.9.2017 - An emergency release because of a showstopper bug. The bake panels were missing.</p>
+<p>02.03.2018 - Version 0.9.6 brings the changes from Blender 2.79a, and adds 260 changes from Bforartists side.</p>
+<p>19.04.2018 - Version 0.9.7 brings the full key map, the changes from Blender 2.79b, and lots of small improvements and fixes. More compact brush panels for example.</p>
+<p>04.05.2018 - Version 1.0.0 RC1 marks the end of this development cycle. All initial development goals that could be fulfilled are fulfilled.</p>
+<p>11.05.2018 - Version 1.0.0 is live.</p>
+<h2 id="blender-s-history">Blender’s History</h2>
+<p>In 1988 Ton Roosendaal co-founded the Dutch animation studio NeoGeo. NeoGeo quickly became the largest 3D animation studio in the Netherlands and one of the leading animation houses in Europe. NeoGeo created award-winning productions (European Corporate Video Awards 1993 and 1995) for large corporate clients such as multi-national electronics company Philips. Within NeoGeo Ton was responsible for both art direction and internal software development. After careful deliberation Ton decided that the current in-house 3D toolset for NeoGeo was too old and cumbersome to maintain, and needed to be rewritten from scratch. In 1995 this rewrite began and was destined to become the 3D software creation we all know as Blender. As NeoGeo continued to refine and improve Blender it became apparent to Ton that Blender could be used as a tool for other artists outside of NeoGeo.</p>
+<p>In 1998, Ton decided to found a new company called Not a Number (NaN) as a spin-off of NeoGeo to further market and develop Blender. At the core of NaN was a desire to create and distribute a compact, cross platform 3D application for free. At the time this was a revolutionary concept as most commercial 3D applications cost thousands of dollars. NaN hoped to bring professional level 3D modeling and animation tools within the reach of the general computing public. NaN’s business model involved providing commercial products and services around Blender. In 1999 NaN attended its first SIGGRAPH conference in an effort to more widely promote Blender. Blender’s first SIGGRAPH convention was a huge success and gathered a tremendous amount of interest from both the press and attendees. Blender was a hit and its huge potential confirmed!</p>
+<p>Following the success of the SIGGRAPH conference in early 2000, NaN secured financing of €4.5M from venture capitalists. This large inflow of cash enabled NaN to rapidly expand its operations. Soon NaN boasted as many as fifty employees working around the world trying to improve and promote Blender. In the summer of 2000, Blender 2.0 was released. This version of Blender added the integration of a game engine to the 3D application. By the end of 2000, the number of users registered on the NaN website surpassed 250,000.</p>
+<p>Unfortunately, NaN’s ambitions and opportunities didn’t match the company’s capabilities and the market realities of the time. This over-extension resulted in restarting NaN with new investor funding and a smaller company in April 2001. Six months later NaN’s first commercial software product, Blender Publisher was launched. This product was targeted at the emerging market of interactive web-based 3D media. Due to disappointing sales and the ongoing difficult economic climate, the new investors decided to shut down all NaN operations. The shutdown also included discontinuing the development of Blender. Although there were clearly shortcomings in the then current version of Blender, such as a complex internal software architecture, unfinished features and a non-standard way of providing the GUI, the enthusiastic support from the user community and customers who had purchased Blender Publisher in the past meant that Ton couldn’t justify leaving Blender to fade into insignificance. Since restarting a company with a sufficiently large team of developers wasn’t feasible, Ton Roosendaal founded the non-profit organization Blender Foundation in March 2002.</p>
+<p>The Blender Foundation’s primary goal was to find a way to continue developing and promoting Blender as a community-based open source project. In July 2002, Ton managed to get the NaN investors to agree to a unique Blender Foundation plan to attempt to release Blender as open source. The “Free Blender” campaign sought to raise €100,000 so that the Foundation could buy the rights to the Blender source code and intellectual property rights from the NaN investors and subsequently release Blender to the open source community. With an enthusiastic group of volunteers, among them several ex-NaN employees, a fund raising campaign was launched to “Free Blender”. To everyone’s surprise and delight the campaign reached the €100,000 goal in only seven short weeks. On Sunday October 13, 2002, Blender was released to the world under the terms of the GNU GPL. Blender development continues to this day driven by a team of dedicated volunteers from around the world led by Blender’s original creator, Ton Roosendaal.</p>
+<h3 id="video-from-blender-1-60-to-2-50">Video: From Blender 1.60 to 2.50</h3>
+<p><a href="https://vimeo.com/8567074">https://vimeo.com/8567074</a></p>
+<h3 id="version-revision-milestones">Version/Revision Milestones</h3>
+<h4 id="the-start">The start!</h4>
+<ul>
+<li>1.00 - January 1994: Blender in development at animation studio NeoGeo.</li>
+<li>1.23 - January 1998: SGI version published on the web, IrisGL.</li>
+<li>1.30 - April 1998: Linux and FreeBSD version, port to OpenGL and X11.</li>
+<li>1.3x - June 1998: NaN founded.</li>
+<li>1.4x - September 1998: Sun and Linux Alpha version released.</li>
+<li>1.50 - November 1998: First Manual published.</li>
+<li>1.60 - April 1999: C-key (new features behind a lock, $95), MS-Windows version released.</li>
+<li>1.6x - June 1999: BeOS and PPC version released.</li>
+<li>1.80 - June 2000: End of C-key, Blender full freeware again.</li>
+<li>2.00 - August 2000: Interactive 3D and real-time engine.</li>
+<li>2.10 - December 2000: New engine, physics, and Python.</li>
+<li>2.20 - August 2001: Character animation system.</li>
+<li>2.21 - October 2001: Blender Publisher launch.</li>
+<li>2.2x - December 2001: Mac OSX version.</li>
+</ul>
+<h4 id="blender-goes-open-source">Blender goes Open Source</h4>
+<ul>
+<li><strong>13 October 2002: Blender goes Open Source, 1st Blender Conference</strong>.</li>
+<li>2.25 - October 2002: Blender Publisher becomes freely available.</li>
+<li>Tuhopuu1 - Oct 2002: The experimental tree of Blender is created, a coder’s playground.</li>
+<li>2.26 - February 2003: The first true open source Blender release.</li>
+<li>2.27 - May 2003: The second open source Blender release.</li>
+<li>2.28x - July 2003: First of the 2.28x series.</li>
+<li>2.30 - October 2003: Preview release of the 2.3x UI makeover presented at the 2nd Blender Conference.</li>
+<li>2.31 - December 2003: Upgrade to stable 2.3x UI project.</li>
+<li>2.32 - January 2004: Major overhaul of internal rendering capabilities.</li>
+<li>2.33 - April 2004: Game Engine returns, ambient occlusion, new procedural textures.</li>
+<li>2.34 - August 2004: Particle interactions, LSCM UV mapping, functional YafRay integration, weighted creases in subdivision surfaces, ramp shaders, full OSA, and many many more.</li>
+<li>2.35 - November 2004: Another version full of improvements: object hooks, curve deforms and curve tapers, particle duplicators and much more.</li>
+<li>2.36 - December 2004: A stabilization version, much work behind the scene, normal and displacement mapping improvements.</li>
+<li>2.37 - June 2005: Transformation tools and widgets, softbodies, force fields, deflections, incremental subdivision surfaces, transparent shadows, and multi-threaded rendering.</li>
+<li>2.40 - December 2005: Full rework of armature system, shape keys, fur with particles, fluids and rigid bodies.</li>
+<li>2.41 - January 2006: Lots of fixes, and some game engine features.</li>
+<li>2.42 - July 2006: The nodes release, array modifier, vector blur, new physics engine, rendering, lip sync, and many other features. This was the release following Project Orange.</li>
+<li>2.43 - February 2007: Multi-resolution meshes, multi-layer UV textures, multi-layer images and multi-pass rendering and baking, sculpting, retopology, multiple additional matte, distort and filter nodes, modeling and animation improvements, better painting with multiple brushes, fluid particles, proxy objects, sequencer rewrite, and post-production UV texturing.</li>
+<li>2.44 - May 2007: The big news, in addition to two new modifiers and re-awakening the 64-bit OS support, was the addition of subsurface scattering, which simulates light scattering beneath the surface of organic and soft objects.</li>
+<li>2.45 - September 2007: Serious bug fixes, with some performance issues addressed.</li>
+<li>2.46 - May 2008: The Peach release was the result of a huge effort of over 70 developers providing enhancements to provide hair and fur, a new particle system, enhanced image browsing, cloth, a seamless and non-intrusive physics cache, rendering improvements in reflections, AO, and render baking, a mesh deform modifier for muscles and such, better animation support via armature tools and drawing, skinning, constraints and a colorful Action Editor, and much more. It was the release following Project Peach.</li>
+<li>2.47 - August 2008: Bugfix release.</li>
+<li>2.48 - October 2008: The Apricot release, cool GLSL shaders, lights and GE improvements, snap, sky simulator, shrinkwrap modifier, and Python editing improvements. This was the release following Project Apricot.</li>
+<li>2.49 - June 2009: Node-based textures, armature sketching (called Etch-a-Ton), boolean mesh operation improvements, JPEG2000 support, projection painting for direct transfer of images to models, and a significant Python script catalogue. GE enhancements included video textures, where you can play movies in-game, upgrades to the Bullet physics engine, dome (fish-eye) rendering, and more API GE calls made available.</li>
+</ul>
+<h4 id="blender-2-5x-the-recode">Blender 2.5x - The Recode!</h4>
+<ul>
+<li>2.5x - From 2009 to August 2011: This series released four pre-version (from Alpha 0 in November 2009 to Beta in July 2010) and three stable versions (from 2.57 - April 2011 - to 2.59 - August 2011). It is one of the most important development projects, with a total refactor of the software with new functions, redesign of the internal window manager and event/tool/data handling system, and new Python API. The final version of this project was Blender 2.59 in August 2011.</li>
+</ul>
+<h4 id="blender-2-6x-to-2-7x-improvements-stabalizing">Blender 2.6x to 2.7x - Improvements &amp; Stabalizing</h4>
+<ul>
+<li>2.60 - October 2011: Internationalization of the UI, improvements in animation system and the GE, vertex weight groups modifiers, 3D audio and video, bug fixes, and the UI internationalization.</li>
+<li>2.61 - December 2011: The Cycles renderer was added in trunk, the camera tracker was added, dynamic paint for modifying textures with mesh contact/approximation, the Ocean Sim modifier to simulate ocean and foam, new add-ons, bug fixes, and more extensions added for the Python API.</li>
+<li>2.62 - February 2012: The Carve library was added to improve boolean operations, support for object tracking was added, the Remesh modifier was added, many improvements in the GE, matrices and vectors in the Python API were improved, new add-ons, and many bug fixes.</li>
+<li>2.63 - April 2012: Bmesh was merged to trunk with full support for n-sided polygons, sculpt hiding, a panoramic camera for Cycles, mirror ball environment textures and float precision textures, render layer mask layers, ambient occlusion and viewport display of background images and render layers, new import and export add-ons were added, and 150 bug fixes.</li>
+<li>2.64 - October 2012: Mask editor, improved motion tracker, OpenColorIO, Cycles improvements, sequencer improvements, better mesh tools (Inset and Bevel were improved), new keying nodes, sculpt masking, Collada improvements, new skin modifier, new compositing nodes backend, and many bugs were fixed.</li>
+<li>2.65 - December 2012: Fire and smoke improvements, anisotropic shader for Cycles, modifier improvements, bevel tool now includes rounding, new add-ons, and over 200 bug fixes.</li>
+<li>2.66 - February 2013: Dynamic topology, rigid body simulation, improvements in UI and usability (including retina display support), Cycles now supports hair, the bevel tool now supports individual vertex bevelling, new <em>Mesh Cache</em> modifier and the new <em>UV Warp</em> modifier, new SPH particle fluid solver. More than 250 bug fixes.</li>
+<li>2.67 - May 2013: Freestyle was added, paint system improvements, subsurface scattering for Cycles, Ceres library in the motion tracker, new custom python nodes, new mesh modeling tools, better support for UTF8 text and improvements in text editors, new add-ons for 3D printing, over 260 bug fixes.</li>
+<li>2.68 - July 2013: New and improved modeling tools, three new Cycles nodes, big improvements in the motion tracker, Python scripts and drivers are disabled by default when loading files for security reasons, and over 280 bug fixes.</li>
+<li>2.69 - October 2013: Even more modeling tools, Cycles improved in many areas, plane tracking is added to the motion tracker, better support for FBX import/export, and over 270 bugs fixed.</li>
+<li>2.70 - March 2014: Cycles gets basic volumetric support on the CPU, more improvements to the motion tracker, two new modeling modifiers, some UI consistency improvements, and more than 560 bug fixes.</li>
+<li>2.71 - June 2014: Deformation motion blur and fire/smoke support is added to Cycles, UI popups are now draggable, performance optimizations for sculpting mode, new interpolation types for animation, many improvements to the GE, and over 400 bug fixes.</li>
+<li>2.72 - October 2014: Cycles gets volume and SSS support on the GPU, pie menus are added and tooltips greatly improved, the intersection modeling tool is added, new sun beam node for the compositor, Freestyle now works with Cycles, texture painting workflow is improved, and more than 220 bug fixes.</li>
+<li>2.73 - January 2015: Cycles gets improved volumetric support, major upgrade to grease pencil, MS-Windows gets Input Method Editors (IMEs) and general improvements to painting, freestyle, sequencer and add-ons.</li>
+<li>2.74 - March 2015: Support for custom-normals, viewport compositing and improvements to hair dynamics.</li>
+<li>2.75 - July 2015: Integrated stereo/multi-view pipeline, corrective smooth modifier and new dependency graph <em>(enable as a command line option)</em>.</li>
+<li>2.76 - November 2015: Pixar OpenSubdiv support, Viewport and File Browser performance boost, node auto-offset, and a text effect strip for the Sequencer.</li>
+</ul>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fedit%2Fappendix-bforartists-history-20261028/collection/docs/edit/docs2%2Fcontent%2Fappendix%2Fbforartists-history.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/edit/appendix-bforartists-history-20261028/docs2/content/appendix/bforartists-history.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#bforartists-5-history">Bforartists 5 History</a><a class="h3" href="#preface">Preface:</a><a class="h3" href="#history">History</a><a class="h2" href="#bforartists-4-history">Bforartists 4 History</a><a class="h3" href="#preface-2">Preface:</a><a class="h3" href="#history-2">History:</a><a class="h2" href="#bforartists-3-history">Bforartists 3 History</a><a class="h3" href="#preface-3">Preface:</a><a class="h3" href="#history-3">History:</a><a class="h2" href="#bforartists-2-history">Bforartists 2 History</a><a class="h3" href="#preface-4">Preface:</a><a class="h3" href="#history-4">History:</a><a class="h2" href="#bforartists-1-history">Bforartists 1 History</a><a class="h3" href="#preface-5">Preface:</a><a class="h3" href="#history-5">History:</a><a class="h2" href="#blender-s-history">Blender’s History</a><a class="h3" href="#video-from-blender-1-60-to-2-50">Video: From Blender 1.60 to 2.50</a><a class="h3" href="#version-revision-milestones">Version/Revision Milestones</a></aside></div></body></html>
