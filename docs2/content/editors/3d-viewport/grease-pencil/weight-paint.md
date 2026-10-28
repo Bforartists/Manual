@@ -39,7 +39,7 @@ a
 
 Normalizes the weight of all Vertex groups so that the values for the single vertices in the sum is 1.
 
-##### Last Operator Normalize all Vertex Group
+##### Adjust Last Operation - Normalize all Vertex Group
 
 ![Last Operator Normalize all Vertex Group](/docs2/images/editors/3d-viewport/header/grease-pencil-weight-paint-mode-weights-menu/last-operator-normalize-all-vertex-group.png)
 
@@ -58,7 +58,7 @@ Keep the values of the active group while normalizing others.
 
 Smooths the weight for selected vertices.
 
-##### Last Operator Smooth Vertex Group
+##### Adjust Last Operation - Smooth Vertex Group
 
 ![Last Operator Smooth Vertex Group](/docs2/images/editors/3d-viewport/header/grease-pencil-weight-paint-mode-weights-menu/last-operator-smooth-vertex-group.png)
 

@@ -75,7 +75,7 @@ This can be combined with the numerical input. Type in X, type in X again to use
 
 The widget can have different orientations. The menu items should be self explaining.
 
-#### Last Operator Move
+#### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/navigation-menu/last-operator-move.png)
 
@@ -152,7 +152,7 @@ This can be combined with the numerical input. Type in X, type in X again to use
 
 The 3d cursor can have different orientations. The menu items should be self explaining.
 
-#### Last Operator Rotate
+#### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/3d-viewport/header/navigation-menu/last-operator-rotate.png)
 
@@ -229,7 +229,7 @@ This can be combined with the numerical input. Hold down mouse, type in X, type 
 
 The 3d cursor can have different orientations. The menu items should be self explaining.
 
-#### Last Operator Resize
+#### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/navigation-menu/last-operator-resize.png)
 

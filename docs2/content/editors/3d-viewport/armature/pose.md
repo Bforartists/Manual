@@ -49,7 +49,7 @@ Shapes a selection of bones into the shape of a sphere. The calculation happens 
 
 Select the bones, activate the tool, then drag the mouse in the 3D viewport. In the header you will read the current factor then. Which tells you how close you are towards the sphere shape.
 
-##### Last Operator To Sphere
+##### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png)
 
@@ -85,7 +85,7 @@ The shear tool works along a imaginary 2d plane. The shear axis controls if the 
 
 To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.
 
-##### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
 
@@ -140,7 +140,7 @@ It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-##### Last Operator Push/Pull
+##### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
 
@@ -188,7 +188,7 @@ Clear transform is a menu with some Clear functionality. You need to have the bo
 
 Resets the pose for the selected bones back to the state of the latest keyframe.
 
-###### Last Operator Clear User Transforms
+###### Adjust Last Operation - Clear User Transforms
 
 ![Last Operator Clear User Transforms](/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-clear-user-transforms.png)
 
@@ -210,7 +210,7 @@ You need a rest pose where you can reset the pose back to. With this tool you ca
 
 You need a rest pose where you can reset the pose back to. With this tool you can set the current pose of the selected bones to be the new Rest pose.
 
-##### Last Operator Apply Pose as Rest Pose
+##### Adjust Last Operation - Apply Pose as Rest Pose
 
 ![Last Operator Apply Pose as Rest Pose](/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-apply-pose-as-rest-pose.png)
 
@@ -226,7 +226,7 @@ Apply final constrained position of posed bones to their transform.
 
 Assigns the current values of custom properties as their defaults. This allows to use them as part of the rest pose state in NLA track mixing.
 
-##### Last Operator Assign Custom Property Values as Default
+##### Adjust Last Operation - Assign Custom Property Values as Default
 
 ![Last Operator Assign Custom Property Values as Default](/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-assign-custom-property-values-as-d.png)
 
@@ -243,7 +243,7 @@ Assigns the current values of custom properties as their defaults. This allows t
 
 Choose several methods to snap one element to another. The menu items should be self explaining.
 
-#### Last Operator Snap Selection to Cursor
+#### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last Operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-snap-selection-to-cursor.png)
 
@@ -313,7 +313,7 @@ The rest of the hotkeys should be self explaining.
 
 Blends the current pose iwth the rest pose.
 
-##### Last Operator Blend Pose with Rest Pose
+##### Adjust Last Operation - Blend Pose with Rest Pose
 
 ![Last Operator Blend Pose with Rest Pose](/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-blend-pose-with-rest-pose.png)
 
@@ -337,11 +337,13 @@ Limit the push effect to specific channels.
 
 Limit the push effect to specific axis.
 
-#### Push Pose from Breakdown
+> **Note:** Entries marked **(Legacy)** are the classic menu commands for Push, Relax and Breakdowner. The tool shelf offers the same as tools, now with matching icons. The **(Legacy)** label tells the two apart.
+
+#### Push Pose from Breakdown (Legacy)
 
 Exaggerates the current pose. Pushes the current pose further away from the previous pose.
 
-##### Last Operator Push Pose
+##### Adjust Last Operation - Push Pose
 
 ![Last Operator Push Pose](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-push-pose.png)
 
@@ -365,11 +367,11 @@ Limit the push effect to specific channels.
 
 Limit the push effect to specific axis.
 
-#### Relax Pose to Breakdown
+#### Relax Pose to Breakdown (Legacy)
 
 Relaxes the current pose.
 
-##### Last Operator Relax Pose to Breakdown
+##### Adjust Last Operation - Relax Pose to Breakdown
 
 ![Last Operator Relax Pose to Breakdown](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-relax-pose-to-breakdown.png)
 
@@ -393,11 +395,11 @@ Limit the relax effect to specific channels.
 
 Limit the relax effect to specific axis.
 
-###### Pose Breakdowner
+#### Pose Breakdowner (Legacy)
 
 Creates a suitable breakdowner pose on the current frame.
 
-###### Last Operator Pose Breakdowner
+###### Adjust Last Operation - Pose Breakdowner
 
 ![Last Operator Pose Breakdowner](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-pose-breakdowner.png)
 
@@ -429,7 +431,7 @@ Blends the current pose with the neighbouring poses.
 
 When you perform the tool then you will see a per cent slider in the header where you can read the percentual influence of the blending. Move the mouse to position the blend pose where you need it.
 
-##### Last Operator Blend to Neighbour
+##### Adjust Last Operation - Blend to Neighbour
 
 ![Last Operator Blend to Neighbour](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-blend-to-neighbour.png)
 
@@ -473,7 +475,7 @@ Usage example with Termination mode "On Selected Keyframes".
 8. Press Propagate, and in the Last operator Propagate Pose choose On Selected Keyframes.  
     The selected keyframes at frame 40 will now turn into the corresponding keyframes from position 0.
 
-#### Last Operator Propagate Pose
+#### Adjust Last Operation - Propagate Pose
 
 ![Last Operator Propagate Pose](/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-propagate-pose.png)
 
@@ -500,7 +502,7 @@ Pastes a previous copied pose.
 
 Pastes a previous copied pose, but flipped along X axis.
 
-##### Last Operator Paste Pose
+##### Adjust Last Operation - Paste Pose
 
 ![Last Operator Paste Pose](/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-paste-pose.png)
 
@@ -572,7 +574,7 @@ To bake from where.
 | Tails | Calculate bone paths from tails. |
 
 
-###### Last Operator Calculate Bone Paths
+###### Adjust Last Operation - Calculate Bone Paths
 
 ![Last Operator Calculate Bone Paths](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-calculate-bone-paths.png)
 
@@ -630,7 +632,7 @@ Show all bone collections.
 
 Add selected bones to a new collection with a new name.
 
-###### Last Operator add Selected Bones to Collection
+###### Adjust Last Operation - add Selected Bones to Collection
 
 ![Last Operator add Selected Bones to Collection](/docs2/images/editors/3d-viewport/header/armature-edit-mode-armature-menu/last-operator-add-selected-bones-to-collection.png)
 
@@ -670,7 +672,7 @@ When you have more than one bone selected then you can just add the constraint t
 
 You can define an own target object too. The armature needs to be in pose mode. Let's create a cube or another primitive. Select it. Now hold down Shift, and click at the bone where you want to add the constraint too. Then choose Add (with Targets), and choose your constraint method. The cube will now be chosen as the target object.
 
-###### Last Operator Add IK to Bone
+###### Adjust Last Operation - Add IK to Bone
 
 ###### With Targets
 
@@ -730,7 +732,7 @@ Bforartists has some internal name conventions for a symmetrical armature. Bones
 
 Renames the bones from top to bottom.
 
-###### Last operator Autoname by Axis
+###### Adjust Last Operation - Autoname by Axis
 
 ![Last operator Autoname by Axis](/docs2/images/editors/3d-viewport/context-menus/armature-edit-mode-armature-context-menu/last-operator-autoname-by-axis.png)
 
@@ -742,7 +744,7 @@ Choose the autoname axis again. Left/Right is X axis, Front/Back is Y axis, and 
 
 When you mirror a half of an armature you end in names like Bone.001.R.001. But what we need is Bone.001.L for a symmetrical armature. Flip names flips the names to follow the left right name conventions.
 
-###### Last operator Flip Names
+###### Adjust Last Operation - Flip Names
 
 ![Last operator Flip Names](/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-flip-names.png)
 
@@ -768,7 +770,7 @@ Show or hide the selected geometry
 | Hide Unselected | Hides the not selected geometry. The selected geometry stays visible. |
 
 
-##### Last Operator Hide Selected
+##### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-hide-selected.png)
 
@@ -784,7 +786,7 @@ Hide the unselected geometry instead the seleced.
 
 Bone Settings is a menu with menu items to toggle special check boxes in the Properties editor. But here you can do it for a selection too, and not just one object.
 
-##### Last Operator Collection Boolean Set
+##### Adjust Last Operation - Collection Boolean Set
 
 ![Last Operator Collection Boolean Set](/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-collection-boolean-set.png)
 
@@ -852,7 +854,7 @@ When you move the mouse then you will see some values in the header, which shows
 
 It also shows some more available transform hotkeys. The hotkeys W E and R allows you just to move, rotate or scale. Hotkey B stands for Bendy Bones. And C is for a custom property. This hotkeys are hard coded, and cannot be changed in the input manager.
 
-###### Last Operator Pose Breakdowner
+###### Adjust Last Operation - Pose Breakdowner
 
 ![Last Operator Pose Breakdowner](/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/last-operator-pose-breakdowner.png)
 
@@ -888,7 +890,7 @@ When you move the mouse then you will see some values in the header, which shows
 
 It also shows some more available transform hotkeys. The hotkeys W E and R allows you just to move, rotate or scale. Hotkey B stands for Bendy Bones. And C is for a custom property. This hotkeys are hard coded, and cannot be changed in the input manager.
 
-###### Last Operator Push Pose from Breakdown.
+###### Adjust Last Operation - Push Pose from Breakdown.
 
 ![Last Operator Push Pose from Breakdown.](/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/last-operator-push-pose-from-breakdown.png)
 
@@ -924,7 +926,7 @@ When you move the mouse then you will see some values in the header, which shows
 
 It also shows some more available transform hotkeys. The hotkeys W E and R allows you just to move, rotate or scale. Hotkey B stands for Bendy Bones. And C is for a custom property. This hotkeys are hard coded, and cannot be changed in the input manager.
 
-###### Last Operator Relax Pose to Breakdown
+###### Adjust Last Operation - Relax Pose to Breakdown
 
 ![Last Operator Relax Pose to Breakdown](/docs2/images/editors/3d-viewport/tool-shelf/armature-pose-mode/last-operator-relax-pose-to-breakdown.png)
 
@@ -1018,7 +1020,7 @@ Pastes a previous copied pose.
 
 Pastes a previous copied pose, but flipped along X axis.
 
-##### Last Operator Paste Pose
+##### Adjust Last Operation - Paste Pose
 
 ![Last Operator Paste Pose](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-paste-pose.png)
 
@@ -1035,11 +1037,13 @@ Pastes a previous copied pose, but flipped along X axis.
 
 Calls a dialog where you can rename the active bone.
 
-#### “Push Pose from Breakdown
+> **Note:** Entries marked **(Legacy)** are the classic menu commands for Push, Relax and Breakdowner. The tool shelf offers the same as tools, now with matching icons. The **(Legacy)** label tells the two apart.
+
+#### Push Pose from Breakdown (Legacy)
 
 Exaggerates the current pose. Pushes the current pose further away from the previous pose.
 
-##### Last Operator Push Pose
+##### Adjust Last Operation - Push Pose
 
 ![Last Operator Push Pose](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-push-pose.png)
 
@@ -1063,11 +1067,11 @@ Limit the push effect to specific channels.
 
 Limit the push effect to specific axis.
 
-#### Relax Pose to Breakdown
+#### Relax Pose to Breakdown (Legacy)
 
 Relaxes the current pose.
 
-##### Last Operator Relax Pose to Breakdown
+##### Adjust Last Operation - Relax Pose to Breakdown
 
 ![Last Operator Relax Pose to Breakdown](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-relax-pose-to-breakdown.png)
 
@@ -1091,7 +1095,7 @@ Limit the relax effect to specific channels.
 
 Limit the relax effect to specific axis.
 
-###### Pose Breakdowner
+#### Pose Breakdowner (Legacy)
 
 Creates a suitable breakdowner pose on the current frame.
 
@@ -1099,7 +1103,7 @@ Creates a suitable breakdowner pose on the current frame.
 
 When you perform the tool then you will see a per cent slider in the header where you can read the percentual influence of the blending. Move the mouse to position the blend pose where you need it.
 
-###### Last Operator Pose Breakdowner
+###### Adjust Last Operation - Pose Breakdowner
 
 ![Last Operator Pose Breakdowner](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-pose-breakdowner.png)
 
@@ -1131,7 +1135,7 @@ Blends the current pose with the neighbouring poses.
 
 When you perform the tool then you will see a per cent slider in the header where you can read the percentual influence of the blending. Move the mouse to position the blend pose where you need it.
 
-##### Last Operator Blend to Neighbour
+##### Adjust Last Operation - Blend to Neighbour
 
 ![Last Operator Blend to Neighbour](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-blend-to-neighbour.png)
 
@@ -1206,7 +1210,7 @@ To bake from where.
 | Tails | Calculate bone paths from tails. |
 
 
-##### Last Operator Calculate Bone Paths
+##### Adjust Last Operation - Calculate Bone Paths
 
 ![Last Operator Calculate Bone Paths](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-calculate-bone-paths.png)
 
@@ -1216,7 +1220,7 @@ Same than the dialog.
 
 Clear remove the motion path from the object.
 
-##### Last Operator Clear Bone Paths
+##### Adjust Last Operation - Clear Bone Paths
 
 ![Last Operator Clear Bone Paths](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-clear-bone-paths.png)
 
@@ -1253,7 +1257,7 @@ Reveals the hidden bones.
 
 Hides the selected bones.
 
-###### Last Operator Hide Selected
+###### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-hide-selected.png)
 
@@ -1267,7 +1271,7 @@ Hides all bones that are not selected.
 
 Resets Pose of selected bones back to key frame state.
 
-##### Last Operator Clear User Transforms
+##### Adjust Last Operation - Clear User Transforms
 
 ![Last Operator Clear User Transforms](/docs2/images/editors/3d-viewport/context-menus/armature-pose-mode-pose-context-menu/last-operator-clear-user-transforms.png)
 

@@ -399,7 +399,7 @@ This view is scene specific only. It does save and load with the current scene. 
 
 You can create more than one user orientation.
 
-#### Last Operator Create Orientation
+#### Adjust Last Operation - Create Orientation
 
 ![Last Operator Create Orientation](/docs2/images/editors/3d-viewport/header/header-tools-and-options/last-operator-create-orientation.png)
 
@@ -556,7 +556,7 @@ The exact radius value can be read in the header while transformation.
 
 And it can also be read and edited at the Proportional Size slider in the Proportional Editing panel.
 
-### Last Operator Proportional Editing
+### Adjust Last Operation - Proportional Editing
 
 ![Last Operator Proportional Editing](/docs2/images/editors/3d-viewport/header/header-tools-and-options/last-operator-proportional-editing.png)
 
@@ -1052,9 +1052,15 @@ Saves all images. Internal images needs to be saved manually first. They don't h
 
 ![Save all Images](/docs2/images/editors/3d-viewport/header/header-tools-and-options/save-all-images.jpg)
 
+## Masking
+
+The **Masking** popover in the Texture Paint header holds two masks, side by side at the top level: **Stencil Mask** and **Cavity Mask**. Tick one to turn it on, and its settings open right below it.
+
+![Masking](/docs2/images/editors/3d-viewport/header/header-tools-and-options/masking.png)
+
 ## Stencil Mask
 
-Stencil mask allows mask painting with a stencil map. It is a sub menu tab. In expanded state it shows the falloff curve, which can be edited.
+Stencil Mask limits your painting with a stencil image: paint only goes through where the image allows it. Tick it to show its settings.
 
 ### Activate Stencil map
 
@@ -1100,17 +1106,16 @@ The stencil color in the viewport.
 
 Inverts the stencil color.
 
-### Cavity Mask
+## Cavity Mask
 
 ![Cavity Mask](/docs2/images/editors/3d-viewport/header/header-tools-and-options/cavity-mask.png)
 
-Cavity mask allows mask painting according to mesh geometry cavity. It is a sub menu tab. In expanded state it shows the falloff curve, which can be edited.
+Cavity Mask paints according to the shape of the mesh: more or less paint goes into dents and creases. Tick it to show its falloff curve, which you can edit.
 
 | Entry | What it does |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Activate Cavity mask | Activates the Cavity mask. |
 | Navigation elements | The navigation elements at the top are described from left to right. |
-| Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
 | Zoom in and out | The two buttons with the magnifying glass at it zooms in and out in the curve window. |
 | Tools | Tools is a menu where you can find some curve related tools. · **Reset View**: Resets the curve windows zoom. · **Reset Curve**: Resets the curve to the initial shape. |
 
@@ -1157,7 +1162,7 @@ Set Handle type to Free.
 
 Toggle Free/Aligned.
 
-#### Last Operator Set Handle Type
+#### Adjust Last Operation - Set Handle Type
 
 ![Last Operator Set Handle Type](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-handle-type.png)
 
@@ -1173,30 +1178,17 @@ Turn on or off all overlays. This includes the ground grid, things like relation
 
 ## Guides
 
-| Entry | What it does |
-| ----- | ------------------------------------------------------------------------------------------------------------ |
-| Grid | Show the whole ground grid, including axes. You can also show the grid in orthographic mode of the viewport. |
-| Floor | Show the ground grid, the white part of it. |
+![Guides](/docs2/images/editors/3d-viewport/header/header-tools-and-options/guides.png)
 
-### Axes
+The ground grid and axis lines.
 
-![Axes](/docs2/images/editors/3d-viewport/header/header-tools-and-options/axes.png)
+**Grid** shows the grid in the orthographic side views, like Front, Top or Right. **Floor** shows the ground grid in the perspective view.
 
-Show the colored axis lines in the 3d view
+While Grid or Floor is on, **Scale** sizes the grid, and **Subdivisions** splits it into finer lines. Both only show when they change something in the current view, and Subdivisions only when the scene's Unit System is set to None.
 
-( now works in both perspective / orthographic Views).
+The **X**, **Y** and **Z** buttons next to **Axes** show the colored axis lines, one button per axis.
 
-### Scale
-
-![Scale](/docs2/images/editors/3d-viewport/header/header-tools-and-options/scale.png)
-
-Scale the ground grid. This works in perspective and orthographic view.
-
-### Subdivisions
-
-![Subdivisions](/docs2/images/editors/3d-viewport/header/header-tools-and-options/subdivisions.png)
-
-Subdivisions just shows with a Unit system of None. It allows you to subdivide the ground grid.
+**Camera Guides** only shows in camera view. It draws the dotted line inside the passepartout. **HDRI Preview** only shows in Material Preview shading. It draws the reflective and diffuse spheres of the lighting.
 
 ## Options
 
@@ -1206,7 +1198,9 @@ Subdivisions just shows with a Unit system of None. It allows you to subdivide t
 
 ![Text Info](/docs2/images/editors/3d-viewport/header/header-tools-and-options/text-info.png)
 
-In the upper left corner of the 3D view there is a text info string, which can be hidden here. It tells you in what view you are, what is selected, and things like frames per second when you play an animation
+In the upper left corner of the 3D view there is a text info string, which can be hidden here. It tells you in what view you are, what is selected, and things like frames per second when you play an animation.
+
+Turning Text Info off also hides the **Attribute Text Overlay** option of the Viewer Node overlay, since that text can't show without it.
 
 ### Annotations
 
@@ -1225,16 +1219,6 @@ Displays statistical informations in the upper left corner of the 3d viewport. O
 ![3D Cursor](/docs2/images/editors/3d-viewport/header/header-tools-and-options/3d-cursor.png)
 
 Show or hide the 3D cursor. That's the white red circle in the center of the viewport.
-
-### Camera Guides
-
-![Camera Guides](/docs2/images/editors/3d-viewport/header/header-tools-and-options/camera-guides.png)
-
-![Camera Guides](/docs2/images/editors/3d-viewport/header/header-tools-and-options/camera-guides-2.png)
-
-Just in Camera mode.
-
-Display the dotted line around the inside of the passepartout.
 
 ## Objects
 
@@ -1288,30 +1272,31 @@ Show or hide the origin of all objects. Even from hidden ones. The not selected 
 
 ![Geometry](/docs2/images/editors/3d-viewport/header/header-tools-and-options/geometry.png)
 
-Geometry related settings.
-
-### Wire frame
-
-![Wire frame](/docs2/images/editors/3d-viewport/header/header-tools-and-options/wire-frame.png)
-
-Show the wire frame in object mode.
-
-| Entry | What it does |
-| ------------------- | ----------------------------------------------------------------------------------------------------- |
-| Wireframe Threshold | With a wire frame value of 1 all edges are drawn. The lower the value, the more edges will disappear. |
-| Opacity | The opacity of the displayed edges. |
+Geometry related settings. **Face Orientation** sits at the top, above the sections you can fold open.
 
 ### Face Orientation
 
 ![Face Orientation](/docs2/images/editors/3d-viewport/header/header-tools-and-options/face-orientation.png)
 
-This mode allows to check for faces with flipped normals, which cannot be seen with the defaults. Blue is pointing outwards, red is pointing inwards.
+Check for flipped faces, which you can't see otherwise. Blue faces point outwards, red faces point inwards.
 
-### Fade inactive Geometry
+### Wireframe
+
+![Wire frame](/docs2/images/editors/3d-viewport/header/header-tools-and-options/wire-frame.png)
+
+Show the wireframe on top of the objects. Tick it to show its settings.
+
+**Threshold** sets how many edges are drawn. At 1 all edges show, and the lower the value, the more edges disappear. **Opacity** sets how see-through the edges are.
+
+The wireframe of a sphere: with **Threshold** at 0 only the edges where the surface turns sharply are drawn (left), at 1 all edges are drawn (right).
+
+![Wireframe threshold on a sphere](/docs2/images/editors/3d-viewport/header/header-tools-and-options/wire-frame-example.png)
+
+### Fade Inactive Geometry
 
 ![Fade inactive Geometry](/docs2/images/editors/3d-viewport/header/header-tools-and-options/fade-inactive-geometry.jpg)
 
-Edit mode feature, does not show in other modes. Fades the not active geometry, the not selected scene objects, towards a plain grey. In Object mode this setting has no effect.
+Only in Edit Mode and the other object modes, not in Object Mode. Fades the objects you're not working on towards plain grey. Tick it to show the **Opacity** slider that sets how strongly they fade.
 
 ## Viewer Node
 
@@ -1327,9 +1312,11 @@ Enable color overlay in viewport for geometry attributes that are connected to a
 
 The opacity of the color overlay mentioned above.
 
-### Text Overlay
+### Attribute Text Overlay
 
-Show geometry attribute values that are connected to an enabled Geometry Nodes’ viewer node as text in viewport. This option just shows when you have geometry nodes at the object, and there is a viewer node in the tree. Example with index values:
+Shows the attribute values from an active Geometry Nodes Viewer node as numbers right on your mesh in the viewport. You need geometry nodes on the object and a Viewer node in the tree. Example with index values:
+
+> **Note:** This option only shows up while **Text Info** is on (Overlays › Options). If you can't find it, turn Text Info on first.
 
 ![Text Overlay](/docs2/images/editors/3d-viewport/header/header-tools-and-options/text-overlay.png)
 
@@ -1341,22 +1328,15 @@ Show geometry attribute values that are connected to an enabled Geometry Nodes�
 
 ![Motion Tracking](/docs2/images/editors/3d-viewport/header/header-tools-and-options/motion-tracking.png)
 
-Motion tracking related settings. When you turn it on, then some further options appears. These features just shows before you bake the solution. Not with the resolved solution.
+Show your motion tracking data in the 3D View. Tick the checkbox in the header of this section to turn it on. These show before you bake the solution, not with the solved result.
 
-| Entry | What it does |
-| ------------ | ----------------------- |
-| Camera Path | Shows the camera path. |
-| Marker Names | Shows the marker names. |
+**Camera Path** shows the path the tracked camera takes, and **Marker Names** shows the names of the markers.
 
-### Track display type
+### Tracks
 
 ![Track display type](/docs2/images/editors/3d-viewport/header/header-tools-and-options/track-display-type.png)
 
-How to display the tracks.
-
-#### Track size
-
-Adjust the display size of the tracks of reconstructed data
+**Display Type** chooses how the tracks are drawn, for example as plain axes or spheres. **Size** sets how big they are drawn.
 
 # Viewport Overlays - Mesh Object - Edit Mode
 
@@ -2603,7 +2583,7 @@ This addon can be turned off in the Preferences.
 
 The lock button at the end of the row turns **Lock Object Modes** on and off. While it's on, you can only select objects that are in the same mode as the active one. That stops you from jumping out of Edit Mode or Sculpt Mode by clicking another object by accident.
 
-The button is hidden by default. To show it, go to **Preferences › Add-ons › Align View Buttons** and turn on **Lock Object Mode** under Navigation. The same setting is also in the sidebar, under **View › Edit**.
+The button is hidden by default. To show it, click the small arrow at the end of the Align View Buttons row and tick **Lock Object Mode** under **Navigation**. The same setting is also in the sidebar, under **View › Edit**.
 
 # Grease Pencil - all modes - Layer Panel
 

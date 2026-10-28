@@ -58,7 +58,7 @@ Rekey changes the number of keys for the selected particles, including root and 
 
 Manually set a weight for the selected keys to interpolate between the current key weight and the brushes weight.
 
-##### Last Operator Weight Set
+##### Adjust Last Operation - Weight Set
 
 ###### Factor
 
@@ -84,7 +84,7 @@ Show or hide the selected geometry
 | Hide Unselected | Hides the not selected geometry. The selected geometry stays visible. |
 
 
-##### Last Operator Hide Selected
+##### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/header/armature-pose-mode-pose-menu/last-operator-hide-selected.png)
 

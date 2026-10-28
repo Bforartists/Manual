@@ -59,7 +59,7 @@ Select different types of objects within the group. It requires to have a group 
 
 The menu items are pretty self explaining. So we won't go into detail here.
 
-### Last Operator Select Grouped
+### Adjust Last Operation - Select Grouped
 
 ![Last Operator Select Grouped](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-grouped.jpg)
 
@@ -97,7 +97,7 @@ Select objects of a specific type.
 
 The menu items are pretty self explaining. So we won't cover every single menu item here.
 
-### Last Operator Select By Type
+### Adjust Last Operation - Select By Type
 
 ![Last Operator Select By Type](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-by-type.png)
 
@@ -112,7 +112,7 @@ The menu items are pretty self explaining. So we won't cover every single menu i
 
 Selects random objects.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random.png)
 
@@ -128,7 +128,7 @@ Selects random objects.
 
 Select the mirrored parts of an object. For example for L.Sword it selects R.Sword.
 
-### Last Operator Select Mirror
+### Adjust Last Operation - Select Mirror
 
 ![Last Operator Select Mirror](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-mirror.png)
 
@@ -164,7 +164,7 @@ The tool operates immediately at entering the string.
 
 Extends existing selection instead of deselecting everything first.
 
-#### Last Operator Select Pattern
+#### Adjust Last Operation - Select Pattern
 
 ![Last Operator Select Pattern](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-pattern.png)
 
@@ -234,7 +234,7 @@ A sub menu with the available lasso select modes.
 
 Select the geometry that is directly linked with the current geometry. You can for example have a mesh with several closed sub meshes. Those sub meshes. are not linked together, but are part of the object.
 
-### Last Operator Select Linked All
+### Adjust Last Operation - Select Linked All
 
 ![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all.png)
 
@@ -246,7 +246,7 @@ Add a limit to the selection. For example, just select up to the next seam.
 
 Select the geometry that is co planar to the current selection. It works also in other selection modes, but you need to have face geometry selected.
 
-### Last Operator Select Linked Flat Faces
+### Adjust Last Operation - Select Linked Flat Faces
 
 ![Last Operator Select Linked Flat Faces](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-flat-faces.png)
 
@@ -260,7 +260,7 @@ Same as with Linked. But works with what is under the mouse cursor.
 
 Same as with Linked. But works with what is under the mouse cursor. And deselects the selection.
 
-### Last Operator Select Linked
+### Adjust Last Operation - Select Linked
 
 ![Last Operator Select Linked](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked.png)
 
@@ -283,7 +283,7 @@ Select geometry based on how similar certain properties are to it. The methods c
 
 ![Similar](/docs2/images/editors/3d-viewport/header/select-menu/similar-4.png)
 
-### Last Operator Select Similar
+### Adjust Last Operation - Select Similar
 
 ![Last Operator Select Similar](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-similar.png)
 
@@ -306,7 +306,7 @@ Choose the select similar method again.
 
 Selects a random group of vertices, edges, or faces, dependent of the mesh selection method.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-2.png)
 
@@ -322,7 +322,7 @@ Selects a random group of vertices, edges, or faces, dependent of the mesh selec
 
 Deselect alternating faces, edges or vertices to create a checker like pattern. The result is dependent of the mesh selection method.
 
-### Last Operator Checker Deselect
+### Adjust Last Operation - Checker Deselect
 
 ![Last Operator Checker Deselect](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-checker-deselect.png)
 
@@ -338,7 +338,7 @@ Deselect alternating faces, edges or vertices to create a checker like pattern. 
 
 Requires to have a symmetrical mesh. Selects the mirrored mesh parts from a selection.
 
-### Last Operator Select Mirror
+### Adjust Last Operation - Select Mirror
 
 ![Last Operator Select Mirror](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-mirror-2.png)
 
@@ -353,7 +353,7 @@ Requires to have a symmetrical mesh. Selects the mirrored mesh parts from a sele
 
 Selects all mesh data in direction of a single axis, starting from the current selection.
 
-### Last Operator Side of Active
+### Adjust Last Operation - Side of Active
 
 ![Last Operator Side of Active](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-side-of-active.png)
 
@@ -385,7 +385,7 @@ Define a threshold to extend the selection.
 
 Select the shortest edge path between two selected mesh elements. This can be vertices, edges or faces. A start and an end point must be selected.
 
-### Last Operator Select shortest path
+### Adjust Last Operation - Select shortest path
 
 ![Last Operator Select shortest path](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-shortest-path.png)
 
@@ -424,7 +424,7 @@ Don't select the whole path, but just every nth element of it.
 
 Select all edges that are marked as sharp.
 
-### Last Operator Select Sharp Edges
+### Adjust Last Operation - Select Sharp Edges
 
 ![Last Operator Select Sharp Edges](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-sharp-edges.png)
 
@@ -438,7 +438,7 @@ The angle after which a sharp edge gets selected.
 
 Selects a loop of edges from a selected edge. The method stops at poles. That's vertices where three or more than four edges comes together. At a UV sphere the north and south pole ...
 
-### Last Operator Multi Select Loops
+### Adjust Last Operation - Multi Select Loops
 
 ![Last Operator Multi Select Loops](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-multi-select-loops.png)
 
@@ -452,7 +452,7 @@ Select edge ring instead of edge loop.
 
 Selects edges parallel to a selected edge in the same ring of faces. The method stops at poles. That's vertices where three or more than four edges comes together. At a UV sphere the north and south pole ...
 
-### Last Operator Multi Select Loops
+### Adjust Last Operation - Multi Select Loops
 
 ![Last Operator Multi Select Loops](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-multi-select-loops.png)
 
@@ -468,7 +468,7 @@ Select everything that is enclosed by an edge loop. When the loop is not closed,
 
 By default the smaller enclosed part gets selected. The Inner-Region.
 
-### Last Operator Select Loop Inner-Region
+### Adjust Last Operation - Select Loop Inner-Region
 
 ![Last Operator Select Loop Inner-Region](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-loop-inner-region.png)
 
@@ -498,7 +498,7 @@ If you hold Shift+Alt, you can add loops.
 
 > **Note:** This is a* *mouse-only operator**; it does not appear in menus.
 
-### Last Operator Select Loop
+### Adjust Last Operation - Select Loop
 
 ![Last Operator Select Loop](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-loop.png)
 
@@ -524,7 +524,7 @@ Controls how face loops are detected and selected based on edge properties. Usef
 
 Select non manifold geometry. Enclosed faces inside of a geometry for example.
 
-#### Last Operator Select Non-Manifold
+#### Adjust Last Operation - Select Non-Manifold
 
 ![Last Operator Select Non-Manifold](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-non-manifold.png)
 
@@ -536,7 +536,7 @@ What exact kind of non manifold geometry should be selected. The options names s
 
 Selects loose geometry.
 
-#### Last Operator Select Loose Geometry
+#### Adjust Last Operation - Select Loose Geometry
 
 ![Last Operator Select Loose Geometry](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-loose-geometry.png)
 
@@ -554,7 +554,7 @@ Select faces where all edges have more than 2 faces. In the picture here we have
 
 Selects faces that has the same number of edges, or better said vertices. Tris, quads, N-gons.
 
-#### Last Operator Select Faces by Side
+#### Adjust Last Operation - Select Faces by Side
 
 ![Last Operator Select Faces by Side](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-faces-by-side.png)
 
@@ -579,7 +579,7 @@ How many numbers of vertices the face should have. 4 is a quad.
 
 Select poles. A pole is a vertice where more than four edges meet.
 
-#### Last Operator Select by Pole Count
+#### Adjust Last Operation - Select by Pole Count
 
 ![Last Operator Select by Pole Count](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-by-pole-count.png)
 
@@ -606,7 +606,7 @@ How to compare to the pole count value.
 
 This operator selects all vertices in a mesh that are **not assigned to any vertex group.** It’s especially useful in rigging, weight painting, and cleanup workflows where ungrouped vertices can cause deformation issues or be overlooked during asset preparation.
 
-### Last Operator Select Ungrouped
+### Adjust Last Operation - Select Ungrouped
 
 ![Last Operator Select Ungrouped](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-ungrouped.png)
 
@@ -691,7 +691,7 @@ A sub menu with the available lasso select modes.
 
 Vertex Selection Mode. Select the geometry that is directly linked with the current geometry. You can for example have a mesh with several closed sub meshes. Those sub meshes. are not linked together, but are part of the object.
 
-### Last Operator Select Linked All
+### Adjust Last Operation - Select Linked All
 
 ![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all.png)
 
@@ -767,7 +767,7 @@ A sub menu with the available lasso select modes.
 
 Vertex Selection Mode. Select the geometry that is directly linked with the current geometry. You can for example have a mesh with several closed sub meshes. Those sub meshes. are not linked together, but are part of the object.
 
-### Last Operator Select Linked All
+### Adjust Last Operation - Select Linked All
 
 ![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all.png)
 
@@ -852,7 +852,7 @@ A sub menu with the available lasso select modes.
 
 Select the geometry that is directly linked with the current geometry. You can for example have a mesh with several closed sub meshes. Those sub meshes. are not linked together, but are part of the object.
 
-### Last Operator Select Linked All
+### Adjust Last Operation - Select Linked All
 
 ![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all.png)
 
@@ -868,7 +868,7 @@ Same as with Linked. But works with what is under the mouse cursor.
 
 Same as with Linked. But works with what is under the mouse cursor. And deselects the selection.
 
-### Last Operator Select Linked
+### Adjust Last Operation - Select Linked
 
 ![Last Operator Select Linked](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-2.png)
 
@@ -885,7 +885,7 @@ Same as with Linked. But works with what is under the mouse cursor. And deselect
 
 Select curve geometry based on how similar certain properties are to it.
 
-### Last Operator Select Similar
+### Adjust Last Operation - Select Similar
 
 #### Type
 
@@ -904,7 +904,7 @@ Choose the select similar method again.
 
 Selects a random group of curve points.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-2.png)
 
@@ -920,7 +920,7 @@ Selects a random group of curve points.
 
 Deselect alternating curve points.
 
-### Last Operator Checker Deselect
+### Adjust Last Operation - Checker Deselect
 
 ![Last Operator Checker Deselect](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-checker-deselect.png)
 
@@ -978,7 +978,7 @@ A sub menu with the available lasso select modes.
 
 Select the geometry that is directly linked with the current geometry. You can for example have a mesh with several closed sub meshes. Those sub meshes are not linked together, but are part of the object.
 
-### Last Operator Select Linked All
+### Adjust Last Operation - Select Linked All
 
 ![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all.png)
 
@@ -992,7 +992,7 @@ Add a limit to the selection. For example, just select up to the next seam.
 
 Select curve geometry based on how similar certain properties are to it.
 
-### Last Operator Select Similar
+### Adjust Last Operation - Select Similar
 
 #### Type
 
@@ -1011,7 +1011,7 @@ Choose the select similar method again.
 
 Selects a random group of control points.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-2.png)
 
@@ -1027,7 +1027,7 @@ Selects a random group of control points.
 
 Deselect alternating control points.
 
-### Last Operator Checker Deselect
+### Adjust Last Operation - Checker Deselect
 
 ![Last Operator Checker Deselect](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-checker-deselect.png)
 
@@ -1082,7 +1082,7 @@ A sub menu with the available lasso select modes.
 
 Select metaball geometry based on how similar certain properties are to it.
 
-### Last Operator Select Similar
+### Adjust Last Operation - Select Similar
 
 #### Type
 
@@ -1101,7 +1101,7 @@ Choose the select similar method again.
 
 Selects a random metaball element.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-2.png)
 
@@ -1144,7 +1144,7 @@ Select everything.
 
 Selects random elements.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-3.png)
 
@@ -1214,7 +1214,7 @@ Selects only points that belong to filled regions.
 Useful for editing shapes, color areas, or solid regions independently.  
 Helps separate fill geometry from outline strokes.
 
-### Last Operator Select by Stroke Type
+### Adjust Last Operation - Select by Stroke Type
 
 ![Last Operator Select by Stroke Type](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-by-stroke-type.png)
 
@@ -1241,7 +1241,7 @@ Select equal elements by the chosen method.
 | Opacity | Selects vertices with similar opacity values. Useful for editing transparency effects or semi-opaque strokes. |
 
 
-### Last Operator Select Similar
+### Adjust Last Operation - Select Similar
 
 #### Mode
 
@@ -1259,17 +1259,19 @@ Selects all vertices that belong to **fill regions** of Grease Pencil strokes. U
 
 ## Linked
 
-![Linked](/docs2/images/editors/3d-viewport/header/select-menu/linked.png)
+Selects whole strokes: every point of each stroke that has at least one point selected.
 
-Select the geometry that is directly linked with the current geometry. You can for example have a mesh with several closed sub meshes. Those sub meshes. are not linked together, but are part of the object.
+## Deselect Linked
 
-### Last Operator Select Linked All
+The opposite of Linked: deselects every point of each stroke that has a point selected.
 
-![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all.png)
+### Adjust Last Operation - Select Linked All
 
-#### Delimit
+![Select Linked, Adjust Last Operation](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-grease-pencil.png)
 
-Add a limit to the selection. For example, just select up to the next seam.
+| Entry | What it does |
+| --------------- | ---------------------------------------------------------------------------------------- |
+| Deselect Linked | Off: select the linked strokes. On: deselect them instead. Linked and Deselect Linked just switch this checkbox. |
 
 ## Alternated
 
@@ -1277,7 +1279,7 @@ Add a limit to the selection. For example, just select up to the next seam.
 
 Select every second element.
 
-### Last Operator Alternated
+### Adjust Last Operation - Alternated
 
 ![Last Operator Alternated](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-alternated.png)
 
@@ -1289,7 +1291,7 @@ The end points are always unselected.
 
 Selects random elements.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-3.png)
 
@@ -1309,7 +1311,7 @@ Select the first element in the stroke.
 
 Select the last element in the stroke.
 
-### Last Operator Select Ends
+### Adjust Last Operation - Select Ends
 
 ![Last Operator Select Ends](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-ends.png)
 
@@ -1370,7 +1372,7 @@ Select armature bones based on how similar certain properties are to it.
 
 Most methods are self explaining. Immediate children selects just the direct children of the active object, while Children selects everything downwards the hierarchy.
 
-### Last Operator Select Similar
+### Adjust Last Operation - Select Similar
 
 #### Type
 
@@ -1389,7 +1391,7 @@ Choose the select similar method again.
 
 Select the mirrored parts of an object. For example for L.bone it selects R.bone.
 
-### Last Operator Select Mirror
+### Adjust Last Operation - Select Mirror
 
 ![Last Operator Select Mirror](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-mirror-3.png)
 
@@ -1425,7 +1427,7 @@ The tool operates immediately at entering the string.
 | Extend | Extends existing selection instead of deselecting everything first. |
 
 
-### Last Operator Select Pattern
+### Adjust Last Operation - Select Pattern
 
 ![Last Operator Select Pattern](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-pattern.png)
 
@@ -1435,7 +1437,7 @@ The Last Operator Select Pattern contains the same menu items than the pop-up. S
 
 Select all bones linked by parent.
 
-### Last Operator Select Linked All
+### Adjust Last Operation - Select Linked All
 
 ![Last Operator Select Linked All](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-all-2.png)
 
@@ -1522,7 +1524,7 @@ The tool operates immediately at entering the string.
 | Extend | Extends existing selection instead of deselecting everything first. |
 
 
-### Last Operator Select Pattern
+### Adjust Last Operation - Select Pattern
 
 ![Last Operator Select Pattern](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-pattern.png)
 
@@ -1532,7 +1534,7 @@ The Last Operator Select Pattern contains the same menu items than the pop-up. S
 
 Mirrors the bone selection. Works with an armature with mirrored parts.
 
-### Last Operator Flip Active/Selected Bone
+### Adjust Last Operation - Flip Active/Selected Bone
 
 ![Last Operator Flip Active/Selected Bone](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-flip-active-selected-bone.png)
 
@@ -1586,7 +1588,7 @@ A sub menu with the available lasso select modes.
 
 Select the mirrored parts to the current selection.
 
-### Last Operator Select Mirror
+### Adjust Last Operation - Select Mirror
 
 ![Last Operator Select Mirror](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-mirror-4.png)
 
@@ -1603,7 +1605,7 @@ Select the mirrored parts to the current selection.
 
 Selects ungrouped Vertices. Requires to have at least one vertex group assigned.
 
-### Last Operator Select Ungrouped
+### Adjust Last Operation - Select Ungrouped
 
 ![Last Operator Select Ungrouped](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-ungrouped-2.png)
 
@@ -1656,7 +1658,7 @@ A sub menu with the available lasso select modes.
 
 Selects random particles.
 
-### Last Operator Select Random
+### Adjust Last Operation - Select Random
 
 ![Last Operator Select Random](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-random-4.png)
 
