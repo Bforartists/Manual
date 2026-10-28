@@ -98,15 +98,15 @@ There are several tools in the header to find. Menus, and a few options.
 
 ![Header - View menu](/docs2/images/editors/asset-browser/header-view-menu.png)
 
-The view menu contains view related functionality.
+The View menu decides what you see. **Source List** shows the libraries and catalogs on the left, and **Asset Details** shows the sidebar with information about the selected asset.
 
+### Frame Selected
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------------------- |
-| Source List | Shows or hides the tool shelf at the left side. |
-| File Path | Please ignore. This entry is a bug. The asset browser shares the code with the file browser. |
-| Frame Selected | Scrolls the selection into view. |
+Scrolls the selected asset into view, handy in a big library.
 
+### Sort
+
+Orders the assets, for example by name. This used to be only in the right-click menu.
 
 ### Display Size
 
@@ -149,6 +149,32 @@ Allows you to box select files. Note that this is an old obsolete operator. You 
 | All | Select all. |
 
 
+## Header - Library menu
+
+![Header - Library menu](/docs2/images/editors/asset-browser/header-library-menu.png)
+
+Everything about the asset libraries themselves.
+
+### Asset Library Paths
+
+Opens the Preferences, where you add and manage your asset library folders.
+
+### Refresh Asset Library
+
+Reloads the current library. Use it after you saved new assets into the library from another file, so they show up here.
+
+### Refresh Remote Listing
+
+Fetches the latest list of assets from an online library.
+
+### Open Remote Assets Cache
+
+Assets you download from online libraries are kept in a cache folder. This opens that folder.
+
+### Clear Remote Assets Cache
+
+Deletes the downloaded online assets to free up disk space. They download again the next time you use them.
+
 ## Header - Catalog menu
 
 ![Header - Catalog menu](/docs2/images/editors/asset-browser/header-catalog-menu.png)
@@ -158,13 +184,6 @@ Allows you to box select files. Note that this is an old obsolete operator. You 
 | ----- | -------------------------------- |
 | Undo | Undo of the last edit operation. |
 | Redo | Redo of the last edit operation. |
-
-
-### Asset Library Paths
-
-![Asset Library Paths](/docs2/images/editors/asset-browser/asset-library-paths.png)
-
-Opens the file browser at the Paths tab. Here you can show, edit, and add paths to new asset libraries.
 
 
 | Entry | What it does |
