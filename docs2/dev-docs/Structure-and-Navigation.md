@@ -76,6 +76,22 @@ Every page has `status:` in its front matter. Readers see it as a coloured chip,
 
 Change it in Pages CMS (**Status**) or in the file; the cards, the chip and the progress bars follow on the next sync.
 
+### 🤖 It follows the pull request by itself
+
+A bot raises the status of the pages a pull request changes, so nobody has to remember to:
+
+| Pull request | Pages it changes become |
+|---|---|
+| 📝 Draft | stay `draft` |
+| 👀 Ready for review | `needs-review` (● In review) |
+| ✅ Approved, or labelled `reviewed` | `reviewed` (● Reviewed) |
+
+- The bot commits the new status to the pull request's own branch, so it reaches `master` with the merge. `master` is protected: nothing is pushed there directly.
+- The status only goes up, never down. A page counts as changed only when its text changed, not its header or pictures.
+- It skips pull requests from forks, pull requests that change more than 25 pages (a bulk rename or a script) and pull requests with the label `no-status`.
+- Preview and the staging website show the chip from the page file, so an open pull request shows ● In review in its preview, and merged pages show ● Reviewed once they were approved.
+- The tool is `docs2/tools/page_status.py`; the workflow is `docs2-page-status.yml`.
+
 ## 🔎 Search
 
 The instant search (Ctrl K, or the 🔎 button) reads `search.json`, which the sync writes from every page's title, summary and headings. A good summary and clear headings are all a page needs to be found.
