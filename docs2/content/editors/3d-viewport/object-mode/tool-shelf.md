@@ -193,7 +193,7 @@ The widget can have different orientations. The menu items should be self explai
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
-#### Last Operator Move
+#### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
 
@@ -290,7 +290,7 @@ The 3d cursor can have different orientations. The menu items should be self exp
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
-#### Last Operator Rotate
+#### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-rotate.png)
 
@@ -393,7 +393,7 @@ The 3d cursor can have different orientations. The menu items should be self exp
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
-#### Last Operator Resize
+#### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
 
@@ -476,7 +476,7 @@ The 3d cursor can have different orientations. The menu items should be self exp
 
 What to do at dragging with the mouse with an active tool. Active Tool means the current tool is used then. When you choose Select Box then a mouse drag will rectangle select instead.
 
-#### Last Operator Resize
+#### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
 
@@ -934,13 +934,15 @@ When you want to measure an angle, first create a straight measure line. Then gr
 | Delete measure lines | Select them and press delete. When you have selected an angle point then first this angle point gets deleted. You need to have to select an endpoint to make the whole stroke active. |
 
 
-## Primitives Add tools group
+## Primitive Add tools
 
-![Primitives Add tools group](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/primitives-add-tools-group.png)
+![Primitive Add tools](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/primitives-add-tools-group.png)
 
 This tools appears in object and edit mode with the correct object types. The tools allows you to create primitives by dragging with the mouse. First you create a ground plane by dragging a rectangle. Then you release the mouse and drag the mouse upwards to create the third dimension of it. And a left click makes the object real then.
 
-You can choose between five primitive types. Cube, Cone, Cylinder, UV Sphere and Icosphere.
+The primitive tools now sit right in the tool shelf, each with its own button, so there's no group to open first. There are six: **Cube, Cone, Cylinder, Quad Sphere, UV Sphere and Icosphere**. The same buttons show in Object Mode, Edit Mode and Sculpt Mode.
+
+> **Note:** The old **Add Primitives** menu in the Sculpt Mode header is gone. Use these tool shelf buttons instead.
 
 ![Primitives Add tools group](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/primitives-add-tools-group-2.png)
 
@@ -1026,7 +1028,7 @@ From where to scale the primitive. From one of its corners or from the center.
 
 Scale uniformly or in drag direction.
 
-#### Last Operator Add Cube Panel
+#### Adjust Last Operation - Add Cube Panel
 
 ![Last Operator Add Cube Panel](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-cube-panel.png)
 
@@ -1124,7 +1126,7 @@ Nothing means you have no base face.
 N-Gon means that the base face is an N-Gon face.  
 Triangle Fan means that the base face is triangulated.
 
-#### Last Operator Add Cone Panel
+#### Adjust Last Operation - Add Cone Panel
 
 ![Last Operator Add Cone Panel](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-cone-panel.png)
 
@@ -1237,7 +1239,7 @@ The number of vertices.
 - N-Gon means that the cap face is an N-Gon face.  
 - Triangle Fan means that the cap face is triangulated.
 
-#### Last Operator Add Circle Panel
+#### Adjust Last Operation - Add Circle Panel
 
 ![Last Operator Add Circle Panel](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-circle-panel.png)
 
@@ -1274,6 +1276,10 @@ Creates UV's for this primitive.
 | Location | Defines the location of the Cylinder. |
 | Rotation | Defines the rotation of the Cylinder. |
 
+
+### Add Quad Sphere
+
+Drag to add a sphere made of four-sided faces, like a subdivided cube rounded into a ball. It's great for sculpting and subdivision, because it has no pinched poles. The tool settings are the same as for the other primitive tools.
 
 ### Add UV Sphere
 
@@ -1352,7 +1358,7 @@ Scale uniformly or in drag direction.
 | Rings | Defines how much rings the sphere has horizontally. |
 
 
-#### Last Operator Add UV Sphere Panel
+#### Adjust Last Operation - Add UV Sphere Panel
 
 ![Last Operator Add UV Sphere Panel](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-uv-sphere-panel.png)
 
@@ -1443,7 +1449,7 @@ Scale uniformly or in drag direction.
 
 The subdivision level of the Ico Sphere.
 
-#### Last Operator Add Ico Sphere Panel
+#### Adjust Last Operation - Add Ico Sphere Panel
 
 ![Last Operator Add Ico Sphere Panel](/docs2/images/editors/3d-viewport/tool-shelf/object-mode/last-operator-add-ico-sphere-panel.png)
 

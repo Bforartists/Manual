@@ -315,12 +315,30 @@ Press `T` to open a pie menu that shows or hides the regions of the editor, such
 ![Select menu](/docs2/images/editors/file-browser/select-menu.png)
 
 
-| Entry | What it does |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Box Select | Allows you to box select files. Note that this is an old obsolete operator. You don't need to press the hotkey anymore for box select. |
-| Inverse | Inverts the selection. |
-| None | Select none. |
-| All | Select all. |
+#### All
+
+Select all files.
+
+#### None
+
+Deselect all files.
+
+#### Invert
+
+Invert the selection.
+
+#### Box Select
+
+Drag a box to select files. You can also just drag in the file list, no hotkey needed.
+
+#### Up / Down
+
+Move the selection to the file above or below, like the **Up / Down Arrow** keys.
+
+#### Left / Right
+
+Move the selection to the file on the left or right, like the **Left / Right Arrow** keys. Only in the thumbnail and horizontal list views, where files sit side by side.
+
 
 
 ## Files context menu

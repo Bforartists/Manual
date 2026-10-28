@@ -550,7 +550,7 @@ Moves the selected object to a collection. The object is removed from the collec
 
 By clicking at this menu item a popup will appear to choose the new collection. Allows also to create a new collection. Once done, the object will be moved to this new created collection.
 
-##### Last Operator Move to Collection
+##### Adjust Last Operation - Move to Collection
 
 ![Last Operator Move to Collection](/docs2/images/editors/outliner/last-operator-move-to-collection.png)
 
@@ -568,7 +568,7 @@ Links the object to a collection. The object remains in the collection it was in
 
 By clicking at this menu item a popup will appear to choose the collection. Here you can also create a new collection. Once done, the object will be linked to this new created collection.
 
-##### Last Operator Link to Collection
+##### Adjust Last Operation - Link to Collection
 
 ![Last Operator Link to Collection](/docs2/images/editors/outliner/last-operator-link-to-collection.png)
 

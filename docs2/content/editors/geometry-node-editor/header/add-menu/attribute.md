@@ -139,6 +139,40 @@ The number of splines in the curve.
 
 How many instances the input geometry has.
 
+### Get Attribute Names
+
+![Get Attribute Names](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/get-attribute-names.png)
+
+Lists the names of the attributes of a geometry as a list of strings. You can limit the list to one data type and one domain. Internal attributes, whose names start with a dot, are not listed.
+
+#### Inputs
+
+##### Geometry
+
+The geometry to read the attribute names from. All parts of the geometry are checked.
+
+##### Filter Data Type
+
+A panel with a checkbox in its header. Turn it on to list only attributes of one data type.
+
+##### Data Type
+
+The data type to list. It is only used when Filter Data Type is on. The default is Float.
+
+##### Filter Domain
+
+A panel with a checkbox in its header. Turn it on to list only attributes on one domain.
+
+##### Domain
+
+The domain to list. It is only used when Filter Domain is on. The default is Point.
+
+#### Outputs
+
+##### Names
+
+A list of the attribute names, sorted alphabetically. Each name appears once, even if several parts of the geometry have it.
+
 ### Blur Attribute
 
 ![Blur Attribute](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/blur-attribute.png)
@@ -256,3 +290,56 @@ What element to use.
 ##### Geometry
 
 The output geometry.
+
+### Transfer Attributes
+
+![Transfer Attributes](/docs2/images/editors/geometry-node-editor/header/add-menu-attribute/transfer-attributes.png)
+
+Copies attributes from the Source geometry to the Target geometry. You choose the attributes by name. Elements are matched by their ID. By default the ID is the index, so element 5 of the source goes to element 5 of the target.
+
+It works for meshes, point clouds, curves, instances and Grease Pencil layers. Only parts that exist in both geometries are used. Grease Pencil layers are matched by their position in the layer list.
+
+#### Inputs
+
+##### Target
+
+The geometry that receives the attributes.
+
+##### Target IDs
+
+A panel that is closed by default. It has one ID field for each domain: Target Point ID, Target Edge ID, Target Face ID, Target Corner ID, Target Curve ID and Target Instance ID. They are evaluated on the target. By default they are the index.
+
+##### Source
+
+The geometry that the attributes are copied from.
+
+##### Source IDs
+
+A panel that is closed by default. It has one ID field for each domain: Source Point ID, Source Edge ID, Source Face ID, Source Corner ID, Source Curve ID and Source Instance ID. They are evaluated on the source. By default they are the index.
+
+Each target element takes the values of the source element with the same ID. If no source element has that ID, the target element keeps its old value, or gets the default value if the attribute is new. If both IDs are the index, the values are copied by index.
+
+##### Pattern Mode
+
+How the attribute names are compared.
+
+- Exact: a name has to match the attribute name exactly.
+- Wildcard: a name may contain one wildcard (*) that stands for any text. This is the default.
+
+##### Attribute Names
+
+A list of the names of the attributes to transfer. You can connect the output of Get Attribute Names here. If the list is empty and Exclude Names is off, nothing is transferred. A message tells you when a name matches no attribute.
+
+##### Exclude Names
+
+Turn it on to transfer all attributes except the ones that match the names.
+
+#### Outputs
+
+##### Target
+
+The target geometry with the transferred attributes.
+
+##### Transferred Names
+
+A list of the names of the attributes that were transferred. Internal attributes, whose names start with a dot, are not listed.

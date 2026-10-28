@@ -1,0 +1,52 @@
+# 🤖 Opens a pull request by itself for every editing branch.
+#
+# Writers who edit in Pages CMS save to a branch named docs2/edit/<something>.
+# The first save pushes that branch; this workflow then opens the pull request into
+# master (once), so nobody has to go to GitHub and press "Compare & pull request".
+# The checks and the preview are made by the "Docs 2.0 checks and preview" workflow,
+# which already runs on every push to docs2/** branches.
+#
+# One-time repository setting (maintainer):
+#   Settings → Actions → General → Workflow permissions →
+#   tick "Allow GitHub Actions to create and approve pull requests"
+
+name: Docs 2.0 auto pull request
+
+on:
+  push:
+    branches: ["docs2/edit/**"]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  open-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Open the pull request, or refresh its title and description
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ github.ref_name }}
+          ACTOR: ${{ github.actor }}
+        run: |
+          # Pages CMS pushes a brand new, still empty branch when a writer creates one.
+          # A pull request needs at least one commit, so wait for the first save.
+          ahead=$(gh api "repos/$GITHUB_REPOSITORY/compare/master...$BRANCH" --jq '.ahead_by' 2>/dev/null || echo 0)
+          if [ "${ahead:-0}" -eq 0 ]; then echo "No commits on $BRANCH yet: the pull request opens at the first save."; exit 0; fi
+          git fetch -q origin master
+          pip install -q pyyaml
+          python3 docs2/tools/pr_summary.py --title-out title.txt --body-out body.md
+          title=$(cat title.txt)
+          existing=$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$BRANCH" --state open --json number --jq '.[0].number')
+          if [ -z "$existing" ]; then
+            gh pr create --repo "$GITHUB_REPOSITORY" --base master --head "$BRANCH" --title "$title" --body-file body.md
+          elif gh pr view "$existing" --repo "$GITHUB_REPOSITORY" --json body --jq .body | grep -q "docs2-auto-pr"; then
+            # only refresh descriptions this workflow wrote, never one a maintainer rewrote
+            gh pr edit "$existing" --repo "$GITHUB_REPOSITORY" --title "$title" --body-file body.md
+          else
+            echo "PR #$existing has a hand-written description: leaving it alone."
+          fi

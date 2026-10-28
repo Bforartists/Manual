@@ -251,7 +251,7 @@ When using Scene Time Synchronisation in the video sequence editor, then display
 
 The View menu contains all View related tools.
 
-### Adjust Last Operation
+### Adjust Last Operation - View Menu
 
 ![Adjust Last Operation](/docs2/images/ui/timeline/header/adjust-last-operation.png)
 

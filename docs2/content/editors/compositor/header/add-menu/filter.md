@@ -357,13 +357,13 @@ The kernel input.
 
 # Blur
 
-### Add menu - Filter - Blur
+## Add menu - Filter - Blur
 
 ![Add menu - Filter - Blur](/docs2/images/editors/compositor/header/add-menu-filter-blur/add-menu-filter-blur.png)
 
 The Filter add menu contains multiple filters you can use on image data, including blurs and other lens effects.
 
-#### Bilateral Blur
+### Bilateral Blur
 
 ![Bilateral Blur](/docs2/images/editors/compositor/header/add-menu-filter-blur/bilateral-blur.png)
 
@@ -371,7 +371,7 @@ The Bilateral Blur node performs a high-quality adaptive blur on the source imag
 
 It can be used for various purposes like: smoothing noisy render passes to avoid longer computation times in example ray-traced ambient occlusion, blurry refraction's/reflections, soft shadows, or to make non-photo realistic compositing effects.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -382,25 +382,25 @@ It can be used for various purposes like: smoothing noisy render passes to avoid
 | Threshold | The threshold of the blur area. Pixels are considered to be in the blur area if the average difference between their determinator of the center pixels is less than this threshold. |
 
 
-##### Outputs
+#### Outputs
 
-###### Image
+##### Image
 
 Standard image output.
 
-#### Blur
+### Blur
 
 ![Blur](/docs2/images/editors/compositor/header/add-menu-filter-blur/blur.png)
 
 The Blur node provides several blur modes to blur an image. The icon top right allows you to collapse and show the image part of the node.
 
-##### Inputs
+#### Inputs
 
-###### Image
+##### Image
 
 Standard image input.
 
-###### Size
+##### Size
 
 ![Size](/docs2/images/editors/compositor/header/add-menu-filter-blur/size.png)
 
@@ -414,13 +414,13 @@ The optional Size input will be multiplied with the X and Y blur radius values. 
 | Separable | Blur along the horizontal and vertical directions independently. This method is faster. |
 
 
-##### Outputs
+#### Outputs
 
-###### Image
+##### Image
 
 Standard image output.
 
-#### Bokeh Blur
+### Bokeh Blur
 
 ![Bokeh Blur](/docs2/images/editors/compositor/header/add-menu-filter-blur/bokeh-blur.png)
 
@@ -428,7 +428,7 @@ The Bokeh Blur node generates a bokeh type blur similar to Defocus. Unlike defoc
 
 Several performance optimizations are also available such as OpenCL support, calculation area restriction and masking.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -440,19 +440,19 @@ Several performance optimizations are also available such as OpenCL support, cal
 | Extend Bounds | Extend the bounds of the input image to fully fit the blurred image. |
 
 
-##### Outputs
+#### Outputs
 
-###### Image
+##### Image
 
 Image output.
 
-#### Defocus
+### Defocus
 
 ![Defocus](/docs2/images/editors/compositor/header/add-menu-filter-blur/defocus.png)
 
 It is typically used to emulate depth of field (DOF) using a post-processing method with a Z-buffer input. But also allows to blur images that are not based on Z depth too.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -461,9 +461,9 @@ It is typically used to emulate depth of field (DOF) using a post-processing met
 | Z | Z-buffer input, but could also be a (greyscale) image used as a mask, or a single value input. |
 
 
-##### Properties
+#### Properties
 
-###### Bokeh Type
+##### Bokeh Type
 
 ![Bokeh Type](/docs2/images/editors/compositor/header/add-menu-filter-blur/bokeh-type.png)
 
@@ -479,7 +479,7 @@ Disk (to emulate a perfect circle) or Triangle (3 blades), Square (4 blades), Pe
 | Max Blur | This value limits the amount of blur by setting a maximum blur radius. Could be used to optimize the performance. The default value of 0 means no limit. |
 
 
-###### Scene
+##### Scene
 
 ![Scene](/docs2/images/editors/compositor/header/add-menu-filter-blur/scene.png)
 
@@ -496,19 +496,19 @@ Select the linked scene. Scenes can be created in the properties editor in the S
 | Z | The Z value of the image. |
 
 
-##### Outputs
+#### Outputs
 
-###### Image
+##### Image
 
 Image output.
 
-#### Directional Blur
+### Directional Blur
 
 ![Directional Blur](/docs2/images/editors/compositor/header/add-menu-filter-blur/directional-blur.png)
 
 Blurs an image in a specified direction and magnitude. Can be used to fake motion blur.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -522,13 +522,13 @@ Blurs an image in a specified direction and magnitude. Can be used to fake motio
 | Translation subtab | **Amount**: The translation amount relative to the image. · **Direction**: The translation direction. |
 
 
-##### Outputs
+#### Outputs
 
-###### Image
+##### Image
 
 Image output.
 
-#### Vector Blur
+### Vector Blur
 
 ![Vector Blur](/docs2/images/editors/compositor/header/add-menu-filter-blur/vector-blur.png)
 
