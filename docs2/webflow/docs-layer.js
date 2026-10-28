@@ -17,7 +17,7 @@
   R.dataset.dkLayer = '1';
   var CDN = 'https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/';
   var NAVURL = 'https://bforartists.github.io/Manual/nav/nav.json', NK = 'bfa-docs-nav';
-  var EDIT_GATE = '';   /* the edit gateway Worker, e.g. 'https://bforartists-docs-edit.<account>.workers.dev/edit'. Empty = Edit this page opens GitHub's editor (see docs2/worker/edit-gateway/README.md) */
+  var EDIT_GATE = 'https://bforartists-docs-edit.trinumedia.workers.dev/edit';   /* the edit gateway Worker, e.g. 'https://bforartists-docs-edit.<account>.workers.dev/edit'. Empty = Edit this page opens GitHub's editor (see docs2/worker/edit-gateway/README.md) */
   var BRANCH = 'master', HOWTO = 'getting-started-about-documentation';   /* the docs branch writers start from; the How to use this manual page */
   var HOME = '/docs/home', DISCORD = 'https://discord.gg/yKuR77v', PRO = 'https://www.trinumedia.com';
   var ISSUE = 'https://github.com/Bforartists/Manual/issues/new';
