@@ -138,7 +138,7 @@ When you double right click into the viewport then you will call the F-Curve con
 
 Pastes copied curve point(s), but flipped.
 
-#### Last operator Paste Keyframes / Flipped
+#### Adjust Last Operation - Paste Keyframes / Flipped
 
 ![Last operator Paste Keyframes / Flipped](/docs2/images/editors/drivers-editor/last-operator-paste-keyframes-flipped.png)
 
@@ -172,7 +172,7 @@ Set the handle type for the currently selected curve point.
 
 ![Handle Type](/docs2/images/editors/drivers-editor/handle-type-2.png)
 
-#### Last Operator Set Keyframe Handle Type
+#### Adjust Last Operation - Set Keyframe Handle Type
 
 ![Last Operator Set Keyframe Handle Type](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-handle-type.png)
 
@@ -188,7 +188,7 @@ The Interpolation mode defines how the curve acts from keyframe to keyframe. You
 
 The easing methods here in the interpolation mode menu are for the easing shape. There is also an easing menu where you can choose a easing method.
 
-#### Last Operator Set Keyframe Interpolation
+#### Adjust Last Operation - Set Keyframe Interpolation
 
 ![Last Operator Set Keyframe Interpolation](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-interpolation.png)
 
@@ -202,7 +202,7 @@ Set the interpolation mode.
 
 The easing methods in the interpolation mode menu are for the easing shape. This menu allows you to choose an easing method.
 
-#### Last Operator Set Keyframe Easing Type
+#### Adjust Last Operation - Set Keyframe Easing Type
 
 ![Last Operator Set Keyframe Easing Type](/docs2/images/editors/drivers-editor/last-operator-set-keyframe-easing-type.png)
 
@@ -218,7 +218,7 @@ Insert a keyframe at the current position. This functionality does not work from
 
 Duplicate the selected curve point(s).
 
-#### Last Operator Duplicate
+#### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/drivers-editor/last-operator-duplicate.png)
 
@@ -261,7 +261,7 @@ Delete the selected curve point(s).
 
 Mirrors the animation by the given method.
 
-#### Last Operator Mirror Keys
+#### Adjust Last Operation - Mirror Keys
 
 ![Last Operator Mirror Keys](/docs2/images/editors/drivers-editor/last-operator-mirror-keys.png)
 
@@ -275,7 +275,7 @@ Flips the selected keyframes over the current frame position by the chosen metho
 
 Snaps the selected keyframes by the given method.
 
-#### Last Operator Snap Keys
+#### Adjust Last Operation - Snap Keys
 
 ![Last Operator Snap Keys](/docs2/images/editors/drivers-editor/last-operator-snap-keys.png)
 

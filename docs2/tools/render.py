@@ -23,7 +23,7 @@ import html_build  # noqa: E402
 import landing  # noqa: E402
 
 REPO_URL = os.environ.get("DOCS_REPO_URL", "https://github.com/Bforartists/Manual")
-CMS_URL = os.environ.get("DOCS_CMS_URL", "https://app.pagescms.org/Bforartists/Manual")
+CMS_URL = os.environ.get("DOCS_CMS_URL", "https://app.pagescms.org/bforartists/manual")
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 PREVIEW_CSS = """
@@ -146,7 +146,9 @@ class Builder:
                  f'<span>Bforartists {htmllib.escape(str(fm.get("version", "")))}</span>',
                  f"<span>🕒 {max(1, round(words / 200))} min read</span>"]
         crumbs = " › ".join(htmllib.escape(str(x)) for x in (fm.get("path") or [fm.get("title", "")]))
-        cms = f"{CMS_URL}/{quote(self.branch, safe='')}/collection/{'snippets' if page.kind == 'snippet' else 'docs'}/edit/{quote(page.rel, safe='')}"
+        # Pages CMS edit links use the full repository path (checked against a link Pages CMS made itself).
+        coll = "snippets" if page.kind == "snippet" else "docs"
+        cms = f"{CMS_URL}/{quote(self.branch, safe='')}/collection/{coll}/edit/{quote(page.rel, safe='')}"
         main = (f'<div class="pv-crumb">📄 Documentation › {crumbs}</div>'
                 f'<h1 class="pv-title">{htmllib.escape(str(fm.get("title", "")))}</h1><div class="pv-chips">{"".join(chips)}</div>'
                 f'<article class="ui-doc-body">{body}</article>'

@@ -322,11 +322,11 @@ This then can be connected to compositing nodes (e.g., Mix, Alpha Over) for inte
 
 # Constant
 
-### Add menu - Input - Constant
+## Add menu - Input - Constant
 
 ![Add menu - Input - Constant](/docs2/images/editors/compositor/header/add-menu-input-constant/add-menu-input-constant.png)
 
-#### Boolean
+### Boolean
 
 ![Boolean](/docs2/images/editors/compositor/header/add-menu-input-constant/boolean.png)
 
@@ -337,7 +337,7 @@ Provide a true / false value.
 | Properties | **Boolean**: The boolean toggle. |
 | Outputs | **Boolean**: The state of the toggle. |
 
-#### Color
+### Color
 
 ![Color](/docs2/images/editors/compositor/header/add-menu-input-constant/color.png)
 
@@ -348,7 +348,7 @@ Set a color.
 | Properties | The RGB node uses the color picker widget. |
 | Outputs | **Color / RGBA**: A single RGBA color value. |
 
-#### Integer
+### Integer
 
 ![Integer](/docs2/images/editors/compositor/header/add-menu-input-constant/integer.png)
 
@@ -359,7 +359,7 @@ Provides an integer value.
 | Properties | **Integer**: The value. |
 | Outputs | **Integer**: The output value. |
 
-#### Normal
+### Normal
 
 ![Normal](/docs2/images/editors/compositor/header/add-menu-input-constant/normal.png)
 
@@ -370,7 +370,7 @@ Input normalized normal values to the other nodes in the tree.
 | Properties | **Input Value**: Here you can adjust the directory of the light to see how the normals behaves. |
 | Outputs | **Normal**: The output value. |
 
-#### Value
+### Value
 
 ![Value](/docs2/images/editors/compositor/header/add-menu-input-constant/value.png)
 
@@ -381,7 +381,7 @@ Provides a float value.
 | Properties | **Value**: The float value. |
 | Outputs | **Value**: The output value. |
 
-#### Vector
+### Vector
 
 ![Vector](/docs2/images/editors/compositor/header/add-menu-input-constant/vector.png)
 
@@ -394,11 +394,11 @@ Provides a vector 3 value.
 
 # Scene
 
-### Add menu - Input - Scene
+## Add menu - Input - Scene
 
 ![Add menu - Input - Scene](/docs2/images/editors/compositor/header/add-menu-input-scene/add-menu-input-scene.png)
 
-#### Render Layers
+### Render Layers
 
 ![Render Layers](/docs2/images/editors/compositor/header/add-menu-input-scene/render-layers.png)
 
@@ -408,9 +408,9 @@ This node is the starting place for getting a picture of your scene into the com
 
 The input happens through the properties.
 
-##### Properties
+#### Properties
 
-###### Scene
+##### Scene
 
 Usually you don't need to select anything here when you work with just one Scene file. But in Bforartists you can work with more than one scene in a blend file. The scene information taken is the raw footage (pre-compositing and pre-sequencing).
 
@@ -421,24 +421,24 @@ Hint. To use composited footage from another scene, it has to be rendered into a
 | View layer | A list of available View Layers. |
 | Render | The render button allows you to re-render the active scene with one click. |
 
-##### Outputs
+#### Outputs
 
 | Entry | What it does |
 | ----- | ------------------- |
 | Image | The rendered image. |
 | Alpha | The Alpha channel. |
 
-###### Render passes sockets
+##### Render passes sockets
 
 ![Render passes sockets](/docs2/images/editors/compositor/header/add-menu-input-scene/render-passes-sockets.png)
 
 Depending on the Render passes that are enabled, other sockets are available. See Cycles and Eevee render passes. The Workbench renderer does not have extra render passes sockets. It just provides Image and Alpha output.
 
-###### Depth
+##### Depth
 
 By default the Z depth pass is enabled.
 
-##### Scene time
+#### Scene time
 
 ![Scene time](/docs2/images/editors/compositor/header/add-menu-input-scene/scene-time.png)
 
@@ -446,38 +446,38 @@ Outputs the current scene time in seconds or in frames.
 The Frame output is a float value to make subframe rendering for motion  
 blur possible.
 
-###### Outputs
+##### Outputs
 
 | Entry | What it does |
 | ------- | ------------------ |
 | Seconds | Output in seconds. |
 | Frame | Output in Frames. |
 
-#### Time Curve
+### Time Curve
 
 ![Time Curve](/docs2/images/editors/compositor/header/add-menu-input-scene/time-curve.png)
 
 The Time node generates a factor value that changes according to the curve as time progresses through the Timeline. The range goes from 0.0 to 1.0. The default is a linear line from 0.0 to 1.0. But the curve can be adjusted.
 
-##### Properties
+#### Properties
 
-###### Navigation elements
+##### Navigation elements
 
 ![Navigation elements](/docs2/images/editors/compositor/header/add-menu-input-scene/navigation-elements.png)
 
 The navigation elements for the curve. They are described from left to right.
 
-###### Zoom in and out
+##### Zoom in and out
 
 The two buttons with the magnifying glass at it zooms in and out in the curve window.
 
-###### Clipping
+##### Clipping
 
 ![Clipping](/docs2/images/editors/compositor/header/add-menu-input-scene/clipping.png)
 
 Clipping options. Set up clipping for the stroke.
 
-###### Tools
+##### Tools
 
 ![Tools](/docs2/images/editors/compositor/header/add-menu-input-scene/tools.png)
 
@@ -490,7 +490,7 @@ Tools is a menu where you can find some curve related tools.
 | Extend Extrapolated | Extends the curve extrapolated before the first point and behind the last point. |
 | Reset Curve | Resets the curve to the initial shape. |
 
-###### Curve window
+##### Curve window
 
 Tweak and adjust the falloff curve by clicking at a curve point and dragging it around.
 
@@ -500,11 +500,11 @@ Holding down ctrl activates temporary snapping.
 
 Holding down shift enables slower movement, which allows more accurate setting.
 
-###### Selecting Points
+##### Selecting Points
 
 > This setting uses the **curve widget**: click to add points, drag to move them. See **[Curve Widget](../../../../interface/properties.md#curve-widget)** in the Interface chapter.
 
-###### Adding Points
+##### Adding Points
 
 ![Adding Points](/docs2/images/editors/compositor/header/add-menu-input-scene/adding-points.png)
 
@@ -519,9 +519,9 @@ You can add new curve points by simply left clicking at the curve. Move the mous
 | Delete Points | Deletes selected curve points. |
 | Start Frame/ End Frame | Start frame and End frame of the range of time specifying the values the output should last. This range becomes the X axis of the graph. The time input could be reversed by specifying a start frame greater than the end frame. |
 
-##### Outputs
+#### Outputs
 
-###### Factor
+##### Factor
 
 A speed of time factor (from 0.00 to 1.00) relative to the frame rate defined in the Render Dimensions Panel. The factor changes according to the defined curve.
 

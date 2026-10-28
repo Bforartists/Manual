@@ -66,6 +66,22 @@ You can add more than one asset library from the preferences.
 
 ![Asset Library](/docs2/images/editors/asset-browser/asset-library-3.png)
 
+### Online libraries while offline
+
+![Offline banner](/docs2/images/editors/asset-browser/offline-banner.png)
+
+Some libraries, like the online Essentials, live on the internet. When internet access is off in the Preferences, the Asset Browser still shows every asset you've **already downloaded**, so you can keep working offline.
+
+A banner at the top reminds you that you only see the offline assets.
+
+#### Continue Offline
+
+Hides the banner, so you can keep working with the assets you already have.
+
+#### Allow Online Access
+
+Turns internet access on, so the rest of the library can load.
+
 ### Drag & Drop of materials
 
 Materials can be dragged directly at the material slots in the Properties Editor.
