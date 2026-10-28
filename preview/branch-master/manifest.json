@@ -1,13 +1,6 @@
 {
  "pages": {
-  "docs2/content/getting-started/about-documentation.md": "getting-started/about-documentation.html",
-  "docs2/content/getting-started/data-structure.md": "getting-started/data-structure.html",
-  "docs2/content/getting-started/differences.md": "getting-started/differences.html",
-  "docs2/content/getting-started/index.md": "getting-started.html",
-  "docs2/content/getting-started/installation.md": "getting-started/installation.html",
-  "docs2/content/getting-started/introduction.md": "getting-started/introduction.html",
-  "docs2/content/getting-started/migrating-from-blender.md": "getting-started/migrating-from-blender.html",
-  "docs2/content/getting-started/quick-start.md": "getting-started/quick-start.html"
+  "docs2/content/editors/geometry-node-editor/header/add-menu/point.md": "editors/geometry-node-editor/header/add-menu/point.html"
  },
- "images": 8
+ "images": 21
 }
