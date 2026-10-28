@@ -1242,7 +1242,7 @@ The opposite of Linked: deselects every point of each stroke that has a point se
 
 ### Last Operator Select Linked
 
-<!-- TODO screenshot: Grease Pencil Edit Mode, Select > Linked, then the Adjust Last Operation panel in place -->
+![Select Linked, Adjust Last Operation](/docs2/images/editors/3d-viewport/header/select-menu/last-operator-select-linked-grease-pencil.png)
 
 | Entry | What it does |
 | --------------- | ---------------------------------------------------------------------------------------- |
