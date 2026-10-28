@@ -13,6 +13,9 @@
 const REPO = "Bforartists/Manual";
 const BASE = "master";
 const ROOTS = { docs: "docs2/content", snippets: "docs2/snippets" };
+// Pages where the "Edit this page" button lives. A click from anywhere else is refused.
+// (No Referer at all is allowed: some browsers hide it, and people paste the link by hand.)
+const ALLOWED_HOSTS = ["bforartists.com", "www.bforartists.com", "bforartists.webflow.io", "bforartists.github.io"];
 const CMS = "https://app.pagescms.org/" + REPO.toLowerCase(); // Pages CMS writes owner/repo in lowercase
 
 const page = (title, body, status = 200) =>
@@ -44,6 +47,22 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname !== "/edit") return page("Bforartists docs edit gateway", "<p>Use the “Edit this page” button on a docs page.</p>", 404);
+
+    // 1. only the docs site may use the gateway
+    const referer = request.headers.get("referer");
+    if (referer) {
+      let host = "";
+      try { host = new URL(referer).hostname; } catch (e) {}
+      if (!ALLOWED_HOSTS.includes(host))
+        return page("Please use the Edit this page button", "<p>This link only works from the Bforartists docs pages.</p>", 403);
+    }
+
+    // 2. a small limit per visitor (the RATE_LIMITER binding in wrangler.toml)
+    if (env.RATE_LIMITER) {
+      const ip = request.headers.get("cf-connecting-ip") || "unknown";
+      const { success } = await env.RATE_LIMITER.limit({ key: ip });
+      if (!success) return page("Too many edits at once", "<p>Please wait a minute and try again.</p>", 429);
+    }
 
     const kind = url.searchParams.get("kind") || "docs";
     const path = url.searchParams.get("path") || "";
