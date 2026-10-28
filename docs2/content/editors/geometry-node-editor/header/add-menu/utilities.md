@@ -1838,6 +1838,8 @@ The domain the Field evaluates. This gets and filters the field type. The domain
 
 ### Add menu - Utilities - List
 
+![Add menu - Utilities - List](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-list/add-menu-list.png)
+
 List nodes create and work with lists. A list is an ordered row of values of the same type.
 
 #### Combine List
