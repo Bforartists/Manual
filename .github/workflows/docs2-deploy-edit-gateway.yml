@@ -1,0 +1,39 @@
+# 🚀 Deploys the edit gateway Worker (docs2/worker/edit-gateway) to Cloudflare.
+#
+# Runs after a merge that changes the Worker, or by hand (Actions → this workflow → Run workflow).
+# One-time setup (maintainer), repository secrets (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN          Cloudflare → My Profile → API Tokens → template "Edit Cloudflare Workers"
+#   CLOUDFLARE_ACCOUNT_ID         Cloudflare dashboard → Workers & Pages → Account ID
+#   EDIT_GATEWAY_GITHUB_TOKEN     fine-grained GitHub token, only Bforartists/Manual, Contents: read and write
+# The token is stored in the Worker as the secret GITHUB_TOKEN_EDIT. It is never written to the repo.
+
+name: Docs 2.0 deploy edit gateway
+
+on:
+  push:
+    branches: [master]
+    paths: ["docs2/worker/edit-gateway/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Deploy first, then store the GitHub token as a Worker secret.
+      # (Uploading a secret before the Worker exists fails on the very first run.)
+      - name: Deploy the Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "3.114.0"
+          workingDirectory: docs2/worker/edit-gateway
+          command: deploy
+          postCommands: |
+            echo "$EDIT_TOKEN" | npx wrangler secret put GITHUB_TOKEN_EDIT
+        env:
+          EDIT_TOKEN: ${{ secrets.EDIT_GATEWAY_GITHUB_TOKEN }}

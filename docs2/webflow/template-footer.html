@@ -66,7 +66,7 @@ var sc=q('.ui-doc-crumb-section'),first=groups[curSec]&&groups[curSec][0];
 if(sc&&first){var l=el('a',sc.className);l.href=first.getAttribute('href');l.textContent=sc.textContent;sc.replaceWith(l)}
 /* 3 doc footer card */
 var sEl=q('.ui-doc-source'),src=art.getAttribute('data-doc-source')||(sEl&&sEl.textContent.trim()),
-CMS='https://app.pagescms.org/Bforartists/Manual/'+encodeURIComponent('docs2/tier1-getting-started')+'/collection/',edit=src?CMS+(/^docs2\/snippets\//.test(src)?'snippets':'docs')+'/edit/'+encodeURIComponent(src):CMS+'docs',
+CMS='https://app.pagescms.org/bforartists/manual/'+encodeURIComponent('docs2/tier1-getting-started')+'/collection/',edit=src?CMS+(/^docs2\/snippets\//.test(src)?'snippets':'docs')+'/edit/'+encodeURIComponent(src):CMS+'docs',
 eEl=q('[data-doc-edited]'),eT=eEl&&eEl.textContent.trim(),pg=q('[data-doc-pager]');
 function half(a,cls,lab,dir){if(!a)return'<div class="ui-doc-foot-half '+cls+' is-empty"></div>';var pi=q('img:not(.ui-doc-sicon)',a);
 return'<div class="ui-doc-foot-half '+cls+'"><div class="ui-doc-foot-label">'+img('doc')+lab+'</div><a class="ui-doc-foot-go" href="'+a.getAttribute('href')+'">'+(dir<0?'<i class="ui-doc-tri is-l"></i>':'')+(pi?'<img alt="" src="'+pi.getAttribute('src')+'">':'')+'<span>'+esc(a.textContent.trim())+'</span>'+(dir>0?'<i class="ui-doc-tri"></i>':'')+'</a></div>'}

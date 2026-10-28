@@ -44,7 +44,7 @@ Shows or hides the tool settings above the header in the 3D view.
 
 Shows or hides the asset shelf at the bottom of the 3d view.
 
-## Adjust Last Operation
+## Adjust Last Operation - View Menu
 
 ![Adjust Last Operation](/docs2/images/editors/3d-viewport/header/view-menu/adjust-last-operation.png)
 

@@ -53,7 +53,7 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 ![Usage](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/usage-2.png)
 
-##### Last Operator To Sphere
+##### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-to-sphere.png)
 
@@ -89,7 +89,7 @@ The shear tool works along a imaginary 2d plane. The shear axis controls if the 
 
 To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.
 
-##### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-shear.png)
 
@@ -141,7 +141,7 @@ It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-##### Last Operator Push/Pull
+##### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-push-pull.png)
 
@@ -173,7 +173,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Warps a mesh selection between two defined points.
 
-##### Last operator Warp
+##### Adjust Last Operation - Warp
 
 
 | Entry | What it does |
@@ -196,7 +196,7 @@ The end point.
 
 This tool allows randomizes the positions of the selected vertices.
 
-##### Last Operator Randomize Transform
+##### Adjust Last Operation - Randomize Transform
 
 ![Last Operator Randomize Transform](/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/last-operator-randomize.png)
 
@@ -225,7 +225,7 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 
 ![Move Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/move-texture-space-4.png)
 
-##### Last Operator Move
+##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-move.png)
 
@@ -276,7 +276,7 @@ Note that once done and applied, there is no way to reset the UV cage back to ze
 
 ![Scale Texture Space](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/scale-texture-space-2.png)
 
-##### Last Operator Resize
+##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/3d-viewport/header/object-menu/last-operator-resize.png)
 
@@ -321,7 +321,7 @@ Set dimensions allows to scale mesh selections in absolute world values. No matt
 
 Set dimensions is an add-on. You can turn it off in the add-ons section of the user preferences when you want.
 
-##### Last Operator Set Dimensions
+##### Adjust Last Operation - Set Dimensions
 
 ###### New Dimensions
 
@@ -343,7 +343,7 @@ Mirror by hotkeys. You activate the tool, type in x for x global for example, or
 
 Mirrors the selection around the chosen axis.
 
-##### Last Operator Mirror
+##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/x-global-y-global-etc.png)
 
@@ -367,7 +367,7 @@ Constraint Axis gives you again the possibility to define the mirror axis. You c
 
 Choose several methods to snap one element to another. The menu items should be self explaining.
 
-##### Last operator Snap Selection to Cursor
+##### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-snap.png)
 
@@ -386,7 +386,7 @@ Some snap operations shows a last operation panel, some not.
 
 the lattice object along the world axis X, Y or Z .
 
-#### Last Operator Flip (Distortion Free)
+#### Adjust Last Operation - Flip (Distortion Free)
 
 ![Last Operator Flip (Distortion Free)](/docs2/images/editors/3d-viewport/header/lattice-edit-mode-lattice-menu/last-operator-flip-distortion-free.png)
 
@@ -422,7 +422,7 @@ Creates a new Hook Modifier for the active object and assigns it to the selected
 
 Does the same as *Hook to New Object*, but instead of hooking the vertices to a new empty, it hooks them to the selected object (if it exists). There should be only one selected object (besides the mesh being edited).
 
-###### Last Operator Hook to Selected Object
+###### Adjust Last Operation - Hook to Selected Object
 
 ![Last Operator Hook to Selected Object](/docs2/images/editors/3d-viewport/header/lattice-edit-mode-lattice-menu/last-operator-hook-to-selected-object.png)
 
@@ -488,7 +488,7 @@ When you click at the widget of the active tool, then you perform the tool actio
 | Tweak, Select Box, Circle and Lasso | When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default. |
 
 
-###### Last Operator Shear
+###### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/3d-viewport/tool-shelf/armature-edit-mode/last-operator-shear.png)
 
@@ -552,7 +552,7 @@ Call this menu with double right click in the 3D viewport. You need to be in Edi
 | Origin to Center of Mass(Volume) | Sets the origin to the center of mass, calculating from the center of the Volume. It must be manifold geometry with consistent normal's. |
 
 
-##### Last Operator Set Origin
+##### Adjust Last Operation - Set Origin
 
 ![Last Operator Set Origin](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-set-origin.png)
 
@@ -573,7 +573,7 @@ Copies the selected object(s).
 
 Pastes copied object(s).
 
-##### Last Operator Paste Selection from Buffer
+##### Adjust Last Operation - Paste Selection from Buffer
 
 ###### Select
 
@@ -597,7 +597,7 @@ You are automatically in grab mode, and so you can easily move the object out of
 
 When you drag the duplicate around you will see the position values in the header.
 
-##### Last Operator Duplicate
+##### Adjust Last Operation - Duplicate
 
 ![Last Operator Duplicate](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-duplicate.png)
 
@@ -658,7 +658,7 @@ Activate the tool. In the header you will now see further instructions. Which is
 | X Y Z Local | Mirrors along the object axis. |
 
 
-##### Last Operator Mirror
+##### Adjust Last Operation - Mirror
 
 ![Last Operator Mirror](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror.png)
 
@@ -695,7 +695,7 @@ Snaps the currently selected object(s) to the cursor location.
 
 Snaps the currently selected object(s) to the cursor location, but keeps the offset of the selected objects to each other. Means the center of the current selection goes to cursor position. Not every individual object.
 
-###### Last operator Snap Selection to Cursor
+###### Adjust Last Operation - Snap Selection to Cursor
 
 ![Last operator Snap Selection to Cursor](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-snap-selection-to-cursor.png)
 
@@ -847,7 +847,7 @@ Create a mesh or curve object, create an object, hold down shift and select the 
 | Object (Attach Curves to Surface) | Parent a Hair Curve to the surface of a new object. |
 
 
-##### Last Operator Make Parent
+##### Adjust Last Operation - Make Parent
 
 ![Last Operator Make Parent](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-make-parent.png)
 
@@ -871,7 +871,7 @@ Clear Parent clears the parent relation completely, including involved modifiers
 | Clear Parent Inverse | Clear Parent Inverse resets the transform corrections applied to the parenting relationship. It does not remove the parenting itself. |
 
 
-###### Last Operator Clear Parent
+###### Adjust Last Operation - Clear Parent
 
 ![Last Operator Clear Parent](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-clear-parent.png)
 
@@ -889,7 +889,7 @@ By clicking at this menu item a popup will appear choose the new collection. All
 
 This operator can also be found in the Header Object menu.
 
-##### Last Operator Move to Collection
+##### Adjust Last Operation - Move to Collection
 
 ![Last Operator Move to Collection](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-move-to-collection.png)
 
@@ -942,7 +942,7 @@ Makes all geometry in the scene visible again.
 
 Hides the selected geometry.
 
-###### Last Operator Hide Selected
+###### Adjust Last Operation - Hide Selected
 
 ![Last Operator Hide Selected](/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-hide-selected.png)
 

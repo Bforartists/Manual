@@ -141,6 +141,62 @@ def check_editor_safe(pages, rep):
             rep.passed["🖋️ Editor-safe"] += 1
 
 
+def check_style(pages, rep):
+    """Formatting standard (docs2/dev-docs/Formatting-Standard.md). Warnings only, one line per page and kind."""
+    C = "🎨 Style"
+    last_op = re.compile(r"^(repeat last|last operator|adjust last operation)", re.I)
+    for p in pages:
+        heads, skips, bold, tables = [], [], [], []
+        lines = list(p.lines())
+        prev = 0
+        for idx, (n, line) in enumerate(lines):
+            m = re.match(r"^(#{1,6})\s+(.*?)\s*$", line)
+            if m:
+                lv = len(m.group(1))
+                heads.append((idx, n, lv, m.group(2)))
+                if prev and lv > prev + 1:
+                    skips.append(n)
+                prev = lv
+                continue
+            if re.match(r"^\*\*[^*]+\*\*\s*:?\s*$", line):
+                bold.append(n)
+            if re.match(r"^\|\s*(Entry|Option|Item)\s*\|\s*What it does\s*\|", line, re.I):
+                tables.append(n)
+        bad = False
+        if skips:
+            rep.warn(p, skips[0], C, f"{len(skips)} heading level skip(s), for example `##` straight to `####`; never skip a level")
+            bad = True
+        if bold:
+            rep.warn(p, bold[0], C, f"{len(bold)} bold line(s) used as a heading; make them real headings")
+            bad = True
+        if tables:
+            rep.warn(p, tables[0], C, f"{len(tables)} \"Entry / What it does\" table(s); operators and settings become sub-headings")
+            bad = True
+        # Adjust Last Operation: the UI name, a sentence and a capture
+        wrong_name, incomplete = [], []
+        for k, (idx, n, lv, text) in enumerate(heads):
+            if not last_op.match(text):
+                continue
+            if not text.strip().lower().startswith("adjust last operation"):
+                wrong_name.append(n)
+            end = heads[k + 1][0] if k + 1 < len(heads) else len(lines)
+            body = [l for _, l in lines[idx + 1:end]]
+            has_img = any("![" in l for l in body)
+            has_sentence = any(l.strip() and not l.lstrip().startswith(("|", "!", "-", "*", ">")) for l in body)
+            if not has_img or not has_sentence:
+                incomplete.append((n, has_img, has_sentence))
+        if wrong_name:
+            rep.warn(p, wrong_name[0], C, f"{len(wrong_name)} heading(s) not named **Adjust Last Operation** (the name the UI uses)")
+            bad = True
+        if incomplete:
+            no_img = sum(1 for _, i, _ in incomplete if not i)
+            no_sen = sum(1 for _, _, t in incomplete if not t)
+            rep.warn(p, incomplete[0][0], C, f"{len(incomplete)} Adjust Last Operation section(s) incomplete ({no_img} without a capture, {no_sen} without a sentence)")
+            bad = True
+        if not bad:
+            rep.passed[C] += 1
+
+
 def check_nav(repo, rep):
     nav = os.path.join(repo, DOCS_ROOT, "nav.yml")
     if not os.path.exists(nav):
@@ -239,6 +295,7 @@ def main(argv):
     check_links(repo, pages, rep)
     check_shared(repo, pages, rep)
     check_editor_safe(pages, rep)
+    check_style(pages, rep)
     check_nav(repo, rep)
     check_workspaces(repo, rep)
     md = markdown(rep, changed, len(pages))

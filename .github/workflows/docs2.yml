@@ -116,28 +116,12 @@ jobs:
             --check _check.md --bot _bot.md --only $only
 
       - name: Publish preview to GitHub Pages
-        id: publish
         if: env.SAME_REPO == 'true'
         continue-on-error: true
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: _preview
-          destination_dir: preview/${{ env.PREVIEW_DIR }}
-          keep_files: true
-          commit_message: "preview: ${{ env.PREVIEW_DIR }} [docs-bot]"
-
-      - name: Publish preview to GitHub Pages (second try)
-        if: env.SAME_REPO == 'true' && steps.publish.outcome == 'failure'
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: _preview
-          destination_dir: preview/${{ env.PREVIEW_DIR }}
-          keep_files: true
-          commit_message: "preview: ${{ env.PREVIEW_DIR }} [docs-bot]"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash docs2/tools/publish_pages.sh _preview "preview/${PREVIEW_DIR}" "preview: ${PREVIEW_DIR} [docs-bot]"
 
       - name: Keep the preview as a download too
         uses: actions/upload-artifact@v4
@@ -156,11 +140,20 @@ jobs:
       - name: 💬 Comment on the pull request
         if: github.event_name == 'pull_request' && env.SAME_REPO == 'true'
         uses: actions/github-script@v7
+        env:
+          CHANGED_FILES: ${{ steps.changed.outputs.files }}
         with:
           script: |
             const fs = require('fs');
             const marker = '<!-- docs2-bot -->';
-            const body = [marker,
+            // ✏️ one click back into the editor, on this PR's own branch
+            const branch = process.env.BRANCH;
+            const cms = 'https://app.pagescms.org/bforartists/manual/' + encodeURIComponent(branch) + '/collection/';
+            const changed = (process.env.CHANGED_FILES || '').split(/\s+/).filter(f => /^docs2\/(content|snippets)\/.*\.md$/.test(f)).slice(0, 8);
+            const edit = [`[![Edit this branch in Pages CMS](https://img.shields.io/badge/Edit_this_branch-Pages_CMS-2ea44f?style=for-the-badge&logo=markdown&logoColor=white)](${cms}docs)`]
+              .concat(changed.length ? ['', 'Changed pages: ' + changed.map(f => `[${f.replace(/^docs2\/(content|snippets)\//, '').replace(/\/index\.md$|\.md$/, '')}](${cms}${f.startsWith('docs2/snippets/') ? 'snippets' : 'docs'}/edit/${encodeURIComponent(f)})`).join(' · ')] : [])
+              .join('\n');
+            const body = [marker, edit, '',
               `## 👀 [Open the preview](${process.env.PREVIEW_URL})`,
               'Built with the website\'s doc kit styles. Updates on every push.', '',
               fs.readFileSync('_check.md', 'utf8'), '',
@@ -187,14 +180,10 @@ jobs:
 
       - name: 🧭 Publish the sidebar (nav.json) to GitHub Pages
         if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH && steps.check.outcome == 'success' && hashFiles('_nav/nav.json') != ''
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: _nav
-          destination_dir: nav
-          keep_files: true
-          commit_message: "nav: ${{ github.sha }} [docs-bot]"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash docs2/tools/publish_pages.sh _nav nav "nav: ${{ github.sha }} [docs-bot]"
 
       - name: 🎛️ Prepare the site scripts (one file per version)
         if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH
@@ -210,14 +199,10 @@ jobs:
 
       - name: 🎛️ Publish the docs layer to GitHub Pages
         if: github.event_name != 'pull_request' && env.BRANCH == env.PUBLISH_BRANCH && hashFiles('_layer/*.js') != ''
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: _layer
-          destination_dir: webflow
-          keep_files: true
-          commit_message: "docs layer: ${{ github.sha }} [docs-bot]"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash docs2/tools/publish_pages.sh _layer webflow "docs layer: ${{ github.sha }} [docs-bot]"
 
       - name: Fail when checks found problems
         if: steps.check.outcome == 'failure'

@@ -74,7 +74,7 @@ This mode comes with masking functionality. You can mask out parts of the image.
 
 # Header Tools and Options
 
-### Image Editor - Header Tools
+## Image Editor - Header Tools
 
 The header contains several tools, depends on what you do and what toolset is selected. The render result has some additional functionality.
 
@@ -88,7 +88,7 @@ The header contains several tools, depends on what you do and what toolset is se
 
 ![Image Editor - Header Tools](/docs2/images/editors/image-editor/header/header-tools-and-options/image-editor-header-tools-5.png)
 
-#### Image Prop
+### Image Prop
 
 ![Image Prop](/docs2/images/editors/image-editor/header/header-tools-and-options/image-prop.png)
 
@@ -106,11 +106,11 @@ From left to right ...
 | Image Edit Box | Read the name of the currently selected image. And you can rename the image here too. |
 | Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
 
-##### Search form
+#### Search form
 
 Search for specific images.
 
-###### New Image
+##### New Image
 
 ![New Image](/docs2/images/editors/image-editor/header/header-tools-and-options/new-image.png)
 
@@ -124,17 +124,17 @@ Creates a new image. You will get a dialog where you can define settings for the
 | Width | The width of the new image. |
 | Height | The height of the new image. |
 
-###### Color
+##### Color
 
 ![Color](/docs2/images/editors/image-editor/header/header-tools-and-options/color.png)
 
 Adjust the color of the new image. A click will call a color picker.
 
-###### Alpha
+##### Alpha
 
 Check this checkbox if the new image should have an alpha channel.
 
-###### Generated Type
+##### Generated Type
 
 ![Generated Type](/docs2/images/editors/image-editor/header/header-tools-and-options/generated-type.png)
 
@@ -146,15 +146,15 @@ UV Grid is a checker texture in black and white.
 
 Color Grid is a colored checker texture.
 
-###### 32 Bit Float
+##### 32 Bit Float
 
 Check this checkbox if the image should be in 32 Bit floating point bit depth per channel. Else it is in 8 bit per channel.
 
-###### Duplicate
+##### Duplicate
 
 Not supported here.
 
-###### Unlink Datablock
+##### Unlink Datablock
 
 This deletes the selected image. Unfortunately not immediately. You need to save the scene and to reload it.
 
@@ -167,13 +167,13 @@ And you need to make sure that it is not linked to anything else. A mesh or a fa
 | Unpack | Unpack packed files to a directory. |
 | User | The number of users that uses this data. Data with a user number of 0 will be removed with closing Bforartists. |
 
-#### Use Image Pin
+### Use Image Pin
 
 ![Use Image Pin](/docs2/images/editors/image-editor/header/header-tools-and-options/use-image-pin.png)
 
 When you select another object. for UV mapping for example, then usually the connected images for this object gets displayed. Use image pin nails the currently selected image so that it stays displayed.
 
-#### Mask Prop
+### Mask Prop
 
 ![Mask Prop](/docs2/images/editors/image-editor/header/header-tools-and-options/mask-prop.png)
 
@@ -185,17 +185,17 @@ Masks are independent from a particular image of movie clip, and so they can als
 
 Masks can be driven over the time so that they follow some object from the footage. For example a running actor. This can be achieved with shape keys or parenting the mask to tracking markers.
 
-##### List of Masks
+#### List of Masks
 
 ![List of Masks](/docs2/images/editors/image-editor/header/header-tools-and-options/list-of-masks.png)
 
 This is a list of the masks in the scene. Here you can switch to other masks.
 
-##### Mask Edit Box
+#### Mask Edit Box
 
 Read the name of the currently selected mask. And you can rename the image mask too.
 
-##### Fake User
+#### Fake User
 
 Wit this button you assign a fake user to this selected mask. Masks gets created with a fake user already. Means when you save the scene and reopen it, then this mask will still be there.
 
@@ -206,7 +206,7 @@ Data, like images, that is not longer linked to anything else gets removed when 
 | Search form | Search for specific images. |
 | Create Mask | Adds a new mask. |
 
-##### Unlink Datablock
+#### Unlink Datablock
 
 This deletes the selected mask. Unfortunately not immediately. You need to save the scene and to reload it.
 
@@ -214,23 +214,23 @@ This deletes the selected mask. Unfortunately not immediately. You need to save 
 
 And you need to make sure that it is not linked to anything else. A mesh or a fake user for example. Have a look if there is a number besides the F button. When this is the case then the image has still a user, and so still loads with loading the scene.
 
-#### Pivot
+### Pivot
 
 ![Pivot](/docs2/images/editors/image-editor/header/header-tools-and-options/pivot.png)
 
 In Mask mode. Adjust what pivot point the mask uses for transformation.
 
-#### Proportional Editing
+### Proportional Editing
 
 In Mask mode. Enable proportional editing.
 
-#### Proportional Editing Settings
+### Proportional Editing Settings
 
 ![Proportional Editing Settings](/docs2/images/editors/image-editor/header/header-tools-and-options/proportional-editing-settings.png)
 
 Proportional Editing is a way of transforming selected elements (such as vertices) while having that transformation affect other nearby elements with a falloff. For example, moving a single vertex will move unselected vertices within a given range. And the falloff means that selected vertices that are closer to the selected vertex will move more than those farther from it.
 
-##### Proportional Size
+#### Proportional Size
 
 ![Proportional Size](/docs2/images/editors/image-editor/header/header-tools-and-options/proportional-size.png)
 
@@ -246,7 +246,7 @@ The exact radius value can be read in the header while transformation.
 
 And it can also be read and edited at the Proportional Size slider in the Proportional Editing panel.
 
-#### Show Gizmos
+### Show Gizmos
 
 ![Show Gizmos](/docs2/images/editors/image-editor/header/header-tools-and-options/show-gizmos.png)
 
@@ -256,17 +256,17 @@ Navigate
 
 Display the navigation gizmos in the Image Editor
 
-#### Overlays
+### Overlays
 
 ![Overlays](/docs2/images/editors/image-editor/header/header-tools-and-options/overlays.png)
 
 Display the overlays in the viewport.
 
-##### Overlays settings
+#### Overlays settings
 
-###### Geometry
+##### Geometry
 
-###### Display UV’s
+##### Display UV’s
 
 Display overlay of UV layer.
 
@@ -275,17 +275,17 @@ Display overlay of UV layer.
 | Faces | The opacity of the faces of the UV layer. |
 | Edges | The opacity of the edges of the UV layer. |
 
-###### Image
+##### Image
 
-###### Show Metadata
+##### Show Metadata
 
 Display existing metadata in the viewport.
 
-###### In Mask mode
+##### In Mask mode
 
 ![In Mask mode](/docs2/images/editors/image-editor/header/header-tools-and-options/in-mask-mode.png)
 
-###### Spline
+##### Spline
 
 **Edge Display type**
 
@@ -293,7 +293,7 @@ Display existing metadata in the viewport.
 
 How to display the spline.
 
-###### Overlay
+##### Overlay
 
 ![Overlay](/docs2/images/editors/image-editor/header/header-tools-and-options/overlay.png)
 
@@ -301,7 +301,7 @@ How to display the spline.
 
 Show the alpha channel of the mask.
 
-#### Display Channels
+### Display Channels
 
 ![Display Channels](/docs2/images/editors/image-editor/header/header-tools-and-options/display-channels.png)
 
@@ -316,17 +316,17 @@ Adjust what channels of the image gets displayed.
 | Green | Displays the green channel of the image. |
 | Blue | Displays the blue channel of the image. |
 
-#### Mask Display
+### Mask Display
 
 ![Mask Display](/docs2/images/editors/image-editor/header/header-tools-and-options/mask-display.png)
 
 In Mask mode and with a Render result. Adjust the display of the mask.
 
-##### Smooth
+#### Smooth
 
 Smoothens the outline of the mask curve.
 
-##### Overlay
+#### Overlay
 
 ![Overlay](/docs2/images/editors/image-editor/header/header-tools-and-options/overlay-2.png)
 
@@ -334,13 +334,13 @@ Smoothens the outline of the mask curve.
 
 When it's a closed curve then this closed area gets displayed as filled where it covers the image. When you tick Overlay then the drop down box becomes active where you can choose the overlay method.
 
-##### Edge Display Type
+#### Edge Display Type
 
 ![Edge Display Type](/docs2/images/editors/image-editor/header/header-tools-and-options/edge-display-type-2.png)
 
 The mask curve can be displayed in different styles.
 
-#### Slot
+### Slot
 
 ![Slot](/docs2/images/editors/image-editor/header/header-tools-and-options/slot.png)
 
@@ -350,7 +350,7 @@ You need to render into this slot. So you need to choose it beforehand. Slots wi
 
 ![Slot](/docs2/images/editors/image-editor/header/header-tools-and-options/slot-2.png)
 
-#### Layers
+### Layers
 
 ![Layers](/docs2/images/editors/image-editor/header/header-tools-and-options/layers.png)
 
@@ -366,7 +366,7 @@ Using View Layers can also save you from having to re-render your entire image e
 
 You can create more View Layers in the Properties editor. In the View Layer Tab.
 
-#### Pass
+### Pass
 
 ![Pass](/docs2/images/editors/image-editor/header/header-tools-and-options/pass.png)
 
@@ -377,7 +377,7 @@ Here you can set the pass mode. Combined or Depth.
 | Combined | The final combination of render passes with everything included. |
 | Depth | Just the Depth render pass. |
 
-#### Show Stereo
+### Show Stereo
 
 ![Show Stereo](/docs2/images/editors/image-editor/header/header-tools-and-options/show-stereo.png)
 
@@ -385,46 +385,46 @@ Here you can set the pass mode. Combined or Depth.
 
 Just with stereoscopy enabled. Shows either the stereoscopic image. Or a single image from one of the cameras.
 
-##### View
+#### View
 
 Show the image from one of the cameras in the list.
 
-### Options Panel
+## Options Panel
 
 ![Options Panel](/docs2/images/editors/image-editor/header/header-tools-and-options/options-panel.png)
 
-#### In View and Mask mode
+### In View and Mask mode
 
 | Entry | What it does |
 | -------------------- | -------------------------------------------------------------------------------- |
 | Update Automatically | Update other editor windows simultaneously with the changes in the Image Editor. |
 | Show Metadata | Draw Metadata properties of the image. |
 
-#### In Paint Mode
+### In Paint Mode
 
-##### Update Automatically
+#### Update Automatically
 
 ![Update Automatically](/docs2/images/editors/image-editor/header/header-tools-and-options/update-automatically.png)
 
 Update other editor windows simultaneously with the changes in the Image Editor.
 
-##### Show Metadata
+#### Show Metadata
 
 Draw Metadata properties of the image.
 
-##### Display Texture Paint UV's
+#### Display Texture Paint UV's
 
 ![Display Texture Paint UV's](/docs2/images/editors/image-editor/header/header-tools-and-options/display-texture-paint-uv-s.png)
 
 Display the UV wire from the active mesh. It needs to be in edit mode.
 
-##### Show same material
+#### Show same material
 
 This is for the case that you work at a texture for the current mesh. Just show faces of the mesh where the material with this texture is assigned to.
 
 # Quick Menu
 
-### Quick Menu
+## Quick Menu
 
 ![Quick Menu](/docs2/images/editors/image-editor/header/quick-menu/quick-menu.png)
 
@@ -438,7 +438,7 @@ Note that added operators in this menu does not have icons. Just text.
 
 Note also that the Quick menu for the Image editor shares the content with the Quick menu from the UV editor.
 
-#### Adding an operator to the Quick menu
+### Adding an operator to the Quick menu
 
 ![Adding an operator to the Quick menu](/docs2/images/editors/image-editor/header/quick-menu/adding-an-operator-to-the-quick-menu.png)
 
@@ -454,7 +454,7 @@ As a rule of thumb, when the right click menu has an Add to Quick Favorites, the
 
 Note that you can also add operators from the tool shelf at the left. And also operators from other editor types. Some other editors have their own quick menu though. The Image Editor for example. These operators gets added in the quick menu of the image editor then. And does not show in the quick menu in the header of the 3D view.
 
-#### Adding a menu to the Quick menu
+### Adding a menu to the Quick menu
 
 ![Adding a menu to the Quick menu](/docs2/images/editors/image-editor/header/quick-menu/adding-a-menu-to-the-quick-menu.png)
 
@@ -462,17 +462,17 @@ It is also possible to add a menu to the Quick menu. For example the whole Add m
 
 ![Adding a menu to the Quick menu](/docs2/images/editors/image-editor/header/quick-menu/adding-a-menu-to-the-quick-menu-2.png)
 
-#### Order
+### Order
 
 You might notice that the add menu adds at the top of the menu, and not at the bottom as you would expect. First comes menus, then comes operators. And they get added in the order in which you add them.
 
 Besides that, operators and menus gets added in the order that you add them. They cannot be sorted afterwards. So be careful how you add them. You can of course always remove operators and menus, and re-add them at the end of the list.
 
-#### Removing an operator from the Quick menu
+### Removing an operator from the Quick menu
 
 > The **Quick Favorites** menu (Q) holds the tools and menus you add to it yourself. See **[Quick Favorites](../../../interface/floating-menus.md#quick-favorites)** in the Interface chapter.
 
-#### Context and mode dependent content
+### Context and mode dependent content
 
 The quick favorites. menu exists in nearly all editors. But it is just in the 3D view available in the header. So that you know this functionality exists. In the other editors you call it with hotkey Q.
 
@@ -480,7 +480,7 @@ The content of the quick favorites. menu changes, dependent over which editor yo
 
 # View Menu
 
-### Image Editor - View Menu
+## Image Editor - View Menu
 
 The View menu contains all View related tools.
 
@@ -496,29 +496,29 @@ It is available in all sub modes. With a render result the view image shows a di
 
 ![Image Editor - View Menu](/docs2/images/editors/image-editor/header/view-menu/image-editor-view-menu-5.png)
 
-#### Toolbar
+### Toolbar
 
 ![Toolbar](/docs2/images/editors/image-editor/header/view-menu/toolbar.png)
 
 Shows or hides the toolbar at the left.
 
-#### Sidebar
+### Sidebar
 
 ![Sidebar](/docs2/images/editors/image-editor/header/view-menu/sidebar.png)
 
 Shows or hides the sidebar at the right in the viewport.
 
-#### Tool Settings
+### Tool Settings
 
 ![Tool Settings](/docs2/images/editors/image-editor/header/view-menu/tool-settings.png)
 
 Shows or hides the tool settings above the header in the 3D view.
 
-#### Asset Shelf
+### Asset Shelf
 
 Not yet. The asset shelf is planned but not implemented yet.
 
-#### Adjust Last Operation
+### Adjust Last Operation - Image Editor - View Menu
 
 ![Adjust Last Operation](/docs2/images/editors/image-editor/header/view-menu/adjust-last-operation.png)
 
@@ -526,17 +526,17 @@ Shows or hides the Adjust Last Operation panel down left.
 
 Note that the Adjust Last Operation menu item in the Edit menu in the main header and the Last button in the toolbar are not related and not functional with this last operator panel. It is an independent element.
 
-#### Legacy submenu
+### Legacy submenu
 
 ![Legacy submenu](/docs2/images/editors/image-editor/header/view-menu/legacy-submenu.png)
 
 This menu contains legay operators that are now available in the tool shelf.
 
-##### Set 2D Cursor
+#### Set 2D Cursor
 
 Mask mode only. Set the 2D cursor position. Hotkey only tool! Please use the hotkey!
 
-#### Annotations (Legacy) submenu
+### Annotations (Legacy) submenu
 
 ![Annotations (Legacy) submenu](/docs2/images/editors/image-editor/header/view-menu/annotations-legacy-submenu.png)
 
@@ -559,7 +559,7 @@ This group of operators is useful to take notes without changing tool-shelf oper
 | Zoom Out | Zooms out of the viewport. |
 | Zoom Border | Draws a rectangle and zooms then to fit the size of this rectangle. Zooming in is done with drawing the rectangle with left mouse button. Zooming out is done with drawing the rectangle with middle mouse button. |
 
-#### Zoom submenu
+### Zoom submenu
 
 ![Zoom submenu](/docs2/images/editors/image-editor/header/view-menu/zoom-submenu.png)
 
@@ -576,7 +576,7 @@ A sub menu where you can choose between predefined zoom factors.
 | Render Slot Cycle Next | Render result only. Cycle through the Render slots. |
 | Render Slot Cycle Previous | Render result only. Cycle through the Render slots. |
 
-#### Area submenu
+### Area submenu
 
 ![Area submenu](/docs2/images/editors/image-editor/header/view-menu/area-submenu.png)
 
@@ -587,7 +587,7 @@ This menu contains general view functionality. And exists in most other editor t
 | Horizontal Split | Splits the current view horizontally into two independent editor windows. |
 | Vertical Split | Splits the current view vertically into two independent editor windows. |
 
-##### Duplicate Area into New Window
+#### Duplicate Area into New Window
 
 ![Duplicate Area into New Window](/docs2/images/editors/image-editor/header/view-menu/duplicate-area-into-new-window.png)
 
@@ -599,7 +599,7 @@ This menu contains general view functionality. And exists in most other editor t
 | Toggle Full screen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Ctrl + Alt + Space. |
 | Close Area | Closes the area window. |
 
-#### Pie menus submenu
+### Pie menus submenu
 
 ![Pie menus submenu](/docs2/images/editors/image-editor/header/view-menu/pie-menus-submenu.png)
 
@@ -607,7 +607,7 @@ Lists the available pie menus, and gives you the ability to read the hotkeys and
 
 # Image Menu
 
-### Image Editor - Image Menu
+## Image Editor - Image Menu
 
 ![Image Editor - Image Menu](/docs2/images/editors/image-editor/header/image-menu/image-editor-image-menu.png)
 
@@ -619,7 +619,7 @@ It is available in all sub modes. But not all content shows in all combinations.
 
 ![Image Editor - Image Menu](/docs2/images/editors/image-editor/header/image-menu/image-editor-image-menu-3.png)
 
-#### New
+### New
 
 ![New](/docs2/images/editors/image-editor/header/image-menu/new.png)
 
@@ -631,17 +631,17 @@ Creates a new image. You will get a dialogue where you can define settings for t
 | Width | The width of the new image. |
 | Height | The height of the new image. |
 
-##### Colour
+#### Colour
 
 ![Colour](/docs2/images/editors/image-editor/header/header-tools-and-options/color.png)
 
 Adjust the colour of the new image. A click will call a colour picker.
 
-##### Alpha
+#### Alpha
 
 Check this checkbox if the new image should have an alpha channel.
 
-##### Generated Type
+#### Generated Type
 
 ![Generated Type](/docs2/images/editors/image-editor/header/image-menu/generated-type.png)
 
@@ -653,15 +653,15 @@ UV Grid is a checker texture in black and white.
 
 Colour Grid is a coloured checker texture.
 
-##### 32 Bit Float
+#### 32 Bit Float
 
 Check this checkbox if the image should be in 32 Bit floating point bit depth per channel. Else it is in 8 bit per channel.
 
-#### Open Image
+### Open Image
 
 Opens the file browser to load an image.
 
-#### Open Cached Render
+### Open Cached Render
 
 ![Open Cached Render](/docs2/images/editors/image-editor/header/image-menu/open-cached-render.png)
 
@@ -683,7 +683,7 @@ This feature can be be used to save RAM while rendering because the render layer
 | Save Copy | Saves a copy of the currently selected image. This will save the file to a specified name, but will keep the old one open in the Image editor. |
 | Save all Images | Saves all images. Note that the images must already exist somewhere at your hard disk so that they can be saved. The item is greyed out as long as the image is not saved to disk. |
 
-#### Invert
+### Invert
 
 ![Invert](/docs2/images/editors/image-editor/header/image-menu/invert.png)
 
@@ -691,7 +691,7 @@ Invert is a sub menu where you can invert the colors of the whole image, or just
 
 > **Note:** This only shows when in the when not viewing the Viewer or Render Result.
 
-#### Resize
+### Resize
 
 ![Resize](/docs2/images/editors/image-editor/header/image-menu/resize.png)
 
@@ -699,7 +699,7 @@ Allows you to change the dimensions of the image. The tool calls a resize panel.
 
 > **Note:** This only shows when in the when not viewing the Viewer or Render Result.
 
-#### Transform
+### Transform
 
 ![Transform](/docs2/images/editors/image-editor/header/image-menu/transform.png)
 
@@ -713,7 +713,7 @@ Allows you to change the dimensions of the image. The tool calls a resize panel.
 | Rotate Counter-Clockwise 90° | Rotate the image to the left by 90 degrees. |
 | Rotate Flip 180° | Rotate the image to the right by 180 degrees and flip the image upside down. |
 
-#### Pack Image / Pack as PNG
+### Pack Image / Pack as PNG
 
 ![Pack Image / Pack as PNG](/docs2/images/editors/image-editor/header/image-menu/pack-image-pack-as-png.png)
 
@@ -725,7 +725,7 @@ Packed images are marked with a pack icon. A click at this icon will unpack the 
 
 > **Warning:** You cannot modify packed images. Changes at the image will not be saved. You need to unpack the image when you want to modify it. And repack it after you have done the changes.
 
-#### Extract Palette
+### Extract Palette
 
 ![Extract Palette](/docs2/images/editors/image-editor/header/image-menu/extract-palette.png)
 
@@ -737,7 +737,7 @@ Allows you to extract a color palette from a loaded image, useful for brush base
 
 # Select Menu
 
-### Image Editor - Select menu
+## Image Editor - Select menu
 
 ![Image Editor - Select menu](/docs2/images/editors/image-editor/header/select-menu/image-editor-select-menu.png)
 
@@ -751,17 +751,17 @@ This menu just appears when you are in Mask mode. And you need to create a new m
 | Box Select | Border select enters the Border Select mode. This is a special select mode where you can select elements by dragging a rectangle. And what's inside of the rectangle gets selected then. It adds to selection by default. To subtract from selection hold down Shift key. The selection gets applied when you release the mouse. You leave the mode automatically when you release the mouse. |
 | Circle Select | Circle select enters the Circle Select mode. This is a special select mode where you can select elements by moving with the mouse over it. It adds to selection by default. To subtract from selection hold down Shift key. To exit the Circle select click with the right mouse button. The pencil radius of the circle select tool can be adjusted with the scroll wheel. |
 
-#### Lasso Select submenu
+### Lasso Select submenu
 
 ![Lasso Select submenu](/docs2/images/editors/image-editor/header/select-menu/lasso-select-submenu.png)
 
 A sub menu with the available lasso select modes.
 
-#### Linked
+### Linked
 
 Select all vertices linked to the active spline(s). The previous selection gets cleared.
 
-#### More / Less submenu
+### More / Less submenu
 
 ![More / Less submenu](/docs2/images/editors/image-editor/header/select-menu/more-less-submenu.png)
 
@@ -772,7 +772,7 @@ Select all vertices linked to the active spline(s). The previous selection gets 
 
 # Add Menu
 
-### Image Editor - Add menu
+## Image Editor - Add menu
 
 ![Image Editor - Add menu](/docs2/images/editors/image-editor/header/add-menu/image-editor-add-menu.png)
 
@@ -784,13 +784,13 @@ They can be moved, rotated and resized with the usual W E R keys. See also mask 
 
 You can add multiple spline curves to a mask layer.
 
-#### Circle
+### Circle
 
 ![Circle](/docs2/images/editors/image-editor/header/add-menu/circle.png)
 
 Adds a circle shaped spline curve.
 
-##### Last Operator Add Circle
+#### Adjust Last Operation - Add Circle
 
 ![Last Operator Add Circle](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-circle.png)
 
@@ -799,13 +799,13 @@ Adds a circle shaped spline curve.
 | Size | The size of the circle spline curve. |
 | Location X Y | The location of the circle spline curve. Calculation happens from the center of the spline. 0 / 0 is down left. |
 
-#### Square
+### Square
 
 ![Square](/docs2/images/editors/image-editor/header/add-menu/square.png)
 
 Adds a square shaped spline curve.
 
-##### Last Operator Add Square
+#### Adjust Last Operation - Add Square
 
 ![Last Operator Add Square](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-square.png)
 
@@ -814,21 +814,21 @@ Adds a square shaped spline curve.
 | Size | The size of the square spline curve. |
 | Location X Y | The location of the square spline curve. Calculation happens from the center of the spline. 0 / 0 is down left. |
 
-#### Add Vertex and Slide
+### Add Vertex and Slide
 
 ![Add Vertex and Slide](/docs2/images/editors/image-editor/header/add-menu/add-vertex-and-slide.png)
 
 Allows you to draw freehand curves by holding down shift and clicking into the viewport. Hotkey only functionality!
 
-##### Last Operator Add Vertex and Slide
+#### Adjust Last Operation - Add Vertex and Slide
 
 ![Last Operator Add Vertex and Slide](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-vertex-and-slide.png)
 
-###### Location X / Y
+##### Location X / Y
 
 Adjust the location of the last created curve point.
 
-#### Feather vertex slide
+### Feather vertex slide
 
 ![Feather vertex slide](/docs2/images/editors/image-editor/header/add-menu/feather-vertex-slide.png)
 
@@ -836,51 +836,51 @@ Create and define a feathering outline curve.
 
 Usage: Hold down shift + control, click at a vertex, and pull outwards. This will create the feathering outline curve, displayed in green.
 
-##### Last Operator Add Feather Vertex and Slide
+#### Adjust Last Operation - Add Feather Vertex and Slide
 
 ![Last Operator Add Feather Vertex and Slide](/docs2/images/editors/image-editor/header/add-menu/last-operator-add-feather-vertex-and-slide.png)
 
-###### Location X / Y
+##### Location X / Y
 
 Adjust the location of the last created feather curve point.
 
 # Mask Menu
 
-### Image Editor - Mask menu
+## Image Editor - Mask menu
 
 ![Image Editor - Mask menu](/docs2/images/editors/image-editor/header/mask-menu/image-editor-mask-menu.png)
 
 This menu appears when you are in Mask mode. It contains further functionality to modify the masking spline curves.
 
-#### Transform submenu
+### Transform submenu
 
 ![Transform submenu](/docs2/images/editors/image-editor/header/mask-menu/transform-submenu.png)
 
 This is a sub menu with some transform menu items. This menu items are hotkey tools!
 
-##### Translate
+#### Translate
 
 Move the selection.
 
-###### Last Operator Move
+##### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/image-editor/header/mask-menu/last-operator-move.png)
 
-###### Move X, Y Z
+##### Move X, Y Z
 
 The position. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and moves relative to this zero then. For the actual location values have a look in the sidebar in the transform panel.
 
-###### Orientation
+##### Orientation
 
 ![Orientation](/docs2/images/editors/image-editor/header/mask-menu/orientation.png)
 
 The widget can have different orientations. The menu items should be self explaining.
 
-###### Mirror Editing
+##### Mirror Editing
 
 Enables mirror editing.
 
-###### Proportional editing
+##### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/image-editor/header/mask-menu/proportional-editing.png)
 
@@ -893,11 +893,11 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
 
-##### Rotate
+#### Rotate
 
 Rotate the selection.
 
-###### Last Operator Rotate
+##### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/image-editor/header/mask-menu/last-operator-rotate.png)
 
@@ -906,17 +906,17 @@ Rotate the selection.
 | Angle | The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel. |
 | Axis | Which axis to rotate. |
 
-###### Orientation
+##### Orientation
 
 ![Orientation](/docs2/images/editors/image-editor/header/mask-menu/orientation.png)
 
 The widget can have different orientations. The menu items should be self explaining.
 
-###### Mirror Editing
+##### Mirror Editing
 
 Enables mirror editing.
 
-###### Proportional editing
+##### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/image-editor/header/mask-menu/proportional-editing.png)
 
@@ -929,11 +929,11 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
 
-##### Scale
+#### Scale
 
 Scale the selection.
 
-###### Last Operator Resize
+##### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/image-editor/header/mask-menu/last-operator-resize.png)
 
@@ -942,17 +942,17 @@ Scale the selection.
 | Angle | The rotation. Attention, the actual world orientation and rotation does not matter here. It always starts with a value of zero, and rotates relative to this zero then. For the actual rotation values have a look in the sidebar in the transform panel. |
 | Axis | Which axis to rotate. |
 
-###### Orientation
+##### Orientation
 
 ![Orientation](/docs2/images/editors/image-editor/header/mask-menu/orientation.png)
 
 The widget can have different orientations. The menu items should be self explaining.
 
-###### Mirror Editing
+##### Mirror Editing
 
 Enables mirror editing.
 
-###### Proportional editing
+##### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/image-editor/header/mask-menu/proportional-editing.png)
 
@@ -965,13 +965,13 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
 
-##### To Sphere
+#### To Sphere
 
 Shapes a selection of objects into the shape of a sphere. The calculation happens with the object origins.
 
 In Object mode this tools requires to have more than one object selected.
 
-###### Usage
+##### Usage
 
 ![Usage](/docs2/images/editors/image-editor/header/mask-menu/usage.png)
 
@@ -979,7 +979,7 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 
 ![Usage](/docs2/images/editors/image-editor/header/mask-menu/usage-2.png)
 
-###### Last Operator To Sphere
+##### Adjust Last Operation - To Sphere
 
 ![Last Operator To Sphere](/docs2/images/editors/image-editor/header/mask-menu/last-operator-to-sphere.png)
 
@@ -988,7 +988,7 @@ Select the vertices, activate the tool, then drag the mouse in the 3D viewport. 
 | Factor | The factor to transform the selection into a shape form. |
 | Mirror Editing | Enable mirror editing. |
 
-###### Proportional editing
+##### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/image-editor/header/mask-menu/proportional-editing-2.png)
 
@@ -1000,13 +1000,13 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Proportional Size | See and adjust the falloff radius. |
 | Connected | The proportional falloff gets calculated for connected parts only. |
 
-###### Projected(2D)
+##### Projected(2D)
 
 The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.
 
 ´
 
-##### Shear
+#### Shear
 
 Shear shears the selection.
 
@@ -1016,37 +1016,37 @@ The shear tool works along a imaginary 2d plane. The shear axis controls if the 
 
 To make things even more complicated, the orientation of this imaginary plane is defined by the Axis and Axis Ortho items below.
 
-###### Last Operator Shear
+##### Adjust Last Operation - Shear
 
 ![Last Operator Shear](/docs2/images/editors/image-editor/header/mask-menu/last-operator-shear.png)
 
-###### Offset
+##### Offset
 
 Adjust an offset.
 
-###### Axis
+##### Axis
 
 ![Axis](/docs2/images/editors/image-editor/header/mask-menu/axis.png)
 
 Defines one axis of the imaginary shear axis plane.
 
-###### Axis Ortho
+##### Axis Ortho
 
 ![Axis Ortho](/docs2/images/editors/image-editor/header/mask-menu/axis.png)
 
 Defines the other axis of the imaginary shear axis plane.
 
-###### Orientation
+##### Orientation
 
 ![Orientation](/docs2/images/editors/image-editor/header/mask-menu/orientation-2.png)
 
 Choose the orientation for the shear action.
 
-###### Mirror Editing
+##### Mirror Editing
 
 Enable mirror editing.
 
-###### Proportional editing
+##### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/image-editor/header/mask-menu/proportional-editing-2.png)
 
@@ -1059,13 +1059,13 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
 
-##### Push/Pull
+#### Push/Pull
 
 It pushes or pulls the object positions relative to the center of the selection.
 
 In Object mode this tool requires to have more than one object selected.
 
-###### Last Operator Push/Pull
+##### Adjust Last Operation - Push/Pull
 
 ![Last Operator Push/Pull](/docs2/images/editors/image-editor/header/mask-menu/last-operator-push-pull.png)
 
@@ -1074,7 +1074,7 @@ In Object mode this tool requires to have more than one object selected.
 | Distance | Adjust the distance of influence of the tool. |
 | Mirror Editing | Enable mirror editing. |
 
-###### Proportional editing
+##### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/image-editor/header/mask-menu/proportional-editing-2.png)
 
@@ -1087,7 +1087,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Connected | The proportional falloff gets calculated for connected parts only. |
 | Projected(2D) | The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated. |
 
-##### Scale Feather
+#### Scale Feather
 
 Scale feather weight for the selected points.
 
@@ -1095,9 +1095,9 @@ The curve type that is used to create mask splines is almost a Bezier curve. But
 
 Besides the handles, every control point also has points that define the feather between the current point and the next point on the spline. Each feather point is stored in UV space, where U means position across spline segment, and V means distance between main spline and feather points.
 
-###### Last Operator Transform
+##### Adjust Last Operation - Transform
 
-###### Values
+##### Values
 
 ![Values](/docs2/images/editors/image-editor/header/mask-menu/values.png)
 
@@ -1105,21 +1105,21 @@ Adjust the scale amount.
 
 X, Y and Z defines the position. W defines the rotation.
 
-###### Axis
+##### Axis
 
 Around which axis to rotate. X, Y or Z.
 
-###### Orientation
+##### Orientation
 
 ![Orientation](/docs2/images/editors/image-editor/header/mask-menu/orientation-3.png)
 
 Orientation is a drop-down box to choose the type of orientation for the transform action.
 
-###### Mirror Editing
+##### Mirror Editing
 
 Enable mirror editing.
 
-###### Proportional editing
+##### Proportional editing
 
 ![Proportional editing](/docs2/images/editors/image-editor/header/mask-menu/proportional-editing-2.png)
 
@@ -1141,7 +1141,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 | Make Parent | Parents the selected spline points. Mask splines can be parented to motion tracker markers. |
 | Clear Parent | Clears the parent relationship. |
 
-#### Toggle Cyclic
+### Toggle Cyclic
 
 ![Toggle Cyclic](/docs2/images/editors/image-editor/toggle-cyclic.png)
 
@@ -1149,7 +1149,7 @@ Enables proportional editing. Activating proportional editing reveals further se
 
 Closes or opens the spline.
 
-#### Switch Direction
+### Switch Direction
 
 ![Switch Direction](/docs2/images/editors/image-editor/switch-direction.jpg)
 
@@ -1157,7 +1157,7 @@ Closes or opens the spline.
 
 A curve has a start point and a end point. Here you can switch them. The end point becomes the starting point and vice versa. As a consequence the handler can switch their location too. With handle type aligned single they can appear outside or inside of the circle.
 
-#### Recalculate Handles
+### Recalculate Handles
 
 ![Recalculate Handles](/docs2/images/editors/image-editor/header/mask-menu/recalculate-handles.png)
 
@@ -1165,21 +1165,21 @@ A curve has a start point and a end point. Here you can switch them. The end poi
 
 Recalculating the normals smoothens out the curve, and realigns the handlers. A square shape with handle type aligned would become round.
 
-#### Set Handle Type submenu
+### Set Handle Type submenu
 
 ![Set Handle Type submenu](/docs2/images/editors/image-editor/header/mask-menu/set-handle-type-submenu.png)
 
 Opens a sub menu where you can choose different handle types.
 
-##### Last Operator Set Handle Type
+#### Adjust Last Operation - Set Handle Type
 
 ![Last Operator Set Handle Type](/docs2/images/editors/image-editor/last-operator-set-handle-type.png)
 
-###### Type
+##### Type
 
 Choose the handle type again.
 
-#### Animation
+### Animation
 
 ![Animation](/docs2/images/editors/image-editor/header/mask-menu/animation.png)
 
@@ -1192,9 +1192,9 @@ Masks can be animated.
 | Feather Reset Animation | Resets the feather weight on all selected curve points at the current frame. |
 | Re-Key Points of Selected Shapes | Recalculate animation data for the currently selected curve points for frames that are selected in the dope sheet. |
 
-#### Show/Hide submenu
+### Show/Hide submenu
 
-##### Show/Hide Faces
+#### Show/Hide Faces
 
 ![Show/Hide Faces](/docs2/images/editors/image-editor/header/mask-menu/show-hide-faces.png)
 
