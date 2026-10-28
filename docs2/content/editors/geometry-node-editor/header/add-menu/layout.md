@@ -21,7 +21,7 @@ replaces:
 ---
 ## Add menu - Layout
 
-![image.png](/docs2/images/_inbox/image-1.png)
+![Add menu - Layout](/docs2/images/editors/geometry-node-editor/header/add-menu/layout/add-menu-layout.png)
 
 These nodes helps organizing the node layout.
 
