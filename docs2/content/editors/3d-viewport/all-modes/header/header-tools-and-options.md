@@ -1281,6 +1281,10 @@ Show the wireframe on top of the objects. Tick it to show its settings.
 
 **Threshold** sets how many edges are drawn. At 1 all edges show, and the lower the value, the more edges disappear. **Opacity** sets how see-through the edges are.
 
+The wireframe of a sphere: with **Threshold** at 0 only the edges where the surface turns sharply are drawn (left), at 1 all edges are drawn (right).
+
+![Wireframe threshold on a sphere](/docs2/images/editors/3d-viewport/header/header-tools-and-options/wire-frame-example.png)
+
 ### Fade Inactive Geometry
 
 ![Fade inactive Geometry](/docs2/images/editors/3d-viewport/header/header-tools-and-options/fade-inactive-geometry.jpg)
