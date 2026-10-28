@@ -1193,7 +1193,9 @@ The **X**, **Y** and **Z** buttons next to **Axes** show the colored axis lines,
 
 ![Text Info](/docs2/images/editors/3d-viewport/header/header-tools-and-options/text-info.png)
 
-In the upper left corner of the 3D view there is a text info string, which can be hidden here. It tells you in what view you are, what is selected, and things like frames per second when you play an animation
+In the upper left corner of the 3D view there is a text info string, which can be hidden here. It tells you in what view you are, what is selected, and things like frames per second when you play an animation.
+
+Turning Text Info off also hides the **Attribute Text Overlay** option of the Viewer Node overlay, since that text can't show without it.
 
 ### Annotations
 
@@ -1305,9 +1307,11 @@ Enable color overlay in viewport for geometry attributes that are connected to a
 
 The opacity of the color overlay mentioned above.
 
-### Text Overlay
+### Attribute Text Overlay
 
-Show geometry attribute values that are connected to an enabled Geometry Nodes’ viewer node as text in viewport. This option just shows when you have geometry nodes at the object, and there is a viewer node in the tree. Example with index values:
+Shows the attribute values from an active Geometry Nodes Viewer node as numbers right on your mesh in the viewport. You need geometry nodes on the object and a Viewer node in the tree. Example with index values:
+
+> **Note:** This option only shows up while **Text Info** is on (Overlays › Options). If you can't find it, turn Text Info on first.
 
 ![Text Overlay](/docs2/images/editors/3d-viewport/header/header-tools-and-options/text-overlay.png)
 
