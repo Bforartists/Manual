@@ -68,8 +68,7 @@ You can also use `inline code` and [links](https://www.blender.org).
 
 ```python
 def hello():
-  print("Hello World!")
-```
+  print("Hello World!")```
 ```
 
 The quick version of the same thing:
@@ -81,7 +80,7 @@ The quick version of the same thing:
 | `---` on its own line | A horizontal line |
 | `**bold**` | **bold** |
 | `*italic*` | *italic* |
-| ``code`` | `code` in a box |
+| `code` | `code` in a box |
 | `[text](https://…)` | A link |
 | `> quote` | An indented quote |
 | `- item` | A bullet list; indent two spaces for a nested item |
@@ -146,3 +145,8 @@ When you exceed a specific angle amount between the reroute nodes, then the node
 ![Move, Rotate, Scale](/docs2/images/editors/geometry-node-editor/header/add-menu-layout/move-rotate-scale.png)
 
 A normal node has a handler. The reroute dot not. You can't simply move it around with the mouse by clicking at the top area. It has none. You have to use the move, rotate and scale commands. They can be found in the View menu.
+
+```
+
+```
+
