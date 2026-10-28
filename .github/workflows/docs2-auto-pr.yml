@@ -33,6 +33,10 @@ jobs:
         run: |
           existing=$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$BRANCH" --state open --json number --jq '.[0].number')
           if [ -n "$existing" ]; then echo "PR #$existing already open for $BRANCH"; exit 0; fi
+          # Pages CMS pushes a brand new, still empty branch when a writer creates one.
+          # A pull request needs at least one commit, so wait for the first save.
+          ahead=$(gh api "repos/$GITHUB_REPOSITORY/compare/master...$BRANCH" --jq '.ahead_by' 2>/dev/null || echo 0)
+          if [ "${ahead:-0}" -eq 0 ]; then echo "No commits on $BRANCH yet: the pull request opens at the first save."; exit 0; fi
           title=$(printf '%s' "$COMMIT_MESSAGE" | head -1)
           [ -n "$title" ] || title="Docs edit on $BRANCH"
           cat > body.md <<EOF
