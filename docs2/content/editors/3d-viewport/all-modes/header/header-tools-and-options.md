@@ -1173,7 +1173,7 @@ Turn on or off all overlays. This includes the ground grid, things like relation
 
 ## Guides
 
-<!-- TODO screenshot: Overlays popover, Guides section with Grid and Floor on -->
+![Guides](/docs2/images/editors/3d-viewport/header/header-tools-and-options/guides.png)
 
 The ground grid and axis lines.
 
