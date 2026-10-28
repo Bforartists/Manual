@@ -2,9 +2,11 @@
 - [🏠 Home](Home.md)
 
 **✏️ Writing**
+- [🚀 Writer quick start](Writer-Quick-Start.md)
 - [✏️ Editing the docs online](Editing-the-docs-online.md)
 - [✍️ Plain writing](Plain-writing.md)
 - [🖼️ Images and screenshots](Images-and-Screenshots.md)
+- [📐 Formatting standard](Formatting-Standard.md)
 - [♻️ Shared sections](Shared-Sections.md)
 - [📘 Reference Manual writing guide](https://github.com/Bforartists/Manual/wiki/Reference-Manual-writing-guide)
 
@@ -29,4 +31,4 @@
 
 ---
 
-[![Edit the docs](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=flat-square&logo=markdown&logoColor=white)](https://app.pagescms.org/Bforartists/Manual/master/collection/docs)
+[![Edit the docs](https://img.shields.io/badge/Edit_the_docs-Pages_CMS-2ea44f?style=flat-square&logo=markdown&logoColor=white)](https://app.pagescms.org/bforartists/manual/master/collection/docs)

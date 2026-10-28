@@ -31,13 +31,13 @@ replaces:
 ---
 # Read
 
-### Add - Curve - Read
+## Add - Curve - Read
 
 ![Add - Curve - Read](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/add-curve-read.png)
 
 Here you find curve related nodes.
 
-#### Curve Handle Positions
+### Curve Handle Positions
 
 ![Curve Handle Positions](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/curve-handle-positions.png)
 
@@ -50,7 +50,7 @@ Get the position of the left or right handle of a curve point.
 | Outputs | **Left**: The left handle of the curve point. · **Right**: The right handle of the curve point. |
 
 
-#### Cuve Length
+### Cuve Length
 
 ![Cuve Length](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/cuve-length.png)
 
@@ -63,7 +63,7 @@ Retreives the length of all splines added together.
 | Outputs | **Length**: The length of the curve. |
 
 
-#### Curve Tangent
+### Curve Tangent
 
 ![Curve Tangent](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/curve-tangent.png)
 
@@ -71,13 +71,13 @@ Retreive the tangent direction of a curve. The output values are normalized vect
 
 Note that for NURBS and Bézier spline curves the value retrieved from this node is the value at every control point, which may not correspond to the visible evaluated points. For NURBS splines the difference may be even more pronounced and the result may not be as expected. A Resample Curve Node node can be used to create a poly spline, where there is a control point for every evaluated point.
 
-##### Outputs
+#### Outputs
 
-###### Factor
+##### Factor
 
 The vector of the tangent.
 
-#### Curve Tilt
+### Curve Tilt
 
 ![Curve Tilt](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/curve-tilt.png)
 
@@ -85,13 +85,13 @@ Outputs the angle used to turn the curve normal around the direction of the curv
 
 The output is per control point. For NURBS and Bézier splines, the values will be interpolated to the final evaluated points.
 
-##### Outputs
+#### Outputs
 
-###### Tilt
+##### Tilt
 
 The tilt angle for the normal in radians.
 
-#### Endpoint Selection
+### Endpoint Selection
 
 ![Endpoint Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/endpoint-selection.png)
 
@@ -107,49 +107,49 @@ as a boolean field on the point domain.
 | Outputs | **Selection**: Selection output. |
 
 
-#### Handle Type Selection
+### Handle Type Selection
 
 ![Handle Type Selection](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/handle-type-selection.png)
 
 Creates a selection based on the handle types of the control points.
 
-##### Properties
+#### Properties
 
-###### Left / Right
+##### Left / Right
 
 Wether to check for the type of handles.
 
-###### Handle Type
+##### Handle Type
 
 ![Handle Type](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/handle-type.png)
 
 What handle type to compare.
 
-##### Output
+#### Output
 
-###### Selection
+##### Selection
 
 The selection.
 
-#### Is Spline Cyclic
+### Is Spline Cyclic
 
 ![Is Spline Cyclic](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/is-spline-cyclic.png)
 
 Retreive if the curve is set to cyclic.
 
-##### Outputs
+#### Outputs
 
-###### Cyclic
+##### Cyclic
 
 If the spline is cyclic or not.
 
-#### Spline Length
+### Spline Length
 
 ![Spline Length](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/spline-length.png)
 
 Retreive the total length of each spline in a curve.
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -158,7 +158,7 @@ Retreive the total length of each spline in a curve.
 | Point Count | Integer Field input of the number of control points on each spline in the spline domain. Or in the point domain, it is the number of points on the spline that contains the given control point. |
 
 
-#### Spline Parameter
+### Spline Parameter
 
 ![Spline Parameter](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/spline-parameter.png)
 
@@ -170,7 +170,7 @@ When used on the spline domain, the node outputs the portion of the total length
 
 Note that for NURBS and Bézier spline curves the value retrieved from this node is the value at every control point, which may not correspond to the visible evaluated points. For NURBS splines the difference may be even more pronounced and the result may not be as expected. A Resample Curve Node node can be used to create a poly spline, where there is a control point for every evaluated point.
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -180,27 +180,27 @@ Note that for NURBS and Bézier spline curves the value retrieved from this node
 | Index | The index of the curve. |
 
 
-#### Spline Resolution
+### Spline Resolution
 
 ![Spline Resolution](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/spline-resolution.png)
 
 Retreive the curve resolution. Means the number of spline points.
 
-##### Outputs
+#### Outputs
 
-###### Resolution
+##### Resolution
 
 The spline resolution.
 
 # Sample
 
-### Add - Curve - Sample
+## Add - Curve - Sample
 
 ![Add - Curve - Sample](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-sample/add-curve-sample.png)
 
 Here you find curve related nodes.
 
-#### Sample Curve
+### Sample Curve
 
 ![Sample Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-sample/sample-curve.png)
 
@@ -210,7 +210,7 @@ The sampled values are linearly interpolated from the values at the evaluated cu
 
 In case that the curve contains multiple splines, the sample position is found based on the total accumulated length, including the lengths of all previous splines. The order of the splines is the same order as displayed in the Spreadsheet Editor.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -222,9 +222,9 @@ In case that the curve contains multiple splines, the sample position is found b
 | Length | The resample amount with method Length. |
 
 
-##### Properties
+#### Properties
 
-###### Data Type
+##### Data Type
 
 ![Data Type](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-sample/data-type.png)
 
@@ -237,7 +237,7 @@ What data to calculate.
 | All Curves | Sample lengths based on the length of all curves. |
 
 
-##### Output
+#### Output
 
 
 | Entry | What it does |
@@ -249,19 +249,19 @@ What data to calculate.
 
 # Write
 
-### Add - Curve - Write
+## Add - Curve - Write
 
 ![Add - Curve - Write](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/add-curve-write.png)
 
 Here you find curve related nodes.
 
-#### Set Curve Normal
+### Set Curve Normal
 
 ![Set Curve Normal](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-curve-normal.png)
 
 Set the evaluation mode for curve normals.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -270,19 +270,19 @@ Set the evaluation mode for curve normals.
 | Selection | A selection of the input curve. |
 
 
-###### Mode
+##### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/mode.png)
 
 The evaluation mode for the curve normals.
 
-##### Outputs
+#### Outputs
 
-###### Curve
+##### Curve
 
 The curve output.
 
-#### Set Curve Radius
+### Set Curve Radius
 
 ![Set Curve Radius](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-curve-radius.png)
 
@@ -295,7 +295,7 @@ Set the curve radius.
 | Outputs | **Geometry**: Standard geometry output. |
 
 
-#### Set Curve Tilt
+### Set Curve Tilt
 
 ![Set Curve Tilt](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-curve-tilt.png)
 
@@ -308,7 +308,7 @@ Controls the tilt angle at each curve control point.
 | Outputs | **Curve**: Standard geometry output. |
 
 
-#### Set Handle Positions
+### Set Handle Positions
 
 ![Set Handle Positions](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-handle-positions.png)
 
@@ -322,13 +322,13 @@ Set the handle positions of bezier curves
 | Outputs | **Geometry**: Standard geometry output. |
 
 
-#### Set Handle Type
+### Set Handle Type
 
 ![Set Handle Type](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-handle-type.png)
 
 Sets a handle type for the curve points of a bezier curve. Handle types determines how the interpolation before and after the curve point happens.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -337,49 +337,49 @@ Sets a handle type for the curve points of a bezier curve. Handle types determin
 | Selection | A selection of the input curve. |
 
 
-##### Properties
+#### Properties
 
-###### Mode
+##### Mode
 
 Left or right handles.
 
-###### Handle Type
+##### Handle Type
 
 ![Handle Type](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-read/handle-type.png)
 
 The different available handle types.
 
-###### Free
+##### Free
 
 ![Free](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/free.png)
 
 The handles can be adjusted individually.
 
-###### Auto
+##### Auto
 
 ![Auto](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/auto.png)
 
 The left and the right handle will always point to each other. The length of the handles will start in equal size.
 
-###### Vector
+##### Vector
 
 ![Vector](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/vector.png)
 
 The handles can be adjusted individually.
 
-###### Aligned
+##### Aligned
 
 ![Aligned](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/aligned.png)
 
 The left and the right handle will always point to each other.
 
-##### Output
+#### Output
 
-###### Curve
+##### Curve
 
 Standard geometry output.
 
-#### Set Spline cyclic
+### Set Spline cyclic
 
 ![Set Spline cyclic](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-spline-cyclic.png)
 
@@ -392,7 +392,7 @@ Sets the spline cyclic. Means looping.
 | Outputs | **Geometry**: Standard geometry output. |
 
 
-#### Set Spline Resolution
+### Set Spline Resolution
 
 ![Set Spline Resolution](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-spline-resolution.png)
 
@@ -405,13 +405,13 @@ Sets the resolution of the spline. Means how many evaluated points should be gen
 | Outputs | **Geometry**: Standard geometry output. |
 
 
-#### Set Spline Type
+### Set Spline Type
 
 ![Set Spline Type](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/set-spline-type.png)
 
 Change the curve spline type.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -420,9 +420,9 @@ Change the curve spline type.
 | Selection | A selection of the input curve. |
 
 
-##### Properties
+#### Properties
 
-###### Spline Type
+##### Spline Type
 
 ![Spline Type](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-write/spline-type.png)
 
@@ -430,21 +430,21 @@ The spline type to set the curve to.
 
 Note that when converting from a NURBS spline to a Bézier spline, at least six points are needed. When the number of points is not a multiple of three a full conversion is not possible and the spline has to be truncated.
 
-##### Output
+#### Output
 
-###### Curve
+##### Curve
 
 Standard geometry output.
 
 # Operations
 
-### Add - Curve
+## Add - Curve
 
 ![Add - Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/add-curve.png)
 
 Here you find curve related nodes.
 
-#### Cuve to Mesh
+### Cuve to Mesh
 
 ![Cuve to Mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/cuve-to-mesh.png)
 
@@ -457,33 +457,33 @@ Converts a curve object to a mesh object. Optionally, a profile curve can be pro
 | Outputs | **Mesh**: Standard mesh output. |
 
 
-#### Cuve to Points
+### Cuve to Points
 
 ![Cuve to Points](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/cuve-to-points.png)
 
 Converts a curve object to a Point cloud.
 
-##### Inputs
+#### Inputs
 
-###### Curve
+##### Curve
 
 The input curve.
 
-##### Properties
+#### Properties
 
-###### Mode
+##### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/mode.png)
 
 How to generate points from the input curve.
 
-###### Evaluated
+##### Evaluated
 
 ![Evaluated](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/evaluated.png)
 
 Create points from the evaluation points of the curve. This is based on the resolution attribute for nurbs and bezier splines.
 
-###### Count
+##### Count
 
 ![Count](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/count.png)
 
@@ -493,7 +493,7 @@ Sample each spline by evenly distributing the specified number of points along t
 
 The number of points to distribute along the spline.
 
-###### Length
+##### Length
 
 ![Length](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/length.png)
 
@@ -503,7 +503,7 @@ Sample each spline by splitting the spline into segments by the specified length
 
 The length of the single segments.
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -514,7 +514,7 @@ The length of the single segments.
 | Rotation | — |
 
 
-#### Cuves to Grease Pencil
+### Cuves to Grease Pencil
 
 ![Cuves to Grease Pencil](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/cuves-to-grease-pencil.png)
 
@@ -527,7 +527,7 @@ Converts a curve object to a mesh object. Optionally, a profile curve can be pro
 | Outputs | **Grease Pencil**: Standard output. The Euler rotation build from the Tangent and Normal outputs. |
 
 
-#### Deform Curves on Surface
+### Deform Curves on Surface
 
 ![Deform Curves on Surface](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/deform-curves-on-surface.png)
 
@@ -540,13 +540,13 @@ Curves that are attached to a surface can follow the surface at modification.
 | Outputs | **Curves**: The output curve. |
 
 
-#### Fill Curve
+### Fill Curve
 
 ![Fill Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/fill-curve.png)
 
 Fills the curve with mesh geometry. The mesh is only generated flat with a local Z of 0.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -555,21 +555,21 @@ Fills the curve with mesh geometry. The mesh is only generated flat with a local
 | Group Input | An index used to rgoup curves together. Filling is done separately for each group. |
 
 
-###### Mode
+##### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/mode-2.png)
 
-###### Triangles or N-gons
+##### Triangles or N-gons
 
 Fill the curve with either triangles, or use N-Gon geometry.
 
-##### Outputs
+#### Outputs
 
-###### Mesh
+##### Mesh
 
 The output as mesh.
 
-#### Fillet Curve
+### Fillet Curve
 
 ![Fillet Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/fillet-curve.png)
 
@@ -577,7 +577,7 @@ The Fillet Curve rounds corners on curve control points, similar to the effect o
 
 A key difference is that the rounded portions created by the Fillet Curve node are always portions of a circle.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -588,7 +588,7 @@ A key difference is that the rounded portions created by the Fillet Curve node a
 | Limit Radius | Prevent overlapping when the defined radius exceeds the maximum possible radius for a given point. |
 
 
-###### Mode
+##### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/mode-3.png)
 
@@ -599,19 +599,19 @@ A key difference is that the rounded portions created by the Fillet Curve node a
 | Poly | Creates a circular arc by creating vertices (as many as defined by the Count fields input) along the arc (applicable for all spline types). |
 
 
-##### Outputs
+#### Outputs
 
-###### Curve
+##### Curve
 
 Standard geometry input with a curve component.
 
-#### Interpolate Curves
+### Interpolate Curves
 
 ![Interpolate Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/interpolate-curves.png)
 
 Generates new curve parts by interpolating between existing curves.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -625,7 +625,7 @@ Generates new curve parts by interpolating between existing curves.
 | Max Neighbor | Maximum amount of close guide curves that are taken into account for interpolation. |
 
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -635,13 +635,13 @@ Generates new curve parts by interpolating between existing curves.
 | Closest Weight | Weight of the closest guide curve for each generated curve. |
 
 
-#### Resample curve
+### Resample curve
 
 ![Resample curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/resample-curve.png)
 
 Creates a poly spline for each input spline. In the Count and Length modes, the control points of the new poly splines will have uniform spacing.
 
-##### Input
+#### Input
 
 
 | Entry | What it does |
@@ -651,7 +651,7 @@ Creates a poly spline for each input spline. In the Count and Length modes, the 
 | Length | The approximate length between the control points of the new splines. |
 
 
-###### Mode
+##### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/mode-4.png)
 
@@ -665,17 +665,17 @@ The resample mode.
 | Length | Use the length of the curve. |
 
 
-###### Count
+##### Count
 
 The number of control points on the new splines.
 
-##### Output
+#### Output
 
-###### Curve
+##### Curve
 
 Standard geometry output.
 
-#### Reverse Curve
+### Reverse Curve
 
 ![Reverse Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/reverse-curve.png)
 
@@ -688,7 +688,7 @@ Reverses the direction of the spline. The start point becomes the end point and 
 | Outputs | **Curve**: Standard geometry output. |
 
 
-#### Subdivide Curve
+### Subdivide Curve
 
 ![Subdivide Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/subdivide-curve.png)
 
@@ -701,7 +701,7 @@ Subdivides the curve. The shape is not changed.
 | Outputs | **Geometry**: Standard geometry output. |
 
 
-#### Trim Curve
+### Trim Curve
 
 ![Trim Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-operations/trim-curve.png)
 
@@ -713,7 +713,7 @@ Cyclic splines are currently not supported.
 
 Note that if the Start input is larger than the End, then the resulting spline will have a single point, located at the sample location of the Start value.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -724,9 +724,9 @@ Note that if the Start input is larger than the End, then the resulting spline w
 | End | The end point of the spline, as a factor. |
 
 
-##### Properties
+#### Properties
 
-###### Mode
+##### Mode
 
 How to find endpoint positions for the trimmed spline.
 
@@ -737,21 +737,21 @@ How to find endpoint positions for the trimmed spline.
 | Length | The endpoint positions of each spline is determined by a length from the start of each spline. The input values should be between 0 and the length of the splines. |
 
 
-##### Outputs
+#### Outputs
 
-###### Curve
+##### Curve
 
 Standard geometry output.
 
 # Primitives
 
-### Add menu - Curve Primitives
+## Add menu - Curve Primitives
 
 ![Add menu - Curve Primitives](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/add-menu-curve-primitives.png)
 
 Add curve primitives in different shapes.
 
-#### Arc
+### Arc
 
 ![Arc](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/arc.png)
 
@@ -759,7 +759,7 @@ Add curve primitives in different shapes.
 
 Adds a bezier curve segment in the shape of an arc
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -771,9 +771,9 @@ Adds a bezier curve segment in the shape of an arc
 | Invert Arc | Inverts the arc. |
 
 
-##### Properties
+#### Properties
 
-###### Mode
+##### Mode
 
 Point or Radius mode.
 
@@ -781,7 +781,7 @@ Radius mode (default): Generates a fixed radius arc on XY plane with controls fo
 
 Points mode: Generates a three point curve arc from Start to End via Middle with an Angle Offset and option to invert the arc. There are also outputs for arc center, radius and normal direction relative to the Z-axis.
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -790,13 +790,13 @@ Points mode: Generates a three point curve arc from Start to End via Middle with
 | In Points Mode | **Center**: The center vector of the arc. · **Normal**: The normal of the arc. · **Radius**: The radius of the arc. |
 
 
-#### Bezier Segment
+### Bezier Segment
 
 ![Bezier Segment](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/bezier-segment.png)
 
 Adds a bezier curve segment.
 
-##### Inputs
+#### Inputs
 
 
 | Entry | What it does |
@@ -806,9 +806,9 @@ Adds a bezier curve segment.
 | Start Handle, End Handle | Positions of the handles used to define the shape of the curve. |
 
 
-##### Properties
+#### Properties
 
-###### Mode
+##### Mode
 
 
 | Entry | What it does |
@@ -817,39 +817,39 @@ Adds a bezier curve segment.
 | Offset | The handle positions are relative to the control point on the curve. The handle inputs give the offset from the control points. |
 
 
-##### Outputs
+#### Outputs
 
-###### Curve
+##### Curve
 
 Bezier spline generated from the inputs.
 
-#### Curve Circle
+### Curve Circle
 
 ![Curve Circle](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/curve-circle.png)
 
 Adds a curve in circle shape.
 
-##### Inputs
+#### Inputs
 
-###### Resolution
+##### Resolution
 
 Number of edges on the circle.
 
-###### Radius
+##### Radius
 
 ![Radius](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/radius.png)
 
 The radius of the circle.
 
-###### Point 1, Point 2, Point 3
+##### Point 1, Point 2, Point 3
 
 Appears when you change the method to Points. Defines three points on the circle. The order of the points determines the direction (clockwise or counterclockwise) of the circle.
 
 Note that because of the finite resolution, the three points do not necessarily lie on the generated curve.
 
-##### Properties
+#### Properties
 
-###### Mode
+##### Mode
 
 
 | Entry | What it does |
@@ -858,7 +858,7 @@ Note that because of the finite resolution, the three points do not necessarily 
 | Radius | The circle is defined by the radius. |
 
 
-##### Outputs
+#### Outputs
 
 
 | Entry | What it does |
@@ -867,15 +867,15 @@ Note that because of the finite resolution, the three points do not necessarily 
 | Center | Appears when you change the method to Points. The center of the circle defined by the three points. |
 
 
-#### Curve Line
+### Curve Line
 
 ![Curve Line](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/curve-line.png)
 
 Adds a curve in the shape of a straight line.
 
-##### Properties
+#### Properties
 
-###### Points
+##### Points
 
 Calculates the curve by a start and end point.
 
@@ -886,7 +886,7 @@ Calculates the curve by a start and end point.
 | End | The end point of the curve. |
 
 
-###### Direction
+##### Direction
 
 ![Direction](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/direction.png)
 
@@ -900,13 +900,13 @@ Calculates the curve by a start point, a direction vector and the length of the 
 | Length | The length of the curve. |
 
 
-##### Outputs
+#### Outputs
 
-###### Curve
+##### Curve
 
 The created curve.
 
-#### Spiral
+### Spiral
 
 ![Spiral](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/spiral.png)
 
@@ -919,7 +919,7 @@ Adds a curve in spiral shape. By default the spiral twists clockwise.
 | Outputs | **Curve**: Poly spline generated from the inputs. |
 
 
-#### Quadratic Bezier
+### Quadratic Bezier
 
 ![Quadratic Bezier](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/quadratic-bezier.png)
 
@@ -932,7 +932,7 @@ Adds a curve from the given control points. The generated shape is a parabola.
 | Outputs | **Curve**: Poly spline generated from the inputs. |
 
 
-#### Quadrilateral
+### Quadrilateral
 
 ![Quadrilateral](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/quadrilateral.png)
 
@@ -940,17 +940,17 @@ Adds a curve in different geometric shapes.
 
 Note that the names does not necessarily fit to the generated geometry.
 
-##### Input
+#### Input
 
 The input nodes may vary. See Properties.
 
-##### Properties
+#### Properties
 
-###### Mode
+##### Mode
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/mode.png)
 
-###### Rectangle
+##### Rectangle
 
 ![Rectangle](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/rectangle.png)
 
@@ -962,7 +962,7 @@ creates a straight line in y direction.
 
 The length of the straight line.
 
-###### Parallelogram
+##### Parallelogram
 
 ![Parallelogram](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/parallelogram.png)
 
@@ -977,7 +977,7 @@ Creates a straight line that is adjustable in x and y direction.
 | Offset | The width of the line. |
 
 
-###### Trapezoid
+##### Trapezoid
 
 ![Trapezoid](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/trapezoid.png)
 
@@ -992,7 +992,7 @@ Creates a straight line that is adjustable in x and y direction.
 | Offset | The offset of the top line of the trapez. |
 
 
-###### Kite
+##### Kite
 
 ![Kite](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/kite.png)
 
@@ -1007,7 +1007,7 @@ creates a straight line in y direction. The curve end points are separately adju
 | Top Height | The length of the top part of the line. |
 
 
-###### Points
+##### Points
 
 ![Points](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/points.png)
 
@@ -1015,7 +1015,7 @@ creates a straight line in y direction. The curve end points are separately adju
 
 Creates a rectangle. Each point of the rectangle is independantly adjustable in x, y and z position.
 
-#### Star
+### Star
 
 ![Star](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-primitives/star.png)
 
@@ -1031,13 +1031,13 @@ This is done by connecting alternating points of two circles. The points on the 
 
 # Topology
 
-### Add menu - Curve Topology
+## Add menu - Curve Topology
 
 ![Add menu - Curve Topology](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-topology/add-menu-curve-topology.png)
 
 Curve topology related nodes.
 
-#### Curve of Point
+### Curve of Point
 
 ![Curve of Point](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-topology/curve-of-point.png)
 
@@ -1050,7 +1050,7 @@ Retrieve the curve of which the control point is part of.
 | Outputs | **Curve Index**: The curve of which the control point is part of. · **Index in Curve**: How far along the curve the control point is. |
 
 
-#### Offset Points in Curve
+### Offset Points in Curve
 
 ![Offset Points in Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-topology/offset-points-in-curve.png)
 
@@ -1063,7 +1063,7 @@ Offset a control point index in the curve.
 | Outputs | **Is Valid Offset**: Outputs true if the evaluated controlpoint plus the offset is a valid index. · **Point Index**: The index of the control point plus the offset. |
 
 
-#### Points of Curve
+### Points of Curve
 
 ![Points of Curve](/docs2/images/editors/geometry-node-editor/header/add-menu-curve-topology/points-of-curve.png)
 
@@ -1074,3 +1074,33 @@ Retreive a point index within a curve.
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | Inputs | **Curve Index**: The curve to retreive the data from · **Weights**: Values to sort the curve points. · **Sort Index**: The point to output. |
 | Outputs | **Point Index**: The output point. · **Total**: The number of points in the curve. |
+
+# Curve
+
+### Add menu - Curve
+
+#### Construct Curves
+
+![Construct Curves](/docs2/images/editors/geometry-node-editor/header/add-menu-curve/construct-curves.png)
+
+Builds curves from raw point data. You give it one list with the positions of all points, and one list that tells where each curve starts. All curves it creates are Poly curves.
+
+##### Inputs
+
+###### Positions
+
+A list with the positions of the points of all curves, one curve after the other.
+
+###### Curve Offsets
+
+A list that says which point each curve starts at. It is one entry longer than the number of curves. It holds the index of the first point of each curve, followed by the total number of points.
+
+For example, two curves with 3 and 2 points use the offsets 0, 3, 5.
+
+The first offset must be 0, the last offset must be the number of points, and every curve needs at least one point. If the lists do not fit, the node shows an error and outputs no curves.
+
+##### Outputs
+
+###### Curves
+
+The new curves. If a list is missing or invalid, the output is empty.

@@ -148,7 +148,7 @@ When you want to move into a specific axis, then press X or Y to limit the movem
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
-#### Last Operator Move
+#### Adjust Last Operation - Move
 
 ![Last Operator Move](/docs2/images/editors/uv-editor/tool-shelf/last-operator-move.png)
 
@@ -226,7 +226,7 @@ By holding down the mouse button and pressing the X, Y or Z key twice you can to
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
-#### Last Operator Rotate
+#### Adjust Last Operation - Rotate
 
 ![Last Operator Rotate](/docs2/images/editors/uv-editor/tool-shelf/last-operator-rotate.png)
 
@@ -307,7 +307,7 @@ When you want to rotate a specific axis, then press X or Y to limit the scale to
 
 Define what kind of transform should happen when you click not at the widget but besides, and drag the mouse.
 
-#### Last Operator Resize
+#### Adjust Last Operation - Resize
 
 ![Last Operator Resize](/docs2/images/editors/uv-editor/tool-shelf/last-operator-resize.png)
 
@@ -475,7 +475,7 @@ You need to be in UV selection mode Vertice, Edge or Face, and with Use UV Selec
 
 ![Rip Region](/docs2/images/editors/uv-editor/tool-shelf/rip-region-2.png)
 
-#### Last Operator UV Rip Move
+#### Adjust Last Operation - UV Rip Move
 
 ![Last Operator UV Rip Move](/docs2/images/editors/uv-editor/tool-shelf/last-operator-uv-rip-move.png)
 

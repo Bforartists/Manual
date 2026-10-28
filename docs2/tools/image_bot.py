@@ -6,7 +6,9 @@
 New images are the ones in docs2/images/ (the library root, where Pages CMS drops land)
 and in docs2/images/_inbox/. For each new image the bot:
 
-  1. removes byte-identical copies (also copies of images already in the library)
+  1. removes byte-identical copies (also copies of images already in the library), but only
+     once a page links to the new file, so an image uploaded a moment before its page is saved
+     is not deleted too early
   2. names it after the page and the heading above it:
      images/<section>/<page>/<heading>.png
   3. rewrites the links in every page and shared section that uses it
@@ -87,7 +89,10 @@ def main(argv):
     for full in new_images(lib):
         rel = os.path.relpath(full, repo).replace("\\", "/")
         h = sha(full)
-        if h in known and os.path.exists(os.path.join(repo, known[h])):
+        # A picture that is already in the library is only swapped for the library copy once a page
+        # links to the new file. Pages CMS uploads the image first and saves the page a moment later;
+        # deleting the copy in between leaves that page pointing at a file that is gone.
+        if h in known and os.path.exists(os.path.join(repo, known[h])) and uses.get(rel):
             moves[rel] = known[h]
             notes.append(("♻️", rel, known[h], "same picture is already in the library"))
             continue

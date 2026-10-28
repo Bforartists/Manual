@@ -93,7 +93,7 @@ The token is a password that lets GitHub write the docs into Webflow's CMS for t
 - [ ] On GitHub, open `Bforartists/Manual`. Click the branch button (top left, it says `master`).
 - [ ] Type `docs2/test-chapter`. Click **Create branch docs2/test-chapter from docs2/main**.
       (If it says *from master*, first switch the branch button to `docs2/main`, then type the name.)
-- [ ] Open [Pages CMS](https://app.pagescms.org/Bforartists/Manual). In the branch picker (top left), choose
+- [ ] Open [Pages CMS](https://app.pagescms.org/bforartists/manual). In the branch picker (top left), choose
       `docs2/test-chapter`.
 
 ✅ Pages CMS shows **📘 Documentation pages** for your new branch.

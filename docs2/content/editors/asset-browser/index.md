@@ -66,6 +66,22 @@ You can add more than one asset library from the preferences.
 
 ![Asset Library](/docs2/images/editors/asset-browser/asset-library-3.png)
 
+### Online libraries while offline
+
+![Offline banner](/docs2/images/editors/asset-browser/offline-banner.png)
+
+Some libraries, like the online Essentials, live on the internet. When internet access is off in the Preferences, the Asset Browser still shows every asset you've **already downloaded**, so you can keep working offline.
+
+A banner at the top reminds you that you only see the offline assets.
+
+#### Continue Offline
+
+Hides the banner, so you can keep working with the assets you already have.
+
+#### Allow Online Access
+
+Turns internet access on, so the rest of the library can load.
+
 ### Drag & Drop of materials
 
 Materials can be dragged directly at the material slots in the Properties Editor.
@@ -82,15 +98,15 @@ There are several tools in the header to find. Menus, and a few options.
 
 ![Header - View menu](/docs2/images/editors/asset-browser/header-view-menu.png)
 
-The view menu contains view related functionality.
+The View menu decides what you see. **Source List** shows the libraries and catalogs on the left, and **Asset Details** shows the sidebar with information about the selected asset.
 
+### Frame Selected
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------------------- |
-| Source List | Shows or hides the tool shelf at the left side. |
-| File Path | Please ignore. This entry is a bug. The asset browser shares the code with the file browser. |
-| Frame Selected | Scrolls the selection into view. |
+Scrolls the selected asset into view, handy in a big library.
 
+### Sort
+
+Orders the assets, for example by name. This used to be only in the right-click menu.
 
 ### Display Size
 
@@ -133,6 +149,32 @@ Allows you to box select files. Note that this is an old obsolete operator. You 
 | All | Select all. |
 
 
+## Header - Library menu
+
+![Header - Library menu](/docs2/images/editors/asset-browser/header-library-menu.png)
+
+Everything about the asset libraries themselves.
+
+### Asset Library Paths
+
+Opens the Preferences, where you add and manage your asset library folders.
+
+### Refresh Asset Library
+
+Reloads the current library. Use it after you saved new assets into the library from another file, so they show up here.
+
+### Refresh Remote Listing
+
+Fetches the latest list of assets from an online library.
+
+### Open Remote Assets Cache
+
+Assets you download from online libraries are kept in a cache folder. This opens that folder.
+
+### Clear Remote Assets Cache
+
+Deletes the downloaded online assets to free up disk space. They download again the next time you use them.
+
 ## Header - Catalog menu
 
 ![Header - Catalog menu](/docs2/images/editors/asset-browser/header-catalog-menu.png)
@@ -142,13 +184,6 @@ Allows you to box select files. Note that this is an old obsolete operator. You 
 | ----- | -------------------------------- |
 | Undo | Undo of the last edit operation. |
 | Redo | Redo of the last edit operation. |
-
-
-### Asset Library Paths
-
-![Asset Library Paths](/docs2/images/editors/asset-browser/asset-library-paths.png)
-
-Opens the file browser at the Paths tab. Here you can show, edit, and add paths to new asset libraries.
 
 
 | Entry | What it does |
@@ -161,11 +196,33 @@ Opens the file browser at the Paths tab. Here you can show, edit, and add paths 
 
 ![Header - Asset menu](/docs2/images/editors/asset-browser/header-asset-menu.png)
 
-This menu contains asset related menu items.
+The Asset menu holds the commands for the assets you select. They used to be only in the right-click menu. Select an asset first, otherwise most entries stay greyed out.
 
-### Paste as new asset
+### Download
 
-Pastes a previously copied asset.
+Only shows for online libraries. Downloads the selected assets, so you can use them offline.
+
+### Clear Asset
+
+Turns the asset back into normal data, so it no longer shows in the Asset Browser.
+
+### Clear Asset (Set Fake User)
+
+Same as Clear Asset, but protects the data with a fake user, so it isn't thrown away when you save.
+
+### Open Blend File
+
+Opens the .blend file the asset is stored in. Works for assets from other files, not for assets in the current file.
+
+### Open File Location
+
+Opens the folder that holds the asset's .blend file.
+
+The two pose entries at the bottom come from the Pose Library add-on, which is on by default. They work in Pose Mode.
+
+### Paste Pose as New Asset
+
+Pastes a previously copied pose as a new pose asset.
 
 ### Create Pose Asset
 
