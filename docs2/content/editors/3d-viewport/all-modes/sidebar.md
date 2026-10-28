@@ -790,8 +790,6 @@ Turning off Lock Rotation reveals the quick navigation buttons Switch to Camera 
 
 This panel comes from the **Important Hotkeys** add-on. It shows the most important hotkeys right in the viewport, as a little cheat sheet while you learn. You can turn the add-on off in the Preferences.
 
-<!-- TODO screenshot: sidebar View tab > Important Hotkeys panel, Hide Text pressed -->
-
 ### Show Text / Hide Text
 
 Shows the hotkeys in the viewport. While they show, the button reads **Hide Text** and looks pressed in, so you can see at a glance that the overlay is on. Click it again to hide them.
