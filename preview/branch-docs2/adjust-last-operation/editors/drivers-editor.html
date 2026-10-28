@@ -119,7 +119,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:1.5rem">Render</span>
 <span style="padding-left:3.5rem">Input</span>
 <span style="padding-left:1.5rem">Header</span>
-<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="timeline/header.html">Header</a>
 <span>Topbar and Statusbar</span>
 <a style="padding-left:1.5rem" href="uv-editor/header.html">Header</a>
 <a style="padding-left:1.5rem" href="video-sequence-editor/header.html">Header</a>
@@ -187,7 +187,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span style="padding-left:1.5rem">Scene</span>
 <span style="padding-left:3.5rem">Color</span>
 <span style="padding-left:1.5rem">Channel List</span>
-<span style="padding-left:3.5rem">View Menu</span>
+<a style="padding-left:3.5rem" href="3d-viewport/all-modes/header/view-menu.html">View Menu</a>
 <span style="padding-left:2.5rem">More</span>
 <a style="padding-left:2.5rem" href="3d-viewport/grease-pencil/weight-paint.html">Weight Paint</a>
 <span style="padding-left:2.5rem">Texture Paint</span>
@@ -260,7 +260,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Text Editor</span>
 <span>Python Console</span>
 <span>Info Editor</span>
-<span>Toolbar</span>
+<a href="toolbar.html">Toolbar</a>
 <a href="outliner.html">Outliner</a>
 <span>Properties Editor</span>
 <span style="padding-left:2.5rem">Cycles</span>
@@ -336,7 +336,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Asset Browser</span>
 <span>Spreadsheet</span>
 <span>Preferences</span>
-<span style="padding-left:1.5rem">Topbar menus</span>
+<a style="padding-left:1.5rem" href="topbar-and-statusbar/topbar-menus.html">Topbar menus</a>
 <span style="padding-left:1.5rem">Viewport</span>
 <span style="padding-left:2.5rem">Add Menu</span>
 <span style="padding-left:2.5rem">Add Menu</span>
@@ -383,25 +383,25 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Drivers are a way to control values or properties by other values or properties. This is done by expressions. As an example, you can use the Y rotation of a sphere to control the X movement of a cube. The rotation of the sphere drives the cube then.</p>
 <p>The Drivers Editor is the place to adjust the settings for drivers.</p>
 <p>The Drivers editor has several areas.</p>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/drivers-editor.png" alt="Drivers Editor" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/drivers-editor.png" alt="Drivers Editor" loading="lazy"></figure>
 <ul>
 <li><strong>Header</strong> (yellow)</li>
 </ul>
 <p>Channel list ( Green ).</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/drivers-editor-2.png" alt="Drivers Editor" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/drivers-editor-2.png" alt="Drivers Editor" loading="lazy"></figure>
 <p>Sidebar ( Blue ). The sidebar needs to be revealed, which can be done by clicking at the small triangle button up right.</p>
 <p><strong>Viewport</strong> (no color)</p>
 <p>The header is divided into two parts. Left tools and menus. Right Options.</p>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/drivers-editor-3.png" alt="Drivers Editor" loading="lazy"></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/drivers-editor-3.png" alt="Drivers Editor" loading="lazy"></figure>
 <ul>
 <li><strong>Menus</strong> (green)</li>
 <li><strong>Options</strong> (yellow)</li>
 </ul>
 <h3 id="time-cursor">Time cursor</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/time-cursor.png" alt="Time cursor" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/time-cursor.png" alt="Time cursor" loading="lazy"></figure>
 <p>The Time Cursor is the green slider at the top. It is used to set and display the current time frame.</p>
 <h3 id="f-curves">F-Curves</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/f-curves.png" alt="F-Curves" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/f-curves.png" alt="F-Curves" loading="lazy"></figure>
 <p>The timeline displays the function curves for the driver. This curve is controlled by the expression. But this curve can also be manipulated in various ways like any other F-Curve. Note that manipulating the curve does not manipulate the expression. It adds on top of it. And there is no way to reset it but create the driver from scratch. So be careful with manipulations.</p>
 <h3 id="handles">Handles</h3>
 <p>Every curve point has handles assigned. The curve can be manipulated by dragging these handlers. You can also change the handle type in the Keyframe Handle Type menu in the header. To make the curve sharp at this keyframe for example.</p>
@@ -414,7 +414,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Scroll Wheel zooms the view.</p>
 <p>To manipulate a curve point, grab one of its handlers and drag.</p>
 <h2 id="channel-context-menu">Channel Context Menu</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/channel-context-menu.png" alt="Channel Context Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/channel-context-menu.png" alt="Channel Context Menu" loading="lazy"></figure>
 <p>When you right click into the channel area, then you will call the Dope Sheet Channel context menu.</p>
 <table class="ui-doc-table">
 <thead>
@@ -467,7 +467,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="extrapolation-mode">Extrapolation Mode</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/extrapolation-mode.png" alt="Extrapolation Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/extrapolation-mode.png" alt="Extrapolation Mode" loading="lazy"></figure>
 <p>Sets the extrapolation mode for the selected F-Curves. Means how the curve acts at the beginning and the end of the F-Curve.</p>
 <table class="ui-doc-table">
 <thead>
@@ -526,7 +526,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h3 id="move-submenu">Move submenu</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/move-submenu.png" alt="Move submenu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/move-submenu.png" alt="Move submenu" loading="lazy"></figure>
 <p>Sort the order of the channels. The menu items should be self explaining.</p>
 <table class="ui-doc-table">
 <thead>
@@ -547,7 +547,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h2 id="f-curve-context-menu">F-Curve Context Menu</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/f-curve-context-menu.png" alt="F-Curve Context Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/f-curve-context-menu.png" alt="F-Curve Context Menu" loading="lazy"></figure>
 <p>When you double right click into the viewport then you will call the F-Curve context menu.</p>
 <table class="ui-doc-table">
 <thead>
@@ -569,48 +569,48 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </table>
 <h3 id="paste-flipped">Paste Flipped</h3>
 <p>Pastes copied curve point(s), but flipped.</p>
-<h4 id="adjust-last-operation">Adjust Last Operation</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/last-operator-paste-keyframes-flipped.png" alt="Last operator Paste Keyframes / Flipped" loading="lazy"><figcaption>Last operator Paste Keyframes / Flipped</figcaption></figure>
+<h4 id="adjust-last-operation-paste-keyframes-flipped">Adjust Last Operation - Paste Keyframes / Flipped</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/last-operator-paste-keyframes-flipped.png" alt="Last operator Paste Keyframes / Flipped" loading="lazy"><figcaption>Last operator Paste Keyframes / Flipped</figcaption></figure>
 <h5 id="frame-offset">Frame Offset</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/frame-offset.png" alt="Frame Offset" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/frame-offset.png" alt="Frame Offset" loading="lazy"></figure>
 <p>Define a time offset to paste the keys.</p>
 <h5 id="value-offset">Value Offset</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/value-offset.png" alt="Value Offset" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/value-offset.png" alt="Value Offset" loading="lazy"></figure>
 <p>Define a value offset to paste the keys.</p>
 <h5 id="type">Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/type.png" alt="Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/type.png" alt="Type" loading="lazy"></figure>
 <p>The paste method.</p>
 <h5 id="flipped">Flipped</h5>
 <p>Paste copied curve point(s) flipped.</p>
 <h3 id="handle-type">Handle Type</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/handle-type.png" alt="Handle Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/handle-type.png" alt="Handle Type" loading="lazy"></figure>
 <p>Set the handle type for the currently selected curve point.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/handle-type-2.png" alt="Handle Type" loading="lazy"></figure>
-<h4 id="adjust-last-operation-2">Adjust Last Operation</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/last-operator-set-keyframe-handle-type.png" alt="Last Operator Set Keyframe Handle Type" loading="lazy"><figcaption>Last Operator Set Keyframe Handle Type</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/handle-type-2.png" alt="Handle Type" loading="lazy"></figure>
+<h4 id="adjust-last-operation-set-keyframe-handle-type">Adjust Last Operation - Set Keyframe Handle Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/last-operator-set-keyframe-handle-type.png" alt="Last Operator Set Keyframe Handle Type" loading="lazy"><figcaption>Last Operator Set Keyframe Handle Type</figcaption></figure>
 <h5 id="type-2">Type</h5>
 <p>Set the handle type for the currently selected curve point.</p>
 <h3 id="interpolation-mode">Interpolation Mode</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/interpolation-mode.png" alt="Interpolation Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/interpolation-mode.png" alt="Interpolation Mode" loading="lazy"></figure>
 <p>The Interpolation mode defines how the curve acts from keyframe to keyframe. You can have a linear curve between two keyframes instead of a bent one for example.</p>
 <p>The easing methods here in the interpolation mode menu are for the easing shape. There is also an easing menu where you can choose a easing method.</p>
-<h4 id="adjust-last-operation-3">Adjust Last Operation</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/last-operator-set-keyframe-interpolation.png" alt="Last Operator Set Keyframe Interpolation" loading="lazy"><figcaption>Last Operator Set Keyframe Interpolation</figcaption></figure>
+<h4 id="adjust-last-operation-set-keyframe-interpolation">Adjust Last Operation - Set Keyframe Interpolation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/last-operator-set-keyframe-interpolation.png" alt="Last Operator Set Keyframe Interpolation" loading="lazy"><figcaption>Last Operator Set Keyframe Interpolation</figcaption></figure>
 <h5 id="type-3">Type</h5>
 <p>Set the interpolation mode.</p>
 <h3 id="easing-mode">Easing Mode</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/easing-mode.png" alt="Easing Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/easing-mode.png" alt="Easing Mode" loading="lazy"></figure>
 <p>The easing methods in the interpolation mode menu are for the easing shape. This menu allows you to choose an easing method.</p>
-<h4 id="adjust-last-operation-4">Adjust Last Operation</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/last-operator-set-keyframe-easing-type.png" alt="Last Operator Set Keyframe Easing Type" loading="lazy"><figcaption>Last Operator Set Keyframe Easing Type</figcaption></figure>
+<h4 id="adjust-last-operation-set-keyframe-easing-type">Adjust Last Operation - Set Keyframe Easing Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/last-operator-set-keyframe-easing-type.png" alt="Last Operator Set Keyframe Easing Type" loading="lazy"><figcaption>Last Operator Set Keyframe Easing Type</figcaption></figure>
 <h5 id="type-4">Type</h5>
 <p>Set the easing type.</p>
 <h3 id="insert-keyframes">Insert Keyframes</h3>
 <p>Insert a keyframe at the current position. This functionality does not work from the Drivers editor.</p>
 <h3 id="duplicate">Duplicate</h3>
 <p>Duplicate the selected curve point(s).</p>
-<h4 id="adjust-last-operation-5">Adjust Last Operation</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/last-operator-duplicate.png" alt="Last Operator Duplicate" loading="lazy"></figure>
+<h4 id="adjust-last-operation-duplicate">Adjust Last Operation - Duplicate</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/last-operator-duplicate.png" alt="Last Operator Duplicate" loading="lazy"></figure>
 <table class="ui-doc-table">
 <thead>
 <tr>
@@ -634,12 +634,12 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </tbody>
 </table>
 <h5 id="orientation">Orientation</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/orientation.png" alt="Orientation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/orientation.png" alt="Orientation" loading="lazy"></figure>
 <p>These values have no effect.</p>
 <h5 id="mirror-editing">Mirror Editing</h5>
 <p>Enable Mirror Editing.</p>
 <h5 id="proportional-editing">Proportional editing</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
 <p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
 <table class="ui-doc-table">
 <thead>
@@ -670,17 +670,17 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h3 id="delete-keyframes">Delete Keyframes</h3>
 <p>Delete the selected curve point(s).</p>
 <h3 id="mirror-submenu">Mirror submenu</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/mirror-submenu.png" alt="Mirror submenu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/mirror-submenu.png" alt="Mirror submenu" loading="lazy"></figure>
 <p>Mirrors the animation by the given method.</p>
-<h4 id="adjust-last-operation-6">Adjust Last Operation</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/last-operator-mirror-keys.png" alt="Last Operator Mirror Keys" loading="lazy"><figcaption>Last Operator Mirror Keys</figcaption></figure>
+<h4 id="adjust-last-operation-mirror-keys">Adjust Last Operation - Mirror Keys</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/last-operator-mirror-keys.png" alt="Last Operator Mirror Keys" loading="lazy"><figcaption>Last Operator Mirror Keys</figcaption></figure>
 <h5 id="type-5">Type</h5>
 <p>Flips the selected keyframes over the current frame position by the chosen method.</p>
 <h3 id="snap-submenu">Snap submenu</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/snap-submenu.png" alt="Snap submenu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/snap-submenu.png" alt="Snap submenu" loading="lazy"></figure>
 <p>Snaps the selected keyframes by the given method.</p>
-<h4 id="adjust-last-operation-7">Adjust Last Operation</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/last-operator-snap-keys.png" alt="Last Operator Snap Keys" loading="lazy"><figcaption>Last Operator Snap Keys</figcaption></figure>
+<h4 id="adjust-last-operation-snap-keys">Adjust Last Operation - Snap Keys</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/last-operator-snap-keys.png" alt="Last Operator Snap Keys" loading="lazy"><figcaption>Last Operator Snap Keys</figcaption></figure>
 <h5 id="type-6">Type</h5>
 <p>Snaps the selected keyframes by the chosen method.</p>
 <h2 id="slider-snapping">Slider snapping</h2>
@@ -688,16 +688,16 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Hold <strong>Ctrl</strong> while dragging a slider to snap it. See <strong><a href="https://github.com/Bforartists/Manual/blob/docs2/adjust-last-operation/docs2/content/interface/properties.md#snapping">Snapping</a></strong> in the Interface chapter.</p>
 </blockquote>
 <h2 id="quick-favorites-menu">Quick Favorites menu</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/quick-favorites-menu.png" alt="Quick Favorites menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/quick-favorites-menu.png" alt="Quick Favorites menu" loading="lazy"></figure>
 <blockquote>
 <p>The <strong>Quick Favorites</strong> menu (Q) holds the tools and menus you add to it yourself. See <strong><a href="https://github.com/Bforartists/Manual/blob/docs2/adjust-last-operation/docs2/content/interface/floating-menus.md#quick-favorites">Quick Favorites</a></strong> in the Interface chapter.</p>
 </blockquote>
 <p>The Quick Menu is empty by default. With Add to Quick favorites you can add this menu to the Quick menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/quick-favorites-menu-2.png" alt="Quick Favorites menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/quick-favorites-menu-2.png" alt="Quick Favorites menu" loading="lazy"></figure>
 <p>In the 3D view we have a menu called Quick in the header, which shows this content then. In the Dope Sheet Editor you can just call it with its hotkey. Q. It has no regular menu entry here.</p>
 <h2 id="editing-the-expression-from-the-property">Editing the expression from the property</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/editing-the-expression-from-the-property.png" alt="Editing the expression from the property" loading="lazy"><figcaption>Editing the expression from the property</figcaption></figure>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/editing-the-expression-from-the-property-2.png" alt="Editing the expression from the property" loading="lazy"><figcaption>Editing the expression from the property</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/editing-the-expression-from-the-property.png" alt="Editing the expression from the property" loading="lazy"><figcaption>Editing the expression from the property</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/editing-the-expression-from-the-property-2.png" alt="Editing the expression from the property" loading="lazy"><figcaption>Editing the expression from the property</figcaption></figure>
 <p>A property with a driver attached will turn pink.</p>
 <p>When you click into the edit box, then the expression for the driver will appear. And you can edit this expression now without to edit the driver again.</p>
 <h2 id="simple-expressions">Simple Expressions</h2>
@@ -738,39 +738,39 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </table>
 <h2 id="drivers-setup-example">Drivers setup example</h2>
 <h3 id="control-movement-of-a-cube-by-rotation-of-a-sphere">Control movement of a cube by rotation of a sphere</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>Create a cube and a sphere, and place the sphere a bit off. We want to be able to select and modify it.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-2.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-2.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>Select the cube.</p>
 <p>In the Transform panel in the sidebar right click at the Z value and choose Add Driver. We will add the driver to the Z axis property of the cube.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-3.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-3.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>When you add a driver a panel will pop up where you can do the drivers setup.</p>
 <p>In case you miss this panel by too fast clicking, it can be called again by right clicking at the property again and choose Edit Drivers from the menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-4.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-4.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>Don't worry about the ERROR: invalid Python expression at this point. we are going to change this now.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-5.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-5.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>In the red field with the Object label choose the sphere.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-6.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-6.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>By default the X value influences now the Z position of the cube. So when you move the sphere in X direction, the cube will move in Z direction.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-7.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-7.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>Let's change this to rotation around Z axis. Now the cube moves in Z axis when we rotate our sphere in Z axis.</p>
 <p>Let's have a look into our Drivers editor.</p>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-8.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-8.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>We have now content available- The channels list has an entry. And when you click at the Z Location channel in the channel list then the content and the driver settings panel in the sidebar will appear. It is the same than the one from the right click menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-9.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/control-movement-of-a-cube-by-rotation-of-a-sphe-9.png" alt="Control movement of a cube by rotation of a sphere" loading="lazy"><figcaption>Control movement of a cube by rotation of a sphere</figcaption></figure>
 <p>Let's have a closer look at how this all works. The Expression field is the place where the magic happens. When you change this expression then you can change the behavior of the driver. For example instead of var + 0.0 you could add a multiplicator here to our variable called var. Let's say var <code>*2</code>. Then the cube moves in double speed of the rotation of our sphere.</p>
 <h3 id="add-input-variable">Add input variable</h3>
 <p>You could also add a second input value, and connect it with another object. Let's say a cone.</p>
 <p>Add a cone object.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/add-input-variable.png" alt="Add input variable" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/add-input-variable.png" alt="Add input variable" loading="lazy"></figure>
 <p>In the Driver add a new input variable.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/add-input-variable-2.png" alt="Add input variable" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/add-input-variable-2.png" alt="Add input variable" loading="lazy"></figure>
 <p>Change this input variable to type Transform Channel.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/add-input-variable-3.png" alt="Add input variable" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/add-input-variable-3.png" alt="Add input variable" loading="lazy"></figure>
 <p>Now in the object field choose our cone object. And rename the input variable to something meaningful. Again set the type to your needs.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/add-input-variable-4.png" alt="Add input variable" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/add-input-variable-4.png" alt="Add input variable" loading="lazy"></figure>
 <p>Now let's change the Expression to this: var + mysecondvar.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/drivers-editor/add-input-variable-5.png" alt="Add input variable" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/fb554e79577d3b39e77a69587254d54431f02f8d/docs2/images/editors/drivers-editor/add-input-variable-5.png" alt="Add input variable" loading="lazy"></figure>
 <p>As a last step update the dependencies by clicking at the Update Dependencies button at the end, which will remove the Invalid Python Expression error.</p>
 <p>And now the driver is controlled by the Z rotation of our sphere, which is defined in the variable var. PLUS the x location of the cone object, which is defined in the variable mysecondvar.</p>
 <h2 id="in-this-chapter">In this chapter</h2><div class="ui-doc-cards"><ul><li><a href="drivers-editor/header.html">Header</a> — The header contains various menus and tools.</li><li><a href="drivers-editor/sidebar.html">Sidebar</a> — This panel displays the properties for the active F-Curve.</li><li><a href="https://github.com/Bforartists/Manual/blob/docs2/adjust-last-operation/docs2/content/editors/drivers-editor/channel-list.md">Channel List</a> — The channel list contains your objects and their animation channels.</li></ul></div></article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fadjust-last-operation/collection/docs/edit/docs2%2Fcontent%2Feditors%2Fdrivers-editor%2Findex.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/adjust-last-operation/docs2/content/editors/drivers-editor/index.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#drivers-editor">Drivers Editor</a><a class="h3" href="#time-cursor">Time cursor</a><a class="h3" href="#f-curves">F-Curves</a><a class="h3" href="#handles">Handles</a><a class="h2" href="#viewport-navigation">Viewport Navigation</a><a class="h3" href="#viewport-navigation-2">Viewport navigation</a><a class="h2" href="#channel-context-menu">Channel Context Menu</a><a class="h3" href="#extrapolation-mode">Extrapolation Mode</a><a class="h3" href="#move-submenu">Move submenu</a><a class="h2" href="#f-curve-context-menu">F-Curve Context Menu</a><a class="h3" href="#paste-flipped">Paste Flipped</a><a class="h3" href="#handle-type">Handle Type</a><a class="h3" href="#interpolation-mode">Interpolation Mode</a><a class="h3" href="#easing-mode">Easing Mode</a><a class="h3" href="#insert-keyframes">Insert Keyframes</a><a class="h3" href="#duplicate">Duplicate</a><a class="h3" href="#delete-keyframes">Delete Keyframes</a><a class="h3" href="#mirror-submenu">Mirror submenu</a><a class="h3" href="#snap-submenu">Snap submenu</a><a class="h2" href="#slider-snapping">Slider snapping</a><a class="h2" href="#quick-favorites-menu">Quick Favorites menu</a><a class="h2" href="#editing-the-expression-from-the-property">Editing the expression from the property</a><a class="h2" href="#simple-expressions">Simple Expressions</a><a class="h2" href="#drivers-setup-example">Drivers setup example</a><a class="h3" href="#control-movement-of-a-cube-by-rotation-of-a-sphere">Control movement of a cube by rotation of a sphere</a><a class="h3" href="#add-input-variable">Add input variable</a><a class="h2" href="#in-this-chapter">In this chapter</a></aside></div></body></html>

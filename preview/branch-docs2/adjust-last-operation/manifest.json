@@ -3,6 +3,7 @@
   "docs2/content/editors/3d-viewport/all-modes/header/header-tools-and-options.md": "editors/3d-viewport/all-modes/header/header-tools-and-options.html",
   "docs2/content/editors/3d-viewport/all-modes/header/navigation-menu.md": "editors/3d-viewport/all-modes/header/navigation-menu.html",
   "docs2/content/editors/3d-viewport/all-modes/header/select-menu.md": "editors/3d-viewport/all-modes/header/select-menu.html",
+  "docs2/content/editors/3d-viewport/all-modes/header/view-menu.md": "editors/3d-viewport/all-modes/header/view-menu.html",
   "docs2/content/editors/3d-viewport/armature/edit.md": "editors/3d-viewport/armature/edit.html",
   "docs2/content/editors/3d-viewport/armature/pose.md": "editors/3d-viewport/armature/pose.html",
   "docs2/content/editors/3d-viewport/curve/edit.md": "editors/3d-viewport/curve/edit.html",
@@ -43,6 +44,9 @@
   "docs2/content/editors/nonlinear-animation-editor/header/index.md": "editors/nonlinear-animation-editor/header.html",
   "docs2/content/editors/nonlinear-animation-editor/sidebar/index.md": "editors/nonlinear-animation-editor/sidebar.html",
   "docs2/content/editors/outliner.md": "editors/outliner.html",
+  "docs2/content/editors/timeline/header.md": "editors/timeline/header.html",
+  "docs2/content/editors/toolbar.md": "editors/toolbar.html",
+  "docs2/content/editors/topbar-and-statusbar/topbar-menus/index.md": "editors/topbar-and-statusbar/topbar-menus.html",
   "docs2/content/editors/uv-editor/header/index.md": "editors/uv-editor/header.html",
   "docs2/content/editors/uv-editor/index.md": "editors/uv-editor.html",
   "docs2/content/editors/uv-editor/tool-shelf.md": "editors/uv-editor/tool-shelf.html",
@@ -50,5 +54,5 @@
   "docs2/content/editors/video-sequence-editor/index.md": "editors/video-sequence-editor.html",
   "docs2/content/getting-started/about-documentation.md": "getting-started/about-documentation.html"
  },
- "images": 3569
+ "images": 3958
 }
