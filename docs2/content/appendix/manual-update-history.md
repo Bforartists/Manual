@@ -6,7 +6,7 @@ path:
   - Appendix
   - Manual Update History
 version: "5.1"
-status: draft
+status: needs-review
 screenshots: "5.1"
 source:
   - 40 Manual Update History.odt
