@@ -1056,6 +1056,8 @@ Saves all images. Internal images needs to be saved manually first. They don't h
 
 The **Masking** popover in the Texture Paint header holds two masks, side by side at the top level: **Stencil Mask** and **Cavity Mask**. Tick one to turn it on, and its settings open right below it.
 
+![Masking](/docs2/images/editors/3d-viewport/header/header-tools-and-options/masking.png)
+
 ## Stencil Mask
 
 Stencil Mask limits your painting with a stencil image: paint only goes through where the image allows it. Tick it to show its settings.
