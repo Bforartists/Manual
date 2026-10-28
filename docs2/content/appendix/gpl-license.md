@@ -14,7 +14,7 @@ order: 30
 ---
 Bforartists is free and open-source software, released under the **GNU General Public License (GPL)**, version 3 or later, like **Blender**, which what this is based on. This means this is for everyone, by everyone, of everyone. 
 
-![Powered by GNU logo sticker](/docs2/images/_inbox/gnu.png)
+![Powered by GNU logo sticker](/docs2/images/appendix/bforartists-history/about-free-software-and-the-gpl.png)
 
 ## About Free Software and the GPL
 
