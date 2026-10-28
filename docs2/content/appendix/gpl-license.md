@@ -51,4 +51,4 @@ Python add-ons that use the Bforartists API are generally considered to be cover
 
 ## Read the license
 
-The full text is on the GNU website [Link]([https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)) and in the license files that come with Bforartists. 
+The full text is on the GNU website [https://www.gnu.org/licenses/gpl-3.0.en.html](https://www.gnu.org/licenses/gpl-3.0.en.html) and in the license files that come with Bforartists. 
