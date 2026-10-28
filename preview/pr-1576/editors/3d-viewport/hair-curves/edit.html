@@ -1,0 +1,1271 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Edit Mode · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1576 · <code>docs2/adjust-last-operation</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../../../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<a href="../../../getting-started/about-documentation.html">Using the Documentation</a>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<a style="padding-left:3.5rem" href="../all-modes/header/header-tools-and-options.html">Header tools and Options</a>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<a style="padding-left:2.5rem" href="../armature/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../curve/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/draw.html">Draw Mode</a>
+<a class="is-current" style="padding-left:2.5rem" href="edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../lattice/edit.html">Edit Mode</a>
+<a style="padding-left:3.5rem" href="../mesh/edit/header.html">Header</a>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<a style="padding-left:3.5rem" href="../mesh/sculpt/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../metaball/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../object-mode/header.html">Header</a>
+<a style="padding-left:2.5rem" href="../point-cloud/edit.html">Edit Mode</a>
+<a style="padding-left:2.5rem" href="../text/edit.html">Edit Mode</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../../dope-sheet/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../drivers-editor/header.html">Header</a>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<a style="padding-left:1.5rem" href="../../graph-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../image-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/header.html">Header</a>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<a style="padding-left:1.5rem" href="../../uv-editor/header.html">Header</a>
+<a style="padding-left:1.5rem" href="../../video-sequence-editor/header.html">Header</a>
+<a style="padding-left:3.5rem" href="../all-modes/header/navigation-menu.html">Navigation Menu</a>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<a style="padding-left:2.5rem" href="../armature/pose.html">Pose Mode</a>
+<a style="padding-left:2.5rem" href="../grease-pencil/edit.html">Edit Mode</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a style="padding-left:3.5rem" href="../mesh/edit/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<a style="padding-left:2.5rem" href="../object-mode/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../../image-editor/tool-shelf.html">Tool Shelf</a>
+<span>Editors introduction</span>
+<a style="padding-left:1.5rem" href="../../movie-clip-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<a style="padding-left:1.5rem" href="../../uv-editor/tool-shelf.html">Tool Shelf</a>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<a href="../../3d-viewport.html">3D Viewport</a>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<a style="padding-left:2.5rem" href="../mesh/vertex-paint.html">Vertex Paint</a>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../../drivers-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../../graph-editor/sidebar.html">Sidebar</a>
+<a style="padding-left:1.5rem" href="../../image-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">Sidebar</span>
+<a style="padding-left:1.5rem" href="../../nonlinear-animation-editor/sidebar.html">Sidebar</a>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<a style="padding-left:3.5rem" href="../all-modes/header/select-menu.html">Select Menu</a>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<a style="padding-left:2.5rem" href="../grease-pencil/vertex-paint.html">Vertex Paint</a>
+<a style="padding-left:3.5rem" href="../mesh/edit/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Context Menus</span>
+<a style="padding-left:2.5rem" href="../mesh/weight-paint.html">Weight Paint</a>
+<a style="padding-left:2.5rem" href="../object-mode/context-menus.html">Context Menus</a>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<a href="../../image-editor.html">Image Editor</a>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<a style="padding-left:2.5rem" href="../grease-pencil/weight-paint.html">Weight Paint</a>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<a style="padding-left:2.5rem" href="../mesh/particle-edit.html">Particle Edit</a>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<a href="../../uv-editor.html">UV Editor</a>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<a href="../../video-sequence-editor.html">Video Sequence Editor</a>
+<a href="../../movie-clip-editor.html">Movie Clip Editor</a>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<a href="../../graph-editor.html">Graph Editor</a>
+<a href="../../drivers-editor.html">Drivers Editor</a>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<a href="../../outliner.html">Outliner</a>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › 3D Viewport › Hair Curves › Edit Mode</div><h1 class="pv-title">Edit Mode</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 15 min read</span></div><article class="ui-doc-body"><p><span class="ui-doc-menu">Hair Curves › Edit Mode</span>: every menu, tool, sidebar tab and context menu of this mode, on one page. Use the panels on the right to jump between the regions.</p>
+<h1 id="header">Header</h1>
+<h2 id="control-points-menu">Control Points menu</h2>
+<h3 id="edit-mode-control-points-menu">Edit mode – Control Points menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-control-points-menu/edit-mode-control-points-menu.png" alt="Edit mode – Control Points menu" loading="lazy"><figcaption>Edit mode – Control Points menu</figcaption></figure>
+<h4 id="extrude-curve">Extrude Curve</h4>
+<p>Extrudes the selected hair curve points, and moves it.</p>
+<h2 id="curves-menu">Curves menu</h2>
+<h3 id="edit-mode-curves-menu">Edit mode - Curves menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/edit-mode-curves-menu.png" alt="Edit mode - Curves menu" loading="lazy"><figcaption>Edit mode - Curves menu</figcaption></figure>
+<h3 id="transform-submenu">Transform Submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/transform-submenu.png" alt="Transform Submenu" loading="lazy"></figure>
+<h4 id="to-sphere">To Sphere</h4>
+<p>Shapes a selection of objects into the shape of a sphere. The calculation happens with the object origins.</p>
+<p>In Object mode this tools requires to have more than one object selected.</p>
+<h5 id="usage">Usage</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/usage.png" alt="Usage" loading="lazy"></figure>
+<p>Select the objects, activate the tool, then drag the mouse in the 3D viewport. In the header you will read the current factor then. Which tells you how close you are towards the sphere shape.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/point-cloud-edit-mode-point-cloud-menu/usage.png" alt="Usage" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/point-cloud-edit-mode-point-cloud-menu/usage-2.png" alt="Usage" loading="lazy"></figure>
+<h5 id="adjust-last-operation">Adjust Last Operation</h5>
+<h6 id="factor">Factor</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/factor.png" alt="Factor" loading="lazy"></figure>
+<p>The factor to transform the selection into a shape form.</p>
+<h6 id="proportional-editing">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="shear">Shear</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/shear.png" alt="Shear" loading="lazy"></figure>
+<p>Shear shears the selection.</p>
+<p>In Object mode this tools requires to have more than one object selected.</p>
+<h5 id="adjust-last-operation-2">Adjust Last Operation</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>Adjust an offset.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Defines one axis of the imaginary shear axis plane.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="axis-ortho">Axis Ortho</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png" alt="Axis Ortho" loading="lazy"></figure>
+<p>Defines the other axis of the imaginary shear axis plane.</p>
+<h6 id="orientation">Orientation</h6>
+<p>Choose the orientation for the shear action.</p>
+<h6 id="proportional-editing-2">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bend">Bend</h4>
+<p>Bends the selection.</p>
+<p>In Object mode this tools requires to have more than one object selected.</p>
+<h4 id="push-pull">Push/Pull</h4>
+<p>It pushes or pulls the object positions relative to the center of the selection.</p>
+<p>In Object mode this tool requires to have more than one object selected.</p>
+<h5 id="adjust-last-operation-3">Adjust Last Operation</h5>
+<h6 id="distance">Distance</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/distance.png" alt="Distance" loading="lazy"></figure>
+<p>Adjust the strength of influence of the tool.</p>
+<h6 id="mirror-editing">Mirror Editing</h6>
+<p>Enables mirror editing.</p>
+<h6 id="proportional-editing-3">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="warp">Warp</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/warp.png" alt="Warp" loading="lazy"></figure>
+<p>Warps a mesh selection between two defined points. This also works with curves.</p>
+<h5 id="adjust-last-operation-4">Adjust Last Operation</h5>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Warp Angle</td>
+<td>The strength of the warp effect.</td>
+</tr>
+<tr>
+<td>Offset Angle</td>
+<td>An offset angle to bend side wards.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="min">Min</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/min.png" alt="Min" loading="lazy"></figure>
+<p>The start point.</p>
+<h6 id="max">Max</h6>
+<p>The end point.</p>
+<h4 id="radius">Radius</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/radius.png" alt="Radius" loading="lazy"></figure>
+<p>Scales the selected geometry of a curve along its normals. Transform orientation and Pivot point gets ignored.</p>
+<p>A positive value pushes the vertices outwards. A negative value pushes the vertices inwards.</p>
+<p>The curve needs to have geometry !</p>
+<h5 id="adjust-last-operation-5">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-transform.png" alt="Last Operator Transform" loading="lazy"></figure>
+<h6 id="values">Values</h6>
+<p>The transform values.</p>
+<h6 id="axis">Axis</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/axis.png" alt="Axis" loading="lazy"></figure>
+<p>The transform axis.</p>
+<h6 id="orientation-2">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable Mirror Editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mirror-submenu">Mirror submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/mirror.png" alt="Mirror submenu" loading="lazy"></figure>
+<p>Mirror mirrors the selected geometry along the defined axis.</p>
+<h4 id="interactive-mirror">Interactive Mirror</h4>
+<p>Mirror by hotkeys. You activate the tool, type in x for x global for example, or x x for x local. And the selection gets mirrored</p>
+<h4 id="x-global-y-global-etc">X Global, Y Global etc.</h4>
+<p>Mirrors the selection around the chosen axis.</p>
+<h5 id="adjust-last-operation-6">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/mesh-edit-mode-mesh-menu/x-global-y-global-etc.png" alt="Last Operator Mirror" loading="lazy"></figure>
+<p>The Last Operator Mirror panel gives you tools to adjust the mirror action.</p>
+<h6 id="orientation-3">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Orientation is a drop-down box . Choose the type of orientation for the mirroring action.</p>
+<h6 id="constraint-axis">Constraint Axis</h6>
+<p>Constraint Axis gives you again the possibility to define the mirror axis. You can choose more than one axis here.</p>
+<h3 id="snap-submenu">Snap submenu</h3>
+<h4 id="snap">Snap</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/snap-vertices.png" alt="Snap" loading="lazy"></figure>
+<p>Choose several methods to snap one element to another. The menu items should be self explaining.</p>
+<h5 id="adjust-last-operation-7">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-snap.png" alt="Last operator Snap Selection to Cursor" loading="lazy"><figcaption>Last operator Snap Selection to Cursor</figcaption></figure>
+<p>Some snap operations shows a last operation panel, some not.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offset</td>
+<td>If the selection should snap as a whole, or if each individual element of the selection should snap.</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>If the selection should be rotated to match the cursor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-attribute">Set Attribute</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/set-attribute.jpg" alt="Set Attribute" loading="lazy"></figure>
+<p>Set the position attribute of the selected elements. The values can be adjusted in the popup.</p>
+<h4 id="delete">Delete</h4>
+<p>Deletes the selected hair curves.</p>
+<h3 id="operators">Operators</h3>
+<h4 id="duplicate">Duplicate</h4>
+<p>Duplicates the current selection. This can be a single control point or a whole curve.</p>
+<p>The copy sticks to the mouse until you release it. A Right click while moving will reset the position of the duplicate. The duplicated part will be part of the same object.</p>
+<p>When you drag the duplicate around you will see the position values in the header.</p>
+<h5 id="adjust-last-operation-8">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-duplicate.png" alt="Last Operator Duplicate" loading="lazy"></figure>
+<h6 id="move-x-y-z">Move X , Y , Z</h6>
+<h6 id="orientation-4">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable Mirror Editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-spline-type">Set Spline Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/set-spline-type.png" alt="Set Spline Type" loading="lazy"></figure>
+<p>With set Spline Type, you can set the type of the curve.</p>
+<ul>
+<li><strong>Catmul Rom</strong> is an interpolated spline system for smooth curves.</li>
+<li><strong>Poly</strong> is a straight line between the control points.</li>
+<li><strong>Bezier</strong> has curve handlers.</li>
+<li>A <strong>NURBS</strong> curve has a control cage.</li>
+</ul>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/set-spline-type-2.png" alt="Set Spline Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/set-spline-type-3.png" alt="Set Spline Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/set-spline-type-4.png" alt="Set Spline Type" loading="lazy"></figure>
+<h5 id="adjust-last-operation-9">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-spline-type.png" alt="Last Operator Set Spline Type" loading="lazy"><figcaption>Last Operator Set Spline Type</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Type is a drop-down box . Choose the spline type</td>
+</tr>
+<tr>
+<td>Handles</td>
+<td>Use Handles when converting Bezier curves into polygons.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-attribute-2">Set Attribute</h4>
+<p>Set values of the attibute for selected elements. The selected geometry will be set to the chosen vector 3 value.</p>
+<h5 id="adjust-last-operation-10">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/hair-curve-edit-mode-curves-menu/last-operator-set-attribute.png" alt="Last Operator Set Attribute" loading="lazy"><figcaption>Last Operator Set Attribute</figcaption></figure>
+<h6 id="position">Position</h6>
+<p>The vector 3 values.</p>
+<h4 id="toggle-cyclic">Toggle Cyclic</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/toggle-cyclic.png" alt="Toggle Cyclic" loading="lazy"></figure>
+<p>Toggle Cyclic closes or opens the curve.</p>
+<h5 id="adjust-last-operation-11">Adjust Last Operation</h5>
+<h6 id="direction">Direction</h6>
+<p>Direction is a drop-down box . Choose the direction in which the curve gets closed.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Separate</td>
+<td>Separates the selection into a new object.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Deletes the selected hair geomety.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="segments-menu">Segments menu</h2>
+<h3 id="edit-mode-segments-menu">Edit Mode - Segments Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/header/curve-surface-edit-mode-segments-menu/edit-mode-segments-menu.png" alt="Edit Mode - Segments Menu" loading="lazy"><figcaption>Edit Mode - Segments Menu</figcaption></figure>
+<p>The Segments menu exists for Curve and Surface object types. They are both curve types, but of different kind.</p>
+<p>The added objects in edit mode becomes part of the current object geometry.</p>
+<h4 id="subdivide">Subdivide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/subdivide.png" alt="Subdivide" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/subdivide-2.png" alt="Subdivide" loading="lazy"></figure>
+<p>Subdivides the selected curve geometry, and adds more control points.</p>
+<h5 id="adjust-last-operation-12">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-subdivide.png" alt="Last Operator Subdivide" loading="lazy"></figure>
+<h6 id="number-of-cuts">Number of Cuts</h6>
+<p>Number of subdivision cuts.</p>
+<h4 id="switch-direction">Switch Direction</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/switch-direction.png" alt="Switch Direction" loading="lazy"></figure>
+<p>Just for Bezier Curve object type. Surface Nurbs curves doesn't have a direction. Switches the direction in which the curve is pointing.</p>
+<h1 id="tool-shelf">Tool Shelf</h1>
+<h2 id="tools">Tools</h2>
+<h3 id="tool-shelf-hair-curve-edit-mode">Tool Shelf - Hair Curve - Edit Mode</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-edit-mode/tool-shelf-hair-curve-edit-mode.png" alt="Tool Shelf - Hair Curve - Edit Mode" loading="lazy"><figcaption>Tool Shelf - Hair Curve - Edit Mode</figcaption></figure>
+<p>With a hair curve object in edit mode you will find some tools to edit the curve geometry in the tool shelf.</p>
+<h4 id="tweak-select-transform-3d-cursor-measure-and-annotate-tools">Tweak, Select, Transform, 3D Cursor Measure and Annotate tools</h4>
+<p>The tweak, select, transform, 3d cursor, measure and annotate tools at the end of the list are explained in the chapter 7.1.1 Editors - 3D View - Tool Shelf - Object Mode. We won't cover this tools again here.</p>
+<h4 id="draw">Draw</h4>
+<p>Allows you to draw a curve into the viewport.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/draw.png" alt="Draw" loading="lazy"></figure>
+<h5 id="tool-settings">Tool Settings</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-settings.png" alt="Tool Settings" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-settings-2.png" alt="Tool Settings" loading="lazy"></figure>
+<h5 id="type">Type</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/type.png" alt="Type" loading="lazy"></figure>
+<p>Set the draw method for the curve. Poly draws a simple polygon shape. Bezier creates a Bezier curve type with handlers.</p>
+<p>With type Bezier you will get more options.</p>
+<h5 id="method">Method</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/method.png" alt="Method" loading="lazy"></figure>
+<p>The curve fitting method for a Bezier curve.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Refit</td>
+<td>Incrementally refit the curve.</td>
+</tr>
+<tr>
+<td>Split</td>
+<td>Split the curve until it fits.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="tolerance">Tolerance</h5>
+<p>Allow deviation for a smoother but less precise line.</p>
+<h5 id="detect-corners">Detect Corners</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/detect-corners.png" alt="Detect Corners" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/detect-corners-2.png" alt="Detect Corners" loading="lazy"></figure>
+<p>Detect corners and use non aligned angles.</p>
+<h6 id="corner-angle">Corner Angle</h6>
+<p>Corners above this angle are considered as corners.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Taper Start / End</td>
+<td>Taper factor for the radius of each curve point.</td>
+</tr>
+<tr>
+<td>Radius Min/Max</td>
+<td>Minimum or maximum radius when the pressure is applied.</td>
+</tr>
+<tr>
+<td>Use Pressure</td>
+<td>Use tablet pressure to draw the curve.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="depth">Depth</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/depth.png" alt="Depth" loading="lazy"></figure>
+<p>The method of projecting depth. Cursor or surface.</p>
+<h6 id="cursor">Cursor</h6>
+<p>Cursor has no further settings.</p>
+<h6 id="surface">Surface</h6>
+<h6 id="project-onto-selected">Project onto selected</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/project-onto-selected.png" alt="Project onto selected" loading="lazy"></figure>
+<p>Projects the strokes only onto selected objects.</p>
+<h6 id="absolute-offset">Absolute Offset</h6>
+<p>Apply a fixed offset, and don't scale by the radius.</p>
+<h6 id="only-first">Only First</h6>
+<p>Use the start of the stroke for the depth.</p>
+<p><strong>Plane</strong></p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/plane.png" alt="Plane" loading="lazy"></figure>
+<p>The plane for the projected strokes.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal to Surface</td>
+<td>Draw in a plane perpendicular to the surface.</td>
+</tr>
+<tr>
+<td>Tangent to Surface</td>
+<td>Draw in the surface plane.</td>
+</tr>
+<tr>
+<td>View</td>
+<td>Draw in a plane that is aligned to the viewport.</td>
+</tr>
+</tbody>
+</table>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curve 2D</td>
+<td>Draw the curve as 2d.</td>
+</tr>
+<tr>
+<td>As Nurbs</td>
+<td>Draw the curve as nurbs.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="adjust-last-operation-13">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-draw-curve.png" alt="Last Operator Draw Curve" loading="lazy"><figcaption>Last Operator Draw Curve</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Error</td>
+<td>Adjust the error distance threshold in object units</td>
+</tr>
+<tr>
+<td>Fit Method</td>
+<td>The curve fitting method. Choose between Refit and Split.</td>
+</tr>
+<tr>
+<td>Corner Angle</td>
+<td>Corners above this angle are considered as corners.</td>
+</tr>
+<tr>
+<td>Cyclic</td>
+<td>With curve type Bezier the curve gets closed. Has no effect at curve type Poly.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="curve-pen">Curve Pen</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/hair-curve-edit-mode/curve-pen.png" alt="Curve Pen" loading="lazy"></figure>
+<p>Extrudes start and end point of the spline to where you click with the mouse.</p>
+<h5 id="tool-settings-2">Tool Settings</h5>
+<h6 id="close-spline">Close Spline</h6>
+<p>Make the spline cyclic.</p>
+<h6 id="extrude-handle-type">Extrude Handle Type</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/extrude-handle-type.png" alt="Extrude Handle Type" loading="lazy"></figure>
+<p>Type of the extrude handler.</p>
+<h4 id="radius-2">Radius</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/radius.png" alt="Radius" loading="lazy"></figure>
+<p>Bezier curves have a radius. This is displayed by the black lines that points away from the curve. The radius tool allows you to resize this radius.</p>
+<h5 id="header-value">Header Value</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/header-value-2.png" alt="Header Value" loading="lazy"></figure>
+<p>When you resize the curve radius then you will see a value in the header. It tells you the current scale factor. This factor always starts with 1.</p>
+<h6 id="tool-settings-3">Tool Settings</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-settings-4.png" alt="Tool Settings" loading="lazy"></figure>
+<h6 id="drag">Drag</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active Tool</td>
+<td>When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.</td>
+</tr>
+<tr>
+<td>Tweak, Select Box, Circle and Lasso</td>
+<td>When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="adjust-last-operation-14">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform.png" alt="Last Operator Transform" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Values X Y Z W</td>
+<td>The axis to increase the radius. Just X has an effect with the curve radius.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>The axis to use. This has no effect with a curve object.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="orientation-5">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Adjust the orientation of the extrusion. It usually starts with Normal.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tilt">Tilt</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tilt.png" alt="Tilt" loading="lazy"></figure>
+<p>With this tool you can tilt the curve. It is the mean tilt value in the Transform panel of the Sidebar.</p>
+<h5 id="header-value-2">Header Value</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/header-value-3.png" alt="Header Value" loading="lazy"></figure>
+<p>When you rotate the curve with the tilt tool, then you will see a value in the header. It tells you the current rotation relative to the starting rotation. This value always starts with 0.</p>
+<h6 id="tool-settings-4">Tool Settings</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/tool-settings-5.png" alt="Tool Settings" loading="lazy"></figure>
+<h6 id="drag-2">Drag</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/mesh-edit-mode/drag.png" alt="Drag" loading="lazy"></figure>
+<p>When you click at the widget of the active tool, then you perform the tool action. Adjust what should happen when you click outside of the widget, in the empty area.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active Tool</td>
+<td>When you click off the widget then the click still does the same than clicking at the widget. It performs the active tool.</td>
+</tr>
+<tr>
+<td>Tweak, Select Box, Circle and Lasso</td>
+<td>When you choose this options then you will set the off click to the different select methods. Whereas tweak works more than a move tool then. Tweak is the default.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="adjust-last-operation-15">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/tool-shelf/curve-edit-mode/last-operator-transform-2.png" alt="Last Operator Transform" loading="lazy"></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angle</td>
+<td>This value tells you the current rotation relative to the starting rotation. This value always starts with 0.</td>
+</tr>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable mirror editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="context-menus">Context Menus</h1>
+<h2 id="curves-context-menu">Curves context menu</h2>
+<h3 id="detailed-table-of-collection">Detailed table of collection</h3>
+<h3 id="edit-mode-curves-context-menu">Edit Mode - Curves Context Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/hair-curves-edit-mode-curves-context-menu/edit-mode-curves-context-menu.png" alt="Edit Mode - Curves Context Menu" loading="lazy"><figcaption>Edit Mode - Curves Context Menu</figcaption></figure>
+<p>Call this menu with double right click in the 3D viewport. You need to be in Edit mode with a armature object.</p>
+<h4 id="subdivide-2">Subdivide</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/subdivide.png" alt="Subdivide" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/subdivide-2.png" alt="Subdivide" loading="lazy"></figure>
+<p>Subdivides the selected curve geometry, and adds more control points.</p>
+<h5 id="adjust-last-operation-16">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-subdivide.png" alt="Last Operator Subdivide" loading="lazy"></figure>
+<h6 id="number-of-cuts-2">Number of Cuts</h6>
+<p>Number of subdivision cuts.</p>
+<h4 id="extrude-curve-2">Extrude Curve</h4>
+<p>Extrudes the selected curve point(s).</p>
+<h5 id="adjust-last-operation-17">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-extrude-curve-and-move.png" alt="Last operator Extrude Curve and Move" loading="lazy"><figcaption>Last operator Extrude Curve and Move</figcaption></figure>
+<h6 id="mode">Mode</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/mode.png" alt="Mode" loading="lazy"></figure>
+<p>A drop-down box where you can choose between different extrude modes.</p>
+<p>Default is Translation. Most other methods has no effect.</p>
+<h6 id="move-x-y-z-2">Move X , Y , Z</h6>
+<p>The position of the extruded point(s).</p>
+<h6 id="orientation-6">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/mesh-object-edit-mode-vertex-context-menu/orientation.png" alt="Orientation" loading="lazy"></figure>
+<p>Adjust the orientation of the extrusion. It usually starts with Normal.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror Editing</td>
+<td>Enable Mirror Editing.</td>
+</tr>
+<tr>
+<td>Proportional editing</td>
+<td>Enables proportional editing. Activating proportional editing reveals further settings. · <strong>Proportional Falloff</strong>: Adjust the falloff methods. · <strong>Proportional Size</strong>: See and adjust the falloff radius. · <strong>Connected</strong>: The proportional falloff gets calculated for connected parts only. · <strong>Projected(2D)</strong>: The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mirror-sub-menu">Mirror sub menu</h4>
+<p>Mirrors the selection.</p>
+<h5 id="interactive-mirror-2">Interactive Mirror</h5>
+<p>Mirrors the selection.</p>
+<h6 id="usage-2">Usage:</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/usage.png" alt="Usage:" loading="lazy"></figure>
+<p>Activate the tool. In the header you will now see further instructions. Which is: type in the axis at which you want to mirror. Interactive mirroring starts in Global space. You can change the orientation in the last operator.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X Y Z Global</td>
+<td>Mirrors along the global axis.</td>
+</tr>
+<tr>
+<td>X Y Z Local</td>
+<td>Mirrors along the object axis.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="adjust-last-operation-18">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror.png" alt="Last Operator Mirror" loading="lazy"></figure>
+<h6 id="orientation-7">Orientation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-mirror-2.png" alt="Orientation" loading="lazy"></figure>
+<p>Choose the orientation in which the transform should happen.</p>
+<h6 id="proportional-editing-4">Proportional editing</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/proportional-editing.png" alt="Proportional editing" loading="lazy"></figure>
+<p>Enables proportional editing. Activating proportional editing reveals further settings.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional Falloff</td>
+<td>Adjust the falloff methods.</td>
+</tr>
+<tr>
+<td>Proportional Size</td>
+<td>See and adjust the falloff radius.</td>
+</tr>
+<tr>
+<td>Connected</td>
+<td>The proportional falloff gets calculated for connected parts only.</td>
+</tr>
+<tr>
+<td>Projected(2D)</td>
+<td>The proportional falloff gets calculated in the screen space. Depth doesn't play a role. When it's in the radius, then it gets calculated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="snap-sub-menu">Snap sub menu</h4>
+<h5 id="selection-to-cursor">Selection to Cursor</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/selection-to-cursor.png" alt="Selection to Cursor" loading="lazy"></figure>
+<p>Snaps the currently selected object(s) to the cursor location.</p>
+<h5 id="selection-to-cursor-keep-offset">Selection to Cursor(Keep Offset)</h5>
+<p>Snaps the currently selected object(s) to the cursor location, but keeps the offset of the selected objects to each other. Means the center of the current selection goes to cursor position. Not every individual object.</p>
+<h6 id="adjust-last-operation-19">Adjust Last Operation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/object-mode-object-context-menu/last-operator-snap-selection-to-cursor.png" alt="Last operator Snap Selection to Cursor" loading="lazy"><figcaption>Last operator Snap Selection to Cursor</figcaption></figure>
+<h6 id="offset">Offset</h6>
+<p>Keep the offset of the selected objects to each other.</p>
+<h6 id="rotation">Rotation</h6>
+<p>Rotate to match the cursor.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selection to Active</td>
+<td>Snaps the currently selected object(s) to the active object.</td>
+</tr>
+<tr>
+<td>Selection to Grid</td>
+<td>Snaps the currently selected object(s) to the nearest grid point.</td>
+</tr>
+<tr>
+<td>Cursor to Selected</td>
+<td>Moves the cursor to the center of the selected object(s).</td>
+</tr>
+<tr>
+<td>Cursor to World Origin</td>
+<td>Moves the cursor to the world origin.</td>
+</tr>
+<tr>
+<td>Cursor to Active</td>
+<td>Moves the cursor to the center of the active object.</td>
+</tr>
+<tr>
+<td>Cursor to Grid</td>
+<td>Moves the cursor to the nearest grid point.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-spline-type-2">Set Spline Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/set-spline-type.png" alt="Set Spline Type" loading="lazy"></figure>
+<p>With set Spline Type you can set the type of the curve.</p>
+<p>Poly is a straight line between the control points. Bezier has curve handlers. A nurbs curve has a control cage.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/set-spline-type-2.png" alt="Set Spline Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/set-spline-type-3.png" alt="Set Spline Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/set-spline-type-4.png" alt="Set Spline Type" loading="lazy"></figure>
+<h5 id="adjust-last-operation-20">Adjust Last Operation</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-spline-type.png" alt="Last Operator Set Spline Type" loading="lazy"><figcaption>Last Operator Set Spline Type</figcaption></figure>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Type is a drop-down box choose the spline type</td>
+</tr>
+<tr>
+<td>Handles</td>
+<td>Use Handles when converting Bezier curves into polygons.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-handle-type">Set Handle Type</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/set-handle-type.png" alt="Set Handle Type" loading="lazy"></figure>
+<p>Handles defines the type of handle for the knots of the curve. You have the choice between Auto, Vector, Align and Free. And the Last Operator gives you a fifth possibility to toggle between Free and Align.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto</td>
+<td>Auto aligns the handles automatically.</td>
+</tr>
+<tr>
+<td>Vector</td>
+<td>Set Handle type to Vector.</td>
+</tr>
+<tr>
+<td>Align</td>
+<td>Set Handle type to Align.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="free">Free</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/free.png" alt="Free" loading="lazy"></figure>
+<p>Set Handle type to Free.</p>
+<h5 id="toggle-free-aligned">Toggle Free/Aligned</h5>
+<p>Toggle Free/Aligned.</p>
+<h6 id="adjust-last-operation-21">Adjust Last Operation</h6>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/last-operator-set-handle-type.png" alt="Last Operator Set Handle Type" loading="lazy"><figcaption>Last Operator Set Handle Type</figcaption></figure>
+<h6 id="type-2">Type</h6>
+<p>Type is a drop-down box where you can set the handle type. You have the choice between Auto, Vector, Align, Free. And the fifth possibility toggles between Free and Align.</p>
+<h4 id="toggle-cyclic-2">Toggle Cyclic</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/toggle-cyclic.png" alt="Toggle Cyclic" loading="lazy"></figure>
+<p>Toggle Cyclic closes or opens the curve.</p>
+<h5 id="adjust-last-operation-22">Adjust Last Operation</h5>
+<h6 id="direction-2">Direction</h6>
+<p>Direction is a drop-down box choose the direction in which the curve gets closed.</p>
+<h4 id="switch-direction-2">Switch Direction</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/8ff7ccadfedfd43d9e7dec896a5818fd39600be2/docs2/images/editors/3d-viewport/context-menus/curve-surface-object-edit-mode-curve-context-menus/switch-direction.png" alt="Switch Direction" loading="lazy"></figure>
+<p>Just for Bezier Curve object type. Surface Nurbs curves doesn't have a direction. Switches the direction in which the curve is pointing.</p>
+<table class="ui-doc-table">
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Separate</td>
+<td>Separates the selected control points, and creates a new curve object out of it. You need to select two control points to select the segment between it.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Removes the selected control points or curves.</td>
+</tr>
+<tr>
+<td>Split</td>
+<td>Split selected points into a new object.</td>
+</tr>
+</tbody>
+</table>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fadjust-last-operation/collection/docs/edit/docs2%2Fcontent%2Feditors%2F3d-viewport%2Fhair-curves%2Fedit.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/adjust-last-operation/docs2/content/editors/3d-viewport/hair-curves/edit.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#control-points-menu">Control Points menu</a><a class="h3" href="#edit-mode-control-points-menu">Edit mode – Control Points menu</a><a class="h2" href="#curves-menu">Curves menu</a><a class="h3" href="#edit-mode-curves-menu">Edit mode - Curves menu</a><a class="h3" href="#transform-submenu">Transform Submenu</a><a class="h3" href="#mirror-submenu">Mirror submenu</a><a class="h3" href="#snap-submenu">Snap submenu</a><a class="h3" href="#operators">Operators</a><a class="h2" href="#segments-menu">Segments menu</a><a class="h3" href="#edit-mode-segments-menu">Edit Mode - Segments Menu</a><a class="h2" href="#tools">Tools</a><a class="h3" href="#tool-shelf-hair-curve-edit-mode">Tool Shelf - Hair Curve - Edit Mode</a><a class="h2" href="#curves-context-menu">Curves context menu</a><a class="h3" href="#detailed-table-of-collection">Detailed table of collection</a><a class="h3" href="#edit-mode-curves-context-menu">Edit Mode - Curves Context Menu</a></aside></div></body></html>
