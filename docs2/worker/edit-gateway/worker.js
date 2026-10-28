@@ -4,7 +4,7 @@
 //
 // 1. checks that the page exists on master,
 // 2. creates the branch docs2/edit/<page>-<yyyymmdd> from the latest master (reuses it the same day),
-// 3. redirects to Pages CMS on that branch. The first save pushes a commit, and the
+// 3. redirects to Pages CMS on that branch (its edit links use the full repository path). The first save pushes a commit, and the
 //    "Docs 2.0 auto pull request" workflow opens the pull request.
 //
 // Pages CMS asks for the GitHub sign-in itself, so this Worker never sees a password.
@@ -69,7 +69,7 @@ export default {
       if (!made.ok && made.status !== 422) throw new Error("create branch " + made.status); // 422: already there, reuse it
 
       // 3. open Pages CMS on it
-      return Response.redirect(`${CMS}/${encodeURIComponent(branch)}/collection/${kind}/edit/${encodeURIComponent(path)}`, 302);
+      return Response.redirect(`${CMS}/${encodeURIComponent(branch)}/collection/${kind}/edit/${encodeURIComponent(ROOTS[kind] + "/" + path)}`, 302);
     } catch (e) {
       return page("The editor could not be prepared", "<p>Please try again in a moment.</p>" + fallback, 502);
     }
