@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Using the Documentation · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1561 · <code>docs2/edit-gate-on</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<a href="../getting-started.html">Getting Started</a>
+<a href="introduction.html">Introduction</a>
+<a class="is-current" href="about-documentation.html">Using the Documentation</a>
+<a href="installation.html">Installation</a>
+<a href="quick-start.html">Quick Start</a>
+<a href="data-structure.html">Data Structure</a>
+<a href="differences.html">Comparison with Blender</a>
+<a href="migrating-from-blender.html">Migrating from Blender</a>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<span>Text Editor</span>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Getting Started › About Documentation</div><h1 class="pv-title">Using the Documentation</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 17 min read</span></div><article class="ui-doc-body"><p>The question of how to use the manual sounds odd in the first moment. Yousimply read it! But there are a few things to know before you canreally find easily what you are looking for. Because using a 3dsoftware requires some special 3d knowledge. And it needs a bit ofknowledge about Bforartists to understand the structure of themanual. So that you can find what you need, both, from coming thesoftware side, and from coming the manual side.</p>
+<figure><img src="https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6a459657c7c5e0a9f2298e57_General-Structure.jpg" alt="Example of Chapter Groups" loading="lazy"><figcaption>Example of Chapter Groups</figcaption></figure>
+<p>The manual is organized into groups of chapters to help you find information quickly.</p>
+<p><em>Here are some descriptions of the chapter groups:</em></p>
+<h3 id="getting-started">Getting Started</h3>
+<p>Covers the <strong>basics</strong> of Bforartists. Here you’ll find installation steps, first launch guidance, and a quick overview of the interface fundamentals. This also helps migrating from Blender and using your Blender settings. It’s the best place for new users to begin.</p>
+<h3 id="interface">Interface</h3>
+<p>Explains the <strong>layout and controls</strong> of the software. This includes windows, areas, editors, shelves, menus, and panels. It helps you understand how the program is organized visually and functionally.</p>
+<h3 id="workspaces">Workspaces</h3>
+<p>Introduces <strong>workspace editor presets</strong> that group editors, modes and tools for specific tasks, such as modeling, animation, or compositing. Workspaces let you switch quickly between different workflows. These are also short hands to different parts of the documentation for in-depth exploration.</p>
+<h3 id="editors">Editors</h3>
+<p>Details each <strong>editor type</strong> in Bforartists, from the 3D View to the Node Editor. Every editor has its own chapter explaining its areas, modes, object types, shelves, menus, properties and tools.</p>
+<h3 id="assets">Assets</h3>
+<p>Covers the <strong>Asset Browser</strong> and how to manage reusable content like materials, objects, and node groups. Assets make it easier to get working quickly.</p>
+<h3 id="extensions-and-addons">Extensions and Addons</h3>
+<p>Explains how to install and use <strong>addons</strong> and <strong>extensions</strong>. These expand the functionality of Bforartists, adding new tools or automating workflows.</p>
+<h3 id="keymap">Keymap</h3>
+<p>Documents the <strong>keyboard shortcuts</strong> and input system. It shows the default keymap and how to customize it to fit your personal workflow.</p>
+<h3 id="advanced">Advanced</h3>
+<p>Provides <strong>specialized topics</strong> such as scripting, data structures, and performance optimization. This section is aimed at users who want to go deeper into technical control.</p>
+<h3 id="information">Information</h3>
+<p>Contains <strong>miscellaneous references</strong> such as version details, credits, and background information about the project. It’s the place for general notes and supporting material.</p>
+<figure><img src="https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6a45978cb3e7d3552e3d5340_Interface-types.jpg" alt="The Interface Types Chapters" loading="lazy"><figcaption>The Interface Types Chapters</figcaption></figure>
+<p>Before diving into each editor, it’s important to understand the <strong>shared interface elements</strong>. These appear across nearly all editors in Bforartists and give the software a consistent structure. Knowing them will help you navigate any editor more easily.</p>
+<h3 id="windows">Windows</h3>
+<p><strong>Windows</strong> are the main containers of the interface. Each window can hold one or more editors, and you can split or join them to customize your workspace. Here you can learn how to manage the main window and secondary windows.</p>
+<h3 id="areas">Areas</h3>
+<p><strong>Areas</strong> are subdivisions inside a window. Each area hosts an editor, and you can resize or rearrange them to fit your workflow. Here you can learn how to resize, duplicate, split and float areas.</p>
+<h3 id="editors-2">Editors</h3>
+<p><strong>Editors</strong> are the functional parts of the interface. Examples include the <strong>3D View</strong>, <strong>Outliner</strong>, <strong>Properties Editor</strong>, and <strong>Timeline</strong>. Each editor has its own tools and purpose.</p>
+<h3 id="headers">Headers</h3>
+<p>The <strong>header</strong> runs along the top of an editor. It contains <strong>menus, options, and tool settings</strong>. This is where you’ll find commands specific to the editor you’re working in.</p>
+<h3 id="footers">Footers</h3>
+<p>Some editors include a <strong>footer</strong> at the bottom. It often provides <strong>status information</strong> or additional controls related to the editor’s content.</p>
+<h3 id="tool-shelves">Tool Shelves</h3>
+<p>On the <strong>left side</strong>, many editors have a <strong>tool shelf</strong>. This is where you’ll find the main <strong>tools and operators</strong> for direct interaction.</p>
+<h3 id="side-bars">Side Bars</h3>
+<p>On the <strong>right side</strong>, editors often include a <strong>sidebar</strong>. It contains <strong>panels and tabs</strong> for adjusting properties, transforms, and add‑on settings.</p>
+<h3 id="tabs-panels">Tabs &amp; Panels</h3>
+<p><strong>Tabs</strong> group related tools, while <strong>panels</strong> provide detailed controls. They keep complex options organized and easy to access.</p>
+<h3 id="properties">Properties</h3>
+<p>Editors often display <strong>properties</strong> related to the active object, tool, or mode. These properties let you adjust values directly for precise control.</p>
+<h3 id="asset-shelves">Asset Shelves</h3>
+<p>Some editors include an <strong>asset shelf</strong>, giving quick access to <strong>materials, objects, or node groups</strong> stored in the Asset Browser.</p>
+<h3 id="context-menus">Context Menus</h3>
+<p>Right‑clicking opens a <strong>context menu</strong>. These menus provide quick access to relevant commands based on your selection.</p>
+<h3 id="floating-menus">Floating Menus</h3>
+<p>Certain actions open <strong>floating menus</strong>, temporary overlays that give you fast access to tools without leaving the viewport.</p>
+<h3 id="pie-menus">Pie Menus</h3>
+<p><strong>Pie menus</strong> are radial menus that let you select options quickly with directional input. They are designed for speed and efficiency.</p>
+<h3 id="last-operator-panel">Last Operator Panel</h3>
+<p>After performing an action, the <strong>Last Operator panel</strong> appears to the bottom left of the Editor. It lets you <strong>adjust the values</strong> of the most recent operation, such as moving, scaling, or extruding.</p>
+<h3 id="floating-dialogues">Floating Dialogues</h3>
+<p>Some tools open <strong>floating dialogues</strong> with additional options. These appear when a tool requires more input before it can be applied such as warnings, wizards or dialogues.</p>
+<p>The search panel at the top left is your fastest way to find specific topics. Type in keywords like “Curves,” “Modifiers,” or “Animation,” and the search will return relevant chapters and sections. The <strong>Discover</strong> button helps you explore related content, making it easier to learn beyond your initial query.</p>
+<h3 id="search-query">Search Query</h3>
+<p>Here you can write what you will like to find.</p>
+<h3 id="discover-button">Discover Button</h3>
+<p>This will ill load a new page showing results from the search, linking to relevant chapters by keywords.</p>
+<p>The left sidebar is the main index of the manual. It organizes chapters into expandable sections such as <strong>Getting Started</strong>, <strong>Interface</strong>, and <strong>Editors</strong>. This is your primary navigation tool for browsing the manual. You can expand or collapse sections to focus on the topics most relevant to your workflow.</p>
+<h3 id="panels">Panels</h3>
+<p>Each panel has a group of chapters related to a central topic. If you click on the panel title, it will take you to an index page giving a short description of each chapter.</p>
+<p>You can also click on the arrow to collapse the panel and momentarily hide it foe easier focus on different groups of chapters.</p>
+<h3 id="chapters">Chapters</h3>
+<p>Each link in each panel are the top level chapters. Each chapter is a new page with sub-section you can navigate later. When you click on the link, you will be able to discover more.</p>
+<p>On the right side of each page, you’ll find the chapter section navigation. This lists the headings and sub‑headings for the current page, allowing you to jump directly to the part you need. It’s especially useful for long chapters with multiple panels or operators.</p>
+<h3 id="section-panels">Section Panels</h3>
+<p>These panels show each chapter section headers, so you can see a hierarchy of points and sub-points.</p>
+<h3 id="sub-sections-by-header-links">Sub-sections by Header links</h3>
+<p>Here you can click and it will take you to a page anchor for that section and sub-section header.</p>
+<p>The button in the top left corner provides additional controls for how you view the documentation.</p>
+<ul>
+<li>Collapse all navigation panels to maximize reading space.</li>
+<li>Print the page directly for offline reference or study.</li>
+<li>Expand the view again when you need the sidebars back.</li>
+</ul>
+<p>These button are designed to give you flexibility, whether you prefer a clean reading experience or a fully navigable interface.</p>
+<p>WIP</p>
+<p>By combining breadcrumbs, search, the main index, section navigation, and utility controls, the documentation interface ensures you can always find your way, whether you’re exploring for the first time or diving deep into advanced topics. It’s built to be approachable, efficient, and supportive of both quick lookups and extended study. Hope you like it!</p>
+<p>This chapter explains how to use the Bforartists documentation effectively. Here we introduces the manual documentation interface, showing you how to navigate chapters, find information quickly, and make the most of the tools available on this website.</p>
+<figure><img src="https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6a44658e6eb9c6a2013289fd_DocumentationNavigation.jpg" alt="Documentation Navigation" loading="lazy"></figure>
+<h3 id="breadcrumbs-yellow">🟨Breadcrumbs (yellow)</h3>
+<p>Use this to go back in chapter hierarchy or to top level indices.</p>
+<h3 id="search-panel-green">🟩Search Panel (green)</h3>
+<p>Use this to search for particular chapters based on a subject.</p>
+<h3 id="main-index-sidebar-blue">🟦Main Index Sidebar (blue)</h3>
+<p>This is the full chapter list. Use this to navigate all groups of chapters and sub-chapters.</p>
+<h3 id="chapter-sections-sidebar-orange">🟧Chapter Sections Sidebar (orange)</h3>
+<p>Use this to navigate sections within chapters, based on headers hierarchies.</p>
+<h3 id="utility-buttons-red">🟥Utility Buttons (red)</h3>
+<p>Use these to eitehr collapse navigation panels, print the page to PDF or expand view for a focused view.</p>
+<p>These are not available in mobile mode, only desktop.</p>
+<p>Breadcrumbs appear at the top of every documentation page. They show your current location within the manual and provide quick links back to higher‑level sections. This makes it easy to retrace your steps or jump between related chapters without losing context.</p>
+<figure><img src="https://cdn.prod.website-files.com/650c5901cff33429a5e537f5/6a4595ebca5c7cf3c08860b2_Breadcrumbs.png" alt="Example of the Breadcrumbs navigation" loading="lazy"><figcaption>Example of the Breadcrumbs navigation</figcaption></figure>
+<h3 id="blue-links">Blue Links</h3>
+<p>The blue links are plages you can go, where the top link is the documentation top level.</p>
+<h3 id="orange-links">Orange Links</h3>
+<p>The orange link is the page you are already located</p>
+<p>The search panel at the top left is your fastest way to find specific topics. Type in keywords like “Curves,” “Modifiers,” or “Animation,” and the search will return relevant chapters and sections. The <strong>Discover</strong> button helps you explore related content, making it easier to learn beyond your initial query.</p>
+<h3 id="search-query-2">Search Query</h3>
+<p>Here you can write what you will like to find.</p>
+<h3 id="discover-button-2">Discover Button</h3>
+<p>This will ill load a new page showing results from the search, linking to relevant chapters by keywords.</p>
+<p>The left sidebar is the main index of the manual. It organizes chapters into expandable sections such as <strong>Getting Started</strong>, <strong>Interface</strong>, and <strong>Editors</strong>. This is your primary navigation tool for browsing the manual. You can expand or collapse sections to focus on the topics most relevant to your workflow.</p>
+<h3 id="panels-2">Panels</h3>
+<p>Each panel has a group of chapters related to a central topic. If you click on the panel title, it will take you to an index page giving a short description of each chapter.</p>
+<p>You can also click on the arrow to collapse the panel and momentarily hide it foe easier focus on different groups of chapters.</p>
+<h3 id="chapters-2">Chapters</h3>
+<p>Each link in each panel are the top level chapters. Each chapter is a new page with sub-section you can navigate later. When you click on the link, you will be able to discover more.</p>
+<p>On the right side of each page, you’ll find the chapter section navigation. This lists the headings and sub‑headings for the current page, allowing you to jump directly to the part you need. It’s especially useful for long chapters with multiple panels or operators.</p>
+<h3 id="section-panels-2">Section Panels</h3>
+<p>These panels show each chapter section headers, so you can see a hierarchy of points and sub-points.</p>
+<h3 id="sub-sections-by-header-links-2">Sub-sections by Header links</h3>
+<p>Here you can click and it will take you to a page anchor for that section and sub-section header.</p>
+<p>The button in the top left corner provides additional controls for how you view the documentation.</p>
+<ul>
+<li>Collapse all navigation panels to maximize reading space.</li>
+<li>Print the page directly for offline reference or study.</li>
+<li>Expand the view again when you need the sidebars back.</li>
+</ul>
+<p>These button are designed to give you flexibility, whether you prefer a clean reading experience or a fully navigable interface.</p>
+<p>WIP</p>
+<p>By combining breadcrumbs, search, the main index, section navigation, and utility controls, the documentation interface ensures you can always find your way, whether you’re exploring for the first time or diving deep into advanced topics. It’s built to be approachable, efficient, and supportive of both quick lookups and extended study. Hope you like it!</p>
+<h2 id="from-the-odt-manual-1-1-how-to-use-the-manual">From the .odt manual (1.1 How to use the Manual)</h2>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> The earlier text of this page from the .odt manual, kept word for word. It is merged with the text above in the Refine phase, after the full migration.</p></div>
+<h3 id="how-to-use-the-manual">How to use the Manual</h3>
+<p>The question of how to use the manual sounds odd in the first moment. You simply read it! But there are a few things to know before you can really find easily what you are looking for. Because using a 3d software requires some special 3d knowledge. And it needs a bit of knowledge about Bforartists to understand the structure of the manual. So that you can find what you need, both, from coming the software side, and from coming the manual side.</p>
+<p>In worst case a manual chapter looks like this:</p>
+<p>7.3.14 Editors - 3D View - Sidebar - Tool Tab - Grease Pencil - Weight Paint Mode</p>
+<p>How do you supposed to find the needed information here? Why is this title so long? What is a mode, what is a sidebar, a tab? And what is a grease pencil?</p>
+<p>Well, the manual chapter names are some sort of breadcrumbs. And you can follow this breadcrumbs. It is always the same pattern, at least for the chapters about the editor types and their tools.</p>
+<p><strong>Chapter number - Editor type - Editor area - Tab and panel if available - Object type</strong> - and the <strong>Mode</strong> in which the object needs to be to show the tool.</p>
+<p>And with this knowledge you should now easily be able to find what you are looking for. And this in both directions. Coming from the software and searching in the manual. And coming from the manual and searching the tool in the software.</p>
+<p>Let's talk about the details.</p>
+<h4 id="general-manual-structure">General Manual structure</h4>
+<p>Chapter 1 to 6 contains some general information. Like the official key map. Or the general interface. The different single editor types starts with chapter 7. And at the end you will find some miscellaneous information.</p>
+<h4 id="editor-type">Editor Type</h4>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f0bd8460472c87c44b024c3d1ada938109fbc84e/docs2/images/getting-started/about-documentation/editor-type.png" alt="Editor Type" loading="lazy"></figure>
+<p>The different editor types is the first thing that brings structure into the manual. The different Editor types.</p>
+<p>In the shot at the right you see that Bforartists is made of several areas. These are the several editor types. They all have their purpose. You have one editor type for the 3d view. One for the file browser, one for the UV editing, one for the Node editor, and so on. In this shot we see the 3D view (green), Toolbar editor (red), Outliner (pink), the Properties Editor (yellow), at the bottom the Timeline editor (blue). And the header and footer.</p>
+<p>Each editor type has its own main chapter.</p>
+<p>Chapter 7 is all about the 3D view. So every chapter that starts with a 7 is a chapter for the 3D view.</p>
+<p>Chapter 8 is all about the Image Editor.</p>
+<p>Chapter 9 is all about the UV Editor, and so on.</p>
+<p>Please have a look in the manual chapter 6 Editors Introduction. Here we list and describe all the different Editor types.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> In short: The manual chapter for the editors starts with the number. Followed by the editor type. Example: 7 Editors - 3D View</p></div>
+<h4 id="editor-area">Editor Area</h4>
+<p>Each editor can have several areas. The header, a toolbar at the left, a sidebar at the right, A tools area, the viewport to display and modify the content, some navigation elements, a panel where you can adjust some operations, and maybe even a footer.</p>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/f0bd8460472c87c44b024c3d1ada938109fbc84e/docs2/images/getting-started/about-documentation/editor-area.png" alt="Editor Area" loading="lazy"></figure>
+<p>Here as an example the 3D view.</p>
+<p>At the top is the Tool Settings. Marked with blue. Here you can find settings for the currently active tool.</p>
+<p>Below the tool settings is the Header. Marked with pink. It contains menus, tools and settings.</p>
+<p>In the middle is the actual viewport. Here you see and modify for example your mesh data.</p>
+<p>At the left you can find the Tool Shelf. Marked with green. It contains all the tools.</p>
+<p>The yellow area is the navigate widgets.</p>
+<p>At the right of it you can find the Sidebar. Marked with blue again. It contains settings and transform values. And it is the place where ad dons adds its panels.</p>
+<p>At the bottom left you can find the Adjust Last Operation panel. Marked with red. This panel appears when you do an operation, like move the mesh to another location, and allows you to adjust the values for the operation afterwards.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> In short: The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Example: 7.1 Editors - 3D View - Header</p></div>
+<h4 id="menus-options-tabs-and-panels">Menus, options, tabs and panels</h4>
+<p>Text menus and options are usually to find in the Header. So this are logical sub chapters for all header chapters.</p>
+<p>Tabs and panels are usually to find in the sidebar. So this is the logical sub chapters for all sidebar chapters.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> In short: The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Followed by the sub types in this area. Example: 7.1.5 Editors - 3D View - Header - Select Menu Example: 7.3.2 Editors - 3D View - Sidebar - Tool Tab</p></div>
+<h4 id="object-types-and-their-modes">Object Types and their modes</h4>
+<p>There are several object types in Bforartists that you can work with. One of the most common object types is the mesh object.</p>
+<p>Each object can have several modes to modify this object type. The mesh object has for example an edit mode where you can modify the mesh. A sculpt mode where you can sculpt the mesh. A vertex paint mode, a weight paint and a texture paint mode.</p>
+<p>Each mode has its own tool set. This means that some tools just shows with specific object types and being in a mode where these tools shows.</p>
+<p>And this is the last and very important breadcrumb in our manual chapter titles. Object type and required mode.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> In short: The manual chapter for the editors starts with the number. Followed by the editor type. Followed by the area type. Followed by the sub types in this area. Followed by object type and needed mode to show these tools. Example: 7.3.7 Editors - 3D View - Sidebar - Tool Tab - Mesh - Vertex Paint Mode</p></div>
+<h2 id="about-this-manual">About this Manual</h2>
+<p>Bforartists is a fork of the open source software Blender. And every software needs a manual. Bforartists 1 was equal enough to use the Blender manual in big parts for that. But even when the tools are the same than in Blender, the user interface differs quite a bit.</p>
+<p>From Bforartists 2 on we did a complete rewrite, and so our manual does not contain any parts from the Blender manual anymore.</p>
+<h2 id="editing-the-bforartists-manual">Editing the Bforartists Manual</h2>
+<p>The Bforartists Manual is a community driven effort to which anyone can contribute.</p>
+<p>And this very easy, since the manual comes not only as PDF files, but also as editable <code>*.odt</code> files. That's the file format for Libre and Open Office. Both free and open source Office solutions. To manipulate or to fix a typo, a word, a sentence or even a whole chapter is as easy as manipulating the text in Libre Office or Open Office, commit the changes to the manual repository, and tell the Bforartists developers to put it online.</p>
+<p>The repository with the ODT files can be found here: <a href="https://github.com/Bforartists/Manual">https://github.com/Bforartists/Manual</a></p>
+<h2 id="license">License</h2>
+<p>The Bforartists’s Manual is free and published under Public <code>Domain*</code></p>
+<p>This means that anyone is free to download, edit and share the manual. It also means that when contributing to the manual you don’t hold exclusive copyright to your text. You are, of course, acknowledged and appreciated for your contribution. However others can change and improve your text in order to keep the manual consistent and up to date.</p>
+<p><code>*</code> As of writing this part here the Blender manual for 2.77 and below was put under a Public Domain AS CC0 license. Which is simply invalid. You can have either Public domain. Or CC0. Those two licenses contradicts each other.</p>
+<p>It also seems that the Blender manual was put under CC0 and then once more under CC0 BY-SA without asking all involved persons if they wanted to do so. The original manual was under OCL license. Another license breach.</p>
+<p>So we choose the license type that seems to fit most here, especially when looking at the old licensing. Public Domain. The old Blender manual parts are still under OCL license.</p>
+<p>The Bforartists 2 manual should not contain any old Blender manual material anymore, and is fully licensed under Public Domain.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Fedit-gate-on/collection/docs/edit/docs2%2Fcontent%2Fgetting-started%2Fabout-documentation.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/edit-gate-on/docs2/content/getting-started/about-documentation.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h3" href="#getting-started">Getting Started</a><a class="h3" href="#interface">Interface</a><a class="h3" href="#workspaces">Workspaces</a><a class="h3" href="#editors">Editors</a><a class="h3" href="#assets">Assets</a><a class="h3" href="#extensions-and-addons">Extensions and Addons</a><a class="h3" href="#keymap">Keymap</a><a class="h3" href="#advanced">Advanced</a><a class="h3" href="#information">Information</a><a class="h3" href="#windows">Windows</a><a class="h3" href="#areas">Areas</a><a class="h3" href="#editors-2">Editors</a><a class="h3" href="#headers">Headers</a><a class="h3" href="#footers">Footers</a><a class="h3" href="#tool-shelves">Tool Shelves</a><a class="h3" href="#side-bars">Side Bars</a><a class="h3" href="#tabs-panels">Tabs &amp; Panels</a><a class="h3" href="#properties">Properties</a><a class="h3" href="#asset-shelves">Asset Shelves</a><a class="h3" href="#context-menus">Context Menus</a><a class="h3" href="#floating-menus">Floating Menus</a><a class="h3" href="#pie-menus">Pie Menus</a><a class="h3" href="#last-operator-panel">Last Operator Panel</a><a class="h3" href="#floating-dialogues">Floating Dialogues</a><a class="h3" href="#search-query">Search Query</a><a class="h3" href="#discover-button">Discover Button</a><a class="h3" href="#panels">Panels</a><a class="h3" href="#chapters">Chapters</a><a class="h3" href="#section-panels">Section Panels</a><a class="h3" href="#sub-sections-by-header-links">Sub-sections by Header links</a><a class="h3" href="#breadcrumbs-yellow">🟨Breadcrumbs (yellow)</a><a class="h3" href="#search-panel-green">🟩Search Panel (green)</a><a class="h3" href="#main-index-sidebar-blue">🟦Main Index Sidebar (blue)</a><a class="h3" href="#chapter-sections-sidebar-orange">🟧Chapter Sections Sidebar (orange)</a><a class="h3" href="#utility-buttons-red">🟥Utility Buttons (red)</a><a class="h3" href="#blue-links">Blue Links</a><a class="h3" href="#orange-links">Orange Links</a><a class="h3" href="#search-query-2">Search Query</a><a class="h3" href="#discover-button-2">Discover Button</a><a class="h3" href="#panels-2">Panels</a><a class="h3" href="#chapters-2">Chapters</a><a class="h3" href="#section-panels-2">Section Panels</a><a class="h3" href="#sub-sections-by-header-links-2">Sub-sections by Header links</a><a class="h2" href="#from-the-odt-manual-1-1-how-to-use-the-manual">From the .odt manual (1.1 How to use the Manual)</a><a class="h3" href="#how-to-use-the-manual">How to use the Manual</a><a class="h2" href="#about-this-manual">About this Manual</a><a class="h2" href="#editing-the-bforartists-manual">Editing the Bforartists Manual</a><a class="h2" href="#license">License</a></aside></div></body></html>
