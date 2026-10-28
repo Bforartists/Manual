@@ -850,6 +850,50 @@ Find and replace strings inside of the input string.
 | Inputs | **String**: The input string. · **Find**: The string part that you want to replace. · **Replace**: The string part that you use to replace the selected string part. |
 | Output | **String**: The strings that you want to join into one text string. |
 
+#### Reverse String
+
+![Reverse String](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/reverse-string.png)
+
+Turns a string around, so the last character comes first. "Bforartists" becomes "stsitraofrB".
+
+##### Inputs
+
+###### String
+
+The text to reverse.
+
+##### Outputs
+
+###### String
+
+The reversed text. An empty string stays empty.
+
+#### Set String Case
+
+![Set String Case](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/set-string-case.png)
+
+Changes all letters of a string to capitals or to small letters.
+
+##### Inputs
+
+###### String
+
+The text to change.
+
+###### Case
+
+Chooses the letter case.
+
+**Uppercase** converts all characters to uppercase. This is the default.
+
+**Lowercase** converts all characters to lowercase.
+
+##### Outputs
+
+###### String
+
+The converted text.
+
 #### Slice String
 
 ![Slice String](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/slice-string.png)
@@ -1007,6 +1051,28 @@ Adds special characters to the text string.
 | ---------- | ------------------------------------- |
 | Line Break | Adds a Line Break to the text string. |
 | Tab | Adds a tab to the text string. |
+
+#### Tag Filter
+
+![Tag Filter](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-text/tag-filter.png)
+
+Checks if a filter matches a list of tags. Use it to pick things by label, for example to select only the items tagged "wood" or "metal".
+
+##### Inputs
+
+###### Tag Filter
+
+The tags to look for, separated by commas, for example `wood, metal`. Spaces around each tag are ignored. The node matches if any one of them is in the Tags list. Tags must be written exactly the same, including capital letters. An empty filter matches everything.
+
+###### Tags
+
+A list of strings. These are the tags to check against.
+
+##### Outputs
+
+###### Match
+
+True if the filter matches the tags.
 
 # Vector
 
