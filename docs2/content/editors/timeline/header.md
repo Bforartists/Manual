@@ -101,16 +101,21 @@ The **Keying Set** field picks which channels get keyed, for example only Locati
 
 The last button, with the diamond, opens the **Keyframing** settings. Its icon shows the current keyframe type.
 
-<!-- TODO screenshot: Timeline header, the Keyframing popover (diamond button) open, with Auto Keying on -->
+![Keyframing popover](/docs2/images/ui/timeline/header/keyframing-popover.png)
 
-**New Keyframe Type** is now right at the top level, so you can pick it without digging. It sets the type, and with it the color, of new keyframes: Keyframe, Breakdown, Moving Hold, Extreme, Jitter or Generated.
+The popover has two parts. **Auto Keyframing** only shows while Auto Keying is on, and **Keyframing** is always there.
 
-The Auto Keying options only show while Auto Keying is on:
+**Auto Keyframing**
 
-- **Auto Keying Mode** chooses whether auto keying adds new keyframes and replaces existing ones (**Add & Replace**), or only replaces keyframes that already exist (**Replace**). Both now have icons.
+- **Mode** chooses whether auto keying adds new keyframes and replaces existing ones (**Add & Replace**), or only replaces keyframes that already exist (**Replace**). Both have icons.
 - **Only Active Keying Set** keys just the channels in the keying set you picked.
-- **Layered Recording** adds a new NLA track and strip for every pass you record over the animation, so you can tweak without destroying earlier passes.
+
+**Keyframing**
+
+- **Type** sets the type, and with it the color, of new keyframes: Keyframe, Breakdown, Moving Hold, Extreme, Jitter or Generated. It is right at the top level, so you can pick it without digging.
+- **Only Active Keying Set** inserts keyframes only into the active keying set.
 - **Cycle-Aware Keying** keeps cyclic animations in sync. New keys on looping channels are mapped back into the loop.
+- **Layered Recording** adds a new NLA track and strip for every pass you record over the animation, so you can tweak without destroying earlier passes. It only shows while *Only Insert Available* is off in the Preferences.
 
 ## Playback Panel
 
