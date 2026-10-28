@@ -92,6 +92,35 @@ Combine multiple socket values into one.
 
 Decompose a bundle of values into the single values.
 
+### Index Switch
+
+![Index Switch](/docs2/images/editors/shader-editor/header/add-menu-utilities/index-switch.png)
+
+The Index Switch node chooses one value out of any number of values by its position (index). Only the chosen value is computed. It is a simpler version of the Menu Switch node: the items have no names and no dropdown, but you can have as many as you need.
+
+#### Inputs
+
+##### Index
+
+Which item to pass through, counting from 0. If the index is outside the available items, the output is the default value of the chosen data type.
+
+##### 0 , 1 ...
+
+The values to choose from. A new node starts with two (0 and 1). Add more with the empty socket at the bottom of the node, or with Add Item in the Items panel of the sidebar. The Items panel also removes and reorders items.
+
+#### Properties
+
+##### Data Type
+
+The type of the values that are switched, and of the output. In the Shader Editor you can choose Float, Integer, Boolean, Vector, Color, String, Menu, Shader, Bundle or Closure. The default is Color.
+
+#### Outputs
+
+##### Output
+
+The value of the chosen item.
+
+
 ### Menu Switch
 
 ![Menu Switch](/docs2/images/editors/shader-editor/header/add-menu-utilities/menu-switch.png)
@@ -141,6 +170,39 @@ Determines the type of the data that is handled by the node.
 ##### Output
 
 The output index.
+
+### Switch
+
+![Switch](/docs2/images/editors/shader-editor/header/add-menu-utilities/switch.png)
+
+Switch between two values with a checkbox. Only the chosen value is computed.
+
+#### Inputs
+
+##### Switch
+
+The checkbox. Off passes the False value through, on passes the True value through.
+
+##### False
+
+The value used when Switch is off.
+
+##### True
+
+The value used when Switch is on.
+
+#### Properties
+
+##### Input Type
+
+The type of the two values and of the output. In the Shader Editor you can choose Float, Integer, Boolean, Vector, Color, String, Menu, Shader, Bundle or Closure. The default is Color.
+
+#### Outputs
+
+##### Output
+
+The True or False value, depending on Switch.
+
 
 # Math
 
