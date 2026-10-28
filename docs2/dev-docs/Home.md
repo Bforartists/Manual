@@ -19,7 +19,7 @@ This wiki is for **writers, reviewers and maintainers** of the Bforartists manua
 | **Guide** | 📘 [Reference Manual writing guide](https://github.com/Bforartists/Manual/wiki/Reference-Manual-writing-guide) | ✏️ [Editing the docs online](Editing-the-docs-online.md) |
 | **Status** | 📦 Archived, kept for reference | ✅ The official manual since October 2026 (332 pages); review and polish under way |
 
-> 💡 New here? Read [Editing the docs online](Editing-the-docs-online.md) first. It takes five minutes and you need nothing installed.
+> 💡 New here? Start with the [Writer quick start](Writer-Quick-Start.md). It takes five minutes and you need nothing installed. [Editing the docs online](Editing-the-docs-online.md) has the details.
 
 ---
 
