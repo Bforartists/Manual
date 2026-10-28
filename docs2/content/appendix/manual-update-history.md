@@ -1,6 +1,6 @@
 ---
 id: appendix.manual-update-history
-title: "Documentation History"
+title: Documentation History
 section: appendix
 path:
   - Appendix
@@ -14,6 +14,26 @@ icon: time
 order: 20
 summary: "Documentation History: Appendix."
 ---
+## Documentation - Version 2
+
+### Preface
+
+This version of the Documentation 2.0 was released in October of 2026, fully refactored and rebuilt using Webflow and a number of automation systems with Github Pages CMS, a WYSIWYG markdown editor. 
+
+21.10.2026 – Updated the manual to Bforartists 5 version 5.2.x
+
+### New Features
+
+This allowed responsive layouts, download to PDF, and interactive navigation, room for Quick Start documentation, and through the power of agentic coding, much of the content and formatting could start to be refactored to be cleaner, use components, and allow for more consistent documentation. It also includes the ability to have page status, and rolling version related updates - and easier community collaboration. 
+
+The goal of refactor lightens the burden on maintainers to not worry about consistent formatting, navigation, table of contents or file compilation. You also don't need to optionally use third-party software - and also allowed multi-file versioning with conflict resolution built in. 
+
+This also allowed to compile hotkeys with an interactive layout that compiled automatically every week. 
+
+This does require a lot of back-end architecture and moving parts through Github actions, Cloudflare applications, and more - but the goal is to make this as maintainer friendly and artist friendly possible. 
+
+## Documentation - Version 1
+
 23.04.2026 – Updated the manual to Bforartists 5 version 5.1.1
 
 24.03.2026 – Updated the manual to Bforartists 5 version 5.1.0
