@@ -2209,6 +2209,40 @@ Only used in Data Type mode. Items with this data type are listed.
 
 A list of strings, one path per item found, sorted alphabetically. If no bundle is connected, the list is empty.
 
+#### Get Geometry Bundle
+
+![Get Geometry Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/get-geometry-bundle.png)
+
+Gets the bundle that is stored on a geometry. Use it to read data that was attached to a geometry with Set Geometry Bundle.
+
+##### Inputs
+
+###### Geometry
+
+The geometry to get the bundle from.
+
+###### Remove
+
+Off by default. When on, the bundle is taken off the geometry that comes out of the node. This can avoid unneeded copies of data.
+
+##### Outputs
+
+###### Geometry
+
+The input geometry. It no longer holds the bundle when Remove is on.
+
+###### Bundle
+
+The bundle that was stored on the geometry.
+
+#### Typed Bundle
+
+![Typed Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/typed-bundle.png)
+
+Adds a Combine Bundle node that already has a String item named Type. The Type tells other nodes what kind of bundle this is, for example when you look for bundles with Get Nested Bundle Paths.
+
+Click the Type field of the new node and pick a type from the list, or type your own name. When you pick a known type, the node adds the items that type needs.
+
 #### Set Geometry Bundle
 
 ![Set Geometry Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/set-geometry-bundle.png)
@@ -2517,6 +2551,50 @@ Returns the running totals starting at either the first value of each accumulati
 Data type: follows the Data Type setting.
 
 Returns the total accumulation at all positions of the field.
+
+### Cluster by Distance
+
+![Cluster by Distance](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-field/cluster-by-distance.png)
+
+Sorts elements into groups by how close together they are. Every group gets a number, the Cluster ID, and all elements in one group share it. Use it to find points that belong to the same blob, to give each pile of scattered points its own random color, or to feed Merge Points so that near points are merged into one. Elements within the Distance of each other end up in the same cluster, and a cluster can grow as a chain from one element to the next.
+
+#### Inputs
+
+##### Selection
+
+Data type: Boolean.
+
+Which elements are put into clusters.
+
+##### Group ID
+
+Data type: Integer.
+
+Elements only join a cluster with others that have the same Group ID. Use it to keep different kinds of elements apart, for example points of different layers.
+
+##### Position
+
+Data type: Vector.
+
+The position used to measure the distance. It is usually the Position node, but you can use any vector.
+
+##### Distance
+
+Data type: Float (distance).
+
+Elements closer than this value belong to the same cluster.
+
+#### Outputs
+
+##### Cluster ID
+
+Data type: Integer.
+
+The number of the cluster. The number is the index of the first element of the cluster, so the first element of a cluster has its own index as ID.
+
+#### How to use
+
+Take five points at x = 0, 0.0005, 0.002, 1 and 1.0005, and set Distance to 0.001. The Cluster ID is 0, 0, 2, 3, 3. The first two points are close enough to share a cluster, the third is too far away and is alone, and the last two form a second cluster. Store the Cluster ID with Store Named Attribute to look at it in the spreadsheet.
 
 ### Evaluate at Index
 
