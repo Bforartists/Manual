@@ -1,26 +1,31 @@
 ---
 id: editors.geometry-node-editor.header.add-menu.geometry
-title: "Geometry"
+title: Geometry
 section: editors
 path:
-  - "Editors"
-  - "Geometry Node Editor"
-  - "Header"
-  - "Add Menu"
-  - "Geometry"
-version: "5.1"
+  - Editors
+  - Geometry Node Editor
+  - Header
+  - Add Menu
+  - Geometry
+version: 5.2.3
 status: needs-review
 icon: node
 summary: "Geometry nodes: Read, Sample, Write, Material, Operations."
 order: 40
-cta: "Nodes"
+cta: Nodes
 source:
-  - "12.1.17 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry.odt"
-  - "12.1.12 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Read.odt"
-  - "12.1.13 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Sample.odt"
-  - "12.1.14 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Write.odt"
-  - "12.1.15 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Material.odt"
-  - "12.1.16 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Operations.odt"
+  - 12.1.17 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry.odt
+  - 12.1.12 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Read.odt
+  - 12.1.13 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Sample.odt
+  - 12.1.14 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Write.odt
+  - 12.1.15 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Material.odt
+  - 12.1.16 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Operations.odt
 replaces:
   - editors.geometry-node-editor.header.add-menu-geometry
   - editors.geometry-node-editor.header.add-menu-geometry-read
@@ -28,6 +33,7 @@ replaces:
   - editors.geometry-node-editor.header.add-menu-geometry-write
   - editors.geometry-node-editor.header.add-menu-geometry-material
   - editors.geometry-node-editor.header.add-menu-geometry-operations
+screenshots: 5.2.3
 ---
 ## Add menu - Geometry
 
@@ -57,8 +63,6 @@ Data type: Geometry.
 
 The output instances.
 
-
-
 ### Join Geometry
 
 ![Join Geometry](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry/join-geometry.png)
@@ -80,7 +84,6 @@ Standard geometry input.
 Data type: Geometry.
 
 Standard geometry output.
-
 
 # Read
 
@@ -168,8 +171,6 @@ For mesh vertices, the normal is an average of the surrounding face normals. If 
 
 The normal output for each edge is the average of the edge’s two vertex normals.
 
-
-
 #### Face Corner
 
 The output for each face corner is the same as the face normal of the corresponding face.
@@ -195,8 +196,6 @@ The normal vector output.
 Data type: Vector.
 
 For meshes, outputs normal without custom normal attributes taken into account.
-
-
 
 ### Position
 
@@ -270,8 +269,6 @@ Data type: Integer.
 
 Determines in which group the closest nearest surface is detected.
 
-
-
 #### Properties
 
 ##### Target Geometry
@@ -299,8 +296,6 @@ Distance from the source position to the closest location in the target.
 Data type: Boolean.
 
 Wether the sampling was successful. It is false when the sampled group is empty.
-
-
 
 ### Index of Nearest
 
@@ -336,8 +331,6 @@ Data type: Boolean.
 
 Has this element a neighbor.
 
-
-
 ### Raycast
 
 ![Raycast](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/raycast.png)
@@ -358,8 +351,6 @@ Data type: follows the Data Type setting.
 
 Attribute input.
 
-
-
 ##### Interpolation
 
 Data type: Menu.
@@ -379,8 +370,6 @@ A vector 3 for the ray direction.
 ###### Ray Length
 
 The length of the ray.
-
-
 
 #### Properties
 
@@ -422,8 +411,6 @@ Data type: follows the Data Type setting.
 
 The attribute of the hit object.
 
-
-
 ### Sample Index
 
 ![Sample Index](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-sample/sample-index.png)
@@ -449,8 +436,6 @@ The value to retreive.
 Data type: Integer.
 
 The index position of the value.
-
-
 
 #### Properties
 
@@ -497,8 +482,6 @@ The source object to take the data from.
 Data type: Vector.
 
 The position of the source object.
-
-
 
 #### Properties
 
@@ -552,8 +535,6 @@ The name that you want to set
 
 Geometry output.
 
-
-
 ### Set ID
 
 ![Set ID](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-write/set-id.png)
@@ -587,8 +568,6 @@ ID Input
 #### Geometry
 
 Geometry output.
-
-
 
 ### Set Position
 
@@ -631,7 +610,6 @@ An optional translation for each point. This is evaluated at the same time as th
 #### Geometry
 
 Geometry outputs.
-
 
 # Material
 
@@ -702,8 +680,6 @@ The new material that replaces the old material.
 
 Geometry output.
 
-
-
 ### Material Index
 
 ![Material Index](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-material/material-index.png)
@@ -717,8 +693,6 @@ Retreive the material index.
 #### Material Index
 
 The material index.
-
-
 
 ### Material Selection
 
@@ -739,8 +713,6 @@ Geometry input.
 #### Material Index
 
 The material index.
-
-
 
 ### Set Material
 
@@ -776,8 +748,6 @@ The material to assign.
 
 The geometry with the new material assigned.
 
-
-
 ### Set Material Index
 
 ![Set Material Index](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-material/set-material.png)
@@ -811,7 +781,6 @@ The material index to assign to the selection.
 #### Geometry
 
 The geometry with the new material index assigned.
-
 
 # Operations
 
@@ -859,8 +828,6 @@ Delete baked data of a single bake node or simulation.
 
 Standard geometry output.
 
-
-
 ### Bounding Box
 
 ![Bounding Box](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/bounding-box.png)
@@ -901,8 +868,6 @@ Data type: Vector.
 
 The maximum values of the bounding box.
 
-
-
 ### Convex Hull
 
 ![Convex Hull](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/convex-hull.png)
@@ -925,8 +890,6 @@ Data type: Geometry.
 
 Standard output.
 
-
-
 ### Delete Geometry
 
 ![Delete Geometry](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/delete-geometry.png)
@@ -946,8 +909,6 @@ Standard geometry input.
 Data type: Boolean.
 
 A selection of the geomerty
-
-
 
 #### Properties
 
@@ -997,8 +958,6 @@ Data type: Integer.
 
 Number of times the geometry should be duplicated.
 
-
-
 #### Properties
 
 ![Properties](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/properties-2.png)
@@ -1021,8 +980,6 @@ Data type: Integer.
 
 The index of the duplicated elements.
 
-
-
 ### Merge by Distance
 
 ![Merge by Distance](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/merge-by-distance.png)
@@ -1043,8 +1000,6 @@ Data type: Boolean.
 
 A selection of the input geometry.
 
-
-
 ##### Mode
 
 Data type: Menu.
@@ -1058,8 +1013,6 @@ Merges all vertices in reach.
 ###### Connected
 
 Merges just vertices that are connected by edges.
-
-
 
 ##### Distance
 
@@ -1143,8 +1096,6 @@ Group ID input value. A group is defined as all elements with the same group id.
 
 The sorted values used to do the reordering. If this is not a field, the node has no affect.
 
-
-
 #### Properties
 
 ##### Domain
@@ -1168,8 +1119,6 @@ The fields are evaluated on the splines in the curve component.
 ###### Instance
 
 The fields are evaluated on the top-level instances. Realized instances are ignored.
-
-
 
 #### Output
 
@@ -1213,8 +1162,6 @@ Euler rotation in local space.
 
 Scale to transform the geometries in local space.
 
-
-
 ##### Matrix mode
 
 ![Matrix mode](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/matrix-mode.png)
@@ -1228,8 +1175,6 @@ Standard geometry input.
 ###### Transform
 
 Transform matrix input.
-
-
 
 #### Output
 
@@ -1289,8 +1234,6 @@ Volume component of the input geometry. In case that the input contains multiple
 
 The single instances of the geometry.
 
-
-
 ### Separate Geometry
 
 ![Separate Geometry](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/separate-geometry.png)
@@ -1313,8 +1256,6 @@ Data type: Boolean.
 
 Selection input.
 
-
-
 #### Properties
 
 ##### Domain
@@ -1336,8 +1277,6 @@ Separated selection.
 ###### Inverted
 
 The inverted separated selection.
-
-
 
 ### Split to Instances
 
@@ -1367,8 +1306,6 @@ Data type: Integer.
 
 Group ID input value.
 
-
-
 #### Properties
 
 ##### Domain
@@ -1391,3 +1328,48 @@ Instances output. An Instance per group.
 
 Group ID output value.
 
+### Get Geometry Component
+
+![Get Geometry Component](/docs2/images/editors/geometry-node-editor/header/add-menu-geometry-operations/get-geometry-component.png)
+
+Picks one kind of geometry out of a mixed geometry, for example only the mesh of a geometry that also holds curves and instances. Use it to work on one part and leave the rest alone. The node copies the chosen component and can remove it from the original.
+
+#### Inputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry to take a component from.
+
+##### Type
+
+Data type: Menu.
+
+Which component to take: Mesh, Point Cloud, Curve, Instances, Grease Pencil or Volume.
+
+##### Remove
+
+Data type: Boolean.
+
+On: the component is taken out of the geometry output.
+
+#### Outputs
+
+##### Geometry
+
+Data type: Geometry.
+
+The geometry. Without the component if Remove is on.
+
+##### Component
+
+Data type: Geometry.
+
+The component that was taken.
+
+##### Exists
+
+Data type: Boolean.
+
+True when the geometry had a component of that type.
