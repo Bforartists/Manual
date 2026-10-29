@@ -1015,6 +1015,8 @@ Black-and-white mask showing white lines representing edges according to the obj
 
 ## Add menu - Input - Constant
 
+![Add menu - Input - Constant](/docs2/images/editors/shader-editor/header/add-menu-input-constant/add-menu-input-constant.png)
+
 Constant nodes give a fixed value that you type in once and connect to as many sockets as you like. The Constant menu is the same in all node editors, so the same set of constants is found in the Geometry Node editor, the Shader editor and the Compositor.
 
 Choose the node by the type of data your socket needs:
