@@ -53,7 +53,7 @@ The volume to list the grid names of.
 
 ##### Names
 
-Data type: String.
+Data type: String list.
 
 A list of the names of all grids in the volume, sorted alphabetically. If the geometry has no volume, the list is empty.
 
@@ -109,7 +109,7 @@ Retreive informations about a grid.
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 Standard geometry input.
 
@@ -131,7 +131,7 @@ Transform from grid index space to object space.
 
 ##### Background Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 Default value outside of grid voxels.
 
@@ -178,7 +178,7 @@ Retreive values from the specified volume grid.
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input grid
 
@@ -210,7 +210,7 @@ Which data type to calculate.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The output value.
 
@@ -224,7 +224,7 @@ Retreive values from the specified volume grid.
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input grid
 
@@ -252,7 +252,7 @@ Which data type to calculate.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The output value.
 
@@ -266,7 +266,7 @@ Move grid values through a velocity field using numerical integration. Supports 
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input grid.
 
@@ -282,7 +282,7 @@ The position field.
 
 ##### Time step
 
-Data type: Float (time).
+Data type: follows the Data Type setting.
 
 Time step for advection in seconds.
 
@@ -308,7 +308,7 @@ Limiting strategy to prevent numerical artifacts.
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The output grid.
 
@@ -540,7 +540,7 @@ Set the transform for the grid from index space into object space.
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 Standard geometry input.
 
@@ -570,7 +570,7 @@ If the new transform is successfully applied and working.
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The grid output.
 
@@ -598,7 +598,7 @@ The name
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 Standard geometry input.
 
@@ -642,13 +642,13 @@ How the shapes are combined: **Intersect** keeps the voxels that are active in b
 
 ##### Grid 1
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The first grid. Its values are used for the result.
 
 ##### Grid 2
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The second grid. Only its shape is used.
 
@@ -656,7 +656,7 @@ The second grid. Only its shape is used.
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The grid with the combined shape.
 
@@ -987,7 +987,7 @@ Turns selected voxels off. A volume grid is built from voxels, and only the acti
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The grid to change. The node works on any data type, set at the top of the node.
 
@@ -1001,7 +1001,7 @@ The voxels to deactivate. A boolean field, evaluated at every voxel. Voxels wher
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The grid without the deactivated voxels.
 
@@ -1017,7 +1017,7 @@ Create new grids by evaulating new values on an existing volume grid topology.
 
 ##### Topology
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input topology.
 
@@ -1049,7 +1049,7 @@ Create new grids by evaulating new values on an existing volume grid topology.
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input grid.
 
@@ -1087,7 +1087,7 @@ The data type to evaluate.
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The generated grid.
 
@@ -1101,7 +1101,7 @@ Create new grids by evaulating new values on an existing volume grid topology.
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input grid.
 
@@ -1121,7 +1121,7 @@ The data type to evaluate.
 
 ##### Grid
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The generated grid.
 
