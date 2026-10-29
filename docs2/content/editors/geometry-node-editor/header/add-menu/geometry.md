@@ -1,26 +1,31 @@
 ---
 id: editors.geometry-node-editor.header.add-menu.geometry
-title: "Geometry"
+title: Geometry
 section: editors
 path:
-  - "Editors"
-  - "Geometry Node Editor"
-  - "Header"
-  - "Add Menu"
-  - "Geometry"
-version: "5.1"
+  - Editors
+  - Geometry Node Editor
+  - Header
+  - Add Menu
+  - Geometry
+version: 5.2.3
 status: needs-review
 icon: node
 summary: "Geometry nodes: Read, Sample, Write, Material, Operations."
 order: 40
-cta: "Nodes"
+cta: Nodes
 source:
-  - "12.1.17 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry.odt"
-  - "12.1.12 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Read.odt"
-  - "12.1.13 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Sample.odt"
-  - "12.1.14 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Write.odt"
-  - "12.1.15 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Material.odt"
-  - "12.1.16 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry - Operations.odt"
+  - 12.1.17 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry.odt
+  - 12.1.12 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Read.odt
+  - 12.1.13 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Sample.odt
+  - 12.1.14 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Write.odt
+  - 12.1.15 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Material.odt
+  - 12.1.16 Editors - Geometry Nodes Editor - Header - Add Menu - Geometry -
+    Operations.odt
 replaces:
   - editors.geometry-node-editor.header.add-menu-geometry
   - editors.geometry-node-editor.header.add-menu-geometry-read
@@ -28,6 +33,7 @@ replaces:
   - editors.geometry-node-editor.header.add-menu-geometry-write
   - editors.geometry-node-editor.header.add-menu-geometry-material
   - editors.geometry-node-editor.header.add-menu-geometry-operations
+screenshots: 5.2.3
 ---
 ## Add menu - Geometry
 
