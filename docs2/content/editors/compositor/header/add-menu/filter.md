@@ -188,6 +188,22 @@ The position of the nearest pixel of the shape, as two whole numbers.
 
 The output is a distance, not a picture, so it is used as a ruler: compare it, remap it or run it through a curve to turn the distance into a shape.
 
+##### Example: distance bands around a shape
+
+A chain that shows what the distance looks like. A heart shape goes in as the mask. The SDF is multiplied by `0.01` and the result is wrapped with Floored Modulo, so the value restarts every 100 pixels.
+
+![Mask To SDF example chain](/docs2/images/editors/compositor/header/add-menu-filter/mask-to-sdf-chain.png)
+
+1. The mask comes from a group that draws a heart. Any mask works here.
+2. **Mask To SDF** measures the distance of every pixel to the edge of the heart.
+3. A **Math** node set to **Multiply** scales that distance by `0.01`, so 100 pixels become `1.0`.
+4. A **Math** node set to **Floored Modulo** with a value of `1.0` keeps only the part after the decimal point. The value climbs from 0 to 1, then starts again.
+5. The result goes to a Viewer.
+
+![Mask To SDF result](/docs2/images/editors/compositor/header/add-menu-filter/mask-to-sdf-result.png)
+
+Each band is 100 pixels wide and follows the outline of the heart. The bands also repeat inside the shape, because pixels inside have negative distances and Floored Modulo wraps them the same way. Change the Multiply value to make the bands wider or narrower.
+
 ##### Grow or shrink a mask by a set number of pixels
 
 1. Connect any mask to **Mask**. A Box Mask or an Ellipse Mask works. Anything above zero counts as inside.
