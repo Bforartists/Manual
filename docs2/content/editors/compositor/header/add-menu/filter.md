@@ -166,7 +166,7 @@ The Inpaint node is used to extend borders of an image into transparent or maske
 
 ![Mask To SDF](/docs2/images/editors/compositor/header/add-menu-filter/mask-to-sdf.png)
 
-Turns a black and white mask into a distance map. Every pixel is given its distance to the nearest edge of the mask. Use it to grow or shrink a mask smoothly, to make soft glows that follow a shape, or to make outlines of any width. The sign of the value tells whether a pixel is inside or outside the mask.
+Turns a black and white mask into a distance map. Every pixel is given its distance to the nearest edge of the mask. Use it to grow or shrink a mask smoothly, to make soft glows that follow a shape, or to make outlines of any width. Pixels outside the shape get positive values that grow the further away they are. Pixels inside get negative values that grow the deeper they are. The edge sits at zero.
 
 #### Inputs
 
@@ -183,6 +183,29 @@ The distance of each pixel to the edge, in pixels.
 ##### Nearest Pixel
 
 The position of the nearest pixel of the shape, as two whole numbers.
+
+#### How to use Mask To SDF
+
+The output is a distance, not a picture, so it is used as a ruler: compare it, remap it or run it through a curve to turn the distance into a shape.
+
+##### Grow or shrink a mask by a set number of pixels
+
+1. Connect any mask to **Mask**. A Box Mask or an Ellipse Mask works. Anything above zero counts as inside.
+2. Connect **SDF** to the **A** input of a **Compare** node (Add > Utilities > Math > Compare).
+3. Set the operation to **Less Than** and type the amount in **B**. A value of `10` grows the mask by 10 pixels. A value of `-10` shrinks it by 10 pixels.
+4. The Compare result is the new mask. Plug it into a Set Alpha, a Mix or a Viewer.
+
+##### Make an outline of any width
+
+1. Plug **SDF** into a **Math** node set to **Absolute**, so inside and outside distances both become positive.
+2. Compare the result with **Less Than** and a width of `3`. You get a ring 3 pixels to each side of the original edge.
+
+##### Make a soft glow that follows the shape
+
+1. Plug **SDF** into a **Map Range** node. Set From Min to `0`, From Max to the glow size in pixels (say `60`), To Min to `1` and To Max to `0`, and turn on **Clamp**.
+2. The result is white at the edge and fades to black 60 pixels away. Use it as a Mix factor over a glow colour.
+
+> **Tip:** The distance is measured in pixels of the image you are working on, so the same values give a different look at 1080p and at 4K. Scale the numbers if you change the resolution.
 
 ### Filter
 
