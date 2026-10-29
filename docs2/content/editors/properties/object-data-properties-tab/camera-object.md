@@ -557,6 +557,12 @@ Displays a diagonal line from the lower left to upper right corners, then lines 
 
 Same as A, but with the opposite corners.
 
+##### Color
+
+Sets the color of the composition guide lines in the camera view. Pick a color that stands out from your scene. A bright color helps on dark shots, a dark color on bright shots.
+
+The color changes all the guides at once.
+
 ## Custom Properties Panel
 
 ![Custom Properties Panel](/docs2/images/editors/properties/view-layer-properties-tab/custom-properties-panel.png)
