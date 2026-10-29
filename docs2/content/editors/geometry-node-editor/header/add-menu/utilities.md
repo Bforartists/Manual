@@ -2011,67 +2011,7 @@ Only used in Data Type mode. Items with this data type are listed.
 
 A list of strings, one path per item found, sorted alphabetically. If no bundle is connected, the list is empty.
 
-#### Get Geometry Bundle
-
-![Get Geometry Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/get-geometry-bundle.png)
-
-Gets the bundle that is stored on a geometry. Use it to read data that was attached to a geometry with Set Geometry Bundle.
-
-##### Inputs
-
-###### Geometry
-
-The geometry to get the bundle from.
-
-###### Remove
-
-Off by default. When on, the bundle is taken off the geometry that comes out of the node. This can avoid unneeded copies of data.
-
-##### Outputs
-
-###### Geometry
-
-The input geometry. It no longer holds the bundle when Remove is on.
-
-###### Bundle
-
-The bundle that was stored on the geometry.
-
-#### Typed Bundle
-
-![Typed Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/typed-bundle.png)
-
-Adds a Combine Bundle node that already has a String item named Type. The Type tells other nodes what kind of bundle this is, for example when you look for bundles with Get Nested Bundle Paths.
-
-Click the Type field of the new node and pick a type from the list, or type your own name. When you pick a known type, the node adds the items that type needs.
-
-### Get Geometry Bundle
-
-![Get Geometry Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/get-geometry-bundle.png)
-
-Takes the bundle that is stored on a geometry and gives it to you. A geometry can carry a bundle along, so extra values travel with it through the node tree. Use it to read values that an earlier part of the tree attached.
-
-#### Inputs
-
-##### Geometry
-
-The geometry that carries the bundle.
-
-##### Remove
-
-On: the bundle is taken off the geometry.
-
-#### Outputs
-
-##### Geometry
-
-The geometry. Without its bundle if Remove is on.
-
-##### Bundle
-
-The bundle that was stored on the geometry.
-
-### Set Geometry Bundle
+#### Set Geometry Bundle
 
 ![Set Geometry Bundle](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities-bundle/set-geometry-bundle.png)
 
