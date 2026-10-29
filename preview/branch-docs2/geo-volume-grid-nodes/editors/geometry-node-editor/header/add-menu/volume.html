@@ -379,12 +379,12 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <span>Glossary</span>
 <span>Index</span>
 <h4>Doc Kit (test)</h4>
-<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Volume</div><h1 class="pv-title">Volume</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 14 min read</span></div><article class="ui-doc-body"><h1 id="read">Read</h1>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Geometry Node Editor › Header › Add Menu › Volume</div><h1 class="pv-title">Volume</h1><div class="pv-chips"><span class="is-needs-review">● needs-review</span><span>Bforartists 5.1</span><span>🕒 15 min read</span></div><article class="ui-doc-body"><h1 id="read">Read</h1>
 <h2 id="add-menu-volume-read">Add menu - Volume - Read</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/add-menu-volume-read.png" alt="Add menu - Volume - Read" loading="lazy"><figcaption>Add menu - Volume - Read</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/add-menu-volume-read.png" alt="Add menu - Volume - Read" loading="lazy"><figcaption>Add menu - Volume - Read</figcaption></figure>
 <p>Here you find nodes to modify the volume.</p>
 <h3 id="get-grid-names">Get Grid Names</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/get-grid-names.png" alt="Get Grid Names" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/get-grid-names.png" alt="Get Grid Names" loading="lazy"></figure>
 <p>Lists the names of all grids stored in a volume. Use it to see what a volume contains, for example before you pick a grid with Get Named Grid.</p>
 <h4 id="inputs">Inputs</h4>
 <h5 id="volume">Volume</h5>
@@ -392,10 +392,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The volume to list the grid names of.</p>
 <h4 id="outputs">Outputs</h4>
 <h5 id="names">Names</h5>
-<p>Data type: String.</p>
+<p>Data type: String list.</p>
 <p>A list of the names of all grids in the volume, sorted alphabetically. If the geometry has no volume, the list is empty.</p>
 <h3 id="get-named-grid">Get Named Grid</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/get-named-grid.png" alt="Get Named Grid" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/get-named-grid.png" alt="Get Named Grid" loading="lazy"></figure>
 <p>Get volume grid from a volume geometry with the specified name</p>
 <h3 id="inputs-2">Inputs</h3>
 <h4 id="volume-2">Volume</h4>
@@ -406,7 +406,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Removes the grid from the volume after retreive.</p>
 <h4 id="properties">Properties</h4>
 <h5 id="data-type">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>The type of data stored in the grid. It determines both, the expected data type of the <strong>Grid</strong> output, and how it can be used in subsequent nodes.</p>
 <h4 id="output">Output</h4>
 <h5 id="volume-3">Volume</h5>
@@ -414,25 +414,25 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="grid">Grid</h5>
 <p>The extracted grid.</p>
 <h3 id="grid-info">Grid Info</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/grid-info.png" alt="Grid Info" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/grid-info.png" alt="Grid Info" loading="lazy"></figure>
 <p>Retreive informations about a grid.</p>
 <h4 id="inputs-3">Inputs</h4>
 <h5 id="grid-2">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>Standard geometry input.</p>
 <h4 id="properties-2">Properties</h4>
 <h5 id="data-type-2">Data type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/data-type-2.png" alt="Data type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/data-type-2.png" alt="Data type" loading="lazy"></figure>
 <p>The data type to retreive.</p>
 <h4 id="output-2">Output</h4>
 <h5 id="transform">Transform</h5>
 <p>Data type: Matrix.</p>
 <p>Transform from grid index space to object space.</p>
 <h5 id="background-value">Background Value</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>Default value outside of grid voxels.</p>
 <h3 id="voxel-index">Voxel Index</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/voxel-index.png" alt="Voxel Index" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/voxel-index.png" alt="Voxel Index" loading="lazy"></figure>
 <p>Retreive the integer coordinates of the voxel that the field is evaluated on.</p>
 <h4 id="outputs-2">Outputs</h4>
 <h5 id="x-y-z">X / Y / Z</h5>
@@ -444,56 +444,56 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Number of voxels in the corresponding direction. Or 1 if the field is evaluated at a voxel.</p>
 <h1 id="sample">Sample</h1>
 <h2 id="add-menu-volume">Add menu - Volume</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/add-menu-volume.png" alt="Add menu - Volume" loading="lazy"><figcaption>Add menu - Volume</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/add-menu-volume.png" alt="Add menu - Volume" loading="lazy"><figcaption>Add menu - Volume</figcaption></figure>
 <p>Here you find nodes to modify the volume.</p>
 <h3 id="sample-grid">Sample Grid</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/sample-grid.png" alt="Sample Grid" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/sample-grid.png" alt="Sample Grid" loading="lazy"></figure>
 <p>Retreive values from the specified volume grid.</p>
 <h4 id="inputs-4">Inputs</h4>
 <h5 id="grid-3">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The input grid</p>
 <h5 id="position">Position</h5>
 <p>Data type: Vector.</p>
 <p>The position field.</p>
 <h5 id="interpolation">Interpolation</h5>
 <p>Data type: Menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/interpolation.png" alt="Interpolation" loading="lazy"></figure>
 <p>How to interpolate the values between neighbouring voxels.</p>
 <h4 id="input">Input</h4>
 <h5 id="data-type-3">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/data-type-2.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/data-type-2.png" alt="Data Type" loading="lazy"></figure>
 <p>Which data type to calculate.</p>
 <h4 id="output-3">Output</h4>
 <h5 id="value">Value</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The output value.</p>
 <h3 id="sample-grid-index">Sample Grid Index</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/sample-grid.png" alt="Sample Grid Index" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/sample-grid.png" alt="Sample Grid Index" loading="lazy"></figure>
 <p>Retreive values from the specified volume grid.</p>
 <h4 id="inputs-5">Inputs</h4>
 <h5 id="grid-4">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The input grid</p>
 <h5 id="position-2">Position</h5>
 <p>The position field.</p>
 <h5 id="interpolation-2">Interpolation</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/interpolation.png" alt="Interpolation" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/interpolation.png" alt="Interpolation" loading="lazy"></figure>
 <p>How to interpolate the values between neighbouring voxels.</p>
 <h4 id="input-2">Input</h4>
 <h5 id="data-type-4">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/data-type-2.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-read/data-type-2.png" alt="Data Type" loading="lazy"></figure>
 <p>Which data type to calculate.</p>
 <h4 id="output-4">Output</h4>
 <h5 id="value-2">Value</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The output value.</p>
 <h3 id="advect-grid">Advect Grid</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/sample-grid.png" alt="Advect Grid" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/sample-grid.png" alt="Advect Grid" loading="lazy"></figure>
 <p>Move grid values through a velocity field using numerical integration. Supports multiple intetgration schemes for different accuracy and performance trade-offs.</p>
 <h4 id="inputs-6">Inputs</h4>
 <h5 id="grid-5">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The input grid.</p>
 <h5 id="velocity">Velocity</h5>
 <p>Data type: Vector.</p>
@@ -501,22 +501,22 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <h5 id="position-3">Position</h5>
 <p>The position field.</p>
 <h5 id="time-step">Time step</h5>
-<p>Data type: Float (time).</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>Time step for advection in seconds.</p>
 <h5 id="integration-scheme">Integration scheme</h5>
 <p>Data type: Menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/integration-scheme.png" alt="Integration scheme" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/integration-scheme.png" alt="Integration scheme" loading="lazy"></figure>
 <p>Numerical integration method for advection.</p>
 <h5 id="limiter">Limiter</h5>
 <p>Data type: Menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/limiter.png" alt="Limiter" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/limiter.png" alt="Limiter" loading="lazy"></figure>
 <p>Limiting strategy to prevent numerical artifacts.</p>
 <h4 id="output-5">Output</h4>
 <h5 id="grid-6">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The output grid.</p>
 <h3 id="grid-curl">Grid Curl</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-curl.png" alt="Grid Curl" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-curl.png" alt="Grid Curl" loading="lazy"></figure>
 <p>Calculate the magnitude and direction of ciruclation of a directional vector grid.</p>
 <h4 id="inputs-7">Inputs</h4>
 <h5 id="grid-7">Grid</h5>
@@ -527,7 +527,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Vector.</p>
 <p>The output grid.</p>
 <h3 id="grid-divergence">Grid Divergence</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-divergence.png" alt="Grid Divergence" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-divergence.png" alt="Grid Divergence" loading="lazy"></figure>
 <p>Calculate the flow into and out of each point of a directional vector grid.</p>
 <h4 id="inputs-8">Inputs</h4>
 <h5 id="grid-8">Grid</h5>
@@ -538,7 +538,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The output grid.</p>
 <h3 id="grid-gradient">Grid Gradient</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-gradient.png" alt="Grid Gradient" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-gradient.png" alt="Grid Gradient" loading="lazy"></figure>
 <p>Calculate the direction and magnitude of the change in values of a scalar grid.</p>
 <h4 id="inputs-9">Inputs</h4>
 <h5 id="grid-9">Grid</h5>
@@ -549,7 +549,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Vector.</p>
 <p>The output grid.</p>
 <h3 id="grid-laplacian">Grid Laplacian</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-laplacian.png" alt="Grid Laplacian" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-laplacian.png" alt="Grid Laplacian" loading="lazy"></figure>
 <p>Compute the divergence of the gradient of the input grid.</p>
 <h4 id="inputs-10">Inputs</h4>
 <h5 id="grid-10">Grid</h5>
@@ -560,7 +560,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The output grid.</p>
 <h4 id="grid-solve-poisson">Grid Solve Poisson</h4>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-solve-poisson.png" alt="Grid Solve Poisson" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/grid-solve-poisson.png" alt="Grid Solve Poisson" loading="lazy"></figure>
 <p>Solves the Poisson equation for a scalar grid. It computes a grid whose Laplacian is the input grid. Use the boundary settings to say what happens at the edge of the active voxels.</p>
 <p>The solver works on grids with the same voxel size in all directions. If the voxel size is not uniform, the node shows a warning.</p>
 <h5 id="inputs-11">Inputs</h5>
@@ -608,10 +608,10 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>The grid of boundary factors the solver used. It is only shown for Mixed.</p>
 <h1 id="write">Write</h1>
 <h2 id="add-menu-volume-2">Add menu - Volume</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/add-menu-volume.png" alt="Add menu - Volume" loading="lazy"><figcaption>Add menu - Volume</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/add-menu-volume.png" alt="Add menu - Volume" loading="lazy"><figcaption>Add menu - Volume</figcaption></figure>
 <p>Here you find nodes to modify the volume.</p>
 <h3 id="grid-background">Grid Background</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/grid-background.png" alt="Grid Background" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/grid-background.png" alt="Grid Background" loading="lazy"></figure>
 <p>Set the background value used for inactive voxels and tiles.</p>
 <h4 id="inputs-12">Inputs</h4>
 <h5 id="grid-12">Grid</h5>
@@ -620,34 +620,34 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Volume density per voxel. Higher values makes it more dense.</p>
 <h4 id="properties-3">Properties</h4>
 <h5 id="data-type-5">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>What data type to calculate.</p>
 <h4 id="output-6">Output</h4>
 <h5 id="grid-13">Grid</h5>
 <p>The grid output.</p>
 <h3 id="set-grid-transform">Set Grid Transform</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/set-grid-transform.png" alt="Set Grid Transform" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/set-grid-transform.png" alt="Set Grid Transform" loading="lazy"></figure>
 <p>Set the transform for the grid from index space into object space.</p>
 <h4 id="inputs-13">Inputs</h4>
 <h5 id="grid-14">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>Standard geometry input.</p>
 <h5 id="transform-2">Transform</h5>
 <p>Data type: Matrix.</p>
 <p>The input transform.</p>
 <h4 id="properties-4">Properties</h4>
 <h5 id="data-type-6">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>What data type to calculate.</p>
 <h4 id="output-7">Output</h4>
 <h5 id="is-valid">Is Valid</h5>
 <p>Data type: Boolean.</p>
 <p>If the new transform is successfully applied and working.</p>
 <h5 id="grid-15">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The grid output.</p>
 <h3 id="store-named-grid">Store Named Grid</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/set-grid-transform.png" alt="Store Named Grid" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/set-grid-transform.png" alt="Store Named Grid" loading="lazy"></figure>
 <p>Set the transform for the grid from index space into object space.</p>
 <h4 id="inputs-14">Inputs</h4>
 <h5 id="volume-4">Volume</h5>
@@ -657,38 +657,38 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: String.</p>
 <p>The name</p>
 <h5 id="grid-16">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>Standard geometry input.</p>
 <h4 id="properties-5">Properties</h4>
 <h5 id="data-type-7">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-write/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>What data type to calculate.</p>
 <h4 id="output-8">Output</h4>
 <h5 id="volume-geometry">Volume Geometry</h5>
 <p>The volume geometry to add to.</p>
 <h1 id="operations">Operations</h1>
 <h2 id="add-menu-volume-operations">Add menu - Volume - Operations</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/add-menu-volume-operations.png" alt="Add menu - Volume - Operations" loading="lazy"><figcaption>Add menu - Volume - Operations</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/add-menu-volume-operations.png" alt="Add menu - Volume - Operations" loading="lazy"><figcaption>Add menu - Volume - Operations</figcaption></figure>
 <p>Here you find nodes to modify the volume.</p>
 <h3 id="grid-topology-boolean">Grid Topology Boolean</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-topology-boolean.png" alt="Grid Topology Boolean" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-topology-boolean.png" alt="Grid Topology Boolean" loading="lazy"></figure>
 <p>Combines the topology of two grids. The topology of a grid is the set of voxels that are active, in other words the shape of the grid and not the numbers stored in it. With this node you can merge two shapes, keep only where they overlap, or cut one out of the other. Use it to build a region for a simulation out of simple pieces, or to restrict one grid to the region of another.</p>
 <h4 id="inputs-15">Inputs</h4>
 <h5 id="operation">Operation</h5>
 <p>Data type: Menu.</p>
 <p>How the shapes are combined: <strong>Intersect</strong> keeps the voxels that are active in both grids, <strong>Union</strong> keeps the voxels that are active in either grid and <strong>Difference</strong> keeps the voxels of Grid 1 that are not active in Grid 2.</p>
 <h5 id="grid-1">Grid 1</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The first grid. Its values are used for the result.</p>
 <h5 id="grid-2">Grid 2</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The second grid. Only its shape is used.</p>
 <h4 id="outputs-8">Outputs</h4>
 <h5 id="grid-17">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The grid with the combined shape.</p>
 <h4 id="how-to-use">How to use</h4>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-topology-boolean-chain.png" alt="Grid Topology Boolean example" loading="lazy"><figcaption>Grid Topology Boolean example</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-topology-boolean-chain.png" alt="Grid Topology Boolean example" loading="lazy"><figcaption>Grid Topology Boolean example</figcaption></figure>
 <p>The example builds two grids and combines their shapes:</p>
 <ol>
 <li>Each <strong>Cube Grid Topology</strong> node makes the shape of a box. The first box goes from -1 to 1, the second from 0 to 2.</li>
@@ -698,7 +698,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </ol>
 <p>A grid that is filled with one constant value has no surface inside, so Grid to Mesh shows nothing for it. Fill the grids with a value that changes, as in the example, when you want to look at the result as a mesh.</p>
 <h3 id="grid-to-mesh">Grid to Mesh</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-to-mesh.png" alt="Grid to Mesh" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-to-mesh.png" alt="Grid to Mesh" loading="lazy"></figure>
 <p>Generate a mesh on the surface of a volume grid.</p>
 <h4 id="inputs-16">Inputs</h4>
 <h5 id="grid-18">Grid</h5>
@@ -715,7 +715,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Geometry.</p>
 <p>The generated mesh.</p>
 <h3 id="volume-to-mesh">Volume to Mesh</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/volume-to-mesh.png" alt="Volume to Mesh" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/volume-to-mesh.png" alt="Volume to Mesh" loading="lazy"></figure>
 <p>The Volume to Mesh node generates a mesh on the “surface” of a volume. The surface is defined by a threshold value. All voxels with a larger value than the threshold are considered to be outside.</p>
 <p>Note that currently this node only works on volumes generated using geometry nodes.</p>
 <h4 id="inputs-17">Inputs</h4>
@@ -723,7 +723,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Geometry.</p>
 <p>Standard geometry input.</p>
 <h5 id="resolution">Resolution</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/resolution.png" alt="Resolution" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/resolution.png" alt="Resolution" loading="lazy"></figure>
 <p>Base the voxel resolution at the gridsize, the amount or the size of the point cloud.</p>
 <h6 id="threshold-2">Threshold</h6>
 <p>The voxel amount to use.</p>
@@ -734,7 +734,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Geometry.</p>
 <p>The generated mesh.</p>
 <h3 id="sdf-grid-boolean">SDF Grid Boolean</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-boolean.png" alt="SDF Grid Boolean" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-boolean.png" alt="SDF Grid Boolean" loading="lazy"></figure>
 <p>Bool multiple sdf grids with each other.</p>
 <h4 id="inputs-18">Inputs</h4>
 <h5 id="grid-1-2">Grid 1</h5>
@@ -751,7 +751,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The generated grid.</p>
 <h3 id="sdf-grid-fillet">SDF Grid Fillet</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-fillet.png" alt="SDF Grid Fillet" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-fillet.png" alt="SDF Grid Fillet" loading="lazy"></figure>
 <p>Round off concave internal corners in a signed distance field. Only affects areas with negataive principal curvature. This creates smoother transitions between surfaces.</p>
 <h4 id="inputs-19">Inputs</h4>
 <h5 id="grid-20">Grid</h5>
@@ -765,7 +765,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The generated grid.</p>
 <h3 id="sdf-grid-laplacian">SDF Grid Laplacian</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-fillet.png" alt="SDF Grid Laplacian" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-fillet.png" alt="SDF Grid Laplacian" loading="lazy"></figure>
 <p>Apply laplacian flow smoothing to a signed distance field.</p>
 <h4 id="inputs-20">Inputs</h4>
 <h5 id="grid-22">Grid</h5>
@@ -779,7 +779,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The generated grid.</p>
 <h3 id="sdf-grid-mean">SDF Grid Mean</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-mean.png" alt="SDF Grid Mean" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-mean.png" alt="SDF Grid Mean" loading="lazy"></figure>
 <p>Apply lmean (box) filter smoothing to a signed distance field. Fast separable averaging filter for general smoothing of the distance field.</p>
 <h4 id="inputs-21">Inputs</h4>
 <h5 id="grid-24">Grid</h5>
@@ -796,7 +796,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The generated grid.</p>
 <h3 id="sdf-grid-mean-2">SDF Grid Mean</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-mean-2.png" alt="SDF Grid Mean" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-mean-2.png" alt="SDF Grid Mean" loading="lazy"></figure>
 <p>Apply mean filter smoothing to a signed distance field. Evolves the surface based on its mean curvature. This smooths high curvature regions more than flat areas.</p>
 <h4 id="inputs-22">Inputs</h4>
 <h5 id="grid-26">Grid</h5>
@@ -810,7 +810,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The generated grid.</p>
 <h3 id="sdf-grid-median">SDF Grid Median</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-median.png" alt="SDF Grid Median" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-median.png" alt="SDF Grid Median" loading="lazy"></figure>
 <p>Apply median filter smoothing to a signed distance field. Reduces nioise while preserving sharp features and edges in the distance field.</p>
 <h4 id="inputs-23">Inputs</h4>
 <h5 id="grid-28">Grid</h5>
@@ -827,7 +827,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The generated grid.</p>
 <h3 id="sdf-grid-offset">SDF Grid Offset</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-offset.png" alt="SDF Grid Offset" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/sdf-grid-offset.png" alt="SDF Grid Offset" loading="lazy"></figure>
 <p>Offset a signed distance field surface by a world space distance. It dilates or erodes while maintaining the signed distance property.</p>
 <h4 id="inputs-24">Inputs</h4>
 <h5 id="grid-30">Grid</h5>
@@ -841,45 +841,45 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Float.</p>
 <p>The generated grid.</p>
 <h3 id="deactivate-voxels">Deactivate Voxels</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/deactivate-voxels.png" alt="Deactivate Voxels" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/deactivate-voxels.png" alt="Deactivate Voxels" loading="lazy"></figure>
 <p>Turns selected voxels off. A volume grid is built from voxels, and only the active ones are stored and used. Deactivating voxels you do not need makes a grid smaller and faster to work with, and it also changes the shape of the grid, because nodes such as Grid to Mesh only see the active part. Use it to cut a hole into a grid or to throw away the part of a grid that is far from where you work.</p>
 <h4 id="inputs-25">Inputs</h4>
 <h5 id="grid-32">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The grid to change. The node works on any data type, set at the top of the node.</p>
 <h5 id="selection">Selection</h5>
 <p>Data type: Boolean.</p>
 <p>The voxels to deactivate. A boolean field, evaluated at every voxel. Voxels where it is true are turned off.</p>
 <h4 id="outputs-17">Outputs</h4>
 <h5 id="grid-33">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The grid without the deactivated voxels.</p>
 <p>Data type, shown at the top of the node, is the type of the values in the grid: Float, Integer, Boolean or Vector.</p>
 <h3 id="field-to-grid">Field to Grid</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/field-to-grid.png" alt="Field to Grid" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/field-to-grid.png" alt="Field to Grid" loading="lazy"></figure>
 <p>Create new grids by evaulating new values on an existing volume grid topology.</p>
 <h4 id="inputs-26">Inputs</h4>
 <h5 id="topology">Topology</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The input topology.</p>
 <h5 id="properties-7">Properties</h5>
 <p>—</p>
 <h5 id="data-type-8">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>The data type to evaluate.</p>
 <h4 id="output-10">Output</h4>
 <h5 id="grid-34">Grid</h5>
 <p>The generated grid.</p>
 <h3 id="prune-grid">Prune Grid</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/prune-grid.png" alt="Prune Grid" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/prune-grid.png" alt="Prune Grid" loading="lazy"></figure>
 <p>Create new grids by evaulating new values on an existing volume grid topology.</p>
 <h4 id="inputs-27">Inputs</h4>
 <h5 id="grid-35">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The input grid.</p>
 <h5 id="mode">Mode</h5>
 <p>Data type: Menu.</p>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/mode.png" alt="Mode" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/mode.png" alt="Mode" loading="lazy"></figure>
 <p>How to progress the state.</p>
 <h6 id="inactive">Inactive</h6>
 <p>Turn inactive voxels and tiels into inactive background tiles.</p>
@@ -889,34 +889,34 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Replace inactive tiles with inactive nodes.</p>
 <h5 id="properties-8">Properties</h5>
 <h5 id="data-type-9">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>The data type to evaluate.</p>
 <h4 id="output-11">Output</h4>
 <h5 id="grid-36">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The generated grid.</p>
 <h3 id="prune-grid-2">Prune Grid</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/prune-grid-2.png" alt="Prune Grid" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/prune-grid-2.png" alt="Prune Grid" loading="lazy"></figure>
 <p>Create new grids by evaulating new values on an existing volume grid topology.</p>
 <h4 id="inputs-28">Inputs</h4>
 <h5 id="grid-37">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The input grid.</p>
 <h5 id="properties-9">Properties</h5>
 <p>—</p>
 <h5 id="data-type-10">Data Type</h5>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/data-type.png" alt="Data Type" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/data-type.png" alt="Data Type" loading="lazy"></figure>
 <p>The data type to evaluate.</p>
 <h4 id="output-12">Output</h4>
 <h5 id="grid-38">Grid</h5>
-<p>Data type: Float.</p>
+<p>Data type: follows the Data Type setting.</p>
 <p>The generated grid.</p>
 <h1 id="primitives">Primitives</h1>
 <h2 id="add-menu-volume-primitives">Add menu - Volume - Primitives</h2>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-primitives/add-menu-volume-primitives.png" alt="Add menu - Volume - Primitives" loading="lazy"><figcaption>Add menu - Volume - Primitives</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-primitives/add-menu-volume-primitives.png" alt="Add menu - Volume - Primitives" loading="lazy"><figcaption>Add menu - Volume - Primitives</figcaption></figure>
 <p>Here you find nodes to modify the volume.</p>
 <h3 id="cube-grid-topology">Cube Grid Topology</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-primitives/cube-grid-topology.png" alt="Cube Grid Topology" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-primitives/cube-grid-topology.png" alt="Cube Grid Topology" loading="lazy"></figure>
 <p>Makes the shape of a box of voxels, without any values in it. The output is only a topology, a set of active voxels, which you give to the Field to Grid node to fill it with a field. Use it as the starting point of a grid that you make from nodes, for example a density grid for a cloud, a signed distance field for a shape, or a region for a simulation.</p>
 <h4 id="inputs-29">Inputs</h4>
 <h5 id="bounds-min">Bounds Min</h5>
@@ -948,7 +948,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 <p>Data type: Boolean.</p>
 <p>The shape of the box, as a boolean grid. Connect it to the Topology input of Field to Grid.</p>
 <h4 id="how-to-use-2">How to use</h4>
-<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-primitives/cube-grid-topology-chain.png" alt="Cube Grid Topology example" loading="lazy"><figcaption>Cube Grid Topology example</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-primitives/cube-grid-topology-chain.png" alt="Cube Grid Topology example" loading="lazy"><figcaption>Cube Grid Topology example</figcaption></figure>
 <ol>
 <li>Add <strong>Cube Grid Topology</strong>. Set <strong>Bounds Min</strong> and <strong>Bounds Max</strong> to the size of the box and the resolutions to the detail you need. The voxel size is the box size divided by the resolution, so the same box with a resolution of 32 has voxels half the size of a resolution of 16.</li>
 <li>Add <strong>Field to Grid</strong> and connect the Topology output to its Topology input. Add a value with the plus socket and connect a field to it. In the example the field is <code>2 - Length(Position)</code>.</li>
@@ -956,7 +956,7 @@ window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme
 </ol>
 <p>Keep the resolution low while you build. Every doubling of the resolution makes eight times as many voxels.</p>
 <h3 id="volume-cube">Volume Cube</h3>
-<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/981260ecf3c9c6cc3bbf960187ef8baf34ee0029/docs2/images/editors/geometry-node-editor/header/add-menu-volume-primitives/volume-cube.png" alt="Volume Cube" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/10df8bed41a6a7a8e73f957942d22808459c4d9a/docs2/images/editors/geometry-node-editor/header/add-menu-volume-primitives/volume-cube.png" alt="Volume Cube" loading="lazy"></figure>
 <p>The Volume Cube node generates a voxel based volume cube primitive that can be used for volume conversion to mesh in conjunction with the Volume to Mesh node.</p>
 <h4 id="inputs-30">Inputs</h4>
 <h5 id="geometry">Geometry</h5>
