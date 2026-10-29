@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Text Editor · Docs preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doc-kit.css"><style>
+:root{--pv-bg:#1e1e1e;--pv-panel:#2b2b2b;--pv-text:#d6d6d6;--pv-muted:#9a9a9a;--pv-line:rgba(255,255,255,.08);--pv-accent:#4f7fc0;--pv-banner:#3a2f12;--pv-banner-text:#ffd98a}
+html.theme-light{--pv-bg:#fafafa;--pv-panel:#fff;--pv-text:#333;--pv-muted:#666;--pv-line:rgba(0,0,0,.1);--pv-banner:#fff4d6;--pv-banner-text:#6b4e00}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--pv-bg);color:var(--pv-text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--dk-link)}
+.pv-banner{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--pv-banner);color:var(--pv-banner-text);font-size:.875rem}
+.pv-banner b{font-weight:700}.pv-banner .pv-sp{flex:1}
+.pv-banner button{font:600 .8125rem Inter,sans-serif;padding:.25rem .75rem;border-radius:4px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.pv-grid{display:grid;grid-template-columns:16rem minmax(0,1fr) 14rem;gap:2rem;max-width:90rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+.pv-side,.pv-outline{position:sticky;top:1rem;align-self:start;max-height:calc(100vh - 2rem);overflow:auto;font-size:.875rem}
+.pv-side h4,.pv-outline h4{margin:1rem 0 .375rem;font:700 .75rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-muted)}
+.pv-side a,.pv-side span{display:block;padding:.3rem .5rem;border-radius:4px;color:var(--pv-text);text-decoration:none;line-height:1.3}
+.pv-side span{color:var(--pv-muted);opacity:.6}.pv-side a:hover{background:var(--dk-hover)}.pv-side a.is-current{background:var(--pv-accent);color:#fff;font-weight:600}
+.pv-outline a{display:block;padding:.25rem .5rem;color:var(--pv-text);text-decoration:none;font-size:.8125rem;border-radius:4px}.pv-outline a.h3{padding-left:1.25rem;color:var(--pv-muted)}
+.pv-outline a:hover{background:var(--dk-hover)}
+.pv-crumb{font-size:.875rem;color:var(--pv-muted);margin-bottom:.75rem}.pv-crumb a{color:var(--dk-link);text-decoration:none}
+.pv-title{font:700 2.5rem/1.1 'Titillium Web',sans-serif;color:var(--dk-text);margin:0 0 .75rem}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}.pv-chips span{padding:.15rem .6rem;border-radius:999px;background:var(--dk-chip);font-size:.8125rem}
+.pv-chips .is-draft{color:#ffd98a}.pv-chips .is-reviewed{color:#a9e08a}
+.pv-edit{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--pv-line)}
+.pv-edit a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:4px;background:var(--dk-raised);border:2px solid var(--dk-btn-edge);box-shadow:var(--dk-shadow-sm);color:var(--dk-text);text-decoration:none;font-weight:600;font-size:.875rem}
+.pv-edit a:hover{background:var(--pv-accent);color:#fff}
+.pv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem;margin:1rem 0 2rem}
+.pv-cards a{display:block;padding:1rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);color:var(--dk-text);text-decoration:none}
+.pv-cards a small{display:block;color:var(--pv-muted);margin-top:.25rem;overflow-wrap:anywhere;font-size:.75rem}.pv-cards a:hover{outline:2px solid var(--pv-accent)}
+.pv-report{padding:1rem 1.25rem;border-radius:8px;background:var(--dk-card);box-shadow:var(--dk-shadow);margin:1rem 0 2rem}
+.pv-report table{border-collapse:collapse;font-size:.875rem;margin:.5rem 0}.pv-report td,.pv-report th{padding:.3rem .6rem;border-bottom:1px solid var(--pv-line);text-align:left}
+@media (max-width:1279px){.pv-grid{grid-template-columns:14rem minmax(0,1fr)}.pv-outline{display:none}}
+@media (max-width:991px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-side{position:static;max-height:none;order:2}}
+</style><script>
+(function(){var k='bfa-preview-theme';try{if(localStorage.getItem(k)==='light')document.documentElement.classList.add('theme-light')}catch(e){}
+window.pvTheme=function(){var l=document.documentElement.classList.toggle('theme-light');try{localStorage.setItem(k,l?'light':'dark')}catch(e){}}})();
+</script></head>
+<body><div class="pv-banner">👀 <b>Docs preview</b> <span>Pull request #1598 · <code>docs2/text-editor-autosave</code> · not the live website</span>
+<span class="pv-sp"></span><a href="../index.html" style="color:inherit">All previewed pages</a><button type="button" onclick="pvTheme()">🌗 Light / dark</button></div>
+<div class="pv-grid"><nav class="pv-side"><h4>Getting Started</h4>
+<span>Getting Started</span>
+<span>Introduction</span>
+<span>Using the Documentation</span>
+<span>Installation</span>
+<span>Quick Start</span>
+<span>Data Structure</span>
+<span>Comparison with Blender</span>
+<span>Migrating from Blender</span>
+<h4>Interface</h4>
+<span>Interface</span>
+<span>Interface Basics</span>
+<span>Windows</span>
+<span>Areas</span>
+<span>Editors</span>
+<span>Headers</span>
+<span>Footers</span>
+<span>Tool Shelves</span>
+<span>Side Bars</span>
+<span>Tabs &amp; Panels</span>
+<span>Properties</span>
+<span>Asset Shelves</span>
+<span>Context Menus</span>
+<span>Floating Menus</span>
+<span>Pie Menus</span>
+<span>Last Operator Panel</span>
+<span>Floating Dialogues</span>
+<span>Input Devices</span>
+<h4>Workspaces</h4>
+<span>Workspaces</span>
+<span>Managing Workspaces</span>
+<span>Main</span>
+<span>UV Editing</span>
+<span>Modeling</span>
+<span>Nodes</span>
+<span>Animation</span>
+<span>Texture Paint</span>
+<span>Shading</span>
+<span>Rendering</span>
+<span>Sculpting</span>
+<span>Compositing</span>
+<span>Scripting</span>
+<span>2D Animation</span>
+<span>Storyboarding</span>
+<span>2D Full Canvas</span>
+<span>Masking</span>
+<span>Motion Tracking</span>
+<span>Video Editing</span>
+<span>Sequencer Compositing</span>
+<span>Assets</span>
+<span>3D Sequencer</span>
+<span>Color Balance</span>
+<h4>Editors</h4>
+<span>Editors</span>
+<span style="padding-left:3.5rem">Header tools and Options</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:1.5rem">All Modes</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Draw Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Header</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Render</span>
+<span style="padding-left:3.5rem">Input</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span>Topbar and Statusbar</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:1.5rem">Header</span>
+<span style="padding-left:3.5rem">Navigation Menu</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Pose Mode</span>
+<span style="padding-left:2.5rem">Edit Mode</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span style="padding-left:3.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Object Mode</span>
+<span style="padding-left:2.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span>Editors introduction</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Output</span>
+<span style="padding-left:3.5rem">Output</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:1.5rem">Tool Shelf</span>
+<span style="padding-left:3.5rem">Quick Menu</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Sculpt Mode</span>
+<span>3D Viewport</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Mesh</span>
+<span style="padding-left:3.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:2.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:3.5rem">Attribute</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">View Layer</span>
+<span style="padding-left:3.5rem">Shader</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:1.5rem">Sidebar</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Select Menu</span>
+<span style="padding-left:1.5rem">Curve and Surface</span>
+<span style="padding-left:2.5rem">Vertex Paint</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Context Menus</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Context Menus</span>
+<span style="padding-left:3.5rem">Creative</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">Geometry</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span>Image Editor</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:1.5rem">Scene</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Channel List</span>
+<span style="padding-left:3.5rem">View Menu</span>
+<span style="padding-left:2.5rem">More</span>
+<span style="padding-left:2.5rem">Weight Paint</span>
+<span style="padding-left:2.5rem">Texture Paint</span>
+<span style="padding-left:1.5rem">Metaball</span>
+<span style="padding-left:3.5rem">Filter</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:3.5rem">Curve</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:1.5rem">World</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Footer</span>
+<span style="padding-left:2.5rem">Particle Edit</span>
+<span style="padding-left:1.5rem">Text</span>
+<span style="padding-left:3.5rem">Keying</span>
+<span style="padding-left:3.5rem">Grease Pencil</span>
+<span style="padding-left:1.5rem">Collection</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Lattice</span>
+<span style="padding-left:3.5rem">Mask</span>
+<span style="padding-left:3.5rem">Instances</span>
+<span style="padding-left:1.5rem">Object</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Armature</span>
+<span style="padding-left:3.5rem">Tracking</span>
+<span style="padding-left:3.5rem">Mesh</span>
+<span style="padding-left:1.5rem">Modifiers</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>UV Editor</span>
+<span style="padding-left:1.5rem">Grease Pencil</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:3.5rem">Point</span>
+<span style="padding-left:1.5rem">Visual Effects</span>
+<span style="padding-left:1.5rem">Hair Curves</span>
+<span style="padding-left:3.5rem">Transform</span>
+<span style="padding-left:3.5rem">Volume</span>
+<span style="padding-left:1.5rem">Particles</span>
+<span style="padding-left:1.5rem">Point Cloud</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:3.5rem">Simulation</span>
+<span style="padding-left:1.5rem">Physics</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span>Compositor</span>
+<span style="padding-left:3.5rem">Color</span>
+<span style="padding-left:1.5rem">Object Data</span>
+<span style="padding-left:3.5rem">Texture</span>
+<span style="padding-left:1.5rem">Object Constraints</span>
+<span style="padding-left:3.5rem">Utilities</span>
+<span style="padding-left:1.5rem">Bone</span>
+<span style="padding-left:3.5rem">Generate</span>
+<span style="padding-left:1.5rem">Bone Constraints</span>
+<span style="padding-left:3.5rem">Node Groups</span>
+<span style="padding-left:1.5rem">Material</span>
+<span>Texture Node Editor</span>
+<span style="padding-left:3.5rem">Normals</span>
+<span>Geometry Node Editor</span>
+<span style="padding-left:1.5rem">Texture</span>
+<span style="padding-left:3.5rem">Group</span>
+<span style="padding-left:1.5rem">Strip</span>
+<span style="padding-left:3.5rem">Layout</span>
+<span style="padding-left:1.5rem">Strip Modifiers</span>
+<span>Shader Editor</span>
+<span>Video Sequence Editor</span>
+<span>Movie Clip Editor</span>
+<span>Dope Sheet</span>
+<span>Timeline</span>
+<span>Graph Editor</span>
+<span>Drivers Editor</span>
+<span>Nonlinear Animation Editor</span>
+<a class="is-current" href="text-editor.html">Text Editor</a>
+<span>Python Console</span>
+<span>Info Editor</span>
+<span>Toolbar</span>
+<span>Outliner</span>
+<span>Properties Editor</span>
+<span style="padding-left:2.5rem">Cycles</span>
+<span style="padding-left:2.5rem">EEVEE</span>
+<span style="padding-left:2.5rem">Workbench</span>
+<span style="padding-left:2.5rem">Normals modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Physics modifiers (Mesh)</span>
+<span style="padding-left:2.5rem">Edit modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Generate modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Deform modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Color modifiers (Grease Pencil)</span>
+<span style="padding-left:2.5rem">Emitter</span>
+<span style="padding-left:2.5rem">Emitter - Emission Panel</span>
+<span style="padding-left:2.5rem">Emitter - Cache Panel</span>
+<span style="padding-left:2.5rem">Emitter - Velocity panel</span>
+<span style="padding-left:2.5rem">Emitter - Rotation panel</span>
+<span style="padding-left:2.5rem">Emitter - Physics panel</span>
+<span style="padding-left:2.5rem">Emitter - Render panel</span>
+<span style="padding-left:2.5rem">Emitter - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Emitter - Children panel</span>
+<span style="padding-left:2.5rem">Emitter - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Dynamics panel</span>
+<span style="padding-left:2.5rem">Emitter - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Emitter - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Emitter - Textures panel</span>
+<span style="padding-left:2.5rem">Emitter - Animation panel</span>
+<span style="padding-left:2.5rem">Emitter - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Hair</span>
+<span style="padding-left:2.5rem">Hair - Emission Panel</span>
+<span style="padding-left:2.5rem">Hair - Cache Panel</span>
+<span style="padding-left:2.5rem">Hair - Velocity panel</span>
+<span style="padding-left:2.5rem">Hair - Rotation panel</span>
+<span style="padding-left:2.5rem">Hair - Physics panel</span>
+<span style="padding-left:2.5rem">Hair - Render panel</span>
+<span style="padding-left:2.5rem">Hair - Viewport Display panel</span>
+<span style="padding-left:2.5rem">Hair - Children panel</span>
+<span style="padding-left:2.5rem">Hair - Hair Shape panel</span>
+<span style="padding-left:2.5rem">Hair - Field Weights panel</span>
+<span style="padding-left:2.5rem">Hair - Force Field Settings panel</span>
+<span style="padding-left:2.5rem">Hair - Vertex Groups panel</span>
+<span style="padding-left:2.5rem">Hair - Textures panel</span>
+<span style="padding-left:2.5rem">Hair - Animation panel</span>
+<span style="padding-left:2.5rem">Hair - Custom Properties panel</span>
+<span style="padding-left:2.5rem">Force Field panel</span>
+<span style="padding-left:2.5rem">Collision panel</span>
+<span style="padding-left:2.5rem">Cloth panel</span>
+<span style="padding-left:2.5rem">Dynamic Paint panel</span>
+<span style="padding-left:2.5rem">Soft Body panel</span>
+<span style="padding-left:2.5rem">Fluid panel</span>
+<span style="padding-left:2.5rem">Rigid Body panel</span>
+<span style="padding-left:2.5rem">Rigid Body Constraint panel</span>
+<span style="padding-left:2.5rem">Mesh Object</span>
+<span style="padding-left:2.5rem">Curve Object</span>
+<span style="padding-left:2.5rem">Curves Object</span>
+<span style="padding-left:2.5rem">Metaball Object</span>
+<span style="padding-left:2.5rem">Surface Object</span>
+<span style="padding-left:2.5rem">Point Cloud Object</span>
+<span style="padding-left:2.5rem">Text Object</span>
+<span style="padding-left:2.5rem">Grease Pencil Object</span>
+<span style="padding-left:2.5rem">Armature Object</span>
+<span style="padding-left:2.5rem">Lattice Object</span>
+<span style="padding-left:2.5rem">Empty&amp;Image Object</span>
+<span style="padding-left:2.5rem">Speaker Object</span>
+<span style="padding-left:2.5rem">Camera Object</span>
+<span style="padding-left:2.5rem">Light Object</span>
+<span style="padding-left:2.5rem">Light Probe Object</span>
+<span style="padding-left:2.5rem">Force Field Object</span>
+<span style="padding-left:2.5rem">Volume Object</span>
+<span>File browser</span>
+<span>Asset Browser</span>
+<span>Spreadsheet</span>
+<span>Preferences</span>
+<span style="padding-left:1.5rem">Topbar menus</span>
+<span style="padding-left:1.5rem">Viewport</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<span style="padding-left:2.5rem">Add Menu</span>
+<h4>Assets</h4>
+<span>Assets</span>
+<span>Essentials Library</span>
+<span>Default Library</span>
+<span>Compositor Library</span>
+<span>Geometry Nodes Library</span>
+<span>Shader Library</span>
+<h4>Extensions and Addons</h4>
+<span>Extensions and Addons</span>
+<span>3D Sequencer</span>
+<span>Power User Tools</span>
+<span>Presentation Slides</span>
+<span>Coworker</span>
+<span>Brush Panels</span>
+<span>Built-in Addons and Extensions</span>
+<h4>Keymap</h4>
+<span>Keymap</span>
+<span>Important Hotkeys</span>
+<span>Standard Keymaps</span>
+<span>Keymap Table</span>
+<h4>Advanced</h4>
+<span>Advanced</span>
+<span>Command Line</span>
+<span>Scripting</span>
+<span>Working Limits</span>
+<span>Troubleshooting</span>
+<span>Reporting a Bug</span>
+<span>Requesting a Feature</span>
+<span>How to Help</span>
+<h4>Information</h4>
+<span>Information</span>
+<span>Bforartists History</span>
+<span>Documentation History</span>
+<span>About the GPL License</span>
+<span>The Community Influences</span>
+<span>Glossary</span>
+<span>Index</span>
+<h4>Doc Kit (test)</h4>
+<span>Doc Kit (test)</span></nav><main><div class="pv-crumb">📄 Documentation › Editors › Text Editor</div><h1 class="pv-title">Text Editor</h1><div class="pv-chips"><span class="is-draft">● draft</span><span>Bforartists 5.1</span><span>🕒 10 min read</span></div><article class="ui-doc-body"><h2 id="text-editor">Text Editor</h2>
+<p><em><em>The</em> *Text Editor</em>*is mainly used to write scripts. And so the functionality orients towards this useage. But you can also use it to write any text. To store some notes for the scene for example. See Tip below.</p>
+<p>When you don't have a file loaded then the header content is rather small.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/text-editor.png" alt="Text Editor" loading="lazy"></figure>
+<p>Once you create a new file, or load a file, you will see the toolbar change, and reveal further functionality.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/text-editor-2.png" alt="Text Editor" loading="lazy"></figure>
+<p>Some text related functionality can also be found in the tool shelf at the right.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/text-editor-3.png" alt="Text Editor" loading="lazy"></figure>
+<div class="ui-doc-callout is-tip"><p><strong>Tip:</strong> A <strong>Text</strong> window can be used to write in a <em>README</em> text explaining the contents of your blend file. Be sure to keep it visible when saving! And be sure to tell the receiver to activate Load UI to display the text file then. Bforartists has Load UI deactivated by default.</p></div>
+<h2 id="slider-snapping">Slider snapping</h2>
+<blockquote>
+<p>Hold <strong>Ctrl</strong> while dragging a slider to snap it. See <strong><a href="https://github.com/Bforartists/Manual/blob/docs2/text-editor-autosave/docs2/content/interface/properties.md#snapping">Snapping</a></strong> in the Interface chapter.</p>
+</blockquote>
+<h2 id="header-file-menu">Header - File Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/header-file-menu.png" alt="Header - File Menu" loading="lazy"><figcaption>Header - File Menu</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/header-file-menu-2.png" alt="Header - File Menu" loading="lazy"><figcaption>Header - File Menu</figcaption></figure>
+<p>The File menu contains the load and save functionality. But also some Python and OSL templates. And some general debug functionality.</p>
+<p>When no text is loaded then the menu is reduced.</p>
+<h3 id="new-text">New Text</h3>
+<p>Creates a new text file.</p>
+<h3 id="open-text">Open Text</h3>
+<p>Open a text file.</p>
+<h3 id="reload">Reload</h3>
+<p>It can happen that you work with an external script editor, like Visual Studio, and change your script there. The reload button reloads the current active text file from hard disk.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/reload.png" alt="Reload" loading="lazy"></figure>
+<p>You will get a warning symbol in the header when the script in the text editor doesn't match with the external text anymore.</p>
+<h3 id="edit-externally">Edit Externally</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/edit-externally.jpg" alt="Edit Externally" loading="lazy"></figure>
+<p>Allows you to edit your file externally with a defined code editor like VS Code.</p>
+<p>Note that you need to define the external editor in the preferences first.</p>
+<h3 id="save">Save</h3>
+<p>Saves the text file. Overwrites the existing version immediately.</p>
+<h3 id="save-as">Save As</h3>
+<p>Save as opens a save as file dialog.</p>
+<h3 id="save-autosave">Save Autosave</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/header-file-menu-autosave.png" alt="Header - File Menu with Save Autosave" loading="lazy"><figcaption>Header - File Menu with Save Autosave</figcaption></figure>
+<p>Creates an autosave of the current Bforartists file in the temp directory, right now. You don't have to wait for the timed autosave. It is handy when you write a script and want a safety copy before you run it.</p>
+<p>The autosave does not replace your <em>.blend</em> file or your text file. To keep changes in a text file, use <strong>Save</strong> or <strong>Save As</strong>.</p>
+<h3 id="templates">Templates</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/templates.png" alt="Templates" loading="lazy"></figure>
+<p>The Templates category contains some example scripts. There are two kind of templates. Python scripts and Open Shading Language scripts. The name of the files should tell you what the script is good for.</p>
+<h3 id="redraw-timer">Redraw Timer</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/redraw-timer.png" alt="Redraw Timer" loading="lazy"></figure>
+<p>This is a relict from early Blender days. A debugging timer for the UI where you can test the redraw time of different UI elements.</p>
+<h3 id="debug-menu">Debug Menu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/debug-menu.png" alt="Debug Menu" loading="lazy"></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/debug-menu-2.png" alt="Debug Menu" loading="lazy"></figure>
+<p>Another development tool. Set the debug level.</p>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/debug-menu-3.png" alt="Debug Menu" loading="lazy"></figure>
+<h4 id="reload-scripts">Reload Scripts</h4>
+<p>Reload Scripts reloads all active python scripts and addons. Including the Bforartists python UI files. This can be useful when you work at the UI or at an add-on. Then you don't have to close and reload Bforartists to see the changes. You can simply reload the scripts and keep Bforartists open.</p>
+<h4 id="clean-up-space-data">Clean up Space Data</h4>
+<p>Remove unused settings for invisible editors.</p>
+<h3 id="memory-statistics">Memory Statistics</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/memory-statistics.jpg" alt="Memory Statistics" loading="lazy"></figure>
+<p>Print memory statistics to the console. You need to have the console open.</p>
+<h3 id="clean-up-operator-presets">Clean Up Operator Presets</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/clean-up-operator-presets.png" alt="Clean Up Operator Presets" loading="lazy"><figcaption>Clean Up Operator Presets</figcaption></figure>
+<p>Remove outdated operator properties from presets that may cause problems. This is useful when an operator supports presets to customize settings need to be reset.</p>
+<h2 id="header-view-menu">Header - View Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/header-view-menu.png" alt="Header - View Menu" loading="lazy"><figcaption>Header - View Menu</figcaption></figure>
+<p>The View menu contains some view related functionality.</p>
+<h3 id="sidebar">Sidebar</h3>
+<p>Opens or closes the sidebar.</p>
+<h3 id="zoom-in">Zoom In</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/zoom-in.png" alt="Zoom In" loading="lazy"></figure>
+<p>Zooms in to adjust the font size to use for displaying the text. The font size can also be adjusted in the sidebar.</p>
+<h4 id="zoom-out">Zoom Out</h4>
+<p>Zooms out to adjust the font size to use for displaying the text. The font size can also be adjusted in the sidebar.</p>
+<h4 id="top-of-file">Top of File</h4>
+<p>Jumps to the top of the text file.</p>
+<h4 id="bottom-of-file">Bottom of File</h4>
+<p>Jumps to the bottom of the text file.</p>
+<h3 id="area-submenu">Area submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/area-submenu.png" alt="Area submenu" loading="lazy"></figure>
+<p>Area is a menu with window related settings.</p>
+<h4 id="horizontal-split">Horizontal Split</h4>
+<p>Splits the editor horizontally into two editors.</p>
+<h4 id="vertical-split">Vertical Split</h4>
+<p>Splits the editor vertically into two editors.</p>
+<h4 id="duplicate-area-into-new-window">Duplicate Area into new Window</h4>
+<p>Creates a floating window out of the current editor</p>
+<h4 id="toggle-maximize-area">Toggle Maximize Area</h4>
+<p>Displays the editor maximized with menus. To return to split view press hotkey Ctrl Up Arrow, or reuse the menu item in the View menu.</p>
+<h4 id="toggle-fullscreen-area">Toggle Fullscreen Area</h4>
+<p>Displays the editor maximized without menus. To return from the full screen view press hotkey Alt F10, or use the little button that appears up right when you move the mouse in this corner.</p>
+<h4 id="close-area">Close Area</h4>
+<p>Closes the area window.</p>
+<h2 id="header-edit-menu">Header - Edit Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/header-edit-menu.png" alt="Header - Edit Menu" loading="lazy"><figcaption>Header - Edit Menu</figcaption></figure>
+<p>The Edit menu contains tools to modify the text.</p>
+<h3 id="cut">Cut</h3>
+<p>Cuts the selected text.</p>
+<h3 id="copy">Copy</h3>
+<p>Copies the selected text.</p>
+<h3 id="paste">Paste</h3>
+<p>Pastes copied text at Text cursor position.</p>
+<h3 id="duplicate-line">Duplicate Line</h3>
+<p>Duplicates the line where the Text cursor currently is.</p>
+<h3 id="move-line-up">Move Line up</h3>
+<p>Moves the line where the Text cursor is one line up.</p>
+<h3 id="move-line-down">Move Line down</h3>
+<p>Moves the line where the Text cursor is one line down.</p>
+<h3 id="select-text-submenu">Select Text submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/select-text-submenu.png" alt="Select Text submenu" loading="lazy"></figure>
+<p>Select text is a sub menu that contains selection functionality, starting from the current position of the Text cursor. The buttons should be self explaining. And usually you use the hotkeys for this functionality.</p>
+<h3 id="move-cursor-submenu">Move Cursor submenu</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/move-cursor-submenu.png" alt="Move Cursor submenu" loading="lazy"></figure>
+<p>This sub menu contains all available methods and its hotkeys to set the mouse cursor in the text.</p>
+<h3 id="delete">Delete</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/delete.png" alt="Delete" loading="lazy"></figure>
+<p>Delete is a sub menu with some special Delete methods, starting from the current position of the Text cursor. And usually you use the hotkeys for this functionality.</p>
+<h4 id="select-all">Select all</h4>
+<p>Selects all text.</p>
+<h4 id="select-line">Select Line</h4>
+<p>Selects the word under the mouse cursor.</p>
+<h3 id="word">Word</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/word.png" alt="Word" loading="lazy"></figure>
+<p>Selects the line where the Text cursor. currently is</p>
+<h3 id="go-to-line">Go to Line</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/go-to-line.png" alt="Go to Line" loading="lazy"></figure>
+<p>This tool opens a sub menu where you can type in the line number and jump to this line then.</p>
+<h3 id="find">Find</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/find.png" alt="Find" loading="lazy"></figure>
+<p>Find opens the Tool Shelf, where you can find a Find &amp; Replace panel. The Find &amp; Replace panel is explained in the tool shelf chapter.</p>
+<h4 id="find-set-selection">Find &amp; Set Selection</h4>
+<p>Finds and selects the next text element that matches with the current selection. It's the same functionality than the Find Next button in the Find &amp; Replace panel.</p>
+<h4 id="text-auto-complete">Text Auto Complete</h4>
+<p>Auto Complete tries to complete your text input.</p>
+<h3 id="text-to-3d-object">Text to 3D Object</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/text-to-3d-object.png" alt="Text to 3D Object" loading="lazy"><figcaption>Text to 3D Object</figcaption></figure>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/text-to-3d-object-2.png" alt="Text to 3D Object" loading="lazy"><figcaption>Text to 3D Object</figcaption></figure>
+<p>Text to 3D Object converts the text of the file to an editable 3D object in the 3D Viewport.</p>
+<h4 id="one-object">One Object</h4>
+<p>Converts the whole text into one object.</p>
+<h4 id="one-object-per-line">One Object Per Line</h4>
+<p>Converts every line of the text into a separate object.</p>
+<h2 id="header-format-menu">Header - Format Menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/header-format-menu.png" alt="Header - Format Menu" loading="lazy"><figcaption>Header - Format Menu</figcaption></figure>
+<p>The format menu contains some formatting functionality.</p>
+<h3 id="indent">Indent</h3>
+<p>Indents the text. Python requires proper indentation.</p>
+<h3 id="unindent">Unindent</h3>
+<p>Unindents the text.</p>
+<h3 id="comment">Comment</h3>
+<p>Comments the text out. For Python usually with a # sign.</p>
+<h3 id="uncomment">Uncomment</h3>
+<p>Uncomments commented text.</p>
+<h3 id="toggle-comments">Toggle comments</h3>
+<p>Toggles the comments.</p>
+<h3 id="whitespaces-to-spaces">Whitespaces to Spaces</h3>
+<p>Converts Whitespaces in the text to Spaces.</p>
+<h3 id="whitespaces-to-tabs">Whitespaces to Tabs</h3>
+<p>Converts Whitespaces in the text to Tabs.</p>
+<h2 id="header-tools">Header - Tools</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/header-tools.png" alt="Header - Tools" loading="lazy"></figure>
+<p>The Header tools provides you with quick access functionality.</p>
+<h3 id="text-prop">Text Prop</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/text-prop.png" alt="Text Prop" loading="lazy"></figure>
+<h4 id="list-of-text-files">List of text files</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/list-of-text-files.png" alt="List of text files" loading="lazy"><figcaption>List of text files</figcaption></figure>
+<p>This is a list of the images in the scene. This list allows you to switch to other images.</p>
+<h5 id="search-form">Search form</h5>
+<p>Search for specific images.</p>
+<h6 id="text-edit-box">Text Edit Box</h6>
+<p>Read the name of the currently selected text. And you can rename the textfile here too.</p>
+<h6 id="unlink-datablock">Unlink Datablock</h6>
+<p>This closes the selected text. Attention, different from the rest of the UI this text really vanishes immediately from the list then.</p>
+<h4 id="file-selector-property">File selector property</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/file-selector-property.png" alt="File selector property" loading="lazy"></figure>
+<h5 id="file-browser">File browser</h5>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/file-browser.png" alt="File browser" loading="lazy"></figure>
+<p>The list of loaded text files.</p>
+<h6 id="fake-user">Fake User</h6>
+<p>Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.</p>
+<h6 id="new-text-2">New Text</h6>
+<p>Create a new text file.</p>
+<h6 id="open-text-2">Open Text</h6>
+<p>Open a text file. A file browser will open.</p>
+<h6 id="remove">Remove</h6>
+<p>Close the text. It will be removed from the list.</p>
+<h3 id="run-script">Run Script</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/run-script.png" alt="Run Script" loading="lazy"></figure>
+<p>This button is for python or OSL scripts. It executes the script.</p>
+<h3 id="register">Register</h3>
+<p>This checkbox is for Python or OSL Scripts. When checked the classes of the script gets registered in Bforartists.</p>
+<h3 id="info-string">Info String</h3>
+<p>Shows infos about the current text file. When it's an internal created file then it displays the String File: Internal. When it's an external loaded file, then the string displays the path to the location of the file.</p>
+<h4 id="show-line-numbers-wrap-and-syntax-highlight">Show Line Numbers, Wrap and Syntax Highlight</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/show-line-numbers-wrap-and-syntax-highlight.png" alt="Show Line Numbers, Wrap and Syntax Highlight" loading="lazy"><figcaption>Show Line Numbers, Wrap and Syntax Highlight</figcaption></figure>
+<p>Show Line numbers displays a row of numbers at the left side of the text file.</p>
+<p>Wrap words wraps the text to fit into the current editor size.</p>
+<p>Syntax highlighting colors text parts fitting to the language.</p>
+<h4 id="find-and-replace">Find and Replace</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/find-and-replace.png" alt="Find and Replace" loading="lazy"></figure>
+<p>Calls a find and replace dialog.</p>
+<h2 id="tool-shelf">Tool Shelf</h2>
+<p>The Tool Shelf is the place for some options and the text search panel.</p>
+<h3 id="find-replace-panel">Find &amp; Replace Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/find-and-replace-panel.png" alt="Find &amp; Replace Panel" loading="lazy"><figcaption>Find &amp; Replace Panel</figcaption></figure>
+<p>In the find panel you will find tools with text search and replace functionality.</p>
+<h4 id="find-edit-box">Find Edit Box</h4>
+<p>Here you can type in the string that you want to search.</p>
+<h4 id="find-set-selected">Find set selected</h4>
+<p>Copies the currently selected text into the Find edit box, searches for a matching string in the text, and selects this match then.</p>
+<h4 id="find-next">Find Next</h4>
+<p>Searches for the next matching string in the text.</p>
+<h4 id="replace-edit-box">Replace Edit Box</h4>
+<p>Here you can type in the string that you want to replace in the text.</p>
+<h4 id="replace-set-selected">Replace set selected</h4>
+<p>Copies the currently selected text into the Find edit box, searches for a matching string in the text, and replaces this match with the string in the Replace edit box.</p>
+<h4 id="replace">Replace</h4>
+<p>Searches for the next matching string in the text. And replaces it the string in the Replace edit box.</p>
+<h4 id="replace-all">Replace all</h4>
+<p>Searches for matching strings in the text. And replaces them all by the string in the Replace edit box.</p>
+<div class="ui-doc-callout is-note"><p><strong>Note:</strong> <img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/replace-all.png" alt="Replace all" /></p>
+<p>By default when the search does not find a matching string anymore in the text below the current selection, then you will get a warning that the search string is not present in the text file. It will not automatically start the search from the top again. You have to place the text cursor manually at the top of the text.</p>
+<p>Or turn on the Wrap checkbox below.</p></div>
+<h5 id="match-case">Match case</h5>
+<p>When ticked then the search is Upper case sensitive.</p>
+<h5 id="wrap">Wrap</h5>
+<p>Starts the search from the top of the document when the search has reached the end of the document.</p>
+<h5 id="all">All</h5>
+<p>Search in all opened Text files, not just the currently active one.</p>
+<h3 id="properties-panel">Properties Panel</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/properties-panel.png" alt="Properties Panel" loading="lazy"></figure>
+<h4 id="highlight">Highlight</h4>
+<p>Highlights the line where the text cursor is.</p>
+<h4 id="live-edit">Live Edit</h4>
+<p>Updates the script while editing.</p>
+<h4 id="font-size">Font Size</h4>
+<p>The font size for the text editor</p>
+<h4 id="tab-width">Tab width</h4>
+<p>Number of spaces to display tabs with. Default is four.</p>
+<h4 id="intendation">Intendation</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/intendation.png" alt="Intendation" loading="lazy"></figure>
+<p>How to deal with intendation. Treating it as tabs or as spaces.</p>
+<h4 id="show-margin">Show Margin</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/show-margin.png" alt="Show Margin" loading="lazy"></figure>
+<p>Shows a dotted line at the right. Note that we have currently a theming problem here with the default Bforartists theme. We have white text, means a white dotted line. And we have a white background. This means that the dotted line just shows with other themes where the header text color is black.</p>
+<h4 id="margin-column">Margin Column</h4>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/margin-column.png" alt="Margin Column" loading="lazy"></figure>
+<p>This edit box becomes visible when Show Margin is ticked.</p>
+<p>Here you can adjust the width from the left at which the dotted margin line should show.</p>
+<h2 id="footer">Footer</h2>
+<h3 id="info-string-2">Info String</h3>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/info-string.png" alt="Info String" loading="lazy"></figure>
+<p>This string shows infos about the current text file.</p>
+<p>When it's an internal created file then it displays the String File: Internal.</p>
+<p>When it's an external loaded file, then the string displays the full path to the location of the file.</p>
+<h2 id="context-menu">Context menu</h2>
+<figure class="is-right"><img src="https://raw.githubusercontent.com/Bforartists/Manual/5b953f1c0f5ac3bd249de8079a8f3cf9564d81df/docs2/images/editors/text-editor/context-menu.png" alt="Context menu" loading="lazy"></figure>
+<p>When you right click into the text editor then a popup menu opens up. It is to 100% made of double menu entries.</p>
+<h3 id="cut-2">Cut</h3>
+<p>Cuts the selected text.</p>
+<h3 id="copy-2">Copy</h3>
+<p>Copies the selected text.</p>
+<h3 id="paste-2">Paste</h3>
+<p>Pastes copied text at Text cursor. position.</p>
+<h3 id="move-line-up-2">Move Line up</h3>
+<p>Moves the line where the Text cursor. is one line up.</p>
+<h3 id="move-line-down-2">Move Line down</h3>
+<p>Moves the line where the Text cursor. is one line down.</p>
+<h3 id="indent-2">Indent</h3>
+<p>Indents the text. Python requires proper indentation.</p>
+<h3 id="unindent-2">Unindent</h3>
+<p>Unindents the text.</p>
+<h3 id="toggle-comments-2">Toggle comments</h3>
+<p>Toggles the comments.</p>
+<h3 id="text-auto-complete-2">Text Auto Complete</h3>
+<p>Auto Complete tries to complete your text input.</p>
+</article><div class="pv-edit"><a href="https://app.pagescms.org/bforartists/manual/docs2%2Ftext-editor-autosave/collection/docs/edit/docs2%2Fcontent%2Feditors%2Ftext-editor.md">✏️ Edit this page</a><a href="https://github.com/Bforartists/Manual/blob/docs2/text-editor-autosave/docs2/content/editors/text-editor.md">🐙 View the Markdown</a></div></main><aside class="pv-outline"><h4>Page sections</h4><a class="h2" href="#text-editor">Text Editor</a><a class="h2" href="#slider-snapping">Slider snapping</a><a class="h2" href="#header-file-menu">Header - File Menu</a><a class="h3" href="#new-text">New Text</a><a class="h3" href="#open-text">Open Text</a><a class="h3" href="#reload">Reload</a><a class="h3" href="#edit-externally">Edit Externally</a><a class="h3" href="#save">Save</a><a class="h3" href="#save-as">Save As</a><a class="h3" href="#save-autosave">Save Autosave</a><a class="h3" href="#templates">Templates</a><a class="h3" href="#redraw-timer">Redraw Timer</a><a class="h3" href="#debug-menu">Debug Menu</a><a class="h3" href="#memory-statistics">Memory Statistics</a><a class="h3" href="#clean-up-operator-presets">Clean Up Operator Presets</a><a class="h2" href="#header-view-menu">Header - View Menu</a><a class="h3" href="#sidebar">Sidebar</a><a class="h3" href="#zoom-in">Zoom In</a><a class="h3" href="#area-submenu">Area submenu</a><a class="h2" href="#header-edit-menu">Header - Edit Menu</a><a class="h3" href="#cut">Cut</a><a class="h3" href="#copy">Copy</a><a class="h3" href="#paste">Paste</a><a class="h3" href="#duplicate-line">Duplicate Line</a><a class="h3" href="#move-line-up">Move Line up</a><a class="h3" href="#move-line-down">Move Line down</a><a class="h3" href="#select-text-submenu">Select Text submenu</a><a class="h3" href="#move-cursor-submenu">Move Cursor submenu</a><a class="h3" href="#delete">Delete</a><a class="h3" href="#word">Word</a><a class="h3" href="#go-to-line">Go to Line</a><a class="h3" href="#find">Find</a><a class="h3" href="#text-to-3d-object">Text to 3D Object</a><a class="h2" href="#header-format-menu">Header - Format Menu</a><a class="h3" href="#indent">Indent</a><a class="h3" href="#unindent">Unindent</a><a class="h3" href="#comment">Comment</a><a class="h3" href="#uncomment">Uncomment</a><a class="h3" href="#toggle-comments">Toggle comments</a><a class="h3" href="#whitespaces-to-spaces">Whitespaces to Spaces</a><a class="h3" href="#whitespaces-to-tabs">Whitespaces to Tabs</a><a class="h2" href="#header-tools">Header - Tools</a><a class="h3" href="#text-prop">Text Prop</a><a class="h3" href="#run-script">Run Script</a><a class="h3" href="#register">Register</a><a class="h3" href="#info-string">Info String</a><a class="h2" href="#tool-shelf">Tool Shelf</a><a class="h3" href="#find-replace-panel">Find &amp; Replace Panel</a><a class="h3" href="#properties-panel">Properties Panel</a><a class="h2" href="#footer">Footer</a><a class="h3" href="#info-string-2">Info String</a><a class="h2" href="#context-menu">Context menu</a><a class="h3" href="#cut-2">Cut</a><a class="h3" href="#copy-2">Copy</a><a class="h3" href="#paste-2">Paste</a><a class="h3" href="#move-line-up-2">Move Line up</a><a class="h3" href="#move-line-down-2">Move Line down</a><a class="h3" href="#indent-2">Indent</a><a class="h3" href="#unindent-2">Unindent</a><a class="h3" href="#toggle-comments-2">Toggle comments</a><a class="h3" href="#text-auto-complete-2">Text Auto Complete</a></aside></div></body></html>
