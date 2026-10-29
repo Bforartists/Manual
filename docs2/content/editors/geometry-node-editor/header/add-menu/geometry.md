@@ -144,7 +144,7 @@ What data type to use.
 
 ##### Attribute
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The output attribute name.
 
@@ -354,7 +354,7 @@ This is actually the source object that sends the ray.
 
 ##### Attribute
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 Attribute input.
 
@@ -412,13 +412,13 @@ The normal of the hit point.
 
 ##### Hit Distance
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The distance of the hit point.
 
 ##### Attribute
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The attribute of the hit object.
 
@@ -440,7 +440,7 @@ The source object to take the data from.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The value to retreive.
 
@@ -474,7 +474,7 @@ Clamp the indices to the size of the attribute domain.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The output value.
 
@@ -670,7 +670,7 @@ Which part of the geometry to read the materials from. The list has one entry fo
 
 ##### Materials
 
-Data type: Material.
+Data type: Material list.
 
 The list of materials, in slot order. If the geometry has no part of the chosen type, or that part has no material slots, nothing is output.
 

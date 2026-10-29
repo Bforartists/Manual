@@ -177,7 +177,7 @@ What input type to evaluate.
 
 ##### Output
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The output index.
 
@@ -245,13 +245,13 @@ Generates a random value.
 
 ##### Min
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The minimum value of the range. This input is only available for Float, Integer, and Vector types.
 
 ##### Max
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The maximum value of the range. This input is only available for Float, Integer, and Vector types.
 
@@ -280,7 +280,7 @@ What kind of random value to create. The items should be self explaining.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The output value.
 
@@ -786,13 +786,13 @@ Note that Hashes cannot be relied upon to be used as unique identifiers because 
 
 ##### Value
 
-Data type: Integer.
+Data type: follows the Data Type setting.
 
 The input value.
 
 ##### Seed
 
-Data type: Integer.
+Data type: follows the Data Type setting.
 
 A seed to randomize the value.
 
@@ -809,7 +809,7 @@ What data type to create.
 
 ##### Hash
 
-Data type: Integer.
+Data type: follows the Data Type setting.
 
 The hash value output.
 
@@ -823,31 +823,31 @@ This node converts (maps) an input value range into a destination range. By defa
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 Standard value input.
 
 ##### From Min
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 Start of the input value range.
 
 ##### From Max
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 End of the input value range.
 
 ##### To Min
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 Startof the destination range.
 
 ##### To Max
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 End of the destination range.
 
@@ -1168,7 +1168,7 @@ The data type to calculate.
 
 ##### Result
 
-Data type: Float or Vector or Color or Rotation.
+Data type: follows the Data Type setting.
 
 The output value or vector.
 
@@ -1553,7 +1553,7 @@ Converts a value to a string.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input value.
 
@@ -1633,25 +1633,25 @@ Remap a value from a range to a target range.
 
 ##### From Min
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 Vector 3 from the minimum input.
 
 ##### From Max
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 Vector 3 from the maximum input.
 
 ##### To Min
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 Vector 3 to the minimum input.
 
 ##### To Min
 
-Data type: Float or Vector.
+Data type: follows the Data Type setting.
 
 Vector 3 to the maximum input.
 
@@ -2354,7 +2354,7 @@ Creates a running total of a given Vector, Float, or Int field.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The field to be accumulated.
 
@@ -2385,7 +2385,7 @@ Returns the running totals starting at either the first value of each accumulati
 
 ##### Total
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 Returns the total accumulation at all positions of the field.
 
@@ -2453,7 +2453,7 @@ Input Index.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 Input Value.
 
@@ -2476,7 +2476,7 @@ What geometry to calculate.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The output value.
 
@@ -2490,7 +2490,7 @@ This node evaluates an existing field on a separate domain in a larger field con
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input value to get the field.
 
@@ -2512,7 +2512,7 @@ The domain the Field evaluates. This gets and filters the field type. The domain
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The output value.
 
@@ -2526,7 +2526,7 @@ Calculate the mean and median of a given field.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input value to get the field.
 
@@ -2555,13 +2555,13 @@ The domain the Field evaluates. This gets and filters the field type. The domain
 
 ##### Mean
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The Mean output value.
 
 ##### Median
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The Median output value.
 
@@ -2576,7 +2576,7 @@ Calculate the minimum and maximum of a given field.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input value to get the field.
 
@@ -2605,13 +2605,13 @@ The domain the Field evaluates. This gets and filters the field type. The domain
 
 ##### Min
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The Min output value.
 
 ##### Max
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The Max output value.
 
@@ -2626,7 +2626,7 @@ Calculate the standard derivation and variance of a given field.
 
 ##### Value
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The input value to get the field.
 
@@ -2659,7 +2659,7 @@ The Min output value.
 
 ##### Variance
 
-Data type: Float.
+Data type: follows the Data Type setting.
 
 The Max output value.
 
