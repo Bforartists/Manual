@@ -45,10 +45,13 @@ The File menu contains the load and save functionality. But also some Python and
 
 When no text is loaded then the menu is reduced.
 
-| Entry | What it does |
-| --------- | ------------------------ |
-| New Text | Creates a new text file. |
-| Open Text | Open a text file. |
+### New Text
+
+Creates a new text file.
+
+### Open Text
+
+Open a text file.
 
 ### Reload
 
@@ -66,10 +69,21 @@ Allows you to edit your file externally with a defined code editor like VS Code.
 
 Note that you need to define the external editor in the preferences first.
 
-| Entry | What it does |
-| ------- | ----------------------------------------------------------------- |
-| Save | Saves the text file. Overwrites the existing version immediately. |
-| Save As | Save as opens a save as file dialog. |
+### Save
+
+Saves the text file. Overwrites the existing version immediately.
+
+### Save As
+
+Save as opens a save as file dialog.
+
+### Save Autosave
+
+![Header - File Menu with Save Autosave](/docs2/images/editors/text-editor/header-file-menu-autosave.png)
+
+Creates an autosave of the current Bforartists file in the temp directory, right now. You don't have to wait for the timed autosave. It is handy when you write a script and want a safety copy before you run it.
+
+The autosave does not replace your *.blend* file or your text file. To keep changes in a text file, use **Save** or **Save As**.
 
 ### Templates
 
@@ -93,10 +107,14 @@ Another development tool. Set the debug level.
 
 ![Debug Menu](/docs2/images/editors/text-editor/debug-menu-3.png)
 
-| Entry | What it does |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reload Scripts | Reload Scripts reloads all active python scripts and addons. Including the Bforartists python UI files. This can be useful when you work at the UI or at an add-on. Then you don't have to close and reload Bforartists to see the changes. You can simply reload the scripts and keep Bforartists open. |
-| Clean up Space Data | Remove unused settings for invisible editors. |
+#### Reload Scripts
+
+Reload Scripts reloads all active python scripts and addons. Including the Bforartists python UI files. This can be useful when you work at the UI or at an add-on. Then you don't have to close and reload Bforartists to see the changes. You can simply reload the scripts and keep Bforartists open.
+
+#### Clean up Space Data
+
+Remove unused settings for invisible editors.
+
 
 ### Memory Statistics
 
@@ -126,11 +144,18 @@ Opens or closes the sidebar.
 
 Zooms in to adjust the font size to use for displaying the text. The font size can also be adjusted in the sidebar.
 
-| Entry | What it does |
-| -------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Zoom Out | Zooms out to adjust the font size to use for displaying the text. The font size can also be adjusted in the sidebar. |
-| Top of File | Jumps to the top of the text file. |
-| Bottom of File | Jumps to the bottom of the text file. |
+#### Zoom Out
+
+Zooms out to adjust the font size to use for displaying the text. The font size can also be adjusted in the sidebar.
+
+#### Top of File
+
+Jumps to the top of the text file.
+
+#### Bottom of File
+
+Jumps to the bottom of the text file.
+
 
 ### Area submenu
 
@@ -138,14 +163,30 @@ Zooms in to adjust the font size to use for displaying the text. The font size c
 
 Area is a menu with window related settings.
 
-| Entry | What it does |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Horizontal Split | Splits the editor horizontally into two editors. |
-| Vertical Split | Splits the editor vertically into two editors. |
-| Duplicate Area into new Window | Creates a floating window out of the current editor |
-| Toggle Maximize Area | Displays the editor maximized with menus. To return to split view press hotkey Ctrl Up Arrow, or reuse the menu item in the View menu. |
-| Toggle Fullscreen Area | Displays the editor maximized without menus. To return from the full screen view press hotkey Alt F10, or use the little button that appears up right when you move the mouse in this corner. |
-| Close Area | Closes the area window. |
+#### Horizontal Split
+
+Splits the editor horizontally into two editors.
+
+#### Vertical Split
+
+Splits the editor vertically into two editors.
+
+#### Duplicate Area into new Window
+
+Creates a floating window out of the current editor
+
+#### Toggle Maximize Area
+
+Displays the editor maximized with menus. To return to split view press hotkey Ctrl Up Arrow, or reuse the menu item in the View menu.
+
+#### Toggle Fullscreen Area
+
+Displays the editor maximized without menus. To return from the full screen view press hotkey Alt F10, or use the little button that appears up right when you move the mouse in this corner.
+
+#### Close Area
+
+Closes the area window.
+
 
 ## Header - Edit Menu
 
@@ -153,14 +194,30 @@ Area is a menu with window related settings.
 
 The Edit menu contains tools to modify the text.
 
-| Entry | What it does |
-| -------------- | ------------------------------------------------------- |
-| Cut | Cuts the selected text. |
-| Copy | Copies the selected text. |
-| Paste | Pastes copied text at Text cursor position. |
-| Duplicate Line | Duplicates the line where the Text cursor currently is. |
-| Move Line up | Moves the line where the Text cursor is one line up. |
-| Move Line down | Moves the line where the Text cursor is one line down. |
+### Cut
+
+Cuts the selected text.
+
+### Copy
+
+Copies the selected text.
+
+### Paste
+
+Pastes copied text at Text cursor position.
+
+### Duplicate Line
+
+Duplicates the line where the Text cursor currently is.
+
+### Move Line up
+
+Moves the line where the Text cursor is one line up.
+
+### Move Line down
+
+Moves the line where the Text cursor is one line down.
+
 
 ### Select Text submenu
 
@@ -180,10 +237,14 @@ This sub menu contains all available methods and its hotkeys to set the mouse cu
 
 Delete is a sub menu with some special Delete methods, starting from the current position of the Text cursor. And usually you use the hotkeys for this functionality.
 
-| Entry | What it does |
-| ----------- | ---------------------------------------- |
-| Select all | Selects all text. |
-| Select Line | Selects the word under the mouse cursor. |
+#### Select all
+
+Selects all text.
+
+#### Select Line
+
+Selects the word under the mouse cursor.
+
 
 ### Word
 
@@ -203,10 +264,14 @@ This tool opens a sub menu where you can type in the line number and jump to thi
 
 Find opens the Tool Shelf, where you can find a Find & Replace panel. The Find & Replace panel is explained in the tool shelf chapter.
 
-| Entry | What it does |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Find & Set Selection | Finds and selects the next text element that matches with the current selection. It's the same functionality than the Find Next button in the Find & Replace panel. |
-| Text Auto Complete | Auto Complete tries to complete your text input. |
+#### Find & Set Selection
+
+Finds and selects the next text element that matches with the current selection. It's the same functionality than the Find Next button in the Find & Replace panel.
+
+#### Text Auto Complete
+
+Auto Complete tries to complete your text input.
+
 
 ### Text to 3D Object
 
@@ -216,10 +281,14 @@ Find opens the Tool Shelf, where you can find a Find & Replace panel. The Find &
 
 Text to 3D Object converts the text of the file to an editable 3D object in the 3D Viewport.
 
-| Entry | What it does |
-| ------------------- | ------------------------------------------------------- |
-| One Object | Converts the whole text into one object. |
-| One Object Per Line | Converts every line of the text into a separate object. |
+#### One Object
+
+Converts the whole text into one object.
+
+#### One Object Per Line
+
+Converts every line of the text into a separate object.
+
 
 ## Header - Format Menu
 
@@ -227,15 +296,34 @@ Text to 3D Object converts the text of the file to an editable 3D object in the 
 
 The format menu contains some formatting functionality.
 
-| Entry | What it does |
-| --------------------- | -------------------------------------------------------- |
-| Indent | Indents the text. Python requires proper indentation. |
-| Unindent | Unindents the text. |
-| Comment | Comments the text out. For Python usually with a # sign. |
-| Uncomment | Uncomments commented text. |
-| Toggle comments | Toggles the comments. |
-| Whitespaces to Spaces | Converts Whitespaces in the text to Spaces. |
-| Whitespaces to Tabs | Converts Whitespaces in the text to Tabs. |
+### Indent
+
+Indents the text. Python requires proper indentation.
+
+### Unindent
+
+Unindents the text.
+
+### Comment
+
+Comments the text out. For Python usually with a # sign.
+
+### Uncomment
+
+Uncomments commented text.
+
+### Toggle comments
+
+Toggles the comments.
+
+### Whitespaces to Spaces
+
+Converts Whitespaces in the text to Spaces.
+
+### Whitespaces to Tabs
+
+Converts Whitespaces in the text to Tabs.
+
 
 ## Header - Tools
 
@@ -257,10 +345,14 @@ This is a list of the images in the scene. This list allows you to switch to oth
 
 Search for specific images.
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Text Edit Box | Read the name of the currently selected text. And you can rename the textfile here too. |
-| Unlink Datablock | This closes the selected text. Attention, different from the rest of the UI this text really vanishes immediately from the list then. |
+###### Text Edit Box
+
+Read the name of the currently selected text. And you can rename the textfile here too.
+
+###### Unlink Datablock
+
+This closes the selected text. Attention, different from the rest of the UI this text really vanishes immediately from the list then.
+
 
 #### File selector property
 
@@ -272,12 +364,22 @@ Search for specific images.
 
 The list of loaded text files.
 
-| Entry | What it does |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fake User | Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene. |
-| New Text | Create a new text file. |
-| Open Text | Open a text file. A file browser will open. |
-| Remove | Close the text. It will be removed from the list. |
+###### Fake User
+
+Wit this button you assign a fake user to this selected image. Data, like images, that is not longer linked to anything else gets removed when you save and reload a scene. Bforartists has the concept of fake users to go around this behavior. An image with a fake user is in fact linked to something. And so it is not lost when you save and reload the scene.
+
+###### New Text
+
+Create a new text file.
+
+###### Open Text
+
+Open a text file. A file browser will open.
+
+###### Remove
+
+Close the text. It will be removed from the list.
+
 
 ### Run Script
 
@@ -319,14 +421,30 @@ The Tool Shelf is the place for some options and the text search panel.
 
 In the find panel you will find tools with text search and replace functionality.
 
-| Entry | What it does |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Find Edit Box | Here you can type in the string that you want to search. |
-| Find set selected | Copies the currently selected text into the Find edit box, searches for a matching string in the text, and selects this match then. |
-| Find Next | Searches for the next matching string in the text. |
-| Replace Edit Box | Here you can type in the string that you want to replace in the text. |
-| Replace set selected | Copies the currently selected text into the Find edit box, searches for a matching string in the text, and replaces this match with the string in the Replace edit box. |
-| Replace | Searches for the next matching string in the text. And replaces it the string in the Replace edit box. |
+#### Find Edit Box
+
+Here you can type in the string that you want to search.
+
+#### Find set selected
+
+Copies the currently selected text into the Find edit box, searches for a matching string in the text, and selects this match then.
+
+#### Find Next
+
+Searches for the next matching string in the text.
+
+#### Replace Edit Box
+
+Here you can type in the string that you want to replace in the text.
+
+#### Replace set selected
+
+Copies the currently selected text into the Find edit box, searches for a matching string in the text, and replaces this match with the string in the Replace edit box.
+
+#### Replace
+
+Searches for the next matching string in the text. And replaces it the string in the Replace edit box.
+
 
 #### Replace all
 
@@ -338,22 +456,39 @@ Searches for matching strings in the text. And replaces them all by the string i
 >
 > Or turn on the Wrap checkbox below.
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------------------------------------------------------- |
-| Match case | When ticked then the search is Upper case sensitive. |
-| Wrap | Starts the search from the top of the document when the search has reached the end of the document. |
-| All | Search in all opened Text files, not just the currently active one. |
+##### Match case
+
+When ticked then the search is Upper case sensitive.
+
+##### Wrap
+
+Starts the search from the top of the document when the search has reached the end of the document.
+
+##### All
+
+Search in all opened Text files, not just the currently active one.
+
 
 ### Properties Panel
 
 ![Properties Panel](/docs2/images/editors/text-editor/properties-panel.png)
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------- |
-| Highlight | Highlights the line where the text cursor is. |
-| Live Edit | Updates the script while editing. |
-| Font Size | The font size for the text editor |
-| Tab width | Number of spaces to display tabs with. Default is four. |
+#### Highlight
+
+Highlights the line where the text cursor is.
+
+#### Live Edit
+
+Updates the script while editing.
+
+#### Font Size
+
+The font size for the text editor
+
+#### Tab width
+
+Number of spaces to display tabs with. Default is four.
+
 
 #### Intendation
 
@@ -393,15 +528,40 @@ When it's an external loaded file, then the string displays the full path to the
 
 When you right click into the text editor then a popup menu opens up. It is to 100% made of double menu entries.
 
-| Entry | What it does |
-| ------------------ | ------------------------------------------------------- |
-| Cut | Cuts the selected text. |
-| Copy | Copies the selected text. |
-| Paste | Pastes copied text at Text cursor. position. |
-| Move Line up | Moves the line where the Text cursor. is one line up. |
-| Move Line down | Moves the line where the Text cursor. is one line down. |
-| Indent | Indents the text. Python requires proper indentation. |
-| Unindent | Unindents the text. |
-| Toggle comments | Toggles the comments. |
-| Text Auto Complete | Auto Complete tries to complete your text input. |
+### Cut
+
+Cuts the selected text.
+
+### Copy
+
+Copies the selected text.
+
+### Paste
+
+Pastes copied text at Text cursor. position.
+
+### Move Line up
+
+Moves the line where the Text cursor. is one line up.
+
+### Move Line down
+
+Moves the line where the Text cursor. is one line down.
+
+### Indent
+
+Indents the text. Python requires proper indentation.
+
+### Unindent
+
+Unindents the text.
+
+### Toggle comments
+
+Toggles the comments.
+
+### Text Auto Complete
+
+Auto Complete tries to complete your text input.
+
 
