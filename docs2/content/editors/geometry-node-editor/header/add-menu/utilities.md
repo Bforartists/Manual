@@ -151,6 +151,8 @@ The Index Switch node is meant as a simpler version of the Menu Switch node. It 
 
 ##### Index
 
+Data type: Integer.
+
 Wich input to choose.
 
 ##### 0 , 1 ...
@@ -170,6 +172,8 @@ What input type to evaluate.
 #### Outputs
 
 ##### Output
+
+Data type: Float.
 
 The output index.
 
@@ -199,6 +203,8 @@ Becomes the output if the value is chosen.
 
 ##### Menu
 
+Data type: Menu.
+
 ![Menu](/docs2/images/editors/geometry-node-editor/header/add-menu-utilities/menu.png)
 
 Determines which of the input options will be selected and passed through as the default.
@@ -221,6 +227,8 @@ Determines the type of the data that is handled by the node.
 
 ##### Output
 
+Data type: Geometry.
+
 The output index.
 
 ### Random Value
@@ -233,17 +241,25 @@ Generates a random value.
 
 ##### Min
 
+Data type: Float.
+
 The minimum value of the range. This input is only available for Float, Integer, and Vector types.
 
 ##### Max
+
+Data type: Float.
 
 The maximum value of the range. This input is only available for Float, Integer, and Vector types.
 
 ##### ID
 
+Data type: Integer.
+
 An ID to drive the random number generator seed. By default, this input uses the same value as if the ID Node, which is the id attribute of the context geometry if it exists, and otherwise the index.
 
 ##### Seed
+
+Data type: Integer.
 
 The random seed for the random number generation.
 
@@ -258,6 +274,8 @@ What kind of random value to create. The items should be self explaining.
 #### Output
 
 ##### Value
+
+Data type: Float.
 
 The output value.
 
@@ -317,6 +335,8 @@ Switch between two inputs values based on a boolean.
 
 ##### Switch
 
+Data type: Boolean.
+
 The boolean switch.
 
 ##### A
@@ -339,6 +359,8 @@ What input type the values are, which defines what type to output then.
 
 ##### Output
 
+Data type: Float.
+
 Numerical value output.
 
 ### Implicit Conversion
@@ -351,6 +373,8 @@ Converts a value to a fixed type, using the same automatic conversion rules that
 
 ##### Value
 
+Data type: Color.
+
 The value to convert.
 
 #### Properties
@@ -362,6 +386,8 @@ The type to convert to.
 #### Outputs
 
 ##### Value
+
+Data type: Color.
 
 The converted value.
 
@@ -429,6 +455,8 @@ The Boolean Math node performs a basic logical operation between its inputs.
 
 ##### Boolean
 
+Data type: Boolean.
+
 Two standard Boolean inputs.
 
 #### Properties
@@ -477,6 +505,8 @@ True when the first input is true and the second is false.
 
 ##### Boolean
 
+Data type: Boolean.
+
 Standard Boolean output.
 
 ### Integer Math
@@ -488,6 +518,8 @@ The Boolean Math node provides mathematical operations with integers.
 #### Inputs
 
 ##### Value
+
+Data type: Integer.
 
 Two standard value inputs.
 
@@ -503,6 +535,8 @@ The available mathematical functions to manipulate the input integers.
 
 ##### Value
 
+Data type: Integer.
+
 The value output.
 
 ### Clamp
@@ -515,13 +549,19 @@ Clamps a value between a minimum and a maximum.
 
 ##### Value
 
+Data type: Float.
+
 The input value to be clamped.
 
 ##### Min
 
+Data type: Float.
+
 The minimum value.
 
 ##### Max
+
+Data type: Float.
 
 The maximum value.
 
@@ -542,6 +582,8 @@ Clamp values between Min and Max range.
 #### Outputs
 
 ##### Result
+
+Data type: Float.
 
 The input value after clamping.
 
@@ -599,6 +641,8 @@ True if A and B are different.
 
 ##### Result
 
+Data type: Boolean.
+
 Standard Boolean output.
 
 ### Float Curve
@@ -610,6 +654,8 @@ The Float Curve node maps an input float to a curve and outputs a float value. T
 #### Inputs
 
 ##### Factor
+
+Data type: Float (factor).
 
 How strong the input influences the output value.
 
@@ -707,6 +753,8 @@ Set handle type to Auto Clamped.
 
 ##### Value
 
+Data type: Float.
+
 The output value.
 
 ### Float to Integer
@@ -718,6 +766,8 @@ Converts a floating point value into an integer value.
 #### Inputs
 
 ##### Float
+
+Data type: Float.
 
 The input float value.
 
@@ -733,6 +783,8 @@ How the float value should be converted.
 
 ##### Integer
 
+Data type: Integer.
+
 The output integer value.
 
 ### Hash Value
@@ -747,9 +799,13 @@ Note that Hashes cannot be relied upon to be used as unique identifiers because 
 
 ##### Value
 
+Data type: Integer.
+
 The input value.
 
 ##### Seed
+
+Data type: Integer.
 
 A seed to randomize the value.
 
@@ -765,6 +821,8 @@ What data type to create.
 
 ##### Hash
 
+Data type: Integer.
+
 The hash value output.
 
 ### Map Range
@@ -777,21 +835,31 @@ This node converts (maps) an input value range into a destination range. By defa
 
 ##### Value
 
+Data type: Float.
+
 Standard value input.
 
 ##### From Min
+
+Data type: Float or Vector.
 
 Start of the input value range.
 
 ##### From Max
 
+Data type: Float or Vector.
+
 End of the input value range.
 
 ##### To Min
 
+Data type: Float or Vector.
+
 Startof the destination range.
 
 ##### To Max
+
+Data type: Float or Vector.
 
 End of the destination range.
 
@@ -830,6 +898,8 @@ The Math Node performs math operations.
 The inputs of the node are dynamic. Some inputs are only available with certain operations. For example, the Addend input is only available in the Multiply Add operator.
 
 ##### Value
+
+Data type: Float.
 
 Input Value. Trigonometric functions read this value as radians.
 
@@ -1063,6 +1133,8 @@ Limits the output to the range (0.0 to 1.0). See Clamp.
 
 ##### Value
 
+Data type: Float.
+
 Numerical value output.
 
 ### Mix
@@ -1101,6 +1173,8 @@ The data type to calculate.
 
 ##### Result
 
+Data type: Float or Vector or Color or Rotation.
+
 The output value or vector.
 
 # Text
@@ -1135,6 +1209,8 @@ The python syntax to modify the string.
 
 ##### String
 
+Data type: String.
+
 The output string.
 
 ### Join Strings
@@ -1147,15 +1223,21 @@ Allows you to join several string into a text string.
 
 ##### Delimiter
 
+Data type: String.
+
 Add a delimiter character.
 
 ##### Strings
+
+Data type: String.
 
 The strings that you want to join into one text string.
 
 #### Outputs
 
 ##### String
+
+Data type: String.
 
 The output string.
 
@@ -1225,19 +1307,27 @@ Allows you to extract a string from a substring at given position with given len
 
 ##### String
 
+Data type: String.
+
 The source string.
 
 ##### Position
 
+Data type: Integer.
+
 The start position of the sub string.
 
 ##### Length
+
+Data type: Integer.
 
 The length of the substring.
 
 #### Outputs
 
 ##### String
+
+Data type: String.
 
 The output substring.
 
@@ -1251,9 +1341,13 @@ Returns an integer of the total count of matching strings or the first integer p
 
 ##### String
 
+Data type: String.
+
 The string that you want to search in.
 
 ##### Search
+
+Data type: String.
 
 The string that would be matched in the string search.
 
@@ -1261,9 +1355,13 @@ The string that would be matched in the string search.
 
 ##### First Found
 
+Data type: Integer.
+
 Returns the integer position of the first character of the found string.
 
 ##### Count
+
+Data type: Integer.
 
 Returns an integer position of the first character of the found string.
 
@@ -1277,11 +1375,15 @@ Gives back the number of characters in this string.
 
 ##### String
 
+Data type: String.
+
 The string that you want to calculate.
 
 #### Outputs
 
 ##### Length
+
+Data type: Integer.
 
 How many characters the string has.
 
@@ -1295,21 +1397,31 @@ Converts the letters of a text into curve objects.
 
 ##### String
 
+Data type: String.
+
 The text string to convert.
 
 ##### Size
+
+Data type: Float (distance).
 
 Size of the string.
 
 ##### Character Spacing
 
+Data type: Float.
+
 The character spacing of the string.
 
 ##### Word Spacing
 
+Data type: Float.
+
 The word spacing of the string.
 
 ##### Line Spacing
+
+Data type: Float.
 
 The line spacing of the string.
 
@@ -1377,13 +1489,19 @@ What point of the string to use as the pivot point.
 
 ##### Curve Instances
 
+Data type: Geometry.
+
 The curves output.
 
 ##### Line
 
+Data type: Integer.
+
 Outputs the line number of the character.
 
 ##### Pivot Point
+
+Data type: Vector.
 
 Outputs the selected pivot point position per character.
 
@@ -1396,6 +1514,8 @@ Converts a **string input** (e.g. *"3.14"* or *"42"*) into a **numeric value** t
 #### Inputs
 
 ##### String
+
+Data type: String.
 
 The input string.
 
@@ -1427,9 +1547,13 @@ Converts a value to a string.
 
 ##### Value
 
+Data type: Float.
+
 The input value.
 
 ##### Decimals
+
+Data type: Integer.
 
 How many decimals the value has.
 
@@ -1473,15 +1597,21 @@ Cuts a string into pieces and gives them as a list. Use it to take apart a path 
 
 ##### String
 
+Data type: String.
+
 The string to cut.
 
 ##### Separator
+
+Data type: String.
 
 The characters to cut at. They are not kept in the pieces.
 
 #### Outputs
 
 ##### List
+
+Data type: String.
 
 The pieces, in the order they appear in the string.
 
@@ -1495,13 +1625,19 @@ Removes characters from the start and the end of a string. Use it to clean up a 
 
 ##### String
 
+Data type: String.
+
 The string to clean.
 
 ##### Characters
 
+Data type: String.
+
 The characters to remove.
 
 ##### Whitespace
+
+Data type: Boolean.
 
 Also remove spaces, tabs and line breaks.
 
@@ -1514,6 +1650,8 @@ A panel with two switches, **Start** and **End**, that choose which end of the s
 #### Outputs
 
 ##### String
+
+Data type: String.
 
 The trimmed string.
 
@@ -1553,17 +1691,25 @@ Remap a value from a range to a target range.
 
 ##### From Min
 
+Data type: Float or Vector.
+
 Vector 3 from the minimum input.
 
 ##### From Max
+
+Data type: Float or Vector.
 
 Vector 3 from the maximum input.
 
 ##### To Min
 
+Data type: Float or Vector.
+
 Vector 3 to the minimum input.
 
 ##### To Min
+
+Data type: Float or Vector.
 
 Vector 3 to the maximum input.
 
@@ -1588,6 +1734,8 @@ Clamp the result to the target range of To Min - To Max.
 #### Outputs
 
 ##### Vector
+
+Data type: Vector.
 
 The output vector.
 
@@ -1647,6 +1795,8 @@ The Separate XYZ Node splits a vector into its individual components.
 
 ##### Vector
 
+Data type: Vector.
+
 The Input vector.
 
 #### Outputs
@@ -1665,13 +1815,19 @@ The Separate XYZ Node splits a vector into its individual components.
 
 ##### Vector
 
+Data type: Vector (2d).
+
 The Input vector.
 
 ##### Sides
 
+Data type: Float.
+
 Number of angluar segments for tiling.
 
 ##### Roundness
+
+Data type: Float (factor).
 
 Roundness of the segments coordinate systems.
 
@@ -1685,17 +1841,25 @@ Stretch the textures to fit into each angular segment.
 
 ##### Segment Coordinates
 
+Data type: Vector.
+
 The segment coordinates for texture mapping.
 
 ##### Segment ID
+
+Data type: Float.
 
 Unique ID for every segment.
 
 ##### Segment Width
 
+Data type: Float.
+
 The width of every segment.
 
 ##### Segment Rotation
+
+Data type: Float.
 
 The rotation of every segment.
 
@@ -1709,9 +1873,13 @@ The Vector Curves node maps an input vector components to a curve.
 
 ##### Factor
 
+Data type: Float (factor).
+
 Standard vector input.
 
 ##### Vector
+
+Data type: Vector.
 
 Standard vector input.
 
@@ -1807,6 +1975,8 @@ Deletes selected curve points.
 
 ##### Vector
 
+Data type: Vector.
+
 Standard vector output.
 
 ### Vector Math
@@ -1821,13 +1991,19 @@ The inputs of the node are dynamic. Some inputs are only available in certain op
 
 ##### Vector
 
+Data type: Vector.
+
 Input vector A.
 
 ##### Vector
 
+Data type: Vector.
+
 Input vector B.
 
 ##### Scale
+
+Data type: Float.
 
 Input Scale.
 
@@ -1845,9 +2021,13 @@ The output of the node is dynamic. It is either a vector or a scalar depending o
 
 ##### Vector
 
+Data type: Vector.
+
 Output vector.
 
 ##### Value
+
+Data type: Float.
 
 Output value.
 
@@ -1863,17 +2043,25 @@ The inputs of the node are dynamic. Some inputs are only available in certain op
 
 ##### Vector
 
+Data type: Vector.
+
 Input vector.
 
 ##### Center
+
+Data type: Vector.
 
 Input Center
 
 ##### Axis
 
+Data type: Vector.
+
 Input Axis.
 
 ##### Angle
+
+Data type: Float (angle).
 
 Input Angle
 
@@ -1888,6 +2076,8 @@ The rotation type.
 #### Outputs
 
 ##### Vector
+
+Data type: Vector.
 
 The Output vector.
 
@@ -1935,6 +2125,8 @@ The inputs of the node are dynamic. Some inputs are only available in certain op
 
 ##### Bundle
 
+Data type: Bundle.
+
 Standard bundle socket with a unified bundle containing all input elements from a Combine Bundle node.
 
 #### Outputs
@@ -1956,6 +2148,8 @@ This enables modular data structuring, reuse, and override logic in procedural w
 #### Inputs
 
 ##### Bundle
+
+Data type: Bundle.
 
 **Bundle 1, Bundle 2, …** Accepts multiple bundles created via the **Combine Bundle** node.   Each bundle may contain different types of data (e.g. Float, Vector, String, Color)
 
@@ -2025,6 +2219,8 @@ The geometry to attach the bundle to.
 
 ##### Bundle
 
+Data type: Bundle.
+
 The bundle to attach.
 
 #### Outputs
@@ -2043,13 +2239,19 @@ Reads one value out of a bundle by its path. Use it when a bundle arrives from o
 
 ##### Bundle
 
+Data type: Bundle.
+
 The bundle to read from.
 
 ##### Path
 
+Data type: String.
+
 The name of the item to read.
 
 ##### Remove
+
+Data type: Boolean.
 
 On: the item is taken out of the bundle.
 
@@ -2063,13 +2265,19 @@ The type of the values in the list. Pick the type that matches what you put in o
 
 ##### Bundle
 
+Data type: Bundle.
+
 The bundle. Without the item if Remove is on.
 
 ##### Item
 
+Data type: Float.
+
 The value found at that path.
 
 ##### Exists
+
+Data type: Boolean.
 
 True when the bundle has an item at that path.
 
@@ -2083,13 +2291,19 @@ Writes one value into a bundle under a path. Use it to add a value to a bundle t
 
 ##### Bundle
 
+Data type: Bundle.
+
 The bundle to add to.
 
 ##### Path
 
+Data type: String.
+
 The name to store the value under.
 
 ##### Item
+
+Data type: Float.
 
 The value to store.
 
@@ -2102,6 +2316,8 @@ The type of the values in the list. Pick the type that matches what you put in o
 #### Outputs
 
 ##### Bundle
+
+Data type: Bundle.
 
 The bundle with the new item.
 
@@ -2264,6 +2480,8 @@ Creates a running total of a given Vector, Float, or Int field.
 
 ##### Value
 
+Data type: Float.
+
 The field to be accumulated.
 
 ##### Group Index
@@ -2292,6 +2510,8 @@ Returns the running totals starting at either the first value of each accumulati
 
 ##### Total
 
+Data type: Float.
+
 Returns the total accumulation at all positions of the field.
 
 ### Evaluate at Index
@@ -2307,9 +2527,13 @@ is used.
 
 ##### Index
 
+Data type: Integer.
+
 Input Index.
 
 ##### Value
+
+Data type: Float.
 
 Input Value.
 
@@ -2331,6 +2555,8 @@ What geometry to calculate.
 
 ##### Value
 
+Data type: Float.
+
 The output value.
 
 ### Evaluate on Domain
@@ -2342,6 +2568,8 @@ This node evaluates an existing field on a separate domain in a larger field con
 #### Inputs
 
 ##### Value
+
+Data type: Float.
 
 The input value to get the field.
 
@@ -2363,6 +2591,8 @@ The domain the Field evaluates. This gets and filters the field type. The domain
 
 ##### Value
 
+Data type: Float.
+
 The output value.
 
 ### Field Average
@@ -2375,9 +2605,13 @@ Calculate the mean and median of a given field.
 
 ##### Value
 
+Data type: Float.
+
 The input value to get the field.
 
 ##### Group ID
+
+Data type: Integer.
 
 The input Group ID to get the field.
 
@@ -2399,9 +2633,13 @@ The domain the Field evaluates. This gets and filters the field type. The domain
 
 ##### Mean
 
+Data type: Float.
+
 The Mean output value.
 
 ##### Median
+
+Data type: Float.
 
 The Median output value.
 
@@ -2415,9 +2653,13 @@ Calculate the minimum and maximum of a given field.
 
 ##### Value
 
+Data type: Float.
+
 The input value to get the field.
 
 ##### Group ID
+
+Data type: Integer.
 
 The input Group ID to get the field.
 
@@ -2439,9 +2681,13 @@ The domain the Field evaluates. This gets and filters the field type. The domain
 
 ##### Min
 
+Data type: Float.
+
 The Min output value.
 
 ##### Max
+
+Data type: Float.
 
 The Max output value.
 
@@ -2455,9 +2701,13 @@ Calculate the standard derivation and variance of a given field.
 
 ##### Value
 
+Data type: Float.
+
 The input value to get the field.
 
 ##### Group ID
+
+Data type: Integer.
 
 The input Group ID to get the field.
 
@@ -2483,6 +2733,8 @@ The Min output value.
 
 ##### Variance
 
+Data type: Float.
+
 The Max output value.
 
 # Lists
@@ -2500,6 +2752,8 @@ Runs a field a set number of times and keeps every result in a list. Use it to t
 #### Inputs
 
 ##### Count
+
+Data type: Integer.
 
 How many items the list holds.
 
@@ -2523,9 +2777,13 @@ Reads one value out of a list by its position. Use it to pick, for example, the 
 
 ##### List
 
+Data type: Float.
+
 The list to read from.
 
 ##### Index
+
+Data type: Integer.
 
 The position of the item to read.
 
@@ -2539,6 +2797,8 @@ The type of the values in the list. Pick the type that matches what you put in o
 
 ##### Value
 
+Data type: Float.
+
 The item found at that position.
 
 ### List Length
@@ -2550,6 +2810,8 @@ Counts how many items a list holds. Use it to know how many times to repeat some
 #### Inputs
 
 ##### List
+
+Data type: Float.
 
 The list to count.
 
@@ -2563,6 +2825,8 @@ The type of the values in the list. Pick the type that matches what you put in o
 
 ##### Length
 
+Data type: Integer.
+
 The number of items.
 
 ### Filter List
@@ -2575,9 +2839,13 @@ Removes items from a list. Each item has a true or false selection, and the node
 
 ##### List
 
+Data type: Float.
+
 The list to filter.
 
 ##### Selection
+
+Data type: Boolean.
 
 One true or false value per item. True means the item is selected.
 
@@ -2591,9 +2859,13 @@ The type of the values in the list. Pick the type that matches what you put in o
 
 ##### Selection
 
+Data type: Float.
+
 The items whose selection is true.
 
 ##### Inverted
+
+Data type: Float.
 
 The items whose selection is false.
 
@@ -2613,25 +2885,37 @@ Reads how loud a sound is, in a range of frequencies, at a moment in time. Use i
 
 ##### Sound
 
+Data type: Sound.
+
 The sound to read. Use the folder button to open an audio file.
 
 ##### Time
+
+Data type: Float (time).
 
 The moment of the sound to read, in seconds. Connect the Scene Time node to follow the animation.
 
 ##### All Channels
 
+Data type: Boolean.
+
 On: the channels of the sound are combined. Off: only the channel set below is read.
 
 ##### Channel
+
+Data type: Integer.
 
 The channel to read when All Channels is off.
 
 ##### Low
 
+Data type: Float (frequency).
+
 The lowest frequency of the range, in Hz.
 
 ##### High
+
+Data type: Float (frequency).
 
 The highest frequency of the range, in Hz.
 
@@ -2648,6 +2932,8 @@ How the edges of the sampled window are softened. Hann, Hamming and Blackman giv
 #### Outputs
 
 ##### Amplitude
+
+Data type: Float.
 
 The strength of the sound in the chosen range.
 
@@ -2677,6 +2963,8 @@ Allows you to combine values into the matrix. A matrix is made of four vector 4 
 
 ##### Matrix
 
+Data type: Matrix.
+
 The output matrix.
 
 ### Combine Transform
@@ -2689,19 +2977,27 @@ Combines transforms.
 
 ##### Translation
 
+Data type: Vector (translation).
+
 The translation input vector.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation input vector.
 
 ##### Scale
+
+Data type: Vector (XYZ).
 
 The scale input vector.
 
 #### Outputs
 
 ##### Transform
+
+Data type: Matrix.
 
 The output transform.
 
@@ -2721,6 +3017,8 @@ Accepts a matrix input.
 
 ##### Determinant
 
+Data type: Float.
+
 Returns a single numerical value representing the determinant of the input matrix. If the determinant is zero, the matrix is non-invertible.
 
 ### Invert Matrix
@@ -2733,15 +3031,21 @@ Inverts the matrix values.
 
 ##### Matrix
 
+Data type: Matrix.
+
 The input matrix.
 
 #### Outputs
 
 ##### Matrix
 
+Data type: Matrix.
+
 The output matrix.
 
 ##### Invertible
+
+Data type: Boolean.
 
 The inverted values.
 
@@ -2773,15 +3077,21 @@ Projects a transform point by a vector.
 
 ##### Vector
 
+Data type: Vector (XYZ).
+
 The input vector
 
 ##### Transform
+
+Data type: Matrix.
 
 The input transform point
 
 #### Outputs
 
 ##### Vector
+
+Data type: Vector (XYZ).
 
 The output vector.
 
@@ -2794,6 +3104,8 @@ Extract single values from a matrix. A matrix is something like a transform cage
 #### Inputs
 
 ##### Matrix
+
+Data type: Matrix.
 
 The input matrix.
 
@@ -2815,19 +3127,27 @@ Extracts the translation, rotation or scale values from a transform.
 
 ##### Transform
 
+Data type: Matrix.
+
 The input transform.
 
 #### Outputs
 
 ##### Translation
 
+Data type: Vector (translation).
+
 The translation output vector.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The rotation output vector.
 
 ##### Scale
+
+Data type: Vector (XYZ).
 
 The scale output vector.
 
@@ -2841,15 +3161,21 @@ Set the direction of a transform.
 
 ##### Direction
 
+Data type: Vector (XYZ).
+
 The input vector 3.
 
 ##### Transform
+
+Data type: Matrix.
 
 The input transform.
 
 #### Outputs
 
 ##### Direction
+
+Data type: Vector (XYZ).
 
 The output direction.
 
@@ -2863,9 +3189,13 @@ Transform a transform point.
 
 ##### Vector
 
+Data type: Vector (XYZ).
+
 The input vector 3.
 
 ##### Transform
+
+Data type: Matrix.
 
 The input transform.
 
@@ -2885,11 +3215,15 @@ Retreive the transpose matrix from a matrix.
 
 ##### Matrix
 
+Data type: Matrix.
+
 The input matrix.
 
 #### Outputs
 
 ##### Matrix
+
+Data type: Matrix.
 
 The output transpose matrix.
 
@@ -2903,19 +3237,27 @@ Splits a matrix into three parts: a rotation **U**, a scale **S** and a second r
 
 ##### Matrix
 
+Data type: Matrix.
+
 The matrix to split.
 
 #### Outputs
 
 ##### U
 
+Data type: Matrix.
+
 The first rotation, as a matrix.
 
 ##### S
 
+Data type: Vector.
+
 The scale along each axis, as a vector.
 
 ##### V
+
+Data type: Matrix.
 
 The second rotation, as a matrix.
 
@@ -2937,13 +3279,19 @@ Aligns a rotation to a vector.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The input euler rotation vector.
 
 ##### Factor
 
+Data type: Float (factor).
+
 The factor to align the euler value to the vector.
 
 ##### Vector
+
+Data type: Vector (XYZ).
 
 The vector to align to.
 
@@ -2963,6 +3311,8 @@ The pivot axis.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The output rotation euler angle.
 
 ### Axes to rotation
@@ -2975,9 +3325,13 @@ Creates a rotation from a primary and a secondary axis. The axis should be ideal
 
 ##### Primary Axis
 
+Data type: Vector.
+
 The axis to rotate around.
 
 ##### Secondary Axis
+
+Data type: Vector.
 
 The secondary axis that gives the alignment.
 
@@ -2995,6 +3349,8 @@ Which axis to align to.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The output rotation euler angle.
 
 ### Axis Angle to Rotation
@@ -3007,15 +3363,21 @@ Converts an axis angle to a rotation.
 
 ##### Axis
 
+Data type: Vector.
+
 The input axis.
 
 ##### Angle
+
+Data type: Float (angle).
 
 The input angle.
 
 #### Outputs
 
 ##### Rotation
+
+Data type: Rotation.
 
 The output rotation value.
 
@@ -3029,11 +3391,15 @@ Converts an euler angle to a rotation.
 
 ##### Euler
 
+Data type: Vector (euler).
+
 The input euler angle vector.
 
 #### Outputs
 
 ##### Rotation
+
+Data type: Rotation.
 
 The output rotation value.
 
@@ -3047,11 +3413,15 @@ Inverts a rotation
 
 ##### Rotation
 
+Data type: Rotation.
+
 The input rotation vector.
 
 #### Outputs
 
 ##### Rotation
+
+Data type: Rotation.
 
 The output rotation value.
 
@@ -3095,9 +3465,13 @@ Rotates an euler rotation by another euler rotation.
 
 ##### Rotation
 
+Data type: Rotation.
+
 Use the rotation of an existing geometry.
 
 ##### Rotate By
+
+Data type: Rotation.
 
 The input rotation.
 
@@ -3117,6 +3491,8 @@ Rotate by the local orientation
 
 ##### Rotation
 
+Data type: Rotation.
+
 The euler angle output.
 
 ### Rotate Vector
@@ -3129,9 +3505,13 @@ Rotates a vector.
 
 ##### Vector
 
+Data type: Vector.
+
 The input vector.
 
 ##### Rotation
+
+Data type: Rotation.
 
 The input rotation.
 
@@ -3151,15 +3531,21 @@ Converts a rotation vector to axis angle.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The input vector.
 
 #### Outputs
 
 ##### Axis
 
+Data type: Vector.
+
 The axis output.
 
 ##### Angle
+
+Data type: Float (angle).
 
 The angle output.
 
@@ -3191,6 +3577,8 @@ Converts a quaternion to a rotation vector.
 
 ##### Rotation
 
+Data type: Rotation.
+
 The input vector.
 
 #### Outputs
@@ -3214,6 +3602,8 @@ The single input values of the quaternion.
 #### Outputs
 
 ##### Rotation
+
+Data type: Rotation.
 
 The output rotation.
 
