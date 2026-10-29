@@ -9,7 +9,7 @@ path:
   - "Add Menu"
   - "Attribute"
 version: "5.1"
-status: draft
+status: needs-review
 icon: node
 summary: "Attribute nodes."
 order: 30
