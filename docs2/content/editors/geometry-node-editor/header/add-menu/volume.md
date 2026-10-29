@@ -45,11 +45,15 @@ Lists the names of all grids stored in a volume. Use it to see what a volume con
 
 ##### Volume
 
+Data type: Geometry.
+
 The volume to list the grid names of.
 
 #### Outputs
 
 ##### Names
+
+Data type: String.
 
 A list of the names of all grids in the volume, sorted alphabetically. If the geometry has no volume, the list is empty.
 
@@ -61,12 +65,18 @@ Get volume grid from a volume geometry with the specified name
 
 ### Inputs
 
+#### Volume
 
-| Entry | What it does |
-| ------ | ------------------------------------------------ |
-| Volume | The input volume. |
-| Name | The name of the grid. |
-| Remove | Removes the grid from the volume after retreive. |
+The input volume.
+
+#### Name
+
+The name of the grid.
+
+#### Remove
+
+Removes the grid from the volume after retreive.
+
 
 
 #### Properties
@@ -79,11 +89,14 @@ The type of data stored in the grid. It determines both, the expected data type 
 
 #### Output
 
+##### Volume
 
-| Entry | What it does |
-| ------ | ------------------- |
-| Volume | The output grid. |
-| Grid | The extracted grid. |
+The output grid.
+
+##### Grid
+
+The extracted grid.
+
 
 
 ### Grid Info
@@ -95,6 +108,8 @@ Retreive informations about a grid.
 #### Inputs
 
 ##### Grid
+
+Data type: Float.
 
 Standard geometry input.
 
@@ -108,11 +123,18 @@ The data type to retreive.
 
 #### Output
 
+##### Transform
 
-| Entry | What it does |
-| ---------------- | ------------------------------------------------ |
-| Transform | Transform from grid index space to object space. |
-| Background Value | Default value outside of grid voxels. |
+Data type: Matrix.
+
+Transform from grid index space to object space.
+
+##### Background Value
+
+Data type: Float.
+
+Default value outside of grid voxels.
+
 
 
 ### Voxel Index
@@ -123,11 +145,20 @@ Retreive the integer coordinates of the voxel that the field is evaluated on.
 
 #### Outputs
 
+##### X / Y / Z
 
-| Entry | What it does |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| X / Y / Z | Vector 3 output of the voxel. |
-| Tile subpanel | **Is Tile**: True when the field is evaluated on a tile. · **Extend X / Y / Z**: Number of voxels in the corresponding direction. Or 1 if the field is evaluated at a voxel. |
+Vector 3 output of the voxel.
+
+##### Tile subpanel
+
+###### Is Tile
+
+True when the field is evaluated on a tile.
+
+###### Extend X / Y / Z
+
+Number of voxels in the corresponding direction. Or 1 if the field is evaluated at a voxel.
+
 
 # Sample
 
@@ -145,14 +176,23 @@ Retreive values from the specified volume grid.
 
 #### Inputs
 
+##### Grid
 
-| Entry | What it does |
-| -------- | ------------------- |
-| Grid | The input grid |
-| Position | The position field. |
+Data type: Float.
+
+The input grid
+
+##### Position
+
+Data type: Vector.
+
+The position field.
+
 
 
 ##### Interpolation
+
+Data type: Menu.
 
 ![Interpolation](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/interpolation.png)
 
@@ -169,6 +209,8 @@ Which data type to calculate.
 #### Output
 
 ##### Value
+
+Data type: Float.
 
 The output value.
 
@@ -180,11 +222,16 @@ Retreive values from the specified volume grid.
 
 #### Inputs
 
+##### Grid
 
-| Entry | What it does |
-| -------- | ------------------- |
-| Grid | The input grid |
-| Position | The position field. |
+Data type: Float.
+
+The input grid
+
+##### Position
+
+The position field.
+
 
 
 ##### Interpolation
@@ -205,6 +252,8 @@ Which data type to calculate.
 
 ##### Value
 
+Data type: Float.
+
 The output value.
 
 ### Advect Grid
@@ -215,22 +264,41 @@ Move grid values through a velocity field using numerical integration. Supports 
 
 #### Inputs
 
+##### Grid
 
-| Entry | What it does |
-| --------- | ----------------------------------- |
-| Grid | The input grid. |
-| Velocity | The velocity. |
-| Position | The position field. |
-| Time step | Time step for advection in seconds. |
+Data type: Float.
+
+The input grid.
+
+##### Velocity
+
+Data type: Vector.
+
+The velocity.
+
+##### Position
+
+The position field.
+
+##### Time step
+
+Data type: Float (time).
+
+Time step for advection in seconds.
+
 
 
 ##### Integration scheme
+
+Data type: Menu.
 
 ![Integration scheme](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/integration-scheme.png)
 
 Numerical integration method for advection.
 
 ##### Limiter
+
+Data type: Menu.
 
 ![Limiter](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-sample/limiter.png)
 
@@ -240,6 +308,8 @@ Limiting strategy to prevent numerical artifacts.
 
 ##### Grid
 
+Data type: Float.
+
 The output grid.
 
 ### Grid Curl
@@ -248,11 +318,22 @@ The output grid.
 
 Calculate the magnitude and direction of ciruclation of a directional vector grid.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | -------------------------- |
-| Inputs | **Grid**: The input grid. |
-| Output | **Curl**: The output grid. |
+##### Grid
+
+Data type: Vector.
+
+The input grid.
+
+#### Outputs
+
+##### Curl
+
+Data type: Vector.
+
+The output grid.
+
 
 
 ### Grid Divergence
@@ -261,11 +342,22 @@ Calculate the magnitude and direction of ciruclation of a directional vector gri
 
 Calculate the flow into and out of each point of a directional vector grid.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | -------------------------------- |
-| Inputs | **Grid**: The input grid. |
-| Output | **Divergence**: The output grid. |
+##### Grid
+
+Data type: Vector.
+
+The input grid.
+
+#### Outputs
+
+##### Divergence
+
+Data type: Float.
+
+The output grid.
+
 
 
 ### Grid Gradient
@@ -274,11 +366,22 @@ Calculate the flow into and out of each point of a directional vector grid.
 
 Calculate the direction and magnitude of the change in values of a scalar grid.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | ------------------------------ |
-| Inputs | **Grid**: The input grid. |
-| Output | **Gradient**: The output grid. |
+##### Grid
+
+Data type: Float.
+
+The input grid.
+
+#### Outputs
+
+##### Gradient
+
+Data type: Vector.
+
+The output grid.
+
 
 
 ### Grid Laplacian
@@ -287,11 +390,22 @@ Calculate the direction and magnitude of the change in values of a scalar grid.
 
 Compute the divergence of the gradient of the input grid.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | ------------------------------- |
-| Inputs | **Grid**: The input grid. |
-| Output | **Laplacian**: The output grid. |
+##### Grid
+
+Data type: Float.
+
+The input grid.
+
+#### Outputs
+
+##### Laplacian
+
+Data type: Float.
+
+The output grid.
+
 
 #### Grid Solve Poisson
 
@@ -392,11 +506,14 @@ Set the background value used for inactive voxels and tiles.
 
 #### Inputs
 
+##### Grid
 
-| Entry | What it does |
-| ---------- | ------------------------------------------------------------ |
-| Grid | Standard geometry input. |
-| Background | Volume density per voxel. Higher values makes it more dense. |
+Standard geometry input.
+
+##### Background
+
+Volume density per voxel. Higher values makes it more dense.
+
 
 
 #### Properties
@@ -421,11 +538,18 @@ Set the transform for the grid from index space into object space.
 
 #### Inputs
 
+##### Grid
 
-| Entry | What it does |
-| --------- | ------------------------ |
-| Grid | Standard geometry input. |
-| Transform | The input transform. |
+Data type: Float.
+
+Standard geometry input.
+
+##### Transform
+
+Data type: Matrix.
+
+The input transform.
+
 
 
 #### Properties
@@ -438,11 +562,18 @@ What data type to calculate.
 
 #### Output
 
+##### Is Valid
 
-| Entry | What it does |
-| -------- | --------------------------------------------------------- |
-| Is Valid | If the new transform is successfully applied and working. |
-| Grid | The grid output. |
+Data type: Boolean.
+
+If the new transform is successfully applied and working.
+
+##### Grid
+
+Data type: Float.
+
+The grid output.
+
 
 
 ### Store Named Grid
@@ -453,12 +584,24 @@ Set the transform for the grid from index space into object space.
 
 #### Inputs
 
+##### Volume
 
-| Entry | What it does |
-| ------ | ------------------------ |
-| Volume | The volume input. |
-| Name | The name |
-| Grid | Standard geometry input. |
+Data type: Geometry.
+
+The volume input.
+
+##### Name
+
+Data type: String.
+
+The name
+
+##### Grid
+
+Data type: Float.
+
+Standard geometry input.
+
 
 
 #### Properties
@@ -483,17 +626,87 @@ The volume geometry to add to.
 
 Here you find nodes to modify the volume.
 
+### Grid Topology Boolean
+
+![Grid Topology Boolean](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-topology-boolean.png)
+
+Combines the topology of two grids. The topology of a grid is the set of voxels that are active, in other words the shape of the grid and not the numbers stored in it. With this node you can merge two shapes, keep only where they overlap, or cut one out of the other. Use it to build a region for a simulation out of simple pieces, or to restrict one grid to the region of another.
+
+#### Inputs
+
+##### Operation
+
+Data type: Menu.
+
+How the shapes are combined: **Intersect** keeps the voxels that are active in both grids, **Union** keeps the voxels that are active in either grid and **Difference** keeps the voxels of Grid 1 that are not active in Grid 2.
+
+##### Grid 1
+
+Data type: Float.
+
+The first grid. Its values are used for the result.
+
+##### Grid 2
+
+Data type: Float.
+
+The second grid. Only its shape is used.
+
+#### Outputs
+
+##### Grid
+
+Data type: Float.
+
+The grid with the combined shape.
+
+#### How to use
+
+![Grid Topology Boolean example](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-topology-boolean-chain.png)
+
+The example builds two grids and combines their shapes:
+
+1. Each **Cube Grid Topology** node makes the shape of a box. The first box goes from -1 to 1, the second from 0 to 2.
+2. Each **Field to Grid** node fills its shape with values. Here the value is `2 - Length(Position)`, which is high near the center of the world and falls off with distance.
+3. **Grid Topology Boolean** combines the two grids. Change **Operation** to see how the result changes.
+4. **Grid to Mesh** turns the result into a mesh, so you can see it.
+
+A grid that is filled with one constant value has no surface inside, so Grid to Mesh shows nothing for it. Fill the grids with a value that changes, as in the example, when you want to look at the result as a mesh.
+
 ### Grid to Mesh
 
 ![Grid to Mesh](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/grid-to-mesh.png)
 
 Generate a mesh on the surface of a volume grid.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Grid**: Standard grid input. · **Threshold**: Values larger than the threshold are inside the generated mesh. · **Adaptivity**: The input radius |
-| Output | **Mesh**: The generated mesh. |
+##### Grid
+
+Data type: Float.
+
+Standard grid input.
+
+##### Threshold
+
+Data type: Float.
+
+Values larger than the threshold are inside the generated mesh.
+
+##### Adaptivity
+
+Data type: Float (factor).
+
+The input radius
+
+#### Outputs
+
+##### Mesh
+
+Data type: Geometry.
+
+The generated mesh.
+
 
 
 ### Volume to Mesh
@@ -508,6 +721,8 @@ Note that currently this node only works on volumes generated using geometry nod
 
 ##### Volume
 
+Data type: Geometry.
+
 Standard geometry input.
 
 ##### Resolution
@@ -516,16 +731,21 @@ Standard geometry input.
 
 Base the voxel resolution at the gridsize, the amount or the size of the point cloud.
 
+###### Threshold
 
-| Entry | What it does |
-| ---------- | ------------------------ |
-| Threshold | The voxel amount to use. |
-| Adaptivity | The input radius. |
+The voxel amount to use.
+
+###### Adaptivity
+
+The input radius.
+
 
 
 #### Output
 
 ##### Mesh
+
+Data type: Geometry.
 
 The generated mesh.
 
@@ -535,12 +755,34 @@ The generated mesh.
 
 Bool multiple sdf grids with each other.
 
+#### Inputs
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------------------------- |
-| Inputs | **Grid 1**: The first input grid. · **Grid 2**: The second input grid |
-| Properties | **Operation**: The bool method. |
-| Output | **Grid**: The generated grid. |
+##### Grid 1
+
+Data type: Float.
+
+The first input grid.
+
+##### Grid 2
+
+Data type: Float.
+
+The second input grid
+
+#### Properties
+
+##### Operation
+
+The bool method.
+
+#### Outputs
+
+##### Grid
+
+Data type: Float.
+
+The generated grid.
+
 
 
 ### SDF Grid Fillet
@@ -549,11 +791,28 @@ Bool multiple sdf grids with each other.
 
 Round off concave internal corners in a signed distance field. Only affects areas with negataive principal curvature. This creates smoother transitions between surfaces.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | --------------------------------------------------------------------------- |
-| Inputs | **Grid**: The input grid. · **Iterations**: How often to run the algorithm. |
-| Output | **Grid**: The generated grid. |
+##### Grid
+
+Data type: Float.
+
+The input grid.
+
+##### Iterations
+
+Data type: Integer.
+
+How often to run the algorithm.
+
+#### Outputs
+
+##### Grid
+
+Data type: Float.
+
+The generated grid.
+
 
 
 ### SDF Grid Laplacian
@@ -562,11 +821,28 @@ Round off concave internal corners in a signed distance field. Only affects area
 
 Apply laplacian flow smoothing to a signed distance field.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | --------------------------------------------------------------------------- |
-| Inputs | **Grid**: The input grid. · **Iterations**: How often to run the algorithm. |
-| Output | **Grid**: The generated grid. |
+##### Grid
+
+Data type: Float.
+
+The input grid.
+
+##### Iterations
+
+Data type: Integer.
+
+How often to run the algorithm.
+
+#### Outputs
+
+##### Grid
+
+Data type: Float.
+
+The generated grid.
+
 
 
 ### SDF Grid Mean
@@ -575,11 +851,34 @@ Apply laplacian flow smoothing to a signed distance field.
 
 Apply lmean (box) filter smoothing to a signed distance field. Fast separable averaging filter for general smoothing of the distance field.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | ----------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Grid**: The input grid. · **Width**: Filter kernel radius in voxel. · **Iterations**: How often to run the algorithm. |
-| Output | **Grid**: The generated grid. |
+##### Grid
+
+Data type: Float.
+
+The input grid.
+
+##### Width
+
+Data type: Integer.
+
+Filter kernel radius in voxel.
+
+##### Iterations
+
+Data type: Integer.
+
+How often to run the algorithm.
+
+#### Outputs
+
+##### Grid
+
+Data type: Float.
+
+The generated grid.
+
 
 
 ### SDF Grid Mean
@@ -588,11 +887,28 @@ Apply lmean (box) filter smoothing to a signed distance field. Fast separable av
 
 Apply mean filter smoothing to a signed distance field. Evolves the surface based on its mean curvature. This smooths high curvature regions more than flat areas.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | --------------------------------------------------------------------------- |
-| Inputs | **Grid**: The input grid. · **Iterations**: How often to run the algorithm. |
-| Output | **Grid**: The generated grid. |
+##### Grid
+
+Data type: Float.
+
+The input grid.
+
+##### Iterations
+
+Data type: Integer.
+
+How often to run the algorithm.
+
+#### Outputs
+
+##### Grid
+
+Data type: Float.
+
+The generated grid.
+
 
 
 ### SDF Grid Median
@@ -601,11 +917,34 @@ Apply mean filter smoothing to a signed distance field. Evolves the surface base
 
 Apply median filter smoothing to a signed distance field. Reduces nioise while preserving sharp features and edges in the distance field.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | ----------------------------------------------------------------------------------------------------------------------- |
-| Inputs | **Grid**: The input grid. · **Width**: Filter kernel radius in voxel. · **Iterations**: How often to run the algorithm. |
-| Output | **Grid**: The generated grid. |
+##### Grid
+
+Data type: Float.
+
+The input grid.
+
+##### Width
+
+Data type: Integer.
+
+Filter kernel radius in voxel.
+
+##### Iterations
+
+Data type: Integer.
+
+How often to run the algorithm.
+
+#### Outputs
+
+##### Grid
+
+Data type: Float.
+
+The generated grid.
+
 
 
 ### SDF Grid Offset
@@ -614,12 +953,59 @@ Apply median filter smoothing to a signed distance field. Reduces nioise while p
 
 Offset a signed distance field surface by a world space distance. It dilates or erodes while maintaining the signed distance property.
 
+#### Inputs
 
-| Entry | What it does |
-| ------ | ------------------------------------------------------------------------------------------ |
-| Inputs | **Grid**: The input grid. · **Distance**: Object space distance to offset the sdf surface. |
-| Output | **Grid**: The generated grid. |
+##### Grid
 
+Data type: Float.
+
+The input grid.
+
+##### Distance
+
+Data type: Float (distance).
+
+Object space distance to offset the sdf surface.
+
+#### Outputs
+
+##### Grid
+
+Data type: Float.
+
+The generated grid.
+
+
+
+### Deactivate Voxels
+
+![Deactivate Voxels](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/deactivate-voxels.png)
+
+Turns selected voxels off. A volume grid is built from voxels, and only the active ones are stored and used. Deactivating voxels you do not need makes a grid smaller and faster to work with, and it also changes the shape of the grid, because nodes such as Grid to Mesh only see the active part. Use it to cut a hole into a grid or to throw away the part of a grid that is far from where you work.
+
+#### Inputs
+
+##### Grid
+
+Data type: Float.
+
+The grid to change. The node works on any data type, set at the top of the node.
+
+##### Selection
+
+Data type: Boolean.
+
+The voxels to deactivate. A boolean field, evaluated at every voxel. Voxels where it is true are turned off.
+
+#### Outputs
+
+##### Grid
+
+Data type: Float.
+
+The grid without the deactivated voxels.
+
+Data type, shown at the top of the node, is the type of the values in the grid: Float, Integer, Boolean or Vector.
 
 ### Field to Grid
 
@@ -629,11 +1015,16 @@ Create new grids by evaulating new values on an existing volume grid topology.
 
 #### Inputs
 
+##### Topology
 
-| Entry | What it does |
-| ---------- | ------------------- |
-| Topology | The input topology. |
-| Properties | — |
+Data type: Float.
+
+The input topology.
+
+##### Properties
+
+—
+
 
 
 ##### Data Type
@@ -658,20 +1049,30 @@ Create new grids by evaulating new values on an existing volume grid topology.
 
 ##### Grid
 
+Data type: Float.
+
 The input grid.
 
 ##### Mode
+
+Data type: Menu.
 
 ![Mode](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-operations/mode.png)
 
 How to progress the state.
 
+###### Inactive
 
-| Entry | What it does |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Inactive | Turn inactive voxels and tiels into inactive background tiles. |
-| Threshold | Turn regioons where all voxels have the same value and active state into inactive background tiles. You will see a threshold slider. |
-| SDF | Replace inactive tiles with inactive nodes. |
+Turn inactive voxels and tiels into inactive background tiles.
+
+###### Threshold
+
+Turn regioons where all voxels have the same value and active state into inactive background tiles. You will see a threshold slider.
+
+###### SDF
+
+Replace inactive tiles with inactive nodes.
+
 
 
 ##### Properties
@@ -686,6 +1087,8 @@ The data type to evaluate.
 
 ##### Grid
 
+Data type: Float.
+
 The generated grid.
 
 ### Prune Grid
@@ -696,11 +1099,16 @@ Create new grids by evaulating new values on an existing volume grid topology.
 
 #### Inputs
 
+##### Grid
 
-| Entry | What it does |
-| ---------- | --------------- |
-| Grid | The input grid. |
-| Properties | — |
+Data type: Float.
+
+The input grid.
+
+##### Properties
+
+—
+
 
 
 ##### Data Type
@@ -713,6 +1121,8 @@ The data type to evaluate.
 
 ##### Grid
 
+Data type: Float.
+
 The generated grid.
 
 # Primitives
@@ -723,6 +1133,80 @@ The generated grid.
 
 Here you find nodes to modify the volume.
 
+### Cube Grid Topology
+
+![Cube Grid Topology](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-primitives/cube-grid-topology.png)
+
+Makes the shape of a box of voxels, without any values in it. The output is only a topology, a set of active voxels, which you give to the Field to Grid node to fill it with a field. Use it as the starting point of a grid that you make from nodes, for example a density grid for a cloud, a signed distance field for a shape, or a region for a simulation.
+
+#### Inputs
+
+##### Bounds Min
+
+Data type: Vector.
+
+The corner of the box with the lowest coordinates.
+
+##### Bounds Max
+
+Data type: Vector.
+
+The corner of the box with the highest coordinates.
+
+##### Resolution X
+
+Data type: Integer.
+
+How many voxels the box has along X.
+
+##### Resolution Y
+
+Data type: Integer.
+
+How many voxels the box has along Y.
+
+##### Resolution Z
+
+Data type: Integer.
+
+How many voxels the box has along Z.
+
+##### Min X
+
+Data type: Integer.
+
+Panel Min. The index of the first voxel along X. It moves the box along the grid index space without changing its size.
+
+##### Min Y
+
+Data type: Integer.
+
+Panel Min. The same for Y.
+
+##### Min Z
+
+Data type: Integer.
+
+Panel Min. The same for Z.
+
+#### Outputs
+
+##### Topology
+
+Data type: Boolean.
+
+The shape of the box, as a boolean grid. Connect it to the Topology input of Field to Grid.
+
+#### How to use
+
+![Cube Grid Topology example](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-primitives/cube-grid-topology-chain.png)
+
+1. Add **Cube Grid Topology**. Set **Bounds Min** and **Bounds Max** to the size of the box and the resolutions to the detail you need. The voxel size is the box size divided by the resolution, so the same box with a resolution of 32 has voxels half the size of a resolution of 16.
+2. Add **Field to Grid** and connect the Topology output to its Topology input. Add a value with the plus socket and connect a field to it. In the example the field is `2 - Length(Position)`.
+3. Connect the grid to **Grid to Mesh** and set Threshold to 0.5. The mesh is a sphere-like surface where the value crosses 0.5, cut off by the box.
+
+Keep the resolution low while you build. Every doubling of the resolution makes eight times as many voxels.
+
 ### Volume Cube
 
 ![Volume Cube](/docs2/images/editors/geometry-node-editor/header/add-menu-volume-primitives/volume-cube.png)
@@ -731,10 +1215,23 @@ The Volume Cube node generates a voxel based volume cube primitive that can be u
 
 #### Inputs
 
+##### Geometry
 
-| Entry | What it does |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Geometry | Standard geometry input. |
-| Density | Volume density per voxel. Higher values makes it more dense. |
-| Background | Value per voxel outside the cube domain. |
-| Min: | Minimum boundary of the volume cube. Max: Maximum boundary of the volume cube. Resolution X Number of volume voxules in the X axis. Resolution Y Number of volume voxules in the Y axis. Resolution Z Number of volume voxules in the Z axis. |
+Standard geometry input.
+
+##### Density
+
+Data type: Float.
+
+Volume density per voxel. Higher values makes it more dense.
+
+##### Background
+
+Data type: Float.
+
+Value per voxel outside the cube domain.
+
+##### Min:
+
+Minimum boundary of the volume cube. Max: Maximum boundary of the volume cube. Resolution X Number of volume voxules in the X axis. Resolution Y Number of volume voxules in the Y axis. Resolution Z Number of volume voxules in the Z axis.
+
